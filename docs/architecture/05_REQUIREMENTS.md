@@ -30,6 +30,9 @@ These requirements consolidate the source-backed decisions; they do not select s
 | REQ-024 | Full selection provenance and suitable robustness tests | Winning filter/parameter is traceable to all evaluated alternatives; sensitivity/null design is preregistered and method-specific | TEST-24 |
 | REQ-025 | Operational feedback firewall | Raw fills/PnL cannot modify claims, protocols or evidence; registered observations enter a later research epoch through controlled interfaces | TEST-25 |
 | REQ-026 | Event/trade Column Library with three timing classes | Full-path extrema cannot be joined into entry features; evolving state is truncated at decision time; exploratory reuse is not independent confirmation | TEST-26 |
+| REQ-027 | Substantially accelerate both hypothesis discovery and testing while preserving decision quality | A preregistered comparison with a named workflow or prior version measures discovery and test-cycle time/cost under matched scope, decision quality and evidence access; reports early exits, gaps, errors, inconclusive results and completed tests separately; meets the improvement threshold without weakening technical/scientific gates | TEST-27 |
+
+TEST-27 is a future framework-level acceptance specification for D068, not an executed benchmark or a new statistical policy. OPEN-11 must select the reference, measures, quality criteria, improvement threshold and comparison design before results. Historical processing time and waiting for genuinely new outcomes must be distinguished. This does not authorize D015's rejected baseline generator, make the number of rejections a reward, or replace D025's calibration and economic gates.
 
 ## Nonfunctional requirements
 

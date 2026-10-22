@@ -1,6 +1,6 @@
 # Decision Register
 
-Version: reconstruction-1. Source-limited reconstruction authorized on October 22, 2026. No new application implementation is authorized by this register.
+Version: reconstruction-1 with approved clarification D068 (October 22, 2026). D001-D067 retain their reconstructed provenance; D068 records a later user clarification separately from the archived conversation. No new application implementation is authorized by this register.
 
 ## Reading authority and counts
 
@@ -9,7 +9,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 45 |
+| ACCEPTED | 46 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -959,3 +959,23 @@ Rejection records in [03_REJECTED_DECISIONS.md](03_REJECTED_DECISIONS.md) record
 **Source and acceptance:** [M0071](../../sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](../../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0101](../../sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](../../sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0138](../../sources/full_conversation.md#m0138--assistant) (L15776-L16032); [M0146](../../sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0148](../../sources/full_conversation.md#m0148--assistant) (L16903-L17083); [M0241](../../sources/full_conversation.md#m0241--user) (L23913-L23913); [M0242](../../sources/full_conversation.md#m0242--assistant) (L23923-L23972); [M0243](../../sources/full_conversation.md#m0243--user) (L23982-L23982). Unresolved implementation semantics.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
+
+### D068 — Accelerate hypothesis discovery and testing as framework success
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** Scientific evaluation requirements can obscure the purpose of accelerating the whole research process, including useful early elimination and learning from unsuccessful work.
+
+**Decision, reason and alternative:** Substantially accelerate both hypothesis discovery and testing while preserving free invention, independent evaluation and decision quality. Evaluate this as framework success alongside technical validity, calibration and economic usefulness; neither idea throughput, rejection count nor supported-claim count alone is sufficient. A predefined comparable workflow or prior version must match task scope, decision quality and evidence access. The reference, measures, substantial-improvement threshold and experiment design remain OPEN-11; no rejected comparator generator or relaxed evidence rule is authorized.
+
+**Affected components / dependencies:** CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07, CMP-11, CMP-12; REQ-027; D001, D008, D013, D019, D025, D028 and D036.
+
+**Source and acceptance:** SESSION-2026-10-22, direct user clarification in the current repository conversation, outside the immutable M0001-M0304 archive. Verbatim excerpts:
+
+> Eine Anforderung bei der Idee zu diesem Framework war es, die Hypothesensuche UND Tests massiv zu beschleunigen, Das ist, das zweite Ziel was das framework leisten soll
+
+> Das wäre ein Erfolgskriterium für das framework selbst. Hypothesen dürfen schnell sterben, und es gibt im Framework mechanismen dafür
+
+The user subsequently approved the documentation remedy in the [System Model Review](../reviews/SYSTEM_MODEL_REVIEW.md#smallest-proposed-remedy) with "ja mach das". That approval covers canonical propagation, complete feedback presentation and simpler entry instructions; it does not approve the still-open scientific semantics. This entry records the clarified goal rather than asserting that the original archive contains these later messages.
+
+**Change control:** Preserve the original D001-D067 records, canonical definitions and source bytes. Numerical acceptance and affected scientific contracts require their own review before use. The clarification is versioned here and in the structured register; its implementation can be rolled back as a documentation revision without erasing this source/approval history.

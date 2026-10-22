@@ -1,6 +1,6 @@
 # Traceability Matrix
 
-All source references resolve through [SOURCE_REVIEW_INDEX.md](SOURCE_REVIEW_INDEX.md) and `sources/message_index.json`. Tests below are specified future acceptance tests, not executed application tests. Implementation phases are proposals.
+Archived source references resolve through [SOURCE_REVIEW_INDEX.md](SOURCE_REVIEW_INDEX.md) and `sources/message_index.json`. SESSION-2026-10-22 is a later source recorded separately in D068 and the structured register. Tests below are specified future acceptance tests, not executed application tests. Implementation phases are proposals.
 
 ## Forward trace: problem to implementation evidence
 
@@ -32,6 +32,7 @@ All source references resolve through [SOURCE_REVIEW_INDEX.md](SOURCE_REVIEW_IND
 | PROB-03 | REQ-024 | D031, D035, D047, D051 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-09 | IF-05, IF-06, IF-07 | TEST-24 | P4 |
 | PROB-05 | REQ-025 | D037 | CMP-08, CMP-09, CMP-10, CMP-11 | IF-11, IF-08 | TEST-25 | P6 |
 | PROB-05 | REQ-026 | D044, D045, D046 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07 | IF-01, IF-06 | TEST-26 | P5 |
+| PROB-08 | REQ-027 | D068, D013, D019, D025, D028, D036 | CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07, CMP-11, CMP-12 | IF-03, IF-06, IF-08, IF-13 | TEST-27 | P7; before framework success claim |
 
 ## Reverse trace: every decision has a disposition
 
@@ -104,6 +105,7 @@ All source references resolve through [SOURCE_REVIEW_INDEX.md](SOURCE_REVIEW_IND
 | D065 | PROPOSED_ONLY | M0245, M0246, M0247 | REQ-023 | Keep open or deferred; no implied approval. |
 | D066 | AMBIGUOUS | M0143, M0144 | REQ-009 | Keep open or deferred; no implied approval. |
 | D067 | OPEN | M0071, M0072, M0101, M0102, M0138, M0146, M0148, M0241, M0242, M0243 | REQ-007 | Keep open or deferred; no implied approval. |
+| D068 | ACCEPTED | SESSION-2026-10-22 | REQ-027 | Accepted acceleration objective; measurement choices remain OPEN-11. |
 
 ## Coverage and orphan rules
 
@@ -113,4 +115,4 @@ Source gaps affect confidence rather than being filled by generated requirements
 
 ## Present verification versus future verification
 
-DOCUMENTATION_VERIFICATION.json records checks actually executed on these documents and the immutable archive. TEST-01 through TEST-26 are not executed. No application, backtest, live data, runtime, schema compiler or statistical calibration was implemented or tested.
+DOCUMENTATION_VERIFICATION.json records checks actually executed on these documents and the immutable archive. TEST-01 through TEST-27 are not executed. D068/REQ-027/TEST-27 were added after the reconstruction verification report; that report does not validate this later revision. No application, backtest, live data, runtime, schema compiler or statistical calibration was implemented or tested.

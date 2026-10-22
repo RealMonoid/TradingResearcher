@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "scope": "static integrity and snapshot mutation checks",
+  "checks": {
+    "pre_existing_changed_files": [
+      "AGENTS.md",
+      "docs/architecture/CURRENT_STATE.md"
+    ],
+    "unchanged_pre_existing_files": 25,
+    "archived_source_files_checked": 5,
+    "local_links_checked": 55,
+    "git_diff_check_exit": 0,
+    "behavioral_responses_checked": 15,
+    "isolated_snapshot_mutation_audits": 15,
+    "manual_behavioral_assessment": {
+      "status": "partial",
+      "tasks_passed": 4,
+      "tasks_total": 5,
+      "criteria_passed": 18,
+      "criteria_total": 19,
+      "all_task_gate_met": false
+    },
+    "checked_artifact_sha256": {
+      "AGENTS.md": "fd1a1d956bd3aa646f062f2de270ca546c88124fa1cc1bd9ae1c691f26f2d658",
+      "docs/architecture/CURRENT_STATE.md": "6b7961cc069007aac9a53d36dba7f2c31b1c35881e922387bb0dc18984e08a35",
+      "docs/reviews/session-understanding/README.md": "f8a81e331598cbb59865e804f002aa9da7c5a0423e421368234bd0af46659a18",
+      "docs/reviews/session-understanding/protocol.json": "0f4b4eb3420c7a389b1124148c6bd3f8203990101d62702a3afb3f1bf1a7776a",
+      "docs/reviews/session-understanding/manifest.json": "ef33697e4f8ebedefaed53f47140a164d226eae580114136ad4f880213e8393a",
+      "docs/reviews/session-understanding/verify.py": "8ac0e8a632cc690faea226e2913e7105ce6e761489e211fb25bf473d3c05b3e0",
+      "docs/reviews/session-understanding/protocol-v2.json": "eeb78dd9196a751d7691c3fdcceeecc4ca297b33514cc3b53d2644b0f6c063e8",
+      "docs/reviews/session-understanding/grading-v1.json": "22ef02d8b03f2637b72c8f3a34c480386804c8863ca9cb6fb8646b4286939852",
+      "docs/reviews/session-understanding/grading-v2.json": "1c6025b3afd2f550a89e7685b57f92c2ecff2b1ee6e469d3cd51882508cf5b79",
+      "docs/reviews/session-understanding/assessment.json": "a8c1289de4ad08255b8cfbcdfaa51f17d7d2a21fd1d1ae54037349ae39b56ab7"
+    }
+  },
+  "failures": [],
+  "boundary": "Static integrity and isolated edit checks only. Behavioral correctness is manually scored; no scientific framework capability is validated."
+}

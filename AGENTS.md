@@ -9,9 +9,12 @@ Preserve the [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md) 
 ## Read according to the task
 
 - Start with the [README](README.md) and descriptive [Current State](docs/architecture/CURRENT_STATE.md).
+- Before a system-level assessment, reconstruct the goals, research flow, feedback, decision authority and open boundaries from the complete [Problem Definition](docs/architecture/01_PROBLEM_DEFINITION.md) and [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md). Relate the task to that model before drawing conclusions. Reuse it within the session; reconstruct it after context loss or a material change. Partial search excerpts do not establish the whole.
 - For affected behavior, consult the [Decision Register](docs/architecture/02_DECISION_REGISTER.md), [Rejected Decisions](docs/architecture/03_REJECTED_DECISIONS.md), [Definitions](docs/architecture/04_DEFINITIONS.md) and [Open Decisions](docs/architecture/11_OPEN_DECISIONS.md).
 - For design or implementation, read relevant sections of the [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md), [Requirements](docs/architecture/05_REQUIREMENTS.md), [Engineering Review](docs/architecture/08_ENGINEERING_REVIEW.md), [Implementation Blueprint](docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md) and [Traceability Matrix](docs/architecture/12_TRACEABILITY_MATRIX.md). Consult the [Scientific Evaluation](docs/architecture/07_SCIENTIFIC_EVALUATION.md) when scientific validity is affected.
 - For provenance disputes, use the [Source Audit](docs/architecture/00_SOURCE_AUDIT.md) and [Source Review Index](docs/architecture/SOURCE_REVIEW_INDEX.md) to locate the relevant archived messages. Do not read the entire conversation for every small change.
+
+For wording-only edits and other bounded tasks with no architectural consequence, use the entry documents and affected files only; skip the full orientation and system recap. Do not expand the task, repeat reads already available, or ask the user to restate documented context. A historical handoff's task authorization describes that earlier task; the current explicit user request determines today's scope, subject to the scientific change-control rules below.
 
 ## Authority and change control
 

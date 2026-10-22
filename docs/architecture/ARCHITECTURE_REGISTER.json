@@ -1,6 +1,6 @@
 {
-  "version": "reconstruction-1",
-  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open.",
+  "version": "reconstruction-1+clarification-1",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 uses the separately recorded current-session clarification SESSION-2026-10-22; the archived source is unchanged.",
   "decisions": [
     {
       "id": "D001",
@@ -1522,6 +1522,30 @@
       "acceptance_basis": "Unresolved implementation semantics",
       "normative": false,
       "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D068",
+      "status": "ACCEPTED",
+      "title": "Accelerate hypothesis discovery and testing as framework success",
+      "problem": "Scientific evaluation requirements can obscure the purpose of accelerating the whole research process, including useful early elimination and learning from unsuccessful work.",
+      "rationale_and_alternative": "Substantially accelerate discovery and testing while preserving free invention, independent evaluation and decision quality. Compare a predefined workflow or prior version under matched scope, quality and evidence access. Measures, thresholds and design remain OPEN-11; no rejected comparator generator or relaxed evidence rule is authorized.",
+      "requirement": "REQ-027",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-07",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-22"
+      ],
+      "acceptance_basis": "Direct current-user clarification and explicit approval to implement the System Model Review documentation remedy; not reconstructed archival acceptance.",
+      "normative": true,
+      "change_control": "Preserve original decisions, definitions and sources. Numerical acceptance and scientific contracts require separate review; retain this source/approval history through documentation rollback."
     }
   ],
   "rejections": [
@@ -2511,6 +2535,15 @@
       ],
       "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
       "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    }
+  ],
+  "supplemental_sources": [
+    {
+      "id": "SESSION-2026-10-22",
+      "kind": "direct_user_clarification_and_documentation_approval",
+      "date": "2026-10-22",
+      "record": "02_DECISION_REGISTER.md#d068--accelerate-hypothesis-discovery-and-testing-as-framework-success",
+      "scope": "Current repository conversation; not part of archived messages M0001-M0304. Verbatim excerpts and approval context are recorded in D068."
     }
   ]
 }

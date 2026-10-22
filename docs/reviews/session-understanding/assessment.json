@@ -1,0 +1,237 @@
+{
+  "reviewer_outputs": {
+    "grading-v1.json": "22ef02d8b03f2637b72c8f3a34c480386804c8863ca9cb6fb8646b4286939852",
+    "grading-v2.json": "1c6025b3afd2f550a89e7685b57f92c2ecff2b1ee6e469d3cd51882508cf5b79"
+  },
+  "coordinator_adjudication": "Reviewed the retained response texts and the failed criteria. Accepted both independent reviewers' conjunctive judgments without changing scores. Independently verified local-edit scope and all snapshot mutations using verify.py --snapshots.",
+  "summary": [
+    {
+      "version": "v1",
+      "condition": "baseline",
+      "tasks_passed": 3,
+      "tasks_total": 5,
+      "criteria_passed": 17,
+      "criteria_total": 19,
+      "critical_errors": 0
+    },
+    {
+      "version": "v1",
+      "condition": "revised",
+      "tasks_passed": 4,
+      "tasks_total": 5,
+      "criteria_passed": 18,
+      "criteria_total": 19,
+      "critical_errors": 0
+    },
+    {
+      "version": "v2",
+      "condition": "revised",
+      "tasks_passed": 4,
+      "tasks_total": 5,
+      "criteria_passed": 18,
+      "criteria_total": 19,
+      "critical_errors": 0
+    }
+  ],
+  "runs": [
+    {
+      "run_id": "run-01",
+      "version": "v1",
+      "condition": "baseline",
+      "task": "triage",
+      "criteria_passed": 3,
+      "criteria_total": 4,
+      "pass": false,
+      "critical_errors": [],
+      "failed_criteria": [
+        4
+      ],
+      "response_sha256": "36dbdeab3361a40bbffda4d545b26742a0fb2cbcebe0868b40a16e234c7207e6"
+    },
+    {
+      "run_id": "run-02",
+      "version": "v1",
+      "condition": "revised",
+      "task": "critique",
+      "criteria_passed": 4,
+      "criteria_total": 4,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "df4d264941612221e2bf141939c0467cb021e06e452de619f56d29f61f009075"
+    },
+    {
+      "run_id": "run-03",
+      "version": "v1",
+      "condition": "baseline",
+      "task": "local_edit",
+      "criteria_passed": 3,
+      "criteria_total": 3,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "44483577a5959b0cedaf9eb6ea182d7552fd0082b43b0828f9766d1ddeeb503e"
+    },
+    {
+      "run_id": "run-04",
+      "version": "v1",
+      "condition": "baseline",
+      "task": "reuse_pressure",
+      "criteria_passed": 4,
+      "criteria_total": 4,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "3190707b26da9b63134bfca639013b2da89454b73c029d2998f0cf37fa430dc9"
+    },
+    {
+      "run_id": "run-05",
+      "version": "v1",
+      "condition": "revised",
+      "task": "local_edit",
+      "criteria_passed": 3,
+      "criteria_total": 3,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "44e0ab6e3b03e1e107d2012bc33a09df839f4ad17c3c58ec6dd0c6f1177a5cf4"
+    },
+    {
+      "run_id": "run-06",
+      "version": "v1",
+      "condition": "revised",
+      "task": "reuse_pressure",
+      "criteria_passed": 4,
+      "criteria_total": 4,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "f957abc9744c4f591936c02e478b13aade7f5b51e4e0612908aec3cf5b145009"
+    },
+    {
+      "run_id": "run-07",
+      "version": "v1",
+      "condition": "revised",
+      "task": "triage",
+      "criteria_passed": 3,
+      "criteria_total": 4,
+      "pass": false,
+      "critical_errors": [],
+      "failed_criteria": [
+        4
+      ],
+      "response_sha256": "673af786d50427524bccc067d1f6c5e8300203934e768b5add22eea51d9330af"
+    },
+    {
+      "run_id": "run-08",
+      "version": "v1",
+      "condition": "baseline",
+      "task": "slice",
+      "criteria_passed": 3,
+      "criteria_total": 4,
+      "pass": false,
+      "critical_errors": [],
+      "failed_criteria": [
+        2
+      ],
+      "response_sha256": "dfa8b5b70e3c7537f65132cdd96a87bfbfe913d8e6c7119dfb917f41cd5cf64f"
+    },
+    {
+      "run_id": "run-09",
+      "version": "v1",
+      "condition": "baseline",
+      "task": "critique",
+      "criteria_passed": 4,
+      "criteria_total": 4,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "6e944b7846cc06b3c010fafd919b19dae697eab68a92e9df2bd88c4c18303f51"
+    },
+    {
+      "run_id": "run-10",
+      "version": "v1",
+      "condition": "revised",
+      "task": "slice",
+      "criteria_passed": 4,
+      "criteria_total": 4,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "3b5f700e1065a3728e249214d6318aaa00e17a60b46b54ff5ef8455a005777ef"
+    },
+    {
+      "run_id": "v2-run-01",
+      "version": "v2",
+      "condition": "revised",
+      "task": "reuse_pressure",
+      "criteria_passed": 4,
+      "criteria_total": 4,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "addea2b3014e7ad7d1340e0b8e03585bc5fb165487e304db8e4f9156d7c5f580"
+    },
+    {
+      "run_id": "v2-run-02",
+      "version": "v2",
+      "condition": "revised",
+      "task": "slice",
+      "criteria_passed": 3,
+      "criteria_total": 4,
+      "pass": false,
+      "critical_errors": [],
+      "failed_criteria": [
+        2
+      ],
+      "response_sha256": "ddf48391bde2bda8783de9b77db6b30ab904d9292cd79f2ec9a8d00869ce07d0"
+    },
+    {
+      "run_id": "v2-run-03",
+      "version": "v2",
+      "condition": "revised",
+      "task": "critique",
+      "criteria_passed": 4,
+      "criteria_total": 4,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "b0ea6ae36283eb0baa13d2615c521303bc04e48c5dede2374e24315d0edeca8f"
+    },
+    {
+      "run_id": "v2-run-04",
+      "version": "v2",
+      "condition": "revised",
+      "task": "local_edit",
+      "criteria_passed": 3,
+      "criteria_total": 3,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "44e62d7c3699e25ca5811f9bc7f00aae66e428d35c77471346a60523b569c44d"
+    },
+    {
+      "run_id": "v2-run-05",
+      "version": "v2",
+      "condition": "revised",
+      "task": "triage",
+      "criteria_passed": 4,
+      "criteria_total": 4,
+      "pass": true,
+      "critical_errors": [],
+      "failed_criteria": [],
+      "response_sha256": "6f56513db3ab6dd5606366609c7f6d30fd86ba5709f1226a227838bea4c207fc"
+    }
+  ],
+  "final_behavioral_acceptance_met": false,
+  "final_status": "partial",
+  "conclusion": "Final instructions passed 4/5 tasks and 18/19 criteria with no observed critical errors. The explicit comparison-reference repair succeeded in triage; a planning response omitted explicit typed gap classification. The original forward-waiting error was not reproduced by either initial condition. No reliable causal improvement, cross-session guarantee, or statistical effect size is established.",
+  "stop_rationale": "Retain the small general orientation/synthesis intervention and the observed limitation. Do not grow or tune instructions solely until these known prompts all pass; the requested investigation and bounded efficacy check include this partial result.",
+  "unverified": [
+    "Actual desktop new-chat instruction injection",
+    "Long-conversation anchoring and compaction drift",
+    "Other model families and exact provider-version replication",
+    "Out-of-sample tasks and repeated stochastic trials",
+    "Scientific framework performance or validity"
+  ]
+}

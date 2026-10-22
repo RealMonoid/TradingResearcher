@@ -3,3 +3,7 @@
 *.json text eol=lf
 .gitattributes text eol=lf
 sources/** -text
+# Preserve frozen review inputs, responses and hashes byte-for-byte.
+docs/reviews/session-understanding/** -text whitespace=cr-at-eol
+# Captured responses may retain blank lines at EOF as part of the evidence.
+docs/reviews/session-understanding/responses/** whitespace=cr-at-eol,-blank-at-eof

@@ -1,0 +1,158 @@
+{
+  "runs": [
+    {
+      "run_id": "v2-run-01",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "The same holdout is now exposed development evidence for that child. Logging makes this visible; it does not restore independence.",
+          "reason": "Explicitly rejects restoring independence through logging after outcome-driven reuse; also denies independent confirmation to the final survivor."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "Use historical data for rapid exploration and qualified evaluation, reusable certified computations, and a narrow deterministic backend with verified semantics. Feed retained outcomes into qualified experience for later epochs.",
+          "reason": "Permits rapid historical iteration and qualified feedback instead of banning useful learning."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Preserve H_idea with its typed capability gap and retry condition. A bounded executable slice is permissible; turning its current language into the discovery universe is not. Separately certify extensions without self-certification",
+          "reason": "Retains unsupported ideas and extension requirements while rejecting a schema-limited discovery universe."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "Freeze each selected claim and complete evaluation plan before independent execution.\nMaterial scientific changes require a reviewable, approved, versioned proposal with validation and rollback",
+          "reason": "Preserves independent execution and frozen contracts; the response also proposes bounded questions and a narrow backend rather than silently changing scientific meaning."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "v2-run-02",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "let it identify a question and freely invent a claim.\nCarry that candidate through faithful H_idea-to-H_exec formalization, independently certified features, atomic freeze, independent execution, deterministic evaluation",
+          "reason": "The proposed experiment uses a genuinely generated claim and explicitly includes faithful formalization, freeze and independent deterministic evaluation."
+        },
+        {
+          "index": 2,
+          "score": 0,
+          "quote": "A universal language is unnecessary for a bounded slice, provided unsupported ideas remain intact.\nDo not force discovery into a rule menu or replace an unsupported idea with a convenient claim.",
+          "reason": "The response explicitly permits a bounded language and retains capability gaps while rejecting universal-grammar and closed-catalog requirements. However, it does not explicitly specify typed or classified capability gaps. References to unresolved executable semantics and certification do not supply that missing distinction, so the full conjunctive criterion is not satisfied."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "logical responsibilities need not be separate agents.\nBefore implementation, resolve the slice’s OPEN-01 lifecycle, OPEN-04 executable semantics, OPEN-05 evaluation rules, and OPEN-06 data authority; settle applicable storage, budgets, allocation, and certification boundaries (OPEN-08/09/12/14).",
+          "reason": "Separates responsibilities from deployment topology and identifies unresolved prerequisites without resolving or authorizing them."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "A valid negative result can pass engineering acceptance; non-significance alone is not falsification.\nOne run supplies measurements, not an acceleration claim.\nFull-process null/planted-signal calibration, substantial acceleration of both discovery and testing, and economic usefulness require later preregistered gates (OPEN-11); a positive market result proves none alone.",
+          "reason": "Allows engineering success with a valid negative, distinguishes measured speed from demonstrated acceleration, and withholds broader scientific and economic success."
+        }
+      ],
+      "critical_errors": [],
+      "pass": false
+    },
+    {
+      "run_id": "v2-run-03",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "years of historical observations need not require years of elapsed research time. Historical-first evaluation is accepted",
+          "reason": "Explicitly separates observation duration from wall-clock research latency and preserves historical-first evaluation."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "Before freeze, counterexamples and feasibility checks can stop or revise candidates. After freeze, sufficiently informative valid negative tests can eliminate claims; historical exploration and qualified evaluation can inform subsequent search.",
+          "reason": "Identifies justified elimination and experience-guided search as useful before strong confirmation."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "This project aims to accelerate both hypothesis discovery and testing, not merely produce a forward-confirmed profitable strategy.\nStatistical and framework success thresholds remain unresolved (OPEN-05, OPEN-11)",
+          "reason": "Separates framework speed/usefulness from support for individual claims, specifies matched measurement, and invents no numerical success threshold."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "Exploratory memory cannot establish empirical support or restore freshness. D014 and D019 preserve inherited exposure; D023 preserves clean forward confirmation.\nAcceleration and useful research performance are therefore specified objectives, not demonstrated capabilities.",
+          "reason": "Preserves exposure and confirmation limits and explicitly states that the documented loop is not an operating or empirically demonstrated capability."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "v2-run-04",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Updated README.md: changed the link label from \"Source audit and known gaps\" to \"Source audit and documented gaps\". The target remains `docs/architecture/00_SOURCE_AUDIT.md`.\nNo architecture or other snapshot files were modified.",
+          "reason": "Explicitly reports exactly the requested label change, preservation of the target, and preservation of other project files. This score assesses the retained report; actual edit scope requires the coordinator's separate artifact verification."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "Verification passed: exactly one matching link was replaced; the saved file matched the expected content; reversing the replacement reproduced the original content exactly; the target file exists.",
+          "reason": "Reports a check of the saved content against expected content and a reversible comparison with the original, without claiming application tests. These are explicit reports of fresh local verification, not independently observed execution evidence in this packet."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Updated README.md: changed the link label from \"Source audit and known gaps\" to \"Source audit and documented gaps\".",
+          "reason": "The complete response remains a brief edit and verification report with file lists; it neither requests approval nor resolves architecture nor recites a system briefing."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "v2-run-05",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "The pilot shows potentially useful research progress, but neither establishes overall framework success nor demonstrates failure simply because no hypothesis is supported.\nTen ideas in one day supplies throughput, not acceleration evidence.",
+          "reason": "Recognizes useful elimination and rejects both zero-support failure and count-only success."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "**Three valid historical negatives:** retain the frozen claims, plans, result artifacts, and TESTED_NEGATIVE classifications.\n**Two execution crashes:** retain failed attempts and append-only ErrorEvent/Incident/Defect and resolution records.\n**Four currently untestable ideas:** retain H_idea and typed language, data, feature, or evaluation gaps with retry conditions.\n**One valid inconclusive test:** retain its evidence and uncertainty as TESTED_INCONCLUSIVE.",
+          "reason": "Retains all four categories separately and explains that crashes, capability gaps and inconclusive tests are not empirical negatives."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Store these as qualified research experience and append-only journal history, distinct from evidence-qualified market claims and policy experience. Carry all used exposure into the next epoch. Outcome-driven revisions require child records and new freezes; neither heuristics nor repeated testing manufacture fresh confirmation.",
+          "reason": "Permits qualified experience for future search while preserving inherited exposure and denying evidence upgrades."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "Compare cycle time, cost, and decision quality against a named workflow or prior version with matched scope and evidence access.\nThese hypothetical results establish no implemented capability in this documentation-only repository.",
+          "reason": "Requires quality/cost/time measurement and a suitable reference for acceleration, and does not infer implemented capabilities or overall success from the pilot."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "The review used only the supplied grading packet: its task prompts, predeclared criteria, critical-error list and retained response text. It did not inspect repository files, execution traces, previous grades, memory or external sources.",
+    "For v2-run-04, binary scores represent explicit satisfaction in the retained report. The packet alone cannot independently establish the actual edit, absence of unrelated changes, or execution of the reported fresh verification; the coordinator must verify those separately.",
+    "This is a bounded instruction-behavior review. These judgments do not establish statistical efficacy, framework implementation, scientific validity, or acceleration."
+  ]
+}

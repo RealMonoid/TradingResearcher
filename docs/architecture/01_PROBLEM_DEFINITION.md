@@ -1,6 +1,6 @@
 # Problem Definition
 
-Version: reconstruction-1. Authority is limited to the available source and the current user's explicit instruction to continue with documented gaps. Read [00_SOURCE_AUDIT.md](00_SOURCE_AUDIT.md) first.
+Version: reconstruction-1 with approved clarification D068 (October 22, 2026). Original source limits remain in [00_SOURCE_AUDIT.md](00_SOURCE_AUDIT.md); D068 separately records the later user clarification.
 
 ## Fundamental problem
 
@@ -11,6 +11,8 @@ The decisive user constitution is M0057, reinforced by M0059 and M0107. The exac
 > Ein Agent-Workflow, in dem ein LLM aus Marktdaten und vorhandenem Wissen selbstständig nichttriviale Hypothesen entwickelt, sie vor dem Test in ausführbare Form bringt, und in dem Code sie anschließend unabhängig an neuen Daten prüft.
 
 Source: [M0057](../../sources/full_conversation.md#m0057--user). D001 records its non-negotiable status.
+
+The framework has two linked goals: autonomous nontrivial invention with faithful independent evaluation, and substantial acceleration of **both hypothesis discovery and testing** (D068). Acceleration concerns the complete research process, including useful early elimination and retained failures. It must preserve scientific decision quality and evidence boundaries; more generated or rejected ideas alone do not demonstrate success.
 
 ## Why this problem matters
 
@@ -29,6 +31,7 @@ The desired output is therefore an auditable chain from question to evidence and
 | PROB-05: Knowledge-to-action gap | Evidence for components is treated as evidence for a policy | REQ-009, REQ-010, REQ-017, REQ-025, REQ-026 |
 | PROB-06: Unbuildable scope and unmeasured quality | More agents, services and metrics substitute for useful research | REQ-018, REQ-022, REQ-023 |
 | PROB-07: Scope mismatch | Five-minute examples or OHLCV-only adapters constrain the actual mandate | REQ-011, REQ-015, REQ-026 |
+| PROB-08: Research speed detached from purpose | A valid research process does not materially accelerate discovery and testing, or buys speed by weakening decisions | REQ-027, with REQ-005, REQ-006, REQ-016 and REQ-020 |
 
 ## Scope evolution that must survive reconstruction
 
@@ -44,10 +47,15 @@ The desired output is therefore an auditable chain from question to evidence and
 | M0209–M0248 | Adversarial checks, operational firewall, placebos and infrastructure candidates | Narrow external adapters; implementation priorities still deferred |
 | M0249–M0290 | Column Library, paths, null design, component analysis, bounded computation and sanity | Reusable diagnostics without leakage or free confirmations |
 | M0291–M0304 | Request for original-source reconstruction and explicit rejected decisions | The handoff must preserve chronology and rationale, not summarize only the endpoint |
+| Later user clarification, October 22, 2026 (D068) | Accelerating discovery and testing is an explicit framework success objective | Trace it to REQ-027 and TEST-27; keep measurement choices open under OPEN-11 |
 
 ## Success and non-goals
 
 Success requires a freely generated claim to pass through formalization, provenance, freeze, independent execution and reproducible evidence classification without manual scientific repair. The complete pipeline must behave acceptably under null and planted-signal calibration, then meet a predefined economic-usefulness gate within an evidence budget. Numeric budgets and thresholds are open, not silently supplied here.
+
+Framework success also requires a measured substantial acceleration of discovery and testing under a predefined comparison with matched task scope, decision quality and evidence access (REQ-027). The reference workflow or prior version, time/cost measures, improvement threshold and assessment design remain OPEN-11; D015's rejected comparator generator is not authorized by this requirement. Distinguish processing existing observations from waiting for new outcomes. Historical-first research can reject or refine candidates quickly while stronger independent confirmation remains a separate constraint.
+
+A hypothesis succeeds or fails under its own frozen evaluation policy. A policy needs its own evidence and operational assessment. The framework is evaluated on the quality, efficiency, calibration and usefulness of the whole process: a valid negative hypothesis result can be useful progress without proving framework success, and a supported hypothesis does not by itself validate a policy. The [Master Architecture](06_MASTER_ARCHITECTURE.md) connects these levels and their feedback paths.
 
 The framework is not a fixed strategy generator, an LLM judge of truth, a mandatory ontology, an unconstrained historical optimizer, or an automatic capital-allocation mandate. It may use known effects, data-first observations and cross-domain analogies, but must not require one discovery route. A failed hypothesis can be useful research; a technically invalid run is neither support nor falsification.
 

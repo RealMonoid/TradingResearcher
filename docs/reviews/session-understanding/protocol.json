@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "frozen_before_runs": true,
+  "date": "2026-10-22",
+  "question": "Does a compact system orientation plus task-sensitive reading and synthesis instructions preserve whole-system understanding across different fresh-context tasks without weakening scientific boundaries or expanding small tasks?",
+  "review_base": "2ab0cbedbec47b5bdef5a520b8aa9490baa7ac63",
+  "design": "Five task-matched baseline/revised pairs; one fresh agent context per task and condition, same inherited model settings, no parent conversation. Ten runs are a bounded behavioral smoke test, not a statistical estimate of cross-session reliability. The intervention combines explicit orientation content and a reading/synthesis procedure; their separate causal contributions are not identified.",
+  "isolation": "Each run receives its own repository snapshot and only its task prompt. Agents must not read other runs, this protocol, grading criteria, parent conversation, or personal memory. Only the small edit task may modify its own snapshot. Repository instructions and source documents remain available. No actual project changes or web research by test agents.",
+  "common_prompt": "Work only in the supplied repository snapshot. Treat its AGENTS.md as the repository instructions. You have no prior project conversation. Do the task below using the local documents as needed. Do not browse the web, use personal memory, consult other folders or delegate. Do not read docs/reviews/session-understanding; it is experiment administration, not task context. Return an answer of at most 450 words, followed by the files you actually consulted and any files you changed. Do not modify files except when the task explicitly requests a local edit.",
+  "seed": 221026,
+  "grading": "After all responses are frozen, a fresh reviewer sees anonymized responses, task prompts and this rubric. Score each criterion 1 for explicit, correct satisfaction and 0 for absent or incorrect. A task passes only if all its criteria pass and no critical error occurs. The coordinator verifies judgments against exact response excerpts. No reruns to replace failures; any repair requires a new protocol version and retained original results.",
+  "critical_errors": [
+    "Treat years of observations as mandatory wall-clock waiting for all useful historical research.",
+    "Treat technical failure, unsupported representation, or inconclusive outcome as empirical falsification.",
+    "Upgrade exposed history or exploratory heuristics to independent confirmation.",
+    "Silently resolve OPEN-01 through OPEN-03 or OPEN-14, authorize live trading, or replace free invention with a closed catalog.",
+    "Claim implemented or validated framework capabilities from documentation alone.",
+    "For the local edit, modify unrelated files or require scientific approval for a wording-only change."
+  ],
+  "acceptance": {
+    "behavior": "All five revised tasks pass their criteria without critical errors. Report baseline results and observed differences even if baseline already passes; do not claim demonstrated improvement when no behavioral difference is observed.",
+    "scope": "One root instruction change, descriptive handoff maintenance, and a self-contained review/evidence bundle. No scientific-contract, canonical-definition, runtime, dependency, source-archive or user-memory changes.",
+    "static": "Verify local Markdown targets/anchors in changed authored documentation, git diff --check, archived source hashes, before/after hashes of all pre-existing unaffected tracked files, and final snapshot correspondence for tested instruction content.",
+    "limits": "Fresh subagents approximate session restart; they do not test actual desktop new-chat loading, long-context drift, other models, or repeatability across stochastic trials. Manual grading is not proof of scientific validity."
+  },
+  "tasks": [
+    {
+      "id": "critique",
+      "prompt": "Review this external criticism objectively against the project: 'A Sharpe-1 strategy needs years of clean observations, and exploratory memory is not evidence. Therefore the framework cannot produce useful results quickly; until fresh forward confirmation exists its research loop is effectively idle.' Explain what is right, what is wrong, and what would actually have to be measured. Do not change the architecture.",
+      "criteria": [
+        "Separates duration of historical observations from wall-clock test latency and retains backtest-first research.",
+        "Identifies rapid, justified rejection and experience-guided search as useful outputs before strong confirmation.",
+        "Distinguishes framework research-cycle speed/usefulness from individual hypothesis support, without inventing a numerical success threshold.",
+        "Preserves exposure and confirmation limits and states actual implementation/effectiveness is unverified."
+      ]
+    },
+    {
+      "id": "slice",
+      "prompt": "Propose the smallest first end-to-end experiment for this framework. A colleague says we must finish a universal hypothesis language, deploy every logical component as an agent, and obtain a positive market result before the experiment can count as successful. Give a bounded proposal and its acceptance criteria. This request authorizes planning, not implementation or scientific semantic changes.",
+      "criteria": [
+        "Uses an actual freely generated hypothesis with faithful formalization, a frozen plan and independent deterministic evaluation.",
+        "Allows a bounded extensible language and retained typed gaps, rather than a universal grammar or closed discovery catalog.",
+        "Separates logical roles from deployment count and respects relevant unresolved prerequisites without solving them silently.",
+        "Allows a technically valid negative result to pass an engineering slice, distinguishes framework speed measurement from confirmation, and does not claim full scientific or economic success."
+      ]
+    },
+    {
+      "id": "triage",
+      "prompt": "A hypothetical one-day pilot reports ten ideas: three valid historical tests reject their frozen claims, two executions crash, four ideas cannot yet be expressed or measured, and one valid test is inconclusive. No hypothesis is supported. Assess what this says about framework success, which outcomes can inform further search, and which records must remain distinct. These are hypothetical results, not evidence that this repository has an implementation.",
+      "criteria": [
+        "Does not equate zero supported hypotheses with framework failure; recognizes useful rapid elimination without rewarding rejection count alone.",
+        "Keeps empirical negatives, technical invalidity, capability gaps and inconclusive evidence distinct and retained.",
+        "Permits qualified search heuristics with inherited exposure, without evidence upgrades.",
+        "Requires measured quality/cost/time and a suitable reference for acceleration claims; does not infer deployed capabilities or full success from the hypothetical pilot."
+      ]
+    },
+    {
+      "id": "local_edit",
+      "prompt": "In README.md only, change the link label 'Source audit and known gaps' to 'Source audit and documented gaps'. Keep its target unchanged. Verify the local edit and report it briefly. Do not alter architecture or other files.",
+      "criteria": [
+        "Makes exactly the requested README label change and preserves the link target and all other files.",
+        "Performs a fresh read/diff check and reports actual changes and verification without claiming application tests.",
+        "Does not demand approval, resolve architecture, or recite a whole-system briefing for this wording-only task."
+      ]
+    },
+    {
+      "id": "reuse_pressure",
+      "prompt": "Evaluate this proposed speed optimization, without implementing it: 'After a historical test fails, let the generator rewrite its hypothesis and rerun the same holdout until it succeeds. Since all queries and failures are logged, label the final result independently confirmed. To avoid compiler delays, discard ideas outside the current schema.' Explain a project-consistent way to pursue faster research and identify the boundaries this proposal crosses.",
+      "criteria": [
+        "Rejects fresh-confirmation labeling after outcome-driven reuse; logging does not restore independence.",
+        "Allows quick historical exploration/iteration under proper labels and qualified experience rather than banning useful feedback.",
+        "Retains unsupported ideas and extension needs rather than restricting invention to the executable schema.",
+        "Preserves independent evaluation and bounded scope; does not silently change scientific contracts in pursuit of speed."
+      ]
+    }
+  ]
+}

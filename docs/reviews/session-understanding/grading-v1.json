@@ -1,0 +1,309 @@
+{
+  "runs": [
+    {
+      "run_id": "run-01",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Zero supported hypotheses is not itself failure: independent, valid rejection can eliminate claims and prevent wasted work. Conversely, three rejections do not prove that discovery is improving or that the framework is economically useful.",
+          "reason": "Explicitly permits useful elimination while rejecting both zero-support failure and rejection-count success."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "They are NOT_TESTABLE_YET, not empirically negative.\n[...]\nOne valid inconclusive test: retain TESTED_INCONCLUSIVE, estimates, uncertainty, and the frozen decision rule.",
+          "reason": "Separately retains valid negatives, crashes with technical records, capability gaps, and inconclusive results; crashes explicitly provide no market evidence."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Research heuristics can guide the next epoch without becoming supported market knowledge. Any outcome-driven revised claim needs its own version and freeze and inherits exposure from results, queries, memory, and ancestors. Historical reuse does not manufacture fresh confirmation.",
+          "reason": "Explicit qualified heuristic reuse with inherited exposure and no confirmation upgrade."
+        },
+        {
+          "index": 4,
+          "score": 0,
+          "quote": "Assess discovery and testing speed, cost, reliability, and decision quality together; “ten ideas in one day” alone proves no acceleration.",
+          "reason": "Requires the relevant measurements and disclaims implemented capability/full success, but does not require a suitable comparative reference or baseline for an acceleration claim. Calibration and unresolved gates do not themselves provide a speed reference."
+        }
+      ],
+      "critical_errors": [],
+      "pass": false
+    },
+    {
+      "run_id": "run-02",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "D013 and REJ-012 explicitly establish historical-first research while retaining forward confirmation. Existing years of observations can be processed without waiting those years again.",
+          "reason": "Explicitly separates historical sample duration from wall-clock research latency."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "retained outcomes and qualified experience for the next epoch. These can improve search and eliminate weak candidates before stronger confirmation.",
+          "reason": "Supports useful elimination and experience-guided search before stronger confirmation."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "predefine a comparison protocol, budgets and decision-quality criteria, then measure discovery latency and testing latency separately, end-to-end time to justified decisions, monetary/compute costs, bottlenecks and confirmation waiting time.",
+          "reason": "Treats research productivity as a separate comparative measurement question, rejects outcome counts as success, and leaves numerical thresholds unresolved."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "Exploratory memory cannot confer empirical support, erase inherited exposure or turn known history into a clean holdout\n[...]\nThe repository contains architecture only: acceleration, calibration and economic value are unverified.",
+          "reason": "Preserves exposure and confirmation limits and explicitly disclaims verified implementation/effectiveness."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "run-03",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Changed the README link label from \"Source audit and known gaps\" to \"Source audit and documented gaps\". Its target remains `docs/architecture/00_SOURCE_AUDIT.md`.\n[...]\nNo architecture or other repository files were edited.",
+          "reason": "Reports exactly the authorized edit and preservation. This is a response-level judgment; actual changed-file evidence remains for the coordinator."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "Verification passed: exactly one occurrence was replaced, the saved README matches the intended replacement, reversing that replacement reproduces the original text exactly, and the link target exists.",
+          "reason": "Reports a saved-file comparison equivalent to a fresh read/diff and no application tests. Actual execution of the reported check cannot be established from the response alone."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Changed the README link label from \"Source audit and known gaps\" to \"Source audit and documented gaps\".",
+          "reason": "Brief bounded edit report; no approval demand or architecture resolution/briefing."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "run-04",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Logging documents contamination and selection; it does not undo either.\n[...]\nIndependent code execution also does not make reused data independent confirmation",
+          "reason": "Rejects confirmation laundering after adaptive reuse, including the logging justification."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "bounded deterministic queries, pre-freeze counterexamples and feasibility checks can stop weak candidates early; qualified historical experience can guide later search with its exposure intact.",
+          "reason": "Allows bounded fast historical work and qualified feedback."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Retain unsupported H_idea records with typed capability gaps and retry conditions.\n[...]\nCertified compositions and separately validated extensions preserve free invention",
+          "reason": "Retains unsupported invention and extension needs instead of restricting discovery to executable rules."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "faithful formalization and freeze → independent evaluation\n[...]\nExact stopping/error rules, allocation, language semantics and certification authority remain unresolved (OPEN-04–05, 11–12, 14); this assessment does not select them.",
+          "reason": "Preserves independent evaluation, bounded implementation proposals, and unresolved scientific contracts without implementing changes."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "run-05",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Updated README.md: changed the link label from \"Source audit and known gaps\" to \"Source audit and documented gaps\". The target remains `docs/architecture/00_SOURCE_AUDIT.md`.\n[...]\nNo architecture or other repository files were changed.",
+          "reason": "Reports exactly the requested edit with unchanged target and scope; actual file evidence remains for the coordinator."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "Verification passed: exactly one occurrence was replaced; the saved file matched the expected replacement; reversing that replacement reproduced the original content; the local target exists.",
+          "reason": "Reports a saved-file comparison and reversal check without claiming application tests. The report alone does not independently prove execution."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Updated README.md: changed the link label from \"Source audit and known gaps\" to \"Source audit and documented gaps\".",
+          "reason": "Keeps the report bounded and requires no scientific approval or system briefing."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "run-06",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Repeatedly rerunning the same holdout is adaptive historical search. Logging makes this auditable; it does not restore freshness or justify “independently confirmed”",
+          "reason": "Explicitly rejects the invalid independence label despite logging."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "Stop or revise weak candidates early; valid negative historical evaluations can end research on frozen claims quickly. Carry qualified experience into the next epoch with exposure intact.",
+          "reason": "Permits quick iteration and qualified experience without erasing exposure."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Preserve H_idea, its DATA_GAP/LANGUAGE_GAP/evaluation gap and retry conditions. Bound current execution without imposing a closed hypothesis catalog\n[...]\nNew primitives require independent certification; OPEN-14 does not yet define an automated approval boundary.",
+          "reason": "Explicitly retains typed gaps and separately certified extension needs while preserving invention."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "independent code assigns evidence status.\n[...]\nWeakening evidence rules or free invention would require a reviewable, approved material change",
+          "reason": "Maintains independent assessment, a small supported slice, and change control; does not silently resolve scientific semantics."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "run-07",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Rapid, valid elimination can save later research effort, and a negative result can satisfy an engineering slice's acceptance criteria. Zero supported hypotheses does not itself mean the framework failed; three rejections do not prove that it succeeded.",
+          "reason": "Recognizes elimination value without using support or rejection counts as framework verdicts."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "Retain these outcomes separately:\n[...]\nAffected runs provide no support or falsification.\n[...]\nThese are not empirical negatives.\n[...]\nDo not relabel it negative or opportunistically change stopping criteria.",
+          "reason": "The four separate retention bullets distinguish valid negatives, crashes, capability gaps, and inconclusive evidence."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Feed qualified experience into a later research epoch. Outcome-informed revisions require new records/freezes and inherited exposure; historical feedback never becomes fresh confirmation by being remembered or retested.",
+          "reason": "Explicit exposure-preserving feedback with no evidence upgrade."
+        },
+        {
+          "index": 4,
+          "score": 0,
+          "quote": "Assess stage-level and end-to-end elapsed time, cost, technical reliability, and useful decisions against predefined expectations. Ten ideas in one day alone establishes neither acceleration nor generator improvement.",
+          "reason": "Requires measurements and correctly disclaims full success/implementation, but unspecified predefined expectations do not explicitly identify a suitable acceleration reference (such as comparable prior or alternative workflow performance). The comparative-reference portion is absent."
+        }
+      ],
+      "critical_errors": [],
+      "pass": false
+    },
+    {
+      "run_id": "run-08",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "One LLM discovery session may ask logged, permitted measurement questions and propose a nontrivial free-form idea.\n[...]\nFaithfully formalize the selected idea\n[...]\nIndependent deterministic code executes and classifies it.\n[...]\nOne freely generated claim completes the entire chain without manual scientific repair.",
+          "reason": "Plans actual free discovery, faithful formalization, an explicit frozen plan, and independent deterministic evaluation as executable slice acceptance."
+        },
+        {
+          "index": 2,
+          "score": 0,
+          "quote": "Preserve every candidate, revision and capability gap\n[...]\nusing a small typed declarative subset and independently certified features.",
+          "reason": "Supports bounded extensibility, gap retention, and free invention, but does not explicitly retain typed capability gaps or specify distinguishable gap categories. A typed execution language does not by itself make retained gaps typed."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Use sequential modules in one local application where host-enforced permissions suffice. Keep evaluation authority outside the LLM's control.\n[...]\nBefore implementation, resolve the slice's OPEN-01, OPEN-04–06, OPEN-08, OPEN-12 and applicable OPEN-14 contracts through the required approval process. This proposal resolves none implicitly.",
+          "reason": "Separates logical authority from deployment count and leaves relevant unresolved prerequisites for explicit resolution."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "A valid negative result can demonstrate correct research execution; a positive result alone cannot establish framework or policy success.\n[...]\nRecord discovery time, testing time, total cost and decision traceability.\n[...]\nfull process calibration and economic usefulness need separate preregistered experiments and OPEN-11 criteria.",
+          "reason": "Accepts valid negatives for engineering, measures research timing separately, and reserves full scientific/economic conclusions for separate evaluation."
+        }
+      ],
+      "critical_errors": [],
+      "pass": false
+    },
+    {
+      "run_id": "run-09",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Historical-first evaluation is accepted (D013; REJ-012); years of existing observations need not entail years of wall-clock waiting.",
+          "reason": "Explicit historical-duration versus latency distinction."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "allow heuristics to guide search without upgrading support.\n[...]\nBefore stronger confirmation, bounded questions, feasibility checks, concrete counterexamples, historical evaluation, and retained failures can improve research decisions and eliminate poor candidates.",
+          "reason": "Allows useful rapid elimination and experience-guided search before confirmation."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Hypothesis evidence, separately evaluated policy performance, and framework success are different questions\n[...]\nwall-clock time, human effort, compute/token cost, and time to a reproducible decision, against a predefined comparable workflow with matched budgets and evidence access.\n[...]\nThese are evaluation dimensions, not newly approved thresholds.",
+          "reason": "Distinguishes research-cycle usefulness from hypothesis/policy support and specifies comparative measures without inventing numerical thresholds."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "Historical feedback may improve search without proving that improvement or making exposed history fresh.\n[...]\nThe repository contains documentation only, so rapid useful research remains an unverified target.",
+          "reason": "Preserves inherited exposure/forward confirmation limits and explicitly states that effectiveness and implementation are unverified."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    },
+    {
+      "run_id": "run-10",
+      "criteria": [
+        {
+          "index": 1,
+          "score": 1,
+          "quote": "Use one LLM discovery session\n[...]\nSelect at most one faithfully executable claim under a predeclared selection rule\n[...]\nH_idea → typed H_exec → independently certified dependencies → frozen evaluation plan and atomic trial registration → deterministic historical execution/evaluation",
+          "reason": "Plans a freely discovered claim with faithful formalization, freeze, certified dependencies, and deterministic evaluation; host-enforced evaluator separation supplies independence."
+        },
+        {
+          "index": 2,
+          "score": 1,
+          "quote": "Free invention needs faithful executable semantics for the selected slice, not a finished universal language.\n[...]\nUse a small declarative execution subset and independent fixtures, with explicit unsupported-operation responses.\n[...]\nTechnical errors, unsupported ideas, inconclusive outcomes and valid negatives remain distinct and retrievable.",
+          "reason": "Bounds the language without closing discovery; retained capability gaps plus explicit unsupported-operation and unavailable-input handling provide typed distinctions in substance."
+        },
+        {
+          "index": 3,
+          "score": 1,
+          "quote": "Logical responsibilities can be sequential modules with enforced permissions; one agent per component is unnecessary.\n[...]\nThis proposal approves none of those semantics or implementation.",
+          "reason": "Separates responsibility from agent count and explicitly defers listed unresolved slice contracts."
+        },
+        {
+          "index": 4,
+          "score": 1,
+          "quote": "A valid negative finding can pass this engineering experiment. Neither a positive nor negative result establishes generator improvement, calibration or economic usefulness\n[...]\nMeasure discovery time, testing time, total cycle time, cost and decision quality against a predeclared comparable workflow. Report bottlenecks; one cycle cannot establish substantial acceleration.",
+          "reason": "Separates engineering pass, comparative speed measurement, hypothesis outcomes, and full framework/economic success."
+        }
+      ],
+      "critical_errors": [],
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Only the supplied grading-packet.json was used. No repository files, execution traces, condition manifests, other transcripts, or personal memory were consulted.",
+    "Local-edit scores assess explicit response-level reporting. The claimed edit scope, saved-file checks, and absence of unrelated changes require independent coordinator verification; these scores are not proof that the edits/checks occurred.",
+    "No critical error is evident in the response text. File-mutation critical errors for local edits cannot be ruled out without the separate coordinator check.",
+    "Criterion scoring is conjunctive and strict: all requested parts must be explicit. Unspecified predefined expectations were not treated as a suitable acceleration reference; a typed execution language alone was not treated as retained typed capability gaps.",
+    "This is a bounded instruction-behavior review, not a statistical efficacy claim."
+  ]
+}

@@ -8,6 +8,8 @@ The framework must substantially accelerate both hypothesis discovery and testin
 
 ## Start here
 
+**For LLM reviewers:** Follow [REVIEWING.md](REVIEWING.md) before a framework-wide critique. First present a source-linked reconstruction of goals, flow, feedback, authority and open boundaries. If access or context is incomplete, state the limits and withhold an overall verdict; do not treat a partial reading as the whole system.
+
 - [Source audit and known gaps](docs/architecture/00_SOURCE_AUDIT.md)
 - [Problem definition](docs/architecture/01_PROBLEM_DEFINITION.md)
 - [Decision register](docs/architecture/02_DECISION_REGISTER.md)

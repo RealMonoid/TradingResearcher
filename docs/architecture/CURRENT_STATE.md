@@ -28,6 +28,8 @@ The [System Model Review](../reviews/SYSTEM_MODEL_REVIEW.md) describes the pre-c
 
 The current [documentation checker](../reviews/verify_system_model.py) runs with `python docs/reviews/verify_system_model.py`; the [revision verification result](../reviews/SYSTEM_MODEL_UPDATE_VERIFICATION.json) records the executed checks and exact file hashes. Supplying its optional pre-edit inventory also checks preservation of all previously present review artifacts. Diagram routing checks do not verify rendering or executable scientific semantics.
 
+[REVIEWING.md](../../REVIEWING.md), linked from README and AGENTS.md, now gives external LLM reviewers the same reconstruction-before-critique protocol. It requires an observable source-linked system model and bounded conclusions when context is incomplete. It changes review procedure, not scientific authority; cross-model compliance is unverified. Earlier verification snapshots retain their original scope and hashes.
+
 Consult the complete [Open Decisions](11_OPEN_DECISIONS.md) register before affected work:
 
 | Open items | Unresolved boundary |

@@ -30,8 +30,6 @@ The current [documentation checker](../reviews/verify_system_model.py) runs with
 
 [REVIEWING.md](../../REVIEWING.md), linked from README and AGENTS.md, now gives external LLM reviewers the same reconstruction-before-critique protocol. It requires an observable source-linked system model and bounded conclusions when context is incomplete. It changes review procedure, not scientific authority; cross-model compliance is unverified. Earlier verification snapshots retain their original scope and hashes.
 
-[review/README.md](../../review/) is a generated, uncompressed reading copy of 17 source documents for GitHub-only readers. Its GitHub directory page displays the README directly; ordinary blob pages can defer content to embedded page data, and plain source views can truncate long files. It includes the review instructions and full architecture documents 00-12, with source hashes and relocated links. It is not a new canonical summary and does not include the original conversation archive or structured companions. `python scripts/build_review_document.py --check` checks exact regeneration. Successful public delivery does not establish that a particular LLM fetcher ingests the complete file.
-
 Consult the complete [Open Decisions](11_OPEN_DECISIONS.md) register before affected work:
 
 | Open items | Unresolved boundary |

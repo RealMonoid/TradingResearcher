@@ -66,3 +66,9 @@ Fitted parameters require predefined sensitivity tests. Broad stable relationshi
 ## Remaining scientific risks
 
 Unknown model pretraining contamination, finite fresh evidence, low-power rare events, failure to account for all adaptive choices, and transportability dominate the epistemic risk. Economic costs, nonstationarity, execution realism and decision-time observability dominate the gap from supported claims to a useful policy. Neither multiple agents nor better documentation removes these risks; the tests and uncertainty reporting above are how they become observable.
+
+## Adopted generator assessment extension
+
+D069-D070 and the [Generator Feedback and Evaluation Contract](13_GENERATOR_FEEDBACK_AND_EVALUATION.md) add binding detail to the existing evaluation responsibilities. Profitably usable hypotheses are the economic objective; superiority to quantitative firms or another generator is not required. Before outcomes, specify the question, permissible inference, relevant effect/precision and resources, not the answer. Absolute-usefulness studies retain statistical references and separate policy testing without requiring a competing generator.
+
+Feedback observations, interpretations and later uses are recorded separately. Procedural gains and economic improvement need different evidence; tuning feedback cannot simultaneously certify its descendant independently. Version comparisons account for repeated runs, matched information/resources, adaptive selection and pending cohorts. Novelty/diversity diagnostics are not evidence gates or reward functions. The academic basis and transfer limits are in document 13; this additive extension does not resolve OPEN-01 through OPEN-03 or choose numerical policies.

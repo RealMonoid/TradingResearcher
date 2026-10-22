@@ -81,4 +81,12 @@ For Hermes, verify permitted-tool-only operation, immutable session context, pro
 
 ## Build boundaries
 
+### Binding generator feedback and assessment extension
+
+D069-D070 adopt [document 13](13_GENERATOR_FEEDBACK_AND_EVALUATION.md) as the semantic contract for the existing modules and interfaces. Extend IF-08's Journal/Experience records with separate feedback observations, interpretations, use records and review outcomes; IF-01/02 must include the retrieval policy/version and inherited exposure. Use the existing artifact envelope and registry, not another memory database or new service.
+
+IF-12 carries the purpose-specific assessment plan for a candidate improvement, including the reference only when the claim is comparative, tuning/assessment separation, budget and planned result interpretation. IF-13 exposes versioned diagnostic cohorts with pending cases, formalization gaps, costs and uncertainty. Discovery diagnostics distinguish unsearched analogues from unsuccessful retrieval and do not assign scientific support. The field contracts and future TEST-28/29/30 fixtures in document 13 are required for affected implementations; concrete schemas and numerical policies remain subject to the relevant open decisions.
+
+An absolute-economic investigation must not fail readiness merely because no competitor generator or prior profitable result exists. It still needs the applicable claim, data, execution and evaluation contracts before a real confirmatory run. This extension is implemented in the specification only.
+
 No application code, packages, dependencies, agent runtime, database, live API connection or deployment is created by this deliverable. The next authorized implementation task should select one phase and its explicit acceptance criteria, resolve its blocking decisions, and retain the same source-backed invariants.

@@ -4,6 +4,8 @@ Source-backed architecture for an autonomous market-research framework: an LLM i
 
 The framework must substantially accelerate both hypothesis discovery and testing while preserving scientific decision quality. The [Problem Definition](docs/architecture/01_PROBLEM_DEFINITION.md) states both goals; the [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md) connects research, early exits, feedback and decision authority.
 
+The economic objective is profitably usable hypotheses after realistic costs, not beating quantitative firms or proving LLM superiority. Whether the framework achieves that objective is an empirical question, not a prerequisite for building it. The [Generator Feedback and Evaluation Contract](docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md) specifies feedback use, later evaluation and discovery diagnostics.
+
 **Status:** documentation and preserved conversation sources only. No application implementation, demonstrated trading edge or live deployment is included.
 
 ## Start here
@@ -23,6 +25,7 @@ The framework must substantially accelerate both hypothesis discovery and testin
 - [Proposed roadmap](docs/architecture/10_IMPLEMENTATION_ROADMAP.md)
 - [Open decisions](docs/architecture/11_OPEN_DECISIONS.md)
 - [Traceability matrix](docs/architecture/12_TRACEABILITY_MATRIX.md)
+- [Generator feedback and evaluation contract](docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md)
 
 ## Evidence and limits
 

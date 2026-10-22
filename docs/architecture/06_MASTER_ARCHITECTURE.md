@@ -142,6 +142,10 @@ The loops have different authority (D019, D026, D037):
 
 Feedback availability is not proof that learning improves results. Framework-level improvement requires the separate assessment in D025/D068. Entry, evolving-state and completed-path diagnostics can accelerate reuse through the Column Library, but retain their time semantics and do not create independent evidence (D044-D046).
 
+D069-D070 make this separation operational through the [Generator Feedback and Evaluation Contract](13_GENERATOR_FEEDBACK_AND_EVALUATION.md). CMP-07 records observations, heuristic interpretations, review triggers and later use separately; CMP-01 propagates exposure through retrieval, CMP-11 reports cohorts and diagnostics, and CMP-06 retains exclusive evidence authority. IF-08 records a use before its downstream result, including early gaps/errors. Candidate improvements and final assessment remain separated under CMP-12. More memory, fewer duplicates or easier compilation alone cannot establish economic improvement.
+
+The economic objective is profitably usable hypotheses after realistic costs, not superiority to quantitative firms or another generator. Unknown success does not block construction or a valid scoped investigation. Absolute-usefulness assessments require their own economic criteria; only comparison claims require a competing configuration or workflow. D068 still evaluates process acceleration, while D015 and independent statistical controls retain their existing scope.
+
 Infrastructure revocation invalidates affected evidence usability through hard dependencies. Mere genealogy, shared evidence or proposed contradictions do not all have the same propagation semantics. A degraded scientific prerequisite marks dependent policies for review according to their dependency type. It does not establish which market mechanism caused a loss.
 
 Operations send costs, fills and incidents to Policy Experience and surveillance. Only governed monitoring can change applicability. Research receives registered questions at a later epoch, never an unmediated instruction to rescue a bad trade. Champion/challenger policy selection is itself trial-accounted.

@@ -2,6 +2,8 @@
 
 Archived source references resolve through [SOURCE_REVIEW_INDEX.md](SOURCE_REVIEW_INDEX.md) and `sources/message_index.json`. SESSION-2026-10-22 is a later source recorded separately in D068 and the structured register. Tests below are specified future acceptance tests, not executed application tests. Implementation phases are proposals.
 
+SESSION-2026-10-22-GENERATOR records the later economic clarification and specification authorization in D069-D070. [Document 13](13_GENERATOR_FEEDBACK_AND_EVALUATION.md#acceptance-specifications) supplies the binding contract and future TEST-28 through TEST-30 cases; its integration is not a runtime test result.
+
 ## Forward trace: problem to implementation evidence
 
 | Problem | Requirement | Decisions | Components | Interfaces | Test | Phase |
@@ -33,6 +35,9 @@ Archived source references resolve through [SOURCE_REVIEW_INDEX.md](SOURCE_REVIE
 | PROB-05 | REQ-025 | D037 | CMP-08, CMP-09, CMP-10, CMP-11 | IF-11, IF-08 | TEST-25 | P6 |
 | PROB-05 | REQ-026 | D044, D045, D046 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07 | IF-01, IF-06 | TEST-26 | P5 |
 | PROB-08 | REQ-027 | D068, D013, D019, D025, D028, D036 | CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07, CMP-11, CMP-12 | IF-03, IF-06, IF-08, IF-13 | TEST-27 | P7; before framework success claim |
+| PROB-02 | REQ-028 | D070, D014, D019, D026 | CMP-01, CMP-03, CMP-04, CMP-06, CMP-07, CMP-12 | IF-01, IF-02, IF-08, IF-12 | TEST-28 | Scoped slice; before feedback reuse |
+| PROB-06 | REQ-029 | D069, D070, D025, D059, D068 | CMP-02, CMP-06, CMP-09, CMP-11, CMP-12 | IF-05, IF-07, IF-12, IF-13 | TEST-29 | Pilot planning; before affected assessment |
+| PROB-01 | REQ-030 | D070, D005, D016, D028 | CMP-01, CMP-02, CMP-03, CMP-07, CMP-11 | IF-02, IF-03, IF-08, IF-13 | TEST-30 | Scoped slice; before diagnostic claims |
 
 ## Reverse trace: every decision has a disposition
 
@@ -106,6 +111,8 @@ Archived source references resolve through [SOURCE_REVIEW_INDEX.md](SOURCE_REVIE
 | D066 | AMBIGUOUS | M0143, M0144 | REQ-009 | Keep open or deferred; no implied approval. |
 | D067 | OPEN | M0071, M0072, M0101, M0102, M0138, M0146, M0148, M0241, M0242, M0243 | REQ-007 | Keep open or deferred; no implied approval. |
 | D068 | ACCEPTED | SESSION-2026-10-22 | REQ-027 | Accepted acceleration objective; measurement choices remain OPEN-11. |
+| D069 | ACCEPTED | SESSION-2026-10-22-GENERATOR | REQ-029 | Absolute profitable usefulness; no advance success or competitor-superiority prerequisite. |
+| D070 | ACCEPTED | SESSION-2026-10-22-GENERATOR | REQ-028/029/030 | Binding feedback, assessment and discovery diagnostic contract in document 13; runtime unimplemented. |
 
 ## Coverage and orphan rules
 
@@ -115,4 +122,4 @@ Source gaps affect confidence rather than being filled by generated requirements
 
 ## Present verification versus future verification
 
-DOCUMENTATION_VERIFICATION.json records checks actually executed on these documents and the immutable archive. TEST-01 through TEST-27 are not executed. D068/REQ-027/TEST-27 were added after the reconstruction verification report; that report does not validate this later revision. No application, backtest, live data, runtime, schema compiler or statistical calibration was implemented or tested.
+DOCUMENTATION_VERIFICATION.json records checks actually executed on the reconstructed documents and immutable archive. TEST-01 through TEST-30 are not executed. D068-D070 and REQ-027 through REQ-030 were added after that report; it does not validate these later revisions. The current documentation checker checks links, preservation and traceability, not application behavior. No application, backtest, live data, runtime, schema compiler or statistical calibration was implemented or tested.

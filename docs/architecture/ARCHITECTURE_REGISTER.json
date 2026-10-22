@@ -1,6 +1,6 @@
 {
-  "version": "reconstruction-1+clarification-1",
-  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 uses the separately recorded current-session clarification SESSION-2026-10-22; the archived source is unchanged.",
+  "version": "reconstruction-1+generator-contract-1",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged.",
   "decisions": [
     {
       "id": "D001",
@@ -1546,6 +1546,32 @@
       "acceptance_basis": "Direct current-user clarification and explicit approval to implement the System Model Review documentation remedy; not reconstructed archival acceptance.",
       "normative": true,
       "change_control": "Preserve original decisions, definitions and sources. Numerical acceptance and scientific contracts require separate review; retain this source/approval history through documentation rollback."
+    },
+    {
+      "id": "D069",
+      "status": "ACCEPTED",
+      "title": "Economic usefulness without a superiority prerequisite",
+      "problem": "A competitor comparison or advance positive-result requirement can replace the user's empirical objective or block the investigation needed to answer it.",
+      "rationale_and_alternative": "Generate profitably usable hypotheses after realistic costs and execution constraints. Beating quantitative firms or another generator is not required; unknown benefit is not a failed build/run gate. Separate absolute usefulness, procedural capability, version improvement and process acceleration; retain statistical references and separate policy evaluation. D015 is unchanged.",
+      "requirement": "REQ-029",
+      "components": ["CMP-02", "CMP-06", "CMP-09", "CMP-11", "CMP-12"],
+      "sources": ["SESSION-2026-10-22-GENERATOR"],
+      "acceptance_basis": "Direct user clarification of the economic objective and explicit instruction to integrate academically grounded improvements into the binding specification, not runtime code.",
+      "normative": true,
+      "change_control": "Preserve prior decisions and this instruction. No profitability, market/threshold, rejected comparator or live authority is introduced; future comparison claims require suitable evidence."
+    },
+    {
+      "id": "D070",
+      "status": "ACCEPTED",
+      "title": "Operational feedback, assessment and discovery diagnostics",
+      "problem": "Memory availability, changed behavior and throughput can be mistaken for beneficial learning without actionable records and valid assessment.",
+      "rationale_and_alternative": "Adopt Generator Feedback and Evaluation Contract version 1.0: distinct observations, interpretations, later use and review with exposure; purpose-specific assessments and uncertainty; diagnostic novelty/diversity and formalization coverage without an originality gate, compulsory retrieval or reward score. Pilot scope follows actual data and information constraints.",
+      "requirement": "REQ-028",
+      "components": ["CMP-01", "CMP-02", "CMP-03", "CMP-04", "CMP-06", "CMP-07", "CMP-11", "CMP-12"],
+      "sources": ["SESSION-2026-10-22-GENERATOR"],
+      "acceptance_basis": "Explicit current-user authorization to research and integrate the reviewed improvements into the binding framework specification; scope and verbatim instructions recorded in D069.",
+      "normative": true,
+      "change_control": "Preserve definitions, sources, prior versions and exposure; OPEN-01 through OPEN-03 and numerical policies remain unresolved. No market experiment or automated certification policy is authorized. Material changes follow D008/D026."
     }
   ],
   "rejections": [
@@ -2544,6 +2570,13 @@
       "date": "2026-10-22",
       "record": "02_DECISION_REGISTER.md#d068--accelerate-hypothesis-discovery-and-testing-as-framework-success",
       "scope": "Current repository conversation; not part of archived messages M0001-M0304. Verbatim excerpts and approval context are recorded in D068."
+    },
+    {
+      "id": "SESSION-2026-10-22-GENERATOR",
+      "kind": "direct_user_goal_clarification_and_specification_authorization",
+      "date": "2026-10-22",
+      "record": "02_DECISION_REGISTER.md#d069--economic-usefulness-without-a-superiority-prerequisite",
+      "scope": "Current repository conversation, outside the immutable archive. User requested academic research and binding specification integration, and clarified profitably usable hypotheses rather than competitive superiority. Verbatim excerpts are recorded in D069; D070 applies that authorized scope."
     }
   ]
 }

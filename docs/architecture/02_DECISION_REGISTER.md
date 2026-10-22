@@ -1,6 +1,6 @@
 # Decision Register
 
-Version: reconstruction-1 with approved clarification D068 (October 22, 2026). D001-D067 retain their reconstructed provenance; D068 records a later user clarification separately from the archived conversation. No new application implementation is authorized by this register.
+Version: reconstruction-1 with approved clarifications/contracts D068-D070 (October 22, 2026). D001-D067 retain their reconstructed provenance; D068-D070 record later user instructions separately from the archived conversation. This revision implements the approved specification changes, not application code.
 
 ## Reading authority and counts
 
@@ -9,7 +9,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 46 |
+| ACCEPTED | 48 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -979,3 +979,39 @@ Rejection records in [03_REJECTED_DECISIONS.md](03_REJECTED_DECISIONS.md) record
 The user subsequently approved the documentation remedy in the [System Model Review](../reviews/SYSTEM_MODEL_REVIEW.md#smallest-proposed-remedy) with "ja mach das". That approval covers canonical propagation, complete feedback presentation and simpler entry instructions; it does not approve the still-open scientific semantics. This entry records the clarified goal rather than asserting that the original archive contains these later messages.
 
 **Change control:** Preserve the original D001-D067 records, canonical definitions and source bytes. Numerical acceptance and affected scientific contracts require their own review before use. The clarification is versioned here and in the structured register; its implementation can be rolled back as a documentation revision without erasing this source/approval history.
+
+### D069 — Economic usefulness without a superiority prerequisite
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** Comparing to competitors or demanding an advance benefit demonstration can replace the user's empirical objective with an unrequested superiority contest or prevent the research that would answer it.
+
+**Decision, reason and alternative:** Generate profitably usable hypotheses after realistic costs and execution constraints; beating quantitative firms or another generator is not required. Unknown benefit is a reason to investigate, not a failed entry gate. Distinguish absolute economic usefulness, procedural capability, version improvement and research acceleration. D068 remains a process objective; statistical references and separate policy evaluation remain necessary. A competing-method comparison is optional and requires its own scope; D015 is not reversed.
+
+**Affected components / dependencies:** CMP-02, CMP-06, CMP-09, CMP-11, CMP-12; REQ-029; D001, D010, D015, D025, D059, D068; OPEN-05/06/11/12.
+
+**Source and acceptance:** SESSION-2026-10-22-GENERATOR, current direct user instructions, outside the immutable archive. The user requested academic research and implementation of the reviewed improvements, then explicitly selected specification integration. Verbatim excerpts:
+
+> Ich weiß nicht ob das besser als irgendwas ist. Ich baue es ja, um das rauszufinden. Wie soll das gehen, das schon im vornherein zu sagen?
+
+> Bezüglich Deiner verbesserungsideen auf Claudes kritik, recherchiere das nochmal ordentlich und dann implementiere es tatsächlich in das framework. Halte dich an akademische Forschung
+
+> Verbindlich in die Framework-Spezifikation integrieren
+
+> Überhaupt, das Framework muss vielleicht nicht besser als irgendwas sein. Es muss profitable Hypothesen generieren und keine Quantfirmen schlagen
+
+**Change control:** This clarification and D070 implement that authorized scope. No claimed profitability, chosen market/threshold, rejected comparator or live authority is introduced. Preserve prior decisions and this instruction when superseded; comparison-specific performance claims still require suitable evidence.
+
+### D070 — Operational feedback, assessment and discovery diagnostics
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** Memory availability, changed behavior and more generated ideas can be mistaken for beneficial learning without actionable records, valid assessment or diagnostic coverage.
+
+**Decision, reason and alternative:** Adopt version 1.0 of the [Generator Feedback and Evaluation Contract](13_GENERATOR_FEEDBACK_AND_EVALUATION.md). Separate observations from interpretations, record later-epoch use with inherited exposure, retain counterevidence and heuristic reviews, and assess only the improvement actually claimed. Require purpose-specific assessment plans and uncertainty; separate procedural from economic feedback. Observe novelty/structural diversity and formalization coverage without creating an originality veto, mandatory literature gate, fixed discovery modes or autonomous reward. Scope pilots by actual data/information constraints without permanently excluding swing or semantic discovery.
+
+**Affected components / dependencies:** CMP-01, CMP-02, CMP-03, CMP-04, CMP-06, CMP-07, CMP-11, CMP-12; REQ-028/029/030; D005, D014, D016, D019, D026, D028, D059, D069; OPEN-04/05/06/09/11/12/14.
+
+**Source and acceptance:** SESSION-2026-10-22-GENERATOR, the explicit research-and-specification instruction quoted in D069, following the [generator critique assessment](../reviews/CLAUDE_GENERATOR_CRITIQUE_ASSESSMENT_2026-10-22.md). The contract's academic basis and transfer limits are recorded in document 13. This is current authorized specification work, not retrospective archival acceptance or evidence of working software.
+
+**Change control:** Preserve definitions, source bytes, prior versions and all exposure. This contract does not resolve OPEN-01 through OPEN-03 or the numerical policies, authorize an experiment while required data are absent, or create a routine-certification approval rule. Material changes follow D008/D026; rollback retains this source history and superseded contract versions.

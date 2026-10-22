@@ -1,6 +1,6 @@
 # Problem Definition
 
-Version: reconstruction-1 with approved clarification D068 (October 22, 2026). Original source limits remain in [00_SOURCE_AUDIT.md](00_SOURCE_AUDIT.md); D068 separately records the later user clarification.
+Version: reconstruction-1 with approved clarifications D068-D069 (October 22, 2026). Original source limits remain in [00_SOURCE_AUDIT.md](00_SOURCE_AUDIT.md); later user clarifications are recorded separately from the archive.
 
 ## Fundamental problem
 
@@ -51,11 +51,15 @@ The desired output is therefore an auditable chain from question to evidence and
 
 ## Success and non-goals
 
+The economic objective is to generate hypotheses that can be used profitably under realistic costs and execution constraints (D069). The project need not beat quantitative firms or prove superiority over another hypothesis generator. Profitability is to be discovered and evaluated; it is not assumed or required before building the system. A supported relationship does not by itself establish a profitable policy, so economic evaluation retains the separate policy contract and uncertainty requirements.
+
 Success requires a freely generated claim to pass through formalization, provenance, freeze, independent execution and reproducible evidence classification without manual scientific repair. The complete pipeline must behave acceptably under null and planted-signal calibration, then meet a predefined economic-usefulness gate within an evidence budget. Numeric budgets and thresholds are open, not silently supplied here.
 
 Framework success also requires a measured substantial acceleration of discovery and testing under a predefined comparison with matched task scope, decision quality and evidence access (REQ-027). The reference workflow or prior version, time/cost measures, improvement threshold and assessment design remain OPEN-11; D015's rejected comparator generator is not authorized by this requirement. Distinguish processing existing observations from waiting for new outcomes. Historical-first research can reject or refine candidates quickly while stronger independent confirmation remains a separate constraint.
 
 A hypothesis succeeds or fails under its own frozen evaluation policy. A policy needs its own evidence and operational assessment. The framework is evaluated on the quality, efficiency, calibration and usefulness of the whole process: a valid negative hypothesis result can be useful progress without proving framework success, and a supported hypothesis does not by itself validate a policy. The [Master Architecture](06_MASTER_ARCHITECTURE.md) connects these levels and their feedback paths.
+
+Entry criteria require a valid scoped investigation and the relevant resolved contracts, not advance proof of economic success or superiority. Absolute usefulness, procedural improvement, version improvement and acceleration answer different questions under the [Generator Feedback and Evaluation Contract](13_GENERATOR_FEEDBACK_AND_EVALUATION.md). D068's reference is for process acceleration; it does not impose investment outperformance or override D015. Exploratory/technical work may be informative before a confirmatory economic study is possible.
 
 The framework is not a fixed strategy generator, an LLM judge of truth, a mandatory ontology, an unconstrained historical optimizer, or an automatic capital-allocation mandate. It may use known effects, data-first observations and cross-domain analogies, but must not require one discovery route. A failed hypothesis can be useful research; a technically invalid run is neither support nor falsification.
 

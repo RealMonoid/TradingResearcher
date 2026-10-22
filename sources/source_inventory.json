@@ -1,0 +1,1045 @@
+{
+  "missing_uploads": [
+    {
+      "message": "M0001",
+      "label": "Bild hochgeladen",
+      "status": "placeholder only; no image element or retrieval URL exposed"
+    },
+    {
+      "message": "M0213",
+      "label": "Bild hochgeladen",
+      "status": "placeholder only; no image element or retrieval URL exposed"
+    }
+  ],
+  "referenced_files": [
+    {
+      "file_id": "file_00000000f0c0820ab06115bcabe4af02",
+      "title": "Trading_System.md",
+      "label": "Trading_System",
+      "messages": [
+        "M0002",
+        "M0006",
+        "M0008",
+        "M0010"
+      ],
+      "citation_attributes": [
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",1259,1290,null,null,2,191,199]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",1938,1967,null,null,0,59,85]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",2671,2702,null,null,2,148,156]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",4663,4692,null,null,0,13,32]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",517,546,null,null,0,75,85]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",1452,1483,null,null,2,148,156]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",1970,2001,null,null,2,360,364]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",1282,1313,null,null,2,148,156]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",2223,2254,null,null,2,191,199]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",3035,3064,null,null,0,75,85]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_00000000f0c0820ab06115bcabe4af02\",6175,6206,null,null,6,319,334]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_00000000f0c0820ab06115bcabe4af02",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Trading_System.md"
+        }
+      ]
+    },
+    {
+      "file_id": "file_000000007d6c81f4a170d996d1d0173f",
+      "title": "Projekt-Workflow.md",
+      "label": "Projekt-Workflow",
+      "messages": [
+        "M0002",
+        "M0004",
+        "M0010",
+        "M0014",
+        "M0016",
+        "M0026",
+        "M0028"
+      ],
+      "citation_attributes": [
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",3580,3609,null,null,0,34,44]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",942,971,null,null,0,34,44]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",991,1020,null,null,0,34,44]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",4770,4799,null,null,0,34,44]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",4946,4976,null,null,1,94,109]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",2252,2282,null,null,1,94,109]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",7199,7228,null,null,0,34,44]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",1806,1835,null,null,0,34,44]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        },
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000007d6c81f4a170d996d1d0173f\",4072,4101,null,null,0,34,44]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000007d6c81f4a170d996d1d0173f",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Projekt-Workflow.md"
+        }
+      ]
+    },
+    {
+      "file_id": "file_000000002e34820a9337dc69fa7da8a8",
+      "title": "Chart_Indikator_Settings.md",
+      "label": "Chart_Indikator_Settings",
+      "messages": [
+        "M0002"
+      ],
+      "citation_attributes": [
+        {
+          "data-file-citation-group-identity": "[[\"unknown\",\"my_files\",\"file_000000002e34820a9337dc69fa7da8a8\",4929,4960,null,null,3,583,596]]",
+          "data-file-citation-group-size": "1",
+          "data-file-citation-primary-file-id": "file_000000002e34820a9337dc69fa7da8a8",
+          "data-file-citation-primary-library-provider": "",
+          "data-file-citation-primary-source": "my_files",
+          "class": [
+            "text-token-text-secondary",
+            "inline-flex",
+            "items-center",
+            "rounded-full",
+            "bg-[#f4f4f4]",
+            "select-none",
+            "dark:bg-token-main-surface-secondary",
+            "h-[22px]",
+            "px-2",
+            "text-[0.5em]",
+            "font-medium",
+            "ms-1",
+            "select-none"
+          ],
+          "title": "Chart_Indikator_Settings.md"
+        }
+      ]
+    }
+  ],
+  "external_links": [
+    {
+      "href": "https://plato.stanford.edu/entries/lakatos/?utm_source=chatgpt.com",
+      "labels": [
+        "Stanford-Enzyklopädie der Philosophie"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://plato.stanford.edu/entries/lakatos/",
+      "labels": [
+        "Stanford-Enzyklopädie der Philosophie"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://www.journals.uchicago.edu/doi/full/10.1093/bjps/axl003?utm_source=chatgpt.com",
+      "labels": [
+        "RCNi Company Limited\n+1"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://plato.stanford.edu/entries/scientific-underdetermination/?utm_source=chatgpt.com",
+      "labels": [
+        "Stanford-Enzyklopädie der Philosophie"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://plato.stanford.edu/entries/thomas-kuhn/?utm_source=chatgpt.com",
+      "labels": [
+        "Stanford-Enzyklopädie der Philosophie\n+1"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://pubmed.ncbi.nlm.nih.gov/13690223/?utm_source=chatgpt.com",
+      "labels": [
+        "PubMed\n+1"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/abs/creativity-as-cognitive-selection-the-blindvariation-and-selectiveretention-model/E6FEDFC29BE1FF3B65236BE0ABE84608?utm_source=chatgpt.com",
+      "labels": [
+        "Cambridge University Press"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://plato.stanford.edu/entries/peirce/?utm_source=chatgpt.com",
+      "labels": [
+        "Stanford-Enzyklopädie der Philosophie\n+1",
+        "Stanford-Enzyklopädie der Philosophie"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://academic.oup.com/jrsssa/article/143/4/383/7105478?utm_source=chatgpt.com",
+      "labels": [
+        "OUP Academic\n+1"
+      ],
+      "messages": [
+        "M0036"
+      ]
+    },
+    {
+      "href": "https://arxiv.org/abs/2505.15155?utm_source=chatgpt.com",
+      "labels": [
+        "arXiv\n+1",
+        "arXiv"
+      ],
+      "messages": [
+        "M0132",
+        "M0134"
+      ]
+    },
+    {
+      "href": "https://github.com/celerycelery/openevolve?utm_source=chatgpt.com",
+      "labels": [
+        "GitHub\n+2\nGitHub\n+2",
+        "GitHub\n+1"
+      ],
+      "messages": [
+        "M0132",
+        "M0134"
+      ]
+    },
+    {
+      "href": "https://github.com/algorithmicsuperintelligence/openevolve/blob/main/configs/default_config.yaml?utm_source=chatgpt.com",
+      "labels": [
+        "GitHub\n+1"
+      ],
+      "messages": [
+        "M0132"
+      ]
+    },
+    {
+      "href": "https://github.com/microsoft/rd-agent?utm_source=chatgpt.com",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0132",
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/algorithmicsuperintelligence/openevolve/blob/main/CLAUDE.md?utm_source=chatgpt.com",
+      "labels": [
+        "GitHub\n+1"
+      ],
+      "messages": [
+        "M0132"
+      ]
+    },
+    {
+      "href": "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/?utm_source=chatgpt.com",
+      "labels": [
+        "Google DeepMind\n+1"
+      ],
+      "messages": [
+        "M0134"
+      ]
+    },
+    {
+      "href": "https://arxiv.org/abs/2408.06292?utm_source=chatgpt.com",
+      "labels": [
+        "arXiv\n+1",
+        "arXiv"
+      ],
+      "messages": [
+        "M0134"
+      ]
+    },
+    {
+      "href": "https://sakana.ai/ai-scientist/?trk=public_post_comment-text&utm_source=chatgpt.com",
+      "labels": [
+        "Sakana AI"
+      ],
+      "messages": [
+        "M0134"
+      ]
+    },
+    {
+      "href": "https://proceedings.mlr.press/v267/huang25n.html?utm_source=chatgpt.com",
+      "labels": [
+        "Proceedings of Machine Learning Research\n+2\nComputer Science\n+2"
+      ],
+      "messages": [
+        "M0136"
+      ]
+    },
+    {
+      "href": "https://cs.stanford.edu/~jure/pubs/auto-hypothesis-validation-icml25.pdf",
+      "labels": [
+        "Computer Science",
+        "Computer Science\n+1"
+      ],
+      "messages": [
+        "M0136"
+      ]
+    },
+    {
+      "href": "https://github.com/microsoft/RD-Agent/blob/main/rdagent/core/proposal.py",
+      "labels": [
+        "GitHub\n+1"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/microsoft/RD-Agent/blob/main/LICENSE",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/algorithmicsuperintelligence/openevolve/blob/main/pyproject.toml?utm_source=chatgpt.com",
+      "labels": [
+        "GitHub\n+1"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/algorithmicsuperintelligence/openevolve/blob/main/openevolve/evaluation_result.py",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/algorithmicsuperintelligence/openevolve/blob/main/openevolve/process_parallel.py",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/algorithmicsuperintelligence/openevolve/blob/main/openevolve/prompt/sampler.py",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/algorithmicsuperintelligence/openevolve?utm_source=chatgpt.com",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/SakanaAI/AI-Scientist-v2/blob/main/LICENSE",
+      "labels": [
+        "GitHub\n+1"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/SakanaAI/AI-Scientist-v2/blob/main/ai_scientist/treesearch/journal.py",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/SakanaAI/AI-Scientist-v2/blob/main/ai_scientist/perform_ideation_temp_free.py",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/snap-stanford/POPPER/blob/main/popper/agent.py",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/snap-stanford/POPPER/blob/main/setup.py",
+      "labels": [
+        "GitHub"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://github.com/google-deepmind/alphaevolve_results?utm_source=chatgpt.com",
+      "labels": [
+        "GitHub\n+1"
+      ],
+      "messages": [
+        "M0140"
+      ]
+    },
+    {
+      "href": "https://www.bmj.com/content/328/7454/1490?utm_source=chatgpt.com",
+      "labels": [
+        "BMJ\n+1"
+      ],
+      "messages": [
+        "M0148"
+      ]
+    },
+    {
+      "href": "https://www.fda.gov/patients/fast-track-breakthrough-therapy-accelerated-approval-priority-review/accelerated-approval?utm_source=chatgpt.com",
+      "labels": [
+        "U.S. Food and Drug Administration\n+1"
+      ],
+      "messages": [
+        "M0148"
+      ]
+    },
+    {
+      "href": "https://www.fda.gov/drugs/information-consumers-and-patients-drugs/fdas-drug-review-process-continued?utm_source=chatgpt.com",
+      "labels": [
+        "U.S. Food and Drug Administration"
+      ],
+      "messages": [
+        "M0148"
+      ]
+    },
+    {
+      "href": "https://www.nejm.org/doi/full/10.1056/NEJM198908103210608?utm_source=chatgpt.com",
+      "labels": [
+        "New England Journal of Medicine\n+1"
+      ],
+      "messages": [
+        "M0148"
+      ]
+    },
+    {
+      "href": "https://arxiv.org/abs/2303.11366?utm_source=chatgpt.com",
+      "labels": [
+        "arXiv\n+2\narXiv\n+2"
+      ],
+      "messages": [
+        "M0166"
+      ]
+    },
+    {
+      "href": "https://www.anthropic.com/engineering/building-effective-agents?s=31",
+      "labels": [
+        "Anthropic",
+        "Anthropic\n+1",
+        "Anthropic\n+3\nAnthropic\n+3\nAnthropic\n+3"
+      ],
+      "messages": [
+        "M0202"
+      ]
+    },
+    {
+      "href": "https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents",
+      "labels": [
+        "Anthropic"
+      ],
+      "messages": [
+        "M0202"
+      ]
+    },
+    {
+      "href": "https://www.anthropic.com/engineering/managed-agents",
+      "labels": [
+        "Anthropic"
+      ],
+      "messages": [
+        "M0202"
+      ]
+    },
+    {
+      "href": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+      "labels": [
+        "Anthropic"
+      ],
+      "messages": [
+        "M0202"
+      ]
+    },
+    {
+      "href": "https://www.anthropic.com/engineering/how-we-contain-claude?trk=public_post_comment-text",
+      "labels": [
+        "Anthropic"
+      ],
+      "messages": [
+        "M0202"
+      ]
+    },
+    {
+      "href": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2460551.&utm_source=chatgpt.com",
+      "labels": [
+        "papers.ssrn.com\n+1"
+      ],
+      "messages": [
+        "M0206"
+      ]
+    },
+    {
+      "href": "https://python.financial/concepts/combinatorial-purged-cross-validation/?utm_source=chatgpt.com",
+      "labels": [
+        "python.financial\n+1"
+      ],
+      "messages": [
+        "M0206"
+      ]
+    },
+    {
+      "href": "https://papers.ssrn.com/sol3/Papers.cfm?abstract_id=2326253&utm_source=chatgpt.com",
+      "labels": [
+        "papers.ssrn.com"
+      ],
+      "messages": [
+        "M0206"
+      ]
+    },
+    {
+      "href": "https://github.com/google-research/harness2",
+      "labels": [
+        "https://github.com/google-research/harness2"
+      ],
+      "messages": [
+        "M0227"
+      ]
+    },
+    {
+      "href": "https://github.com/nousresearch/hermes-agent",
+      "labels": [
+        "https://github.com/nousresearch/hermes-agent"
+      ],
+      "messages": [
+        "M0231"
+      ]
+    },
+    {
+      "href": "https://github.com/polakowo/vectorbt",
+      "labels": [
+        "https://github.com/polakowo/vectorbt"
+      ],
+      "messages": [
+        "M0235"
+      ]
+    },
+    {
+      "href": "https://vectorbt.dev/api/indicators/factory/?utm_source=chatgpt.com",
+      "labels": [
+        "vectorbt IndicatorFactory-Dokumentation"
+      ],
+      "messages": [
+        "M0254"
+      ]
+    },
+    {
+      "href": "https://docs.feast.dev/getting-started/concepts/point-in-time-joins?utm_source=chatgpt.com",
+      "labels": [
+        "Feast-Dokumentation zu Point-in-Time-Joins"
+      ],
+      "messages": [
+        "M0254"
+      ]
+    },
+    {
+      "href": "https://lineyourownpockets.com/episodes/the-key-to-backtesting-your-library-of-columns?utm_source=chatgpt.com",
+      "labels": [
+        "The Key to Backtesting: Your Library of Columns"
+      ],
+      "messages": [
+        "M0256"
+      ]
+    },
+    {
+      "href": "https://lineyourownpockets.com/episodes/how-to-grow-your-column-library?utm_source=chatgpt.com",
+      "labels": [
+        "How to Grow Your Column Library"
+      ],
+      "messages": [
+        "M0256"
+      ]
+    }
+  ],
+  "non_favicon_images": [
+    {
+      "message": "M0254",
+      "alt": "GitHub - polakowo/vectorbt: The backtesting engine that gives you an unfair advantage. Run thousands of trading ideas before others finish one. · GitHub",
+      "src": "https://images.openai.com/static-rsc-4/z-9tuZPSuapQQG0pYkSm8d-DCnah0heMPUPs6-gS_zZD8NcEdyiPypiUNpWaL__ZPOPcic5wCq-4d47mo7SClm5SzYzZwvKVkUNxpunJVB6WoZIP3mSVujjLZ350GYM9x-MqgePJau2KbiSq-StAGkqNMjahPM5eQ7CB1eJ15p0?purpose=inline"
+    },
+    {
+      "message": "M0254",
+      "alt": "GitHub - microsoft/qlib: Qlib is an AI-oriented Quant investment platform that aims to use AI tech to empower Quant Research, from exploring ideas to implementing productions. Qlib supports diverse ML modeling paradigms, including supervised learning, market dynamics modeling, and RL, and is now equipped with https://github.com/microsoft/RD-Agent to automate R&D process.",
+      "src": "https://images.openai.com/static-rsc-4/U_dbR3ofYQ5r4-SsCCkT0Ow3b6K2hUk7tdLpILNZYGSpvw8qkUWShkmC1lzG2Yf1ha9011SkQsQyigJcGtG96FYp4rynNex1_q1wY0dYXQ3V29rhl3mS0-WeFkD9X-Z23qJbPQHy45dO84tsQmcQVOYBR2A1MURthQNh5v8XoBk?purpose=inline"
+    },
+    {
+      "message": "M0254",
+      "alt": "Feast - The Open Source Feature Store for Machine Learning",
+      "src": "https://images.openai.com/static-rsc-4/gc5VQvJIKe6E4zw_8iqLUUNeTgMwdt3zBH7eYGOzYMEpsvBs-6JzuxNkS5y52y-3f-sokV-8_9RNih-Gbd2hg8dSgzSZJkrDmVFOfJCdDh-B9UL7_WjgCkNdB1omuzfZ5T8ir3Rgut94m0l1g2gTDfWNaCLCPuboUGPn1QKzMrY?purpose=inline"
+    },
+    {
+      "message": "M0272",
+      "alt": "",
+      "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20font-family%3D%22-apple-system-body%2C%20ui-sans-serif%2C%20-apple-system%2C%20system-ui%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20Helvetica%2C%20%26quot%3BApple%20Color%20Emoji%26quot%3B%2C%20Arial%2C%20sans-serif%2C%20%26quot%3BSegoe%20UI%20Emoji%26quot%3B%2C%20%26quot%3BSegoe%20UI%20Symbol%26quot%3B%22%20font-weight%3D%22400%22%20data-d-component%3D%22svg%22%20fill%3D%22currentColor%22%20style%3D%22color%3Argb(13%2C%2013%2C%2013)%22%20viewBox%3D%220%200%20150%20135%22%20width%3D%22100%25%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%228%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%238DBD9A%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3C%2Fsvg%3E"
+    },
+    {
+      "message": "M0272",
+      "alt": "",
+      "src": "data:image/svg+xml;charset=utf-8,%3Csvg%20font-family%3D%22-apple-system-body%2C%20ui-sans-serif%2C%20-apple-system%2C%20system-ui%2C%20%26quot%3BSegoe%20UI%26quot%3B%2C%20Helvetica%2C%20%26quot%3BApple%20Color%20Emoji%26quot%3B%2C%20Arial%2C%20sans-serif%2C%20%26quot%3BSegoe%20UI%20Emoji%26quot%3B%2C%20%26quot%3BSegoe%20UI%20Symbol%26quot%3B%22%20font-weight%3D%22400%22%20data-d-component%3D%22svg%22%20fill%3D%22currentColor%22%20style%3D%22color%3Argb(13%2C%2013%2C%2013)%22%20viewBox%3D%220%200%20150%20135%22%20width%3D%22100%25%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%228%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%227%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%2226%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%2369A29D%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23D0C77D%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%2245%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23477C90%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%2264%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%2283%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%228%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2227%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2246%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2265%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%2284%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22103%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3Crect%20x%3D%22122%22%20y%3D%22102%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%222%22%20fill%3D%22%23334D68%22%2F%3E%3C%2Fsvg%3E"
+    }
+  ]
+}

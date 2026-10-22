@@ -1,0 +1,54 @@
+# Problem Definition
+
+Version: reconstruction-1. Authority is limited to the available source and the current user's explicit instruction to continue with documented gaps. Read [00_SOURCE_AUDIT.md](00_SOURCE_AUDIT.md) first.
+
+## Fundamental problem
+
+Build an autonomous market-research workflow in which an LLM independently develops nontrivial hypotheses from market observations and available knowledge, turns them into executable specifications before testing, and submits them to independent code for evaluation on appropriately separated evidence. Preserve what was learned, what failed, what was exposed and what remains uncertain. Use that knowledge to research adaptive trading policies without confusing a good historical strategy with a supported market claim.
+
+The decisive user constitution is M0057, reinforced by M0059 and M0107. The exact source statement is:
+
+> Ein Agent-Workflow, in dem ein LLM aus Marktdaten und vorhandenem Wissen selbstständig nichttriviale Hypothesen entwickelt, sie vor dem Test in ausführbare Form bringt, und in dem Code sie anschließend unabhängig an neuen Daten prüft.
+
+Source: [M0057](../../sources/full_conversation.md#m0057--user). D001 records its non-negotiable status.
+
+## Why this problem matters
+
+The conversation starts with a chart-specific hypothesis, but quickly distinguishes noticing a pattern, forming a scientific claim and knowing whether that claim survives testing. It then asks how the generator itself can become a better researcher without merely learning to explain historical winners. An autonomous system amplifies both discovery capacity and selection bias: it can inspect many features, ask outcome-dependent questions, revise explanations, synthesize policies and recycle those results through memory. A frozen backtest alone does not control this whole process.
+
+The desired output is therefore an auditable chain from question to evidence and decision. Profitable backtests are neither sufficient proof of the research process nor the sole definition of useful knowledge. Economic usefulness remains an eventual project gate, alongside technical validity and calibration; profitability has not been demonstrated.
+
+## Problem-to-requirement map
+
+| Problem | Consequence to prevent | Required response |
+|---|---|---|
+| PROB-01: Free invention versus controlled execution | A rule catalog or expressive bottleneck replaces discovery | REQ-001 through REQ-003 |
+| PROB-02: Information contamination | Historical outcomes return through queries, papers, memory or ancestors | REQ-004, REQ-012 through REQ-016 |
+| PROB-03: Selection and weak evidence | Best historical survivor is labeled scientific truth | REQ-005, REQ-019, REQ-020, REQ-024 |
+| PROB-04: Meaning and dependency drift | The same name or status silently means something different | REQ-006 through REQ-008, REQ-021 |
+| PROB-05: Knowledge-to-action gap | Evidence for components is treated as evidence for a policy | REQ-009, REQ-010, REQ-017, REQ-025, REQ-026 |
+| PROB-06: Unbuildable scope and unmeasured quality | More agents, services and metrics substitute for useful research | REQ-018, REQ-022, REQ-023 |
+| PROB-07: Scope mismatch | Five-minute examples or OHLCV-only adapters constrain the actual mandate | REQ-011, REQ-015, REQ-026 |
+
+## Scope evolution that must survive reconstruction
+
+| Source interval | Change in understanding | Final consequence |
+|---|---|---|
+| M0001–M0028 | Chart hypothesis becomes a question about the research process; introspection and composite scores are challenged | Observe artifacts and preserve ex-ante quality separately from outcomes |
+| M0029–M0056 | Variation, causal uncertainty and multiple discovery routes | Controlled diversity; no mandatory mechanism or SPC chart |
+| M0057–M0074 | User constitution, autonomous roles, compiler, certification, formulas and errors | Strict confirmation boundary; free ideas and retained language gaps |
+| M0075–M0100 | Adaptive policies, hypothesis relationships and revised time scope | Minimal dependency graph; 15-minute minimum discovery; swing allowed |
+| M0101–M0138 | Historical-first, no simple generator, queries, multimodal data, problem finding and second policy search | Exposure lineage and distinct research/policy trials |
+| M0139–M0174 | Reuse, provenance, evidence budget, base rates, calibration, memory and governed improvement | Own scientific core; no automatic evidence upgrade or self-modification |
+| M0175–M0208 | Quantitative claims, dashboards, web research, scope governance and robustness | Explicit universes, costs, fitted-parameter tests; no universal statistical recipe |
+| M0209–M0248 | Adversarial checks, operational firewall, placebos and infrastructure candidates | Narrow external adapters; implementation priorities still deferred |
+| M0249–M0290 | Column Library, paths, null design, component analysis, bounded computation and sanity | Reusable diagnostics without leakage or free confirmations |
+| M0291–M0304 | Request for original-source reconstruction and explicit rejected decisions | The handoff must preserve chronology and rationale, not summarize only the endpoint |
+
+## Success and non-goals
+
+Success requires a freely generated claim to pass through formalization, provenance, freeze, independent execution and reproducible evidence classification without manual scientific repair. The complete pipeline must behave acceptably under null and planted-signal calibration, then meet a predefined economic-usefulness gate within an evidence budget. Numeric budgets and thresholds are open, not silently supplied here.
+
+The framework is not a fixed strategy generator, an LLM judge of truth, a mandatory ontology, an unconstrained historical optimizer, or an automatic capital-allocation mandate. It may use known effects, data-first observations and cross-domain analogies, but must not require one discovery route. A failed hypothesis can be useful research; a technically invalid run is neither support nor falsification.
+
+This deliverable is documentation, not implementation. It does not recover the missing chart or original project-file bodies, demonstrate an edge, verify a live strategy, or establish that a candidate dependency is production-ready.

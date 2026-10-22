@@ -1,0 +1,2516 @@
+{
+  "version": "reconstruction-1",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open.",
+  "decisions": [
+    {
+      "id": "D001",
+      "status": "NON_NEGOTIABLE",
+      "title": "Free LLM invention, executable freeze, independent code judgment",
+      "problem": "A template selector or self-scoring narrator cannot answer the original research problem.",
+      "rationale_and_alternative": "Retain freedom before confirmation and prevent outcome-driven claim repair; closed rule catalogs and LLM verdicts are excluded.",
+      "requirement": "REQ-001",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0057",
+        "M0059",
+        "M0107"
+      ],
+      "acceptance_basis": "Direct user constitution and reinforcement",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D002",
+      "status": "ACCEPTED",
+      "title": "Separate H_idea and H_exec; retain unexecutable ideas",
+      "problem": "A compiler can silently narrow discovery.",
+      "rationale_and_alternative": "Formalize without changing the claim; retain DATA_GAP, LANGUAGE_GAP and evaluation gaps for retry, rather than deleting unusual ideas.",
+      "requirement": "REQ-002",
+      "components": [
+        "CMP-02",
+        "CMP-03"
+      ],
+      "sources": [
+        "M0061",
+        "M0062",
+        "M0067",
+        "M0071",
+        "M0074"
+      ],
+      "acceptance_basis": "User instruction plus requested handoff",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D003",
+      "status": "ACCEPTED",
+      "title": "Express differences, associations, changes, boundaries and interactions",
+      "problem": "A flat rule schema cannot represent the permitted research space.",
+      "rationale_and_alternative": "Support binary and continuous outcomes and extensible semantics; mechanisms produce testable consequences. No closed hypothesis menu.",
+      "requirement": "REQ-002",
+      "components": [
+        "CMP-03",
+        "CMP-04"
+      ],
+      "sources": [
+        "M0067",
+        "M0068",
+        "M0071",
+        "M0088",
+        "M0090"
+      ],
+      "acceptance_basis": "Direct requested specification; later clarification",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D004",
+      "status": "ACCEPTED",
+      "title": "Certified feature compositions and separately certified new primitives",
+      "problem": "Unreviewed computations can introduce leakage or semantic errors.",
+      "rationale_and_alternative": "Spec author supplies independent golden cases; implementation cannot certify itself. Revoked versions invalidate dependent evidence.",
+      "requirement": "REQ-003",
+      "components": [
+        "CMP-03",
+        "CMP-04",
+        "CMP-08"
+      ],
+      "sources": [
+        "M0061",
+        "M0062",
+        "M0065",
+        "M0066",
+        "M0067",
+        "M0068"
+      ],
+      "acceptance_basis": "Direct user specification in M0067",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D005",
+      "status": "ACCEPTED",
+      "title": "Point-in-time context and immutable research epochs",
+      "problem": "Shared mutable context contaminates independent search.",
+      "rationale_and_alternative": "Same permitted snapshot, isolated discovery perspectives, artifact exchange and next-epoch knowledge updates; no shared live brainstorming state.",
+      "requirement": "REQ-004",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-07"
+      ],
+      "sources": [
+        "M0063",
+        "M0064",
+        "M0068",
+        "M0071",
+        "M0110",
+        "M0111",
+        "M0112"
+      ],
+      "acceptance_basis": "User autonomy request and retained design",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D006",
+      "status": "ACCEPTED",
+      "title": "Code assigns evaluation policy, family and evidence status",
+      "problem": "The generator could choose easy sample sizes or declare success.",
+      "rationale_and_alternative": "Freeze policy and dependencies before evaluation; N_min and family assignment follow predefined rules independent of the generator.",
+      "requirement": "REQ-005",
+      "components": [
+        "CMP-04",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0065",
+        "M0066",
+        "M0067",
+        "M0068",
+        "M0071",
+        "M0072"
+      ],
+      "acceptance_basis": "Direct requested specification",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D007",
+      "status": "ACCEPTED",
+      "title": "Append-only error tracking distinct from negative evidence",
+      "problem": "Technical failures can be mistaken for falsification.",
+      "rationale_and_alternative": "Separate ErrorEvent/Incident/Defect, quarantine by severity, retain resolution history; errors provide no evidence for or against H.",
+      "requirement": "REQ-006",
+      "components": [
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-11"
+      ],
+      "sources": [
+        "M0069",
+        "M0070",
+        "M0071",
+        "M0072",
+        "M0288",
+        "M0289"
+      ],
+      "acceptance_basis": "Direct user request and later acceptance",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D008",
+      "status": "ACCEPTED",
+      "title": "Canonical versioned definitions and formulas",
+      "problem": "Stable names can conceal semantic changes.",
+      "rationale_and_alternative": "Preserve M0072 section 6 formulas; changes to meaning need proposal, impact analysis and approval; editorial corrections may preserve meaning.",
+      "requirement": "REQ-007",
+      "components": [
+        "CMP-04",
+        "CMP-06",
+        "CMP-12"
+      ],
+      "sources": [
+        "M0071",
+        "M0072",
+        "M0241",
+        "M0242",
+        "M0243"
+      ],
+      "acceptance_basis": "Direct instruction and explicit acceptance",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D009",
+      "status": "ACCEPTED",
+      "title": "Minimal provenance and dependency graph",
+      "problem": "A broad epistemic ontology turns interpretations into facts.",
+      "rationale_and_alternative": "Boolean logic belongs inside a hypothesis; retain genealogy, REQUIRES, evidence overlap and joint testing. Broad semantic relations remain proposals.",
+      "requirement": "REQ-008",
+      "components": [
+        "CMP-03",
+        "CMP-07",
+        "CMP-08"
+      ],
+      "sources": [
+        "M0085",
+        "M0086",
+        "M0089",
+        "M0090",
+        "M0091",
+        "M0092"
+      ],
+      "acceptance_basis": "Contextual consolidation; no standalone acceptance turn",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D010",
+      "status": "ACCEPTED",
+      "title": "Hypotheses and policies have separate evidence",
+      "problem": "A useful claim does not validate a strategy assembled from it.",
+      "rationale_and_alternative": "Policy synthesis is a second search with separate trials, provenance and validation; composite success does not prove each component.",
+      "requirement": "REQ-009",
+      "components": [
+        "CMP-06",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0083",
+        "M0084",
+        "M0113",
+        "M0114",
+        "M0137",
+        "M0138",
+        "M0139",
+        "M0141"
+      ],
+      "acceptance_basis": "User additions and explicit continuation",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D011",
+      "status": "ACCEPTED",
+      "title": "Mechanisms are optional discovery routes, testable when claimed",
+      "problem": "Narrative plausibility can masquerade as causal evidence.",
+      "rationale_and_alternative": "Allow theory-first, data-first and recombination; causal claims require premises, competing explanations and independent consequences.",
+      "requirement": "REQ-010",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0093",
+        "M0094",
+        "M0095",
+        "M0096",
+        "M0111",
+        "M0112",
+        "M0193",
+        "M0194",
+        "M0195"
+      ],
+      "acceptance_basis": "Later explicit acceptance in M0195",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D012",
+      "status": "ACCEPTED",
+      "title": "V1 discovery starts at 15 minutes; swing horizons allowed",
+      "problem": "Earlier 5-minute examples overconstrain the goal.",
+      "rationale_and_alternative": "Observation timeframe differs from outcome and invalidation horizons. Exclude 5-minute discovery in v1, not all future execution uses.",
+      "requirement": "REQ-011",
+      "components": [
+        "CMP-01",
+        "CMP-03"
+      ],
+      "sources": [
+        "M0097",
+        "M0098"
+      ],
+      "acceptance_basis": "Direct user scope change",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D013",
+      "status": "ACCEPTED",
+      "title": "Historical backtest-first with separate test backend",
+      "problem": "Duplicating execution logic obscures scientific responsibility.",
+      "rationale_and_alternative": "Research owns exposure, freeze and evidence; backend owns calculations and simulation. Historical OOS, walk-forward and forward remain distinct.",
+      "requirement": "REQ-012",
+      "components": [
+        "CMP-01",
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0101",
+        "M0102",
+        "M0105",
+        "M0106",
+        "M0153",
+        "M0154",
+        "M0155"
+      ],
+      "acceptance_basis": "Direct user change plus later evidence qualification",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D014",
+      "status": "ACCEPTED",
+      "title": "Transitive data exposure inheritance",
+      "problem": "Knowledge and memory can launder previously seen outcomes.",
+      "rationale_and_alternative": "A descendant inherits exposure of all used artifacts and queries; rollback never restores freshness. Unknown model exposure is not clean holdout.",
+      "requirement": "REQ-013",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-07",
+        "CMP-08"
+      ],
+      "sources": [
+        "M0102",
+        "M0106",
+        "M0112",
+        "M0153",
+        "M0154",
+        "M0155",
+        "M0166",
+        "M0167"
+      ],
+      "acceptance_basis": "Retained principle explicitly accepted with memory",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D015",
+      "status": "REJECTED",
+      "title": "Rule-based or combinatorial baseline generator",
+      "problem": "A competing generator changes the research question and adds machinery.",
+      "rationale_and_alternative": "Keep statistical comparators and process placebos; do not build a baseline hypothesis agent.",
+      "requirement": "REQ-001",
+      "components": [
+        "CMP-02",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0107",
+        "M0108",
+        "M0190",
+        "M0191",
+        "M0220",
+        "M0221"
+      ],
+      "acceptance_basis": "Direct user rejection",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D016",
+      "status": "ACCEPTED",
+      "title": "Research reasoner performs problem finding and adaptive pre-freeze search",
+      "problem": "Prompting for a fixed number of ideas invites superficial variations.",
+      "rationale_and_alternative": "Use tensions, question formation, deterministic queries, counterexamples and bounded reasoning budgets; do not prescribe answers.",
+      "requirement": "REQ-014",
+      "components": [
+        "CMP-01",
+        "CMP-02"
+      ],
+      "sources": [
+        "M0109",
+        "M0110",
+        "M0111",
+        "M0112",
+        "M0119",
+        "M0121",
+        "M0122",
+        "M0129",
+        "M0130",
+        "M0223",
+        "M0224",
+        "M0225"
+      ],
+      "acceptance_basis": "Direct user emphasis; explicit acceptance of adaptive search",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D017",
+      "status": "ACCEPTED",
+      "title": "Entry, exit, sizing, management and adaptive updates are research objects",
+      "problem": "Static downstream rules can erase the value of adaptive research.",
+      "rationale_and_alternative": "Freeze state reactions and update rules; do not rewrite policy after losses. No mandatory linear progression through all claim roles.",
+      "requirement": "REQ-009",
+      "components": [
+        "CMP-03",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0113",
+        "M0114"
+      ],
+      "acceptance_basis": "Direct user scope expansion",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D018",
+      "status": "ACCEPTED",
+      "title": "Technical, fundamental, on-chain and other financial information permitted",
+      "problem": "Predetermined weights or OHLCV-only inputs constrain invention.",
+      "rationale_and_alternative": "The generator hypothesizes relevance and integration; model release times, revisions, confirmation and processing latency.",
+      "requirement": "REQ-015",
+      "components": [
+        "CMP-01",
+        "CMP-03",
+        "CMP-05"
+      ],
+      "sources": [
+        "M0115",
+        "M0116",
+        "M0161",
+        "M0162",
+        "M0163"
+      ],
+      "acceptance_basis": "Direct user instruction and PIT acceptance",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D019",
+      "status": "ACCEPTED",
+      "title": "Four distinct memories with inherited provenance",
+      "problem": "Experience, observations and established market claims can be conflated.",
+      "rationale_and_alternative": "Separate Research Journal, Market Model, Research Experience Memory and Policy Experience; heuristics guide search, never upgrade evidence.",
+      "requirement": "REQ-016",
+      "components": [
+        "CMP-07",
+        "CMP-08",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0125",
+        "M0126",
+        "M0165",
+        "M0166",
+        "M0167",
+        "M0168"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0167",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D020",
+      "status": "ACCEPTED",
+      "title": "Evidence, current applicability and deployment permission are different axes",
+      "problem": "Replicated knowledge may degrade; uncertain action is not scientific proof.",
+      "rationale_and_alternative": "Use evidence-to-decision with explicit risk, confirmation and withdrawal conditions; no automatic status-to-capital ladder.",
+      "requirement": "REQ-017",
+      "components": [
+        "CMP-06",
+        "CMP-08",
+        "CMP-09",
+        "CMP-10"
+      ],
+      "sources": [
+        "M0137",
+        "M0138",
+        "M0141",
+        "M0142",
+        "M0145",
+        "M0146",
+        "M0147",
+        "M0148",
+        "M0185",
+        "M0186"
+      ],
+      "acceptance_basis": "Contextual retained design; capital thresholds not accepted",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D021",
+      "status": "ACCEPTED",
+      "title": "Every policy rule has a basis and scope/parameter provenance",
+      "problem": "A policy can smuggle pretrained trading folklore into supposedly tested rules.",
+      "rationale_and_alternative": "Record EVIDENCE_BACKED, UNTESTED_ASSUMPTION or OPERATIONAL_CONSTRAINT; also scope relation, parameter origin and conflicts. Register new assumptions.",
+      "requirement": "REQ-009",
+      "components": [
+        "CMP-09",
+        "CMP-08"
+      ],
+      "sources": [
+        "M0141",
+        "M0142",
+        "M0143",
+        "M0144",
+        "M0185",
+        "M0186"
+      ],
+      "acceptance_basis": "Direct user basis rule; dimensional refinements retained",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D022",
+      "status": "CONDITIONALLY_ACCEPTED",
+      "title": "Selective reuse of external infrastructure",
+      "problem": "Rebuilding generic plumbing wastes effort; importing fitness logic changes the goal.",
+      "rationale_and_alternative": "Own scientific core; reuse only isolated components after interface, license and conformance checks. RD-Agent/OpenEvolve are references, not chosen foundations.",
+      "requirement": "REQ-018",
+      "components": [
+        "CMP-02",
+        "CMP-05",
+        "CMP-12"
+      ],
+      "sources": [
+        "M0139",
+        "M0140",
+        "M0229",
+        "M0231",
+        "M0232",
+        "M0233",
+        "M0235",
+        "M0236",
+        "M0237"
+      ],
+      "acceptance_basis": "User asks reuse; later candidate-specific acceptance",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D023",
+      "status": "ACCEPTED",
+      "title": "Evidence budget and confirmation queue",
+      "problem": "Cheap hypotheses can exhaust finite independent information.",
+      "rationale_and_alternative": "Prioritize ex-ante quality, testability, nonredundancy and decision relevance; preserve nonselected ideas. Forward evidence remains necessary for clean confirmation.",
+      "requirement": "REQ-019",
+      "components": [
+        "CMP-02",
+        "CMP-04",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0153",
+        "M0154",
+        "M0155",
+        "M0156"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0155",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D024",
+      "status": "ACCEPTED",
+      "title": "Primary support is not truth; base-rate interpretation is separate from power",
+      "problem": "Rare real effects can produce many false positive discoveries.",
+      "rationale_and_alternative": "N_min uses outcome base rate, not subjective probability that H is true. Family evidence informs interpretation with uncertainty; replication remains separate.",
+      "requirement": "REQ-005",
+      "components": [
+        "CMP-06",
+        "CMP-08"
+      ],
+      "sources": [
+        "M0157",
+        "M0158",
+        "M0159",
+        "M0160"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0159",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D025",
+      "status": "ACCEPTED",
+      "title": "Framework itself must be falsifiable and calibrated end to end",
+      "problem": "A pipeline could document nonsense indefinitely.",
+      "rationale_and_alternative": "Freeze technical, calibration and economic gates; test null worlds and planted effects through discovery and policy selection, not only the statistics code.",
+      "requirement": "REQ-020",
+      "components": [
+        "CMP-02",
+        "CMP-05",
+        "CMP-06",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0161",
+        "M0162",
+        "M0163",
+        "M0164"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0163",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D026",
+      "status": "ACCEPTED",
+      "title": "Material self-improvement requires proposals, approval, validation and rollback",
+      "problem": "An agent can improve apparent results by changing its scientific rules.",
+      "rationale_and_alternative": "Version every change, preserve failed probes and exposure, restore earlier versions; no in-place material self-modification.",
+      "requirement": "REQ-021",
+      "components": [
+        "CMP-12",
+        "CMP-02",
+        "CMP-07"
+      ],
+      "sources": [
+        "M0169",
+        "M0170",
+        "M0171",
+        "M0172",
+        "M0173",
+        "M0174"
+      ],
+      "acceptance_basis": "Direct instruction and explicit acceptance",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D027",
+      "status": "ACCEPTED",
+      "title": "Quantitatively disappointable claims; EV and downside for policies",
+      "problem": "Correct direction alone can hide economically irrelevant effects.",
+      "rationale_and_alternative": "Specify comparator, estimand, horizon, relevant effect and falsifier; policy claims add net EV, downside and execution conditions.",
+      "requirement": "REQ-005",
+      "components": [
+        "CMP-03",
+        "CMP-06",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0175",
+        "M0176",
+        "M0177",
+        "M0178"
+      ],
+      "acceptance_basis": "Direct user correction; retained in final architecture",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D028",
+      "status": "ACCEPTED",
+      "title": "Diagnostic versioned dashboards, no single agent success score",
+      "problem": "Metric optimization can corrupt research behavior.",
+      "rationale_and_alternative": "Show technical reliability, cost, gaps, diversity, trials, evidence maturity and policy health with denominators; no automatic Sharpe or novelty reward.",
+      "requirement": "REQ-022",
+      "components": [
+        "CMP-11"
+      ],
+      "sources": [
+        "M0179",
+        "M0180",
+        "M0185",
+        "M0186"
+      ],
+      "acceptance_basis": "Direct user dashboard requirement",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D029",
+      "status": "ACCEPTED",
+      "title": "Targeted external research allowed with provenance and time boundaries",
+      "problem": "Pretrained knowledge is incomplete and can reinforce confirmation bias.",
+      "rationale_and_alternative": "Prefer claim-appropriate academic/primary sources; seek counterevidence; external evidence never becomes internal replication automatically.",
+      "requirement": "REQ-014",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-07"
+      ],
+      "sources": [
+        "M0181",
+        "M0182",
+        "M0183",
+        "M0184"
+      ],
+      "acceptance_basis": "Direct instruction and explicit acceptance",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D030",
+      "status": "ACCEPTED",
+      "title": "Implementation anti-bloat and two-iteration stop",
+      "problem": "A research design can expand into an unbuildable platform.",
+      "rationale_and_alternative": "Current-scope work only; simplest sufficient design; review files over 1,000 lines; monitor costs/runtime; stop after two iterations without meaningful improvement.",
+      "requirement": "REQ-023",
+      "components": [
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "M0187",
+        "M0188",
+        "M0223",
+        "M0224",
+        "M0225"
+      ],
+      "acceptance_basis": "Direct user instruction; reinforced acceptance",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D031",
+      "status": "ACCEPTED",
+      "title": "Causal time-series evaluation and full selection accounting",
+      "problem": "End-model parameter counts hide actual search freedom.",
+      "rationale_and_alternative": "Register outcome-driven feature, threshold, policy and generator choices; use sensible policy comparators and costs. No universal walk-forward method.",
+      "requirement": "REQ-024",
+      "components": [
+        "CMP-04",
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0189",
+        "M0190",
+        "M0191",
+        "M0192"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0191",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D032",
+      "status": "ACCEPTED",
+      "title": "Mechanisms predict applicability and negative cases before test",
+      "problem": "A story fitted only to winners cannot discriminate explanations.",
+      "rationale_and_alternative": "Derive stronger/weaker/absent regions from structural premises; keep UNKNOWN mechanisms legitimate for empirical discovery.",
+      "requirement": "REQ-010",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0193",
+        "M0194",
+        "M0195",
+        "M0196"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0195",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D033",
+      "status": "ACCEPTED",
+      "title": "Freeze claim scope and test universe separately",
+      "problem": "Successful selected instruments can be generalized beyond tested coverage.",
+      "rationale_and_alternative": "Specify primary, suitable negative-control and optional replication universes; additions after results are new exploration.",
+      "requirement": "REQ-005",
+      "components": [
+        "CMP-03",
+        "CMP-04",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0197",
+        "M0198",
+        "M0199",
+        "M0200"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0199",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D034",
+      "status": "ACCEPTED",
+      "title": "Agents for open reasoning; deterministic workflows for specified operations",
+      "problem": "Agent discretion at scientific boundaries undermines reproducibility.",
+      "rationale_and_alternative": "Use narrow tools, just-in-time retrieval, brain/hands separation and untrusted-content boundaries; LLM formalization is schema-checked, not an evidential judge.",
+      "requirement": "REQ-004",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0201",
+        "M0202",
+        "M0203",
+        "M0204"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0203",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D035",
+      "status": "ACCEPTED",
+      "title": "Fitted parameters need sensitivity checks; ensembles are new claims",
+      "problem": "A sharp winning optimum may reflect search luck.",
+      "rationale_and_alternative": "Predefine neighborhoods and stress parameter, tail, regime and cost dependence. DSR/PBO are conditional methods, not universal gates.",
+      "requirement": "REQ-024",
+      "components": [
+        "CMP-05",
+        "CMP-06",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0205",
+        "M0206",
+        "M0207",
+        "M0208"
+      ],
+      "acceptance_basis": "Explicit acceptance of qualified M0206",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D036",
+      "status": "ACCEPTED",
+      "title": "Adversarial falsification before freeze is not validation",
+      "problem": "A plausible narrative or model consensus is weak assurance.",
+      "rationale_and_alternative": "LLMs propose concrete attacks; code checks available cases. Surviving criticism is ex-ante information only; post-freeze repair creates a new version.",
+      "requirement": "REQ-010",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0209",
+        "M0210",
+        "M0211",
+        "M0212"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0211",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D037",
+      "status": "ACCEPTED",
+      "title": "Operational feedback firewall",
+      "problem": "Bad fills or short PnL spells must not rewrite market evidence.",
+      "rationale_and_alternative": "Route operations to policy experience/deployment; registered anomalies enter future research epochs; applicability changes use predefined monitoring rules.",
+      "requirement": "REQ-025",
+      "components": [
+        "CMP-08",
+        "CMP-09",
+        "CMP-10",
+        "CMP-11"
+      ],
+      "sources": [
+        "M0213",
+        "M0214",
+        "M0215",
+        "M0216",
+        "M0217",
+        "M0218"
+      ],
+      "acceptance_basis": "Direct restriction and explicit acceptance; missing image not reconstructed",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D038",
+      "status": "ACCEPTED",
+      "title": "Best-of-N symmetry and process-matched placebo calibration",
+      "problem": "A selected real winner is unfairly compared with one unselected null candidate.",
+      "rationale_and_alternative": "Reproduce selection freedom, nuisance exposure and execution constraints; compare on evidence fresh to both sides.",
+      "requirement": "REQ-020",
+      "components": [
+        "CMP-05",
+        "CMP-06",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0219",
+        "M0220",
+        "M0221",
+        "M0222"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0221",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D039",
+      "status": "ACCEPTED",
+      "title": "Adaptive compute and failure diagnosis before repetition",
+      "problem": "More tokens do not solve missing data, premises or representation.",
+      "rationale_and_alternative": "Distinguish knowledge, premise, data, search, representation and evaluation gaps; log trajectory and budget; diagnoses remain hypotheses.",
+      "requirement": "REQ-014",
+      "components": [
+        "CMP-02",
+        "CMP-11"
+      ],
+      "sources": [
+        "M0223",
+        "M0224",
+        "M0225",
+        "M0226"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0225",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D040",
+      "status": "CONDITIONALLY_ACCEPTED",
+      "title": "Harness2 principles for controlled generator improvement",
+      "problem": "An improver with final evaluation access can overfit its own acceptance test.",
+      "rationale_and_alternative": "Propose/probe/compose only behind protected evaluation and approval; adapt selected patterns, not an uncontrolled recursion foundation.",
+      "requirement": "REQ-021",
+      "components": [
+        "CMP-12"
+      ],
+      "sources": [
+        "M0227",
+        "M0228",
+        "M0229",
+        "M0230"
+      ],
+      "acceptance_basis": "Explicit acceptance of role-limited recommendation",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D041",
+      "status": "CONDITIONALLY_ACCEPTED",
+      "title": "Hermes as agent-runtime candidate",
+      "problem": "Generic provider/tool/session infrastructure need not be rebuilt.",
+      "rationale_and_alternative": "Keep evidence/knowledge ownership outside runtime; isolate profiles, memory and tools. Candidate selection is not proof of integration.",
+      "requirement": "REQ-018",
+      "components": [
+        "CMP-02",
+        "CMP-07"
+      ],
+      "sources": [
+        "M0231",
+        "M0232",
+        "M0233",
+        "M0234"
+      ],
+      "acceptance_basis": "Explicit acceptance of candidate role, not unconditional dependency",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D042",
+      "status": "CONDITIONALLY_ACCEPTED",
+      "title": "vectorbt as primary backtest backend candidate",
+      "problem": "A concrete fast calculation backend is needed behind a stable contract.",
+      "rationale_and_alternative": "Own adapter and scientific semantics; validate path-dependent execution and edition/license suitability before adoption.",
+      "requirement": "REQ-012",
+      "components": [
+        "CMP-05"
+      ],
+      "sources": [
+        "M0235",
+        "M0236",
+        "M0237",
+        "M0238"
+      ],
+      "acceptance_basis": "Explicit acceptance as primary candidate",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D043",
+      "status": "ACCEPTED",
+      "title": "English en-US project language",
+      "problem": "Mixed terms and languages create avoidable semantic drift.",
+      "rationale_and_alternative": "All project artifacts use English; source quotations retain language; user conversation language is independent.",
+      "requirement": "REQ-007",
+      "components": [
+        "CMP-12"
+      ],
+      "sources": [
+        "M0239-A",
+        "M0239-B",
+        "M0240"
+      ],
+      "acceptance_basis": "Direct user language policy; duplicate blocks preserved",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D044",
+      "status": "ACCEPTED",
+      "title": "Column Library includes event and trade diagnostics",
+      "problem": "Feature inputs alone miss why and when trade paths differ.",
+      "rationale_and_alternative": "Reusable columns need semantic/PIT definitions; broad candidate-event research is an option, not a mandatory discovery route.",
+      "requirement": "REQ-026",
+      "components": [
+        "CMP-01",
+        "CMP-05",
+        "CMP-07"
+      ],
+      "sources": [
+        "M0251",
+        "M0255",
+        "M0256",
+        "M0257",
+        "M0258"
+      ],
+      "acceptance_basis": "Direct request plus accepted corrected podcast interpretation",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D045",
+      "status": "ACCEPTED",
+      "title": "Entry, evolving intra-trade and full-path columns stay separate",
+      "problem": "Full-trade MAE/MFE leak future information into earlier decisions.",
+      "rationale_and_alternative": "Decision-time values use only accumulated observations; one path can support exploration of many ideas but not independent confirmations.",
+      "requirement": "REQ-026",
+      "components": [
+        "CMP-01",
+        "CMP-03",
+        "CMP-05"
+      ],
+      "sources": [
+        "M0259",
+        "M0260",
+        "M0261",
+        "M0262",
+        "M0263"
+      ],
+      "acceptance_basis": "Direct intra-trade request and accepted consolidation",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D046",
+      "status": "ACCEPTED",
+      "title": "Broad discovery and controlled confirmation",
+      "problem": "A rich column library can become unregistered filter optimization.",
+      "rationale_and_alternative": "Preserve continuous information where meaningful; register every selected filter and combination; confirm new claims independently.",
+      "requirement": "REQ-026",
+      "components": [
+        "CMP-02",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0261",
+        "M0262",
+        "M0263",
+        "M0264"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0263",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D047",
+      "status": "ACCEPTED",
+      "title": "Column relationship robustness, not mandatory monotonicity",
+      "problem": "A winning threshold can hide unstable or nonlinear structure.",
+      "rationale_and_alternative": "Inspect distribution and time stability; match filter selection rate and relevant exposure; count the complete search.",
+      "requirement": "REQ-024",
+      "components": [
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0265",
+        "M0266",
+        "M0267",
+        "M0268"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0267",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D048",
+      "status": "ACCEPTED",
+      "title": "Signal and policy decomposition where suitable",
+      "problem": "Net PnL obscures whether entry, exit, sizing or market effect contributes.",
+      "rationale_and_alternative": "Use event studies and component diagnostics; choosing a decay peak exit is a new selection. No mandatory positive entry edge before exit research.",
+      "requirement": "REQ-009",
+      "components": [
+        "CMP-05",
+        "CMP-06",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0271",
+        "M0272",
+        "M0273",
+        "M0274"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0273",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D049",
+      "status": "ACCEPTED",
+      "title": "Hypothesis-specific null contract and selection-aware tests",
+      "problem": "A correct test can still answer the wrong question.",
+      "rationale_and_alternative": "State destroyed relationships, preserved structure, benchmark and assumptions; fixed-family max-statistics differ from rerunning adaptive search.",
+      "requirement": "REQ-020",
+      "components": [
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0275",
+        "M0276",
+        "M0277",
+        "M0278"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0277",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D050",
+      "status": "CONDITIONALLY_ACCEPTED",
+      "title": "Diversification, meta-labeling and resampling as optional policy methods",
+      "problem": "Combining strategies or shuffled trades can be mistaken for new evidence.",
+      "rationale_and_alternative": "Evaluate combined policies independently; preserve attribution; dependence-aware path-risk diagnostics do not establish future risk.",
+      "requirement": "REQ-009",
+      "components": [
+        "CMP-05",
+        "CMP-06",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0279",
+        "M0280",
+        "M0281",
+        "M0282"
+      ],
+      "acceptance_basis": "Explicit acceptance of qualified methods",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D051",
+      "status": "ACCEPTED",
+      "title": "Bounded exhaustive computation allowed; no generator replacement",
+      "problem": "Calculation scale can hide enormous data mining freedom.",
+      "rationale_and_alternative": "Use brute force for columns, diagnostics, sensitivity, attacks and calibration; record outcome selection and independent confirmation.",
+      "requirement": "REQ-024",
+      "components": [
+        "CMP-02",
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0283",
+        "M0284",
+        "M0285",
+        "M0286"
+      ],
+      "acceptance_basis": "User asks to add qualified M0284",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D052",
+      "status": "ACCEPTED",
+      "title": "Deterministic sanity gates at critical transitions",
+      "problem": "Simple data, timing or accounting mistakes can dominate results.",
+      "rationale_and_alternative": "Check data, claim and simulation invariants; technical failure quarantines execution, never disproves H; no plausibility score veto.",
+      "requirement": "REQ-006",
+      "components": [
+        "CMP-01",
+        "CMP-03",
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0287",
+        "M0288",
+        "M0289",
+        "M0290"
+      ],
+      "acceptance_basis": "Explicit acceptance in M0289",
+      "normative": true,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D053",
+      "status": "SUPERSEDED",
+      "title": "Future-only primary evaluation environment",
+      "problem": "Earlier prospective-only flow does not represent later backtest-first scope.",
+      "rationale_and_alternative": "Replace primary execution mode with historical-first plus separately labeled forward confirmation; preserve original formulas as historical versions.",
+      "requirement": "REQ-012",
+      "components": [
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0062",
+        "M0068",
+        "M0072",
+        "M0101",
+        "M0102",
+        "M0153",
+        "M0154",
+        "M0155"
+      ],
+      "acceptance_basis": "Superseded explicitly by user M0101",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D054",
+      "status": "SUPERSEDED",
+      "title": "Generator receives context but cannot use tools",
+      "problem": "No-tools simplification prevents later approved measurement and literature research.",
+      "rationale_and_alternative": "Permit scoped deterministic queries and targeted web research with exposure/provenance controls.",
+      "requirement": "REQ-014",
+      "components": [
+        "CMP-01",
+        "CMP-02"
+      ],
+      "sources": [
+        "M0061",
+        "M0062",
+        "M0110",
+        "M0112",
+        "M0181",
+        "M0182",
+        "M0183"
+      ],
+      "acceptance_basis": "Superseded by direct user M0181",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D055",
+      "status": "SUPERSEDED",
+      "title": "Per-hypothesis generated test code as default",
+      "problem": "Generator-produced statistics can change semantics or judge its own claim.",
+      "rationale_and_alternative": "Declarative H_exec and deterministic compiler replace it; new feature implementation remains a separately certified infrastructure path.",
+      "requirement": "REQ-002",
+      "components": [
+        "CMP-03",
+        "CMP-04"
+      ],
+      "sources": [
+        "M0058",
+        "M0065",
+        "M0066",
+        "M0067",
+        "M0068",
+        "M0074"
+      ],
+      "acceptance_basis": "Later user-requested compiler specification",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D056",
+      "status": "SUPERSEDED",
+      "title": "Broad semantic epistemic graph as mandatory core",
+      "problem": "Interpreted contradictions/refinements were presented too confidently.",
+      "rationale_and_alternative": "Replace with provenance, hard dependencies and evidence overlap; optional proposed relations are not facts.",
+      "requirement": "REQ-008",
+      "components": [
+        "CMP-08"
+      ],
+      "sources": [
+        "M0086",
+        "M0089",
+        "M0090",
+        "M0092"
+      ],
+      "acceptance_basis": "Assistant retracts under user challenge",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D057",
+      "status": "SUPERSEDED",
+      "title": "Rigid evidence-status-to-capital ladder",
+      "problem": "Evidence alone does not determine benefit, downside or operational readiness.",
+      "rationale_and_alternative": "Use separate evidence-to-decision policy with bounded uncertainty and explicit withdrawal conditions.",
+      "requirement": "REQ-017",
+      "components": [
+        "CMP-10"
+      ],
+      "sources": [
+        "M0145",
+        "M0146",
+        "M0147",
+        "M0148"
+      ],
+      "acceptance_basis": "Later contextual revision, no numerical limits accepted",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D058",
+      "status": "SUPERSEDED",
+      "title": "5-minute discovery examples as current scope",
+      "problem": "Early examples conflict with later explicit minimum timeframe.",
+      "rationale_and_alternative": "V1 minimum 15 minutes; lower-timeframe execution may be reconsidered separately.",
+      "requirement": "REQ-011",
+      "components": [
+        "CMP-01",
+        "CMP-03"
+      ],
+      "sources": [
+        "M0050",
+        "M0072",
+        "M0097",
+        "M0098"
+      ],
+      "acceptance_basis": "Direct user scope change",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D059",
+      "status": "DEFERRED",
+      "title": "Full causal meta-evaluation of generator quality",
+      "problem": "Heavy methodology can precede basic instrumentation and evidence.",
+      "rationale_and_alternative": "Instrument first; consider paired generator-version studies when enough data exist. Never reintroduce rejected rule-based baseline.",
+      "requirement": "REQ-022",
+      "components": [
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "M0016",
+        "M0017",
+        "M0018",
+        "M0020",
+        "M0022",
+        "M0044",
+        "M0107",
+        "M0108"
+      ],
+      "acceptance_basis": "Explicitly staged in source; no deadline committed",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D060",
+      "status": "DEFERRED",
+      "title": "Universal SPC control charts and thresholds",
+      "problem": "No stable per-version distribution is established.",
+      "rationale_and_alternative": "Freeze metric definitions, collect observations and assess assumptions before choosing charts. No causal attribution from chart alarms alone.",
+      "requirement": "REQ-022",
+      "components": [
+        "CMP-11"
+      ],
+      "sources": [
+        "M0041",
+        "M0042",
+        "M0043",
+        "M0044"
+      ],
+      "acceptance_basis": "Not chosen in source",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D061",
+      "status": "DEFERRED",
+      "title": "Exact initial agent count and provider diversity",
+      "problem": "Logical independence does not specify deployment topology.",
+      "rationale_and_alternative": "Keep multiple independent perspectives in target design; choose count and cost after a conformance experiment.",
+      "requirement": "REQ-004",
+      "components": [
+        "CMP-02"
+      ],
+      "sources": [
+        "M0064",
+        "M0068",
+        "M0072",
+        "M0110",
+        "M0186",
+        "M0246",
+        "M0247"
+      ],
+      "acceptance_basis": "Open in handoff; implementation discussion deferred",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D062",
+      "status": "DEFERRED",
+      "title": "Exact statistical policies, family taxonomy and sample targets",
+      "problem": "Examples are not a validated numerical protocol.",
+      "rationale_and_alternative": "Resolve before affected confirmation runs; do not invent alpha, N_min, calendars or replication count.",
+      "requirement": "REQ-005",
+      "components": [
+        "CMP-04",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0068",
+        "M0072",
+        "M0186",
+        "M0246",
+        "M0247"
+      ],
+      "acceptance_basis": "Explicit open technical specification",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D063",
+      "status": "DEFERRED",
+      "title": "Exact storage, retrieval, schemas and runtime versions",
+      "problem": "Architecture roles do not select a database or tested release.",
+      "rationale_and_alternative": "Propose small implementations and contracts in blueprint; no silent dependency adoption.",
+      "requirement": "REQ-018",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-07"
+      ],
+      "sources": [
+        "M0186",
+        "M0232",
+        "M0246",
+        "M0247"
+      ],
+      "acceptance_basis": "Open/deferred technical choices",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D064",
+      "status": "DEFERRED",
+      "title": "Capital amounts and live deployment thresholds",
+      "problem": "Scientific architecture cannot determine personal risk authority.",
+      "rationale_and_alternative": "Keep live execution out of initial research implementation; require explicit deployment policy before real capital.",
+      "requirement": "REQ-017",
+      "components": [
+        "CMP-10"
+      ],
+      "sources": [
+        "M0146",
+        "M0148",
+        "M0186"
+      ],
+      "acceptance_basis": "Explicitly not fixed",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D065",
+      "status": "PROPOSED_ONLY",
+      "title": "Single-agent vertical slice implementation order",
+      "problem": "Feasibility is unproven and large initial scope is risky.",
+      "rationale_and_alternative": "Useful engineering recommendation, not a replacement for independent target roles; user deferred prioritization at M0247.",
+      "requirement": "REQ-023",
+      "components": [
+        "CMP-02",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06"
+      ],
+      "sources": [
+        "M0245",
+        "M0246",
+        "M0247"
+      ],
+      "acceptance_basis": "Recommendation explicitly not implemented",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D066",
+      "status": "AMBIGUOUS",
+      "title": "Scope subset automatically inherits evidence",
+      "problem": "A subgroup can differ from the average effect in its parent population.",
+      "rationale_and_alternative": "Preserve M0144 statement but flag transportability conditions; do not silently treat subset evidence as confirmed.",
+      "requirement": "REQ-009",
+      "components": [
+        "CMP-06",
+        "CMP-09"
+      ],
+      "sources": [
+        "M0143",
+        "M0144"
+      ],
+      "acceptance_basis": "Scientific contradiction requiring resolution",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    },
+    {
+      "id": "D067",
+      "status": "OPEN",
+      "title": "Historical state machine and status-axis migration",
+      "problem": "M0072 prospective lifecycle and one status field do not cover later multi-axis evidence.",
+      "rationale_and_alternative": "Preserve old definitions; propose a versioned historical branch and orthogonal status dimensions for approval.",
+      "requirement": "REQ-007",
+      "components": [
+        "CMP-04",
+        "CMP-06",
+        "CMP-08"
+      ],
+      "sources": [
+        "M0071",
+        "M0072",
+        "M0101",
+        "M0102",
+        "M0138",
+        "M0146",
+        "M0148",
+        "M0241",
+        "M0242",
+        "M0243"
+      ],
+      "acceptance_basis": "Unresolved implementation semantics",
+      "normative": false,
+      "change_control": "User approval for semantic or goal changes; unresolved implementation choices remain proposals."
+    }
+  ],
+  "rejections": [
+    {
+      "id": "REJ-001",
+      "proposal": "Closed catalog or combinatorial generator",
+      "proposed_by": "Assistant control-baseline proposal",
+      "sources": [
+        "M0057",
+        "M0058",
+        "M0106",
+        "M0107",
+        "M0108"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "Replacing LLM invention with known rules changes the goal.",
+      "scope": "Generator role only; statistical baselines and matched placebos remain required.",
+      "alternative": "Free LLM invention with independent tests",
+      "decisions": [
+        "D001",
+        "D015"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-002",
+      "proposal": "LLM judges its own empirical success",
+      "proposed_by": "Earlier generic agent pattern",
+      "sources": [
+        "M0057",
+        "M0058",
+        "M0065",
+        "M0066",
+        "M0068"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "Narrative judgment can move criteria after outcomes.",
+      "scope": "Scientific status assignment; interpretation may remain agentic.",
+      "alternative": "Deterministic versioned policy",
+      "decisions": [
+        "D001",
+        "D006"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-003",
+      "proposal": "Arbitrary generated test Python per hypothesis",
+      "proposed_by": "Assistant",
+      "sources": [
+        "M0058",
+        "M0065",
+        "M0066",
+        "M0067",
+        "M0068",
+        "M0074"
+      ],
+      "classification": "REPLACED_BY_BETTER_APPROACH",
+      "reason": "Statistics and semantics can drift per experiment.",
+      "scope": "Default H_exec execution, not separately certified feature implementation.",
+      "alternative": "Declarative compiler",
+      "decisions": [
+        "D002",
+        "D055"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-004",
+      "proposal": "Mandatory human approval for every new primitive",
+      "proposed_by": "User-supplied critique",
+      "sources": [
+        "M0065",
+        "M0066",
+        "M0068",
+        "M0072"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Routine manual review conflicts with autonomous research.",
+      "scope": "Routine primitives may use independent automated certification; material framework changes still need approval.",
+      "alternative": "Spec author golden cases and independent validator",
+      "decisions": [
+        "D004",
+        "D026"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-005",
+      "proposal": "Scope baseline uses only qualifying events",
+      "proposed_by": "Potential implementation interpretation",
+      "sources": [
+        "M0061",
+        "M0062",
+        "M0072"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "It removes the comparator population.",
+      "scope": "Binary baseline over the complete predefined scope.",
+      "alternative": "All eligible scope cases and conditional subset",
+      "decisions": [
+        "D006",
+        "D008"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-006",
+      "proposal": "Discovery must start with theory or a known mechanism",
+      "proposed_by": "User-supplied critiques",
+      "sources": [
+        "M0051",
+        "M0052",
+        "M0053",
+        "M0054",
+        "M0093",
+        "M0094",
+        "M0095",
+        "M0096",
+        "M0128"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "It excludes legitimate data-first discoveries.",
+      "scope": "Mechanism required only when a causal claim is made.",
+      "alternative": "Theory-first, data-first and recombination",
+      "decisions": [
+        "D011",
+        "D032"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-007",
+      "proposal": "Mandatory known replicated seed for every idea",
+      "proposed_by": "Discussed user suggestion",
+      "sources": [
+        "M0093",
+        "M0094"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Seeds are useful context but a closed boundary would limit invention.",
+      "scope": "Open discovery remains permitted.",
+      "alternative": "Optional anchor-based and open discovery",
+      "decisions": [
+        "D011"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-008",
+      "proposal": "One compulsory seven-level hypothesis ladder",
+      "proposed_by": "User-supplied proposal",
+      "sources": [
+        "M0081",
+        "M0082",
+        "M0091",
+        "M0092"
+      ],
+      "classification": "REPLACED_BY_BETTER_APPROACH",
+      "reason": "Interactions can exist without an aggregate main effect; exits can matter independently.",
+      "scope": "No compulsory prerequisite of positive entry edge.",
+      "alternative": "Typed claims and justified hard dependencies",
+      "decisions": [
+        "D009",
+        "D017",
+        "D048"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-009",
+      "proposal": "Broad epistemic knowledge graph as factual core",
+      "proposed_by": "Assistant",
+      "sources": [
+        "M0086",
+        "M0089",
+        "M0090",
+        "M0092"
+      ],
+      "classification": "REPLACED_BY_BETTER_APPROACH",
+      "reason": "Contradicts/refines links are interpretations, not objective facts.",
+      "scope": "V1 core; optional proposed relations may be retained as such.",
+      "alternative": "Provenance, dependencies, evidence overlap and joint tests",
+      "decisions": [
+        "D009",
+        "D056"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-010",
+      "proposal": "AND/OR combination inherits component evidence",
+      "proposed_by": "Potential inference",
+      "sources": [
+        "M0087",
+        "M0088",
+        "M0090",
+        "M0092",
+        "M0137",
+        "M0138"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "New mixtures and interactions change the estimand and scope.",
+      "scope": "Combined claims and policies require their own tests.",
+      "alternative": "Boolean AST plus separate composite claim",
+      "decisions": [
+        "D003",
+        "D010"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-011",
+      "proposal": "Five-minute input to v1 discovery",
+      "proposed_by": "Earlier assistant examples",
+      "sources": [
+        "M0050",
+        "M0072",
+        "M0097",
+        "M0098"
+      ],
+      "classification": "REJECTED_FOR_V1",
+      "reason": "User deliberately moved discovery to 15 minutes and swing horizons.",
+      "scope": "Not a universal prohibition on future execution data.",
+      "alternative": "Observation timeframe at least 15 minutes",
+      "decisions": [
+        "D012",
+        "D058"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-012",
+      "proposal": "Prospective-only primary research environment",
+      "proposed_by": "Earlier assistant architecture",
+      "sources": [
+        "M0062",
+        "M0068",
+        "M0072",
+        "M0101",
+        "M0102"
+      ],
+      "classification": "REPLACED_BY_BETTER_APPROACH",
+      "reason": "User chose historical backtests as primary environment.",
+      "scope": "Does not remove need for true forward confirmation.",
+      "alternative": "Historical-first with evidence-origin labels",
+      "decisions": [
+        "D013",
+        "D053"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-013",
+      "proposal": "No generator tools",
+      "proposed_by": "User initial simplification and assistant",
+      "sources": [
+        "M0061",
+        "M0062",
+        "M0110",
+        "M0112",
+        "M0181",
+        "M0182",
+        "M0183"
+      ],
+      "classification": "REPLACED_BY_BETTER_APPROACH",
+      "reason": "Numerical questions and targeted literature research are later allowed.",
+      "scope": "Only scoped pre-freeze access; no evaluator secrets.",
+      "alternative": "Logged deterministic queries and sourced research",
+      "decisions": [
+        "D016",
+        "D029",
+        "D054"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-014",
+      "proposal": "Repeated holdout reuse labeled independent OOS",
+      "proposed_by": "Potential implementation pattern",
+      "sources": [
+        "M0102",
+        "M0106",
+        "M0154",
+        "M0166",
+        "M0167"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "Direct and ancestral outcome exposure contaminate new claims.",
+      "scope": "Includes memory, market model, web and rollback lineage.",
+      "alternative": "Transitive exposure tracking",
+      "decisions": [
+        "D014",
+        "D023"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-015",
+      "proposal": "Universal N=100, 12-month freeze or mandatory statistical method",
+      "proposed_by": "Early suggestions and quoted critiques",
+      "sources": [
+        "M0010",
+        "M0013",
+        "M0014",
+        "M0019",
+        "M0020",
+        "M0021",
+        "M0022",
+        "M0065",
+        "M0066",
+        "M0190",
+        "M0206"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Power, dependence, scope and stopping differ by question.",
+      "scope": "Reject universal prescription, not the methods themselves.",
+      "alternative": "Predefined hypothesis-appropriate EvaluationPolicy",
+      "decisions": [
+        "D006",
+        "D031",
+        "D035"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-016",
+      "proposal": "Single weighted generator-quality or research-value score",
+      "proposed_by": "Assistant early proposal",
+      "sources": [
+        "M0012",
+        "M0015",
+        "M0016",
+        "M0017",
+        "M0018",
+        "M0027",
+        "M0028"
+      ],
+      "classification": "REPLACED_BY_BETTER_APPROACH",
+      "reason": "Arbitrary weights and Goodhart incentives confuse process and outcome.",
+      "scope": "Initial monitoring; no accepted weight vector.",
+      "alternative": "Separate ex-ante quality, evidence, economics and cost",
+      "decisions": [
+        "D028",
+        "D059"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-017",
+      "proposal": "Trade quality as a subset of hypothesis quality",
+      "proposed_by": "Assistant notation",
+      "sources": [
+        "M0012",
+        "M0015",
+        "M0016"
+      ],
+      "classification": "REPLACED_BY_BETTER_APPROACH",
+      "reason": "The objects are different assessment dimensions, not sets in that relation.",
+      "scope": "Conceptual interpretation.",
+      "alternative": "Separate Q_Trade, Q_H and Q_Research",
+      "decisions": [
+        "D028"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-018",
+      "proposal": "Filled falsifier field equals falsifiability",
+      "proposed_by": "User-supplied critique",
+      "sources": [
+        "M0043",
+        "M0044"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Completeness is mechanically measurable; testability is substantive.",
+      "scope": "Diagnostic metric semantics.",
+      "alternative": "Protocol completeness separate from ex-ante quality",
+      "decisions": [
+        "D028",
+        "D060"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-019",
+      "proposal": "Complexity growth proves degeneration",
+      "proposed_by": "User-supplied critique",
+      "sources": [
+        "M0043",
+        "M0044"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Additional conditions can yield new testable content.",
+      "scope": "Complexity is an investigation signal, not a verdict.",
+      "alternative": "Versioned complexity and novel-consequence review",
+      "decisions": [
+        "D028"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-020",
+      "proposal": "Embedding similarity is scientific redundancy truth",
+      "proposed_by": "User-supplied metric idea",
+      "sources": [
+        "M0043",
+        "M0044",
+        "M0110",
+        "M0112"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Text similarity differs from equivalent empirical claims.",
+      "scope": "Optional screening only; not automatic rejection.",
+      "alternative": "Structural diagnostics and explicit interpretation",
+      "decisions": [
+        "D028"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-021",
+      "proposal": "Immediate SPC/Nelson rules on heterogeneous success rates",
+      "proposed_by": "Discussion and quoted critique",
+      "sources": [
+        "M0039",
+        "M0040",
+        "M0041",
+        "M0042",
+        "M0043",
+        "M0044"
+      ],
+      "classification": "DEFERRED_NOT_REJECTED",
+      "reason": "No stable per-version process baseline or attribution is established.",
+      "scope": "Specific charts can be reconsidered after measured distributions.",
+      "alternative": "Instrument first and investigate alarms",
+      "decisions": [
+        "D060"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-022",
+      "proposal": "Builder pattern as central architecture layer",
+      "proposed_by": "User inquiry and assistant evaluation",
+      "sources": [
+        "M0073",
+        "M0074"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "It adds no scientific boundary beyond schemas and compiler.",
+      "scope": "Local helper remains possible if simpler.",
+      "alternative": "Spec-driven boundary; local implementation discretion",
+      "decisions": [
+        "D002"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-023",
+      "proposal": "Mandatory human novelty/originality score or maximum semantic distance",
+      "proposed_by": "User-supplied diversity proposal",
+      "sources": [
+        "M0047",
+        "M0048",
+        "M0109",
+        "M0110",
+        "M0149",
+        "M0150"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Distant ideas can be nonsense; similarity can hide useful boundaries.",
+      "scope": "No rejection of cross-domain discovery.",
+      "alternative": "Structural mappings and falsifiable consequences",
+      "decisions": [
+        "D016"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-024",
+      "proposal": "Single anomaly detector as exclusive discovery gate",
+      "proposed_by": "User-supplied proposal",
+      "sources": [
+        "M0109",
+        "M0110",
+        "M0111",
+        "M0112",
+        "M0129",
+        "M0130"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "It determines what the LLM is allowed to notice.",
+      "scope": "Can be an optional input, not exclusive gate.",
+      "alternative": "Problem finding from multiple context sources",
+      "decisions": [
+        "D016"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-025",
+      "proposal": "Different data slices by default for independent agents",
+      "proposed_by": "User-supplied proposal",
+      "sources": [
+        "M0109",
+        "M0110",
+        "M0111",
+        "M0112"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Differences then confound input variation and reasoning variation.",
+      "scope": "Separate experimental mode remains possible.",
+      "alternative": "Same permitted snapshot, independent reasoning",
+      "decisions": [
+        "D005"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-026",
+      "proposal": "Fixed technical/fundamental/on-chain weights",
+      "proposed_by": "Illustrative alternative",
+      "sources": [
+        "M0115",
+        "M0116"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Weights are empirical hypotheses, not architecture truths.",
+      "scope": "No prohibition on frozen hypothesized weighting.",
+      "alternative": "Hypothesized information integration/update rules",
+      "decisions": [
+        "D018"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-027",
+      "proposal": "Policy without rule provenance or disguised negative conflict",
+      "proposed_by": "Potential failure mode",
+      "sources": [
+        "M0141",
+        "M0142",
+        "M0143",
+        "M0144"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "Rules otherwise invent unsupported market knowledge.",
+      "scope": "Explicit counterclaims remain allowed as untested hypotheses.",
+      "alternative": "Basis, scope, parameters and conflict records",
+      "decisions": [
+        "D021"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-028",
+      "proposal": "Automatic evidence-status-to-capital ladder",
+      "proposed_by": "User proposal and assistant first refinement",
+      "sources": [
+        "M0145",
+        "M0146",
+        "M0147",
+        "M0148"
+      ],
+      "classification": "REPLACED_BY_BETTER_APPROACH",
+      "reason": "Evidence does not alone determine downside or readiness.",
+      "scope": "No accepted numerical capital thresholds.",
+      "alternative": "Evidence-to-decision with bounded authorization",
+      "decisions": [
+        "D020",
+        "D057"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-029",
+      "proposal": "LLM-invented numerical prior and N_min based on belief in H",
+      "proposed_by": "User-supplied base-rate discussion",
+      "sources": [
+        "M0157",
+        "M0158",
+        "M0159",
+        "M0160"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Power design and posterior credibility answer different questions.",
+      "scope": "Empirical family interpretation may be estimated with uncertainty.",
+      "alternative": "Keep outcome base rate separate from effect prevalence",
+      "decisions": [
+        "D024"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-030",
+      "proposal": "Autonomous material self-modification",
+      "proposed_by": "User-supplied self-improvement proposal",
+      "sources": [
+        "M0169",
+        "M0170",
+        "M0171",
+        "M0172",
+        "M0173"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "It can alter standards to generate apparent progress.",
+      "scope": "Research proposals are autonomous; activation is not.",
+      "alternative": "Approval, isolated validation, versioning, rollback",
+      "decisions": [
+        "D026",
+        "D040"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-031",
+      "proposal": "Adopt RD-Agent/OpenEvolve fitness selection as scientific core",
+      "proposed_by": "Framework comparison",
+      "sources": [
+        "M0131",
+        "M0132",
+        "M0133",
+        "M0134",
+        "M0139",
+        "M0140"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Winner optimization is not evidence classification.",
+      "scope": "Reuse generic plumbing only where isolated.",
+      "alternative": "Own scientific model and orchestrator",
+      "decisions": [
+        "D022"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-032",
+      "proposal": "POPPER-generated statistics as direct verdict authority",
+      "proposed_by": "Framework comparison",
+      "sources": [
+        "M0135",
+        "M0136",
+        "M0140"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Formal error control needs applicable assumptions and valid tests.",
+      "scope": "Implication decomposition useful; no blind drop-in validator.",
+      "alternative": "Frozen independent evaluator",
+      "decisions": [
+        "D006",
+        "D022"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-033",
+      "proposal": "Universal DSR/CPCV/PBO gate or naive global trial count",
+      "proposed_by": "User-supplied proposal",
+      "sources": [
+        "M0205",
+        "M0206",
+        "M0207"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Not all outcomes are Sharpe; dependence and method assumptions matter.",
+      "scope": "Optional appropriate methods remain available.",
+      "alternative": "EvaluationPolicy with full search/dependence provenance",
+      "decisions": [
+        "D035"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-034",
+      "proposal": "Ban fixed numerical parameters; force distributions everywhere",
+      "proposed_by": "User-supplied proposal",
+      "sources": [
+        "M0205",
+        "M0206",
+        "M0207"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "It prevents the generator from stating quantitative claims.",
+      "scope": "Fitted parameters still need sensitivity checks.",
+      "alternative": "FIXED_EX_ANTE, DERIVED, FITTED provenance",
+      "decisions": [
+        "D027",
+        "D035"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-035",
+      "proposal": "Remove best 5 percent of trades as universal pass gate",
+      "proposed_by": "User-supplied proposal",
+      "sources": [
+        "M0205",
+        "M0206",
+        "M0207"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Legitimate positively skewed strategies rely on rare winners.",
+      "scope": "Useful labeled stress diagnostic when appropriate.",
+      "alternative": "Tail concentration and hypothesis-specific robustness",
+      "decisions": [
+        "D035"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-036",
+      "proposal": "Automatically deploy the average of a robust parameter cluster",
+      "proposed_by": "User-supplied proposal",
+      "sources": [
+        "M0205",
+        "M0206",
+        "M0207"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "An ensemble is another policy claim with its own selection.",
+      "scope": "May be proposed and independently tested.",
+      "alternative": "Separate ensemble registration/evaluation",
+      "decisions": [
+        "D035"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-037",
+      "proposal": "Survival of model criticism proves reality",
+      "proposed_by": "User-supplied assertion",
+      "sources": [
+        "M0209",
+        "M0210",
+        "M0211"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "Models can share blind spots; absence of found falsifiers is not market evidence.",
+      "scope": "No adversarial-survival evidence score.",
+      "alternative": "Checkable challenges before freeze",
+      "decisions": [
+        "D036"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-038",
+      "proposal": "Raw live losses rewrite prompts or market truth",
+      "proposed_by": "Missing graphic discussion and user restriction",
+      "sources": [
+        "M0213",
+        "M0214",
+        "M0215",
+        "M0216",
+        "M0217"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "Execution, policy and market causes differ.",
+      "scope": "Image itself unavailable; only explicit textual boundary reconstructed.",
+      "alternative": "Feedback firewall and future registered research",
+      "decisions": [
+        "D037"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-039",
+      "proposal": "Selected real winner versus unselected null candidate",
+      "proposed_by": "User-supplied critique",
+      "sources": [
+        "M0219",
+        "M0220",
+        "M0221",
+        "M0275",
+        "M0276",
+        "M0277"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "Unequal selection freedom inflates apparent skill.",
+      "scope": "No requirement for a rejected baseline generator.",
+      "alternative": "Process-matched selection and fresh comparison",
+      "decisions": [
+        "D038",
+        "D049"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-040",
+      "proposal": "One universal null destroys all structure or preserves the claimed effect",
+      "proposed_by": "User-supplied critique",
+      "sources": [
+        "M0275",
+        "M0276",
+        "M0277"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Different scientific questions require different nulls.",
+      "scope": "Preserve nuisance structure, destroy only specified target relation.",
+      "alternative": "Explicit null-model contract",
+      "decisions": [
+        "D049"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-041",
+      "proposal": "Full-path MAE/MFE used as entry information",
+      "proposed_by": "Potential Column Library misuse",
+      "sources": [
+        "M0259",
+        "M0260",
+        "M0261",
+        "M0262",
+        "M0263"
+      ],
+      "classification": "PERMANENT_CONSTRAINT",
+      "reason": "Final extrema were not available at entry.",
+      "scope": "Useful retrospective diagnostics, not causal inputs.",
+      "alternative": "Entry/evolving/full-path time semantics",
+      "decisions": [
+        "D045"
+      ],
+      "reconsideration": "Only explicit approved goal/semantic change.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-042",
+      "proposal": "Mandatory continuous columns, quintiles or monotonicity",
+      "proposed_by": "User-supplied column proposals",
+      "sources": [
+        "M0261",
+        "M0262",
+        "M0263",
+        "M0265",
+        "M0266",
+        "M0267"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Discrete events and nonlinear effects can be real.",
+      "scope": "Use these methods when appropriate, not as discovery veto.",
+      "alternative": "Distributional and temporal diagnostics",
+      "decisions": [
+        "D046",
+        "D047"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-043",
+      "proposal": "Positive main signal required before exit/sizing research",
+      "proposed_by": "User-supplied hierarchy and event-study discussion",
+      "sources": [
+        "M0081",
+        "M0082",
+        "M0091",
+        "M0092",
+        "M0271",
+        "M0272",
+        "M0273"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Path-dependent policies can have value without standalone entry edge.",
+      "scope": "Component diagnostics need not be a linear gate.",
+      "alternative": "Separate policy and signal hypotheses",
+      "decisions": [
+        "D017",
+        "D048"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-044",
+      "proposal": "Trade shuffling establishes alpha or new independent future risk",
+      "proposed_by": "User-supplied resampling proposal",
+      "sources": [
+        "M0279",
+        "M0280",
+        "M0281"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Reordering does not create new returns and can destroy dependence.",
+      "scope": "Conditional path-risk diagnostic only.",
+      "alternative": "Dependence-aware resampling with explicit assumptions",
+      "decisions": [
+        "D050"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-045",
+      "proposal": "Blind unbounded strategy enumeration replaces discovery",
+      "proposed_by": "User brute-force question",
+      "sources": [
+        "M0283",
+        "M0284",
+        "M0285"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "It selects historical winners without preserving hypothesis-led research.",
+      "scope": "Bounded analytical computation remains allowed.",
+      "alternative": "LLM questions plus registered computation",
+      "decisions": [
+        "D051"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-046",
+      "proposal": "Sanity score or plausibility veto by an LLM",
+      "proposed_by": "User sanity-check question",
+      "sources": [
+        "M0287",
+        "M0288",
+        "M0289"
+      ],
+      "classification": "REJECTED_FOR_SPECIFIC_ROLE",
+      "reason": "Unusual hypotheses are not technical errors.",
+      "scope": "Checks enforce objective consistency, not conventional wisdom.",
+      "alternative": "Deterministic invariant/metamorphic checks",
+      "decisions": [
+        "D052"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    },
+    {
+      "id": "REJ-047",
+      "proposal": "Full infrastructure before a feasibility slice",
+      "proposed_by": "Assistant implementation critique",
+      "sources": [
+        "M0245",
+        "M0246",
+        "M0247"
+      ],
+      "classification": "DEFERRED_NOT_REJECTED",
+      "reason": "User deferred implementation prioritization; no final sequence chosen.",
+      "scope": "Do not claim the recommended slice was already approved.",
+      "alternative": "Reviewable proposed staged roadmap",
+      "decisions": [
+        "D065"
+      ],
+      "reconsideration": "Allowed only within the stated scope; document new evidence, costs and an approved change where material.",
+      "authority": "Direct user or accepted qualified reply where cited; otherwise contextual assistant rejection retained as such, not a newly invented user ban."
+    }
+  ]
+}

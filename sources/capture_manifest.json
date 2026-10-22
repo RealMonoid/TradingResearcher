@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "capture_date": "2026-10-22",
+  "timezone": "Europe/Berlin",
+  "source_url": "https://chatgpt.com/share/6ad98ddf-8728-83ed-89cb-84cf0bee5d48",
+  "capture_method": "Read-only rendered browser DOM after loading each numbered turn through its observed UI container. No hidden application state or original Markdown export was used.",
+  "numbered_turns": 304,
+  "message_blocks": 305,
+  "user_message_blocks": 153,
+  "assistant_message_blocks": 152,
+  "missing_turn_numbers": [],
+  "complete_original_source_verified": false,
+  "files": [
+    {
+      "path": "full_conversation.md",
+      "bytes": 1039425,
+      "sha256": "cdc3c0e6602a72c61ea2239eba77d98cd9a6b49e91d5d17eb63678a77e0c696e"
+    },
+    {
+      "path": "message_index.json",
+      "bytes": 124183,
+      "sha256": "819e64275c17c96866ef5f794303a3f0ac8a4340c4ea21c5b67d3ab4a2b3be2a"
+    },
+    {
+      "path": "recovered_dom.json",
+      "bytes": 13612771,
+      "sha256": "8c43074cc643e9b5bae4acf6b84b4b24a2cf5c27cebb0d37e68e108f07fe8a0f"
+    },
+    {
+      "path": "source_inventory.json",
+      "bytes": 45251,
+      "sha256": "21cd047a167d530aaa4687860b583b84040e986f098e7b8e0e0b3df25121701a"
+    },
+    {
+      "path": "structured_content.json",
+      "bytes": 556414,
+      "sha256": "39b28c980245c692d36d57cea2106177a9b6dce046091aeecb09eae35dae1283"
+    }
+  ]
+}

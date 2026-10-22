@@ -1,0 +1,321 @@
+{
+  "date": "2026-10-22",
+  "scope": "Documentation only; no application tests executed",
+  "all_checks_passed": true,
+  "checks": [
+    {
+      "name": "json_parse",
+      "passed": true,
+      "details": {
+        "files": 8,
+        "errors": []
+      }
+    },
+    {
+      "name": "required_documents",
+      "passed": true,
+      "details": {
+        "required": 13
+      }
+    },
+    {
+      "name": "frozen_source_manifest_hashes",
+      "passed": true,
+      "details": {
+        "files": 5,
+        "mismatches": []
+      }
+    },
+    {
+      "name": "source_read_only_attributes",
+      "passed": true,
+      "details": {
+        "files": 6
+      }
+    },
+    {
+      "name": "source_message_counts",
+      "passed": true,
+      "details": {
+        "numbered_turns": 304,
+        "message_blocks": 305
+      }
+    },
+    {
+      "name": "transcript_305_exact_text_and_hashes",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "original_formula_section_exact",
+      "passed": true,
+      "details": {
+        "characters": 12394,
+        "sha256": "67090081ba1ed08f025ac36cff300cd9550e51d5907edeb6f928b6a8fd6de647"
+      }
+    },
+    {
+      "name": "structured_source_references",
+      "passed": true,
+      "details": {
+        "records": 114
+      }
+    },
+    {
+      "name": "unique_record_ids",
+      "passed": true,
+      "details": {
+        "records": 114
+      }
+    },
+    {
+      "name": "cross_reference_IDs",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "local_links_and_source_anchors",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "markdown_fence_balance",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "markdown_table_column_counts",
+      "passed": true,
+      "details": []
+    },
+    {
+      "name": "trace_rows",
+      "passed": true,
+      "details": {
+        "requirements": 26,
+        "decisions": 67
+      }
+    },
+    {
+      "name": "rejection_decision_links",
+      "passed": true,
+      "details": {
+        "records": 47
+      }
+    },
+    {
+      "name": "untracked_document_whitespace",
+      "passed": true,
+      "details": {
+        "command": "git -c core.autocrlf=false diff --no-index --check -- NUL <file>",
+        "files": 16,
+        "outcomes": [
+          {
+            "file": "00_SOURCE_AUDIT.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "01_PROBLEM_DEFINITION.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "02_DECISION_REGISTER.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "03_REJECTED_DECISIONS.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "04_DEFINITIONS.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "05_REQUIREMENTS.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "06_MASTER_ARCHITECTURE.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "07_SCIENTIFIC_EVALUATION.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "08_ENGINEERING_REVIEW.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "09_IMPLEMENTATION_BLUEPRINT.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "10_IMPLEMENTATION_ROADMAP.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "11_OPEN_DECISIONS.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "12_TRACEABILITY_MATRIX.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "ARCHITECTURE_REGISTER.json",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "SOURCE_REVIEW_INDEX.md",
+            "exit": 1,
+            "diagnostics": ""
+          },
+          {
+            "file": "SOURCE_VERIFICATION.json",
+            "exit": 1,
+            "diagnostics": ""
+          }
+        ]
+      }
+    },
+    {
+      "name": "git_diff_check",
+      "passed": true,
+      "details": {
+        "exit": 0,
+        "diagnostics": ""
+      }
+    },
+    {
+      "name": "PPV_arithmetic",
+      "passed": true,
+      "details": {
+        "illustrative_percentages": [
+          13.91,
+          45.71
+        ]
+      }
+    }
+  ],
+  "resolved_check_findings": [
+    "Generated CRLF files normalized to LF without changing source archive or quoted text.",
+    "Traceability table delimiter corrected to seven columns."
+  ],
+  "decision_status_counts": {
+    "NON_NEGOTIABLE": 1,
+    "ACCEPTED": 45,
+    "REJECTED": 1,
+    "CONDITIONALLY_ACCEPTED": 5,
+    "SUPERSEDED": 6,
+    "DEFERRED": 6,
+    "PROPOSED_ONLY": 1,
+    "AMBIGUOUS": 1,
+    "OPEN": 1
+  },
+  "rejection_classification_counts": {
+    "PERMANENT_CONSTRAINT": 13,
+    "REPLACED_BY_BETTER_APPROACH": 8,
+    "REJECTED_FOR_SPECIFIC_ROLE": 23,
+    "REJECTED_FOR_V1": 1,
+    "DEFERRED_NOT_REJECTED": 2
+  },
+  "documentation_sizes": [
+    {
+      "file": "00_SOURCE_AUDIT.md",
+      "lines": 105
+    },
+    {
+      "file": "01_PROBLEM_DEFINITION.md",
+      "lines": 54
+    },
+    {
+      "file": "02_DECISION_REGISTER.md",
+      "lines": 961
+    },
+    {
+      "file": "03_REJECTED_DECISIONS.md",
+      "lines": 663
+    },
+    {
+      "file": "04_DEFINITIONS.md",
+      "lines": 397
+    },
+    {
+      "file": "05_REQUIREMENTS.md",
+      "lines": 40
+    },
+    {
+      "file": "06_MASTER_ARCHITECTURE.md",
+      "lines": 113
+    },
+    {
+      "file": "07_SCIENTIFIC_EVALUATION.md",
+      "lines": 68
+    },
+    {
+      "file": "08_ENGINEERING_REVIEW.md",
+      "lines": 54
+    },
+    {
+      "file": "09_IMPLEMENTATION_BLUEPRINT.md",
+      "lines": 80
+    },
+    {
+      "file": "10_IMPLEMENTATION_ROADMAP.md",
+      "lines": 28
+    },
+    {
+      "file": "11_OPEN_DECISIONS.md",
+      "lines": 41
+    },
+    {
+      "file": "12_TRACEABILITY_MATRIX.md",
+      "lines": 116
+    },
+    {
+      "file": "SOURCE_REVIEW_INDEX.md",
+      "lines": 313
+    }
+  ],
+  "artifact_hashes": {
+    "00_SOURCE_AUDIT.md": "0dc74b558c5241db6494b06c38f2dce9ad60c407f850155b1037ebce41a56ed6",
+    "01_PROBLEM_DEFINITION.md": "84092f375dc458494945259bf5acd76dcd59f95bb3e0eca22f558b974d623fb7",
+    "02_DECISION_REGISTER.md": "b1f8a446bd868eab1868da6b7e69ceb0ac72b03645431dbb2f1cd609804f2bb4",
+    "03_REJECTED_DECISIONS.md": "a92670d5239a4db774f20629ef02839d61efc765242e1bd667b25f3cc58fc0bc",
+    "04_DEFINITIONS.md": "e6c28f05e8724a3ad12b5e4cec63b528d850e52dc14b5d3b41d4e7fb6cbe2a95",
+    "05_REQUIREMENTS.md": "49ec25a71dcf71cafa85b68dd9f6d881c5a0920063c2a598b3644b767ee50cae",
+    "06_MASTER_ARCHITECTURE.md": "65b3f8fb05fdfa0842e5122241884cbf585364820517bb4c193ac642d1cbdf20",
+    "07_SCIENTIFIC_EVALUATION.md": "5becaf08c03368a38ab92f8807af1ecf95f02755ed12495d237d599f19c5c756",
+    "08_ENGINEERING_REVIEW.md": "ed3e479d896908abacdd7e4c366af20d02c6d442afa2b7e877ce974127b64685",
+    "09_IMPLEMENTATION_BLUEPRINT.md": "003ba1d3e0c1e062567eef32ecffa6e1e0e9a431cf48d98d62beb589052db28e",
+    "10_IMPLEMENTATION_ROADMAP.md": "534c526bdd02c84de75c9b1064295345dc818a9e7760b9d4245ac9b8d879d390",
+    "11_OPEN_DECISIONS.md": "08368ee8f8cd5dd1da57b181bf13aba556676f0dd623631cc5919942444963d6",
+    "12_TRACEABILITY_MATRIX.md": "078dd927bb7b92a49ddda75419728fe7a55c07feb584fb6868a745b5750cfbbb",
+    "ARCHITECTURE_REGISTER.json": "db82e7057ca37cb85581463952f7498ef679b5da952107a8838d4cf04077f24f",
+    "SOURCE_REVIEW_INDEX.md": "2b5a3cff290297f2b27f640ba3e613598676c6987988029a6e5c8eccab51b916",
+    "SOURCE_VERIFICATION.json": "49ec6489a5541fbec2a3995a3b2fc193d40118ab6f09f345c7e4dbce4f088982"
+  },
+  "unverified": [
+    "Full original conversation source and missing supporting files/images",
+    "Exhaustive extraction of every minor assertion",
+    "Independent-person review",
+    "Application implementation and all TEST-01 through TEST-26",
+    "Runtime/backend/schema integration, performance and licenses for intended use",
+    "Statistical calibration, profitability, forward and live outcomes"
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "checked_at": "2026-10-22T06:27:43.748263+02:00",
+  "checks": [
+    {
+      "check": "numbered_turns_contiguous_1_to_304",
+      "passed": true
+    },
+    {
+      "check": "305_distinct_message_ids",
+      "passed": true
+    },
+    {
+      "check": "speaker_counts_153_user_152_assistant",
+      "passed": true
+    },
+    {
+      "check": "305_transcript_blocks_exactly_match_DOM",
+      "passed": true
+    },
+    {
+      "check": "all_message_hashes_match",
+      "passed": true
+    },
+    {
+      "check": "all_source_file_hashes_match",
+      "passed": true
+    },
+    {
+      "check": "turn_239_duplicate_bodies_preserved",
+      "passed": true
+    },
+    {
+      "check": "incomplete_turn_302_preserved",
+      "passed": true
+    },
+    {
+      "check": "all_source_files_read_only",
+      "passed": true
+    },
+    {
+      "check": "1173_preformatted_blocks_retained",
+      "passed": true
+    },
+    {
+      "check": "4_TeX_annotations_retained",
+      "passed": true
+    },
+    {
+      "check": "exact_structured_block_preservation",
+      "passed": true
+    },
+    {
+      "check": "phases_1_to_10_not_generated",
+      "passed": true
+    }
+  ],
+  "local_integrity_result": "PASS",
+  "full_source_gate": "FULL_SOURCE_NOT_VERIFIED",
+  "full_source_gate_passed": false,
+  "boundaries": [
+    "No independent original export comparison",
+    "Two original user images unavailable",
+    "Three cited project file bodies not inspected",
+    "Turn 302 visibly incomplete; cause unknown",
+    "No claim of private conversation or alternate branch completeness",
+    "No requirements or architecture reconstruction performed"
+  ]
+}

@@ -8,7 +8,7 @@ The framework must substantially accelerate both hypothesis discovery and testin
 
 ## Start here
 
-**Single-page reading option:** [Complete architecture reading copy](FRAMEWORK_REVIEW.md) includes the reviewer instructions and all architecture documents 00-12 in one uncompressed Markdown file. Use its ordinary GitHub file page when repository import or multi-file retrieval fails. It is generated from the originals, not a separate summary; source archives remain linked separately.
+**Single-page reading option:** [Complete architecture reading copy](review/) includes the reviewer instructions and all architecture documents 00-12 in one uncompressed Markdown file. Open the linked GitHub directory page, which displays its README directly, when repository import or multi-file retrieval fails. It is generated from the originals, not a separate summary; source archives remain linked separately.
 
 **For LLM reviewers:** Follow [REVIEWING.md](REVIEWING.md) before a framework-wide critique. First present a source-linked reconstruction of goals, flow, feedback, authority and open boundaries. If access or context is incomplete, state the limits and withhold an overall verdict; do not treat a partial reading as the whole system.
 

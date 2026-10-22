@@ -10,7 +10,7 @@ import posixpath
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "FRAMEWORK_REVIEW.md"
+OUTPUT = ROOT / "review/README.md"
 FILES = ["REVIEWING.md", "README.md", "AGENTS.md", "docs/architecture/CURRENT_STATE.md"] + [
     p.relative_to(ROOT).as_posix()
     for p in sorted((ROOT / "docs/architecture").glob("[0-9][0-9]_*.md"))
@@ -25,7 +25,7 @@ def relocate_links(text, source):
             return match[0]
         local, separator, anchor = target.partition("#")
         dest = posixpath.normpath(posixpath.join(posixpath.dirname(source), local)) if local else source
-        return f"[{label}]({dest}{separator}{anchor})"
+        return f"[{label}](../{dest}{separator}{anchor})"
 
     lines, fence = [], None
     for line in text.splitlines(keepends=True):
@@ -59,7 +59,7 @@ def build():
     for source in FILES:
         raw = (ROOT / source).read_bytes()
         text = raw.decode("utf-8")
-        parts.append(f"| [{source}]({source}) | `{hashlib.sha256(raw).hexdigest()}` |\n")
+        parts.append(f"| [{source}](../{source}) | `{hashlib.sha256(raw).hexdigest()}` |\n")
         bodies.append(f"\n---\n\n## Source file: {source}\n\n" + relocate_links(text, source).rstrip("\n") + "\n")
     parts.extend(bodies)
     parts.append("\n---\n\nEND OF COMPLETE ARCHITECTURE READING COPY\n")
@@ -73,8 +73,9 @@ if __name__ == "__main__":
     expected = build()
     if args.check:
         if not OUTPUT.is_file() or OUTPUT.read_bytes() != expected:
-            raise SystemExit("FAIL: FRAMEWORK_REVIEW.md is missing or stale")
+            raise SystemExit("FAIL: review/README.md is missing or stale")
         print(f"PASS: 17 complete source files; {len(expected)} output bytes; exact regeneration match")
     else:
+        OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_bytes(expected)
         print(f"Wrote {OUTPUT}: 17 complete source files; {len(expected)} bytes")

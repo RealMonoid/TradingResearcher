@@ -14,23 +14,23 @@ If your retrieval stops before `END OF COMPLETE ARCHITECTURE READING COPY`, repo
 
 | File | SHA-256 of source bytes |
 |---|---|
-| [REVIEWING.md](REVIEWING.md) | `1aebef5b29443bee79b232ec4c2fd2e86eab2967e905d64c1175fcdf36230fe2` |
-| [README.md](README.md) | `0057e5b534801cf2e4a94cc7b099ca4df09cf4f37dbd1b4aa12607731cd419d8` |
-| [AGENTS.md](AGENTS.md) | `7af7654a98f4fc1dd077605791e853fea8f39520e627e82c4e90dba871357400` |
-| [docs/architecture/CURRENT_STATE.md](docs/architecture/CURRENT_STATE.md) | `38ed0148f382b4ca7791231a38386b47ebdc8bdc08011127f7d61cfa7d59a3ab` |
-| [docs/architecture/00_SOURCE_AUDIT.md](docs/architecture/00_SOURCE_AUDIT.md) | `0dc74b558c5241db6494b06c38f2dce9ad60c407f850155b1037ebce41a56ed6` |
-| [docs/architecture/01_PROBLEM_DEFINITION.md](docs/architecture/01_PROBLEM_DEFINITION.md) | `402d50d911a003129248bfb19b19a1ac6c48d5a5c9fec01b91aa4a05564ebe9c` |
-| [docs/architecture/02_DECISION_REGISTER.md](docs/architecture/02_DECISION_REGISTER.md) | `6f6f8e98fccb050861c52a20a4129952c9f2e7bb9d745bbc48558165bad80abe` |
-| [docs/architecture/03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DECISIONS.md) | `a92670d5239a4db774f20629ef02839d61efc765242e1bd667b25f3cc58fc0bc` |
-| [docs/architecture/04_DEFINITIONS.md](docs/architecture/04_DEFINITIONS.md) | `e6c28f05e8724a3ad12b5e4cec63b528d850e52dc14b5d3b41d4e7fb6cbe2a95` |
-| [docs/architecture/05_REQUIREMENTS.md](docs/architecture/05_REQUIREMENTS.md) | `e02beebf43b91d8bdbded1de36d1723faf3d63e2ada994d21b72ed8854de0e0d` |
-| [docs/architecture/06_MASTER_ARCHITECTURE.md](docs/architecture/06_MASTER_ARCHITECTURE.md) | `7fe412f3d3b7c4a5f89bac82849dc448ecdda634baefc6cdd32877decf4a9c32` |
-| [docs/architecture/07_SCIENTIFIC_EVALUATION.md](docs/architecture/07_SCIENTIFIC_EVALUATION.md) | `5becaf08c03368a38ab92f8807af1ecf95f02755ed12495d237d599f19c5c756` |
-| [docs/architecture/08_ENGINEERING_REVIEW.md](docs/architecture/08_ENGINEERING_REVIEW.md) | `ed3e479d896908abacdd7e4c366af20d02c6d442afa2b7e877ce974127b64685` |
-| [docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md](docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md) | `f249c93abd1d40f207eb34dc06c52dd8f7089b3d6826ca145de7852fef427d53` |
-| [docs/architecture/10_IMPLEMENTATION_ROADMAP.md](docs/architecture/10_IMPLEMENTATION_ROADMAP.md) | `3e9eaa40c5c42d9c95030bb604f9d2378a55f77408593c3b42ac54919ad3d53c` |
-| [docs/architecture/11_OPEN_DECISIONS.md](docs/architecture/11_OPEN_DECISIONS.md) | `bb0fe61429cb292a1b1554989ce23a3e02bfbebea824cdd7c3fccb0fd209fbc5` |
-| [docs/architecture/12_TRACEABILITY_MATRIX.md](docs/architecture/12_TRACEABILITY_MATRIX.md) | `d5a063ae83357e431e0d0610c58fd5925895ef07d36552fc20f4a24d68d57126` |
+| [REVIEWING.md](../REVIEWING.md) | `1aebef5b29443bee79b232ec4c2fd2e86eab2967e905d64c1175fcdf36230fe2` |
+| [README.md](../README.md) | `f585e7453849ee6fb6979a7d625746891deac726583f8504b7477bab2383c3dd` |
+| [AGENTS.md](../AGENTS.md) | `2e8a2af773557f2ed8ca06a266163def23d6aef538f0271b39fc5fefe5845512` |
+| [docs/architecture/CURRENT_STATE.md](../docs/architecture/CURRENT_STATE.md) | `f3628b4f672e636a4f6671684bdb3c2f246b010fbee69de2a578729a779f1474` |
+| [docs/architecture/00_SOURCE_AUDIT.md](../docs/architecture/00_SOURCE_AUDIT.md) | `0dc74b558c5241db6494b06c38f2dce9ad60c407f850155b1037ebce41a56ed6` |
+| [docs/architecture/01_PROBLEM_DEFINITION.md](../docs/architecture/01_PROBLEM_DEFINITION.md) | `402d50d911a003129248bfb19b19a1ac6c48d5a5c9fec01b91aa4a05564ebe9c` |
+| [docs/architecture/02_DECISION_REGISTER.md](../docs/architecture/02_DECISION_REGISTER.md) | `6f6f8e98fccb050861c52a20a4129952c9f2e7bb9d745bbc48558165bad80abe` |
+| [docs/architecture/03_REJECTED_DECISIONS.md](../docs/architecture/03_REJECTED_DECISIONS.md) | `a92670d5239a4db774f20629ef02839d61efc765242e1bd667b25f3cc58fc0bc` |
+| [docs/architecture/04_DEFINITIONS.md](../docs/architecture/04_DEFINITIONS.md) | `e6c28f05e8724a3ad12b5e4cec63b528d850e52dc14b5d3b41d4e7fb6cbe2a95` |
+| [docs/architecture/05_REQUIREMENTS.md](../docs/architecture/05_REQUIREMENTS.md) | `e02beebf43b91d8bdbded1de36d1723faf3d63e2ada994d21b72ed8854de0e0d` |
+| [docs/architecture/06_MASTER_ARCHITECTURE.md](../docs/architecture/06_MASTER_ARCHITECTURE.md) | `7fe412f3d3b7c4a5f89bac82849dc448ecdda634baefc6cdd32877decf4a9c32` |
+| [docs/architecture/07_SCIENTIFIC_EVALUATION.md](../docs/architecture/07_SCIENTIFIC_EVALUATION.md) | `5becaf08c03368a38ab92f8807af1ecf95f02755ed12495d237d599f19c5c756` |
+| [docs/architecture/08_ENGINEERING_REVIEW.md](../docs/architecture/08_ENGINEERING_REVIEW.md) | `ed3e479d896908abacdd7e4c366af20d02c6d442afa2b7e877ce974127b64685` |
+| [docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md](../docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md) | `f249c93abd1d40f207eb34dc06c52dd8f7089b3d6826ca145de7852fef427d53` |
+| [docs/architecture/10_IMPLEMENTATION_ROADMAP.md](../docs/architecture/10_IMPLEMENTATION_ROADMAP.md) | `3e9eaa40c5c42d9c95030bb604f9d2378a55f77408593c3b42ac54919ad3d53c` |
+| [docs/architecture/11_OPEN_DECISIONS.md](../docs/architecture/11_OPEN_DECISIONS.md) | `bb0fe61429cb292a1b1554989ce23a3e02bfbebea824cdd7c3fccb0fd209fbc5` |
+| [docs/architecture/12_TRACEABILITY_MATRIX.md](../docs/architecture/12_TRACEABILITY_MATRIX.md) | `d5a063ae83357e431e0d0610c58fd5925895ef07d36552fc20f4a24d68d57126` |
 
 ---
 
@@ -44,9 +44,9 @@ Reconstruct the system before judging it. Apply this protocol to a framework-wid
 
 Record the branch or commit and the scope of the assessment. Read actual file contents, not just the repository page, search snippets, filenames or another model's summary. The current default branch is `codex/architecture`; verify it rather than assuming `main`. If GitHub page extraction fails, try direct Raw files or the public contents API. Report failed or truncated reads; they do not count as completed reading.
 
-Read the [README](README.md) and [Current State](docs/architecture/CURRENT_STATE.md), then the complete [Problem Definition](docs/architecture/01_PROBLEM_DEFINITION.md) and [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md). Use their references to check the [Definitions](docs/architecture/04_DEFINITIONS.md), [Decision Register](docs/architecture/02_DECISION_REGISTER.md), [Rejected Decisions](docs/architecture/03_REJECTED_DECISIONS.md) and [Open Decisions](docs/architecture/11_OPEN_DECISIONS.md). For a whole-framework review, cover the [Requirements](docs/architecture/05_REQUIREMENTS.md), [Scientific Evaluation](docs/architecture/07_SCIENTIFIC_EVALUATION.md), [Engineering Review](docs/architecture/08_ENGINEERING_REVIEW.md), [Blueprint](docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md), [Roadmap](docs/architecture/10_IMPLEMENTATION_ROADMAP.md) and [Traceability](docs/architecture/12_TRACEABILITY_MATRIX.md) as well. Read long documents in bounded sections without dropping the middle.
+Read the [README](../README.md) and [Current State](../docs/architecture/CURRENT_STATE.md), then the complete [Problem Definition](../docs/architecture/01_PROBLEM_DEFINITION.md) and [Master Architecture](../docs/architecture/06_MASTER_ARCHITECTURE.md). Use their references to check the [Definitions](../docs/architecture/04_DEFINITIONS.md), [Decision Register](../docs/architecture/02_DECISION_REGISTER.md), [Rejected Decisions](../docs/architecture/03_REJECTED_DECISIONS.md) and [Open Decisions](../docs/architecture/11_OPEN_DECISIONS.md). For a whole-framework review, cover the [Requirements](../docs/architecture/05_REQUIREMENTS.md), [Scientific Evaluation](../docs/architecture/07_SCIENTIFIC_EVALUATION.md), [Engineering Review](../docs/architecture/08_ENGINEERING_REVIEW.md), [Blueprint](../docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md), [Roadmap](../docs/architecture/10_IMPLEMENTATION_ROADMAP.md) and [Traceability](../docs/architecture/12_TRACEABILITY_MATRIX.md) as well. Read long documents in bounded sections without dropping the middle.
 
-Check provenance disputes against the [Source Audit](docs/architecture/00_SOURCE_AUDIT.md) and its source index, then the relevant original messages. A later decision can supersede an earlier example. Preserve the distinction between accepted, conditional, rejected, superseded, proposed and open positions. A review recommendation is not an accepted scientific rule.
+Check provenance disputes against the [Source Audit](../docs/architecture/00_SOURCE_AUDIT.md) and its source index, then the relevant original messages. A later decision can supersede an earlier example. Preserve the distinction between accepted, conditional, rejected, superseded, proposed and open positions. A review recommendation is not an accepted scientific rule.
 
 ## Demonstrate the system model before the critique
 
@@ -78,29 +78,29 @@ This is a review discipline, not a guarantee of model comprehension or a reason 
 
 Source-backed architecture for an autonomous market-research framework: an LLM independently develops hypotheses, freezes executable claims before confirmation, and submits them to independent code for evaluation.
 
-The framework must substantially accelerate both hypothesis discovery and testing while preserving scientific decision quality. The [Problem Definition](docs/architecture/01_PROBLEM_DEFINITION.md) states both goals; the [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md) connects research, early exits, feedback and decision authority.
+The framework must substantially accelerate both hypothesis discovery and testing while preserving scientific decision quality. The [Problem Definition](../docs/architecture/01_PROBLEM_DEFINITION.md) states both goals; the [Master Architecture](../docs/architecture/06_MASTER_ARCHITECTURE.md) connects research, early exits, feedback and decision authority.
 
 **Status:** documentation and preserved conversation sources only. No application implementation, demonstrated trading edge or live deployment is included.
 
 ## Start here
 
-**Single-page reading option:** [Complete architecture reading copy](FRAMEWORK_REVIEW.md) includes the reviewer instructions and all architecture documents 00-12 in one uncompressed Markdown file. Use its ordinary GitHub file page when repository import or multi-file retrieval fails. It is generated from the originals, not a separate summary; source archives remain linked separately.
+**Single-page reading option:** [Complete architecture reading copy](../review) includes the reviewer instructions and all architecture documents 00-12 in one uncompressed Markdown file. Open the linked GitHub directory page, which displays its README directly, when repository import or multi-file retrieval fails. It is generated from the originals, not a separate summary; source archives remain linked separately.
 
-**For LLM reviewers:** Follow [REVIEWING.md](REVIEWING.md) before a framework-wide critique. First present a source-linked reconstruction of goals, flow, feedback, authority and open boundaries. If access or context is incomplete, state the limits and withhold an overall verdict; do not treat a partial reading as the whole system.
+**For LLM reviewers:** Follow [REVIEWING.md](../REVIEWING.md) before a framework-wide critique. First present a source-linked reconstruction of goals, flow, feedback, authority and open boundaries. If access or context is incomplete, state the limits and withhold an overall verdict; do not treat a partial reading as the whole system.
 
-- [Source audit and known gaps](docs/architecture/00_SOURCE_AUDIT.md)
-- [Problem definition](docs/architecture/01_PROBLEM_DEFINITION.md)
-- [Decision register](docs/architecture/02_DECISION_REGISTER.md)
-- [Rejected and replaced alternatives](docs/architecture/03_REJECTED_DECISIONS.md)
-- [Canonical definitions and preserved formulas](docs/architecture/04_DEFINITIONS.md)
-- [Requirements](docs/architecture/05_REQUIREMENTS.md)
-- [Master architecture](docs/architecture/06_MASTER_ARCHITECTURE.md)
-- [Scientific evaluation](docs/architecture/07_SCIENTIFIC_EVALUATION.md)
-- [Engineering review](docs/architecture/08_ENGINEERING_REVIEW.md)
-- [Implementation blueprint](docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md)
-- [Proposed roadmap](docs/architecture/10_IMPLEMENTATION_ROADMAP.md)
-- [Open decisions](docs/architecture/11_OPEN_DECISIONS.md)
-- [Traceability matrix](docs/architecture/12_TRACEABILITY_MATRIX.md)
+- [Source audit and known gaps](../docs/architecture/00_SOURCE_AUDIT.md)
+- [Problem definition](../docs/architecture/01_PROBLEM_DEFINITION.md)
+- [Decision register](../docs/architecture/02_DECISION_REGISTER.md)
+- [Rejected and replaced alternatives](../docs/architecture/03_REJECTED_DECISIONS.md)
+- [Canonical definitions and preserved formulas](../docs/architecture/04_DEFINITIONS.md)
+- [Requirements](../docs/architecture/05_REQUIREMENTS.md)
+- [Master architecture](../docs/architecture/06_MASTER_ARCHITECTURE.md)
+- [Scientific evaluation](../docs/architecture/07_SCIENTIFIC_EVALUATION.md)
+- [Engineering review](../docs/architecture/08_ENGINEERING_REVIEW.md)
+- [Implementation blueprint](../docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md)
+- [Proposed roadmap](../docs/architecture/10_IMPLEMENTATION_ROADMAP.md)
+- [Open decisions](../docs/architecture/11_OPEN_DECISIONS.md)
+- [Traceability matrix](../docs/architecture/12_TRACEABILITY_MATRIX.md)
 
 ## Evidence and limits
 
@@ -108,11 +108,11 @@ The archive contains 305 message blocks from 304 numbered turns of the accessibl
 
 The decision register separates accepted decisions, conditional choices, superseded positions, deferred work and new proposals. The roadmap and implementation contracts are not evidence that an application has been built.
 
-- [Exact captured transcript](sources/full_conversation.md)
-- [Source manifest and checksums](sources/capture_manifest.json)
-- [Message review index](docs/architecture/SOURCE_REVIEW_INDEX.md)
-- [Machine-readable architecture register](docs/architecture/ARCHITECTURE_REGISTER.json)
-- [Documentation verification results](docs/architecture/DOCUMENTATION_VERIFICATION.json)
+- [Exact captured transcript](../sources/full_conversation.md)
+- [Source manifest and checksums](../sources/capture_manifest.json)
+- [Message review index](../docs/architecture/SOURCE_REVIEW_INDEX.md)
+- [Machine-readable architecture register](../docs/architecture/ARCHITECTURE_REGISTER.json)
+- [Documentation verification results](../docs/architecture/DOCUMENTATION_VERIFICATION.json)
 
 Files under `sources/` are preserved byte-for-byte. Git attributes disable text conversion for that directory. Verify their SHA-256 hashes against the capture manifest before using a new checkout for reconstruction or further analysis.
 
@@ -126,17 +126,17 @@ Project documentation is English (en-US); original source quotations retain thei
 
 ## Purpose and boundaries
 
-Build toward autonomous, nontrivial LLM invention of market hypotheses, faithful formalization and freezing, and independent deterministic scientific evaluation. Preserve free discovery rather than replacing it with a closed rule catalog. The LLM must not judge its own empirical success. See the [Problem Definition](docs/architecture/01_PROBLEM_DEFINITION.md) and D001 in the [Decision Register](docs/architecture/02_DECISION_REGISTER.md).
+Build toward autonomous, nontrivial LLM invention of market hypotheses, faithful formalization and freezing, and independent deterministic scientific evaluation. Preserve free discovery rather than replacing it with a closed rule catalog. The LLM must not judge its own empirical success. See the [Problem Definition](../docs/architecture/01_PROBLEM_DEFINITION.md) and D001 in the [Decision Register](../docs/architecture/02_DECISION_REGISTER.md).
 
-Preserve the [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md) invariants: point-in-time information, inherited exposure, pre-outcome scientific commitments, independent feature certification, retained failures and unsupported ideas, separate policy evaluation, and the firewall between operations and research evidence. Keep evidence, validity, applicability and deployment authority distinct without inventing a resolution to open semantics. Historical-first research does not make exposed history unseen; v1 discovery starts at 15-minute observations (D012–D014).
+Preserve the [Master Architecture](../docs/architecture/06_MASTER_ARCHITECTURE.md) invariants: point-in-time information, inherited exposure, pre-outcome scientific commitments, independent feature certification, retained failures and unsupported ideas, separate policy evaluation, and the firewall between operations and research evidence. Keep evidence, validity, applicability and deployment authority distinct without inventing a resolution to open semantics. Historical-first research does not make exposed history unseen; v1 discovery starts at 15-minute observations (D012–D014).
 
 ## Read according to the task
 
-- Start with the [README](README.md) and descriptive [Current State](docs/architecture/CURRENT_STATE.md).
-- Before a system-level assessment, follow [REVIEWING.md](REVIEWING.md): reconstruct and substantiate the system model before critique, state gaps, and withhold an overall verdict when the reconstruction is incomplete. Use that same model for design and implementation; reuse it within a session and reconstruct it after context loss or a material change.
-- For affected behavior, consult the [Decision Register](docs/architecture/02_DECISION_REGISTER.md), [Rejected Decisions](docs/architecture/03_REJECTED_DECISIONS.md), [Definitions](docs/architecture/04_DEFINITIONS.md) and [Open Decisions](docs/architecture/11_OPEN_DECISIONS.md).
-- For design or implementation, read relevant sections of the [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md), [Requirements](docs/architecture/05_REQUIREMENTS.md), [Engineering Review](docs/architecture/08_ENGINEERING_REVIEW.md), [Implementation Blueprint](docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md) and [Traceability Matrix](docs/architecture/12_TRACEABILITY_MATRIX.md). Consult the [Scientific Evaluation](docs/architecture/07_SCIENTIFIC_EVALUATION.md) when scientific validity is affected.
-- For provenance disputes, use the [Source Audit](docs/architecture/00_SOURCE_AUDIT.md) and [Source Review Index](docs/architecture/SOURCE_REVIEW_INDEX.md) to locate the relevant archived messages. Do not read the entire conversation for every small change.
+- Start with the [README](../README.md) and descriptive [Current State](../docs/architecture/CURRENT_STATE.md).
+- Before a system-level assessment, follow [REVIEWING.md](../REVIEWING.md): reconstruct and substantiate the system model before critique, state gaps, and withhold an overall verdict when the reconstruction is incomplete. Use that same model for design and implementation; reuse it within a session and reconstruct it after context loss or a material change.
+- For affected behavior, consult the [Decision Register](../docs/architecture/02_DECISION_REGISTER.md), [Rejected Decisions](../docs/architecture/03_REJECTED_DECISIONS.md), [Definitions](../docs/architecture/04_DEFINITIONS.md) and [Open Decisions](../docs/architecture/11_OPEN_DECISIONS.md).
+- For design or implementation, read relevant sections of the [Master Architecture](../docs/architecture/06_MASTER_ARCHITECTURE.md), [Requirements](../docs/architecture/05_REQUIREMENTS.md), [Engineering Review](../docs/architecture/08_ENGINEERING_REVIEW.md), [Implementation Blueprint](../docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md) and [Traceability Matrix](../docs/architecture/12_TRACEABILITY_MATRIX.md). Consult the [Scientific Evaluation](../docs/architecture/07_SCIENTIFIC_EVALUATION.md) when scientific validity is affected.
+- For provenance disputes, use the [Source Audit](../docs/architecture/00_SOURCE_AUDIT.md) and [Source Review Index](../docs/architecture/SOURCE_REVIEW_INDEX.md) to locate the relevant archived messages. Do not read the entire conversation for every small change.
 
 For wording-only edits and other bounded tasks with no architectural consequence, use the entry documents and affected files only; skip the full orientation and system recap. Do not expand the task, repeat reads already available, or ask the user to restate documented context. A historical handoff's task authorization describes that earlier task; the current explicit user request determines today's scope, subject to the scientific change-control rules below.
 
@@ -161,10 +161,10 @@ Distinguish scientific logic from ordinary infrastructure. External runtimes, st
 
 - Keep all authored project artifacts in English (en-US), per D043. Preserve original-language verbatim source quotations and the archived source bytes; do not translate or rewrite the original conversation archive. Document source gaps honestly and add later recovery as separately versioned evidence.
 - Use the smallest coherent implementation that meets affected requirements. Logical roles do not mandate separate agents, services or databases. Avoid speculative abstractions and follow D030's bounded iteration rules.
-- The [Roadmap](docs/architecture/10_IMPLEMENTATION_ROADMAP.md) proposes phases; it does not authorize starting one. Work within the user's current scope and resolve blockers for the selected work.
+- The [Roadmap](../docs/architecture/10_IMPLEMENTATION_ROADMAP.md) proposes phases; it does not authorize starting one. Work within the user's current scope and resolve blockers for the selected work.
 - Verify changes against affected requirements, acceptance criteria and existing tests. Distinguish specified future tests from executable tests and from tests actually run. For documentation, check consistency, links, whitespace and preservation of unaffected artifacts. Report changed files, exact check outcomes and unverified boundaries; do not claim scientific validity from software checks.
-- After approved decisions or verified capability changes, update affected canonical documents and the descriptive handoff using the [Current State maintenance process](docs/architecture/CURRENT_STATE.md#maintaining-this-handoff-and-recording-decisions).
-- If a source listed in [FRAMEWORK_REVIEW.md](FRAMEWORK_REVIEW.md) changes, regenerate that reading copy with `python scripts/build_review_document.py` and verify it with `python scripts/build_review_document.py --check`.
+- After approved decisions or verified capability changes, update affected canonical documents and the descriptive handoff using the [Current State maintenance process](../docs/architecture/CURRENT_STATE.md#maintaining-this-handoff-and-recording-decisions).
+- If a source listed in [review/README.md](../review/README.md) changes, regenerate that reading copy with `python scripts/build_review_document.py` and verify it with `python scripts/build_review_document.py --check`.
 
 ---
 
@@ -172,39 +172,39 @@ Distinguish scientific logic from ordinary infrastructure. External runtimes, st
 
 # Current state
 
-Verified October 22, 2026. This is a descriptive handoff, not an additional source of architectural authority. The [Decision Register](docs/architecture/02_DECISION_REGISTER.md), [Rejected Decisions](docs/architecture/03_REJECTED_DECISIONS.md) and versioned [Definitions](docs/architecture/04_DEFINITIONS.md) retain their existing authority and qualifications.
+Verified October 22, 2026. This is a descriptive handoff, not an additional source of architectural authority. The [Decision Register](../docs/architecture/02_DECISION_REGISTER.md), [Rejected Decisions](../docs/architecture/03_REJECTED_DECISIONS.md) and versioned [Definitions](../docs/architecture/04_DEFINITIONS.md) retain their existing authority and qualifications.
 
 ## Repository and existing artifacts
 
 - Repository: [RealMonoid/TradingResearcher](https://github.com/RealMonoid/TradingResearcher). Verified working branch: `codex/architecture`; `origin` is `https://github.com/RealMonoid/TradingResearcher.git`.
-- Architecture baseline before the original repository preparation: commit `d818dc0ded5d224932638795845071d2f24ce115`. That preparation added root [AGENTS.md](AGENTS.md) and this handoff. The earlier session-understanding intervention is preserved in its review artifacts. The subsequently approved system-model revision records D068, completes the existing goal/feedback explanation and simplifies entry instructions; it does not resolve open scientific contracts or authorize framework implementation.
-- The [README](README.md) indexes architecture documents 00–12: source audit, problem definition, decisions, rejections, definitions, requirements, master architecture, scientific evaluation, engineering review, blueprint, proposed roadmap, open decisions and traceability.
-- [ARCHITECTURE_REGISTER.json](docs/architecture/ARCHITECTURE_REGISTER.json) is a structured documentation companion. [SOURCE_REVIEW_INDEX.md](docs/architecture/SOURCE_REVIEW_INDEX.md), [SOURCE_VERIFICATION.json](docs/architecture/SOURCE_VERIFICATION.json) and [DOCUMENTATION_VERIFICATION.json](docs/architecture/DOCUMENTATION_VERIFICATION.json) preserve review and verification evidence from the reconstruction. Those reports do not automatically cover later changes or these two preparation files.
-- [sources/](sources) contains the original captured [conversation](sources/full_conversation.md), recovered DOM, message index, structured content, source inventory and [capture manifest](sources/capture_manifest.json). The capture records 304 numbered turns and 305 message blocks. It is not a verified complete original export. Missing images/files, incomplete M0302 and other provenance limits remain in the [Source Audit](docs/architecture/00_SOURCE_AUDIT.md), SRC-001 through SRC-008. Continuing with documented gaps was explicitly authorized; the archive remains unchanged.
+- Architecture baseline before the original repository preparation: commit `d818dc0ded5d224932638795845071d2f24ce115`. That preparation added root [AGENTS.md](../AGENTS.md) and this handoff. The earlier session-understanding intervention is preserved in its review artifacts. The subsequently approved system-model revision records D068, completes the existing goal/feedback explanation and simplifies entry instructions; it does not resolve open scientific contracts or authorize framework implementation.
+- The [README](../README.md) indexes architecture documents 00–12: source audit, problem definition, decisions, rejections, definitions, requirements, master architecture, scientific evaluation, engineering review, blueprint, proposed roadmap, open decisions and traceability.
+- [ARCHITECTURE_REGISTER.json](../docs/architecture/ARCHITECTURE_REGISTER.json) is a structured documentation companion. [SOURCE_REVIEW_INDEX.md](../docs/architecture/SOURCE_REVIEW_INDEX.md), [SOURCE_VERIFICATION.json](../docs/architecture/SOURCE_VERIFICATION.json) and [DOCUMENTATION_VERIFICATION.json](../docs/architecture/DOCUMENTATION_VERIFICATION.json) preserve review and verification evidence from the reconstruction. Those reports do not automatically cover later changes or these two preparation files.
+- [sources/](../sources) contains the original captured [conversation](../sources/full_conversation.md), recovered DOM, message index, structured content, source inventory and [capture manifest](../sources/capture_manifest.json). The capture records 304 numbered turns and 305 message blocks. It is not a verified complete original export. Missing images/files, incomplete M0302 and other provenance limits remain in the [Source Audit](../docs/architecture/00_SOURCE_AUDIT.md), SRC-001 through SRC-008. Continuing with documented gaps was explicitly authorized; the archive remains unchanged.
 
 ## Actual capabilities versus target design
 
 The repository currently provides a readable, source-linked architecture, decision and rejection history, canonical definitions, requirements, proposed interfaces and acceptance specifications. It supports architectural discussion and traceability to the preserved source.
 
-There is no implemented framework, application test suite, build/package configuration or CI workflow. No discovery agent, compiler, feature certification service, runtime registry, freeze transaction, data connector, simulator, evidence engine, memory system, Column Library, dashboard or deployment capability exists here. The `TEST-01` through `TEST-27` entries in the [Traceability Matrix](docs/architecture/12_TRACEABILITY_MATRIX.md) are future acceptance specifications, not executed tests. Record-field tables in the [Blueprint](docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md) are not complete executable schemas. Repository-instruction checks are separate from these future application tests.
+There is no implemented framework, application test suite, build/package configuration or CI workflow. No discovery agent, compiler, feature certification service, runtime registry, freeze transaction, data connector, simulator, evidence engine, memory system, Column Library, dashboard or deployment capability exists here. The `TEST-01` through `TEST-27` entries in the [Traceability Matrix](../docs/architecture/12_TRACEABILITY_MATRIX.md) are future acceptance specifications, not executed tests. Record-field tables in the [Blueprint](../docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md) are not complete executable schemas. Repository-instruction checks are separate from these future application tests.
 
-As recorded in the [Engineering Review](docs/architecture/08_ENGINEERING_REVIEW.md), vectorbt is the accepted primary backend candidate; Hermes is a runtime candidate; Harness2 provides conditionally accepted improvement patterns. None is integrated or conformance-tested in this repository. That review is a documented critical pass, not an independent-person audit or application-code audit. Research performance, scientific calibration and profitability are unverified.
+As recorded in the [Engineering Review](../docs/architecture/08_ENGINEERING_REVIEW.md), vectorbt is the accepted primary backend candidate; Hermes is a runtime candidate; Harness2 provides conditionally accepted improvement patterns. None is integrated or conformance-tested in this repository. That review is a documented critical pass, not an independent-person audit or application-code audit. Research performance, scientific calibration and profitability are unverified.
 
 ## Approved boundaries and unresolved work
 
-The [Problem Definition](docs/architecture/01_PROBLEM_DEFINITION.md) and [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md) preserve free LLM invention, faithful H_idea-to-H_exec formalization, independent code judgment, point-in-time context and inherited exposure, frozen evaluation and selection rules, retained technical failures, separately evaluated policies and governed improvement. Unsupported ideas remain recorded with their gaps. Historical-first research and the 15-minute v1 observation minimum remain accepted; forward confirmation retains its distinct evidence origin. Logical component boundaries do not select a service topology or agent count.
+The [Problem Definition](../docs/architecture/01_PROBLEM_DEFINITION.md) and [Master Architecture](../docs/architecture/06_MASTER_ARCHITECTURE.md) preserve free LLM invention, faithful H_idea-to-H_exec formalization, independent code judgment, point-in-time context and inherited exposure, frozen evaluation and selection rules, retained technical failures, separately evaluated policies and governed improvement. Unsupported ideas remain recorded with their gaps. Historical-first research and the 15-minute v1 observation minimum remain accepted; forward confirmation retains its distinct evidence origin. Logical component boundaries do not select a service topology or agent count.
 
-The user clarification that substantially accelerating hypothesis discovery **and** testing is a framework-level success objective is now recorded as D068, REQ-027 and future TEST-27. Its current-session source is separate from the immutable archive. The Problem Definition states both goals; the Master Architecture and Blueprint connect early exits, retained gaps/errors, qualified results and the distinct feedback loops. [AGENTS.md](AGENTS.md) points to this whole instead of duplicating incident-specific reminders. Numeric targets and comparison design remain OPEN-11; no lifecycle migration, evidence upgrade or certification policy is approved.
+The user clarification that substantially accelerating hypothesis discovery **and** testing is a framework-level success objective is now recorded as D068, REQ-027 and future TEST-27. Its current-session source is separate from the immutable archive. The Problem Definition states both goals; the Master Architecture and Blueprint connect early exits, retained gaps/errors, qualified results and the distinct feedback loops. [AGENTS.md](../AGENTS.md) points to this whole instead of duplicating incident-specific reminders. Numeric targets and comparison design remain OPEN-11; no lifecycle migration, evidence upgrade or certification policy is approved.
 
-The [System Model Review](docs/reviews/SYSTEM_MODEL_REVIEW.md) describes the pre-change findings and approved remedy. The earlier [session-understanding experiment](docs/reviews/session-understanding/README.md) applies only to its frozen instruction versions; its checker intentionally compares against those old hashes and is not a gate for this revision. Its incomplete efficacy result is retained. This revision has documentation integrity and consistency checks, not a new behavioral efficacy experiment; reliable comprehension across new sessions or compaction remains unverified.
+The [System Model Review](../docs/reviews/SYSTEM_MODEL_REVIEW.md) describes the pre-change findings and approved remedy. The earlier [session-understanding experiment](../docs/reviews/session-understanding/README.md) applies only to its frozen instruction versions; its checker intentionally compares against those old hashes and is not a gate for this revision. Its incomplete efficacy result is retained. This revision has documentation integrity and consistency checks, not a new behavioral efficacy experiment; reliable comprehension across new sessions or compaction remains unverified.
 
-The current [documentation checker](docs/reviews/verify_system_model.py) runs with `python docs/reviews/verify_system_model.py`; the [revision verification result](docs/reviews/SYSTEM_MODEL_UPDATE_VERIFICATION.json) records the executed checks and exact file hashes. Supplying its optional pre-edit inventory also checks preservation of all previously present review artifacts. Diagram routing checks do not verify rendering or executable scientific semantics.
+The current [documentation checker](../docs/reviews/verify_system_model.py) runs with `python docs/reviews/verify_system_model.py`; the [revision verification result](../docs/reviews/SYSTEM_MODEL_UPDATE_VERIFICATION.json) records the executed checks and exact file hashes. Supplying its optional pre-edit inventory also checks preservation of all previously present review artifacts. Diagram routing checks do not verify rendering or executable scientific semantics.
 
-[REVIEWING.md](REVIEWING.md), linked from README and AGENTS.md, now gives external LLM reviewers the same reconstruction-before-critique protocol. It requires an observable source-linked system model and bounded conclusions when context is incomplete. It changes review procedure, not scientific authority; cross-model compliance is unverified. Earlier verification snapshots retain their original scope and hashes.
+[REVIEWING.md](../REVIEWING.md), linked from README and AGENTS.md, now gives external LLM reviewers the same reconstruction-before-critique protocol. It requires an observable source-linked system model and bounded conclusions when context is incomplete. It changes review procedure, not scientific authority; cross-model compliance is unverified. Earlier verification snapshots retain their original scope and hashes.
 
-[FRAMEWORK_REVIEW.md](FRAMEWORK_REVIEW.md) is a generated, uncompressed reading copy of 17 source documents for GitHub-only readers. It includes the review instructions and full architecture documents 00-12, with source hashes and relocated links. It is not a new canonical summary and does not include the original conversation archive or structured companions. `python scripts/build_review_document.py --check` checks exact regeneration. Successful public delivery does not establish that a particular LLM fetcher ingests the complete file.
+[review/README.md](../review) is a generated, uncompressed reading copy of 17 source documents for GitHub-only readers. Its GitHub directory page displays the README directly; ordinary blob pages can defer content to embedded page data, and plain source views can truncate long files. It includes the review instructions and full architecture documents 00-12, with source hashes and relocated links. It is not a new canonical summary and does not include the original conversation archive or structured companions. `python scripts/build_review_document.py --check` checks exact regeneration. Successful public delivery does not establish that a particular LLM fetcher ingests the complete file.
 
-Consult the complete [Open Decisions](docs/architecture/11_OPEN_DECISIONS.md) register before affected work:
+Consult the complete [Open Decisions](../docs/architecture/11_OPEN_DECISIONS.md) register before affected work:
 
 | Open items | Unresolved boundary |
 |---|---|
@@ -215,13 +215,13 @@ Consult the complete [Open Decisions](docs/architecture/11_OPEN_DECISIONS.md) re
 | OPEN-10–12 | Live-capital authority, framework success/stop criteria and confirmation allocation. |
 | OPEN-13–15 | Applicability/dependency propagation, routine certification versus material-change approval, and source recovery. |
 
-The [Roadmap](docs/architecture/10_IMPLEMENTATION_ROADMAP.md) recommends P1 semantic contracts followed by a technical vertical slice and later calibration. It is a proposal, not an authorized implementation phase. Earlier preparation and session-understanding tasks concern repository instructions and documentation; their scope statements do not override a later explicit user request. A framework implementation request must identify a bounded scope and acceptance evidence, with the relevant open decisions resolved before dependent work. No live trading or material self-modification is authorized by these documents.
+The [Roadmap](../docs/architecture/10_IMPLEMENTATION_ROADMAP.md) recommends P1 semantic contracts followed by a technical vertical slice and later calibration. It is a proposal, not an authorized implementation phase. Earlier preparation and session-understanding tasks concern repository instructions and documentation; their scope statements do not override a later explicit user request. A framework implementation request must identify a bounded scope and acceptance evidence, with the relevant open decisions resolved before dependent work. No live trading or material self-modification is authorized by these documents.
 
 ## Maintaining this handoff and recording decisions
 
 1. Identify affected decision, definition, requirement and open-item IDs. Consult rejection reasons and scope before revisiting an approach; inspect targeted source messages when provenance matters.
 2. Record a proposed decision with rationale, alternatives, impacts and approval status. Obtain explicit user approval before applying material goal, semantic or scientific-contract changes. A discussion, example or engineering recommendation is not acceptance.
-3. After approval where required, update the [Decision Register](docs/architecture/02_DECISION_REGISTER.md) and its [structured companion](docs/architecture/ARCHITECTURE_REGISTER.json). Preserve history and distinguish acceptance, rejection, supersession, proposal and unresolved status. Update the [Rejected Decisions](docs/architecture/03_REJECTED_DECISIONS.md) when an alternative's disposition changes; version affected [Definitions](docs/architecture/04_DEFINITIONS.md) rather than silently rewriting meaning.
+3. After approval where required, update the [Decision Register](../docs/architecture/02_DECISION_REGISTER.md) and its [structured companion](../docs/architecture/ARCHITECTURE_REGISTER.json). Preserve history and distinguish acceptance, rejection, supersession, proposal and unresolved status. Update the [Rejected Decisions](../docs/architecture/03_REJECTED_DECISIONS.md) when an alternative's disposition changes; version affected [Definitions](../docs/architecture/04_DEFINITIONS.md) rather than silently rewriting meaning.
 4. Update affected requirements, architecture, blueprint, open decisions and traceability; verify the corresponding acceptance criteria and tests. Ordinary implementation details need not become new scientific decisions. Preserve the original source archive; later source recovery gets separate provenance.
 5. Refresh this snapshot when verified capabilities or repository context change. State what exists, what remains conceptual and what was actually checked. Keep canonical decisions in their registers rather than resolving them in this handoff.
 
@@ -341,7 +341,7 @@ Continuation with these gaps is explicitly authorized; the user need not repeat 
 
 # Problem Definition
 
-Version: reconstruction-1 with approved clarification D068 (October 22, 2026). Original source limits remain in [00_SOURCE_AUDIT.md](docs/architecture/00_SOURCE_AUDIT.md); D068 separately records the later user clarification.
+Version: reconstruction-1 with approved clarification D068 (October 22, 2026). Original source limits remain in [00_SOURCE_AUDIT.md](../docs/architecture/00_SOURCE_AUDIT.md); D068 separately records the later user clarification.
 
 ## Fundamental problem
 
@@ -351,7 +351,7 @@ The decisive user constitution is M0057, reinforced by M0059 and M0107. The exac
 
 > Ein Agent-Workflow, in dem ein LLM aus Marktdaten und vorhandenem Wissen selbstständig nichttriviale Hypothesen entwickelt, sie vor dem Test in ausführbare Form bringt, und in dem Code sie anschließend unabhängig an neuen Daten prüft.
 
-Source: [M0057](sources/full_conversation.md#m0057--user). D001 records its non-negotiable status.
+Source: [M0057](../sources/full_conversation.md#m0057--user). D001 records its non-negotiable status.
 
 The framework has two linked goals: autonomous nontrivial invention with faithful independent evaluation, and substantial acceleration of **both hypothesis discovery and testing** (D068). Acceleration concerns the complete research process, including useful early elimination and retained failures. It must preserve scientific decision quality and evidence boundaries; more generated or rejected ideas alone do not demonstrate success.
 
@@ -396,7 +396,7 @@ Success requires a freely generated claim to pass through formalization, provena
 
 Framework success also requires a measured substantial acceleration of discovery and testing under a predefined comparison with matched task scope, decision quality and evidence access (REQ-027). The reference workflow or prior version, time/cost measures, improvement threshold and assessment design remain OPEN-11; D015's rejected comparator generator is not authorized by this requirement. Distinguish processing existing observations from waiting for new outcomes. Historical-first research can reject or refine candidates quickly while stronger independent confirmation remains a separate constraint.
 
-A hypothesis succeeds or fails under its own frozen evaluation policy. A policy needs its own evidence and operational assessment. The framework is evaluated on the quality, efficiency, calibration and usefulness of the whole process: a valid negative hypothesis result can be useful progress without proving framework success, and a supported hypothesis does not by itself validate a policy. The [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md) connects these levels and their feedback paths.
+A hypothesis succeeds or fails under its own frozen evaluation policy. A policy needs its own evidence and operational assessment. The framework is evaluated on the quality, efficiency, calibration and usefulness of the whole process: a valid negative hypothesis result can be useful progress without proving framework success, and a supported hypothesis does not by itself validate a policy. The [Master Architecture](../docs/architecture/06_MASTER_ARCHITECTURE.md) connects these levels and their feedback paths.
 
 The framework is not a fixed strategy generator, an LLM judge of truth, a mandatory ontology, an unconstrained historical optimizer, or an automatic capital-allocation mandate. It may use known effects, data-first observations and cross-domain analogies, but must not require one discovery route. A failed hypothesis can be useful research; a technically invalid run is neither support nor falsification.
 
@@ -426,7 +426,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | AMBIGUOUS | 1 |
 | OPEN | 1 |
 
-Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DECISIONS.md) record rejected alternatives at finer granularity. Do not add their count to this table as if these were disjoint decisions. Components and requirement IDs resolve in documents 05 and 06. Dependencies mean the referenced requirement and components must hold; D001 and D008 constrain every normative decision.
+Rejection records in [03_REJECTED_DECISIONS.md](../docs/architecture/03_REJECTED_DECISIONS.md) record rejected alternatives at finer granularity. Do not add their count to this table as if these were disjoint decisions. Components and requirement IDs resolve in documents 05 and 06. Dependencies mean the referenced requirement and components must hold; D001 and D008 constrain every normative decision.
 
 ## Chronological decisions
 
@@ -440,7 +440,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-03, CMP-04, CMP-06; REQ-001; D001 and D008.
 
-**Source and acceptance:** [M0057](sources/full_conversation.md#m0057--user) (L5598-L5606); [M0059](sources/full_conversation.md#m0059--user) (L5690-L5690); [M0107](sources/full_conversation.md#m0107--user) (L12455-L12455). Direct user constitution and reinforcement.
+**Source and acceptance:** [M0057](../sources/full_conversation.md#m0057--user) (L5598-L5606); [M0059](../sources/full_conversation.md#m0059--user) (L5690-L5690); [M0107](../sources/full_conversation.md#m0107--user) (L12455-L12455). Direct user constitution and reinforcement.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -454,7 +454,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-03; REQ-002; D001 and D008.
 
-**Source and acceptance:** [M0061](sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0067](sources/full_conversation.md#m0067--user) (L7383-L7392); [M0071](sources/full_conversation.md#m0071--user) (L8730-L8737); [M0074](sources/full_conversation.md#m0074--assistant) (L9306-L9395). User instruction plus requested handoff.
+**Source and acceptance:** [M0061](../sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](../sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0067](../sources/full_conversation.md#m0067--user) (L7383-L7392); [M0071](../sources/full_conversation.md#m0071--user) (L8730-L8737); [M0074](../sources/full_conversation.md#m0074--assistant) (L9306-L9395). User instruction plus requested handoff.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -468,7 +468,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-03, CMP-04; REQ-002; D001 and D008.
 
-**Source and acceptance:** [M0067](sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0071](sources/full_conversation.md#m0071--user) (L8730-L8737); [M0088](sources/full_conversation.md#m0088--assistant) (L10833-L10961); [M0090](sources/full_conversation.md#m0090--assistant) (L10981-L11135). Direct requested specification; later clarification.
+**Source and acceptance:** [M0067](../sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0071](../sources/full_conversation.md#m0071--user) (L8730-L8737); [M0088](../sources/full_conversation.md#m0088--assistant) (L10833-L10961); [M0090](../sources/full_conversation.md#m0090--assistant) (L10981-L11135). Direct requested specification; later clarification.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -482,7 +482,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-03, CMP-04, CMP-08; REQ-003; D001 and D008.
 
-**Source and acceptance:** [M0061](sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0065](sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0067](sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546). Direct user specification in M0067.
+**Source and acceptance:** [M0061](../sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](../sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0065](../sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](../sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0067](../sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546). Direct user specification in M0067.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -496,7 +496,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-02, CMP-07; REQ-004; D001 and D008.
 
-**Source and acceptance:** [M0063](sources/full_conversation.md#m0063--user) (L6406-L6406); [M0064](sources/full_conversation.md#m0064--assistant) (L6416-L7134); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0071](sources/full_conversation.md#m0071--user) (L8730-L8737); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0111](sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794). User autonomy request and retained design.
+**Source and acceptance:** [M0063](../sources/full_conversation.md#m0063--user) (L6406-L6406); [M0064](../sources/full_conversation.md#m0064--assistant) (L6416-L7134); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0071](../sources/full_conversation.md#m0071--user) (L8730-L8737); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0111](../sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794). User autonomy request and retained design.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -510,7 +510,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-04, CMP-06; REQ-005; D001 and D008.
 
-**Source and acceptance:** [M0065](sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0067](sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0071](sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286). Direct requested specification.
+**Source and acceptance:** [M0065](../sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](../sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0067](../sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0071](../sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286). Direct requested specification.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -524,7 +524,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-04, CMP-05, CMP-06, CMP-11; REQ-006; D001 and D008.
 
-**Source and acceptance:** [M0069](sources/full_conversation.md#m0069--user) (L8556-L8556); [M0070](sources/full_conversation.md#m0070--assistant) (L8566-L8720); [M0071](sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0288](sources/full_conversation.md#m0288--assistant) (L26682-L26842); [M0289](sources/full_conversation.md#m0289--user) (L26852-L26852). Direct user request and later acceptance.
+**Source and acceptance:** [M0069](../sources/full_conversation.md#m0069--user) (L8556-L8556); [M0070](../sources/full_conversation.md#m0070--assistant) (L8566-L8720); [M0071](../sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0288](../sources/full_conversation.md#m0288--assistant) (L26682-L26842); [M0289](../sources/full_conversation.md#m0289--user) (L26852-L26852). Direct user request and later acceptance.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -538,7 +538,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-04, CMP-06, CMP-12; REQ-007; D001 and D008.
 
-**Source and acceptance:** [M0071](sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0241](sources/full_conversation.md#m0241--user) (L23913-L23913); [M0242](sources/full_conversation.md#m0242--assistant) (L23923-L23972); [M0243](sources/full_conversation.md#m0243--user) (L23982-L23982). Direct instruction and explicit acceptance.
+**Source and acceptance:** [M0071](../sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0241](../sources/full_conversation.md#m0241--user) (L23913-L23913); [M0242](../sources/full_conversation.md#m0242--assistant) (L23923-L23972); [M0243](../sources/full_conversation.md#m0243--user) (L23982-L23982). Direct instruction and explicit acceptance.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -552,7 +552,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-03, CMP-07, CMP-08; REQ-008; D001 and D008.
 
-**Source and acceptance:** [M0085](sources/full_conversation.md#m0085--user) (L10586-L10586); [M0086](sources/full_conversation.md#m0086--assistant) (L10596-L10813); [M0089](sources/full_conversation.md#m0089--user) (L10971-L10971); [M0090](sources/full_conversation.md#m0090--assistant) (L10981-L11135); [M0091](sources/full_conversation.md#m0091--user) (L11145-L11153); [M0092](sources/full_conversation.md#m0092--assistant) (L11163-L11299). Contextual consolidation; no standalone acceptance turn.
+**Source and acceptance:** [M0085](../sources/full_conversation.md#m0085--user) (L10586-L10586); [M0086](../sources/full_conversation.md#m0086--assistant) (L10596-L10813); [M0089](../sources/full_conversation.md#m0089--user) (L10971-L10971); [M0090](../sources/full_conversation.md#m0090--assistant) (L10981-L11135); [M0091](../sources/full_conversation.md#m0091--user) (L11145-L11153); [M0092](../sources/full_conversation.md#m0092--assistant) (L11163-L11299). Contextual consolidation; no standalone acceptance turn.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -566,7 +566,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-06, CMP-09; REQ-009; D001 and D008.
 
-**Source and acceptance:** [M0083](sources/full_conversation.md#m0083--user) (L10333-L10333); [M0084](sources/full_conversation.md#m0084--assistant) (L10343-L10576); [M0113](sources/full_conversation.md#m0113--user) (L12804-L12804); [M0114](sources/full_conversation.md#m0114--assistant) (L12814-L13085); [M0137](sources/full_conversation.md#m0137--user) (L15763-L15766); [M0138](sources/full_conversation.md#m0138--assistant) (L15776-L16032); [M0139](sources/full_conversation.md#m0139--user) (L16042-L16042); [M0141](sources/full_conversation.md#m0141--user) (L16275-L16277). User additions and explicit continuation.
+**Source and acceptance:** [M0083](../sources/full_conversation.md#m0083--user) (L10333-L10333); [M0084](../sources/full_conversation.md#m0084--assistant) (L10343-L10576); [M0113](../sources/full_conversation.md#m0113--user) (L12804-L12804); [M0114](../sources/full_conversation.md#m0114--assistant) (L12814-L13085); [M0137](../sources/full_conversation.md#m0137--user) (L15763-L15766); [M0138](../sources/full_conversation.md#m0138--assistant) (L15776-L16032); [M0139](../sources/full_conversation.md#m0139--user) (L16042-L16042); [M0141](../sources/full_conversation.md#m0141--user) (L16275-L16277). User additions and explicit continuation.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -580,7 +580,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-03, CMP-06; REQ-010; D001 and D008.
 
-**Source and acceptance:** [M0093](sources/full_conversation.md#m0093--user) (L11309-L11309); [M0094](sources/full_conversation.md#m0094--assistant) (L11319-L11491); [M0095](sources/full_conversation.md#m0095--user) (L11501-L11510); [M0096](sources/full_conversation.md#m0096--assistant) (L11520-L11684); [M0111](sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0193](sources/full_conversation.md#m0193--user) (L20788-L20788); [M0194](sources/full_conversation.md#m0194--assistant) (L20798-L20910); [M0195](sources/full_conversation.md#m0195--user) (L20920-L20920). Later explicit acceptance in M0195.
+**Source and acceptance:** [M0093](../sources/full_conversation.md#m0093--user) (L11309-L11309); [M0094](../sources/full_conversation.md#m0094--assistant) (L11319-L11491); [M0095](../sources/full_conversation.md#m0095--user) (L11501-L11510); [M0096](../sources/full_conversation.md#m0096--assistant) (L11520-L11684); [M0111](../sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0193](../sources/full_conversation.md#m0193--user) (L20788-L20788); [M0194](../sources/full_conversation.md#m0194--assistant) (L20798-L20910); [M0195](../sources/full_conversation.md#m0195--user) (L20920-L20920). Later explicit acceptance in M0195.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -594,7 +594,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-03; REQ-011; D001 and D008.
 
-**Source and acceptance:** [M0097](sources/full_conversation.md#m0097--user) (L11694-L11694); [M0098](sources/full_conversation.md#m0098--assistant) (L11704-L11790). Direct user scope change.
+**Source and acceptance:** [M0097](../sources/full_conversation.md#m0097--user) (L11694-L11694); [M0098](../sources/full_conversation.md#m0098--assistant) (L11704-L11790). Direct user scope change.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -608,7 +608,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-05, CMP-06; REQ-012; D001 and D008.
 
-**Source and acceptance:** [M0101](sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0105](sources/full_conversation.md#m0105--user) (L12189-L12262); [M0106](sources/full_conversation.md#m0106--assistant) (L12272-L12445); [M0153](sources/full_conversation.md#m0153--user) (L17440-L17441); [M0154](sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0155](sources/full_conversation.md#m0155--user) (L17653-L17653). Direct user change plus later evidence qualification.
+**Source and acceptance:** [M0101](../sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](../sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0105](../sources/full_conversation.md#m0105--user) (L12189-L12262); [M0106](../sources/full_conversation.md#m0106--assistant) (L12272-L12445); [M0153](../sources/full_conversation.md#m0153--user) (L17440-L17441); [M0154](../sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0155](../sources/full_conversation.md#m0155--user) (L17653-L17653). Direct user change plus later evidence qualification.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -622,7 +622,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-02, CMP-07, CMP-08; REQ-013; D001 and D008.
 
-**Source and acceptance:** [M0102](sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0106](sources/full_conversation.md#m0106--assistant) (L12272-L12445); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0153](sources/full_conversation.md#m0153--user) (L17440-L17441); [M0154](sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0155](sources/full_conversation.md#m0155--user) (L17653-L17653); [M0166](sources/full_conversation.md#m0166--assistant) (L18223-L18400); [M0167](sources/full_conversation.md#m0167--user) (L18410-L18410). Retained principle explicitly accepted with memory.
+**Source and acceptance:** [M0102](../sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0106](../sources/full_conversation.md#m0106--assistant) (L12272-L12445); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0153](../sources/full_conversation.md#m0153--user) (L17440-L17441); [M0154](../sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0155](../sources/full_conversation.md#m0155--user) (L17653-L17653); [M0166](../sources/full_conversation.md#m0166--assistant) (L18223-L18400); [M0167](../sources/full_conversation.md#m0167--user) (L18410-L18410). Retained principle explicitly accepted with memory.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -636,7 +636,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-06; REQ-001; D001 and D008.
 
-**Source and acceptance:** [M0107](sources/full_conversation.md#m0107--user) (L12455-L12455); [M0108](sources/full_conversation.md#m0108--assistant) (L12465-L12501); [M0190](sources/full_conversation.md#m0190--assistant) (L20585-L20739); [M0191](sources/full_conversation.md#m0191--user) (L20749-L20749); [M0220](sources/full_conversation.md#m0220--assistant) (L22551-L22716); [M0221](sources/full_conversation.md#m0221--user) (L22726-L22726). Direct user rejection.
+**Source and acceptance:** [M0107](../sources/full_conversation.md#m0107--user) (L12455-L12455); [M0108](../sources/full_conversation.md#m0108--assistant) (L12465-L12501); [M0190](../sources/full_conversation.md#m0190--assistant) (L20585-L20739); [M0191](../sources/full_conversation.md#m0191--user) (L20749-L20749); [M0220](../sources/full_conversation.md#m0220--assistant) (L22551-L22716); [M0221](../sources/full_conversation.md#m0221--user) (L22726-L22726). Direct user rejection.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -650,7 +650,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-02; REQ-014; D001 and D008.
 
-**Source and acceptance:** [M0109](sources/full_conversation.md#m0109--user) (L12511-L12537); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0111](sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0119](sources/full_conversation.md#m0119--user) (L13471-L13473); [M0121](sources/full_conversation.md#m0121--user) (L13878-L13878); [M0122](sources/full_conversation.md#m0122--assistant) (L13888-L14078); [M0129](sources/full_conversation.md#m0129--user) (L14827-L14827); [M0130](sources/full_conversation.md#m0130--assistant) (L14837-L15103); [M0223](sources/full_conversation.md#m0223--user) (L22769-L22769); [M0224](sources/full_conversation.md#m0224--assistant) (L22779-L22997); [M0225](sources/full_conversation.md#m0225--user) (L23007-L23007). Direct user emphasis; explicit acceptance of adaptive search.
+**Source and acceptance:** [M0109](../sources/full_conversation.md#m0109--user) (L12511-L12537); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0111](../sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0119](../sources/full_conversation.md#m0119--user) (L13471-L13473); [M0121](../sources/full_conversation.md#m0121--user) (L13878-L13878); [M0122](../sources/full_conversation.md#m0122--assistant) (L13888-L14078); [M0129](../sources/full_conversation.md#m0129--user) (L14827-L14827); [M0130](../sources/full_conversation.md#m0130--assistant) (L14837-L15103); [M0223](../sources/full_conversation.md#m0223--user) (L22769-L22769); [M0224](../sources/full_conversation.md#m0224--assistant) (L22779-L22997); [M0225](../sources/full_conversation.md#m0225--user) (L23007-L23007). Direct user emphasis; explicit acceptance of adaptive search.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -664,7 +664,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-03, CMP-09; REQ-009; D001 and D008.
 
-**Source and acceptance:** [M0113](sources/full_conversation.md#m0113--user) (L12804-L12804); [M0114](sources/full_conversation.md#m0114--assistant) (L12814-L13085). Direct user scope expansion.
+**Source and acceptance:** [M0113](../sources/full_conversation.md#m0113--user) (L12804-L12804); [M0114](../sources/full_conversation.md#m0114--assistant) (L12814-L13085). Direct user scope expansion.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -678,7 +678,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-03, CMP-05; REQ-015; D001 and D008.
 
-**Source and acceptance:** [M0115](sources/full_conversation.md#m0115--user) (L13095-L13095); [M0116](sources/full_conversation.md#m0116--assistant) (L13105-L13255); [M0161](sources/full_conversation.md#m0161--user) (L17939-L17947); [M0162](sources/full_conversation.md#m0162--assistant) (L17957-L18158); [M0163](sources/full_conversation.md#m0163--user) (L18168-L18168). Direct user instruction and PIT acceptance.
+**Source and acceptance:** [M0115](../sources/full_conversation.md#m0115--user) (L13095-L13095); [M0116](../sources/full_conversation.md#m0116--assistant) (L13105-L13255); [M0161](../sources/full_conversation.md#m0161--user) (L17939-L17947); [M0162](../sources/full_conversation.md#m0162--assistant) (L17957-L18158); [M0163](../sources/full_conversation.md#m0163--user) (L18168-L18168). Direct user instruction and PIT acceptance.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -692,7 +692,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-07, CMP-08, CMP-09; REQ-016; D001 and D008.
 
-**Source and acceptance:** [M0125](sources/full_conversation.md#m0125--user) (L14382-L14382); [M0126](sources/full_conversation.md#m0126--assistant) (L14392-L14575); [M0165](sources/full_conversation.md#m0165--user) (L18212-L18213); [M0166](sources/full_conversation.md#m0166--assistant) (L18223-L18400); [M0167](sources/full_conversation.md#m0167--user) (L18410-L18410); [M0168](sources/full_conversation.md#m0168--assistant) (L18420-L18458). Explicit acceptance in M0167.
+**Source and acceptance:** [M0125](../sources/full_conversation.md#m0125--user) (L14382-L14382); [M0126](../sources/full_conversation.md#m0126--assistant) (L14392-L14575); [M0165](../sources/full_conversation.md#m0165--user) (L18212-L18213); [M0166](../sources/full_conversation.md#m0166--assistant) (L18223-L18400); [M0167](../sources/full_conversation.md#m0167--user) (L18410-L18410); [M0168](../sources/full_conversation.md#m0168--assistant) (L18420-L18458). Explicit acceptance in M0167.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -706,7 +706,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-06, CMP-08, CMP-09, CMP-10; REQ-017; D001 and D008.
 
-**Source and acceptance:** [M0137](sources/full_conversation.md#m0137--user) (L15763-L15766); [M0138](sources/full_conversation.md#m0138--assistant) (L15776-L16032); [M0141](sources/full_conversation.md#m0141--user) (L16275-L16277); [M0142](sources/full_conversation.md#m0142--assistant) (L16287-L16439); [M0145](sources/full_conversation.md#m0145--user) (L16690-L16691); [M0146](sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0147](sources/full_conversation.md#m0147--user) (L16878-L16893); [M0148](sources/full_conversation.md#m0148--assistant) (L16903-L17083); [M0185](sources/full_conversation.md#m0185--user) (L19995-L19995); [M0186](sources/full_conversation.md#m0186--assistant) (L20005-L20327). Contextual retained design; capital thresholds not accepted.
+**Source and acceptance:** [M0137](../sources/full_conversation.md#m0137--user) (L15763-L15766); [M0138](../sources/full_conversation.md#m0138--assistant) (L15776-L16032); [M0141](../sources/full_conversation.md#m0141--user) (L16275-L16277); [M0142](../sources/full_conversation.md#m0142--assistant) (L16287-L16439); [M0145](../sources/full_conversation.md#m0145--user) (L16690-L16691); [M0146](../sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0147](../sources/full_conversation.md#m0147--user) (L16878-L16893); [M0148](../sources/full_conversation.md#m0148--assistant) (L16903-L17083); [M0185](../sources/full_conversation.md#m0185--user) (L19995-L19995); [M0186](../sources/full_conversation.md#m0186--assistant) (L20005-L20327). Contextual retained design; capital thresholds not accepted.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -720,7 +720,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-09, CMP-08; REQ-009; D001 and D008.
 
-**Source and acceptance:** [M0141](sources/full_conversation.md#m0141--user) (L16275-L16277); [M0142](sources/full_conversation.md#m0142--assistant) (L16287-L16439); [M0143](sources/full_conversation.md#m0143--user) (L16449-L16460); [M0144](sources/full_conversation.md#m0144--assistant) (L16470-L16680); [M0185](sources/full_conversation.md#m0185--user) (L19995-L19995); [M0186](sources/full_conversation.md#m0186--assistant) (L20005-L20327). Direct user basis rule; dimensional refinements retained.
+**Source and acceptance:** [M0141](../sources/full_conversation.md#m0141--user) (L16275-L16277); [M0142](../sources/full_conversation.md#m0142--assistant) (L16287-L16439); [M0143](../sources/full_conversation.md#m0143--user) (L16449-L16460); [M0144](../sources/full_conversation.md#m0144--assistant) (L16470-L16680); [M0185](../sources/full_conversation.md#m0185--user) (L19995-L19995); [M0186](../sources/full_conversation.md#m0186--assistant) (L20005-L20327). Direct user basis rule; dimensional refinements retained.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -734,7 +734,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-05, CMP-12; REQ-018; D001 and D008.
 
-**Source and acceptance:** [M0139](sources/full_conversation.md#m0139--user) (L16042-L16042); [M0140](sources/full_conversation.md#m0140--assistant) (L16052-L16265); [M0229](sources/full_conversation.md#m0229--user) (L23324-L23324); [M0231](sources/full_conversation.md#m0231--user) (L23378-L23378); [M0232](sources/full_conversation.md#m0232--assistant) (L23388-L23680); [M0233](sources/full_conversation.md#m0233--user) (L23690-L23690); [M0235](sources/full_conversation.md#m0235--user) (L23736-L23736); [M0236](sources/full_conversation.md#m0236--assistant) (L23746-L23805); [M0237](sources/full_conversation.md#m0237--user) (L23815-L23815). User asks reuse; later candidate-specific acceptance.
+**Source and acceptance:** [M0139](../sources/full_conversation.md#m0139--user) (L16042-L16042); [M0140](../sources/full_conversation.md#m0140--assistant) (L16052-L16265); [M0229](../sources/full_conversation.md#m0229--user) (L23324-L23324); [M0231](../sources/full_conversation.md#m0231--user) (L23378-L23378); [M0232](../sources/full_conversation.md#m0232--assistant) (L23388-L23680); [M0233](../sources/full_conversation.md#m0233--user) (L23690-L23690); [M0235](../sources/full_conversation.md#m0235--user) (L23736-L23736); [M0236](../sources/full_conversation.md#m0236--assistant) (L23746-L23805); [M0237](../sources/full_conversation.md#m0237--user) (L23815-L23815). User asks reuse; later candidate-specific acceptance.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -748,7 +748,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-04, CMP-06; REQ-019; D001 and D008.
 
-**Source and acceptance:** [M0153](sources/full_conversation.md#m0153--user) (L17440-L17441); [M0154](sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0155](sources/full_conversation.md#m0155--user) (L17653-L17653); [M0156](sources/full_conversation.md#m0156--assistant) (L17663-L17681). Explicit acceptance in M0155.
+**Source and acceptance:** [M0153](../sources/full_conversation.md#m0153--user) (L17440-L17441); [M0154](../sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0155](../sources/full_conversation.md#m0155--user) (L17653-L17653); [M0156](../sources/full_conversation.md#m0156--assistant) (L17663-L17681). Explicit acceptance in M0155.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -762,7 +762,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-06, CMP-08; REQ-005; D001 and D008.
 
-**Source and acceptance:** [M0157](sources/full_conversation.md#m0157--user) (L17691-L17692); [M0158](sources/full_conversation.md#m0158--assistant) (L17702-L17883); [M0159](sources/full_conversation.md#m0159--user) (L17893-L17893); [M0160](sources/full_conversation.md#m0160--assistant) (L17903-L17929). Explicit acceptance in M0159.
+**Source and acceptance:** [M0157](../sources/full_conversation.md#m0157--user) (L17691-L17692); [M0158](../sources/full_conversation.md#m0158--assistant) (L17702-L17883); [M0159](../sources/full_conversation.md#m0159--user) (L17893-L17893); [M0160](../sources/full_conversation.md#m0160--assistant) (L17903-L17929). Explicit acceptance in M0159.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -776,7 +776,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-05, CMP-06, CMP-09; REQ-020; D001 and D008.
 
-**Source and acceptance:** [M0161](sources/full_conversation.md#m0161--user) (L17939-L17947); [M0162](sources/full_conversation.md#m0162--assistant) (L17957-L18158); [M0163](sources/full_conversation.md#m0163--user) (L18168-L18168); [M0164](sources/full_conversation.md#m0164--assistant) (L18178-L18202). Explicit acceptance in M0163.
+**Source and acceptance:** [M0161](../sources/full_conversation.md#m0161--user) (L17939-L17947); [M0162](../sources/full_conversation.md#m0162--assistant) (L17957-L18158); [M0163](../sources/full_conversation.md#m0163--user) (L18168-L18168); [M0164](../sources/full_conversation.md#m0164--assistant) (L18178-L18202). Explicit acceptance in M0163.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -790,7 +790,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-12, CMP-02, CMP-07; REQ-021; D001 and D008.
 
-**Source and acceptance:** [M0169](sources/full_conversation.md#m0169--user) (L18468-L18600); [M0170](sources/full_conversation.md#m0170--assistant) (L18610-L18868); [M0171](sources/full_conversation.md#m0171--user) (L18878-L18878); [M0172](sources/full_conversation.md#m0172--assistant) (L18888-L19083); [M0173](sources/full_conversation.md#m0173--user) (L19093-L19093); [M0174](sources/full_conversation.md#m0174--assistant) (L19103-L19114). Direct instruction and explicit acceptance.
+**Source and acceptance:** [M0169](../sources/full_conversation.md#m0169--user) (L18468-L18600); [M0170](../sources/full_conversation.md#m0170--assistant) (L18610-L18868); [M0171](../sources/full_conversation.md#m0171--user) (L18878-L18878); [M0172](../sources/full_conversation.md#m0172--assistant) (L18888-L19083); [M0173](../sources/full_conversation.md#m0173--user) (L19093-L19093); [M0174](../sources/full_conversation.md#m0174--assistant) (L19103-L19114). Direct instruction and explicit acceptance.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -804,7 +804,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-03, CMP-06, CMP-09; REQ-005; D001 and D008.
 
-**Source and acceptance:** [M0175](sources/full_conversation.md#m0175--user) (L19124-L19124); [M0176](sources/full_conversation.md#m0176--assistant) (L19134-L19244); [M0177](sources/full_conversation.md#m0177--user) (L19254-L19254); [M0178](sources/full_conversation.md#m0178--assistant) (L19264-L19515). Direct user correction; retained in final architecture.
+**Source and acceptance:** [M0175](../sources/full_conversation.md#m0175--user) (L19124-L19124); [M0176](../sources/full_conversation.md#m0176--assistant) (L19134-L19244); [M0177](../sources/full_conversation.md#m0177--user) (L19254-L19254); [M0178](../sources/full_conversation.md#m0178--assistant) (L19264-L19515). Direct user correction; retained in final architecture.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -818,7 +818,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-11; REQ-022; D001 and D008.
 
-**Source and acceptance:** [M0179](sources/full_conversation.md#m0179--user) (L19525-L19525); [M0180](sources/full_conversation.md#m0180--assistant) (L19535-L19798); [M0185](sources/full_conversation.md#m0185--user) (L19995-L19995); [M0186](sources/full_conversation.md#m0186--assistant) (L20005-L20327). Direct user dashboard requirement.
+**Source and acceptance:** [M0179](../sources/full_conversation.md#m0179--user) (L19525-L19525); [M0180](../sources/full_conversation.md#m0180--assistant) (L19535-L19798); [M0185](../sources/full_conversation.md#m0185--user) (L19995-L19995); [M0186](../sources/full_conversation.md#m0186--assistant) (L20005-L20327). Direct user dashboard requirement.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -832,7 +832,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-02, CMP-07; REQ-014; D001 and D008.
 
-**Source and acceptance:** [M0181](sources/full_conversation.md#m0181--user) (L19808-L19808); [M0182](sources/full_conversation.md#m0182--assistant) (L19818-L19949); [M0183](sources/full_conversation.md#m0183--user) (L19959-L19959); [M0184](sources/full_conversation.md#m0184--assistant) (L19969-L19985). Direct instruction and explicit acceptance.
+**Source and acceptance:** [M0181](../sources/full_conversation.md#m0181--user) (L19808-L19808); [M0182](../sources/full_conversation.md#m0182--assistant) (L19818-L19949); [M0183](../sources/full_conversation.md#m0183--user) (L19959-L19959); [M0184](../sources/full_conversation.md#m0184--assistant) (L19969-L19985). Direct instruction and explicit acceptance.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -846,7 +846,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-11, CMP-12; REQ-023; D001 and D008.
 
-**Source and acceptance:** [M0187](sources/full_conversation.md#m0187--user) (L20337-L20343); [M0188](sources/full_conversation.md#m0188--assistant) (L20353-L20544); [M0223](sources/full_conversation.md#m0223--user) (L22769-L22769); [M0224](sources/full_conversation.md#m0224--assistant) (L22779-L22997); [M0225](sources/full_conversation.md#m0225--user) (L23007-L23007). Direct user instruction; reinforced acceptance.
+**Source and acceptance:** [M0187](../sources/full_conversation.md#m0187--user) (L20337-L20343); [M0188](../sources/full_conversation.md#m0188--assistant) (L20353-L20544); [M0223](../sources/full_conversation.md#m0223--user) (L22769-L22769); [M0224](../sources/full_conversation.md#m0224--assistant) (L22779-L22997); [M0225](../sources/full_conversation.md#m0225--user) (L23007-L23007). Direct user instruction; reinforced acceptance.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -860,7 +860,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-04, CMP-05, CMP-06; REQ-024; D001 and D008.
 
-**Source and acceptance:** [M0189](sources/full_conversation.md#m0189--user) (L20554-L20575); [M0190](sources/full_conversation.md#m0190--assistant) (L20585-L20739); [M0191](sources/full_conversation.md#m0191--user) (L20749-L20749); [M0192](sources/full_conversation.md#m0192--assistant) (L20759-L20778). Explicit acceptance in M0191.
+**Source and acceptance:** [M0189](../sources/full_conversation.md#m0189--user) (L20554-L20575); [M0190](../sources/full_conversation.md#m0190--assistant) (L20585-L20739); [M0191](../sources/full_conversation.md#m0191--user) (L20749-L20749); [M0192](../sources/full_conversation.md#m0192--assistant) (L20759-L20778). Explicit acceptance in M0191.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -874,7 +874,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-03, CMP-06; REQ-010; D001 and D008.
 
-**Source and acceptance:** [M0193](sources/full_conversation.md#m0193--user) (L20788-L20788); [M0194](sources/full_conversation.md#m0194--assistant) (L20798-L20910); [M0195](sources/full_conversation.md#m0195--user) (L20920-L20920); [M0196](sources/full_conversation.md#m0196--assistant) (L20930-L20957). Explicit acceptance in M0195.
+**Source and acceptance:** [M0193](../sources/full_conversation.md#m0193--user) (L20788-L20788); [M0194](../sources/full_conversation.md#m0194--assistant) (L20798-L20910); [M0195](../sources/full_conversation.md#m0195--user) (L20920-L20920); [M0196](../sources/full_conversation.md#m0196--assistant) (L20930-L20957). Explicit acceptance in M0195.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -888,7 +888,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-03, CMP-04, CMP-06; REQ-005; D001 and D008.
 
-**Source and acceptance:** [M0197](sources/full_conversation.md#m0197--user) (L20967-L20967); [M0198](sources/full_conversation.md#m0198--assistant) (L20977-L21102); [M0199](sources/full_conversation.md#m0199--user) (L21112-L21112); [M0200](sources/full_conversation.md#m0200--assistant) (L21122-L21144). Explicit acceptance in M0199.
+**Source and acceptance:** [M0197](../sources/full_conversation.md#m0197--user) (L20967-L20967); [M0198](../sources/full_conversation.md#m0198--assistant) (L20977-L21102); [M0199](../sources/full_conversation.md#m0199--user) (L21112-L21112); [M0200](../sources/full_conversation.md#m0200--assistant) (L21122-L21144). Explicit acceptance in M0199.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -902,7 +902,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-02, CMP-03, CMP-04, CMP-06; REQ-004; D001 and D008.
 
-**Source and acceptance:** [M0201](sources/full_conversation.md#m0201--user) (L21154-L21154); [M0202](sources/full_conversation.md#m0202--assistant) (L21164-L21430); [M0203](sources/full_conversation.md#m0203--user) (L21440-L21440); [M0204](sources/full_conversation.md#m0204--assistant) (L21450-L21470). Explicit acceptance in M0203.
+**Source and acceptance:** [M0201](../sources/full_conversation.md#m0201--user) (L21154-L21154); [M0202](../sources/full_conversation.md#m0202--assistant) (L21164-L21430); [M0203](../sources/full_conversation.md#m0203--user) (L21440-L21440); [M0204](../sources/full_conversation.md#m0204--assistant) (L21450-L21470). Explicit acceptance in M0203.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -916,7 +916,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-05, CMP-06, CMP-09; REQ-024; D001 and D008.
 
-**Source and acceptance:** [M0205](sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](sources/full_conversation.md#m0207--user) (L21737-L21737); [M0208](sources/full_conversation.md#m0208--assistant) (L21747-L21768). Explicit acceptance of qualified M0206.
+**Source and acceptance:** [M0205](../sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](../sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](../sources/full_conversation.md#m0207--user) (L21737-L21737); [M0208](../sources/full_conversation.md#m0208--assistant) (L21747-L21768). Explicit acceptance of qualified M0206.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -930,7 +930,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-03, CMP-06; REQ-010; D001 and D008.
 
-**Source and acceptance:** [M0209](sources/full_conversation.md#m0209--user) (L21778-L21779); [M0210](sources/full_conversation.md#m0210--assistant) (L21789-L21968); [M0211](sources/full_conversation.md#m0211--user) (L21978-L21978); [M0212](sources/full_conversation.md#m0212--assistant) (L21988-L22015). Explicit acceptance in M0211.
+**Source and acceptance:** [M0209](../sources/full_conversation.md#m0209--user) (L21778-L21779); [M0210](../sources/full_conversation.md#m0210--assistant) (L21789-L21968); [M0211](../sources/full_conversation.md#m0211--user) (L21978-L21978); [M0212](../sources/full_conversation.md#m0212--assistant) (L21988-L22015). Explicit acceptance in M0211.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -944,7 +944,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-08, CMP-09, CMP-10, CMP-11; REQ-025; D001 and D008.
 
-**Source and acceptance:** [M0213](sources/full_conversation.md#m0213--user) (L22025-L22026); [M0214](sources/full_conversation.md#m0214--assistant) (L22036-L22263); [M0215](sources/full_conversation.md#m0215--user) (L22273-L22273); [M0216](sources/full_conversation.md#m0216--assistant) (L22283-L22451); [M0217](sources/full_conversation.md#m0217--user) (L22461-L22461); [M0218](sources/full_conversation.md#m0218--assistant) (L22471-L22508). Direct restriction and explicit acceptance; missing image not reconstructed.
+**Source and acceptance:** [M0213](../sources/full_conversation.md#m0213--user) (L22025-L22026); [M0214](../sources/full_conversation.md#m0214--assistant) (L22036-L22263); [M0215](../sources/full_conversation.md#m0215--user) (L22273-L22273); [M0216](../sources/full_conversation.md#m0216--assistant) (L22283-L22451); [M0217](../sources/full_conversation.md#m0217--user) (L22461-L22461); [M0218](../sources/full_conversation.md#m0218--assistant) (L22471-L22508). Direct restriction and explicit acceptance; missing image not reconstructed.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -958,7 +958,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-05, CMP-06, CMP-09; REQ-020; D001 and D008.
 
-**Source and acceptance:** [M0219](sources/full_conversation.md#m0219--user) (L22518-L22541); [M0220](sources/full_conversation.md#m0220--assistant) (L22551-L22716); [M0221](sources/full_conversation.md#m0221--user) (L22726-L22726); [M0222](sources/full_conversation.md#m0222--assistant) (L22736-L22759). Explicit acceptance in M0221.
+**Source and acceptance:** [M0219](../sources/full_conversation.md#m0219--user) (L22518-L22541); [M0220](../sources/full_conversation.md#m0220--assistant) (L22551-L22716); [M0221](../sources/full_conversation.md#m0221--user) (L22726-L22726); [M0222](../sources/full_conversation.md#m0222--assistant) (L22736-L22759). Explicit acceptance in M0221.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -972,7 +972,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-11; REQ-014; D001 and D008.
 
-**Source and acceptance:** [M0223](sources/full_conversation.md#m0223--user) (L22769-L22769); [M0224](sources/full_conversation.md#m0224--assistant) (L22779-L22997); [M0225](sources/full_conversation.md#m0225--user) (L23007-L23007); [M0226](sources/full_conversation.md#m0226--assistant) (L23017-L23046). Explicit acceptance in M0225.
+**Source and acceptance:** [M0223](../sources/full_conversation.md#m0223--user) (L22769-L22769); [M0224](../sources/full_conversation.md#m0224--assistant) (L22779-L22997); [M0225](../sources/full_conversation.md#m0225--user) (L23007-L23007); [M0226](../sources/full_conversation.md#m0226--assistant) (L23017-L23046). Explicit acceptance in M0225.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -986,7 +986,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-12; REQ-021; D001 and D008.
 
-**Source and acceptance:** [M0227](sources/full_conversation.md#m0227--user) (L23056-L23056); [M0228](sources/full_conversation.md#m0228--assistant) (L23066-L23314); [M0229](sources/full_conversation.md#m0229--user) (L23324-L23324); [M0230](sources/full_conversation.md#m0230--assistant) (L23334-L23368). Explicit acceptance of role-limited recommendation.
+**Source and acceptance:** [M0227](../sources/full_conversation.md#m0227--user) (L23056-L23056); [M0228](../sources/full_conversation.md#m0228--assistant) (L23066-L23314); [M0229](../sources/full_conversation.md#m0229--user) (L23324-L23324); [M0230](../sources/full_conversation.md#m0230--assistant) (L23334-L23368). Explicit acceptance of role-limited recommendation.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1000,7 +1000,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-07; REQ-018; D001 and D008.
 
-**Source and acceptance:** [M0231](sources/full_conversation.md#m0231--user) (L23378-L23378); [M0232](sources/full_conversation.md#m0232--assistant) (L23388-L23680); [M0233](sources/full_conversation.md#m0233--user) (L23690-L23690); [M0234](sources/full_conversation.md#m0234--assistant) (L23700-L23726). Explicit acceptance of candidate role, not unconditional dependency.
+**Source and acceptance:** [M0231](../sources/full_conversation.md#m0231--user) (L23378-L23378); [M0232](../sources/full_conversation.md#m0232--assistant) (L23388-L23680); [M0233](../sources/full_conversation.md#m0233--user) (L23690-L23690); [M0234](../sources/full_conversation.md#m0234--assistant) (L23700-L23726). Explicit acceptance of candidate role, not unconditional dependency.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1014,7 +1014,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-05; REQ-012; D001 and D008.
 
-**Source and acceptance:** [M0235](sources/full_conversation.md#m0235--user) (L23736-L23736); [M0236](sources/full_conversation.md#m0236--assistant) (L23746-L23805); [M0237](sources/full_conversation.md#m0237--user) (L23815-L23815); [M0238](sources/full_conversation.md#m0238--assistant) (L23825-L23843). Explicit acceptance as primary candidate.
+**Source and acceptance:** [M0235](../sources/full_conversation.md#m0235--user) (L23736-L23736); [M0236](../sources/full_conversation.md#m0236--assistant) (L23746-L23805); [M0237](../sources/full_conversation.md#m0237--user) (L23815-L23815); [M0238](../sources/full_conversation.md#m0238--assistant) (L23825-L23843). Explicit acceptance as primary candidate.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1028,7 +1028,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-12; REQ-007; D001 and D008.
 
-**Source and acceptance:** [M0239-A](sources/full_conversation.md#m0239-a--user) (L23853-L23853); [M0239-B](sources/full_conversation.md#m0239-b--user) (L23863-L23863); [M0240](sources/full_conversation.md#m0240--assistant) (L23873-L23903). Direct user language policy; duplicate blocks preserved.
+**Source and acceptance:** [M0239-A](../sources/full_conversation.md#m0239-a--user) (L23853-L23853); [M0239-B](../sources/full_conversation.md#m0239-b--user) (L23863-L23863); [M0240](../sources/full_conversation.md#m0240--assistant) (L23873-L23903). Direct user language policy; duplicate blocks preserved.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1042,7 +1042,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-05, CMP-07; REQ-026; D001 and D008.
 
-**Source and acceptance:** [M0251](sources/full_conversation.md#m0251--user) (L24512-L24512); [M0255](sources/full_conversation.md#m0255--user) (L24776-L24776); [M0256](sources/full_conversation.md#m0256--assistant) (L24786-L24852); [M0257](sources/full_conversation.md#m0257--user) (L24862-L24862); [M0258](sources/full_conversation.md#m0258--assistant) (L24872-L24894). Direct request plus accepted corrected podcast interpretation.
+**Source and acceptance:** [M0251](../sources/full_conversation.md#m0251--user) (L24512-L24512); [M0255](../sources/full_conversation.md#m0255--user) (L24776-L24776); [M0256](../sources/full_conversation.md#m0256--assistant) (L24786-L24852); [M0257](../sources/full_conversation.md#m0257--user) (L24862-L24862); [M0258](../sources/full_conversation.md#m0258--assistant) (L24872-L24894). Direct request plus accepted corrected podcast interpretation.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1056,7 +1056,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-03, CMP-05; REQ-026; D001 and D008.
 
-**Source and acceptance:** [M0259](sources/full_conversation.md#m0259--user) (L24904-L24904); [M0260](sources/full_conversation.md#m0260--assistant) (L24914-L25021); [M0261](sources/full_conversation.md#m0261--user) (L25031-L25037); [M0262](sources/full_conversation.md#m0262--assistant) (L25047-L25121); [M0263](sources/full_conversation.md#m0263--user) (L25131-L25131). Direct intra-trade request and accepted consolidation.
+**Source and acceptance:** [M0259](../sources/full_conversation.md#m0259--user) (L24904-L24904); [M0260](../sources/full_conversation.md#m0260--assistant) (L24914-L25021); [M0261](../sources/full_conversation.md#m0261--user) (L25031-L25037); [M0262](../sources/full_conversation.md#m0262--assistant) (L25047-L25121); [M0263](../sources/full_conversation.md#m0263--user) (L25131-L25131). Direct intra-trade request and accepted consolidation.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1070,7 +1070,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-04, CMP-05, CMP-06; REQ-026; D001 and D008.
 
-**Source and acceptance:** [M0261](sources/full_conversation.md#m0261--user) (L25031-L25037); [M0262](sources/full_conversation.md#m0262--assistant) (L25047-L25121); [M0263](sources/full_conversation.md#m0263--user) (L25131-L25131); [M0264](sources/full_conversation.md#m0264--assistant) (L25141-L25149). Explicit acceptance in M0263.
+**Source and acceptance:** [M0261](../sources/full_conversation.md#m0261--user) (L25031-L25037); [M0262](../sources/full_conversation.md#m0262--assistant) (L25047-L25121); [M0263](../sources/full_conversation.md#m0263--user) (L25131-L25131); [M0264](../sources/full_conversation.md#m0264--assistant) (L25141-L25149). Explicit acceptance in M0263.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1084,7 +1084,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-05, CMP-06; REQ-024; D001 and D008.
 
-**Source and acceptance:** [M0265](sources/full_conversation.md#m0265--user) (L25159-L25165); [M0266](sources/full_conversation.md#m0266--assistant) (L25175-L25372); [M0267](sources/full_conversation.md#m0267--user) (L25382-L25382); [M0268](sources/full_conversation.md#m0268--assistant) (L25392-L25400). Explicit acceptance in M0267.
+**Source and acceptance:** [M0265](../sources/full_conversation.md#m0265--user) (L25159-L25165); [M0266](../sources/full_conversation.md#m0266--assistant) (L25175-L25372); [M0267](../sources/full_conversation.md#m0267--user) (L25382-L25382); [M0268](../sources/full_conversation.md#m0268--assistant) (L25392-L25400). Explicit acceptance in M0267.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1098,7 +1098,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-05, CMP-06, CMP-09; REQ-009; D001 and D008.
 
-**Source and acceptance:** [M0271](sources/full_conversation.md#m0271--user) (L25637-L25643); [M0272](sources/full_conversation.md#m0272--assistant) (L25653-L25771); [M0273](sources/full_conversation.md#m0273--user) (L25781-L25781); [M0274](sources/full_conversation.md#m0274--assistant) (L25791-L25797). Explicit acceptance in M0273.
+**Source and acceptance:** [M0271](../sources/full_conversation.md#m0271--user) (L25637-L25643); [M0272](../sources/full_conversation.md#m0272--assistant) (L25653-L25771); [M0273](../sources/full_conversation.md#m0273--user) (L25781-L25781); [M0274](../sources/full_conversation.md#m0274--assistant) (L25791-L25797). Explicit acceptance in M0273.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1112,7 +1112,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-05, CMP-06; REQ-020; D001 and D008.
 
-**Source and acceptance:** [M0275](sources/full_conversation.md#m0275--user) (L25807-L25810); [M0276](sources/full_conversation.md#m0276--assistant) (L25820-L25964); [M0277](sources/full_conversation.md#m0277--user) (L25974-L25974); [M0278](sources/full_conversation.md#m0278--assistant) (L25984-L25994). Explicit acceptance in M0277.
+**Source and acceptance:** [M0275](../sources/full_conversation.md#m0275--user) (L25807-L25810); [M0276](../sources/full_conversation.md#m0276--assistant) (L25820-L25964); [M0277](../sources/full_conversation.md#m0277--user) (L25974-L25974); [M0278](../sources/full_conversation.md#m0278--assistant) (L25984-L25994). Explicit acceptance in M0277.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1126,7 +1126,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-05, CMP-06, CMP-09; REQ-009; D001 and D008.
 
-**Source and acceptance:** [M0279](sources/full_conversation.md#m0279--user) (L26004-L26008); [M0280](sources/full_conversation.md#m0280--assistant) (L26018-L26248); [M0281](sources/full_conversation.md#m0281--user) (L26258-L26258); [M0282](sources/full_conversation.md#m0282--assistant) (L26268-L26278). Explicit acceptance of qualified methods.
+**Source and acceptance:** [M0279](../sources/full_conversation.md#m0279--user) (L26004-L26008); [M0280](../sources/full_conversation.md#m0280--assistant) (L26018-L26248); [M0281](../sources/full_conversation.md#m0281--user) (L26258-L26258); [M0282](../sources/full_conversation.md#m0282--assistant) (L26268-L26278). Explicit acceptance of qualified methods.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1140,7 +1140,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-05, CMP-06; REQ-024; D001 and D008.
 
-**Source and acceptance:** [M0283](sources/full_conversation.md#m0283--user) (L26288-L26288); [M0284](sources/full_conversation.md#m0284--assistant) (L26298-L26615); [M0285](sources/full_conversation.md#m0285--user) (L26625-L26625); [M0286](sources/full_conversation.md#m0286--assistant) (L26635-L26662). User asks to add qualified M0284.
+**Source and acceptance:** [M0283](../sources/full_conversation.md#m0283--user) (L26288-L26288); [M0284](../sources/full_conversation.md#m0284--assistant) (L26298-L26615); [M0285](../sources/full_conversation.md#m0285--user) (L26625-L26625); [M0286](../sources/full_conversation.md#m0286--assistant) (L26635-L26662). User asks to add qualified M0284.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1154,7 +1154,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-03, CMP-05, CMP-06; REQ-006; D001 and D008.
 
-**Source and acceptance:** [M0287](sources/full_conversation.md#m0287--user) (L26672-L26672); [M0288](sources/full_conversation.md#m0288--assistant) (L26682-L26842); [M0289](sources/full_conversation.md#m0289--user) (L26852-L26852); [M0290](sources/full_conversation.md#m0290--assistant) (L26862-L26874). Explicit acceptance in M0289.
+**Source and acceptance:** [M0287](../sources/full_conversation.md#m0287--user) (L26672-L26672); [M0288](../sources/full_conversation.md#m0288--assistant) (L26682-L26842); [M0289](../sources/full_conversation.md#m0289--user) (L26852-L26852); [M0290](../sources/full_conversation.md#m0290--assistant) (L26862-L26874). Explicit acceptance in M0289.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1168,7 +1168,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-05, CMP-06; REQ-012; D001 and D008.
 
-**Source and acceptance:** [M0062](sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0101](sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0153](sources/full_conversation.md#m0153--user) (L17440-L17441); [M0154](sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0155](sources/full_conversation.md#m0155--user) (L17653-L17653). Superseded explicitly by user M0101.
+**Source and acceptance:** [M0062](../sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0101](../sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](../sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0153](../sources/full_conversation.md#m0153--user) (L17440-L17441); [M0154](../sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0155](../sources/full_conversation.md#m0155--user) (L17653-L17653). Superseded explicitly by user M0101.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1182,7 +1182,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-02; REQ-014; D001 and D008.
 
-**Source and acceptance:** [M0061](sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0181](sources/full_conversation.md#m0181--user) (L19808-L19808); [M0182](sources/full_conversation.md#m0182--assistant) (L19818-L19949); [M0183](sources/full_conversation.md#m0183--user) (L19959-L19959). Superseded by direct user M0181.
+**Source and acceptance:** [M0061](../sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](../sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0181](../sources/full_conversation.md#m0181--user) (L19808-L19808); [M0182](../sources/full_conversation.md#m0182--assistant) (L19818-L19949); [M0183](../sources/full_conversation.md#m0183--user) (L19959-L19959). Superseded by direct user M0181.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1196,7 +1196,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-03, CMP-04; REQ-002; D001 and D008.
 
-**Source and acceptance:** [M0058](sources/full_conversation.md#m0058--assistant) (L5616-L5680); [M0065](sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0067](sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0074](sources/full_conversation.md#m0074--assistant) (L9306-L9395). Later user-requested compiler specification.
+**Source and acceptance:** [M0058](../sources/full_conversation.md#m0058--assistant) (L5616-L5680); [M0065](../sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](../sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0067](../sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0074](../sources/full_conversation.md#m0074--assistant) (L9306-L9395). Later user-requested compiler specification.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1210,7 +1210,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-08; REQ-008; D001 and D008.
 
-**Source and acceptance:** [M0086](sources/full_conversation.md#m0086--assistant) (L10596-L10813); [M0089](sources/full_conversation.md#m0089--user) (L10971-L10971); [M0090](sources/full_conversation.md#m0090--assistant) (L10981-L11135); [M0092](sources/full_conversation.md#m0092--assistant) (L11163-L11299). Assistant retracts under user challenge.
+**Source and acceptance:** [M0086](../sources/full_conversation.md#m0086--assistant) (L10596-L10813); [M0089](../sources/full_conversation.md#m0089--user) (L10971-L10971); [M0090](../sources/full_conversation.md#m0090--assistant) (L10981-L11135); [M0092](../sources/full_conversation.md#m0092--assistant) (L11163-L11299). Assistant retracts under user challenge.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1224,7 +1224,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-10; REQ-017; D001 and D008.
 
-**Source and acceptance:** [M0145](sources/full_conversation.md#m0145--user) (L16690-L16691); [M0146](sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0147](sources/full_conversation.md#m0147--user) (L16878-L16893); [M0148](sources/full_conversation.md#m0148--assistant) (L16903-L17083). Later contextual revision, no numerical limits accepted.
+**Source and acceptance:** [M0145](../sources/full_conversation.md#m0145--user) (L16690-L16691); [M0146](../sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0147](../sources/full_conversation.md#m0147--user) (L16878-L16893); [M0148](../sources/full_conversation.md#m0148--assistant) (L16903-L17083). Later contextual revision, no numerical limits accepted.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1238,7 +1238,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-03; REQ-011; D001 and D008.
 
-**Source and acceptance:** [M0050](sources/full_conversation.md#m0050--assistant) (L4710-L4801); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0097](sources/full_conversation.md#m0097--user) (L11694-L11694); [M0098](sources/full_conversation.md#m0098--assistant) (L11704-L11790). Direct user scope change.
+**Source and acceptance:** [M0050](../sources/full_conversation.md#m0050--assistant) (L4710-L4801); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0097](../sources/full_conversation.md#m0097--user) (L11694-L11694); [M0098](../sources/full_conversation.md#m0098--assistant) (L11704-L11790). Direct user scope change.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1252,7 +1252,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-11, CMP-12; REQ-022; D001 and D008.
 
-**Source and acceptance:** [M0016](sources/full_conversation.md#m0016--assistant) (L691-L953); [M0017](sources/full_conversation.md#m0017--user) (L963-L976); [M0018](sources/full_conversation.md#m0018--assistant) (L986-L1097); [M0020](sources/full_conversation.md#m0020--assistant) (L1125-L1273); [M0022](sources/full_conversation.md#m0022--assistant) (L1311-L1436); [M0044](sources/full_conversation.md#m0044--assistant) (L3468-L3731); [M0107](sources/full_conversation.md#m0107--user) (L12455-L12455); [M0108](sources/full_conversation.md#m0108--assistant) (L12465-L12501). Explicitly staged in source; no deadline committed.
+**Source and acceptance:** [M0016](../sources/full_conversation.md#m0016--assistant) (L691-L953); [M0017](../sources/full_conversation.md#m0017--user) (L963-L976); [M0018](../sources/full_conversation.md#m0018--assistant) (L986-L1097); [M0020](../sources/full_conversation.md#m0020--assistant) (L1125-L1273); [M0022](../sources/full_conversation.md#m0022--assistant) (L1311-L1436); [M0044](../sources/full_conversation.md#m0044--assistant) (L3468-L3731); [M0107](../sources/full_conversation.md#m0107--user) (L12455-L12455); [M0108](../sources/full_conversation.md#m0108--assistant) (L12465-L12501). Explicitly staged in source; no deadline committed.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1266,7 +1266,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-11; REQ-022; D001 and D008.
 
-**Source and acceptance:** [M0041](sources/full_conversation.md#m0041--user) (L3116-L3131); [M0042](sources/full_conversation.md#m0042--assistant) (L3141-L3423); [M0043](sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](sources/full_conversation.md#m0044--assistant) (L3468-L3731). Not chosen in source.
+**Source and acceptance:** [M0041](../sources/full_conversation.md#m0041--user) (L3116-L3131); [M0042](../sources/full_conversation.md#m0042--assistant) (L3141-L3423); [M0043](../sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](../sources/full_conversation.md#m0044--assistant) (L3468-L3731). Not chosen in source.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1280,7 +1280,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02; REQ-004; D001 and D008.
 
-**Source and acceptance:** [M0064](sources/full_conversation.md#m0064--assistant) (L6416-L7134); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0186](sources/full_conversation.md#m0186--assistant) (L20005-L20327); [M0246](sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](sources/full_conversation.md#m0247--user) (L24349-L24349). Open in handoff; implementation discussion deferred.
+**Source and acceptance:** [M0064](../sources/full_conversation.md#m0064--assistant) (L6416-L7134); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0186](../sources/full_conversation.md#m0186--assistant) (L20005-L20327); [M0246](../sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](../sources/full_conversation.md#m0247--user) (L24349-L24349). Open in handoff; implementation discussion deferred.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1294,7 +1294,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-04, CMP-06; REQ-005; D001 and D008.
 
-**Source and acceptance:** [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0186](sources/full_conversation.md#m0186--assistant) (L20005-L20327); [M0246](sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](sources/full_conversation.md#m0247--user) (L24349-L24349). Explicit open technical specification.
+**Source and acceptance:** [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0186](../sources/full_conversation.md#m0186--assistant) (L20005-L20327); [M0246](../sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](../sources/full_conversation.md#m0247--user) (L24349-L24349). Explicit open technical specification.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1308,7 +1308,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-01, CMP-02, CMP-07; REQ-018; D001 and D008.
 
-**Source and acceptance:** [M0186](sources/full_conversation.md#m0186--assistant) (L20005-L20327); [M0232](sources/full_conversation.md#m0232--assistant) (L23388-L23680); [M0246](sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](sources/full_conversation.md#m0247--user) (L24349-L24349). Open/deferred technical choices.
+**Source and acceptance:** [M0186](../sources/full_conversation.md#m0186--assistant) (L20005-L20327); [M0232](../sources/full_conversation.md#m0232--assistant) (L23388-L23680); [M0246](../sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](../sources/full_conversation.md#m0247--user) (L24349-L24349). Open/deferred technical choices.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1322,7 +1322,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-10; REQ-017; D001 and D008.
 
-**Source and acceptance:** [M0146](sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0148](sources/full_conversation.md#m0148--assistant) (L16903-L17083); [M0186](sources/full_conversation.md#m0186--assistant) (L20005-L20327). Explicitly not fixed.
+**Source and acceptance:** [M0146](../sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0148](../sources/full_conversation.md#m0148--assistant) (L16903-L17083); [M0186](../sources/full_conversation.md#m0186--assistant) (L20005-L20327). Explicitly not fixed.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1336,7 +1336,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-02, CMP-04, CMP-05, CMP-06; REQ-023; D001 and D008.
 
-**Source and acceptance:** [M0245](sources/full_conversation.md#m0245--user) (L24008-L24008); [M0246](sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](sources/full_conversation.md#m0247--user) (L24349-L24349). Recommendation explicitly not implemented.
+**Source and acceptance:** [M0245](../sources/full_conversation.md#m0245--user) (L24008-L24008); [M0246](../sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](../sources/full_conversation.md#m0247--user) (L24349-L24349). Recommendation explicitly not implemented.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1350,7 +1350,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-06, CMP-09; REQ-009; D001 and D008.
 
-**Source and acceptance:** [M0143](sources/full_conversation.md#m0143--user) (L16449-L16460); [M0144](sources/full_conversation.md#m0144--assistant) (L16470-L16680). Scientific contradiction requiring resolution.
+**Source and acceptance:** [M0143](../sources/full_conversation.md#m0143--user) (L16449-L16460); [M0144](../sources/full_conversation.md#m0144--assistant) (L16470-L16680). Scientific contradiction requiring resolution.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1364,7 +1364,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 **Affected components / dependencies:** CMP-04, CMP-06, CMP-08; REQ-007; D001 and D008.
 
-**Source and acceptance:** [M0071](sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0101](sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0138](sources/full_conversation.md#m0138--assistant) (L15776-L16032); [M0146](sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0148](sources/full_conversation.md#m0148--assistant) (L16903-L17083); [M0241](sources/full_conversation.md#m0241--user) (L23913-L23913); [M0242](sources/full_conversation.md#m0242--assistant) (L23923-L23972); [M0243](sources/full_conversation.md#m0243--user) (L23982-L23982). Unresolved implementation semantics.
+**Source and acceptance:** [M0071](../sources/full_conversation.md#m0071--user) (L8730-L8737); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0101](../sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](../sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0138](../sources/full_conversation.md#m0138--assistant) (L15776-L16032); [M0146](../sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0148](../sources/full_conversation.md#m0148--assistant) (L16903-L17083); [M0241](../sources/full_conversation.md#m0241--user) (L23913-L23913); [M0242](../sources/full_conversation.md#m0242--assistant) (L23923-L23972); [M0243](../sources/full_conversation.md#m0243--user) (L23982-L23982). Unresolved implementation semantics.
 
 **Change control:** User approval for semantic or goal changes; unresolved implementation choices remain proposals.
 
@@ -1384,7 +1384,7 @@ Rejection records in [03_REJECTED_DECISIONS.md](docs/architecture/03_REJECTED_DE
 
 > Das wäre ein Erfolgskriterium für das framework selbst. Hypothesen dürfen schnell sterben, und es gibt im Framework mechanismen dafür
 
-The user subsequently approved the documentation remedy in the [System Model Review](docs/reviews/SYSTEM_MODEL_REVIEW.md#smallest-proposed-remedy) with "ja mach das". That approval covers canonical propagation, complete feedback presentation and simpler entry instructions; it does not approve the still-open scientific semantics. This entry records the clarified goal rather than asserting that the original archive contains these later messages.
+The user subsequently approved the documentation remedy in the [System Model Review](../docs/reviews/SYSTEM_MODEL_REVIEW.md#smallest-proposed-remedy) with "ja mach das". That approval covers canonical propagation, complete feedback presentation and simpler entry instructions; it does not approve the still-open scientific semantics. This entry records the clarified goal rather than asserting that the original archive contains these later messages.
 
 **Change control:** Preserve the original D001-D067 records, canonical definitions and source bytes. Numerical acceptance and affected scientific contracts require their own review before use. The clarification is versioned here and in the structured register; its implementation can be rolled back as a documentation revision without erasing this source/approval history.
 
@@ -1394,7 +1394,7 @@ The user subsequently approved the documentation remedy in the [System Model Rev
 
 # Rejected, Replaced and Deferred Alternatives
 
-This is a scope-sensitive exclusion register. Rejection of a framework role does not reject every function of that framework. Rejections made by the assistant in the evolving discussion are not represented as verbatim user vetoes. Source links identify the proposer, the qualification/rejection and any subsequent user acceptance. Deferred items are not permanent bans. See [02_DECISION_REGISTER.md](docs/architecture/02_DECISION_REGISTER.md) for current authority.
+This is a scope-sensitive exclusion register. Rejection of a framework role does not reject every function of that framework. Rejections made by the assistant in the evolving discussion are not represented as verbatim user vetoes. Source links identify the proposer, the qualification/rejection and any subsequent user acceptance. Deferred items are not permanent bans. See [02_DECISION_REGISTER.md](../docs/architecture/02_DECISION_REGISTER.md) for current authority.
 
 Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json after checks.
 
@@ -1410,7 +1410,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0057](sources/full_conversation.md#m0057--user) (L5598-L5606); [M0058](sources/full_conversation.md#m0058--assistant) (L5616-L5680); [M0106](sources/full_conversation.md#m0106--assistant) (L12272-L12445); [M0107](sources/full_conversation.md#m0107--user) (L12455-L12455); [M0108](sources/full_conversation.md#m0108--assistant) (L12465-L12501).
+**Chronological evidence:** [M0057](../sources/full_conversation.md#m0057--user) (L5598-L5606); [M0058](../sources/full_conversation.md#m0058--assistant) (L5616-L5680); [M0106](../sources/full_conversation.md#m0106--assistant) (L12272-L12445); [M0107](../sources/full_conversation.md#m0107--user) (L12455-L12455); [M0108](../sources/full_conversation.md#m0108--assistant) (L12465-L12501).
 
 ## REJ-002 — LLM judges its own empirical success
 
@@ -1424,7 +1424,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0057](sources/full_conversation.md#m0057--user) (L5598-L5606); [M0058](sources/full_conversation.md#m0058--assistant) (L5616-L5680); [M0065](sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546).
+**Chronological evidence:** [M0057](../sources/full_conversation.md#m0057--user) (L5598-L5606); [M0058](../sources/full_conversation.md#m0058--assistant) (L5616-L5680); [M0065](../sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](../sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546).
 
 ## REJ-003 — Arbitrary generated test Python per hypothesis
 
@@ -1438,7 +1438,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0058](sources/full_conversation.md#m0058--assistant) (L5616-L5680); [M0065](sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0067](sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0074](sources/full_conversation.md#m0074--assistant) (L9306-L9395).
+**Chronological evidence:** [M0058](../sources/full_conversation.md#m0058--assistant) (L5616-L5680); [M0065](../sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](../sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0067](../sources/full_conversation.md#m0067--user) (L7383-L7392); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0074](../sources/full_conversation.md#m0074--assistant) (L9306-L9395).
 
 ## REJ-004 — Mandatory human approval for every new primitive
 
@@ -1452,7 +1452,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0065](sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286).
+**Chronological evidence:** [M0065](../sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](../sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286).
 
 ## REJ-005 — Scope baseline uses only qualifying events
 
@@ -1466,7 +1466,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0061](sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286).
+**Chronological evidence:** [M0061](../sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](../sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286).
 
 ## REJ-006 — Discovery must start with theory or a known mechanism
 
@@ -1480,7 +1480,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0051](sources/full_conversation.md#m0051--user) (L4811-L4812); [M0052](sources/full_conversation.md#m0052--assistant) (L4822-L5142); [M0053](sources/full_conversation.md#m0053--user) (L5152-L5152); [M0054](sources/full_conversation.md#m0054--assistant) (L5162-L5436); [M0093](sources/full_conversation.md#m0093--user) (L11309-L11309); [M0094](sources/full_conversation.md#m0094--assistant) (L11319-L11491); [M0095](sources/full_conversation.md#m0095--user) (L11501-L11510); [M0096](sources/full_conversation.md#m0096--assistant) (L11520-L11684); [M0128](sources/full_conversation.md#m0128--assistant) (L14628-L14817).
+**Chronological evidence:** [M0051](../sources/full_conversation.md#m0051--user) (L4811-L4812); [M0052](../sources/full_conversation.md#m0052--assistant) (L4822-L5142); [M0053](../sources/full_conversation.md#m0053--user) (L5152-L5152); [M0054](../sources/full_conversation.md#m0054--assistant) (L5162-L5436); [M0093](../sources/full_conversation.md#m0093--user) (L11309-L11309); [M0094](../sources/full_conversation.md#m0094--assistant) (L11319-L11491); [M0095](../sources/full_conversation.md#m0095--user) (L11501-L11510); [M0096](../sources/full_conversation.md#m0096--assistant) (L11520-L11684); [M0128](../sources/full_conversation.md#m0128--assistant) (L14628-L14817).
 
 ## REJ-007 — Mandatory known replicated seed for every idea
 
@@ -1494,7 +1494,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0093](sources/full_conversation.md#m0093--user) (L11309-L11309); [M0094](sources/full_conversation.md#m0094--assistant) (L11319-L11491).
+**Chronological evidence:** [M0093](../sources/full_conversation.md#m0093--user) (L11309-L11309); [M0094](../sources/full_conversation.md#m0094--assistant) (L11319-L11491).
 
 ## REJ-008 — One compulsory seven-level hypothesis ladder
 
@@ -1508,7 +1508,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0081](sources/full_conversation.md#m0081--user) (L9864-L10129); [M0082](sources/full_conversation.md#m0082--assistant) (L10139-L10323); [M0091](sources/full_conversation.md#m0091--user) (L11145-L11153); [M0092](sources/full_conversation.md#m0092--assistant) (L11163-L11299).
+**Chronological evidence:** [M0081](../sources/full_conversation.md#m0081--user) (L9864-L10129); [M0082](../sources/full_conversation.md#m0082--assistant) (L10139-L10323); [M0091](../sources/full_conversation.md#m0091--user) (L11145-L11153); [M0092](../sources/full_conversation.md#m0092--assistant) (L11163-L11299).
 
 ## REJ-009 — Broad epistemic knowledge graph as factual core
 
@@ -1522,7 +1522,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0086](sources/full_conversation.md#m0086--assistant) (L10596-L10813); [M0089](sources/full_conversation.md#m0089--user) (L10971-L10971); [M0090](sources/full_conversation.md#m0090--assistant) (L10981-L11135); [M0092](sources/full_conversation.md#m0092--assistant) (L11163-L11299).
+**Chronological evidence:** [M0086](../sources/full_conversation.md#m0086--assistant) (L10596-L10813); [M0089](../sources/full_conversation.md#m0089--user) (L10971-L10971); [M0090](../sources/full_conversation.md#m0090--assistant) (L10981-L11135); [M0092](../sources/full_conversation.md#m0092--assistant) (L11163-L11299).
 
 ## REJ-010 — AND/OR combination inherits component evidence
 
@@ -1536,7 +1536,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0087](sources/full_conversation.md#m0087--user) (L10823-L10823); [M0088](sources/full_conversation.md#m0088--assistant) (L10833-L10961); [M0090](sources/full_conversation.md#m0090--assistant) (L10981-L11135); [M0092](sources/full_conversation.md#m0092--assistant) (L11163-L11299); [M0137](sources/full_conversation.md#m0137--user) (L15763-L15766); [M0138](sources/full_conversation.md#m0138--assistant) (L15776-L16032).
+**Chronological evidence:** [M0087](../sources/full_conversation.md#m0087--user) (L10823-L10823); [M0088](../sources/full_conversation.md#m0088--assistant) (L10833-L10961); [M0090](../sources/full_conversation.md#m0090--assistant) (L10981-L11135); [M0092](../sources/full_conversation.md#m0092--assistant) (L11163-L11299); [M0137](../sources/full_conversation.md#m0137--user) (L15763-L15766); [M0138](../sources/full_conversation.md#m0138--assistant) (L15776-L16032).
 
 ## REJ-011 — Five-minute input to v1 discovery
 
@@ -1550,7 +1550,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0050](sources/full_conversation.md#m0050--assistant) (L4710-L4801); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0097](sources/full_conversation.md#m0097--user) (L11694-L11694); [M0098](sources/full_conversation.md#m0098--assistant) (L11704-L11790).
+**Chronological evidence:** [M0050](../sources/full_conversation.md#m0050--assistant) (L4710-L4801); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0097](../sources/full_conversation.md#m0097--user) (L11694-L11694); [M0098](../sources/full_conversation.md#m0098--assistant) (L11704-L11790).
 
 ## REJ-012 — Prospective-only primary research environment
 
@@ -1564,7 +1564,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0062](sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0068](sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0101](sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](sources/full_conversation.md#m0102--assistant) (L11988-L12157).
+**Chronological evidence:** [M0062](../sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0068](../sources/full_conversation.md#m0068--assistant) (L7402-L8546); [M0072](../sources/full_conversation.md#m0072--assistant) (L8747-L9286); [M0101](../sources/full_conversation.md#m0101--user) (L11978-L11978); [M0102](../sources/full_conversation.md#m0102--assistant) (L11988-L12157).
 
 ## REJ-013 — No generator tools
 
@@ -1578,7 +1578,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0061](sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0181](sources/full_conversation.md#m0181--user) (L19808-L19808); [M0182](sources/full_conversation.md#m0182--assistant) (L19818-L19949); [M0183](sources/full_conversation.md#m0183--user) (L19959-L19959).
+**Chronological evidence:** [M0061](../sources/full_conversation.md#m0061--user) (L5817-L5825); [M0062](../sources/full_conversation.md#m0062--assistant) (L5835-L6396); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0181](../sources/full_conversation.md#m0181--user) (L19808-L19808); [M0182](../sources/full_conversation.md#m0182--assistant) (L19818-L19949); [M0183](../sources/full_conversation.md#m0183--user) (L19959-L19959).
 
 ## REJ-014 — Repeated holdout reuse labeled independent OOS
 
@@ -1592,7 +1592,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0102](sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0106](sources/full_conversation.md#m0106--assistant) (L12272-L12445); [M0154](sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0166](sources/full_conversation.md#m0166--assistant) (L18223-L18400); [M0167](sources/full_conversation.md#m0167--user) (L18410-L18410).
+**Chronological evidence:** [M0102](../sources/full_conversation.md#m0102--assistant) (L11988-L12157); [M0106](../sources/full_conversation.md#m0106--assistant) (L12272-L12445); [M0154](../sources/full_conversation.md#m0154--assistant) (L17451-L17643); [M0166](../sources/full_conversation.md#m0166--assistant) (L18223-L18400); [M0167](../sources/full_conversation.md#m0167--user) (L18410-L18410).
 
 ## REJ-015 — Universal N=100, 12-month freeze or mandatory statistical method
 
@@ -1606,7 +1606,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0010](sources/full_conversation.md#m0010--assistant) (L228-L352); [M0013](sources/full_conversation.md#m0013--user) (L487-L491); [M0014](sources/full_conversation.md#m0014--assistant) (L501-L660); [M0019](sources/full_conversation.md#m0019--user) (L1107-L1115); [M0020](sources/full_conversation.md#m0020--assistant) (L1125-L1273); [M0021](sources/full_conversation.md#m0021--user) (L1283-L1301); [M0022](sources/full_conversation.md#m0022--assistant) (L1311-L1436); [M0065](sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0190](sources/full_conversation.md#m0190--assistant) (L20585-L20739); [M0206](sources/full_conversation.md#m0206--assistant) (L21550-L21727).
+**Chronological evidence:** [M0010](../sources/full_conversation.md#m0010--assistant) (L228-L352); [M0013](../sources/full_conversation.md#m0013--user) (L487-L491); [M0014](../sources/full_conversation.md#m0014--assistant) (L501-L660); [M0019](../sources/full_conversation.md#m0019--user) (L1107-L1115); [M0020](../sources/full_conversation.md#m0020--assistant) (L1125-L1273); [M0021](../sources/full_conversation.md#m0021--user) (L1283-L1301); [M0022](../sources/full_conversation.md#m0022--assistant) (L1311-L1436); [M0065](../sources/full_conversation.md#m0065--user) (L7144-L7188); [M0066](../sources/full_conversation.md#m0066--assistant) (L7198-L7373); [M0190](../sources/full_conversation.md#m0190--assistant) (L20585-L20739); [M0206](../sources/full_conversation.md#m0206--assistant) (L21550-L21727).
 
 ## REJ-016 — Single weighted generator-quality or research-value score
 
@@ -1620,7 +1620,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0012](sources/full_conversation.md#m0012--assistant) (L372-L477); [M0015](sources/full_conversation.md#m0015--user) (L670-L681); [M0016](sources/full_conversation.md#m0016--assistant) (L691-L953); [M0017](sources/full_conversation.md#m0017--user) (L963-L976); [M0018](sources/full_conversation.md#m0018--assistant) (L986-L1097); [M0027](sources/full_conversation.md#m0027--user) (L1629-L1645); [M0028](sources/full_conversation.md#m0028--assistant) (L1655-L1834).
+**Chronological evidence:** [M0012](../sources/full_conversation.md#m0012--assistant) (L372-L477); [M0015](../sources/full_conversation.md#m0015--user) (L670-L681); [M0016](../sources/full_conversation.md#m0016--assistant) (L691-L953); [M0017](../sources/full_conversation.md#m0017--user) (L963-L976); [M0018](../sources/full_conversation.md#m0018--assistant) (L986-L1097); [M0027](../sources/full_conversation.md#m0027--user) (L1629-L1645); [M0028](../sources/full_conversation.md#m0028--assistant) (L1655-L1834).
 
 ## REJ-017 — Trade quality as a subset of hypothesis quality
 
@@ -1634,7 +1634,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0012](sources/full_conversation.md#m0012--assistant) (L372-L477); [M0015](sources/full_conversation.md#m0015--user) (L670-L681); [M0016](sources/full_conversation.md#m0016--assistant) (L691-L953).
+**Chronological evidence:** [M0012](../sources/full_conversation.md#m0012--assistant) (L372-L477); [M0015](../sources/full_conversation.md#m0015--user) (L670-L681); [M0016](../sources/full_conversation.md#m0016--assistant) (L691-L953).
 
 ## REJ-018 — Filled falsifier field equals falsifiability
 
@@ -1648,7 +1648,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0043](sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](sources/full_conversation.md#m0044--assistant) (L3468-L3731).
+**Chronological evidence:** [M0043](../sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](../sources/full_conversation.md#m0044--assistant) (L3468-L3731).
 
 ## REJ-019 — Complexity growth proves degeneration
 
@@ -1662,7 +1662,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0043](sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](sources/full_conversation.md#m0044--assistant) (L3468-L3731).
+**Chronological evidence:** [M0043](../sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](../sources/full_conversation.md#m0044--assistant) (L3468-L3731).
 
 ## REJ-020 — Embedding similarity is scientific redundancy truth
 
@@ -1676,7 +1676,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0043](sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](sources/full_conversation.md#m0044--assistant) (L3468-L3731); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794).
+**Chronological evidence:** [M0043](../sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](../sources/full_conversation.md#m0044--assistant) (L3468-L3731); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794).
 
 ## REJ-021 — Immediate SPC/Nelson rules on heterogeneous success rates
 
@@ -1690,7 +1690,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0039](sources/full_conversation.md#m0039--user) (L2965-L2965); [M0040](sources/full_conversation.md#m0040--assistant) (L2975-L3106); [M0041](sources/full_conversation.md#m0041--user) (L3116-L3131); [M0042](sources/full_conversation.md#m0042--assistant) (L3141-L3423); [M0043](sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](sources/full_conversation.md#m0044--assistant) (L3468-L3731).
+**Chronological evidence:** [M0039](../sources/full_conversation.md#m0039--user) (L2965-L2965); [M0040](../sources/full_conversation.md#m0040--assistant) (L2975-L3106); [M0041](../sources/full_conversation.md#m0041--user) (L3116-L3131); [M0042](../sources/full_conversation.md#m0042--assistant) (L3141-L3423); [M0043](../sources/full_conversation.md#m0043--user) (L3433-L3458); [M0044](../sources/full_conversation.md#m0044--assistant) (L3468-L3731).
 
 ## REJ-022 — Builder pattern as central architecture layer
 
@@ -1704,7 +1704,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0073](sources/full_conversation.md#m0073--user) (L9296-L9296); [M0074](sources/full_conversation.md#m0074--assistant) (L9306-L9395).
+**Chronological evidence:** [M0073](../sources/full_conversation.md#m0073--user) (L9296-L9296); [M0074](../sources/full_conversation.md#m0074--assistant) (L9306-L9395).
 
 ## REJ-023 — Mandatory human novelty/originality score or maximum semantic distance
 
@@ -1718,7 +1718,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0047](sources/full_conversation.md#m0047--user) (L4431-L4431); [M0048](sources/full_conversation.md#m0048--assistant) (L4441-L4690); [M0109](sources/full_conversation.md#m0109--user) (L12511-L12537); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0149](sources/full_conversation.md#m0149--user) (L17093-L17094); [M0150](sources/full_conversation.md#m0150--assistant) (L17104-L17267).
+**Chronological evidence:** [M0047](../sources/full_conversation.md#m0047--user) (L4431-L4431); [M0048](../sources/full_conversation.md#m0048--assistant) (L4441-L4690); [M0109](../sources/full_conversation.md#m0109--user) (L12511-L12537); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0149](../sources/full_conversation.md#m0149--user) (L17093-L17094); [M0150](../sources/full_conversation.md#m0150--assistant) (L17104-L17267).
 
 ## REJ-024 — Single anomaly detector as exclusive discovery gate
 
@@ -1732,7 +1732,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0109](sources/full_conversation.md#m0109--user) (L12511-L12537); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0111](sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0129](sources/full_conversation.md#m0129--user) (L14827-L14827); [M0130](sources/full_conversation.md#m0130--assistant) (L14837-L15103).
+**Chronological evidence:** [M0109](../sources/full_conversation.md#m0109--user) (L12511-L12537); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0111](../sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794); [M0129](../sources/full_conversation.md#m0129--user) (L14827-L14827); [M0130](../sources/full_conversation.md#m0130--assistant) (L14837-L15103).
 
 ## REJ-025 — Different data slices by default for independent agents
 
@@ -1746,7 +1746,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0109](sources/full_conversation.md#m0109--user) (L12511-L12537); [M0110](sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0111](sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](sources/full_conversation.md#m0112--assistant) (L12672-L12794).
+**Chronological evidence:** [M0109](../sources/full_conversation.md#m0109--user) (L12511-L12537); [M0110](../sources/full_conversation.md#m0110--assistant) (L12547-L12633); [M0111](../sources/full_conversation.md#m0111--user) (L12643-L12662); [M0112](../sources/full_conversation.md#m0112--assistant) (L12672-L12794).
 
 ## REJ-026 — Fixed technical/fundamental/on-chain weights
 
@@ -1760,7 +1760,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0115](sources/full_conversation.md#m0115--user) (L13095-L13095); [M0116](sources/full_conversation.md#m0116--assistant) (L13105-L13255).
+**Chronological evidence:** [M0115](../sources/full_conversation.md#m0115--user) (L13095-L13095); [M0116](../sources/full_conversation.md#m0116--assistant) (L13105-L13255).
 
 ## REJ-027 — Policy without rule provenance or disguised negative conflict
 
@@ -1774,7 +1774,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0141](sources/full_conversation.md#m0141--user) (L16275-L16277); [M0142](sources/full_conversation.md#m0142--assistant) (L16287-L16439); [M0143](sources/full_conversation.md#m0143--user) (L16449-L16460); [M0144](sources/full_conversation.md#m0144--assistant) (L16470-L16680).
+**Chronological evidence:** [M0141](../sources/full_conversation.md#m0141--user) (L16275-L16277); [M0142](../sources/full_conversation.md#m0142--assistant) (L16287-L16439); [M0143](../sources/full_conversation.md#m0143--user) (L16449-L16460); [M0144](../sources/full_conversation.md#m0144--assistant) (L16470-L16680).
 
 ## REJ-028 — Automatic evidence-status-to-capital ladder
 
@@ -1788,7 +1788,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0145](sources/full_conversation.md#m0145--user) (L16690-L16691); [M0146](sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0147](sources/full_conversation.md#m0147--user) (L16878-L16893); [M0148](sources/full_conversation.md#m0148--assistant) (L16903-L17083).
+**Chronological evidence:** [M0145](../sources/full_conversation.md#m0145--user) (L16690-L16691); [M0146](../sources/full_conversation.md#m0146--assistant) (L16701-L16868); [M0147](../sources/full_conversation.md#m0147--user) (L16878-L16893); [M0148](../sources/full_conversation.md#m0148--assistant) (L16903-L17083).
 
 ## REJ-029 — LLM-invented numerical prior and N_min based on belief in H
 
@@ -1802,7 +1802,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0157](sources/full_conversation.md#m0157--user) (L17691-L17692); [M0158](sources/full_conversation.md#m0158--assistant) (L17702-L17883); [M0159](sources/full_conversation.md#m0159--user) (L17893-L17893); [M0160](sources/full_conversation.md#m0160--assistant) (L17903-L17929).
+**Chronological evidence:** [M0157](../sources/full_conversation.md#m0157--user) (L17691-L17692); [M0158](../sources/full_conversation.md#m0158--assistant) (L17702-L17883); [M0159](../sources/full_conversation.md#m0159--user) (L17893-L17893); [M0160](../sources/full_conversation.md#m0160--assistant) (L17903-L17929).
 
 ## REJ-030 — Autonomous material self-modification
 
@@ -1816,7 +1816,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0169](sources/full_conversation.md#m0169--user) (L18468-L18600); [M0170](sources/full_conversation.md#m0170--assistant) (L18610-L18868); [M0171](sources/full_conversation.md#m0171--user) (L18878-L18878); [M0172](sources/full_conversation.md#m0172--assistant) (L18888-L19083); [M0173](sources/full_conversation.md#m0173--user) (L19093-L19093).
+**Chronological evidence:** [M0169](../sources/full_conversation.md#m0169--user) (L18468-L18600); [M0170](../sources/full_conversation.md#m0170--assistant) (L18610-L18868); [M0171](../sources/full_conversation.md#m0171--user) (L18878-L18878); [M0172](../sources/full_conversation.md#m0172--assistant) (L18888-L19083); [M0173](../sources/full_conversation.md#m0173--user) (L19093-L19093).
 
 ## REJ-031 — Adopt RD-Agent/OpenEvolve fitness selection as scientific core
 
@@ -1830,7 +1830,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0131](sources/full_conversation.md#m0131--user) (L15113-L15113); [M0132](sources/full_conversation.md#m0132--assistant) (L15123-L15274); [M0133](sources/full_conversation.md#m0133--user) (L15284-L15284); [M0134](sources/full_conversation.md#m0134--assistant) (L15294-L15505); [M0139](sources/full_conversation.md#m0139--user) (L16042-L16042); [M0140](sources/full_conversation.md#m0140--assistant) (L16052-L16265).
+**Chronological evidence:** [M0131](../sources/full_conversation.md#m0131--user) (L15113-L15113); [M0132](../sources/full_conversation.md#m0132--assistant) (L15123-L15274); [M0133](../sources/full_conversation.md#m0133--user) (L15284-L15284); [M0134](../sources/full_conversation.md#m0134--assistant) (L15294-L15505); [M0139](../sources/full_conversation.md#m0139--user) (L16042-L16042); [M0140](../sources/full_conversation.md#m0140--assistant) (L16052-L16265).
 
 ## REJ-032 — POPPER-generated statistics as direct verdict authority
 
@@ -1844,7 +1844,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0135](sources/full_conversation.md#m0135--user) (L15515-L15515); [M0136](sources/full_conversation.md#m0136--assistant) (L15525-L15753); [M0140](sources/full_conversation.md#m0140--assistant) (L16052-L16265).
+**Chronological evidence:** [M0135](../sources/full_conversation.md#m0135--user) (L15515-L15515); [M0136](../sources/full_conversation.md#m0136--assistant) (L15525-L15753); [M0140](../sources/full_conversation.md#m0140--assistant) (L16052-L16265).
 
 ## REJ-033 — Universal DSR/CPCV/PBO gate or naive global trial count
 
@@ -1858,7 +1858,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0205](sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](sources/full_conversation.md#m0207--user) (L21737-L21737).
+**Chronological evidence:** [M0205](../sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](../sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](../sources/full_conversation.md#m0207--user) (L21737-L21737).
 
 ## REJ-034 — Ban fixed numerical parameters; force distributions everywhere
 
@@ -1872,7 +1872,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0205](sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](sources/full_conversation.md#m0207--user) (L21737-L21737).
+**Chronological evidence:** [M0205](../sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](../sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](../sources/full_conversation.md#m0207--user) (L21737-L21737).
 
 ## REJ-035 — Remove best 5 percent of trades as universal pass gate
 
@@ -1886,7 +1886,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0205](sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](sources/full_conversation.md#m0207--user) (L21737-L21737).
+**Chronological evidence:** [M0205](../sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](../sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](../sources/full_conversation.md#m0207--user) (L21737-L21737).
 
 ## REJ-036 — Automatically deploy the average of a robust parameter cluster
 
@@ -1900,7 +1900,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0205](sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](sources/full_conversation.md#m0207--user) (L21737-L21737).
+**Chronological evidence:** [M0205](../sources/full_conversation.md#m0205--user) (L21480-L21540); [M0206](../sources/full_conversation.md#m0206--assistant) (L21550-L21727); [M0207](../sources/full_conversation.md#m0207--user) (L21737-L21737).
 
 ## REJ-037 — Survival of model criticism proves reality
 
@@ -1914,7 +1914,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0209](sources/full_conversation.md#m0209--user) (L21778-L21779); [M0210](sources/full_conversation.md#m0210--assistant) (L21789-L21968); [M0211](sources/full_conversation.md#m0211--user) (L21978-L21978).
+**Chronological evidence:** [M0209](../sources/full_conversation.md#m0209--user) (L21778-L21779); [M0210](../sources/full_conversation.md#m0210--assistant) (L21789-L21968); [M0211](../sources/full_conversation.md#m0211--user) (L21978-L21978).
 
 ## REJ-038 — Raw live losses rewrite prompts or market truth
 
@@ -1928,7 +1928,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0213](sources/full_conversation.md#m0213--user) (L22025-L22026); [M0214](sources/full_conversation.md#m0214--assistant) (L22036-L22263); [M0215](sources/full_conversation.md#m0215--user) (L22273-L22273); [M0216](sources/full_conversation.md#m0216--assistant) (L22283-L22451); [M0217](sources/full_conversation.md#m0217--user) (L22461-L22461).
+**Chronological evidence:** [M0213](../sources/full_conversation.md#m0213--user) (L22025-L22026); [M0214](../sources/full_conversation.md#m0214--assistant) (L22036-L22263); [M0215](../sources/full_conversation.md#m0215--user) (L22273-L22273); [M0216](../sources/full_conversation.md#m0216--assistant) (L22283-L22451); [M0217](../sources/full_conversation.md#m0217--user) (L22461-L22461).
 
 ## REJ-039 — Selected real winner versus unselected null candidate
 
@@ -1942,7 +1942,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0219](sources/full_conversation.md#m0219--user) (L22518-L22541); [M0220](sources/full_conversation.md#m0220--assistant) (L22551-L22716); [M0221](sources/full_conversation.md#m0221--user) (L22726-L22726); [M0275](sources/full_conversation.md#m0275--user) (L25807-L25810); [M0276](sources/full_conversation.md#m0276--assistant) (L25820-L25964); [M0277](sources/full_conversation.md#m0277--user) (L25974-L25974).
+**Chronological evidence:** [M0219](../sources/full_conversation.md#m0219--user) (L22518-L22541); [M0220](../sources/full_conversation.md#m0220--assistant) (L22551-L22716); [M0221](../sources/full_conversation.md#m0221--user) (L22726-L22726); [M0275](../sources/full_conversation.md#m0275--user) (L25807-L25810); [M0276](../sources/full_conversation.md#m0276--assistant) (L25820-L25964); [M0277](../sources/full_conversation.md#m0277--user) (L25974-L25974).
 
 ## REJ-040 — One universal null destroys all structure or preserves the claimed effect
 
@@ -1956,7 +1956,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0275](sources/full_conversation.md#m0275--user) (L25807-L25810); [M0276](sources/full_conversation.md#m0276--assistant) (L25820-L25964); [M0277](sources/full_conversation.md#m0277--user) (L25974-L25974).
+**Chronological evidence:** [M0275](../sources/full_conversation.md#m0275--user) (L25807-L25810); [M0276](../sources/full_conversation.md#m0276--assistant) (L25820-L25964); [M0277](../sources/full_conversation.md#m0277--user) (L25974-L25974).
 
 ## REJ-041 — Full-path MAE/MFE used as entry information
 
@@ -1970,7 +1970,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Only explicit approved goal/semantic change.
 
-**Chronological evidence:** [M0259](sources/full_conversation.md#m0259--user) (L24904-L24904); [M0260](sources/full_conversation.md#m0260--assistant) (L24914-L25021); [M0261](sources/full_conversation.md#m0261--user) (L25031-L25037); [M0262](sources/full_conversation.md#m0262--assistant) (L25047-L25121); [M0263](sources/full_conversation.md#m0263--user) (L25131-L25131).
+**Chronological evidence:** [M0259](../sources/full_conversation.md#m0259--user) (L24904-L24904); [M0260](../sources/full_conversation.md#m0260--assistant) (L24914-L25021); [M0261](../sources/full_conversation.md#m0261--user) (L25031-L25037); [M0262](../sources/full_conversation.md#m0262--assistant) (L25047-L25121); [M0263](../sources/full_conversation.md#m0263--user) (L25131-L25131).
 
 ## REJ-042 — Mandatory continuous columns, quintiles or monotonicity
 
@@ -1984,7 +1984,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0261](sources/full_conversation.md#m0261--user) (L25031-L25037); [M0262](sources/full_conversation.md#m0262--assistant) (L25047-L25121); [M0263](sources/full_conversation.md#m0263--user) (L25131-L25131); [M0265](sources/full_conversation.md#m0265--user) (L25159-L25165); [M0266](sources/full_conversation.md#m0266--assistant) (L25175-L25372); [M0267](sources/full_conversation.md#m0267--user) (L25382-L25382).
+**Chronological evidence:** [M0261](../sources/full_conversation.md#m0261--user) (L25031-L25037); [M0262](../sources/full_conversation.md#m0262--assistant) (L25047-L25121); [M0263](../sources/full_conversation.md#m0263--user) (L25131-L25131); [M0265](../sources/full_conversation.md#m0265--user) (L25159-L25165); [M0266](../sources/full_conversation.md#m0266--assistant) (L25175-L25372); [M0267](../sources/full_conversation.md#m0267--user) (L25382-L25382).
 
 ## REJ-043 — Positive main signal required before exit/sizing research
 
@@ -1998,7 +1998,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0081](sources/full_conversation.md#m0081--user) (L9864-L10129); [M0082](sources/full_conversation.md#m0082--assistant) (L10139-L10323); [M0091](sources/full_conversation.md#m0091--user) (L11145-L11153); [M0092](sources/full_conversation.md#m0092--assistant) (L11163-L11299); [M0271](sources/full_conversation.md#m0271--user) (L25637-L25643); [M0272](sources/full_conversation.md#m0272--assistant) (L25653-L25771); [M0273](sources/full_conversation.md#m0273--user) (L25781-L25781).
+**Chronological evidence:** [M0081](../sources/full_conversation.md#m0081--user) (L9864-L10129); [M0082](../sources/full_conversation.md#m0082--assistant) (L10139-L10323); [M0091](../sources/full_conversation.md#m0091--user) (L11145-L11153); [M0092](../sources/full_conversation.md#m0092--assistant) (L11163-L11299); [M0271](../sources/full_conversation.md#m0271--user) (L25637-L25643); [M0272](../sources/full_conversation.md#m0272--assistant) (L25653-L25771); [M0273](../sources/full_conversation.md#m0273--user) (L25781-L25781).
 
 ## REJ-044 — Trade shuffling establishes alpha or new independent future risk
 
@@ -2012,7 +2012,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0279](sources/full_conversation.md#m0279--user) (L26004-L26008); [M0280](sources/full_conversation.md#m0280--assistant) (L26018-L26248); [M0281](sources/full_conversation.md#m0281--user) (L26258-L26258).
+**Chronological evidence:** [M0279](../sources/full_conversation.md#m0279--user) (L26004-L26008); [M0280](../sources/full_conversation.md#m0280--assistant) (L26018-L26248); [M0281](../sources/full_conversation.md#m0281--user) (L26258-L26258).
 
 ## REJ-045 — Blind unbounded strategy enumeration replaces discovery
 
@@ -2026,7 +2026,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0283](sources/full_conversation.md#m0283--user) (L26288-L26288); [M0284](sources/full_conversation.md#m0284--assistant) (L26298-L26615); [M0285](sources/full_conversation.md#m0285--user) (L26625-L26625).
+**Chronological evidence:** [M0283](../sources/full_conversation.md#m0283--user) (L26288-L26288); [M0284](../sources/full_conversation.md#m0284--assistant) (L26298-L26615); [M0285](../sources/full_conversation.md#m0285--user) (L26625-L26625).
 
 ## REJ-046 — Sanity score or plausibility veto by an LLM
 
@@ -2040,7 +2040,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0287](sources/full_conversation.md#m0287--user) (L26672-L26672); [M0288](sources/full_conversation.md#m0288--assistant) (L26682-L26842); [M0289](sources/full_conversation.md#m0289--user) (L26852-L26852).
+**Chronological evidence:** [M0287](../sources/full_conversation.md#m0287--user) (L26672-L26672); [M0288](../sources/full_conversation.md#m0288--assistant) (L26682-L26842); [M0289](../sources/full_conversation.md#m0289--user) (L26852-L26852).
 
 ## REJ-047 — Full infrastructure before a feasibility slice
 
@@ -2054,7 +2054,7 @@ Records: 47. Classifications are counted in DOCUMENTATION_VERIFICATION.json afte
 
 **Reconsideration:** Allowed only within the stated scope; document new evidence, costs and an approved change where material.
 
-**Chronological evidence:** [M0245](sources/full_conversation.md#m0245--user) (L24008-L24008); [M0246](sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](sources/full_conversation.md#m0247--user) (L24349-L24349).
+**Chronological evidence:** [M0245](../sources/full_conversation.md#m0245--user) (L24008-L24008); [M0246](../sources/full_conversation.md#m0246--assistant) (L24018-L24339); [M0247](../sources/full_conversation.md#m0247--user) (L24349-L24349).
 
 ---
 
@@ -2464,7 +2464,7 @@ Ohne eine solche eingefrorene Policy ist wiederholtes Nachsehen keine zulässige
 
 # Requirements and Observable Acceptance
 
-These requirements consolidate the source-backed decisions; they do not select still-open numeric thresholds or infrastructure products. Each acceptance condition below is a future implementation test specification, not a test reported as executed. Decision/source provenance is in [02_DECISION_REGISTER.md](docs/architecture/02_DECISION_REGISTER.md).
+These requirements consolidate the source-backed decisions; they do not select still-open numeric thresholds or infrastructure products. Each acceptance condition below is a future implementation test specification, not a test reported as executed. Decision/source provenance is in [02_DECISION_REGISTER.md](../docs/architecture/02_DECISION_REGISTER.md).
 
 | ID | Required behavior | Observable acceptance condition | Verification |
 |---|---|---|---|
@@ -2514,7 +2514,7 @@ Latency, throughput, token budgets, storage retention, availability targets and 
 
 This reconstructs the source-backed target architecture. Component boundaries are logical responsibilities, not a commitment to twelve services or twelve agents. Concrete persistence, runtime topology and unresolved semantics remain proposals. Read decisions, definitions and open issues together.
 
-The [Problem Definition](docs/architecture/01_PROBLEM_DEFINITION.md) sets the linked goals of autonomous invention with independent evaluation and substantially accelerated discovery and testing (D001, D068). The workflow below retains progress from unsuccessful research as well as supported claims. Its information paths explain responsibilities; they are not an approved replacement for the legacy state machine.
+The [Problem Definition](../docs/architecture/01_PROBLEM_DEFINITION.md) sets the linked goals of autonomous invention with independent evaluation and substantially accelerated discovery and testing (D001, D068). The workflow below retains progress from unsuccessful research as well as supported claims. Its information paths explain responsibilities; they are not an approved replacement for the legacy state machine.
 
 ## Scientific invariants
 
@@ -2635,7 +2635,7 @@ Exact schemas are not recovered finished implementations. The blueprint specifie
 
 ## Freeze and state transitions
 
-**Current intent versus preserved lifecycle:** D013/D053 establish historical-first primary research. DEF-016 and the original formulas remain in [04_DEFINITIONS.md](docs/architecture/04_DEFINITIONS.md) for provenance; the prospective transition list does not require all research to wait for future observations. OPEN-01 proposes a versioned historical/forward branch with distinct evidence, validity and applicability dimensions and still blocks an executable replacement. The diagram explains accepted responsibilities without assigning new lifecycle enums or approving that migration.
+**Current intent versus preserved lifecycle:** D013/D053 establish historical-first primary research. DEF-016 and the original formulas remain in [04_DEFINITIONS.md](../docs/architecture/04_DEFINITIONS.md) for provenance; the prospective transition list does not require all research to wait for future observations. OPEN-01 proposes a versioned historical/forward branch with distinct evidence, validity and applicability dimensions and still blocks an executable replacement. The diagram explains accepted responsibilities without assigning new lifecycle enums or approving that migration.
 
 Regardless of storage representation, a freeze is valid only when the exact input closure is immutable, the selected evaluation plan is assigned, the confirmation allocation/exposure check passes and the trial is durably recorded. Compile and certify before this transaction. After freeze, rebuilding a representation must match the frozen compiler and semantic version; changing the claim or method creates a new record.
 
@@ -2865,7 +2865,7 @@ A concrete pre-freeze attack may instead lead to revision or abandonment. IF-08 
 
 For an executable candidate, code checks semantics, assigns the frozen evaluation family/plan and checks evidence eligibility. The selected confirmation request is committed atomically. The backend executes the authorized partition and returns raw cases plus versions. The evidence engine verifies the manifest, applies the frozen rule and records a result. Interpretation may explain the result but cannot alter it. A future knowledge snapshot includes the qualified result and its exposure ancestry.
 
-The valid result may be negative, inconclusive or supported; each is retained with its evidence origin and limits. Primary research uses historical data, while genuinely fresh/forward confirmation has distinct eligibility and allocation rules. The [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md#freeze-and-state-transitions) explains the current intent versus the preserved prospective lifecycle. OPEN-01/05/12 must resolve executable transitions, evaluation/stopping policy and allocation before affected operations; these examples introduce no new status enum or universal early-stop rule.
+The valid result may be negative, inconclusive or supported; each is retained with its evidence origin and limits. Primary research uses historical data, while genuinely fresh/forward confirmation has distinct eligibility and allocation rules. The [Master Architecture](../docs/architecture/06_MASTER_ARCHITECTURE.md#freeze-and-state-transitions) explains the current intent versus the preserved prospective lifecycle. OPEN-01/05/12 must resolve executable transitions, evaluation/stopping policy and allocation before affected operations; these examples introduce no new status enum or universal early-stop rule.
 
 If a feature is later revoked, dependent results become unusable according to the canonical invalidation rule. Recalculation creates a new execution/evidence record using certified dependencies and the appropriate retained or new scientific contract; it must not erase the old failure. If a result inspires a narrower claim, that claim is a new descendant and inherits all relevant exposure.
 
@@ -2964,7 +2964,7 @@ The architecture cannot resolve the private conversation's unavailable material 
 
 # Traceability Matrix
 
-Archived source references resolve through [SOURCE_REVIEW_INDEX.md](docs/architecture/SOURCE_REVIEW_INDEX.md) and `sources/message_index.json`. SESSION-2026-10-22 is a later source recorded separately in D068 and the structured register. Tests below are specified future acceptance tests, not executed application tests. Implementation phases are proposals.
+Archived source references resolve through [SOURCE_REVIEW_INDEX.md](../docs/architecture/SOURCE_REVIEW_INDEX.md) and `sources/message_index.json`. SESSION-2026-10-22 is a later source recorded separately in D068 and the structured register. Tests below are specified future acceptance tests, not executed application tests. Implementation phases are proposals.
 
 ## Forward trace: problem to implementation evidence
 

@@ -1,6 +1,6 @@
 # Decision Register
 
-Version: reconstruction-1 with approved clarifications/contracts D068-D070 (October 22, 2026). D001-D067 retain their reconstructed provenance; D068-D070 record later user instructions separately from the archived conversation. This revision implements the approved specification changes, not application code.
+Version: reconstruction-1 + generator-contract/1.0 + research-contract/1.0 (October 23, 2026). D001-D070 retain their historical wording and statuses; D071-D085 record the later approved scoped resolutions. Counts include historical dispositions; an older OPEN/AMBIGUOUS/DEFERRED record is not a current blocker where the explicit resolution below applies. This revision implements binding specification changes, not application code.
 
 ## Reading authority and counts
 
@@ -9,7 +9,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 48 |
+| ACCEPTED | 63 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -1015,3 +1015,228 @@ The user subsequently approved the documentation remedy in the [System Model Rev
 **Source and acceptance:** SESSION-2026-10-22-GENERATOR, the explicit research-and-specification instruction quoted in D069, following the [generator critique assessment](../reviews/CLAUDE_GENERATOR_CRITIQUE_ASSESSMENT_2026-10-22.md). The contract's academic basis and transfer limits are recorded in document 13. This is current authorized specification work, not retrospective archival acceptance or evidence of working software.
 
 **Change control:** Preserve definitions, source bytes, prior versions and all exposure. This contract does not resolve OPEN-01 through OPEN-03 or the numerical policies, authorize an experiment while required data are absent, or create a routine-certification approval rule. Material changes follow D008/D026; rollback retains this source history and superseded contract versions.
+
+
+### D071 — Versioned lifecycle and separate evidence axes
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-01 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** introduce `research-contract/1.0` as a separately versioned extension; preserve reconstruction-1 and the exact M0072 quotation. Use this execution path: Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 1](14_RETAIL_RESEARCH_CONTRACT.md#1-open-01-versioned-lifecycle-and-evidence-axes); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-04, CMP-06, CMP-08, CMP-12; REQ-007; D008/D026; OPEN-01. Additional affected records: D008/D013/D020/D053/D067, DEF-014–024/027, REQ-005/006/007/012/017.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D072 — Scope membership without automatic evidence transport
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-02 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** IN_SCOPE/SCOPE_SUBSET/EXTRAPOLATION/INCOMPATIBLE describe a scope relation only. Mark a rule EVIDENCE_BACKED for its particular use only when a referenced EvidenceRecord directly evaluates that target or a separately approved transport contract justifies the target estimand, overlap, effect modifiers and uncertainty. V1 provides no automatic transport estimator. Otherwise record UNTESTED_ASSUMPTION and a candidate claim, without blocking policy research itself. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 2](14_RETAIL_RESEARCH_CONTRACT.md#2-open-02-subset-membership-is-not-evidence-transport); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-03, CMP-05, CMP-06, CMP-08, CMP-09; REQ-009; D008/D026; OPEN-02. Additional affected records: D010/D021/D066, DEF-028/029, REQ-009.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D073 — Descriptive cohorts without invented truth priors
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-03 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** report generated, executable, frozen, valid-evaluated, initially supported, replication-selected, replication-completed, replicated, failed and pending counts by version/cohort and observation cutoff. Keep explicit denominators and time at risk. Undefined rates remain null, not zero. A selected replication yield is labeled as selected. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 3](14_RETAIL_RESEARCH_CONTRACT.md#3-open-03-descriptive-cohorts-no-invented-truth-priors); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-11, CMP-12; REQ-022; D008/D026; OPEN-03. Additional affected records: D024/D028, DEF-011/012/026, REQ-005/022/029.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D074 — Typed expressions and explicit estimands
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-04 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** use a versioned JSON AST, not generated evaluator code. The expression language is extensible; the currently certified operator set is an execution capability boundary, not a hypothesis catalog. Preserve the original H_idea and a semantic-difference report. Unrepresented meaning produces LANGUAGE_GAP or SEMANTIC_AMBIGUITY. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 4](14_RETAIL_RESEARCH_CONTRACT.md#4-open-04-typed-expressions-and-explicit-estimands); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-02, CMP-03, CMP-04; REQ-002; D008/D026; OPEN-04. Additional affected records: D002–004/D008/D017/D027/D031, DEF-003–008/013/023/031/032, REQ-002/003/005/011/024/026.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D075 — Fixed historical inference and finite information decisions
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-05 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** use a fixed historical assessment for the initial profile. Discovery can stop cheaply for a concrete contradiction, unaffordable requirement or missing representation, but such abandonment is not a frozen empirical negative. After freeze, evaluate once at the declared fixed trigger. Do not repeatedly inspect nominal intervals for early success. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 5](14_RETAIL_RESEARCH_CONTRACT.md#5-open-05-test-policy-useful-negatives-and-information-limits); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-03, CMP-04, CMP-06, CMP-08, CMP-09; REQ-005; D008/D026; OPEN-05. Additional affected records: D006/D024/D027/D031/D035/D062, DEF-007/008/012/018/021/022, REQ-005/019/020/024/029.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D076 — Bounded initial data and execution profile
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-06 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** adopt a first research profile using BTCUSDT and ETHUSDT spot 15-minute data, UTC, January 1, 2020 through December 31, 2025, from the public Binance archive or verified local copies of those exact artifacts. This is a bounded liquid-market engineering/evidence profile, not an assertion of uncrowded alpha, an investment recommendation or a permanent restriction to crypto/OHLCV. Other domains remain first-class extension requests under D018. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 6](14_RETAIL_RESEARCH_CONTRACT.md#6-open-06-data-and-execution-authority); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-01, CMP-03, CMP-05; REQ-015; D008/D026; OPEN-06. Additional affected records: D012/D013/D018/D033/D042/D069, DEF-013/024/031/033, REQ-011/012/015/018/029.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D077 — Owned runtime adapter and host isolation
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-07 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** define the owned adapter interface now; do not require Hermes for v1. Use the already available provider/runtime only through bounded calls and artifacts, recording its exact model identifier and generation parameters. If only a mutable alias is exposed, record that limitation and reject claims requiring an immutable model snapshot. Never claim that changing model names proves independence. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 7](14_RETAIL_RESEARCH_CONTRACT.md#7-open-07-runtime-choice-and-isolation); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-01, CMP-02, CMP-05, CMP-07, CMP-12; REQ-018; D008/D026; OPEN-07. Additional affected records: D022/D034/D040–042/D063, REQ-004/012/018/021.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D078 — Transactional persistence and canonical serialization
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-08 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** start with one local SQLite registry, one writer and immutable artifact payloads. Store small JSON envelopes/bodies, events, dependency edges, trial identities and freeze manifests in the same database transaction. Use foreign keys, uniqueness constraints, append-only application APIs and `synchronous=FULL`; verify actual settings on connection. Large data/result blobs are external, content-addressed files staged, flushed and hash-verified before registry reference commitment. An uncommitted staged blob grants no authority. Recovery checks committed references and quarantines missing/corrupt blobs; harmless orphan staging files can be reclaimed under a separate retention policy. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 8](14_RETAIL_RESEARCH_CONTRACT.md#8-open-08-persistence-serialization-and-recovery); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-04, CMP-06, CMP-08, CMP-12; REQ-007; D008/D026; OPEN-08. Additional affected records: D006/D007/D008/D009/D030/D063, REQ-005/006/007/008/012/023.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D079 — Bounded discovery perspectives and compute budgets
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-09 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** initial research epoch has two isolated discovery perspectives on the same snapshot, run sequentially to limit resource use; they exchange completed artifacts only after submission. One may use semantic context and another an alternative reasoning prompt, but modes are not mandatory scientific filters. Same provider/model is allowed; differing labels are not evidence of diverse thought. Exact model and prompt versions are run-profile fields. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 9](14_RETAIL_RESEARCH_CONTRACT.md#9-open-09-perspectives-models-and-compute-budget); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-02, CMP-04, CMP-05, CMP-06, CMP-11, CMP-12; REQ-023; D008/D026; OPEN-09. Additional affected records: D005/D016/D028/D030/D039/D061/D070, REQ-004/014/022/023/030.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D080 — Research-only authority and zero authorized capital
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-10 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** v1 has no order-submission capability, authorized capital is zero, and every output is a research or simulation artifact. This settles the current operating mode. A later live-capital capability requires a separate reviewed deployment contract specifying owner, loss/exposure limits, venue/account, costs, withdrawal and rollback. Those personal choices cannot be inferred from a p-value or research result. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 10](14_RETAIL_RESEARCH_CONTRACT.md#10-open-10-explicit-research-only-authority); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-06, CMP-08, CMP-09, CMP-10; REQ-017; D008/D026; OPEN-10. Additional affected records: D020/D057/D064, REQ-017/025.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D081 — Separate finite success and continuation gates
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-11 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** report separate gates. Passing an earlier gate permits only its named inference, never a profitable-framework claim. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 11](14_RETAIL_RESEARCH_CONTRACT.md#11-open-11-finite-success-and-continuation-criteria); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-02, CMP-06, CMP-09, CMP-11, CMP-12; REQ-029; D008/D026; OPEN-11. Additional affected records: D025/D030/D038/D059/D068–070, REQ-020/022/023/027/029.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D082 — Frozen batch allocation and controlled feedback release
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-12 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** one predeclared batch of at most eight primary estimands per initial campaign. Selection uses development information only. First admit semantically complete, testable candidates with available information; then order by explicit decision relevance, lower estimated test cost and nonredundant coverage, with stable registration order as the final tie-break. Preserve criterion values and reasons; do not create a weighted LLM truth score. Untested critical policy assumptions can receive a documented priority flag. Unselected ideas remain queued. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 12](14_RETAIL_RESEARCH_CONTRACT.md#12-open-12-confirmation-allocation-and-feedback-release); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-02, CMP-04, CMP-06; REQ-019; D008/D026; OPEN-12. Additional affected records: D014/D023/D031/D038/D046/D049/D070, REQ-005/013/019/020/024/028/029.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D083 — Typed dependency consequences and current applicability
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-13 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** use the existing minimal typed graph with this consequence table. No general scientific-contradiction ontology is introduced. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 13](14_RETAIL_RESEARCH_CONTRACT.md#13-open-13-dependency-effects-and-applicability); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-03, CMP-07, CMP-08; REQ-008; D008/D026; OPEN-13. Additional affected records: D009/D020/D037, DEF-015/027, REQ-008/017/025.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D084 — Independent certification within approved semantics
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-14 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** distinguish certification of an implementation from approval of scientific meaning. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 14](14_RETAIL_RESEARCH_CONTRACT.md#14-open-14-automatic-certification-within-an-approved-envelope); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-03, CMP-04, CMP-08; REQ-003; D008/D026; OPEN-14. Additional affected records: D004/D008/D026/D034/D052, REQ-003/006/007/021.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+
+### D085 — Source-gap continuation and versioned recovery
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** OPEN-15 requires an explicit scoped policy before affected operations.
+
+**Decision, reason and alternative:** retain the current archive and SRC-001 through SRC-008 exactly. Continue using the already authorized source-limited reconstruction. New recovery is a separately versioned evidence set with checksums, provenance comparison and an affected-decision audit. Never synthesize a missing image, file body or acceptance message. Adopt the complete policy, rationale, alternatives, limits and acceptance cases in [contract section 15](14_RETAIL_RESEARCH_CONTRACT.md#15-open-15-source-gap-policy); the short entry does not replace that contract.
+
+**Affected components / dependencies:** CMP-04, CMP-06, CMP-08, CMP-12; REQ-007; D008/D026; OPEN-15. Additional affected records: D008/D043, source audit and all source-qualified decisions.
+
+**Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
+
+**Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.

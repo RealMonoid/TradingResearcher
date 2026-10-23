@@ -3,7 +3,8 @@
 Run: python docs/reviews/verify_system_model.py
 Optional --baseline accepts the pre-edit path/hash inventory for this revision.
 The optional inventory mode retains the original revision's CHANGED list.
-Current checks also cover the additive generator contract and preserve D001-D068.
+Current checks cover adopted contracts and preserved historical decision versions.
+The separate verify_retail_contract.py checks the full adoption baseline and proposal.
 """
 
 import argparse
@@ -25,7 +26,10 @@ CHANGED = ["AGENTS.md", "README.md"] + ["docs/architecture/" + name for name in 
     "12_TRACEABILITY_MATRIX.md", "ARCHITECTURE_REGISTER.json", "CURRENT_STATE.md",
 )]
 CHECKED = CHANGED + ["docs/architecture/07_SCIENTIFIC_EVALUATION.md",
-                     "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md"]
+                     "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+                     "docs/architecture/04_DEFINITIONS.md",
+                     "docs/architecture/08_ENGINEERING_REVIEW.md",
+                     "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md"]
 
 
 def digest(path):
@@ -85,10 +89,12 @@ def verify(baseline=None):
     require(decision_text.split("### D001", 1)[1].split("### D068", 1)[0].strip() == old_text.split("### D001", 1)[1].strip(), "Original decision prose altered")
     approved_text = original("docs/architecture/02_DECISION_REGISTER.md", APPROVED_BASE).decode("utf-8")
     require(decision_text.split("### D068", 1)[1].split("### D069", 1)[0].strip() == approved_text.split("### D068", 1)[1].strip(), "Approved D068 prose altered")
-    for rel in ("03_REJECTED_DECISIONS.md", "04_DEFINITIONS.md"):
-        require((ROOT / "docs/architecture" / rel).read_bytes() == original("docs/architecture/" + rel), "Protected document altered: " + rel)
-    scientific = (ROOT / "docs/architecture/07_SCIENTIFIC_EVALUATION.md").read_bytes()
-    require(scientific.startswith(original("docs/architecture/07_SCIENTIFIC_EVALUATION.md")), "Original scientific review altered")
+    rel = "docs/architecture/03_REJECTED_DECISIONS.md"
+    require((ROOT / rel).read_bytes() == original(rel), "Protected rejections altered")
+    for rel in ("04_DEFINITIONS.md", "07_SCIENTIFIC_EVALUATION.md"):
+        path = "docs/architecture/" + rel
+        legacy = original(path).decode("utf-8").replace("\r\n", "\n").strip()
+        require(legacy in (ROOT / path).read_text(encoding="utf-8"), "Historical version not retained: " + rel)
     statuses = dict(re.findall(r"### (D\d{3})[^\n]*\n\n\*\*Status:\*\* ([A-Z_]+)", decision_text))
     require(len(statuses) == len(register["decisions"]) == len(re.findall(r"^### D\d{3} ", decision_text, re.M)), "Duplicate or missing decision IDs")
     require(statuses == {d["id"]: d["status"] for d in register["decisions"]}, "Decision status mismatch")

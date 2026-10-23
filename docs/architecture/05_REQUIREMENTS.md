@@ -1,6 +1,6 @@
 # Requirements and Observable Acceptance
 
-These requirements consolidate the source-backed decisions; they do not select still-open numeric thresholds or infrastructure products. Each acceptance condition below is a future implementation test specification, not a test reported as executed. Decision/source provenance is in [02_DECISION_REGISTER.md](02_DECISION_REGISTER.md).
+These requirements consolidate the source-backed decisions; D071-D085 now select the scoped policies and infrastructure design in document 14. Each acceptance condition below is a future implementation test specification, not a test reported as executed. Decision/source provenance is in [02_DECISION_REGISTER.md](02_DECISION_REGISTER.md).
 
 | ID | Required behavior | Observable acceptance condition | Verification |
 |---|---|---|---|
@@ -35,7 +35,18 @@ These requirements consolidate the source-backed decisions; they do not select s
 | REQ-029 | Assessment readiness and claims match their actual purpose | Absolute usefulness can be investigated without prior profit or competitor superiority; comparison claims require an appropriate reference and matched resources/information; plans retain pending/failing cohorts and distinguish uncertainty from equivalence or falsification | TEST-29 |
 | REQ-030 | Diagnostic discovery coverage without a novelty gate | Known analogues, not-searched and none-found outcomes remain distinguishable; method-versioned similarity and H_idea/H_exec coverage are reported without automatic evidence, originality certification or diversity rewards | TEST-30 |
 
-TEST-27 is a future framework-level acceptance specification for D068, not an executed benchmark or a new statistical policy. OPEN-11 must select the reference, measures, quality criteria, improvement threshold and comparison design before results. Historical processing time and waiting for genuinely new outcomes must be distinguished. This does not authorize D015's rejected baseline generator, make the number of rejections a reward, or replace D025's calibration and economic gates.
+TEST-27 is a future framework-level acceptance specification for D068, not an executed benchmark or a new statistical policy. D081 selects the scoped improvement target and measured intervals; the actual named reference, matched tasks and comparison plan must still be frozen before results. Historical processing time and waiting for genuinely new outcomes must be distinguished. This does not authorize D015's rejected baseline generator, make the number of rejections a reward, or replace D025's calibration and economic gates.
+
+## Selection and exposure acceptance coverage
+
+The [evaluation supplement](07_SCIENTIFIC_EVALUATION.md#overfitting-controls-across-the-research-process) applies existing requirements across the whole research process. The [worked acceptance cases](12_TRACEABILITY_MATRIX.md#selection-and-exposure-acceptance-cases) make the following boundaries observable without adding a universal estimator, numerical threshold or new TEST ID:
+
+- REQ-005/024/029 distinguish assessment of a frozen candidate from assessment of a selection/adaptation procedure. Fitting or selection using evaluation outcomes cannot be hidden outside an advertised evaluation boundary.
+- REQ-003/004/013/015/028 apply to fitted preprocessing, retrieved lessons, pass/fail feedback and diagnostic-based selection, not only direct access to future price rows.
+- REQ-019/020 require a justified dependence/error/allocation policy and calibration matched to the assessed selection process. Shared predeclared confirmation is not automatically forbidden; independent seeds or a complete ledger are not sufficient proof of validity.
+- REQ-009/026 distinguish retained-trade diagnostics from executable policy performance when changed decisions affect opportunities, positions or costs.
+
+These are elaborations of the existing acceptance conditions. They are not executed tests, a replacement for document 13 version 1.0, or by themselves resolutions of OPEN-05/11/12; D075/D081/D082 now supply those scoped policies. Statistical policy and access assumptions must be concrete before the affected confirmatory operation; exploratory preparation can retain explicit gaps.
 
 ## Nonfunctional requirements
 
@@ -45,4 +56,15 @@ Persist an artifact before acknowledging success. Repeated delivery or retry mus
 
 Access boundaries must be enforced by the host, not merely described in prompts. Logs must reference secrets without retaining secret values. External text and memory are data, not instructions that grant permissions. Use bounded resource policies with explicit exhaustion states, while preserving the freedom to submit an idea that cannot yet be executed.
 
-Latency, throughput, token budgets, storage retention, availability targets and calibration tolerances are unresolved quantitative requirements (OPEN-05, OPEN-09, OPEN-11). No unmeasured performance claims are made.
+D075/D079/D081 specify scoped statistical, token/call/time and calibration policies. Measured throughput, monetary costs, availability guarantees and any retention schedule remain unverified or future inputs. No unmeasured performance claims are made.
+
+## Binding research-contract/1.0 acceptance extension
+
+The full policies and acceptance cases in [document 14](14_RETAIL_RESEARCH_CONTRACT.md) are normative for the affected requirements; the [closure mapping](12_TRACEABILITY_MATRIX.md#approved-closure-acceptance-mapping) assigns them to existing TEST IDs. No new application test is claimed.
+
+- REQ-002/003/007: preserve H_idea and legacy versions; validate typed AST meaning and independent certification; unknown legacy origin cannot become known through migration.
+- REQ-005/006/012/019/024: freeze the complete interval/effect/dependence/information and release policy, reserve the whole batch atomically, distinguish invalidity from a negative, retain all outcomes, and deny result-driven changes. Re-execution is not replication.
+- REQ-008/009/017/025: scope inclusion alone cannot certify a rule; dependency revocation changes usability while preserving original outcomes; applicability is assessed at use; research outputs authorize zero capital.
+- REQ-004/013/014/018/021: host-enforced isolation and immutable version provenance, bounded calls and exposure inheritance; only unchanged approved semantics permit automatic certification.
+- REQ-011/015/026/029: apply the initial data/execution profile without narrowing future hypothesis scope; preserve availability and fee uncertainties; resimulate changed paths; separate technical, calibration and economic claims.
+- REQ-020/022/023/027/028/030: preserve cohort denominators and pending cases, distinguish narrow from process calibration, enforce finite resource stops, measure both acceleration intervals and prevent partial-batch feedback or novelty-based scientific rewards.

@@ -1,26 +1,32 @@
-# Open Decisions, Contradictions and Approval Boundaries
+# Open Decisions and Current Dispositions
 
-The current user explicitly authorized completion with documented source gaps. None of the items below prevents delivery of these documents. They block only the specified future implementation or scientific claim. No approval is presumed and no question needs to be repeated to finish the present task.
+Updated October 23, 2026 after the user's explicit **Freigabe** of proposal v0.1. D071-D085 adopt the [Retail Research Contract](14_RETAIL_RESEARCH_CONTRACT.md). All 15 design questions have a scoped disposition; this is not a claim that missing inputs, software or empirical validation now exist. Original preapproval wording is retained in the [preapproval archive](../reviews/adoption-2026-10-23/preapproval-documents.zip), with its original paths and hashes.
 
 ## Open register
 
-| ID / priority | Problem and affected work | Proposed resolution / options | Authority and approval boundary |
-|---|---|---|---|
-| OPEN-01 / blocking P1 | Original M0072 states are prospective and combine concepts later separated; historical-first requires a coherent lifecycle | Versioned historical/forward execution branch; orthogonal execution validity, primary evidence, origin, replication and applicability; retain legacy definitions | **PROPOSED CHANGE — USER APPROVAL REQUIRED.** D008, D020, D067; no migration performed |
-| OPEN-02 / blocking affected policy support | M0144 assumes subset scope is safe; aggregate evidence may not support a subgroup | Scope inclusion checks set membership only; separately require transportability/coverage/heterogeneity conditions before evidence-backed designation | **PROPOSED CHANGE — USER APPROVAL REQUIRED.** D066; preserve historical wording |
-| OPEN-03 / blocking numerical family priors | Replicated/tested ratio is confounded by power, censoring and selected replication | Keep rates as descriptive diagnostics; use no truth-probability or posterior until an estimator and calibration are specified | **PROPOSED CHANGE — USER APPROVAL REQUIRED.** D024; no new numerical prior |
-| OPEN-04 / blocking P1 | Five claim forms, boolean structure, continuous outcomes and adaptive policies lack complete executable grammar | Define typed expressions, estimands, time/units/missingness and language-extension conformance; preserve unsupported ideas | Technical choice under D002–D004; semantic changes need D008 approval |
-| OPEN-05 / blocking confirmation | Alpha/error policy, family assignment, effect sizes, N_min/precision, stopping and replication rules are unspecified | Select hypothesis-appropriate policies before outcomes; define negative versus inconclusive and case dependence | D006, D031, D062; examples are not defaults |
-| OPEN-06 / blocking real data | Initial market/instruments, providers, history, PIT availability, revisions, costs and fill models are unspecified | Choose a bounded initial universe with auditable data rights and execution conventions; keep broad-domain capability extensible | D012, D018, D042; new data authority may require user choice |
-| OPEN-07 / before runtime adoption | Hermes is a candidate; exact version, invocation model, isolation and license/dependency inventory untested | Compare narrow adapter conformance and operational cost before dependency adoption; do not build a second platform | D022, D041, D063 |
-| OPEN-08 / before persistence implementation | Database/file layout, schema migrations, hash serialization and crash recovery are unspecified | Prefer a simple transaction-capable index and immutable payloads; define serialization, retention, backup and restore | New engineering proposal, not accepted historical stack |
-| OPEN-09 / before scaled discovery | Agent count, models, search modes, budgets and material overrun thresholds remain open | Measure a small isolated multi-perspective run with same allowed snapshot; use D070's method-versioned coverage/diversity diagnostics and cost/latency before scale; no compulsory modes or novelty reward | D005, D028, D030, D061, D070 |
-| OPEN-10 / blocking live capital | Deployment thresholds, risk ownership, capital limits and operational authority absent | Keep research/paper simulation separate; define explicit risk limits, withdrawal, promotion and rollback before live action | D020, D064; current task authorizes no trades |
-| OPEN-11 / blocking claims of framework success | Numeric calibration/economic gates, stop criteria and acceleration/version-assessment designs remain unspecified | Use D069-D070's purpose-specific contract: absolute profitably usable hypotheses need economic/cost/risk criteria, not competing-generator superiority; acceleration/version claims name the relevant reference and matched information/resources. Specify uncertainty, pending cohorts, budget and a review checkpoint before assessment outcomes; positive benefit is not a build/run prerequisite | D025, D068-D070, REQ-027/029; contract structure is adopted in document 13, numerical choices remain open; D015 is unchanged |
-| OPEN-12 / before confirmation allocation | Evidence-budget allocation and overlapping candidate-family treatment not finalized | Preserve free ideas; specify ex-ante selection, quotas/queue, simultaneous-testing dependencies and reuse rules. D070 requires an availability/latency/dependence inventory and sensitivity or precision justification; it supplies no automatic allocation rule | D023, D038, D049, D070 |
-| OPEN-13 / before current-knowledge monitoring | Applicability/decay thresholds and typed scientific dependency consequences are incomplete | Distinguish hard infrastructure invalidation, applicability review, scientific contradiction and operational degradation | D009, D020, D037 |
-| OPEN-14 / before feature/language changes | Early routine autonomous certification versus later approval of material changes needs a clear boundary | Existing-language feature composition can follow approved certification; new semantics/compiler/language or evidence rules need material-change review | D004, D026; interpretation requires explicit policy before automation |
-| OPEN-15 / source confidence | Missing images, cited files, incomplete M0302 and absent original export | Continue with current source limits; later add versioned recovery, compare provenance and re-audit affected decisions | SRC-001 through SRC-008; continuation explicitly authorized, no fabricated replacement |
+| ID | Adopted authority | Current disposition and remaining boundary |
+|---|---|---|
+| OPEN-01 | D071; contract section 1 | Design resolved. Runtime schemas, projections and migration fixtures remain unimplemented. |
+| OPEN-02 | D072; contract section 2 | Design resolved for direct evidence. Automatic transport estimators are deferred; each target still needs evidence. |
+| OPEN-03 | D073; contract section 3 | Design resolved. Cohort counts require real records; future probabilistic prevalence estimators remain deferred. |
+| OPEN-04 | D074; contract section 4 | Design envelope resolved. Concrete AST schemas, primitive specifications and evaluator conformance remain implementation work; unsupported meanings stay gaps. |
+| OPEN-05 | D075; contract section 5 | Scoped fixed historical profile resolved. Exact development-derived block length, PRNG/seed, information target and assumption justification are required run inputs; candidate conformance/calibration is unverified. Other estimators and sequential methods are deferred. |
+| OPEN-06 | D076; contract section 6 | Initial universe, source, dates and simulation conventions resolved. Actual files, rights, vintages/availability, quality, exposure and applicable costs remain unverified inputs; no data acquired. |
+| OPEN-07 | D077; contract section 7 | Owned bounded adapter selected. Exact provider/dependency versions, license and isolation conformance remain unverified; Hermes stays optional and vectorbt a candidate. |
+| OPEN-08 | D078; contract section 8 | SQLite, serialization and recovery design resolved. Implementation, crash tests and restore verification remain absent. |
+| OPEN-09 | D079; contract section 9 | Two perspectives and scoped call/token/time budgets resolved. Exact model/prompts, actual costs and any paid-run currency cap remain run inputs. |
+| OPEN-10 | D080; contract section 10 | Current authority resolved: research-only, zero capital. Future live risk, accounts, limits and deployment are deferred and need separate approval. |
+| OPEN-11 | D081; contract section 11 | Scoped success/calibration/resource targets resolved. Numerical policy opportunity-cost/downside targets, named acceleration reference and study-specific repetitions remain pre-outcome plan inputs. No success gate has been empirically passed. |
+| OPEN-12 | D082; contract section 12 | Initial batch allocation/release resolved. Actual reservations, selection records, dependence review and previously unused corroboration evidence are required inputs. |
+| OPEN-13 | D083; contract section 13 | Typed consequences and applicability states resolved. Actual use-time scope assessment is required; quantitative monitoring/decay methods remain separately versioned future work. |
+| OPEN-14 | D084; contract section 14 | Certification/approval boundary resolved. Independent golden fixtures, validator implementation and membership checks remain unimplemented; genuinely new meaning still requires D008/D026 review. |
+| OPEN-15 | D085; contract section 15 | Continuation/recovery policy resolved. SRC-001 through SRC-008 remain externally unresolved facts; no missing source has been recovered. |
+
+## Readiness before an affected run
+
+Bind the adopted contract and exact implementation versions. Before freezing, record actual data rights/quality/availability and exposure; the scoped effect, estimand and dependence profile; justified information requirements; frozen randomization; applicable costs or explicit scenarios; resource ceilings; and the reservation/release manifest. Missing facts cause a typed readiness gap. Do not spend days collecting new outcomes merely to resolve a design question, invent an input or advertise scenario costs as verified net profitability.
+
+The [Blueprint](09_IMPLEMENTATION_BLUEPRINT.md) assigns these fields to existing interfaces. Run-specific choices must stay inside the approved envelope and precede assessment inspection. A changed scientific meaning requires a reviewable versioned proposal; ordinary implementation of the adopted contract does not require repeated approval.
 
 ## Resolved historical tensions
 
@@ -36,6 +42,6 @@ The current user explicitly authorized completion with documented source gaps. N
 
 ## Changes requiring approval
 
-OPEN-01 through OPEN-03 are the concrete semantic change proposals in this review. They have not been applied as historical decisions or implemented. Other entries are missing technical/risk selections whose decision owner must be assigned before affected work. No accepted goal change is proposed. Any future removal of free invention, independent code judgment, evidence separation or the accepted research scope must carry **GOAL CHANGE — USER APPROVAL REQUIRED**.
+OPEN-01 through OPEN-03 and OPEN-14 are now adopted for research-contract/1.0. Future material scientific changes remain subject to D008/D026, including new estimator meanings, automatic transport, truth-prior models, certification-envelope changes or live deployment authority. Any removal of the accepted goals must carry **GOAL CHANGE — USER APPROVAL REQUIRED**. No goal change was adopted here.
 
-The architecture cannot resolve the private conversation's unavailable material by inference. If new primary sources contradict a contextual reconstruction, preserve both versions and record the correction with affected IDs instead of quietly replacing history.
+Source recovery remains a separate factual task. Preserve old and new evidence and audit affected decisions if recovered material contradicts reconstruction; never synthesize missing acceptance or replace the archived bytes.

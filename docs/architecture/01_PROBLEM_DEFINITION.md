@@ -47,7 +47,7 @@ The desired output is therefore an auditable chain from question to evidence and
 | M0209–M0248 | Adversarial checks, operational firewall, placebos and infrastructure candidates | Narrow external adapters; implementation priorities still deferred |
 | M0249–M0290 | Column Library, paths, null design, component analysis, bounded computation and sanity | Reusable diagnostics without leakage or free confirmations |
 | M0291–M0304 | Request for original-source reconstruction and explicit rejected decisions | The handoff must preserve chronology and rationale, not summarize only the endpoint |
-| Later user clarification, October 22, 2026 (D068) | Accelerating discovery and testing is an explicit framework success objective | Trace it to REQ-027 and TEST-27; keep measurement choices open under OPEN-11 |
+| Later user clarification, October 22, 2026 (D068) | Accelerating discovery and testing is an explicit framework success objective | Trace it to REQ-027 and TEST-27; apply scoped D081 targets; freeze the actual comparison before measurement |
 
 ## Success and non-goals
 
@@ -55,7 +55,7 @@ The economic objective is to generate hypotheses that can be used profitably und
 
 Success requires a freely generated claim to pass through formalization, provenance, freeze, independent execution and reproducible evidence classification without manual scientific repair. The complete pipeline must behave acceptably under null and planted-signal calibration, then meet a predefined economic-usefulness gate within an evidence budget. Numeric budgets and thresholds are open, not silently supplied here.
 
-Framework success also requires a measured substantial acceleration of discovery and testing under a predefined comparison with matched task scope, decision quality and evidence access (REQ-027). The reference workflow or prior version, time/cost measures, improvement threshold and assessment design remain OPEN-11; D015's rejected comparator generator is not authorized by this requirement. Distinguish processing existing observations from waiting for new outcomes. Historical-first research can reject or refine candidates quickly while stronger independent confirmation remains a separate constraint.
+Framework success also requires a measured substantial acceleration of discovery and testing under a predefined comparison with matched task scope, decision quality and evidence access (REQ-027). D081 adopts a scoped 50% reduction target for both median discovery-to-freeze and freeze-to-report time, with paired uncertainty and failures retained. The named reference workflow, matched tasks and assessment execution remain required pre-outcome inputs; D015's rejected comparator generator is not authorized by this requirement. Distinguish processing existing observations from waiting for new outcomes. Historical-first research can reject or refine candidates quickly while stronger independent confirmation remains a separate constraint.
 
 A hypothesis succeeds or fails under its own frozen evaluation policy. A policy needs its own evidence and operational assessment. The framework is evaluated on the quality, efficiency, calibration and usefulness of the whole process: a valid negative hypothesis result can be useful progress without proving framework success, and a supported hypothesis does not by itself validate a policy. The [Master Architecture](06_MASTER_ARCHITECTURE.md) connects these levels and their feedback paths.
 
@@ -64,3 +64,9 @@ Entry criteria require a valid scoped investigation and the relevant resolved co
 The framework is not a fixed strategy generator, an LLM judge of truth, a mandatory ontology, an unconstrained historical optimizer, or an automatic capital-allocation mandate. It may use known effects, data-first observations and cross-domain analogies, but must not require one discovery route. A failed hypothesis can be useful research; a technically invalid run is neither support nor falsification.
 
 This deliverable is documentation, not implementation. It does not recover the missing chart or original project-file bodies, demonstrate an edge, verify a live strategy, or establish that a candidate dependency is production-ready.
+
+## Approved retail research scope
+
+D071-D085 adopt [research-contract/1.0](14_RETAIL_RESEARCH_CONTRACT.md) without changing the goals. Its finite historical work unit returns a scientific outcome and a separate resource decision; an information gap or inconclusive result can stop work without mandatory days of forward observation. Clean forward confirmation remains a distinct optional track, with inherited exposure preserved.
+
+The two-instrument 15-minute profile is an initial bounded study, not a permanent restriction on free invention or broad data domains. No profitable-policy, calibration or acceleration result has been demonstrated. The [current dispositions](11_OPEN_DECISIONS.md) distinguish completed design choices from missing inputs and future capabilities.

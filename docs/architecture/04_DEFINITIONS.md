@@ -1,3 +1,25 @@
+# Canonical Definitions: Version Resolution
+
+Active extension: **research-contract/1.0**, adopted by D071-D085 on October 23, 2026. The [Retail Research Contract](14_RETAIL_RESEARCH_CONTRACT.md) supplies the full normative meaning and acceptance cases. The complete reconstruction-1 text below is preserved as a legacy version, including the verbatim M0072 quotation and formulas; its open-status annotations describe that earlier version.
+
+For a new scoped manifest, resolve the following existing definition IDs as `(definition_id, research-contract/1.0)`. Other IDs keep reconstruction-1 meaning. A frozen legacy manifest retains its original version. No ambiguous legacy field is silently inferred. The prior bytes are also retained in the [preapproval archive](../reviews/adoption-2026-10-23/preapproval-documents.zip).
+
+| Definition IDs | research-contract/1.0 extension | Authority |
+|---|---|---|
+| DEF-003 through DEF-008, DEF-013, DEF-023, DEF-031/032 | Typed JSON AST, explicit estimand/units/time/missingness; all five forms remain representable; unsupported evaluation stays a gap. Condition-versus-whole-scope means are resampled jointly | D074; contract section 4 |
+| DEF-007/008/012/018/021/022 | Fixed historical-batch-v1 interval and minimum-effect rules; negative concerns the claimed relevant effect, not exact zero; resource STOP is separate from a scientific negative | D075; section 5 |
+| DEF-011/012/026 | Explicit descriptive cohort denominators/cutoff; no replicated/tested truth prior or posterior. Outcome base rates remain possible power inputs | D073; section 3 |
+| DEF-014 through DEF-024, DEF-027 | Separate execution stage, technical validity, primary outcome, origin, historical qualification, replication, usability, current applicability and action authority. Historical readiness does not require calendar waiting | D071; section 1 |
+| DEF-024 | Unknown exposure is null plus reason, not proof of exposed or unseen origin; procedural holdout does not erase ancestry | D071/D076/D082; sections 1/6/12 |
+| DEF-015/027 | Dependency invalidation changes usability, not historical outcome; current applicability is timestamped and defaults to NOT_ASSESSED | D083; section 13 |
+| DEF-028/029 | Scope membership alone supplies no subgroup evidence; direct target evaluation or separately approved transport contract is required for EVIDENCE_BACKED | D072; section 2 |
+| DEF-013/024/031/033 | Scoped data profile and next-eligible-bar execution with explicit cost/PIT uncertainties; unknown costs are not zero | D076; section 6 |
+| Certification of all affected definitions | Independent automatic conformance within approved semantics; new meaning or uncertain envelope membership requires material-change review | D084; section 14 |
+
+The scoped overlay does not replace a definition's unrelated fields. Section 1 owns migration/projection and section 13 owns applicability consequences. Unknown origin/replication/applicability remains unknown; retries do not create replication. No runtime records have been migrated.
+
+## Preserved reconstruction-1 (historical version)
+
 # Canonical Definitions and Formula Preservation
 
 Version: reconstruction-1. Semantic governance: D008, M0071–M0072 and M0241–M0243. English explanations do not replace original mathematical definitions. Material changes require user approval. Ambiguity blocks affected future operations, not the present source-limited documentation work.

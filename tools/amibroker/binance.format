@@ -1,0 +1,7 @@
+$FORMAT Ticker, Date_YMD, Time, Open, High, Low, Close, Volume
+$SEPARATOR ,
+$SKIPLINES 0
+$AUTOADD 1
+$BREAKONERR 1
+$CONT 1
+$VOLFACTOR 1

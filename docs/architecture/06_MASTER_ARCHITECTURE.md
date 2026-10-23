@@ -1,8 +1,8 @@
 # Master Architecture
 
-This reconstructs the source-backed target architecture. Component boundaries are logical responsibilities, not a commitment to twelve services or twelve agents. Concrete persistence, runtime topology and unresolved semantics remain proposals. Read decisions, definitions and open issues together.
+This reconstructs the source-backed target architecture. Component boundaries are logical responsibilities, not a commitment to twelve services or twelve agents. D071-D085 select a scoped persistence, adapter and semantic contract; runtime implementation and empirical validation remain absent. Read decisions, definitions and open issues together.
 
-The [Problem Definition](01_PROBLEM_DEFINITION.md) sets the linked goals of autonomous invention with independent evaluation and substantially accelerated discovery and testing (D001, D068). The workflow below retains progress from unsuccessful research as well as supported claims. Its information paths explain responsibilities; they are not an approved replacement for the legacy state machine.
+The [Problem Definition](01_PROBLEM_DEFINITION.md) sets the linked goals of autonomous invention with independent evaluation and substantially accelerated discovery and testing (D001, D068). The workflow below retains progress from unsuccessful research as well as supported claims. Its information paths explain responsibilities; the versioned replacement for scoped new records is research-contract/1.0, while the legacy state machine remains preserved.
 
 ## Scientific invariants
 
@@ -61,7 +61,7 @@ flowchart TD
   V -->|Approved version in later epoch| C
 ```
 
-The diagram does not imply that every hypothesis must pass through strategy synthesis or live deployment. Historical backtests are the primary research environment (D013); fresh confirmation has separate admissibility, allocation and evidence-origin rules (D014, D023). Processing years of existing data is distinct from waiting years for new outcomes. Exact lifecycle/status mapping, evaluation/stopping rules and confirmation allocation remain OPEN-01, OPEN-05 and OPEN-12.
+The diagram does not imply that every hypothesis must pass through strategy synthesis or live deployment. Historical backtests are the primary research environment (D013); fresh confirmation has separate admissibility, allocation and evidence-origin rules (D014, D023). Processing years of existing data is distinct from waiting years for new outcomes. D071/D075/D082 and document 14 now specify the scoped lifecycle, evaluation/stopping rules and batch allocation.
 
 Abandonment after a pre-freeze attack, a retained capability gap, an inconclusive result and technical failure are not interchangeable with a frozen empirical negative. Any stage can report technical failure through error tracking; the execution branch illustrates that shared path. Valid negative results follow the frozen policy. Early formal evaluation requires the pre-frozen sequential policy in DEF-022; a fixed-horizon test still obeys DEF-021. Revision before freeze retains trajectory and exposure; revision after freeze creates a descendant. These boundaries allow fast elimination without promising that every claim can be decided quickly.
 
@@ -123,11 +123,17 @@ Exact schemas are not recovered finished implementations. The blueprint specifie
 
 ## Freeze and state transitions
 
-**Current intent versus preserved lifecycle:** D013/D053 establish historical-first primary research. DEF-016 and the original formulas remain in [04_DEFINITIONS.md](04_DEFINITIONS.md) for provenance; the prospective transition list does not require all research to wait for future observations. OPEN-01 proposes a versioned historical/forward branch with distinct evidence, validity and applicability dimensions and still blocks an executable replacement. The diagram explains accepted responsibilities without assigning new lifecycle enums or approving that migration.
+**Current intent versus preserved lifecycle:** D013/D053 establish historical-first primary research. DEF-016 and the original formulas remain in [04_DEFINITIONS.md](04_DEFINITIONS.md) for provenance; the prospective transition list does not require all research to wait for future observations. D071 now adopts the versioned historical/forward branch and distinct axes in document 14 section 1. Historical execution reaches readiness from the frozen information trigger without calendar waiting. Legacy records retain their original definition version and unknown fields; the approval does not fabricate a completed runtime migration.
 
 Regardless of storage representation, a freeze is valid only when the exact input closure is immutable, the selected evaluation plan is assigned, the confirmation allocation/exposure check passes and the trial is durably recorded. Compile and certify before this transaction. After freeze, rebuilding a representation must match the frozen compiler and semantic version; changing the claim or method creates a new record.
 
 Retries repeat execution of the same frozen request. They do not create extra independent evidence. A result-dependent change creates a child hypothesis or policy with inherited exposure, new trial identity and a new freeze. Failed attempts remain recorded.
+
+### Evaluation boundary across selection and reuse
+
+D014/D031/D046/D070 apply before and after the final rule is chosen. A candidate-level plan evaluates that frozen claim or policy on admissible evidence. A procedure-level plan evaluates the specified search or adaptation process, including its permitted fitting, selection and feedback. Nested evaluation is one possible design, not a mandatory architecture stage. Selecting columns or transformations on outer outcomes before refitting in folds does not establish an independent procedure assessment. The [scientific supplement](07_SCIENTIFIC_EVALUATION.md#overfitting-controls-across-the-research-process) explains the distinction and method limits.
+
+CMP-01 owns actual input/availability and exposure closure; CMP-02/03 retain search and fitting provenance; CMP-04 binds that closure and the assigned plan; CMP-06 judges only the inference permitted by it. CMP-07 and CMP-11 retain the origin of assessment information used through memory or diagnostics, including coarse pass/fail or ranking feedback. Using such information to select a descendant carries exposure into its next context. Retaining a valid original result and denying its reuse as independent confirmation for a changed descendant are compatible. Existing records/interfaces carry these facts; they do not require a separate service or a new lifecycle enum.
 
 ## Feedback and revocation
 
@@ -149,3 +155,11 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 Infrastructure revocation invalidates affected evidence usability through hard dependencies. Mere genealogy, shared evidence or proposed contradictions do not all have the same propagation semantics. A degraded scientific prerequisite marks dependent policies for review according to their dependency type. It does not establish which market mechanism caused a loss.
 
 Operations send costs, fills and incidents to Policy Experience and surveillance. Only governed monitoring can change applicability. Research receives registered questions at a later epoch, never an unmediated instruction to rescue a bad trade. Champion/challenger policy selection is itself trial-accounted.
+
+## Adopted bounded implementation contract
+
+[Research-contract/1.0](14_RETAIL_RESEARCH_CONTRACT.md) governs the initial work unit without changing the component graph. CMP-01 brokers verified inputs; CMP-02 uses two isolated sequential perspectives and bounded calls; CMP-03 preserves free ideas while formalizing typed AST drafts and feature specifications. CMP-04 compiles and independently certifies approved meanings, then commits registry, freeze and allocation in one SQLite transaction with canonical envelopes and content-addressed external blobs. CMP-05 returns raw execution facts; CMP-06 alone applies the frozen scientific policy. Both share a verified immutable manifest, not model-visible evaluator storage.
+
+CMP-07/08 retain qualified outcomes, invalidity, dependencies and exposure. A report separates scientific outcome from STOP/RETAIN_GAP/CONTINUE_WITHIN_BUDGET/QUEUE_FURTHER_EVIDENCE. CMP-09 requests separate policy trials under realistic costs or explicitly qualified scenarios; CMP-05 executes them and CMP-06 alone evaluates their evidence. CMP-10 has no order authority in v1. CMP-11/12 observe cohorts, costs and declared success gates, with governed changes. New meanings remain subject to D008/D026; routine conformance within D084's envelope does not need repeated approval.
+
+A normal historical path may finish with supported, negative or inconclusive evidence. An unavailable primitive exits with a retained gap; invalid data exits without a market verdict; budget exhaustion terminates without favorable partial release. All are retrievable inputs to later governed work, not automatic Market Model truth.

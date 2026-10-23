@@ -1,6 +1,6 @@
 {
-  "version": "reconstruction-1+generator-contract-1",
-  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged.",
+  "version": "reconstruction-1+generator-contract-1+research-contract-1",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions.",
   "decisions": [
     {
       "id": "D001",
@@ -1554,8 +1554,16 @@
       "problem": "A competitor comparison or advance positive-result requirement can replace the user's empirical objective or block the investigation needed to answer it.",
       "rationale_and_alternative": "Generate profitably usable hypotheses after realistic costs and execution constraints. Beating quantitative firms or another generator is not required; unknown benefit is not a failed build/run gate. Separate absolute usefulness, procedural capability, version improvement and process acceleration; retain statistical references and separate policy evaluation. D015 is unchanged.",
       "requirement": "REQ-029",
-      "components": ["CMP-02", "CMP-06", "CMP-09", "CMP-11", "CMP-12"],
-      "sources": ["SESSION-2026-10-22-GENERATOR"],
+      "components": [
+        "CMP-02",
+        "CMP-06",
+        "CMP-09",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-22-GENERATOR"
+      ],
       "acceptance_basis": "Direct user clarification of the economic objective and explicit instruction to integrate academically grounded improvements into the binding specification, not runtime code.",
       "normative": true,
       "change_control": "Preserve prior decisions and this instruction. No profitability, market/threshold, rejected comparator or live authority is introduced; future comparison claims require suitable evidence."
@@ -1567,11 +1575,321 @@
       "problem": "Memory availability, changed behavior and throughput can be mistaken for beneficial learning without actionable records and valid assessment.",
       "rationale_and_alternative": "Adopt Generator Feedback and Evaluation Contract version 1.0: distinct observations, interpretations, later use and review with exposure; purpose-specific assessments and uncertainty; diagnostic novelty/diversity and formalization coverage without an originality gate, compulsory retrieval or reward score. Pilot scope follows actual data and information constraints.",
       "requirement": "REQ-028",
-      "components": ["CMP-01", "CMP-02", "CMP-03", "CMP-04", "CMP-06", "CMP-07", "CMP-11", "CMP-12"],
-      "sources": ["SESSION-2026-10-22-GENERATOR"],
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-06",
+        "CMP-07",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-22-GENERATOR"
+      ],
       "acceptance_basis": "Explicit current-user authorization to research and integrate the reviewed improvements into the binding framework specification; scope and verbatim instructions recorded in D069.",
       "normative": true,
       "change_control": "Preserve definitions, sources, prior versions and exposure; OPEN-01 through OPEN-03 and numerical policies remain unresolved. No market experiment or automated certification policy is authorized. Material changes follow D008/D026."
+    },
+    {
+      "id": "D071",
+      "status": "ACCEPTED",
+      "title": "Versioned lifecycle and separate evidence axes",
+      "problem": "OPEN-01 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "introduce `research-contract/1.0` as a separately versioned extension; preserve reconstruction-1 and the exact M0072 quotation. Use this execution path: Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#1-open-01-versioned-lifecycle-and-evidence-axes.",
+      "requirement": "REQ-007",
+      "components": [
+        "CMP-04",
+        "CMP-06",
+        "CMP-08",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D072",
+      "status": "ACCEPTED",
+      "title": "Scope membership without automatic evidence transport",
+      "problem": "OPEN-02 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "IN_SCOPE/SCOPE_SUBSET/EXTRAPOLATION/INCOMPATIBLE describe a scope relation only. Mark a rule EVIDENCE_BACKED for its particular use only when a referenced EvidenceRecord directly evaluates that target or a separately approved transport contract justifies the target estimand, overlap, effect modifiers and uncertainty. V1 provides no automatic transport estimator. Otherwise record UNTESTED_ASSUMPTION and a candidate claim, without blocking policy research itself. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#2-open-02-subset-membership-is-not-evidence-transport.",
+      "requirement": "REQ-009",
+      "components": [
+        "CMP-03",
+        "CMP-05",
+        "CMP-06",
+        "CMP-08",
+        "CMP-09"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D073",
+      "status": "ACCEPTED",
+      "title": "Descriptive cohorts without invented truth priors",
+      "problem": "OPEN-03 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "report generated, executable, frozen, valid-evaluated, initially supported, replication-selected, replication-completed, replicated, failed and pending counts by version/cohort and observation cutoff. Keep explicit denominators and time at risk. Undefined rates remain null, not zero. A selected replication yield is labeled as selected. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#3-open-03-descriptive-cohorts-no-invented-truth-priors.",
+      "requirement": "REQ-022",
+      "components": [
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D074",
+      "status": "ACCEPTED",
+      "title": "Typed expressions and explicit estimands",
+      "problem": "OPEN-04 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "use a versioned JSON AST, not generated evaluator code. The expression language is extensible; the currently certified operator set is an execution capability boundary, not a hypothesis catalog. Preserve the original H_idea and a semantic-difference report. Unrepresented meaning produces LANGUAGE_GAP or SEMANTIC_AMBIGUITY. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#4-open-04-typed-expressions-and-explicit-estimands.",
+      "requirement": "REQ-002",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D075",
+      "status": "ACCEPTED",
+      "title": "Fixed historical inference and finite information decisions",
+      "problem": "OPEN-05 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "use a fixed historical assessment for the initial profile. Discovery can stop cheaply for a concrete contradiction, unaffordable requirement or missing representation, but such abandonment is not a frozen empirical negative. After freeze, evaluate once at the declared fixed trigger. Do not repeatedly inspect nominal intervals for early success. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#5-open-05-test-policy-useful-negatives-and-information-limits.",
+      "requirement": "REQ-005",
+      "components": [
+        "CMP-03",
+        "CMP-04",
+        "CMP-06",
+        "CMP-08",
+        "CMP-09"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D076",
+      "status": "ACCEPTED",
+      "title": "Bounded initial data and execution profile",
+      "problem": "OPEN-06 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "adopt a first research profile using BTCUSDT and ETHUSDT spot 15-minute data, UTC, January 1, 2020 through December 31, 2025, from the public Binance archive or verified local copies of those exact artifacts. This is a bounded liquid-market engineering/evidence profile, not an assertion of uncrowded alpha, an investment recommendation or a permanent restriction to crypto/OHLCV. Other domains remain first-class extension requests under D018. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#6-open-06-data-and-execution-authority.",
+      "requirement": "REQ-015",
+      "components": [
+        "CMP-01",
+        "CMP-03",
+        "CMP-05"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D077",
+      "status": "ACCEPTED",
+      "title": "Owned runtime adapter and host isolation",
+      "problem": "OPEN-07 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "define the owned adapter interface now; do not require Hermes for v1. Use the already available provider/runtime only through bounded calls and artifacts, recording its exact model identifier and generation parameters. If only a mutable alias is exposed, record that limitation and reject claims requiring an immutable model snapshot. Never claim that changing model names proves independence. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#7-open-07-runtime-choice-and-isolation.",
+      "requirement": "REQ-018",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-05",
+        "CMP-07",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D078",
+      "status": "ACCEPTED",
+      "title": "Transactional persistence and canonical serialization",
+      "problem": "OPEN-08 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "start with one local SQLite registry, one writer and immutable artifact payloads. Store small JSON envelopes/bodies, events, dependency edges, trial identities and freeze manifests in the same database transaction. Use foreign keys, uniqueness constraints, append-only application APIs and `synchronous=FULL`; verify actual settings on connection. Large data/result blobs are external, content-addressed files staged, flushed and hash-verified before registry reference commitment. An uncommitted staged blob grants no authority. Recovery checks committed references and quarantines missing/corrupt blobs; harmless orphan staging files can be reclaimed under a separate retention policy. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#8-open-08-persistence-serialization-and-recovery.",
+      "requirement": "REQ-007",
+      "components": [
+        "CMP-04",
+        "CMP-06",
+        "CMP-08",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D079",
+      "status": "ACCEPTED",
+      "title": "Bounded discovery perspectives and compute budgets",
+      "problem": "OPEN-09 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "initial research epoch has two isolated discovery perspectives on the same snapshot, run sequentially to limit resource use; they exchange completed artifacts only after submission. One may use semantic context and another an alternative reasoning prompt, but modes are not mandatory scientific filters. Same provider/model is allowed; differing labels are not evidence of diverse thought. Exact model and prompt versions are run-profile fields. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#9-open-09-perspectives-models-and-compute-budget.",
+      "requirement": "REQ-023",
+      "components": [
+        "CMP-02",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D080",
+      "status": "ACCEPTED",
+      "title": "Research-only authority and zero authorized capital",
+      "problem": "OPEN-10 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "v1 has no order-submission capability, authorized capital is zero, and every output is a research or simulation artifact. This settles the current operating mode. A later live-capital capability requires a separate reviewed deployment contract specifying owner, loss/exposure limits, venue/account, costs, withdrawal and rollback. Those personal choices cannot be inferred from a p-value or research result. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#10-open-10-explicit-research-only-authority.",
+      "requirement": "REQ-017",
+      "components": [
+        "CMP-06",
+        "CMP-08",
+        "CMP-09",
+        "CMP-10"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D081",
+      "status": "ACCEPTED",
+      "title": "Separate finite success and continuation gates",
+      "problem": "OPEN-11 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "report separate gates. Passing an earlier gate permits only its named inference, never a profitable-framework claim. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#11-open-11-finite-success-and-continuation-criteria.",
+      "requirement": "REQ-029",
+      "components": [
+        "CMP-02",
+        "CMP-06",
+        "CMP-09",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D082",
+      "status": "ACCEPTED",
+      "title": "Frozen batch allocation and controlled feedback release",
+      "problem": "OPEN-12 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "one predeclared batch of at most eight primary estimands per initial campaign. Selection uses development information only. First admit semantically complete, testable candidates with available information; then order by explicit decision relevance, lower estimated test cost and nonredundant coverage, with stable registration order as the final tie-break. Preserve criterion values and reasons; do not create a weighted LLM truth score. Untested critical policy assumptions can receive a documented priority flag. Unselected ideas remain queued. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#12-open-12-confirmation-allocation-and-feedback-release.",
+      "requirement": "REQ-019",
+      "components": [
+        "CMP-02",
+        "CMP-04",
+        "CMP-06"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D083",
+      "status": "ACCEPTED",
+      "title": "Typed dependency consequences and current applicability",
+      "problem": "OPEN-13 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "use the existing minimal typed graph with this consequence table. No general scientific-contradiction ontology is introduced. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#13-open-13-dependency-effects-and-applicability.",
+      "requirement": "REQ-008",
+      "components": [
+        "CMP-03",
+        "CMP-07",
+        "CMP-08"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D084",
+      "status": "ACCEPTED",
+      "title": "Independent certification within approved semantics",
+      "problem": "OPEN-14 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "distinguish certification of an implementation from approval of scientific meaning. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#14-open-14-automatic-certification-within-an-approved-envelope.",
+      "requirement": "REQ-003",
+      "components": [
+        "CMP-03",
+        "CMP-04",
+        "CMP-08"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D085",
+      "status": "ACCEPTED",
+      "title": "Source-gap continuation and versioned recovery",
+      "problem": "OPEN-15 requires an explicit scoped policy before affected operations.",
+      "rationale_and_alternative": "retain the current archive and SRC-001 through SRC-008 exactly. Continue using the already authorized source-limited reconstruction. New recovery is a separately versioned evidence set with checksums, provenance comparison and an affected-decision audit. Never synthesize a missing image, file body or acceptance message. Full policy, rejected alternatives, limits and acceptance cases: 14_RETAIL_RESEARCH_CONTRACT.md#15-open-15-source-gap-policy.",
+      "requirement": "REQ-007",
+      "components": [
+        "CMP-04",
+        "CMP-06",
+        "CMP-08",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-23-CLOSURE"
+      ],
+      "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
+      "normative": true,
+      "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
     }
   ],
   "rejections": [
@@ -2577,6 +2895,157 @@
       "date": "2026-10-22",
       "record": "02_DECISION_REGISTER.md#d069--economic-usefulness-without-a-superiority-prerequisite",
       "scope": "Current repository conversation, outside the immutable archive. User requested academic research and binding specification integration, and clarified profitably usable hypotheses rather than competitive superiority. Verbatim excerpts are recorded in D069; D070 applies that authorized scope."
+    },
+    {
+      "id": "SESSION-2026-10-23-CLOSURE",
+      "kind": "direct_user_approval_of_reviewable_specification",
+      "date": "2026-10-23",
+      "record": "14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution",
+      "scope": "Verbatim Freigabe adopts proposal v0.1 for binding specification integration; not part of M0001-M0304, no empirical completion or live authority."
+    }
+  ],
+  "decision_resolutions": [
+    {
+      "open_id": "OPEN-01",
+      "adopted_by": "D071",
+      "contract": "research-contract/1.0",
+      "section": 1,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-02",
+      "adopted_by": "D072",
+      "contract": "research-contract/1.0",
+      "section": 2,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-03",
+      "adopted_by": "D073",
+      "contract": "research-contract/1.0",
+      "section": 3,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-04",
+      "adopted_by": "D074",
+      "contract": "research-contract/1.0",
+      "section": 4,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-05",
+      "adopted_by": "D075",
+      "contract": "research-contract/1.0",
+      "section": 5,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-06",
+      "adopted_by": "D076",
+      "contract": "research-contract/1.0",
+      "section": 6,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-07",
+      "adopted_by": "D077",
+      "contract": "research-contract/1.0",
+      "section": 7,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-08",
+      "adopted_by": "D078",
+      "contract": "research-contract/1.0",
+      "section": 8,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-09",
+      "adopted_by": "D079",
+      "contract": "research-contract/1.0",
+      "section": 9,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-10",
+      "adopted_by": "D080",
+      "contract": "research-contract/1.0",
+      "section": 10,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-11",
+      "adopted_by": "D081",
+      "contract": "research-contract/1.0",
+      "section": 11,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-12",
+      "adopted_by": "D082",
+      "contract": "research-contract/1.0",
+      "section": 12,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-13",
+      "adopted_by": "D083",
+      "contract": "research-contract/1.0",
+      "section": 13,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-14",
+      "adopted_by": "D084",
+      "contract": "research-contract/1.0",
+      "section": 14,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    },
+    {
+      "open_id": "OPEN-15",
+      "adopted_by": "D085",
+      "contract": "research-contract/1.0",
+      "section": 15,
+      "scope": "Bounded v1 design; see current open register for runtime inputs and external facts."
+    }
+  ],
+  "historical_disposition_relations": [
+    {
+      "historical": "D067",
+      "resolution": "D071",
+      "meaning": "Legacy lifecycle retained; research-contract/1.0 extension governs new scoped records."
+    },
+    {
+      "historical": "D066",
+      "resolution": "D072",
+      "meaning": "Ambiguous automatic subset transport is not adopted; scope membership and evidence are distinct."
+    },
+    {
+      "historical": "D024",
+      "resolution": "D073",
+      "meaning": "Family statistics remain descriptive; no replicated/tested numerical truth prior."
+    },
+    {
+      "historical": "D061",
+      "resolution": "D079",
+      "meaning": "Two perspectives selected for v1 only; larger topology remains deferred."
+    },
+    {
+      "historical": "D062",
+      "resolution": "D075",
+      "meaning": "Scoped historical mean/rate interval policy specified; other estimators require separate profiles."
+    },
+    {
+      "historical": "D063",
+      "resolution": "D077/D078",
+      "meaning": "Owned adapter and SQLite selected; exact dependency versions and conformance remain run prerequisites."
+    },
+    {
+      "historical": "D064",
+      "resolution": "D080",
+      "meaning": "Current mode research-only; live-risk choices remain deferred."
     }
   ]
 }

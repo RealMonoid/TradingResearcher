@@ -1,16 +1,16 @@
 # Implementation Blueprint
 
-Status: documentation proposal, not implemented code. Source-backed behavior is mandatory as recorded in the decision register; implementation choices below are recommendations. Resolve the blocking open decisions before executing the affected milestone. Do not interpret this blueprint as user authorization for live trading or material framework self-modification.
+Status: binding semantic specification with scoped implementation choices adopted in D071-D085; no application code is implemented. Source-backed behavior and research-contract/1.0 govern their stated scopes. Complete the remaining run inputs and conformance prerequisites before affected operations. Do not interpret this blueprint as user authorization for live trading or material framework self-modification.
 
 ## Minimal coherent implementation shape
 
-Use a modular application with explicit ownership of context, discovery, formalization, registry/freeze, backend execution and evidence. Keep immutable artifact bodies in content-addressed storage and an indexed transaction-capable registry for identities, events and dependency edges. A local database plus files is a candidate starting point, not an accepted product choice. A separate graph database, message broker, vector store and service mesh are not initially justified.
+Use a modular application with explicit ownership of context, discovery, formalization, registry/freeze, backend execution and evidence. Keep immutable artifact bodies in content-addressed storage and an indexed transaction-capable registry for identities, events and dependency edges. D078 selects one local SQLite writer plus content-addressed external blobs for v1; conformance and recovery remain unimplemented. A separate graph database, message broker, vector store and service mesh are not initially justified.
 
 Use one orchestrator that routes artifacts and enforces permissions, not one that selects scientific conclusions. Roles can be sequential in an engineering smoke test. Target independent discovery perspectives must later be demonstrated with separate state and identical allowed context; a one-agent smoke test is not proof of that requirement.
 
 ## Interface contracts
 
-Names below are proposed contract identifiers, not promises about third-party APIs.
+Names below identify owned contracts; they are not promises about third-party APIs.
 
 | ID | Interface / caller → owner | Request | Response and failure behavior |
 |---|---|---|---|
@@ -40,10 +40,26 @@ Names below are proposed contract identifiers, not promises about third-party AP
 | EvaluationPlan | claim_ref, effect_criterion, family_policy, eligibility, dependence_design, sample/precision_plan, stopping_rule, null/control_contract, uncertainty_method, status_rules, replication_plan, code_version | Values assigned before confirmation; no universal hardcoded alpha or N_min |
 | FrozenManifest | h_exec_hash, compiler_version, policy_hash, dependency_closure_hash, data_access_manifest, trial_id, frozen_at, allocation_ref, definition_refs | Atomic durable commitment before outcome access |
 | ExecutionResult | request_hash, data_snapshot, case_ids, raw_output_refs, data/feature/cost/fill/execution_versions, seed/environment, checks, errors | Backend does not assign evidence status |
-| EvidenceRecord | trial_ref, result_hash, evaluation_version, effect/interval/statistics, primary_outcome, origin, validity, replication_ref, limitations | Status representation depends on OPEN-01; do not flatten distinct axes |
+| EvidenceRecord | trial_ref, result_hash, evaluation_version, effect/interval/statistics, primary_outcome, origin, validity, replication_ref, limitations | D071 / research-contract/1.0 supplies separate axes; do not flatten them |
 | PolicySpec | rules, basis_refs, assumptions, scope_relations, parameter_origins, conflicts, update_rules, operational_constraints, own_plan | Assumptions can create research candidates, not silent facts |
 
 These field lists are contract requirements, not complete JSON Schemas. Concrete scalar types, enumerations, timestamp/decimal encodings and migration rules must be specified together with executable validation fixtures in Phase P1. A cosmetic schema that accepts arbitrary prose in the estimand field is not sufficient.
+
+## Selection and assessment through existing interfaces
+
+Apply D014/D031/D045-D049/D070 through the records above. The following mapping explains existing semantic fields; it does not add a separate ledger service, prescribe physical schemas or replace document 13 version 1.0.
+
+| Existing boundary | Information that must remain reconstructable | Failure or qualification |
+|---|---|---|
+| IF-02/03/08: query, idea and Journal lineage | Candidates/alternatives, selector/version, queried data/results, chosen columns/thresholds/horizons, revisions and abandonment, linked through existing artifact IDs | A winning rule without its selection ancestry cannot support a claim of independently assessed selection. Retain the idea and the gap. |
+| IF-04: feature certification and compilation | Input availability, fitted transformation state/version, fitting sample and parameters through FeatureDefinition and dependency references | A valid formula with fitting state learned from prohibited outcomes still fails the applicable availability/exposure boundary. Certification is not evidence of predictive value. |
+| IF-05/07: plan, freeze and evaluation | Whether the target is a frozen candidate or a selection/adaptation procedure; permitted training/fitting and assessment inputs, family/dependence/stopping rules, and the inference supported | Reject incomplete confirmation contracts. Do not describe globally selected features followed by outer refits as a wholly independent procedure evaluation. |
+| IF-08/12/13: feedback use and assessment release | Released artifact/result, recipient context/version, access timing and any subsequent selection/use, including aggregate ranks or pass/fail feedback | Used assessment feedback becomes descendant exposure even without raw-data access. Preserve the original frozen result; deny unsupported freshness claims for later work. |
+| IF-06/10: execution and policy selection | Eligible population, exclusions, original execution constraints, changed rules and whether saved paths still represent the requested policy | If removing a trade frees a position slot or cash for an absent opportunity, filtering the old rows is only a subset diagnostic. Resimulate affected interactions or return an explicit capability gap. |
+
+For example, discovery selects a distance column and cutoff on permitted historical outcomes. The selected claim retains the alternatives and fitting provenance. It can be frozen for a separate admissible candidate assessment once its open contracts are resolved. If instead the experiment assesses that selection procedure, fitting and choosing the cutoff must occur inside each permitted development portion; outer outcomes cannot influence those choices. In either case, released assessment feedback used to propose the next cutoff creates an exposed descendant. This is information provenance, not a prohibition on learning.
+
+The [worked cases](12_TRACEABILITY_MATRIX.md#selection-and-exposure-acceptance-cases) specify both invalid and permitted uses. D070 already requires final-assessment release/access rules; D075/D081/D082 now supply the scoped policy; bind all required run-specific inputs. The examples supply no reusable-holdout guarantee; adopted batch allocation is specified in document 14 section 12.
 
 ## Expression-language requirements
 
@@ -69,7 +85,7 @@ A concrete pre-freeze attack may instead lead to revision or abandonment. IF-08 
 
 For an executable candidate, code checks semantics, assigns the frozen evaluation family/plan and checks evidence eligibility. The selected confirmation request is committed atomically. The backend executes the authorized partition and returns raw cases plus versions. The evidence engine verifies the manifest, applies the frozen rule and records a result. Interpretation may explain the result but cannot alter it. A future knowledge snapshot includes the qualified result and its exposure ancestry.
 
-The valid result may be negative, inconclusive or supported; each is retained with its evidence origin and limits. Primary research uses historical data, while genuinely fresh/forward confirmation has distinct eligibility and allocation rules. The [Master Architecture](06_MASTER_ARCHITECTURE.md#freeze-and-state-transitions) explains the current intent versus the preserved prospective lifecycle. OPEN-01/05/12 must resolve executable transitions, evaluation/stopping policy and allocation before affected operations; these examples introduce no new status enum or universal early-stop rule.
+The valid result may be negative, inconclusive or supported; each is retained with its evidence origin and limits. Primary research uses historical data, while genuinely fresh/forward confirmation has distinct eligibility and allocation rules. The [Master Architecture](06_MASTER_ARCHITECTURE.md#freeze-and-state-transitions) explains the current intent versus the preserved prospective lifecycle. D071/D075/D082 now resolve the scoped transitions, evaluation/stopping and allocation contracts. Their required run fields and conformance must be complete before affected operations; no universal early-stop rule is inferred.
 
 If a feature is later revoked, dependent results become unusable according to the canonical invalidation rule. Recalculation creates a new execution/evidence record using certified dependencies and the appropriate retained or new scientific contract; it must not erase the old failure. If a result inspires a narrower claim, that claim is a new descendant and inherits all relevant exposure.
 
@@ -85,8 +101,29 @@ For Hermes, verify permitted-tool-only operation, immutable session context, pro
 
 D069-D070 adopt [document 13](13_GENERATOR_FEEDBACK_AND_EVALUATION.md) as the semantic contract for the existing modules and interfaces. Extend IF-08's Journal/Experience records with separate feedback observations, interpretations, use records and review outcomes; IF-01/02 must include the retrieval policy/version and inherited exposure. Use the existing artifact envelope and registry, not another memory database or new service.
 
-IF-12 carries the purpose-specific assessment plan for a candidate improvement, including the reference only when the claim is comparative, tuning/assessment separation, budget and planned result interpretation. IF-13 exposes versioned diagnostic cohorts with pending cases, formalization gaps, costs and uncertainty. Discovery diagnostics distinguish unsearched analogues from unsuccessful retrieval and do not assign scientific support. The field contracts and future TEST-28/29/30 fixtures in document 13 are required for affected implementations; concrete schemas and numerical policies remain subject to the relevant open decisions.
+IF-12 carries the purpose-specific assessment plan for a candidate improvement, including the reference only when the claim is comparative, tuning/assessment separation, budget and planned result interpretation. IF-13 exposes versioned diagnostic cohorts with pending cases, formalization gaps, costs and uncertainty. Discovery diagnostics distinguish unsearched analogues from unsuccessful retrieval and do not assign scientific support. The field contracts and future TEST-28/29/30 fixtures in document 13 are required for affected implementations; concrete executable schemas remain implementation work, while D071-D085 now supply the scoped numerical and semantic policies.
 
 An absolute-economic investigation must not fail readiness merely because no competitor generator or prior profitable result exists. It still needs the applicable claim, data, execution and evaluation contracts before a real confirmatory run. This extension is implemented in the specification only.
 
 No application code, packages, dependencies, agent runtime, database, live API connection or deployment is created by this deliverable. The next authorized implementation task should select one phase and its explicit acceptance criteria, resolve its blocking decisions, and retain the same source-backed invariants.
+
+## Research-contract/1.0 interface bindings
+
+The [adopted contract](14_RETAIL_RESEARCH_CONTRACT.md) supplies normative meaning. This binding assigns its fields to existing owners; these tables are not executable schemas or a claim that the runtime exists.
+
+| Interface / records | Required extension and invariant |
+|---|---|
+| IF-01 / ContextSnapshot | Exact source checksums, retrieval/availability times and uncertainty, timestamp units, development/assessment roles, model exposure and transitive ancestry; same allowed snapshot for both perspectives |
+| IF-02/03 / HypothesisProposal | Prompt/model versions, bounded tool capability, calls/tokens/time/cost, retained original idea, selection reason and semantic-difference report; no evaluator or peer scratch access |
+| IF-04/09 / ExecutableHypothesis, CertificationRecord | Typed AST, five relationship forms, explicit estimand, units/time/missingness, exact primitive specs, independent validator/fixtures and approved-envelope classification; unknown membership is a gap |
+| IF-05 / EvaluationPlan | Contract/profile versions; theta/direction/delta; frozen m and 0.05/m marginal noncoverage; dependence/overlap and exact block lengths; 19,999 draws, quantile/PRNG/version/seed; N_min justification and fixed cutoff; origin/limits; selection/reservation/release and separate resource stops |
+| IF-05/06 / FrozenManifest, TrialRecord, ExecutionResult | Atomic immutable closure and allocation, canonical-json/1 bytes/hash, idempotency identity, same-trial retries; actual data/cost/fill versions and next-bar/shared-cash conventions; failed or contradictory results retained/quarantined |
+| IF-07 / EvidenceRecord | Separate stage, validity, primary outcome, origin/null reason, historical qualification, replication trial, usability, timestamped applicability and action authority; raw references and enclosing interval with assumptions; no scientific verdict on invalid attempts |
+| IF-08 / KnowledgeEntry, ExperienceEntry | Whole-batch release provenance, descendants' inherited exposure, original outcome retained on dependency invalidation, explicit descriptive cohort denominators and pending follow-up |
+| IF-10 / PolicySpec | Direct target evidence or UNTESTED_ASSUMPTION per rule; no automatic subset transport; independent policy plan, frozen net-value hurdle/risk scenarios, actual cost basis or explicit break-even scenarios |
+| IF-11 / operational view | Research-only and zero authorized capital; use-time applicability; cost/fill incidents trigger review, never rewrite scientific outcomes |
+| IF-12/13 / ImprovementProposal, diagnostics | Purpose-specific gate, development/final separation, exact calibration bounds, paired acceleration plan when claimed, complete costs/failures, two-no-improvement stopping and D084 change classification |
+
+Persistence uses one SQLite writer with checked foreign keys and FULL synchronization. Small envelopes/events/edges/freezes commit together; external blobs are staged/flushed/hash-verified before reference commitment. Recovery quarantines missing/corrupt committed blobs. Backups include a verified blob manifest and restored projections. Migration keeps old bytes/hashes and versioned mappings; no runtime records currently exist to migrate.
+
+Implementation should proceed through typed schema/fixtures and registry, controlled adapter slice, candidate evaluator conformance/calibration, and then an authorized evidence run with actual inputs. Future schemas must make every field above machine-checkable; free text may explain a gap but cannot substitute for frozen executable meaning.

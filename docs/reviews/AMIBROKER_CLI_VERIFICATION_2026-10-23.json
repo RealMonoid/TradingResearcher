@@ -1,0 +1,96 @@
+{
+  "status": "PASS",
+  "scope": "technical integration only",
+  "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\20261023T203514Z-e1347318",
+  "started_at_utc": "2026-10-23T20:35:14.932031+00:00",
+  "executable_sha256": "ffee8746d6b677ec206f2d8fd365f892759bc137f3415adc5bcb1e46ada67303",
+  "controller_sha256": {
+    "cli.py": "75f6c99f7f1288dd490a7749b5142db6afc9e26ee9a9a68391ae6fe5935fccc3",
+    "worker.js": "76b1563d1280c5db7ec4cbab3ff328423fa645e1bbc1f37637ae86d66b343318",
+    "smoke.afl": "e2f5e699b9bfd8697bccb877bca618260bfdeec53750798516c2e4037c704620",
+    "binance.format": "28a99e492157167ca59182a0a3396aaf012a11f8429849c8451f5b3c81f2af90"
+  },
+  "source": {
+    "url": "https://data.binance.vision/data/spot/daily/klines/BTCUSDT/15m/BTCUSDT-15m-2020-01-01.zip",
+    "sha256": "b1895d846e8bdcbf82779edfd6e204a4049c8c6f95ddbcd23d9225b1ceb62f71",
+    "raw_csv_sha256": "df92b581ad20e2d0e030d2ee555c9ad78c2fb0d38391e05617954ae7d84431bd",
+    "provider_checksum": "PASS",
+    "rows": 96,
+    "retrieved_at_utc": "2026-10-23T20:35:16.614309+00:00",
+    "timestamp_unit": "milliseconds; explicit UTC conversion to bar-end boundary",
+    "role": "exposed development/technical fixture; not confirmation",
+    "pit_vintage": "unverified present-day archive download"
+  },
+  "application": {
+    "version": "6.20.1",
+    "database": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\20261023T203514Z-e1347318\\database",
+    "stocks": "0"
+  },
+  "automation": {
+    "version": "6.20.1",
+    "database": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\20261023T203514Z-e1347318\\database",
+    "stocks": "0",
+    "import_result": "0",
+    "export": "completed"
+  },
+  "verification": {
+    "rows": 96,
+    "ohlcv": "PASS",
+    "utc_end_timestamps": "PASS",
+    "lag_close": "PASS",
+    "ma3": "PASS",
+    "interval_seconds": 900,
+    "numeric_tolerance": "max(0.002, abs(expected)*2e-7); timestamps/interval exact",
+    "max_absolute_numeric_error": 0.0003125000002910383
+  },
+  "finished_at_utc": "2026-10-23T20:35:20.422793+00:00",
+  "artifact_sha256": {
+    "BTCUSDT-15m-2020-01-01.csv": "df92b581ad20e2d0e030d2ee555c9ad78c2fb0d38391e05617954ae7d84431bd",
+    "BTCUSDT-15m-2020-01-01.zip": "b1895d846e8bdcbf82779edfd6e204a4049c8c6f95ddbcd23d9225b1ceb62f71",
+    "BTCUSDT-15m-2020-01-01.zip.CHECKSUM": "3b1fdd8f2fefff7f561e9a3c04bfd92a8815f53493fa470c520908154b3f66d5",
+    "exploration.csv": "081df41b357e9a9f847c951d797a9cb9bef69764f3152e26ccc24ba2f7fb325c",
+    "import.csv": "862574e487363e91af23bf5ae93528acc61824f87ccd541d43bb53f06447748a",
+    "smoke.apx": "b313ef60194679b79415e095d84eeaa33fdf237d52316f868d50714419b9385c"
+  },
+  "unit_tests": {
+    "command": "python -B -m unittest discover -s tools/amibroker -p test_cli.py",
+    "tests": 7,
+    "exit_code": 0,
+    "result": "PASS"
+  },
+  "commands_verified": [
+    {
+      "command": "python -B tools/amibroker/cli.py probe",
+      "exit_code": 0,
+      "scope": "Startup, OLE version/database access and owned-process cleanup; exercised before final raw-CSV preservation correction."
+    },
+    {
+      "command": "python -B tools/amibroker/cli.py smoke-binance",
+      "exit_code": 0,
+      "scope": "Final controller hash above; includes startup/probe/import/APX exploration/export/validation/cleanup."
+    }
+  ],
+  "unverified": [
+    "Full license entitlement and intended-use terms",
+    "Direct ABB /runbatch execution",
+    "Portfolio backtesting, fill/cost/cash/stop conformance",
+    "No autonomous discovery, AST-to-AFL compiler, frozen research registry or scientific verdict",
+    "Historical source publication latency/vintage and profitability",
+    "Concurrent-launch race injection and forced-timeout cleanup",
+    "Desktop UI/preferences may be updated by AmiBroker; not a headless sandbox"
+  ],
+  "changed_files": [
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/08_ENGINEERING_REVIEW.md"
+  ],
+  "added_files": [
+    "tools/amibroker/cli.py",
+    "tools/amibroker/worker.js",
+    "tools/amibroker/smoke.afl",
+    "tools/amibroker/binance.format",
+    "tools/amibroker/test_cli.py",
+    "tools/amibroker/README.md",
+    "docs/reviews/AMIBROKER_CLI_VERIFICATION_2026-10-23.json"
+  ]
+}

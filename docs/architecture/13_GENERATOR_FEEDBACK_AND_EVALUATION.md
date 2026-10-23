@@ -1,3 +1,13 @@
+# Generator Contract: Version 1.0 with Research Contract Extension
+
+The complete adopted generator contract v1.0 below is retained unchanged in meaning and text. **D071-D085 / [research-contract/1.0](14_RETAIL_RESEARCH_CONTRACT.md) now resolve its scoped OPEN references**, including lifecycle, descriptive cohorts, numerical pilot policy, batch release and independent certification. Its older statements that these choices are unresolved describe the original v1.0 adoption, not current authority.
+
+For current scoped work, bind both generator-contract/1.0 and research-contract/1.0. Feedback observations, interpretations, uses, review triggers and diagnostic fields below remain mandatory. Contract section 12 controls assessment release and inherited exposure; section 11 controls purpose-specific assessment gates; section 14 controls the approved certification envelope. No automatic truth-prior, novelty veto or material self-modification is introduced.
+
+Rollback may select an older approved configuration for future work while retaining all observation/use/evaluation records and exposure. The [preapproval archive](../reviews/adoption-2026-10-23/preapproval-documents.zip) preserves the original version 1.0 bytes. Executable acceptance remains unverified.
+
+## Preserved generator contract version 1.0
+
 # Generator Feedback and Evaluation Contract
 
 Version: 1.0, October 22, 2026. Normative specification under D069-D070 and REQ-028 through REQ-030; no runtime implementation or executed scientific experiment. This contract operationalizes existing memory, exposure, diagnostics and evaluation responsibilities. It does not replace the canonical lifecycle, definitions or open statistical policies.

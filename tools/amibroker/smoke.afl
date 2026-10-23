@@ -1,0 +1,12 @@
+SetOption("NoDefaultColumns", True);
+Filter = 1;
+AddColumn(DateNum(), "Day", 1.0);
+AddColumn(TimeNum(), "Time", 1.0);
+AddColumn(Open, "Open", 1.8);
+AddColumn(High, "High", 1.8);
+AddColumn(Low, "Low", 1.8);
+AddColumn(Close, "Close", 1.8);
+AddColumn(Volume, "Volume", 1.8);
+AddColumn(Ref(Close, -1), "LagClose", 1.8);
+AddColumn(MA(Close, 3), "MA3", 1.8);
+AddColumn(Interval(), "Interval", 1.0);

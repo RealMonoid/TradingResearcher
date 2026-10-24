@@ -1,14 +1,20 @@
 # Current State
 
-Updated October 23, 2026 after approval and integration of research-contract/1.0. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
+Updated October 24, 2026 after approval and integration of agent-inquiry/1.0 under D086. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
 
 ## Repository and existing artifacts
 
-Repository: [RealMonoid/TradingResearcher](https://github.com/RealMonoid/TradingResearcher), working branch `codex/architecture`. The [README](../../README.md) indexes documents 00-14. [ARCHITECTURE_REGISTER.json](ARCHITECTURE_REGISTER.json) is the structured companion, including current resolution relations while retaining earlier decision records.
+Repository: [RealMonoid/TradingResearcher](https://github.com/RealMonoid/TradingResearcher), working branch `codex/architecture`. The [README](../../README.md) indexes documents 00-15. [ARCHITECTURE_REGISTER.json](ARCHITECTURE_REGISTER.json) is the structured companion, including current resolution relations while retaining earlier decision records.
 
 The original captured [conversation](../../sources/full_conversation.md) contains 305 message blocks from 304 numbered turns. It is a qualified capture, not a verified complete original export. SRC-001 through SRC-008 remain open in the [Source Audit](00_SOURCE_AUDIT.md); no archive bytes or missing source content were replaced.
 
-## Latest approval and completed specification integration
+## Latest approval: agent inquiry discipline
+
+The user approved the reviewed working-discipline proposal on October 24, 2026 and requested GitHub publication. D086 adopts [agent-inquiry/1.0](15_AGENT_INQUIRY_DISCIPLINE.md): identify the investigation object, explain targeted clarification value while permitting open exploration, challenge assumptions without an objection quota, and retain concise sourced investigation summaries at work boundaries. AGENTS.md and REVIEWING.md apply it to repository work; REQ-014, existing roles and IF-02/03/08 carry the specified research-agent behavior. This introduces no new agent, scientific status, budget or data permission.
+
+[Integration verification](../reviews/AGENT_INQUIRY_VERIFICATION_2026-10-24.json) records documentation checks and preserved artifacts. Behavioral TEST-14 examples, runtime enforcement and improvements in research quality, speed or economics remain unverified. Prior research-contract/1.0 and generator contract v1.0 are unchanged; source history and exposure remain retained.
+
+## Previous approval and completed specification integration
 
 The user requested a systematic whole-framework understanding, literature-backed closure of missing choices and complete implementation, with retail economics and no mandatory prolonged forward wait. The [research assessment](../reviews/OPEN_DECISION_RESEARCH_2026-10-23.md) reconstructed goals, normal/early-exit paths, four feedback loops and authority, then mapped all 15 open items to primary literature and transfer limits. The [reviewable proposal v0.1](../reviews/RETAIL_RESEARCH_CONTRACT_PROPOSAL_2026-10-23.md) supplied exact policies and approval scope. The user replied **Freigabe** to its binding specification integration.
 

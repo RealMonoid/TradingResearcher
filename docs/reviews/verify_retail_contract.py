@@ -2,6 +2,7 @@
 
 Run with python -B to avoid generating cache artifacts in the review directory.
 The immutable preapproval inventory measures this adoption, including prior edits.
+Explicit later approvals may add changed paths; original policy checks remain scoped.
 """
 
 import argparse
@@ -34,6 +35,7 @@ ADDED = [
     "docs/reviews/adoption-2026-10-23/preapproval-documents.zip",
     "docs/reviews/adoption-2026-10-23/verification.json",
 ]
+LATER_APPROVED_CHANGED = {"REVIEWING.md": "D086 / agent-inquiry/1.0"}
 
 
 def sha(data):
@@ -60,7 +62,9 @@ def validate():
     baseline = json.loads((FOLDER / "baseline.json").read_text(encoding="utf-8"))
     changed = sorted(p for p, h in baseline.items()
                      if not (ROOT / p).is_file() or sha((ROOT / p).read_bytes()) != h)
-    require(set(changed) == EXPECTED_CHANGED, "Unexpected adoption changes: " + repr(changed))
+    require(set(changed) == EXPECTED_CHANGED | set(LATER_APPROVED_CHANGED),
+            "Unexpected changes since adoption baseline: " + repr(changed))
+    checks["later_approved_changed_paths"] = LATER_APPROVED_CHANGED
     for path in ADDED:
         require((ROOT / path).is_file(), "Missing adoption artifact: " + path)
     checks["adoption_baseline_files"] = len(baseline)
@@ -130,11 +134,14 @@ def validate():
         resolution = after["decision_resolutions"][n-1]
         require(resolution["adopted_by"] == did and resolution["section"] == n,
                 "Incorrect resolution binding: " + oid)
-    counts = Counter(d["status"] for d in after["decisions"])
-    require(len(after["decisions"]) == 85 and counts["ACCEPTED"] == 63,
+    adopted_decisions = after["decisions"][:85]
+    counts = Counter(d["status"] for d in adopted_decisions)
+    require([d["id"] for d in adopted_decisions] == [f"D{n:03}" for n in range(1, 86)]
+            and counts["ACCEPTED"] == 63,
             "Adoption decision counts mismatch")
     checks["scoped_open_dispositions_and_acceptance_mappings"] = 15
-    checks["decision_status_counts"] = dict(counts)
+    checks["adoption_decision_status_counts_D001_D085"] = dict(counts)
+    checks["decision_status_counts"] = dict(Counter(d["status"] for d in after["decisions"]))
 
     for name, stale in [("AGENTS.md", "remain unapproved semantic proposals"),
                         ("README.md", "awaiting explicit scientific approval"),

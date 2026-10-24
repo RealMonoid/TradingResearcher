@@ -1,6 +1,6 @@
 {
-  "version": "reconstruction-1+generator-contract-1+research-contract-1",
-  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions.",
+  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline; prior scientific contracts are unchanged.",
   "decisions": [
     {
       "id": "D001",
@@ -1890,6 +1890,29 @@
       "acceptance_basis": "Direct user approval: Freigabe, following the reviewable v0.1 specification-integration proposal.",
       "normative": true,
       "change_control": "D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version."
+    },
+    {
+      "id": "D086",
+      "status": "ACCEPTED",
+      "title": "Purposeful inquiry and assumption checking for agents",
+      "problem": "Inherited framing, object substitution and unqualified information gathering can misdirect agent work.",
+      "rationale_and_alternative": "Adopt agent-inquiry/1.0: identify the object, explain clarification value, allow open exploration, challenge without an objection quota and summarize investigations in existing records; no new role, score, access or scientific authority.",
+      "requirement": "REQ-014",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-03",
+        "CMP-06",
+        "CMP-07",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-24-INQUIRY"
+      ],
+      "acceptance_basis": "Explicit user approval of the preceding reviewed proposal and GitHub publication on October 24, 2026; approval recorded in document 15.",
+      "normative": true,
+      "change_control": "D008/D026; agent-inquiry/1.0. Preserve prior decisions, contracts and exposure; future revisions/rollback are versioned. Runtime behavior and effectiveness are unverified."
     }
   ],
   "rejections": [
@@ -2902,6 +2925,13 @@
       "date": "2026-10-23",
       "record": "14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution",
       "scope": "Verbatim Freigabe adopts proposal v0.1 for binding specification integration; not part of M0001-M0304, no empirical completion or live authority."
+    },
+    {
+      "id": "SESSION-2026-10-24-INQUIRY",
+      "kind": "direct_user_approval_of_reviewed_agent_working_discipline",
+      "date": "2026-10-24",
+      "record": "15_AGENT_INQUIRY_DISCIPLINE.md#approval-and-scope",
+      "scope": "User approved the immediately preceding scoped working-discipline proposal and GitHub publication; separate from the original archive, with no runtime effectiveness claim or new scientific authority."
     }
   ],
   "decision_resolutions": [

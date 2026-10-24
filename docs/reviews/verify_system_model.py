@@ -29,7 +29,8 @@ CHECKED = CHANGED + ["docs/architecture/07_SCIENTIFIC_EVALUATION.md",
                      "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
                      "docs/architecture/04_DEFINITIONS.md",
                      "docs/architecture/08_ENGINEERING_REVIEW.md",
-                     "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md"]
+                     "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+                     "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md", "REVIEWING.md"]
 
 
 def digest(path):

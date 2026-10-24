@@ -27,6 +27,7 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 - [Traceability matrix](docs/architecture/12_TRACEABILITY_MATRIX.md)
 - [Generator feedback and evaluation contract](docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md)
 - [Adopted retail research contract](docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md)
+- [Agent inquiry discipline](docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md) (D086; approved working practice, runtime behavior unverified)
 
 For selection bias and overfitting, the [integrated evaluation guidance](docs/architecture/07_SCIENTIFIC_EVALUATION.md#overfitting-controls-across-the-research-process) connects discovery, Columns, policy search and generator feedback. The [October 23 framework review](docs/reviews/OVERFITTING_REVIEW_2026-10-23.md) records the system assessment and documentation changes. These earlier reviews clarify existing decisions. D071-D085 now adopt the scoped statistical and implementation contracts; no runtime protection has been demonstrated.
 

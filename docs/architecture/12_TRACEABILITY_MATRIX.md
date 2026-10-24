@@ -21,7 +21,7 @@ SESSION-2026-10-22-GENERATOR records the later economic clarification and specif
 | PROB-07 | REQ-011 | D012, D058 | CMP-01, CMP-03 | IF-01, IF-04 | TEST-11 | P2 |
 | PROB-02 | REQ-012 | D013, D042, D053 | CMP-01, CMP-05, CMP-06 | IF-06, IF-07 | TEST-12 | P2 |
 | PROB-02 | REQ-013 | D014 | CMP-01, CMP-02, CMP-07, CMP-08 | IF-01, IF-02, IF-08 | TEST-13 | P3 |
-| PROB-02 | REQ-014 | D016, D029, D039, D054 | CMP-01, CMP-02, CMP-07, CMP-11 | IF-02, IF-03 | TEST-14 | P3 |
+| PROB-02 | REQ-014 | D016, D029, D039, D054, D086 | CMP-01, CMP-02, CMP-03, CMP-06, CMP-07, CMP-11, CMP-12 | IF-02, IF-03, IF-08 | TEST-14; [agent inquiry cases](15_AGENT_INQUIRY_DISCIPLINE.md#acceptance-examples-for-test-14) | P3; repository review discipline now |
 | PROB-07 | REQ-015 | D018, D076 | CMP-01, CMP-03, CMP-05 | IF-01, IF-06 | TEST-15 | P2/P5 |
 | PROB-02 | REQ-016 | D019 | CMP-07, CMP-08, CMP-09 | IF-08 | TEST-16 | P3 |
 | PROB-05 | REQ-017 | D020, D057, D064, D080 | CMP-06, CMP-08, CMP-09, CMP-10 | IF-11 | TEST-17 | P6 |
@@ -128,6 +128,7 @@ SESSION-2026-10-22-GENERATOR records the later economic clarification and specif
 | D083 | ACCEPTED | SESSION-2026-10-23-CLOSURE | REQ-008 | OPEN-13: [contract section 13](14_RETAIL_RESEARCH_CONTRACT.md#13-open-13-dependency-effects-and-applicability); specification adopted, runtime acceptance unexecuted. |
 | D084 | ACCEPTED | SESSION-2026-10-23-CLOSURE | REQ-003 | OPEN-14: [contract section 14](14_RETAIL_RESEARCH_CONTRACT.md#14-open-14-automatic-certification-within-an-approved-envelope); specification adopted, runtime acceptance unexecuted. |
 | D085 | ACCEPTED | SESSION-2026-10-23-CLOSURE | REQ-007 | OPEN-15: [contract section 15](14_RETAIL_RESEARCH_CONTRACT.md#15-open-15-source-gap-policy); specification adopted, runtime acceptance unexecuted. |
+| D086 | ACCEPTED | SESSION-2026-10-24-INQUIRY | REQ-014 | Apply agent-inquiry/1.0 in repository work and specified future agents; TEST-14 extensions unexecuted. |
 
 ## Coverage and orphan rules
 

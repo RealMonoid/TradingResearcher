@@ -35,6 +35,14 @@ Distinguish scientific logic from ordinary infrastructure. External runtimes, st
 
 ## Working discipline
 
+Apply [Agent Inquiry Discipline / agent-inquiry/1.0](docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md), adopted in D086:
+
+- Identify the actual object, source/version and scope under investigation; treat supplied questions and your own framing as assumptions to examine.
+- Before a targeted investigation, state the uncertainty and which possible findings could change the assessment or next action. Open exploration may start with a search purpose, without a finished hypothesis or competing explanations; retain changes in purpose.
+- Challenge consequential assumptions and concrete counterexamples without manufacturing objections. "No substantiated objection found" is acceptable and does not prove the claim.
+- At completed investigations, handoffs and justified continuation decisions, retain a concise summary: purpose, finding with source, warranted conclusion, remaining uncertainty, and next action with reason. Reuse existing artifacts; no form before every tool call or private reasoning transcript is required.
+- Apply existing budget, exposure, freeze and role boundaries. This discipline adds no scientific verdict, automatic score, compulsory discovery mode or new access permission.
+
 - Keep all authored project artifacts in English (en-US), per D043. Preserve original-language verbatim source quotations and the archived source bytes; do not translate or rewrite the original conversation archive. Document source gaps honestly and add later recovery as separately versioned evidence.
 - Use the smallest coherent implementation that meets affected requirements. Logical roles do not mandate separate agents, services or databases. Avoid speculative abstractions and follow D030's bounded iteration rules.
 - The [Roadmap](docs/architecture/10_IMPLEMENTATION_ROADMAP.md) proposes phases; it does not authorize starting one. Work within the user's current scope and resolve blockers for the selected work.

@@ -1,6 +1,6 @@
 # Decision Register
 
-Version: reconstruction-1 + generator-contract/1.0 + research-contract/1.0 (October 23, 2026). D001-D070 retain their historical wording and statuses; D071-D085 record the later approved scoped resolutions. Counts include historical dispositions; an older OPEN/AMBIGUOUS/DEFERRED record is not a current blocker where the explicit resolution below applies. This revision implements binding specification changes, not application code.
+Version: reconstruction-1 + generator-contract/1.0 + research-contract/1.0 + agent-inquiry/1.0 (October 24, 2026). D086 adopts the approved agent working discipline; prior scientific contracts remain unchanged. D001-D070 retain their historical wording and statuses; D071-D085 record the later approved scoped resolutions. Counts include historical dispositions; an older OPEN/AMBIGUOUS/DEFERRED record is not a current blocker where the explicit resolution below applies. This revision implements binding specification changes, not application code.
 
 ## Reading authority and counts
 
@@ -9,7 +9,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 63 |
+| ACCEPTED | 64 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -1240,3 +1240,17 @@ The user subsequently approved the documentation remedy in the [System Model Rev
 **Source and acceptance:** SESSION-2026-10-23-CLOSURE; the user's verbatim "Freigabe" adopts proposal v0.1 for binding specification integration, as recorded in [the approval record](14_RETAIL_RESEARCH_CONTRACT.md#approval-and-version-resolution). This is new approval, not retrospective archival attribution.
 
 **Change control:** D008/D026; research-contract/1.0. Preserve historical versions, original outcomes and exposure; material changes require a new approved version. Runtime implementation and empirical verification are not asserted.
+
+### D086 — Purposeful inquiry and assumption checking for agents
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** Agents can inherit a misleading question, substitute a different investigation object, or collect information without explaining what it clarifies.
+
+**Decision, reason and alternative:** Adopt [Agent Inquiry Discipline / agent-inquiry/1.0](15_AGENT_INQUIRY_DISCIPLINE.md): identify the object, explain targeted clarification value while permitting open exploration, challenge assumptions without an objection quota, and retain a concise purpose/finding/conclusion/uncertainty/next-action summary at work boundaries. Reuse existing roles and records. No single decisive-question requirement, automatic score, compulsory mode controller or added scientific authority.
+
+**Affected components / dependencies:** CMP-01, CMP-02, CMP-03, CMP-06, CMP-07, CMP-11, CMP-12; REQ-014 and future TEST-14 extensions; IF-02/03/08; D001/D002/D008/D014/D016/D026/D028/D030/D070/D079/D082. Repository instructions and review discipline apply the same scoped practice.
+
+**Source and acceptance:** SESSION-2026-10-24-INQUIRY. The user explicitly approved the preceding reviewed proposal and GitHub publication: "Ok, das übernehmen wir so. Schreib es rein. Dann github updaten". See [approval and scope](15_AGENT_INQUIRY_DISCIPLINE.md#approval-and-scope). This is a new session source, not an attribution to the original archive.
+
+**Change control:** D008/D026; agent-inquiry/1.0. Preserve prior decisions, scientific contracts, source bytes and exposure history. Future rollback records supersession and restores the previous applicable configuration without deleting history. Runtime behavior and effectiveness are unverified.

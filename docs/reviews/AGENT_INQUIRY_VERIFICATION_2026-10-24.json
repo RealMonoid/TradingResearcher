@@ -1,0 +1,137 @@
+{
+  "status": "PASS",
+  "date": "2026-10-24",
+  "base_commit": "92b5996a56077d4f83864f4b6eebad19af94d175",
+  "scope": "D086 / agent-inquiry/1.0 documentation integration; no runtime or scientific efficacy claim",
+  "changed_files": [
+    "AGENTS.md",
+    "README.md",
+    "REVIEWING.md",
+    "docs/architecture/02_DECISION_REGISTER.md",
+    "docs/architecture/05_REQUIREMENTS.md",
+    "docs/architecture/06_MASTER_ARCHITECTURE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/architecture/ARCHITECTURE_REGISTER.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/verify_retail_contract.py",
+    "docs/reviews/verify_system_model.py"
+  ],
+  "added_files": [
+    "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md",
+    "docs/reviews/AGENT_INQUIRY_VERIFICATION_2026-10-24.json"
+  ],
+  "checks": [
+    {
+      "command": "python -B docs/reviews/verify_system_model.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "checks": {
+        "local_links": 562,
+        "source_files": 5,
+        "decisions": 86,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Not checked; rerun with retained --baseline inventory",
+        "git_diff_check_exit": 0
+      },
+      "errors": []
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "checks": {
+        "local_links": 562,
+        "source_files": 5,
+        "decisions": 86,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+        "git_diff_check_exit": 0,
+        "later_approved_changed_paths": {
+          "REVIEWING.md": "D086 / agent-inquiry/1.0"
+        },
+        "adoption_baseline_files": 63,
+        "preexisting_files_unchanged": 45,
+        "archived_documents_exact": 20,
+        "preserved_preapproval_decisions": 70,
+        "full_historical_definition_review_generator_texts": 3,
+        "approved_policy_sections_exact_except_status_words": 15,
+        "scoped_open_dispositions_and_acceptance_mappings": 15,
+        "adoption_decision_status_counts_D001_D085": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 63,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        },
+        "decision_status_counts": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 64,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        }
+      },
+      "errors": []
+    }
+  ],
+  "focused_preservation": {
+    "existing_tracked_change_scope": "PASS: exact 12-file allowlist against base commit",
+    "prior_structured_decisions_unchanged": 85,
+    "prior_decision_prose_unchanged": 85,
+    "rejection_records_unchanged": 47,
+    "existing_scoped_dispositions_unchanged": 15,
+    "protected_texts_unchanged": [
+      "docs/architecture/03_REJECTED_DECISIONS.md",
+      "docs/architecture/04_DEFINITIONS.md",
+      "docs/architecture/07_SCIENTIFIC_EVALUATION.md",
+      "docs/architecture/11_OPEN_DECISIONS.md",
+      "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+      "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md"
+    ],
+    "git_diff_check_exit": 0,
+    "source_byte_checks": "Five capture-manifest files checked by both documentation verifiers"
+  },
+  "manual_review": "Approved four practices and role boundaries traced through D086, REQ-014, IF-02/03/08 and nine future TEST-14 examples; no new allocation, evidence policy, budget, service or automatic score.",
+  "checked_files_sha256": {
+    "AGENTS.md": "6a391ed64233962bb6e7a41d40ea87e805fade9a532a3964c1981bdba85ca05c",
+    "README.md": "d2d4703d6aae2fd01b9360029614cdd23dfdf881a0e279997e1b15a7ab8a734c",
+    "REVIEWING.md": "47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b",
+    "docs/architecture/02_DECISION_REGISTER.md": "f9db5ac6915f6227fddf1e588de1dc46926cb23d91a8679fc389134daed7b9d1",
+    "docs/architecture/05_REQUIREMENTS.md": "e66e57305331ba41adcee7bc4703125d939e73592eedb6c618fa1143f7372450",
+    "docs/architecture/06_MASTER_ARCHITECTURE.md": "6c71b1198e4f7d537cf4304ba99b4ef43973c64a164cd5cb7584a8c88d0c7726",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "de97fa725bd8d14112822b8bc0d8a9bb5f4f70be16128a82ad8bd11c603fa7b1",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "495bfb9ed87c12295628e4027a8c19d9f7229280e22904aa32cf2661dcbafcb4",
+    "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626",
+    "docs/architecture/ARCHITECTURE_REGISTER.json": "94d166dbbe4a9341f747794e39cca62b7a5918f4247da06d43334983b668d258",
+    "docs/architecture/CURRENT_STATE.md": "7c1a6a740b9c43fb82573bab77e0b4a77ea64a3467596220e2eda079e41797bd",
+    "docs/reviews/verify_retail_contract.py": "6a6e083aa2cbe99c580bbfcaefc678e8e85b8b57d73e4e0349e2ead39d346bfe",
+    "docs/reviews/verify_system_model.py": "fdcfb2628dca337cfcbd9c7f540645fea41013b76731fdb806f1a5cf23466272"
+  },
+  "unverified": [
+    "Future TEST-14 agent behavior and runtime enforcement",
+    "Research quality, economic usefulness, speed or cost improvements",
+    "Scientific calibration, market evidence and live deployment"
+  ],
+  "publication": "Report generated before commit/push; verify remote commit separately."
+}

@@ -129,7 +129,9 @@ def validate():
     trace = (ROOT / "docs/architecture/12_TRACEABILITY_MATRIX.md").read_text(encoding="utf-8")
     for n, oid in enumerate(expected_open, 1):
         did = f"D{70+n:03}"
-        require(f"| {oid} | {did}; contract section {n} |" in open_text, "Missing open disposition: " + oid)
+        disposition = (f"| {oid} | {did}; contract section {n}; D087 invocation extension |"
+                       if n == 13 else f"| {oid} | {did}; contract section {n} |")
+        require(disposition in open_text, "Missing open disposition: " + oid)
         require(f"| {n} / {did} | TEST-" in trace, "Missing closure acceptance trace: " + oid)
         resolution = after["decision_resolutions"][n-1]
         require(resolution["adopted_by"] == did and resolution["section"] == n,
@@ -157,7 +159,7 @@ def validate():
     result["unverified"] += [
         "Complete executable AST/schema/primitive implementations and independent golden fixtures",
         "Actual data quality, rights, historical availability, model exposure and account/execution costs",
-        "Pinned runtime/backend compatibility, licensing, isolation, SQLite crash recovery and restore",
+        "Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately",
         "Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs",
         "SRC-001 through SRC-008 and completeness of original conversation",
     ]

@@ -1,0 +1,359 @@
+{
+  "status": "PASS",
+  "generated_at_utc": "2026-10-24T20:52:23.180055+00:00",
+  "scope": "Approved bounded local coordination implementation; no scientific evidence authority",
+  "approval_source": {
+    "id": "SESSION-2026-10-24-LOCAL-COORDINATION",
+    "verbatim": "freigabe, implementiere das so",
+    "scope": "Local Python/SQLite controller, scoped artifacts, task queue, operational checks and generic triggers"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "sqlite": "3.50.4",
+    "platform": "Windows-11-10.0.26300-SP0"
+  },
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_block_is_not_completion_and_retry_retains_attempt (test_coordination.CoordinationTests.test_block_is_not_completion_and_retry_retains_attempt) ... ok\ntest_boolean_substitution_cannot_pass_source_or_numeric_checks (test_coordination.CoordinationTests.test_boolean_substitution_cannot_pass_source_or_numeric_checks) ... ok\ntest_budgets_heartbeats_and_dependencies (test_coordination.CoordinationTests.test_budgets_heartbeats_and_dependencies) ... ok\ntest_claim_is_exclusive_and_completion_delivery_is_idempotent (test_coordination.CoordinationTests.test_claim_is_exclusive_and_completion_delivery_is_idempotent) ... ok\ntest_done_claim_fails_declared_completion_check_and_is_retained (test_coordination.CoordinationTests.test_done_claim_fails_declared_completion_check_and_is_retained) ... ok\ntest_idempotency_conflict_restart_and_backup (test_coordination.CoordinationTests.test_idempotency_conflict_restart_and_backup) ... ok\ntest_idempotency_does_not_conflate_boolean_and_integer (test_coordination.CoordinationTests.test_idempotency_does_not_conflate_boolean_and_integer) ... ok\ntest_identity_metadata_and_frozen_context_are_protected (test_coordination.CoordinationTests.test_identity_metadata_and_frozen_context_are_protected) ... ok\ntest_internal_controller_identity_and_implicit_batch_are_separate (test_coordination.CoordinationTests.test_internal_controller_identity_and_implicit_batch_are_separate) ... ok\ntest_interrupted_first_initialization_recovers_persisted_operator_key (test_coordination.CoordinationTests.test_interrupted_first_initialization_recovers_persisted_operator_key) ... ok\ntest_invalid_json_and_unknown_checker_cannot_succeed (test_coordination.CoordinationTests.test_invalid_json_and_unknown_checker_cannot_succeed) ... ok\ntest_large_retained_history_remains_pageable (test_coordination.CoordinationTests.test_large_retained_history_remains_pageable) ... ok\ntest_negative_source_report_completes_without_evidence_authority (test_coordination.CoordinationTests.test_negative_source_report_completes_without_evidence_authority) ... ok\ntest_numerical_check_rejects_wrong_total_and_accepts_exact_decimal (test_coordination.CoordinationTests.test_numerical_check_rejects_wrong_total_and_accepts_exact_decimal) ... ok\ntest_operator_can_inspect_retained_evidence_without_exposing_it_to_workers (test_coordination.CoordinationTests.test_operator_can_inspect_retained_evidence_without_exposing_it_to_workers) ... ok\ntest_release_is_atomic_after_batch_and_only_visible_in_later_context (test_coordination.CoordinationTests.test_release_is_atomic_after_batch_and_only_visible_in_later_context) ... ok\ntest_schedules_are_durable_idempotent_and_do_not_change_evidence (test_coordination.CoordinationTests.test_schedules_are_durable_idempotent_and_do_not_change_evidence) ... ok\ntest_single_writer_and_immutable_storage (test_coordination.CoordinationTests.test_single_writer_and_immutable_storage) ... ok\ntest_stale_attempt_cannot_publish_after_same_identity_reclaims (test_coordination.CoordinationTests.test_stale_attempt_cannot_publish_after_same_identity_reclaims) ... ok\ntest_subsecond_effective_lease_configuration_is_rejected (test_coordination.CoordinationTests.test_subsecond_effective_lease_configuration_is_rejected) ... ok\ntest_unserializable_response_does_not_commit_a_claim (test_coordination.CoordinationTests.test_unserializable_response_does_not_commit_a_claim) ... ok\ntest_cli_demo_and_restart_verify (test_local_runtime.RuntimeTests.test_cli_demo_and_restart_verify) ... ok\ntest_http_rejects_foreign_identity_origin_and_unknown_fields (test_local_runtime.RuntimeTests.test_http_rejects_foreign_identity_origin_and_unknown_fields) ... ok\ntest_process_crash_rolls_back_uncommitted_write_and_preserves_committed_write (test_local_runtime.RuntimeTests.test_process_crash_rolls_back_uncommitted_write_and_preserves_committed_write) ... ok\ntest_real_worker_and_background_time_trigger (test_local_runtime.RuntimeTests.test_real_worker_and_background_time_trigger) ... ok\ntest_worker_handler_failure_becomes_visible_block (test_local_runtime.RuntimeTests.test_worker_handler_failure_becomes_visible_block) ... ok\n\n----------------------------------------------------------------------\nRan 26 tests in 11.887s\n\nOK\n",
+      "tests_run": 26
+    },
+    {
+      "argv": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tools/amibroker",
+        "-p",
+        "test_cli.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_checksum_and_member_name_enforced (test_cli.DataBoundaryTests.test_checksum_and_member_name_enforced) ... ok\ntest_empty_export_rejected_with_validation_error (test_cli.DataBoundaryTests.test_empty_export_rejected_with_validation_error) ... ok\ntest_exact_utc_day_and_closed_bar_timestamps (test_cli.DataBoundaryTests.test_exact_utc_day_and_closed_bar_timestamps) ... ok\ntest_export_missing_or_extra_rows_rejected (test_cli.DataBoundaryTests.test_export_missing_or_extra_rows_rejected) ... ok\ntest_export_requires_exact_timestamps_and_calculations (test_cli.DataBoundaryTests.test_export_requires_exact_timestamps_and_calculations) ... ok\ntest_gaps_and_duplicates_rejected (test_cli.DataBoundaryTests.test_gaps_and_duplicates_rejected) ... ok\ntest_unknown_units_and_bad_ohlc_rejected (test_cli.DataBoundaryTests.test_unknown_units_and_bad_ohlc_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.013s\n\nOK\n",
+      "tests_run": 7
+    },
+    {
+      "argv": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "trading_researcher",
+        "demo",
+        "--directory",
+        ".trf-runtime/verified-demo-20261024T205216Z"
+      ],
+      "exit_code": 0,
+      "result": {
+        "scope": "Synthetic local coordination smoke test; no market evidence",
+        "completion": {
+          "accepted": true,
+          "artifact_id": "2797b9a720a2dfb80c94c65f614c99cd8b4d21adc27a30ca97c10ac413f2d427",
+          "check": "decimal-sum/v1",
+          "message": "Decimal calculation and independent rational check agree",
+          "scientific_authority": false,
+          "state": "completed"
+        },
+        "job_id": "65ed0c6063fb4e978898725dad46902f",
+        "integrity": {
+          "events": 9,
+          "foreign_keys": true,
+          "schema_version": 1,
+          "scope": "local coordination integrity only",
+          "status": "PASS",
+          "synchronous": "FULL"
+        },
+        "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\verified-demo-20261024T205216Z"
+      },
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "trading_researcher",
+        "verify",
+        "--directory",
+        ".trf-runtime/verified-demo-20261024T205216Z"
+      ],
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "events": 9,
+        "foreign_keys": true,
+        "synchronous": "FULL",
+        "schema_version": 1,
+        "scope": "local coordination integrity only"
+      },
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "checks": {
+          "local_links": 630,
+          "source_files": 5,
+          "decisions": 88,
+          "preserved_original_decisions": 67,
+          "preserved_approved_decisions": 68,
+          "preserved_rejections": 47,
+          "traced_requirements": 30,
+          "generator_acceptance_specs": 3,
+          "diagram_edges": 38,
+          "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+          "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+          "git_diff_check_exit": 0,
+          "later_approved_changed_paths": {
+            "REVIEWING.md": "D086 / agent-inquiry/1.0"
+          },
+          "adoption_baseline_files": 63,
+          "preexisting_files_unchanged": 45,
+          "archived_documents_exact": 20,
+          "preserved_preapproval_decisions": 70,
+          "full_historical_definition_review_generator_texts": 3,
+          "approved_policy_sections_exact_except_status_words": 15,
+          "scoped_open_dispositions_and_acceptance_mappings": 15,
+          "adoption_decision_status_counts_D001_D085": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 63,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          },
+          "decision_status_counts": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 66,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          }
+        },
+        "checked_files_sha256": {
+          "AGENTS.md": "6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9",
+          "README.md": "a04b23cbe11bacedfcae6b530bf38ca04f2159444f3a18bb07686ab7c98f7a77",
+          "docs/architecture/01_PROBLEM_DEFINITION.md": "7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446",
+          "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+          "docs/architecture/05_REQUIREMENTS.md": "b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56",
+          "docs/architecture/06_MASTER_ARCHITECTURE.md": "16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "7c90a7c289b9f56037b99dbe09400b6bcb2e83da6a09348763bb8cbd8035d27a",
+          "docs/architecture/10_IMPLEMENTATION_ROADMAP.md": "eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2",
+          "docs/architecture/11_OPEN_DECISIONS.md": "68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29",
+          "docs/architecture/12_TRACEABILITY_MATRIX.md": "76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba",
+          "docs/architecture/ARCHITECTURE_REGISTER.json": "a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37",
+          "docs/architecture/CURRENT_STATE.md": "48af2d90db9eb678e641ab8c31322d5d678575b385c97578ec657653d27a2815",
+          "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+          "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2",
+          "docs/architecture/04_DEFINITIONS.md": "3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9",
+          "docs/architecture/08_ENGINEERING_REVIEW.md": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c",
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+          "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626",
+          "docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md": "dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e",
+          "docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md": "bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d",
+          "REVIEWING.md": "47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b",
+          "trading_researcher/README.md": "ee737e851d17cd65bf31b0d38644a13d3fe960a57c28aa0efe8b981f4c8ae535",
+          "docs/reviews/verify_system_model.py": "59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef",
+          "docs/reviews/verify_retail_contract.py": "c1aecd79447dafd205a284415ed25d7ba2ad35ebee25f2c108c74d1df19b0e92",
+          "docs/reviews/adoption-2026-10-23/baseline.json": "56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036",
+          "docs/reviews/adoption-2026-10-23/preapproval-documents.zip": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+        },
+        "errors": [],
+        "unverified": [
+          "New-session behavioral efficacy and compaction retention",
+          "Mermaid rendering",
+          "Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately",
+          "D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement",
+          "Complete executable AST/schema/primitive implementations and independent golden fixtures",
+          "Actual data quality, rights, historical availability, model exposure and account/execution costs",
+          "Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately",
+          "Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs",
+          "SRC-001 through SRC-008 and completeness of original conversation"
+        ],
+        "changed_files_since_preapproval": [
+          "AGENTS.md",
+          "README.md",
+          "REVIEWING.md",
+          "docs/architecture/01_PROBLEM_DEFINITION.md",
+          "docs/architecture/02_DECISION_REGISTER.md",
+          "docs/architecture/04_DEFINITIONS.md",
+          "docs/architecture/05_REQUIREMENTS.md",
+          "docs/architecture/06_MASTER_ARCHITECTURE.md",
+          "docs/architecture/07_SCIENTIFIC_EVALUATION.md",
+          "docs/architecture/08_ENGINEERING_REVIEW.md",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+          "docs/architecture/10_IMPLEMENTATION_ROADMAP.md",
+          "docs/architecture/11_OPEN_DECISIONS.md",
+          "docs/architecture/12_TRACEABILITY_MATRIX.md",
+          "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+          "docs/architecture/ARCHITECTURE_REGISTER.json",
+          "docs/architecture/CURRENT_STATE.md",
+          "docs/reviews/verify_system_model.py"
+        ],
+        "added_files": [
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+          "docs/reviews/verify_retail_contract.py",
+          "docs/reviews/adoption-2026-10-23/baseline.json",
+          "docs/reviews/adoption-2026-10-23/preapproval-documents.zip",
+          "docs/reviews/adoption-2026-10-23/verification.json"
+        ],
+        "preserved_proposal_sha256": "22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29",
+        "preapproval_archive_sha256": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+      },
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'docs/reviews/verify_retail_contract.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'docs/reviews/verify_system_model.py', LF will be replaced by CRLF the next time Git touches it\n"
+    },
+    {
+      "argv": [
+        "git",
+        "check-ignore",
+        ".trf-runtime/verified-demo-20261024T205216Z/operator.key"
+      ],
+      "exit_code": 0,
+      "stdout": ".trf-runtime/verified-demo-20261024T205216Z/operator.key\n",
+      "stderr": ""
+    }
+  ],
+  "prior_workspace": {
+    "head": "6bf8345020ae26aec7786c100864ad32695507f1",
+    "status_before": " M AGENTS.md\n M README.md\n M docs/architecture/02_DECISION_REGISTER.md\n M docs/architecture/04_DEFINITIONS.md\n M docs/architecture/05_REQUIREMENTS.md\n M docs/architecture/06_MASTER_ARCHITECTURE.md\n M docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\n M docs/architecture/10_IMPLEMENTATION_ROADMAP.md\n M docs/architecture/11_OPEN_DECISIONS.md\n M docs/architecture/12_TRACEABILITY_MATRIX.md\n M docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\n M docs/architecture/ARCHITECTURE_REGISTER.json\n M docs/architecture/CURRENT_STATE.md\n M docs/reviews/verify_retail_contract.py\n M docs/reviews/verify_system_model.py\n?? docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\n?? docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\n?? docs/reviews/MONITORING_VISIBILITY_VERIFICATION_2026-10-24.json\n?? docs/reviews/TEMPORAL_DIAGNOSTIC_AUTOMATION_PROPOSAL_2026-10-24.md\n?? docs/reviews/TEMPORAL_DIAGNOSTIC_INTEGRATION_VERIFICATION_2026-10-24.json\n?? docs/reviews/__pycache__/\n",
+    "baseline_file_count": 82,
+    "unchanged_preexisting_files": 71,
+    "change_scope_matches_allowlist": true,
+    "changed_files_sha256": {
+      "README.md": {
+        "before": "2ff185971599bbfdcb7391a96955d8cd62965b740bd68634efa3f2933212c453",
+        "after": "a04b23cbe11bacedfcae6b530bf38ca04f2159444f3a18bb07686ab7c98f7a77"
+      },
+      "docs/architecture/05_REQUIREMENTS.md": {
+        "before": "d7648bd080d4268a8965667c90f8b1776f273caf476c426b4c2bbf918ff9a064",
+        "after": "b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56"
+      },
+      "docs/architecture/06_MASTER_ARCHITECTURE.md": {
+        "before": "79e6d125eb7d4c8b296e844151d3a6c2491ec9a61a726d89695d654583cd7226",
+        "after": "16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e"
+      },
+      "docs/architecture/08_ENGINEERING_REVIEW.md": {
+        "before": "c0bc1e1891c17418d35add4b0448ccc45d312fcd1701e41a29c9eaa4ec995253",
+        "after": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c"
+      },
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": {
+        "before": "9aa1a00c171fec52bd8c2e14a030891eae8588a9f7614e176699b9b006f16e18",
+        "after": "7c90a7c289b9f56037b99dbe09400b6bcb2e83da6a09348763bb8cbd8035d27a"
+      },
+      "docs/architecture/10_IMPLEMENTATION_ROADMAP.md": {
+        "before": "1cbb6efe1df27297f2e8d7d04533ecd2c676fb058af3ba24ecd5b6c9b9c72c38",
+        "after": "eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2"
+      },
+      "docs/architecture/11_OPEN_DECISIONS.md": {
+        "before": "8beb5392df723adb1a6da59c9c9b4d3cb17931579debb6c1721a3b07a812285b",
+        "after": "68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29"
+      },
+      "docs/architecture/12_TRACEABILITY_MATRIX.md": {
+        "before": "2bb01078b54ade95a0ac32f2483d83277917b03b72f2c3c2b22a7f2cb608086e",
+        "after": "76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba"
+      },
+      "docs/architecture/CURRENT_STATE.md": {
+        "before": "a7f71407de63d081b6b26317dc018d373080aac71ce460c78f81752ada1e2071",
+        "after": "48af2d90db9eb678e641ab8c31322d5d678575b385c97578ec657653d27a2815"
+      },
+      "docs/reviews/verify_retail_contract.py": {
+        "before": "25cccbc8b4d564f7c515a3a8f023052ec45911291cc2dbd6bf9f262f4a4c67dd",
+        "after": "c1aecd79447dafd205a284415ed25d7ba2ad35ebee25f2c108c74d1df19b0e92"
+      },
+      "docs/reviews/verify_system_model.py": {
+        "before": "74b6eb44717ffddd830023aa46e892e3c489495e80debfc5696e96230c3be16a",
+        "after": "59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef"
+      }
+    }
+  },
+  "new_files_sha256": {
+    ".gitignore": "5ea3cc22e8fa8bd4c02bf58d56c3a50629f3227184630e8f6896ea1d96147b4a",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "68eeadc706f3477d983d332c12cf96b0982ea8169a164444437e748b17c8a113",
+    "trading_researcher/checks.py": "d7a5b79c4b367ee702ca92b847e66bdcc72e857a8dfc86e5b48da1f6ac88d1b9",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/coordination.py": "9b3bef2c92a897735f8f2eb7b81568b334c99a62acdedd84b8fc9eafaee4d20f",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe",
+    "trading_researcher/README.md": "ee737e851d17cd65bf31b0d38644a13d3fe960a57c28aa0efe8b981f4c8ae535",
+    "tests/test_coordination.py": "b928aad7d17efea91b4173fea767c3ca04591d0018da3315f256b6b9931295ff",
+    "tests/test_local_runtime.py": "a60000c28a24bbec09a5d83672ae11ff11206f51d44821f8c1061efe8e20ffbc"
+  },
+  "this_report": {
+    "path": "docs/reviews/LOCAL_COORDINATION_VERIFICATION_2026-10-24.json",
+    "hash_excluded": "Avoid self-referential checksum"
+  },
+  "independent_review": {
+    "mode": "Read-only subagent review of code and tests",
+    "fixed_findings": [
+      "Type-preserving source/numeric comparisons",
+      "Bounded paginated status responses",
+      "Response validation before commit",
+      "Minimum viable integer-second lease"
+    ],
+    "additional_regressions": [
+      "Interrupted initial credential creation",
+      "Retained evidence operator access",
+      "Backup restoration",
+      "Real process crash with committed and uncommitted writes",
+      "Reserved controller identity and implicit batch separation"
+    ]
+  },
+  "test_first_observations": [
+    "Initial broker and transport suites failed with their modules absent, then passed after implementation.",
+    "A backup handle leak was observed on Windows and fixed with explicit connection closure.",
+    "New bootstrap/evidence-access tests failed before their targeted fixes.",
+    "Boolean substitution and idempotency tests failed before type-preserving comparisons.",
+    "Pagination, response rollback, minimum lease and reserved host identity tests failed before targeted fixes."
+  ],
+  "unverified": [
+    "Full autonomous discovery/provider integration and model/prompt/token/cost accounting",
+    "Scientific AST compiler, feature certification, FrozenManifest/TrialRecord, allocation and evaluator",
+    "Full four-memory authority and external/provider exposure tracking",
+    "External blob lifecycle, schema migration and power-loss durability",
+    "Adversarial isolation against unrestricted shell/filesystem access under the trusted OS account",
+    "Preemption of arbitrary installed handlers and exactly-once external side effects",
+    "Point-in-time market data, statistical calibration, profitability or research acceleration",
+    "D087 completed-outcome producer, quantitative diagnostic method and intended-use readiness/freshness",
+    "D088 local-calendar weekly reports, notice delivery and autonomous method-comparison workflow",
+    "Full TEST-01 through TEST-30 acceptance, cross-machine execution and throughput"
+  ],
+  "side_effect_scope": "No model API calls, package installations, live trading, external publication or persistent service installation. Demo runtime stays in ignored local storage; server is shut down."
+}

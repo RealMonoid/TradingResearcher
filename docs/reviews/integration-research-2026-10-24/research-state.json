@@ -1,0 +1,180 @@
+{
+  "objective": "Reconstruct the framework systematically, research academic literature and Anthropic/OpenAI primary sources, and propose the best fitting integration of the LLM researcher, four memories and scientific evaluation. Apply AI Psychiatry. Do not implement or adopt scientific changes.",
+  "requirements": [
+    {
+      "id": "R1",
+      "requirement": "Source-backed system model, normal and failure paths, feedback, authority, implementation, open boundaries",
+      "status": "VERIFIED",
+      "evidence": "SYSTEM_MODEL.md: inspected roles, authority, normal/failure paths, feedback and current code; local sources supersede old memory."
+    },
+    {
+      "id": "R2",
+      "requirement": "Academic primary-source research with claim-level transfer limits",
+      "status": "VERIFIED",
+      "evidence": "SOURCES.md: seven academic primary sources; inspected sections and transfer limits recorded."
+    },
+    {
+      "id": "R3",
+      "requirement": "Opened primary Anthropic and OpenAI sources",
+      "status": "VERIFIED",
+      "evidence": "SOURCES.md: four Anthropic and four OpenAI documents directly inspected; fallback access methods disclosed."
+    },
+    {
+      "id": "R4",
+      "requirement": "Concrete integration options, recommendations, interfaces and preservation of free invention",
+      "status": "VERIFIED",
+      "evidence": "INTEGRATION_PROPOSAL.md sections 1-3: compared orchestration options and specified loop, four memory views and scientific interfaces."
+    },
+    {
+      "id": "R5",
+      "requirement": "Validation, staging, costs, affected decisions, versioning and rollback",
+      "status": "VERIFIED",
+      "evidence": "INTEGRATION_PROPOSAL.md sections 4-8 and VALIDATION_AND_AUDIT.md: gates, costs, readiness, decisions, counterexamples and rollback."
+    },
+    {
+      "id": "R6",
+      "requirement": "AI Psychiatry applied with observable control and no new scientific authority",
+      "status": "VERIFIED",
+      "evidence": "Manifest-derived control inventory, observable progress and finite loophole review; no implementation or scientific authority inferred from skill."
+    },
+    {
+      "id": "R7",
+      "requirement": "Fresh artifact checks, preserved preexisting files and final evidence-based completion audit",
+      "status": "VERIFIED",
+      "evidence": "verification.json and verify_review.py: fresh existing tests/document checks plus local artifact and baseline-preservation checks; exact results govern completion."
+    }
+  ],
+  "active_control": null,
+  "controls": {
+    "install-framework": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No installation, upgrade or repair of the plugin is requested."
+    },
+    "executive-control": {
+      "status": "SATISFIED",
+      "evidence": "Objective and R1-R7 remained fixed: reconstruction, primary-source research and proposal, not implementation."
+    },
+    "attention-reset": {
+      "status": "SATISFIED",
+      "evidence": "Continuation reused SYSTEM_MODEL.md, baseline and research-state; no restart or replacement of the active goal."
+    },
+    "stop-overthinking": {
+      "status": "SATISFIED",
+      "evidence": "Source selection ended when integration choices and their critical limits had direct support; remaining work was artifact validation."
+    },
+    "stop-compulsive-verification": {
+      "status": "SATISFIED",
+      "evidence": "One fresh regression pass; additional checks limited to new artifacts and preservation. Future tests are not represented as executed."
+    },
+    "flatten-recursive-investigation": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No nested agent delegation or recursive investigation was used."
+    },
+    "evidence-gate": {
+      "status": "SATISFIED",
+      "evidence": "SOURCES.md separates primary claims from project deductions; runtime, calibration and economic evidence stay distinct."
+    },
+    "recover-from-deadlock-livelock": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No unresolved execution deadlock; source-access problems were resolved using primary-source alternatives."
+    },
+    "completion-gate": {
+      "status": "SATISFIED",
+      "evidence": "Finite R1-R7 matrix and fresh verification determine the endpoint; no implementation or optional new research is appended."
+    },
+    "loophole-hunter": {
+      "status": "SATISFIED",
+      "evidence": "VALIDATION_AND_AUDIT.md reviews actual integration shortcuts and maps their detection/rules/recovery."
+    },
+    "framework-red-team": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No plugin-framework security/packaging audit requested or triggered; concrete integration shortcuts are reviewed under loophole-hunter."
+    },
+    "anti-gaming": {
+      "status": "SATISFIED",
+      "evidence": "Proposal retains gaps, failed/pending trials and all ideas; task completion does not mean profitable discovery."
+    },
+    "false-progress-detector": {
+      "status": "SATISFIED",
+      "evidence": "Completion requires source-backed recommendations and interfaces, not additional searching or infrastructure-only demos."
+    },
+    "blocker-validator": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No hard blocker to the requested research proposal; implementation run inputs are explicitly future prerequisites."
+    },
+    "hidden-recursion-detector": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No recursive delegated tasks or reset investigation identifiers."
+    },
+    "strategy-laundering-detector": {
+      "status": "SATISFIED",
+      "evidence": "Direct adapter choice preserves controller and scientific contracts; named platforms do not supply missing evidence."
+    },
+    "scope-laundering-detector": {
+      "status": "SATISFIED",
+      "evidence": "Only this review folder is authored; canonical and implementation files remain under baseline preservation checks."
+    },
+    "completion-evidence": {
+      "status": "SATISFIED",
+      "evidence": "VALIDATION_AND_AUDIT.md maps all requirements to named artifacts; verification.json records exact executed checks."
+    },
+    "memory-validator": {
+      "status": "SATISFIED",
+      "evidence": "Older documentation-only memory was superseded by inspected current runtime/code/contracts; no memory was edited."
+    },
+    "context-balance": {
+      "status": "SATISFIED",
+      "evidence": "Source-backed system model retained before external research; bounded follow-up reads resolved truncated relevant passages."
+    },
+    "underthinking-detector": {
+      "status": "SATISFIED",
+      "evidence": "The system model precedes recommendations; source assumptions and implementation gaps are explicit."
+    },
+    "reasoning-balance": {
+      "status": "SATISFIED",
+      "evidence": "Chosen design includes alternatives, counterexamples and transfer limits without requiring speculative framework expansion."
+    },
+    "investigation-floor": {
+      "status": "SATISFIED",
+      "evidence": "Existing state, target, rationale, risks and required evidence are reconstructed in SYSTEM_MODEL.md."
+    },
+    "decision-readiness": {
+      "status": "SATISFIED",
+      "evidence": "Ready for a design recommendation; model selection, runtime and scientific performance require stated future evidence."
+    },
+    "root-cause-validator": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No production incident or asserted causal root cause is being resolved."
+    },
+    "evidence-floor": {
+      "status": "SATISFIED",
+      "evidence": "Primary sources were opened; software tests, specification and empirical validation are not conflated."
+    },
+    "executive-override": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No control limit override requested or used."
+    },
+    "rule-conflict-resolver": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "No unresolved instruction conflict; research proposal status preserves repository approval boundaries."
+    },
+    "never-stop": {
+      "status": "SATISFIED",
+      "evidence": "The requested proposal was carried through sources, concrete design, validation plan and final checks; implementation is outside this goal."
+    },
+    "direct-communication": {
+      "status": "SATISFIED",
+      "evidence": "German progress updates explain findings; authored project artifacts are English; final report identifies outcomes and limits."
+    }
+  },
+  "control_manifest": "C:/Users/monoi/.codex/plugins/cache/openai-curated-remote/ai-psychiatry/0.6.0/.ai/manifests/skills.json",
+  "control_sequence": [
+    "executive-control",
+    "investigation-floor",
+    "decision-readiness",
+    "loophole-hunter",
+    "completion-evidence",
+    "completion-gate"
+  ],
+  "scope_note": "Statuses describe this research task, not effectiveness of the plugin or certification of the proposed runtime. Actual check results in verification.json govern the completion claim."
+}

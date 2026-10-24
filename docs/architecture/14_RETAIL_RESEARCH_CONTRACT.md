@@ -2,6 +2,10 @@
 
 Version: **research-contract/1.0 — ACCEPTED**, October 23, 2026. Authority: D071-D085, under D008/D026. Scope: binding specification integration of proposal v0.1; no application runtime or empirical result is claimed.
 
+Later version resolution: D087 adopts [temporal-diagnostic-invocation/1.0](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md) as a separate extension of section 13's monitoring invocation. The research-contract/1.0 statistical and applicability meanings below remain in force; the extension does not select a quantitative method or live authority.
+
+D088 separately adopts [monitoring-visibility/1.0](17_MONITORING_VISIBILITY_AND_REPORTING.md) for background execution of authorized temporal work and user reporting. It does not change this contract's estimands, evidence axes or research-only authority.
+
 ## Approval and version resolution
 
 Source **SESSION-2026-10-23-CLOSURE** is the current repository conversation, separate from the immutable archive. After presentation of the [reviewable proposal v0.1](../reviews/RETAIL_RESEARCH_CONTRACT_PROPOSAL_2026-10-23.md) for binding specification integration, the user replied verbatim:

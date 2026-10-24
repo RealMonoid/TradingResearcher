@@ -30,7 +30,10 @@ CHECKED = CHANGED + ["docs/architecture/07_SCIENTIFIC_EVALUATION.md",
                      "docs/architecture/04_DEFINITIONS.md",
                      "docs/architecture/08_ENGINEERING_REVIEW.md",
                      "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
-                     "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md", "REVIEWING.md"]
+                     "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md",
+                     "docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md",
+                     "docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md", "REVIEWING.md",
+                     "trading_researcher/README.md"]
 
 
 def digest(path):
@@ -158,7 +161,7 @@ def verify(baseline=None):
     diff = subprocess.run(["git", "diff", "--check"], cwd=ROOT, text=True, capture_output=True)
     require(diff.returncode == 0, diff.stdout + diff.stderr)
     checks["git_diff_check_exit"] = diff.returncode
-    return {"status": "PASS" if not errors else "FAIL", "checks": checks, "checked_files_sha256": {p: digest(ROOT / p) for p in CHECKED}, "errors": errors, "unverified": ["New-session behavioral efficacy and compaction retention", "Mermaid rendering", "Framework runtime, TEST-01 through TEST-30, calibration, profitability and speed improvement"]}
+    return {"status": "PASS" if not errors else "FAIL", "checks": checks, "checked_files_sha256": {p: digest(ROOT / p) for p in CHECKED}, "errors": errors, "unverified": ["New-session behavioral efficacy and compaction retention", "Mermaid rendering", "Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately", "D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement"]}
 
 
 if __name__ == "__main__":

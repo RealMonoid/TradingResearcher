@@ -1,0 +1,41 @@
+# Monitoring Visibility and Reporting Contract
+
+Version: **monitoring-visibility/1.0 — ACCEPTED**, October 24, 2026. Authority: D088. This operational reporting extension uses the existing temporal diagnostic invocation contract (D087) and research-contract/1.0. It does not select a quantitative decay method, change an evidence or applicability state, authorize trading, or assert that a background runtime exists.
+
+## Approval and scope
+
+Source: SESSION-2026-10-24-MONITORING-VISIBILITY, a later user instruction outside the immutable original conversation archive. After a review of temporal-edge literature and the current contracts, the user accepted a bounded comparison of candidate temporal diagnostic methods and required that due work run in the background, remain visible, and prompt the user when action is needed. The user clarified that this is a **future TradingResearcher function**, with a **weekly status report plus immediate actionable notices**, and requested no separate Codex reminder. Approval covers orchestration and reporting of already authorized work, not automatic adoption of a new scientific method or live risk rule.
+
+## Binding operational behavior
+
+1. **Run authorized work when ready.** Considering a quantitative temporal method for activation requires a versioned method-comparison plan binding its object, candidate methods, estimand, absolute and relative economic criteria where relevant, point-in-time inputs, calibration worlds, dependence and repeated-look assumptions, budget, stopping rule and assessment separation before its results are inspected. The plan predeclares false-alarm and detection-delay measures, a no-winner result, and the stable-loss, regime-prevalence-change, within-regime-effect-change and cost-only cases identified by D087 where applicable. Once an authorized plan and all required inputs are ready, the existing workflow starts its bounded comparison without a manual reminder. Missing plan, data, capability, budget or independent assessment boundary creates a retained work item with its exact reason. Comparison results and failures are review artifacts; they cannot activate a method or change evidence. A new scientific method or decision rule still requires D008/D026 approval and D084 certification. Do not retune a plan on the monitored outcomes and call that independent validation.
+2. **Keep diagnostic invocation event-driven.** D087 continues to own `EligibleOutcomeBatchCommitted`, frozen checkpoints and intended-use checks. A weekly report or notification is not a completed outcome, an extra quantitative look, or a reason to advance a checkpoint. A due approved diagnostic runs automatically under D087; an unapproved or uncalibrated method remains a visible capability gap.
+3. **Maintain a durable pending-work view.** CMP-07/11 retain each method-comparison or monitoring work item with object and plan version, first-seen and last-checked times, next declared trigger or review date, latest data cutoff, reason, owner or required user action, attempt identity, and notification/delivery state. Items remain in the weekly report until resolved, superseded with provenance, or explicitly closed under the applicable rule. A missing input stream cannot disappear merely because no new data event arrives.
+4. **Produce one status report each week.** A wall-clock reporting tick produces a report even when no eligible batch arrived. The default delivery time is Monday 09:00 Europe/Berlin, configurable by the user; this is a communication schedule, not a universal scientific monitoring cadence. The report states its generation time and scope; registered objects and plan versions; last eligible data cutoff and freshness assessment; latest diagnostic result, uncertainty and applicability as of its assessment; historical evidence separately; open alarms, failed or overdue attempts, missing inputs and method-comparison progress; next declared trigger; and actions needing the user's decision. Unknown freshness or an absent plan is displayed as unknown or a gap, never as current validity. An empty or unchanged week still produces a concise report.
+5. **Notify promptly when action is needed.** Send a separate notice on a newly recorded actionable event: a plan-defined alarm or adverse applicability consequence, an intended-use block, a due run that fails or exhausts resources, a plan-defined stale/missing-data condition, a comparison prerequisite requiring the user's decision, or a completed method comparison requiring scientific review. Include object, as-of time, record/plan references, observed result and uncertainty, reason the user is needed, and the next allowed action. Do not notify on every data batch or repeat the same unchanged event. Delivery failure remains a pending work item and is retried under the same notice identity; still-open items appear in each weekly report. A notice never implies an order, capital change or scientific verdict issued by the LLM.
+6. **Keep the LLM in a reporting role.** The LLM may turn retained, versioned records into a readable report or question and link each material statement to its source record. It may flag an unresolved explanation and propose a later research question. It cannot choose a winning method, change a frozen plan, assign scientific status, declare an edge dead, or infer live authority from a loss or alarm. When rendering fails, the underlying deterministic status record and pending notice remain visible for retry.
+
+The delivery channel and its credentials are deployment-time inputs. This contract does not create a message channel, scheduler, data producer or evaluation runtime in the present documentation-only repository.
+
+## Future acceptance cases
+
+These extend future TEST-17, TEST-22 and TEST-25; they are specified, not executed.
+
+| Case | Required observable behavior |
+|---|---|
+| A frozen, authorized comparison plan becomes ready | One bounded background comparison starts; results, failures and budget use are retained; no method is activated automatically. |
+| A comparison is blocked or finishes with no qualified winner | The exact gap or inconclusive result remains in pending work and the weekly report; a new scientific rule is not invented. |
+| An eligible outcome reaches a D087 checkpoint | The due diagnostic runs once under its approved plan; notice is sent only for an actionable result or failure. |
+| A weekly tick occurs with no new data event | One report still states the last cutoff and any plan-defined staleness, missing stream or unknown freshness; no quantitative checkpoint is advanced. |
+| A report is unchanged and no action is needed | A concise weekly report is delivered without duplicate immediate notices. |
+| An alarm, failed due run or required approval is recorded | One prompt notice names the object, evidence time, uncertainty and required action; open work recurs in weekly reports until closed. |
+| The same event is redelivered or a message delivery fails | Event and notice identities prevent duplicate scientific trials or repeated alerts; the failed delivery is retained and retried. |
+| The LLM description conflicts with the record or suggests live action | The record remains authoritative; no evidence, applicability or capital state is changed by the description. |
+
+## Validation, versioning and rollback
+
+Affected decisions and requirements: D008/D020/D026/D037/D080/D083/D084/D087, REQ-017/022/025 and IF-11/13. Reuse CMP-01/06/07/08/10/11/12 and existing Journal, diagnostic, dashboard and improvement records. No new scientific enum, agent role, service or mandatory edge category is introduced.
+
+Before runtime adoption, verify event and wall-clock scheduling, durable recovery, idempotent delivery, access-controlled report generation, data-freshness semantics, failed-job visibility and the future acceptance cases above. A separate approved method profile must establish its own estimand, calibration, false-alarm and detection properties. Documentation checks do not establish any of those behaviors.
+
+Version schedules, comparison plans, report definitions and delivery rules. A later supersession or rollback selects a prior configuration without deleting reports, attempts, alerts, delivery failures, historical evidence or inherited exposure.

@@ -1,0 +1,23 @@
+{
+  "subject": "D087 / temporal-diagnostic-invocation/1.0 documentation integration",
+  "date": "2026-10-24",
+  "approval_source": "SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC: user approved proposal v0.2 with freigegeben",
+  "preapproval_proposal_sha256": "a822dd8abc1a666f6171c51cbcf2441a5c8b5f47399f27885cc46d2ff711525b",
+  "scope": "Canonical specification and traceability only; no application runtime, statistical method or live authority",
+  "checks": {
+    "python -B docs/reviews/verify_system_model.py": "PASS, exit 0; decision/status, source, traceability, links, whitespace and preserved-source checks",
+    "python -B docs/reviews/verify_retail_contract.py": "PASS, exit 0; original 15 approved policy sections, 15 open dispositions and preapproval archive retained",
+    "git diff --check": "PASS, exit 0 for tracked changes",
+    "new_file_trailing_whitespace": "PASS, no matches in new proposal, contract and this record"
+  },
+  "preexisting_unrelated_work": {
+    "path": "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "treatment": "Existing stock-ranking decision-region addition retained; D087 rows added separately"
+  },
+  "unverified": [
+    "EligibleOutcomeBatchCommitted event producer and scheduler do not exist",
+    "TEST-17/25 behavioral acceptance cases have not run",
+    "No quantitative diagnostic method, checkpoint values or false-alarm calibration has been approved or tested",
+    "No live deployment, capital authority or economic benefit is demonstrated"
+  ]
+}

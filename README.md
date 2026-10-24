@@ -6,7 +6,7 @@ The framework must substantially accelerate both hypothesis discovery and testin
 
 The economic objective is profitably usable hypotheses after realistic costs, not beating quantitative firms or proving LLM superiority. Whether the framework achieves that objective is an empirical question, not a prerequisite for building it. The [Generator Feedback and Evaluation Contract](docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md) specifies feedback use, later evaluation and discovery diagnostics.
 
-**Status:** framework specifications, preserved sources and a bounded [AmiBroker CLI utility](tools/amibroker/README.md) with a verified Binance import/exploration/export smoke test. The autonomous research framework, scientific evaluator and live deployment are not implemented; no trading edge is demonstrated.
+**Status:** framework specifications, preserved sources, a runnable [local coordination runtime](trading_researcher/README.md), and a bounded [AmiBroker CLI utility](tools/amibroker/README.md) with a verified Binance import/exploration/export smoke test. The coordination runtime provides a SQLite queue, scoped immutable artifacts, fenced leases, operational completion checks and generic triggers. The autonomous research framework, scientific evaluator and live deployment are not implemented; no trading edge is demonstrated.
 
 ## Start here
 
@@ -28,8 +28,14 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 - [Generator feedback and evaluation contract](docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md)
 - [Adopted retail research contract](docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md)
 - [Agent inquiry discipline](docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md) (D086; approved working practice, runtime behavior unverified)
+- [Temporal diagnostic invocation](docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md) (D087; automatic due checks specified, runtime and statistical method unverified)
+- [Monitoring visibility and reporting](docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md) (D088; weekly status and actionable notices specified, runtime and delivery unverified)
 
-For selection bias and overfitting, the [integrated evaluation guidance](docs/architecture/07_SCIENTIFIC_EVALUATION.md#overfitting-controls-across-the-research-process) connects discovery, Columns, policy search and generator feedback. The [October 23 framework review](docs/reviews/OVERFITTING_REVIEW_2026-10-23.md) records the system assessment and documentation changes. These earlier reviews clarify existing decisions. D071-D085 now adopt the scoped statistical and implementation contracts; no runtime protection has been demonstrated.
+For selection bias and overfitting, the [integrated evaluation guidance](docs/architecture/07_SCIENTIFIC_EVALUATION.md#overfitting-controls-across-the-research-process) connects discovery, Columns, policy search and generator feedback. The [October 23 framework review](docs/reviews/OVERFITTING_REVIEW_2026-10-23.md) records the system assessment and documentation changes. These earlier reviews clarify existing decisions. D071-D085 now adopt the scoped statistical and implementation contracts. Bounded coordination controls have executable tests; full research isolation and scientific runtime conformance remain unverified.
+
+D087 adopts a later [automatic temporal diagnostic invocation contract](docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md). It makes a committed batch of eligible completed outcomes and each intended use trigger the appropriate due/scope check for a bound plan. It does not select a universal monitoring interval, decay estimator, alarm threshold or live action rule.
+
+D088 adopts [background temporal work and reporting](docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md): an authorized bounded method comparison starts when ready, open work stays visible, and the future framework sends a weekly status report plus prompt notices when user action is needed. Report timing is separate from scientific checkpoints. Generic bounded time/event triggers now exist; completed-outcome event production, diagnostic execution, weekly report generation and message delivery remain unimplemented.
 
 ## Evidence and limits
 

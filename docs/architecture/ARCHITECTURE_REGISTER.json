@@ -1,6 +1,6 @@
 {
-  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1",
-  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline; prior scientific contracts are unchanged.",
+  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1+temporal-diagnostic-invocation-1+monitoring-visibility-1",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline. D087 uses SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC for a later approved invocation extension. D088 uses SESSION-2026-10-24-MONITORING-VISIBILITY for operational reporting; prior scientific contracts remain versioned.",
   "decisions": [
     {
       "id": "D001",
@@ -1913,6 +1913,51 @@
       "acceptance_basis": "Explicit user approval of the preceding reviewed proposal and GitHub publication on October 24, 2026; approval recorded in document 15.",
       "normative": true,
       "change_control": "D008/D026; agent-inquiry/1.0. Preserve prior decisions, contracts and exposure; future revisions/rollback are versioned. Runtime behavior and effectiveness are unverified."
+    },
+    {
+      "id": "D087",
+      "status": "ACCEPTED",
+      "title": "Automatic invocation of temporal diagnostics for intended use",
+      "problem": "A predefined applicability diagnostic can be forgotten or silently skipped after new eligible outcomes or at intended use.",
+      "rationale_and_alternative": "Adopt temporal-diagnostic-invocation/1.0: an eligible completed-outcome batch checks frozen checkpoints automatically; intended use checks scope and freshness; due approved diagnostics run without a reminder. Missing plans/data remain visible, duplicate/corrected deliveries preserve identity. No generic rolling-profit alarm, statistical method or live authority is selected.",
+      "requirement": "REQ-017",
+      "components": [
+        "CMP-01",
+        "CMP-06",
+        "CMP-07",
+        "CMP-08",
+        "CMP-10",
+        "CMP-11"
+      ],
+      "sources": [
+        "SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC"
+      ],
+      "acceptance_basis": "Direct user approval: freigegeben, after proposal v0.2 and its clarified EligibleOutcomeBatchCommitted event; approval recorded in document 16.",
+      "normative": true,
+      "change_control": "D008/D026; temporal-diagnostic-invocation/1.0 extends research-contract/1.0 section 13. Preserve prior contracts, plans, attempts and exposure. Method and live authority require separate approval; runtime and calibration unverified."
+    },
+    {
+      "id": "D088",
+      "status": "ACCEPTED",
+      "title": "Background temporal work and visible user reporting",
+      "problem": "Authorized comparisons and diagnostics can remain blocked, overdue or completed without the user noticing; a missing data event can leave stale information unseen.",
+      "rationale_and_alternative": "Adopt monitoring-visibility/1.0: start bounded authorized comparisons when ready, retain pending work and delivery state, send weekly reports and prompt actionable notices. Report ticks never advance quantitative checkpoints. The LLM summarizes records without choosing methods, assigning evidence or authorizing capital; no new service or generic profit alarm is selected.",
+      "requirement": "REQ-022",
+      "components": [
+        "CMP-01",
+        "CMP-06",
+        "CMP-07",
+        "CMP-08",
+        "CMP-10",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-24-MONITORING-VISIBILITY"
+      ],
+      "acceptance_basis": "Direct user acceptance of bounded method comparison and request for automatic background work, prompt contact and status reports; follow-up clarification chose Framework-only, weekly plus immediate actionable notices.",
+      "normative": true,
+      "change_control": "monitoring-visibility/1.0 covers operational orchestration and reporting; new scientific meaning remains under D008/D026/D084 and live authority under D080. Preserve plans, reports, alerts, delivery failures and exposure. Runtime and delivery unverified."
     }
   ],
   "rejections": [
@@ -2932,6 +2977,20 @@
       "date": "2026-10-24",
       "record": "15_AGENT_INQUIRY_DISCIPLINE.md#approval-and-scope",
       "scope": "User approved the immediately preceding scoped working-discipline proposal and GitHub publication; separate from the original archive, with no runtime effectiveness claim or new scientific authority."
+    },
+    {
+      "id": "SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC",
+      "kind": "direct_user_approval_of_reviewable_invocation_extension",
+      "date": "2026-10-24",
+      "record": "16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#approval-and-scope",
+      "scope": "User approved proposal v0.2 with freigegeben after clarification of the concrete eligible-outcome batch event. The later session is outside the immutable original archive; method, cadence and live authority are not approved."
+    },
+    {
+      "id": "SESSION-2026-10-24-MONITORING-VISIBILITY",
+      "kind": "direct_user_approval_and_reporting_instruction",
+      "date": "2026-10-24",
+      "record": "17_MONITORING_VISIBILITY_AND_REPORTING.md#approval-and-scope",
+      "scope": "User accepted a bounded method-comparison direction and requested automatic background work and user contact. Follow-up chose future Framework functionality, weekly reports and immediate actionable notices, with no Codex reminder. No scientific method or live authority was approved."
     }
   ],
   "decision_resolutions": [

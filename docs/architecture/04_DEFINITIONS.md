@@ -12,11 +12,12 @@ For a new scoped manifest, resolve the following existing definition IDs as `(de
 | DEF-014 through DEF-024, DEF-027 | Separate execution stage, technical validity, primary outcome, origin, historical qualification, replication, usability, current applicability and action authority. Historical readiness does not require calendar waiting | D071; section 1 |
 | DEF-024 | Unknown exposure is null plus reason, not proof of exposed or unseen origin; procedural holdout does not erase ancestry | D071/D076/D082; sections 1/6/12 |
 | DEF-015/027 | Dependency invalidation changes usability, not historical outcome; current applicability is timestamped and defaults to NOT_ASSESSED | D083; section 13 |
+| DEF-027 invocation extension | Intended use checks scope/freshness; a newly committed eligible completed-outcome batch checks the plan-frozen checkpoint automatically. Missing plan/data remain NOT_ASSESSED or REVIEW_REQUIRED; original evidence is retained | D087; [temporal-diagnostic-invocation/1.0](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md) |
 | DEF-028/029 | Scope membership alone supplies no subgroup evidence; direct target evaluation or separately approved transport contract is required for EVIDENCE_BACKED | D072; section 2 |
 | DEF-013/024/031/033 | Scoped data profile and next-eligible-bar execution with explicit cost/PIT uncertainties; unknown costs are not zero | D076; section 6 |
 | Certification of all affected definitions | Independent automatic conformance within approved semantics; new meaning or uncertain envelope membership requires material-change review | D084; section 14 |
 
-The scoped overlay does not replace a definition's unrelated fields. Section 1 owns migration/projection and section 13 owns applicability consequences. Unknown origin/replication/applicability remains unknown; retries do not create replication. No runtime records have been migrated.
+The scoped overlay does not replace a definition's unrelated fields. Section 1 owns migration/projection and section 13 owns applicability consequences; D087's separate invocation extension does not replace either. Unknown origin/replication/applicability remains unknown; retries do not create replication. No runtime records have been migrated.
 
 ## Preserved reconstruction-1 (historical version)
 

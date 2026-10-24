@@ -2,6 +2,10 @@
 
 Updated October 23, 2026 after the user's explicit **Freigabe** of proposal v0.1. D071-D085 adopt the [Retail Research Contract](14_RETAIL_RESEARCH_CONTRACT.md). All 15 design questions have a scoped disposition; this is not a claim that missing inputs, software or empirical validation now exist. Original preapproval wording is retained in the [preapproval archive](../reviews/adoption-2026-10-23/preapproval-documents.zip), with its original paths and hashes.
 
+Later update, October 24, 2026: D087 adopts [automatic temporal diagnostic invocation](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md) for a bound plan at eligible completed-outcome checkpoints and intended use. This resolves how an approved plan is invoked, not which quantitative monitoring method, checkpoint frequency, threshold or live response to use.
+
+D088 later adopts [monitoring visibility and reporting](17_MONITORING_VISIBILITY_AND_REPORTING.md): authorized method comparisons start when ready, pending work persists, and the future framework issues weekly reports and prompt actionable notices. The quantitative method, comparison inputs, runtime, delivery channel and live response remain separate open inputs or capabilities.
+
 ## Open register
 
 | ID | Adopted authority | Current disposition and remaining boundary |
@@ -13,12 +17,12 @@ Updated October 23, 2026 after the user's explicit **Freigabe** of proposal v0.1
 | OPEN-05 | D075; contract section 5 | Scoped fixed historical profile resolved. Exact development-derived block length, PRNG/seed, information target and assumption justification are required run inputs; candidate conformance/calibration is unverified. Other estimators and sequential methods are deferred. |
 | OPEN-06 | D076; contract section 6 | Initial universe, source, dates and simulation conventions resolved. Actual files, rights, vintages/availability, quality, exposure and applicable costs remain unverified inputs; no data acquired. |
 | OPEN-07 | D077; contract section 7 | Owned bounded adapter selected. Exact provider/dependency versions, license and isolation conformance remain unverified; Hermes stays optional and vectorbt a candidate. |
-| OPEN-08 | D078; contract section 8 | SQLite, serialization and recovery design resolved. Implementation, crash tests and restore verification remain absent. |
+| OPEN-08 | D078; contract section 8 | SQLite, serialization and recovery design resolved. The approved [local coordination slice](../../trading_researcher/README.md) now implements small immutable envelopes, transactional jobs, process-crash recovery and tested backup restoration. Full scientific freeze/allocation, external blob manifests, migration and power-loss conformance remain unimplemented or unverified. |
 | OPEN-09 | D079; contract section 9 | Two perspectives and scoped call/token/time budgets resolved. Exact model/prompts, actual costs and any paid-run currency cap remain run inputs. |
 | OPEN-10 | D080; contract section 10 | Current authority resolved: research-only, zero capital. Future live risk, accounts, limits and deployment are deferred and need separate approval. |
 | OPEN-11 | D081; contract section 11 | Scoped success/calibration/resource targets resolved. Numerical policy opportunity-cost/downside targets, named acceleration reference and study-specific repetitions remain pre-outcome plan inputs. No success gate has been empirically passed. |
 | OPEN-12 | D082; contract section 12 | Initial batch allocation/release resolved. Actual reservations, selection records, dependence review and previously unused corroboration evidence are required inputs. |
-| OPEN-13 | D083; contract section 13 | Typed consequences and applicability states resolved. Actual use-time scope assessment is required; quantitative monitoring/decay methods remain separately versioned future work. |
+| OPEN-13 | D083; contract section 13; D087 invocation extension | Typed consequences and applicability states resolved. Automatic due/scope invocation for a bound plan is adopted but unimplemented. Actual eligible inputs, plan configuration, quantitative monitoring/decay methods and calibration remain separately versioned future work. |
 | OPEN-14 | D084; contract section 14 | Certification/approval boundary resolved. Independent golden fixtures, validator implementation and membership checks remain unimplemented; genuinely new meaning still requires D008/D026 review. |
 | OPEN-15 | D085; contract section 15 | Continuation/recovery policy resolved. SRC-001 through SRC-008 remain externally unresolved facts; no missing source has been recovered. |
 

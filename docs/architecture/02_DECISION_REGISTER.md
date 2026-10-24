@@ -1,6 +1,6 @@
 # Decision Register
 
-Version: reconstruction-1 + generator-contract/1.0 + research-contract/1.0 + agent-inquiry/1.0 (October 24, 2026). D086 adopts the approved agent working discipline; prior scientific contracts remain unchanged. D001-D070 retain their historical wording and statuses; D071-D085 record the later approved scoped resolutions. Counts include historical dispositions; an older OPEN/AMBIGUOUS/DEFERRED record is not a current blocker where the explicit resolution below applies. This revision implements binding specification changes, not application code.
+Version: reconstruction-1 + generator-contract/1.0 + research-contract/1.0 + agent-inquiry/1.0 + temporal-diagnostic-invocation/1.0 + monitoring-visibility/1.0 (October 24, 2026). D086 adopts the agent working discipline; D087 adopts automatic invocation of a predeclared temporal diagnostic plan; D088 adopts background orchestration and user-visible reporting for authorized temporal work. Earlier scientific contracts remain versioned and unchanged in their stated scope. D001-D070 retain their historical wording and statuses; D071-D085 record the approved scoped resolutions. Counts include historical dispositions; an older OPEN/AMBIGUOUS/DEFERRED record is not a current blocker where the explicit resolution below applies. This revision implements binding specification changes, not application code.
 
 ## Reading authority and counts
 
@@ -9,7 +9,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 64 |
+| ACCEPTED | 66 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -1254,3 +1254,31 @@ The user subsequently approved the documentation remedy in the [System Model Rev
 **Source and acceptance:** SESSION-2026-10-24-INQUIRY. The user explicitly approved the preceding reviewed proposal and GitHub publication: "Ok, das übernehmen wir so. Schreib es rein. Dann github updaten". See [approval and scope](15_AGENT_INQUIRY_DISCIPLINE.md#approval-and-scope). This is a new session source, not an attribution to the original archive.
 
 **Change control:** D008/D026; agent-inquiry/1.0. Preserve prior decisions, scientific contracts, source bytes and exposure history. Future rollback records supersession and restores the previous applicable configuration without deleting history. Runtime behavior and effectiveness are unverified.
+
+### D087 — Automatic invocation of temporal diagnostics for intended use
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** A predeclared applicability diagnostic can be forgotten or silently skipped when newly eligible outcomes arrive or a policy is considered for use.
+
+**Decision, reason and alternative:** Adopt [Temporal Diagnostic Invocation / temporal-diagnostic-invocation/1.0](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md). A versioned plan binds the object, inputs and future checkpoints before monitored outcomes are inspected. A committed batch of complete, eligible outcomes automatically checks whether the next checkpoint is due; intended use always checks scope and freshness. A due approved diagnostic runs without a manual reminder, while missing inputs or capability remain visible as NOT_ASSESSED/REVIEW_REQUIRED. Duplicate deliveries and corrected data retain trial identity and provenance. This does not select a statistical method or grant live authority; a generic rolling-profit alarm for every idea is not adopted.
+
+**Affected components / dependencies:** CMP-01, CMP-06, CMP-07, CMP-08, CMP-10, CMP-11; REQ-008/017/025 and future TEST-17/25 extensions; IF-11; D008/D020/D026/D037/D080/D083/D084, DEF-027.
+
+**Source and acceptance:** SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC. After the [reviewable proposal v0.2](../reviews/TEMPORAL_DIAGNOSTIC_AUTOMATION_PROPOSAL_2026-10-24.md) defined the eligible-outcome event in response to the user's clarification, the user explicitly replied "freigegeben". See [approval and scope](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#approval-and-scope). This later session is separate from the original source archive.
+
+**Change control:** D008/D026; temporal-diagnostic-invocation/1.0 extends research-contract/1.0 section 13. Preserve earlier contracts and all plans, attempts, outcomes and exposure. A changed scientific method or live action rule requires separate approval. Runtime behavior, false-alarm calibration and economic benefit remain unverified.
+
+### D088 — Background temporal work and visible user reporting
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** An authorized diagnostic or method comparison can remain blocked, overdue or completed without the user noticing; an absent data event can leave stale information unseen.
+
+**Decision, reason and alternative:** Adopt [Monitoring Visibility and Reporting / monitoring-visibility/1.0](17_MONITORING_VISIBILITY_AND_REPORTING.md). Run a bounded, authorized temporal-method comparison automatically once its predeclared plan and inputs are ready, while D087 continues to invoke approved diagnostics at their own checkpoints. Retain pending work and delivery state; send a weekly status report and prompt notice for new actionable events. A reporting tick never creates a quantitative look. The LLM summarizes source-bound records but cannot select a method, change evidence or authorize capital. Reuse existing monitoring, dashboard and improvement roles; no new edge status, service or generic profit alarm is adopted.
+
+**Affected components / dependencies:** CMP-01/06/07/08/10/11/12; REQ-017/022/025 and future TEST-17/22/25 extensions; IF-11/13; D008/D020/D026/D037/D080/D083/D084/D087.
+
+**Source and acceptance:** SESSION-2026-10-24-MONITORING-VISIBILITY. The user accepted the preceding bounded method-comparison direction and requested background execution, prompt contact and status reports; a follow-up clarification selected the future Framework function, weekly reports and immediate actionable notices, without a separate Codex reminder. See [approval and scope](17_MONITORING_VISIBILITY_AND_REPORTING.md#approval-and-scope). This is a later current-session source, not an addition to the original archive.
+
+**Change control:** monitoring-visibility/1.0 specifies operational orchestration and reporting. Scientific method activation remains under D008/D026/D084 and live authority under D080. Preserve prior contracts and all plans, attempts, reports, notices, delivery failures and exposure. Runtime scheduling, message delivery, behavioral tests and economic usefulness are unverified.

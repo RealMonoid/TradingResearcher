@@ -4,6 +4,10 @@ Archived source references resolve through [SOURCE_REVIEW_INDEX.md](SOURCE_REVIE
 
 SESSION-2026-10-22-GENERATOR records the later economic clarification and specification authorization in D069-D070. [Document 13](13_GENERATOR_FEEDBACK_AND_EVALUATION.md#acceptance-specifications) supplies the binding contract and future TEST-28 through TEST-30 cases; its integration is not a runtime test result.
 
+SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC records the later approval of D087. [Document 16](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases) extends future TEST-17/25 for automatic invocation, without claiming that a monitoring runtime or quantitative method has been tested.
+
+SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational reporting instruction and clarification. [Document 17](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) extends future TEST-17/22/25 for background authorized work, weekly reports and actionable notices; those complete behaviors are not implemented or tested. The later local coordination slice supplies generic triggers only; its bounded executable coverage is recorded below.
+
 ## Forward trace: problem to implementation evidence
 
 | Problem | Requirement | Decisions | Components | Interfaces | Test | Phase |
@@ -15,7 +19,7 @@ SESSION-2026-10-22-GENERATOR records the later economic clarification and specif
 | PROB-03 | REQ-005 | D006, D024, D027, D033, D062, D075 | CMP-03, CMP-04, CMP-06, CMP-08, CMP-09 | IF-05, IF-07 | TEST-05 | P1/P4 |
 | PROB-04 | REQ-006 | D007, D052 | CMP-01, CMP-03, CMP-04, CMP-05, CMP-06, CMP-11 | IF-06, IF-07, IF-13 | TEST-06 | P2 |
 | PROB-04 | REQ-007 | D008, D043, D067, D071, D078, D085 | CMP-04, CMP-06, CMP-08, CMP-12 | IF-04, IF-12 | TEST-07 | P1 |
-| PROB-04 | REQ-008 | D009, D056, D083 | CMP-03, CMP-07, CMP-08 | IF-08, IF-09 | TEST-08 | P1/P3 |
+| PROB-04 | REQ-008 | D009, D056, D083, D087 | CMP-03, CMP-07, CMP-08 | IF-08, IF-09, IF-11 | TEST-08 | P1/P3/P6 |
 | PROB-05 | REQ-009 | D010, D017, D021, D048, D050, D066, D072 | CMP-03, CMP-05, CMP-06, CMP-08, CMP-09 | IF-10, IF-07 | TEST-09 | P6 |
 | PROB-05 | REQ-010 | D011, D032, D036 | CMP-02, CMP-03, CMP-06 | IF-03, IF-07 | TEST-10 | P2/P6 |
 | PROB-07 | REQ-011 | D012, D058 | CMP-01, CMP-03 | IF-01, IF-04 | TEST-11 | P2 |
@@ -24,15 +28,15 @@ SESSION-2026-10-22-GENERATOR records the later economic clarification and specif
 | PROB-02 | REQ-014 | D016, D029, D039, D054, D086 | CMP-01, CMP-02, CMP-03, CMP-06, CMP-07, CMP-11, CMP-12 | IF-02, IF-03, IF-08 | TEST-14; [agent inquiry cases](15_AGENT_INQUIRY_DISCIPLINE.md#acceptance-examples-for-test-14) | P3; repository review discipline now |
 | PROB-07 | REQ-015 | D018, D076 | CMP-01, CMP-03, CMP-05 | IF-01, IF-06 | TEST-15 | P2/P5 |
 | PROB-02 | REQ-016 | D019 | CMP-07, CMP-08, CMP-09 | IF-08 | TEST-16 | P3 |
-| PROB-05 | REQ-017 | D020, D057, D064, D080 | CMP-06, CMP-08, CMP-09, CMP-10 | IF-11 | TEST-17 | P6 |
+| PROB-05 | REQ-017 | D020, D057, D064, D080, D087, D088 | CMP-01, CMP-06, CMP-07, CMP-08, CMP-09, CMP-10, CMP-11 | IF-11 | TEST-17; [D087 invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases); [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P6 |
 | PROB-06 | REQ-018 | D022, D041, D063, D077 | CMP-01, CMP-02, CMP-05, CMP-07, CMP-12 | IF-02, IF-06, IF-12 | TEST-18 | P2/P7 |
 | PROB-03 | REQ-019 | D023, D082 | CMP-02, CMP-04, CMP-06 | IF-05 | TEST-19 | P4 |
 | PROB-03 | REQ-020 | D025, D038, D049 | CMP-02, CMP-05, CMP-06, CMP-09 | IF-06, IF-07 | TEST-20 | P4 |
 | PROB-04 | REQ-021 | D026, D040 | CMP-02, CMP-07, CMP-12 | IF-12 | TEST-21 | P3/P7 |
-| PROB-06 | REQ-022 | D028, D059, D060, D073 | CMP-11, CMP-12 | IF-13 | TEST-22 | P5 |
+| PROB-06 | REQ-022 | D028, D059, D060, D073, D088 | CMP-11, CMP-12 | IF-13 | TEST-22; [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P5/P6 |
 | PROB-06 | REQ-023 | D030, D065, D079 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-11, CMP-12 | IF-12, IF-13 | TEST-23 | P1/P7 |
 | PROB-03 | REQ-024 | D031, D035, D047, D051 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-09 | IF-05, IF-06, IF-07 | TEST-24 | P4 |
-| PROB-05 | REQ-025 | D037 | CMP-08, CMP-09, CMP-10, CMP-11 | IF-11, IF-08 | TEST-25 | P6 |
+| PROB-05 | REQ-025 | D037, D087, D088 | CMP-01, CMP-06, CMP-07, CMP-08, CMP-09, CMP-10, CMP-11, CMP-12 | IF-11, IF-08, IF-13 | TEST-25; [D087 invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases); [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P6 |
 | PROB-05 | REQ-026 | D044, D045, D046 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07 | IF-01, IF-06 | TEST-26 | P5 |
 | PROB-08 | REQ-027 | D068, D013, D019, D025, D028, D036 | CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07, CMP-11, CMP-12 | IF-03, IF-06, IF-08, IF-13 | TEST-27 | P7; before framework success claim |
 | PROB-02 | REQ-028 | D070, D014, D019, D026 | CMP-01, CMP-03, CMP-04, CMP-06, CMP-07, CMP-12 | IF-01, IF-02, IF-08, IF-12 | TEST-28 | Scoped slice; before feedback reuse |
@@ -129,6 +133,8 @@ SESSION-2026-10-22-GENERATOR records the later economic clarification and specif
 | D084 | ACCEPTED | SESSION-2026-10-23-CLOSURE | REQ-003 | OPEN-14: [contract section 14](14_RETAIL_RESEARCH_CONTRACT.md#14-open-14-automatic-certification-within-an-approved-envelope); specification adopted, runtime acceptance unexecuted. |
 | D085 | ACCEPTED | SESSION-2026-10-23-CLOSURE | REQ-007 | OPEN-15: [contract section 15](14_RETAIL_RESEARCH_CONTRACT.md#15-open-15-source-gap-policy); specification adopted, runtime acceptance unexecuted. |
 | D086 | ACCEPTED | SESSION-2026-10-24-INQUIRY | REQ-014 | Apply agent-inquiry/1.0 in repository work and specified future agents; TEST-14 extensions unexecuted. |
+| D087 | ACCEPTED | SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC | REQ-017/025 | Apply [temporal-diagnostic-invocation/1.0](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md): due eligible batches and intended use invoke bound-plan checks automatically; TEST-17/25 extensions unexecuted. |
+| D088 | ACCEPTED | SESSION-2026-10-24-MONITORING-VISIBILITY | REQ-017/022/025 | Apply [monitoring-visibility/1.0](17_MONITORING_VISIBILITY_AND_REPORTING.md): authorized work starts when ready, pending work persists, weekly reports and actionable notices are delivered; TEST-17/22/25 extensions unexecuted. |
 
 ## Coverage and orphan rules
 
@@ -148,10 +154,11 @@ October 23 elaboration of existing requirements and tests, grounded in D006/D014
 | TEST-05/19; REQ-005/019 | Submit several predeclared candidates sharing outcomes; contrast with outcome-guided additions after release | The resolved joint dependence/error/allocation policy governs the predeclared batch. Changed candidates inherit selection exposure. Missing policy blocks confirmation, not retention of ideas. Do not impose one dataset per idea. |
 | TEST-05/29; REQ-005/029 | Stop a fixed-horizon trial at the first favorable interim score; contrast with a valid pre-frozen sequential policy | The opportunistic result cannot become final support. The applicable sequential procedure can decide at its permitted boundary. Low information, non-significance and budget exhaustion do not silently become scientific negatives. |
 | TEST-20/24/29; REQ-020/024/029 | Compare a selected real winner against one unselected null candidate, or tune on calibration outcomes and report them as untouched final assessment | The declared process-calibration claim fails the selection-symmetry or assessment-separation check. A fixed-family analysis remains possible only under its narrower declared claim and assumptions. Retain tuning, failures and uncertainty. |
+| TEST-09/24; REQ-009/024 | A frozen stock-ranking policy has positive broad-universe RankIC, but outcomes near its actual selection cutoff or its net policy result are poor; after assessment, a different cutoff is proposed | Report the broad diagnostic and the outcomes in the policy's selected decision region with the applicable eligibility, exposure and execution assumptions. Do not infer policy value from broad RankIC. A result-driven cutoff change is a new exposed policy selection requiring its own trial and, where paths interact, resimulation. Do not require monotonic quantiles for unrelated claim types. |
 | TEST-09/26; REQ-009/026 | Remove trade A from a saved table when its absence would permit trade B or change available cash, exits or costs | The subset statistic is labeled as such. A policy-performance claim requires faithful re-execution of affected interactions; an unsupported backend returns a capability gap. Independent path/accounting fixtures verify any implemented result. |
 | TEST-13/19/29; REQ-013/019/029 | A scoped claim is frozen before appropriate forward outcomes exist; a later candidate uses those released outcomes | Forward origin is retained for the first trial, with its dependence/multiplicity/stopping checks. The descendant inherits exposure; a new date label or model name cannot reset it. |
 
-The [Scientific Evaluation](07_SCIENTIFIC_EVALUATION.md#overfitting-controls-across-the-research-process) owns the interpretation and method limits; the [Blueprint](09_IMPLEMENTATION_BLUEPRINT.md#selection-and-assessment-through-existing-interfaces) maps the same cases to IF-02 through IF-13. These earlier cases do not themselves select policy. D071-D085 and document 14 now resolve the scoped semantics and numerical policies; the cases must be instantiated against that version.
+The stock-ranking decision-region case is motivated by the observed gap between broad ranking skill and selected-portfolio outcomes in [Quant-Arena](https://arxiv.org/html/2610.30113v1#S3.SS3); it illustrates existing D047/D048 and REQ-009/024 rather than adopting its scoring rule or market conclusions. The [Scientific Evaluation](07_SCIENTIFIC_EVALUATION.md#overfitting-controls-across-the-research-process) owns the interpretation and method limits; the [Blueprint](09_IMPLEMENTATION_BLUEPRINT.md#selection-and-assessment-through-existing-interfaces) maps the same cases to IF-02 through IF-13. These earlier cases do not themselves select policy. D071-D085 and document 14 now resolve the scoped semantics and numerical policies; the cases must be instantiated against that version.
 
 ## Present verification versus future verification
 
@@ -179,3 +186,22 @@ SESSION-2026-10-23-CLOSURE adopts [research-contract/1.0](14_RETAIL_RESEARCH_CON
 | 13 / D083 | TEST-08, TEST-17, TEST-25 | hard invalidation propagates; genealogy does not; changed costs trigger review without erasing scientific evidence. |
 | 14 / D084 | TEST-03, TEST-06, TEST-07, TEST-21 | existing-semantic implementation can pass without a human click; changed expected values or new temporal meaning cannot; unusual but valid ideas are retained. |
 | 15 / D085 | TEST-07 | immutable archive hashes match; later recovery can be attached without overwriting prior bytes; confidence qualifications remain visible. |
+
+The later D087 [invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases) extend TEST-17/25: eligible completed-outcome events trigger a due check, duplicate/corrected batches retain identity, intended use checks freshness, and missing information remains visible without altering evidence or authorizing action. Method calibration and runtime behavior remain unverified.
+
+The later D088 [reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) extend TEST-17/22/25: an authorized comparison starts when ready, a weekly tick reports even without data, actionable events prompt once, and delivery failures persist. A report never advances a scientific checkpoint or activates a method. Scheduling, delivery and user benefit remain unverified.
+
+## Local coordination implementation evidence
+
+`SESSION-2026-10-24-LOCAL-COORDINATION` authorizes the runnable [local controller](../../trading_researcher/README.md). [Current verification](../reviews/LOCAL_COORDINATION_VERIFICATION_2026-10-24.json) records exact executed commands and file hashes. No full TEST-01 through TEST-30 completion is asserted by the following partial mapping.
+
+| Requirement / future acceptance family | Executed infrastructure coverage | Still outside this coverage |
+|---|---|---|
+| REQ-004/018; TEST-04/18 | [Broker tests](../../tests/test_coordination.py) deny forged identity, stale attempt writes, late context additions and unauthorized artifact/status access; [HTTP tests](../../tests/test_local_runtime.py) exercise the real capability boundary | PIT market-data validation, provider isolation, arbitrary shell access, complete adapter provenance |
+| REQ-007; D078 | Exclusive writer, idempotent job keys, retry history, SQLite integrity, real process-crash rollback, preserved commits and restored backup | Scientific FrozenManifest/TrialRecord closure, external blob manifest/quarantine, migration, power failure |
+| REQ-013/016; TEST-13/16 | Descendants retain all supplied context ancestry; incomplete operational batches cannot release; later-epoch access is explicit | Full four-memory authority, scientific allocation/dependence and all external/context exposure |
+| REQ-006/007/018; TEST-06/07/18 | Trusted structural, source-copy and decimal/rational checks reject invalid output; negative source records can complete a technical job without evidence authority | LLM factuality generally, source truth, hypothesis evaluation, statistical calibration |
+| REQ-023; TEST-23 | Attempt/deadline bounds, blocked handoff, bounded trigger occurrences, crash catch-up, duplicate events and paginated retained history | Model token/cost accounting, material-improvement iteration policy, measured research acceleration |
+| D087/D088 prerequisites | Real HTTP worker dispatch from a generic due timer; durable time/event scheduling and idempotent occurrence identity | Eligible completed-outcome producer, bound-plan readiness/freshness, quantitative diagnostics, weekly local-calendar reports and delivery |
+
+Operational records use their own versioned envelopes. A successful job is not a scientific verdict or a completed research acceptance test. The full requirements and adopted definitions are unchanged.

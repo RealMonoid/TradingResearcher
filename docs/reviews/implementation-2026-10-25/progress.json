@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "101 unique tests pass, including actual owned family-series lifecycle, 23 independent cases and legacy study/calibration regressions. Exact evidence and resource limits: family-series-verification-2026-10-26.json."
+      "evidence": "129 focused tests pass, including 23 independent cases and actual continued development/final execution; study-continuation-verification-2026-10-26.json retains exact outputs and limits."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -292,11 +292,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Implement the contract section9 recorded bounded resource-continuation path after reviewing exact ownership, immutable world/source identity, cumulative budget/failure accounting and D030 stopping rules; no alias resets or replacement draws. The 60-minute initial cap and 4GiB installed envelope are unchanged here. Then complete actual nuisance/stress/information/final-calibration work and the full campaign, scientific freeze, mixed-provider research, policy/AmiBroker and reporting objective.",
+  "next_action": "Resolve and retain the actual nuisance/stress/information profile against the observed diagnostic limitations, then execute the complete original development and protected final inventories with explicit justified resource tranches where needed. Do not reclassify the synthetic continuation fixture as calibration or migrate stale final sources. Continue the full scientific admission/campaign/freeze, mixed-provider research, policy/AmiBroker and reporting objective.",
   "continuation_audit": {
     "previous_goal_turn": "no_progress_verification_only",
     "current_goal_turn": "progress",
-    "basis": "Profile-selected redundant exact ordering removed; 92 targeted tests and six cold actual pipeline executions retain all outputs with a 20.74% median workload gain. Contract section9 supports inspecting a recorded bounded continuation path next.",
+    "basis": "Explicit bounded continuation is now consumed by the owned study runner. Chronological costs, authenticated decisions, source/exposure/revocation and actual development/final continuation are tested; complete scientific calibration is not claimed.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -433,6 +433,19 @@
     "cold_pipeline_executions": 6,
     "paired_result_and_encoded_stream_identical": true,
     "median_runtime_reduction_percent": 20.736403603280618,
+    "provider_calls": 0,
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "study_resource_continuation_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "unique_focused_tests": 129,
+    "verification": "docs/reviews/implementation-2026-10-25/study-continuation-verification-2026-10-26.json",
+    "actual_development_worlds": 4,
+    "actual_final_worlds": 2,
+    "final_planned_worlds": 1024,
+    "final_count_status": "NOT_ASSESSED",
     "provider_calls": 0,
     "scientific_readiness": false,
     "full_objective_complete": false

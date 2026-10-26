@@ -9,7 +9,7 @@ SCHEMA='dependency-revocation/1'
 AUTHORITY='technical_use_revocation_not_scientific_outcome'
 PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1','composition-source-package/1'}
 VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1',
-    'research-data-target/1','protected-data-binding/1'}
+    'research-data-target/1','protected-data-binding/1','study-resource-continuation/1'}
 REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1',
     'population-family-input/1','family-study-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
@@ -114,9 +114,14 @@ class DependencyRevocations:
         if schema in REQUEST_INPUTS:
             request=body['request']
             return [request[k] for k in ('plan_id','execution_id','diagnostics_id') if k in request]
-        if schema in ('evaluator-calibration-input/1','family-calibration-input/1'):return [body['request']['development_study_id']]
+        if schema in ('evaluator-calibration-input/1','family-calibration-input/1'):
+            return [body['request']['development_study_id'],*body.get('development_continuation_ids',[])]
         if schema=='development-measurement-input/1':return [body['request']['snapshot_id']]
-        if schema in RESULT_INPUTS:return [body['input_capsule_id']] if 'input_capsule_id' in body else [body['study_id']]
+        if schema=='study-resource-continuation/1':
+            return [body['request']['study_id']]+([body['previous_continuation_id']] if body['previous_continuation_id'] else [])
+        if schema in RESULT_INPUTS:
+            return [body['input_capsule_id']] if 'input_capsule_id' in body else [body['study_id']]+(
+                [body['continuation_id']] if body.get('continuation_id') else [])
         return None
 
     def _dependency_use(self,artifact_id):

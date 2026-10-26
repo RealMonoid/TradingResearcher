@@ -189,6 +189,20 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
         return dict(row)
 
     def call(self, token, op, **args):
+        if op=='continue_study':
+            from .binding import require
+            from .calibration_runs import CalibrationStudies
+            from .family_study_runs import FamilyStudies, FamilyCalibrationStudies
+            with self._mutex:
+                self._binding_owner(token)
+                require(type(args.get('study_id')) is str,'Study identity required')
+                body=self._artifact(args['study_id'])['body']
+                require(type(body) is dict,'Owned study input required')
+                schema=body.get('schema')
+                runners={'information-study-input/1':self,'family-study-input/1':FamilyStudies(self),
+                    'evaluator-calibration-input/1':CalibrationStudies(self),'family-calibration-input/1':FamilyCalibrationStudies(self)}
+                require(schema in runners,'Owned study input required')
+                return runners[schema]._continue_study_external(token,args)
         if op in ('prepare_family_study','advance_family_study','inspect_family_study',
                   'prepare_family_calibration','advance_family_calibration','inspect_family_calibration'):
             from .family_study_runs import FamilyStudies, FamilyCalibrationStudies

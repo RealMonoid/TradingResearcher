@@ -23,6 +23,8 @@ Generic `source_refs`, `exposure`, `supersedes`, scientific genealogy and confli
 
 This is a bounded mapping of existing schemas, not a new contradiction ontology. It does not infer aliases of data snapshots, certify an arbitrary user schema, or implement future economic-policy applicability and evidence publication. Those future consumers must explicitly bind and check their technical versions.
 
+The later [resource-continuation path](INFORMATION_STUDIES.md#explicit-resource-continuation) adds owned `study-resource-continuation/1` decisions as exact revocable technical records. A continuation binds its study and preceding continuation; a financed attempt binds its continuation. New final inputs also bind the grants used by the latest completed development attempts. New use and mid-run settlement follow these typed edges. Historical failed attempts are not indiscriminately added to a final input's dependency set, while their charges and provenance remain retained.
+
 ## Enforcement and history
 
 Data loading checks before scanning and again before returning rows. Certification and compilation check retained package versions before launching validation/calculation and again before commitment. Certificate status can report `INVALIDATED_BY_DEPENDENCY`. Bound execution, every plan diagnostic and the shared downstream plan/execution boundary check their actual dependencies. Final calibration checks the retained development study before new use.

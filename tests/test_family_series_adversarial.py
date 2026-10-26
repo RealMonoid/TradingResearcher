@@ -72,7 +72,7 @@ class FamilySeriesAdversarialTests(unittest.TestCase):
         payload = {'case_blob':{'sha256':'a' * 64, 'size':0}}
         request = {'key':'synthetic-partial', 'execution_id':'synthetic-execution'}
         study = self.owned('family-study-input/1', manifest=manifest, payload=payload,
-            request=request, initial_storage_bytes=0)
+            request=request, initial_storage_bytes=0, source_footprint={})
         runner = FamilyStudies(self.broker)
         partial = partial_record(manifest, world)
         calculation = {'world_id':world['id'], 'outcome':partial, 'scientific_readiness':False,

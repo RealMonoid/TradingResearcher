@@ -1,0 +1,262 @@
+{
+  "schema": "independent-study-resource-continuation-review/1",
+  "created_at": "2026-10-26T19:17:28.042765+00:00",
+  "reviewer": "/root/publication_review",
+  "status": "PASS_BOUNDED_LOCAL_RESOURCE_CONTINUATION",
+  "baseline_commit": "3ad8b40dfef66f851c3959fb6753c96727bd9988",
+  "purpose": "Verify explicit bounded resource continuation without changing scientific inventory, arithmetic, prior charges, failure history or protected final-calibration isolation.",
+  "authority": {
+    "contract": "research-contract/1.0 section 9, adopted by D079; D030 bounded iteration; section 13 technical dependency invalidation",
+    "interpretation": "Additional computation requires a recorded decision. The added no-progress counter is an inventory-only conservative operational fence, not a definition or proof of scientific meaningful improvement.",
+    "unchanged": "No change to required worlds, seeds, scenario vectors, draws, retry caps, fixed-denominator calibration criteria, source version, protected outcomes or scientific admission."
+  },
+  "findings": [
+    {
+      "id": "missing-empty-blob-list",
+      "status": "FIXED",
+      "observation": "All positive grants reached transactional replay, which indexed an absent blob_refs field and raised KeyError. The transaction rolled back.",
+      "correction": "New host-issued grants explicitly carry blob_refs: []; successful replay and backup/restore now pass.",
+      "red_check": "20261026T190745-0e8f1db7"
+    },
+    {
+      "id": "incomplete-inherited-grant-exposure",
+      "status": "FIXED",
+      "observation": "An attempt after two grants referenced the latest grant, but its explicitly retained exposure omitted the earlier grant inherited by that latest grant.",
+      "correction": "The new attempt unions the current resource dependency exposure with the original study exposure and direct references.",
+      "red_check": "20261026T191231-56fae306"
+    },
+    {
+      "id": "revoked-completed-development-grant-at-final-use",
+      "status": "FIXED",
+      "observation": "A completed development attempt became INVALIDATED_BY_DEPENDENCY when its used grant was technically revoked, but the original final-development resolver still accepted the COMPLETE input series.",
+      "correction": "Final setup authenticates the latest completed attempt for every world, checks the used grant dependencies and binds those grant IDs into the final input, references, inherited exposure and typed revocation graph. Historical failed attempts are not indiscriminately required.",
+      "red_check": "20261026T191358-95d90df8"
+    }
+  ],
+  "withdrawn_or_corrected_test_assumptions": [
+    "The first synthetic fixture patched numerical input resolution only at preparation. Continuation correctly revalidates the exact frozen inputs, so the fixture was corrected to return its unchanged request-specific tuple throughout the test. No production validation was removed.",
+    "An initial test assumed all operations-only development grants must cause blanket research-ancestry denial. Current context/release policy does not define that rule. The test was narrowed to protected final ancestry through both source_refs and exposure, while preserving existing development behavior. This was a test-scope correction, not a relaxed final-calibration boundary."
+  ],
+  "remaining_substantiated_production_blockers": [],
+  "reviewed_invariants": [
+    "Only authenticated operator requests dispatch the continuation operation; source/worker-supplied continuation namespaces are reserved.",
+    "Each explicit request supplies an exact checkpoint and nonempty bounded tranche of at most 3600000 compute milliseconds and 4 GiB logical storage, including room for 1 MiB decision metadata and the next entire fixed attempt.",
+    "The manifest and retained numerical package are immutable. Historical aliases cannot stack a grant at the same consumed checkpoint; the same key and identical request return only their original decision without adding a charge.",
+    "Relevant events are replayed chronologically. Temporary reservation overflow remains latched after a smaller known settlement, and a later forged grant cannot hide that prefix. Unknown settlements, outstanding attempts, orphan uncertainty, terminal states and exhausted retries cannot receive a compensating grant.",
+    "Complete VERIFIED or INFORMATION_GAP world inventory is the only mechanical progress counter. A third consecutive no-progress grant is refused even when two technical attempts leave a third frozen retry available.",
+    "Grant artifact and authoritative event commit atomically. A fault after both inserts rolls back both; the original request can subsequently commit once.",
+    "Grants retain the prior grant, original study and inherited exposure. New attempts bind their current grant and recheck that resource dependency before use and settlement.",
+    "Final calibration inputs consume usable completed-development grant dependencies and retain those dependencies for future typed invalidation. A budget decision cannot silently update an old final assessment source.",
+    "Full backup/restore preserves the checkpoint, grant identity and accumulated charges. Exact retry after restore does not add another tranche."
+  ],
+  "checks": {
+    "initial_api_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_continuation_independent.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:04:20.260098+00:00",
+      "finished_at": "2026-10-26T19:04:34.718946+00:00",
+      "seconds": 14.458848,
+      "exit_code": 1,
+      "log": "20261026T190420-61ba2de8.log",
+      "record_sha256": "104da2fbd51891208f0a7aaf342d6ca26c5a37055e1d3a25628c1a85be6cf6f3",
+      "log_sha256": "cc14e693b60a0e5a04952162152136ff3b646c0c12f85081adc99549264b4a16",
+      "test_count": 16,
+      "unittest_seconds": 13.907
+    },
+    "no_progress_preimplementation_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_continuation_independent.py",
+        "-k",
+        "third_no_progress",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:05:46.768341+00:00",
+      "finished_at": "2026-10-26T19:05:48.090930+00:00",
+      "seconds": 1.322589,
+      "exit_code": 1,
+      "log": "20261026T190546-fb7022b7.log",
+      "record_sha256": "08f093bf8e342e0486d5210663345ee4bb64c1c3d60da173de13ed8bb0eacb1f",
+      "log_sha256": "160b8bcd4c072e3145508d234542af8189cf8f192f97758c0ea00f5b68184b26",
+      "test_count": 1,
+      "unittest_seconds": 0.769
+    },
+    "fixture_resolution_error_retained": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_continuation_independent.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:06:07.997212+00:00",
+      "finished_at": "2026-10-26T19:06:24.564876+00:00",
+      "seconds": 16.567664,
+      "exit_code": 1,
+      "log": "20261026T190607-15544a85.log",
+      "record_sha256": "4588c4c6ec6183ef5595f2e7f1441fc3eb5dc0ff487720c6123a42c80743f871",
+      "log_sha256": "c4cd10eb869d1190fc7711d14380438f6029ea2e5ed28e2553880543bafed85c",
+      "test_count": 17,
+      "unittest_seconds": 16.004
+    },
+    "empty_blob_field_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_continuation_independent.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:07:45.221306+00:00",
+      "finished_at": "2026-10-26T19:08:07.337574+00:00",
+      "seconds": 22.116268,
+      "exit_code": 1,
+      "log": "20261026T190745-0e8f1db7.log",
+      "record_sha256": "0e4802ca4a67c9c7d0485b4caec5cdc3e64315f431a6f628bd1e89f3d6f88068",
+      "log_sha256": "da5598b26f997a62c86c1b40bf673ff74b7bc11bed4827ec647c60791edff206",
+      "test_count": 19,
+      "unittest_seconds": 21.534
+    },
+    "inherited_exposure_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_continuation_independent.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:12:31.244190+00:00",
+      "finished_at": "2026-10-26T19:12:55.218591+00:00",
+      "seconds": 23.974401,
+      "exit_code": 1,
+      "log": "20261026T191231-56fae306.log",
+      "record_sha256": "e4a3c0f0541f0764c83f77ad9b437b6e030cb955725e4fa08374b5b54c9e7976",
+      "log_sha256": "c6a3d43c20cb5ac228231056e8ee746f71eb007526d86d69cb69c87a87e91e1d",
+      "test_count": 22,
+      "unittest_seconds": 23.422
+    },
+    "completed_development_dependency_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_continuation_independent.py",
+        "-k",
+        "final_setup",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:13:58.607182+00:00",
+      "finished_at": "2026-10-26T19:14:00.510160+00:00",
+      "seconds": 1.902978,
+      "exit_code": 1,
+      "log": "20261026T191358-95d90df8.log",
+      "record_sha256": "4ed62619d19dd42fc5d20a2315434e92378cd153ac10c65ad66b5d9fa7b0196f",
+      "log_sha256": "4e001b985196595f638e0d81fa1d5b448ce5309a659ed4ffb6554f83bb7f78da",
+      "test_count": 1,
+      "unittest_seconds": 1.214
+    },
+    "independent_final_green": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_continuation_independent.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:15:13.322238+00:00",
+      "finished_at": "2026-10-26T19:15:44.300000+00:00",
+      "seconds": 30.977762,
+      "exit_code": 0,
+      "log": "20261026T191513-787f84b0.log",
+      "record_sha256": "391e7ad1e9f92ead0c7594a4e5795135e2a68b949a8c688f293a46b4ab5e54c1",
+      "log_sha256": "9ca9f8e453c6cbb34c8af77d25eead0ed878735942d098ac1690e8aa5a14a7cf",
+      "test_count": 23,
+      "unittest_seconds": 30.382
+    },
+    "unique_independent_tests": 23,
+    "other_runs": "The parent owns separate genuine child/replay lifecycle and affected regression runs. Their latest final runs were not yet inspected by this reviewer at report creation; no result is inferred here."
+  },
+  "test_evidence_scope": {
+    "real": "Temporary owned SQLite registry; authenticated public operations; actual source/blob retention; event replay; typed revocation; backup/restore; injected transactional failure.",
+    "synthetic": "Only _study_inputs numeric-data resolution is replaced with an exact request-specific fixed tuple. Host observation events establish selected arithmetic histories. Two orchestration cases replace execute_attempt with an explicit synthetic INFORMATION_GAP result and two placeholder proofs.",
+    "not_claimed": "These synthetic observations are not numerical scientific worlds or independent child replay. The separate parent integration must establish the actual continued-calculator lifecycle."
+  },
+  "limitations": [
+    "This bounded local review is not the full repository suite or a completed final calibration.",
+    "A grant is permission to use another bounded tranche for unchanged work, not scientific acceptance, an information target, market-model adequacy or profitability.",
+    "Logical storage and parent elapsed-work accounting are retained; this does not create an operating-system disk, memory or CPU quota.",
+    "The no-progress counter does not certify that D030 meaningful improvement occurred; explicit operator rationale and the existing scientific decision boundaries remain necessary.",
+    "Source-stale final studies remain blocked. No automatic migration, seed reset or selective replacement is provided.",
+    "A complete backup preserves the known ledger. Protection against separately running or deliberately rolling back older registry copies is not established without an external shared authority.",
+    "No paid model call, protected market-data read, full 256-world-per-cohort run or actual expanded scientific campaign is performed by this review."
+  ],
+  "next_action": "Confirm the separately executed genuine continuation lifecycle and affected regressions, preserve all failed observations, then record a concrete bounded campaign continuation only when its unchanged inventory and remaining resource requirements are reviewable.",
+  "source_sha256": {
+    "trading_researcher/study_resources.py": "436d3ac62638b6088cf07a26f6aa2be6da0932ad252982f1edb9514b83a971dd",
+    "trading_researcher/study_runs.py": "344471ce51d7d8b849cda734fb1aadcc4957609ea5e544322790bcb47117264a",
+    "trading_researcher/information_study.py": "ede0c49cc21a96c9759a9a68e6fcee1522df498e5105996fbb1a456f319277be",
+    "trading_researcher/calibration_runs.py": "dfae620aa8434bd0de54a98d262c5fc7c31059d07e370d1493df46a3c338db1b",
+    "trading_researcher/family_study_runs.py": "1e38a9bce9d9013a8b73e92e397bd9a667838cb400fbd6bc8e648e658763804f",
+    "trading_researcher/coordination.py": "28830475b8335804d4ba655282c7dce7a1d5d96268f391faa31e8659344a94cf",
+    "trading_researcher/storage.py": "9f6dfa7c53ca67f3e13cf2596c15df1d4050b7bacbeb5b84437e147af7417f98",
+    "trading_researcher/memory.py": "201183af4e6272ca46a8abd2ba5a3145e600ae32f3b39854479035282778939a",
+    "trading_researcher/revocations.py": "be0028ff21e68f19288b9a3e05345cfb4fd8f886756270f49e39be473365d9e8",
+    "tests/test_study_continuation_independent.py": "c4f5ddae55a63444e07cd9e7b2ba52dab5a6463986feddefbc25672b903c976c",
+    "tests/test_information_study.py": "04f01a54b9fba7b37b6f3a20c954bb0740625bbb6bfe56724ff3065826dd8392"
+  },
+  "canonical_authority_sha256": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d"
+  },
+  "baseline_evidence_sha256": {
+    "baseline.json": "08a924a41403b7c8388316a9080d7d9916c02bb911a06383c686d507b91c17ad",
+    "source-before.zip": "5c4b5fd96007fa5d1aad2d8e0b39d443d886f23c29500a23ec40efdc41d2ea94"
+  },
+  "reviewer_changed_files": [
+    "tests/test_study_continuation_independent.py",
+    ".trf-runtime/study-continuation-checks-2026-10-26/independent-review.json"
+  ],
+  "procedure_sha256": "8259fd613d8cd1945492b4d6e12d321ff24e60754137d308badab6d9a828fb5a"
+}

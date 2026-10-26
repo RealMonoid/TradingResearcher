@@ -209,11 +209,14 @@ def summarize(manifest,records):
         'n_min':None,'scientific_readiness':False,'classification_permitted':False}
 
 
-def budget_state(manifest,reservations,settlements):
+def budget_state(manifest,reservations,settlements,*,additional_compute_ms=0,additional_storage_bytes=0):
     """Replay conservative logical-byte/compute charges; unresolved use stays charged."""
     _validate_manifest(manifest)
     require(type(reservations) is list and type(settlements) is list,'Explicit reservation history required')
+    integer(additional_compute_ms,'additional compute',0);integer(additional_storage_bytes,'additional storage',0)
     budget=manifest['profile']['budget'];world_ids={item['id'] for item in manifest['worlds']}
+    max_compute=budget['max_compute_ms']+additional_compute_ms
+    max_storage=budget['max_storage_bytes']+additional_storage_bytes
     reserved={};closed={};counts=Counter()
     for item in reservations:
         require(type(item) is dict and set(item)=={'attempt_id','world_id','compute_ms','storage_bytes'},'Exact reservation required')
@@ -242,9 +245,9 @@ def budget_state(manifest,reservations,settlements):
         compute+=charged['compute_ms'];storage+=charged['storage_bytes']
         if settled and (settled['compute_ms']>reservation['compute_ms'] or settled['storage_bytes']>reservation['storage_bytes']):overrun=True
     outstanding=[identity for identity in reserved if identity not in closed]
-    overrun=overrun or compute>budget['max_compute_ms'] or storage>budget['max_storage_bytes']
+    overrun=overrun or compute>max_compute or storage>max_storage
     return {'charged_compute_ms':compute,'charged_storage_bytes':storage,'outstanding_attempts':outstanding,
         'attempts_per_world':dict(counts),'overrun':overrun,
         'next_reservation_fits':not outstanding and not overrun
-            and compute+budget['attempt_compute_ms']<=budget['max_compute_ms']
-            and storage+budget['attempt_storage_bytes']<=budget['max_storage_bytes']}
+            and compute+budget['attempt_compute_ms']<=max_compute
+            and storage+budget['attempt_storage_bytes']<=max_storage}

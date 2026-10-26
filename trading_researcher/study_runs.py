@@ -18,6 +18,7 @@ from .evaluation_plans import source_bundle, footprint
 from .information_study import make_manifest, summarize, budget_state
 from .study_pipeline import BOOTSTRAP
 from .study_stream import validate_stream
+from .study_resources import ResourceHistory, validate_request, SCHEMA as CONTINUATION, AUTHORITY as RESOURCE_AUTHORITY
 
 
 INPUT='information-study-input/1'
@@ -228,26 +229,54 @@ class InformationStudies:
             return study
 
     def _study_history(self,study):
-        reservations=[];settlements=[];records={};results=[];orphan=False
+        history=self._study_resources(study)
+        return history.reservations,history.settlements,list(history.records.values()),history.results,history.orphan
+
+    def _study_resources(self,study):
+        history=ResourceHistory(study)
         for row in self._db.execute('SELECT envelope FROM events ORDER BY seq'):
-            event=decode(row[0]);details=event['details']
-            if event['actor']!='controller' or details.get('study_id')!=study['id']:continue
-            if event['action']=='information_study_reserved':reservations.append(details['reservation'])
-            elif event['action']=='information_study_settled':
-                settlements.append(details['settlement']);record=details['outcome'];records[record['world_id']]=record
-                orphan=orphan or details['orphan_uncertain']
-                if details['artifact_id'] is not None:results.append(details['artifact_id'])
-        return reservations,settlements,list(records.values()),results,orphan
+            history.apply(decode(row[0]),self._artifact)
+        return history
+
+    def _study_resource_dependency(self,study,view):
+        identity=view['continuation_ids'][-1] if view['continuation_ids'] else study['id']
+        self._require_usable_dependencies(identity)
+        return identity
+
+    def _continue_study_external(self,token,args):
+        with self._transaction():
+            actor=self._binding_owner(token);request=decode(canonical(args));validate_request(request)
+            # An exact replay returns its immutable decision even after later
+            # work or revocation. This does not authorize a new computation.
+            for row in self._db.execute('SELECT envelope FROM events ORDER BY seq'):
+                event=decode(row[0])
+                if event['actor']=='controller' and event['action']=='information_study_continued':
+                    grant=self._artifact(event['details']['artifact_id'])
+                    if grant['body']['request']['key']==request['key']:
+                        if grant['body']['request']!=request:raise Conflict('Continuation key already binds its original request')
+                        return grant
+            study=self._study(request['study_id']);history=self._study_resources(study);terms=history.terms(request)
+            view=self._study_view(study);require(view['status']=='RESOURCE_STOP','Study is not at a resource stop')
+            self._study_resource_dependency(study,view);self._study_before_execute(study)
+            body=study['body'];inputs=self._study_inputs(actor,body['request'])
+            require(digest(list(inputs))==digest([body['payload'],body['manifest'],study['source_refs'],study['exposure']]),
+                'Study dependencies changed')
+            self._load_study_source(study)
+            refs,exposure=history.references()
+            saved=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
+                'data_class':'operations','source_refs':refs,'exposure':exposure,'blob_refs':[],'authority':RESOURCE_AUTHORITY,
+                'body':{'schema':CONTINUATION,'created_at':self._now(),'request':request,**terms,'scientific_readiness':False}})
+            self._event('controller','information_study_continued',study_id=study['id'],artifact_id=saved['id'])
+            # Verify the same chronological replay used after restart before
+            # committing the artifact and event together.
+            self._study_resources(study).budget()
+            return saved
 
     def _study_view(self,study):
-        reservations,settlements,records,results,orphan=self._study_history(study)
-        manifest=study['body']['manifest'];budget=budget_state(manifest,reservations,settlements)
-        budget['initial_storage_bytes']=study['body']['initial_storage_bytes']
-        budget['charged_storage_bytes']+=budget['initial_storage_bytes']
+        history=self._study_resources(study)
+        records=list(history.records.values());results=history.results;orphan=history.orphan
+        manifest=study['body']['manifest'];budget=history.budget()
         limits=manifest['profile']['budget']
-        budget['overrun']=budget['overrun'] or budget['charged_storage_bytes']>limits['max_storage_bytes']
-        budget['next_reservation_fits']=budget['next_reservation_fits'] and not budget['overrun'] and (
-            budget['charged_storage_bytes']+limits['attempt_storage_bytes']<=limits['max_storage_bytes'])
         summary=self._study_summary(study,records,results);by_world={r['world_id']:r for r in records}
         pending=next((w for w in manifest['worlds'] if w['id'] not in by_world
             or by_world[w['id']]['state']=='TECHNICAL_FAILURE'),None)
@@ -260,6 +289,7 @@ class InformationStudies:
         if state!='COMPLETE':summary['candidate_time_rows']=None
         return {'study_id':study['id'],'status':state,'budget':budget,'summary':summary,
             'next_world_id':pending['id'] if state=='READY' and pending else None,'attempt_artifact_ids':results,
+            'resource_checkpoint':history.checkpoint,'continuation_ids':[g['id'] for g in history.grants],
             'scientific_readiness':False,'n_min':None}
 
     def _load_study_source(self,study):
@@ -283,7 +313,9 @@ class InformationStudies:
         reservation=next(r for r in reservations if r['attempt_id']==attempt)
         require(settlement.get('attempt_id')==attempt,'Settlement attempt differs from its reservation')
         require(outcome['world_id']==reservation['world_id'],'Settlement world differs from its reservation')
-        budget_state(study['body']['manifest'],reservations,settlements+[settlement])
+        budget_state(study['body']['manifest'],reservations,settlements+[settlement],
+            additional_compute_ms=view['budget']['max_compute_ms']-view['budget']['original_max_compute_ms'],
+            additional_storage_bytes=view['budget']['max_storage_bytes']-view['budget']['original_max_storage_bytes'])
         summarize(study['body']['manifest'],[outcome])
         self._event('controller','information_study_settled',study_id=study['id'],settlement=settlement,
             outcome=outcome,artifact_id=artifact_id,orphan_uncertain=orphan)
@@ -314,6 +346,9 @@ class InformationStudies:
             study=self._study(args['study_id']);view=self._study_view(study)
             if view['status']=='RUNNING':raise Conflict('Study already has an outstanding attempt')
             if view['status']!='READY':return view
+            continuation_id=view['continuation_ids'][-1] if view['continuation_ids'] else None
+            resource_dependency=self._study_resource_dependency(study,view) if continuation_id else study['id']
+            resource_exposure=self._artifact(resource_dependency)['exposure'] if continuation_id else []
             body=study['body'];manifest=body['manifest'];limits=manifest['profile']['budget']
             world=next(w for w in manifest['worlds'] if w['id']==view['next_world_id'])
             attempt=uuid.uuid4().hex
@@ -362,15 +397,17 @@ class InformationStudies:
                 require(attempt in self._study_view(study)['budget']['outstanding_attempts'],'Stale study result')
                 # Revocation can arrive while the isolated computation runs.
                 # Retain/charge its output, but never settle it as a valid world.
-                try:self._require_usable_dependencies(study['id'])
+                try:self._require_usable_dependencies(resource_dependency)
                 except (Invalid,Denied,Conflict) as exc:
                     outcome=self._study_failed_outcome(manifest,world,outcome)
                     failure={'type':type(exc).__name__,'message':str(exc)[:2000]}
                 for descriptor in descriptors.values():self._register_blob(descriptor)
                 saved=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
-                    'data_class':self._study_data_class,'source_refs':[study['id']],'exposure':sorted(set(study['exposure'])|{study['id']}),
+                    'data_class':self._study_data_class,'source_refs':sorted({study['id'],resource_dependency}),
+                    'exposure':sorted(set(study['exposure'])|set(resource_exposure)|{study['id'],resource_dependency}),
                     'blob_refs':sorted({v['sha256'] for v in descriptors.values()}),'authority':self._study_authority,
                     'body':{'schema':self._study_result_schema,'created_at':self._now(),'study_id':study['id'],'attempt_id':attempt,
+                        **({'continuation_id':continuation_id} if continuation_id else {}),
                         'world_id':world['id'],'outcome':outcome,'result':result,'proofs':proofs,
                         'output_blobs':descriptors,'settlement':settlement,'failure':failure,'scientific_readiness':False}})
                 self._settle_study(study,attempt,settlement,outcome,saved['id'])

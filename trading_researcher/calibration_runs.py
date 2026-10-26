@@ -46,6 +46,23 @@ class CalibrationStudies(InformationStudies):
         self.broker._require_usable_dependencies(study['id'])
         view=runner._study_view(study)
         require(view['status']=='COMPLETE','Final calibration requires a complete owned development study')
+        # Only the latest completed attempt per world supplies this inventory.
+        # Each attempt has the study's already checked dependencies plus its
+        # optional continuation. Preserve those additional technical bindings
+        # when consuming the development result for a final series.
+        seen=set();continuations=set()
+        for identity in reversed(view['attempt_artifact_ids']):
+            artifact=self._artifact(identity);attempt=artifact['body'];world=attempt['world_id']
+            if world in seen:continue
+            seen.add(world)
+            require(artifact['creator']==artifact['origin']=='controller' and attempt['study_id']==study['id']
+                and attempt['schema']==runner._study_result_schema
+                and attempt['outcome']['state'] in ('VERIFIED','INFORMATION_GAP'),
+                'Completed development attempt binding differs')
+            if attempt.get('continuation_id'):continuations.add(attempt['continuation_id'])
+        require(seen=={w['id'] for w in study['body']['manifest']['worlds']},'Completed development attempt inventory differs')
+        for identity in sorted(continuations):self._require_usable_dependencies(identity)
+        view['used_continuation_ids']=sorted(continuations)
         integer(request['time_rows'],'fixed target',1)
         require(request['time_rows'] in study['body']['manifest']['profile']['targets'],
             'Final target must have been studied in development')
@@ -73,15 +90,17 @@ class CalibrationStudies(InformationStudies):
             raise Conflict('Final series already binds its seed, budget, cost and applicability; no reset')
 
     def _study_inputs(self,actor,request):
-        development,_=self._development(request);body=development['body']
+        development,view=self._development(request);body=development['body']
         cost,ancestry=self._study_cost_source(request['cost_estimate'])
         profile=deepcopy(body['manifest']['profile'])
         profile.update(targets=[request['time_rows']],worlds_per_cell=256,seed=request['seed'],
             budget=request['budget'],cost_estimate=request['cost_estimate'])
         manifest=self._calibration_policy.make_final_manifest(body['manifest']['assigned'],profile)
         self._calibration_policy.validate_count_envelope(manifest,request['applicability'])
-        refs=sorted(set(development['source_refs'])|{development['id'],cost['id']}|ancestry)
-        exposure=sorted(set(development['exposure'])|set(refs))
+        refs=sorted(set(development['source_refs'])|{development['id'],cost['id']}|ancestry|set(view['used_continuation_ids']))
+        exposure=set(development['exposure'])|set(refs)
+        for identity in view['used_continuation_ids']:exposure.update(self._artifact(identity)['exposure'])
+        exposure=sorted(exposure)
         return body['payload'],manifest,refs,exposure
 
     def _study_capture_source(self,request):
@@ -99,6 +118,7 @@ class CalibrationStudies(InformationStudies):
                 and not ids.intersection(w['id'] for w in old),'Recorded development/final seed or world collision')
             compared.append(prior['id'])
         return {'assessment_source_footprint':LOADED_SOURCE,
+            **({'development_continuation_ids':view['used_continuation_ids']} if view['used_continuation_ids'] else {}),
             'count_plan_hash':digest(self._calibration_policy.count_plan(manifest,request['applicability'])),
             'target_basis':'development_candidate' if view['summary']['candidate_time_rows']==request['time_rows']
                 else 'studied_sensitivity_cutoff_not_n_min',

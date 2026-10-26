@@ -10,7 +10,9 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
-The [exact ordered-replicate optimization](docs/reviews/implementation-2026-10-25/ORDERED_REPLICATES_2026-10-26.md) removes repeated parsing/sorting within interval and Monte Carlo calculations. Three cold paired pipeline runs preserve complete results and all stream bytes, with a 20.74% median runtime reduction on the fixed synthetic fixture. Complete calibration and resource continuation remain unfinished.
+The [recorded resource-continuation path](docs/reviews/implementation-2026-10-25/STUDY_CONTINUATION_2026-10-26.md) now resumes an exhausted development/final series through explicit bounded decisions. It preserves original worlds, seeds, source, retry caps, costs and failures; later grants cannot conceal earlier overruns. A real synthetic lifecycle completes four development worlds and two of 1,024 final worlds with separate replay. Final counts remain NOT_ASSESSED; complete calibration and the broader research workflow remain unfinished.
+
+The [exact ordered-replicate optimization](docs/reviews/implementation-2026-10-25/ORDERED_REPLICATES_2026-10-26.md) removes repeated parsing/sorting within interval and Monte Carlo calculations. Three cold paired pipeline runs preserve complete results and all stream bytes, with a 20.74% median runtime reduction on the fixed synthetic fixture. This is a measured engineering improvement, not complete calibration.
 
 The [lossless study-retention checkpoint](docs/reviews/implementation-2026-10-25/STREAM_RETENTION_2026-10-26.md) preserves every case/draw and separate replay while compressing new study streams. A paired actual-source fixture confirms identical results and decoded bytes, with 79.62% less charged storage. It demonstrates no speed gain; complete-series storage/compute feasibility remains unresolved.
 

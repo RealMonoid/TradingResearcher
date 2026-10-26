@@ -115,7 +115,7 @@ class EvaluationPlans:
         require(footprint(bundle)==body['source_footprint'],'Retained source footprint differs')
         return bundle
 
-    def _retain_plan_attempt(self,request,payload,refs,exposure,source,capsule,meaning=None,composition=None):
+    def _retain_plan_attempt(self,request,payload,refs,exposure,source,capsule,meaning=None,composition=None,data_use=None):
         # The caller holds the broker mutex. No child may run until the capsule,
         # committed blob references and STARTED event commit together.
         attempt=uuid.uuid4().hex
@@ -133,7 +133,8 @@ class EvaluationPlans:
                         'runtime_identity':_runtime_identity(),'scientific_readiness':False,
                         'allocation_reserved':False,'frozen':False,
                         **({'meaning_review_at_preparation':meaning} if meaning is not None else {}),
-                        **({'composition_at_preparation':composition} if composition is not None else {})}})
+                        **({'composition_at_preparation':composition} if composition is not None else {}),
+                        **({'data_use_at_preparation':data_use} if data_use is not None else {})}})
             self._event('controller','bound_computation_started',attempt_id=attempt,kind='evaluation_plan',
                 input_ref=request['compiled_id'],retained_input_id=capsule['id'])
         return attempt,capsule
@@ -241,7 +242,18 @@ class EvaluationPlans:
             certificate=self._artifact(request['composition_certificate_id'])
             refs=sorted(set(refs)|{certificate['id'],*certificate['source_refs']})
             exposure=sorted(set(exposure)|set(refs)|set(certificate['exposure']))
-        return payload,refs,exposure,meaning,composition
+        data_use=self._plan_data_use_evidence(actor,request)
+        if data_use is not None:
+            assessment=self._artifact(request['data_use_assessment_id'])
+            refs=sorted(set(refs)|{assessment['id'],*assessment['source_refs']})
+            exposure=sorted(set(exposure)|set(refs)|set(assessment['exposure']))
+        return payload,refs,exposure,meaning,composition,data_use
+
+    def _plan_data_use_evidence(self,actor,request):
+        if 'data_use_assessment_id' not in request:return None
+        assessment=self._artifact(request['data_use_assessment_id'])
+        self._deny_final_calibration_ancestry(assessment)
+        return self._inspect_data_use(actor,assessment['id'],compiled_id=request['compiled_id'])
 
     def _plan_composition_evidence(self,actor,request):
         if 'composition_certificate_id' not in request:return None
@@ -256,13 +268,17 @@ class EvaluationPlans:
             and type(body) is dict and body.get('schema')==SCHEMA,'Owned evaluation plan required')
         meaning,_=self._plan_meaning_evidence(actor,body['request'])
         composition=self._plan_composition_evidence(actor,body['request'])
+        data_use=self._plan_data_use_evidence(actor,body['request'])
         gates=None if body['plan'] is None else list(body['plan']['remaining_gates'])
         if gates is not None and meaning is not None and meaning['independent_semantic_review']=='SATISFIED':
             gates=[gate for gate in gates if gate!='independent_semantic_review']
         if gates is not None and composition is not None and composition['composition_conformance']=='SATISFIED':
             gates=[gate for gate in gates if gate!='composition_conformance']
+        if gates is not None and data_use is not None and data_use['qualified_exploration_data_use']=='SATISFIED':
+            gates=[gate for gate in gates if gate!='scientific_data_and_exposure_acceptance']
         return {'plan_id':plan_id,'status':body['status'],'gap':body['gap'],
-            'meaning_review':meaning,'composition':composition,'current_remaining_gates':gates,
+            'meaning_review':meaning,'composition':composition,'data_use':data_use,'current_remaining_gates':gates,
+            'data_use_scope':'exact_compiled_development_exploration_only','protected_target_admission':False,
             'dependency_use':self._dependency_use(plan_id),
             'scientific_readiness':False,'allocation_reserved':False,'frozen':False}
 
@@ -270,12 +286,13 @@ class EvaluationPlans:
         with self._mutex:
             actor=self._binding_owner(token)
             required={'key','compiled_id','primary_count','dependence'}
-            require(required<=set(args)<=required|{'meaning_review_id','composition_certificate_id'},'Missing or unexpected plan request fields')
+            require(required<=set(args)<=required|{'meaning_review_id','composition_certificate_id','data_use_assessment_id'},'Missing or unexpected plan request fields')
             request=decode(canonical(args))
             text(request['key'],'plan request key')
             text(request['compiled_id'],'compiled identity')
             if 'meaning_review_id' in request:text(request['meaning_review_id'],'meaning-review identity')
             if 'composition_certificate_id' in request:text(request['composition_certificate_id'],'composition certificate identity')
+            if 'data_use_assessment_id' in request:text(request['data_use_assessment_id'],'data-use assessment identity')
             integer(request['primary_count'],'primary count',1)
             require(request['primary_count']<=8 and type(request['dependence']) is dict,
                 'A bounded family and explicit dependence design are required')
@@ -283,7 +300,7 @@ class EvaluationPlans:
             if existing is not None:return existing
             capsule=self._existing_plan_input(request)
             new_input=capsule is None
-            payload,refs,exposure,meaning,composition=self._reviewed_plan_inputs(actor,request)
+            payload,refs,exposure,meaning,composition,data_use=self._reviewed_plan_inputs(actor,request)
             if capsule is not None:
                 require(digest([payload,refs,exposure])==digest([capsule['body']['payload'],capsule['source_refs'],capsule['exposure']]),
                     'Retained plan dependencies differ; no silent input substitution')
@@ -291,12 +308,14 @@ class EvaluationPlans:
                     'Retained meaning-review inventory differs; use a new preparation key')
                 require(composition==capsule['body'].get('composition_at_preparation'),
                     'Retained composition prerequisite differs; use a new preparation key')
+                require(data_use==capsule['body'].get('data_use_at_preparation'),
+                    'Retained data-use prerequisite differs; use a new preparation key')
                 source=self._load_plan_input_source(capsule)
             else:
                 source=source_bundle()
                 if footprint(source)!=LOADED_SOURCE:
                     raise Conflict('Plan source changed since process import; restart with the intended source version')
-            attempt,capsule=self._retain_plan_attempt(request,payload,refs,exposure,source,capsule,meaning,composition)
+            attempt,capsule=self._retain_plan_attempt(request,payload,refs,exposure,source,capsule,meaning,composition,data_use)
         try:
             # Consume the durable bytes, including on the first attempt. Staged
             # but uncommitted files never stand in for a retained input.
@@ -315,7 +334,7 @@ class EvaluationPlans:
             with self._transaction():
                 actor=self._binding_owner(token)
                 current=self._reviewed_plan_inputs(actor,request)
-                require(digest(list(current))==digest([payload,refs,exposure,meaning,composition]),'Plan dependencies changed before commitment')
+                require(digest(list(current))==digest([payload,refs,exposure,meaning,composition,data_use]),'Plan dependencies changed before commitment')
                 require(footprint(self._load_plan_input_source(capsule))==footprint(source),
                     'Retained source changed before commitment')
                 if new_input and footprint(source_bundle())!=LOADED_SOURCE:
@@ -343,6 +362,7 @@ class EvaluationPlans:
                         'scientific_readiness':False,'allocation_reserved':False,'frozen':False,
                         **({'meaning_review_at_preparation':meaning} if meaning is not None else {}),
                         **({'composition_at_preparation':composition} if composition is not None else {}),
+                        **({'data_use_at_preparation':data_use} if data_use is not None else {}),
                         'qualification':'Preparation retains assigned pilot policy and pending gates; no protected execution or result publication permission.'}})
                 self._event('controller','evaluation_plan_prepared',artifact_id=saved['id'],request_key=request['key'],status=saved['body']['status'])
                 self._event('controller','bound_computation_checked',attempt_id=attempt,artifact_id=saved['id'],status=saved['body']['status'])

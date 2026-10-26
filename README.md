@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [data-use check](trading_researcher/DATA_USE.md) now binds qualified historical exploration to an exact compiled development hypothesis, reviewed provider documents and preserved candidate exposure. It does not authorize protected assessment/corroboration or assert unseen history. Current plan inspection records this narrow scope separately from its remaining scientific prerequisites.
+
 The [composition conformance path](trading_researcher/COMPOSITION.md) checks the retained binding driver against independent expectations and binds its result to an exact compiled hypothesis. Plan inspection can satisfy this prerequisite separately from data/exposure, semantic review, calibration and atomic scientific freeze.
 
 The [technical revocation path](trading_researcher/REVOCATIONS.md) now prevents new use of explicitly revoked data, certificates and retained implementation versions. It follows actual typed dependencies, preserves historical results and exposure, and retains failures when revocation arrives during computation. It grants no scientific validity or empirical verdict.

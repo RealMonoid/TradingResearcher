@@ -1,0 +1,323 @@
+{
+  "schema": "independent-data-use-implementation-review/1",
+  "created_at": "2026-10-26T15:29:57.615278+00:00",
+  "reviewer": "/root/publication_review",
+  "status": "PASS_BOUNDED_QUALIFIED_DEVELOPMENT_DATA_USE",
+  "baseline_commit": "540fa89b6e9ecf64b0082b034aa9d4e137374dca",
+  "purpose": "Independently check the smallest existing-contract path for qualified use of exact historical development data, without protected-target admission or new evidence semantics.",
+  "authority": {
+    "contract": "research-contract/1.0",
+    "decisions": [
+      "D014",
+      "D037",
+      "D071",
+      "D076",
+      "D082",
+      "D083",
+      "D084"
+    ],
+    "sections": [
+      "1",
+      "6",
+      "12",
+      "13",
+      "14"
+    ],
+    "interpretation": "Unknown model training exposure and assumed delay can remain explicit qualifications for historical exploration. They do not establish model-unseen history, verified PIT, independent confirmation or calibrated process-level error control."
+  },
+  "reviewed_properties": [
+    "The host issues data-use-assessment/1 only for an exact owned successful compilation and its intact dependency versions. Generic sources and workers cannot mint the reserved namespace or call the operator operations.",
+    "Prior knowledge starts at the original formalization and traverses source references, exposure, worker context and job bindings. Later compiler-added dependencies are not automatically mislabeled prior LLM knowledge; target IDs already in the original ancestry are never subtracted.",
+    "Required missing sources are integrity gaps. Opaque exposure annotations remain unresolved; the limited exploratory pass neither erases them nor claims clean holdout.",
+    "Protected assessment/calibration ancestry and unsupported operations ancestry retain gaps for this implemented scope. Host-owned typed implementation packages/certificates are separately reported as technical provenance, and their ancestors are still traversed.",
+    "Provider document descriptors, owned blobs, exact hashes, URLs and full original receipt validation are retained. Exact reviewed README and terms pins, rather than free rights prose, constrain personal non-production research use.",
+    "The assumed delay is checked against the exact normalizer binding and feature-definition parameters and availability meaning. Historical publication and vintage remain unknown.",
+    "Historical plan child output and its raw gate list remain unchanged. Optional data-use evidence is retained in the immutable input capsule and outer record; the current view removes only the scoped data/exposure gate and explicitly returns protected_target_admission=false.",
+    "Same-key historical retrieval preserves immutable records. Current use rechecks checker currency, exact findings and typed technical revocation. A changed prerequisite during plan preparation prevents commitment.",
+    "An unreadable or changed installed checker fails closed. All scientific readiness, allocation and freeze flags remain false."
+  ],
+  "resolved_review_findings": [
+    {
+      "finding": "Raw operations ancestry could hide behind a development wrapper.",
+      "resolution": "The final walker reports unsupported operations separately from owned typed technical packages/certificates; unsupported operations cause a controlled-import gap, including through technical ancestry."
+    },
+    {
+      "finding": "An unreadable checker file originally escaped current-status handling.",
+      "resolution": "checker_current returns false on OSError; current use remains non-current rather than reusing a pass."
+    },
+    {
+      "finding": "Existing assessment ancestry is rejected more conservatively than the entire contract requires for exploration.",
+      "resolution": "This is a bounded implemented-scope limitation, not a new universal prohibition on qualified analysis of previously exposed history or on operationally inspired future research."
+    }
+  ],
+  "checks": {
+    "independently_executed": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_use.py"
+      ],
+      "started_at": "2026-10-26T15:26:11.095833+00:00",
+      "finished_at": "2026-10-26T15:26:15.825592+00:00",
+      "seconds": 4.729759,
+      "exit_code": 0,
+      "log": "20261026T152611-26bf091c.log",
+      "record_file": ".trf-runtime/data-admission-checks-2026-10-26/20261026T152611-26bf091c.json",
+      "record_sha256": "2cf3bced2aaa52b1bfefb4523bedb51144903ef995259e68ba3d0c951a42557a",
+      "log_sha256": "55ccd9b50587c272a6db592aa3ae67f1d3966d94b120dff7f0d20de9d35fadad",
+      "test_count": 10,
+      "unittest_seconds": 4.054
+    },
+    "parent_executed_full_current_suite_reviewed": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_use*.py"
+      ],
+      "started_at": "2026-10-26T15:25:32.278652+00:00",
+      "finished_at": "2026-10-26T15:28:13.089707+00:00",
+      "seconds": 160.811055,
+      "exit_code": 0,
+      "log": "20261026T152532-83270ea2.log",
+      "record_file": ".trf-runtime/data-admission-checks-2026-10-26/20261026T152532-83270ea2.json",
+      "record_sha256": "86bdbe0af34928ed47bd6c1d620ace23d265111511493aa0d5bc8017e3f0b718",
+      "log_sha256": "9e6188699b95d58053bcbb565acffa66b529991ea61a299ecefd18d31e9da2e7",
+      "test_count": 24,
+      "unittest_seconds": 160.236
+    },
+    "unique_new_unit_tests": 24,
+    "counting_note": "The independent 10 are included in the final 24 and are not counted twice. No repository-wide full-suite claim.",
+    "additional_parent_checks_reviewed": [
+      {
+        "command": [
+          "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+          "-B",
+          ".trf-runtime/data-admission-checks-2026-10-26/provider_documents_check.py"
+        ],
+        "started_at": "2026-10-26T15:17:01.290478+00:00",
+        "finished_at": "2026-10-26T15:17:02.287447+00:00",
+        "seconds": 0.996969,
+        "exit_code": 0,
+        "log": "20261026T151701-55ef79cf.log",
+        "record_file": ".trf-runtime/data-admission-checks-2026-10-26/20261026T151701-55ef79cf.json",
+        "record_sha256": "b2fa9e6de0e485a76c1bf4b5471953df23d7862cfb96f003623fbae605205f25",
+        "log_sha256": "3ddacb68cd5e660d5dbaf46d987e54ab9112ef33e27dc46707678a6d4a05a008",
+        "test_count": null,
+        "unittest_seconds": null
+      },
+      {
+        "command": [
+          "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+          "-B",
+          ".trf-runtime/data-admission-checks-2026-10-26/real_data_use_check.py"
+        ],
+        "started_at": "2026-10-26T15:26:02.090046+00:00",
+        "finished_at": "2026-10-26T15:26:12.141441+00:00",
+        "seconds": 10.051395,
+        "exit_code": 0,
+        "log": "20261026T152602-cfbd1ef9.log",
+        "record_file": ".trf-runtime/data-admission-checks-2026-10-26/20261026T152602-cfbd1ef9.json",
+        "record_sha256": "950c442b3e44633aa3d98d5b8af0be5afaa8e3c251c8ab60fa4b3f7d074f459e",
+        "log_sha256": "e4cee8566f645315de081daecb00c04c6c79ab8b457d41cca382280373eabb65",
+        "test_count": null,
+        "unittest_seconds": null
+      },
+      {
+        "command": [
+          "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+          "-B",
+          ".trf-runtime/data-admission-checks-2026-10-26/real_data_use_check.py"
+        ],
+        "started_at": "2026-10-26T15:27:36.110804+00:00",
+        "finished_at": "2026-10-26T15:28:00.854099+00:00",
+        "seconds": 24.743295,
+        "exit_code": 0,
+        "log": "20261026T152736-c11a7bc5.log",
+        "record_file": ".trf-runtime/data-admission-checks-2026-10-26/20261026T152736-c11a7bc5.json",
+        "record_sha256": "cfd6f63b1050347f21c0c14d5cda475f6ecb178abe4aabb92cb3230935fd828e",
+        "log_sha256": "cad3b6155ebc8bb75d33d41d441c28cdeeb549726e415c6c1d5e0480e5f4018a",
+        "test_count": null,
+        "unittest_seconds": null
+      }
+    ]
+  },
+  "retained_failures": [
+    {
+      "record": "20261026T151335-1b4415c3.json",
+      "exit_code": 1,
+      "test_count": 1,
+      "finding": "Reserved namespace red test failed before the new namespace was installed."
+    },
+    {
+      "record": "20261026T151913-48bd00c6.json",
+      "exit_code": 1,
+      "test_count": 16,
+      "errors": 8,
+      "finding": "Provider document checking used public broker reads inside an existing transaction and raised sqlite3.OperationalError. Fixed by internal owned artifact/blob reads while retaining validate_provider_document_bytes."
+    }
+  ],
+  "actual_retained_observation": {
+    "scope": {
+      "compiled_id": "f7a2cd7d6f020708a93ccaee41330256798a92251a0a8072387d2d9f4ac6713f",
+      "formalization_id": "43ad4bea85c2539a9cac8b2ede7972d86c18eb380e32485b14d3683e12296ad4",
+      "data_snapshot_id": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+      "catalog_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "feature_certificate_id": "0a7537664c1548f7c6dcf105371c9b041112a2e8fe60fc1ce54420dd2ad25f8d",
+      "feature_definitions_id": "f9164a9399e7a2d5dd89e3fd523187225aa5fecc0e8c8a0f75a66f39c0554ffc",
+      "normalization_id": "f594c9e3de021e72a788865bd757f9a9ecc17b4373c3002fe5fb5db574e63426",
+      "partition": "development",
+      "universe": {
+        "end": "2020-01-03T00:00:00Z",
+        "instruments": [
+          "BTCUSDT"
+        ],
+        "start": "2020-01-02T00:00:00Z"
+      },
+      "row_window": {
+        "end": "2020-01-03T00:00:00Z",
+        "instruments": [
+          "BTCUSDT"
+        ],
+        "start": "2020-01-01T23:45:00Z"
+      },
+      "purpose": "Personal non-production historical research",
+      "use": "qualified_historical_exploration"
+    },
+    "assessment_id": "33922c89cfbf500d54538fd942b4e2f3ea4b2cda3703132e8be48cdebce7dcf8",
+    "record": ".trf-runtime/data-admission-checks-2026-10-26/real-data-use-20261026T152800.json",
+    "record_sha256": "cad3b6155ebc8bb75d33d41d441c28cdeeb549726e415c6c1d5e0480e5f4018a",
+    "checker_sha256": "697ed8bc748b75b43b3f7bf4fcc2b025f02c920f66b3d9e530d490cd1582fc01",
+    "known_ancestry_artifacts": 610,
+    "assumed_delay_seconds": 900,
+    "provider_calls": 0,
+    "plan_id": "74c7fecaf99cb89cd8946817549d2f4d36c4138e8f1002c1647bca5db91b5ca0",
+    "prior_plan_unchanged": true,
+    "current_remaining_gates": [
+      "independent_semantic_review",
+      "composition_conformance",
+      "calibrated_estimator_and_information_plan",
+      "atomic_allocation_and_freeze"
+    ],
+    "data_use_scope": "exact_compiled_development_exploration_only",
+    "protected_target_admission": false,
+    "meaning": "A pre-existing engineering-selected BTCUSDT development probe passed exact qualified-use inspection with target exposure retained. No new hypothesis or market verdict was generated.",
+    "reviewer_access": "The reviewer inspected the retained metadata observation and script, not market rows or registry credentials. The parent ran the actual owned observation."
+  },
+  "provider_document_observation": {
+    "record": ".trf-runtime/data-admission-checks-2026-10-26/provider-documents-result.json",
+    "record_sha256": "3ddacb68cd5e660d5dbaf46d987e54ab9112ef33e27dc46707678a6d4a05a008",
+    "checked_at": "2026-10-26T15:17:02.268456+00:00",
+    "documents": [
+      {
+        "provider_documents_id": "88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438",
+        "retrieved_at": "2026-10-25T02:56:28Z",
+        "checks": [
+          {
+            "name": "README.md",
+            "source_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/README.md",
+            "sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+            "size": 5282,
+            "current_upstream_sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+            "matches_current_upstream": true
+          },
+          {
+            "name": "TERMS_AND_CONDITIONS.md",
+            "source_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/TERMS_AND_CONDITIONS.md",
+            "sha256": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0",
+            "size": 9807,
+            "current_upstream_sha256": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0",
+            "matches_current_upstream": true
+          }
+        ]
+      }
+    ],
+    "qualification": "Parent-verified exact retained/current provider document bytes. This review checks the binding and limited declared purpose; it does not provide a general legal entitlement, redistribution, production or deployment approval."
+  },
+  "limitations": [
+    "Only exact qualified development exploration is positively supported. Protected assessment/corroboration admission and atomic allocation/freeze remain unfinished.",
+    "Synthetic integration fixtures substitute document pins explicitly; their pass alone is not real-provider licensing evidence. The separate retained-provider observation supplies the actual exact-byte check.",
+    "The original source acquisition, market data truth, actual historical publication/vintage, unknown external/model exposure and scientific missingness are not proven by this software review.",
+    "No independent confirmation, outcome eligibility upgrade, statistical calibration, profitability, useful free discovery, operating-system sandbox or capital authority is established.",
+    "The checker may hash retained data/source blobs through existing binding validation; denial of _load_reference_data in the probe establishes no row expansion, not zero I/O.",
+    "No paid calls were executed by this reviewer. This report is an implementation review, not a scientific certificate."
+  ],
+  "source_sha256": {
+    ".trf-runtime/data-admission-checks-2026-10-26/check.py": "f24585b0e011b922802015aca90458128df554e751fe5f6f4d54656ad196e355",
+    ".trf-runtime/data-admission-checks-2026-10-26/provider_documents_check.py": "2d104ad2d59e88d03dbec624fe393fc029b797cbe1dd18572fb23f6dba2b6abe",
+    ".trf-runtime/data-admission-checks-2026-10-26/real_data_use_check.py": "13231e02459dbc3527b7ef4b4ac70d120bffe3b28fd42e27067e8de02e9bb884",
+    "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+    "docs/architecture/04_DEFINITIONS.md": "3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9",
+    "docs/architecture/05_REQUIREMENTS.md": "b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "tests/test_binding.py": "ba338f30875c6ca6c760d28c9f845b2e7ce970bb5649b1c0d00b741eb7bd932e",
+    "tests/test_data_use.py": "8765b390ab9e1e0a9e13e5de7d7496fa2ead0444d6324da75afecf7c7daa2438",
+    "tests/test_data_use_binding.py": "1fed7cebae182010859aefce64eb8a71d3e9c8177595b6cf211fed9961cbe30f",
+    "tests/test_evaluation_plans.py": "82775936e5de1f4f1ee6174667b4ddb28bfcf2bcb8525a16e1284284b341680e",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/auxiliary.py": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "d641bbe48d16275d4d0890e5f469b89decdb892c533773640557a3a1daf9b0f1",
+    "trading_researcher/bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "be7028bed86d82cfccb25c3ac0d926cb84bfa5d7a448168d5a898cbe38d4b6ea",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/composition.py": "5cb5a66c6884d6237f3e334234f72230c94ae9d1d904b8eafd3e33c78b6c30a7",
+    "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "4ba7dfa72f29748508c0c69fb1353e4588a491afaafed396a0201721cb34a91c",
+    "trading_researcher/DATA.md": "1688ae61b3af462d1cd5e59920b4751b52133b87197a00507ae19719258d634d",
+    "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+    "trading_researcher/data_use.py": "697ed8bc748b75b43b3f7bf4fcc2b025f02c920f66b3d9e530d490cd1582fc01",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "a4fbbacb16ae4128c32f4b43b6135de5122fe0f35c68ccaf6606bd5b7e660a58",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/FEATURES.md": "cac040ca6677f7837ea617bdb3bb1ba21a8d3bac968286a7d860cb48cf67e254",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+    "trading_researcher/memory.py": "00c973e3e1c98fd44cf73b546b6484e14e4048ac70a82adf239973dd49a94074",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/revocations.py": "8f273a52201a8aa29cfe7111ac813b5ac3d10fdc77d57e99ce29ff2feecac68d",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "16088f940b7dc76ddbac245d2ef14b0d2377db1e4bd38b88e788f17138aa952f",
+    "trading_researcher/study_pipeline.py": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+    "trading_researcher/study_runs.py": "84b396f6dcc3d0fdf67adcd80d11c348bb99d37508bb269e2f408002f902040b",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "next_action": "Preserve this exact qualified-use evidence and continue the separately open scientific gates. Any later protected target must receive its own exact scope/exposure/allocation checks; do not transfer this development pass."
+}

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-26T15:17:02.268456+00:00",
+  "documents": [
+    {
+      "provider_documents_id": "88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438",
+      "retrieved_at": "2026-10-25T02:56:28Z",
+      "checks": [
+        {
+          "name": "README.md",
+          "source_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/README.md",
+          "sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+          "size": 5282,
+          "current_upstream_sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+          "matches_current_upstream": true
+        },
+        {
+          "name": "TERMS_AND_CONDITIONS.md",
+          "source_url": "https://raw.githubusercontent.com/binance/binance-public-data/master/TERMS_AND_CONDITIONS.md",
+          "sha256": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0",
+          "size": 9807,
+          "current_upstream_sha256": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0",
+          "matches_current_upstream": true
+        }
+      ]
+    }
+  ],
+  "qualification": "Exact reviewed provider documentation only; no market values read and no historical vintage or deployment permission established."
+}

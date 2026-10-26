@@ -1,8 +1,10 @@
 # Current State
 
-Updated October 26, 2026 for composition conformance after technical revocation, meaning-review integration and requested GitHub publication. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
+Updated October 26, 2026 for qualified development data use after composition conformance, technical revocation, meaning-review integration and requested GitHub publication. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
 
 ## Repository and existing artifacts
+
+The [data-use continuation](../reviews/implementation-2026-10-25/DATA_USE_INTEGRATION_2026-10-26.md) adds an owned assessment for an exact compiled development use. Reviewed provider bytes, independent feature replay, matching delay parameters and original candidate ancestry are checked together. Unknown training exposure and historical vintage remain qualified. The current plan gate can be satisfied only for this exploratory scope; protected target admission remains false. Real retained Binance documents and the existing development probe have been exercised without new model calls or market-outcome calculation. Protected target binding, calibrated information/evaluation, atomic family freeze and the full seven-package objective remain incomplete.
 
 The [composition continuation](../reviews/implementation-2026-10-25/COMPOSITION_INTEGRATION_2026-10-26.md) adds independent fixed checks for the retained binding driver and an owned certificate for the exact compiled candidate. Plan preparation retains its evidence and current inspection can satisfy only composition conformance. Data/exposure, semantic review, calibrated information and atomic freeze remain distinct. Source packages, interruptions, backup/replay and revocation preserve historical evidence.
 

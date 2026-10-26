@@ -52,6 +52,8 @@ No assessment access, budget reservation, scientific result release, semantic ap
 
 ## Evidence and unfinished requirements
 
+An optional `data_use_assessment_id` binds the [qualified data-use assessment](DATA_USE.md) to this exact development compilation. The input capsule and completed plan retain `data_use_at_preparation`, and commitment rechecks it. Current inspection can remove `scientific_data_and_exposure_acceptance` only for `exact_compiled_development_exploration_only`; `protected_target_admission` remains false. Unknown model exposure, assumed availability, existing outcome eligibility gaps, all other gates and historical raw plan bytes are preserved. Rebinding to protected data requires a separate future admission and allocation path.
+
 An optional `composition_certificate_id` binds the [independent composition checks](COMPOSITION.md) to the exact compiled identity. Preparation retains `composition_at_preparation` and rechecks it before commitment. Fresh inspection removes only `composition_conformance` when satisfied. Revoked, stale or unavailable certificates keep this prerequisite open; historical plans and all other gates remain intact.
 
 [Technical revocation](REVOCATIONS.md) is checked for the compiled hypothesis and every declared development diagnostic before new use and commitment. A diagnostic can carry a different compiler dependency. `inspect_evaluation_plan` additionally reports fresh `dependency_use`; historical plan/calculator bytes stay unchanged. A completed request key is not a new admission token.

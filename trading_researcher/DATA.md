@@ -1,5 +1,7 @@
 # Bound normalized data snapshots
 
+The later [qualified data-use check](DATA_USE.md) consumes this exact snapshot through a certified compiled hypothesis. It can qualify personal development exploration while retaining exposure and timing uncertainty; structural snapshot registration itself still grants no such qualification.
+
 This implements the data-binding portion of IF-01 under [research-contract/1.0 sections 6 and 8](../docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md). It binds an exact supplied catalog, normalized row files, retained raw sources and acquisition assertions. It does not certify those assertions, reconstruct historical vintages, establish feature meaning, allocate confirmation data or grant scientific execution authority.
 
 The host operation `register_data_snapshot(catalog_id, row_source_ids, manifest)` is available through the existing authenticated operator RPC. The catalog must be a retained `feature-catalog/1` source with exactly `schema` and `features`, using the [reference expression types](EXPRESSIONS.md). Ordered row source IDs must resolve to owned `blob-source/1` files imported through [external storage](STORAGE.md). A filename or an uncommitted digest cannot substitute for an artifact reference. Models cannot register snapshots or read their bytes through this operation.

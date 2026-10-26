@@ -97,12 +97,14 @@ class DependencyRevocations:
             args=body['dependency_arguments']
             return [body['data_snapshot_id'],body['source_package_id'],args['feature_certificate_id'],args['reference_certificate_id']]
         if schema=='reference-execution/1':return [body['compiled_id']]
+        if schema=='data-use-assessment/1':return [body['compiled_id']]
         if schema=='composition-input/1':return [body['compiled_id'],body['source_package_id']]
         if schema=='composition-certificate/1':return [body['input_capsule_id']]
         if schema in {'evaluation-plan/1','evaluation-plan-input/1'}:
             request=body['request']
             return [request['compiled_id'],*request['dependence']['development_refs'],
-                *([request['composition_certificate_id']] if 'composition_certificate_id' in request else [])]
+                *([request['composition_certificate_id']] if 'composition_certificate_id' in request else []),
+                *([request['data_use_assessment_id']] if 'data_use_assessment_id' in request else [])]
         if schema in REQUEST_INPUTS:
             request=body['request']
             return [request[k] for k in ('plan_id','execution_id','diagnostics_id') if k in request]

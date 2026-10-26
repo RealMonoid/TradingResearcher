@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-10-26T15:28:00.822661+00:00",
+  "assessment_id": "33922c89cfbf500d54538fd942b4e2f3ea4b2cda3703132e8be48cdebce7dcf8",
+  "checker_sha256": "697ed8bc748b75b43b3f7bf4fcc2b025f02c920f66b3d9e530d490cd1582fc01",
+  "compiled_id": "f7a2cd7d6f020708a93ccaee41330256798a92251a0a8072387d2d9f4ac6713f",
+  "scope": {
+    "compiled_id": "f7a2cd7d6f020708a93ccaee41330256798a92251a0a8072387d2d9f4ac6713f",
+    "formalization_id": "43ad4bea85c2539a9cac8b2ede7972d86c18eb380e32485b14d3683e12296ad4",
+    "data_snapshot_id": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+    "catalog_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+    "feature_certificate_id": "0a7537664c1548f7c6dcf105371c9b041112a2e8fe60fc1ce54420dd2ad25f8d",
+    "feature_definitions_id": "f9164a9399e7a2d5dd89e3fd523187225aa5fecc0e8c8a0f75a66f39c0554ffc",
+    "normalization_id": "f594c9e3de021e72a788865bd757f9a9ecc17b4373c3002fe5fb5db574e63426",
+    "partition": "development",
+    "universe": {
+      "end": "2020-01-03T00:00:00Z",
+      "instruments": [
+        "BTCUSDT"
+      ],
+      "start": "2020-01-02T00:00:00Z"
+    },
+    "row_window": {
+      "end": "2020-01-03T00:00:00Z",
+      "instruments": [
+        "BTCUSDT"
+      ],
+      "start": "2020-01-01T23:45:00Z"
+    },
+    "purpose": "Personal non-production historical research",
+    "use": "qualified_historical_exploration"
+  },
+  "rights": {
+    "provider_documents_id": "88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438",
+    "document_sha256": {
+      "README.md": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+      "TERMS_AND_CONDITIONS.md": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0"
+    },
+    "receipt_sha256": "35849649e44837a86c94705be99c6a5fd6352d43c4f5248287f654c7161392a1",
+    "retrieved_at": "2026-10-25T02:56:28Z",
+    "reviewed_bytes_match": true,
+    "purpose": "Personal non-production historical research",
+    "basis": "Reviewed dataset terms v1.0 section 4.1 and research-contract/1.0 section 6; no commercial or production permission."
+  },
+  "availability": {
+    "basis": "assumed",
+    "delay_seconds": 900,
+    "historical_publication_time": null,
+    "historical_vintage_verified": false
+  },
+  "exposure": {
+    "target_in_candidate_ancestry": true,
+    "model_training_exposure": "UNKNOWN",
+    "evidence_origin": null,
+    "origin_reason": "Training exposure and historical publication vintage are unverified; known and unresolved candidate exposure is retained.",
+    "independent_confirmation": false
+  },
+  "prior_knowledge_count": 610,
+  "unresolved_exposure_refs": [],
+  "protected_knowledge_ids": [],
+  "operations_knowledge_ids": [],
+  "current": {
+    "assessment_id": "33922c89cfbf500d54538fd942b4e2f3ea4b2cda3703132e8be48cdebce7dcf8",
+    "compiled_id": "f7a2cd7d6f020708a93ccaee41330256798a92251a0a8072387d2d9f4ac6713f",
+    "status": "QUALIFIED_EXPLORATION",
+    "qualified_exploration_data_use": "SATISFIED",
+    "scientific_readiness": false,
+    "independent_confirmation": false,
+    "protected_target_admission": false
+  },
+  "plan_id": "74c7fecaf99cb89cd8946817549d2f4d36c4138e8f1002c1647bca5db91b5ca0",
+  "prior_plan_unchanged": true,
+  "plan_view": {
+    "plan_id": "74c7fecaf99cb89cd8946817549d2f4d36c4138e8f1002c1647bca5db91b5ca0",
+    "status": "POLICY_DRAFT",
+    "gap": null,
+    "meaning_review": null,
+    "composition": null,
+    "data_use": {
+      "assessment_id": "33922c89cfbf500d54538fd942b4e2f3ea4b2cda3703132e8be48cdebce7dcf8",
+      "compiled_id": "f7a2cd7d6f020708a93ccaee41330256798a92251a0a8072387d2d9f4ac6713f",
+      "status": "QUALIFIED_EXPLORATION",
+      "qualified_exploration_data_use": "SATISFIED",
+      "scientific_readiness": false,
+      "independent_confirmation": false,
+      "protected_target_admission": false
+    },
+    "current_remaining_gates": [
+      "independent_semantic_review",
+      "composition_conformance",
+      "calibrated_estimator_and_information_plan",
+      "atomic_allocation_and_freeze"
+    ],
+    "data_use_scope": "exact_compiled_development_exploration_only",
+    "protected_target_admission": false,
+    "dependency_use": {
+      "artifact_id": "74c7fecaf99cb89cd8946817549d2f4d36c4138e8f1002c1647bca5db91b5ca0",
+      "status": "NOT_REVOKED",
+      "checked_versions": [
+        "0a7537664c1548f7c6dcf105371c9b041112a2e8fe60fc1ce54420dd2ad25f8d",
+        "2fb850ec1d8ca119193e8ed976cab3076980c1ea4fbee1bd3ebd707edcd6ec69",
+        "33922c89cfbf500d54538fd942b4e2f3ea4b2cda3703132e8be48cdebce7dcf8",
+        "46b5e30126e533ac4f9f2d622e17cc92a312a0fecc950455ec95046c2606fd3c",
+        "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+        "74c7fecaf99cb89cd8946817549d2f4d36c4138e8f1002c1647bca5db91b5ca0",
+        "ba1168382f4d2c98fdafde3c9b71b75afd889ea18402bf9e091b7d1127f452c2",
+        "d9150a513482c7cdfc8fae0ed5eca7a6e7e5c1a431c6596bba3c9d7f2ae5a1e2",
+        "e565baabd8bc321786afd8488dd84c7af0e1ad2e10288381e7e1fffe2bcf49b0",
+        "f7a2cd7d6f020708a93ccaee41330256798a92251a0a8072387d2d9f4ac6713f",
+        "f9164a9399e7a2d5dd89e3fd523187225aa5fecc0e8c8a0f75a66f39c0554ffc"
+      ],
+      "invalidations": [],
+      "unknown_bindings": [],
+      "scientific_readiness": false,
+      "qualification": "Current supported technical bindings only; NOT_REVOKED is not validity or scientific admission."
+    },
+    "scientific_readiness": false,
+    "allocation_reserved": false,
+    "frozen": false
+  },
+  "provider_calls": 0,
+  "scientific_readiness": false,
+  "qualification": "Existing engineering-selected development probe with actual retained Binance archives; not a new LLM discovery, protected assessment admission, calibration or profitability result."
+}

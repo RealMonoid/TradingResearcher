@@ -16,6 +16,7 @@ from .evaluation_policy import require
 from .information_diagnostics import diagnose
 from .outcomes import _rational, _read_rational, reference_contrast, STATES
 from .stationary_bootstrap import randomness
+from .source_process_scope import diagnose_source_process
 
 
 SPEC = 'binary-population-spec/1'
@@ -53,8 +54,11 @@ def build_model(report, diagnostics, spec, effects):
     require(type(diagnostics) is dict, 'Bound development diagnostics required')
     observed = diagnose(report, diagnostics.get('lags'))
     require(digest(observed) == digest(diagnostics), 'Population diagnostics differ from the exact case inputs')
+    source_scope = diagnose_source_process(report)
     model = {'schema': MODEL, 'status': 'MODEL_OR_INFORMATION_GAP', 'specification': spec,
         'diagnostics': deepcopy(diagnostics), 'diagnostics_hash': digest(diagnostics), 'effects': deepcopy(effects),
+        'source_process_scope': source_scope,
+        'source_identity_preservation': ('NOT_GUARANTEED' if source_scope['identity'] is not None else 'NOT_ASSESSED'),
         'population': None, 'scenarios': [], 'lattice_size': None, 'gaps': [],
         'assumption_status': 'DECLARED_STRESS_NOT_FITTED_OR_VALIDATED',
         'limitations': ['pooled_homogeneous_response_rates', 'exogenous_joint_masks',

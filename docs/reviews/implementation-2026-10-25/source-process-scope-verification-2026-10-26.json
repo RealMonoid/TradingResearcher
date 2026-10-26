@@ -1,0 +1,535 @@
+{
+  "schema": "source-process-scope-verification/1",
+  "date": "2026-10-26",
+  "baseline_commit": "8f43357edcb439dc160bd8f6f264138858c96805",
+  "status": "FOCUSED_CHECKS_PASS",
+  "unique_focused_tests": 91,
+  "test_ids": [
+    "test_expressions.ExpressionTests.test_depth_limit_counts_node_levels_including_the_root",
+    "test_expressions.ExpressionTests.test_finite_resource_budget_is_enforced",
+    "test_expressions.ExpressionTests.test_independent_golden_cases",
+    "test_expressions.ExpressionTests.test_program_cannot_substitute_a_different_catalog_version",
+    "test_family_adversarial.FamilyHostBoundaryTests.test_family_input_and_result_follow_existing_typed_revocation_graph",
+    "test_family_adversarial.FamilyHostBoundaryTests.test_private_plan_class_cannot_be_laundered_through_development_diagnostics",
+    "test_family_adversarial.FamilyHostBoundaryTests.test_protected_diagnostics_are_denied_before_development_binding",
+    "test_family_adversarial.FamilyPipelineAdversarialTests.test_actual_generated_family_uses_bound_design_and_shared_bootstrap_seed",
+    "test_family_adversarial.FamilyPipelineAdversarialTests.test_exhaustive_common_lattice_matches_fixed_joint_probabilities",
+    "test_family_adversarial.FamilyPipelineAdversarialTests.test_infeasible_required_model_retains_all_outcomes_without_bootstrap",
+    "test_family_adversarial.FamilyPipelineAdversarialTests.test_information_gap_is_distinct_from_invalid_input_failure",
+    "test_family_adversarial.FamilyPipelineAdversarialTests.test_second_component_inherits_global_deadline",
+    "test_family_adversarial.FamilyPipelineAdversarialTests.test_unstable_classification_does_not_erase_actual_interval_miscoverage",
+    "test_family_oracles.FamilyEventOracleTests.test_boundary_error_and_known_miss_survive_unavailable_sibling",
+    "test_family_oracles.FamilyEventOracleTests.test_mixed_boundary_and_justified_alternative_have_separate_events",
+    "test_family_oracles.FamilyEventOracleTests.test_negative_direction_uses_assigned_negative_boundary_and_alternative",
+    "test_family_oracles.FamilyEventOracleTests.test_null_false_support_survives_missing_boundary_component",
+    "test_family_oracles.FamilyEventOracleTests.test_unavailable_interval_is_not_joint_coverage_success",
+    "test_family_oracles.SharedTemplateFamilyOracleTests.test_fixed_rate_equations_and_strict_threshold_edges",
+    "test_family_oracles.SharedTemplateFamilyOracleTests.test_invalid_family_or_unusable_model_cannot_drop_a_component",
+    "test_family_oracles.SharedTemplateFamilyOracleTests.test_order_replay_and_original_input_are_preserved",
+    "test_family_oracles.SharedTemplateFamilyOracleTests.test_response_components_have_distinct_individual_streams",
+    "test_family_oracles.SharedTemplateFamilyOracleTests.test_shared_mask_unknown_condition_and_hidden_time_evolution",
+    "test_information_study.InformationStudyTests.test_manifest_has_complete_fixed_inventory_and_distinct_seed_streams",
+    "test_information_study.InformationStudyTests.test_no_partial_grid_nomination",
+    "test_information_study.InformationStudyTests.test_outward_interval_endpoint_hand_cases",
+    "test_information_study.InformationStudyTests.test_profile_cannot_change_effects_grid_or_boolean_counts",
+    "test_information_study.InformationStudyTests.test_reservations_are_charged_until_settled",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_accounting_rejects_duplicate_unplanned_unreserved_and_boolean_history",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_closed_form_cp_roots_have_fixed_outward_grid_endpoints",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_complete_nonmonotone_grid_selects_smallest_tested_target_only",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_contract_one_sided_threshold_counts_are_not_point_power_counts",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_fixed_accounting_charges_unknown_use_and_all_retries_without_reset",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_information_gap_stays_in_denominator_but_technical_failure_blocks_selection",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_inventory_is_detached_and_every_population_bootstrap_seed_is_distinct",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_malformed_json_identity_and_enum_values_raise_controlled_validation",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_manifest_rejects_unassigned_effects_noninteger_fields_and_resource_expansion",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_missing_duplicate_unplanned_and_contradictory_results_are_not_hidden",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_nondirectional_selection_requires_every_sign_and_stress",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_outer_interval_rejects_invalid_types_counts_and_numeric_envelopes",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_overrun_is_never_truncated_to_a_cap_or_refunded",
+    "test_information_study_adversarial.InformationStudyAdversarialTests.test_small_binomial_exhaustion_has_at_least_declared_pointwise_coverage",
+    "test_outcomes.OutcomeTests.test_binary_reports_cannot_contain_outcomes_outside_zero_and_one",
+    "test_outcomes.OutcomeTests.test_cancellation_cannot_hide_an_oversized_final_contrast",
+    "test_outcomes.OutcomeTests.test_changed_status_cannot_conceal_review_trace_or_pending_metadata",
+    "test_outcomes.OutcomeTests.test_contrast_rejects_duplicate_missing_cases_and_malformed_values",
+    "test_outcomes.OutcomeTests.test_contrast_retains_numeric_resource_stop_without_partial_effect",
+    "test_outcomes.OutcomeTests.test_future_data_cannot_change_decision_scope",
+    "test_outcomes.OutcomeTests.test_independent_golden_cases",
+    "test_outcomes.OutcomeTests.test_missing_window_member_cannot_hide_declared_partition_crossing",
+    "test_outcomes.OutcomeTests.test_missing_window_member_cannot_hide_late_predecision_publication",
+    "test_outcomes.OutcomeTests.test_request_boundaries_and_no_silent_coercion",
+    "test_outcomes.OutcomeTests.test_type_and_catalog_boundaries_are_enforced",
+    "test_outcomes.OutcomeTests.test_unrelated_instrument_and_later_rows_cannot_change_cases",
+    "test_population_models.PopulationModelTests.test_bounds_and_resource_inputs_are_exact",
+    "test_population_models.PopulationModelTests.test_diagnostics_and_model_cannot_be_substituted",
+    "test_population_models.PopulationModelTests.test_infeasible_scenario_is_not_clipped_or_dropped",
+    "test_population_models.PopulationModelTests.test_population_equations_include_unknown_conditions",
+    "test_population_models.PopulationModelTests.test_world_replays_preserves_masks_and_uses_synthetic_identity",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_common_lattice_covariance_hand_identity_is_not_realized_sample_truth",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_degenerate_and_infeasible_scenarios_are_not_repaired_or_selected_away",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_exact_bernoulli_mapping_enumerates_every_integer_atom",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_exact_population_truth_accounts_for_unknown_and_all_signed_scenarios",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_joint_mask_sequence_and_latent_updates_include_ineligible_times",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_large_exact_lattice_retains_resource_gap_without_decimal_conversion",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_malformed_or_missing_model_fields_fail_with_controlled_validation",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_persistent_chains_and_circular_mask_continuation_use_declared_integer_choices",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_returned_model_does_not_alias_supplied_diagnostics",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_source_boundary_and_outcome_gap_map_separately_from_artificial_maturity",
+    "test_population_models_adversarial.PopulationModelAdversarialTests.test_specification_seed_scenario_and_bound_source_validation",
+    "test_population_runs.PopulationRunTests.test_forged_world_bytes_are_denied_by_separate_replay",
+    "test_population_runs.PopulationRunTests.test_interruption_retains_original_recipe_and_replays_original_source",
+    "test_population_runs.PopulationRunTests.test_only_operator_and_owned_matching_diagnostics_are_admitted",
+    "test_population_runs.PopulationRunTests.test_owned_world_binds_plan_truth_input_source_and_replay",
+    "test_source_process_scope.SourceProcessScopeTests.test_actual_reference_execution_has_separate_observed_and_eligible_support",
+    "test_source_process_scope.SourceProcessScopeTests.test_fixed_stress_counterexample_is_not_source_process_execution",
+    "test_source_process_scope.SourceProcessScopeTests.test_model_retains_diagnostic_without_changing_declared_probabilities",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_constant_only_and_unsupported_window_have_no_generic_independence_claim",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_duplicate_and_reordered_case_keys_fail_existing_report_validation",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_exact_not_and_nested_lags_preserve_signed_value_identity",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_featurewise_and_whole_expression_lags_match_only_values_not_missingness",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_horizon_and_condition_lookback_both_contribute_with_negative_sign",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_literal_values_units_and_decimal_spellings_remain_exact",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_missing_current_intermediate_and_partner_rows_have_exclusive_buckets",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_no_catalog_alias_operator_or_commutation_equivalence_is_invented",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_no_observed_comparisons_never_becomes_process_adequacy",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_nonuniform_feature_shifts_are_not_a_single_time_translation",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_positive_offset_remains_descriptive_with_valid_review_gap_at_first_outcome",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_structurally_valid_observed_mismatch_is_retained_not_forced_equal",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_two_instruments_match_exact_timestamps_and_include_observed_terminal_conditions",
+    "test_source_process_scope_adversarial.SourceProcessScopeAdversarialTests.test_zero_offset_is_not_confused_with_no_identified_shift"
+  ],
+  "checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        ".trf-runtime/model-scope-checks-2026-10-26/inspect_actual.py"
+      ],
+      "started_at": "2026-10-26T19:28:20.281040+00:00",
+      "finished_at": "2026-10-26T19:28:20.466424+00:00",
+      "seconds": 0.185384,
+      "exit_code": 0,
+      "log": "20261026T192820-fa789118.log",
+      "record": "20261026T192820-fa789118.json",
+      "log_sha256": "5df9fc755c0c6497edbb5208a01c22a074be1e3e0474d7ffa2595366a79a7505"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_source_process_scope.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:38:01.257671+00:00",
+      "finished_at": "2026-10-26T19:38:01.472927+00:00",
+      "seconds": 0.215256,
+      "exit_code": 1,
+      "log": "20261026T193801-8a6fe0c7.log",
+      "record": "20261026T193801-8a6fe0c7.json",
+      "log_sha256": "133260cadcbec650dc9f98ca16dbb7d9af423fed4735a94b3500aa1be99c488d"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_source_process_scope.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:38:54.096933+00:00",
+      "finished_at": "2026-10-26T19:38:54.328677+00:00",
+      "seconds": 0.231744,
+      "exit_code": 0,
+      "log": "20261026T193854-e5bbb1ee.log",
+      "record": "20261026T193854-e5bbb1ee.json",
+      "log_sha256": "27ae28dbdddbb6a316ecc9555405e4f66aad795fd63156c19343bcc4aae3463a"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_population_models*.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:39:35.649143+00:00",
+      "finished_at": "2026-10-26T19:39:36.264921+00:00",
+      "seconds": 0.615778,
+      "exit_code": 0,
+      "log": "20261026T193935-104d54cc.log",
+      "record": "20261026T193935-104d54cc.json",
+      "log_sha256": "63bd2c2ed98b01e8a3d626b1aef46bec4e861db1cc1136b4756eb39955de2570"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        ".trf-runtime/model-scope-checks-2026-10-26/independent_red.py"
+      ],
+      "started_at": "2026-10-26T19:40:02.891484+00:00",
+      "finished_at": "2026-10-26T19:40:03.284757+00:00",
+      "seconds": 0.393273,
+      "exit_code": 1,
+      "log": "20261026T194002-96acd3e1.log",
+      "record": "20261026T194002-96acd3e1.json",
+      "log_sha256": "f42b4c9f08ccee05962e72f3c56f4e89d174ea369e78e22fe04de080fd966e81"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_population_runs.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:40:12.309709+00:00",
+      "finished_at": "2026-10-26T19:41:56.499204+00:00",
+      "seconds": 104.189495,
+      "exit_code": 0,
+      "log": "20261026T194012-dce795d4.log",
+      "record": "20261026T194012-dce795d4.json",
+      "log_sha256": "577256391caaeba0eced85d31a8c2882231b70c9df45ee6e854bdfcc43e0ab38"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        ".trf-runtime/model-scope-checks-2026-10-26/actual_scope.py"
+      ],
+      "started_at": "2026-10-26T19:40:12.359282+00:00",
+      "finished_at": "2026-10-26T19:40:16.166777+00:00",
+      "seconds": 3.807495,
+      "exit_code": 0,
+      "log": "20261026T194012-ee525bd9.log",
+      "record": "20261026T194012-ee525bd9.json",
+      "log_sha256": "60fe051e694c30ee196849cda543b8b415eef617d77c057edc5133d9a3551b24"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_information_study*.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:40:47.289861+00:00",
+      "finished_at": "2026-10-26T19:40:48.486460+00:00",
+      "seconds": 1.196599,
+      "exit_code": 0,
+      "log": "20261026T194047-453ce3e8.log",
+      "record": "20261026T194047-453ce3e8.json",
+      "log_sha256": "25773e96409902477008c7d0caf0cb547df71f611262dda2a89e3f3151088e06"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        ".trf-runtime/model-scope-checks-2026-10-26/independent_red.py"
+      ],
+      "started_at": "2026-10-26T19:40:47.481469+00:00",
+      "finished_at": "2026-10-26T19:40:48.163859+00:00",
+      "seconds": 0.68239,
+      "exit_code": 1,
+      "log": "20261026T194047-79bc9961.log",
+      "record": "20261026T194047-79bc9961.json",
+      "log_sha256": "b078079e61044319a739153346e50db7745b78b2a1c751f5dc724712535bfe88"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_source_process_scope*.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:40:47.319509+00:00",
+      "finished_at": "2026-10-26T19:40:47.656186+00:00",
+      "seconds": 0.336677,
+      "exit_code": 0,
+      "log": "20261026T194047-8b89f809.log",
+      "record": "20261026T194047-8b89f809.json",
+      "log_sha256": "51edc80f1ab5fa6dfcecacdee6e2d3ebaff948ed012ba70306a3fcd5d79d1e4a"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_source_process_scope_adversarial.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T19:40:50.440609+00:00",
+      "finished_at": "2026-10-26T19:40:50.661520+00:00",
+      "seconds": 0.220911,
+      "exit_code": 0,
+      "log": "20261026T194050-86ba867d.log",
+      "record": "20261026T194050-86ba867d.json",
+      "log_sha256": "953f2078f018a22b7c899530a6a43f8f2bb65d3c64fdd7effc137723a3a3f3cf"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        ".trf-runtime/model-scope-checks-2026-10-26/regressions.py"
+      ],
+      "started_at": "2026-10-26T19:41:46.593519+00:00",
+      "finished_at": "2026-10-26T19:41:48.243491+00:00",
+      "seconds": 1.649972,
+      "exit_code": 0,
+      "log": "20261026T194146-b2afb018.log",
+      "record": "20261026T194146-b2afb018.json",
+      "log_sha256": "c0b290133830c06239a8cdc761ed1dc54300592f086805a0651afc2b3e519457"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "started_at": "2026-10-26T19:47:54.599967+00:00",
+      "finished_at": "2026-10-26T19:48:00.507602+00:00",
+      "seconds": 5.907635,
+      "exit_code": 0,
+      "log": "20261026T194754-925d4430.log",
+      "record": "20261026T194754-925d4430.json",
+      "log_sha256": "9517b75bbdc86e06066b3ca9819b05fc075f1d0c84068d48167e0f4357a3c47a"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/integration-research-2026-10-24/verify_review.py"
+      ],
+      "started_at": "2026-10-26T19:47:54.584100+00:00",
+      "finished_at": "2026-10-26T19:47:54.875917+00:00",
+      "seconds": 0.291817,
+      "exit_code": 1,
+      "log": "20261026T194754-ba59a9e6.log",
+      "record": "20261026T194754-ba59a9e6.json",
+      "log_sha256": "256f9889afdf95949cc01e95fd2adc5cb0afbc613999062eb3bf53e6882c915c"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "started_at": "2026-10-26T19:47:54.584134+00:00",
+      "finished_at": "2026-10-26T19:48:00.552587+00:00",
+      "seconds": 5.968453,
+      "exit_code": 0,
+      "log": "20261026T194754-be8d81d5.log",
+      "record": "20261026T194754-be8d81d5.json",
+      "log_sha256": "6858b4d8972960e48405779dbef92ff290f4c1d950be7d7337d759aa91e3c13d"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "started_at": "2026-10-26T19:47:54.584114+00:00",
+      "finished_at": "2026-10-26T19:47:54.820003+00:00",
+      "seconds": 0.235889,
+      "exit_code": 0,
+      "log": "20261026T194754-e4e4a7b9.log",
+      "record": "20261026T194754-e4e4a7b9.json",
+      "log_sha256": "ce14809ab5e6afb8cf6791c1f6da1845c0f0b018f3a9cca917e3d7bfce1196af"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        ".trf-runtime/model-scope-checks-2026-10-26/classify_legacy_check.py"
+      ],
+      "started_at": "2026-10-26T19:48:58.018488+00:00",
+      "finished_at": "2026-10-26T19:48:58.334830+00:00",
+      "seconds": 0.316342,
+      "exit_code": 0,
+      "log": "20261026T194858-4d3ca015.log",
+      "record": "20261026T194858-4d3ca015.json",
+      "log_sha256": "501b583b091a2666a3d14196810f9d49e2eb632083b08adb34b3264c2035ed08"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "started_at": "2026-10-26T19:50:45.056057+00:00",
+      "finished_at": "2026-10-26T19:50:50.841645+00:00",
+      "seconds": 5.785588,
+      "exit_code": 0,
+      "log": "20261026T195045-21e093d6.log",
+      "record": "20261026T195045-21e093d6.json",
+      "log_sha256": "c132eae5376a1db07b827e3b574d923af6d62ddacc355a3e7af56e8ec925ae71"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "started_at": "2026-10-26T19:50:45.077604+00:00",
+      "finished_at": "2026-10-26T19:50:45.295447+00:00",
+      "seconds": 0.217843,
+      "exit_code": 0,
+      "log": "20261026T195045-7de2a1e7.log",
+      "record": "20261026T195045-7de2a1e7.json",
+      "log_sha256": "ce14809ab5e6afb8cf6791c1f6da1845c0f0b018f3a9cca917e3d7bfce1196af"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "started_at": "2026-10-26T19:50:45.031849+00:00",
+      "finished_at": "2026-10-26T19:50:50.627211+00:00",
+      "seconds": 5.595362,
+      "exit_code": 0,
+      "log": "20261026T195045-ebc7d464.log",
+      "record": "20261026T195045-ebc7d464.json",
+      "log_sha256": "91027697f6e3b5caea10828d848419838d634127c5723de22dea28b754f51b41"
+    }
+  ],
+  "changed_files": [
+    "README.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/SOURCE_PROCESS_SCOPE_2026-10-26.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/source-process-scope-evidence-2026-10-26.zip",
+    "docs/reviews/implementation-2026-10-25/source-process-scope-independent-2026-10-26.json",
+    "docs/reviews/implementation-2026-10-25/source-process-scope-observation-2026-10-26.json",
+    "docs/reviews/implementation-2026-10-25/source-process-scope-verification-2026-10-26.json",
+    "tests/test_population_runs.py",
+    "tests/test_source_process_scope.py",
+    "tests/test_source_process_scope_adversarial.py",
+    "trading_researcher/POPULATION_MODELS.md",
+    "trading_researcher/population_models.py",
+    "trading_researcher/source_process_scope.py"
+  ],
+  "source_and_test_sha256": {
+    "trading_researcher/source_process_scope.py": "ca6ba80ae63761bfe8e9c93117bf3b2e1c9c68bb9d0a7c2c227a65e6269b64ba",
+    "trading_researcher/population_models.py": "832b10430e2e8d95d29f2a1b2a230d7ca6044c84e5a23c5fd6b09bd26ece4327",
+    "tests/test_source_process_scope.py": "d5f34f7319a00c65cfa548fa41c505b657a18d865d21fadb04f27f523767f018",
+    "tests/test_source_process_scope_adversarial.py": "88abbb407ea70038dd470d9da33d4a258783423b48c85f105c1880c774f392da",
+    "tests/test_population_runs.py": "8a349f5a02379caf2e8490f996dc7bda0cf01db5fffc67f0a4a6d2cba9a66654"
+  },
+  "historical_proposal_check": {
+    "schema": "historical-proposal-check-scope/1",
+    "baseline_commit": "8f43357edcb439dc160bd8f6f264138858c96805",
+    "checker": "docs/reviews/integration-research-2026-10-24/verify_review.py",
+    "actual_exit_code": 1,
+    "actual_log": "20261026T194754-ba59a9e6.log",
+    "prior_commit_changed_historical_files": [
+      ".gitattributes",
+      ".gitignore",
+      "README.md",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/LOCAL_COORDINATION_VERIFICATION_2026-10-24.json",
+      "docs/reviews/OPEN_DECISION_CLOSURE_VERIFICATION_2026-10-23.json",
+      "docs/reviews/adoption-2026-10-23/baseline.json",
+      "docs/reviews/verify_retail_contract.py",
+      "tests/test_local_runtime.py",
+      "trading_researcher/README.md",
+      "trading_researcher/__main__.py",
+      "trading_researcher/checks.py",
+      "trading_researcher/coordination.py"
+    ],
+    "prior_commit_unexpected_file_count": 390,
+    "current_changed_historical_files": [
+      ".gitattributes",
+      ".gitignore",
+      "README.md",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/verify_retail_contract.py",
+      "tests/test_local_runtime.py",
+      "trading_researcher/README.md",
+      "trading_researcher/__main__.py",
+      "trading_researcher/checks.py",
+      "trading_researcher/coordination.py"
+    ],
+    "current_unexpected_file_count": 398,
+    "inventory_requirements_already_false_before_change": true,
+    "disposition": "Not an applicable implementation release gate: its frozen proposal scope forbids all later implementation files. Failure retained, historical checker unchanged. Current system/retail/implementation checks are the applicable documentation gates."
+  },
+  "assembly_note": "The first evidence assembly stopped with exit 1 while the independent report was still pending; no release occurred. Assembly then succeeded after the report was present.",
+  "preservation": {
+    "baseline_files": 493,
+    "unchanged_files": 486,
+    "changed_baseline_files": [
+      "README.md",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/implementation-2026-10-25/progress.json",
+      "tests/test_population_runs.py",
+      "trading_researcher/POPULATION_MODELS.md",
+      "trading_researcher/population_models.py"
+    ],
+    "all_other_baseline_hashes_preserved": true
+  },
+  "actual_observation": {
+    "path": "source-process-scope-observation-2026-10-26.json",
+    "sha256": "88168d37900b866ce68d6eb373dded35c0fd739641ddca576c2bf39bc2456025"
+  },
+  "independent_review": {
+    "path": "source-process-scope-independent-2026-10-26.json",
+    "sha256": "613c10feea35bfc4cc096d67f921cacc57b3bf9828d83b9f1563df405c8f43ff"
+  },
+  "evidence_archive": {
+    "path": "source-process-scope-evidence-2026-10-26.zip",
+    "sha256": "9f23f811a87fbb9bccf6490eef17ed66bbcaa8703627fe6d77e02a299b0b00d1",
+    "bytes": 1310823
+  },
+  "provider_calls": 0,
+  "scientific_readiness": false,
+  "full_objective_complete": false,
+  "unverified": [
+    "original-process adequacy and fitted nuisance law",
+    "complete scientific calibration and information target",
+    "general AST equivalence or independent program/feature certification",
+    "historical PIT and actual economic usefulness",
+    "full repository test suite",
+    "scientific admission/campaign/freeze",
+    "genuine mixed-provider research and policy/reporting"
+  ]
+}

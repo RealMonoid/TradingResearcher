@@ -51,6 +51,10 @@ class PopulationRunTests(unittest.TestCase):
         body=result['body']
         self.assertEqual(body['status'],'GENERATED_UNCALIBRATED')
         self.assertFalse(body['scientific_readiness'])
+        scope=body['result']['model']['source_process_scope']
+        self.assertEqual(scope['schema'],'source-process-scope/1')
+        self.assertEqual(scope['original_process_adequacy'],'NOT_ASSESSED')
+        self.assertEqual(scope['case_stream_sha256'],self.execution['body']['result']['case_blob']['sha256'])
         self.assertEqual(body['result']['world']['truth']['effect'],{'numerator':'1','denominator':'10'})
         self.assertIsNone(body['result']['n_min'])
         capsule=self.op('get_artifact',artifact_id=body['input_capsule_id'])

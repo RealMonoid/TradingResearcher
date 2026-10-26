@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "129 focused tests pass, including 23 independent cases and actual continued development/final execution; study-continuation-verification-2026-10-26.json retains exact outputs and limits."
+      "evidence": "91 unique focused tests pass, including 14 independent cases and owned generation/replay. A fixed actual-source counterexample retains unchanged numerical outputs and prior-source case bytes; source-process-scope-verification-2026-10-26.json records exact checks and limits."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -292,11 +292,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Resolve and retain the actual nuisance/stress/information profile against the observed diagnostic limitations, then execute the complete original development and protected final inventories with explicit justified resource tranches where needed. Do not reclassify the synthetic continuation fixture as calibration or migrate stale final sources. Continue the full scientific admission/campaign/freeze, mixed-provider research, policy/AmiBroker and reporting objective.",
+  "next_action": "Formulate and assess a source-specific population/profile rationale that respects the diagnosed temporal dependencies before admitting an actual information target. Keep existing estimator-only stress studies explicitly scoped, preserve original source-bound inventories and justify resource continuation. Do not turn the prescribed one-day engineering case into a fixed discovery catalog. Continue full calibration/campaign/admission/freeze, mixed-provider research, policy/AmiBroker and reporting.",
   "continuation_audit": {
     "previous_goal_turn": "no_progress_verification_only",
     "current_goal_turn": "progress",
-    "basis": "Explicit bounded continuation is now consumed by the owned study runner. Chronological costs, authenticated decisions, source/exposure/revocation and actual development/final continuation are tested; complete scientific calibration is not claimed.",
+    "basis": "The actual source identity C_t=Y_(t-2) is retained in new model reports; independent tests and a fixed counterexample expose the original-process scope gap without changing the estimator-only stress law. This is an implemented descriptive diagnostic, not calibrated scientific readiness.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -447,6 +447,22 @@
     "final_planned_worlds": 1024,
     "final_count_status": "NOT_ASSESSED",
     "provider_calls": 0,
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "source_process_scope_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "verification": "docs/reviews/implementation-2026-10-25/source-process-scope-verification-2026-10-26.json",
+    "unique_focused_tests": 91,
+    "independent_tests": 14,
+    "observed_pairs": 94,
+    "observed_equal": 94,
+    "synthetic_pairs": 91,
+    "synthetic_unequal": 42,
+    "legacy_case_bytes_unchanged": true,
+    "provider_calls": 0,
+    "original_process_adequacy": "NOT_ASSESSED",
     "scientific_readiness": false,
     "full_objective_complete": false
   }

@@ -1,0 +1,2142 @@
+{
+  "schema": "dependent-null-assessment-verification/1",
+  "baseline_commit": "58780bd58e92b99bcd3dff39176617b1b3a006e3",
+  "status": "EXACT_SCOPE_ASSESSMENT_PASS",
+  "check": {
+    "command": [
+      "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+      "-B",
+      "docs/reviews/implementation-2026-10-25/verify_dependent_null_scope.py"
+    ],
+    "started_at": "2026-10-26T20:33:20.378049+00:00",
+    "finished_at": "2026-10-26T20:33:20.553661+00:00",
+    "seconds": 0.175612,
+    "exit_code": 0,
+    "log": "20261026T203320-573e2e1c.log"
+  },
+  "result": {
+    "schema": "dependent-null-scope-counterexample/1",
+    "status": "PASS",
+    "cases": [
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "rho": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "transition_from_one": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "transition_from_zero": {
+          "numerator": "3",
+          "denominator": "4"
+        },
+        "true_condition_minus_scope_effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "states": 16,
+        "stationary_mass": [
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          }
+        ],
+        "score_variance": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "score_lrv_multiplier_vs_iid": {
+          "numerator": "1",
+          "denominator": "3"
+        },
+        "score_long_run_variance": {
+          "numerator": "1",
+          "denominator": "12"
+        },
+        "moments": [
+          {
+            "lag": 0,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "outcome_covariance": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          {
+            "lag": 1,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 2,
+            "score_covariance": {
+              "numerator": "-1",
+              "denominator": "8"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 3,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 4,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "16"
+            },
+            "outcome_covariance": {
+              "numerator": "-1",
+              "denominator": "8"
+            }
+          },
+          {
+            "lag": 5,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 6,
+            "score_covariance": {
+              "numerator": "-1",
+              "denominator": "32"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 7,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 8,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "64"
+            },
+            "outcome_covariance": {
+              "numerator": "1",
+              "denominator": "16"
+            }
+          },
+          {
+            "lag": 9,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 10,
+            "score_covariance": {
+              "numerator": "-1",
+              "denominator": "128"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 11,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 12,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "256"
+            },
+            "outcome_covariance": {
+              "numerator": "-1",
+              "denominator": "32"
+            }
+          }
+        ],
+        "stationarity_residuals_exact_zero": true,
+        "score_two_step_eigen_identity": true
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "rho": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "transition_from_one": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "transition_from_zero": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "true_condition_minus_scope_effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "states": 16,
+        "stationary_mass": [
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          }
+        ],
+        "score_variance": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "score_lrv_multiplier_vs_iid": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "score_long_run_variance": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "moments": [
+          {
+            "lag": 0,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "outcome_covariance": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          {
+            "lag": 1,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 2,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 3,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 4,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 5,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 6,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 7,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 8,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 9,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 10,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 11,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 12,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          }
+        ],
+        "stationarity_residuals_exact_zero": true,
+        "score_two_step_eigen_identity": true
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "rho": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "transition_from_one": {
+          "numerator": "3",
+          "denominator": "4"
+        },
+        "transition_from_zero": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "true_condition_minus_scope_effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "states": 16,
+        "stationary_mass": [
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          },
+          {
+            "numerator": "1",
+            "denominator": "16"
+          }
+        ],
+        "score_variance": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "score_lrv_multiplier_vs_iid": {
+          "numerator": "3",
+          "denominator": "1"
+        },
+        "score_long_run_variance": {
+          "numerator": "3",
+          "denominator": "4"
+        },
+        "moments": [
+          {
+            "lag": 0,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "4"
+            },
+            "outcome_covariance": {
+              "numerator": "1",
+              "denominator": "4"
+            }
+          },
+          {
+            "lag": 1,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 2,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "8"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 3,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 4,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "16"
+            },
+            "outcome_covariance": {
+              "numerator": "1",
+              "denominator": "8"
+            }
+          },
+          {
+            "lag": 5,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 6,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "32"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 7,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 8,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "64"
+            },
+            "outcome_covariance": {
+              "numerator": "1",
+              "denominator": "16"
+            }
+          },
+          {
+            "lag": 9,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 10,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "128"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 11,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 12,
+            "score_covariance": {
+              "numerator": "1",
+              "denominator": "256"
+            },
+            "outcome_covariance": {
+              "numerator": "1",
+              "denominator": "32"
+            }
+          }
+        ],
+        "stationarity_residuals_exact_zero": true,
+        "score_two_step_eigen_identity": true
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "rho": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "transition_from_one": {
+          "numerator": "5",
+          "denominator": "47"
+        },
+        "transition_from_zero": {
+          "numerator": "57",
+          "denominator": "94"
+        },
+        "true_condition_minus_scope_effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "states": 16,
+        "stationary_mass": [
+          {
+            "numerator": "614656",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "130321",
+            "denominator": "4879681"
+          }
+        ],
+        "score_variance": {
+          "numerator": "784",
+          "denominator": "2209"
+        },
+        "score_lrv_multiplier_vs_iid": {
+          "numerator": "1",
+          "denominator": "3"
+        },
+        "score_long_run_variance": {
+          "numerator": "784",
+          "denominator": "6627"
+        },
+        "moments": [
+          {
+            "lag": 0,
+            "score_covariance": {
+              "numerator": "784",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "532",
+              "denominator": "2209"
+            }
+          },
+          {
+            "lag": 1,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 2,
+            "score_covariance": {
+              "numerator": "-392",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 3,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 4,
+            "score_covariance": {
+              "numerator": "196",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "-266",
+              "denominator": "2209"
+            }
+          },
+          {
+            "lag": 5,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 6,
+            "score_covariance": {
+              "numerator": "-98",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 7,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 8,
+            "score_covariance": {
+              "numerator": "49",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "133",
+              "denominator": "2209"
+            }
+          },
+          {
+            "lag": 9,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 10,
+            "score_covariance": {
+              "numerator": "-49",
+              "denominator": "4418"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 11,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 12,
+            "score_covariance": {
+              "numerator": "49",
+              "denominator": "8836"
+            },
+            "outcome_covariance": {
+              "numerator": "-133",
+              "denominator": "4418"
+            }
+          }
+        ],
+        "stationarity_residuals_exact_zero": true,
+        "score_two_step_eigen_identity": true
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "rho": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "transition_from_one": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "transition_from_zero": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "true_condition_minus_scope_effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "states": 16,
+        "stationary_mass": [
+          {
+            "numerator": "614656",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "130321",
+            "denominator": "4879681"
+          }
+        ],
+        "score_variance": {
+          "numerator": "784",
+          "denominator": "2209"
+        },
+        "score_lrv_multiplier_vs_iid": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "score_long_run_variance": {
+          "numerator": "784",
+          "denominator": "2209"
+        },
+        "moments": [
+          {
+            "lag": 0,
+            "score_covariance": {
+              "numerator": "784",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "532",
+              "denominator": "2209"
+            }
+          },
+          {
+            "lag": 1,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 2,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 3,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 4,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 5,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 6,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 7,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 8,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 9,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 10,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 11,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 12,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          }
+        ],
+        "stationarity_residuals_exact_zero": true,
+        "score_two_step_eigen_identity": true
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "rho": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "transition_from_one": {
+          "numerator": "33",
+          "denominator": "47"
+        },
+        "transition_from_zero": {
+          "numerator": "19",
+          "denominator": "94"
+        },
+        "true_condition_minus_scope_effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "states": 16,
+        "stationary_mass": [
+          {
+            "numerator": "614656",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "417088",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "283024",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "192052",
+            "denominator": "4879681"
+          },
+          {
+            "numerator": "130321",
+            "denominator": "4879681"
+          }
+        ],
+        "score_variance": {
+          "numerator": "784",
+          "denominator": "2209"
+        },
+        "score_lrv_multiplier_vs_iid": {
+          "numerator": "3",
+          "denominator": "1"
+        },
+        "score_long_run_variance": {
+          "numerator": "2352",
+          "denominator": "2209"
+        },
+        "moments": [
+          {
+            "lag": 0,
+            "score_covariance": {
+              "numerator": "784",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "532",
+              "denominator": "2209"
+            }
+          },
+          {
+            "lag": 1,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 2,
+            "score_covariance": {
+              "numerator": "392",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 3,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 4,
+            "score_covariance": {
+              "numerator": "196",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "266",
+              "denominator": "2209"
+            }
+          },
+          {
+            "lag": 5,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 6,
+            "score_covariance": {
+              "numerator": "98",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 7,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 8,
+            "score_covariance": {
+              "numerator": "49",
+              "denominator": "2209"
+            },
+            "outcome_covariance": {
+              "numerator": "133",
+              "denominator": "2209"
+            }
+          },
+          {
+            "lag": 9,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 10,
+            "score_covariance": {
+              "numerator": "49",
+              "denominator": "4418"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 11,
+            "score_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "outcome_covariance": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "lag": 12,
+            "score_covariance": {
+              "numerator": "49",
+              "denominator": "8836"
+            },
+            "outcome_covariance": {
+              "numerator": "133",
+              "denominator": "4418"
+            }
+          }
+        ],
+        "stationarity_residuals_exact_zero": true,
+        "score_two_step_eigen_identity": true
+      }
+    ],
+    "exact_states_per_case": 16,
+    "checked_lags_per_case": 13,
+    "proposed_affine_extension_cases": [
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "beta": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "minimum_transition": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "maximum_transition": {
+          "numerator": "3",
+          "denominator": "4"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "beta": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "alpha": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "minimum_transition": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "maximum_transition": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "beta": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "minimum_transition": {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        "maximum_transition": {
+          "numerator": "3",
+          "denominator": "4"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "beta": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "3",
+          "denominator": "20"
+        },
+        "minimum_transition": {
+          "numerator": "7",
+          "denominator": "40"
+        },
+        "maximum_transition": {
+          "numerator": "33",
+          "denominator": "40"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "beta": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "alpha": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "minimum_transition": {
+          "numerator": "9",
+          "denominator": "20"
+        },
+        "maximum_transition": {
+          "numerator": "11",
+          "denominator": "20"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "beta": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "minimum_transition": {
+          "numerator": "9",
+          "denominator": "40"
+        },
+        "maximum_transition": {
+          "numerator": "31",
+          "denominator": "40"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "beta": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "3",
+          "denominator": "10"
+        },
+        "minimum_transition": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "maximum_transition": {
+          "numerator": "9",
+          "denominator": "10"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "beta": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "alpha": {
+          "numerator": "1",
+          "denominator": "5"
+        },
+        "minimum_transition": {
+          "numerator": "2",
+          "denominator": "5"
+        },
+        "maximum_transition": {
+          "numerator": "3",
+          "denominator": "5"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "beta": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "minimum_transition": {
+          "numerator": "1",
+          "denominator": "5"
+        },
+        "maximum_transition": {
+          "numerator": "4",
+          "denominator": "5"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "beta": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "minimum_transition": {
+          "numerator": "5",
+          "denominator": "47"
+        },
+        "maximum_transition": {
+          "numerator": "57",
+          "denominator": "94"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "beta": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "alpha": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "minimum_transition": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "maximum_transition": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "beta": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "minimum_transition": {
+          "numerator": "19",
+          "denominator": "94"
+        },
+        "maximum_transition": {
+          "numerator": "33",
+          "denominator": "47"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "beta": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "141",
+          "denominator": "1120"
+        },
+        "minimum_transition": {
+          "numerator": "2921",
+          "denominator": "52640"
+        },
+        "maximum_transition": {
+          "numerator": "1281",
+          "denominator": "1880"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "beta": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "alpha": {
+          "numerator": "47",
+          "denominator": "560"
+        },
+        "minimum_transition": {
+          "numerator": "9747",
+          "denominator": "26320"
+        },
+        "maximum_transition": {
+          "numerator": "427",
+          "denominator": "940"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "beta": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "47",
+          "denominator": "1120"
+        },
+        "minimum_transition": {
+          "numerator": "9747",
+          "denominator": "52640"
+        },
+        "maximum_transition": {
+          "numerator": "1367",
+          "denominator": "1880"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "beta": {
+          "numerator": "-1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "141",
+          "denominator": "560"
+        },
+        "minimum_transition": {
+          "numerator": "121",
+          "denominator": "26320"
+        },
+        "maximum_transition": {
+          "numerator": "711",
+          "denominator": "940"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "beta": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "alpha": {
+          "numerator": "47",
+          "denominator": "280"
+        },
+        "minimum_transition": {
+          "numerator": "4427",
+          "denominator": "13160"
+        },
+        "maximum_transition": {
+          "numerator": "237",
+          "denominator": "470"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      },
+      {
+        "q": {
+          "numerator": "19",
+          "denominator": "47"
+        },
+        "effect": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "beta": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "alpha": {
+          "numerator": "47",
+          "denominator": "560"
+        },
+        "minimum_transition": {
+          "numerator": "4427",
+          "denominator": "26320"
+        },
+        "maximum_transition": {
+          "numerator": "707",
+          "denominator": "940"
+        },
+        "stationarity_and_target_exact": true,
+        "production_implemented": false
+      }
+    ],
+    "source_sha256": "903d2c76c60d44f423a53ac5fb9fc9dcbe29af5d95aa0495b5a528e2c02fd1eb",
+    "qualification": "Project-derived population counterexamples, not a fitted market law, simulation performance result, bootstrap miscoverage claim or admitted profile. The variance multiplier applies to the linearization score, not an exact finite-sample variance ratio for the random-denominator estimator.",
+    "simulated_worlds": 0,
+    "provider_calls": 0,
+    "market_data_read": false,
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "exact_stdout_sha256": "2a23f0d6307ac640a1b4e13e3bfb6453f485b9e6949ba54394ee2380f8af3ef1",
+  "production_python_files_unchanged": 60,
+  "provider_calls": 0,
+  "scientific_readiness": false,
+  "full_objective_complete": false,
+  "limits": [
+    "No production extension, market fit or adopted profile",
+    "No bootstrap performance or exact finite-sample variance claim",
+    "Joint multiple-response initialization and masks remain unimplemented for the proposal",
+    "No information target or final calibration"
+  ],
+  "checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_dependent_null_scope.py"
+      ],
+      "started_at": "2026-10-26T20:33:20.378049+00:00",
+      "finished_at": "2026-10-26T20:33:20.553661+00:00",
+      "seconds": 0.175612,
+      "exit_code": 0,
+      "log": "20261026T203320-573e2e1c.log",
+      "record": "20261026T203320-573e2e1c.json",
+      "log_sha256": "2a23f0d6307ac640a1b4e13e3bfb6453f485b9e6949ba54394ee2380f8af3ef1"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-c",
+        "import itertools,json\nfrom fractions import Fraction as F\nstates=list(itertools.product((0,1),repeat=2))\ndef encoded(x): return {\"numerator\":str(x.numerator),\"denominator\":str(x.denominator)}\ndef mv(matrix,v): return [sum(p*x for p,x in zip(row,v)) for row in matrix]\nchecked=[]\nfor q in (F(1,2),F(19,47)):\n    for e in (F(0),F(1,20),F(1,10)):\n        for beta in (F(-1,2),F(0),F(1,2)):\n            alpha=(1-beta)*e/(1-q)\n            pair={(0,0):(1-q)**2+q*e,(0,1):q*(1-q-e),(1,0):q*(1-q-e),(1,1):q*(q+e)}\n            pi=[pair[s] for s in states]\n            rates=[q+alpha*(s[1]-q)+beta*(s[0]-q) for s in states]\n            Q=[[F(0) if t[0]!=s[1] else p if t[1] else 1-p for t in states] for s,p in zip(states,rates)]\n            assert all(0<p<1 for p in rates) and all(p>0 for p in pi) and sum(pi)==1\n            assert all(sum(row)==1 for row in Q)\n            assert all(sum(pi[i]*Q[i][j] for i in range(4))==pi[j] for j in range(4))\n            Q2=[[sum(Q[i][k]*Q[k][j] for k in range(4)) for j in range(4)] for i in range(4)]\n            assert all(p>0 for row in Q2 for p in row)\n            assert sum(pi[i]*s[0] for i,s in enumerate(states))==q\n            assert sum(pi[i]*s[1] for i,s in enumerate(states))==q\n            assert sum(pi[i]*s[0]*s[1] for i,s in enumerate(states))/q-q==e\n            entry={\"q\":encoded(q),\"effect\":encoded(e),\"beta\":encoded(beta),\"minimum_transition\":encoded(min(rates)),\"mixing_two_step_min\":encoded(min(p for row in Q2 for p in row))}\n            if e==0:\n                score=[(F(a)-q)*(F(b)-q)/q for a,b in states]\n                h=[x/(1-beta) for x in score]\n                Qh=mv(Q,h)\n                assert [x-y for x,y in zip(h,Qh)]==score\n                variance=sum(p*x*x for p,x in zip(pi,score))\n                lrv=2*sum(p*x*y for p,x,y in zip(pi,score,h))-variance\n                assert variance==(1-q)**2\n                assert lrv==variance*(1+beta)/(1-beta)\n                entry[\"score_poisson_lrv\"]=encoded(lrv)\n                entry[\"score_lrv_ratio\"]=encoded(lrv/variance)\n            checked.append(entry)\nq=F(19,47)\ncross=F(0)\nfor a,b,c in itertools.product((0,1),repeat=3):\n    mass=q**(a+b+c)*(1-q)**(3-a-b-c)\n    first=(a-q)*(b-q)/q\n    second=(b-q)*(c-q)/q\n    cross+=mass*first**2*second**2\nsquared_score_covariance=cross-(1-q)**4\nassert squared_score_covariance==(1-q)**3*(1-2*q)**2/q>0\nassert next(x for x in checked if x[\"q\"]==encoded(q) and x[\"effect\"]==encoded(F(1,10)) and x[\"beta\"]==encoded(F(-1,2)))[\"minimum_transition\"]==encoded(F(121,26320))\nprint(json.dumps({\"status\":\"PASS\",\"method\":\"independent four-state stride-two kernel; exact Poisson equation at null; positive two-step transition matrix\",\"checked_extension_cells\":len(checked),\"null_poisson_checks\":6,\"squared_score_covariance_at_lag2_when_outcomes_iid\":encoded(squared_score_covariance),\"cases\":checked,\"simulated_worlds\":0,\"market_data_read\":False,\"scientific_readiness\":False},indent=2))\n"
+      ],
+      "started_at": "2026-10-26T20:35:16.027303+00:00",
+      "finished_at": "2026-10-26T20:35:16.127975+00:00",
+      "seconds": 0.100672,
+      "exit_code": 0,
+      "log": "20261026T203516-f029b52f.log",
+      "record": "20261026T203516-f029b52f.json",
+      "log_sha256": "55ba4396d6ac3ebae8e0b7a495eac529a857780a3bdf9ee3e2318229ad915c88"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "started_at": "2026-10-26T20:39:13.148972+00:00",
+      "finished_at": "2026-10-26T20:39:18.696733+00:00",
+      "seconds": 5.547761,
+      "exit_code": 0,
+      "log": "20261026T203913-424ac7dd.log",
+      "record": "20261026T203913-424ac7dd.json",
+      "log_sha256": "5fc442806a4129d3a11c62eaec98db4f4f5cbc27ac76c7d763123b54c824166a"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "started_at": "2026-10-26T20:39:13.146324+00:00",
+      "finished_at": "2026-10-26T20:39:13.380296+00:00",
+      "seconds": 0.233972,
+      "exit_code": 0,
+      "log": "20261026T203913-7d7efd3f.log",
+      "record": "20261026T203913-7d7efd3f.json",
+      "log_sha256": "7e510800dc04cd4cc90a6edf9a09769cafb928d7546590c2449641932e49f663"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "started_at": "2026-10-26T20:39:13.146364+00:00",
+      "finished_at": "2026-10-26T20:39:18.733434+00:00",
+      "seconds": 5.58707,
+      "exit_code": 0,
+      "log": "20261026T203913-a12109b7.log",
+      "record": "20261026T203913-a12109b7.json",
+      "log_sha256": "567cbc9fa2f907aa7452a161a47d443157e6b9179c9bd6de676713a2b56a567d"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-26T20:39:20.649472+00:00",
+      "finished_at": "2026-10-26T20:39:20.719756+00:00",
+      "seconds": 0.070284,
+      "exit_code": 0,
+      "log": "20261026T203920-175b8392.log",
+      "record": "20261026T203920-175b8392.json",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "independent_review": {
+    "path": "dependent-null-independent-2026-10-26.json",
+    "sha256": "8a4196377f56bb8fff13a78bf6d07e2a60358980424e2ee7bce1ccd0485c74b9"
+  },
+  "evidence_archive": {
+    "path": "dependent-null-evidence-2026-10-26.zip",
+    "sha256": "1acf26e37c0ca98cee94bc478fbca122deee11640d511d06ad626ee785fcfa17",
+    "bytes": 26566
+  },
+  "changed_files": [
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/DEPENDENT_NULL_SCOPE_2026-10-26.md",
+    "docs/reviews/implementation-2026-10-25/dependent-null-evidence-2026-10-26.zip",
+    "docs/reviews/implementation-2026-10-25/dependent-null-independent-2026-10-26.json",
+    "docs/reviews/implementation-2026-10-25/dependent-null-verification-2026-10-26.json",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/verify_dependent_null_scope.py"
+  ]
+}

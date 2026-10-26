@@ -1,0 +1,126 @@
+{
+  "schema": "independent-dependent-null-scope-review/1",
+  "status": "PASS_EXACT_MATHEMATICAL_SCOPE_ASSESSMENT",
+  "reviewed_at_utc": "2026-10-26T20:36:58Z",
+  "baseline_commit": "58780bd58e92b99bcd3dff39176617b1b3a006e3",
+  "reviewer": "independent publication_review agent",
+  "purpose": "Independently assess whether a preserved shifted source identity and zero conditional-minus-scope effect determine dependence or estimator-score long-run variance, and assess the algebraic feasibility of the proposed second-order continuation.",
+  "scope": {
+    "production_edits": false,
+    "simulation_runs": 0,
+    "market_rows_read": false,
+    "provider_calls": 0,
+    "scientific_profile_adopted": false,
+    "new_runtime_tests": 0,
+    "prior_113_tests_counted_as_new": false,
+    "tracked_runtime_unchanged_check": {
+      "command": ["git", "diff", "--exit-code", "58780bd58e92b99bcd3dff39176617b1b3a006e3", "--", "trading_researcher"],
+      "exit_code": 0
+    }
+  },
+  "findings": [
+    {
+      "id": "NULL-01",
+      "status": "VERIFIED_CONSTRUCTIVE_COUNTEREXAMPLE",
+      "finding": "Four independent stationary lag-four binary chains, interleaved by time phase, preserve C_t=Y_(t-2). C and Y lie in different phases, so they are independent at the same decision time and E[Y|C=1]-E[Y]=0 even when outcome dependence at lag four is nonzero.",
+      "probability_law": "P(Y_t=1|Y_(t-4)=1)=q+(1-q)*rho and P(Y_t=1|Y_(t-4)=0)=q*(1-rho).",
+      "mixing_argument": "All examined transition probabilities are strictly between zero and one. Any chronological four-bit target state is reachable from any start in four steps with positive probability. The finite chain is therefore irreducible and aperiodic and has geometric dependence decay. This is not a nonmixing or periodic pathology used to evade the estimator assumptions.",
+      "warranted_conclusion": "The source identity and zero effect do not force an IID outcome null. The published lag-linked model remains a valid declared restricted stress case; it does not span this dependent-null variation."
+    },
+    {
+      "id": "NULL-02",
+      "status": "VERIFIED_CORRECT_LINEARIZATION_OBJECT",
+      "finding": "For g(m_CY,m_C,m_Y)=m_CY/m_C-m_Y at the null point (q^2,q,q), the centered linearization is phi=(CY-q^2)/q-(C-q)-(Y-q)=(C-q)*(Y-q)/q.",
+      "qualification": "The score belongs to the canonical condition-versus-whole-scope ratio contrast with fully known conditions and complete eligible observations. It is not a condition-versus-complement estimator and does not assume q is externally known by the estimator. Random denominators and possible zero conditioned counts prevent treating its variance as the exact finite-sample estimator variance."
+    },
+    {
+      "id": "NULL-03",
+      "status": "VERIFIED_INFINITE_LAG_SCORE_RESULT",
+      "finding": "Point variance is (1-q)^2 for every examined rho. Odd-lag score covariances vanish; lag 2k covariance is (1-q)^2*rho^k. Their absolutely convergent sum gives long-run variance (1-q)^2*(1+rho)/(1-rho), with ratios 1/3, 1 and 3 at rho=-1/2,0,1/2.",
+      "independent_method": "Use the four-state stride-two pair process (A,B)->(B,Z), rather than the parent's chronological sixteen-state representation. At the null Q*phi=rho*phi, and h=phi/(1-rho) solves (I-Q)h=phi exactly. The Poisson identity 2*E[phi*h]-E[phi^2] reproduces the claimed long-run variance in all six null cases.",
+      "time_scale_qualification": "Interleaving the two independent score phases adds no extra factor two or four. The original-time odd-lag covariances are zero and its even-lag sum equals the stride-two result.",
+      "limits": "This is a population score long-run variance, not a finite-sample estimator variance ratio, standard-error measurement, bootstrap miscoverage estimate, statistical power result or actual market diagnosis."
+    },
+    {
+      "id": "NULL-04",
+      "status": "VERIFIED_UNCORRELATED_DOES_NOT_MEAN_IID",
+      "finding": "At rho=0, outcomes are IID but the overlapping score values generally are not IID. Direct enumeration of three independent Bernoulli values gives Cov(phi_t^2,phi_(t+2)^2)=(1-q)^3*(1-2q)^2/q.",
+      "exact_q_19_over_47_value": {"numerator": "1778112", "denominator": "92713939"},
+      "qualification": "This positive squared-score covariance at q=19/47 establishes score dependence despite zero ordinary score autocovariances. It does not change the stated score long-run variance ratio at rho zero. The final assessment correctly distinguishes IID outcomes from possibly dependent overlapping scores."
+    },
+    {
+      "id": "NULL-05",
+      "status": "VERIFIED_PROPOSED_EXTENSION_FEASIBILITY_ONLY",
+      "finding": "For r=e/(1-q), alpha=(1-beta)*r and conditional mean q+alpha*(Y_(t-2)-q)+beta*(Y_(t-4)-q), the proposed consecutive-pair masses are stationary in each independent time phase and yield effect e. Given the pair law, E[Y_(t-4)-q|Y_(t-2)]=r*(Y_(t-2)-q), so alpha+beta*r=r preserves the required lag-two pair relation.",
+      "pair_masses": {
+        "11": "q*(q+e)",
+        "10": "q*(1-q-e)",
+        "01": "q*(1-q-e)",
+        "00": "(1-q)^2+q*e"
+      },
+      "independent_check": "All 18 listed q/e/beta cells have positive pair masses, strict-interior transition probabilities, exact stationary residuals, correct q marginals and target e. Every entry of the stride-two pair kernel squared is positive, directly confirming finite-state mixing for these cells.",
+      "reductions": "e=0 recovers the dependent-null construction; beta=0 recovers the previously implemented lag-linked transition law.",
+      "near_boundary_example": {
+        "q": "19/47",
+        "effect": "1/10",
+        "beta": "-1/2",
+        "minimum_transition": {"numerator": "121", "denominator": "26320"}
+      },
+      "limits": "Only these declared algebraic cells were checked. The example beta values are not fitted nuisance estimates or universally feasible defaults. Negative-effect scenarios, arbitrary masks, shared innovations across responses/instruments, exact joint history initialization, capacity and owned runtime integration are not supplied by this check. The existing first-order solver must not be reused as though the larger history state were one binary coordinate."
+    }
+  ],
+  "unresolved_blockers_to_the_mathematical_assessment": [],
+  "parent_exact_check": {
+    "record": ".trf-runtime/dependent-null-assessment-2026-10-26/20261026T203320-573e2e1c.json",
+    "log": ".trf-runtime/dependent-null-assessment-2026-10-26/20261026T203320-573e2e1c.log",
+    "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", "docs/reviews/implementation-2026-10-25/verify_dependent_null_scope.py"],
+    "exit_code": 0,
+    "wrapper_seconds": 0.175612,
+    "null_cases": 6,
+    "chronological_states_per_case": 16,
+    "checked_lags_per_null_case": 13,
+    "proposed_extension_cells": 18,
+    "qualification": "Exact finite-state enumeration, not simulated calibration worlds or a runtime test suite. The six null parameter cells also occur in the 18-cell candidate grid; these are not 24 distinct parameter triples."
+  },
+  "independent_exact_check": {
+    "record": ".trf-runtime/dependent-null-assessment-2026-10-26/20261026T203516-f029b52f.json",
+    "log": ".trf-runtime/dependent-null-assessment-2026-10-26/20261026T203516-f029b52f.log",
+    "command_form": "python -B -c <complete independent Fraction-based four-state/Poisson procedure preserved verbatim in the command record>",
+    "procedure_imports": ["itertools", "json", "fractions.Fraction"],
+    "imports_parent_checker_or_production_model": false,
+    "exit_code": 0,
+    "started_at_utc": "2026-10-26T20:35:16.027303+00:00",
+    "finished_at_utc": "2026-10-26T20:35:16.127975+00:00",
+    "wrapper_seconds": 0.100672,
+    "stride_two_states": 4,
+    "stationarity_marginal_target_and_positive_Q_squared_cells": 18,
+    "null_poisson_equation_checks": 6,
+    "additional_check": "Exact three-Bernoulli enumeration of squared-score dependence at rho=0 and q=19/47.",
+    "simulation_runs": 0,
+    "market_data_read": false
+  },
+  "documentation_review": {
+    "file": "docs/reviews/implementation-2026-10-25/DEPENDENT_NULL_SCOPE_2026-10-26.md",
+    "outcome": "Accurately distinguishes unchanged point variance from changed long-run variance, IID outcomes from overlapping score dependence, algebraic feasibility from runtime implementation, and the proposal from an adopted or adequate market calibration profile."
+  },
+  "remaining_uncertainty": [
+    "The actual source's negative empirical products do not identify rho, beta or any market population law.",
+    "The long-run variance identities apply to the fully observed single-response mathematical construction. Unknown-condition, eligibility, cross-instrument and other sampled masks require their own score and joint-law analysis.",
+    "No finite-sample ratio-estimator variance, coverage, bootstrap classification error, power or N_min has been measured or proved here.",
+    "The candidate second-order law is not a production generator, approved nuisance profile or scientific acceptance rule.",
+    "A future implementation must preserve all assigned effect scenarios, real history state, exact joint initialization or a separately justified alternative, source/replay/accounting controls and retained failures."
+  ],
+  "warranted_next_action": "Use this concrete dependent-null omission to design and independently test a versioned bounded second-order stress generator and its joint history initialization. Before substantive calibration, assess its actual nuisance and applicability scope rather than treating the examined beta values or one-day engineering template as fitted truth or a universal research catalog.",
+  "scientific_readiness": false,
+  "source_sha256": {
+    "docs/reviews/implementation-2026-10-25/verify_dependent_null_scope.py": "903d2c76c60d44f423a53ac5fb9fc9dcbe29af5d95aa0495b5a528e2c02fd1eb",
+    "docs/reviews/implementation-2026-10-25/DEPENDENT_NULL_SCOPE_2026-10-26.md": "afa7ffd4e886106029b7f48fea7f86fcb53cac98a0d7979205eddf590f59318b",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d"
+  },
+  "evidence_sha256": {
+    ".trf-runtime/dependent-null-assessment-2026-10-26/20261026T203320-573e2e1c.json": "7f898d640fc1e6a5333c0cb784298a29ace6baec3b22a887ee018d63b4e36650",
+    ".trf-runtime/dependent-null-assessment-2026-10-26/20261026T203320-573e2e1c.log": "2a23f0d6307ac640a1b4e13e3bfb6453f485b9e6949ba54394ee2380f8af3ef1",
+    ".trf-runtime/dependent-null-assessment-2026-10-26/20261026T203516-f029b52f.json": "ba5a1d46d5d586b90c40787c736f777bedf43b4e294c5c7220dff49b05fb57a0",
+    ".trf-runtime/dependent-null-assessment-2026-10-26/20261026T203516-f029b52f.log": "55ba4396d6ac3ebae8e0b7a495eac529a857780a3bdf9ee3e2318229ad915c88"
+  }
+}

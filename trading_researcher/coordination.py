@@ -237,7 +237,7 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
                          'add_research', 'inspect_memory', 'rebuild_memory',
                          'create_research_epoch', 'inspect_research_epoch', 'reference_certificate_status',
                          'inspect_reference_checks', 'feature_certificate_status', 'inspect_feature_checks',
-                         'inspect_bound_computations','assess_meaning_review','inspect_meaning_review'}
+                         'inspect_bound_computations','assess_meaning_review','inspect_meaning_review','inspect_evaluation_plan'}
             allowed = admin_ops if actor['role'] == 'operator' else worker_ops
             if op not in allowed:
                 raise Denied('Operation unavailable for this capability')

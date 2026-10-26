@@ -1,0 +1,146 @@
+{
+  "schema": "plan-meaning-independent-review/1",
+  "status": "PASS_BOUNDED_PLAN_MEANING_INTEGRATION",
+  "checked_at_utc": "2026-10-26T13:32:29.491540+00:00",
+  "reviewer": "independent publication_review agent",
+  "purpose": "Connect existing independent meaning-review evidence to plan preparation and fresh intended-use inspection without changing scientific gates or empirical authority.",
+  "authority_assessment": "Ordinary implementation of D002/D074 and the existing independent-review prerequisite under research-contract/1.0 section 11 and D084. No new estimand, evidence rule, scientific certificate or material scientific-contract change is adopted.",
+  "source_sha256": {
+    "trading_researcher/evaluation_plans.py": "f3f63e9c55d8702dec7d00817d5e471481d9b1c28f5641b4492aec035c4bb306",
+    "trading_researcher/coordination.py": "98189b9afb4ff8a0396d7c2068ad6ab9e1aebfb316a40c34c13a5b7da04a2969",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+    "tests/plan_review_support.py": "1c4f4038573bf60c321ac513832a82e0784cd0ee35342913340ac41586fe65ef",
+    "tests/test_plan_reviews.py": "c719eb3727fc033c8e003da82f14ac200dfb12771f0212de3d249fd94986fc35",
+    "tests/test_plan_reviews_adversarial.py": "b84a5ad06530959ab454bb3a98f3bde14d574e0dd5633f743fa4ca7b98823417",
+    "tests/test_plan_review_binding.py": "4cf86181be131fd027226472c22fd8afc6a1723545574f778548d7a0f6ac9f54"
+  },
+  "changed_by_reviewer": [
+    "tests/test_plan_reviews_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/plan-meaning-independent-2026-10-26.json"
+  ],
+  "findings": [
+    {
+      "finding": "The optional assessment must be host-owned, registered and bound to the exact compiled formalization.",
+      "evidence": "Wrong target, null/empty references, wrappers and raw review records are rejected before calculation; worker access is denied before dependent reads."
+    },
+    {
+      "finding": "Meaning also depends on the compiled feature definition identity, including parameters and time semantics.",
+      "evidence": "Inspected strict definition-ID check for every registered review of feature-using targets. The full binding test changes delay_seconds while preserving names/types/units/origin and obtains a mocked positive review; plan preparation rejects it before the child. Literal-only candidates do not require unrelated definitions."
+    },
+    {
+      "finding": "The admitted capsule retains review sources, inherited exposure and historical inspection state.",
+      "evidence": "Independent tests check exposure preservation, current negative/unverified reviews, a review registered during child execution, interrupted-input retention and rejection of silent same-key refresh."
+    },
+    {
+      "finding": "Completed plan idempotency preserves historical bytes while current inspection recomputes the semantic prerequisite.",
+      "evidence": "Policy or inventory changes reopen the semantic gate; completed key reuse returns the original record, and a changed assessment reference conflicts. Raw child output and evaluation-policy.py remain unchanged."
+    },
+    {
+      "finding": "Fresh inspection does not grant full plan currency or scientific readiness.",
+      "evidence": "Only independent_semantic_review can leave the derived gate list. EVALUATION_GAP has a null gate list, all authority flags remain false, and other scientific prerequisites remain open. Documentation requires future atomic freeze to recheck rather than cache this view."
+    }
+  ],
+  "independent_checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_reviews_adversarial.py"
+      ],
+      "outcome": "PASS",
+      "tests": 11,
+      "unittest_seconds": 35.931,
+      "exit_code": 0,
+      "tool_chunks": [
+        "6e210b",
+        "f80cdf"
+      ]
+    },
+    {
+      "command": "git diff --check",
+      "outcome": "PASS",
+      "exit_code": 0,
+      "tool_chunk": "98f0a3"
+    },
+    {
+      "command": "git diff --exit-code bdc6254 -- trading_researcher/evaluation_policy.py trading_researcher/meaning_reviews.py trading_researcher/features.py",
+      "outcome": "Unchanged preexisting policy, assessment and feature semantics",
+      "exit_code": 0
+    }
+  ],
+  "separately_inspected_parent_checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_review_binding.py"
+      ],
+      "started_at": "2026-10-26T13:28:39.323967+00:00",
+      "finished_at": "2026-10-26T13:30:06.221831+00:00",
+      "seconds": 86.897864,
+      "exit_code": 0,
+      "log": "20261026T132839-71175439.log",
+      "tests": 2,
+      "unittest_seconds": 86.336,
+      "executed_by": "parent agent; command record and log independently inspected",
+      "result_sha256": "b340cac0429777d4c2d22f8d2b70fec38b96f038104858a0454ac0ce7003effe",
+      "log_sha256": "ff85a2814b3fdc7f18fec496e355c521d76174289fee8efbcd6b09dcaaf2c8d7"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_reviews*.py"
+      ],
+      "started_at": "2026-10-26T13:29:15.862216+00:00",
+      "finished_at": "2026-10-26T13:30:07.737201+00:00",
+      "seconds": 51.874985,
+      "exit_code": 0,
+      "log": "20261026T132915-5282733b.log",
+      "tests": 14,
+      "unittest_seconds": 51.316,
+      "executed_by": "parent agent; command record and log independently inspected",
+      "result_sha256": "77ca6560cde6c8bd5d88beb093b0c6104b35e2daf5e89cf8b25a5d960a05ab53",
+      "log_sha256": "d403b83dce142bca30aeb42d4fc7dc1f1d8607ca44894f7766080661dc54b17b"
+    }
+  ],
+  "retained_test_preparation_failure": {
+    "tests": 11,
+    "unittest_seconds": 32.202,
+    "exit_code": 1,
+    "errors": 2,
+    "tool_chunks": [
+      "7f2039",
+      "b1a4ab"
+    ],
+    "reason": "Two independently authored tests attempted a second formalization using a helper whose release target was fixed at epoch 2. The existing controller correctly rejected release into a non-later epoch.",
+    "repair": "Only the independent fixtures changed: wrong-target assessment does not need a review; unverified-history coverage adds the unverified response to the original target. Production checks were not weakened."
+  },
+  "unverified": [
+    "Provider replies are mocked in this integration; no actual model call, model-quality benchmark or paid API test was performed.",
+    "Eleven independent boundary tests stub numeric data resolution; the separately inspected two-test integration supplies actual synthetic data, certification, compilation, execution and child replay.",
+    "Fresh prerequisite inspection is not a durable admission token. Scientific data/exposure acceptance, composition conformance, calibrated information/evaluation and atomic allocation/freeze remain separate.",
+    "No scientific readiness, market edge, mixed-provider research cycle, publication or deployment completion is established by this review.",
+    "Trusted host/operator and operating-system boundaries remain outside the worker isolation guarantee."
+  ]
+}

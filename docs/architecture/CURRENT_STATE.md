@@ -1,8 +1,10 @@
 # Current State
 
-Updated October 26, 2026 for the requested GitHub publication checkpoint. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
+Updated October 26, 2026 for the meaning-review plan integration after the requested GitHub publication. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
 
 ## Repository and existing artifacts
+
+The [plan integration](../reviews/implementation-2026-10-25/PLAN_MEANING_INTEGRATION_2026-10-26.md) consumes an owned meaning-review assessment for the exact compiled formalization and feature-definition identity. Preparation retains its inventory before child execution and rejects changes before commitment. Fresh operator inspection reopens the semantic prerequisite for stale evidence while preserving historical plans, gaps, source ancestry and exposure. This is ordinary integration of D002/D074/D084 prerequisites; data/exposure acceptance, calibrated information/evaluation and atomic scientific freeze remain unfinished. No additional provider call was needed.
 
 The [October 26 meaning-review continuation](../reviews/implementation-2026-10-25/MEANING_REVIEW_OBSERVATION_2026-10-26.md) now records all eight actual judgments matching the independently fixed expectations in the corrected full comparison. Earlier input-limit gaps and preparation failures remain retained. The original epoch was recovered without a budget reset; visible neutral identity/schema provenance resolved the fixture ambiguity. Only the two faithful executable mappings satisfy the separate review-process prerequisite; no scientific readiness or downstream admission follows. Aggregate actual provider usage is now 22 calls, 145,641 tokens and USD 0.404925 conservative bound. Earlier usage totals below remain historical checkpoints.
 

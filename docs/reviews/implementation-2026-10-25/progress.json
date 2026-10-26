@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "121 fresh tests passed before publication at 32eccc2. Production/test/fixture bytes remain unchanged. All eight actual judgments match the independently fixed expectations in the corrected full comparison; earlier incomplete observations and preparation failures remain retained. Independent review, fresh documentation checks, exact usage and limits are in meaning-review-verification-2026-10-26.json. No scientific admission or full research cycle."
+      "evidence": "63 unique focused tests pass: 14 plan-review boundaries, 2 complete synthetic binding cases, 16 prior plan tests, 11 retention/crash/backup tests and 20 meaning-review tests. Fresh documentation checks and independent review are retained in plan-meaning-verification-2026-10-26.json. No paid call, scientific admission, atomic freeze or full research cycle."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -292,11 +292,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Continue step3/4 faithful formalization and independently observed meaning review, data/exposure acceptance, nuisance adequacy, information/calibration and atomic scientific admission. The second direct provider transport and mixed-controller fixtures are now implemented; actual Anthropic access/spending and live compatibility remain required before the first mixed-model research cycle. Reuse the aggregate ledger if expanded provider spending is approved. No automatic cheap routing, OpenCode bridge, quality-equivalence or scientific-success claim is activated.",
+  "next_action": "Continue step3/4 data/exposure acceptance and composition prerequisites, calibrated information/evaluation and atomic family allocation/freeze. Meaning-review plan integration now has fresh current inspection; future freeze must recheck it atomically. Actual Anthropic access/spending remains required before the mixed-provider live research cycle.",
   "continuation_audit": {
-    "previous_goal_turn": "no_progress_verification_only",
+    "previous_goal_turn": "progress_publication_and_fixed_meaning_comparison",
     "current_goal_turn": "progress",
-    "basis": "This continuation closes the auxiliary worker-response provenance gap with host-owned direct dispatch, independent adversarial checks and actual bounded OpenAI handoff calls. The full seven-package goal remains incomplete; scientific prerequisites remain open.",
+    "basis": "Current meaning-review evidence now binds plan preparation and intended-use inspection, including exact feature-definition identity, full exposure, stale inventory reopening and interrupted request retention. The full seven-package objective remains incomplete.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -323,5 +323,16 @@
     "scientific_readiness": false,
     "full_objective_complete": false,
     "next": "Connect current immutable review evidence to remaining admission prerequisites without weakening data/exposure, calibration or atomic-freeze gates."
+  },
+  "meaning_review_plan_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "verification": "docs/reviews/implementation-2026-10-25/plan-meaning-verification-2026-10-26.json",
+    "unique_focused_tests": 63,
+    "full_data_binding_tests": 2,
+    "provider_calls": 0,
+    "raw_policy_and_historical_plans_unchanged": true,
+    "scientific_readiness": false,
+    "full_objective_complete": false
   }
 }

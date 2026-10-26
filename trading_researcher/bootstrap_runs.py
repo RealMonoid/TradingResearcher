@@ -234,6 +234,8 @@ class BootstrapRuns:
         require(e['compiled_id']==p['request']['compiled_id']
                 and execution['id'] in p['request']['dependence']['development_refs'],
                 'Development execution must be a declared diagnostic of this exact plan')
+        self._require_usable_dependencies(plan_id)
+        self._require_usable_dependencies(execution_id)
         self._plan_inputs(actor,p['request'])
         result=e['result']; descriptor=result['case_blob']
         require(execution['blob_refs']==[descriptor['sha256']], 'Execution case binding differs')

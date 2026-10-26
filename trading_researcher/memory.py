@@ -239,7 +239,7 @@ class ResearchMemory:
                 latest = max(latest, int(utc(body.get('created_at')).timestamp()))
             elif type(body) is dict and body.get('schema') == 'implementation-certificate/1':
                 latest = max(latest, integer(body.get('created_at'), 'certificate creation time'))
-            elif type(body) is dict and body.get('schema') in ('blob-source/1', 'reference-source-package/1', 'data-snapshot/1',
+            elif type(body) is dict and body.get('schema') in ('dependency-revocation/1', 'blob-source/1', 'reference-source-package/1', 'data-snapshot/1',
                     'feature-source-package/1', 'feature-definitions/1', 'feature-certificate/1',
                     'compiled-hypothesis/1', 'reference-execution/1', 'binding-source-package/1', 'evaluation-plan/1',
                     'evaluation-plan-input/1','semantic-review-record/1','semantic-review-assessment/1','provider-invocation/1','provider-invocation-input/1',

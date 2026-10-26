@@ -18,7 +18,7 @@ Before commitment, the parent validates the exact response schema, fixed definit
 
 Definitions inherit data classification, source identities, exposure and creation-time availability. Assessment definitions cannot enter discovery/formalization as development data. Generic source/worker writes cannot mint the reserved namespaces. Certificates are host work products, not automatically released feedback.
 
-`feature_certificate_status(certificate_id=..., data_snapshot_id=...)` optionally requires the intended snapshot and rejects a mismatch. Status is `CURRENT`, `STALE`, `QUARANTINED` or `CERTIFICATION_GAP`. Any application source change conservatively makes installed-package currency stale. Currency grants no scientific execution permission. `inspect_feature_checks(limit=...)` returns bounded durable attempt history.
+`feature_certificate_status(certificate_id=..., data_snapshot_id=...)` optionally requires the intended snapshot and rejects a mismatch. Status is `CURRENT`, `STALE`, `QUARANTINED`, `CERTIFICATION_GAP` or `INVALIDATED_BY_DEPENDENCY` after an applicable [technical revocation](REVOCATIONS.md). Any application source change conservatively makes installed-package currency stale. Currency grants no scientific execution permission. `inspect_feature_checks(limit=...)` returns bounded durable attempt history.
 
 ## Independent expectations and limits
 

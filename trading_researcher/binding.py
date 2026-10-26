@@ -309,6 +309,7 @@ class BoundComputation:
         require(artifact['creator'] == artifact['origin'] == 'controller' and type(body) is dict
             and body.get('schema') == 'binding-source-package/1' and body.get('profile') == PROFILE
             and set(body['files']) == set(PACKAGE_FILES))
+        self._require_usable_dependencies(identity)
         require(body['bootstrap_sha256'] == hashlib.sha256(BOOTSTRAP.encode()).hexdigest())
         bundle = {}
         for name,item in body['files'].items():
@@ -376,6 +377,7 @@ class BoundComputation:
         attempt = self._bound_start('compile',args['formalization_id'])
         report,error = None,None
         try:
+            with self._mutex:self._require_usable_dependencies(package_id)
             with tempfile.TemporaryDirectory(prefix='trf-bound-compile-') as temporary:
                 report = run_child(bundle,'compile',payload,temporary)
             validate_compilation(report['result'],payload)
@@ -421,6 +423,7 @@ class BoundComputation:
             # This check must precede any certificate/blob/row loader.
             if snapshot['data_class'] != 'development' or snapshot['body']['manifest']['partition'] != 'development':
                 raise Denied('Protected outcomes require a separately frozen scientific plan and allocation')
+            self._require_usable_dependencies(compiled['id'])
             arguments = body['dependency_arguments']
             dependencies = self._bound_dependencies(actor,*(arguments[key] for key in ('formalization_id','feature_certificate_id','reference_certificate_id')))
             bundle = self._load_binding_package(body['source_package_id'])

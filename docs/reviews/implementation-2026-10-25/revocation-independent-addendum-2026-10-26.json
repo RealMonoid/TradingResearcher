@@ -1,0 +1,194 @@
+{
+  "schema": "technical-revocation-independent-addendum/1",
+  "status": "PASS_BOUNDED_SHARED_DEPENDENCY_FIX",
+  "checked_at_utc": "2026-10-26T14:24:02.057318+00:00",
+  "reviewer": "independent publication_review agent",
+  "prior_review": {
+    "path": "docs/reviews/implementation-2026-10-25/revocation-independent-2026-10-26.json",
+    "sha256": "651f2774ab610b9e00f4fa12adaf8e02b5e72109249b03802a7f6c8145230324",
+    "preserved_without_rewrite": true
+  },
+  "purpose": "Record a later plan-review regression, its retained reproducer, and a bounded correction to generated technical dependency edges.",
+  "finding": "The first revocation implementation passed its earlier checks but a subsequent 14-case plan-review run produced seven errors. Multiple typed fields may reference the same dependency. Calling codec.strings on the generated combined edge list incorrectly treated this shared dependency as an invalid duplicate request.",
+  "correction": "Only generated traversal-edge handling changed: require a list with at most 256 entries before deduplication, apply the existing bounded nonempty text validator to every entry, then deduplicate with dict.fromkeys. Existing public request validation and codec.strings are unchanged.",
+  "authority_assessment": "This is ordinary graph traversal correction within D083/REQ-008. It changes neither scientific meaning nor package identity, revocation authority, provenance propagation or admission rules.",
+  "source_changes_since_prior_review": {
+    "trading_researcher/revocations.py": {
+      "before": "fac68527b37672b05a5d0d3e56ede76fd0344aabb5e313b5f1f5e2bb0bcd75f6",
+      "after": "717a78816fcda1a2123d9765b87cc2cf6d9ef442d43351c5f2b0d710e9f9629f"
+    },
+    "tests/test_revocations.py": {
+      "before": "08aba38cba19e297615d9c962a97ace7973fc2f6ab0b9a485c45a7156a6ad789",
+      "after": "d19657ab0ba831dd170f49d6a8a61aaeb2baec4e187be3459f1bd020b7a8ea9b"
+    }
+  },
+  "unchanged_bound_source_count": 55,
+  "independent_checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocations*.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T14:21:44.505177+00:00",
+      "finished_at": "2026-10-26T14:21:53.381365+00:00",
+      "seconds": 8.876188,
+      "exit_code": 0,
+      "log": "20261026T142144-beabb059.log",
+      "test_count": 18,
+      "unittest_seconds": 8.325,
+      "metadata_sha256": "2c408fcd4db8364f57e5ee55df7cd6c6a70a471fe29866d8e7201323f27df2c8",
+      "log_sha256": "445da5ff0ded5b1be23ce4ed72761ea65df37fed8d6b53b194ebd28e8acd94e1",
+      "provenance": "Run directly by the independent reviewer against the corrected source: all 18 current revocation cases.",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    }
+  ],
+  "independently_inspected_parent_checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_reviews*.py"
+      ],
+      "started_at": "2026-10-26T14:19:49.252609+00:00",
+      "finished_at": "2026-10-26T14:20:43.991432+00:00",
+      "seconds": 54.738823,
+      "exit_code": 0,
+      "log": "20261026T141949-ba087f21.log",
+      "test_count": 14,
+      "unittest_seconds": 54.164,
+      "metadata_sha256": "6449603f3a0da00cca8ad80f2be7860c4f02d3fb602186b09590d54e115d35b7",
+      "log_sha256": "c569d7ea22b8f2861c2ad25e916c6ebb776dd51f39485a2016cdb8b59436a2a4",
+      "provenance": "Retained exact exit and output read: all 14 original plan-review regression cases pass unchanged.",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocation_binding.py"
+      ],
+      "started_at": "2026-10-26T14:19:49.208604+00:00",
+      "finished_at": "2026-10-26T14:21:43.014912+00:00",
+      "seconds": 113.806308,
+      "exit_code": 0,
+      "log": "20261026T141949-92cc984d.log",
+      "test_count": 5,
+      "unittest_seconds": 113.257,
+      "metadata_sha256": "078b826f900c7861720e406cf48153fd84b300159ecaebbc6bf18a7acd96fc42",
+      "log_sha256": "5e3d7a3e6ef03668873cba2b7e9ba0714e76c3e6806ca8c376a2bf681632b0e6",
+      "provenance": "Retained exact exit and output read: five real binding, plan, execution and study integration cases pass on the corrected source.",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocations*.py"
+      ],
+      "started_at": "2026-10-26T14:19:49.216342+00:00",
+      "finished_at": "2026-10-26T14:20:00.051628+00:00",
+      "seconds": 10.835286,
+      "exit_code": 0,
+      "log": "20261026T141949-f4b475c0.log",
+      "test_count": 18,
+      "unittest_seconds": 10.271,
+      "metadata_sha256": "8655ca150ae63ae9e1c493d7975122b5e0fb9edbf40e3925616b8ab1b08abb14",
+      "log_sha256": "08d95973244a661623fbfe39d63a76592f0a2635b30f992e7f9b0da8cc80a7ae",
+      "provenance": "Parent-run 18-case revocation suite agrees with the independent run; not counted twice.",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    }
+  ],
+  "retained_failures": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_reviews*.py"
+      ],
+      "started_at": "2026-10-26T14:10:37.296447+00:00",
+      "finished_at": "2026-10-26T14:11:26.086593+00:00",
+      "seconds": 48.790146,
+      "exit_code": 1,
+      "log": "20261026T141037-84f5861c.log",
+      "test_count": 14,
+      "unittest_seconds": 48.184,
+      "metadata_sha256": "7cabb22d3be6cfc91f3c622e78076340c8c6953a930b9f808b071f23bd9715ed",
+      "log_sha256": "27e6362ddc56b00750cf2422154666d825ce6b2df0a65700a255257ec975e373",
+      "provenance": "Later regression exposed the defect after the original independent report was written.",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26",
+      "errors": 7,
+      "passed": 7,
+      "reason": "Generated technical dependency lists rejected a shared artifact as duplicate."
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocations.py"
+      ],
+      "started_at": "2026-10-26T14:19:25.627577+00:00",
+      "finished_at": "2026-10-26T14:19:27.210442+00:00",
+      "seconds": 1.582865,
+      "exit_code": 1,
+      "log": "20261026T141925-2c9bbaa1.log",
+      "test_count": 3,
+      "unittest_seconds": 1.1,
+      "metadata_sha256": "074fe56bdb09b760f3a4d467ee424276636d8f7d46d3aca48ae985efc37aca79",
+      "log_sha256": "1e37f31217a3f789562d22e785dcf1f80ffdb988fd2db0529683cb3949390674",
+      "provenance": "New focused shared-dependency test was run against the old code before the fix.",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26",
+      "errors": 1,
+      "passed": 2,
+      "reason": "The focused counterexample failed at the same duplicate-list validator."
+    }
+  ],
+  "reviewed_counterexample": "The synthetic graph test references one version through two typed fields. After correction it visits the version once, reports a single applicable invalidation and includes the consumer in the retained affected-object set. This is a graph fixture, not a certificate of a scientifically valid evaluation plan.",
+  "warranted_conclusion": "The reported shared-dependency regression is fixed and both the original failing regression suite and focused reproducer now pass. Existing invalidations still propagate, source history remains immutable, and typed graph deduplication does not grant validity or scientific admission.",
+  "remaining_blockers_in_reviewed_scope": [],
+  "limitations": [
+    "The unchanged boundaries and qualifications of the original review remain applicable.",
+    "This addendum does not erase the earlier errors or retroactively assert that the original version passed the later regression suite.",
+    "Only revocation traversal and its focused regression test changed among the 57 previously bound source files; all other 55 source hashes match.",
+    "No production files or expected scientific results were changed by the independent reviewer. No paid API calls were made.",
+    "These checks do not establish scientific data acceptance, historical point-in-time truth, rights, unknown model-training exposure, empirical validity or capital authority."
+  ],
+  "next_action": "Publish the corrected source with both reviews and retained failures, then continue the already approved scientific prerequisites."
+}

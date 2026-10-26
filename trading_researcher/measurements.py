@@ -136,6 +136,7 @@ class DevelopmentMeasurements:
         if request['snapshot_id'] not in ancestry:raise Denied('Snapshot unavailable in the frozen context')
         snapshot=self._data_snapshot(request['snapshot_id']);manifest=snapshot['body']['manifest']
         if snapshot['data_class']!='development' or manifest['partition']!='development':raise Denied('Development partition required')
+        self._require_usable_dependencies(snapshot['id'])
         start,end,allowed=window(manifest['universe'])
         if lower-900*request['warmup_bars']<start or upper>end or not set(instruments)<=set(allowed):
             raise Denied('Measurement and explicit warmup must stay within the authorized snapshot')

@@ -16,6 +16,8 @@ The seven-package implementation remains in progress. This summary describes the
 
 ## Latest continuation
 
+The [technical revocation continuation](REVOCATION_INTEGRATION_2026-10-26.md) implements the existing D083 contract for supported data, certificate and implementation-package versions. It retains defect evidence and affected objects, follows actual technical uses rather than generic ancestry, denies new computation/delivery after revocation and preserves charged failures and historical outputs. Data qualification, composition/scientific admission, calibration and atomic freeze remain open.
+
 The [October 26 plan integration](PLAN_MEANING_INTEGRATION_2026-10-26.md) adds optional owned meaning-review evidence to plan preparation and a fresh operator inspection. Exact target/feature identity, inherited exposure, interrupted-input retention and stale-review reopening are preserved. Only the semantic prerequisite can close; the historical draft and the other scientific gates remain unchanged. No API inference was performed in this continuation.
 
 [Development measurements](../../../trading_researcher/MEASUREMENTS.md) now evaluate general causal expressions from recorded provider tool calls with exact descriptive values, explicit missingness and private exposure. Independent tests reproduced an undelivered-result read leak; removing worker exposure fixed it. The focused regression inventory has 78 unique tests: 70 passed initially, while one of eight HTTP runtime tests hit a connection reset; all eight passed unchanged on rerun. The transport failure remains recorded and unexplained. The fourteen independent measurement tests are included in those 78, not additional tests.

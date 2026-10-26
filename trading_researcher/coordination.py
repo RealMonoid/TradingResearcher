@@ -36,6 +36,7 @@ from .study_runs import InformationStudies
 from .measurements import DevelopmentMeasurements
 from .controller_providers import ControllerProviders, routes as provider_routes_config
 from .meaning_reviews import MeaningReviews
+from .revocations import DependencyRevocations
 
 
 SCHEMA = '''
@@ -66,7 +67,7 @@ CREATE TABLE IF NOT EXISTS events(seq INTEGER PRIMARY KEY, previous_hash TEXT NO
 '''
 
 
-class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews):
+class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews, DependencyRevocations):
     def __init__(self, directory, clock=None, *, provider_routes=None):
         self._provider_routes = provider_routes_config(provider_routes)
         self.directory = Path(directory).resolve()
@@ -237,7 +238,8 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
                          'add_research', 'inspect_memory', 'rebuild_memory',
                          'create_research_epoch', 'inspect_research_epoch', 'reference_certificate_status',
                          'inspect_reference_checks', 'feature_certificate_status', 'inspect_feature_checks',
-                         'inspect_bound_computations','assess_meaning_review','inspect_meaning_review','inspect_evaluation_plan'}
+                         'inspect_bound_computations','assess_meaning_review','inspect_meaning_review','inspect_evaluation_plan',
+                         'revoke_dependency','inspect_dependency_use'}
             allowed = admin_ops if actor['role'] == 'operator' else worker_ops
             if op not in allowed:
                 raise Denied('Operation unavailable for this capability')

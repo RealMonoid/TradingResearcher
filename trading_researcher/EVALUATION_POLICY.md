@@ -52,6 +52,8 @@ No assessment access, budget reservation, scientific result release, semantic ap
 
 ## Evidence and unfinished requirements
 
+[Technical revocation](REVOCATIONS.md) is checked for the compiled hypothesis and every declared development diagnostic before new use and commitment. A diagnostic can carry a different compiler dependency. `inspect_evaluation_plan` additionally reports fresh `dependency_use`; historical plan/calculator bytes stay unchanged. A completed request key is not a new admission token.
+
 The independent [91-case fixture](../tests/fixtures/reference_evaluation_policy_cases.json) and [authorship note](../tests/fixtures/reference_evaluation_policy_expectations.md) were fixed before the implementation was inspected. The policy suite exercises 81 cases. The ten allocation-state cases remain explicitly pending for the future campaign/freeze state machine; they are not counted as verified behavior. Additional adversarial tests cover arithmetic growth, units, false Boolean/count coercion, undefined draws, input mutation, unavailable diagnostic blobs, stale imports and transaction failures.
 
 The [source baseline archive](../docs/reviews/implementation-2026-10-25/evaluation-policy-source-baseline.zip) preserves the three exact source documents pinned by the fixture, including the blueprint before its descriptive implementation update. Archive member hashes must match the fixture's source hashes; later documentation does not replace those source versions.

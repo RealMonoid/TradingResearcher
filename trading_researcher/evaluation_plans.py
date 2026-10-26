@@ -154,6 +154,7 @@ class EvaluationPlans:
                 or type(body) is not dict or body.get('schema')!='compiled-hypothesis/1'
                 or body.get('status')!='COMPILED'):
             raise Denied('Plan preparation requires an owned compiled hypothesis')
+        self._require_usable_dependencies(compiled['id'])
         snapshot=self._data_snapshot(body['data_snapshot_id'])
         if snapshot['data_class']!='development' or snapshot['body']['manifest']['partition']!='development':
             raise Denied('This preparation route accepts development bindings only')
@@ -168,6 +169,7 @@ class EvaluationPlans:
                     or value.get('schema')!='reference-execution/1' or value.get('status')!='DESCRIPTIVE_EXECUTION'
                     or value.get('data_snapshot_id')!=snapshot['id']):
                 raise Denied('Dependence references must be owned computations on this development snapshot')
+            self._require_usable_dependencies(artifact['id'])
             descriptor=value['result']['case_blob']
             require(artifact['blob_refs']==[descriptor['sha256']],'Diagnostic blob binding differs')
             try:
@@ -246,6 +248,7 @@ class EvaluationPlans:
             gates=[gate for gate in gates if gate!='independent_semantic_review']
         return {'plan_id':plan_id,'status':body['status'],'gap':body['gap'],
             'meaning_review':meaning,'current_remaining_gates':gates,
+            'dependency_use':self._dependency_use(plan_id),
             'scientific_readiness':False,'allocation_reserved':False,'frozen':False}
 
     def _prepare_evaluation_plan_external(self,token,args):

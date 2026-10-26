@@ -312,6 +312,7 @@ class ReferenceCertification:
                 or body['schema'] != 'reference-source-package/1' or body['profile'] != PROFILE
                 or type(body['files']) is not dict or set(body['files']) != set(FILES)):
             raise Invalid('Expected a host-owned source package for the exact reference profile')
+        self._require_usable_dependencies(package_id)
         bundle, identities, size = {}, set(), 0
         for name, descriptor in body['files'].items():
             if type(descriptor) is not dict or set(descriptor) != {'sha256', 'size'}:
@@ -357,7 +358,11 @@ class ReferenceCertification:
             self._event('controller', 'reference_certification_started', attempt_id=attempt_id,
                         source_package_id=package_id, retained=retained)
         if report is None:
-            report = run_reference_validation(bundle)
+            try:
+                with self._mutex:self._require_usable_dependencies(package_id)
+            except (Invalid,Denied):
+                report = _report('CERTIFICATION_GAP', 'SOURCE_PACKAGE_REVOKED_OR_UNSUPPORTED')
+            else:report = run_reference_validation(bundle)
         with self._transaction():
             actor = self._principal(token)
             if actor['role'] != 'operator':
@@ -368,7 +373,7 @@ class ReferenceCertification:
                     if not retained:
                         current = current and _footprint(read_bundle()) == report['footprint']
                     current = current and _environment_current(report['environment'])
-                except (OSError, ValueError, TypeError, Conflict):
+                except (OSError, ValueError, TypeError, Conflict, Denied):
                     current = False
                 if not current:
                     report = {**report, 'status': 'CERTIFICATION_GAP',
@@ -394,6 +399,9 @@ class ReferenceCertification:
                 or type(body) is not dict or body.get('schema') != SCHEMA
                 or body.get('profile') != PROFILE or body.get('scope') != SCOPE):
             raise Invalid('Expected a host-issued certificate for the exact reference profile')
+        if self._dependency_use(certificate_id)['status']=='INVALIDATED_BY_DEPENDENCY':
+            return {'certificate_id':certificate_id,'status':'INVALIDATED_BY_DEPENDENCY',
+                'retained_source_status':'REVOKED_DEPENDENCY','scientific_readiness':False}
         status = 'CERTIFICATION_GAP'
         retained_status = 'NOT_VERIFIED'
         if body['status'] == 'CERTIFIED':

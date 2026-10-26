@@ -1,0 +1,330 @@
+{
+  "schema": "technical-revocation-independent-review/1",
+  "status": "PASS_BOUNDED_TECHNICAL_REVOCATION",
+  "checked_at_utc": "2026-10-26T14:11:34.778145+00:00",
+  "reviewer": "independent publication_review agent",
+  "base_commit": "f7072ee7d33dfaa03b09612c74613e8b9eff929d",
+  "purpose": "Implement already accepted technical-version revocation before future data admission, without inventing exposure or point-in-time acceptance policy.",
+  "authority_assessment": "D083, research-contract/1.0 section 13, DEF-015, REQ-008 and IF-09 already require retained historical outcomes and invalidation through actually used infrastructure. Section 14 does not authorize a new scientific exposure or acceptance policy. This bounded change implements operational revocation only.",
+  "source_sha256": {
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/auxiliary.py": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "d641bbe48d16275d4d0890e5f469b89decdb892c533773640557a3a1daf9b0f1",
+    "trading_researcher/bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "be7028bed86d82cfccb25c3ac0d926cb84bfa5d7a448168d5a898cbe38d4b6ea",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "c5b50b4ddc61ae0c6929371eade3eb110e6c7a72ff7f1cb28ca38adf97bf8381",
+    "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "5d8162f418749425d1de5ac1b47b21cc4b7159b3fc99189db37cfb4827d5586a",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+    "trading_researcher/memory.py": "8b6804d0e5888fe14613c6c0297542ee42bbe096a77b859e90e82feb85fde083",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/revocations.py": "fac68527b37672b05a5d0d3e56ede76fd0344aabb5e313b5f1f5e2bb0bcd75f6",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "32450e1227857fe1938fcdbcf297d539385102496a16fdad1e35390f2cbf238b",
+    "trading_researcher/study_pipeline.py": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+    "trading_researcher/study_runs.py": "84b396f6dcc3d0fdf67adcd80d11c348bb99d37508bb269e2f408002f902040b",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe",
+    "tests/test_revocations_adversarial.py": "7f3616f59511a11c1ebb30116d79be71faead9e7b3bcba9b8254c5daa3c50ea1",
+    "tests/test_revocations.py": "08aba38cba19e297615d9c962a97ace7973fc2f6ab0b9a485c45a7156a6ad789",
+    "tests/test_revocation_binding.py": "2e547426168d58b3c88959ccda7b7f03407c86f4b22dec5f7d72dcca5f6924bd",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+    "docs/architecture/04_DEFINITIONS.md": "3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9",
+    "docs/architecture/05_REQUIREMENTS.md": "b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "0191b59fbfc69cd3a4fe3046446c09c3c19d281f29314b9b6b3d3b132e386079"
+  },
+  "changed_by_reviewer": [
+    "tests/test_revocations_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/revocation-independent-2026-10-26.json"
+  ],
+  "findings": [
+    {
+      "finding": "Revocations are operator-authorized, host-issued, immutable records with exact defect-evidence references and an affected-object set for supported typed bindings.",
+      "evidence": "Authenticated namespace, conflicting-key, missing-evidence, historical pre-upgrade source forgery and backup/restore tests pass. Untrusted historical source bodies cannot impersonate controller revocation records."
+    },
+    {
+      "finding": "Technical use is distinct from provenance, genealogy, exposure and revision history.",
+      "evidence": "The implemented schema-specific edges do not blindly traverse source_refs/exposure. A corrected snapshot may supersede a revoked snapshot while retaining that exposure; it remains structurally usable and scientifically unaccepted. Unknown consumer schemas yield UNKNOWN_BINDING."
+    },
+    {
+      "finding": "Exact retained package bytes cannot regain use by receiving a new artifact timestamp or certificate.",
+      "evidence": "Package selectors bind schema plus the hash of the exact footprint. Real retained-package alias tests deny identical bytes under a later ID, while changed bytes remain merely NOT_REVOKED and uncertified. Real binding integration prevents launching a revoked compiler."
+    },
+    {
+      "finding": "All declared plan diagnostics have their own hard dependencies.",
+      "evidence": "The real binding integration creates an alternate compiler and an additional diagnostic on the same snapshot. Revoking only that compiler leaves the main compiled target unaffected but invalidates the plan that consumes the additional diagnostic."
+    },
+    {
+      "finding": "Revocation races are checked again before newly calculated data or results can be used.",
+      "evidence": "Independent tests cover unlocked row scans and measurement calculation/delivery; parent-run real integration covers plan calculation, reference execution and a study world. A revoked in-flight study output is retained and charged but settled as TECHNICAL_FAILURE."
+    },
+    {
+      "finding": "Reference validation closes a revoked in-flight attempt as a retained gap.",
+      "evidence": "The independent real-reference-validation test revokes its package after successful fixed-case validation. The controller retains CERTIFICATION_GAP and a completed attempt rather than granting a certificate or leaving an unresolved started attempt."
+    },
+    {
+      "finding": "History and scientific authority remain separate from current technical usability.",
+      "evidence": "Original artifacts remain byte-identical and readable, historical completed plan retrieval remains idempotent, and current inspection reports INVALIDATED_BY_DEPENDENCY separately. NOT_REVOKED is explicitly not validity, scientific admission, or capital authority."
+    }
+  ],
+  "independent_checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocations_adversarial.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T14:02:50.527864+00:00",
+      "finished_at": "2026-10-26T14:02:58.376427+00:00",
+      "seconds": 7.848563,
+      "exit_code": 0,
+      "log": "20261026T140250-279bba98.log",
+      "provenance": "Run directly by the independent reviewer after all 15 independent cases were present.",
+      "test_count": 15,
+      "unittest_seconds": 7.305,
+      "metadata_sha256": "db184619903fa70dff0e11d4d50557eeb02cc4223d8cde08e644354f4c1cf0d5",
+      "log_sha256": "70ab5508cba48b28325bb034fb7a3234fd15a92d6c6f582e98a8d2fe9f4fe399",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    }
+  ],
+  "independently_inspected_parent_checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocation_binding.py"
+      ],
+      "started_at": "2026-10-26T14:03:01.052545+00:00",
+      "finished_at": "2026-10-26T14:04:53.479113+00:00",
+      "seconds": 112.426568,
+      "exit_code": 0,
+      "log": "20261026T140301-a9d60e4c.log",
+      "provenance": "Parent-run structured exit and retained output independently read; test implementation inspected.",
+      "test_count": 5,
+      "unittest_seconds": 111.881,
+      "metadata_sha256": "8a112edbe335dd8689fe4f12c345ea6590037dc4d953cd04efe331c6255b573d",
+      "log_sha256": "0335d376779e3b80c3f2ebfb8a79276b4c605439c0754bb443b8b33afd71114c",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data.py"
+      ],
+      "started_at": "2026-10-26T14:03:29.789375+00:00",
+      "finished_at": "2026-10-26T14:03:39.586109+00:00",
+      "seconds": 9.796734,
+      "exit_code": 0,
+      "log": "20261026T140329-cdc1f318.log",
+      "provenance": "Parent-run structured exit and retained output independently read; test implementation inspected.",
+      "test_count": 17,
+      "unittest_seconds": 9.268,
+      "metadata_sha256": "3ea863c68fc1ec0ff68eaeda486a3d0a57a2fcf7cb95195ff2364c1556b8c68c",
+      "log_sha256": "47c4973d31680e607ded02942ac12174aef2357b8e7da0e19731466892418792",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_measurements*.py"
+      ],
+      "started_at": "2026-10-26T14:03:29.783238+00:00",
+      "finished_at": "2026-10-26T14:03:43.400361+00:00",
+      "seconds": 13.617123,
+      "exit_code": 0,
+      "log": "20261026T140329-1ad0fd81.log",
+      "provenance": "Parent-run structured exit and retained output independently read; test implementation inspected.",
+      "test_count": 21,
+      "unittest_seconds": 13.047,
+      "metadata_sha256": "49d7c0d6ee4e34feccd3c5bb473a2be7a5bd069b6afe086af61e16566d2d8d7c",
+      "log_sha256": "d15a3d020b30a06adac5cbf442754979b06702126b637e0c89148d896c3a1577",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_certification.py"
+      ],
+      "started_at": "2026-10-26T14:03:29.831595+00:00",
+      "finished_at": "2026-10-26T14:03:59.331380+00:00",
+      "seconds": 29.499785,
+      "exit_code": 0,
+      "log": "20261026T140329-39c789c7.log",
+      "provenance": "Parent-run structured exit and retained output independently read; test implementation inspected.",
+      "test_count": 21,
+      "unittest_seconds": 28.965,
+      "metadata_sha256": "0600efbd8e6686483d0c8f6dd6bae799c85ccb2aaf1dc1e402608a082e81b929",
+      "log_sha256": "964acb92e8ccd5d247d79e0d7509512679371862cc3d59240aeb8412210678bd",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_calibration_runs.py"
+      ],
+      "started_at": "2026-10-26T14:05:59.661526+00:00",
+      "finished_at": "2026-10-26T14:08:06.467793+00:00",
+      "seconds": 126.806267,
+      "exit_code": 0,
+      "log": "20261026T140559-fec47214.log",
+      "provenance": "Parent-run structured exit and retained output independently read; test implementation inspected.",
+      "test_count": 3,
+      "unittest_seconds": 126.253,
+      "metadata_sha256": "c04ed324d61a9945d014ed89aedba5417ecb2eb6292f3a249d0a673f22b3a137",
+      "log_sha256": "af8ef12a07017a2e0a68e57b6658b4310694cfae4ec90b627658bb8999fc8c1f",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_features.py"
+      ],
+      "started_at": "2026-10-26T14:05:59.661422+00:00",
+      "finished_at": "2026-10-26T14:08:29.008646+00:00",
+      "seconds": 149.347224,
+      "exit_code": 0,
+      "log": "20261026T140559-646b7271.log",
+      "provenance": "Parent-run structured exit and retained output independently read; test implementation inspected.",
+      "test_count": 4,
+      "unittest_seconds": 148.812,
+      "metadata_sha256": "47bdc679bd5396ad2ebfe6146cafdfcc753bd33bc215d065c7d4abf6c28fb7d4",
+      "log_sha256": "fa73f35e8edbb11b38c7eaac1d3faf9436b0b0c343851d7f7dcaddc180a79abf",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_runs*.py"
+      ],
+      "started_at": "2026-10-26T14:05:59.753076+00:00",
+      "finished_at": "2026-10-26T14:09:30.547049+00:00",
+      "seconds": 210.793973,
+      "exit_code": 0,
+      "log": "20261026T140559-b8acc180.log",
+      "provenance": "Parent-run structured exit and retained output independently read; test implementation inspected.",
+      "test_count": 13,
+      "unittest_seconds": 210.242,
+      "metadata_sha256": "6e2d81d5017960ebcc740fe82e328683dd943aba9173b30a831ef41eed2a5523",
+      "log_sha256": "11383c5ebb229802196125d93f8d5d7ea9832f9ebd7fc33cc2ac9585806b3dda",
+      "local_evidence_directory": ".trf-runtime/revocation-checks-2026-10-26"
+    }
+  ],
+  "retained_failed_observations": [
+    {
+      "tool_chunk": "14e1ff",
+      "command": "python -B -m unittest discover -s tests -p test_revocations_adversarial.py -v",
+      "test_count": 14,
+      "passed": 12,
+      "failures": 2,
+      "unittest_seconds": 6.68,
+      "exit_code": 1,
+      "finding": "Before the measurement fix, both revocation during calculation and cached tool delivery after revocation failed to raise Denied.",
+      "resolution": "Added usability to measurement authorization, which runs before use and again before delivery, and added typed measurement dependencies. Both original counterexamples pass unchanged in the final 15-test run."
+    }
+  ],
+  "resolved_static_findings": [
+    "Filter revocation records by controller ownership and exact authority, including pre-upgrade registries.",
+    "Check newly retained compiler/reference/feature packages before validator or child launch.",
+    "Catch newly possible Denied/Invalid during reference-certificate final validation and retain the gap.",
+    "Retain the affected-object set in the append-only revocation event record, while dynamically checking later package aliases."
+  ],
+  "limitations": [
+    "Tests use synthetic rows and defect assertions. They do not validate the truth or completeness of an operator defect diagnosis.",
+    "Supported targets are data snapshots, feature definitions/certificates, reference implementation certificates and the three named retained package schemas. Arbitrary code blobs, unsupported schemas, and semantically similar new data versions are not automatically equated.",
+    "Package identity is exact schema and footprint, not a proof that changed source bytes repair a defect. New versions still require the existing certification and future scientific-admission gates.",
+    "NOT_REVOKED reports only the absence of a recorded revocation along supported typed bindings at inspection time. It is not a reusable admission token or a scientific validity status.",
+    "No point-in-time release evidence, rights interpretation, unknown training-exposure resolution, allocation/freeze, calibration quality or empirical validity is established. Those plan gates remain open.",
+    "No automatic defect detection, unrevocation workflow, full production-scale performance claim, arbitrary dependency ontology or operating capital authority is implemented.",
+    "The reviewer ran the 15 independent tests and inspected the separate parent-run integration/regression evidence; the reviewer did not independently rerun the expensive five-case integration.",
+    "No paid API calls or production source edits were made by this reviewer."
+  ],
+  "remaining_blockers_in_reviewed_scope": [],
+  "next_action": "Preserve these sources and test evidence, finish documentation checks and publication, then continue the existing scientific prerequisites without treating technical revocation as scientific data acceptance."
+}

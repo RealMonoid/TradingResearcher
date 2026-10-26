@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [technical revocation path](trading_researcher/REVOCATIONS.md) now prevents new use of explicitly revoked data, certificates and retained implementation versions. It follows actual typed dependencies, preserves historical results and exposure, and retains failures when revocation arrives during computation. It grants no scientific validity or empirical verdict.
+
 The [meaning-review plan integration](docs/reviews/implementation-2026-10-25/PLAN_MEANING_INTEGRATION_2026-10-26.md) now binds review evidence to the exact compiled formalization and feature definitions. Current inspection reopens the semantic prerequisite when review history or policy changes. Historical plan bytes and all other scientific gates remain intact.
 
 The [latest meaning-review observation](docs/reviews/implementation-2026-10-25/MEANING_REVIEW_OBSERVATION_2026-10-26.md) records a corrected complete comparison: all eight actual model judgments match the independently fixed expectations, with earlier incomplete attempts retained. Two exact targets satisfy only the independent-review process prerequisite; scientific admission remains unfinished. Aggregate framework usage is now 145,641 tokens and a conservative USD 0.404925.

@@ -1,8 +1,10 @@
 # Current State
 
-Updated October 26, 2026 for the meaning-review plan integration after the requested GitHub publication. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
+Updated October 26, 2026 for technical dependency revocation after the meaning-review plan integration and requested GitHub publication. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
 
 ## Repository and existing artifacts
+
+The [D083/IF-09 technical revocation continuation](../reviews/implementation-2026-10-25/REVOCATION_INTEGRATION_2026-10-26.md) adds operator-issued immutable defect records, event-time affected sets and current typed dependency inspection. New data/measurement/compiled/plan/study consumption checks revocation before use and commitment. Equal retained package bytes cannot escape through a new package ID. Generic provenance, genealogy and supersession do not invalidate a new version. Historical records remain intact. This does not accept uncertain acquisition/PIT/exposure claims or complete scientific admission, policy applicability or the seven-package objective.
 
 The [plan integration](../reviews/implementation-2026-10-25/PLAN_MEANING_INTEGRATION_2026-10-26.md) consumes an owned meaning-review assessment for the exact compiled formalization and feature-definition identity. Preparation retains its inventory before child execution and rejects changes before commitment. Fresh operator inspection reopens the semantic prerequisite for stale evidence while preserving historical plans, gaps, source ancestry and exposure. This is ordinary integration of D002/D074/D084 prerequisites; data/exposure acceptance, calibrated information/evaluation and atomic scientific freeze remain unfinished. No additional provider call was needed.
 

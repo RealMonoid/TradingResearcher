@@ -12,7 +12,7 @@ import uuid
 from .binding import require, write_file
 from .binance_normalize import _run_child
 from .certification import _environment_current, _runtime_identity
-from .codec import canonical, decode, digest, text
+from .codec import Invalid, canonical, decode, digest, text
 from .errors import Conflict, Denied
 from .evaluation_plans import source_bundle, footprint
 from .information_study import make_manifest, summarize, budget_state
@@ -340,6 +340,12 @@ class InformationStudies:
                 failure={'type':'ResourceOverrun','message':'Observed work exceeded its frozen attempt reservation'}
             with self._transaction():
                 require(attempt in self._study_view(study)['budget']['outstanding_attempts'],'Stale study result')
+                # Revocation can arrive while the isolated computation runs.
+                # Retain/charge its output, but never settle it as a valid world.
+                try:self._require_usable_dependencies(study['id'])
+                except (Invalid,Denied,Conflict) as exc:
+                    outcome={**outcome,'state':'TECHNICAL_FAILURE','decision':None,'covered':None}
+                    failure={'type':type(exc).__name__,'message':str(exc)[:2000]}
                 for descriptor in descriptors.values():self._register_blob(descriptor)
                 saved=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
                     'data_class':self._study_data_class,'source_refs':[study['id']],'exposure':sorted(set(study['exposure'])|{study['id']}),

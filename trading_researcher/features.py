@@ -92,6 +92,7 @@ def definitions(instruments):
 
 def binding(broker, snapshot_id):
     snapshot = broker._data_snapshot(snapshot_id)
+    broker._require_usable_dependencies(snapshot_id)
     body = snapshot['body']
     inputs = broker._data_inputs(body['catalog_id'], body['row_source_ids'], body['manifest'])
     broker._check_data_blobs(inputs)
@@ -418,6 +419,7 @@ class FeatureCertification:
                 or type(body) is not dict or body.get('schema') != 'feature-source-package/1'
                 or body.get('profile') != PROFILE or not valid_names(body.get('files', {}))):
             raise Denied('Expected a protected feature source package')
+        self._require_usable_dependencies(identity)
         bundle = {}
         for name, descriptor in body['files'].items():
             raw = self._read_blob_bytes(descriptor['sha256'])
@@ -446,6 +448,7 @@ class FeatureCertification:
                 data_snapshot_id=snapshot_id, source_package_id=package_id)
         report = None
         try:
+            with self._mutex:self._require_usable_dependencies(package_id)
             with tempfile.TemporaryDirectory(prefix='trf-feature-validation-') as temporary:
                 root = Path(temporary)
                 self._backup_bundle_external(token, {'destination': str(root/'registry')})
@@ -511,6 +514,9 @@ class FeatureCertification:
             raise Denied('Expected a host-owned feature certificate')
         if data_snapshot_id is not None and data_snapshot_id != body['data_snapshot_id']:
             raise Denied('Feature certificate belongs to a different data snapshot')
+        if self._dependency_use(certificate_id)['status']=='INVALIDATED_BY_DEPENDENCY':
+            return {'certificate_id':certificate_id,'status':'INVALIDATED_BY_DEPENDENCY',
+                'data_snapshot_id':body['data_snapshot_id'],'scientific_readiness':False,'scope':deepcopy(SCOPE)}
         status = 'CERTIFICATION_GAP'
         if body['status'] == 'CERTIFIED':
             try:

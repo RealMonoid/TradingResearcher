@@ -255,6 +255,7 @@ class DataSnapshots:
             raise Invalid('Reference calculation accepts at most 100000 rows')
         with self._mutex:
             snapshot = self._data_snapshot(snapshot_id)
+            self._require_usable_dependencies(snapshot_id)
             body = snapshot['body']
             inputs = self._data_inputs(body['catalog_id'], body['row_source_ids'], body['manifest'])
             if (lower < inputs['start'] or upper > inputs['end']
@@ -264,6 +265,7 @@ class DataSnapshots:
         coverage, rows = self._scan_data(inputs, (lower, upper, instruments, max_rows))
         if coverage != body['coverage'] or digest(inputs['catalog']) != body['catalog_hash']:
             raise Conflict('Retained data no longer matches its snapshot')
+        with self._mutex:self._require_usable_dependencies(snapshot_id)
         return {'data_snapshot_ref': snapshot_id, 'catalog': deepcopy(inputs['catalog']), 'rows': rows,
                 'availability': deepcopy(body['manifest']['availability']),
                 'remaining_gates': list(body['remaining_gates']), 'scientific_readiness': False}

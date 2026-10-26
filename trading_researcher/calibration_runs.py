@@ -26,6 +26,7 @@ class CalibrationStudies(InformationStudies):
     def _development(self,request):
         text(request['development_study_id'],'development study')
         study=self.broker._study(request['development_study_id'])
+        self.broker._require_usable_dependencies(study['id'])
         view=self.broker._study_view(study)
         require(view['status']=='COMPLETE','Final calibration requires a complete owned development study')
         integer(request['time_rows'],'fixed target',1)

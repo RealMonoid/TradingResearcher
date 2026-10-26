@@ -14,6 +14,9 @@ from .codec import canonical, decode, digest, integer, text
 from .errors import Conflict, Denied
 from .evaluation_plans import source_bundle, footprint
 from .population_models import build_model, generate_world, validate_specification, WORLD
+from .family_models import validate_components
+from .family_pipeline import calculate_family, RESULT as FAMILY_COMPUTATION
+from .monte_carlo import validate_config
 from .outcomes import _read_rational, _rational
 from .stationary_bootstrap import randomness
 from .storage import _hash_file
@@ -21,6 +24,8 @@ from .storage import _hash_file
 
 INPUT='population-world-input/1'
 RESULT='development-population-world/1'
+FAMILY_INPUT='population-family-input/1'
+FAMILY_RESULT='development-population-family/1'
 AUTHORITY='development_population_world_not_scientific_admission'
 LOADED_SOURCE=footprint(source_bundle())
 BOOTSTRAP=('import sys;sys.path.insert(0,sys.argv[1]);'
@@ -49,14 +54,17 @@ def child_entry(request_path):
             checksum.update(raw)
             if verify is None:stream.write(raw)
             else:require(stream.read(len(raw))==raw,'Population contribution replay differs')
-        report={**payload['report'],'cases':cases}
-        model=build_model(report,payload['diagnostics'],payload['specification'],payload['effects'])
-        world=None
-        if model['status']=='MODEL_SPECIFIED':
-            world=generate_world(report,model,payload['scenario'],payload['time_rows'],payload['seed'])
-            for case in world['report'].pop('cases'):retain(case)
-        result={'schema':WORLD,'status':model['status'] if world is None else world['status'],
-            'model':model,'world':world,'n_min':None,'scientific_readiness':False,'classification_permitted':False}
+        if 'components' in payload:
+            result=calculate_family(payload,cases,retain)
+        else:
+            report={**payload['report'],'cases':cases}
+            model=build_model(report,payload['diagnostics'],payload['specification'],payload['effects'])
+            world=None
+            if model['status']=='MODEL_SPECIFIED':
+                world=generate_world(report,model,payload['scenario'],payload['time_rows'],payload['seed'])
+                for case in world['report'].pop('cases'):retain(case)
+            result={'schema':WORLD,'status':model['status'] if world is None else world['status'],
+                'model':model,'world':world,'n_min':None,'scientific_readiness':False,'classification_permitted':False}
         if verify is not None:
             require(stream.read(1)==b'','Unexpected contribution suffix')
             require(digest(result)==verify,'Population result differs from exact replay')
@@ -99,7 +107,7 @@ class PopulationWorlds:
                 return self._artifact(row['id'])
         return None
 
-    def _population_inputs(self,actor,request):
+    def _population_inputs(self,actor,request,*,family=False):
         diagnostic=self._artifact(request['diagnostics_id']);body=diagnostic.get('body')
         if not (diagnostic['creator']==diagnostic['origin']=='controller' and diagnostic['data_class']=='development'
                 and type(body) is dict and body.get('schema')=='development-information-diagnostics/1'):
@@ -118,17 +126,29 @@ class PopulationWorlds:
         require(direction in ('positive','negative','nondirectional'),'Unsupported owned direction')
         effects=([0,delta,2*delta,-delta,-2*delta] if direction=='nondirectional' else
                  [0,delta,2*delta] if direction=='positive' else [0,-delta,-2*delta])
-        require(request['scenario']<len(effects),'Undeclared population scenario')
+        if family:
+            components=validate_components(request['components'],len(effects))
+            require(len(components)==plan['body']['request']['primary_count'], 'Family size differs from owned plan')
+            require(len(components)*request['time_rows']*len(bound['universe']['instruments'])<=100000,
+                'Family target exceeds its aggregate case envelope')
+            mc=validate_config({'schema':'mc-boundary-policy/1','noncoverage':request['mc_noncoverage'],
+                'delta':criterion['delta'],'direction':direction})
+            extra={'components':components,'bootstrap_seed':request['bootstrap_seed'],
+                'design':{'base_length':plan['body']['request']['dependence']['base_length'],
+                    'primary_count':len(components),'mc_policy':mc}}
+        else:
+            require(request['scenario']<len(effects),'Undeclared population scenario')
+            extra={'scenario':request['scenario']}
         refs=sorted(set(refs)|{diagnostic['id']})
         exposure=sorted(set(exposure)|set(diagnostic['exposure'])|set(refs))
         return {'report':result['report'],'case_blob':result['case_blob'],'diagnostics':body['result'],
             'effects':[_rational(value) for value in effects],
-            **{key:request[key] for key in ('specification','scenario','time_rows','seed','limits')}},refs,exposure
+            **extra,**{key:request[key] for key in ('specification','time_rows','seed','limits')}},refs,exposure
 
-    def _load_population_source(self,capsule):
+    def _load_population_source(self,capsule,*,family=False):
         body=capsule['body']
         require(capsule['creator']==capsule['origin']=='controller' and capsule['data_class']=='development'
-            and type(body) is dict and body.get('schema')==INPUT,'Unowned population input')
+            and type(body) is dict and body.get('schema')==(FAMILY_INPUT if family else INPUT),'Unowned population input')
         require(body['request_hash']==digest(body['request']) and body['payload_hash']==digest(body['payload']),
             'Retained population request differs')
         require(body['runtime_identity']==_runtime_identity()
@@ -139,6 +159,9 @@ class PopulationWorlds:
             'Invalid population source paths')
         require({'trading_researcher/__init__.py','trading_researcher/population_runs.py',
             'trading_researcher/population_models.py'}<=set(files),'Incomplete population source')
+        if family:
+            require({'trading_researcher/family_models.py','trading_researcher/family_pipeline.py',
+                'trading_researcher/stationary_bootstrap.py'}<=set(files),'Incomplete family source')
         require(all(type(item) is dict and set(item)=={'sha256','size'} and type(item['size']) is int
             and 0<=item['size']<=16*1024*1024 for item in files.values())
             and sum(item['size'] for item in files.values())<=16*1024*1024,'Invalid source resource envelope')
@@ -149,14 +172,22 @@ class PopulationWorlds:
             and footprint(source)==body['source_footprint'],'Retained population source differs')
         return source
 
-    def _run_population_world_external(self,token,args):
+    def _run_population_world_external(self,token,args,*,family=False):
+        input_schema=FAMILY_INPUT if family else INPUT
+        result_schema=FAMILY_RESULT if family else RESULT
         with self._mutex:
             actor=self._binding_owner(token)
-            require(set(args)=={'key','plan_id','execution_id','diagnostics_id','specification','scenario','time_rows','seed','limits'},'Exact population request required')
+            fields={'key','plan_id','execution_id','diagnostics_id','specification','time_rows','seed','limits'}
+            fields|={'components','bootstrap_seed','mc_noncoverage'} if family else {'scenario'}
+            require(set(args)==fields,'Exact population request required')
             request=decode(canonical(args))
             for key in ('key','plan_id','execution_id','diagnostics_id'):text(request[key],key)
             validate_specification(request['specification'])
-            integer(request['scenario'],'scenario',0)
+            if family:
+                validate_components(request['components'],5)
+                randomness(request['bootstrap_seed'])
+                require(request['bootstrap_seed']!=request['seed'],'Separate population and bootstrap seeds required')
+            else:integer(request['scenario'],'scenario',0)
             integer(request['time_rows'],'joint time rows',1)
             require(request['time_rows']<=100000,'World target exceeds its grid envelope')
             randomness(request['seed'])
@@ -164,10 +195,10 @@ class PopulationWorlds:
             require(type(limits) is dict and set(limits)=={'max_seconds'},'Explicit population time limit required')
             integer(limits['max_seconds'],'population time limit',1)
             require(limits['max_seconds']<=1800,'Population time limit exceeds the development envelope')
-            existing=self._find_population_world(RESULT,request)
+            existing=self._find_population_world(result_schema,request)
             if existing is not None:return existing
-            capsule=self._find_population_world(INPUT,request)
-            payload,refs,exposure=self._population_inputs(actor,request)
+            capsule=self._find_population_world(input_schema,request)
+            payload,refs,exposure=self._population_inputs(actor,request,family=family)
             fresh=capsule is None
             if fresh:
                 source=source_bundle()
@@ -175,7 +206,7 @@ class PopulationWorlds:
             else:
                 require(digest([payload,refs,exposure])==digest([capsule['body']['payload'],capsule['source_refs'],capsule['exposure']]),
                     'Population dependencies differ from the retained inputs')
-                source=self._load_population_source(capsule)
+                source=self._load_population_source(capsule,family=family)
             attempt=uuid.uuid4().hex
             files={name:self._stage_blob_bytes(raw) for name,raw in source.items()} if fresh else capsule['body']['source_files']
             with self._transaction():
@@ -185,11 +216,11 @@ class PopulationWorlds:
                     capsule=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
                         'data_class':'development','source_refs':refs,'exposure':exposure,
                         'blob_refs':sorted({v['sha256'] for v in files.values()}|{payload['case_blob']['sha256']}),
-                        'authority':AUTHORITY,'body':{'schema':INPUT,'created_at':self._now(),'request':request,
+                        'authority':AUTHORITY,'body':{'schema':input_schema,'created_at':self._now(),'request':request,
                             'request_hash':digest(request),'payload':payload,'payload_hash':digest(payload),
                             'source_files':files,'source_footprint':footprint(source),'runtime_identity':_runtime_identity(),
                             'bootstrap_sha256':hashlib.sha256(BOOTSTRAP.encode()).hexdigest(),'scientific_readiness':False}})
-                self._event('controller','bound_computation_started',attempt_id=attempt,kind='population_world',
+                self._event('controller','bound_computation_started',attempt_id=attempt,kind='population_family' if family else 'population_world',
                     input_ref=request['execution_id'],retained_input_id=capsule['id'])
         deadline=time.monotonic()+limits['max_seconds']
         def remaining():
@@ -198,18 +229,22 @@ class PopulationWorlds:
             return seconds
         try:
             with self._mutex:
-                source=self._load_population_source(capsule)
+                source=self._load_population_source(capsule,family=family)
                 cases=self._read_blob_bytes(payload['case_blob']['sha256'])
                 require(len(cases)==payload['case_blob']['size'],'Retained case size differs')
             calculated,raw=run_child(source,payload,cases,remaining())
             result=calculated['result']
-            require(type(result) is dict and result.get('schema')==WORLD and result.get('n_min') is None
+            require(type(result) is dict and result.get('schema')==(FAMILY_COMPUTATION if family else WORLD) and result.get('n_min') is None
                 and result.get('scientific_readiness') is False and result.get('classification_permitted') is False,
                 'Populations cannot grant scientific authority')
             require(result['model']['diagnostics_hash']==digest(payload['diagnostics']),
                 'Population input binding differs')
             if result['world'] is None:
                 require(raw==b'' and result['status']=='MODEL_OR_INFORMATION_GAP','Invalid model gap')
+            elif family:
+                require(result['world']['time_rows']==payload['time_rows'] and result['outer_world_count']==1
+                    and len(result['world']['components'])==len(payload['components'])
+                    and len(result['bootstraps'])==len(payload['components']), 'Family world dimensions differ')
             else:
                 require(result['world']['time_rows']==payload['time_rows']
                     and len(raw.splitlines())==payload['time_rows']*len(payload['report']['request']['universe']['instruments']),
@@ -222,13 +257,13 @@ class PopulationWorlds:
             require(descriptor==calculated['world_blob'],'Population contribution commitment differs')
             with self._transaction():
                 actor=self._binding_owner(token)
-                require(digest(list(self._population_inputs(actor,request)))==digest([payload,refs,exposure]),
+                require(digest(list(self._population_inputs(actor,request,family=family)))==digest([payload,refs,exposure]),
                     'Population dependencies changed before commitment')
-                require(footprint(self._load_population_source(capsule))==footprint(source),'Population source changed')
+                require(footprint(self._load_population_source(capsule,family=family))==footprint(source),'Population source changed')
                 if fresh:require(footprint(source_bundle())==LOADED_SOURCE,'Installed population source changed')
                 require(_environment_current(calculated['environment']) and _environment_current(verified['environment']),
                     'Population runtime changed before commitment')
-                existing=self._find_population_world(RESULT,request)
+                existing=self._find_population_world(result_schema,request)
                 if existing is not None:
                     require(existing['body']['input_capsule_id']==capsule['id']
                         and digest(existing['body']['result'])==digest(result),'Concurrent population results differ')
@@ -238,11 +273,11 @@ class PopulationWorlds:
                 saved=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
                     'data_class':'development','source_refs':sorted(set(refs)|{capsule['id']}),
                     'exposure':sorted(set(exposure)|{capsule['id']}),'blob_refs':[descriptor['sha256']],
-                    'authority':AUTHORITY,'body':{'schema':RESULT,'created_at':self._now(),'request':request,
+                    'authority':AUTHORITY,'body':{'schema':result_schema,'created_at':self._now(),'request':request,
                         'input_capsule_id':capsule['id'],'attempt_id':attempt,'status':result['status'],'result':result,
                         'world_blob':descriptor,'environment':calculated['environment'],'verification':verified,
                         'scientific_readiness':False,
-                        'qualification':'Declared estimator-level stress world only; no fitted model, power, information target, calibration, evidence or freeze.'}})
+                        'qualification':'Declared estimator-level stress world only; no fitted model, power, information target, completed calibration, evidence or freeze.'}})
                 self._event('controller','bound_computation_checked',attempt_id=attempt,artifact_id=saved['id'],status=result['status'])
                 return saved
         except BaseException:

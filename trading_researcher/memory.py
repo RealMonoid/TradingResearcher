@@ -247,6 +247,7 @@ class ResearchMemory:
                     'bootstrap-input/1','development-bootstrap/1',
                     'information-diagnostics-input/1','development-information-diagnostics/1',
                     'population-world-input/1','development-population-world/1',
+                    'population-family-input/1','development-population-family/1',
                     'information-study-input/1','development-information-study-attempt/1',
                     'evaluator-calibration-input/1','evaluator-calibration-attempt/1',
                     'development-measurement-input/1','development-measurement/1'):

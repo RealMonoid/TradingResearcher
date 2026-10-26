@@ -10,9 +10,11 @@ AUTHORITY='technical_use_revocation_not_scientific_outcome'
 PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1','composition-source-package/1'}
 VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1',
     'research-data-target/1','protected-data-binding/1'}
-REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1'}
+REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1',
+    'population-family-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
-    'development-information-study-attempt/1','evaluator-calibration-attempt/1','development-measurement/1'}
+    'development-information-study-attempt/1','evaluator-calibration-attempt/1','development-measurement/1',
+    'development-population-family/1'}
 
 
 def version_selector(artifact):

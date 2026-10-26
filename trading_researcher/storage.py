@@ -25,6 +25,7 @@ RESERVED = ('research-data-target/','protected-data-binding/','data-use-assessme
             'bootstrap-input/','development-bootstrap/',
             'information-diagnostics-input/','development-information-diagnostics/',
             'population-world-input/','development-population-world/',
+            'population-family-input/','development-population-family/',
             'information-study-input/','development-information-study-attempt/',
             'evaluator-calibration-input/','evaluator-calibration-attempt/',
             'development-measurement-input/','development-measurement/')

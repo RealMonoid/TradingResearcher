@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [joint synthetic family path](trading_researcher/POPULATION_MODELS.md#joint-synthetic-response-families) generates distinct responses with mixed declared truths on one shared development mask grid and executes the existing fixed-draw estimator for each response. The owned runner retains inputs, cases, draws and fresh-process replay. This adds a calibration prerequisite; the complete final multi-world series and market-model adequacy remain unfinished.
+
 The [private plan-preparation path](docs/reviews/implementation-2026-10-25/PROTECTED_PLAN_INTEGRATION_2026-10-26.md) now consumes exact protected-target data qualifications and diagnostics from the declared development snapshot. It retains private inputs, interrupted attempts and remaining scientific gates. Unknown model training and historical availability remain qualified; this does not authorize protected outcome execution or certify an unused holdout.
 
 The [public research-target path](trading_researcher/DATA_TARGETS.md) separates a predeclared calendar/feature contract from an explicit private protected-data binding. Formalization and independent meaning review receive the original public declaration; compilation verifies exact private versions and full feature semantics. Synthetic integration checks cover privacy, revocation and restore. Protected scientific admission, allocation/freeze and execution remain unavailable.

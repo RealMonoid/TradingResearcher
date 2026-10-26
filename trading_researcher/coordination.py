@@ -206,6 +206,8 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
             return self._inspect_information_study_external(token, args)
         if op == 'run_population_world':
             return self._run_population_world_external(token, args)
+        if op == 'run_population_family':
+            return self._run_population_world_external(token, args, family=True)
         if op == 'prepare_information_diagnostics':
             return self._prepare_information_diagnostics_external(token, args)
         if op == 'run_development_bootstrap':

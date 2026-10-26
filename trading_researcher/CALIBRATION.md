@@ -47,7 +47,7 @@ Input and attempt schemas are controller-owned `evaluator-calibration-input/1` a
 
 Events come from retained owned attempts, not caller-supplied success flags. At the boundary, support and negative decisions form one union event. Undefined-information outcomes count as no decisive result but cannot provide interval coverage; technical/model failures provide no observed events. Partial or unavailable cohorts cannot pass. Count interpretation is bound to the host source footprint; a changed implementation suppresses counts and blocks further execution while inspection and orphan recovery remain available. Source hashes detect drift; they are not independent proof of loaded machine code.
 
-The selected target is labeled either the development candidate or a studied sensitivity cutoff. It never becomes `N_min` merely because a finite grid was examined. Single-claim interval coverage is the degenerate family case; coherent multi-claim worlds with mixed true effects remain unavailable, so this runner cannot close the complete section 11 calibration requirement.
+The selected target is labeled either the development candidate or a studied sensitivity cutoff. It never becomes `N_min` merely because a finite grid was examined. Single-claim interval coverage is the degenerate family case. The separate [development family runner](POPULATION_MODELS.md#joint-synthetic-response-families) now generates coherent shared-template worlds with mixed true effects and executes the actual estimator, but is not integrated into the final inventory/count assessment. This single-claim final runner still cannot close the complete section 11 calibration requirement.
 
 ## Remaining work
 

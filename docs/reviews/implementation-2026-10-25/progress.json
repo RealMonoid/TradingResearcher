@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "75 unique tests pass: 19 protected preparation/ancestry cases, 24 existing data-use, 11 retention, 16 plan-review and 5 direct plan cases. See protected-plan-verification-2026-10-26.json for exact evidence and limits. No paid call."
+      "evidence": "82 unique focused tests pass, including actual owned two-response computation/fresh replay and 19 independent oracle/adversarial cases. Exact outcomes and limits: family-verification-2026-10-26.json."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -292,11 +292,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Resolve campaign selection/reservation and pre-outcome eligibility under the existing contracts, and complete justified nuisance/stress-model and information/calibration work before atomic scientific freeze. Preserve private draft inputs, qualified history and the full genuine mixed-provider cycle, policy/AmiBroker and reporting objective.",
+  "next_action": "Integrate coherent family computations into fixed development/final inventories, distinct final seeds, aggregate budgets and authenticated complete-denominator calibration counts. Assess population/stress adequacy and information targets before scientific freeze. Preserve the full campaign/reservation, protected research, genuine mixed-provider cycle, policy/AmiBroker and reporting objective.",
   "continuation_audit": {
     "previous_goal_turn": "no_progress_verification_only",
     "current_goal_turn": "progress",
-    "basis": "An exact private data qualification is now consumed by actual protected plan preparation, using declared development diagnostics and private replayable capsules. Scientific data/exposure admission remains open.",
+    "basis": "A controller-owned joint family now generates coherent mixed-truth synthetic responses and executes/replays the actual fixed-draw estimator with bound family size. The final multi-world calibration remains unfinished.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -384,6 +384,17 @@
     "unique_focused_tests": 75,
     "verification": "docs/reviews/implementation-2026-10-25/protected-plan-verification-2026-10-26.json",
     "scope": "Qualified private plan preparation only; complete campaign/selection review, protected scientific admission and execution remain unavailable.",
+    "provider_calls": 0,
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "joint_family_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "unique_focused_tests": 82,
+    "verification": "docs/reviews/implementation-2026-10-25/family-verification-2026-10-26.json",
+    "actual_outer_worlds": 1,
+    "actual_draws": 79996,
     "provider_calls": 0,
     "scientific_readiness": false,
     "full_objective_complete": false

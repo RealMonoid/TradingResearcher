@@ -1,5 +1,7 @@
 # Retained formalization records
 
+The [public data-target path](DATA_TARGETS.md) lets `test_universe.data_snapshot_ref` name an authorized, immutable predeclared target rather than a raw snapshot. The public declaration binds development feature semantics and requested calendar scope. Only a separately supplied private host binding can resolve it to exact protected data; neither the declaration nor formalization grants access. Independent review receives the original public declaration explicitly, alongside its exact public definitions. Existing direct snapshot references are unchanged.
+
 The [independent meaning-review assessment](MEANING_REVIEWS.md) separately records whether a complete controller-observed comparison process satisfies that prerequisite for an exact target. Model judgment remains fallible and does not authorize scientific execution.
 
 This implements the draft boundary of IF-03/04 under D002/D074. The worker operation `record_formalization` requires a current formalizer lease and an idea plus catalog already authorized to that attempt. The original idea artifact and its exact text remain separate from the candidate. Candidates admitted under the retained-envelope size/depth bounds are retained, including unsupported expressions or ambiguous meaning. Neither a draft nor an accepted operational submission grants scientific readiness.

@@ -83,7 +83,7 @@ class CompositionCertification:
             'An owned successful compilation is required')
         self._require_usable_dependencies(compiled_id)
         args=body['dependency_arguments']
-        deps=self._bound_dependencies(actor,*(args[k] for k in ('formalization_id','feature_certificate_id','reference_certificate_id')))
+        deps=self._bound_request_dependencies(actor,args)
         payload={'formalization_id':args['formalization_id'],'candidate':deps['formalization']['body']['candidate'],
             'catalog':deps['catalog'],'data_manifest':deps['snapshot']['body']['manifest'],
             'as_of':args['as_of'],'max_steps':args['max_steps']}

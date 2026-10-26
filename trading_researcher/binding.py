@@ -247,7 +247,11 @@ class BoundComputation:
             raise Denied('Compilation and bound computation require the host operator')
         return actor
 
-    def _bound_dependencies(self, actor, formalization_id, feature_certificate_id, reference_certificate_id):
+    def _bound_request_dependencies(self,actor,args):
+        optional={'data_target_binding_id':args['data_target_binding_id']} if 'data_target_binding_id' in args else {}
+        return self._bound_dependencies(actor,*(args[name] for name in ('formalization_id','feature_certificate_id','reference_certificate_id')),**optional)
+
+    def _bound_dependencies(self, actor, formalization_id, feature_certificate_id, reference_certificate_id, data_target_binding_id=None):
         from .certification import _pins_match, EXPECTED_CHECKS
         record = self._artifact(text(formalization_id,'formalization identity'))
         require(record['origin'] == 'worker' and type(record['body']) is dict
@@ -263,9 +267,8 @@ class BoundComputation:
             and original['candidate']['idea_ref'] == original['idea_id'])
         require(record['body']['assessment']['status'] == 'STRUCTURE_CHECKED','The formalization retains an unresolved gap')
         candidate = record['body']['candidate']
-        snapshot = self._data_snapshot(candidate['test_universe']['data_snapshot_ref'])
-        require(snapshot['id'] in sources)
-        require(record['body']['catalog_id'] == snapshot['body']['catalog_id'],'Formalization and data catalog identities differ')
+        snapshot,target_refs=self._resolve_compilation_target(actor,candidate,record['body']['catalog_id'],
+            sources,feature_certificate_id,data_target_binding_id)
         catalog = self._artifact(snapshot['body']['catalog_id'])['body']['features']
         require(digest(catalog) == snapshot['body']['catalog_hash'])
         feature = self._artifact(text(feature_certificate_id,'feature certificate identity'))
@@ -281,7 +284,7 @@ class BoundComputation:
         require(hashes(reference_bundle) == refbody['footprint'] and _pins_match(refbody['footprint'])
             and digest(refbody['checks']) == digest(EXPECTED_CHECKS) and _environment_current(refbody['environment']),
             'The retained calculator needs its exact compatible certified runtime')
-        identities = [formalization_id,feature_certificate_id,reference_certificate_id,snapshot['id'],snapshot['body']['catalog_id']]
+        identities = sorted({formalization_id,feature_certificate_id,reference_certificate_id,snapshot['id'],snapshot['body']['catalog_id'],*target_refs})
         exposure = set(identities)
         for identity in identities:
             exposure.update(self._artifact(identity)['exposure'])
@@ -362,13 +365,15 @@ class BoundComputation:
     def _compile_hypothesis_external(self, token, args):
         with self._mutex:
             actor = self._binding_owner(token)
-            require(set(args) == {'formalization_id','feature_certificate_id','reference_certificate_id','as_of','max_steps'})
+            required={'formalization_id','feature_certificate_id','reference_certificate_id','as_of','max_steps'}
+            require(required<=set(args)<=required|{'data_target_binding_id'})
+            if 'data_target_binding_id' in args:text(args['data_target_binding_id'],'private target binding')
             args = decode(canonical(args))
             from .outcomes import _instant
             require(_instant(args['as_of']) <= self._now(),'The computation as_of time cannot be in the future')
             integer(args['max_steps'],'primitive step budget',1)
             require(args['max_steps'] <= 10000000)
-            dependencies = self._bound_dependencies(actor,*(args[key] for key in ('formalization_id','feature_certificate_id','reference_certificate_id')))
+            dependencies = self._bound_request_dependencies(actor,args)
         payload = {'formalization_id':args['formalization_id'],'candidate':dependencies['formalization']['body']['candidate'],
             'catalog':dependencies['catalog'],'data_manifest':dependencies['snapshot']['body']['manifest'],
             'as_of':args['as_of'],'max_steps':args['max_steps']}
@@ -390,7 +395,7 @@ class BoundComputation:
             actor = self._binding_owner(token)
             if error is None:
                 try:
-                    current = self._bound_dependencies(actor,*(args[key] for key in ('formalization_id','feature_certificate_id','reference_certificate_id')))
+                    current = self._bound_request_dependencies(actor,args)
                     require(current['refs'] == dependencies['refs'] and current['exposure'] == dependencies['exposure'])
                     require(hashes(self._load_binding_package(package_id)) == hashes(bundle)
                         and (ROOT/DRIVER).read_bytes() == bundle[DRIVER] and _environment_current(report['environment']))
@@ -425,7 +430,7 @@ class BoundComputation:
                 raise Denied('Protected outcomes require a separately frozen scientific plan and allocation')
             self._require_usable_dependencies(compiled['id'])
             arguments = body['dependency_arguments']
-            dependencies = self._bound_dependencies(actor,*(arguments[key] for key in ('formalization_id','feature_certificate_id','reference_certificate_id')))
+            dependencies = self._bound_request_dependencies(actor,arguments)
             bundle = self._load_binding_package(body['source_package_id'])
             require(all(bundle[name] == raw for name,raw in dependencies['reference_bundle'].items()))
             require(_environment_current(body['environment']))
@@ -474,7 +479,7 @@ class BoundComputation:
             actor = self._binding_owner(token)
             if error is None:
                 try:
-                    self._bound_dependencies(actor,*(arguments[key] for key in ('formalization_id','feature_certificate_id','reference_certificate_id')))
+                    self._bound_request_dependencies(actor,arguments)
                     require(hashes(self._load_binding_package(body['source_package_id'])) == hashes(bundle))
                     require(_environment_current(report['environment']))
                     require(_environment_current(verification['environment']))

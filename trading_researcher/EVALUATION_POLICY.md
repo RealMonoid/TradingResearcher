@@ -24,7 +24,9 @@ The operator RPC is:
 prepare_evaluation_plan(key, compiled_id, primary_count, dependence)
 ```
 
-An optional `meaning_review_id` binds an existing owned `semantic-review-assessment/1` to the exact compiled formalization. An explicit null or unrelated record is invalid. For candidates that reference features, every review in that assessment must use the same feature-definition artifact as the compiler's feature certificate. Matching names, types and units alone cannot establish identical parameters, timing or provenance. Literal-only candidates do not require unused feature definitions. The review's sources and inherited exposure enter the admitted capsule and final plan.
+An optional `meaning_review_id` binds an existing owned `semantic-review-assessment/1` to the exact compiled formalization. An explicit null or unrelated record is invalid. For direct-snapshot candidates that reference features, every review in that assessment must use the same feature-definition artifact as the compiler's feature certificate. Matching names, types and units alone cannot establish identical parameters, timing or provenance. Literal-only candidates do not require unused feature definitions. The review's sources and inherited exposure enter the admitted capsule and final plan.
+
+The separate [public-target resolver](DATA_TARGETS.md) requires review of the original public declaration and its exact development definition artifact. The private binding proves equality of all feature definitions, parameters and specification versions against the exact protected certificate. The meaning-reference check verifies that mapping instead of disclosing protected definitions to the reviewer. This does not enable protected plan preparation: the development-only gate below still rejects it before dependent row reads.
 
 The optional `meaning_review_at_preparation` snapshot is historical evidence. Preparation checks its current inventory before admission and again before commitment. An intervening review or policy change interrupts the attempt; retrying its key cannot substitute a new review inventory. A completed key still returns its original immutable plan.
 

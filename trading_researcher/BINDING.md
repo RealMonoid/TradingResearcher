@@ -4,7 +4,9 @@
 
 ## Owned operations
 
-The separate [composition certificate](COMPOSITION.md) checks the retained driver and exact candidate. Compilation by itself still grants no composition certification or scientific readiness. This addition does not change the bound-reference/1 request, warmup, outcome or execution semantics below.
+The [public-target resolver](DATA_TARGETS.md) adds optional `data_target_binding_id` to the operator RPC. For an authorized public target reference, this explicit private binding selects an exact protected snapshot/certificate and proves full equality to the predeclared development feature semantics. It does not grant row access or scientific execution. Direct snapshot requests and the CLI example below remain unchanged.
+
+The separate [composition certificate](COMPOSITION.md) checks the retained driver and exact candidate. Compilation by itself still grants no composition certification or scientific readiness. Warmup, outcome and numerical execution semantics remain unchanged.
 
 The operator calls `compile_hypothesis(formalization_id, feature_certificate_id, reference_certificate_id, as_of, max_steps)`. Every argument is mandatory. The original formalization must be the accepted result of a completed `formalization/v1` job. The host verifies immutable identities, the original idea and authorized sources. The candidate, catalog and data identities must match exactly. A supplied source or a worker-created success claim cannot substitute for these records.
 

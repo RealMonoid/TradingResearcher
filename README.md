@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [public research-target path](trading_researcher/DATA_TARGETS.md) separates a predeclared calendar/feature contract from an explicit private protected-data binding. Formalization and independent meaning review receive the original public declaration; compilation verifies exact private versions and full feature semantics. Synthetic integration checks cover privacy, revocation and restore. Protected scientific admission, allocation/freeze and execution remain unavailable.
+
 The [data-use check](trading_researcher/DATA_USE.md) now binds qualified historical exploration to an exact compiled development hypothesis, reviewed provider documents and preserved candidate exposure. It does not authorize protected assessment/corroboration or assert unseen history. Current plan inspection records this narrow scope separately from its remaining scientific prerequisites.
 
 The [composition conformance path](trading_researcher/COMPOSITION.md) checks the retained binding driver against independent expectations and binds its result to an exact compiled hypothesis. Plan inspection can satisfy this prerequisite separately from data/exposure, semantic review, calibration and atomic scientific freeze.

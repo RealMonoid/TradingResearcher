@@ -124,13 +124,24 @@ class AuxiliaryResearch:
                 'Review must use the formalization original epoch; a new epoch cannot reset its budget')
         if spec['allowed_workers'][0]==target['creator']:raise Denied('Formalizer cannot independently review its own artifact')
         allowed={target['id'],body['idea_id'],body['catalog_id'],*definitions}
-        if not set(context['artifact_ids'])<=allowed:raise Denied('Review context contains unrelated material')
-        if body['catalog_id'] not in context['artifact_ids']:raise Denied('Review catalog is outside the frozen context')
         catalog=self._artifact(body['catalog_id'])
         candidate=body['candidate']
         universe=candidate.get('test_universe',{}) if type(candidate) is dict else {}
         snapshot_id=universe.get('data_snapshot_ref') if type(universe) is dict else None
-        check_definition_origins(retained,catalog['id'],snapshot_id)
+        public_target=None
+        # Retained DATA_GAP drafts may contain arbitrary untrusted references.
+        # Such text cannot become an existence/schema oracle outside the original
+        # authorization snapshot merely because a reviewer inspects the draft.
+        if (type(snapshot_id) is str and snapshot_id in target['source_refs']
+                and snapshot_id in body['authorization_snapshot']
+                and self._declared_definition_origins(retained,catalog['id'],snapshot_id)):
+            public_target=self._public_data_target(snapshot_id)
+            allowed.add(snapshot_id)
+            if snapshot_id not in context['artifact_ids']:raise Denied('Review requires the original public data-target declaration')
+        if not set(context['artifact_ids'])<=allowed:raise Denied('Review context contains unrelated material')
+        if body['catalog_id'] not in context['artifact_ids']:raise Denied('Review catalog is outside the frozen context')
+        if public_target is None:
+            check_definition_origins(retained,catalog['id'],snapshot_id)
         required_refs=candidate.get('feature_refs',[]) if type(candidate) is dict else []
         strings(required_refs,'candidate feature references')
         require(set(required_refs)<=set(defined),'Review requires explicit meanings for every referenced feature')
@@ -139,6 +150,7 @@ class AuxiliaryResearch:
                 'Review definitions differ from the retained catalog')
         return {'schema':'semantic-review-input/1','context_id':context['id'],'inputs':inputs,
             'formalization':target,'catalog':catalog,'definitions':retained,
+            **({'data_target':public_target} if public_target is not None else {}),
             'qualification':'Assess meaning independently; supplied mappings are formalizer assertions. No assessment outcomes are supplied.'}
 
     def _auxiliary_input(self,actor,lease):

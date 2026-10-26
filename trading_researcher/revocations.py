@@ -8,7 +8,8 @@ from .errors import Conflict, Denied
 SCHEMA='dependency-revocation/1'
 AUTHORITY='technical_use_revocation_not_scientific_outcome'
 PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1','composition-source-package/1'}
-VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1'}
+VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1',
+    'research-data-target/1','protected-data-binding/1'}
 REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
     'development-information-study-attempt/1','evaluator-calibration-attempt/1','development-measurement/1'}
@@ -18,7 +19,7 @@ def version_selector(artifact):
     body=artifact['body']
     schema=body.get('schema') if type(body) is dict else None
     if schema not in VERSIONS:raise Invalid('Unsupported technical-version type')
-    origin='source' if schema in {'data-snapshot/1','feature-definitions/1'} else 'controller'
+    origin='source' if schema in {'data-snapshot/1','feature-definitions/1','research-data-target/1'} else 'controller'
     if artifact['creator']!='controller' or artifact['origin']!=origin:
         raise Denied('An owned technical version is required')
     if schema in PACKAGES:
@@ -88,6 +89,8 @@ class DependencyRevocations:
         if schema in VERSIONS:version_selector(artifact)
         elif artifact['creator']!=artifact['origin'] or artifact['creator']!='controller':return None
         if schema in PACKAGES or schema=='data-snapshot/1':return []
+        if schema=='research-data-target/1':return [body['request']['development_feature_certificate_id']]
+        if schema=='protected-data-binding/1':return [body['request'][key] for key in ('target_id','data_snapshot_id','feature_certificate_id')]
         if schema=='feature-definitions/1':
             return [ref for ref in body.get('input_refs',[]) if self._artifact(ref)['body'].get('schema')=='data-snapshot/1']
         if schema=='feature-certificate/1':
@@ -95,7 +98,8 @@ class DependencyRevocations:
         if schema=='implementation-certificate/1':return [body['source_package_id']] if body.get('source_package_id') else []
         if schema=='compiled-hypothesis/1':
             args=body['dependency_arguments']
-            return [body['data_snapshot_id'],body['source_package_id'],args['feature_certificate_id'],args['reference_certificate_id']]
+            return [body['data_snapshot_id'],body['source_package_id'],args['feature_certificate_id'],args['reference_certificate_id'],
+                *([args['data_target_binding_id']] if 'data_target_binding_id' in args else [])]
         if schema=='reference-execution/1':return [body['compiled_id']]
         if schema=='data-use-assessment/1':return [body['compiled_id']]
         if schema=='composition-input/1':return [body['compiled_id'],body['source_package_id']]

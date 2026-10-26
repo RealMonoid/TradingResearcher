@@ -1,0 +1,542 @@
+{
+  "schema": "protected-target-verification/1",
+  "status": "PASS",
+  "created_at": "2026-10-26T16:20:34.160181+00:00",
+  "parent_commit": "f1ee046359ea6fc5e6e4a97ded9d20d56f73db0e",
+  "unique_focused_tests": 142,
+  "test_inventory": {
+    "test_data_targets*.py": 15,
+    "test_plan_review*.py": 16,
+    "test_binding*.py": 19,
+    "test_auxiliary*.py": 24,
+    "test_revocation*.py": 23,
+    "test_composition*.py": 21,
+    "test_data_use*.py": 24
+  },
+  "latest_pass_log_by_suite": {
+    "test_data_targets*.py": "20261026T160353-9f503179.log",
+    "test_plan_review*.py": "20261026T160403-3c9b325f.log",
+    "test_binding*.py": "20261026T161419-73c3285a.log",
+    "test_auxiliary*.py": "20261026T161419-bd4695db.log",
+    "test_revocation*.py": "20261026T161419-67b86257.log",
+    "test_composition*.py": "20261026T161720-6cf229e1.log",
+    "test_data_use*.py": "20261026T161720-8352b012.log"
+  },
+  "checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets.py"
+      ],
+      "started_at": "2026-10-26T15:44:21.265712+00:00",
+      "finished_at": "2026-10-26T15:44:22.058879+00:00",
+      "seconds": 0.793167,
+      "exit_code": 1,
+      "log": "20261026T154421-c8dc01dd.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets.py"
+      ],
+      "started_at": "2026-10-26T15:47:03.334609+00:00",
+      "finished_at": "2026-10-26T15:47:04.042977+00:00",
+      "seconds": 0.708368,
+      "exit_code": 0,
+      "log": "20261026T154703-4957c02d.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets*.py"
+      ],
+      "started_at": "2026-10-26T15:51:08.900755+00:00",
+      "finished_at": "2026-10-26T15:55:21.394369+00:00",
+      "seconds": 252.493614,
+      "exit_code": 1,
+      "log": "20261026T155108-5d5efb0b.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets.py"
+      ],
+      "started_at": "2026-10-26T15:53:11.720762+00:00",
+      "finished_at": "2026-10-26T15:53:13.200065+00:00",
+      "seconds": 1.479303,
+      "exit_code": 1,
+      "log": "20261026T155311-98cd6419.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets.py"
+      ],
+      "started_at": "2026-10-26T15:54:49.077989+00:00",
+      "finished_at": "2026-10-26T15:54:50.735447+00:00",
+      "seconds": 1.657458,
+      "exit_code": 1,
+      "log": "20261026T155449-f320958b.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets.py"
+      ],
+      "started_at": "2026-10-26T15:56:41.983279+00:00",
+      "finished_at": "2026-10-26T15:56:43.444195+00:00",
+      "seconds": 1.460916,
+      "exit_code": 0,
+      "log": "20261026T155641-222d7d9e.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets*.py"
+      ],
+      "started_at": "2026-10-26T15:56:45.090461+00:00",
+      "finished_at": "2026-10-26T16:00:58.873466+00:00",
+      "seconds": 253.783005,
+      "exit_code": 1,
+      "log": "20261026T155645-d2840177.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets.py"
+      ],
+      "started_at": "2026-10-26T15:58:25.149535+00:00",
+      "finished_at": "2026-10-26T15:58:26.766551+00:00",
+      "seconds": 1.617016,
+      "exit_code": 0,
+      "log": "20261026T155825-8cc268cc.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_targets*.py"
+      ],
+      "started_at": "2026-10-26T16:03:53.236384+00:00",
+      "finished_at": "2026-10-26T16:09:16.877138+00:00",
+      "seconds": 323.640754,
+      "exit_code": 0,
+      "log": "20261026T160353-9f503179.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_review*.py"
+      ],
+      "started_at": "2026-10-26T16:04:03.895706+00:00",
+      "finished_at": "2026-10-26T16:06:29.463552+00:00",
+      "seconds": 145.567846,
+      "exit_code": 0,
+      "log": "20261026T160403-3c9b325f.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocation*.py"
+      ],
+      "started_at": "2026-10-26T16:14:19.626051+00:00",
+      "finished_at": "2026-10-26T16:16:44.097128+00:00",
+      "seconds": 144.471077,
+      "exit_code": 0,
+      "log": "20261026T161419-67b86257.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_binding*.py"
+      ],
+      "started_at": "2026-10-26T16:14:19.646267+00:00",
+      "finished_at": "2026-10-26T16:18:37.453087+00:00",
+      "seconds": 257.80682,
+      "exit_code": 0,
+      "log": "20261026T161419-73c3285a.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary*.py"
+      ],
+      "started_at": "2026-10-26T16:14:19.651202+00:00",
+      "finished_at": "2026-10-26T16:17:05.749513+00:00",
+      "seconds": 166.098311,
+      "exit_code": 0,
+      "log": "20261026T161419-bd4695db.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition*.py"
+      ],
+      "started_at": "2026-10-26T16:17:20.325326+00:00",
+      "finished_at": "2026-10-26T16:19:34.304839+00:00",
+      "seconds": 133.979513,
+      "exit_code": 0,
+      "log": "20261026T161720-6cf229e1.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_data_use*.py"
+      ],
+      "started_at": "2026-10-26T16:17:20.289918+00:00",
+      "finished_at": "2026-10-26T16:19:59.945876+00:00",
+      "seconds": 159.655958,
+      "exit_code": 0,
+      "log": "20261026T161720-8352b012.log"
+    }
+  ],
+  "independent_review_unique_additional_tests": 0,
+  "independent_review_note": "The reviewer independently reran two tests already included in the fifteen target tests.",
+  "independent_review_sha256": "9ab7052b21bef664fcc771a2dcb2b2f616394621a6957429a3a33d39ff0c9a10",
+  "later_reviewed_document_change": "BINDING.md wording now states unchanged warmup, outcome and numerical semantics instead of implying the RPC request has no optional addition. All reviewed production/test hashes match.",
+  "retained_failed_checks": [
+    "20261026T154421-c8dc01dd.log",
+    "20261026T155108-5d5efb0b.log",
+    "20261026T155311-98cd6419.log",
+    "20261026T155449-f320958b.log",
+    "20261026T155645-d2840177.log"
+  ],
+  "source_sha256": {
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/auxiliary.py": "539e230d8508225229073e5a8e428629b8daf81a31005bf20bfe50a1f8752e57",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "bfb195ad9c1e27bd4ff8a8159cfd0a0b986f31565814ffa714f90e95daf36aaf",
+    "trading_researcher/bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "be7028bed86d82cfccb25c3ac0d926cb84bfa5d7a448168d5a898cbe38d4b6ea",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/composition.py": "2a234f84263c13fab214c1730eac326c578f2d8ad01149a81294133026727acd",
+    "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "2ecc90ef7a0f60425f31abfeaaa8340e1f8e940e6d0a45ef5efcdd624bd6a081",
+    "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+    "trading_researcher/data_targets.py": "4ea784c8eefb3eceb8183b6adefdf09adfaf15ac329fb233317eb0cb0dd91697",
+    "trading_researcher/data_use.py": "697ed8bc748b75b43b3f7bf4fcc2b025f02c920f66b3d9e530d490cd1582fc01",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "467d488bdf8443a7569263f2449c78fc5930bca23f6413713fcca1603c020868",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+    "trading_researcher/memory.py": "78e168ba18e0c8d2f239746621f715b3a07c3021ac21e23430594cb74f30195a",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/revocations.py": "b1303ab054acc52b57ee48af024bae5de190cedca45683a98c72ba05ae697876",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "2d0b586cc34c0b47805f5be3df9949a804e3590776daae7dd1ea183aae8992e7",
+    "trading_researcher/study_pipeline.py": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+    "trading_researcher/study_runs.py": "84b396f6dcc3d0fdf67adcd80d11c348bb99d37508bb269e2f408002f902040b",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "changed_code_test_sha256": {
+    "tests/data_target_support.py": "8a4d25324c34e9e2ca6900a40a97f68abfae70ff4b296eccfed9089f47cd8cf7",
+    "tests/test_data_targets.py": "85c77356d3f74019b323355cd2f9b9055b024e1d170c3afffd70e707e7affadf",
+    "tests/test_data_targets_binding.py": "1112a57d6a537183f1c609a1355e5c7126d51f489ac900763118159618278437",
+    "trading_researcher/auxiliary.py": "539e230d8508225229073e5a8e428629b8daf81a31005bf20bfe50a1f8752e57",
+    "trading_researcher/binding.py": "bfb195ad9c1e27bd4ff8a8159cfd0a0b986f31565814ffa714f90e95daf36aaf",
+    "trading_researcher/composition.py": "2a234f84263c13fab214c1730eac326c578f2d8ad01149a81294133026727acd",
+    "trading_researcher/coordination.py": "2ecc90ef7a0f60425f31abfeaaa8340e1f8e940e6d0a45ef5efcdd624bd6a081",
+    "trading_researcher/data_targets.py": "4ea784c8eefb3eceb8183b6adefdf09adfaf15ac329fb233317eb0cb0dd91697",
+    "trading_researcher/evaluation_plans.py": "467d488bdf8443a7569263f2449c78fc5930bca23f6413713fcca1603c020868",
+    "trading_researcher/memory.py": "78e168ba18e0c8d2f239746621f715b3a07c3021ac21e23430594cb74f30195a",
+    "trading_researcher/revocations.py": "b1303ab054acc52b57ee48af024bae5de190cedca45683a98c72ba05ae697876",
+    "trading_researcher/storage.py": "2d0b586cc34c0b47805f5be3df9949a804e3590776daae7dd1ea183aae8992e7"
+  },
+  "preserved_sha256": {
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/data_use.py": "697ed8bc748b75b43b3f7bf4fcc2b025f02c920f66b3d9e530d490cd1582fc01",
+    "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+    "docs/architecture/03_REJECTED_DECISIONS.md": "a92670d5239a4db774f20629ef02839d61efc765242e1bd667b25f3cc58fc0bc",
+    "docs/architecture/04_DEFINITIONS.md": "3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "tests/fixtures/composition_conformance_cases.json": "b28025c09fb9292998328fc698aa06f2ab0275ced8a74d0370d38437551baa64",
+    "tests/fixtures/composition_conformance_expectations.md": "983771a0fc554e479cdc8f8dd08257b6f05161de8960cd1f4e4facf8e79034c4",
+    "tests/fixtures/information_diagnostics_cases.json": "e2b8233b7b8ed1917f9392eb0c989279837f88219843371f35740908ccbb6b6f",
+    "tests/fixtures/information_diagnostics_expectations.md": "a30e91ec64b2e2bbc307a3e6b9ba4e54902aaa23dd4ed2ce926060eda670d065",
+    "tests/fixtures/meaning_review_cases.json": "be419900653305eb986cccb8c40ff4e1779bef1cf6d478e0b8ea49c166a88d09",
+    "tests/fixtures/meaning_review_cases.md": "60d64133ad2a5d309beecd3f882dde59c11f83fd98e8f8f2ae9f61643be3027b",
+    "tests/fixtures/reference_binance_cases.json": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+    "tests/fixtures/reference_binance_expectations.md": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88",
+    "tests/fixtures/reference_binance_partition_cases.json": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+    "tests/fixtures/reference_binance_partition_expectations.md": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+    "tests/fixtures/reference_binance_quality_cases.json": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+    "tests/fixtures/reference_binance_quality_expectations.md": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+    "tests/fixtures/reference_binding_cases.json": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+    "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257",
+    "tests/fixtures/reference_calibration_counts.json": "c1c7d41e24b20c4b3c170e7051fb597c1e6b761712274c287d008c485ac27ae9",
+    "tests/fixtures/reference_calibration_counts.md": "04e272af558ff9b7c0c469aa5290217a9966c9a3c1807f42f0acb25d6163b303",
+    "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+    "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe",
+    "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+    "tests/fixtures/reference_feature_cases.json": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+    "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee",
+    "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817"
+  },
+  "unchanged_top_level_functions": {
+    "trading_researcher/binding.py": [
+      "_compute",
+      "_execute",
+      "_verify_execution",
+      "child_entry",
+      "compile_payload",
+      "environment",
+      "expected_request",
+      "hashes",
+      "require",
+      "run_child",
+      "validate_compilation",
+      "write_file"
+    ],
+    "trading_researcher/composition.py": [
+      "child_entry",
+      "fixed_checks",
+      "run_composition_child"
+    ],
+    "trading_researcher/evaluation_plans.py": [
+      "child_entry",
+      "footprint",
+      "run_plan_child",
+      "source_bundle"
+    ]
+  },
+  "evidence_archive": "protected-target-evidence-2026-10-26.zip",
+  "evidence_archive_sha256": "511be48b9900cffc66b082aecaae695212da35a58a1a7b5b947e369decb248a0",
+  "archive_members": 56,
+  "archive_scope": "Changed production/tests, prior changed sources, exact test/check outputs including failures, test identities and independent review. No credentials, raw market downloads or registry backups.",
+  "provider_calls": 0,
+  "scientific_readiness": false,
+  "full_objective_complete": false,
+  "unverified": [
+    "Full repository test suite and exhaustive old-package replay",
+    "Real protected-market application or evaluation",
+    "Operating-system isolation and trusted-host compromise",
+    "Historical publication vintage and model training exposure",
+    "Scientific protected-target data/exposure admission",
+    "Outcome eligibility and population/stress adequacy",
+    "Calibrated information/inference including mixed-truth families",
+    "Atomic scientific allocation/freeze and fixed result release",
+    "Genuine mixed-provider research cycle",
+    "Certified AmiBroker policy evaluation and domain reporting",
+    "Profitability"
+  ],
+  "finalized_at": "2026-10-26T16:21:14.058206+00:00",
+  "changed_files": [
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/PROTECTED_TARGET_INTEGRATION_2026-10-26.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/protected-target-evidence-2026-10-26.zip",
+    "docs/reviews/implementation-2026-10-25/protected-target-independent-2026-10-26.json",
+    "docs/reviews/implementation-2026-10-25/protected-target-verification-2026-10-26.json",
+    "tests/data_target_support.py",
+    "tests/test_data_targets.py",
+    "tests/test_data_targets_binding.py",
+    "trading_researcher/BINDING.md",
+    "trading_researcher/DATA_TARGETS.md",
+    "trading_researcher/EVALUATION_POLICY.md",
+    "trading_researcher/FORMALIZATION.md",
+    "trading_researcher/auxiliary.py",
+    "trading_researcher/binding.py",
+    "trading_researcher/composition.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/data_targets.py",
+    "trading_researcher/evaluation_plans.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/revocations.py",
+    "trading_researcher/storage.py"
+  ],
+  "documentation_checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-26T16:20:45.964836+00:00",
+      "finished_at": "2026-10-26T16:20:46.046493+00:00",
+      "seconds": 0.081657,
+      "exit_code": 0,
+      "log": "20261026T162045-55c1027b.log",
+      "output": "warning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/CURRENT_STATE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/BINDING.md', CRLF will be replaced by LF the next time Git touches it\n"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "started_at": "2026-10-26T16:20:45.959324+00:00",
+      "finished_at": "2026-10-26T16:20:52.005424+00:00",
+      "seconds": 6.0461,
+      "exit_code": 0,
+      "log": "20261026T162045-b8d73df5.log",
+      "output": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 777,\n    \"source_files\": 5,\n    \"decisions\": 88,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Checked against this adoption's preapproval inventory\",\n    \"git_diff_check_exit\": 0,\n    \"later_approved_changed_paths\": {\n      \"REVIEWING.md\": \"D086 / agent-inquiry/1.0\",\n      \".gitattributes\": \"October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes\"\n    },\n    \"adoption_baseline_files\": 63,\n    \"preexisting_files_unchanged\": 44,\n    \"archived_documents_exact\": 20,\n    \"preserved_preapproval_decisions\": 70,\n    \"full_historical_definition_review_generator_texts\": 3,\n    \"approved_policy_sections_exact_except_status_words\": 15,\n    \"scoped_open_dispositions_and_acceptance_mappings\": 15,\n    \"adoption_decision_status_counts_D001_D085\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 63,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    },\n    \"decision_status_counts\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 66,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    }\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"7a75febb103396485e6eecbae82c0fa06915f41859afcdb37f76c92ba67323cc\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"4c97e38ce41929798fdd0c4b3d4e8805bf4e31e03486fd7956d6be6914e16d0d\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37\",\n    \"docs/architecture/CURRENT_STATE.md\": \"be2e134f68f379d8c33a43ea4d9c88d1deaa0ba8c47440a1683b9312f0957bb0\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\",\n    \".gitattributes\": \"44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c\",\n    \"docs/reviews/verify_system_model.py\": \"59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef\",\n    \"docs/reviews/verify_retail_contract.py\": \"e8ad4dfc1eb0474f68e6df3b1e28e80009353ef32932c7c9d7826ab59e82d9c9\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\": \"56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\",\n    \"Complete executable AST/schema/primitive implementations and independent golden fixtures\",\n    \"Actual data quality, rights, historical availability, model exposure and account/execution costs\",\n    \"Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately\",\n    \"Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs\",\n    \"SRC-001 through SRC-008 and completeness of original conversation\"\n  ],\n  \"changed_files_since_preapproval\": [\n    \".gitattributes\",\n    \"AGENTS.md\",\n    \"README.md\",\n    \"REVIEWING.md\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_system_model.py\"\n  ],\n  \"added_files\": [\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\",\n    \"docs/reviews/adoption-2026-10-23/verification.json\"\n  ],\n  \"preserved_proposal_sha256\": \"22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29\",\n  \"preapproval_archive_sha256\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n}\n"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "started_at": "2026-10-26T16:20:45.923799+00:00",
+      "finished_at": "2026-10-26T16:20:51.916551+00:00",
+      "seconds": 5.992752,
+      "exit_code": 0,
+      "log": "20261026T162045-777b02f8.log",
+      "output": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 777,\n    \"source_files\": 5,\n    \"decisions\": 88,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Not checked; rerun with retained --baseline inventory\",\n    \"git_diff_check_exit\": 0\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"7a75febb103396485e6eecbae82c0fa06915f41859afcdb37f76c92ba67323cc\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"4c97e38ce41929798fdd0c4b3d4e8805bf4e31e03486fd7956d6be6914e16d0d\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37\",\n    \"docs/architecture/CURRENT_STATE.md\": \"be2e134f68f379d8c33a43ea4d9c88d1deaa0ba8c47440a1683b9312f0957bb0\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\"\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "started_at": "2026-10-26T16:20:45.944677+00:00",
+      "finished_at": "2026-10-26T16:20:46.188056+00:00",
+      "seconds": 0.243379,
+      "exit_code": 0,
+      "log": "20261026T162045-e437508c.log",
+      "output": "{\n  \"status\": \"PASS\",\n  \"baseline_files\": 103,\n  \"unchanged_files\": 91,\n  \"changed_files\": [\n    \"docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md\",\n    \".gitattributes\",\n    \".gitignore\",\n    \"README.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"tests/test_local_runtime.py\",\n    \"trading_researcher/README.md\",\n    \"trading_researcher/__main__.py\",\n    \"trading_researcher/checks.py\",\n    \"trading_researcher/coordination.py\"\n  ],\n  \"new_files\": [\n    \"docs/reviews/implementation-2026-10-25/PROTECTED_TARGET_INTEGRATION_2026-10-26.md\",\n    \"docs/reviews/implementation-2026-10-25/protected-target-evidence-2026-10-26.zip\",\n    \"docs/reviews/implementation-2026-10-25/protected-target-independent-2026-10-26.json\",\n    \"docs/reviews/implementation-2026-10-25/protected-target-verification-2026-10-26.json\",\n    \"tests/data_target_support.py\",\n    \"tests/test_data_targets.py\",\n    \"tests/test_data_targets_binding.py\",\n    \"trading_researcher/DATA_TARGETS.md\",\n    \"trading_researcher/data_targets.py\"\n  ],\n  \"local_document_links\": 291,\n  \"errors\": [],\n  \"scope\": \"Implementation preservation, local link targets and whitespace; no semantic/scientific certification\"\n}\n"
+    }
+  ]
+}

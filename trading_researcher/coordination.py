@@ -39,6 +39,7 @@ from .meaning_reviews import MeaningReviews
 from .revocations import DependencyRevocations
 from .composition import CompositionCertification
 from .data_use import DataUseAssessments
+from .data_targets import DataTargets
 
 
 SCHEMA = '''
@@ -69,7 +70,7 @@ CREATE TABLE IF NOT EXISTS events(seq INTEGER PRIMARY KEY, previous_hash TEXT NO
 '''
 
 
-class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews, DependencyRevocations, CompositionCertification, DataUseAssessments):
+class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews, DependencyRevocations, CompositionCertification, DataUseAssessments, DataTargets):
     def __init__(self, directory, clock=None, *, provider_routes=None):
         self._provider_routes = provider_routes_config(provider_routes)
         self.directory = Path(directory).resolve()
@@ -243,7 +244,8 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
                          'create_research_epoch', 'inspect_research_epoch', 'reference_certificate_status',
                          'inspect_reference_checks', 'feature_certificate_status', 'inspect_feature_checks',
                          'inspect_bound_computations','assess_meaning_review','inspect_meaning_review','inspect_evaluation_plan',
-                         'revoke_dependency','inspect_dependency_use','composition_certificate_status','assess_data_use','inspect_data_use'}
+                         'revoke_dependency','inspect_dependency_use','composition_certificate_status','assess_data_use','inspect_data_use',
+                         'declare_data_target','bind_data_target'}
             allowed = admin_ops if actor['role'] == 'operator' else worker_ops
             if op not in allowed:
                 raise Denied('Operation unavailable for this capability')
@@ -366,6 +368,8 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
             if type(body) is dict and str(body.get('schema','')).startswith(
                     ('evaluator-calibration-input/','evaluator-calibration-attempt/')):
                 raise Denied('Reserved final calibration and its descendants are unavailable to research roles')
+            if type(body) is dict and body.get('schema')=='protected-data-binding/1':
+                raise Denied('Private target bindings and their descendants are unavailable to research roles')
             for ref in set(current['source_refs'])|set(current['exposure']):
                 if ref not in seen and self._db.execute('SELECT 1 FROM artifacts WHERE id=?',(ref,)).fetchone():
                     pending.append(self._artifact(ref))

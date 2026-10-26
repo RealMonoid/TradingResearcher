@@ -182,7 +182,7 @@ class EvaluationPlans:
                 'Retained diagnostic cases differ from the committed result')
             diagnostics.append(artifact)
         args=body['dependency_arguments']
-        dependencies=self._bound_dependencies(actor,*(args[name] for name in ('formalization_id','feature_certificate_id','reference_certificate_id')))
+        dependencies=self._bound_request_dependencies(actor,args)
         definitions=self._artifact(dependencies['feature_certificate']['body']['definitions_id'])['body']['definitions']
         payload={'candidate':dependencies['formalization']['body']['candidate'],'definitions':definitions,
             'outcome_description':body['compilation']['programs']['outcome_program'],
@@ -218,6 +218,13 @@ class EvaluationPlans:
                 and type(certificate_body) is dict and certificate_body.get('schema')=='feature-certificate/1',
                 'Owned feature certificate required for meaning-review scope')
             required_definition=certificate_body['definitions_id']
+            if 'data_target_binding_id' in binding['dependency_arguments']:
+                private=self._checked_target_binding({},binding['dependency_arguments']['data_target_binding_id'])
+                resolved=private['body']['resolved']
+                require(resolved['feature_certificate_id']==certificate['id']
+                    and resolved['target_id']==target['body']['candidate']['test_universe']['data_snapshot_ref'],
+                    'Meaning review private target binding differs')
+                required_definition=resolved['public_definitions_id']
             require(all(required_definition in job['spec']['research_inputs']['definition_ids']
                 for job in body['inventory']['jobs']),
                 'Meaning review did not use the compiled feature-definition identity')

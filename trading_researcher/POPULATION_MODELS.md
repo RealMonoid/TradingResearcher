@@ -75,4 +75,6 @@ Controller-owned `population-family-input/1` and `development-population-family/
 
 ## Next integration boundary
 
+An additional [lag-linked binary law](LAG_LINKED_POPULATION.md) now preserves a recognized shifted source value identity through generated response histories. It has separate versioned model/specification schemas and exact finite-state joint initialization. Existing source/mask response behavior remains unchanged. The added law is another explicitly limited stress scenario, not automatic original-process adequacy or a replacement for unsupported free hypotheses.
+
 The generated reference-shaped reports are consumed by the actual joint bootstrap and MC arithmetic. Such execution is not evidence of power or a calibrated information target. The [owned family-series controller](CALIBRATION.md#owned-joint-family-series) now precommits complete inventories and fresh final seed namespaces, applies aggregate resource/storage budgets, retains attempts and authenticates complete-denominator counts. The standalone family operation does not itself satisfy those series controls. Full actual calibration, practical resource feasibility, return models, heterogeneous claim-template laws and empirical model adequacy remain unfinished. No scientific acceptance, atomic freeze or genuine LLM research cycle is supplied by this generator alone.

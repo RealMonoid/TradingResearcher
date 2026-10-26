@@ -76,6 +76,8 @@ The [exact ordered-replicate checkpoint](../implementation-2026-10-25/ORDERED_RE
 
 **Exit evidence:** numerical and manifest checks pass; technical invalidity is separate from market outcomes; the narrowly scoped calibration report meets the applicable adopted gate with uncertainty and every failed world retained. Failure blocks affected scientific classifications and results in a bounded diagnosis. A fixed-calculator pass is not full-process calibration. Maps to proposal P3, D006/D017/D021/D075/D081/D082 and REQ-005/019/020/024/029.
 
+The subsequent [lag-linked population checkpoint](../implementation-2026-10-25/LAG_LINKED_POPULATION_2026-10-26.md) preserves recognized source value identities in an additional declared stress law with exact joint stationary starts. Four fixed engineering development worlds run the existing estimator and separate replay; no target is nominated. Its limited Markov law does not establish empirical nuisance fit or general dependent-null adequacy. Continue the model/profile assessment and complete calibration requirements above without treating this integration inventory as a scientific power study.
+
 ### 5. First genuine historical research cycle
 
 **Status: QUEUED after 1-4.** Before any discovery or assessment use, resolve and record the run inputs: verified data artifacts and rights, actual availability and inherited exposure, exact provider/model/prompt configuration, a finite currency cap if calls are paid, the applicable measurement/estimator profile, and the complete frozen selection/allocation plan. Missing inputs block only the affected operation; they cannot be replaced by invented facts or silent scientific defaults.

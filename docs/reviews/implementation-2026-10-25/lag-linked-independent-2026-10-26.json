@@ -1,0 +1,242 @@
+{
+  "schema": "independent-lag-linked-population-review/1",
+  "status": "PASS_BOUNDED_LAG_LINKED_STRESS_IMPLEMENTATION",
+  "reviewed_at_utc": "2026-10-26T20:25:32Z",
+  "reviewer": "independent publication_review agent",
+  "baseline_commit": "b4dba35c0a261c5ca99985e50909dd074033304c",
+  "purpose": "Review the declared lag-linked binary process, exact joint stationary initialization, exogenous-mask interpretation and retained owned execution without approving a market model or scientific information target.",
+  "scope": {
+    "production_changes": [
+      "trading_researcher/lag_population.py",
+      "trading_researcher/population_models.py",
+      "trading_researcher/family_models.py"
+    ],
+    "independently_authored_test_file": "tests/test_lag_population_adversarial.py",
+    "authority": "Implementation and model inquiry within research-contract/1.0 sections 5.3, 5.4 and 11; no change to estimator, scientific thresholds, calibration requirements or free discovery.",
+    "reviewer_production_edits": false,
+    "paid_provider_calls": 0,
+    "protected_market_evaluation": false,
+    "full_repository_test_run": false,
+    "scientific_admission": false
+  },
+  "findings": [
+    {
+      "id": "LAG-01",
+      "status": "VERIFIED_CONDITIONAL_PROCESS_ARGUMENT",
+      "finding": "For positive lag d, a=q+e and b=q-q*e/(1-q) satisfy q*a+(1-q)*b=q. Independent stationary time phases and fresh innovations therefore define a stationary lag-d binary process with C_t=Y_(t-d) and conditional-minus-scope effect e under the declared mask assumptions.",
+      "limits": "The effect also fixes lag-k*d correlation to (e/(1-q))**k. Other phase correlations are zero, and the zero-effect latent law is IID over time. This is a specific hypothetical stress law, not an arbitrary dependent null, raw feature process, fitted market law or universal original-AST simulator."
+    },
+    {
+      "id": "LAG-02",
+      "status": "VERIFIED_OBSERVED_GROUP_SEMANTICS",
+      "finding": "The model distinguishes source condition fraction from generated w=r*q, where r is the eligible condition-known fraction. It preserves the existing observable p_other meaning as q-w*e/(1-w), while reporting latent transition b separately. Unknown conditions remain in the whole-scope baseline.",
+      "independent_oracle": "A two-instrument fixture with q=1/2 and r=13/14 yields w=13/28, p_true=3/5, latent b=2/5 and observed p_other=31/75 for e=1/10. Weighted observable group means return exactly q.",
+      "limits": "These identities require masks independent of the latent responses and homogeneous q across the pooled instruments. They do not establish exogeneity or homogeneity in market data. Original source condition values are not resampled or presented as preserved."
+    },
+    {
+      "id": "LAG-03",
+      "status": "VERIFIED_EXACT_FINITE_JOINT_LAW",
+      "finding": "The solver integrates the product of coordinate probabilities conditional on a common uniform innovation, using an independent common-channel choice for each coordinate. It solves pi P=pi exactly, checks normalization/nonnegative mass and all residuals, and retains an exact integer sampling CDF.",
+      "independent_oracles": [
+        "For q=1/2, effects [0,1/10] and common share 1, ascending low-bit-coordinate state probabilities are [9/20,1/20,1/20,9/20].",
+        "For the same transitions and common share 1/2, the probabilities are [3/10,1/5,1/5,3/10], distinguishing independent coordinate channel choices from one global channel choice.",
+        "Common share zero yields the exact product of different coordinate stationary marginals.",
+        "Four identical IID coordinates with full common share have mass 2/3 at state 0 and 1/3 at state 15, with zero mass on all intermediate states. The solver correctly permits transient joint states."
+      ],
+      "process_argument": "Strictly interior transitions give a positive probability of the same all-zero reset from every prior state, so all states reach the one closed stationary class. One independent exact joint-state draw per time phase initializes the process without a finite burn-in or successful-initialization selection.",
+      "limits": "The deterministic capability is one through four response-by-instrument coordinates, at most sixteen joint states and a 4096-bit arithmetic envelope. Strict-interior capability exclusions are distinguished from mathematically infeasible probabilities. This is not a proof that a finite PRNG realizes an ideal stochastic law."
+    },
+    {
+      "id": "LAG-04",
+      "status": "VERIFIED_GENERATOR_CHRONOLOGY_AND_BINDING",
+      "finding": "Each response derives its condition from its own earlier generated latent value. Latent states advance on every timestamp, including fully missing rows; mask states, knownness and terminal censoring remain explicit. Initial states are retained before the rolling histories are mutated.",
+      "independent_oracle": "Controlled streams with two wholly missing intermediate rows require condition values [false,true,null,null,false,true,true,false]. This checks latent advancement through gaps, not merely agreement among visible pairs. A tampered model transition is rejected before any random stream is created.",
+      "limits": "The masks remain an exogenous sampled template and no original AST is executed. Different family responses are different synthetic components, not different real ASTs on one price path."
+    },
+    {
+      "id": "LAG-05",
+      "status": "VERIFIED_VERSIONED_DISPATCH_AND_COMPATIBILITY",
+      "finding": "Only explicit new specification/model schemas select the added implementation. The previous generator code path is otherwise unchanged. The retained pre-edit package and current package produce identical complete old-law results and case bytes on the fixed compatibility observation.",
+      "limits": "Historical source packages are not migrated. Reuse of the existing owned capture/replay and family-study pipeline does not grant a scientific freeze, protected data authority or completed final calibration."
+    },
+    {
+      "id": "LAG-06",
+      "status": "QUALIFIED_OPERATOR_COST_INPUT",
+      "finding": "The 60000 ms and 64 MiB input is expressly an operator allowance estimate, despite the legacy observed_* field names. The host labels it retained_operator_input_not_authenticated_benchmark. Actual reservations, settlements and retained bytes are separately accounted.",
+      "limits": "These input figures are not measured performance and cannot establish efficiency or full-series feasibility. The observed family charges below include concurrent engineering execution and are not a comparative benchmark."
+    }
+  ],
+  "unresolved_blockers_within_reviewed_scope": [],
+  "independent_test_history": [
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T200556-26f554c8.json",
+      "log": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T200556-26f554c8.log",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_lag_population_adversarial.py", "-v"],
+      "tests": 15,
+      "exit_code": 0,
+      "unittest_seconds": 0.069,
+      "wrapper_seconds": 0.257647,
+      "qualification": "Initial independent exact oracles passed because production landed while the tests were being authored. This is not represented as a before-implementation failing run."
+    },
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T200648-576b8e9a.json",
+      "log": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T200648-576b8e9a.log",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", "-c", "import sys; sys.path.insert(0,\".trf-runtime/lag-linked-checks-2026-10-26/source-before.zip\"); import trading_researcher; assert \"source-before.zip\" in trading_researcher.__file__; import unittest; unittest.main(module=None,argv=[\"unittest\",\"discover\",\"-s\",\"tests\",\"-p\",\"test_lag_population_adversarial.py\",\"-v\"])"],
+      "tests": 15,
+      "errors_including_subtests": 57,
+      "exit_code": 1,
+      "unittest_seconds": 0.033,
+      "wrapper_seconds": 0.226889,
+      "qualification": "Retained pre-edit package import is explicitly asserted. Every error is the absent lag_population module; no production file was reverted or modified to manufacture the failure."
+    },
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201008-61168379.json",
+      "log": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201008-61168379.log",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_lag_population_adversarial.py", "-v"],
+      "tests": 19,
+      "exit_code": 0,
+      "unittest_seconds": 0.086,
+      "wrapper_seconds": 0.373591,
+      "started_at_utc": "2026-10-26T20:10:08.205817+00:00",
+      "finished_at_utc": "2026-10-26T20:10:08.579408+00:00",
+      "qualification": "Four additional meaningful checks cover the arithmetic resource envelope, exact pooled knownness interpretation, latent chronology under missing rows and pre-RNG model tampering. These were added during implementation review."
+    }
+  ],
+  "additional_terminal_records_inspected": [
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201953-96395438.json",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_lag_population*.py", "-v"],
+      "tests": 23,
+      "exit_code": 0,
+      "unittest_seconds": 0.093,
+      "wrapper_seconds": 0.406469,
+      "qualification": "Includes the same 19 independent cases, not 23 additional cases."
+    },
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201219-527b1d99.json",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", "-m", "unittest", "discover", "-s", "tests", "-p", "test_population*.py", "-v"],
+      "tests": 20,
+      "exit_code": 0,
+      "unittest_seconds": 100.466,
+      "wrapper_seconds": 101.207206
+    },
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201424-c28d5645.json",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", ".trf-runtime/lag-linked-checks-2026-10-26/regressions.py"],
+      "tests": 70,
+      "exit_code": 0,
+      "unittest_seconds": 4.798,
+      "wrapper_seconds": 5.401074
+    }
+  ],
+  "terminal_test_inventory": {
+    "unique_pass_identities_independently_counted_from_three_logs": 113,
+    "composition": "23 new lag cases including 19 independent cases, 20 population/owned-run regressions and 70 existing scope/family/information cases.",
+    "full_repository_claim": false
+  },
+  "retained_reporting_failures_and_recovery": [
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201115-f05857ba.json",
+      "log": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201115-f05857ba.log",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", ".trf-runtime/lag-linked-checks-2026-10-26/owned_probe.py"],
+      "exit_code": 1,
+      "wrapper_seconds": 123.938785,
+      "cause": "The reporting helper looked for a nonexistent top-level stream_blob after its log had already recorded all four owned worlds COMPLETE."
+    },
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201553-7eda33a9.json",
+      "log": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201553-7eda33a9.log",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", ".trf-runtime/lag-linked-checks-2026-10-26/inspect_owned.py"],
+      "exit_code": 1,
+      "wrapper_seconds": 0.374581,
+      "cause": "The first read-only inspection helper omitted the wrapper artifact ID when reading raw stored envelopes."
+    },
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T201612-884adcf1.json",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", ".trf-runtime/lag-linked-checks-2026-10-26/inspect_owned.py"],
+      "exit_code": 0,
+      "wrapper_seconds": 2.796893,
+      "outcome": "Read-only recovery checks owned envelopes, stream hashes, generation/replay equality, complete original world IDs and observed shifted pairs."
+    },
+    {
+      "record": ".trf-runtime/lag-linked-checks-2026-10-26/20261026T202454-cf11ecfb.json",
+      "command": ["C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe", "-B", ".trf-runtime/lag-linked-checks-2026-10-26/inspect_owned.py"],
+      "exit_code": 0,
+      "wrapper_seconds": 2.945141,
+      "outcome": "Final read-only verification with precise recovery wording; numerical observations remain unchanged."
+    }
+  ],
+  "owned_execution_observation": {
+    "profile": ".trf-runtime/lag-linked-checks-2026-10-26/owned-profile.json",
+    "observation": ".trf-runtime/lag-linked-checks-2026-10-26/owned-observation.json",
+    "procedure_review": "The recovery opens SQLite mode=ro, verifies controller-owned development envelopes and blob SHA/size, checks exact generation/replay encoded bytes and both proofs, and compares the observed world ID set with the original four-world manifest. It does not call an owned advance operation.",
+    "scalar_comparable_equal_pairs": 94,
+    "completed_family_worlds": 4,
+    "attempts_per_original_family_world": [1, 1, 1, 1],
+    "proofs_per_family_world": [2, 2, 2, 2],
+    "generated_family_cases": 512,
+    "retained_draws_per_family_world": 119994,
+    "retained_draws_total": 479976,
+    "required_block_lengths": [1, 2, 4],
+    "equal_shift_pairs_per_response_in_manifest_order": [59, 59, 61, 60],
+    "unequal_shift_pairs": 0,
+    "all_eight_component_outcomes": "VERIFIED, covered=true, TESTED_INCONCLUSIVE",
+    "planted_component_detections": {"a": false, "b": false},
+    "candidate_time_rows": null,
+    "n_min": null,
+    "scientific_readiness": false,
+    "charged_compute_ms": 96874,
+    "settled_attempt_storage_bytes": 108845626,
+    "initial_storage_bytes": 2787138,
+    "charged_storage_bytes": 111632764,
+    "outstanding_attempts": 0,
+    "overrun": false,
+    "legacy_result_and_case_bytes_identical": true,
+    "runtime_sources_rechecked_against_observation": 60,
+    "runtime_source_hash_mismatches": 0,
+    "rerun_qualification": "No owned scalar or family-study world or attempt was rerun, replaced or reseeded. The separate read-only old/current compatibility comparison was repeated during recovery; it is additional verification, not another owned study attempt.",
+    "interpretation": "Four fixed development patterns on the prescribed engineering source, with one world per pattern. This establishes a bounded owned integration/replay capability, not a power estimate or passing final calibration."
+  },
+  "documentation_review": {
+    "outcome": "The model guide and checkpoint accurately state exact-law assumptions, knownness/group distinctions, independence of time phases, retained failures, lack of original-AST execution and scientific limits. A too-broad no-world-rerun sentence was narrowed to owned scalar/family-study attempts while explicitly disclosing repeated read-only compatibility comparisons.",
+    "sha256": {
+      "trading_researcher/LAG_LINKED_POPULATION.md": "1e5428edb44b90f948750ad9f6cab3163a60d3b87a019274594d23c6a9e6bae3",
+      "docs/reviews/implementation-2026-10-25/LAG_LINKED_POPULATION_2026-10-26.md": "d6a7efa33027458ed0550d327999efc2bf3836b63bcc385506b65937017d2306"
+    },
+    "method_source": {
+      "url": "https://www.cs.ox.ac.uk/people/elias.koutsoupias/pc2017-18/lectures.html",
+      "section": "Stationary Distributions",
+      "verified_use": "Standard defining equation pi=pi Q. The specific transition law, reset argument and algebraic oracles are project derivations, not empirically established market assumptions."
+    }
+  },
+  "remaining_uncertainty": [
+    "A substantive source-specific nuisance/stress profile, market stationarity and exogeneity, and arbitrary original-process adequacy remain unverified.",
+    "The law cannot independently vary its lag-d dependence and effect, explain arbitrary other-lag products or preserve arbitrary feature/price relationships.",
+    "The maximum four-coordinate exact solver is a bounded capability. Unsupported dimensions or arithmetic capacity are not silently approximated or excluded from denominators.",
+    "No admitted information target, complete 256-world-per-cohort final calibration, full-process error guarantee or authentic free-discovery cycle is established.",
+    "No performance improvement or full-series resource-feasibility claim follows from operator estimates or the concurrent engineering run.",
+    "No historical PIT, policy profitability, live-capital or deployment authority follows from these software results."
+  ],
+  "next_action": "Assess and predeclare an actual nuisance/stress scope beyond this simple lag law, preserving failures and the original free-discovery boundary, before freezing a substantive information/calibration profile. Continue the remaining admission/freeze and research workflow work without promoting this engineering probe to scientific readiness.",
+  "source_sha256": {
+    "trading_researcher/lag_population.py": "95032a128ac2c94f97d14c99e0db5a93fbf3160b129b081ccd5ac5f1d871be1a",
+    "trading_researcher/population_models.py": "372d4506968a9a0620e2df3911e41e45656d32795ae3f58e3c9b206a10e4c4cf",
+    "trading_researcher/family_models.py": "b059f89d2c8c08a72e3d675c9c6f67f8fce6ddfdbd5e631d6fc31614b5eccd42",
+    "trading_researcher/population_runs.py": "a6ded70258275d251d058053bd7a7bbb95fe824842a440b5a6af41d692024ae4",
+    "trading_researcher/family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+    "trading_researcher/information_study.py": "ede0c49cc21a96c9759a9a68e6fcee1522df498e5105996fbb1a456f319277be",
+    "trading_researcher/study_runs.py": "344471ce51d7d8b849cda734fb1aadcc4957609ea5e544322790bcb47117264a",
+    "tests/test_lag_population_adversarial.py": "11d1581e8ab0eee57b0a668e75ff7c9c12d8a1786f27fe72bbadba6e4f0772f2",
+    "tests/test_lag_population.py": "d9b0ff8b545ddc8c7e260c046776ad16aeeaf6a48850c183d95f387fffb84ef4",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d"
+  },
+  "evidence_sha256": {
+    ".trf-runtime/lag-linked-checks-2026-10-26/source-before.zip": "edd8561606ea496f7bfdc50135f31c11e6fc6d4b62c4e62463a11acf7c430467",
+    ".trf-runtime/lag-linked-checks-2026-10-26/owned-profile.json": "0be60b81dfacd69f176618d75f56fb7ebe998280e75dca9192bdd7e5e42b2985",
+    ".trf-runtime/lag-linked-checks-2026-10-26/owned-observation.json": "c26eaba3cd78e961b1673324c663240dbcd5fbec96dea3b07342f30232485cae",
+    ".trf-runtime/lag-linked-checks-2026-10-26/owned_probe.initial.py": "982ecdcb354357114c1dbc714140ead6ab3a35b3980d82d3c2a3881e74488bb1",
+    ".trf-runtime/lag-linked-checks-2026-10-26/inspect_owned.py": "66c3d4980a78eabf1754449d3aa7befef971b0ac75054ea4016d20bb4be81ffb",
+    ".trf-runtime/lag-linked-checks-2026-10-26/owned-study-input.json": "9950d70309e778b3239256465f5e7b47f88aa9baebb6b4b7382e4a1ab98627cd",
+    ".trf-runtime/lag-linked-checks-2026-10-26/owned-study-latest.json": "f34ce1308a26c6455370bc21a2acfdd2a753d051137841712469636b834f404a"
+  }
+}

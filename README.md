@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [lag-linked population model](docs/reviews/implementation-2026-10-25/LAG_LINKED_POPULATION_2026-10-26.md) adds a declared binary stress law that preserves recognized temporal condition/outcome identities, with exact joint stationary starts and shared innovations. Four owned development worlds complete generation, the unchanged estimator and separate replay, retaining 479,976 draws. The short engineering probe nominates no information target; market adequacy and full calibration remain unfinished.
+
 The [source-process scope diagnostic](docs/reviews/implementation-2026-10-25/SOURCE_PROCESS_SCOPE_2026-10-26.md) now retains recognized temporal condition/outcome identities beside each new population model. The prescribed real-data engineering probe has 94 matching observed pairs; a fixed estimator-only synthetic world violates that source identity on 42 of 91 comparable pairs. This identifies a limit on interpretation, not a new scientific rejection rule. Original-process adequacy and the actual information/calibration profile remain unresolved.
 
 The [recorded resource-continuation path](docs/reviews/implementation-2026-10-25/STUDY_CONTINUATION_2026-10-26.md) now resumes an exhausted development/final series through explicit bounded decisions. It preserves original worlds, seeds, source, retry caps, costs and failures; later grants cannot conceal earlier overruns. A real synthetic lifecycle completes four development worlds and two of 1,024 final worlds with separate replay. Final counts remain NOT_ASSESSED; complete calibration and the broader research workflow remain unfinished.

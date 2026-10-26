@@ -32,6 +32,9 @@ def specification(mask_mean_block, persistence, common_share, rationale):
 
 
 def validate_specification(spec):
+    if type(spec) is dict and spec.get('schema') == 'lag-linked-binary-spec/1':
+        from .lag_population import validate_specification as validate_linked
+        return validate_linked(spec)
     require(type(spec) is dict and set(spec) == {'schema', 'mask_mean_block', 'persistence',
             'common_share', 'rationale'} and spec['schema'] == SPEC, 'Exact population specification required')
     integer(spec['mask_mean_block'], 'mask mean block', 1)
@@ -46,6 +49,9 @@ def validate_specification(spec):
 
 def build_model(report, diagnostics, spec, effects):
     """Bind empirical q,w and all declared effects; never fit to power outcomes."""
+    if type(spec) is dict and spec.get('schema') == 'lag-linked-binary-spec/1':
+        from .lag_population import build_model as build_linked
+        return build_linked(report, diagnostics, spec, effects)
     spec = validate_specification(spec)
     require(type(effects) is list and 1 <= len(effects) <= 5, 'Explicit bounded effect scenarios required')
     parsed = [_read_rational(value) for value in effects]
@@ -129,6 +135,9 @@ def generate_world(report, model, scenario, time_rows, seed):
     rows have the same stationary mask marginal, so this independent calendar
     restriction leaves population q,w unchanged; realized ratios still vary.
     """
+    if type(model) is dict and model.get('schema') == 'lag-linked-binary-model/1':
+        from .lag_population import generate_world as generate_linked
+        return generate_linked(report, model, scenario, time_rows, seed)
     require(type(model) is dict and model.get('schema') == MODEL, 'Population model required')
     expected = build_model(report, model.get('diagnostics'), model.get('specification'), model.get('effects'))
     require(digest(expected) == digest(model), 'Population model differs from its bound source and recipe')

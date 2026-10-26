@@ -34,6 +34,9 @@ def _rng(seed, component):
 
 
 def generate_family(report, model, components, time_rows, seed):
+    if type(model) is dict and model.get('schema') == 'lag-linked-binary-model/1':
+        from .lag_population import generate_family as generate_linked
+        return generate_linked(report, model, components, time_rows, seed)
     expected = build_model(report, model.get('diagnostics'), model.get('specification'), model.get('effects'))
     require(digest(expected) == digest(model), 'Family model differs from its exact source and recipe')
     require(model['status'] == 'MODEL_SPECIFIED', 'Unresolved family model cannot generate a world')

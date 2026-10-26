@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "91 unique focused tests pass, including 14 independent cases and owned generation/replay. A fixed actual-source counterexample retains unchanged numerical outputs and prior-source case bytes; source-process-scope-verification-2026-10-26.json records exact checks and limits."
+      "evidence": "113 unique focused tests pass, including 19 independent cases. Four original owned lag-linked development worlds completed with 479976 retained draws and independent replay; exact records and retained reporting-helper failures are in lag-linked-verification-2026-10-26.json. No scientific readiness is claimed."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -252,7 +252,10 @@
         "docs/reviews/implementation-2026-10-25/calibration-count-verification.json",
         "trading_researcher/calibration_runs.py",
         "docs/reviews/implementation-2026-10-25/calibration-run-verification.json",
-        "docs/reviews/implementation-2026-10-25/draw-transport-verification.json"
+        "docs/reviews/implementation-2026-10-25/draw-transport-verification.json",
+        "trading_researcher/LAG_LINKED_POPULATION.md",
+        "docs/reviews/implementation-2026-10-25/LAG_LINKED_POPULATION_2026-10-26.md",
+        "docs/reviews/implementation-2026-10-25/lag-linked-verification-2026-10-26.json"
       ],
       "remaining_action": "Owned finite development studies, exact calibration-count arithmetic/CLI and protected single-claim final-series orchestration are implemented. Complete final calibration, coherent mixed-truth multi-claim worlds, adequate development nuisance/stress models and meaningful information targets remain required alongside scientific admission and freeze. Recorded seed disjointness does not certify independent sampling. Later AmiBroker/reporting packages remain in the full seven-package objective."
     },
@@ -292,11 +295,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Formulate and assess a source-specific population/profile rationale that respects the diagnosed temporal dependencies before admitting an actual information target. Keep existing estimator-only stress studies explicitly scoped, preserve original source-bound inventories and justify resource continuation. Do not turn the prescribed one-day engineering case into a fixed discovery catalog. Continue full calibration/campaign/admission/freeze, mixed-provider research, policy/AmiBroker and reporting.",
+  "next_action": "Assess the source-specific nuisance and stress scope beyond the simple lag-linked law before freezing a substantive information/calibration profile. Preserve the original prescribed engineering source and all study inventories; do not equate this one-day template with free discovery or infer power from one world per cell. Continue applicable scientific admission/campaign/freeze, full calibration, mixed-provider research, policy/AmiBroker and reporting.",
   "continuation_audit": {
     "previous_goal_turn": "no_progress_verification_only",
     "current_goal_turn": "progress",
-    "basis": "The actual source identity C_t=Y_(t-2) is retained in new model reports; independent tests and a fixed counterexample expose the original-process scope gap without changing the estimator-only stress law. This is an implemented descriptive diagnostic, not calibrated scientific readiness.",
+    "basis": "A new declared lag-linked stress law preserves the diagnosed C_t=Y_(t-2) relationship, with exact finite joint stationary initialization and missingness-aware group rates. Four owned development worlds completed and replayed without replacing seeds or failures. Existing model bytes remain identical. This is implemented integration progress, not an adequate market law, information target or complete scientific calibration.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -463,6 +466,25 @@
     "legacy_case_bytes_unchanged": true,
     "provider_calls": 0,
     "original_process_adequacy": "NOT_ASSESSED",
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "lag_linked_population_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "verification": "docs/reviews/implementation-2026-10-25/lag-linked-verification-2026-10-26.json",
+    "unique_focused_tests": 113,
+    "independent_tests": 19,
+    "actual_development_worlds": 4,
+    "actual_draws": 479976,
+    "scalar_comparable_pairs": 94,
+    "unequal_shifted_pairs": 0,
+    "charged_compute_ms": 96874,
+    "charged_logical_bytes": 111632764,
+    "legacy_result_and_case_bytes_identical": true,
+    "provider_calls": 0,
+    "original_process_adequacy": "NOT_ASSESSED",
+    "n_min": null,
     "scientific_readiness": false,
     "full_objective_complete": false
   }

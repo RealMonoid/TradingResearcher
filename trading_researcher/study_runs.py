@@ -17,6 +17,7 @@ from .errors import Conflict, Denied
 from .evaluation_plans import source_bundle, footprint
 from .information_study import make_manifest, summarize, budget_state
 from .study_pipeline import BOOTSTRAP
+from .study_stream import validate_stream
 
 
 INPUT='information-study-input/1'
@@ -35,7 +36,7 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs)
     overhead=2*(sum(map(len,source.values()))+len(cases)+4*METADATA_BYTES)+METADATA_BYTES
     stream_limit=min(256*1024*1024,(budget-overhead)//4)
     require(stream_limit>0,'Attempt storage cannot hold inputs and bounded metadata')
-    calculated=None;raw=None;proofs=[]
+    calculated=None;raw=None;proofs=[];encoding=None
     for phase in ('generate','replay'):
         request={'payload':payload,'manifest':manifest,'world':world,'footprint':expected,
             'verify':None if calculated is None else digest(calculated),'stream_limit':stream_limit}
@@ -47,22 +48,32 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs)
                     path=directory/name;path.parent.mkdir(parents=True,exist_ok=True);write_file(path,value)
                 write_file(directory/'cases.jsonl',cases)
                 write_file(directory/'request.json',canonical(request).encode())
-                if raw is not None:write_file(directory/'expected-stream.jsonl',raw)
+                if raw is not None:
+                    write_file(directory/('expected-stream.jsonl.gz' if encoding is not None else 'expected-stream.jsonl'),raw)
                 response=_run_child([sys.executable,'-I','-S','-B','-c',BOOTSTRAP,str(directory),str(directory/'request.json')],
                     directory,timeout=remaining())
-                require(type(response) is dict and set(response)=={'result','stream_blob','request_hash','footprint','environment'},
+                fields={'result','stream_blob','request_hash','footprint','environment'}
+                require(type(response) is dict and (set(response)==fields or set(response)==fields|{'stream_encoding'}),
                     'Malformed study child response')
+                encoded='stream_encoding' in response
+                if phase=='replay':
+                    require(encoded==(encoding is not None) and response.get('stream_encoding')==encoding,
+                        'Study replay encoding differs')
                 require(response['request_hash']==digest(request) and response['footprint']==expected
                     and _environment_current(response['environment']),'Study response identity differs')
-                path=directory/('stream.jsonl' if phase=='generate' else 'expected-stream.jsonl')
+                path=directory/(('stream' if phase=='generate' else 'expected-stream')+'.jsonl'+('.gz' if encoded else ''))
+                require(path.stat().st_size<=stream_limit,'Study encoded file exceeds bound')
                 observed=path.read_bytes()
                 require(len(observed)<=stream_limit and response['stream_blob']==
                     {'sha256':hashlib.sha256(observed).hexdigest(),'size':len(observed)},'Study stream digest differs')
+                if encoded:validate_stream(observed,response['stream_encoding'],encoded_limit=stream_limit)
                 require(footprint({name:(directory/name).read_bytes() for name in source})==expected,
                     'Retained study package changed')
-                proofs.append({key:response[key] for key in ('request_hash','footprint','environment','stream_blob')})
+                proof={key:response[key] for key in ('request_hash','footprint','environment','stream_blob')}
+                if encoded:proof['stream_encoding']=response['stream_encoding']
+                proofs.append(proof)
                 if phase=='generate':
-                    calculated=response['result'];raw=observed
+                    calculated=response['result'];raw=observed;encoding=response.get('stream_encoding')
                     # Time/segment/numeric stops are not deterministic successful
                     # computations and must never acquire a completed-world status.
                     if calculated['outcome']['state']=='TECHNICAL_FAILURE':return calculated,proofs
@@ -75,7 +86,8 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs)
                     if stat.S_ISREG(observed_stat.st_mode):meter['materialized_bytes']+=observed_stat.st_size
                 # Originals already exist in the input capsule; preserve every
                 # output/prefix, diagnostic and replay input even after failure.
-                for name in ('stream.jsonl','expected-stream.jsonl','child-output.json','child-errors.txt'):
+                for name in ('stream.jsonl','expected-stream.jsonl','stream.jsonl.gz','expected-stream.jsonl.gz',
+                        'child-output.json','child-errors.txt'):
                     path=directory/name
                     try:observed_stat=path.stat()
                     except FileNotFoundError:continue

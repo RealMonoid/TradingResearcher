@@ -81,7 +81,8 @@ class FamilyPipelineAdversarialTests(unittest.TestCase):
 
     def test_second_component_inherits_global_deadline(self):
         payload, cases = self.payload(); stops = []
-        def bootstrap(report, design, limits, *, stop, on_draw):
+        def bootstrap(report, design, limits, *, stop, on_draw, on_draw_bytes=None):
+            self.assertIsNone(on_draw_bytes)  # This fixture exercises the retained dictionary path.
             stops.append(stop())
             return self.bootstrap((0, 1), (1, 5)) if not stops[-1] else {'status': 'RESOURCE_STOP'}
         with patch('trading_researcher.family_pipeline.time.monotonic', side_effect=[0, 1, 2]), \

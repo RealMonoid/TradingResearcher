@@ -1,0 +1,304 @@
+{
+  "schema": "independent-lossless-study-retention-review/1",
+  "created_at": "2026-10-26T18:25:00.477701+00:00",
+  "reviewer": "/root/publication_review",
+  "baseline_commit": "0f1bf368b1709b7e5eb9cf5c54e8f682647fb1da",
+  "status": "PASS_BOUNDED_LOSSLESS_RETENTION_AND_LEGACY_TRANSPORT",
+  "purpose": "Verify lossless bounded storage and byte callback reuse without changing estimator, world, draw-count, scientific threshold or complete-series requirements.",
+  "fixed_encoding": "study-stream-gzip/1: fixed 10-byte header, level6 raw DEFLATE, 65536-byte decoded input chunks, final remainder, CRC32 and exact length footer; zlib build/runtime versions bound.",
+  "findings": [
+    {
+      "id": "write-fragmentation-changed-encoding",
+      "status": "FIXED",
+      "before": "Direct compressobj.compress calls on arbitrary caller writes produced different DEFLATE bytes for identical decoded data. The independent fragmentation and GzipFile-reference tests failed.",
+      "after": "A bounded 65536-byte input buffer fixes compressor boundaries independently of caller writes. Empty/Hello goldens, repeated text, hash-derived bytes and split points 65535/65536/65537 pass.",
+      "oracle_qualification": "The first GzipFile comparison used its implicit Python3.14 buffering. The final separate GzipFile reference explicitly flushes only its input buffer after each fixed chunk, never gzip.flush/Z_SYNC_FLUSH. This matches the versioned chunk rule without claiming arbitrary gzip implementation byte identity."
+    }
+  ],
+  "remaining_substantiated_blockers": [],
+  "reviewed_invariants": [
+    "Encoded and decoded limits are separate. Header, body and footer emissions are checked; supplied streams remain caller-owned. Failed output prefixes remain available and no destructor can append bytes.",
+    "Decode validates exact metadata shapes/types/runtime binding, fixed header, one complete member, decoded hash/size and bounded expansion. Truncation, corrupt CRC/body, concatenation and arbitrary trailing bytes are rejected.",
+    "A forged small decoded size/hash cannot bypass the runtime decompression bound; no unbounded flush or whole-body gzip.decompress path is used.",
+    "Replay regenerates canonical records, recompresses using fixed chunks and compares every encoded byte plus final EOF. Hash equality alone does not replace exact replay.",
+    "The parent verifies actual compressed-file hash/size and decoded descriptor, retains encoding in proofs and rejects format/metadata switches between generation and replay.",
+    "Old five-field raw responses still select fixed JSONL paths; new six-field encoded responses select fixed gzip paths. Retained source content is not string-inspected to infer encoding.",
+    "Both old/new fixed output paths, errors and partial files remain retained and physically charged through existing finally/stat accounting.",
+    "The family fast callback reuses the calculator canonical draw bytes and JSON-escapes response IDs. Complete framed bytes match the dictionary path, including undefined values and quote/backslash/newline/non-ASCII IDs.",
+    "zlib/struct are imported by the transport module before child environment capture; the existing standard-library/runtime identity checks include their loaded files. gzip is used only by the independent test reference.",
+    "No estimator calculation, seed recipe, draw count, event definition, aggregate budget or scientific admission threshold was changed."
+  ],
+  "checks": {
+    "baseline_import_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-c",
+        "import sys,unittest; sys.path.insert(0,'.trf-runtime/stream-retention-checks-2026-10-26/source-before.zip'); import trading_researcher; assert 'source-before.zip' in trading_researcher.__file__; suite=unittest.defaultTestLoader.discover('tests',pattern='test_study_stream_independent.py'); result=unittest.TextTestRunner().run(suite); sys.exit(not result.wasSuccessful())"
+      ],
+      "started_at": "2026-10-26T18:17:07.044908+00:00",
+      "finished_at": "2026-10-26T18:17:07.387078+00:00",
+      "seconds": 0.34217,
+      "exit_code": 1,
+      "log": "20261026T181707-4df8bba5.log",
+      "record_sha256": "c1e9d63df5f13bb76d1268629bf862578d313527e57dc540e16febe7b5afafdb",
+      "log_sha256": "cd1ec693b43b5682db75aefaf1767b0c20818728b969dee06471b067a2ae3a2a",
+      "test_count": 1,
+      "unittest_seconds": 0.0
+    },
+    "baseline_note": "The current independent test was imported against the preserved source-before ZIP. Package provenance was asserted before discovery. One expected missing-module error is recorded, not 15 executed failing cases.",
+    "first_current_fragmentation_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_stream_independent.py"
+      ],
+      "started_at": "2026-10-26T18:17:24.421131+00:00",
+      "finished_at": "2026-10-26T18:17:24.778582+00:00",
+      "seconds": 0.357451,
+      "exit_code": 1,
+      "log": "20261026T181724-52021b1e.log",
+      "record_sha256": "a3662e7d10a63869d4c8126ec454b72fca6a4af1cbd5efc11d0b6831f21c1af1",
+      "log_sha256": "0329e992980d7e74f67fcbb0da6c4f388e2fa5c6d5f4778afc60316809d914b3",
+      "test_count": 15,
+      "unittest_seconds": 0.041
+    },
+    "independent_reference_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_stream_independent.py"
+      ],
+      "started_at": "2026-10-26T18:18:41.103947+00:00",
+      "finished_at": "2026-10-26T18:18:41.476377+00:00",
+      "seconds": 0.37243,
+      "exit_code": 1,
+      "log": "20261026T181841-be081285.log",
+      "record_sha256": "61b8f15cd049f7123d539050ecd8091090d06fb0a47d8fe231dbe86d4d0f69f5",
+      "log_sha256": "04fc242db17eeca640dcc18e5a5124e4dca6f0f962222841e55037e6d979d058",
+      "test_count": 16,
+      "unittest_seconds": 0.05
+    },
+    "final_independent_green": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_stream_independent.py"
+      ],
+      "started_at": "2026-10-26T18:21:47.712669+00:00",
+      "finished_at": "2026-10-26T18:21:48.110515+00:00",
+      "seconds": 0.397846,
+      "exit_code": 0,
+      "log": "20261026T182147-9501528a.log",
+      "record_sha256": "9d486e789b4f8734adcd4350496d806b88decb024f16684134fbe9276393919b",
+      "log_sha256": "6ac99f2ad574a61b086641d20a69957a11fb9d61edbc947bf16d4494efe95d50",
+      "test_count": 17,
+      "unittest_seconds": 0.062
+    },
+    "actual_transport_tests_inspected": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_stream_transport.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T18:19:47.007736+00:00",
+      "finished_at": "2026-10-26T18:20:33.476616+00:00",
+      "seconds": 46.46888,
+      "exit_code": 0,
+      "log": "20261026T181947-5991cc20.log",
+      "record_sha256": "6cdae3cb0f9f913717a6dd51ec1e2a15922243b287bc9b4abbcf37824425deb6",
+      "log_sha256": "472bddf20b29887d6d8f256c96aa9d4c97fca4dea15b7fca33a35691752c0c6e",
+      "test_count": 2,
+      "unittest_seconds": 46.031
+    },
+    "existing_family_mock_signature_failure_retained": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_adversarial.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T18:20:24.394019+00:00",
+      "finished_at": "2026-10-26T18:20:26.500379+00:00",
+      "seconds": 2.10636,
+      "exit_code": 1,
+      "log": "20261026T182024-bd962da1.log",
+      "record_sha256": "309c3ff58a8e82add81c18381e48b938ba1b3c9d67f9fb661825d70ca8ce1268",
+      "log_sha256": "e5988b947bc1a2eb59d2cbc38176916c8d619f14fe112cd69b4b0db8dbc8bea1",
+      "test_count": 9,
+      "unittest_seconds": 1.53
+    },
+    "existing_family_regression_after_signature_fix": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_adversarial.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T18:21:07.982347+00:00",
+      "finished_at": "2026-10-26T18:21:10.220226+00:00",
+      "seconds": 2.237879,
+      "exit_code": 0,
+      "log": "20261026T182107-acd97126.log",
+      "record_sha256": "2fd19114c04f5c756da2500f4f76159cf89cf8f25103845ea73232c9438cb6e5",
+      "log_sha256": "66f8a73000c644e683d2983c3a11220cba3a118e6a01f0628f4bf5cbd0d9f37a",
+      "test_count": 9,
+      "unittest_seconds": 1.667
+    },
+    "mock_signature_note": "Only the existing synthetic bootstrap helper signature was adapted to accept on_draw_bytes; the global-deadline expected results were not changed.",
+    "whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-26T18:24:57.562424+00:00",
+      "finished_at": "2026-10-26T18:24:57.642519+00:00",
+      "seconds": 0.080095,
+      "exit_code": 0,
+      "log": "20261026T182457-c8c0be13.log",
+      "record_sha256": "05033a6bf2c37148fa75972cd0cd67e081e36265445f0cff154e811ade0ef993",
+      "log_sha256": "def7a0357eb308b78f547dfdc8a6d8c5e49bf4ad32a3c5d384c107d36936b71c",
+      "test_count": null,
+      "unittest_seconds": null
+    },
+    "independent_unique_cases": 17,
+    "additional_parent_executed_cases_inspected": 11,
+    "no_full_suite_claim": true
+  },
+  "fixed_byte_oracles": {
+    "empty": "1f8b08000000000000ff03000000000000000000",
+    "hello_newline": "1f8b08000000000000ffcb48cdc9c9e7020020303a3606000000",
+    "framing_qualification": "Mocked calculator outputs isolate canonical framing; actual full result/draw equality is separately exercised by the paired retained-source transport test."
+  },
+  "legacy_archive": {
+    "path": "tests/fixtures/study-source-0f1bf36.zip",
+    "sha256": "ee335215005ce138a058ea3499c5424ac929003a9243e80c139ed0c18dc96e2f",
+    "source_files": 56,
+    "all_source_bytes_equal_preserved_baseline": true
+  },
+  "actual_paired_observation": {
+    "benchmark": "same_fixed_mixed_family_actual_generate_and_replay",
+    "observations": [
+      {
+        "label": "retained_raw_0f1bf36",
+        "seconds": 22.87276959999872,
+        "proof_count": 2,
+        "stream_bytes": 22787327,
+        "materialized_bytes": 47274192,
+        "retained_bytes": 45639866,
+        "charged_bytes": 93962634
+      },
+      {
+        "label": "encoded_current",
+        "seconds": 23.00606549999793,
+        "proof_count": 2,
+        "stream_bytes": 4079481,
+        "materialized_bytes": 9874834,
+        "retained_bytes": 8224968,
+        "charged_bytes": 19148378
+      }
+    ],
+    "result_sha256": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+    "decoded_sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+    "decoded_bytes": 22787327,
+    "draws": 79996,
+    "complete_result_and_stream_equal": true,
+    "qualification": "One paired synthetic observation; not full-series feasibility or market calibration."
+  },
+  "resource_projection": {
+    "same_observed_encoded_charge_times_1024_bytes": 19607939072,
+    "existing_aggregate_storage_limit_bytes": 4294967296,
+    "same_observed_seconds_times_1024": 23558.21107199788,
+    "existing_aggregate_compute_limit_seconds": 3600,
+    "qualification": "Illustrative same-workload scaling only. It still exceeds existing full-series limits. No actual 1024-world study was executed, and scenario costs need not be identical."
+  },
+  "limits": [
+    "The single ordered old/new observation supports storage savings and exact result/decoded-stream equality for this workload. It shows no runtime speed gain and does not estimate a general speedup.",
+    "A valid encoded blob is lossless transport evidence, not scientific truth or a completed calibration. The decoder does not independently authenticate arbitrary supplied event meanings.",
+    "No complete final calibration, model adequacy, protected market evaluation, N_min, scientific freeze or profitable outcome is demonstrated.",
+    "Storage accounting remains logical materialization/retention accounting, not an operating-system disk/memory quota. Complete-workload feasibility remains open.",
+    "Other long-running parent regressions are excluded until terminal evidence exists; this review is not a full repository suite."
+  ],
+  "next_action": "Retain current regression outcomes and measure the remaining cost of complete prescribed cohorts before any full-series feasibility claim. Preserve the fixed world inventory and all required draw evidence.",
+  "source_sha256": {
+    "tests/fixtures/study-source-0f1bf36.zip": "ee335215005ce138a058ea3499c5424ac929003a9243e80c139ed0c18dc96e2f",
+    "tests/study_stream_support.py": "4be0fe0798de9855e6fd5d764f76fdb5292b6719353c35258cc11b7b2ea97970",
+    "tests/test_family_adversarial.py": "7d6710a4dcf57e48bd55918561ec704579042d382b35708c76afb9592fd143a0",
+    "tests/test_study_runs.py": "3d98b0ed79150a6734332da3fb57249a7973dd8757433277cea9165ec9165085",
+    "tests/test_study_runs_adversarial.py": "551e546da3d5b8692abd3b708ff1faa185c1cf934b4b40104534e502fb789997",
+    "tests/test_study_stream_independent.py": "cc6e750bf50f34f220f65a78d2dcab46999e1475bf204e2302af36ac9d8691a9",
+    "tests/test_study_stream_transport.py": "6913615f45677a4bb1619369890fccafe6fc84204b711e4a31d120ffdd51d38f",
+    "trading_researcher/binding.py": "bfb195ad9c1e27bd4ff8a8159cfd0a0b986f31565814ffa714f90e95daf36aaf",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "c172032e3c76a6dfaa69b67257e58d9ff0066adf82da03032eb547091e781c5a",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/family_models.py": "d0819d0e7b297daed74ac5b6afad7abfac83b57b3e66659ceb2c8c0307ab1d11",
+    "trading_researcher/family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+    "trading_researcher/family_study.py": "9153cd667aed7bdad52226d6d33e9eba3b1cf529fc25a5fefd4eaae19ccf2ba0",
+    "trading_researcher/family_study_runs.py": "1e38a9bce9d9013a8b73e92e397bd9a667838cb400fbd6bc8e648e658763804f",
+    "trading_researcher/information_study.py": "817f9221f9a9de3ed0e6a203be3c06213c1c43d48c68910cee02cabe6b509866",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/study_pipeline.py": "9cf4cbddc2c3facc657a0d675a6e945251314c62594f6d17ab0173d6201b9bb7",
+    "trading_researcher/study_runs.py": "0311e70eb2d3dd7b3e9d088ede140c7150f032b7028ed796d3c2d1574b3415bf",
+    "trading_researcher/study_stream.py": "ccdacccac038a0e340603f922e8f722a7342b7f66cf00552c27a9c796d9820dd"
+  },
+  "verified_numerical_sources_unchanged": [
+    "trading_researcher/stationary_bootstrap.py",
+    "trading_researcher/population_models.py",
+    "trading_researcher/family_models.py",
+    "trading_researcher/family_study.py",
+    "trading_researcher/information_study.py",
+    "trading_researcher/calibration.py",
+    "trading_researcher/calibration_study.py",
+    "trading_researcher/codec.py"
+  ],
+  "independent_stdlib_reference_sha256": {
+    "Python314/Lib/gzip.py": "68987cf83c74f3e6cfb436adcf0c37acb4ba02bf2e45dc11285b951324de7485"
+  },
+  "reviewer_changed_files": [
+    "tests/test_study_stream_independent.py",
+    ".trf-runtime/stream-retention-checks-2026-10-26/independent-review.json"
+  ],
+  "procedure_sha256": "cd1d845ac1cd93416e31b16d1ca50de8179a7338af7f93c182ded956c93ce8a2"
+}

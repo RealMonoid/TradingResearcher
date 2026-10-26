@@ -8,13 +8,15 @@ from .evaluation_plans import source_bundle, footprint
 from .population_models import build_model, generate_world
 from .stationary_bootstrap import calculate, randomness
 from .outcomes import _read_rational
+from .study_stream import EncodedStream
 
 
 BOOTSTRAP=('import sys;sys.path.insert(0,sys.argv[1]);'
     'from trading_researcher.study_pipeline import child_entry;child_entry(sys.argv[2])')
 
 
-def calculate_world(payload, manifest, world, cases, retain, *, retain_draw_bytes=None):
+def calculate_world(payload, manifest, world, cases, retain, *, retain_draw_bytes=None,
+        retain_family_draw_bytes=None):
     """Complete deterministic pipeline with an exact ordered case/draw sink."""
     if manifest['schema'] in ('family-information-study-manifest/1','family-evaluator-calibration-manifest/1'):
         from .family_pipeline import calculate_family
@@ -26,7 +28,7 @@ def calculate_world(payload, manifest, world, cases, retain, *, retain_draw_byte
             'limits':{'max_seconds':max(1,manifest['profile']['budget']['attempt_compute_ms']//1000)},
             'design':{'base_length':manifest['assigned']['base_length'],
                 'primary_count':manifest['assigned']['primary_count'],'mc_policy':manifest['mc_policy']}}
-        result=calculate_family(bound,cases,retain)
+        result=calculate_family(bound,cases,retain,retain_draw_bytes=retain_family_draw_bytes)
         return {**result,'world_id':world['id'],'outcome':outcome_record(manifest,world,result['outcomes'])}
     report={**payload['report'],'cases':cases}
     model=build_model(report,payload['diagnostics'],
@@ -74,25 +76,21 @@ def child_entry(request_path):
         'Retained study input cases differ')
     cases=[decode(line) for line in raw.splitlines()]
     require(len(cases)<=100000,'Study case count exceeds its envelope')
-    checksum=hashlib.sha256();total=0
-    path=directory/('expected-stream.jsonl' if verify is not None else 'stream.jsonl')
+    path=directory/('expected-stream.jsonl.gz' if verify is not None else 'stream.jsonl.gz')
     with path.open('rb' if verify is not None else 'xb') as stream:
-        def retain_line(line):
-            nonlocal total
-            total+=len(line)
-            require(total<=request['stream_limit'],'Study output exceeds its reserved storage')
-            checksum.update(line)
-            if verify is None:stream.write(line)
-            else:require(stream.read(len(line))==line,'Study case/draw replay differs')
-        def retain(record):retain_line((canonical(record)+'\n').encode())
+        encoded=EncodedStream(stream,encoded_limit=request['stream_limit'],verify=verify is not None)
+        def retain(record):encoded.write((canonical(record)+'\n').encode())
         # The calculator already validated and serialized this immutable draw.
         # Static sorted framing exactly matches canonical({kind, value}).
-        def retain_draw(encoded):retain_line(b'{"kind":"draw","value":'+encoded+b'}\n')
+        def retain_draw(draw):encoded.write(b'{"kind":"draw","value":'+draw+b'}\n')
         result=calculate_world(payload,request['manifest'],request['world'],cases,retain,
-            retain_draw_bytes=retain_draw)
+            retain_draw_bytes=retain_draw,retain_family_draw_bytes=encoded.write)
+        encoding=encoded.finish()
         if verify is not None:
-            require(stream.read(1)==b'' and digest(result)==verify,'Study replay differs')
+            require(digest(result)==verify,'Study replay differs')
+    raw=path.read_bytes()
     require(footprint(source_bundle())==expected,'Study source changed during computation')
     print(canonical({'result':result if verify is None else {'verified_result_hash':verify},
-        'stream_blob':{'sha256':checksum.hexdigest(),'size':total},'request_hash':digest(request),
+        'stream_blob':{'sha256':hashlib.sha256(raw).hexdigest(),'size':len(raw)},
+        'stream_encoding':encoding,'request_hash':digest(request),
         'footprint':expected,'environment':observed_environment}),flush=True)

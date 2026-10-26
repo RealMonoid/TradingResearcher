@@ -65,6 +65,8 @@ Practical resource feasibility is unresolved. The preceding valid 64-row two-res
 
 ## Remaining work
 
+The subsequent [lossless stream checkpoint](../docs/reviews/implementation-2026-10-25/STREAM_RETENTION_2026-10-26.md) reduces the paired fixture's logical charge from 93,962,634 to 19,148,378 bytes while preserving all records and results. Its full-series extrapolation still exceeds the existing storage and compute budgets; the complete actual final series remains unfinished. Scientific thresholds, fixed draws/worlds and source-currency restrictions are unchanged.
+
 All reports retain `scientific_readiness: false` and `n_min: null`. Owned attempt authentication and fixed single-claim event extraction do not establish population adequacy, justified stress applicability, independent sampling, substantive semantic review, historical data admission, complete evaluator/full-process calibration or scientific freeze. The actual final series remains incomplete until every required world is present; integration fixtures and individual replayed worlds do not supply that result. These remain in the original seven-package plan.
 
 The independent [numerical fixture](../tests/fixtures/reference_calibration_counts.json) and [authorship note](../tests/fixtures/reference_calibration_counts.md) were fixed before implementation. [Verification](../docs/reviews/implementation-2026-10-25/calibration-count-verification.json) records exact checks and source preservation; [independent review](../docs/reviews/implementation-2026-10-25/calibration-count-review.json) has its own scope. Fixture observations are synthetic and cannot be reported as completed real simulations.

@@ -1,6 +1,7 @@
 """Independent fault injection at the study pipeline and durable owner boundary."""
 from copy import deepcopy
 import hashlib
+import io
 from pathlib import Path
 import unittest
 from unittest.mock import patch
@@ -11,6 +12,7 @@ from trading_researcher import study_pipeline, study_runs
 from trading_researcher.codec import Invalid, canonical, decode, digest
 from trading_researcher.errors import Conflict
 from trading_researcher.information_study import make_manifest
+from trading_researcher.study_stream import EncodedStream, decode_stream
 
 
 class StudyPipelineAdversarialTests(unittest.TestCase):
@@ -218,13 +220,18 @@ class StudyRunAdversarialTests(unittest.TestCase):
             response = real(command, directory, timeout=timeout)
             calls.append(request['verify'])
             if request['verify'] is None:
-                path = directory / 'stream.jsonl'
-                rows = path.read_bytes().splitlines()
+                path = directory / 'stream.jsonl.gz'
+                rows = decode_stream(path.read_bytes(), response['stream_encoding']).splitlines()
                 first = decode(rows[0])
                 self.assertEqual(first['kind'], 'case')
                 first['value']['reason'] = 'independent_consistently_rehashed_corruption'
                 rows[0] = canonical(first).encode()
-                raw = b'\n'.join(rows) + b'\n'
+                decoded = b'\n'.join(rows) + b'\n'
+                buffer = io.BytesIO()
+                stream = EncodedStream(buffer, encoded_limit=request['stream_limit'])
+                stream.write(decoded)
+                response['stream_encoding'] = stream.finish()
+                raw = buffer.getvalue()
                 path.write_bytes(raw)
                 response['stream_blob'] = {'sha256': hashlib.sha256(raw).hexdigest(), 'size': len(raw)}
                 (directory / 'child-output.json').write_text(canonical(response), encoding='utf-8')
@@ -237,8 +244,8 @@ class StudyRunAdversarialTests(unittest.TestCase):
         self.assertIsNone(view['summary']['candidate_time_rows'])
         attempt = self.op('get_artifact', artifact_id=view['attempt_artifact_ids'][0])['body']
         self.assertIn('replay', attempt['failure']['message'])
-        self.assertIn('generate/stream.jsonl', attempt['output_blobs'])
-        self.assertIn('replay/expected-stream.jsonl', attempt['output_blobs'])
+        self.assertIn('generate/stream.jsonl.gz', attempt['output_blobs'])
+        self.assertIn('replay/expected-stream.jsonl.gz', attempt['output_blobs'])
         self.assertIn('replay/child-errors.txt', attempt['output_blobs'])
 
 

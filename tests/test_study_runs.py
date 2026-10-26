@@ -57,7 +57,7 @@ class StudyRunTests(unittest.TestCase):
             self.assertGreater(attempt['settlement']['storage_bytes'],0)
             if attempt['result']['bootstrap']['status']!='INPUT_GAP':
                 self.assertEqual([case['attempted'] for case in attempt['result']['bootstrap']['cases']],[19999]*3)
-            self.assertIn('generate/stream.jsonl',attempt['output_blobs'])
+            self.assertIn('generate/stream.jsonl.gz',attempt['output_blobs'])
 
     def test_failure_is_retained_and_retry_reuses_manifest_source_and_seeds(self):
         from trading_researcher import study_runs

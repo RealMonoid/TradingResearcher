@@ -15,6 +15,8 @@ from .features import binding
 SCHEMA='data-use-assessment/1'
 PROFILE='qualified-development-data-use/1'
 AUTHORITY='qualified_exploration_data_use_only'
+PROTECTED_PROFILE='qualified-protected-target-data-use/1'
+PROTECTED_AUTHORITY='private_plan_data_prerequisite_only'
 PURPOSE='Personal non-production historical research'
 REVIEWED_DOCUMENTS={
     'README.md':'2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad',
@@ -25,6 +27,18 @@ LOADED_SELF=hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 def checker_current(expected):
     try:return expected==LOADED_SELF and hashlib.sha256(Path(__file__).read_bytes()).hexdigest()==LOADED_SELF
     except OSError:return False
+
+
+def protected_knowledge_gaps(knowledge):
+    """Inspect concrete retained ancestry, not unknowable pretraining contents."""
+    return [gap for field,gap in (
+        ('protected_knowledge_ids','PROTECTED_KNOWLEDGE_IN_CANDIDATE_ANCESTRY'),
+        ('operations_knowledge_ids','OPERATIONS_KNOWLEDGE_REQUIRES_CONTROLLED_IMPORT'),
+        ('unresolved_exposure_refs','UNRESOLVED_CANDIDATE_EXPOSURE')) if knowledge[field]]
+
+
+def use_profile(compiled):
+    return PROTECTED_PROFILE if 'data_target_binding_id' in compiled['body']['dependency_arguments'] else PROFILE
 
 
 def prior_knowledge(broker, formalization):
@@ -115,12 +129,20 @@ class DataUseAssessments:
             for item in definitions['body']['definitions']),'Feature availability meaning differs')
         rights=reviewed_documents(self,original['request']['provider_documents_ref'])
         knowledge=prior_knowledge(self,formalization)
+        private=None
+        if use_profile(compiled)==PROTECTED_PROFILE:
+            private=self._checked_target_binding(actor,args['data_target_binding_id'])
+            resolved=private['body']['resolved']
+            require(resolved['data_snapshot_id']==snapshot['id'] and resolved['feature_certificate_id']==feature['id'],
+                'Private data qualification differs from compilation')
         gaps=[]
-        if manifest['partition']!='development' or snapshot['data_class']!='development':gaps.append('PROTECTED_TARGET_REQUIRES_SEPARATE_ADMISSION')
+        if private is None and (manifest['partition']!='development' or snapshot['data_class']!='development'):
+            gaps.append('PROTECTED_TARGET_REQUIRES_SEPARATE_ADMISSION')
         if knowledge['protected_knowledge_ids']:gaps.append('PROTECTED_KNOWLEDGE_IN_CANDIDATE_ANCESTRY')
         if knowledge['operations_knowledge_ids']:gaps.append('OPERATIONS_KNOWLEDGE_REQUIRES_CONTROLLED_IMPORT')
+        if private is not None and knowledge['unresolved_exposure_refs']:gaps.append('UNRESOLVED_CANDIDATE_EXPOSURE')
         if manifest['rights']['basis']!='documented' or not rights['reviewed_bytes_match']:gaps.append('PROVIDER_DOCUMENT_REVIEW_REQUIRED')
-        return {'scope':{'compiled_id':compiled_id,'formalization_id':formalization['id'],
+        findings={'scope':{'compiled_id':compiled_id,'formalization_id':formalization['id'],
                 'data_snapshot_id':snapshot['id'],'catalog_id':snapshot['body']['catalog_id'],
                 'feature_certificate_id':feature['id'],'feature_definitions_id':definitions['id'],
                 'normalization_id':original['normalization']['id'],'partition':manifest['partition'],
@@ -134,6 +156,14 @@ class DataUseAssessments:
                 'origin_reason':'Training exposure and historical publication vintage are unverified; known and unresolved candidate exposure is retained.',
                 'independent_confirmation':False},
             'gaps':gaps,'scientific_readiness':False,'allocation_reserved':False,'frozen':False}
+        if private is not None:
+            findings['scope'].update({'use':'qualified_private_plan_preparation',
+                'data_target_binding_id':private['id'],'public_target_id':resolved['target_id'],
+                'public_definitions_id':resolved['public_definitions_id']})
+            findings['exposure'].update({'candidate_ancestry_check':'RECORDED_ANCESTRY_ONLY',
+                'external_selection_knowledge':'UNKNOWN','reserved_role_verified':False,
+                'campaign_selection_and_prior_use':'NOT_ASSESSED'})
+        return findings
 
     def _assess_data_use(self,actor,compiled_id):
         text(compiled_id,'compiled identity')
@@ -142,6 +172,8 @@ class DataUseAssessments:
             and body.get('schema')=='compiled-hypothesis/1' and body.get('status')=='COMPILED',
             'Owned successful compilation required')
         require(checker_current(LOADED_SELF),'Restart after data-use checker changes')
+        profile=use_profile(compiled)
+        protected=profile==PROTECTED_PROFILE
         findings=None;failure=None
         try:findings=self._data_use_findings(actor,compiled_id)
         except (Invalid,Conflict,Denied,OSError,KeyError,TypeError,ValueError) as exc:failure=type(exc).__name__
@@ -149,27 +181,33 @@ class DataUseAssessments:
         refs=sorted({compiled_id,*compiled['source_refs']})
         saved=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
             'data_class':compiled['data_class'],'source_refs':refs,'exposure':sorted(set(refs)|set(compiled['exposure'])),
-            'authority':AUTHORITY,'body':{'schema':SCHEMA,'profile':PROFILE,'created_at':self._now(),
-                'compiled_id':compiled_id,'checker_sha256':LOADED_SELF,'status':'QUALIFIED_EXPLORATION' if passed else 'DATA_USE_GAP',
+            'authority':PROTECTED_AUTHORITY if protected else AUTHORITY,'body':{'schema':SCHEMA,'profile':profile,'created_at':self._now(),
+                'compiled_id':compiled_id,'checker_sha256':LOADED_SELF,
+                'status':('QUALIFIED_PRIVATE_PLAN_DATA' if protected else 'QUALIFIED_EXPLORATION') if passed else 'DATA_USE_GAP',
                 'findings':findings,'failure_type':failure,'scientific_readiness':False,
-                'qualification':'Exact exploratory use only. No unseen-history, outcome eligibility, estimator validity, holdout admission, allocation, freeze or deployment authority.'}})
+                'qualification':('Exact private plan prerequisite only; recorded candidate ancestry is not complete campaign/selection chronology or an unused reservation. '
+                    if protected else 'Exact exploratory use only. ')
+                    +'No unseen-history, outcome eligibility, estimator validity, holdout admission, allocation, freeze or deployment authority.'}})
         self._event(actor['name'],'data_use_assessed',artifact_id=saved['id'],compiled_id=compiled_id,status=saved['body']['status'])
         return saved
 
     def _inspect_data_use(self,actor,assessment_id,compiled_id=None):
         artifact=self._artifact(text(assessment_id,'data-use assessment'));body=artifact['body']
-        require(artifact['creator']==artifact['origin']=='controller' and artifact['authority']==AUTHORITY
-            and type(body) is dict and body.get('schema')==SCHEMA and body.get('profile')==PROFILE,
+        require(artifact['creator']==artifact['origin']=='controller' and type(body) is dict and body.get('schema')==SCHEMA
+            and body.get('profile') in (PROFILE,PROTECTED_PROFILE)
+            and artifact['authority']==(PROTECTED_AUTHORITY if body['profile']==PROTECTED_PROFILE else AUTHORITY),
             'Owned data-use assessment required')
         if compiled_id is not None:require(body['compiled_id']==compiled_id,'Data use targets another compilation')
         status=body['status']
         if self._dependency_use(assessment_id)['status']=='INVALIDATED_BY_DEPENDENCY':status='INVALIDATED_BY_DEPENDENCY'
         elif not checker_current(body['checker_sha256']):status='STALE_CHECKER'
-        elif status=='QUALIFIED_EXPLORATION':
+        elif status in ('QUALIFIED_EXPLORATION','QUALIFIED_PRIVATE_PLAN_DATA'):
             try:current=self._data_use_findings(actor,body['compiled_id'])
             except (Invalid,Conflict,Denied,OSError,KeyError,TypeError,ValueError):status='QUARANTINED'
             else:
                 if digest(current)!=digest(body['findings']):status='STALE_EVIDENCE'
         return {'assessment_id':assessment_id,'compiled_id':body['compiled_id'],'status':status,
             'qualified_exploration_data_use':'SATISFIED' if status=='QUALIFIED_EXPLORATION' else 'NOT_SATISFIED',
+            **({'qualified_protected_target_data_use':'SATISFIED' if status=='QUALIFIED_PRIVATE_PLAN_DATA' else 'NOT_SATISFIED'}
+                if body['profile']==PROTECTED_PROFILE else {}),
             'scientific_readiness':False,'independent_confirmation':False,'protected_target_admission':False}

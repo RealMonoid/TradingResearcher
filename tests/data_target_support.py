@@ -13,12 +13,13 @@ UNIVERSE={'start':'2024-01-01T00:15:00Z','end':'2024-01-01T01:00:00Z','instrumen
 
 
 class Fixture:
-    def __init__(self):
+    def __init__(self,private_versions=3):
         self.base=BindingFixture()
-        try:self._setup()
+        try:self._setup(private_versions)
         except BaseException:self.base.close();raise
 
-    def _setup(self):
+    def _setup(self,private_versions):
+        assert private_versions in (1,3)
         self.broker=self.base.broker;self.token=self.base.token;self.root=self.base.root
         self.target=self.op('declare_data_target',key='target',partition='assessment',universe=UNIVERSE,
             development_feature_certificate_id=self.base.feature['id'])
@@ -36,7 +37,7 @@ class Fixture:
         raw=b''.join(row(opened+900000*n) for n in range(3))
         alternative=row(opened,price='11')+row(opened+1800000,price='11')
         for index,(values,delay) in enumerate(((raw,self.base.base['delay_seconds']),
-                (alternative,self.base.base['delay_seconds']),(raw,self.base.base['delay_seconds']+1))):
+                (alternative,self.base.base['delay_seconds']),(raw,self.base.base['delay_seconds']+1))[:private_versions]):
             normalizer=self.base.normalizer
             source=normalizer.source(values,month='2024-01')
             normalized=normalizer.run_normalize([source],start=UNIVERSE['start'],end=UNIVERSE['end'],partition='assessment',delay=delay)

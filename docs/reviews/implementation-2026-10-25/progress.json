@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "142 unique focused tests pass: 15 target, 16 plan-review, 19 binding, 24 auxiliary, 23 revocation, 21 composition and 24 data-use cases. Independent review and original failed checks retained. See protected-target-verification-2026-10-26.json. Synthetic protected data only; no paid call."
+      "evidence": "75 unique tests pass: 19 protected preparation/ancestry cases, 24 existing data-use, 11 retention, 16 plan-review and 5 direct plan cases. See protected-plan-verification-2026-10-26.json for exact evidence and limits. No paid call."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -292,11 +292,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Integrate protected-target data/exposure qualification with the approved scientific admission requirements without transporting development approval or exposing private coverage/binding failures to research roles. Continue justified nuisance/stress-model and information/calibration work, atomic family allocation/freeze, fixed release and the genuine mixed-provider research cycle.",
+  "next_action": "Resolve campaign selection/reservation and pre-outcome eligibility under the existing contracts, and complete justified nuisance/stress-model and information/calibration work before atomic scientific freeze. Preserve private draft inputs, qualified history and the full genuine mixed-provider cycle, policy/AmiBroker and reporting objective.",
   "continuation_audit": {
     "previous_goal_turn": "no_progress_verification_only",
     "current_goal_turn": "progress",
-    "basis": "Public predeclared targets now bind explicitly to private exact data without changing formalization/review packets or granting scientific admission. Synthetic owned-path tests, legacy regressions and independent review pass.",
+    "basis": "An exact private data qualification is now consumed by actual protected plan preparation, using declared development diagnostics and private replayable capsules. Scientific data/exposure admission remains open.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -374,6 +374,16 @@
     "verification": "docs/reviews/implementation-2026-10-25/protected-target-verification-2026-10-26.json",
     "scope": "Public declaration and private exact reference resolution only; protected scientific admission and execution remain unavailable.",
     "unique_focused_tests": 142,
+    "provider_calls": 0,
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "protected_plan_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "unique_focused_tests": 75,
+    "verification": "docs/reviews/implementation-2026-10-25/protected-plan-verification-2026-10-26.json",
+    "scope": "Qualified private plan preparation only; complete campaign/selection review, protected scientific admission and execution remain unavailable.",
     "provider_calls": 0,
     "scientific_readiness": false,
     "full_objective_complete": false

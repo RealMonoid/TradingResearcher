@@ -359,7 +359,7 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
         self._event(actor['name'], 'context_frozen', context_id=identity)
         return {'id': identity, **envelope}
 
-    def _deny_final_calibration_ancestry(self,artifact):
+    def _deny_final_calibration_ancestry(self,artifact,*,allow_private_targets=False):
         pending=[artifact];seen=set()
         while pending:
             current=pending.pop()
@@ -368,7 +368,7 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
             if type(body) is dict and str(body.get('schema','')).startswith(
                     ('evaluator-calibration-input/','evaluator-calibration-attempt/')):
                 raise Denied('Reserved final calibration and its descendants are unavailable to research roles')
-            if type(body) is dict and body.get('schema')=='protected-data-binding/1':
+            if not allow_private_targets and type(body) is dict and body.get('schema')=='protected-data-binding/1':
                 raise Denied('Private target bindings and their descendants are unavailable to research roles')
             for ref in set(current['source_refs'])|set(current['exposure']):
                 if ref not in seen and self._db.execute('SELECT 1 FROM artifacts WHERE id=?',(ref,)).fetchone():

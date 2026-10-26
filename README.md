@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [private plan-preparation path](docs/reviews/implementation-2026-10-25/PROTECTED_PLAN_INTEGRATION_2026-10-26.md) now consumes exact protected-target data qualifications and diagnostics from the declared development snapshot. It retains private inputs, interrupted attempts and remaining scientific gates. Unknown model training and historical availability remain qualified; this does not authorize protected outcome execution or certify an unused holdout.
+
 The [public research-target path](trading_researcher/DATA_TARGETS.md) separates a predeclared calendar/feature contract from an explicit private protected-data binding. Formalization and independent meaning review receive the original public declaration; compilation verifies exact private versions and full feature semantics. Synthetic integration checks cover privacy, revocation and restore. Protected scientific admission, allocation/freeze and execution remain unavailable.
 
 The [data-use check](trading_researcher/DATA_USE.md) now binds qualified historical exploration to an exact compiled development hypothesis, reviewed provider documents and preserved candidate exposure. It does not authorize protected assessment/corroboration or assert unseen history. Current plan inspection records this narrow scope separately from its remaining scientific prerequisites.

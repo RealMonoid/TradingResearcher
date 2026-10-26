@@ -1,0 +1,27 @@
+# Qualified private plan preparation — October 26, 2026
+
+## Purpose and governing boundary
+
+After exact public/private target binding, the development-only preparation path still rejected every protected target. The next question was whether existing data qualifications could feed a private plan without disclosing protected outcomes or declaring them independent. [Research-contract/1.0 sections 1, 6, 8, 12 and 14](../../architecture/14_RETAIL_RESEARCH_CONTRACT.md) permit qualified historical findings, require retained exposure and technical provenance, preserve atomic freeze/allocation and distinguish implementation from scientific meaning. Unknown model training is not proof of either exposure or independence.
+
+The implemented normal path is now: public declaration and faithful candidate; explicit private compilation; owned data qualification for that exact target; private policy draft using declared development diagnostics; separate remaining scientific admission, calibration/information, allocation/freeze and eventual controlled result release. H_idea and the candidate are retained unchanged. The same retained deterministic policy calculator assigns the draft. No protected outcome is calculated or shown to the model along this path.
+
+A missing rights review, unresolved concrete ancestry, known protected/operational knowledge, incompatible binding or revoked dependency prevents the supported preparation path. Failed qualifications remain private. An interrupted preparation retains the original capsule and source version; a changed request cannot reuse its key. None of these exits means that the market claim is empirically false. Later contract-compliant exploration of already released history is not permanently prohibited.
+
+## Implemented integration
+
+The existing [data-use operations](../../../trading_researcher/DATA_USE.md) now select `qualified-protected-target-data-use/1` for explicit private-target compilations. `QUALIFIED_PRIVATE_PLAN_DATA` confirms only the exact private preparation prerequisite. Provider bytes, actual normalization delay, complete feature semantics and original candidate ancestry remain bound. Compiler-added private dependencies are not retroactively treated as prior candidate knowledge; an already exposed target is never subtracted from original ancestry.
+
+The [plan operation](../../../trading_researcher/EVALUATION_POLICY.md) requires a current matching private qualification. It accepts diagnostics only as owned descriptive executions on the development snapshot named by the public declaration's development certificate, verifies their case-blob hashes/sizes and checks protected, operational and unresolved concrete ancestry. Metadata-only checks do not establish the empirical adequacy of a chosen dependence design.
+
+The retained input capsule and plan use assessment data class for this route. Both carry the private binding ancestry. Only internal host consumption of private data-use/composition evidence receives the narrow private-binding exception; discovery/formalizer context checks remain unchanged, and final calibration ancestry remains prohibited even to that preparation path. Inputs, qualification, review/composition evidence, bytes and revocations are checked again before commitment. The direct development path and numerical policy rules remain intact.
+
+Current inspection returns `exact_private_target_preparation_only`, retains `scientific_data_and_exposure_acceptance`, and reports `protected_selection_and_reservation_review: NOT_ASSESSED`. A traversal of registered candidate ancestors does not reconstruct every prior campaign, sibling query, external observation or selection decision. Thus even a positive private qualification keeps evidence origin null, training exposure unknown, independent confirmation false, and reserved-role verification false. Historical archive vintage remains unverified; delay remains an explicit scenario.
+
+## Verification and next work
+
+The [verification manifest](protected-plan-verification-2026-10-26.json) records exact commands, changed files, source identities, retained failures and the [independent review](protected-plan-independent-2026-10-26.json). Synthetic tests exercise owned normalization, feature certification, formalization, private compilation, development execution, preparation/replay and backup/restore. Rights pins are explicitly substituted only for synthetic fixture documents. Scripted model transport does not establish actual model quality. A single owned review remains insufficient for the complete meaning-review prerequisite; its correct mapping must not remove that gate.
+
+No canonical scientific rule, numerical policy function or fixed numerical expectation was changed. No paid provider request occurred. Real protected-market application, full repository tests, exhaustive replay of all historical source versions, a fully qualified actual multi-provider research cycle, scientific calibration/information sufficiency and economic policy usefulness remain unverified.
+
+Next: resolve campaign selection/reservation and pre-outcome eligibility through the existing contracts, and complete the justified nuisance/stress and information/calibration path before atomic scientific freeze. The genuine research cycle, separate certified AmiBroker policy evaluation and domain reporting remain part of the active seven-package objective. This checkpoint does not narrow that objective or claim its completion.

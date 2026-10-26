@@ -75,6 +75,13 @@ def run_plan_child(bundle,payload,verify_hash=None):
 
 
 class EvaluationPlans:
+    def _plan_data_class(self,request):
+        compiled=self._artifact(request['compiled_id']);body=compiled['body']
+        require(compiled['creator']==compiled['origin']=='controller' and type(body) is dict
+            and body.get('schema')=='compiled-hypothesis/1' and body.get('status')=='COMPILED'
+            and compiled['data_class'] in ('development','assessment'),'Owned compiled plan target required')
+        return compiled['data_class']
+
     def _existing_plan_input(self,request):
         for row in self._db.execute('SELECT id,envelope FROM artifacts'):
             envelope=decode(row['envelope'])
@@ -88,8 +95,9 @@ class EvaluationPlans:
 
     def _load_plan_input_source(self,capsule):
         body=capsule['body']
-        require(capsule['creator']==capsule['origin']=='controller' and capsule['data_class']=='development'
+        require(capsule['creator']==capsule['origin']=='controller' and capsule['data_class'] in ('development','assessment')
             and type(body) is dict and body.get('schema')==INPUT_SCHEMA,'Unowned plan input capsule')
+        require(capsule['data_class']==self._plan_data_class(body['request']),'Plan capsule data class differs from target')
         require(body['request_hash']==digest(body['request']) and body['payload_hash']==digest(body['payload']),
             'Retained plan inputs differ')
         require(body['bootstrap_sha256']==hashlib.sha256(BOOTSTRAP.encode()).hexdigest(),
@@ -124,7 +132,7 @@ class EvaluationPlans:
             if capsule is None:
                 for descriptor in files.values():self._register_blob(descriptor)
                 capsule=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
-                    'data_class':'development','source_refs':refs,'exposure':exposure,
+                    'data_class':self._plan_data_class(request),'source_refs':refs,'exposure':exposure,
                     'blob_refs':sorted({item['sha256'] for item in files.values()}),
                     'authority':'retained_preparation_input_not_scientific_admission',
                     'body':{'schema':INPUT_SCHEMA,'created_at':self._now(),'request':request,'request_hash':digest(request),
@@ -158,8 +166,20 @@ class EvaluationPlans:
             raise Denied('Plan preparation requires an owned compiled hypothesis')
         self._require_usable_dependencies(compiled['id'])
         snapshot=self._data_snapshot(body['data_snapshot_id'])
-        if snapshot['data_class']!='development' or snapshot['body']['manifest']['partition']!='development':
-            raise Denied('This preparation route accepts development bindings only')
+        protected=snapshot['data_class']!='development' or snapshot['body']['manifest']['partition']!='development'
+        diagnostic_snapshot_id=snapshot['id']
+        if protected:
+            # Only host-private drafting is enabled. This does not reserve data
+            # or authorize scientific execution or publication.
+            if 'data_target_binding_id' not in body['dependency_arguments'] or 'data_use_assessment_id' not in request:
+                raise Denied('Protected plan preparation requires an exact private binding and data qualification')
+            qualification=self._plan_data_use_evidence(actor,request)
+            require(qualification.get('qualified_protected_target_data_use')=='SATISFIED',
+                'Protected plan data prerequisite is not satisfied')
+            private=self._checked_target_binding(actor,body['dependency_arguments']['data_target_binding_id'])
+            public=self._public_data_target(private['body']['resolved']['target_id'])
+            _,development,_=self._target_feature(actor,public['body']['request']['development_feature_certificate_id'])
+            diagnostic_snapshot_id=development['snapshot']['id']
         references=strings(request['dependence'].get('development_refs'),'development diagnostic references')
         if not 1<=len(references)<=16:raise Invalid('One through sixteen retained development diagnostics required')
         diagnostics=[]
@@ -169,9 +189,14 @@ class EvaluationPlans:
             if (artifact['creator']!=artifact['origin'] or artifact['creator']!='controller'
                     or artifact['data_class']!='development' or type(value) is not dict
                     or value.get('schema')!='reference-execution/1' or value.get('status')!='DESCRIPTIVE_EXECUTION'
-                    or value.get('data_snapshot_id')!=snapshot['id']):
+                    or value.get('data_snapshot_id')!=diagnostic_snapshot_id):
                 raise Denied('Dependence references must be owned computations on this development snapshot')
             self._require_usable_dependencies(artifact['id'])
+            if protected:
+                from .data_use import prior_knowledge, protected_knowledge_gaps
+                self._deny_final_calibration_ancestry(artifact)
+                require(not protected_knowledge_gaps(prior_knowledge(self,artifact)),
+                    'Development diagnostic ancestry cannot establish the protected preparation prerequisite')
             descriptor=value['result']['case_blob']
             require(artifact['blob_refs']==[descriptor['sha256']],'Diagnostic blob binding differs')
             try:
@@ -259,20 +284,21 @@ class EvaluationPlans:
     def _plan_data_use_evidence(self,actor,request):
         if 'data_use_assessment_id' not in request:return None
         assessment=self._artifact(request['data_use_assessment_id'])
-        self._deny_final_calibration_ancestry(assessment)
+        self._deny_final_calibration_ancestry(assessment,allow_private_targets=self._plan_data_class(request)=='assessment')
         return self._inspect_data_use(actor,assessment['id'],compiled_id=request['compiled_id'])
 
     def _plan_composition_evidence(self,actor,request):
         if 'composition_certificate_id' not in request:return None
         certificate=self._artifact(request['composition_certificate_id'])
-        self._deny_final_calibration_ancestry(certificate)
+        self._deny_final_calibration_ancestry(certificate,allow_private_targets=self._plan_data_class(request)=='assessment')
         return self._composition_certificate_status(actor,request['composition_certificate_id'],compiled_id=request['compiled_id'])
 
     def _inspect_evaluation_plan(self,actor,plan_id):
         artifact=self._artifact(text(plan_id,'evaluation-plan identity'))
         body=artifact['body']
-        require(artifact['creator']==artifact['origin']=='controller' and artifact['data_class']=='development'
+        require(artifact['creator']==artifact['origin']=='controller' and artifact['data_class'] in ('development','assessment')
             and type(body) is dict and body.get('schema')==SCHEMA,'Owned evaluation plan required')
+        require(artifact['data_class']==self._plan_data_class(body['request']),'Plan data class differs from target')
         meaning,_=self._plan_meaning_evidence(actor,body['request'])
         composition=self._plan_composition_evidence(actor,body['request'])
         data_use=self._plan_data_use_evidence(actor,body['request'])
@@ -285,7 +311,9 @@ class EvaluationPlans:
             gates=[gate for gate in gates if gate!='scientific_data_and_exposure_acceptance']
         return {'plan_id':plan_id,'status':body['status'],'gap':body['gap'],
             'meaning_review':meaning,'composition':composition,'data_use':data_use,'current_remaining_gates':gates,
-            'data_use_scope':'exact_compiled_development_exploration_only','protected_target_admission':False,
+            'data_use_scope':'exact_private_target_preparation_only' if artifact['data_class']=='assessment' else 'exact_compiled_development_exploration_only',
+            **({'protected_selection_and_reservation_review':'NOT_ASSESSED'} if artifact['data_class']=='assessment' else {}),
+            'protected_target_admission':False,
             'dependency_use':self._dependency_use(plan_id),
             'scientific_readiness':False,'allocation_reserved':False,'frozen':False}
 
@@ -356,7 +384,7 @@ class EvaluationPlans:
                     self._event('controller','bound_computation_checked',attempt_id=attempt,artifact_id=existing['id'],status='REUSED')
                     return existing
                 saved=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
-                    'data_class':'development','source_refs':sorted(set(refs)|{capsule['id']}),
+                    'data_class':self._plan_data_class(request),'source_refs':sorted(set(refs)|{capsule['id']}),
                     'exposure':sorted(set(exposure)|{capsule['id']}),
                     'blob_refs':sorted({descriptor['sha256'] for descriptor in source_files.values()}),
                     'authority':'plan_preparation_not_scientific_admission',

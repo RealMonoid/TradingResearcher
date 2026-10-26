@@ -52,6 +52,8 @@ No assessment access, budget reservation, scientific result release, semantic ap
 
 ## Evidence and unfinished requirements
 
+An optional `composition_certificate_id` binds the [independent composition checks](COMPOSITION.md) to the exact compiled identity. Preparation retains `composition_at_preparation` and rechecks it before commitment. Fresh inspection removes only `composition_conformance` when satisfied. Revoked, stale or unavailable certificates keep this prerequisite open; historical plans and all other gates remain intact.
+
 [Technical revocation](REVOCATIONS.md) is checked for the compiled hypothesis and every declared development diagnostic before new use and commitment. A diagnostic can carry a different compiler dependency. `inspect_evaluation_plan` additionally reports fresh `dependency_use`; historical plan/calculator bytes stay unchanged. A completed request key is not a new admission token.
 
 The independent [91-case fixture](../tests/fixtures/reference_evaluation_policy_cases.json) and [authorship note](../tests/fixtures/reference_evaluation_policy_expectations.md) were fixed before the implementation was inspected. The policy suite exercises 81 cases. The ten allocation-state cases remain explicitly pending for the future campaign/freeze state machine; they are not counted as verified behavior. Additional adversarial tests cover arithmetic growth, units, false Boolean/count coercion, undefined draws, input mutation, unavailable diagnostic blobs, stale imports and transaction failures.

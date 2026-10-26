@@ -1,0 +1,5361 @@
+{
+  "schema": "composition-conformance-cases/1",
+  "scope": "Static composition of existing research-ast/1 primitives and bound-reference/1 request/window mapping only.",
+  "authorship": "Independently derived from contracts and hand-counted grid intervals. The reviewer had inspected the existing implementation before authorship; no compiler or calculator was invoked to generate expected results.",
+  "source_sha256": {
+    "trading_researcher/EXPRESSIONS.md": "522a810ec667ba2e4cdbf223d0446f196349484bb5119deeaf121d27bcfb5962",
+    "trading_researcher/OUTCOMES.md": "633f06660ca6199c6e74283b783ecfc336ffce9acf058da4272c60e7699fac0a",
+    "trading_researcher/BINDING.md": "6829d05bd8ddff8ec753217e608baaa159cd0646f96ba4cd6f7dd31866cd7de8",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "tests/fixtures/reference_binding_cases.json": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+    "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257"
+  },
+  "cases": [
+    {
+      "name": "direct_price_quantity",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "5e186fe206534cc12fc89b3bda4427159fa582bdb1efd3334155c951da76ad11",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "USDT/BTC",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": []
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T01:00:00Z",
+          "end": "2020-01-01T02:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 0,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 4,
+        "expected_case_count": 4,
+        "outcome_unit": "USDT/BTC",
+        "scientific_readiness": false
+      },
+      "derivation": "Four decision instants, no lookback: [01:00,02:00), one instrument, four loaded rows. Boolean scope/condition have null units; quantity outcome retains USDT/BTC."
+    },
+    {
+      "name": "nested_decision_lag_window",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "bars": 2,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 3,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/left/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/left/arg/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "bars": 2,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 3,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "78af4fe819bc84ebda93fa0d12a6d1d68f74561b1f6bf97e4c3c565bfaf6c356",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/left/bars",
+              "/expression/left/arg/bars",
+              "/expression/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "USDT/BTC",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": []
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T00:00:00Z",
+          "end": "2020-01-01T02:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 3600,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 8,
+        "expected_case_count": 4,
+        "outcome_unit": "USDT/BTC",
+        "scientific_readiness": false
+      },
+      "derivation": "Lag 2 plus trailing window 3 needs 2+(3-1)=4 prior bars = 3600 seconds. At start 01:00 this begins 00:00; eight rows to 02:00, four decision cases."
+    },
+    {
+      "name": "clamped_decision_warmup_remains_explicit",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "bars": 2,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 3,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/left/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/left/arg/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:30:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "bars": 2,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 3,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "78af4fe819bc84ebda93fa0d12a6d1d68f74561b1f6bf97e4c3c565bfaf6c356",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/left/bars",
+              "/expression/left/arg/bars",
+              "/expression/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "USDT/BTC",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": []
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T00:30:00Z",
+          "end": "2020-01-01T02:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 3600,
+        "unavailable_warmup_seconds": 1800,
+        "maximum_input_rows": 6,
+        "expected_case_count": 4,
+        "outcome_unit": "USDT/BTC",
+        "scientific_readiness": false
+      },
+      "derivation": "The same four-bar requirement begins at 00:00 but the retained snapshot begins 00:30. Keep 3600 required seconds and 1800 unavailable seconds, load six rows, and do not invent earlier data."
+    },
+    {
+      "name": "outcome_lookback_relative_to_future_anchor",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "lag",
+                "bars": 4,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 4,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 2
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:30:00Z",
+            "end": "2020-01-01T02:30:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/arg/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "lag",
+              "bars": 4,
+              "arg": {
+                "op": "trailing_mean",
+                "bars": 4,
+                "arg": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                }
+              }
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 2,
+          "universe": {
+            "start": "2020-01-01T01:30:00Z",
+            "end": "2020-01-01T02:30:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "a4749ead9316e57f89601071d5807f05760d7cd1c234c2dd36cae5b8b78d880a",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "USDT/BTC",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/bars",
+              "/expression/arg/bars"
+            ]
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T02:30:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 4500,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 9,
+        "expected_case_count": 4,
+        "outcome_unit": "USDT/BTC",
+        "scientific_readiness": false
+      },
+      "derivation": "Outcome lag 4 plus window 4 spans seven bars before its future anchor. Horizon two leaves five pre-decision bars = 4500 seconds. From 01:30 load back to 00:15: nine rows to 02:30. Existing runtime REVIEW_REQUIRED rules remain unchanged."
+    },
+    {
+      "name": "horizon_offsets_all_outcome_lookback",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "lag",
+                "bars": 4,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 4,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 9
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:30:00Z",
+            "end": "2020-01-01T02:30:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/arg/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "lag",
+              "bars": 4,
+              "arg": {
+                "op": "trailing_mean",
+                "bars": 4,
+                "arg": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                }
+              }
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 9,
+          "universe": {
+            "start": "2020-01-01T01:30:00Z",
+            "end": "2020-01-01T02:30:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "87ebaf31647187ba64d1c091cdc2914496a6117aecbc45017846a5b66d8a1a2b",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "USDT/BTC",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/bars",
+              "/expression/arg/bars"
+            ]
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T01:30:00Z",
+          "end": "2020-01-01T02:30:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 0,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 4,
+        "expected_case_count": 4,
+        "outcome_unit": "USDT/BTC",
+        "scientific_readiness": false
+      },
+      "derivation": "Nine future-anchor bars exceed the seven-bar outcome lookback, so none is required before the decision. This does not assert that any outcome fits the partition or is mature."
+    },
+    {
+      "name": "decision_and_outcome_require_maximum_not_sum",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "bars": 2,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 3,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "lag",
+                "bars": 4,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 4,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 2
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:30:00Z",
+            "end": "2020-01-01T02:30:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/left/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/left/arg/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/arg/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "bars": 2,
+                "arg": {
+                  "op": "trailing_mean",
+                  "bars": 3,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "lag",
+              "bars": 4,
+              "arg": {
+                "op": "trailing_mean",
+                "bars": 4,
+                "arg": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                }
+              }
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 2,
+          "universe": {
+            "start": "2020-01-01T01:30:00Z",
+            "end": "2020-01-01T02:30:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "a44b7d560d4b07d8faed92abd09004f3ed51fdf9b846c55fb8f3acadd4bd11f3",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/left/bars",
+              "/expression/left/arg/bars",
+              "/expression/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "USDT/BTC",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/bars",
+              "/expression/arg/bars"
+            ]
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T02:30:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 4500,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 9,
+        "expected_case_count": 4,
+        "outcome_unit": "USDT/BTC",
+        "scientific_readiness": false
+      },
+      "derivation": "The four-bar decision dependency and five-bar pre-decision outcome dependency share the same available history. Their union needs max(4,5)=5 bars, not nine."
+    },
+    {
+      "name": "binary_outcome_keeps_boolean_program_and_ratio_estimand",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "ratio",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "gt",
+                "left": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                },
+                "right": {
+                  "op": "lag",
+                  "bars": 1,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              }
+            },
+            "scale": "binary_probability"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/right/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "lag",
+                "bars": 1,
+                "arg": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                }
+              }
+            }
+          },
+          "outcome_scale": "binary_probability",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "e090712cafb632df174b53b113950ccd34d39cface409956a395c58e161e5336",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/right/bars"
+            ]
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T01:00:00Z",
+          "end": "2020-01-01T02:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 0,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 4,
+        "expected_case_count": 4,
+        "outcome_unit": "ratio",
+        "scientific_readiness": false
+      },
+      "derivation": "The future-anchor comparison is Boolean with null program unit. The resulting probability contrast is explicitly dimensionless ratio. One lag at a one-bar future anchor adds no pre-decision warmup."
+    },
+    {
+      "name": "per_program_feature_units_and_parameter_paths",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "ratio",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.volume@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "BTC",
+                "value": "0"
+              }
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "sub",
+                "left": {
+                  "op": "div",
+                  "left": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  },
+                  "right": {
+                    "op": "lag",
+                    "bars": 1,
+                    "arg": {
+                      "op": "feature",
+                      "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                    }
+                  }
+                },
+                "right": {
+                  "op": "literal",
+                  "type": "real",
+                  "unit": "ratio",
+                  "value": "1"
+                }
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/left/right/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1",
+            "BTCUSDT.volume@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.volume@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "BTC",
+                "value": "0"
+              }
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "sub",
+              "left": {
+                "op": "div",
+                "left": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                },
+                "right": {
+                  "op": "lag",
+                  "bars": 1,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": "1"
+              }
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "cee6edc95e7a4d3d0433c8c615704a9ffe42629044135d7c25c6749153eb0ee5",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.volume@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/right/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "ratio",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/left/right/bars",
+              "/expression/right/value"
+            ]
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1",
+          "BTCUSDT.volume@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T01:00:00Z",
+          "end": "2020-01-01T02:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 0,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 4,
+        "expected_case_count": 4,
+        "outcome_unit": "ratio",
+        "scientific_readiness": false
+      },
+      "derivation": "Volume appears only in scope, price in condition/outcome. Same-price-unit division gives ratio, then subtract ratio one. Exact per-program closures and pointer paths must not be replaced by the common union."
+    },
+    {
+      "name": "nondecisive_boolean_branch_stays_in_static_closure",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "and",
+              "left": {
+                "op": "literal",
+                "type": "boolean",
+                "unit": null,
+                "value": false
+              },
+              "right": {
+                "op": "gt",
+                "left": {
+                  "op": "lag",
+                  "bars": 3,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                },
+                "right": {
+                  "op": "literal",
+                  "type": "real",
+                  "unit": "USDT/BTC",
+                  "value": "101"
+                }
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/left/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/left/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "and",
+              "left": {
+                "op": "literal",
+                "type": "boolean",
+                "unit": null,
+                "value": false
+              },
+              "right": {
+                "op": "gt",
+                "left": {
+                  "op": "lag",
+                  "bars": 3,
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  }
+                },
+                "right": {
+                  "op": "literal",
+                  "type": "real",
+                  "unit": "USDT/BTC",
+                  "value": "101"
+                }
+              }
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "63a7490264066f29fc8a5cf51672b2b3a54eeca615fc5ff236e4ddb964eb7db4",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/left/value",
+              "/expression/right/left/bars",
+              "/expression/right/right/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "USDT/BTC",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": []
+          }
+        },
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ],
+        "row_window": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T02:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 2700,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 7,
+        "expected_case_count": 4,
+        "outcome_unit": "USDT/BTC",
+        "scientific_readiness": false
+      },
+      "derivation": "False AND a comparison may determine a value, but static validation and declared dependencies include both branches. The three-bar lag needs 2700 seconds and seven input rows; no branch erasure is allowed."
+    },
+    {
+      "name": "typed_null_literal_does_not_invent_a_feature",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "ratio",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": null
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": []
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": null
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "972d6c394c172cc36ae73e90320b801bcc7048720086aa13ffed67bb7593454e",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "ratio",
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          }
+        },
+        "feature_refs": [],
+        "row_window": {
+          "start": "2020-01-01T01:00:00Z",
+          "end": "2020-01-01T02:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "warmup_seconds": 0,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 4,
+        "expected_case_count": 4,
+        "outcome_unit": "ratio",
+        "scientific_readiness": false
+      },
+      "derivation": "A typed missing ratio literal has a real ratio type and its own parameter pointer, but no feature dependency. Compilation makes no claim that the missing outcome becomes eligible."
+    },
+    {
+      "name": "request_order_and_sorted_row_window_are_distinct",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "ratio",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": null
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "ETHUSDT",
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": []
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "ETHUSDT",
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": null
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "ETHUSDT",
+              "BTCUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "26a00da960d03c56a98fd53e6ee1c823f1fefca20df34752dd91f24a8b8c24f9",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "ratio",
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          }
+        },
+        "feature_refs": [],
+        "row_window": {
+          "start": "2020-01-01T01:00:00Z",
+          "end": "2020-01-01T02:00:00Z",
+          "instruments": [
+            "BTCUSDT",
+            "ETHUSDT"
+          ]
+        },
+        "warmup_seconds": 0,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 8,
+        "expected_case_count": 8,
+        "outcome_unit": "ratio",
+        "scientific_readiness": false
+      },
+      "derivation": "Keep the original requested instrument order in the immutable request. The loader window is sorted BTCUSDT,ETHUSDT. Four grid instants times two instruments produce eight input rows and cases."
+    },
+    {
+      "name": "exact_input_row_limit_without_warmup",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "ratio",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": null
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T00:15:00Z",
+            "end": "2021-06-04T20:15:00Z",
+            "instruments": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": []
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2021-06-04T20:15:00Z",
+            "instruments": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "fixture:composition-formalization",
+          "data_snapshot_ref": "fixture:composition-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": null
+            }
+          },
+          "outcome_scale": "quantity",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "2020-01-01T00:15:00Z",
+            "end": "2021-06-04T20:15:00Z",
+            "instruments": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ]
+          },
+          "as_of": "2024-01-01T00:00:00Z",
+          "max_steps": 10000
+        },
+        "candidate_hash": "65f21e68c84fe8f3149861b14f6b38ede20ff59bed4809d3529a7abdad85cf25",
+        "programs": {
+          "scope_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "condition_program": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "outcome_program": {
+            "type": "real",
+            "unit": "ratio",
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          }
+        },
+        "feature_refs": [],
+        "row_window": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2021-06-04T20:15:00Z",
+          "instruments": [
+            "BTCUSDT",
+            "ETHUSDT"
+          ]
+        },
+        "warmup_seconds": 0,
+        "unavailable_warmup_seconds": 0,
+        "maximum_input_rows": 100000,
+        "expected_case_count": 100000,
+        "outcome_unit": "ratio",
+        "scientific_readiness": false
+      },
+      "derivation": "Exactly 50000 decision instants times two instruments equals the existing 100000-row limit. No input rows are added when all programs have zero lookback. UTC formatting uses only standard-library calendar arithmetic."
+    },
+    {
+      "name": "program_catalog_identity_mismatch",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "ExpressionGap",
+        "code": "FEATURE_GAP"
+      },
+      "derivation": "Every program must bind the exact supplied catalog, independently of whether its features appear in another program."
+    },
+    {
+      "name": "future_access_cannot_hide_in_false_branch",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "and",
+              "left": {
+                "op": "literal",
+                "type": "boolean",
+                "unit": null,
+                "value": false
+              },
+              "right": {
+                "op": "future",
+                "arg": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                }
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "ExpressionGap",
+        "code": "TEMPORAL_GAP"
+      },
+      "derivation": "The existing temporal prohibition is static and applies even in a nondecisive Boolean branch."
+    },
+    {
+      "name": "unknown_feature_cannot_hide_in_false_branch",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "and",
+              "left": {
+                "op": "literal",
+                "type": "boolean",
+                "unit": null,
+                "value": false
+              },
+              "right": {
+                "op": "gt",
+                "left": {
+                  "op": "feature",
+                  "ref": "unregistered@1"
+                },
+                "right": {
+                  "op": "literal",
+                  "type": "real",
+                  "unit": "USDT/BTC",
+                  "value": "101"
+                }
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "ExpressionGap",
+        "code": "FEATURE_GAP"
+      },
+      "derivation": "A missing version definition remains a feature gap even when Boolean values could short-circuit."
+    },
+    {
+      "name": "incompatible_units_in_composed_outcome",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "add",
+                "left": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                },
+                "right": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.volume@binance-spot-15m-v1"
+                }
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "ExpressionGap",
+        "code": "TYPE_GAP"
+      },
+      "derivation": "USDT/BTC plus BTC is not the approved same-unit addition."
+    },
+    {
+      "name": "estimand_unit_must_match_quantity_program",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "ratio",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "A price quantity outcome cannot silently become a dimensionless contrast."
+    },
+    {
+      "name": "declared_feature_closure_has_unused_member",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1",
+            "BTCUSDT.volume@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "Declaring an unused extra feature is not exact dependency closure."
+    },
+    {
+      "name": "declared_feature_closure_omits_used_member",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": []
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "A used versioned price feature cannot disappear from the declared closure."
+    },
+    {
+      "name": "real_scope_is_not_boolean_scope",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": "1"
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "Scalar one cannot be coerced into Boolean true at the composition boundary."
+    },
+    {
+      "name": "binary_scale_rejects_real_outcome",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "ratio",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "binary_probability"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "Binary probability requires an actual Boolean outcome program; a real-valued price is not implicitly converted."
+    },
+    {
+      "name": "off_grid_universe_is_not_rounded",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:01Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "The binding loader requires exact 900-second boundaries; it must not silently round the declared candidate start."
+    },
+    {
+      "name": "candidate_universe_cannot_precede_snapshot",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T01:15:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "The exact candidate interval must lie inside the retained snapshot interval."
+    },
+    {
+      "name": "candidate_instrument_must_belong_to_snapshot",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "ETHUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "The compiler cannot select an instrument absent from the supplied snapshot universe."
+    },
+    {
+      "name": "warmup_cannot_silently_exceed_input_row_limit",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "ratio",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "lag",
+              "bars": 1,
+              "arg": {
+                "op": "literal",
+                "type": "boolean",
+                "unit": null,
+                "value": true
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": null
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T00:15:00Z",
+            "end": "2021-06-04T20:15:00Z",
+            "instruments": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/outcome/program/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": []
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2021-06-04T20:15:00Z",
+            "instruments": [
+              "BTCUSDT",
+              "ETHUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": 10000
+      },
+      "error": {
+        "type": "Invalid"
+      },
+      "derivation": "The 100000 expected cases already use 50000 grid instants for two instruments. One earlier warmup instant adds two rows, so the required 100002 inputs exceed the existing limit. Do not truncate or label the plan complete."
+    },
+    {
+      "name": "boolean_step_budget_is_not_integer_budget",
+      "payload": {
+        "formalization_id": "fixture:composition-formalization",
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "101"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T01:00:00Z",
+            "end": "2020-01-01T02:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:composition-data"
+          },
+          "parameter_origins": [
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independently fixed synthetic composition case; no observed outcome selection."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "catalog": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT/BTC"
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "count"
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "BTC"
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "type": "real",
+            "unit": "USDT"
+          }
+        },
+        "data_manifest": {
+          "universe": {
+            "start": "2020-01-01T00:00:00Z",
+            "end": "2020-01-01T03:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ]
+          }
+        },
+        "as_of": "2024-01-01T00:00:00Z",
+        "max_steps": true
+      },
+      "error": {
+        "type": "ExpressionGap",
+        "code": "RESOURCE_GAP"
+      },
+      "derivation": "Python Boolean/integer compatibility must not override the explicit positive integer resource contract."
+    }
+  ]
+}

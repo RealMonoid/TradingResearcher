@@ -4,6 +4,8 @@
 
 ## Owned operations
 
+The separate [composition certificate](COMPOSITION.md) checks the retained driver and exact candidate. Compilation by itself still grants no composition certification or scientific readiness. This addition does not change the bound-reference/1 request, warmup, outcome or execution semantics below.
+
 The operator calls `compile_hypothesis(formalization_id, feature_certificate_id, reference_certificate_id, as_of, max_steps)`. Every argument is mandatory. The original formalization must be the accepted result of a completed `formalization/v1` job. The host verifies immutable identities, the original idea and authorized sources. The candidate, catalog and data identities must match exactly. A supplied source or a worker-created success claim cannot substitute for these records.
 
 The reference certificate must retain its exact verified package, fixed expectations and compatible Python runtime. An intact older package can remain usable after the installed source changes: `STALE` installed currency alone does not revoke retained conformance. A missing or corrupt package cannot use this exception. Raw feature certificates must bind the intended snapshot and exact catalog. Their historical availability qualifications remain unchanged.

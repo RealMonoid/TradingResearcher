@@ -1,0 +1,487 @@
+{
+  "schema": "composition-verification/1",
+  "status": "PASS",
+  "created_at": "2026-10-26T14:55:23.301493+00:00",
+  "parent_commit": "b57638bcab0c3cdde7d8ceda92d4764a7fa9f55f",
+  "unique_focused_tests": 64,
+  "independent_fixed_compiler_cases": 26,
+  "test_inventory": {
+    "test_composition*.py": 21,
+    "test_plan_reviews*.py": 14,
+    "test_plan_retention*.py": 11,
+    "test_revocations*.py": 18
+  },
+  "latest_pass_log_by_suite": {
+    "test_composition*.py": "20261026T144915-186e93c4.log",
+    "test_plan_reviews*.py": "20261026T144110-901dc1b4.log",
+    "test_plan_retention*.py": "20261026T144513-6631eaf8.log",
+    "test_revocations*.py": "20261026T144513-ff445397.log"
+  },
+  "checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition.py"
+      ],
+      "started_at": "2026-10-26T14:31:52.544631+00:00",
+      "finished_at": "2026-10-26T14:31:53.259134+00:00",
+      "seconds": 0.714503,
+      "exit_code": 1,
+      "log": "20261026T143152-c8d19ec5.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition.py"
+      ],
+      "started_at": "2026-10-26T14:32:04.219089+00:00",
+      "finished_at": "2026-10-26T14:32:04.970279+00:00",
+      "seconds": 0.75119,
+      "exit_code": 1,
+      "log": "20261026T143204-a41b7245.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition.py"
+      ],
+      "started_at": "2026-10-26T14:34:55.933913+00:00",
+      "finished_at": "2026-10-26T14:34:56.619039+00:00",
+      "seconds": 0.685126,
+      "exit_code": 0,
+      "log": "20261026T143455-9b147ec0.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition.py"
+      ],
+      "started_at": "2026-10-26T14:39:38.658548+00:00",
+      "finished_at": "2026-10-26T14:39:39.346095+00:00",
+      "seconds": 0.687547,
+      "exit_code": 0,
+      "log": "20261026T143938-bdf2a61d.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition.py"
+      ],
+      "started_at": "2026-10-26T14:40:39.667707+00:00",
+      "finished_at": "2026-10-26T14:40:40.972427+00:00",
+      "seconds": 1.30472,
+      "exit_code": 0,
+      "log": "20261026T144039-a7373395.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition_binding.py"
+      ],
+      "started_at": "2026-10-26T14:41:10.809426+00:00",
+      "finished_at": "2026-10-26T14:43:05.338278+00:00",
+      "seconds": 114.528852,
+      "exit_code": 1,
+      "log": "20261026T144110-851fe691.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_reviews*.py"
+      ],
+      "started_at": "2026-10-26T14:41:10.837296+00:00",
+      "finished_at": "2026-10-26T14:42:03.564226+00:00",
+      "seconds": 52.72693,
+      "exit_code": 0,
+      "log": "20261026T144110-901dc1b4.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition*.py"
+      ],
+      "started_at": "2026-10-26T14:44:17.227995+00:00",
+      "finished_at": "2026-10-26T14:46:19.637468+00:00",
+      "seconds": 122.409473,
+      "exit_code": 0,
+      "log": "20261026T144417-091b9b7a.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_plan_retention*.py"
+      ],
+      "started_at": "2026-10-26T14:45:13.462476+00:00",
+      "finished_at": "2026-10-26T14:48:10.325271+00:00",
+      "seconds": 176.862795,
+      "exit_code": 0,
+      "log": "20261026T144513-6631eaf8.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocations*.py"
+      ],
+      "started_at": "2026-10-26T14:45:13.437493+00:00",
+      "finished_at": "2026-10-26T14:45:24.043697+00:00",
+      "seconds": 10.606204,
+      "exit_code": 0,
+      "log": "20261026T144513-ff445397.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition.py"
+      ],
+      "started_at": "2026-10-26T14:47:11.865366+00:00",
+      "finished_at": "2026-10-26T14:47:13.333228+00:00",
+      "seconds": 1.467862,
+      "exit_code": 1,
+      "log": "20261026T144711-ab1bcc40.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition*.py"
+      ],
+      "started_at": "2026-10-26T14:49:15.005109+00:00",
+      "finished_at": "2026-10-26T14:51:14.445645+00:00",
+      "seconds": 119.440536,
+      "exit_code": 0,
+      "log": "20261026T144915-186e93c4.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T14:50:08.343069+00:00",
+      "finished_at": "2026-10-26T14:50:09.882221+00:00",
+      "seconds": 1.539152,
+      "exit_code": 0,
+      "log": "20261026T145008-7123eed3.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_composition_adversarial.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T14:50:08.308958+00:00",
+      "finished_at": "2026-10-26T14:50:09.297317+00:00",
+      "seconds": 0.988359,
+      "exit_code": 0,
+      "log": "20261026T145008-d47db512.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "started_at": "2026-10-26T14:54:07.931495+00:00",
+      "finished_at": "2026-10-26T14:54:13.389173+00:00",
+      "seconds": 5.457678,
+      "exit_code": 0,
+      "log": "20261026T145407-61785ea4.log"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "started_at": "2026-10-26T14:54:07.926519+00:00",
+      "finished_at": "2026-10-26T14:54:13.221282+00:00",
+      "seconds": 5.294763,
+      "exit_code": 0,
+      "log": "20261026T145407-8a357e24.log"
+    }
+  ],
+  "source_phases": "43 plan-review/retention/revocation regressions passed before the final installed-validator currency guard. The 21 directly affected composition tests passed after that guard; no numerical, binding, reference or feature semantics changed.",
+  "retained_failures": [
+    "Initial test setup assumed unsupported Broker context-manager syntax; corrected before namespace regression.",
+    "Reserved composition namespace checks failed before implementation.",
+    "First full integration run: eight passed, one test-helper name collision; helper corrected.",
+    "Independent installed-file currency concern reproduced for both driver and fixture; fixed without changing frozen expectations."
+  ],
+  "source_sha256": {
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/auxiliary.py": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "d641bbe48d16275d4d0890e5f469b89decdb892c533773640557a3a1daf9b0f1",
+    "trading_researcher/bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "be7028bed86d82cfccb25c3ac0d926cb84bfa5d7a448168d5a898cbe38d4b6ea",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/composition.py": "5cb5a66c6884d6237f3e334234f72230c94ae9d1d904b8eafd3e33c78b6c30a7",
+    "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "edc1cbad27750ad2142a3b0df7327a6e28e4cd85579aa417ed505f81710d0d08",
+    "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "1d50df5a01cbfb3f232cff3c65064a23ce902ead28605c0319bca901517afb03",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+    "trading_researcher/memory.py": "16d870a508c2a345a3b36669f7e2de0b6180c9ba8f1e83cf6ccc94cd8f6cc748",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/revocations.py": "e54cdcf9b4338a18a7d6c9c40c05ab3cf7461809c1e4c4616e20650ce4efaa74",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "302c8570425786a5033379050976242f7ecfffa999f0419302db637279b1f962",
+    "trading_researcher/study_pipeline.py": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+    "trading_researcher/study_runs.py": "84b396f6dcc3d0fdf67adcd80d11c348bb99d37508bb269e2f408002f902040b",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "changed_code_test_sha256": {
+    "tests/fixtures/composition_conformance_cases.json": "b28025c09fb9292998328fc698aa06f2ab0275ced8a74d0370d38437551baa64",
+    "tests/test_composition.py": "bf693ee41a39805fee8c3481c62e405ef1f3c28bbb05fe0739ef207518e0dc94",
+    "tests/test_composition_adversarial.py": "d87a40e08828c6aecbc2ca5248c92ac8cf120c135ee49d589a2cbce4e844afe3",
+    "tests/test_composition_binding.py": "f3ecac10e9c407cb7ffeb85c0485acdf357c5792c9556e2a96102af7c62046b5",
+    "trading_researcher/composition.py": "5cb5a66c6884d6237f3e334234f72230c94ae9d1d904b8eafd3e33c78b6c30a7",
+    "trading_researcher/coordination.py": "edc1cbad27750ad2142a3b0df7327a6e28e4cd85579aa417ed505f81710d0d08",
+    "trading_researcher/evaluation_plans.py": "1d50df5a01cbfb3f232cff3c65064a23ce902ead28605c0319bca901517afb03",
+    "trading_researcher/memory.py": "16d870a508c2a345a3b36669f7e2de0b6180c9ba8f1e83cf6ccc94cd8f6cc748",
+    "trading_researcher/revocations.py": "e54cdcf9b4338a18a7d6c9c40c05ab3cf7461809c1e4c4616e20650ce4efaa74",
+    "trading_researcher/storage.py": "302c8570425786a5033379050976242f7ecfffa999f0419302db637279b1f962"
+  },
+  "preserved_sha256": {
+    "trading_researcher/binding.py": "d641bbe48d16275d4d0890e5f469b89decdb892c533773640557a3a1daf9b0f1",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/auxiliary.py": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d"
+  },
+  "independent_review_sha256": "55d526a7239313a3d0dea40723ebe00599127e62ad0ce6a777f8e1f34d8bc501",
+  "evidence_archive": "composition-evidence-2026-10-26.zip",
+  "evidence_archive_sha256": "4940898f41e84b3cd883f65d5219c41cfaba1c49ce724b46680ba01429406c95",
+  "archive_members": 55,
+  "archive_scope": "Changed code/tests, prior changed sources, fixed expectation derivation, exact check logs and review; not a standalone runtime or registry backup.",
+  "provider_calls": 0,
+  "scientific_readiness": false,
+  "full_objective_complete": false,
+  "unverified": [
+    "Full repository suite",
+    "General semantic equivalence",
+    "Scientific data/PIT/rights/exposure admission",
+    "Resolution of existing outcome dependency REVIEW_REQUIRED",
+    "Calibrated information and inference",
+    "Atomic scientific allocation/freeze",
+    "Genuine mixed-provider research cycle",
+    "AmiBroker policy adapter and domain reporting",
+    "Profitability"
+  ],
+  "finalized_at": "2026-10-26T14:55:57.060937+00:00",
+  "changed_files": [
+    "README.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/COMPOSITION_INTEGRATION_2026-10-26.md",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/composition-evidence-2026-10-26.zip",
+    "docs/reviews/implementation-2026-10-25/composition-independent-2026-10-26.json",
+    "docs/reviews/implementation-2026-10-25/composition-verification-2026-10-26.json",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "tests/fixtures/composition_conformance_cases.json",
+    "tests/fixtures/composition_conformance_expectations.md",
+    "tests/test_composition.py",
+    "tests/test_composition_adversarial.py",
+    "tests/test_composition_binding.py",
+    "trading_researcher/BINDING.md",
+    "trading_researcher/COMPOSITION.md",
+    "trading_researcher/EVALUATION_POLICY.md",
+    "trading_researcher/composition.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/evaluation_plans.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/revocations.py",
+    "trading_researcher/storage.py"
+  ],
+  "documentation_checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-26T14:55:35.842126+00:00",
+      "finished_at": "2026-10-26T14:55:35.909546+00:00",
+      "seconds": 0.06742,
+      "exit_code": 0,
+      "log": "20261026T145535-69f483de.log",
+      "output": "warning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/CURRENT_STATE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/BINDING.md', CRLF will be replaced by LF the next time Git touches it\n"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "started_at": "2026-10-26T14:54:07.931495+00:00",
+      "finished_at": "2026-10-26T14:54:13.389173+00:00",
+      "seconds": 5.457678,
+      "exit_code": 0,
+      "log": "20261026T145407-61785ea4.log",
+      "output": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 773,\n    \"source_files\": 5,\n    \"decisions\": 88,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Checked against this adoption's preapproval inventory\",\n    \"git_diff_check_exit\": 0,\n    \"later_approved_changed_paths\": {\n      \"REVIEWING.md\": \"D086 / agent-inquiry/1.0\",\n      \".gitattributes\": \"October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes\"\n    },\n    \"adoption_baseline_files\": 63,\n    \"preexisting_files_unchanged\": 44,\n    \"archived_documents_exact\": 20,\n    \"preserved_preapproval_decisions\": 70,\n    \"full_historical_definition_review_generator_texts\": 3,\n    \"approved_policy_sections_exact_except_status_words\": 15,\n    \"scoped_open_dispositions_and_acceptance_mappings\": 15,\n    \"adoption_decision_status_counts_D001_D085\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 63,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    },\n    \"decision_status_counts\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 66,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    }\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"de4edaadbf3b518a16214594f6be3f18dd0a536d7821c862f5e03f5927fbea45\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"4c97e38ce41929798fdd0c4b3d4e8805bf4e31e03486fd7956d6be6914e16d0d\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37\",\n    \"docs/architecture/CURRENT_STATE.md\": \"f4045e025870cbe4209dabbd4897c3b5293c6d2216fae42698f068e734844bf9\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\",\n    \".gitattributes\": \"44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c\",\n    \"docs/reviews/verify_system_model.py\": \"59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef\",\n    \"docs/reviews/verify_retail_contract.py\": \"e8ad4dfc1eb0474f68e6df3b1e28e80009353ef32932c7c9d7826ab59e82d9c9\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\": \"56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\",\n    \"Complete executable AST/schema/primitive implementations and independent golden fixtures\",\n    \"Actual data quality, rights, historical availability, model exposure and account/execution costs\",\n    \"Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately\",\n    \"Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs\",\n    \"SRC-001 through SRC-008 and completeness of original conversation\"\n  ],\n  \"changed_files_since_preapproval\": [\n    \".gitattributes\",\n    \"AGENTS.md\",\n    \"README.md\",\n    \"REVIEWING.md\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_system_model.py\"\n  ],\n  \"added_files\": [\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\",\n    \"docs/reviews/adoption-2026-10-23/verification.json\"\n  ],\n  \"preserved_proposal_sha256\": \"22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29\",\n  \"preapproval_archive_sha256\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n}\n"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "started_at": "2026-10-26T14:54:07.926519+00:00",
+      "finished_at": "2026-10-26T14:54:13.221282+00:00",
+      "seconds": 5.294763,
+      "exit_code": 0,
+      "log": "20261026T145407-8a357e24.log",
+      "output": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 773,\n    \"source_files\": 5,\n    \"decisions\": 88,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Not checked; rerun with retained --baseline inventory\",\n    \"git_diff_check_exit\": 0\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"de4edaadbf3b518a16214594f6be3f18dd0a536d7821c862f5e03f5927fbea45\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"4c97e38ce41929798fdd0c4b3d4e8805bf4e31e03486fd7956d6be6914e16d0d\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37\",\n    \"docs/architecture/CURRENT_STATE.md\": \"f4045e025870cbe4209dabbd4897c3b5293c6d2216fae42698f068e734844bf9\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\"\n  ]\n}\n"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "started_at": "2026-10-26T14:55:35.889086+00:00",
+      "finished_at": "2026-10-26T14:55:36.153639+00:00",
+      "seconds": 0.264553,
+      "exit_code": 0,
+      "log": "20261026T145535-491263cd.log",
+      "output": "{\n  \"status\": \"PASS\",\n  \"baseline_files\": 103,\n  \"unchanged_files\": 91,\n  \"changed_files\": [\n    \"docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md\",\n    \".gitattributes\",\n    \".gitignore\",\n    \"README.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"tests/test_local_runtime.py\",\n    \"trading_researcher/README.md\",\n    \"trading_researcher/__main__.py\",\n    \"trading_researcher/checks.py\",\n    \"trading_researcher/coordination.py\"\n  ],\n  \"new_files\": [\n    \"docs/reviews/implementation-2026-10-25/COMPOSITION_INTEGRATION_2026-10-26.md\",\n    \"docs/reviews/implementation-2026-10-25/composition-evidence-2026-10-26.zip\",\n    \"docs/reviews/implementation-2026-10-25/composition-independent-2026-10-26.json\",\n    \"docs/reviews/implementation-2026-10-25/composition-verification-2026-10-26.json\",\n    \"tests/fixtures/composition_conformance_cases.json\",\n    \"tests/fixtures/composition_conformance_expectations.md\",\n    \"tests/test_composition.py\",\n    \"tests/test_composition_adversarial.py\",\n    \"tests/test_composition_binding.py\",\n    \"trading_researcher/COMPOSITION.md\",\n    \"trading_researcher/composition.py\"\n  ],\n  \"local_document_links\": 290,\n  \"errors\": [],\n  \"scope\": \"Implementation preservation, local link targets and whitespace; no semantic/scientific certification\"\n}\n"
+    }
+  ]
+}

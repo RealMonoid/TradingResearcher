@@ -4,6 +4,8 @@ Status: binding semantic specification with scoped implementation choices adopte
 
 ## Minimal coherent implementation shape
 
+The [composition conformance implementation](../../trading_researcher/COMPOSITION.md) now supplies the bounded D084/IF-04 check for exact combinations of existing certified reference primitives. Independent fixed compiler expectations, retained input/source identities, current dependency checks and candidate replay bind an owned certificate. IF-05 preparation can retain that certificate and inspect its current status; atomic scientific freeze, data/exposure acceptance and calibrated evaluation remain incomplete. This capability does not change primitive meaning or resolve existing outcome dependency gaps.
+
 Use a modular application with explicit ownership of context, discovery, formalization, registry/freeze, backend execution and evidence. Keep immutable artifact bodies in content-addressed storage and an indexed transaction-capable registry for identities, events and dependency edges. D078 selects one local SQLite writer plus content-addressed external blobs for v1. The bounded runtime below implements small envelopes, immutable external files, corruption quarantine and complete backup/restore; full scientific conformance remains incomplete. A separate graph database, message broker, vector store and service mesh are not initially justified.
 
 Use one orchestrator that routes artifacts and enforces permissions, not one that selects scientific conclusions. Roles can be sequential in an engineering smoke test. Target independent discovery perspectives must later be demonstrated with separate state and identical allowed context; a one-agent smoke test is not proof of that requirement.

@@ -17,7 +17,8 @@ from .errors import Conflict, Denied
 SHA = re.compile(r'[0-9a-f]{64}\Z')
 MAX_BLOB_BYTES = 512 * 1024 * 1024
 BLOCK = 1024 * 1024
-RESERVED = ('dependency-revocation/', 'blob-source/', 'reference-source-package/', 'data-snapshot/',
+RESERVED = ('composition-certificate/','composition-input/','composition-source-package/',
+            'dependency-revocation/', 'blob-source/', 'reference-source-package/', 'data-snapshot/',
             'feature-source-package/', 'feature-definitions/', 'feature-certificate/',
             'compiled-hypothesis/', 'reference-execution/', 'binding-source-package/', 'evaluation-plan/',
             'evaluation-plan-input/','semantic-review-record/','semantic-review-assessment/','provider-invocation/','provider-invocation-input/',

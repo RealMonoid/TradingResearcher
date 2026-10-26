@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [composition conformance path](trading_researcher/COMPOSITION.md) checks the retained binding driver against independent expectations and binds its result to an exact compiled hypothesis. Plan inspection can satisfy this prerequisite separately from data/exposure, semantic review, calibration and atomic scientific freeze.
+
 The [technical revocation path](trading_researcher/REVOCATIONS.md) now prevents new use of explicitly revoked data, certificates and retained implementation versions. It follows actual typed dependencies, preserves historical results and exposure, and retains failures when revocation arrives during computation. It grants no scientific validity or empirical verdict.
 
 The [meaning-review plan integration](docs/reviews/implementation-2026-10-25/PLAN_MEANING_INTEGRATION_2026-10-26.md) now binds review evidence to the exact compiled formalization and feature definitions. Current inspection reopens the semantic prerequisite when review history or policy changes. Historical plan bytes and all other scientific gates remain intact.

@@ -14,6 +14,8 @@ Use the existing Python application and SQLite registry. Start with direct provi
 
 ## Ordered work packages
 
+October 26 continuation: [composition conformance](../implementation-2026-10-25/COMPOSITION_INTEGRATION_2026-10-26.md) implements the D084 prerequisite for exact combinations of existing certified primitives. Its current plan gate remains separate from unresolved data/exposure, calibration and atomic freeze; the full seven-package objective is unchanged.
+
 October 26 continuation: [technical revocation](../implementation-2026-10-25/REVOCATION_INTEGRATION_2026-10-26.md) supplies the already approved D083/IF-09 prerequisite for safe use of known technical versions. It does not introduce a new scientific data-acceptance policy or complete the later admission/calibration/freeze work.
 
 October 26 continuation: [meaning-review plan integration](../implementation-2026-10-25/PLAN_MEANING_INTEGRATION_2026-10-26.md) connects current review evidence to the exact formalization and feature definitions without granting scientific readiness. The following package boundaries and seven-package objective remain unchanged.

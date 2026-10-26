@@ -4,6 +4,8 @@ The seven-package implementation remains in progress. This summary describes the
 
 ## What has been implemented
 
+The [October 26 composition continuation](COMPOSITION_INTEGRATION_2026-10-26.md) adds independently fixed compiler expectations, retained per-candidate conformance certificates and current plan prerequisite checks. It complements meaning review and technical revocation; scientific data/exposure acceptance, calibrated information/evaluation and atomic freeze remain unfinished.
+
 | Package | Current capability and remaining work |
 |---|---|
 | 1. Memory and storage | Four logical research-memory views, exposure-aware retrieval, immutable blobs, corruption checks and complete backup/restore. Scientific evidence/policy publication still needs the later evaluation and release path. |

@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "116 unique focused tests passed across this checkpoint. After the final shared-edge correction, 37 relevant revocation, plan-review and complete binding tests passed again. Exact source phases, retained failures, documentation checks and independent review are in revocation-verification-2026-10-26.json. No paid call, scientific admission, atomic freeze or full research cycle."
+      "evidence": "64 unique focused tests pass, including 21 composition tests and 43 plan-review, retention and revocation regressions. Twenty-six independent compiler expectations are checked inside the new validation path. Exact source phases, failures and documentation gates are retained in composition-verification-2026-10-26.json. No paid call or scientific admission."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -292,11 +292,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Continue step 3/4 composition and data/exposure admission prerequisites, then calibrated information/evaluation and atomic family allocation/freeze. Future freeze must atomically recheck current meaning review and technical dependency usability. Actual Anthropic access/spending remains required before the mixed-provider live research cycle.",
+  "next_action": "Continue scientific data/exposure qualification and calibrated information/evaluation, then atomic family allocation/freeze and fixed release. Meaning review, exact composition and technical usability now have separate current checks; future freeze must recheck all prerequisites atomically. Actual Anthropic access/spending remains needed for its live calls.",
   "continuation_audit": {
     "previous_goal_turn": "no_progress_verification_only",
     "current_goal_turn": "progress",
-    "basis": "Existing D083/IF-09 technical revocation now records exact defect evidence and affected objects, preserves history and checks actual dependency use before new work/delivery/commit. Scientific admission semantics and numerical policies are unchanged.",
+    "basis": "D084 composition conformance now has independently fixed compiler expectations, exact retained candidate replay, owned certificates, current plan gate integration and technical revocation. Full seven-package scope remains incomplete.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -343,6 +343,17 @@
     "relevant_tests_after_last_code_change": 37,
     "provider_calls": 0,
     "scope": "Owned supported technical versions and explicit consumer bindings under D083/IF-09; no generic ancestry invalidation or scientific admission.",
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "composition_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "verification": "docs/reviews/implementation-2026-10-25/composition-verification-2026-10-26.json",
+    "unique_focused_tests": 64,
+    "independent_fixed_compiler_cases": 26,
+    "provider_calls": 0,
+    "scope": "Exact compositions of existing certified primitives and retained bound-reference driver; other admission gates and outcome dependency gaps remain unchanged.",
     "scientific_readiness": false,
     "full_objective_complete": false
   }

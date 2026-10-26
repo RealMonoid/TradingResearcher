@@ -1,8 +1,10 @@
 # Current State
 
-Updated October 26, 2026 for technical dependency revocation after the meaning-review plan integration and requested GitHub publication. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
+Updated October 26, 2026 for composition conformance after technical revocation, meaning-review integration and requested GitHub publication. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
 
 ## Repository and existing artifacts
+
+The [composition continuation](../reviews/implementation-2026-10-25/COMPOSITION_INTEGRATION_2026-10-26.md) adds independent fixed checks for the retained binding driver and an owned certificate for the exact compiled candidate. Plan preparation retains its evidence and current inspection can satisfy only composition conformance. Data/exposure, semantic review, calibrated information and atomic freeze remain distinct. Source packages, interruptions, backup/replay and revocation preserve historical evidence.
 
 The [D083/IF-09 technical revocation continuation](../reviews/implementation-2026-10-25/REVOCATION_INTEGRATION_2026-10-26.md) adds operator-issued immutable defect records, event-time affected sets and current typed dependency inspection. New data/measurement/compiled/plan/study consumption checks revocation before use and commitment. Equal retained package bytes cannot escape through a new package ID. Generic provenance, genealogy and supersession do not invalidate a new version. Historical records remain intact. This does not accept uncertain acquisition/PIT/exposure claims or complete scientific admission, policy applicability or the seven-package objective.
 

@@ -7,8 +7,8 @@ from .errors import Conflict, Denied
 
 SCHEMA='dependency-revocation/1'
 AUTHORITY='technical_use_revocation_not_scientific_outcome'
-PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1'}
-VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1'}
+PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1','composition-source-package/1'}
+VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1'}
 REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
     'development-information-study-attempt/1','evaluator-calibration-attempt/1','development-measurement/1'}
@@ -97,9 +97,12 @@ class DependencyRevocations:
             args=body['dependency_arguments']
             return [body['data_snapshot_id'],body['source_package_id'],args['feature_certificate_id'],args['reference_certificate_id']]
         if schema=='reference-execution/1':return [body['compiled_id']]
+        if schema=='composition-input/1':return [body['compiled_id'],body['source_package_id']]
+        if schema=='composition-certificate/1':return [body['input_capsule_id']]
         if schema in {'evaluation-plan/1','evaluation-plan-input/1'}:
             request=body['request']
-            return [request['compiled_id'],*request['dependence']['development_refs']]
+            return [request['compiled_id'],*request['dependence']['development_refs'],
+                *([request['composition_certificate_id']] if 'composition_certificate_id' in request else [])]
         if schema in REQUEST_INPUTS:
             request=body['request']
             return [request[k] for k in ('plan_id','execution_id','diagnostics_id') if k in request]

@@ -16,6 +16,18 @@ BOOTSTRAP=('import sys;sys.path.insert(0,sys.argv[1]);'
 
 def calculate_world(payload, manifest, world, cases, retain, *, retain_draw_bytes=None):
     """Complete deterministic pipeline with an exact ordered case/draw sink."""
+    if manifest['schema'] in ('family-information-study-manifest/1','family-evaluator-calibration-manifest/1'):
+        from .family_pipeline import calculate_family
+        from .family_study import components, outcome_record
+        bound={**payload,'effects':manifest['effects'],
+            'specification':manifest['profile']['specifications'][world['spec_index']],
+            'components':components(manifest,world),'time_rows':world['time_rows'],'seed':world['population_seed'],
+            'bootstrap_seed':world['bootstrap_seed'],
+            'limits':{'max_seconds':max(1,manifest['profile']['budget']['attempt_compute_ms']//1000)},
+            'design':{'base_length':manifest['assigned']['base_length'],
+                'primary_count':manifest['assigned']['primary_count'],'mc_policy':manifest['mc_policy']}}
+        result=calculate_family(bound,cases,retain)
+        return {**result,'world_id':world['id'],'outcome':outcome_record(manifest,world,result['outcomes'])}
     report={**payload['report'],'cases':cases}
     model=build_model(report,payload['diagnostics'],
         manifest['profile']['specifications'][world['spec_index']],manifest['effects'])

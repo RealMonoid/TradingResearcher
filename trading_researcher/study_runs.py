@@ -115,6 +115,13 @@ class InformationStudies:
     def _study_before_execute(self,study):
         pass
 
+    def _study_manifest(self,assigned,profile):
+        return make_manifest(assigned,profile)
+
+    def _study_failed_outcome(self,manifest,world,prior=None):
+        base=prior or {'world_id':world['id'],'scope_count':None,'condition_count':None}
+        return {**base,'state':'TECHNICAL_FAILURE','decision':None,'covered':None}
+
     def _study_artifacts(self):
         for row in self._db.execute('SELECT id,envelope FROM artifacts'):
             envelope=decode(row['envelope']);body=envelope.get('body')
@@ -161,7 +168,7 @@ class InformationStudies:
             'base_length':p['request']['dependence']['base_length'],'primary_count':p['request']['primary_count'],
             'delta':criterion['delta'],'direction':criterion['direction'],'horizon_bars':report['request']['horizon_bars'],
             'available_time_rows':report['expected_case_count']//width,'instruments':width}
-        manifest=make_manifest(assigned,request['profile'])
+        manifest=self._study_manifest(assigned,request['profile'])
         refs=sorted(set(refs)|{diagnostic['id'],cost['id']}|ancestry)
         exposure=sorted(set(exposure)|set(diagnostic['exposure'])|set(refs))
         return payload,manifest,refs,exposure
@@ -278,8 +285,8 @@ class InformationStudies:
                 for reservation in reservations:
                     attempt=reservation['attempt_id']
                     if attempt in closed:continue
-                    outcome={'world_id':reservation['world_id'],'state':'TECHNICAL_FAILURE','decision':None,
-                        'scope_count':None,'condition_count':None,'covered':None}
+                    world=next(w for w in study['body']['manifest']['worlds'] if w['id']==reservation['world_id'])
+                    outcome=self._study_failed_outcome(study['body']['manifest'],world)
                     self._settle_study(study,attempt,{'attempt_id':attempt,'compute_ms':0,'storage_bytes':0,
                         'usage_known':False},outcome,None,orphan=True)
 
@@ -308,8 +315,7 @@ class InformationStudies:
             require(seconds>0,'Study attempt exhausted its compute reservation')
             return seconds
         meter={'materialized_bytes':0,'accounting_complete':True};outputs=[];result=None;proofs=[];failure=None;cancelled=None
-        outcome={'world_id':world['id'],'state':'TECHNICAL_FAILURE','decision':None,
-            'scope_count':None,'condition_count':None,'covered':None}
+        outcome=self._study_failed_outcome(manifest,world)
         try:
             with self._mutex:
                 actor=self._binding_owner(token)
@@ -323,7 +329,9 @@ class InformationStudies:
                 and result['classification_permitted'] is False and result['n_min'] is None,'Study result claims forbidden authority')
             summarize(manifest,[result['outcome']])
             if result['outcome']['state']!='TECHNICAL_FAILURE':require(len(proofs)==2,'Completed study world requires separate replay')
-            remaining();outcome=result['outcome']
+            remaining()
+            outcome=(self._study_failed_outcome(manifest,world,result['outcome'])
+                if result['outcome']['state']=='TECHNICAL_FAILURE' else result['outcome'])
         except BaseException as exc:
             failure={'type':type(exc).__name__,'message':str(exc)[:2000]}
             if not isinstance(exc,Exception):cancelled=exc
@@ -336,7 +344,7 @@ class InformationStudies:
             settlement={'attempt_id':attempt,'compute_ms':compute,'storage_bytes':storage,
                 'usage_known':meter['accounting_complete']}
             if compute>limits['attempt_compute_ms'] or storage>limits['attempt_storage_bytes']:
-                outcome={**outcome,'state':'TECHNICAL_FAILURE','decision':None,'covered':None}
+                outcome=self._study_failed_outcome(manifest,world,outcome)
                 failure={'type':'ResourceOverrun','message':'Observed work exceeded its frozen attempt reservation'}
             with self._transaction():
                 require(attempt in self._study_view(study)['budget']['outstanding_attempts'],'Stale study result')
@@ -344,7 +352,7 @@ class InformationStudies:
                 # Retain/charge its output, but never settle it as a valid world.
                 try:self._require_usable_dependencies(study['id'])
                 except (Invalid,Denied,Conflict) as exc:
-                    outcome={**outcome,'state':'TECHNICAL_FAILURE','decision':None,'covered':None}
+                    outcome=self._study_failed_outcome(manifest,world,outcome)
                     failure={'type':type(exc).__name__,'message':str(exc)[:2000]}
                 for descriptor in descriptors.values():self._register_blob(descriptor)
                 saved=self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',

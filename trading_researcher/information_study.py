@@ -101,6 +101,9 @@ def make_manifest(assigned,profile,*,purpose='development'):
 
 
 def _validate_manifest(manifest):
+    if type(manifest) is dict and manifest.get('schema') in ('family-information-study-manifest/1','family-evaluator-calibration-manifest/1'):
+        from .family_study import validate_manifest
+        return validate_manifest(manifest)
     require(type(manifest) is dict and manifest.get('schema') in (MANIFEST,FINAL_MANIFEST),'Owned study manifest required')
     expected=make_manifest(manifest.get('assigned'),manifest.get('profile'),
         purpose='final_calibration' if manifest['schema']==FINAL_MANIFEST else 'development')
@@ -144,6 +147,9 @@ def outer_interval(k,n,noncoverage,bits=40):
 
 
 def summarize(manifest,records):
+    if type(manifest) is dict and manifest.get('schema') in ('family-information-study-manifest/1','family-evaluator-calibration-manifest/1'):
+        from .family_study import summarize as family_summary
+        return family_summary(manifest,records)
     _validate_manifest(manifest)
     require(type(records) is list,'Study results must be a list')
     worlds={world['id']:world for world in manifest['worlds']};seen={}

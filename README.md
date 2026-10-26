@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [joint-family series controller](trading_researcher/CALIBRATION.md#owned-joint-family-series) now binds shared-template simulations to fixed development/final inventories, aggregate resource accounting, protected final records and complete-denominator count assessment. Actual lifecycle tests execute four development worlds and one final world with failure/retry/replay/recovery. The full calibration and practical resource feasibility remain unfinished.
+
 The [joint synthetic family path](trading_researcher/POPULATION_MODELS.md#joint-synthetic-response-families) generates distinct responses with mixed declared truths on one shared development mask grid and executes the existing fixed-draw estimator for each response. The owned runner retains inputs, cases, draws and fresh-process replay. This adds a calibration prerequisite; the complete final multi-world series and market-model adequacy remain unfinished.
 
 The [private plan-preparation path](docs/reviews/implementation-2026-10-25/PROTECTED_PLAN_INTEGRATION_2026-10-26.md) now consumes exact protected-target data qualifications and diagnostics from the declared development snapshot. It retains private inputs, interrupted attempts and remaining scientific gates. Unknown model training and historical availability remain qualified; this does not authorize protected outcome execution or certify an unused holdout.

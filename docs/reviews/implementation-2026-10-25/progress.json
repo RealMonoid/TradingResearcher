@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "82 unique focused tests pass, including actual owned two-response computation/fresh replay and 19 independent oracle/adversarial cases. Exact outcomes and limits: family-verification-2026-10-26.json."
+      "evidence": "101 unique tests pass, including actual owned family-series lifecycle, 23 independent cases and legacy study/calibration regressions. Exact evidence and resource limits: family-series-verification-2026-10-26.json."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -292,11 +292,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Integrate coherent family computations into fixed development/final inventories, distinct final seeds, aggregate budgets and authenticated complete-denominator calibration counts. Assess population/stress adequacy and information targets before scientific freeze. Preserve the full campaign/reservation, protected research, genuine mixed-provider cycle, policy/AmiBroker and reporting objective.",
+  "next_action": "Resolve actual full-series storage/compute feasibility with verified lossless retention/calculation improvements or a justified explicit resource configuration; never drop draws, worlds, cohorts or failures. Then assess population/stress adequacy, information targets and full final calibration before scientific freeze, preserving the full campaign/reservation, mixed-provider research, policy/AmiBroker and reporting objective.",
   "continuation_audit": {
     "previous_goal_turn": "no_progress_verification_only",
     "current_goal_turn": "progress",
-    "basis": "A controller-owned joint family now generates coherent mixed-truth synthetic responses and executes/replays the actual fixed-draw estimator with bound family size. The final multi-world calibration remains unfinished.",
+    "basis": "Shared-template family computations now enter owned fixed development/final inventories, aggregate accounting and authenticated compact complete-denominator counts; actual lifecycle exercised. Full-series resource feasibility and calibration remain unresolved.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -395,6 +395,19 @@
     "verification": "docs/reviews/implementation-2026-10-25/family-verification-2026-10-26.json",
     "actual_outer_worlds": 1,
     "actual_draws": 79996,
+    "provider_calls": 0,
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "family_series_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "unique_focused_tests": 101,
+    "verification": "docs/reviews/implementation-2026-10-25/family-series-verification-2026-10-26.json",
+    "actual_development_worlds": 4,
+    "actual_final_worlds": 1,
+    "final_planned_worlds": 1024,
+    "final_status": "NOT_ASSESSED",
     "provider_calls": 0,
     "scientific_readiness": false,
     "full_objective_complete": false

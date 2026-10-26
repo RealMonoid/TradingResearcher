@@ -1,0 +1,321 @@
+{
+  "schema": "independent-family-series-review/1",
+  "created_at": "2026-10-26T17:56:23.442504+00:00",
+  "status": "PASS_BOUNDED_FAMILY_SERIES_SOURCE_AND_UNIT_REVIEW",
+  "reviewer": "/root/publication_review",
+  "baseline_commit": "f44f43489dd7802db1fc3f1e2a3bbaabc21e77e8",
+  "purpose": "Independently verify the fixed joint-family inventory/count design and its owned series integration without claiming completed scientific calibration.",
+  "authority": {
+    "contract": "research-contract/1.0",
+    "sections": [
+      "11",
+      "14"
+    ],
+    "meaning_preserved": "No m=1 exception; fixed 256-world final denominators and adopted exact one-sided thresholds remain unchanged."
+  },
+  "findings": [
+    {
+      "id": "retained-input-identity",
+      "severity": "blocking_before_fix",
+      "status": "FIXED",
+      "before": "Raw registry envelopes have no id field. The collision inventory yielded those envelopes and failed on artifact identity access.",
+      "after": "The scanner uses Broker._artifact(row.id), verifying stored identity and retaining IDs for development/final/standalone input kinds."
+    },
+    {
+      "id": "known-union-partial-sibling",
+      "severity": "count_semantics_before_fix",
+      "status": "FIXED",
+      "before": "Count extraction discarded a known True event whenever another component made the aggregate state technical/model failure.",
+      "after": "The pure count mapper consumes validated events; known union errors survive unknown siblings while missing required observations remain unavailable."
+    },
+    {
+      "id": "partial-unreplayed-attempt",
+      "severity": "authentication_boundary",
+      "status": "FIXED",
+      "before": "A calculation with a technical sibling can intentionally return before replay. Its partial VERIFIED component must not become owned calibrated evidence.",
+      "after": "The shared runner retains the raw partial result/proof but settles every family component unavailable through the shared failure factory. This prevents the pure mapper fix from counting unreplayed partial outputs."
+    }
+  ],
+  "remaining_substantiated_production_blockers": [],
+  "reviewed_invariants": [
+    "Every pattern contains the assigned distinct response count; all homogeneous effects and a genuinely mixed vector are mandatory. Unsupported/oversized profiles fail rather than truncate.",
+    "One spec/vector/replicate is one jointly generated world, never one replicate per component. Final cohorts each expand to the same 256 world IDs for that group.",
+    "Null-support and boundary-decision unions use only their applicable components; detection remains per planted response; every group also has joint coverage.",
+    "Compact cohort descriptors and shared world groups avoid duplicated event requests. The unchanged evaluate_cohort applies all thresholds; every required cohort must complete and pass.",
+    "The final identity retains numerical pattern structure under bounded response-column permutation while removing labels/rationale/provenance aliases. Existing final requests cannot reset seed, budget, cost or applicability.",
+    "Recorded seed collision checks include retained development/final inventories and standalone population/family capsules, including failed and reserved work.",
+    "The existing retained-source execution/replay, per-attempt reservation, orphan recovery, dependency revocation and source currency paths are reused.",
+    "New family input/attempt schemas are host-reserved, creation-time-aware and in the typed revocation graph. Final operations ancestry is denied to discovery/formalization even through wrappers and the private-target exception.",
+    "Old numerical policy and single-claim count schemas remain unchanged; only explicit new family manifest schemas dispatch to family behavior."
+  ],
+  "checks": {
+    "first_oracle_run_interface_errors_retained": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_study_oracles.py"
+      ],
+      "started_at": "2026-10-26T17:43:55.728349+00:00",
+      "finished_at": "2026-10-26T17:43:58.544258+00:00",
+      "seconds": 2.815909,
+      "exit_code": 1,
+      "log": "20261026T174355-3e5dfc50.log",
+      "record_sha256": "e43d145372b7a950c81f9425b05c4a2778aaa062387a2207f28382d1d8f737ee",
+      "log_sha256": "21d0bf2048332ae3846a71350a273cfc947e3a628aeae34da47ab3fb8b23e4e3",
+      "test_count": 13,
+      "unittest_seconds": 2.584
+    },
+    "oracle_initial_green": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_study_oracles.py"
+      ],
+      "started_at": "2026-10-26T17:44:20.260105+00:00",
+      "finished_at": "2026-10-26T17:44:23.146694+00:00",
+      "seconds": 2.886589,
+      "exit_code": 0,
+      "log": "20261026T174420-acd836e8.log",
+      "record_sha256": "5d2dda4e0a86f562cf61810ed77776dcc1db23b25b0f122fb4716990e28cb42d",
+      "log_sha256": "522a2c92e9c1cee6c5f23a8f090f179b4e4b5884b1fd9271a219b0700d54196a",
+      "test_count": 13,
+      "unittest_seconds": 2.655
+    },
+    "adversarial_red_before_production_fixes": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_series_adversarial.py"
+      ],
+      "started_at": "2026-10-26T17:50:17.230663+00:00",
+      "finished_at": "2026-10-26T17:50:21.444811+00:00",
+      "seconds": 4.214148,
+      "exit_code": 1,
+      "log": "20261026T175017-0d6511e2.log",
+      "record_sha256": "a2d2bd54d71e31bb0a8fe247d94c509724ec8e56eed90f5b287c721121627041",
+      "log_sha256": "0fa5ced189f4243e6e75c27580c6501f6170f38404140c5250bf4cf2ba5dd99d",
+      "test_count": 10,
+      "unittest_seconds": 3.635
+    },
+    "parent_green_after_fixes": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_series_adversarial.py"
+      ],
+      "started_at": "2026-10-26T17:52:37.864007+00:00",
+      "finished_at": "2026-10-26T17:52:41.319046+00:00",
+      "seconds": 3.455039,
+      "exit_code": 0,
+      "log": "20261026T175237-593b279e.log",
+      "record_sha256": "d819bf747d520406ce31c39eb5766a9522b85a7baf159a13a8d201dc7940f5b2",
+      "log_sha256": "2ac39c1654eec503a857bb8f10a8cbe15ee4ad9b6033d3b8df5a802a11ddcac0",
+      "test_count": 10,
+      "unittest_seconds": 2.885
+    },
+    "independent_current_adversarial": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_series_adversarial.py"
+      ],
+      "started_at": "2026-10-26T17:54:19.717437+00:00",
+      "finished_at": "2026-10-26T17:54:24.454171+00:00",
+      "seconds": 4.736734,
+      "exit_code": 0,
+      "log": "20261026T175419-be431365.log",
+      "record_sha256": "0033557f3a18318b69f652c99d3219434a27e235e8086fa8e2bf018e8025ba84",
+      "log_sha256": "3b0bc5145ce8940a8bc13337e199940c0e28cd37262ee5c507733770bf8f3edc",
+      "test_count": 10,
+      "unittest_seconds": 4.007
+    },
+    "independent_current_oracles": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_family_study_oracles.py"
+      ],
+      "started_at": "2026-10-26T17:54:19.698584+00:00",
+      "finished_at": "2026-10-26T17:54:23.071987+00:00",
+      "seconds": 3.373403,
+      "exit_code": 0,
+      "log": "20261026T175419-e911be06.log",
+      "record_sha256": "ee9a91232deedf642ff0e2828ab1df33c3dcaff6f13fa8cf5f450c10efef2786",
+      "log_sha256": "737f4135bd3f7128a2d44f266d90680ae1f2fe8ea90ea53afcaa20b6bde61c33",
+      "test_count": 13,
+      "unittest_seconds": 3.09
+    },
+    "whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-26T17:56:20.592630+00:00",
+      "finished_at": "2026-10-26T17:56:20.676873+00:00",
+      "seconds": 0.084243,
+      "exit_code": 0,
+      "log": "20261026T175620-effa9026.log",
+      "record_sha256": "1258895d73eac7cbbaaef85264f1a1531496d468766c05a08bd73d1b3d9a089e",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test_count": null,
+      "unittest_seconds": null
+    },
+    "unique_independent_tests": 23,
+    "oracle_timing": "The 13 fixed expectations were authored before reading the new production module. Production existed by first execution. Two selector fields were corrected from id to cohort_id without changing any numerical oracle; that failure is not claimed as a production defect.",
+    "red_green": "The later 10-case adversarial run showed exactly two assertion failures and one KeyError. The same tests pass after the three production corrections; no expected scientific result was weakened."
+  },
+  "fixed_oracles": {
+    "eight_response_positive": {
+      "worlds": 1024,
+      "cohorts": 22,
+      "patterns": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ]
+    },
+    "eight_response_nondirectional": {
+      "worlds": 1536,
+      "cohorts": 33
+    },
+    "boundary_union": "17 worlds with two erroneous supports plus 17 worlds with one erroneous negative yield 34 error worlds, not 51 component events.",
+    "missing_failure": "Missing replicate 5 and failed replicate 7 retain planned=256, observed=254 and point=null in every affected cohort.",
+    "development_target": "One planted component below four-fifths prevents nomination of the smaller target despite successful siblings."
+  },
+  "actual_lifecycle_status_at_review": "Parent-owned real four-cell development plus one final-world replay and recovery tests were still pending at review creation. Their source was reviewed, but no execution success from that pending run is claimed here.",
+  "resource_boundary": {
+    "prior_observed_64_row_family_stream_bytes": 23325061,
+    "illustrative_1024_times_same_stream_bytes": 23884862464,
+    "existing_aggregate_storage_limit_bytes": 4294967296,
+    "qualification": "Illustrative scaling of the earlier observed workload, not a guarantee that every scenario has identical size. Even raw-stream storage at that scale exceeds the current envelope before replay/materialization. No practical complete-series feasibility is established; resource-stop remains an honest outcome."
+  },
+  "limitations": [
+    "The 23 current tests include synthetic count records and host metadata plus mocked calculator results; they isolate invariants and do not themselves authenticate a complete generated series.",
+    "No complete 256-world-per-cell final assessment, real-market validity, model adequacy, heterogeneous original-AST truth coupling or full-process calibration is demonstrated.",
+    "Distinct deterministic PRNG seeds do not prove ideal statistical independence. Applicability declarations remain unverified.",
+    "No scientific freeze/allocation, protected market-outcome execution, N_min, profitability or live-capital authority follows.",
+    "Long-running parent lifecycle/legacy regression runs are intentionally excluded until their terminal outputs exist. This is not a full repository suite."
+  ],
+  "next_action": "Complete the pending actual lifecycle and legacy regression checks against these source hashes, retain any failures, and qualify full-series resource feasibility before claiming an executable complete calibration workload.",
+  "source_sha256": {
+    "tests/family_run_support.py": "145c60910c1998388df492d05c0fdf98f1e21ced996a148b673def61a8c2d643",
+    "tests/test_calibration_runs.py": "a17b94d95f2bb231c45aa809dcaa5415fc70ccdccba9560012dfcb357fa1e4f1",
+    "tests/test_calibration_study.py": "05f82722f78c103807778c26a4222fed6b069e5c43730281f057b56c7ab009ee",
+    "tests/test_family_series_adversarial.py": "bc54756f9983243db8a79562a350df8f139c61add330320f5f821d2afe623a22",
+    "tests/test_family_series_runs.py": "3023a52927c1052e2c82dad229f6cdf445cbbae4cbc566750d9768532b79bfe8",
+    "tests/test_family_study_dispatch.py": "f69766cf39d5fa5a8c1c0b01fa12e002bf59d306d720cb031704dfa662f09275",
+    "tests/test_family_study_oracles.py": "4457073ce9a432bebdc99a976be1b801a156404f7b02d9ef853d23bbcbea6e94",
+    "tests/test_information_study.py": "04f01a54b9fba7b37b6f3a20c954bb0740625bbb6bfe56724ff3065826dd8392",
+    "trading_researcher/binding.py": "bfb195ad9c1e27bd4ff8a8159cfd0a0b986f31565814ffa714f90e95daf36aaf",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "c172032e3c76a6dfaa69b67257e58d9ff0066adf82da03032eb547091e781c5a",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/coordination.py": "a0856d4d1ca6ebc5b1c4b8452b75f8ff563b8c77781e459d5d740974302cb4a9",
+    "trading_researcher/data_use.py": "b670913e14e446b7d38ba5b1c53886f9167235d6fb8b786a893379488b554794",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/family_models.py": "d0819d0e7b297daed74ac5b6afad7abfac83b57b3e66659ceb2c8c0307ab1d11",
+    "trading_researcher/family_pipeline.py": "7556797054fd143228a09bc31e28fa36fbd9ca9d706f4dd3ab38bb3e9ced2adf",
+    "trading_researcher/family_study.py": "9153cd667aed7bdad52226d6d33e9eba3b1cf529fc25a5fefd4eaae19ccf2ba0",
+    "trading_researcher/family_study_runs.py": "1e38a9bce9d9013a8b73e92e397bd9a667838cb400fbd6bc8e648e658763804f",
+    "trading_researcher/information_study.py": "817f9221f9a9de3ed0e6a203be3c06213c1c43d48c68910cee02cabe6b509866",
+    "trading_researcher/memory.py": "a569e4f695110cecc20c6a56eba147dbdf6c1c5fe8c51f1e6431e08f485fcacc",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "a6ded70258275d251d058053bd7a7bbb95fe824842a440b5a6af41d692024ae4",
+    "trading_researcher/revocations.py": "506cce427a17147cf41cc60f9322fe0f2a6ace2536b0198a8a6f1edac22eab08",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "2b470c26330c998e40b512dba06aa1a40b0aa2b2f7d2f861db8070569c8b9e3f",
+    "trading_researcher/study_pipeline.py": "0463903fe002e042e598bbd6ba176217626211144885491b26c76470e7772bf9",
+    "trading_researcher/study_runs.py": "0f9bc571f37e5cc556f0e148c62884bf0cec9e8e774101d27e12771465d5237c"
+  },
+  "verified_numerical_sources_unchanged": [
+    "trading_researcher/calibration.py",
+    "trading_researcher/calibration_study.py",
+    "trading_researcher/codec.py",
+    "trading_researcher/evaluation_policy.py",
+    "trading_researcher/stationary_bootstrap.py",
+    "trading_researcher/population_models.py",
+    "trading_researcher/family_models.py",
+    "trading_researcher/family_pipeline.py"
+  ],
+  "changed_by_reviewer": [
+    "tests/test_family_study_oracles.py",
+    "tests/test_family_series_adversarial.py",
+    ".trf-runtime/family-study-checks-2026-10-26/independent-review.json"
+  ],
+  "procedure_sha256": "595ecf8b44b8569a5942fdb0cc577f208cbde26e37aebfbe6e653fcbb39053a0"
+}

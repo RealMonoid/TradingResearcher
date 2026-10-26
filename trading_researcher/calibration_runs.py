@@ -1,7 +1,7 @@
 """Owned, protected final draws for the implemented single-claim estimator scope."""
 from copy import deepcopy
 
-from .calibration_study import make_final_manifest, count_plan, count_assessment, validate_count_envelope
+from . import calibration_study
 from .codec import canonical, decode, digest, integer, text
 from .errors import Conflict
 from .evaluation_policy import require
@@ -19,21 +19,37 @@ class CalibrationStudies(InformationStudies):
     _study_data_class='operations'
     _study_authority='conditional_single_claim_calibration_not_scientific_admission'
     _study_request_fields={'key','development_study_id','time_rows','seed','budget','cost_estimate','applicability'}
+    _calibration_policy=calibration_study
+    _calibration_identity_schema='single-claim-final-identity/1'
+    _calibration_scope='one_primary_binary_claim_estimator_only'
+    _mixed_truth_status='UNAVAILABLE'
+    _calibration_summary_schema='single-claim-final-calibration-summary/1'
+    _event_semantics='FIXED_SINGLE_CLAIM_OUTCOME_MAPPING'
+    _calibration_qualification=('Owned retained attempts and fixed event mapping. PRNG independence, population adequacy, '
+        'stress applicability, mixed-truth multi-claim coverage and scientific admission remain unverified.')
 
     def __init__(self,broker):self.broker=broker
     def __getattr__(self,name):return getattr(self.broker,name)
 
+    def _development_runner(self):return self.broker
+
+    def _validate_development_family(self,manifest):
+        require(manifest['assigned']['primary_count']==1,
+            'Coherent mixed-truth multi-claim calibration is unavailable on the single-claim route')
+
+    def _calibration_identity_extra(self,manifest):return {}
+
     def _development(self,request):
         text(request['development_study_id'],'development study')
-        study=self.broker._study(request['development_study_id'])
+        runner=self._development_runner()
+        study=runner._study(request['development_study_id'])
         self.broker._require_usable_dependencies(study['id'])
-        view=self.broker._study_view(study)
+        view=runner._study_view(study)
         require(view['status']=='COMPLETE','Final calibration requires a complete owned development study')
         integer(request['time_rows'],'fixed target',1)
         require(request['time_rows'] in study['body']['manifest']['profile']['targets'],
             'Final target must have been studied in development')
-        require(study['body']['manifest']['assigned']['primary_count']==1,
-            'Coherent mixed-truth multi-claim calibration is unavailable')
+        self._validate_development_family(study['body']['manifest'])
         return study,view
 
     def _study_identity(self,request):
@@ -45,11 +61,11 @@ class CalibrationStudies(InformationStudies):
         payload['diagnostics'].pop('case_report_hash',None)
         specs=[{k:v for k,v in spec.items() if k!='rationale'} for spec in manifest['profile']['specifications']]
         require(len({digest(spec) for spec in specs})==len(specs),'Duplicate numerical stress specifications')
-        return digest({'schema':'single-claim-final-identity/1','payload':payload,
+        return digest({'schema':self._calibration_identity_schema,'payload':payload,
             'calculation_source':body['source_footprint'],
             'assigned':{k:v for k,v in manifest['assigned'].items() if k!='input_binding'},
             'specifications':sorted(specs,key=canonical),'time_rows':request['time_rows'],
-            'mc_policy':manifest['mc_policy']})
+            'mc_policy':manifest['mc_policy'],**self._calibration_identity_extra(manifest)})
 
     def _study_existing_request(self,existing,request):
         fixed=lambda value:{k:v for k,v in value.items() if k not in ('key','development_study_id')}
@@ -62,8 +78,8 @@ class CalibrationStudies(InformationStudies):
         profile=deepcopy(body['manifest']['profile'])
         profile.update(targets=[request['time_rows']],worlds_per_cell=256,seed=request['seed'],
             budget=request['budget'],cost_estimate=request['cost_estimate'])
-        manifest=make_final_manifest(body['manifest']['assigned'],profile)
-        validate_count_envelope(manifest,request['applicability'])
+        manifest=self._calibration_policy.make_final_manifest(body['manifest']['assigned'],profile)
+        self._calibration_policy.validate_count_envelope(manifest,request['applicability'])
         refs=sorted(set(development['source_refs'])|{development['id'],cost['id']}|ancestry)
         exposure=sorted(set(development['exposure'])|set(refs))
         return body['payload'],manifest,refs,exposure
@@ -78,19 +94,31 @@ class CalibrationStudies(InformationStudies):
         seeds={w[key] for w in manifest['worlds'] for key in ('population_seed','bootstrap_seed')}
         ids={w['id'] for w in manifest['worlds']}
         compared=[]
-        for prior in [*self.broker._study_artifacts(),*self._study_artifacts()]:
-            old=prior['body']['manifest']['worlds']
+        for prior,old in self._recorded_calibration_worlds():
             require(not seeds.intersection(w[key] for w in old for key in ('population_seed','bootstrap_seed'))
                 and not ids.intersection(w['id'] for w in old),'Recorded development/final seed or world collision')
             compared.append(prior['id'])
         return {'assessment_source_footprint':LOADED_SOURCE,
-            'count_plan_hash':digest(count_plan(manifest,request['applicability'])),
+            'count_plan_hash':digest(self._calibration_policy.count_plan(manifest,request['applicability'])),
             'target_basis':'development_candidate' if view['summary']['candidate_time_rows']==request['time_rows']
                 else 'studied_sensitivity_cutoff_not_n_min',
             'seed_disjoint_from_recorded_study_ids':sorted(compared),
             'freshness_qualification':'Distinct recorded PRNG seeds and world IDs; independent sampling law not certified.',
-            'calibration_scope':'one_primary_binary_claim_estimator_only',
-            'multi_claim_mixed_truth_calibration':'UNAVAILABLE'}
+            'calibration_scope':self._calibration_scope,
+            'multi_claim_mixed_truth_calibration':self._mixed_truth_status}
+
+    def _recorded_calibration_worlds(self):
+        # Retained inputs include failed and not-yet-executed reservations.
+        study_schemas={'information-study-input/1','evaluator-calibration-input/1',
+            'family-study-input/1','family-calibration-input/1'}
+        for row in self._db.execute('SELECT id,envelope FROM artifacts'):
+            artifact=self._artifact(row['id']);body=artifact.get('body')
+            if artifact['creator']!=artifact['origin'] or artifact['creator']!='controller' or type(body) is not dict:continue
+            if body.get('schema') in study_schemas:yield artifact,body['manifest']['worlds']
+            elif body.get('schema') in ('population-world-input/1','population-family-input/1'):
+                payload=body['payload']
+                yield artifact,[{'id':artifact['id'],'population_seed':payload['seed'],
+                    'bootstrap_seed':payload.get('bootstrap_seed',payload['seed'])}]
 
     def _study_input_ref(self,study):return study['body']['request']['development_study_id']
 
@@ -102,7 +130,7 @@ class CalibrationStudies(InformationStudies):
 
     def _study_summary(self,study,records,results):
         body=study['body'];manifest=body['manifest'];summary=summarize(manifest,records)
-        summary.update(schema='single-claim-final-calibration-summary/1',
+        summary.update(schema=self._calibration_summary_schema,
             candidate_qualification='fixed_studied_target_not_n_min',target_basis=body['target_basis'])
         # Inspection and orphan recovery must still work after a host update.
         # Refuse a new count interpretation instead of silently changing it.
@@ -123,17 +151,16 @@ class CalibrationStudies(InformationStudies):
             else:
                 artifact=self._artifact(identity);attempt=artifact['body']
                 require(artifact['origin']==artifact['creator']=='controller' and artifact['data_class']=='operations'
-                    and attempt['schema']==RESULT and attempt['study_id']==study['id']
+                    and attempt['schema']==self._study_result_schema and attempt['study_id']==study['id']
                     and attempt['outcome']==outcome and attempt['settlement']==details['settlement'],
                     'Final event differs from its owned attempt')
                 sources[outcome['world_id']]=identity
             outcomes[outcome['world_id']]=outcome
         require(outcomes=={r['world_id']:r for r in records},'Final event inventory differs')
-        assessment=count_assessment(manifest,records,sources,body['request']['applicability'])
+        assessment=self._calibration_policy.count_assessment(manifest,records,sources,body['request']['applicability'])
         require(assessment['plan_hash']==body['count_plan_hash'],'Frozen count plan differs')
         assessment.update(input_authentication='OWNED_REPLAYED_ATTEMPTS',
-            freshness='RECORDED_SEED_DISJOINTNESS_ONLY',event_semantics='FIXED_SINGLE_CLAIM_OUTCOME_MAPPING',
-            qualification='Owned retained attempts and fixed event mapping. PRNG independence, population adequacy, '
-                'stress applicability, mixed-truth multi-claim coverage and scientific admission remain unverified.')
+            freshness='RECORDED_SEED_DISJOINTNESS_ONLY',event_semantics=self._event_semantics,
+            qualification=self._calibration_qualification)
         summary['count_assessment']=assessment
         return summary

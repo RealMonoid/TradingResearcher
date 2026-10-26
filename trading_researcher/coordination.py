@@ -142,6 +142,9 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
             self._recover_information_studies()
             from .calibration_runs import CalibrationStudies
             CalibrationStudies(self)._recover_information_studies()
+            from .family_study_runs import FamilyStudies, FamilyCalibrationStudies
+            FamilyStudies(self)._recover_information_studies()
+            FamilyCalibrationStudies(self)._recover_information_studies()
         except BaseException:
             self.close()
             raise
@@ -186,6 +189,16 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
         return dict(row)
 
     def call(self, token, op, **args):
+        if op in ('prepare_family_study','advance_family_study','inspect_family_study',
+                  'prepare_family_calibration','advance_family_calibration','inspect_family_calibration'):
+            from .family_study_runs import FamilyStudies, FamilyCalibrationStudies
+            final=op.endswith('calibration')
+            runner=FamilyCalibrationStudies(self) if final else FamilyStudies(self)
+            if op.startswith('prepare_'):return runner._prepare_information_study_external(token,args)
+            key='calibration_id' if final else 'study_id'
+            if set(args)!={key}:raise Invalid('Exact family series identity required')
+            method=runner._advance_information_study_external if op.startswith('advance_') else runner._inspect_information_study_external
+            return method(token,{'study_id':args[key]})
         if op == 'invoke_auxiliary_provider':
             return self._invoke_auxiliary_provider_external(token, args)
         if op in ('prepare_evaluator_calibration','advance_evaluator_calibration','inspect_evaluator_calibration'):
@@ -368,7 +381,8 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
             if current['id'] in seen:continue
             seen.add(current['id']);body=current.get('body')
             if type(body) is dict and str(body.get('schema','')).startswith(
-                    ('evaluator-calibration-input/','evaluator-calibration-attempt/')):
+                    ('evaluator-calibration-input/','evaluator-calibration-attempt/',
+                     'family-calibration-input/','family-calibration-attempt/')):
                 raise Denied('Reserved final calibration and its descendants are unavailable to research roles')
             if not allow_private_targets and type(body) is dict and body.get('schema')=='protected-data-binding/1':
                 raise Denied('Private target bindings and their descendants are unavailable to research roles')

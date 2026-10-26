@@ -11,10 +11,10 @@ PACKAGES={'reference-source-package/1','feature-source-package/1','binding-sourc
 VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1',
     'research-data-target/1','protected-data-binding/1'}
 REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1',
-    'population-family-input/1'}
+    'population-family-input/1','family-study-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
     'development-information-study-attempt/1','evaluator-calibration-attempt/1','development-measurement/1',
-    'development-population-family/1'}
+    'development-population-family/1','family-study-attempt/1','family-calibration-attempt/1'}
 
 
 def version_selector(artifact):
@@ -114,7 +114,7 @@ class DependencyRevocations:
         if schema in REQUEST_INPUTS:
             request=body['request']
             return [request[k] for k in ('plan_id','execution_id','diagnostics_id') if k in request]
-        if schema=='evaluator-calibration-input/1':return [body['request']['development_study_id']]
+        if schema in ('evaluator-calibration-input/1','family-calibration-input/1'):return [body['request']['development_study_id']]
         if schema=='development-measurement-input/1':return [body['request']['snapshot_id']]
         if schema in RESULT_INPUTS:return [body['input_capsule_id']] if 'input_capsule_id' in body else [body['study_id']]
         return None

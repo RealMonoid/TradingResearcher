@@ -250,6 +250,7 @@ class ResearchMemory:
                     'population-family-input/1','development-population-family/1',
                     'information-study-input/1','development-information-study-attempt/1',
                     'evaluator-calibration-input/1','evaluator-calibration-attempt/1',
+                    'family-study-input/1','family-study-attempt/1','family-calibration-input/1','family-calibration-attempt/1',
                     'development-measurement-input/1','development-measurement/1'):
                 latest = max(latest, integer(body.get('created_at'), 'retained source creation time'))
             for identity in current['exposure']:

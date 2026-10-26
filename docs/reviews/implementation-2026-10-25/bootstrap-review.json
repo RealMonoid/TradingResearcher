@@ -1,0 +1,483 @@
+{
+  "schema": "independent-bootstrap-review/1",
+  "review_date": "2026-10-25",
+  "reviewer": "Independent memory_boundary_review agent",
+  "purpose": "Independently assess the adopted joint stationary-block computational candidate and its new owned development-only persistence route, without granting calibrated inference or scientific admission.",
+  "conclusion": {
+    "status": "NO_REMAINING_BLOCKER_FOUND_WITHIN_REVIEWED_SCOPE",
+    "finding": "Twenty-four independent methods pass after ten demonstrated counterexamples were corrected. The kernel preserves the joint full-grid resampling unit, canonical row-weighted contrast, fixed draw ordinals, undefined draws, bounded arithmetic and explicit stopping. Owned stopped prefixes now receive strict metadata/stream validation, while successful calculations retain separate process replay.",
+    "scientific_certificate": false,
+    "calibration_performed": false,
+    "whole_framework_verdict": false
+  },
+  "authority_and_sources": {
+    "canonical": {
+      "path": "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+      "sha256": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+      "sections": [
+        "5.3 dependence/uncertainty",
+        "5.4 information/stopping",
+        "8 persistence",
+        "11 separate success/calibration gates"
+      ]
+    },
+    "primary_method_sources": [
+      {
+        "url": "https://users.ssc.wisc.edu/~behansen/718/Politis%20Romano.pdf",
+        "use": "Politis and Romano 1994, section 2: stationary resampling uses random geometric block lengths and circular continuation."
+      },
+      {
+        "url": "https://www.ssc.wisc.edu/~bhansen/718/RomanoWolf2005.pdf",
+        "use": "Romano and Wolf 2005, Appendix B.4: uniform block starts, geometric mean block length and truncation to the original number of time positions."
+      }
+    ],
+    "source_qualification": "These sources corroborate the algorithm family and assumptions. They do not validate this implementation, the pilot data, finite-sample coverage or profitability.",
+    "preimplementation_expectation": "The numeric probe with time 0 outcomes (0,C=true),(10,C=unknown), time 1 outcome (4,C=true), original effect -8/3, and repeated-time effects -5 and 0 was sent before inspecting the sampler. Other adversarial tests were designed during implementation review; this is not represented as a wholly preimplementation golden bundle."
+  },
+  "reviewed_files": [
+    "trading_researcher/stationary_bootstrap.py",
+    "trading_researcher/bootstrap_runs.py",
+    "trading_researcher/evaluation_policy.py",
+    "trading_researcher/outcomes.py",
+    "trading_researcher/binding.py",
+    "trading_researcher/evaluation_plans.py",
+    "trading_researcher/binance_normalize.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/storage.py",
+    "trading_researcher/memory.py",
+    "tests/bootstrap_support.py",
+    "tests/test_stationary_bootstrap.py",
+    "tests/test_bootstrap_runs.py"
+  ],
+  "reviewer_changed_files": [
+    {
+      "path": "tests/test_stationary_bootstrap_adversarial.py",
+      "change": "New thirteen-method independent kernel suite, including hand-calculated arithmetic and full 19,999-draw paths."
+    },
+    {
+      "path": "tests/test_bootstrap_runs_adversarial.py",
+      "change": "New eleven-method independent owned-route/envelope/lifecycle suite."
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/bootstrap-review.json",
+      "change": "New audit record; earlier reports preserved."
+    }
+  ],
+  "runtime_files_modified_by_reviewer": [],
+  "pinned_fixtures_modified_by_reviewer": [],
+  "implementation_boundary": {
+    "sampling_unit": "One complete aligned timestamp bucket containing every instrument and its original eligibility/condition/outcome. Zero-contribution time buckets remain on the full grid. Missing calendar observations are not compressed into adjacent pseudo-bars.",
+    "contrast": "Within each resample, aggregate the exact eligible scope sum/count and condition-true sum/count using the same timestamp multiplicities; unknown C remains in the scope baseline. No condition-versus-complement substitution or equal-timestamp averaging is introduced.",
+    "geometry": "Uniform start positions; geometric mean length L with restart probability represented through the declared log transform; circular continuation; raw geometric length clipped to the remaining sample length before summation. L=1 has a direct one-row specialization.",
+    "finite_design": "Deduplicated upward-rounded half/base/double mean lengths, with the adopted outcome-overlap lower bound. Exactly 19,999 draws per required length if computation completes. Undefined denominators retain their ordinals and prevent a combined inferential interval.",
+    "numerics": "Sums, each mean, effects and interval arithmetic use exact rational values within the declared 8,192-bit envelope. Geometric sampling uses a 53-bit uniform and libm log transform; it is explicitly a numerical approximation, not an exact probability-law certificate.",
+    "randomness": "Explicit supported Python MT19937 identity/runtime version and bounded nonnegative integer seed. Per-length seed is SHA256 of the canonical sampler/master-seed/length object. No automatic reseeding or successful-draw replacement.",
+    "stopping": "Cooperative cancellation/time checks and an overall segment budget; an interrupted partial draw is separate from completed defined/undefined replicates. Final callback, interval and enclosing phases cannot turn an expired/cancelled calculation into a completed result.",
+    "owned_route": "Operator-only run_development_bootstrap binds an owned development policy draft and its declared exact descriptive execution, case blob, immutable source capsule and original request before launching a fresh isolated child.",
+    "retention": "Admitted failed keys preserve request/source identity. Same-key changed request conflicts. Retained retries load archived calculation bytes rather than checkout calculation sources. Prelaunch transaction failure creates no committed input capsule or child launch.",
+    "verification": "All returned paths receive schema, bound identity, counters, ordinals, canonical draw-stream, digest and interval-arithmetic checks. Non-resource results additionally undergo exact replay in a separate process. RESOURCE_STOP prefixes explicitly retain verification=null and partial_numeric_replay_performed=false.",
+    "authority": "Every computational result remains scientifically unready, with classification_permitted=false. No calibration, N_min, scientific allocation/freeze, protected assessment permission, D087 event or evidence publication is supplied."
+  },
+  "kernel_findings": [
+    {
+      "id": "BOOT-K1",
+      "title": "Boolean state counters were accepted as integer metadata",
+      "location": {
+        "path": "trading_researcher/stationary_bootstrap.py",
+        "line": 117
+      },
+      "reproduction": "In a genuine one-instrument reference report with ELIGIBLE=1 and PARTITION_BOUNDARY=1, replacing both counters with true passed the inherited loose dictionary equality check.",
+      "resolution": "Kernel admission now requires exact nonnegative integer counter types.",
+      "regression": "test_boolean_state_counts_are_not_integer_metadata",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "BOOT-K2",
+      "title": "Cancellation raised by the final draw sink was ignored",
+      "location": {
+        "path": "trading_researcher/stationary_bootstrap.py",
+        "line": 189
+      },
+      "reproduction": "The on_draw callback set the stop predicate at length 2, draw index 19998. The old kernel still returned COMPUTED_UNCALIBRATED with a constructed interval.",
+      "resolution": "Stop/time checks now occur after each completed draw/callback and after interval/enclosing work; interrupted completion retains RESOURCE_STOP without a combined interval.",
+      "regression": "test_final_draw_cancellation_is_checked_before_interval_publication",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "BOOT-K3",
+      "title": "Deadline expiry inside final interval construction was ignored",
+      "location": {
+        "path": "trading_researcher/stationary_bootstrap.py",
+        "line": 200
+      },
+      "reproduction": "A controlled monotonic clock crossed the cap during the final basic_interval call; the previous kernel still returned completed computation.",
+      "resolution": "The final interval/enclosure phases recheck deadline and clear incomplete combined output.",
+      "regression": "test_deadline_crossed_in_final_interval_cannot_return_completed_result",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "BOOT-K4",
+      "title": "Oversized equal means could cancel into an accepted zero effect",
+      "location": {
+        "path": "trading_researcher/stationary_bootstrap.py",
+        "line": 175
+      },
+      "reproduction": "A genuine reference report uses p=2**8191+1 through bounded AST literals. A possible resample yields both means 1/(4*p), whose denominator has 8194 bits. Their difference is zero, so bounding only the difference retained a draw outside the declared per-statistic envelope.",
+      "resolution": "The conditional and scope means are separately bounded before subtraction and draw retention.",
+      "regression": "test_equal_oversized_means_cannot_hide_numeric_envelope_failure",
+      "status": "RESOLVED"
+    }
+  ],
+  "owned_result_findings": [
+    {
+      "id": "BOOT-O1",
+      "title": "Minimal RESOURCE_STOP response bypassed required result schema",
+      "location": {
+        "path": "trading_researcher/bootstrap_runs.py",
+        "line": 31
+      },
+      "reproduction": "After a real isolated child returned a resource stop, a boundary fault replaced its result with only status and two false authority flags. The owned operation committed it.",
+      "resolution": "Every path now validates the exact required result schema before commitment.",
+      "regression": "test_minimal_resource_stop_cannot_bypass_the_result_schema",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "BOOT-O2",
+      "title": "Stopped response could change input identity and seed",
+      "location": {
+        "path": "trading_researcher/bootstrap_runs.py",
+        "line": 40
+      },
+      "reproduction": "A real stopped response's case_report_hash and master seed were altered while retaining its valid outer source/runtime envelope; the prior route committed the mismatch.",
+      "resolution": "Header/case hashes, exact design/limits/numerics, derived seeds and retained descriptive input are bound by canonical comparisons.",
+      "regression": "test_resource_stop_cannot_change_bound_input_or_seed",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "BOOT-O3",
+      "title": "Stopped counters could contradict the actual retained prefix",
+      "location": {
+        "path": "trading_researcher/bootstrap_runs.py",
+        "line": 61
+      },
+      "reproduction": "A stopped response claimed 19,999 defined/attempted draws despite its short or empty stream. The earlier route committed the counters without validating the stream.",
+      "resolution": "Sensitivity order, ordinal coverage, defined/undefined/interrupted accounting, stream length, hashes and segment usage are checked.",
+      "regression": "test_resource_stop_counters_cannot_contradict_retained_draw_prefix",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "BOOT-O4",
+      "title": "Rehashed malformed draw suffix could become an owned blob",
+      "location": {
+        "path": "trading_researcher/bootstrap_runs.py",
+        "line": 74
+      },
+      "reproduction": "A malformed JSON object was appended to a real stopped draw stream and the outer blob hash/size were updated. The prior route accepted the rehashed corruption.",
+      "resolution": "Every retained draw has canonical bytes and exact fields/types/ordinal, and trailing bytes are denied.",
+      "regression": "test_resource_stop_cannot_commit_a_rehashed_malformed_draw_suffix",
+      "status": "RESOLVED"
+    }
+  ],
+  "additional_state_cause_findings": [
+    {
+      "id": "BOOT-O5",
+      "title": "Pending input could be relabelled as a resource stop",
+      "location": {
+        "path": "trading_researcher/bootstrap_runs.py",
+        "line": 52
+      },
+      "reproduction": "A genuine outcomes_pending INPUT_GAP with empty draw stream was changed to RESOURCE_STOP/caller_cancelled and accepted by the first strict validator revision.",
+      "resolution": "A non-descriptive retained input must remain INPUT_GAP.",
+      "regression": "test_pending_input_cannot_be_relabelled_as_a_resource_stop",
+      "status": "RESOLVED"
+    },
+    {
+      "id": "BOOT-O6",
+      "title": "Segment exhaustion could be claimed with no consumed segments",
+      "location": {
+        "path": "trading_researcher/bootstrap_runs.py",
+        "line": 133
+      },
+      "reproduction": "A pre-cancelled result with zero sampled segments was changed to computation_segment_limit despite max_segments=1; the first strict validator accepted it.",
+      "resolution": "A segment-limit stop must account for complete plus interrupted sampled segments reaching the exact configured cap.",
+      "regression": "test_segment_exhaustion_cannot_be_claimed_before_using_the_cap",
+      "status": "RESOLVED"
+    }
+  ],
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_stationary_bootstrap_adversarial.py -v",
+      "stage": "initial kernel red",
+      "tests": 13,
+      "failures": 3,
+      "errors": 1,
+      "seconds": 9.72,
+      "exit_code": 1,
+      "qualification": "Three genuine assertion failures: integer metadata, final cancellation and final-interval deadline. The numeric fixture initially exceeded the preexisting 100-character literal admission bound before entering the sampler; that one error was a test construction issue."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_stationary_bootstrap_adversarial.py -k equal_oversized -v",
+      "stage": "corrected numeric regression red",
+      "tests": 1,
+      "failures": 1,
+      "errors": 0,
+      "seconds": 0.004,
+      "exit_code": 1,
+      "qualification": "After constructing p using a balanced AST of admitted literals, the genuine oversized-mean counterexample reached the sampler and failed its expected numeric stop. The original report's descriptive effect was exactly zero and admitted."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_stationary_bootstrap_adversarial.py -v",
+      "stage": "first independent kernel green",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 10.666,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bootstrap_runs_adversarial.py -v",
+      "stage": "initial owned-route red",
+      "tests": 9,
+      "failures": 4,
+      "errors": 1,
+      "seconds": 87.55,
+      "exit_code": 1,
+      "qualification": "Four genuine committed-response failures are listed separately above. The one rollback-hook error was a test parameter named kind colliding with an event detail of the same name; the hook was renamed event_name. It was not a runtime transaction defect. All 34 captured source/test/helper files matched before and after this run."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bootstrap_runs_adversarial.py -k BootstrapEnvelopeAdversarialTests -v",
+      "stage": "additional pure-validator cause/state red",
+      "tests": 2,
+      "failures": 2,
+      "errors": 0,
+      "seconds": 0.006,
+      "exit_code": 1
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_stationary_bootstrap_adversarial.py -v",
+      "stage": "final independent kernel green",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 10.184,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bootstrap_runs_adversarial.py -v",
+      "stage": "final independent owned/envelope/lifecycle green",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 85.898,
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "stage": "post-final-run whitespace check",
+      "exit_code": 0,
+      "qualification": "Line-ending conversion warnings only; untracked authored files also require the separate JSON/AST/whitespace gate."
+    }
+  ],
+  "additional_verified_probes": [
+    "Hand-calculated original -8/3 and resampled -5/0 contrasts; condition-unknown rows remain baseline contributions.",
+    "All instruments use a single timestamp draw; zero-contribution grid slots remain present; no per-time average reweighting.",
+    "L=1 uses no geometric floating draw; a very long raw block is clipped before circular summation.",
+    "Contradictory completion metadata, case reordering, duplicate instrument slots, inconsistent counters and noncanonical rational values are rejected.",
+    "Full 19,999-draw paths run without changing MAX_RESAMPLES. Undefined draw ordinals remain present, and exact canonical per-length stream hashes reproduce across runs.",
+    "An interrupted prefix does not become an undefined completed draw; sink exceptions propagate without fabricated completion.",
+    "Seed/algorithm/runtime and resource scalar admission are type-strict and bounded.",
+    "Caller input and draw-callback mutation cannot change detached request/design/limits or already hashed draw bytes.",
+    "An alternative genuine owned execution cannot substitute for the exact plan's declared diagnostic before dependent bytes are loaded.",
+    "Failed admitted requests retain source and request keys; retained replay does not consult checkout calculation bytes.",
+    "Prelaunch transaction failure rolls back the capsule and starts no child.",
+    "Late caller mutation cannot rebind the admitted owned request.",
+    "An actual sleeping child under an explicit short timeout is killed and reaped."
+  ],
+  "source_captures": {
+    "kernel_initial_red": {
+      "trading_researcher/stationary_bootstrap.py": "360d07418272c3cbdee27396995c005ff974ff0bdf3e07fa9e1da1b1b3dec309",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "tests/test_stationary_bootstrap_adversarial.py": "eec4efb57ef9ab4db7aeaf5a0cbcc81456177df9c626fb644a220a126f93c88f",
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540"
+    },
+    "numeric_red_qualification": "The pre-fix kernel hash was captured before the initial red suite. The parent held that runtime stable through the corrected numeric red; the test's balanced-literal repair was later captured as fa4a8eb0f9a069f81a27b92e5c758aee857de70136208506e7618199b703a5b0. No separate before/after source-hash command is claimed for the 0.004-second numeric-only invocation.",
+    "owned_initial_red_before": {
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/test_bootstrap_runs.py": "12271143086ae821de04b599109589bcc0d4feb60e57da271f1da458c131f9fc",
+      "tests/test_bootstrap_runs_adversarial.py": "795393966108f25f58df68d619495a2de41fc289175e92cbd9b2d5654fae22cb",
+      "tests/test_stationary_bootstrap_adversarial.py": "fa4a8eb0f9a069f81a27b92e5c758aee857de70136208506e7618199b703a5b0",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "9a01d833c7d8f49c615f3d27ae45ea950649f4236e35df13eea8a1ce66f9f02f",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c38f734a747a2b3730d7ea80c45296f651a0ffc185dc4498810715c01fa90edd",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "owned_initial_red_after": {
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/test_bootstrap_runs.py": "12271143086ae821de04b599109589bcc0d4feb60e57da271f1da458c131f9fc",
+      "tests/test_bootstrap_runs_adversarial.py": "795393966108f25f58df68d619495a2de41fc289175e92cbd9b2d5654fae22cb",
+      "tests/test_stationary_bootstrap_adversarial.py": "fa4a8eb0f9a069f81a27b92e5c758aee857de70136208506e7618199b703a5b0",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "9a01d833c7d8f49c615f3d27ae45ea950649f4236e35df13eea8a1ce66f9f02f",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c38f734a747a2b3730d7ea80c45296f651a0ffc185dc4498810715c01fa90edd",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "owned_initial_red_equal": true,
+    "cause_guard_red": {
+      "trading_researcher/bootstrap_runs.py": "11d157e197944897de7615e45796c363b5b1106f79179e215bb80c159c82bf0b",
+      "trading_researcher/stationary_bootstrap.py": "c38f734a747a2b3730d7ea80c45296f651a0ffc185dc4498810715c01fa90edd",
+      "tests/test_bootstrap_runs_adversarial.py": "1f01bfac83b013f2daef8d7ef8ec42c8ae27630ed7e10b82d7e64abe69f0ddac"
+    },
+    "final_before": {
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/test_bootstrap_runs.py": "12271143086ae821de04b599109589bcc0d4feb60e57da271f1da458c131f9fc",
+      "tests/test_bootstrap_runs_adversarial.py": "1f01bfac83b013f2daef8d7ef8ec42c8ae27630ed7e10b82d7e64abe69f0ddac",
+      "tests/test_stationary_bootstrap.py": "ff74e2bef4aeb520308a5e98d09634dddd9aa601e6a3430d34ab3b3916455fb8",
+      "tests/test_stationary_bootstrap_adversarial.py": "fa4a8eb0f9a069f81a27b92e5c758aee857de70136208506e7618199b703a5b0",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "4d086f3c75f249b81252f8082e03866c87e03cfa03ba0b27a342895a35e3e29d",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c38f734a747a2b3730d7ea80c45296f651a0ffc185dc4498810715c01fa90edd",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "final_after": {
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/test_bootstrap_runs.py": "12271143086ae821de04b599109589bcc0d4feb60e57da271f1da458c131f9fc",
+      "tests/test_bootstrap_runs_adversarial.py": "1f01bfac83b013f2daef8d7ef8ec42c8ae27630ed7e10b82d7e64abe69f0ddac",
+      "tests/test_stationary_bootstrap.py": "ff74e2bef4aeb520308a5e98d09634dddd9aa601e6a3430d34ab3b3916455fb8",
+      "tests/test_stationary_bootstrap_adversarial.py": "fa4a8eb0f9a069f81a27b92e5c758aee857de70136208506e7618199b703a5b0",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "4d086f3c75f249b81252f8082e03866c87e03cfa03ba0b27a342895a35e3e29d",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c38f734a747a2b3730d7ea80c45296f651a0ffc185dc4498810715c01fa90edd",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "final_equal": true,
+    "final_file_count": 35
+  },
+  "preserved_fixed_artifacts": {
+    "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+    "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+    "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0"
+  },
+  "remaining_boundaries": [
+    "Conformance and deterministic replay are not statistical calibration. No marginal coverage, boundary error rate, power, N_min, stationarity, dependence adequacy or rare-event adequacy has been established.",
+    "The approved section 11 final calibration worlds, separate final seeds, 256-dataset requirements and uncertainty criteria remain a distinct unfinished step; bootstrap replicate counts are not independent empirical observations.",
+    "The finite-uniform/libm geometric transform is explicitly approximate. This review does not certify its probability-law error or cross-platform native-library reproducibility.",
+    "Pure-kernel time limits are cooperative around bounded operations, not OS preemption of every Python arithmetic/sort/callback. The owned child additionally has a hard process lifecycle envelope. Parent admission, source staging and final integrity/commit work must not be confused with the kernel's internal clock.",
+    "RESOURCE_STOP prefixes receive structural/input/stream and applicable interval-arithmetic validation only. Their paths and draw values are not independently numerically replayed. They remain incomplete, have no combined interval, verification is null, and cannot supply scientific admission.",
+    "The independent owned suite emphasized actual stopped children, retention, malformed responses and failure paths. The complete owned separate-replay path was inspected and is covered by the parent's positive test file; this report does not relabel that parent's execution as an independently run positive suite.",
+    "No new independent HTTP RPC, full backup/restore, physical power-loss or real-process registry crash test was performed specifically for bootstrap. Existing storage/recovery infrastructure is reused.",
+    "The local operator and installed handlers remain trusted. Source/hash binding and child processes are not an OS sandbox against malicious same-account code or database mutation.",
+    "No paid model/provider, actual market return study, protected assessment/corroboration evaluation, scientific freeze/allocation, evidence release, D087 event or capital authority was exercised.",
+    "The whole repository suite and synthetic scale probe are separate parent evidence; their counts/timings are not included in the twenty-four independent passing methods reported here."
+  ],
+  "next_action": "Run the full regression and documentation/preservation gates on the pinned stable source, then continue the explicit development-information and independent calibration gates before any inferential or scientific adoption.",
+  "activity_notes": "Only the two new independent test files and this new audit JSON were authored. Earlier reports and pinned fixtures were not edited. No external messages, paid providers or new blocked cleanup operation occurred."
+}

@@ -1,0 +1,215 @@
+{
+  "schema": "independent-implementation-review/1",
+  "date": "2026-10-25",
+  "reviewer": "information_review",
+  "status": "PASS_BOUNDED_OFFLINE_CHECKPOINT",
+  "purpose": "Verify opt-in version-2 measurement-result presentation while retaining exact raw results, exact model-visible bodies, legacy behavior and conservative failure ordering.",
+  "source_sha256": {
+    "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/research_calls.py": "3ae55e37f9237eee2f656408ef321fa1c8f6ebfda842997eccc8c9dcc6e6f96f",
+    "trading_researcher/measurements.py": "239b0a0ca39885a3aa3347d14f250404bf719b4a39b3f6318b2d3d40773b3be2"
+  },
+  "test_sha256": {
+    "tests/test_context_views_adversarial.py": "09861ac11240077e4372e639d0cbf6f8658b22928a5ae9922adea2f4d8b33474",
+    "tests/test_measurement_context_views_adversarial.py": "b89119decea02b546c3da3941728bcbb8380a9a8b8fcc93254f72c898e210288"
+  },
+  "protected_artifacts_sha256": {
+    "docs/reviews/implementation-2026-10-25/provider-usage-review.json": "a8615302f37456ef29ee203dd37d58cd1e0d54479c5bdde31fdd85fb8048350d",
+    "docs/reviews/implementation-2026-10-25/openai-provider-review.json": "de53f8bb99b37538375ed1051e8b0d522dfae6c3030dcff5da0663e17c07be09",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-baseline.json": "3adfb4f50628ebaaa2349d872422523a91a352437d05011e847347642e14e215",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+    "docs/reviews/implementation-2026-10-25/baseline.json": "0938c679b0c76b9ae3f12f9b8423445b264c30b4f59c9b37d4cc8faa40d0c879",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-results.json": "12d2bb8f83bc1d2f99779cfaed78a5bfccc486578986f0d07e412c0ba3532b57",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+    "docs/reviews/implementation-2026-10-25/binance-registry-retention.json": "344746c5c7591569cb20741d3095bb1a1ddc7e37358349486e2f409439559ad9",
+    "docs/reviews/implementation-2026-10-25/binance-source-inventory.json": "a6d7198d0b0a350e123a6e856825e46cd7a3b7e9c138c2c0ae5a57d5c8cc513b",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+    "docs/reviews/implementation-2026-10-25/bootstrap-baseline.json": "2b4dba278b2c2db67b182f594549cd843ed8d851c1579250f305eaa058dd39d1",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+    "docs/reviews/implementation-2026-10-25/data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+    "docs/reviews/implementation-2026-10-25/feature-results.json": "6edf1dcb1d4a777b85bfafc358bd4c36bac6062bf4a2f3cbfb539e20d59ed39a",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/information-planning-baseline.json": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+    "docs/reviews/implementation-2026-10-25/mc-stability-baseline.json": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+    "docs/reviews/implementation-2026-10-25/measurement-review.json": "b3477a873c0b4967152176d998ffcbf20c218ace9dd970ca1cba88698b0e51c6",
+    "docs/reviews/implementation-2026-10-25/measurement-verification.json": "ffd1c6ebdfa220ff795a36ea13a7e276b950f3d6b03c325791d13a64d58eab22",
+    "docs/reviews/implementation-2026-10-25/memory-preservation.json": "445a51780caca04b35ddd09a8addf1ea3f0fdd6ab7c8d5e09efea4ad5dbb9efc",
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-baseline.json": "bbe364a8d449fc3e09bedcf909d1f0a5da61f2260ea1d64942c4201c76bf529f",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+    "docs/reviews/implementation-2026-10-25/plan-retention-baseline.json": "3d97578b6c68d417f3e5584ee9356f3d5435e3b663208c87b567429af27db430",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+    "docs/reviews/implementation-2026-10-25/population-model-baseline.json": "6b693a0b586259879b0151cb41aefa5395d9dc82965628de125ccb5b67e2b1c7",
+    "docs/reviews/implementation-2026-10-25/population-model-progress.json": "5028d35ac7c13fa84d4937afedd03e7b75aa66e014052d14989cf457c5319a0f",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+    "docs/reviews/implementation-2026-10-25/population-model-verification.json": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b",
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c",
+    "docs/reviews/implementation-2026-10-25/study-review.json": "3d08b38a6b4a8accc07705b625762b61d9b37ccbfae38db31c72b48ecc94f742",
+    "docs/reviews/implementation-2026-10-25/study-verification.json": "1134ed19aa2c02a1ba30d6c6a00f723659b0f035b954e0d2fa0999a46b9a3e43",
+    "docs/reviews/implementation-2026-10-25/CHATGPT_PLAN_INTEGRATION_REVIEW.md": "433bbc5b46809db59c714c6083dde8e4e412c1347d36d4e31f5fbd94097573be",
+    "docs/reviews/implementation-2026-10-25/provider-identity-review.json": "fb903cf72721d1f6134055b32c9509e40685279c75575917f379b18bf8d10d8a",
+    "docs/reviews/implementation-2026-10-25/context-views-review.json": "59cf48da8f5b21fcc2d88386168cf588cc7409c6b688c2ef315706980eb6ce37"
+  },
+  "authorized_prior_test_update": {
+    "path": "tests/test_context_views_adversarial.py",
+    "old_sha256": "a6f14b6f6f65fdb409341c879c800ac64ed6911e5ec0f418eaa592bf52b63b64",
+    "new_sha256": "09861ac11240077e4372e639d0cbf6f8658b22928a5ae9922adea2f4d8b33474",
+    "change": "Only the unsupported-version sentinel changed from /2 to /999 because version 2 is now explicitly supported. Reverse replacement reproduces the exact old byte hash. Prior review reports were not rewritten."
+  },
+  "fixed_oracles": {
+    "presentation_profile": "discovery-source-view/2",
+    "reused_value_view_schema": "discovery-source-view/1",
+    "raw_schema": "provider-tool-result/1",
+    "derived_schema": "provider-tool-view/1",
+    "derived_keys": [
+      "schema",
+      "presentation_profile",
+      "source_tool_result_id",
+      "model_visible_body"
+    ],
+    "derivation_source_refs": "Exactly [raw_tool_result_id]",
+    "eligible_projection": "Successful measure_development RPC only, including a returned typed measurement gap.",
+    "other_tool_values": "Full reads, section pages, searches and capability results remain exact raw tool bodies.",
+    "transport_fixture_mean": {
+      "numerator": "10",
+      "denominator": "1"
+    },
+    "transport_fixture_missingness": [
+      null,
+      "missing_observation",
+      "not_yet_available"
+    ],
+    "gap_fixture": {
+      "status": "MEASUREMENT_GAP",
+      "reason": {
+        "code": "DATA_GAP"
+      },
+      "uncomputed_positions": 3,
+      "scientific_readiness": false
+    },
+    "retention_order": [
+      "raw tool result",
+      "derived model-visible view",
+      "next provider dispatch"
+    ],
+    "retention_failure": "No followup inference or repeated measurement after raw/view write failure.",
+    "malformed_call_fixtures": [
+      null,
+      [
+        "bad"
+      ],
+      {
+        "id": "malformed"
+      },
+      {
+        "id": "malformed",
+        "name": "measure_development"
+      }
+    ]
+  },
+  "findings": [
+    {
+      "id": "MCV-01",
+      "severity": "medium",
+      "status": "FIXED",
+      "finding": "The initial version-2 projection branch accessed call['name'] before confirming that tool validation succeeded. Malformed calls already converted to a retained denial could then raise an unhandled KeyError or TypeError.",
+      "evidence_kind": "Independent source inspection; the parent fix reached disk before the first focused execution of the added regression. No failing test execution is claimed.",
+      "original_source_sha256": "573a41c6f83b65411ed942e460abaca3154e812134de930ad3d724b39f64da8a",
+      "fix": "Check tool_result.status == ok before accessing the validated call name.",
+      "regression": "Four malformed-call fixtures remain raw denials, create no view, invoke no measurement and allow the existing followup flow."
+    },
+    {
+      "id": "MCV-02",
+      "status": "VERIFIED_WITHIN_SCOPE",
+      "finding": "Raw measurement envelopes are retained unchanged before their separate view records. The exact model_visible_body in the retained view is sent to the model; body fields, gaps, numerical strings, gates and readiness remain equal."
+    },
+    {
+      "id": "MCV-03",
+      "status": "VERIFIED_WITHIN_SCOPE",
+      "finding": "Absent and version-1 profiles retain full measurement replies. Version 2 is frozen explicitly and requires the exact section-tool schema. Nonmeasurement results and denials are never projected."
+    },
+    {
+      "id": "MCV-04",
+      "status": "VERIFIED_WITHIN_SCOPE",
+      "finding": "Injected raw-write, view-write and next-reservation failures stop followup dispatch without repeating the measurement. These are controlled RPC fault fixtures, not crash-recovery or live-provider proofs."
+    }
+  ],
+  "verification": {
+    "tests": 31,
+    "new_measurement_view_tests": 10,
+    "existing_context_view_tests": 21,
+    "test_seconds": "1.436",
+    "wrapper_seconds": "2.037",
+    "exit_code": 0,
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*context_views_adversarial.py",
+      "-v"
+    ],
+    "tracked_hashes_stable": true,
+    "tracked_hash_count": 21,
+    "first_combined_run": {
+      "tests": 30,
+      "test_seconds": "1.598",
+      "exit_code": 0,
+      "qualification": "Before the additional malformed-call regression and guard fix."
+    },
+    "focused_malformed_call_run": {
+      "tests": 1,
+      "subcases": 4,
+      "test_seconds": "0.011",
+      "exit_code": 0,
+      "qualification": "After the guard fix; no red run observed."
+    },
+    "fixture_boundaries": "Nine new cases exercise the installed research loop with deterministic local RPC/provider fixtures; one uses a disposable real Broker for frozen-profile admission. Existing 21 cases retain their original scope. No new measurement computation or real-provider inference is implied.",
+    "parent_reported_not_repeated": {
+      "tests": 20,
+      "test_seconds": "14.912",
+      "exit_code": 0,
+      "qualification": "Research-loop/call regression reported by parent before the final guard-order fix."
+    }
+  },
+  "evidence_files": {
+    ".trf-runtime/measurement-context-views-independent-review-2026-10-25/final-result.json": "eb0d8c7a57b5c1e53a305a773950a3447cd2f91d9460e682ed7b94f236551969",
+    ".trf-runtime/measurement-context-views-independent-review-2026-10-25/final-tests.log": "62fee3967095ea6d30cf8a57d77d6a511b1c47ef73cba75264ad2840af781a81",
+    ".trf-runtime/measurement-context-views-independent-review-2026-10-25/malformed-calls-result.json": "d6b0e50216abe9dadb6f011b2bcac59ac9971a2b8189adb8b7c47cc89115d51e",
+    ".trf-runtime/measurement-context-views-independent-review-2026-10-25/malformed-calls-tests.log": "2219fe235739a99b3586f1ae99f8f1915ac962160de32911d3f1f5c2a81ec7e8",
+    ".trf-runtime/measurement-context-views-independent-review-2026-10-25/result.json": "1e3b627d54a1b4ea8370a47eeb05cafc4d229fc31fe0f0bd8df79be614221f62",
+    ".trf-runtime/measurement-context-views-independent-review-2026-10-25/tests.log": "c452400ec40a874862a399804d0f3fa80f4a92afd1f357376891eef1de9570e6"
+  },
+  "warranted_conclusion": "No unresolved substantiated blocker found in this bounded presentation extension after the malformed-call guard fix. It adds retained views, not measurement or scientific authority.",
+  "not_verified": [
+    "No credentials, actual provider APIs, inference or real spend ledger accessed by this reviewer.",
+    "Byte counts are not token counts; no token savings claim is inferred from envelope size.",
+    "Equal research quality, genuine discovery and scientific validity are not established.",
+    "Live measurement transport, real crash recovery and the full framework suite were not exercised by this reviewer."
+  ],
+  "next_action": "Run the separately authorized engineering transport probe only after checking these source hashes; retain usage and exact raw/view artifacts under the existing aggregate budget."
+}

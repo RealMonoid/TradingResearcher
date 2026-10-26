@@ -1,0 +1,4364 @@
+{
+  "schema": "binance-source-inventory/1",
+  "date": "2026-10-25",
+  "status": "COMPLETE_WITH_RETAINED_GAPS",
+  "archives": 144,
+  "checksum_matches": 144,
+  "strict_normalization_passed": 128,
+  "retained_normalization_gaps": 16,
+  "timestamp_issues_in_rejected_files": 16,
+  "raw_rows_total": 420560,
+  "missing_bars_in_passed_files": 84,
+  "adapter_sha256": "78584d2811a39c87d464e8ae4e5df0e25ddd9e021d8f454ea76f1514be4cb0af",
+  "provider_documents": {
+    "retrieved_at": "2026-10-25T02:56:28Z",
+    "schema": "binance-document-snapshot/1",
+    "sources": {
+      "README.md": {
+        "http": {
+          "etag": "\"df58a8b6d8c2fe4bc24833b7ce5ec85f539845feb5bd1dfc0505ce6c2c6f3993\"",
+          "last_modified": null
+        },
+        "sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+        "size": 5282,
+        "url": "https://raw.githubusercontent.com/binance/binance-public-data/master/README.md"
+      },
+      "TERMS_AND_CONDITIONS.md": {
+        "http": {
+          "etag": "\"305dbf1892163216e562ac2e7369263a91264d92277d2bf04d765c69f859a3ad\"",
+          "last_modified": null
+        },
+        "sha256": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0",
+        "size": 9807,
+        "url": "https://raw.githubusercontent.com/binance/binance-public-data/master/TERMS_AND_CONDITIONS.md"
+      }
+    },
+    "started_at": "2026-10-25T02:56:27Z"
+  },
+  "sources": [
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-01.zip": {
+          "sha256": "f3e6e57450b4e947aa34a0fd075ccf36be79e469a481eb08f63b1a6b299d3bdf",
+          "size": 164781
+        },
+        "BTCUSDT-15m-2020-01.zip.CHECKSUM": {
+          "sha256": "55f377fe95a4029f6055f153526c098e425a22f576f02a23e11639acd06864d5",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-01.csv": {
+          "sha256": "14ff4aa10ccef7acc0e63d5e349f3a317de016cf0bb40e786cc934af9bf30f29",
+          "size": 449155
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:56:31Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-01.zip": {
+          "sha256": "29bd369f073f5b31720d3a5d34f6b03edf5440fa1069a3ef2bb0fa0b7941471d",
+          "size": 149268
+        },
+        "ETHUSDT-15m-2020-01.zip.CHECKSUM": {
+          "sha256": "2b846864d577b71b3cb6a5b48e39263da02085476c9b1ad121eb0ca572f126d7",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-01.csv": {
+          "sha256": "269adceb5ff28efa435a6227cab7c403c1d38411293709bb3891ade38c799b8a",
+          "size": 435741
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:56:34Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-02.zip": {
+          "sha256": "3986551ecbf7078c607f10199cec630c46e9b5919fb2541ef1b3abeea31eb406",
+          "size": 153696
+        },
+        "BTCUSDT-15m-2020-02.zip.CHECKSUM": {
+          "sha256": "5a3ad122a3bff303990ba9fb16acfe96d4dfa038b69858726dcbd60dcf4ee5c0",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-02.csv": {
+          "sha256": "b6244fefb7e50c7a93d8b6fa6e8994b364ec7cfd9dd0a983013710f32ebd83ca",
+          "size": 419263
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T02:57:27Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2757,
+      "timestamp_issues": [
+        {
+          "line": 1771,
+          "open_raw": 1582111800000,
+          "close_raw": 1582112132286,
+          "expected_close_raw": 1582112699999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-02.zip": {
+          "sha256": "0b3d30806c4bb5e61880d006fd3ec8eeaa8da413fc6e158b1f6bafcd8feb0cc5",
+          "size": 142762
+        },
+        "ETHUSDT-15m-2020-02.zip.CHECKSUM": {
+          "sha256": "98926ea4a290e150809c7da838639796424a4a241b9b927faf2dc93577062628",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-02.csv": {
+          "sha256": "2a533d0886067fcf1d44430177339c1921066f3ae8cdf2266487bba9bc8aaa6c",
+          "size": 408210
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T02:59:04Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2757,
+      "timestamp_issues": [
+        {
+          "line": 1771,
+          "open_raw": 1582111800000,
+          "close_raw": 1582112132298,
+          "expected_close_raw": 1582112699999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-03.zip": {
+          "sha256": "0ace9004d2a636f6cf43104ac6e862513b643576b5d94335a4342988dfbfc8be",
+          "size": 167677
+        },
+        "BTCUSDT-15m-2020-03.zip.CHECKSUM": {
+          "sha256": "e204bcd7eef9b6651cff304534c5dc863ef9e48026dd08503ca5687395550daf",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-03.csv": {
+          "sha256": "a30eb38f382e612ded0db0af7c5164930b07f4cee10db56a7a1759229419692f",
+          "size": 451406
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T02:59:07Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2968,
+      "timestamp_issues": [
+        {
+          "line": 326,
+          "open_raw": 1583313300000,
+          "close_raw": 1583313706694,
+          "expected_close_raw": 1583314199999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-03.zip": {
+          "sha256": "01698aaf54e78df4f41701571abb5907128524c684de4ca95d9855a74bf360f0",
+          "size": 154110
+        },
+        "ETHUSDT-15m-2020-03.zip.CHECKSUM": {
+          "sha256": "b7e7665605a2831db51f7503a3f5a1725ca872a47705ce858981c7790ba5fab1",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-03.csv": {
+          "sha256": "628ea6f2303e6f885f0826b0e2e7d12f40b4ce9b52c0a9e1fff5f594173ee73a",
+          "size": 440907
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T02:59:09Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2968,
+      "timestamp_issues": [
+        {
+          "line": 326,
+          "open_raw": 1583313300000,
+          "close_raw": 1583313706700,
+          "expected_close_raw": 1583314199999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-04.zip": {
+          "sha256": "ba17900695e5857989877662b62f890de40074c138e8c91e05a2dbe37daa94d1",
+          "size": 159804
+        },
+        "BTCUSDT-15m-2020-04.zip.CHECKSUM": {
+          "sha256": "cb1efa94658895f8d2662f6d8f9e486d0ab0ad1025ad9372c86f507ddd69e821",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-04.csv": {
+          "sha256": "30cde9a387072c2ba948b7fd09e7ee531ebf5d5d02774c845cdc7b18ad1cd897",
+          "size": 434792
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:12Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2870,
+        "missing_bars": 10,
+        "gaps": [
+          {
+            "start": 1587780000,
+            "end": 1587789000,
+            "missing_bars": 10
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-04.zip": {
+          "sha256": "b72c9f2a6b4a6d52b4dc688639b83cb023d44415ec19e75f9107188eca40a53a",
+          "size": 147706
+        },
+        "ETHUSDT-15m-2020-04.zip.CHECKSUM": {
+          "sha256": "bf43e9a483b36983e1d55955df2a4e1415a0ce447613feaa966c06530fc45ffd",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-04.csv": {
+          "sha256": "b93f9bc42e54a7dd0f9ff4bd55db8c62431df84b70e4f66c01803470a544b535",
+          "size": 425501
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:15Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2870,
+        "missing_bars": 10,
+        "gaps": [
+          {
+            "start": 1587780000,
+            "end": 1587789000,
+            "missing_bars": 10
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-05.zip": {
+          "sha256": "474b584a088f210e6406a65402caa0e98b3c040264db93bb2cdb2d7b1ff0e350",
+          "size": 167179
+        },
+        "BTCUSDT-15m-2020-05.zip.CHECKSUM": {
+          "sha256": "3adc6aa85ce6293c29b80b08404f68ba9aeca101d302fe50b43a736c437b6580",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-05.csv": {
+          "sha256": "7c3ed6ae81d4e223853484d9c051db3d0d656a26ec7eeb7b257313718aee53ae",
+          "size": 451735
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:18Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-05.zip": {
+          "sha256": "f0883d2159492e9285c74a0245b054aea393a35bc5590d6a55f9190e8a81fd7d",
+          "size": 152701
+        },
+        "ETHUSDT-15m-2020-05.zip.CHECKSUM": {
+          "sha256": "39e8587ac2e0d32b5605062336e8dbeed03dd88c5b47ded32e20d0079eaf83d3",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-05.csv": {
+          "sha256": "3414af994a5bb2d6848116fa09f04337e638d7a24bfb26eb712653eefcc6b684",
+          "size": 440630
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:20Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-06.zip": {
+          "sha256": "b0c0c5d0ceeeda7619e7c014873d7b48d2b883facc591b2b4f753aa3f438c0a6",
+          "size": 158061
+        },
+        "BTCUSDT-15m-2020-06.zip.CHECKSUM": {
+          "sha256": "a230e3dd1200bc3c4fd087e2d3b0184e03e72d185bbcfad65778a139a3cf1571",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-06.csv": {
+          "sha256": "c24464e4e45c1dca8f4ea33b687e55b3c7122ac86d5f0ba706eb1a4b27a39e1a",
+          "size": 432811
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:23Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2866,
+        "missing_bars": 14,
+        "gaps": [
+          {
+            "start": 1593309600,
+            "end": 1593322200,
+            "missing_bars": 14
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-06.zip": {
+          "sha256": "232ff520baa375b6fb5c92dbfa07612104c3b1bf62063ba2ff9e4c10149058be",
+          "size": 145497
+        },
+        "ETHUSDT-15m-2020-06.zip.CHECKSUM": {
+          "sha256": "4077544a73e773cbc940b81b59a7c2a236967e06c2e8d284c963401d3a63f8bb",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-06.csv": {
+          "sha256": "4691d3d201936d4cd913eeea03dd0e78ac7d16340d1f43a1c11429109bb8f7d6",
+          "size": 422468
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:25Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2866,
+        "missing_bars": 14,
+        "gaps": [
+          {
+            "start": 1593309600,
+            "end": 1593322200,
+            "missing_bars": 14
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-07.zip": {
+          "sha256": "608fe9683436c46bde2400a9389337a528e9df505010f64b26e5300ba48e0294",
+          "size": 163275
+        },
+        "BTCUSDT-15m-2020-07.zip.CHECKSUM": {
+          "sha256": "c0e749d042d8b3bcc4597e09f4b6f2ce0a5cc37b21e02889facecb04ebb968e2",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-07.csv": {
+          "sha256": "f822911243747a8b0e924a07b921885835e7b0a13351de372cf4139c40cdade2",
+          "size": 451186
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:28Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-07.zip": {
+          "sha256": "397a07dfb7cb8d5ace27b074abe47a73bf74c7cd82bcdcf4d5241a2b3389607e",
+          "size": 151945
+        },
+        "ETHUSDT-15m-2020-07.zip.CHECKSUM": {
+          "sha256": "8514ec5c07474e25172050a67bbf7b41a8a03b63948ef6a9df62b183b1be86c0",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-07.csv": {
+          "sha256": "7d7e5423619f87760bc480391774b41653923c45a2b0272b908212596597646d",
+          "size": 440163
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:31Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-08.zip": {
+          "sha256": "dde79916f0d46941f4d2e8a2726ba1b9a3089361ba1f2d45360609a8d098decc",
+          "size": 166855
+        },
+        "BTCUSDT-15m-2020-08.zip.CHECKSUM": {
+          "sha256": "040ffc472208a9f6a74022cba8d4bb7fd0e182e1ca72bde28d93dcc0cb0165be",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-08.csv": {
+          "sha256": "ffad24f28c47285a35cbf45863170ade9b3bace06616570fa0fd64b964691027",
+          "size": 463206
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:34Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-08.zip": {
+          "sha256": "658dfdbeb68a7c691cc253a97aa275fede546159e0b2815e300606b2617308cc",
+          "size": 156010
+        },
+        "ETHUSDT-15m-2020-08.zip.CHECKSUM": {
+          "sha256": "f47ca4b53fc3df59bc09a2a1adecda858b82b8c37e0d232dc7c431581876988e",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-08.csv": {
+          "sha256": "315b558d47bd02a18aeb55cca50b0da4b00603b8b16fed44d807c76c2167b3ff",
+          "size": 444018
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:37Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-09.zip": {
+          "sha256": "4507410af54992946ed9b317ba604e9e6a8991039242da06fb97d1b1d976b103",
+          "size": 160982
+        },
+        "BTCUSDT-15m-2020-09.zip.CHECKSUM": {
+          "sha256": "6ea032e9163c31f998babb32a56b89f199763184fec95a9d0cd4dee1f9dde1ae",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-09.csv": {
+          "sha256": "237a934a3c3ade4ea5cf39a75efa5de9e98cddb7edb94376033ba51fa7db6fca",
+          "size": 447702
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:39Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-09.zip": {
+          "sha256": "a70e210c356176d89757fc0f4f522144c6046425e725375f7d157ea80e1369de",
+          "size": 151702
+        },
+        "ETHUSDT-15m-2020-09.zip.CHECKSUM": {
+          "sha256": "77dff7342cff2c30912aee8e551e2441ac9afc74a710070f271e48c32c66a6c3",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-09.csv": {
+          "sha256": "5434014e3a450dd938c86346aedb7b1fe7006826d21f1a3cbcbd194c6e5a5746",
+          "size": 430400
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:42Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-10.zip": {
+          "sha256": "ed4b16ebfeca45ddb5ba40d4cce8934166e6d95edcc1c118476eada8ff62b098",
+          "size": 165272
+        },
+        "BTCUSDT-15m-2020-10.zip.CHECKSUM": {
+          "sha256": "acbd265a05b79454c795fcd83ceb922e11c1d091049946a00e5c005b29091785",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-10.csv": {
+          "sha256": "f2e83ead1439d584e2752d71cf25dac6627b9d36fe69f7a66d7893c90f50d1bc",
+          "size": 462073
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:45Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-10.zip": {
+          "sha256": "1464a6821df78bd8adfc545e1657d8e7ce6b953ec27d3fe91ec9f548902acfbd",
+          "size": 153680
+        },
+        "ETHUSDT-15m-2020-10.zip.CHECKSUM": {
+          "sha256": "694fdf14b595fcf3877b3c2a3aa6d6d51c923eaa524751d6dead61d32b5f57de",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-10.csv": {
+          "sha256": "f6913ad27d11ed4dcf7eab4627c2865ae76d5137611b8ddea1cae66e7443d3d4",
+          "size": 441269
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:48Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-11.zip": {
+          "sha256": "f26be8af234fa6c0fb4b05af571bf533131196ebb09200aee13599e225193512",
+          "size": 164333
+        },
+        "BTCUSDT-15m-2020-11.zip.CHECKSUM": {
+          "sha256": "4b417c495a1b68ee95b5f0adf3265040b8ce40bc2299fd72da6548756efdb425",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-11.csv": {
+          "sha256": "c31f2d6deba5e8efaaf31b78fc2297b89e77583fe1aa94bd73e087ee183e7230",
+          "size": 451228
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:50Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2876,
+        "missing_bars": 4,
+        "gaps": [
+          {
+            "start": 1606716000,
+            "end": 1606719600,
+            "missing_bars": 4
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-11.zip": {
+          "sha256": "e048dde908e906136b83143e16301f529fb92faa21587a9fe158558925dd6641",
+          "size": 152925
+        },
+        "ETHUSDT-15m-2020-11.zip.CHECKSUM": {
+          "sha256": "6ba9351755cdab00ff623a78aa66a89a833a0694acb013bc4cc496c7cb37c1d9",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-11.csv": {
+          "sha256": "dee7e0bd662e972fb2e5db53c1f10d2b099e9a1fbf3d8c56d34f45bd4dacd170",
+          "size": 430789
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:59:53Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2876,
+        "missing_bars": 4,
+        "gaps": [
+          {
+            "start": 1606716000,
+            "end": 1606719600,
+            "missing_bars": 4
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2020-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2020-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2020-12.zip": {
+          "sha256": "f7fc61a0975bdd6c9d593b50964014647978f6d4ba2c85edb128a9385b9831cf",
+          "size": 169863
+        },
+        "BTCUSDT-15m-2020-12.zip.CHECKSUM": {
+          "sha256": "d3d059c5736c8648c87afaa1670ca33ec29c8e51b21911e8b129cfc6fdd6aedf",
+          "size": 89
+        },
+        "BTCUSDT-15m-2020-12.csv": {
+          "sha256": "3a475065da72155378457feba7101ebc2870b2f9c4c13fd4650a8fb8fc0bd556",
+          "size": 464109
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T02:59:56Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2957,
+      "timestamp_issues": [
+        {
+          "line": 1977,
+          "open_raw": 1608559200000,
+          "close_raw": 1608558440521,
+          "expected_close_raw": 1608560099999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2020-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2020-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2020-12.zip": {
+          "sha256": "947e21b6ee307cdbdc1dc22a556ebd5c553d1fd127993bef46ff6e085c949992",
+          "size": 157412
+        },
+        "ETHUSDT-15m-2020-12.zip.CHECKSUM": {
+          "sha256": "8d99eff7acef54fddc2d0eb4a30cb5449e2fa901ac263f8d926abf4ac49b5a99",
+          "size": 89
+        },
+        "ETHUSDT-15m-2020-12.csv": {
+          "sha256": "90bb2554b7484a55b8b5cd774339af64954fed194a517b0c462337594e4a6c87",
+          "size": 442335
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T02:59:59Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2957,
+      "timestamp_issues": [
+        {
+          "line": 1977,
+          "open_raw": 1608559200000,
+          "close_raw": 1608558440528,
+          "expected_close_raw": 1608560099999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-01.zip": {
+          "sha256": "4113719e7621550c36f9e4a5b5ff99c9d03cbac5a057cff85e91c7e3bc2ad50d",
+          "size": 175462
+        },
+        "BTCUSDT-15m-2021-01.zip.CHECKSUM": {
+          "sha256": "226855b2ec0814f64e2c7981dad705e8d0b6bb702d17d5678c22804b1a7f36af",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-01.csv": {
+          "sha256": "6843a77858ccecccae6e5e7161d6f6bd376cfe0d3729772dbe942f0fa44cc014",
+          "size": 471175
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:02Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-01.zip": {
+          "sha256": "8edc903436445c97a800c3c3859a47663245bf8570b47e86c3b06736b454df00",
+          "size": 166008
+        },
+        "ETHUSDT-15m-2021-01.zip.CHECKSUM": {
+          "sha256": "f038642bb195021785c55c03878e24165634b32491e005252989e56fa73a16c5",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-01.csv": {
+          "sha256": "e2406c1bbb90bc480baf49e4a93f35a7372522c6bc12fe878290dfe22122a037",
+          "size": 463194
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:04Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-02.zip": {
+          "sha256": "2b2658c43308a1a0ec6684f7d938879d3a6e4cc8828f0875e342e0ddf8f5f4f0",
+          "size": 157920
+        },
+        "BTCUSDT-15m-2021-02.zip.CHECKSUM": {
+          "sha256": "6a68dea5507af2ae5fa6cfbe837f61b0e9d56f16d4911d755979f23158a71418",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-02.csv": {
+          "sha256": "24eb0f052202cd03fc305cbf9d7214597a001caaa9139e72947acf09f95133ca",
+          "size": 424539
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:00:07Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2683,
+      "timestamp_issues": [
+        {
+          "line": 975,
+          "open_raw": 1613014200000,
+          "close_raw": 1613014854773,
+          "expected_close_raw": 1613015099999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-02.zip": {
+          "sha256": "a89838e59572696d8524402600cb7cc6ded07eb8a4cc69d13d22514d0f088518",
+          "size": 148858
+        },
+        "ETHUSDT-15m-2021-02.zip.CHECKSUM": {
+          "sha256": "3b5eec6edc11f52bf265ef3e09a2b7852311e472baa9e3a94a778c8ae9acfda9",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-02.csv": {
+          "sha256": "4d23b2526dd6641347377f07fcb49ae9e679547af3f7f59e0e17712d30a8d46d",
+          "size": 416684
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:00:09Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2683,
+      "timestamp_issues": [
+        {
+          "line": 975,
+          "open_raw": 1613014200000,
+          "close_raw": 1613014855829,
+          "expected_close_raw": 1613015099999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-03.zip": {
+          "sha256": "ddf1acd7ccc4fe6188b2da65fecbafbfd2a1463fcb4b41419249498c9d45b70b",
+          "size": 173980
+        },
+        "BTCUSDT-15m-2021-03.zip.CHECKSUM": {
+          "sha256": "94ab0842b7d2149038799eab51326f7204af4f259fc584f153b04139dfa5dde3",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-03.csv": {
+          "sha256": "d74d00cc17a123177ad35220e13560d02551aeb9be19568b5c5939a745378467",
+          "size": 469297
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:12Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2970,
+        "missing_bars": 6,
+        "gaps": [
+          {
+            "start": 1614996000,
+            "end": 1615001400,
+            "missing_bars": 6
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-03.zip": {
+          "sha256": "b19829af188eed9448e6dcb5d1fa5c77ae04a49b3039292faa13c5f3414d803e",
+          "size": 163017
+        },
+        "ETHUSDT-15m-2021-03.zip.CHECKSUM": {
+          "sha256": "693ab00e82038e089652139fac640e75ad9b573efe60e31aa0f3b6e6b5c34063",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-03.csv": {
+          "sha256": "a7b4393e62e21b45cd90d380ad39179e71ae5b61cafcdfa72a53847698a96c00",
+          "size": 458472
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:15Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2970,
+        "missing_bars": 6,
+        "gaps": [
+          {
+            "start": 1614996000,
+            "end": 1615001400,
+            "missing_bars": 6
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-04.zip": {
+          "sha256": "726f7165f3703ec852194e6fbd54157ecf54760d670db399adec8de23026a947",
+          "size": 166103
+        },
+        "BTCUSDT-15m-2021-04.zip.CHECKSUM": {
+          "sha256": "b070e602bae472e56b2fbe4e604353e1a8cc0aa66a2867303256cb0e7c94e2f4",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-04.csv": {
+          "sha256": "726831d8c9aa1eebc87e0390a713515272b682f04a4972bc9c2b046c192db3dd",
+          "size": 450612
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:00:18Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2852,
+      "timestamp_issues": [
+        {
+          "line": 2311,
+          "open_raw": 1619323200000,
+          "close_raw": 1619323258146,
+          "expected_close_raw": 1619324099999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-04.zip": {
+          "sha256": "0044bc8e84a9f16285dc5f1bc1706234f61543839a8e6619b5ed069681c3d61f",
+          "size": 158710
+        },
+        "ETHUSDT-15m-2021-04.zip.CHECKSUM": {
+          "sha256": "766bcff4a75bfb395be60ccb09e4c43179ecee0373e450b6e3cc231971316bbf",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-04.csv": {
+          "sha256": "44885c842d243bd510f239d4d874b47aeba692fa5524dfd8582235a69e34ef7b",
+          "size": 442635
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:00:20Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2852,
+      "timestamp_issues": [
+        {
+          "line": 2311,
+          "open_raw": 1619323200000,
+          "close_raw": 1619323259271,
+          "expected_close_raw": 1619324099999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-05.zip": {
+          "sha256": "23dea9f052edba2539ac8389cd4cf7ccab4871796bbbf1d2ca7cbd176f035247",
+          "size": 176051
+        },
+        "BTCUSDT-15m-2021-05.zip.CHECKSUM": {
+          "sha256": "bac8b8f576ab7bbc93efb0279e4787efe5fa7697fef0ea1f563bc2bcb4822779",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-05.csv": {
+          "sha256": "caaba406287692f4cc1bbe01fedaa1bd7b876b91963bdc10f3ff97e8fe85a937",
+          "size": 471814
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:23Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-05.zip": {
+          "sha256": "53f84fa5070ce1fc017dfdbcab02282bd9301886131d9e054f5be6c0e10dd2af",
+          "size": 169956
+        },
+        "ETHUSDT-15m-2021-05.zip.CHECKSUM": {
+          "sha256": "074e494498d41e58fe495020c478ebb7ede21003acd221534e130122488fca3d",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-05.csv": {
+          "sha256": "58bf17d178103f713c00618bc5d58442af0d2f73f7998d7d283256fe84cfa310",
+          "size": 466545
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:26Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-06.zip": {
+          "sha256": "5c21bb4a2f5ca846f01cb834d868819a308d8b5bdca702c872bfce8ea00e3318",
+          "size": 168508
+        },
+        "BTCUSDT-15m-2021-06.zip.CHECKSUM": {
+          "sha256": "67ecc1d846c379e9a8977120fa51fc0b723772eade69ce7b8f93e5a710bddedb",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-06.csv": {
+          "sha256": "d846f92c7e69ed84602eb20d46989ab0de52aff994e8e9b6e8346899cf342ce3",
+          "size": 455008
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:28Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-06.zip": {
+          "sha256": "12609de7cf35765a70be9380bbd839d1766d50f0675dfcedd57de807bbee46d4",
+          "size": 160753
+        },
+        "ETHUSDT-15m-2021-06.zip.CHECKSUM": {
+          "sha256": "4625ebcf3499c76e15f6ab732be3f44931b7798475af3515a5bee9a1dffa10d6",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-06.csv": {
+          "sha256": "bd8e9bac03b093325aa8f3af274e8c28418218bf0f149d469a7979e25863b400",
+          "size": 446838
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:31Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-07.zip": {
+          "sha256": "8ab53799a98716d11f241ccbbb9dc395bc491b58f783c7924b2e12e8606e61ac",
+          "size": 170973
+        },
+        "BTCUSDT-15m-2021-07.zip.CHECKSUM": {
+          "sha256": "7b947c4baeafd9cbfe7947c0fa9cd46091b648e692789031a63a252dc0dd4099",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-07.csv": {
+          "sha256": "83ba2f412e7dd2bb9a90a3dd354d31d1b9f2123518fd7bd397ff7dd5139f6416",
+          "size": 466360
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:34Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-07.zip": {
+          "sha256": "7894581c3e4c17f54f832c44c88ccd002d4a497e088e58f516b789bf9c82094a",
+          "size": 164122
+        },
+        "ETHUSDT-15m-2021-07.zip.CHECKSUM": {
+          "sha256": "c1dcd25bdab2478316a6197975d7e3065fd5258384d47e9ee21d52616d239621",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-07.csv": {
+          "sha256": "6ee54be607ccdecc9a6603fb7eeee78d5d11d7c32fa9e5e60daf523e6b6c5586",
+          "size": 459420
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:36Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-08.zip": {
+          "sha256": "e4d20bbe576a94c7474f951b4e44adb1a0d6149e6b9eed0be2ad69504ca775e0",
+          "size": 169921
+        },
+        "BTCUSDT-15m-2021-08.zip.CHECKSUM": {
+          "sha256": "ece5983ac85391921a00c5ce86035fb3e320e3d92205a911d9e1693431c95654",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-08.csv": {
+          "sha256": "78f3a8a41652082a37cdf565fe3d41ffbdf54a562ab1738aff572916b65acec8",
+          "size": 465139
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:00:38Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2958,
+      "timestamp_issues": [
+        {
+          "line": 1160,
+          "open_raw": 1628819100000,
+          "close_raw": 1628819999000,
+          "expected_close_raw": 1628819999999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-08.zip": {
+          "sha256": "f5fa5199358586df77da71ffaa6c40eccf6e53e1fc5224bac5814eec70597211",
+          "size": 162906
+        },
+        "ETHUSDT-15m-2021-08.zip.CHECKSUM": {
+          "sha256": "933aa2ddb51c34cf7b7381b95941ffe45edfb20ebed4947a5f5448bbd235238e",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-08.csv": {
+          "sha256": "de0f4966647d874cb7e84e8b01ff58b3dd6dc1a64b355f02620565231e14af51",
+          "size": 458216
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:00:41Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2958,
+      "timestamp_issues": [
+        {
+          "line": 1160,
+          "open_raw": 1628819100000,
+          "close_raw": 1628819999000,
+          "expected_close_raw": 1628819999999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-09.zip": {
+          "sha256": "ac69a371a9027b1dd2c05b8c6948a4f75fccf40d0788de53fc4c51a173eaff0a",
+          "size": 161154
+        },
+        "BTCUSDT-15m-2021-09.zip.CHECKSUM": {
+          "sha256": "d70bac31a3d68aacc149c3c0558438e5abb646f220fcf7c50b7edb8a090d00b3",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-09.csv": {
+          "sha256": "7feb7064ebbc87150a84965d01fce371b2e7341f7148288aa6da011747c651a2",
+          "size": 450802
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:44Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2872,
+        "missing_bars": 8,
+        "gaps": [
+          {
+            "start": 1632898800,
+            "end": 1632906000,
+            "missing_bars": 8
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-09.zip": {
+          "sha256": "5780f76bee3a169a5d13a4d2cb178c5e87f8005775b6092be24f79191fbad531",
+          "size": 154072
+        },
+        "ETHUSDT-15m-2021-09.zip.CHECKSUM": {
+          "sha256": "d94c39b7500c78e9fb316e8c58a53c3bfeb9e826dfdee8f82e313555a841f67e",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-09.csv": {
+          "sha256": "cc0716ae699a46bc70268f361f262b22293c1e70f8a512c10a0e138d21a0b91f",
+          "size": 443904
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:46Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2872,
+        "missing_bars": 8,
+        "gaps": [
+          {
+            "start": 1632898800,
+            "end": 1632906000,
+            "missing_bars": 8
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-10.zip": {
+          "sha256": "f0bc836c1ab8edf6ff5911a75846b3d42498170117122dda41cd304e3e776c88",
+          "size": 167735
+        },
+        "BTCUSDT-15m-2021-10.zip.CHECKSUM": {
+          "sha256": "9f792c4e6a0b262333f0531bed1e05d29792b696a4182fb19604bc206c208b47",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-10.csv": {
+          "sha256": "a45ce50c7a39ee2affbd708c7c75da77e65106b3e33963cae8d080665c50e2f4",
+          "size": 468006
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:49Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-10.zip": {
+          "sha256": "39189bbd2f4ab81b91f2aa73f49a97d3343c663af47b48a2d0092f11d7fc2a97",
+          "size": 158940
+        },
+        "ETHUSDT-15m-2021-10.zip.CHECKSUM": {
+          "sha256": "9bceb99361252655ef5362ec6c9953bb08bf2b36a8fe7cc40917b1c39538b469",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-10.csv": {
+          "sha256": "92b87d8a4e152b5dd37be9a29e18a0944db765937b1d8f4b0a98980b45a875a3",
+          "size": 459462
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:52Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-11.zip": {
+          "sha256": "59eaa87d6aad4836fff4185aa45330d513bbd639ec639087ff90ef2bd444c0c8",
+          "size": 161829
+        },
+        "BTCUSDT-15m-2021-11.zip.CHECKSUM": {
+          "sha256": "6dd4dbb693e53cfecbef40c40f84cbdc11bd701dc3dfabf2039b378c959f8921",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-11.csv": {
+          "sha256": "e06943fceee11f55792f37db195b971e25ae760a74e8454687eb165d4d2d3245",
+          "size": 452549
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:54Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-11.zip": {
+          "sha256": "55f98422c66835dd208dcb59a8cef5f24a8e49ea164e38a811ad89dd9c86990f",
+          "size": 154104
+        },
+        "ETHUSDT-15m-2021-11.zip.CHECKSUM": {
+          "sha256": "a972db0d4bbe00077846ffcebc08d3bfb3ff5d6bfc905cc2c7685c3c4bd1d8b9",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-11.csv": {
+          "sha256": "193c04c739d8559c9eb33baf1042ab246e801a55f159675d3db6d7d05e608a63",
+          "size": 444545
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:00:57Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2021-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2021-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2021-12.zip": {
+          "sha256": "5e87f4e0e328a170291c91001dd48e124533108af2c6d17315821399b43a0dd7",
+          "size": 166157
+        },
+        "BTCUSDT-15m-2021-12.zip.CHECKSUM": {
+          "sha256": "3e80e0616c0acfc758c5860e9d370b5c443eac99acfc6fcca295a21ff4848df9",
+          "size": 89
+        },
+        "BTCUSDT-15m-2021-12.csv": {
+          "sha256": "de414f1034c3d8dcc22babbb46f535a2dc22ba4271f5b4f6244c750b835b2d56",
+          "size": 465611
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:01:00Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2976,
+      "timestamp_issues": [
+        {
+          "line": 2228,
+          "open_raw": 1640321100000,
+          "close_raw": 1640321994362,
+          "expected_close_raw": 1640321999999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2021-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2021-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2021-12.zip": {
+          "sha256": "5f67b5cfc6122db50b2546db64fb1c135fe8ec96aa40990ecc8242ab941549db",
+          "size": 158507
+        },
+        "ETHUSDT-15m-2021-12.zip.CHECKSUM": {
+          "sha256": "b6fdd298c6e6fc3a3884212eb42a5ef32fdf21f70182493810d8a7d774d6f92a",
+          "size": 89
+        },
+        "ETHUSDT-15m-2021-12.csv": {
+          "sha256": "559f7fd36f130d24faa71dca3f98c0792e4738efef0eec85bc4be45fdb1a7236",
+          "size": 458198
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:01:02Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2976,
+      "timestamp_issues": [
+        {
+          "line": 2228,
+          "open_raw": 1640321100000,
+          "close_raw": 1640321996158,
+          "expected_close_raw": 1640321999999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-01.zip": {
+          "sha256": "efae265201d39fd48892ee80478aba9f3c499e4daec95b771aa922dcd1658bb7",
+          "size": 165638
+        },
+        "BTCUSDT-15m-2022-01.zip.CHECKSUM": {
+          "sha256": "e2bc1e7388e5b3d76e9181a7de24a0006f2421fbd99c06f26f6ed90bd828e2e1",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-01.csv": {
+          "sha256": "300080aa204e169178a3497ca092017d5d495569c8b9e45b62a9c59a78806d78",
+          "size": 464330
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:04Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-01.zip": {
+          "sha256": "fbf8e9d4b0f0fa533ca2efe5f9f5d5add0f0c363823f930f938907fb8fb7699c",
+          "size": 157719
+        },
+        "ETHUSDT-15m-2022-01.zip.CHECKSUM": {
+          "sha256": "5ce3d7a0d57874caf4db0b5a9b5c99f726ac295b806ffdd3d8fa175f5ceee544",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-01.csv": {
+          "sha256": "4911b38219be1e362e491b3851d8e328daead54b23a606dd7a4472359b9b68e0",
+          "size": 457261
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:07Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-02.zip": {
+          "sha256": "c9e89f3f1f3c684b79d3f2785a02ccea401d5aa477c323a071b3ceec85ffaf8f",
+          "size": 149957
+        },
+        "BTCUSDT-15m-2022-02.zip.CHECKSUM": {
+          "sha256": "31159a1b37e6644ea32dc77813d3f161140809612e55cd83a076d5240dc47cdf",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-02.csv": {
+          "sha256": "8404afc5559fe8350ac223a60a2b6833f2d739d28bb338cef3bfc3460f19420e",
+          "size": 419736
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:09Z",
+      "coverage": {
+        "expected_bars": 2688,
+        "observed_bars": 2688,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-02.zip": {
+          "sha256": "d883f4ee0879395dc33ad8e26ec1ea9e06f76d86b07848386557432dc7a1f5bd",
+          "size": 142912
+        },
+        "ETHUSDT-15m-2022-02.zip.CHECKSUM": {
+          "sha256": "f79ce0e0ad1afff80be73d5e6cf9abaf0549d38d840100cabc041527c03ce77d",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-02.csv": {
+          "sha256": "6fb02341ab7804e45368b4f62ea395f1f38e5fd6431333c3cee639029c5b4442",
+          "size": 413793
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:12Z",
+      "coverage": {
+        "expected_bars": 2688,
+        "observed_bars": 2688,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-03.zip": {
+          "sha256": "be9e2af6651a4bf5cb565e508ebd62ea2773fed9eed1c8f47f1e5409fea9b96c",
+          "size": 165643
+        },
+        "BTCUSDT-15m-2022-03.zip.CHECKSUM": {
+          "sha256": "3b0c189e44b835fdf628b22a022368f4796e9a8eb5495e99bb312d48fd166237",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-03.csv": {
+          "sha256": "7d03549d3a64e16a1bd7eb3ed4053ae2a00e5afcf18ff42dea9f21bf4c77e2fa",
+          "size": 465854
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:15Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-03.zip": {
+          "sha256": "da8f35afe58f968800ef5f32208f0092e90325f3e3d73b9e44bf551627b36195",
+          "size": 156802
+        },
+        "ETHUSDT-15m-2022-03.zip.CHECKSUM": {
+          "sha256": "de644cc9a1d2957f8e1b78c1008a1020eed574e13b9940de14a85dd995779ff8",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-03.csv": {
+          "sha256": "48023f6f3c0c867b9f109ce03a676337186f21cffbb764be5664da0830a5010c",
+          "size": 457625
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:17Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-04.zip": {
+          "sha256": "d0c155a7891d8748727a475a19c6fa3013a1bc35d85a7cf8b31cb461bac6253a",
+          "size": 159534
+        },
+        "BTCUSDT-15m-2022-04.zip.CHECKSUM": {
+          "sha256": "08d6afba0ad0a2e488a5d94cc46f5997113aece4b9fa58e12e2a36329db0c3d2",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-04.csv": {
+          "sha256": "f619f7a893a6d159bfc455b272d5a7936fb7d91ea48e4971fdca10a080454c5d",
+          "size": 449490
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:20Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-04.zip": {
+          "sha256": "00bda6572dde6a7bfdac52fc6eb5f71a35b1282edb1df5dcb38e33a0ff231e3a",
+          "size": 151639
+        },
+        "ETHUSDT-15m-2022-04.zip.CHECKSUM": {
+          "sha256": "245be60a8b578f1ef038e8b44a4e734de299f0ca32e6bf9745d81573897c82e7",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-04.csv": {
+          "sha256": "8c43f3e34ce373c17f96642b10ee4afb69edd5cab4f7947202ebfc1bb2cfe948",
+          "size": 442439
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:23Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-05.zip": {
+          "sha256": "b9fb6fc2c414b71b7e22dfa02e3fca57a2bab37b9223cb64abffb1bcebfed76d",
+          "size": 166402
+        },
+        "BTCUSDT-15m-2022-05.zip.CHECKSUM": {
+          "sha256": "cc66c19191036b3d95ea5cc02d00afc248665b2da64e7a1d8cc982ce627eeeba",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-05.csv": {
+          "sha256": "204bea0ee180cec329d0bb7aa0fd1c3ae505fc122c1306762431b1799ce916ae",
+          "size": 466881
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:26Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-05.zip": {
+          "sha256": "17910dcd95567fc435a1f89322dc12e8bd6af471aaab8451d273b3017893a7fe",
+          "size": 158103
+        },
+        "ETHUSDT-15m-2022-05.zip.CHECKSUM": {
+          "sha256": "f023b2c878fe5004c2824976f2dbb3d3082586b9cad4f76adc20331ad6c4f87d",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-05.csv": {
+          "sha256": "74cc53d8182350890d4c495d6a1f66bf9adf58f5ab3009a3bd50fd4352ede3c2",
+          "size": 459562
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:29Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-06.zip": {
+          "sha256": "580517e864e67f594b8b1397e08099bee8dbbc505010f462efadb5b7d85366b0",
+          "size": 161440
+        },
+        "BTCUSDT-15m-2022-06.zip.CHECKSUM": {
+          "sha256": "1e1f0e3c8077ed96e8535355e18f106a0dfd275d3657e1630b439813d6cf7da4",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-06.csv": {
+          "sha256": "3ed46b9bb8ab9c59e9e0db91ae54bd484632691d5b9f95799030fbbf5ff7b85f",
+          "size": 452333
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:32Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-06.zip": {
+          "sha256": "d0516b7fd012c7f5463c6176cbdd65251357ea63e336f42459e3d75e2584d0ff",
+          "size": 153751
+        },
+        "ETHUSDT-15m-2022-06.zip.CHECKSUM": {
+          "sha256": "43e8bdc4c371e4aec30e417d0c01200af01da35a4c2a12c1326bce15e1d8dfc4",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-06.csv": {
+          "sha256": "c80cb9934d3bb1eb0e1300ef19514c6d7bb71f580f71929d571363a5bd9df5aa",
+          "size": 446115
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:35Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-07.zip": {
+          "sha256": "7c20c2c7097815f1a4279b9d4724b6e1b90ec0ec0508aa2e9cc0dee6e4c7351c",
+          "size": 169648
+        },
+        "BTCUSDT-15m-2022-07.zip.CHECKSUM": {
+          "sha256": "1f2d52c6ed0a3f7f6c3182b4ece70a9175dcff3d0d02276f4b18b153804563ef",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-07.csv": {
+          "sha256": "34d40d3d640fac8d13768e5bacbaeb3284e26a71641d2f91551c25041095eebf",
+          "size": 471695
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:38Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-07.zip": {
+          "sha256": "2382dc533b1663d3d44ec8dd778386ef97d6a4bc5c0addc075448ef8c6fedb9b",
+          "size": 158434
+        },
+        "ETHUSDT-15m-2022-07.zip.CHECKSUM": {
+          "sha256": "6959e4cfba5289e21e2d3fa928fafd4149c5fc0c69a0a0d257adcc8c6c0109b5",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-07.csv": {
+          "sha256": "cdc51ff3f6d5aa66c0b685bdf6284ec9750ff70009fca0cd607ccac3098e7053",
+          "size": 461335
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:41Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-08.zip": {
+          "sha256": "c024cd120c2523bfc8c16f870aefbca20a5d9610020628f63ad6d681560b4ed3",
+          "size": 170038
+        },
+        "BTCUSDT-15m-2022-08.zip.CHECKSUM": {
+          "sha256": "fb3b15f1cdd593c0a6122a8a52b06fb5c77a4a987bee39c784ea339d42ba5f83",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-08.csv": {
+          "sha256": "6fe9c2149fe56da51eb897f4b27ee3ab7ee6c8a067feeb2d6794661310b29519",
+          "size": 473779
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:44Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-08.zip": {
+          "sha256": "abcca9d5ba3d43ea709937699dc2a705c1f15d062489375d1f98b7f34ca787ef",
+          "size": 157937
+        },
+        "ETHUSDT-15m-2022-08.zip.CHECKSUM": {
+          "sha256": "b10ded1d0078fffdd927710f4f3a2e8ac3dc852be38e884c748e6505468a8135",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-08.csv": {
+          "sha256": "656a0741af894c0be116cdbbe8e4b007c8e35f44f9b204187bebb9ae9497abd6",
+          "size": 459872
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:47Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-09.zip": {
+          "sha256": "c463f2e48a93de727a3c12de228cf72bdcfb8583787939dbe7c829f2916c3edf",
+          "size": 166244
+        },
+        "BTCUSDT-15m-2022-09.zip.CHECKSUM": {
+          "sha256": "48ccd7f1635c2b34ddca46ca08580f3e0badefcbb44e06d730e2028a8642725d",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-09.csv": {
+          "sha256": "56bf07b966fb872dda57ad414695b99a235ee96d5c4375a2e4eafd00cd1f4079",
+          "size": 460808
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:50Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-09.zip": {
+          "sha256": "abc5d7d500b0260cabeb5496c92db0b5b0e8b9fd4f29b3fb08d270724c98b7c6",
+          "size": 151798
+        },
+        "ETHUSDT-15m-2022-09.zip.CHECKSUM": {
+          "sha256": "4670ad2282da98f4219a4a9e7fae03ab97870f1b7925afba82456d40b97811ea",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-09.csv": {
+          "sha256": "6e383b838410fbe0de769fd39c70565ab9ac5f37df763862e09e7e3dbbabc5eb",
+          "size": 443747
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:52Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-10.zip": {
+          "sha256": "a801fc927acf211940253256403d57199bed76cb179a74d407402646106b87ce",
+          "size": 169112
+        },
+        "BTCUSDT-15m-2022-10.zip.CHECKSUM": {
+          "sha256": "871fd6914b338b8a6d0439a4633d4d159de38ae2df80f7d6a588208b5b645255",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-10.csv": {
+          "sha256": "b4e675cf4ffd2db10598981682cded055926849153748258c4f1f74a7932d693",
+          "size": 474407
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:55Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-10.zip": {
+          "sha256": "ce3aee6ea123bea8668df209766a3fe441f0462798983b16f63bf52d61d1e028",
+          "size": 153634
+        },
+        "ETHUSDT-15m-2022-10.zip.CHECKSUM": {
+          "sha256": "443e89b04c239c6b5f838739fe5825428618b722c6e44af312f207eca4218abf",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-10.csv": {
+          "sha256": "4468807f03c3b3f714329997f3affaf940025e56ae838360eace55f5c4e1d2dd",
+          "size": 456094
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:01:58Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-11.zip": {
+          "sha256": "ed6c0b186e825c38c1c3f9c1b86ae4d442309c6db7581d40e3ef979835857f84",
+          "size": 165049
+        },
+        "BTCUSDT-15m-2022-11.zip.CHECKSUM": {
+          "sha256": "507424955efe24a4e0353e286778345aa3a0fae8e438e9bf56f7322d5e99b69c",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-11.csv": {
+          "sha256": "52e73ea00e871c891c6ad1e63a1a877cb435c292288a81ac3034467c6e4bb967",
+          "size": 460236
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:00Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-11.zip": {
+          "sha256": "a85f85d6dd7b4ed2235d07de06309420bf6d4b4486adb55f978613b2e8701ccb",
+          "size": 150749
+        },
+        "ETHUSDT-15m-2022-11.zip.CHECKSUM": {
+          "sha256": "2423069c5d525a2da27084b2b8a82a1d6144b5bb618f881b0446931518f29879",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-11.csv": {
+          "sha256": "b07bdffeb41c72114adcd597e56b0b393f2faf6935f1c49b056ae13657a51456",
+          "size": 442970
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:03Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2022-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2022-12.zip": {
+          "sha256": "e61c7c885847e5e45a4cff8800dc275bb570d3591ed66046bed2ff0b051fe8c2",
+          "size": 166501
+        },
+        "BTCUSDT-15m-2022-12.zip.CHECKSUM": {
+          "sha256": "ee955a11e8364aa235b5e9beba5b1e8c1d1ad60b5d442eace933f31e577b6a02",
+          "size": 89
+        },
+        "BTCUSDT-15m-2022-12.csv": {
+          "sha256": "c84ab72275af0b2bfe104bb2e707e612b215882ccbfbb18e96017d6a4807e873",
+          "size": 473108
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:06Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2022-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2022-12.zip": {
+          "sha256": "a3db71ca486fc15f4cc70e1f6d3d16ded7dffb6357ed7ea0710335a38ad8a039",
+          "size": 150401
+        },
+        "ETHUSDT-15m-2022-12.zip.CHECKSUM": {
+          "sha256": "ac2e96037612084da5cc3233f06d4019545734273c72176be3adc78c1c48399b",
+          "size": 89
+        },
+        "ETHUSDT-15m-2022-12.csv": {
+          "sha256": "32cd3d3f5c9dad3dba4c5699eeb601f3cf727587f7c21f815306562c1a247741",
+          "size": 453204
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:09Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-01.zip": {
+          "sha256": "1d03d63df33a4cdb234397054593666f6f6b31aa4d2e3d823bd4b65877fd377c",
+          "size": 169578
+        },
+        "BTCUSDT-15m-2023-01.zip.CHECKSUM": {
+          "sha256": "c290c36bb6e8a7808fb4f6fdad65edc1edbcb49ff3901c323cdc6db8d2a2b517",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-01.csv": {
+          "sha256": "c27cfc2866d880ed08744aaef0a0f5b9ba5e65ba27bd0c98a3b9b3d3a33a87f3",
+          "size": 474922
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:12Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-01.zip": {
+          "sha256": "1575719192e93650a4f1aea522ed4c7beb909cf7ca46beb047918aa838897d34",
+          "size": 152605
+        },
+        "ETHUSDT-15m-2023-01.zip.CHECKSUM": {
+          "sha256": "e6a246e70391e6d661748406898fd88abfb3a97df9671d7e8e20e4f9b85189dc",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-01.csv": {
+          "sha256": "4718a2a218697c4c2246ee83553b45fdbf17635757ef6a501987cbf9ec829778",
+          "size": 454937
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:14Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-02.zip": {
+          "sha256": "400a9759346d20189f6fd20a688dc75568f78c5a3da73f4bed0a54a0c8341b15",
+          "size": 155185
+        },
+        "BTCUSDT-15m-2023-02.zip.CHECKSUM": {
+          "sha256": "d82df7f5cc2fefa46a2c2e03d9022e93a08db3e6c8b45fa3cd413fe4cf7c5a5d",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-02.csv": {
+          "sha256": "80ae56b7b589d1c84cbcbaaa8f74f1c1fa6f29f15ed8661a7aa7de151a3ce4d1",
+          "size": 430645
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:16Z",
+      "coverage": {
+        "expected_bars": 2688,
+        "observed_bars": 2688,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-02.zip": {
+          "sha256": "a76ad91c947eebdadfcc89ff7cf210204f3e4609c0716dad992db7e83ea4ad43",
+          "size": 139152
+        },
+        "ETHUSDT-15m-2023-02.zip.CHECKSUM": {
+          "sha256": "c2052e4b2688d5d004b0a1a365de693a217f3bc002e5634647a191ee4ee990c9",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-02.csv": {
+          "sha256": "8f9638192cc4e33a5d508968deda991d9008a6a2b6477313cf3f1f149c233c84",
+          "size": 411972
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:19Z",
+      "coverage": {
+        "expected_bars": 2688,
+        "observed_bars": 2688,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-03.zip": {
+          "sha256": "c9871c6908687def566067cbadd1e0bab4740956f4d842992b7da52828ccae96",
+          "size": 170537
+        },
+        "BTCUSDT-15m-2023-03.zip.CHECKSUM": {
+          "sha256": "8d9960d463c956391810f78b64cc73b17152c9c80e7c57631c47ae4a6817c9b6",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-03.csv": {
+          "sha256": "6d8f2986903fc2696bb14ed7ae592d6c49d2f14fabecbef02ec9c2d37ac80e8c",
+          "size": 474149
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:02:22Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2971,
+      "timestamp_issues": [
+        {
+          "line": 2259,
+          "open_raw": 1679661000000,
+          "close_raw": 1679661581646,
+          "expected_close_raw": 1679661899999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-03.zip": {
+          "sha256": "63f591e35691c501c232b06a980641f87aded1f9497281ad279999babaca1e71",
+          "size": 155154
+        },
+        "ETHUSDT-15m-2023-03.zip.CHECKSUM": {
+          "sha256": "e8bf0dd73ab22b993c3983d5e5e9861ecb9dfc900fb7154ae9ab8d26164b2455",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-03.csv": {
+          "sha256": "e96e7f0ce53537f564e019528a22e3e036dfc9005f57a0e382eaab636f04b20b",
+          "size": 457168
+        }
+      },
+      "status": "RETAINED_NORMALIZATION_GAP",
+      "retrieved_at": "2026-10-25T03:02:24Z",
+      "reason": "Timestamp units, exact bar close or declared month do not match",
+      "raw_rows": 2971,
+      "timestamp_issues": [
+        {
+          "line": 2259,
+          "open_raw": 1679661000000,
+          "close_raw": 1679661583061,
+          "expected_close_raw": 1679661899999
+        }
+      ],
+      "diagnostic_scope": "Timestamp fields inspected; no repair or complete quality acceptance of this rejected file."
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-04.zip": {
+          "sha256": "e21f8e8b6caeca003f40668496b08681856c5b0cba19f7865523426ecbbd72c6",
+          "size": 157828
+        },
+        "BTCUSDT-15m-2023-04.zip.CHECKSUM": {
+          "sha256": "55f3d591151e16e65d8870ec189ebd4ed776cfe0c64310ae6eb77c26fd60561c",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-04.csv": {
+          "sha256": "69925cb48318f047e4c6131ebcee01bb065f3fb672d3b9db61139c91df51e2c8",
+          "size": 449737
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:25Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-04.zip": {
+          "sha256": "c4931decfaf9c153071727bfeb004c7689aeae1f7e0704b82a04edbf2834f1d1",
+          "size": 149182
+        },
+        "ETHUSDT-15m-2023-04.zip.CHECKSUM": {
+          "sha256": "75fce57c1824fbfbd255ca58b8ae03955ea2786187d73f3021046cebdbf3e6ab",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-04.csv": {
+          "sha256": "c38ab4f6f78607220092a3b2ff1170ef27c5d7afaf7e5242432fe527ee0f86be",
+          "size": 441852
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:28Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-05.zip": {
+          "sha256": "654743cddb8c3930543fd45661755aced8ec8052b33ebc6e791c44623255f30b",
+          "size": 161989
+        },
+        "BTCUSDT-15m-2023-05.zip.CHECKSUM": {
+          "sha256": "e2493c31d65ae6d25ecb739fbdaa938fc744aa11fbf1fbada59deb3bd9d3ffe4",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-05.csv": {
+          "sha256": "f4f31332b3183b98e11e9f12d4e72caa75945a555070353d402b9b3d32aa7c6a",
+          "size": 462877
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:31Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-05.zip": {
+          "sha256": "52258dbce42595e70fe2073a9f8324fca6a6da5fe4b5223e1540b82442837849",
+          "size": 152114
+        },
+        "ETHUSDT-15m-2023-05.zip.CHECKSUM": {
+          "sha256": "c600662a0bc3b73ec5ed7140310baee0e76f56343ad4e3bbcb661c13fb2d14d3",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-05.csv": {
+          "sha256": "5a073a2e2d114b32487aa3815407c8caaacbca26f8fb78ac6e77e53eda15f739",
+          "size": 454698
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:34Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-06.zip": {
+          "sha256": "b4a0d0d98910e37e14922ac4cbdca3f759bf511adb7ef5f067c18b154ad7da0f",
+          "size": 157027
+        },
+        "BTCUSDT-15m-2023-06.zip.CHECKSUM": {
+          "sha256": "71db01e1b7e5d03b60b04e78bb1186d606dc41376a43d67de9be25495471c9a1",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-06.csv": {
+          "sha256": "421f531f4104138b9f4df67b43875fb163c6ae33418a0e46dcd483be271e83d3",
+          "size": 448150
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:36Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-06.zip": {
+          "sha256": "d6b6868b735a099f099a77fe51ef5cd8eb86d83aaf85c86d5c8e745e90d4dbaf",
+          "size": 147215
+        },
+        "ETHUSDT-15m-2023-06.zip.CHECKSUM": {
+          "sha256": "8e66707e220be340ebdd8d7218d15ba2a04d24d8f76e20f0a3a70c2732f17cee",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-06.csv": {
+          "sha256": "f7700674303092b74143b902415345b434dbda51e652291d712c799596db07d0",
+          "size": 439343
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:38Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-07.zip": {
+          "sha256": "b7291ae9886e9d6087f3630ca6fb561eadec5162576c7979521ebedbae701dd4",
+          "size": 159054
+        },
+        "BTCUSDT-15m-2023-07.zip.CHECKSUM": {
+          "sha256": "fefcf100e84db6800bd1dcc1a5544f8166cb6070a217d01db505df966bca6790",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-07.csv": {
+          "sha256": "7d764d81c244e238071977f2fdd98784e3a2bce956aa502797188092d8c8f291",
+          "size": 460532
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:41Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-07.zip": {
+          "sha256": "b874cf5e8e2396dd8d13bab1340bc528574a658ad339b249f3f0dc95050dffd1",
+          "size": 149608
+        },
+        "ETHUSDT-15m-2023-07.zip.CHECKSUM": {
+          "sha256": "fd7d7c5d43e521ee9434e3946ae4dbafeace5442fcda3f337b0f6e098e11d000",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-07.csv": {
+          "sha256": "a62616e149d5cf65ceeecd420f932c54931f76e96b3440fc64bcba82ba5e6c46",
+          "size": 451887
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:44Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-08.zip": {
+          "sha256": "e0394875cd40e4aa5a7fb52f157b22a9a9afae1e9b7477eedb1e9d8ab936f6fa",
+          "size": 158269
+        },
+        "BTCUSDT-15m-2023-08.zip.CHECKSUM": {
+          "sha256": "6147fd24f0710a6c469e508c8c3bde55226e4dc8bf93a3452937b3a82025bc27",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-08.csv": {
+          "sha256": "b83b0f8f0419851efe065bf847ed6402a3676f78488cc74e92947cf89c355ee2",
+          "size": 460673
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:47Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-08.zip": {
+          "sha256": "ba3c20e3309010d3d175cc76d13eb1acc71f6d32b483da5b48152b623e17ac38",
+          "size": 148412
+        },
+        "ETHUSDT-15m-2023-08.zip.CHECKSUM": {
+          "sha256": "65c44c8b124be4fd209a913a4a892fcd61be6219754a601c2122ac985dc65d1e",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-08.csv": {
+          "sha256": "6e32ceddad1ed044e9c279ac2f6dd0bf2775765b27c40380604b53bd224bda0f",
+          "size": 451124
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:50Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-09.zip": {
+          "sha256": "bc7164f859cedeabd940fd262616a20eb991703f1f92c3883b6ee662d9127dc1",
+          "size": 153465
+        },
+        "BTCUSDT-15m-2023-09.zip.CHECKSUM": {
+          "sha256": "8577314480d2ef106d35566f8128a35c5ea48e234b19c15939ab864b0425a9d9",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-09.csv": {
+          "sha256": "87e660a4208618dedc83e0b0d870d6d6028cc9443db2ed78567c1f3019be5737",
+          "size": 445104
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:53Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-09.zip": {
+          "sha256": "79639262ec81de75316658777b3caf4ecbaf477c2968f56941a0a738c7d26969",
+          "size": 143764
+        },
+        "ETHUSDT-15m-2023-09.zip.CHECKSUM": {
+          "sha256": "4e2ab3d635784ca3b4e7b0c226f9f5c43b8e75649e5285059a6c1aedac410896",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-09.csv": {
+          "sha256": "e43c2871a0fa928eacb3af341238ceeceb11df2f54194a0e864a85dcbba7f391",
+          "size": 435898
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:55Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-10.zip": {
+          "sha256": "fea186b52b2c9a4044cf6ab9cb82be5c68e70abfa39a2eb3197e084e0c331ad5",
+          "size": 161502
+        },
+        "BTCUSDT-15m-2023-10.zip.CHECKSUM": {
+          "sha256": "792c0ccd756e64c475d9006e82e0f8676a84a82c40a4eb235d4ccd73845b7fe4",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-10.csv": {
+          "sha256": "7ccc5e6cb4517c2ed0aeb26863ffcb82870cb9b8f47cee7767bed8581ac68a3c",
+          "size": 462527
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:02:58Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-10.zip": {
+          "sha256": "6445662660f6f715b510ff8e1caf8d775cf5b72fd7b96f70082adfac1336cddf",
+          "size": 151013
+        },
+        "ETHUSDT-15m-2023-10.zip.CHECKSUM": {
+          "sha256": "294adce5eadf2959078ff6b9cdb22c93281bbec5862fb11cded00103e97b163e",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-10.csv": {
+          "sha256": "650a0617df9639e007e14ec735a5a83d15cec057dc9bf34dd5d57c9e816e95f9",
+          "size": 452387
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:01Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-11.zip": {
+          "sha256": "e9c55ca59b275a4527ccea513904dfc6579c907683de4bfc33346044ee37933c",
+          "size": 157253
+        },
+        "BTCUSDT-15m-2023-11.zip.CHECKSUM": {
+          "sha256": "229cd4f289b8be24ed0f892d0806def4e7a467baff5b4dcf947bd2a9b52c877f",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-11.csv": {
+          "sha256": "627de37e3933fa4247108a7ae85927685d400e15672495975db5d893494b35a8",
+          "size": 448432
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:03Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-11.zip": {
+          "sha256": "b1feac3245419158f0017a82f95f2199e2172373638f0751ace1c8323ed99f43",
+          "size": 148920
+        },
+        "ETHUSDT-15m-2023-11.zip.CHECKSUM": {
+          "sha256": "a429016530e2cd44dc6830001ce09298d9422697b9b90d91b7285c176232df18",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-11.csv": {
+          "sha256": "c537d52ea63a254477dfe67f7a66484c20fbd37f0f17fe481d3ccb4bf9b1c0fb",
+          "size": 440817
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:06Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2023-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2023-12.zip": {
+          "sha256": "7101778274e14957e6af9fe4c2030e7b70a20b4f3f08b8eafbafba8a3dfbe2e9",
+          "size": 163686
+        },
+        "BTCUSDT-15m-2023-12.zip.CHECKSUM": {
+          "sha256": "8934b38e0500e0e2803ff0c1470f45bfce29e012c9f702726c70ad68d39ff477",
+          "size": 89
+        },
+        "BTCUSDT-15m-2023-12.csv": {
+          "sha256": "052dd2b2c6fa6f81c4139258f55349950d23ee0823a66e15a2b8ac904ebc32d3",
+          "size": 465137
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:09Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2023-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2023-12.zip": {
+          "sha256": "8d74c7e0013b6e5e5dd372073de9bd80d11ce271be2addf9a6b06561705e239e",
+          "size": 154754
+        },
+        "ETHUSDT-15m-2023-12.zip.CHECKSUM": {
+          "sha256": "5e58a2e7bc59432e027f093335dd1489ba3b46b0aa0ea238288ecdab8e5a1afc",
+          "size": 89
+        },
+        "ETHUSDT-15m-2023-12.csv": {
+          "sha256": "aff4ccbe01d21d19112925274c592e37ca5e84743cefad8aac6120e5c9b34fc6",
+          "size": 456222
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:12Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-01.zip": {
+          "sha256": "20c617e34b350f61d4bba493154ddec76b9f2ecd449a94410a60ba75efd488ce",
+          "size": 164409
+        },
+        "BTCUSDT-15m-2024-01.zip.CHECKSUM": {
+          "sha256": "3622cdae7850378c3c7925b92b2097a916697ef34f53283697b6895356e2b106",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-01.csv": {
+          "sha256": "1884fad02ff86930e1e004d85f8155438a454a6e708a2a67ca88646ac76f5610",
+          "size": 465560
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:14Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-01.zip": {
+          "sha256": "a52f64be0752ffd8f1abeed7446045ff2d3c39855e77b636c30ccf2c06ddd008",
+          "size": 155311
+        },
+        "ETHUSDT-15m-2024-01.zip.CHECKSUM": {
+          "sha256": "82700a59a24a77c9e389d49ab3bf236fe3eb784e5d924987e55a02b9393d611e",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-01.csv": {
+          "sha256": "b8d9ce302f705bb1262cab33d544c4ede585c2b9165195d7048b6985edd1a9a4",
+          "size": 456722
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:17Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-02.zip": {
+          "sha256": "55066890cd3a76c97c05e94213311b17a4146d697f6abe8762b3edae8495b20e",
+          "size": 153686
+        },
+        "BTCUSDT-15m-2024-02.zip.CHECKSUM": {
+          "sha256": "57d0671d08ef213d12bdc145624665ed8b62cdc6b71190f57557cefa76ff4eec",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-02.csv": {
+          "sha256": "7621f87a8fa1d2588fdaebacdd30333d2feaa05b453118c7c697f17aa27f4720",
+          "size": 435610
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:19Z",
+      "coverage": {
+        "expected_bars": 2784,
+        "observed_bars": 2784,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-02.zip": {
+          "sha256": "1e02fac59990c6eeec1f37f5e7fffb0e34279834a78c5934896c098380c59d2a",
+          "size": 145728
+        },
+        "ETHUSDT-15m-2024-02.zip.CHECKSUM": {
+          "sha256": "f3cdbf8477ac4835333b16bb2a4df5d22a410b38321594e872aa4c9fa6808c21",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-02.csv": {
+          "sha256": "752f9a159200cbf45bf5f713e925bd1c4b84c4d2c4202b30c021d259b84a0402",
+          "size": 428083
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:22Z",
+      "coverage": {
+        "expected_bars": 2784,
+        "observed_bars": 2784,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-03.zip": {
+          "sha256": "d42824b930c63b31c0217e39d9ef22671a79b695330a63dda68df8ef04dc81c1",
+          "size": 167084
+        },
+        "BTCUSDT-15m-2024-03.zip.CHECKSUM": {
+          "sha256": "0023b0dac11277f92c06152c67a995794379e199ee1e6341d46a0fe5581671d6",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-03.csv": {
+          "sha256": "e94c2546e6f757c08ff4aba18a93d759af47fee3700165f2696417609bf418f4",
+          "size": 469006
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:25Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-03.zip": {
+          "sha256": "0c403af70b056779054d16b81fbd904864738c8026b40622da5ae28632a8f945",
+          "size": 158722
+        },
+        "ETHUSDT-15m-2024-03.zip.CHECKSUM": {
+          "sha256": "462304298bdadd685abd1807c59bf3e9a9b99e1f903e715d02746b39c7de048c",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-03.csv": {
+          "sha256": "79dbdca5656fcb53bf051b40dbf6940c7b99e880d1ca38ebaf724135073a6174",
+          "size": 460779
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:27Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-04.zip": {
+          "sha256": "c9d04ed29b5103131db2f9b7c7dfe1d42f10cc889a01e9cbf0dd23b00f701cab",
+          "size": 160707
+        },
+        "BTCUSDT-15m-2024-04.zip.CHECKSUM": {
+          "sha256": "7b95c062b16abfbac700a6b526a370716456bd122ff45070fcf897a34bde1205",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-04.csv": {
+          "sha256": "fde006dba67848d6e736b229688190cbeea04c398042df22a7a26eb2bc76fa0b",
+          "size": 451459
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:30Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-04.zip": {
+          "sha256": "b2601ce5ceb71d46d3889beaacad971d823393a7dae78e68852e52da758a0c78",
+          "size": 152123
+        },
+        "ETHUSDT-15m-2024-04.zip.CHECKSUM": {
+          "sha256": "afe873cb73d412c4a9f4574062e7c297fdfa087b6d5f95c2042a7ffcacb1d6f3",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-04.csv": {
+          "sha256": "023bc4fa955f64b7871b433a73221e749bca7f31e75efc5c5171444ad4cdc4ac",
+          "size": 443177
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:33Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-05.zip": {
+          "sha256": "b093a42ba168fbdb34365067a3e0fa714a8856840a9abd12188378b6e54eddb2",
+          "size": 163851
+        },
+        "BTCUSDT-15m-2024-05.zip.CHECKSUM": {
+          "sha256": "066198596972e2241b4877bc9000db94b387a7599fa9a3852e02d9354ad145d2",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-05.csv": {
+          "sha256": "6c3b6882d5083589dec5e6b8112cd9cda94cc2de295682089de6d283825efad1",
+          "size": 463985
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:36Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-05.zip": {
+          "sha256": "606e908fe6de46f3bc2e950434093be686fefaf24946d59a897ddc7a48c2b1f3",
+          "size": 155654
+        },
+        "ETHUSDT-15m-2024-05.zip.CHECKSUM": {
+          "sha256": "4933af4b64ec5c9b3bb1ed88d63f94d8b8eb55b040c0f4dc54defee8db6d5910",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-05.csv": {
+          "sha256": "71fb49f90e26c1acf9e475268f7ac75921ac7893676714a129ce9e1db4ab176a",
+          "size": 456379
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:39Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-06.zip": {
+          "sha256": "41e0e7ecf5087b343daa183d2cf9a0f5e33e1f279a1d529e39845223999be0f1",
+          "size": 156179
+        },
+        "BTCUSDT-15m-2024-06.zip.CHECKSUM": {
+          "sha256": "55a254a70dac349ed69471cfc6ea401eb7b860902e915f2a00ab144c8ca7589f",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-06.csv": {
+          "sha256": "a3115c66aae5947cdd97a263bd2ae39b28805e2948b0f153f2f2fc6181aa92a5",
+          "size": 447193
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:42Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-06.zip": {
+          "sha256": "7a79f1af25487217a1b187163a98e2df10c27b4ea2050bddf0199138feae3613",
+          "size": 148930
+        },
+        "ETHUSDT-15m-2024-06.zip.CHECKSUM": {
+          "sha256": "c3f28c6686801122c4097ab6452241a5c57770af561d8a9fcfa6780fd3a2aae8",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-06.csv": {
+          "sha256": "2420ac47814a3d862c6c0f2ce4a40bf61e4531d16956b6b2916840a6d9d5a78e",
+          "size": 439740
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:45Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-07.zip": {
+          "sha256": "cd60b795c1cf5b33e6899b474152a89e0f07953a6dabb9514a3269274ad390d4",
+          "size": 163056
+        },
+        "BTCUSDT-15m-2024-07.zip.CHECKSUM": {
+          "sha256": "1bdf80ec4bab741af1356061990e488be56dd6d99c48d456e622be70b28be80d",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-07.csv": {
+          "sha256": "ec2d09f705f225632bd120e6fc4af9075590d2417816edb004e6729e90aced35",
+          "size": 464321
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:48Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-07.zip": {
+          "sha256": "9158fc53f283c3c467a411fb4a12d235fe53225904b6c75ac4bcb237cdea364c",
+          "size": 155717
+        },
+        "ETHUSDT-15m-2024-07.zip.CHECKSUM": {
+          "sha256": "ae7828b202b4aad0601229ef5893cddb8d741e49bf953cb96fa7eaa05b118823",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-07.csv": {
+          "sha256": "77671362e26efb73811e56d42f773bf3813010f7c17542a883a29f9a094bfbb0",
+          "size": 455919
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:50Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-08.zip": {
+          "sha256": "44e084e916a4c661b2177741d71438916388c0d34554f63cb147973aac13b094",
+          "size": 164040
+        },
+        "BTCUSDT-15m-2024-08.zip.CHECKSUM": {
+          "sha256": "3fe8d6caf60fa6e7b7bc22e482fc04710aaedbd281dc725fba8a36e913e33118",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-08.csv": {
+          "sha256": "54fecf17078a8fb0d1a6ec16be6a64003947bf411e2697ced2815162cb69a7b0",
+          "size": 464337
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:52Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-08.zip": {
+          "sha256": "d69a001670428e83a8dea90d5fb7bacbcd777410e98293318674e0aa90a5daac",
+          "size": 156138
+        },
+        "ETHUSDT-15m-2024-08.zip.CHECKSUM": {
+          "sha256": "d74ccec57b22ea015c04ce7677bf356639b9e408db8125f2eeced3351d90539f",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-08.csv": {
+          "sha256": "29200542ff4a3499a99f5eda8aafc387b29a203bd3684e41f20c748ce64ff420",
+          "size": 456714
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:53Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-09.zip": {
+          "sha256": "2135a835c5b7be91f6015d182b393b115a40aea8a83193a096f23d2c8447b9c0",
+          "size": 156476
+        },
+        "BTCUSDT-15m-2024-09.zip.CHECKSUM": {
+          "sha256": "b8bffa5604a08e8e0d897ca9ae665fd60ee035a97ba6b141ce06216021513ad5",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-09.csv": {
+          "sha256": "e4d1b71536ec880ac772a42aacdb12fa6db0751fe5b4a6fd5a345fcd947f5579",
+          "size": 448744
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:56Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-09.zip": {
+          "sha256": "4ae6d427ed21138f96f8ea47257812640da2000ea72e608f86701c4983f68700",
+          "size": 149267
+        },
+        "ETHUSDT-15m-2024-09.zip.CHECKSUM": {
+          "sha256": "e4b9d7f4b727f2f55f6581633d1fa8cddb718d80f78d5eb9d93aa8d7738bdb92",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-09.csv": {
+          "sha256": "20c1611b9931c78226ac8b9034ba0210514d44f565791aa2203c990f44cff668",
+          "size": 440853
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:03:59Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-10.zip": {
+          "sha256": "2e5b200be53e7196f1c73b06f3fb33caee04d2efd191b08d45049dd2a287d326",
+          "size": 162356
+        },
+        "BTCUSDT-15m-2024-10.zip.CHECKSUM": {
+          "sha256": "99e83b19849ac104107b52c51e3bf7d8ac4a62af7aed7c9a9a99701fdd72207d",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-10.csv": {
+          "sha256": "637ad8d7c3df180637cd4a65970e220d02aca6bc852e3e7d8dc6ccfbb5d7d9cb",
+          "size": 464071
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:02Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-10.zip": {
+          "sha256": "ebb1d763fabab7d32025015e0229fccedaf3d768165d03a5df2756995fb75d32",
+          "size": 154883
+        },
+        "ETHUSDT-15m-2024-10.zip.CHECKSUM": {
+          "sha256": "4505167c1e490280fd9c204f7af7ca333ca955e5cae88cfb74c65f1c3c662ee1",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-10.csv": {
+          "sha256": "e43c2a3f09a173deb3e2ab1edc03b4ebac129f1c8e4dfab8aeae185a69b19011",
+          "size": 456438
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:04Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-11.zip": {
+          "sha256": "4589ca348cb6547a59dab9cafd3ca474631f3817bfe13e692607f1074cbe2818",
+          "size": 161547
+        },
+        "BTCUSDT-15m-2024-11.zip.CHECKSUM": {
+          "sha256": "a4f36ed25d9e4a9121cbd92a4d2c6b2a56b5833175d246f82c21ff454fb27b30",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-11.csv": {
+          "sha256": "74368a671fcf241c4f1846bf451a63045ca68860d9e525a1c3969b9e47b819ba",
+          "size": 453806
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:07Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-11.zip": {
+          "sha256": "fc64a5f1201c6b59f9a3e476e17de2eecf5c2d71141be86bc50cfd10fb43f37f",
+          "size": 154025
+        },
+        "ETHUSDT-15m-2024-11.zip.CHECKSUM": {
+          "sha256": "9e53ef02e845e94af6a1ab237a8dcf1100da1156f73e3c71c84af95d09b59136",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-11.csv": {
+          "sha256": "416c0498ef6a9e48e0c45e02bfbb7e17c1e1203574ca7fce617e38b4c1454091",
+          "size": 446945
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:10Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2024-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2024-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2024-12.zip": {
+          "sha256": "f7df52b68d68c03936b886f6fa056027959e307310d27c05175fd74382e5ec9d",
+          "size": 167250
+        },
+        "BTCUSDT-15m-2024-12.zip.CHECKSUM": {
+          "sha256": "762602ace545073a965c8d41b87827ed1d299229da0c64d789af1594e27872e5",
+          "size": 89
+        },
+        "BTCUSDT-15m-2024-12.csv": {
+          "sha256": "b239e92908fa6fdcd5bec56f2d19bb2b68956b4a282bb394f7b64baa520d95d8",
+          "size": 470666
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:13Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2024-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2024-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2024-12.zip": {
+          "sha256": "740ceb801c523850370500e757062a0f1fe4070f5750ef173799c6427fe4a4fd",
+          "size": 159011
+        },
+        "ETHUSDT-15m-2024-12.zip.CHECKSUM": {
+          "sha256": "be5d6feb0f8de50521782bd8185eca1233f58f7d5b3756506c70bd535981ce1d",
+          "size": 89
+        },
+        "ETHUSDT-15m-2024-12.csv": {
+          "sha256": "9c09431684853a322c955514eea843e388181233514b80500791a6b7b6dea08c",
+          "size": 461302
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:16Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-01.zip": {
+          "sha256": "e2070d7dfd1ad7ade38589fdaa44366f9bd686fa750259a56b39111f7f49ae73",
+          "size": 168041
+        },
+        "BTCUSDT-15m-2025-01.zip.CHECKSUM": {
+          "sha256": "0f38e7d209c4200c52d9e2850251e34b47a0da03caa0e4cf5b292dfe6321fa98",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-01.csv": {
+          "sha256": "4b259d50eab871287ee98d5a46fd034eb6a83df88078bdba87735ab1a8321653",
+          "size": 489676
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:56:36Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-01",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-01",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-01.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-01.zip": {
+          "sha256": "84bad649817269f4e97b6c567c5dd177a4e1d21921ce216798406bf5e2dc39bd",
+          "size": 159000
+        },
+        "ETHUSDT-15m-2025-01.zip.CHECKSUM": {
+          "sha256": "b4c512de0b6d0d8910e4bddcbb0f54dfb9a41ed76f267ce3f554719df7a3d734",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-01.csv": {
+          "sha256": "1bffc752791af36e0b186b725d0cb4b50344d5d8a288b9b162b3b55e71a08268",
+          "size": 477508
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T02:56:38Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-02.zip": {
+          "sha256": "75b92f4005f40dc8f9bb6ac2f48edef0e1fbd3d9603709b25355d11a76bde949",
+          "size": 151425
+        },
+        "BTCUSDT-15m-2025-02.zip.CHECKSUM": {
+          "sha256": "877d9f1234df8adea3f55ee808b31f689c242f1cdb21e3ec9b14a442dbdeba52",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-02.csv": {
+          "sha256": "acf2e1241a8f1924fd3ac0043564d85cb76fe1dc6783383bc0298cca676fb0a2",
+          "size": 437435
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:19Z",
+      "coverage": {
+        "expected_bars": 2688,
+        "observed_bars": 2688,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-02",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-02",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-02.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-02.zip": {
+          "sha256": "34f7721028e6a920fdfab4ba101f2ae36ad059928d2f778f062742f8281f7781",
+          "size": 144415
+        },
+        "ETHUSDT-15m-2025-02.zip.CHECKSUM": {
+          "sha256": "58b991d7cc0c24418edd7cfc704aca8d92a76f0f0703199aeef8a61d0a58e5cc",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-02.csv": {
+          "sha256": "53d58feb197a65b220fc00c1836ab2e1d4d94d9caab9583ea0f6d2c8a233f529",
+          "size": 432710
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:22Z",
+      "coverage": {
+        "expected_bars": 2688,
+        "observed_bars": 2688,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-03.zip": {
+          "sha256": "ae17d51ad99cc5b7498d9fdb591af40601d001af2f08a0e08c0ac1a514d11445",
+          "size": 167405
+        },
+        "BTCUSDT-15m-2025-03.zip.CHECKSUM": {
+          "sha256": "09d85644a2151a081c503a2dbe7510c1c058b4a073fc198bab6bfe584ab0972e",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-03.csv": {
+          "sha256": "af4fc223397261ec7fe0c995ebf7b7a44e34bab57702603e4f7ab89dc40beb4e",
+          "size": 483097
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:25Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-03",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-03",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-03.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-03.zip": {
+          "sha256": "d92f5ce9a31ba3110bedff7af9cd6e0708ebe1e02e139157ff29bdc22f01fc33",
+          "size": 157828
+        },
+        "ETHUSDT-15m-2025-03.zip.CHECKSUM": {
+          "sha256": "35463ca1bb6c2348343e1ae566483dbcaad8493d85b12f12aff711d110e1dc93",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-03.csv": {
+          "sha256": "59ff05f5632e7c75efea55423830d8d25aec1fca080b5ce4452c9902bf683603",
+          "size": 476823
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:28Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-04.zip": {
+          "sha256": "4c5e24448a99a67756d6c692239a97b9ca7607088f0822ac2a38064afe31cd8e",
+          "size": 160754
+        },
+        "BTCUSDT-15m-2025-04.zip.CHECKSUM": {
+          "sha256": "17a84dd6ea91bdad55122af5312ad8d80cc5c6e069e025765711b44d8e7b3dd8",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-04.csv": {
+          "sha256": "23d28cf65a155975b542b101ff4f5f1f037d08393dc0c75d7cbcb0fe3730815a",
+          "size": 466949
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:31Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-04",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-04",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-04.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-04.zip": {
+          "sha256": "106eefead6ee2254283f6b6bc6e1e6d38d7f59bb386131323fefe97dcfffae34",
+          "size": 152496
+        },
+        "ETHUSDT-15m-2025-04.zip.CHECKSUM": {
+          "sha256": "36bfd3776018554c646aa94a382d4c2711015e19ffe06f33c122ea0e1a5a79d5",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-04.csv": {
+          "sha256": "731e89f69ac78a4b3be8b03e204069b8d557dc2d07d12a340dd70f1d927f420c",
+          "size": 461849
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:33Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-05.zip": {
+          "sha256": "3f281b71006c4675852627577e243106492976f1ed8bf63cb477d6c2c587b73c",
+          "size": 166978
+        },
+        "BTCUSDT-15m-2025-05.zip.CHECKSUM": {
+          "sha256": "cd702a9a09be58f81144dc8dafab9597868da5ebc72a13e8f1c0c588786deb36",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-05.csv": {
+          "sha256": "806aa736df00f7e466a27af86582bc7a38e5444afc123f9f301171b9eb74892d",
+          "size": 491480
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:36Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-05",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-05",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-05.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-05.zip": {
+          "sha256": "cc6d10fe84ceafc6bc5a9d7364ec14d18408ddb7e19113a51dc987315566925b",
+          "size": 159180
+        },
+        "ETHUSDT-15m-2025-05.zip.CHECKSUM": {
+          "sha256": "125c9147083e331ba033e8ef9756832700f3d659ef143addb8a16b50e9f7b852",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-05.csv": {
+          "sha256": "83a5ce7d7f1c165e9ef3f4c9b76a306a8bf1282001099de42f7b228e5acff500",
+          "size": 479013
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:39Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-06.zip": {
+          "sha256": "38e4a053cd454454fbd59071a7d83e1c2300cbf33244b2c7b1c8e43b0001e70c",
+          "size": 160347
+        },
+        "BTCUSDT-15m-2025-06.zip.CHECKSUM": {
+          "sha256": "e2fbf37bb4063eda4714f992e9780bcf99dd7bcfdac9fd9e6ef1fffe6594afda",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-06.csv": {
+          "sha256": "5ed5b8f531695fe560192dd638bfe3252d6e33bf35c560cf2fb843fd58f60948",
+          "size": 475768
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:42Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-06",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-06",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-06.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-06.zip": {
+          "sha256": "7b9b239a5a4954f9dbdc4e06e596075de0a3af6794952c5b1719d7efb3f60b09",
+          "size": 153123
+        },
+        "ETHUSDT-15m-2025-06.zip.CHECKSUM": {
+          "sha256": "97c872a024872ac19dff7da7604b9e738ed2575007851296ac78da48004b07b8",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-06.csv": {
+          "sha256": "d7c20084feb0439ac4c65f47873da0ad95a00ee3facfd9e18759ac069c31877c",
+          "size": 462169
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:45Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-07.zip": {
+          "sha256": "fde0f69099200a5c7a9e2df29c4a30192887dee417cc27b75b78ac156b82ce7e",
+          "size": 165156
+        },
+        "BTCUSDT-15m-2025-07.zip.CHECKSUM": {
+          "sha256": "2f62eee0d35601872d2652b32bcdf3f25dfb433b6aa15df398a4d3a4593a9c90",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-07.csv": {
+          "sha256": "dd8e391c830b210d80a2b77b5d4310e47acfca708c99f437239796df958db6b0",
+          "size": 492419
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:47Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-07",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-07",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-07.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-07.zip": {
+          "sha256": "53df300524898205f202fc57338be2fea06fd4da2b1cc176c4de6952751176c5",
+          "size": 159690
+        },
+        "ETHUSDT-15m-2025-07.zip.CHECKSUM": {
+          "sha256": "14f2104298cdfead34c66bc8a9673f61e2191d8576fd84457b6e73f825805cb6",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-07.csv": {
+          "sha256": "39820873a12de7af45c3927f26c3fa28782acf12daf74f3f9bf947190f1b0bbc",
+          "size": 479187
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:50Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-08.zip": {
+          "sha256": "be96bc6cc5a7ee230e6991641d997784c9c5fa8a416ef63d09cc39c722debb02",
+          "size": 165760
+        },
+        "BTCUSDT-15m-2025-08.zip.CHECKSUM": {
+          "sha256": "a16ccf5e6a29e7177763bc7f6177f3487228ca7ac19f54bc31dc2fe4ad83237e",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-08.csv": {
+          "sha256": "43c34922d4cfe47bc07da76cb5721b7159e11f3fbe94d594c2b7f915d6e12016",
+          "size": 492714
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:53Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-08",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-08",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-08.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-08.zip": {
+          "sha256": "f44311feba03aa7b9a81327060a58b60d738f932e73067a5f43caac804829054",
+          "size": 161601
+        },
+        "ETHUSDT-15m-2025-08.zip.CHECKSUM": {
+          "sha256": "0360aa297a6cfcf25d97079644a2a4755b0082a7beba31af9e4d2efc1ded2938",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-08.csv": {
+          "sha256": "2262abcf42a597532a9808c70503f87656db789f8502bd48feb46cafcf89ccba",
+          "size": 480724
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:56Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-09.zip": {
+          "sha256": "b8c6bddf326809830bc5e21043222850699890ea0947d13d1fb98e13339191ca",
+          "size": 159307
+        },
+        "BTCUSDT-15m-2025-09.zip.CHECKSUM": {
+          "sha256": "44361e8045db9d5850c1ef710d71f9a73828979b586ff470ce29965e896c5f73",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-09.csv": {
+          "sha256": "bfedf4de813a2da8c87ab4659b0f67f4fae07f288bf92b668befe9b37ed5add8",
+          "size": 475437
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:04:59Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-09",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-09",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-09.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-09.zip": {
+          "sha256": "d9246e0929570bcbae6fce12734c025bf407af3559a02cc99418aca04b02135d",
+          "size": 153815
+        },
+        "ETHUSDT-15m-2025-09.zip.CHECKSUM": {
+          "sha256": "d4bbec1b07cdc40d58348b13cc05ad201ac4ae3a183516162af073a01615c4eb",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-09.csv": {
+          "sha256": "67789964334819f58224be162aa0d7fffb85ec39994f0055e036fc6bf60aeb88",
+          "size": 462218
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:05:01Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-10.zip": {
+          "sha256": "e70fe6171cc61d01a915c7c7c22f325723c1d7d5216223472ed487f72d693524",
+          "size": 168896
+        },
+        "BTCUSDT-15m-2025-10.zip.CHECKSUM": {
+          "sha256": "d40dbcec6d8629c60decdcc944c96fe4921676abf117c4ddf8bab8c849e31b56",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-10.csv": {
+          "sha256": "2302a4dfbb23d7b5230d1107c53277fae60ca8d7cd4ae7c8b5aea29954b126c2",
+          "size": 495229
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:05:04Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-10",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-10",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-10.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-10.zip": {
+          "sha256": "ddb2b2851af41e31794d00d663571523a1709b631fd7444933824cb9ad5edd85",
+          "size": 161142
+        },
+        "ETHUSDT-15m-2025-10.zip.CHECKSUM": {
+          "sha256": "5d255d87bb4e8a6a8369e9b45bfbc3c802feb173aeb1b5d7e568086f7e0b0cf7",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-10.csv": {
+          "sha256": "e23b0c1999eb5a589b032aa908344f8dc9d6fdc1a3ab6b2e33d00334c556d6a3",
+          "size": 479465
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:05:07Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-11.zip": {
+          "sha256": "23040caa8960c13e0a4875504bb6042396b9fee5eef2ea08e12c5249f51d61df",
+          "size": 163307
+        },
+        "BTCUSDT-15m-2025-11.zip.CHECKSUM": {
+          "sha256": "280e0a684f95a8e19f0e535bc29fca4b4770aef89689135254640420a0abe5a4",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-11.csv": {
+          "sha256": "2ae86d84bcafecd0426f86b0da71c0be818408a48b952264292d349bb4facbf1",
+          "size": 472987
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:05:10Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-11",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-11",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-11.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-11.zip": {
+          "sha256": "288889103766ff11ec404e74a92c1e1ceb0884e40d9f653922207dd566f35d20",
+          "size": 155342
+        },
+        "ETHUSDT-15m-2025-11.zip.CHECKSUM": {
+          "sha256": "5385c9402720574e7ae3dadf0a840f81ca72ecdf059be7b8a5b4f6165a3f03a1",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-11.csv": {
+          "sha256": "3bc441e6d4108a31d9d23c5b1a19ea2f9344c6221e1001f50c1aa4427e1dc54a",
+          "size": 463535
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:05:13Z",
+      "coverage": {
+        "expected_bars": 2880,
+        "observed_bars": 2880,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\BTCUSDT-2025-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2025-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "BTCUSDT-15m-2025-12.zip": {
+          "sha256": "a263be5b80c459621d1cd20018951289c64e08891b8425a1dd78c0ee1f490cea",
+          "size": 164960
+        },
+        "BTCUSDT-15m-2025-12.zip.CHECKSUM": {
+          "sha256": "7ad3830b18a39add03e04ede34767f4573a0e41a19622ea8bf53ccf7389df9b9",
+          "size": 89
+        },
+        "BTCUSDT-15m-2025-12.csv": {
+          "sha256": "4f99a3abbc909ddee3237a0e28931886ea01de137b67403f5a0753a85508af22",
+          "size": 480057
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:05:16Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-12",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25\\ETHUSDT-2025-12",
+      "url": "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2025-12.zip",
+      "provider_checksum": "MATCH",
+      "files": {
+        "ETHUSDT-15m-2025-12.zip": {
+          "sha256": "b4270c918a02f78800b6390e94af525f29c8554d27cc13cf6b62537691476df8",
+          "size": 157483
+        },
+        "ETHUSDT-15m-2025-12.zip.CHECKSUM": {
+          "sha256": "9dbd3194cfb71bef55aeaf9ea37b14afd3b9d3abc11342eaf5d5c1475f102331",
+          "size": 89
+        },
+        "ETHUSDT-15m-2025-12.csv": {
+          "sha256": "752deffc33acb8ce36686ba3c7be3991d00316d6e35687678aece9306f724878",
+          "size": 475798
+        }
+      },
+      "status": "STRICT_NORMALIZATION_PASSED",
+      "retrieved_at": "2026-10-25T03:05:18Z",
+      "coverage": {
+        "expected_bars": 2976,
+        "observed_bars": 2976,
+        "missing_bars": 0,
+        "gaps": []
+      }
+    }
+  ],
+  "scientific_readiness": false,
+  "exposure": "Source identities, coverage and technical validation gaps were exposed to the implementing assistant; prices and empirical hypothesis results were not printed. Retain this diagnostic exposure in later contexts.",
+  "limits": [
+    "Historical vintage/publication truth unverified.",
+    "Raw acquisition directories are outside registry backup bundles until imported as committed blob sources.",
+    "Sixteen rejected monthly files remain source gaps; no bad bar was repaired or dropped into an accepted sample.",
+    "No scientific experiment, feature certificate, trading authorization or complete data acceptance follows."
+  ]
+}

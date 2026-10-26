@@ -1,0 +1,291 @@
+{
+  "schema": "independent-information-study-review/1",
+  "date": "2026-10-25",
+  "role": "Independent evidence-engineering reviewer; tests and report only, no production edits",
+  "purpose": "Assess the complete fixed finite-grid development study, exact outer uncertainty, durable reservation/settlement accounting and retained generation/bootstrap/MC/replay integration against research-contract/1.0 sections 5.3, 5.4 and 11.",
+  "conclusion": "No remaining substantiated defect found in the bounded review after the documented fixes. The reviewed implementation can retain an uncalibrated development study and nominate a smallest tested target only after its complete declared grid. These checks do not establish adequate real-market nuisance assumptions, calibrated power, scientific N_min or admission.",
+  "reviewed_sources": [
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md sections 5.3, 5.4, 9 and 11",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json",
+    "trading_researcher/information_study.py: make_manifest, outer_interval, summarize, budget_state",
+    "trading_researcher/study_pipeline.py: calculate_world, child_entry",
+    "trading_researcher/study_runs.py: prepare/advance/inspect, execute_attempt, _study_history, _settle_study and recovery",
+    "Existing population, evaluation-plan, bootstrap/MC, storage, memory and broker ownership boundaries"
+  ],
+  "independence": {
+    "fixed_oracles": "Closed-form CP endpoints, nonmonotone and nondirectional selection counts, and a reservation ledger were communicated before reading the new pure implementation. Expectations were not changed to fit the implementation.",
+    "retry_scope_clarification": "The initial informal max_attempts example did not identify global versus per-world scope. The stable API explicitly assigns the cap per world; tests check that scope and keep next_reservation_fits an aggregate resource predicate.",
+    "production_edits": false,
+    "reused_setup": "The owner tests reuse the existing owned plan/execution/diagnostic fixture setup without importing or inheriting its test methods.",
+    "fault_fixture_limits": "Pipeline status mapping and dispatcher routing use explicit mocked fault fixtures. Mock proofs are not replay evidence. The consistently rehashed stream attack separately runs real generation and a real fresh replay child."
+  },
+  "hand_expectations": {
+    "two_sided95_cp_bits8": [
+      {
+        "k": 0,
+        "n": 1,
+        "lower": "0",
+        "upper": "125/128"
+      },
+      {
+        "k": 1,
+        "n": 1,
+        "lower": "3/128",
+        "upper": "1"
+      },
+      {
+        "k": 0,
+        "n": 2,
+        "lower": "0",
+        "upper": "27/32"
+      },
+      {
+        "k": 1,
+        "n": 2,
+        "lower": "3/256",
+        "upper": "253/256"
+      },
+      {
+        "k": 2,
+        "n": 2,
+        "lower": "5/32",
+        "upper": "1"
+      }
+    ],
+    "two_sided95_cp_n2_k1_bits40": {
+      "lower": "13830885511/1099511627776",
+      "upper": "1085680742265/1099511627776"
+    },
+    "exact_dyadic_root": "For n=1,k=0,noncoverage=1/2, the upper root is exactly 3/4 and has a zero-width bracket.",
+    "finite_enumeration": "All n=1..8 and p=j/16 for j=0..16 have exact enumerated coverage at least 19/20 with outward 8-bit endpoints; reflected bounds and maximum bracket width are checked.",
+    "contract_count_distinction": "Separate one-sided 95% endpoints correspond to a two-sided 90% interval. At n=256, upper<=0.10 admits at most17 errors; lower>=0.70 requires192 detections. The point estimate>=0.80 requires205 detections (52 of64). These are arithmetic fixtures, not calibration observations.",
+    "nonmonotone_grid": "At targets8,12,16 with5 worlds/cell and2delta detections4,3,5, nominate8 only after the complete grid.",
+    "nondirectional_grid": "Positive counts4,4,5 and negative counts3,4,5 nominate12; one required stress/sign falling below4/5 moves the candidate to16, and a further required failure removes the candidate.",
+    "denominators": "Four detections plus one completed information gap is4/5; replacing that gap with a technical failure or model gap makes the study incomplete.",
+    "accounting": "With aggregate1000ms/1000bytes and per-attempt400ms/300bytes, known125/90 then unknown0/0 then known100/50 charge625ms/440bytes. All three attempts remain charged; a fourth attempt for that world is rejected."
+  },
+  "findings_and_fixes": [
+    {
+      "finding": "Verified outcomes admitted missing, zero and impossible eligible counts; aggregate excess was not flagged as overrun.",
+      "evidence": "Initial independent pure run:12 tests, six failing assertions, exit1. These overlapped parent-announced pending hardening; reviewer additionally identified the terminal-horizon maximum.",
+      "fix": "Parent requires positive exact verified counts with conditioned<=scope<=(time_rows-horizon)*instruments and flags aggregate excess."
+    },
+    {
+      "finding": "Malformed list identities/enums caused raw TypeError during hash membership.",
+      "evidence": "Direct caught probes covered five shapes; the subsequent13-test independent run retained four unittest errors, exit1.",
+      "fix": "Parent added explicit string/None guards before dict/set lookup; unchanged cases pass."
+    },
+    {
+      "finding": "Diagnostic and cost ancestry validation originally followed retained plan/blob loading.",
+      "evidence": "Independent source finding, also observed by the parent owner test. Not represented as a separately executed reviewer denial test.",
+      "fix": "Parent moved diagnostics ownership/lineage and development-only cost ancestry validation before shared plan/source loading."
+    },
+    {
+      "finding": "The stream reservation allowed three copies while its declared materialization-plus-retention accounting requires four.",
+      "evidence": "Independent arithmetic/source finding; fixed before the first owned reviewer run.",
+      "fix": "Parent divides remaining stream space by4 and uses conservative per-child metadata overhead. The independent reservation test checks four-copy coverage."
+    },
+    {
+      "finding": "Failed or suppressed file-stat/output collection could cause unknown materialization usage to be settled as known.",
+      "evidence": "Independent source/fault-design finding; pathlib is_file may suppress stat errors. Fixed before the first owned reviewer run, whose tuple failure prevented the injected fault from executing.",
+      "fix": "Parent uses explicit stat/S_ISREG and an accounting_complete marker. Final injected-stat test proves usage_known=false and full conservative charges."
+    },
+    {
+      "finding": "Owner dependency comparison passed a tuple to the JSON digest and stopped before child execution.",
+      "evidence": "Parent identified the precise cause. Independent owned run corroborated the blocked path:9 tests with five failures, exit1; sources stable.",
+      "fix": "Parent converts inputs to a list before hashing. The unchanged9 independent owner tests then pass."
+    }
+  ],
+  "final_independent_checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_information_study_adversarial.py",
+        "-v"
+      ],
+      "test_count": 14,
+      "unittest_seconds": 0.685,
+      "exit_code": 0,
+      "wall_seconds": 1.049,
+      "source_stable": true,
+      "evidence_result": ".trf-runtime/information-study-independent-review-2026-10-25/pure-tests-result.json",
+      "log_sha256": "185d7ff34e5be9eeeab8f0968df12d48af2c337a2a3c84b05439c62e4f4b245b"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_runs_adversarial.py",
+        "-v"
+      ],
+      "test_count": 9,
+      "unittest_seconds": 99.462,
+      "exit_code": 0,
+      "wall_seconds": 100.152,
+      "source_stable": true,
+      "evidence_result": ".trf-runtime/information-study-independent-review-2026-10-25/owner-tests-result.json",
+      "log_sha256": "6a279ec42ba317f44b16d1803c320e0a8c58f93ad62b854f7b470dadfed903e0"
+    }
+  ],
+  "retained_failed_checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_information_study_adversarial.py",
+        "-v"
+      ],
+      "test_count": 12,
+      "unittest_seconds": 0.124,
+      "exit_code": 1,
+      "wall_seconds": 0.393,
+      "source_stable": true,
+      "evidence_result": ".trf-runtime/information-study-independent-review-2026-10-25/initial-tests-result.json",
+      "log_sha256": "87b5c700d758dff0220d9583ef8cea90d2306e0b2520b0e7b0122e6e9464f5a6",
+      "failures": 6
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_information_study_adversarial.py",
+        "-v"
+      ],
+      "test_count": 13,
+      "unittest_seconds": 0.135,
+      "exit_code": 1,
+      "wall_seconds": 0.388,
+      "source_stable": true,
+      "evidence_result": ".trf-runtime/information-study-independent-review-2026-10-25/malformed-tests-result.json",
+      "log_sha256": "4782288d0bb383bda742e027bc28c5bf118e38d760ef47887c1c09ab99adf0d0",
+      "errors": 4
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_study_runs_adversarial.py",
+        "-v"
+      ],
+      "test_count": 9,
+      "unittest_seconds": 96.091,
+      "exit_code": 1,
+      "wall_seconds": 96.692,
+      "source_stable": true,
+      "evidence_result": ".trf-runtime/information-study-independent-review-2026-10-25/owner-initial-tests-result.json",
+      "log_sha256": "ca70de499197c9a5411bcbe4ff3edb9ccfa103652836fe35e02de15c0fa1ee08",
+      "failures": 5
+    }
+  ],
+  "owner_evidence": [
+    "Known technical retries preserve the identical world and seeds; both failed artifacts, prefixes and charges remain; retry cap and key alias cannot reset that exact study.",
+    "An already settled attempt cannot append another settlement.",
+    "A staging failure leaves an outstanding reservation; the normal advance is fenced, recovery charges the full reservation, and repeated recovery does not restart or refund it.",
+    "Unknown materialization metadata is conservatively charged rather than refunded.",
+    "Completed information gaps advance to the next fixed world; resource/time/segment/numeric stops map to technical failure.",
+    "Completed MC instability becomes inconclusive and interval coverage is evaluated against population truth, not the realized sample contrast.",
+    "A coherently rehashed changed generation stream passes superficial digest consistency but is rejected by real separate-process replay; the study retains technical failure and both streams/errors without nomination."
+  ],
+  "qualifications": [
+    "Outer intervals use exact tail comparisons and outward dyadic root brackets. They are pointwise under fixed independent outer worlds in the declared simulation law, not simultaneous or selection-adjusted confidence guarantees.",
+    "At zero and delta the summary reports detection rates; planned power is identified at2delta. A point80% crossing is not proof that true power exceeds80%.",
+    "The owned ledger enforces each immutable study budget, not a global machine/campaign budget across independently prepared profiles. A new version or continuation still needs its recorded resource/exposure disposition.",
+    "Storage accounting is declared logical materializations plus retained outputs and a fixed metadata allowance, not an OS disk or memory quota. Measured compute covers parent elapsed work through staging and explicitly excludes final commit.",
+    "The retained cost source is operator input with development-only ancestry, explicitly not an authenticated benchmark.",
+    "Orphan recovery is tested by invoking the actual recovery path with outstanding reservations; no real process-tree crash or OS disk exhaustion was induced.",
+    "Parent full regression and forthcoming HTTP engineering probes are separate evidence and are not claimed as reviewer-executed checks."
+  ],
+  "captured_source_and_prior_artifact_hashes": {
+    "trading_researcher/information_study.py": "030c2d5bef9d327874591a5b8902bf8d2e7f1e88b87558e37e970d348e4cda04",
+    "trading_researcher/study_runs.py": "52407f3ee4448db39c06bd5838c6aa84f9dc1c9830a41cdab50a49c76d864ca6",
+    "trading_researcher/study_pipeline.py": "86929369fc5c87df952090af9009e047125f0d9b5c164d17b884b909f6f30d3d",
+    "trading_researcher/coordination.py": "b75ee1403870b61800ac6801881118944203dc0a73e6e5a10fc9c9d4078b31c5",
+    "trading_researcher/storage.py": "d4e1858c623e15a2d37b0c9cf3f3059740064033343e26392f88975c40c94d85",
+    "trading_researcher/memory.py": "ef459243a1c32c16b9825ec5f9932dbcaeb11e60ebae96aae1346b0f412db9d5",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/stationary_bootstrap.py": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "tests/test_study_runs_adversarial.py": "ab5ca216353d313e67bdd82307d6f6b035665c4f781c97d686e73307d068d4b7",
+    "tests/test_information_study_adversarial.py": "3d5044038abf1ce126c481739e686c2e8b4ed260ad60f367e5fbb3b9f383e316",
+    "tests/fixtures/information_diagnostics_cases.json": "e2b8233b7b8ed1917f9392eb0c989279837f88219843371f35740908ccbb6b6f",
+    "tests/fixtures/information_diagnostics_expectations.md": "a30e91ec64b2e2bbc307a3e6b9ba4e54902aaa23dd4ed2ce926060eda670d065",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+    "docs/reviews/implementation-2026-10-25/data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+    "docs/reviews/implementation-2026-10-25/population-model-verification.json": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b",
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c"
+  },
+  "preservation": "All47 captured files remained byte-identical during the final owned test run. Earlier planning assessment, frozen diagnostic fixtures and prior review/verification reports were not edited. Earlier failed checks retain their own source snapshots.",
+  "reviewer_changed_files": [
+    "tests/test_information_study_adversarial.py",
+    "tests/test_study_runs_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/study-review.json"
+  ],
+  "unverified_boundaries": [
+    "Real-market population-model adequacy, fitted dependence and nuisance uncertainty",
+    "Attainable real-workload power/precision grid or scientific N_min",
+    "Fresh256-dataset narrow calibration, boundary/mixed-family calibration and full-process calibration",
+    "Original H_exec/raw-market replay, scientific admission/freeze, economic benefit or capital authority"
+  ],
+  "next_action": "Use the parent retained regression and genuine HTTP engineering probe to check deployment wiring. An actual information study must still finish its predeclared feasible grid and retain all resource/technical outcomes; later scientific admission requires the outstanding adequacy, calibration and freeze gates."
+}

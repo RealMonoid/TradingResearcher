@@ -1,0 +1,137 @@
+{
+  "schema": "independent-implementation-review/1",
+  "date": "2026-10-25",
+  "reviewer": "information_review",
+  "status": "PASS_BOUNDED_OFFLINE_CHECKPOINT",
+  "purpose": "Verify model-name/version and UTC timestamp provenance for framework usage records without inventing immutable model snapshots or historical completion times.",
+  "source_sha256": {
+    "trading_researcher/openai_provider.py": "bde8838004c795d680767936ed2f5478bb06c7c1e3511db8efe6bf9103f10097",
+    "trading_researcher/provider_usage.py": "60eabcfe0bee311334016e0342c69b639302146dcf939b48e91da357f715a825"
+  },
+  "test_sha256": {
+    "tests/test_openai_provider_adversarial.py": "1aa6e34b3948acc332d4c15f356610552adacaa733e1a0ed81aa593df0c77a3a",
+    "tests/test_openai_provider_metadata_adversarial.py": "ddc9c93739e0dc0dead6999b352807578783e12b355928c20433b204d40bd87c",
+    "tests/test_provider_usage_adversarial.py": "3e74d24b07ee323ebc4f2c62bdcc5ada162e468b22e530f7de9503cb00bc89b4",
+    "tests/test_provider_identity_adversarial.py": "4b68e051fc6daa2755b4b270beb4db0335eac3af99dedd675556c3ca42503c52"
+  },
+  "protected_artifacts_sha256": {
+    "docs/reviews/implementation-2026-10-25/provider-usage-review.json": "a8615302f37456ef29ee203dd37d58cd1e0d54479c5bdde31fdd85fb8048350d",
+    "docs/reviews/implementation-2026-10-25/openai-provider-review.json": "de53f8bb99b37538375ed1051e8b0d522dfae6c3030dcff5da0663e17c07be09",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-baseline.json": "3adfb4f50628ebaaa2349d872422523a91a352437d05011e847347642e14e215",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+    "docs/reviews/implementation-2026-10-25/baseline.json": "0938c679b0c76b9ae3f12f9b8423445b264c30b4f59c9b37d4cc8faa40d0c879",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-results.json": "12d2bb8f83bc1d2f99779cfaed78a5bfccc486578986f0d07e412c0ba3532b57",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+    "docs/reviews/implementation-2026-10-25/binance-registry-retention.json": "344746c5c7591569cb20741d3095bb1a1ddc7e37358349486e2f409439559ad9",
+    "docs/reviews/implementation-2026-10-25/binance-source-inventory.json": "a6d7198d0b0a350e123a6e856825e46cd7a3b7e9c138c2c0ae5a57d5c8cc513b",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+    "docs/reviews/implementation-2026-10-25/bootstrap-baseline.json": "2b4dba278b2c2db67b182f594549cd843ed8d851c1579250f305eaa058dd39d1",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+    "docs/reviews/implementation-2026-10-25/data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+    "docs/reviews/implementation-2026-10-25/feature-results.json": "6edf1dcb1d4a777b85bfafc358bd4c36bac6062bf4a2f3cbfb539e20d59ed39a",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/information-planning-baseline.json": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+    "docs/reviews/implementation-2026-10-25/mc-stability-baseline.json": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+    "docs/reviews/implementation-2026-10-25/measurement-review.json": "b3477a873c0b4967152176d998ffcbf20c218ace9dd970ca1cba88698b0e51c6",
+    "docs/reviews/implementation-2026-10-25/measurement-verification.json": "ffd1c6ebdfa220ff795a36ea13a7e276b950f3d6b03c325791d13a64d58eab22",
+    "docs/reviews/implementation-2026-10-25/memory-preservation.json": "445a51780caca04b35ddd09a8addf1ea3f0fdd6ab7c8d5e09efea4ad5dbb9efc",
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-baseline.json": "bbe364a8d449fc3e09bedcf909d1f0a5da61f2260ea1d64942c4201c76bf529f",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+    "docs/reviews/implementation-2026-10-25/plan-retention-baseline.json": "3d97578b6c68d417f3e5584ee9356f3d5435e3b663208c87b567429af27db430",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+    "docs/reviews/implementation-2026-10-25/population-model-baseline.json": "6b693a0b586259879b0151cb41aefa5395d9dc82965628de125ccb5b67e2b1c7",
+    "docs/reviews/implementation-2026-10-25/population-model-progress.json": "5028d35ac7c13fa84d4937afedd03e7b75aa66e014052d14989cf457c5319a0f",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+    "docs/reviews/implementation-2026-10-25/population-model-verification.json": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b",
+    "docs/reviews/implementation-2026-10-25/progress.json": "398066f64a07389dd4de33fbddaedf7380b2960ad80a57590037ea8c7a6b1621",
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c",
+    "docs/reviews/implementation-2026-10-25/study-review.json": "3d08b38a6b4a8accc07705b625762b61d9b37ccbfae38db31c72b48ecc94f742",
+    "docs/reviews/implementation-2026-10-25/study-verification.json": "1134ed19aa2c02a1ba30d6c6a00f723659b0f035b954e0d2fa0999a46b9a3e43",
+    "docs/reviews/implementation-2026-10-25/CHATGPT_PLAN_INTEGRATION_REVIEW.md": "433bbc5b46809db59c714c6083dde8e4e412c1347d36d4e31f5fbd94097573be"
+  },
+  "reviewed_semantics": {
+    "requested_model": "The frozen request identifier; it does not prove the served revision.",
+    "reported_model": "The provider response identifier, unavailable before the response.",
+    "catalog_name_and_version": "Frozen descriptive catalog metadata, separate from prompt version and the immutable provider snapshot.",
+    "immutable_snapshot": "Explicitly null with status UNKNOWN when the available identifier does not establish an immutable snapshot.",
+    "admission_timestamp": "Existing local admission timestamp rendered in ISO 8601 UTC.",
+    "settlement_timestamp": "New local durable-settlement timestamp, not a provider execution-completion timestamp; historical missing values remain null."
+  },
+  "official_source": {
+    "url": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "checked_on": "2026-10-25",
+    "finding": "The page names GPT-6.1 Sol and lists gpt-6.1-sol in its Snapshots section without a dated immutable snapshot. The reviewed implementation does not claim such a snapshot."
+  },
+  "fixed_oracles": {
+    "admitted_unix": 100,
+    "admitted_at_utc": "1970-01-01T00:01:40Z",
+    "settled_unix": 200,
+    "settled_at_utc": "1970-01-01T00:03:20Z",
+    "later_idempotent_replay_unix": 900,
+    "original_settlement_preserved": true,
+    "same_run_distinct_model_identities": 3,
+    "tokens_per_identity": 504,
+    "aggregate_tokens": 1512,
+    "legacy_reported_model": null,
+    "legacy_catalog_version": null,
+    "legacy_settlement_timestamp": null
+  },
+  "findings": [
+    "No new substantiated defect was found in the bounded extension reviewed here.",
+    "A mocked provider invocation retains requested/catalog identity before inference with reported_model null, then stores the returned alias separately while preserving UNKNOWN immutable snapshot status.",
+    "Run and model summaries do not merge different reported identifiers or catalog versions even when epoch, run, and worker match.",
+    "An identical settlement replay preserves the original timestamp; changing only model identity with the same monetary charge is rejected.",
+    "Direct legacy reporting preserves database bytes; additive ledger-table migration does not backfill old identity fields, alter old receipt bodies, or assign historical settlement times."
+  ],
+  "verification": {
+    "tests": 32,
+    "new_identity_tests": 6,
+    "unchanged_prior_tests": 26,
+    "test_seconds": "2.039",
+    "wrapper_seconds": "2.400",
+    "exit_code": 0,
+    "source_test_prior_artifact_hashes_stable": 59,
+    "modules": [
+      "test_openai_provider_adversarial",
+      "test_openai_provider_metadata_adversarial",
+      "test_provider_usage_adversarial",
+      "test_provider_identity_adversarial"
+    ],
+    "runner": "python -B with unittest.defaultTestLoader.loadTestsFromNames; exact retained output in tests.log",
+    "evidence_directory": ".trf-runtime/provider-identity-independent-review-2026-10-25",
+    "evidence_sha256": {
+      "result.json": "36af358a56fd917eeccc9415752ba6f9e4cac62879d9b159b320997bf5e4cba1",
+      "tests.log": "a55997a4dba20124b57866ad47e04e33055d0a0bb82c7581cef4eec8acd1d570"
+    }
+  },
+  "not_verified": [
+    "No real API, credentials, account quota, or historical production ledger was accessed by this reviewer.",
+    "The tests use synthetic temporary ledgers and mocked provider responses; they establish no live served model revision or real provider completion timestamp.",
+    "No scientific validity, discovery quality, full-framework security, or new execution authority is established."
+  ],
+  "changed_by_reviewer": [
+    "tests/test_provider_identity_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/provider-identity-review.json"
+  ],
+  "next_action": "Parent may freeze this reporting checkpoint and continue the separately authorized full-context investigation."
+}

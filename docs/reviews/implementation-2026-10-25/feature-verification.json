@@ -1,0 +1,621 @@
+{
+  "schema": "raw-feature-verification/1",
+  "status": "PASS_WITH_EXPLICIT_SCIENTIFIC_AND_PROVENANCE_LIMITS",
+  "changed_files_this_checkpoint": [
+    "trading_researcher/features.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/storage.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/__main__.py",
+    "trading_researcher/FEATURES.md",
+    "trading_researcher/README.md",
+    "tests/test_features.py",
+    "tests/test_feature_adversarial.py",
+    "tests/fixtures/reference_feature_cases.json",
+    "tests/fixtures/reference_feature_expectations.md",
+    "README.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/feature-results.json",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json"
+  ],
+  "runtime_tests": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-q"
+    ],
+    "exit_code": 0,
+    "duration_seconds": 319.057,
+    "test_count": 196,
+    "reported_test_seconds": "318.468",
+    "source_unchanged_during_tests": true,
+    "source_sha256": {
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "b501b4aefcf9ac1ebf26afb42f5106aabd660393635b2a661d31394818320360",
+      "trading_researcher/BINANCE.md": "147841892ba24dc4de19cc2bd7e0391e999e77524e69999ce75107006f3224b2",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/BINANCE_NORMALIZATION.md": "6303faf2009a6a5858a33ce381d8a44fcf66840ea461793a2aef3a0a096c6577",
+      "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/CERTIFICATION.md": "c03db08a3cc71c095c5a478c1d2b020dbc2e7da75bfb4e06c7880d59d107d9ee",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "07adb75eeff3bb6dd67b6a5625b82481c619c00e4afd2c1b793668a18cf0e704",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "9f27c0fd022b68d18567cf1c607e6a5bc4c043a124fa791f2a629114ec179cf2",
+      "trading_researcher/DATA.md": "be8fc51b42c52cc01753df55a127972bc91bddf12e5ed7eeb7a831ff8ae70687",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/EXPRESSIONS.md": "522a810ec667ba2e4cdbf223d0446f196349484bb5119deeaf121d27bcfb5962",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/FEATURES.md": "b803cd95938cebb3ea5ac584c3923f5462ae8aae84562e8f43b07612e4ef85c8",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/FORMALIZATION.md": "4b8b044445de45d7cac436bf17c78d550d598d5c262915b201ae8d5f51a84ad7",
+      "trading_researcher/formalization.py": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0",
+      "trading_researcher/MEMORY.md": "a74510af628768a80f920d55236e476edb67c85cbe58b027a3842389b7224b78",
+      "trading_researcher/memory.py": "a6a5351b0e79e35b9b0aae3e239f067edfd1ae3d58f6dba32a8282cdaa7b4026",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/OUTCOMES.md": "633f06660ca6199c6e74283b783ecfc336ffce9acf058da4272c60e7699fac0a",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/README.md": "1e273f07b73b4a0ed3a07bff7d0b9040b4199433c2ad58e3de470bbf8f5b52a2",
+      "trading_researcher/research_calls.py": "776f852184ed42916790565d312a816ab7dce523af6fe7f43d223f077fe9d284",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/RESEARCHER.md": "b5802da05ba83a08a1561b339c7a4f34dc9e50e503b6e305da84f07d7242b567",
+      "trading_researcher/researcher.py": "2678b7e05f83a979c1a2b527d61230d28b822a1156b3dc09a7764f8d4e5efbba",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/STORAGE.md": "3163a033e985d3cb80a590f8e70fa13255ef0dce15cf51f7929d176142ae286a",
+      "trading_researcher/storage.py": "ab72b03205bedfbf30b7ce0dd0c981b03263e99925948bb7956ece1a135d3db2",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe",
+      "tests/fixtures/reference_binance_cases.json": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+      "tests/fixtures/reference_binance_expectations.md": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88",
+      "tests/fixtures/reference_binance_partition_cases.json": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+      "tests/fixtures/reference_binance_partition_expectations.md": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+      "tests/fixtures/reference_binance_quality_cases.json": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+      "tests/fixtures/reference_binance_quality_expectations.md": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+      "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+      "tests/fixtures/reference_feature_cases.json": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+      "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee",
+      "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+      "tests/test_binance_archive.py": "d0d51e95cef4a6b2ceeaf4a788ea19b839377ecf97f9a1ae76dab4cccd15e959",
+      "tests/test_binance_ingest.py": "8201f84b8de45bed381833ec31224f4c1c2e78b9b6541624b1270c56beb55b16",
+      "tests/test_binance_normalize.py": "621238a96e3baa8584466f3bfbfa55ed535e12420ad5fa078e8de8a6eafb5d77",
+      "tests/test_binance_quality.py": "36d8bd7a0e6c0c371e39e699e0e7ab7c8c2d2c23f83a80ebb499338e74a0b0ed",
+      "tests/test_certification.py": "bcf1fe8780619bd8b26ff551cb12c1ff347a96bedb1eef4aa2b8862d44311dd2",
+      "tests/test_coordination.py": "b928aad7d17efea91b4173fea767c3ca04591d0018da3315f256b6b9931295ff",
+      "tests/test_data.py": "197f902659e2f7e103b5bb5eec7ba280ff0018f91ca5e83241e1b0489bfc01b8",
+      "tests/test_expressions.py": "a927ef0a44c0f81945ffa6e0f5f9858ac526838da5d01d80f6c04f641d52ba02",
+      "tests/test_feature_adversarial.py": "e0782cce5db75b5607be717dd7bc1da6cf6e4000c59838bcb39d36faba2b1b81",
+      "tests/test_features.py": "facfc83ab476ff7c1ba188ccb6e277e759c94296b3347678680d163097c1f498",
+      "tests/test_formalization.py": "25c6e017396fbdf6dcee1825e27e42bd6f296f2d543fdeea6d3fab34af575fe1",
+      "tests/test_local_runtime.py": "17bcae356faf10209f446fffb110a62c0c50261be830b2809b17885858f39153",
+      "tests/test_memory.py": "036a7b1fe19bdd900d9db90dca376ac876bcf1a762047387900e70fa5aaff09a",
+      "tests/test_outcomes.py": "2ecaa33fa2b76792ed6df26924d6f43280138123ed93789d88108437b0237384",
+      "tests/test_research_calls.py": "54e1bcd3987ebc2e3225dc5b87ab3e6eb5f68cf8fe526d1b5de6b71e08603211",
+      "tests/test_researcher.py": "7af611fa7670d4da89718fba5a0fff4d3e8a63e062a31193cc8a338a01e1062f",
+      "tests/test_storage.py": "548d263d12d9aa783b248112f06b60058757a8eea1973a45dc03bde6f9582e8a"
+    },
+    "status": "PASS"
+  },
+  "independent_admission_review": {
+    "command": "python -B -m unittest discover -s tests -p test_feature_adversarial.py -v",
+    "methods": 8,
+    "duration_seconds": "80.502",
+    "exit_code": 0,
+    "fixture_admission_targets_exercised": 21,
+    "additional_cases": [
+      "malformed response fields",
+      "empty summary/definitions",
+      "Boolean column index",
+      "shared mutable returned scope",
+      "missing normalization field"
+    ],
+    "remaining_blockers_found": false,
+    "scope_limit": "Reviewer did not inspect the real-data runs or backup/restore"
+  },
+  "per_certificate_child_checks": {
+    "archive_cases": 43,
+    "quality_cases": 32,
+    "partition_cases": 22,
+    "definition_cases": 18,
+    "projection_cases": 10
+  },
+  "pinned_expectations": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "tests/fixtures/reference_binance_cases.json": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+    "tests/fixtures/reference_binance_quality_cases.json": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+    "tests/fixtures/reference_binance_partition_cases.json": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+    "tests/fixtures/reference_feature_cases.json": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+    "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee"
+  },
+  "executed_application_closure": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "tests/fixtures/reference_binance_cases.json": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+    "tests/fixtures/reference_binance_partition_cases.json": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+    "tests/fixtures/reference_binance_quality_cases.json": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+    "tests/fixtures/reference_feature_cases.json": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+    "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "b501b4aefcf9ac1ebf26afb42f5106aabd660393635b2a661d31394818320360",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+    "trading_researcher/checks.py": "07adb75eeff3bb6dd67b6a5625b82481c619c00e4afd2c1b793668a18cf0e704",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/coordination.py": "9f27c0fd022b68d18567cf1c607e6a5bc4c043a124fa791f2a629114ec179cf2",
+    "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+    "trading_researcher/formalization.py": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0",
+    "trading_researcher/memory.py": "a6a5351b0e79e35b9b0aae3e239f067edfd1ae3d58f6dba32a8282cdaa7b4026",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/research_calls.py": "776f852184ed42916790565d312a816ab7dce523af6fe7f43d223f077fe9d284",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "2678b7e05f83a979c1a2b527d61230d28b822a1156b3dc09a7764f8d4e5efbba",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/storage.py": "ab72b03205bedfbf30b7ce0dd0c981b03263e99925948bb7956ece1a135d3db2",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "real_runs": [
+    {
+      "partition": "development",
+      "exit_code": 0,
+      "duration_seconds": 126.907,
+      "certificate_id": "0a7537664c1548f7c6dcf105371c9b041112a2e8fe60fc1ce54420dd2ad25f8d",
+      "status": "CERTIFIED"
+    },
+    {
+      "partition": "assessment",
+      "exit_code": 0,
+      "duration_seconds": 76.541,
+      "certificate_id": "dac7dfc050d630d87eca275f593f79337bd4fbe32ae3327a25e016b254fa7d2c",
+      "status": "CERTIFIED"
+    },
+    {
+      "partition": "corroboration",
+      "exit_code": 0,
+      "duration_seconds": 75.835,
+      "certificate_id": "5f14a4a0c69d673875a9a1ec78bb466a89594f975974185add37ff35613b4d31",
+      "status": "CERTIFIED"
+    }
+  ],
+  "backup_restore": {
+    "status": "PASS",
+    "original_integrity": {
+      "status": "PASS",
+      "events": 985,
+      "foreign_keys": true,
+      "synchronous": "FULL",
+      "schema_version": 1,
+      "scope": "local coordination and research memory integrity only",
+      "research_memory": {
+        "status": "PASS",
+        "records": 0,
+        "version": "research-memory/1",
+        "scientific_authority": false
+      },
+      "blobs": {
+        "status": "PASS",
+        "committed": 763,
+        "quarantined": [],
+        "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+      }
+    },
+    "restored_integrity": {
+      "status": "PASS",
+      "events": 985,
+      "foreign_keys": true,
+      "synchronous": "FULL",
+      "schema_version": 1,
+      "scope": "local coordination and research memory integrity only",
+      "research_memory": {
+        "status": "PASS",
+        "records": 0,
+        "version": "research-memory/1",
+        "scientific_authority": false
+      },
+      "blobs": {
+        "status": "PASS",
+        "committed": 763,
+        "quarantined": [],
+        "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+      }
+    },
+    "backup": {
+      "status": "PASS",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-feature-backup-2026-10-25",
+      "blobs": 763,
+      "credentials_included": false
+    },
+    "restoration": {
+      "status": "PASS",
+      "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-feature-restored-2026-10-25",
+      "blobs": 763,
+      "projection_validation": "PASS",
+      "credentials": "separately supplied matching operator key"
+    },
+    "committed_blob_bytes": 632085672,
+    "certificate_statuses": {
+      "development": {
+        "certificate_id": "0a7537664c1548f7c6dcf105371c9b041112a2e8fe60fc1ce54420dd2ad25f8d",
+        "status": "CURRENT",
+        "data_snapshot_id": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+        "scientific_readiness": false,
+        "scope": {
+          "authority": "raw_measurement_implementation_conformance",
+          "not_certified": [
+            "historical_publication_time",
+            "source_truth",
+            "scientific_missingness_policy",
+            "semantic_equivalence_of_hypotheses",
+            "scientific_evidence",
+            "calibration",
+            "capital_authority",
+            "OS_sandbox"
+          ]
+        }
+      },
+      "assessment": {
+        "certificate_id": "dac7dfc050d630d87eca275f593f79337bd4fbe32ae3327a25e016b254fa7d2c",
+        "status": "CURRENT",
+        "data_snapshot_id": "6a122807e671e49790cd81d6c469e9a68f6f86bf634b75b5a5677def7c1e79dc",
+        "scientific_readiness": false,
+        "scope": {
+          "authority": "raw_measurement_implementation_conformance",
+          "not_certified": [
+            "historical_publication_time",
+            "source_truth",
+            "scientific_missingness_policy",
+            "semantic_equivalence_of_hypotheses",
+            "scientific_evidence",
+            "calibration",
+            "capital_authority",
+            "OS_sandbox"
+          ]
+        }
+      },
+      "corroboration": {
+        "certificate_id": "5f14a4a0c69d673875a9a1ec78bb466a89594f975974185add37ff35613b4d31",
+        "status": "CURRENT",
+        "data_snapshot_id": "a37ebd4ed47798321d6385b6ae2e36890d4bf6f5f1b970d63af823da088fa9e4",
+        "scientific_readiness": false,
+        "scope": {
+          "authority": "raw_measurement_implementation_conformance",
+          "not_certified": [
+            "historical_publication_time",
+            "source_truth",
+            "scientific_missingness_policy",
+            "semantic_equivalence_of_hypotheses",
+            "scientific_evidence",
+            "calibration",
+            "capital_authority",
+            "OS_sandbox"
+          ]
+        }
+      }
+    },
+    "exact_restored_artifacts_compared": 12,
+    "scientific_readiness": false
+  },
+  "documentation_checks": {
+    "retail_contract": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "checks": {
+          "local_links": 685,
+          "source_files": 5,
+          "decisions": 88,
+          "preserved_original_decisions": 67,
+          "preserved_approved_decisions": 68,
+          "preserved_rejections": 47,
+          "traced_requirements": 30,
+          "generator_acceptance_specs": 3,
+          "diagram_edges": 38,
+          "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+          "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+          "git_diff_check_exit": 0,
+          "later_approved_changed_paths": {
+            "REVIEWING.md": "D086 / agent-inquiry/1.0"
+          },
+          "adoption_baseline_files": 63,
+          "preexisting_files_unchanged": 45,
+          "archived_documents_exact": 20,
+          "preserved_preapproval_decisions": 70,
+          "full_historical_definition_review_generator_texts": 3,
+          "approved_policy_sections_exact_except_status_words": 15,
+          "scoped_open_dispositions_and_acceptance_mappings": 15,
+          "adoption_decision_status_counts_D001_D085": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 63,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          },
+          "decision_status_counts": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 66,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          }
+        },
+        "checked_files_sha256": {
+          "AGENTS.md": "6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9",
+          "README.md": "c158ab311ce6cfedd87ed2c2ad92a0cbb6645d87d55043f27e10405cc4d04fd3",
+          "docs/architecture/01_PROBLEM_DEFINITION.md": "7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446",
+          "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+          "docs/architecture/05_REQUIREMENTS.md": "b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56",
+          "docs/architecture/06_MASTER_ARCHITECTURE.md": "16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "52ff700566e5f28b50cabba47eb8cd9d4951379a8adccf03f8bdea9e1cb8e00f",
+          "docs/architecture/10_IMPLEMENTATION_ROADMAP.md": "eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2",
+          "docs/architecture/11_OPEN_DECISIONS.md": "68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29",
+          "docs/architecture/12_TRACEABILITY_MATRIX.md": "76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba",
+          "docs/architecture/ARCHITECTURE_REGISTER.json": "a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37",
+          "docs/architecture/CURRENT_STATE.md": "6016810a49e2be3cf150aada9ae3338eba14c2a9f523764cfc25b85bc2e788a0",
+          "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+          "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2",
+          "docs/architecture/04_DEFINITIONS.md": "3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9",
+          "docs/architecture/08_ENGINEERING_REVIEW.md": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c",
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+          "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626",
+          "docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md": "dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e",
+          "docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md": "bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d",
+          "REVIEWING.md": "47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b",
+          "trading_researcher/README.md": "1e273f07b73b4a0ed3a07bff7d0b9040b4199433c2ad58e3de470bbf8f5b52a2",
+          "docs/reviews/verify_system_model.py": "59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef",
+          "docs/reviews/verify_retail_contract.py": "c1aecd79447dafd205a284415ed25d7ba2ad35ebee25f2c108c74d1df19b0e92",
+          "docs/reviews/adoption-2026-10-23/baseline.json": "56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036",
+          "docs/reviews/adoption-2026-10-23/preapproval-documents.zip": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+        },
+        "errors": [],
+        "unverified": [
+          "New-session behavioral efficacy and compaction retention",
+          "Mermaid rendering",
+          "Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately",
+          "D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement",
+          "Complete executable AST/schema/primitive implementations and independent golden fixtures",
+          "Actual data quality, rights, historical availability, model exposure and account/execution costs",
+          "Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately",
+          "Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs",
+          "SRC-001 through SRC-008 and completeness of original conversation"
+        ],
+        "changed_files_since_preapproval": [
+          "AGENTS.md",
+          "README.md",
+          "REVIEWING.md",
+          "docs/architecture/01_PROBLEM_DEFINITION.md",
+          "docs/architecture/02_DECISION_REGISTER.md",
+          "docs/architecture/04_DEFINITIONS.md",
+          "docs/architecture/05_REQUIREMENTS.md",
+          "docs/architecture/06_MASTER_ARCHITECTURE.md",
+          "docs/architecture/07_SCIENTIFIC_EVALUATION.md",
+          "docs/architecture/08_ENGINEERING_REVIEW.md",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+          "docs/architecture/10_IMPLEMENTATION_ROADMAP.md",
+          "docs/architecture/11_OPEN_DECISIONS.md",
+          "docs/architecture/12_TRACEABILITY_MATRIX.md",
+          "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+          "docs/architecture/ARCHITECTURE_REGISTER.json",
+          "docs/architecture/CURRENT_STATE.md",
+          "docs/reviews/verify_system_model.py"
+        ],
+        "added_files": [
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+          "docs/reviews/verify_retail_contract.py",
+          "docs/reviews/adoption-2026-10-23/baseline.json",
+          "docs/reviews/adoption-2026-10-23/preapproval-documents.zip",
+          "docs/reviews/adoption-2026-10-23/verification.json"
+        ],
+        "preserved_proposal_sha256": "22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29",
+        "preapproval_archive_sha256": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+      },
+      "warnings": ""
+    },
+    "preservation": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "status": "PASS",
+        "baseline_files": 103,
+        "unchanged_files": 93,
+        "changed_files": [
+          "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+          ".gitignore",
+          "README.md",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+          "docs/architecture/CURRENT_STATE.md",
+          "tests/test_local_runtime.py",
+          "trading_researcher/README.md",
+          "trading_researcher/__main__.py",
+          "trading_researcher/checks.py",
+          "trading_researcher/coordination.py"
+        ],
+        "new_files": [
+          "docs/reviews/implementation-2026-10-25/baseline.json",
+          "docs/reviews/implementation-2026-10-25/binance-normalization-results.json",
+          "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json",
+          "docs/reviews/implementation-2026-10-25/binance-quality-verification.json",
+          "docs/reviews/implementation-2026-10-25/binance-registry-retention.json",
+          "docs/reviews/implementation-2026-10-25/binance-source-inventory.json",
+          "docs/reviews/implementation-2026-10-25/binance-verification.json",
+          "docs/reviews/implementation-2026-10-25/certification-verification.json",
+          "docs/reviews/implementation-2026-10-25/data-verification.json",
+          "docs/reviews/implementation-2026-10-25/expressions-verification.json",
+          "docs/reviews/implementation-2026-10-25/feature-results.json",
+          "docs/reviews/implementation-2026-10-25/formalization-verification.json",
+          "docs/reviews/implementation-2026-10-25/memory-preservation.json",
+          "docs/reviews/implementation-2026-10-25/memory-verification.json",
+          "docs/reviews/implementation-2026-10-25/outcomes-verification.json",
+          "docs/reviews/implementation-2026-10-25/progress.json",
+          "docs/reviews/implementation-2026-10-25/researcher-verification.json",
+          "docs/reviews/implementation-2026-10-25/storage-verification.json",
+          "docs/reviews/implementation-2026-10-25/verify_implementation.py",
+          "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+          "tests/fixtures/reference_binance_cases.json",
+          "tests/fixtures/reference_binance_expectations.md",
+          "tests/fixtures/reference_binance_partition_cases.json",
+          "tests/fixtures/reference_binance_partition_expectations.md",
+          "tests/fixtures/reference_binance_quality_cases.json",
+          "tests/fixtures/reference_binance_quality_expectations.md",
+          "tests/fixtures/reference_expression_cases.json",
+          "tests/fixtures/reference_feature_cases.json",
+          "tests/fixtures/reference_feature_expectations.md",
+          "tests/fixtures/reference_outcome_cases.json",
+          "tests/test_binance_archive.py",
+          "tests/test_binance_ingest.py",
+          "tests/test_binance_normalize.py",
+          "tests/test_binance_quality.py",
+          "tests/test_certification.py",
+          "tests/test_data.py",
+          "tests/test_expressions.py",
+          "tests/test_feature_adversarial.py",
+          "tests/test_features.py",
+          "tests/test_formalization.py",
+          "tests/test_memory.py",
+          "tests/test_outcomes.py",
+          "tests/test_research_calls.py",
+          "tests/test_researcher.py",
+          "tests/test_storage.py",
+          "trading_researcher/BINANCE.md",
+          "trading_researcher/BINANCE_NORMALIZATION.md",
+          "trading_researcher/CERTIFICATION.md",
+          "trading_researcher/DATA.md",
+          "trading_researcher/EXPRESSIONS.md",
+          "trading_researcher/FEATURES.md",
+          "trading_researcher/FORMALIZATION.md",
+          "trading_researcher/MEMORY.md",
+          "trading_researcher/OUTCOMES.md",
+          "trading_researcher/RESEARCHER.md",
+          "trading_researcher/STORAGE.md",
+          "trading_researcher/binance_archive.py",
+          "trading_researcher/binance_ingest.py",
+          "trading_researcher/binance_normalize.py",
+          "trading_researcher/binance_quality.py",
+          "trading_researcher/certification.py",
+          "trading_researcher/data.py",
+          "trading_researcher/errors.py",
+          "trading_researcher/expressions.py",
+          "trading_researcher/features.py",
+          "trading_researcher/formalization.py",
+          "trading_researcher/memory.py",
+          "trading_researcher/memory_demo.py",
+          "trading_researcher/outcomes.py",
+          "trading_researcher/research_calls.py",
+          "trading_researcher/research_demo.py",
+          "trading_researcher/researcher.py",
+          "trading_researcher/storage.py"
+        ],
+        "local_document_links": 206,
+        "errors": [],
+        "scope": "Implementation preservation, local link targets and whitespace; no semantic/scientific certification"
+      },
+      "warnings": ""
+    },
+    "whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "result": "",
+      "warnings": "warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/CURRENT_STATE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'tests/test_local_runtime.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/__main__.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/checks.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/coordination.py', LF will be replaced by CRLF the next time Git touches it"
+    }
+  },
+  "defects_reproduced_and_fixed": [
+    "generic namespace accepted before implementation",
+    "malformed child report could promote authority or omit definitions/replay",
+    "returned scope mutated shared host constants",
+    "missing normalization field raised untyped KeyError",
+    "Python Boolean/integer equality accepted incorrect pinned definition"
+  ],
+  "test_history": {
+    "initial_red": {
+      "methods": 16,
+      "failures": 3,
+      "errors": 4,
+      "exit_code": 1,
+      "note": "Included twelve preexisting normalization methods through an imported test class; collection corrected"
+    },
+    "initial_four_feature_methods": {
+      "exit_code": 0,
+      "duration_seconds": "102.385"
+    },
+    "post_report_hardening_four_methods": {
+      "exit_code": 0,
+      "duration_seconds": "101.712"
+    },
+    "scope_alias_red": {
+      "methods": 7,
+      "failures": 1,
+      "exit_code": 1,
+      "duration_seconds": "67.541"
+    },
+    "intermediate_suite": {
+      "methods": 195,
+      "exit_code": 0,
+      "duration_seconds": "332.703",
+      "qualification": "Parent imported before final typed-input/equality changes; superseded by fresh stable-source suite"
+    }
+  },
+  "unverified": [
+    "Actual historical publication/PIT and provider truth",
+    "Scientific acquisition/rights acceptance and scientific missingness policy",
+    "General composition/dependency certification, faithful semantic mapping and bound scientific execution",
+    "Evaluation-plan/allocation/freeze, inferential calibration and full research-cycle validity",
+    "Live LLM integration, paid usage, economic benefit, AmiBroker policy adapter and monitoring/reporting",
+    "Public feature-package-only revalidation, archived Python binaries, hostile same-account isolation",
+    "Power-loss durability and maximum-size throughput"
+  ],
+  "no_paid_calls": true,
+  "software_installed": [],
+  "commit_or_push_performed": false,
+  "changed_files_sha256": {
+    "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+    "trading_researcher/coordination.py": "9f27c0fd022b68d18567cf1c607e6a5bc4c043a124fa791f2a629114ec179cf2",
+    "trading_researcher/storage.py": "ab72b03205bedfbf30b7ce0dd0c981b03263e99925948bb7956ece1a135d3db2",
+    "trading_researcher/memory.py": "a6a5351b0e79e35b9b0aae3e239f067edfd1ae3d58f6dba32a8282cdaa7b4026",
+    "trading_researcher/__main__.py": "b501b4aefcf9ac1ebf26afb42f5106aabd660393635b2a661d31394818320360",
+    "trading_researcher/FEATURES.md": "b803cd95938cebb3ea5ac584c3923f5462ae8aae84562e8f43b07612e4ef85c8",
+    "trading_researcher/README.md": "1e273f07b73b4a0ed3a07bff7d0b9040b4199433c2ad58e3de470bbf8f5b52a2",
+    "tests/test_features.py": "facfc83ab476ff7c1ba188ccb6e277e759c94296b3347678680d163097c1f498",
+    "tests/test_feature_adversarial.py": "e0782cce5db75b5607be717dd7bc1da6cf6e4000c59838bcb39d36faba2b1b81",
+    "tests/fixtures/reference_feature_cases.json": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+    "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee",
+    "README.md": "c158ab311ce6cfedd87ed2c2ad92a0cbb6645d87d55043f27e10405cc4d04fd3",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "52ff700566e5f28b50cabba47eb8cd9d4951379a8adccf03f8bdea9e1cb8e00f",
+    "docs/architecture/CURRENT_STATE.md": "6016810a49e2be3cf150aada9ae3338eba14c2a9f523764cfc25b85bc2e788a0",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "a3c8ef5900ed3800bc80cad4cc60b18a649f0074f77aa90d3e3b9913d9a5353b",
+    "docs/reviews/implementation-2026-10-25/progress.json": "5fab6a1a81fe8ef0b6677a9432fc6cd4a23430d29ce1c152446471075e0ec17a",
+    "docs/reviews/implementation-2026-10-25/feature-results.json": "6edf1dcb1d4a777b85bfafc358bd4c36bac6062bf4a2f3cbfb539e20d59ed39a"
+  }
+}

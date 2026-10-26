@@ -97,6 +97,58 @@ class RuntimeTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(json.loads(result.stdout)['status'], 'PASS')
 
+    def test_cli_research_demo_two_isolated_fixture_perspectives(self):
+        directory = Path(self.tmp.name) / 'research-demo'
+        result = subprocess.run([sys.executable, '-B', '-m', 'trading_researcher', 'research-demo',
+                                 '--directory', str(directory)], text=True, capture_output=True, timeout=25)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        report = json.loads(result.stdout)
+        self.assertEqual(report['perspectives_completed'], 2)
+        self.assertFalse(report['genuine_discovery'])
+        self.assertTrue(report['same_base_context'])
+        self.assertTrue(report['private_transcripts'])
+        self.assertEqual(report['integrity']['status'], 'PASS')
+        self.assertEqual(report['usage']['calls'], 3)
+
+    def test_research_memory_through_real_authenticated_rpc(self):
+        token = self.admin.call('register_worker', name='researcher', role='discovery',
+                                capabilities=['research-record/v1'])['token']
+        source = self.admin.call('add_research', kind='source',
+                                 content={'text': 'Observed fixture', 'uri': 'fixture:rpc'},
+                                 scope={}, source_refs=[])['id']
+        context = self.admin.call('create_context', role='discovery', epoch=1,
+                                  artifact_ids=[source])['id']
+        self.admin.call('enqueue', key='research', spec={
+            'kind': 'research-record/v1', 'context_id': context, 'purpose': 'RPC memory fixture',
+            'allowed_workers': ['researcher'], 'max_attempts': 1, 'lease_seconds': 10,
+            'deadline': int(time.time()) + 60, 'dependencies': []})
+        worker = Client(self.url, token)
+        lease = worker.call('claim')['lease']
+        self.assertEqual(worker.call('search_memory', lease=lease)['total'], 1)
+        idea = worker.call('record_research', lease=lease, kind='idea',
+                           content={'text': 'A free but untested idea'}, scope={}, source_refs=[source])
+        result = worker.call('submit', lease=lease, artifact_id=idea['id'])
+        self.assertTrue(result['accepted'])
+        self.assertFalse(result['scientific_authority'])
+        with self.assertRaises(RemoteError):
+            worker.call('inspect_memory')
+        self.assertEqual(self.admin.call('verify')['research_memory']['records'], 3)
+
+    def test_memory_demo_cli_releases_complete_history_and_stops(self):
+        directory = Path(self.tmp.name) / 'memory-demo'
+        result = subprocess.run([sys.executable, '-B', '-m', 'trading_researcher', 'memory-demo',
+                                 '--directory', str(directory)], text=True, capture_output=True, timeout=20)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        report = json.loads(result.stdout)
+        self.assertEqual(report['memory_records'], 5)
+        self.assertEqual(report['correction_preserved'], True)
+        self.assertEqual(report['market_findings'], 0)
+        self.assertEqual(report['completion']['accepted'], True)
+        self.assertEqual(report['completion']['scientific_authority'], False)
+        self.assertEqual(report['restored_projection_matches'], True)
+        reopened = Broker(directory)
+        reopened.close()
+
     def test_process_crash_rolls_back_uncommitted_write_and_preserves_committed_write(self):
         directory = Path(self.tmp.name) / 'crash'
         script = '''

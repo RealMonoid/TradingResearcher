@@ -1,0 +1,282 @@
+{
+  "schema": "nuisance-diagnostics-review/1",
+  "date": "2026-10-25",
+  "reviewer": "Independent information_review agent",
+  "status": "PASS_WITH_EXPLICIT_IMPLEMENTATION_AND_SCIENTIFIC_LIMITS",
+  "purpose": "Check that the new owned development diagnostic computation measures the declared complete grid and empirical nuisance summaries faithfully, retains input/source/exposure and failure boundaries, and does not claim a model, N_min or scientific authority.",
+  "basis": [
+    "AGENTS.md; research-contract/1.0 sections 5.3, 5.4 and 11; D075 and D084",
+    "Master Architecture invariants and component authority; D024 and REJ-029 separate outcome base rates from belief in a hypothesis",
+    "Current implementation code in information_diagnostics.py, information_runs.py, bootstrap_runs.py, evaluation_plans.py, binding.py, outcomes.py, coordination.py, storage.py and memory.py; current baseline and fixed prior reports",
+    "Existing information-planning-assessment.json is development guidance, not independent scientific approval. Its preserved source record was read but not edited."
+  ],
+  "inspection_scope": {
+    "whole_framework_verdict": false,
+    "production_edits_by_reviewer": false,
+    "new_scientific_meaning_approved": false,
+    "new_model_fit_or_power_study": false,
+    "full_suite_run_by_reviewer": false
+  },
+  "fixture_provenance": {
+    "authored_before_new_implementation_read": true,
+    "expected_values_changed_to_fit_implementation": false,
+    "fixtures": 4,
+    "sha256": {
+      "tests/fixtures/information_diagnostics_cases.json": "e2b8233b7b8ed1917f9392eb0c989279837f88219843371f35740908ccbb6b6f",
+      "tests/fixtures/information_diagnostics_expectations.md": "a30e91ec64b2e2bbc307a3e6b9ba4e54902aaa23dd4ed2ce926060eda670d065"
+    },
+    "construction_qualification": "The six-time hand report is a report-layer arithmetic table with legitimate individual case metadata, not a claim of a single raw history. Removing its t2 decision row would also invalidate t1 outcomes. A separate fully materialized raw-row fixture records that effect and is exactly replayed by the independent test."
+  },
+  "hand_oracle": {
+    "grid_rows": 6,
+    "instruments": [
+      "A",
+      "B"
+    ],
+    "pooled_q": "3/7",
+    "condition_fraction_w": "4/7",
+    "conditional_mean": "1/2",
+    "contrast": "1/14",
+    "scope_counts": [
+      2,
+      2,
+      0,
+      2,
+      1,
+      0
+    ],
+    "condition_counts": [
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "score": [
+      "123/196",
+      "-171/196",
+      "0",
+      "123/196",
+      "-75/196",
+      "0"
+    ],
+    "score_lag_moments": {
+      "0": "5427/19208",
+      "1": "-15129/96040",
+      "2": "-21033/153664"
+    },
+    "outcome_lag1": {
+      "A": {
+        "pairs": 2,
+        "fixed_center_product": "1/4"
+      },
+      "B": {
+        "pairs": 1,
+        "fixed_center_product": "1/9"
+      }
+    },
+    "common_time": {
+      "pairs": 3,
+      "left_pair_mean": "2/3",
+      "right_pair_mean": "1/3",
+      "fixed_center_product": "-2/9"
+    }
+  },
+  "findings": [
+    {
+      "id": "NDR-01",
+      "status": "FIXED_AND_VERIFIED",
+      "finding": "Boolean state-count aliases were accepted through the inherited reference validator because Python booleans compare equal to integer zero/one.",
+      "reproduction": "Independent test admitted OUTCOME_MISSING=True and OUTCOME_PENDING=False before the fix.",
+      "resolution": "Parent added an exact nonnegative-int metadata check before reference_contrast; fixed fixture bytes were not changed.",
+      "boundary": "This validates input typing; it does not establish source truth."
+    },
+    {
+      "id": "NDR-02",
+      "status": "FIXED_AND_VERIFIED",
+      "finding": "The paired outcome mean labels had no explicit time order and used later/earlier order while the independent diagnostic convention was earlier/later. A lag-2 A pair returned left mean zero instead of one. The product itself was unchanged.",
+      "resolution": "Parent aligned pairs to left-earlier/right-later and recorded explicit pair_order. The independent fixed expected means now pass.",
+      "boundary": "An empirical centered product is not an identified latent common-shock parameter or an independence certificate."
+    }
+  ],
+  "review_conclusion": "The examined computation agrees with the frozen hand oracles and maintains the exercised owned-input, contribution-replay, deadline, gap and authority boundaries. No additional substantiated production defect was found in this bounded review. This is not a fitted response model, a scientific calibration result, a derived information target or a whole-framework verdict.",
+  "reuse_assessment": {
+    "decision": "Separate owned operation/artifacts with a shared development plan/execution binding helper, preserving existing bootstrap result schemas.",
+    "reused": [
+      "evaluation_plans.source_bundle/footprint",
+      "BootstrapRuns._development_plan_execution",
+      "Existing reference_contrast validation and materialized case model",
+      "Isolated retained-source child execution and source/runtime verification",
+      "Existing SQLite artifacts, immutable blob references, scoped RPC authorization, interrupted attempt records and independent replay"
+    ],
+    "new_runtime_files": [
+      "trading_researcher/information_diagnostics.py",
+      "trading_researcher/information_runs.py"
+    ],
+    "changed_existing_runtime_files": [
+      "trading_researcher/bootstrap_runs.py",
+      "trading_researcher/coordination.py",
+      "trading_researcher/memory.py",
+      "trading_researcher/storage.py"
+    ]
+  },
+  "checks": {
+    "red": {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_information_diagnostics_adversarial.py",
+        "-v"
+      ],
+      "tests": 11,
+      "seconds": "0.029",
+      "exit_code": 1,
+      "failures": 3,
+      "failing_methods": 2,
+      "note": "Two Boolean aliases plus the time-order mean mismatch; nine other methods passed. A preceding red run reported missing explicit pair_order before the time-order assertion was moved first. No expected fixture value changed."
+    },
+    "pure_adversarial": {
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_information_diagnostics_adversarial.py",
+        "-v"
+      ],
+      "tests": 12,
+      "seconds": "0.026",
+      "exit_code": 0,
+      "basis": "Direct fresh terminal result after both production fixes and the additional empty-scope case."
+    },
+    "owned_adversarial": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_information_runs_adversarial.py",
+        "-v"
+      ],
+      "tests": 4,
+      "seconds": "70.890",
+      "wall_seconds": 71.375,
+      "exit_code": 0,
+      "log": ".trf-runtime/nuisance-diagnostics-independent-review-2026-10-25/owner-tests.log",
+      "log_sha256": "bdd121b1d14dfa9a44e1e9a0ed196610c41cbde109780d33ab5af470e4a536f7",
+      "report": ".trf-runtime/nuisance-diagnostics-independent-review-2026-10-25/owner-tests-result.json",
+      "report_sha256": "ac1d9e884d043d312b075c85c0a5e0c251e5113048eb64548ab8ce7cbd24c01c"
+    }
+  },
+  "coverage": [
+    "Fixed pooled and per-instrument true/false/unknown counts and rates; full-grid moments, exact zero-sum contrast score, no compressed missing times",
+    "Explicit eligible-pair counts, full-marginal versus pair means, chronological pair order and null moments when no pairs exist",
+    "Distinct no-scope, no-condition, observed-degenerate-rate, nonbinary, unfinished, pending and review-required boundaries",
+    "16-instrument and 16-lag envelope acceptance; 17-instrument typed resource gap and invalid/excess lag rejection without truncation",
+    "No input/callback mutation of retained data, callback exception propagation, source/header/contribution byte hashes",
+    "Owned protected-snapshot and contradictory plan/execution membership denial before blob/dependency access",
+    "False contributions with consistently replaced hashes still rejected by separate computation replay; no result published, original input retained",
+    "One shared computation/replay time cap; an exhausted cap cannot start a fresh replay budget"
+  ],
+  "source_captures": {
+    "before": {
+      "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+      "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+      "trading_researcher/bootstrap_runs.py": "2abfbd49e81914f30fb1ae1a410e06b133ae759e496c609865d321c68eebe156",
+      "trading_researcher/coordination.py": "d249d8411d2f7496b1b44c4ce3de415cd0611fa06e897432b1b9a9b4b6cb33c9",
+      "trading_researcher/storage.py": "6e2daf4f7a10d947b22ce7152e83d06326a1b25632f06340c94d55b536684e50",
+      "trading_researcher/memory.py": "5cbea2f0bd0f77830193504ab068cbab3897779fd52c7286c2109705b4966b2d",
+      "tests/test_information_diagnostics_adversarial.py": "c82c3e6232a6a6a05287ecbc07da20ad75615d9886fc1c8d2edb31e940584f53",
+      "tests/test_information_runs_adversarial.py": "163bc8b69a14343fe40316cb78f700c42a10b76e084b24f1664f79c74f251824",
+      "tests/fixtures/information_diagnostics_cases.json": "e2b8233b7b8ed1917f9392eb0c989279837f88219843371f35740908ccbb6b6f",
+      "tests/fixtures/information_diagnostics_expectations.md": "a30e91ec64b2e2bbc307a3e6b9ba4e54902aaa23dd4ed2ce926060eda670d065",
+      "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+      "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+      "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+      "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+      "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+      "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+      "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+      "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+      "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+      "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb"
+    },
+    "after": {
+      "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+      "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+      "trading_researcher/bootstrap_runs.py": "2abfbd49e81914f30fb1ae1a410e06b133ae759e496c609865d321c68eebe156",
+      "trading_researcher/coordination.py": "d249d8411d2f7496b1b44c4ce3de415cd0611fa06e897432b1b9a9b4b6cb33c9",
+      "trading_researcher/storage.py": "6e2daf4f7a10d947b22ce7152e83d06326a1b25632f06340c94d55b536684e50",
+      "trading_researcher/memory.py": "5cbea2f0bd0f77830193504ab068cbab3897779fd52c7286c2109705b4966b2d",
+      "tests/test_information_diagnostics_adversarial.py": "c82c3e6232a6a6a05287ecbc07da20ad75615d9886fc1c8d2edb31e940584f53",
+      "tests/test_information_runs_adversarial.py": "163bc8b69a14343fe40316cb78f700c42a10b76e084b24f1664f79c74f251824",
+      "tests/fixtures/information_diagnostics_cases.json": "e2b8233b7b8ed1917f9392eb0c989279837f88219843371f35740908ccbb6b6f",
+      "tests/fixtures/information_diagnostics_expectations.md": "a30e91ec64b2e2bbc307a3e6b9ba4e54902aaa23dd4ed2ce926060eda670d065",
+      "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+      "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+      "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+      "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+      "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+      "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+      "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+      "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+      "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+      "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb"
+    },
+    "all_captured_files_stable": true,
+    "preserved_prior_reports_sha256": {
+      "auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+      "binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+      "binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+      "binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+      "binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+      "bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+      "certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+      "data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+      "evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+      "expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+      "feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+      "formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+      "information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+      "mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+      "memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+      "outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+      "plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+      "researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+      "storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c"
+    },
+    "baseline_archive": "nuisance-diagnostics-source-before.zip",
+    "baseline_archive_sha256": "8b0f59e38f59e1f578b4abbf2af929ea3814742f28f701a9033ef810c0f443a7",
+    "baseline_archive_members": 92
+  },
+  "changed_files_by_reviewer": [
+    "tests/fixtures/information_diagnostics_cases.json",
+    "tests/fixtures/information_diagnostics_expectations.md",
+    "tests/test_information_diagnostics_adversarial.py",
+    "tests/test_information_runs_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json"
+  ],
+  "remaining_boundaries": [
+    "No quantitative block selector or stationarity/weak-dependence test is supplied. Positive or flat empirical covariance does not validate a response model.",
+    "The binary profile does not implement a faithful return process or coherent joint-family worlds. Development data and inherited exposure remain qualified.",
+    "Nuisance fitting, immutable population-model simulation profiles, actual fixed-count bootstrap power studies, N_min selection and independent final calibration remain work.",
+    "These tests do not establish market evidence, scientific data/semantic acceptance, scientific freeze/allocation, live capital, economic usefulness or end-to-end acceleration.",
+    "The owned control-path tests include explicit fault injection and one synthetic clock; they are boundary checks, not timing benchmarks or OS sandbox/security certification.",
+    "No real HTTP transport smoke or full regression was run by this reviewer; parent integration/full-suite evidence must be reported separately."
+  ]
+}

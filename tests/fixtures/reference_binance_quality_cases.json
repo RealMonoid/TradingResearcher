@@ -1,0 +1,2081 @@
+{
+  "schema": "reference-binance-quality-cases/1",
+  "authorship": "Independent expectations fixed before any row-quality implementation inspection",
+  "notes": [
+    "Synthetic source bytes; no historical-publication or scientific claim.",
+    "raw_line_sha256 includes exact LF/CRLF where present; source_sha256 hashes exact UTF-8 raw_csv bytes.",
+    "Coverage gaps are half-open source-open-time intervals; reference row times are expected exclusive ends.",
+    "Whole-source rejection reasons are explanatory; valid audit per-row reason codes are fixed.",
+    "All nine numeric feature samples are null for invalid keyed rows; no partially usable bar is emitted.",
+    "All reference adapters use the explicit five-second assumed-delay test parameter, not a recommended delay."
+  ],
+  "cases": [
+    {
+      "name": "valid_lf",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "6081e5b85bf217d7a55886f45f78d39f931e5789dc8bab3c82f7c8919081bbfb",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "VALID_COMPLETE_BAR",
+            "bar": {
+              "open_time": 1577836800,
+              "end_time": 1577837700,
+              "open": "10",
+              "high": "12",
+              "low": "9",
+              "close": "11",
+              "volume": "4",
+              "quote_volume": "42",
+              "trades": 4,
+              "taker_base_volume": "2",
+              "taker_quote_volume": "22"
+            },
+            "reason": null,
+            "raw_line_sha256": "6081e5b85bf217d7a55886f45f78d39f931e5789dc8bab3c82f7c8919081bbfb"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 1,
+          "invalid_bars": 0,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": true,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "12",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "9",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "11",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "42",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "2",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "22",
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "valid_crlf",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,2,22,0\r\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "115c9d5cd0b8a678eef14919a02ae551480bb556bf5851b2efb4546a6d3185aa",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "VALID_COMPLETE_BAR",
+            "bar": {
+              "open_time": 1577836800,
+              "end_time": 1577837700,
+              "open": "10",
+              "high": "12",
+              "low": "9",
+              "close": "11",
+              "volume": "4",
+              "quote_volume": "42",
+              "trades": 4,
+              "taker_base_volume": "2",
+              "taker_quote_volume": "22"
+            },
+            "reason": null,
+            "raw_line_sha256": "115c9d5cd0b8a678eef14919a02ae551480bb556bf5851b2efb4546a6d3185aa"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 1,
+          "invalid_bars": 0,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": true,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "12",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "9",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "11",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "42",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "2",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "22",
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "valid_without_final_newline",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,2,22,0",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "ed4b0738d09d426b2aba6a8dddc0a24ae56ec9c3f3d953f02d483ec1dda2771f",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "VALID_COMPLETE_BAR",
+            "bar": {
+              "open_time": 1577836800,
+              "end_time": 1577837700,
+              "open": "10",
+              "high": "12",
+              "low": "9",
+              "close": "11",
+              "volume": "4",
+              "quote_volume": "42",
+              "trades": 4,
+              "taker_base_volume": "2",
+              "taker_quote_volume": "22"
+            },
+            "reason": null,
+            "raw_line_sha256": "ed4b0738d09d426b2aba6a8dddc0a24ae56ec9c3f3d953f02d483ec1dda2771f"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 1,
+          "invalid_bars": 0,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": true,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "12",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "9",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "11",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "42",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "2",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "22",
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "truncated_close_is_quarantined_not_extended",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837132286,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "5f2bbca264c5fcab2febb93521bc35ab746f05f4070480b4e053478e0b78047f",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_CLOSE_TIME",
+            "raw_line_sha256": "5f2bbca264c5fcab2febb93521bc35ab746f05f4070480b4e053478e0b78047f"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "close_before_open_is_quarantined",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577836799999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "b89c89302b267596690d058e97fa7c452f8912d1a0ec17773e0e4b1eb3d525b3",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_CLOSE_TIME",
+            "raw_line_sha256": "b89c89302b267596690d058e97fa7c452f8912d1a0ec17773e0e4b1eb3d525b3"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "noninteger_close_with_unambiguous_open",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,not-a-time,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "42d8fec33d47762583221bb07a12c3c9523024bcc2e337ee497b5b15fa36dc46",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_CLOSE_TIME",
+            "raw_line_sha256": "42d8fec33d47762583221bb07a12c3c9523024bcc2e337ee497b5b15fa36dc46"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "high_below_open",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,8,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "59fea14e9477763dd82a62fa866bd112f00a9c39d385507ab4559e144619cbc1",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "OHLC_VOLUME_INVARIANT",
+            "raw_line_sha256": "59fea14e9477763dd82a62fa866bd112f00a9c39d385507ab4559e144619cbc1"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "zero_price",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,0,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "6ea56154fadccc12be2b895db439f6a087075eda3a5e61e99c961d6c69277c9c",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "OHLC_VOLUME_INVARIANT",
+            "raw_line_sha256": "6ea56154fadccc12be2b895db439f6a087075eda3a5e61e99c961d6c69277c9c"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "negative_price",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,-10,12,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "8a48259c77e23d67d8fc0eeb98587245b7a30949347ff652a3b32dd681139f55",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_QUANTITY",
+            "raw_line_sha256": "8a48259c77e23d67d8fc0eeb98587245b7a30949347ff652a3b32dd681139f55"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "negative_base_volume",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,-1,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "6f1d4f138eed8177a2a8bae3320c95a1dac703259798335a8388bcedb9c0a27d",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_QUANTITY",
+            "raw_line_sha256": "6f1d4f138eed8177a2a8bae3320c95a1dac703259798335a8388bcedb9c0a27d"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "negative_quote_volume",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,-1,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "5d03a10fb4b4c9f46cab78f0e3459ce284814b1e678feb6b0f292914e760adfb",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_QUANTITY",
+            "raw_line_sha256": "5d03a10fb4b4c9f46cab78f0e3459ce284814b1e678feb6b0f292914e760adfb"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "taker_base_exceeds_total",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,4.1,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "a6c39be3901f171e7db5d1b6417e4ad1ccb268c6bcfb966952bd8aebf2c8ca26",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "OHLC_VOLUME_INVARIANT",
+            "raw_line_sha256": "a6c39be3901f171e7db5d1b6417e4ad1ccb268c6bcfb966952bd8aebf2c8ca26"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "taker_quote_exceeds_total",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,2,42.1,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "7828da0a7e404e5055d22bc2e22ed2153dc98efe240eb127f370e5df58b419d2",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "OHLC_VOLUME_INVARIANT",
+            "raw_line_sha256": "7828da0a7e404e5055d22bc2e22ed2153dc98efe240eb127f370e5df58b419d2"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "fractional_trade_count",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4.5,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "7ce586de7fb403a5208d9486cb8df015959f0a768dabf927136175b151364507",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_TRADE_COUNT",
+            "raw_line_sha256": "7ce586de7fb403a5208d9486cb8df015959f0a768dabf927136175b151364507"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "negative_trade_count",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,-1,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "7236251574152aa25c538ac2b5bc2ef7d3c191c06c39baed464ef42e564ab9da",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_TRADE_COUNT",
+            "raw_line_sha256": "7236251574152aa25c538ac2b5bc2ef7d3c191c06c39baed464ef42e564ab9da"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "nonfinite_quantity",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,NaN,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "ff1d60e44f09f77760a18a60a4df59d9a7c398d3a6e2ad4db31cee3a2196eb2f",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_QUANTITY",
+            "raw_line_sha256": "ff1d60e44f09f77760a18a60a4df59d9a7c398d3a6e2ad4db31cee3a2196eb2f"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "valid_zero_activity_retains_zero_values",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,10,10,10,0,1577837699999,0,0,0,0,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "43c83247c1458f0574258073dba0dab9d3026704242d62999fd025b9bbb545ec",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "VALID_COMPLETE_BAR",
+            "bar": {
+              "open_time": 1577836800,
+              "end_time": 1577837700,
+              "open": "10",
+              "high": "10",
+              "low": "10",
+              "close": "10",
+              "volume": "0",
+              "quote_volume": "0",
+              "trades": 0,
+              "taker_base_volume": "0",
+              "taker_quote_volume": "0"
+            },
+            "reason": null,
+            "raw_line_sha256": "43c83247c1458f0574258073dba0dab9d3026704242d62999fd025b9bbb545ec"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 1,
+          "invalid_bars": 0,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1577837700,
+              "end": 1580515200,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": true,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "microsecond_close_one_tick_short_is_invalid",
+      "symbol": "ETHUSDT",
+      "month": "2025-01",
+      "raw_csv": "1735689600000000,2000,2010,1990,2005,0.4,1735690499999998,800.5,4,0.2,401,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "27052471ac496c796148d33eac8c9bde2adfe1b1efccc6daf78166f2ca2c9af8",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1735689600,
+            "end_time": 1735690500,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_CLOSE_TIME",
+            "raw_line_sha256": "27052471ac496c796148d33eac8c9bde2adfe1b1efccc6daf78166f2ca2c9af8"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1735690500,
+              "end": 1738368000,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1735690500,
+            "instrument": "ETHUSDT",
+            "features": {
+              "ETHUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              },
+              "ETHUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              },
+              "ETHUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              },
+              "ETHUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              },
+              "ETHUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              },
+              "ETHUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              },
+              "ETHUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              },
+              "ETHUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              },
+              "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1735690505
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "invalid_present_and_absent_grid_bar_are_distinct",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,2,22,0\n1577837700000,10,12,9,11,4,1577837999000,42,4,2,22,0\n1577839500000,10,12,9,11,4,1577840399999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "4f87be0741dfe742162eac505eb4edad8545f195936e47c2151bb205390b8456",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "status": "VALID_COMPLETE_BAR",
+            "bar": {
+              "open_time": 1577836800,
+              "end_time": 1577837700,
+              "open": "10",
+              "high": "12",
+              "low": "9",
+              "close": "11",
+              "volume": "4",
+              "quote_volume": "42",
+              "trades": 4,
+              "taker_base_volume": "2",
+              "taker_quote_volume": "22"
+            },
+            "reason": null,
+            "raw_line_sha256": "6081e5b85bf217d7a55886f45f78d39f931e5789dc8bab3c82f7c8919081bbfb"
+          },
+          {
+            "line": 2,
+            "open_time": 1577837700,
+            "end_time": 1577838600,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_CLOSE_TIME",
+            "raw_line_sha256": "d847fd402a4bf5409275e4d2d1241539855caa79c3e4497b254ececbaa0fb976"
+          },
+          {
+            "line": 3,
+            "open_time": 1577839500,
+            "end_time": 1577840400,
+            "status": "VALID_COMPLETE_BAR",
+            "bar": {
+              "open_time": 1577839500,
+              "end_time": 1577840400,
+              "open": "10",
+              "high": "12",
+              "low": "9",
+              "close": "11",
+              "volume": "4",
+              "quote_volume": "42",
+              "trades": 4,
+              "taker_base_volume": "2",
+              "taker_quote_volume": "22"
+            },
+            "reason": null,
+            "raw_line_sha256": "c67d3f2aaf8953662fb43628e7cfcc4a9c7aa1cb62ca10cb574698a8fbc35f77"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 3,
+          "valid_bars": 2,
+          "invalid_bars": 1,
+          "missing_bars": 2973,
+          "gaps": [
+            {
+              "start": 1577838600,
+              "end": 1577839500,
+              "missing_bars": 1
+            },
+            {
+              "start": 1577840400,
+              "end": 1580515200,
+              "missing_bars": 2972
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "12",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "9",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "11",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "42",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "2",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "22",
+                "available_at": 1577837705
+              }
+            }
+          },
+          {
+            "time": 1577838600,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838605
+              }
+            }
+          },
+          {
+            "time": 1577840400,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "10",
+                "available_at": 1577840405
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "12",
+                "available_at": 1577840405
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "9",
+                "available_at": 1577840405
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "11",
+                "available_at": 1577840405
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577840405
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "42",
+                "available_at": 1577840405
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "4",
+                "available_at": 1577840405
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "2",
+                "available_at": 1577840405
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "22",
+                "available_at": 1577840405
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "invalid_final_development_bar_keeps_expected_boundary",
+      "symbol": "BTCUSDT",
+      "month": "2023-12",
+      "raw_csv": "1704066300000,10,12,9,11,4,1704066500000,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": true,
+        "schema": "binance-row-quality/1",
+        "source_sha256": "65c1ca715e613d82cd0a9edd49ce184dfbfeed4da6e785977dd0f182c9753df7",
+        "records": [
+          {
+            "line": 1,
+            "open_time": 1704066300,
+            "end_time": 1704067200,
+            "status": "INVALID_BAR",
+            "bar": null,
+            "reason": "INVALID_CLOSE_TIME",
+            "raw_line_sha256": "65c1ca715e613d82cd0a9edd49ce184dfbfeed4da6e785977dd0f182c9753df7"
+          }
+        ],
+        "coverage": {
+          "expected_bars": 2976,
+          "present_bars": 1,
+          "valid_bars": 0,
+          "invalid_bars": 1,
+          "missing_bars": 2975,
+          "gaps": [
+            {
+              "start": 1701388800,
+              "end": 1704066300,
+              "missing_bars": 2975
+            }
+          ]
+        },
+        "expected_end_definition": "open_time + 900; expected grid boundary, not an observed close for invalid bars",
+        "historical_publication": "UNKNOWN",
+        "scientific_readiness": false,
+        "strict_parser_accepted": false,
+        "reference_rows": [
+          {
+            "time": 1704067200,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1704067205
+              }
+            }
+          }
+        ],
+        "reference_availability_basis": "assumed"
+      }
+    },
+    {
+      "name": "duplicate_valid_and_invalid_key_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,2,22,0\n1577836800000,10,12,9,11,4,1577837000000,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "094ea9e3b8f8d27c31972dd07a332fda913548d7eb0ba9e6e8d345b35e89eff2",
+        "reason": "DUPLICATE_KEY",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "reversed_key_after_invalid_bar_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577837700000,10,12,9,11,4,1577837999000,42,4,2,22,0\n1577836800000,10,12,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "762e1e7d91cae573beecedf92c8ef710e30635bdb5d97bb5f3ccbedf84512480",
+        "reason": "REVERSED_KEY",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "off_grid_open_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836801000,10,12,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "6e4919553a6a55e2c40bb86ac1ce7604dcd96b32ab1b3663fdbf7ae68167a82c",
+        "reason": "INVALID_KEY",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "nonnumeric_open_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "unknown,10,12,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "8e2288ec3fee3d342aad5b18b9bb3721e49e6b5fc04f62493125c9e9a95ef8f8",
+        "reason": "INVALID_KEY",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "wrong_unit_open_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000000,10,12,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "b66c20ef3df81f65a469454ffc794e673e8f52fd84fd376ed383448ba43c916f",
+        "reason": "INVALID_KEY",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "out_of_month_open_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1580515200000,10,12,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "c4f34530497aa0ed7f4f1502fd5ad966b992abaacd97a8015a058f6340dc7e60",
+        "reason": "OUTSIDE_MONTH",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "wrong_column_count_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,2,22\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "4410aff4a5aebf611b0dd97014e5515daa2fee070610f71e43351f4851aec9fa",
+        "reason": "AMBIGUOUS_LAYOUT",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "unterminated_quote_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,\"unterminated\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "62f0e1f24893be18f2c735d3df6a4d9573ee94345a7ebe37bfa0ad9afc4b3d88",
+        "reason": "AMBIGUOUS_QUOTING",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "multiline_quoted_number_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,\"1\n0\",12,9,11,4,1577837699999,42,4,2,22,0\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "500b02cc7083d99b988097198cb08e518e89a8fc46729f68e825f2af257c7363",
+        "reason": "MULTILINE_AMBIGUITY",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "blank_physical_line_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,10,12,9,11,4,1577837699999,42,4,2,22,0\n\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "da0b0d50cbf9c2b28eea39ca225a3eed82dc360a5b9199c0023e24b7aea9485b",
+        "reason": "AMBIGUOUS_EMPTY_LINE",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "empty_source_fails",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "reason": "EMPTY_SOURCE",
+        "records": null,
+        "reference_rows": null
+      }
+    },
+    {
+      "name": "header_without_key_fails_source",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "open_time,open,high,low,close,volume,close_time,quote_volume,trades,taker_base,taker_quote,ignore\n",
+      "delay_seconds": 5,
+      "expected": {
+        "accepted": false,
+        "source_sha256": "58e04c16ebf49511cbc3ebfc128878b4b962fac4688d0f1343ef769de139d01d",
+        "reason": "INVALID_KEY",
+        "records": null,
+        "reference_rows": null
+      }
+    }
+  ]
+}

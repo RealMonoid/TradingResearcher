@@ -1,0 +1,470 @@
+{
+  "schema": "reference-calibration-counts/1",
+  "authored": "2026-10-25",
+  "status": "INDEPENDENT_EXPECTATIONS_FROZEN_BEFORE_PRODUCTION",
+  "provenance": {
+    "project_code_imported": false,
+    "production_module_existed_at_creation": false,
+    "method": "Direct integer binomial polynomial sums using math.comb; invert tail=1/20 on a 2^40 dyadic grid; independently verify endpoint tail inequalities and exact rational threshold comparisons. No probability package or production helper used.",
+    "authority": "research-contract/1.0, section 11; D081",
+    "reference_note": "INFORMATION_STUDY_IMPLEMENTATION.md, Exact outer uncertainty"
+  },
+  "confidence": {
+    "one_sided": "19/20",
+    "tail": "1/20",
+    "upper_error_tolerance": "1/10",
+    "lower_detection_minimum": "7/10",
+    "point_detection_design_target": "4/5",
+    "worlds_per_cohort": 256
+  },
+  "bounds": [
+    {
+      "id": "lower-k0-n1",
+      "k": 0,
+      "n": 1,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "0",
+        "upper_numerator": "0",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "0",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0",
+      "display_upper": "0"
+    },
+    {
+      "id": "upper-k0-n1",
+      "k": 0,
+      "n": 1,
+      "side": "upper",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "1044536046387",
+        "upper_numerator": "1044536046388",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "1044536046388",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.9499999999998181010596454143524169921875",
+      "display_upper": "0.95000000000072759576141834259033203125"
+    },
+    {
+      "id": "lower-k1-n1",
+      "k": 1,
+      "n": 1,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "54975581388",
+        "upper_numerator": "54975581389",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "54975581388",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.04999999999927240423858165740966796875",
+      "display_upper": "0.0500000000001818989403545856475830078125"
+    },
+    {
+      "id": "upper-k1-n1",
+      "k": 1,
+      "n": 1,
+      "side": "upper",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "1099511627776",
+        "upper_numerator": "1099511627776",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "1099511627776",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "1",
+      "display_upper": "1"
+    },
+    {
+      "id": "upper-k0-n2",
+      "k": 0,
+      "n": 2,
+      "side": "upper",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "853653353600",
+        "upper_numerator": "853653353601",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "853653353601",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.776393202249892055988311767578125",
+      "display_upper": "0.7763932022508015506900846958160400390625"
+    },
+    {
+      "id": "lower-k2-n2",
+      "k": 2,
+      "n": 2,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "245858274175",
+        "upper_numerator": "245858274176",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "245858274175",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.2236067977491984493099153041839599609375",
+      "display_upper": "0.223606797750107944011688232421875"
+    },
+    {
+      "id": "lower-k5-n10",
+      "k": 5,
+      "n": 10,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "244576577053",
+        "upper_numerator": "244576577054",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "244576577053",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.2224411010074618388898670673370361328125",
+      "display_upper": "0.222441101008371333591639995574951171875"
+    },
+    {
+      "id": "upper-k5-n10",
+      "k": 5,
+      "n": 10,
+      "side": "upper",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "854935050722",
+        "upper_numerator": "854935050723",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "854935050723",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.777558898991628666408360004425048828125",
+      "display_upper": "0.7775588989925381611101329326629638671875"
+    },
+    {
+      "id": "lower-k0-n256",
+      "k": 0,
+      "n": 256,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "0",
+        "upper_numerator": "0",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "0",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0",
+      "display_upper": "0"
+    },
+    {
+      "id": "upper-k0-n256",
+      "k": 0,
+      "n": 256,
+      "side": "upper",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "12791582117",
+        "upper_numerator": "12791582118",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "12791582118",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.0116338761627048370428383350372314453125",
+      "display_upper": "0.011633876163614331744611263275146484375"
+    },
+    {
+      "id": "upper-k17-n256",
+      "k": 17,
+      "n": 256,
+      "side": "upper",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "107692130210",
+        "upper_numerator": "107692130211",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "107692130211",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.097945421848635305650532245635986328125",
+      "display_upper": "0.0979454218495448003523051738739013671875"
+    },
+    {
+      "id": "upper-k18-n256",
+      "k": 18,
+      "n": 256,
+      "side": "upper",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "112683933244",
+        "upper_numerator": "112683933245",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "112683933245",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.10248544026035233400762081146240234375",
+      "display_upper": "0.1024854402612618287093937397003173828125"
+    },
+    {
+      "id": "lower-k191-n256",
+      "k": 191,
+      "n": 256,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "766786605589",
+        "upper_numerator": "766786605590",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "766786605589",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.6973883551736435038037598133087158203125",
+      "display_upper": "0.697388355174552998505532741546630859375"
+    },
+    {
+      "id": "lower-k192-n256",
+      "k": 192,
+      "n": 256,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "771293486821",
+        "upper_numerator": "771293486822",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "771293486821",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.7014873397756673512049019336700439453125",
+      "display_upper": "0.701487339776576845906674861907958984375"
+    },
+    {
+      "id": "lower-k204-n256",
+      "k": 204,
+      "n": 256,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "825809378218",
+        "upper_numerator": "825809378219",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "825809378218",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.751069254163667210377752780914306640625",
+      "display_upper": "0.7510692541645767050795257091522216796875"
+    },
+    {
+      "id": "lower-k205-n256",
+      "k": 205,
+      "n": 256,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "830391652699",
+        "upper_numerator": "830391652700",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "830391652699",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.7552368085262060048989951610565185546875",
+      "display_upper": "0.75523680852711549960076808929443359375"
+    },
+    {
+      "id": "lower-k256-n256",
+      "k": 256,
+      "n": 256,
+      "side": "lower",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "1086720045658",
+        "upper_numerator": "1086720045659",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "1086720045658",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "0.988366123836385668255388736724853515625",
+      "display_upper": "0.9883661238372951629571616649627685546875"
+    },
+    {
+      "id": "upper-k256-n256",
+      "k": 256,
+      "n": 256,
+      "side": "upper",
+      "bits": 40,
+      "bracket": {
+        "lower_numerator": "1099511627776",
+        "upper_numerator": "1099511627776",
+        "denominator": "1099511627776"
+      },
+      "outward_endpoint": {
+        "numerator": "1099511627776",
+        "denominator": "1099511627776"
+      },
+      "display_lower": "1",
+      "display_upper": "1"
+    }
+  ],
+  "thresholds": [
+    {
+      "k": 17,
+      "n": 256,
+      "side": "upper",
+      "threshold": "1/10",
+      "tail_numerator": "400875768714937003031825839577534205909532827666125676852330050529094543377270649788435191770192439087813431829616200398364316628275146257466010496426983232382221492276585268308884341100276558040254977170591913025407610423368915400539568818068887342620625",
+      "tail_denominator": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "accepts_exact_threshold": true,
+      "comparison": "20 * tail_numerator <= tail_denominator"
+    },
+    {
+      "k": 18,
+      "n": 256,
+      "side": "upper",
+      "threshold": "1/10",
+      "tail_numerator": "644102724690824201176246031825405423650065259079481281543549872658191072432437540420404978666181931255238498004729816443682194659352480921736931757249126165890650495875208178607305967396937462540343867839872672219365276297625264240327900591761265887052625",
+      "tail_denominator": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "accepts_exact_threshold": false,
+      "comparison": "20 * tail_numerator <= tail_denominator"
+    },
+    {
+      "k": 191,
+      "n": 256,
+      "side": "lower",
+      "threshold": "7/10",
+      "tail_numerator": "599628845669781292770470104519278885032240127676942929761852821828860880303087799083305467685710701463332004491970651662679456650860001831035788733351824161966998848998375265211052842939984969385683344807430519592826253446606856071094166080901534553763925",
+      "tail_denominator": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "accepts_exact_threshold": false,
+      "comparison": "20 * tail_numerator <= tail_denominator"
+    },
+    {
+      "k": 192,
+      "n": 256,
+      "side": "lower",
+      "threshold": "7/10",
+      "tail_numerator": "449401572041414699183345420959493773031930572133110335626448589273402464843019351212784267126257042872304386093300873157436873444216117425218723873060152011740383275737695882302688795420731420733301999896450195492887764052200921261641054459621262047799125",
+      "tail_denominator": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "accepts_exact_threshold": true,
+      "comparison": "20 * tail_numerator <= tail_denominator"
+    },
+    {
+      "k": 204,
+      "n": 256,
+      "side": "lower",
+      "threshold": "7/10",
+      "tail_numerator": "3056239721556142057611461233480240169473059593389706777155845029084699841533602729979238701825317963834313108614592579862986888286022597313284449219751881158943677799692509534635627180114975817787270106486389278711144484570126462219919518214625325870425",
+      "tail_denominator": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "accepts_exact_threshold": true,
+      "comparison": "20 * tail_numerator <= tail_denominator"
+    },
+    {
+      "k": 205,
+      "n": 256,
+      "side": "lower",
+      "threshold": "7/10",
+      "tail_numerator": "1754603021576698887055217731534838480110202316846373769886137459605239414979711728075801434570826989858656287961362936105583496294964910874604792131303241960880677027954934493396161056896948032481512878650706428815615754474886527565358716993594685929625",
+      "tail_denominator": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "accepts_exact_threshold": true,
+      "comparison": "20 * tail_numerator <= tail_denominator"
+    },
+    {
+      "k": 34,
+      "n": 256,
+      "side": "upper",
+      "threshold": "1/10",
+      "tail_numerator": "9638204675147180620637665285581021328920055387971600355426471082673852098104595362999959345777923935684220957305945989698870554572635103414555606119453145983551893263898457721666950834960469833715469576758578526730432444385932111812250770229171031939019625",
+      "tail_denominator": "10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "accepts_exact_threshold": false,
+      "comparison": "20 * tail_numerator <= tail_denominator"
+    }
+  ],
+  "point_design_cases": [
+    {
+      "k": 204,
+      "n": 256,
+      "observed_rate": "51/64",
+      "design_target_met": false,
+      "calibration_detection_minimum_met": true
+    },
+    {
+      "k": 205,
+      "n": 256,
+      "observed_rate": "205/256",
+      "design_target_met": true,
+      "calibration_detection_minimum_met": true
+    }
+  ],
+  "event_semantics_cases": [
+    {
+      "id": "boundary-disjoint-tails",
+      "worlds": 256,
+      "false_support": 17,
+      "false_negative": 17,
+      "overlap": 0,
+      "erroneous_decisive_events": 34,
+      "upper_tolerance_met": false,
+      "qualification": "The event is the union of erroneous decisive classifications, not two separately passing tails."
+    },
+    {
+      "id": "missing-is-not-zero",
+      "planned_worlds": 256,
+      "observed_events": 255,
+      "known_true_events": 0,
+      "missing": 1,
+      "status": "NOT_ASSESSED",
+      "denominator": 256
+    },
+    {
+      "id": "unavailable-is-not-false",
+      "planned_worlds": 256,
+      "available_events": 255,
+      "known_true_events": 0,
+      "unavailable": 1,
+      "status": "NOT_ASSESSED",
+      "denominator": 256
+    }
+  ],
+  "limitations": [
+    "Booleans do not authenticate their source, seed freshness, simulation law, empirical classification or independence.",
+    "Joint claims and instruments inside one simulation are one outer world.",
+    "One-sided 95 percent bounds are pointwise; the manifest conjunction is not automatically a simultaneous confidence statement.",
+    "These thresholds are scoped adopted engineering tolerances, not evidence that any estimator passed calibration."
+  ]
+}

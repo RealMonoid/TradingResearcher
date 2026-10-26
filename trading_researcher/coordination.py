@@ -18,14 +18,24 @@ import uuid
 
 from . import checks
 from .codec import Invalid, canonical, decode, digest, integer, strings, text
-
-
-class Denied(PermissionError):
-    pass
-
-
-class Conflict(RuntimeError):
-    pass
+from .errors import Conflict, Denied
+from .memory import ResearchMemory
+from .research_calls import ResearchCalls
+from .formalization import FormalizationRecords
+from .certification import ReferenceCertification
+from .storage import ExternalStorage, RESERVED as STORAGE_SCHEMAS
+from .data import DataSnapshots
+from .features import FeatureCertification
+from .binding import BoundComputation
+from .evaluation_plans import EvaluationPlans
+from .auxiliary import AuxiliaryResearch
+from .bootstrap_runs import BootstrapRuns
+from .information_runs import InformationDiagnostics
+from .population_runs import PopulationWorlds
+from .study_runs import InformationStudies
+from .measurements import DevelopmentMeasurements
+from .controller_providers import ControllerProviders, routes as provider_routes_config
+from .meaning_reviews import MeaningReviews
 
 
 SCHEMA = '''
@@ -56,10 +66,12 @@ CREATE TABLE IF NOT EXISTS events(seq INTEGER PRIMARY KEY, previous_hash TEXT NO
 '''
 
 
-class Broker:
-    def __init__(self, directory, clock=None):
+class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews):
+    def __init__(self, directory, clock=None, *, provider_routes=None):
+        self._provider_routes = provider_routes_config(provider_routes)
         self.directory = Path(directory).resolve()
         self.directory.mkdir(parents=True, exist_ok=True)
+        existing_registry = (self.directory / 'registry.sqlite3').is_file()
         self.clock = clock or (lambda: int(time.time()))
         self._mutex = threading.RLock()
         self._lock_file = (self.directory / 'writer.lock').open('a+b')
@@ -114,7 +126,18 @@ class Broker:
             self.admin_token = key_path.read_text(encoding='utf-8').strip()
             if self._principal(self.admin_token)['role'] != 'operator':
                 raise Denied('Operator credential mismatch')
+            self._initialize_memory(existing_registry)
+            self._initialize_research_calls(existing_registry)
+            self._initialize_controller_providers(existing_registry)
+            self._initialize_meaning_reviews(existing_registry)
+            self._initialize_storage(existing_registry)
             self._verify()
+            self._recover_reference_checks()
+            self._recover_feature_checks()
+            self._recover_bound_computations()
+            self._recover_information_studies()
+            from .calibration_runs import CalibrationStudies
+            CalibrationStudies(self)._recover_information_studies()
         except BaseException:
             self.close()
             raise
@@ -159,13 +182,62 @@ class Broker:
         return dict(row)
 
     def call(self, token, op, **args):
+        if op == 'invoke_auxiliary_provider':
+            return self._invoke_auxiliary_provider_external(token, args)
+        if op in ('prepare_evaluator_calibration','advance_evaluator_calibration','inspect_evaluator_calibration'):
+            from .calibration_runs import CalibrationStudies
+            runner=CalibrationStudies(self)
+            if op=='prepare_evaluator_calibration':return runner._prepare_information_study_external(token,args)
+            if set(args)!={'calibration_id'}:raise Invalid('Exact calibration identity required')
+            method=(runner._advance_information_study_external if op=='advance_evaluator_calibration'
+                else runner._inspect_information_study_external)
+            return method(token,{'study_id':args['calibration_id']})
+        if op == 'measure_development':
+            return self._measure_development_external(token, args)
+        if op == 'prepare_information_study':
+            return self._prepare_information_study_external(token, args)
+        if op == 'advance_information_study':
+            return self._advance_information_study_external(token, args)
+        if op == 'inspect_information_study':
+            return self._inspect_information_study_external(token, args)
+        if op == 'run_population_world':
+            return self._run_population_world_external(token, args)
+        if op == 'prepare_information_diagnostics':
+            return self._prepare_information_diagnostics_external(token, args)
+        if op == 'run_development_bootstrap':
+            return self._run_development_bootstrap_external(token, args)
         canonical(args)
+        if op == 'compile_hypothesis':
+            return self._compile_hypothesis_external(token, args)
+        if op == 'execute_development':
+            return self._execute_development_external(token, args)
+        if op == 'prepare_evaluation_plan':
+            return self._prepare_evaluation_plan_external(token, args)
+        if op == 'certify_features':
+            return self._certify_features_external(token, args)
+        if op == 'certify_reference':
+            return self._certify_reference_external(token, args)
+        if op == 'revalidate_reference':
+            return self._certify_reference_external(token, args, retained=True)
+        if op == 'add_blob_source':
+            return self._add_blob_source_external(token, args)
+        if op == 'register_data_snapshot':
+            return self._register_data_snapshot_external(token, args)
+        if op == 'backup_bundle':
+            return self._backup_bundle_external(token, args)
         with self._transaction():
             actor = self._principal(token)
-            worker_ops = {'claim', 'heartbeat', 'read_artifact', 'put_artifact', 'submit', 'block'}
+            worker_ops = {'claim', 'heartbeat', 'read_artifact', 'put_artifact', 'submit', 'block',
+                          'record_research', 'search_memory', 'reserve_research_call',
+                          'finish_research_call', 'research_call_state', 'record_formalization',
+                          'auxiliary_input', 'record_semantic_review'}
             admin_ops = {'register_worker', 'add_source', 'create_context', 'create_batch', 'seal_batch',
                          'enqueue', 'resume', 'release_batch', 'inspect', 'status', 'verify',
-                         'add_schedule', 'emit', 'tick', 'backup', 'get_artifact'}
+                         'add_schedule', 'emit', 'tick', 'backup', 'get_artifact',
+                         'add_research', 'inspect_memory', 'rebuild_memory',
+                         'create_research_epoch', 'inspect_research_epoch', 'reference_certificate_status',
+                         'inspect_reference_checks', 'feature_certificate_status', 'inspect_feature_checks',
+                         'inspect_bound_computations','assess_meaning_review','inspect_meaning_review'}
             allowed = admin_ops if actor['role'] == 'operator' else worker_ops
             if op not in allowed:
                 raise Denied('Operation unavailable for this capability')
@@ -212,11 +284,25 @@ class Broker:
         return {'id': artifact_id, **envelope}
 
     def _save_artifact(self, envelope):
+        blob_refs = strings(envelope.get('blob_refs', []), 'blob references')
+        for identity in blob_refs:
+            if not self._db.execute('SELECT 1 FROM blobs WHERE sha256=?', (identity,)).fetchone():
+                raise Denied('Artifact refers to an uncommitted blob')
         identity = digest(envelope)
         self._db.execute('INSERT OR IGNORE INTO artifacts VALUES(?,?)', (identity, canonical(envelope)))
+        for blob_id in blob_refs:
+            self._db.execute('INSERT OR IGNORE INTO artifact_blobs VALUES(?,?)', (identity, blob_id))
         return {'id': identity, **envelope}
 
     def _add_source(self, actor, body, data_class, exposure=None):
+        if type(body) is dict and str(body.get('schema', '')).startswith(STORAGE_SCHEMAS):
+            raise Invalid('Blob sources and reference packages require owned host operations')
+        if type(body) is dict and str(body.get('schema', '')).startswith('implementation-certificate/'):
+            raise Invalid('Implementation certificates require the host-owned validator')
+        if type(body) is dict and str(body.get('schema', '')).startswith('formalization-record/'):
+            raise Invalid('Formalization records require the owned formalizer operation')
+        if type(body) is dict and str(body.get('schema', '')).startswith('research-record/'):
+            raise Invalid('Use add_research for typed memory records')
         if data_class not in ('development', 'assessment', 'operations'):
             raise Invalid('Unknown source class')
         exposure = strings(exposure or [], 'exposure')
@@ -235,14 +321,20 @@ class Broker:
             raise Conflict('Context integrity failure')
         return {'id': context_id, **value}
 
-    def _create_context(self, actor, role, epoch, artifact_ids):
+    def _create_context(self, actor, role, epoch, artifact_ids, research_time=None):
         if role not in ('discovery', 'formalizer', 'executor', 'reporter'):
             raise Invalid('Unknown context role')
         integer(epoch, 'epoch')
         strings(artifact_ids, 'artifact_ids')
+        research_time = self._now() if research_time is None else integer(research_time, 'research_time')
+        if research_time > self._now():
+            raise Invalid('Research time cannot be in the future')
         exposure = set(artifact_ids)
         for identity in artifact_ids:
             artifact = self._artifact(identity)
+            if role in ('discovery','formalizer'):
+                self._deny_final_calibration_ancestry(artifact)
+            self._record_context_check(artifact, research_time, epoch)
             exposure.update(artifact['exposure'])
             if artifact['origin'] == 'source':
                 if artifact['data_class'] != 'development' and role in ('discovery', 'formalizer'):
@@ -251,12 +343,26 @@ class Broker:
                 released = self._db.execute('SELECT epoch FROM releases WHERE artifact_id=?', (identity,)).fetchone()
                 if released is None or epoch < released[0]:
                     raise Denied('Work product has not been released for this epoch')
-        envelope = {'version': 'local-context/1', 'role': role, 'epoch': epoch,
-                    'artifact_ids': sorted(artifact_ids), 'exposure': sorted(exposure)}
+        envelope = {'version': 'local-context/2', 'role': role, 'epoch': epoch,
+                    'artifact_ids': sorted(artifact_ids), 'exposure': sorted(exposure),
+                    'research_time': research_time}
         identity = digest(envelope)
         self._db.execute('INSERT OR IGNORE INTO contexts VALUES(?,?)', (identity, canonical(envelope)))
         self._event(actor['name'], 'context_frozen', context_id=identity)
         return {'id': identity, **envelope}
+
+    def _deny_final_calibration_ancestry(self,artifact):
+        pending=[artifact];seen=set()
+        while pending:
+            current=pending.pop()
+            if current['id'] in seen:continue
+            seen.add(current['id']);body=current.get('body')
+            if type(body) is dict and str(body.get('schema','')).startswith(
+                    ('evaluator-calibration-input/','evaluator-calibration-attempt/')):
+                raise Denied('Reserved final calibration and its descendants are unavailable to research roles')
+            for ref in set(current['source_refs'])|set(current['exposure']):
+                if ref not in seen and self._db.execute('SELECT 1 FROM artifacts WHERE id=?',(ref,)).fetchone():
+                    pending.append(self._artifact(ref))
 
     def _create_batch(self, actor, key, epoch):
         text(key, 'batch key')
@@ -282,7 +388,8 @@ class Broker:
     def _spec(self, spec):
         required = {'kind', 'context_id', 'purpose', 'allowed_workers', 'max_attempts',
                     'lease_seconds', 'deadline', 'dependencies'}
-        if type(spec) is not dict or not required <= set(spec) or set(spec) - required - {'batch_id'}:
+        if type(spec) is not dict or not required <= set(spec) or set(spec) - required - {
+                'batch_id', 'research_epoch_id','research_call_profile','research_inputs'}:
             raise Invalid('Job specification fields are missing or unexpected')
         text(spec['kind'], 'kind')
         text(spec['purpose'], 'purpose')
@@ -296,6 +403,7 @@ class Broker:
         integer(spec['lease_seconds'], 'lease_seconds', 3)
         integer(spec['deadline'], 'deadline', 1)
         context = self._context(spec['context_id'])
+        self._research_spec_check(spec)
         for name in spec['allowed_workers']:
             row = self._db.execute('SELECT role,capabilities FROM principals WHERE name=?', (name,)).fetchone()
             if row is None or row['role'] != context['role'] or spec['kind'] not in decode(row['capabilities']):
@@ -307,6 +415,7 @@ class Broker:
 
     def _enqueue(self, actor, key, spec):
         text(key, 'job key')
+        spec=decode(canonical(spec))
         row = self._db.execute('SELECT id,envelope FROM job_specs WHERE request_key=?', (key,)).fetchone()
         if row:
             if row['envelope'] != canonical(spec):
@@ -346,6 +455,7 @@ class Broker:
         self._db.execute('''UPDATE attempts SET state=?,ended_at=?,detail=?,result_id=?
                             WHERE job_id=? AND generation=?''',
                          (state, self._now(), canonical(detail), result_id, job['id'], job['generation']))
+        self._journal_attempt(job, state, detail)
 
     def _expire(self):
         now = self._now()
@@ -411,7 +521,7 @@ class Broker:
     def _read_artifact(self, actor, lease, artifact_id):
         job = self._owned(actor, lease)
         context = self._context(job['spec']['context_id'])
-        if artifact_id not in context['artifact_ids']:
+        if artifact_id not in self._attempt_sources(actor, job, context):
             raise Denied('Artifact unavailable in frozen context')
         result = self._artifact(artifact_id)
         self._event(actor['name'], 'artifact_read', job_id=job['id'], artifact_id=artifact_id)
@@ -421,14 +531,30 @@ class Broker:
         job = self._owned(actor, lease)
         context = self._context(job['spec']['context_id'])
         strings(source_refs, 'source_refs')
-        if not set(source_refs) <= set(context['artifact_ids']):
+        if not set(source_refs) <= self._attempt_sources(actor, job, context):
             raise Denied('References must belong to the frozen context')
-        # Conservatively inherit the entire supplied context, not worker-selected ancestry.
+        if type(body) is dict and str(body.get('schema', '')).startswith(STORAGE_SCHEMAS):
+            raise Invalid('Blob sources and reference packages require owned host operations')
+        if type(body) is dict and str(body.get('schema', '')).startswith('research-record/'):
+            raise Invalid('Use record_research for typed memory records')
+        if type(body) is dict and str(body.get('schema', '')).startswith('implementation-certificate/'):
+            raise Invalid('Implementation certificates require the host-owned validator')
+        if type(body) is dict and str(body.get('schema', '')).startswith('formalization-record/'):
+            raise Invalid('Use record_formalization for retained formalization records')
+        return self._worker_artifact(actor, job, context, body, source_refs)
+
+    def _worker_artifact(self, actor, job, context, body, source_refs):
+        # Preserve the base snapshot and the separately accumulated private attempt.
+        # A retry cannot quietly inherit an unreleased previous attempt's scratch.
+        ancestry = self._attempt_sources(actor, job, context)
+        exposure = set(context['exposure']) | ancestry
+        for identity in ancestry:
+            exposure.update(self._artifact(identity)['exposure'])
         result = self._save_artifact({'version': 'local-artifact/1', 'creator': actor['name'],
             'origin': 'worker', 'job_id': job['id'], 'generation': job['generation'],
             'context_id': context['id'], 'data_class': 'work_product', 'body': body,
-            'source_refs': sorted(set(context['artifact_ids'])), 'cited_refs': sorted(source_refs),
-            'exposure': context['exposure'], 'authority': 'unverified_work_product'})
+            'source_refs': sorted(ancestry), 'cited_refs': sorted(source_refs),
+            'exposure': sorted(exposure), 'authority': 'unverified_work_product'})
         self._event(actor['name'], 'artifact_staged', job_id=job['id'], artifact_id=result['id'])
         return {'id': result['id']}
 
@@ -442,13 +568,20 @@ class Broker:
                     raise Conflict('Attempt already submitted a different result')
                 return decode(prior['detail'])
         job = self._owned(actor, lease)
+        self._research_completion_check(job)
         result = self._artifact(artifact_id)
         if (result['origin'] != 'worker' or result['creator'] != actor['name']
                 or result['job_id'] != job['id'] or result['generation'] != job['generation']):
             raise Denied('Result does not belong to this attempt')
         context = self._context(job['spec']['context_id'])
         sources = [self._artifact(ref) for ref in context['artifact_ids']]
+        if job['spec']['kind'] in ('formalization/v1','semantic-review/v1'):
+            sources = [self._artifact(ref) for ref in result['source_refs']]
         try:
+            if job['spec']['kind']=='semantic-review/v1':
+                body=result['body']
+                expected=self._semantic_body(actor,job,body['call_id'],body['created_at'])
+                if canonical(expected)!=canonical(body):raise Invalid('Semantic review differs from its owned input/response binding')
             message = checks.validate(job['spec']['kind'], result['body'], sources)
             accepted = True
         except Invalid as exc:
@@ -492,11 +625,25 @@ class Broker:
             raise Conflict('Incomplete batch cannot release partial results')
         if batch['released_epoch'] is not None and batch['released_epoch'] != target_epoch:
             raise Conflict('Release epoch is immutable')
-        for row in rows:
-            self._db.execute('INSERT OR IGNORE INTO releases VALUES(?,?,?)', (row['result_id'], target_epoch, batch_id))
+        identities = [row['result_id'] for row in rows]
+        jobs = {row['id'] for row in rows}
+        # Preserve all typed inquiry history of this completed batch, including
+        # unsuccessful earlier attempts. Only the operator can release the batch.
+        for record in self._db.execute('SELECT artifact_id FROM research_records ORDER BY seq'):
+            artifact = self._artifact(record['artifact_id'])
+            if artifact['origin'] in ('worker', 'controller') and artifact.get('job_id') in jobs:
+                identities.append(record['artifact_id'])
+        for record in self._db.execute('SELECT id,envelope FROM artifacts'):
+            artifact = decode(record['envelope'])
+            if (artifact['origin'] == 'worker' and artifact.get('job_id') in jobs
+                    and type(artifact['body']) is dict and artifact['body'].get('schema') == 'formalization-record/1'):
+                identities.append(record['id'])
+        identities = list(dict.fromkeys(identities))
+        for identity in identities:
+            self._db.execute('INSERT OR IGNORE INTO releases VALUES(?,?,?)', (identity, target_epoch, batch_id))
         self._db.execute('UPDATE batches SET released_epoch=? WHERE id=?', (target_epoch, batch_id))
         self._event(actor['name'], 'batch_released', batch_id=batch_id, target_epoch=target_epoch)
-        return {'artifact_ids': [r['result_id'] for r in rows], 'epoch': target_epoch}
+        return {'artifact_ids': identities, 'epoch': target_epoch}
 
     @staticmethod
     def _page(limit, after):
@@ -618,10 +765,14 @@ class Broker:
             if row['previous_hash'] != previous or row['hash'] != expected:
                 raise Conflict('Audit chain mismatch')
             previous, count = row['hash'], count + 1
-        return {'status': 'PASS', 'events': count, 'foreign_keys': True, 'synchronous': 'FULL',
-                'schema_version': 1, 'scope': 'local coordination integrity only'}
+        blobs = self._verify_blobs()
+        return {'status': blobs['status'], 'events': count, 'foreign_keys': True, 'synchronous': 'FULL',
+                'schema_version': 1, 'scope': 'local coordination and research memory integrity only',
+                'research_memory': self._verify_memory(), 'blobs': blobs}
 
     def _backup(self, actor, destination):
+        if self._db.execute('SELECT 1 FROM blobs LIMIT 1').fetchone():
+            raise Conflict('Database-only backup cannot omit blobs; use backup_bundle')
         # Backup uses a separate read connection; backing up the active write transaction blocks.
         path = Path(destination).resolve()
         if path.exists():

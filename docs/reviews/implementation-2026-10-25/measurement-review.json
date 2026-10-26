@@ -1,0 +1,242 @@
+{
+  "schema": "independent-development-measurement-review/1",
+  "date": "2026-10-25",
+  "role": "Independent evidence-engineering reviewer; tests and report only",
+  "purpose": "Check that provider-neutral development measurements preserve existing causal research-ast/1 semantics and derive every worker invocation from its authorized retained provider response, with bounded computation, source retention and private release.",
+  "conclusion": "No remaining substantiated defect found in the bounded review after the undelivered-result access fix. The tool produces qualified descriptive development values or retained gaps. It does not establish truthful historical availability, scientific feature certification, hypothesis validity, calibrated evidence or genuine LLM discovery.",
+  "source_context": [
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md section4 causal typed expressions and existing exposure/authority boundaries",
+    "trading_researcher/EXPRESSIONS.md and ReferenceEngine in trading_researcher/expressions.py",
+    "trading_researcher/measurements.py: measure, validate_request, authorization, retained input and result release",
+    "trading_researcher/research_calls.py: durable provider call ownership, timeliness and reservation receipts",
+    "trading_researcher/researcher.py: legacy versus explicitly measurement-enabled frozen tool sets",
+    "trading_researcher/coordination.py, memory.py, storage.py and data.py: current-attempt visibility, reserved records and snapshot loading"
+  ],
+  "independence": {
+    "fixed_before_implementation_read": "Numeric/missingness expectations, the original-decision availability cutoff, absent-current-row behavior and the194-complete-cell primitive-budget oracle were communicated before reading measurements.py.",
+    "fixture_setup_correction": "The initial peer test incorrectly tried to claim a second simultaneous job. The broker correctly returned no job under the adopted sequential execution rule. The test was corrected to block the first attempt without releasing its private work before claiming the second; numeric and authorization expectations were unchanged.",
+    "production_changes_by_reviewer": false,
+    "credentials_or_live_provider_calls_by_reviewer": false,
+    "prior_reports_changed": false
+  },
+  "fixed_hand_oracles": {
+    "grid": "t_i = 2022-01-01T00:00:00Z + 900*i seconds; output cells t1..t6 for BTCUSDT and ETHUSDT, with one explicit warmup bar.",
+    "btc_source": "Prices t0=10 timely; t1=20 available at t2; t2 row absent; t3=null timely; t4=40 timely; t5=50 available at t6; t6=60 timely.",
+    "eth_source": "Prices100,110,120,130,140,150,160, all timely at t0..t6.",
+    "btc_raw": [
+      "not_yet_available",
+      "missing_observation",
+      "missing_value",
+      "40",
+      "not_yet_available",
+      "60"
+    ],
+    "btc_lag1": [
+      "10",
+      "missing_observation",
+      "missing_observation",
+      "missing_value",
+      "40",
+      "50"
+    ],
+    "btc_lag2": [
+      "missing_observation",
+      "missing_observation",
+      "20",
+      "missing_observation",
+      "missing_value",
+      "40"
+    ],
+    "btc_mean2": [
+      "incomplete_window",
+      "missing_observation",
+      "incomplete_window",
+      "incomplete_window",
+      "incomplete_window",
+      "55"
+    ],
+    "eth_lag1": [
+      "100",
+      "110",
+      "120",
+      "130",
+      "140",
+      "150"
+    ],
+    "eth_current_over_lag1_minus1": [
+      "1/10",
+      "1/11",
+      "1/12",
+      "1/13",
+      "1/14",
+      "1/15"
+    ],
+    "btc_return_t6": "1/5",
+    "pooled_raw_summary": "Eight defined output cells total910, giving exact descriptive mean455/4. This is a defined-cell summary, not a population estimate.",
+    "availability": "The lagged t1 value is usable at decision t3 after its t2 publication, and the t5 value is usable exactly at t6. Availability uses the original decision cutoff, never the historical lookup time.",
+    "missing_current_row": "ReferenceEngine checks the current grid row before lag/literal evaluation. The absent BTC t2 row remains missing_observation even where an older value exists; no placeholder, nearest-row or other-instrument fill is allowed.",
+    "warmup": "With warmup0 the first lag is missing even when the full supplied fixture includes t0. A wholly empty selected input remains an explicit DATA_GAP with all expected cells uncomputed.",
+    "nondecisive_dependencies": "False AND a missing Boolean is False while the missing_feature_value trace remains; True OR a comparison using a late price is True while not_yet_available remains in the trace.",
+    "shared_step_budget": "A complete mean512 requires513 primitive nodes per cell. At256 requested cells, the shared100000-step cap permits194 complete values, interrupts the195th, leaves62 uncomputed positions and labels the summary completed_prefix_only."
+  },
+  "confirmed_finding": {
+    "problem": "When the research epoch halted during measurement but the lease remained current, the direct RPC denied release while the saved result still had worker exposure. The same worker could read that undelivered result through ordinary read_artifact authorization.",
+    "risk": "A delivered=false field did not enforce the authority boundary on all read paths; hiding the result ID is not access control.",
+    "reproduction": "Independent test halts only the epoch during the actual snapshot load, confirms the measurement RPC raises Denied, then attempts a direct read with the still-valid lease.",
+    "fix_owner": "Parent implementation agent",
+    "fix": "The saved result receives exposed_to=actor only when delivered is true; an undelivered result has no worker exposure. Operator audit remains available.",
+    "verified_result": "The unchanged corrected test now denies both delivery paths and confirms operator audit access."
+  },
+  "independent_checks": {
+    "initial": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_measurements_adversarial.py",
+        "-v"
+      ],
+      "test_count": 14,
+      "unittest_seconds": 5.324,
+      "wall_seconds": 5.904,
+      "exit_code": 1,
+      "captured_files": 42,
+      "sources_stable": true,
+      "result_path": ".trf-runtime/measurement-independent-review-2026-10-25/initial-tests-result.json",
+      "log_sha256": "c60119adb75787b423505c317e0985db8b6e7d142590d63c794e7c580b821b8c",
+      "failures": 1,
+      "fixture_setup_errors": 1
+    },
+    "corrected_red": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_measurements_adversarial.py",
+        "-v"
+      ],
+      "test_count": 14,
+      "unittest_seconds": 5.401,
+      "wall_seconds": 5.999,
+      "exit_code": 1,
+      "captured_files": 42,
+      "sources_stable": true,
+      "result_path": ".trf-runtime/measurement-independent-review-2026-10-25/corrected-red-tests-result.json",
+      "log_sha256": "359d8f64a840916ce577af2bf8c47f56f4f61d7f3980d55087eeef69175faeb6",
+      "failures": 1
+    },
+    "final": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_measurements_adversarial.py",
+        "-v"
+      ],
+      "test_count": 14,
+      "unittest_seconds": 4.821,
+      "wall_seconds": 5.399,
+      "exit_code": 0,
+      "captured_files": 42,
+      "sources_stable": true,
+      "result_path": ".trf-runtime/measurement-independent-review-2026-10-25/tests-result.json",
+      "log_sha256": "c2fb2ed903ce57bb010f9f480b296108baaf759a7d09e2c694638db1035812a9",
+      "failures": 0
+    },
+    "test_file_sha256": "7120e1317f65e5ffb7dfaee67edc252ca4dcf08759f7fff7106d42f634bbdd6f",
+    "final_measurement_source_sha256": "239b0a0ca39885a3aa3347d14f250404bf719b4a39b3f6318b2d3d40773b3be2"
+  },
+  "verified_boundaries": [
+    "Exact fixed raw/lag/window/return values, original-decision availability and same-instrument alignment",
+    "No silent warmup expansion or current-grid placeholder; retained empty-input and unsupported-program gaps",
+    "Three-valued Boolean results preserve missing/late dependency traces",
+    "Shared primitive budget, explicit uncomputed suffix and exact partial descriptive summary",
+    "Causal validation applies even to an unused Boolean branch; catalog mismatch is a typed gap",
+    "The256 cap counts time/instrument cells; Boolean warmup values and513 bars are rejected",
+    "Unlisted snapshots, invented/duplicate tool IDs and late/overrun provider responses are rejected before raw loading",
+    "A second perspective with its own valid lease cannot read or reexecute the first perspective private result",
+    "An unresolved prior computation is not repeated; a new generation cannot read its capsule or reuse its provider call",
+    "Retained source/input capsule exists before calculation; a duplicate completed invocation returns the same artifact without another load",
+    "Epoch-halt output remains available for operator audit while both worker delivery paths are denied"
+  ],
+  "source_review_notes": [
+    "The worker RPC accepts only lease, provider call ID and tool ID; computation arguments come from the exact retained tools response.",
+    "The handler checks owner/job/generation, timely within-reservation recorded response, active epoch, exact frozen measurement tool, authorized snapshot and development partition before raw loading.",
+    "Legacy tool definitions remain separate; the researcher loop accepts the supported frozen sets and sends exactly the selected profile tools. This compatibility was source-reviewed here; full legacy regressions are separate parent evidence.",
+    "The operation releases the main transaction before loading/computing and rechecks authority at release. Existing data loading still validates/scans the full snapshot for a small returned window.",
+    "Authorized inputs and installed source bytes precede calculation; source fingerprint checks surround the calculation. This review does not claim a new independent-process execution/replay certificate.",
+    "The stored availability basis and remaining data/feature/scientific gates accompany output; the tool cannot certify supplied publication timestamps."
+  ],
+  "limits_and_unverified": [
+    "Real provider compatibility, credentials, live billing and genuine hypothesis invention were not exercised by this review.",
+    "The byte-stop mechanism was source-reviewed but its exact boundary was not separately stress-tested; primitive-step and cell/window limits were exercised.",
+    "No large-snapshot latency, OS process-crash/disk-exhaustion or throughput benchmark was performed.",
+    "Raw data truth, historical availability, rights and feature certification remain separately qualified.",
+    "Scientific classification, calibrated uncertainty, model adequacy, N_min, economic usefulness and capital authority remain outside this tool."
+  ],
+  "captured_source_and_prior_report_hashes": {
+    "trading_researcher/measurements.py": "239b0a0ca39885a3aa3347d14f250404bf719b4a39b3f6318b2d3d40773b3be2",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/researcher.py": "1aa230d945fed886115f87dc58589e6ae9265d2ddfebcc39ea3809381fc8476d",
+    "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+    "trading_researcher/coordination.py": "ad703629a9e4e2a45e6a9474c4e61a72e6e6943390b5e249d77c6e16c55d3c32",
+    "trading_researcher/memory.py": "9c7bf9204945b7f32b3dee3e3e2bc61a268bad8dc881e1c1b8a3dc8c74726e9d",
+    "trading_researcher/storage.py": "beb89e9b7c62a14d33e04ad102cbb70ed229614e3ee6305383b841f6ba3991e3",
+    "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+    "tests/test_measurements_adversarial.py": "7120e1317f65e5ffb7dfaee67edc252ca4dcf08759f7fff7106d42f634bbdd6f",
+    "tests/test_measurements.py": "aec464bb0b1d1704fad3cda2df019247e17550c658ffa84396c3afeb6914dcf1",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+    "docs/reviews/implementation-2026-10-25/data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+    "docs/reviews/implementation-2026-10-25/population-model-verification.json": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b",
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c",
+    "docs/reviews/implementation-2026-10-25/study-review.json": "3d08b38a6b4a8accc07705b625762b61d9b37ccbfae38db31c72b48ecc94f742",
+    "docs/reviews/implementation-2026-10-25/study-verification.json": "1134ed19aa2c02a1ba30d6c6a00f723659b0f035b954e0d2fa0999a46b9a3e43"
+  },
+  "preservation": "All42 captured files were stable during the final independent run. Previous review and verification reports were not edited. Initial and corrected failing logs remain separate from the passing log.",
+  "reviewer_changed_files": [
+    "tests/test_measurements_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/measurement-review.json"
+  ],
+  "next_action": "Complete parent regression and the provider-neutral integrated engineering probe. Configure any live-provider access separately through the authorized credential workflow; measurement conformance does not authorize paid calls or establish scientific success."
+}

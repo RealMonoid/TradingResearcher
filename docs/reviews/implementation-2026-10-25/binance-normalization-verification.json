@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-25",
+  "status": "PASS_WITH_EXPLICIT_SCIENTIFIC_AND_PROVENANCE_LIMITS",
+  "purpose": "Connect committed original sources to exact decision-time partitions while preserving invalid/absent observations, inherited exposure, receipt qualifications and actually executed source provenance.",
+  "scope": "Bound source transformation and structural data snapshots; no scientific data/feature acceptance or inference.",
+  "finding": "Three actual partitions contain 280206 development, 70272 assessment and 70080 corroboration rows. Development has 16 all-null invalid rows and 306 absent observations, including two unavailable initial 2020 observations. All three snapshots survive full backup/restore.",
+  "warranted_conclusion": "The retained source set now supplies reproducible, qualified structural inputs for later feature and scientific gates. Current checksum agreement and an explicit delay scenario do not establish historical publication, independent evidence or ignorable missingness.",
+  "next_action": "Continue step 3 with independently specified feature definitions and composition/dependency/availability certification, preserving source quality and explicit historical scenarios. Then bind scientific execution to compatible retained data/code/calculation certificates and complete semantic review, evaluation-plan/allocation validation and atomic freeze. Calibration remains a separate required scientific gate; no structural snapshot alone is ready evidence.",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_binance*.py'",
+      "exit_code": 0,
+      "tests_passed": 40,
+      "duration_seconds": 65.796,
+      "strict_fixed_cases": 43,
+      "quality_fixed_cases": 32,
+      "partition_fixed_cases": 22
+    },
+    {
+      "command": "python -B -m unittest discover -s tests",
+      "exit_code": 0,
+      "tests_passed": 184,
+      "duration_seconds": 142.381
+    },
+    {
+      "command": "python -B -m trading_researcher normalize-binance-partition --directory .trf-runtime/binance-normalized-registry-2026-10-25 --request .trf-runtime/binance-normalized-registry-2026-10-25/development-normalization-request.json",
+      "exit_code": 0,
+      "duration_ms": 50664,
+      "observed_rows": 280206,
+      "missing_rows": 306,
+      "invalid_present_rows": 16,
+      "scientific_readiness": false
+    },
+    {
+      "command": "python -B -m trading_researcher normalize-binance-partition --directory .trf-runtime/binance-normalized-registry-2026-10-25 --request .trf-runtime/binance-normalized-registry-2026-10-25/assessment-normalization-request.json",
+      "exit_code": 0,
+      "duration_ms": 17540,
+      "observed_rows": 70272,
+      "missing_rows": 0,
+      "invalid_present_rows": 0,
+      "scientific_readiness": false
+    },
+    {
+      "command": "python -B -m trading_researcher normalize-binance-partition --directory .trf-runtime/binance-normalized-registry-2026-10-25 --request .trf-runtime/binance-normalized-registry-2026-10-25/corroboration-normalization-request.json",
+      "exit_code": 0,
+      "duration_ms": 17563,
+      "observed_rows": 70080,
+      "missing_rows": 0,
+      "invalid_present_rows": 0,
+      "scientific_readiness": false
+    },
+    {
+      "command": "python -B -",
+      "procedure": "Stream all three committed row files; count rows/nulls and compare first/last instrument observations and all null observations against original retained CSV fields using csv/Fraction without the normalization adapter; then backup_bundle,restore_bundle,verify and compare snapshot/normalization/code records.",
+      "exit_code": 0,
+      "status": "PASS",
+      "directly_compared_rows": 28,
+      "artifacts": 974,
+      "blobs": 752,
+      "blob_bytes": 631700486,
+      "numerical_check_scope": "Additional separate direct calculation by implementing host, not an independent scientific certification; remaining observations received structural/source checks, not this sampled numeric comparison."
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "local_links": 680,
+      "decisions": 88,
+      "requirements": 30,
+      "errors": []
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "baseline_files": 103,
+      "unchanged_files": 93,
+      "authorized_changes": 10,
+      "local_document_links": 194,
+      "errors": []
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output_summary": "No whitespace errors; existing CRLF normalization warnings only."
+    },
+    {
+      "command": "git check-ignore .trf-runtime/binance-normalized-registry-2026-10-25/registry.sqlite3 .trf-runtime/binance-normalized-backup-2026-10-25/registry.sqlite3 .trf-runtime/binance-normalized-restored-2026-10-25/registry.sqlite3",
+      "exit_code": 0
+    }
+  ],
+  "independent_review": {
+    "reviewer": "memory_boundary_review",
+    "result": "No unresolved blocker in reviewed normalization boundary after receipt-validation correction.",
+    "partition_fixture_sha256": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+    "expectations_sha256": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+    "authorship": "22 expectations fixed before implementation inspection; the prior 43 strict and 32 quality cases remain unchanged.",
+    "fixed_finding": "A caller-supplied source bundle could wrap a semantically invalid original acquisition receipt while satisfying hashes. Full success/failure/provider-document validators are now shared between initial retention and normalization. Invalid schema/readiness/purpose/rights/times are rejected rather than inherited.",
+    "red_green": "The forged success receipt regression failed before correction and passes after it.",
+    "fresh_child_probes": {
+      "cases_rejected": 8,
+      "data_snapshots_committed": 0,
+      "duration_seconds": 9.587,
+      "exit_code": 0
+    },
+    "shared_ingestion_recheck": {
+      "tests_passed": 9,
+      "duration_seconds": 4.714,
+      "exit_code": 0
+    },
+    "other_verified_boundaries": [
+      "Transitive protected ancestry denied before raw reads",
+      "Copied source mutation rejected before data snapshot commitment",
+      "Owned child killed/reaped on caller cancellation",
+      "Oversized error output rejected even with child exit 0",
+      "Boundary/unit/order behavior against 22 independent cases"
+    ],
+    "limits": "Reviewer did not independently validate the full real normalization, actual backup exercise, power-loss recovery or scientific/PIT validity."
+  },
+  "results_record": "docs/reviews/implementation-2026-10-25/binance-normalization-results.json",
+  "changed_files_this_checkpoint": [
+    "trading_researcher/binance_normalize.py",
+    "trading_researcher/binance_archive.py",
+    "trading_researcher/binance_ingest.py",
+    "trading_researcher/__main__.py",
+    "tests/test_binance_normalize.py",
+    "tests/fixtures/reference_binance_partition_cases.json",
+    "tests/fixtures/reference_binance_partition_expectations.md",
+    "trading_researcher/BINANCE_NORMALIZATION.md",
+    "trading_researcher/BINANCE.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-results.json",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json"
+  ],
+  "checked_files_sha256": {
+    "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/__main__.py": "57484b5405df37bdacd5a9f086e8d851d651f2ab67ce6edd87920e018732a2bb",
+    "tests/test_binance_normalize.py": "621238a96e3baa8584466f3bfbfa55ed535e12420ad5fa078e8de8a6eafb5d77",
+    "tests/fixtures/reference_binance_partition_cases.json": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+    "tests/fixtures/reference_binance_partition_expectations.md": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+    "trading_researcher/BINANCE_NORMALIZATION.md": "6303faf2009a6a5858a33ce381d8a44fcf66840ea461793a2aef3a0a096c6577",
+    "trading_researcher/BINANCE.md": "147841892ba24dc4de19cc2bd7e0391e999e77524e69999ce75107006f3224b2",
+    "README.md": "5f964ae47be7535d6cd76f2212a818c959ddaf877fffa8d936695669e338e17f",
+    "docs/architecture/CURRENT_STATE.md": "2955b2ac00f4206b574b06a274dea9c71a88a826b0a027ce5541c69cb8079ac0",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "5b3ee809dd396a78e8557878b38072193532c82e41ed66b061ddedea744670aa",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "3a3158543839eff9695288f98d2443fd781f6f55d7289843c29145dae581f58e",
+    "docs/reviews/implementation-2026-10-25/progress.json": "7cd013ef9f2ceb9a8eb16a5afa0a519ad92796ea3747b1028728dcabe57e9d70",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-results.json": "12d2bb8f83bc1d2f99779cfaed78a5bfccc486578986f0d07e412c0ba3532b57"
+  },
+  "unverified": [
+    "Full seven-package objective remains active and incomplete.",
+    "The explicit 900-second delay is an engineering scenario, not an empirical release-latency estimate, a certified PIT guarantee or an adopted universal default.",
+    "Historical vintages/publication and 16 legacy failed-file receipt bindings remain uncertain; local-copy retrieval does not repair them.",
+    "Data snapshots retain 16 invalid present and 306 missing development observations; inferential missingness/eligibility, outcome-boundary rules, feature/semantic certification and scientific data acceptance remain separate.",
+    "Joint catalogs contain symbol-specific features; absent other-symbol feature keys are not source defects.",
+    "Scientific evaluation-plan/allocation/freeze, calibrated inference, live provider integration and a genuine LLM cycle remain incomplete.",
+    "Source/runtime execution binding is verified for this transformation, not a scientific feature certificate or OS sandbox. Runtime executables/standard library are fingerprinted, not archived.",
+    "Actual source package replay after removal of the workspace is not provided by this new normalization wrapper; exact code bytes and normalized outputs are retained for subsequent owned replay work.",
+    "Full real-data sample comparison covered 28 boundary/invalid rows; it is not a separate numeric reimplementation over every market row or proof of market truth.",
+    "Hardware power-loss durability and universal throughput are unverified; recorded timings describe these particular runs.",
+    "No paid model call, software installation, commit or push performed in this checkpoint."
+  ]
+}

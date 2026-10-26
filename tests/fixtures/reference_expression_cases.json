@@ -1,0 +1,4515 @@
+{
+  "schema": "reference-expression-cases/1",
+  "cases": [
+    {
+      "name": "literal_decimal_reduced",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "literal",
+        "type": "real",
+        "unit": "ratio",
+        "value": "0.125"
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "literal_negative_decimal",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "literal",
+        "type": "real",
+        "unit": "USDT",
+        "value": "-2.50"
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": {
+          "numerator": "-5",
+          "denominator": "2"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "literal_negative_zero",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "literal",
+        "type": "real",
+        "unit": "ratio",
+        "value": "-0.0"
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "decimal_add_exact",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "add",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.1"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.2"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "3",
+          "denominator": "10"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "decimal_subtract_negative",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "sub",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "-1.5"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "2.25"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "-15",
+          "denominator": "4"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "decimal_multiply_exact",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "mul",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.125"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.4"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "division_repeating_fraction",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "div",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "1"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "3"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "1",
+          "denominator": "3"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "division_negative_denominator",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "div",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "2"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "-3"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "-2",
+          "denominator": "3"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "division_two_negatives",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "div",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "-2"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "-3"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "2",
+          "denominator": "3"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "nested_fraction_add",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "add",
+        "left": {
+          "op": "div",
+          "left": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "3"
+          }
+        },
+        "right": {
+          "op": "div",
+          "left": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "6"
+          }
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "large_integer_plus_decimal_exact",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "add",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "9007199254740993"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.1"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "90071992547409931",
+          "denominator": "10"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "usdt_add",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "add",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "3.25"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "1.75"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": {
+          "numerator": "5",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "usdt_subtract",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "sub",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "1"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "2.5"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": {
+          "numerator": "-3",
+          "denominator": "2"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "ratio_times_usdt",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "mul",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.25"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "10"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": {
+          "numerator": "5",
+          "denominator": "2"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "usdt_times_ratio",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "mul",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "10"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.25"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": {
+          "numerator": "5",
+          "denominator": "2"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "usdt_divided_by_ratio",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "div",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "3"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.25"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": {
+          "numerator": "12",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "same_unit_division_is_ratio",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "div",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "2.5"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "0.5"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "5",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "unmatched_add_units",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "add",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "1"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "1"
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "compound_multiplication_unavailable",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "mul",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "2"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "3"
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "inverse_unit_division_unavailable",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "div",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "2"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "3"
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "arithmetic_rejects_boolean",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "add",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "1"
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "equal_normalized_decimals",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "eq",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.10"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.1"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "unequal_exact_decimals",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "eq",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.10000000000000001"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0.1"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "less_than_negative",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "lt",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "-2"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "-1"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "less_or_equal_equal",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "le",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "1.25"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "1.25"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "greater_than_equal_is_false",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "gt",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "1"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "1"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "greater_or_equal",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "ge",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "4"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "3.9"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "boolean_equality",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "eq",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "comparison_unit_mismatch",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "lt",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "1"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "2"
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "ordered_boolean_comparison_rejected",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "lt",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "comparison_type_mismatch",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "eq",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "1"
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "and_false_false",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "and_false_true",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "and_false_unknown",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "and_true_false",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "and_true_true",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "and_true_unknown",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "unknown_boolean"
+      }
+    },
+    {
+      "name": "and_unknown_false",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "and_unknown_true",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "unknown_boolean"
+      }
+    },
+    {
+      "name": "and_unknown_unknown",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "unknown_boolean"
+      }
+    },
+    {
+      "name": "or_false_false",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "or_false_true",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "or_false_unknown",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "unknown_boolean"
+      }
+    },
+    {
+      "name": "or_true_false",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "or_true_true",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "or_true_unknown",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "or_unknown_false",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "unknown_boolean"
+      }
+    },
+    {
+      "name": "or_unknown_true",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "or_unknown_unknown",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "unknown_boolean"
+      }
+    },
+    {
+      "name": "not_false",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "not",
+        "arg": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": true,
+        "missing": null
+      }
+    },
+    {
+      "name": "not_true",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "not",
+        "arg": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "not_unknown",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "not",
+        "arg": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "unknown_boolean"
+      }
+    },
+    {
+      "name": "boolean_operator_rejects_real",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0"
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "typed_real_null",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "literal",
+        "type": "real",
+        "unit": "USDT",
+        "value": null
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": null,
+        "missing": "missing_value"
+      }
+    },
+    {
+      "name": "typed_boolean_null",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "literal",
+        "type": "boolean",
+        "unit": null,
+        "value": null
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "missing_value"
+      }
+    },
+    {
+      "name": "feature_null",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": null,
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "missing_value"
+      }
+    },
+    {
+      "name": "feature_value_absent",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "missing_feature_value"
+      }
+    },
+    {
+      "name": "null_plus_value_stays_missing",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "add",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": null
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "5"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "missing_value"
+      }
+    },
+    {
+      "name": "zero_times_null_stays_missing",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "mul",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": null
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "missing_value"
+      }
+    },
+    {
+      "name": "null_compared_with_zero_stays_unknown",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "eq",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": null
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": null,
+        "missing": "missing_value"
+      }
+    },
+    {
+      "name": "division_by_zero",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "div",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "USDT",
+          "value": "1"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": null,
+        "missing": "division_by_zero"
+      }
+    },
+    {
+      "name": "zero_divided_by_zero",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "div",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0"
+        },
+        "right": {
+          "op": "literal",
+          "type": "real",
+          "unit": "ratio",
+          "value": "0"
+        }
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "division_by_zero"
+      }
+    },
+    {
+      "name": "false_feature_is_present",
+      "catalog": {
+        "flag@1": {
+          "type": "boolean",
+          "unit": null
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "flag@1": {
+              "value": false,
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "flag@1"
+      },
+      "index": 0,
+      "expected": {
+        "type": "boolean",
+        "unit": null,
+        "value": false,
+        "missing": null
+      }
+    },
+    {
+      "name": "zero_feature_is_present",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "0",
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "unknown_feature_definition",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "unregistered@1"
+      },
+      "index": 0,
+      "error_code": "FEATURE_GAP"
+    },
+    {
+      "name": "current_feature",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "30",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "lag_zero_is_current",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 0
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "30",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "lag_one_exact_grid",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "20",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "lag_two_exact_grid",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "10",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "lag_before_dataset",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "missing_observation"
+      }
+    },
+    {
+      "name": "lag_grid_hole_not_previous_row",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "missing_observation"
+      }
+    },
+    {
+      "name": "feature_availability_at_boundary",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "20",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "feature_availability_one_second_late",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 901
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "not_yet_available"
+      }
+    },
+    {
+      "name": "historical_sample_available_at_decision",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "20",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "historical_sample_still_unavailable",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 1801
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "not_yet_available"
+      }
+    },
+    {
+      "name": "nested_lag_uses_original_decision_time",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "lag",
+          "arg": {
+            "op": "feature",
+            "ref": "x@1"
+          },
+          "bars": 1
+        },
+        "bars": 1
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "10",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "interleaved_A_lag_stays_A",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "200",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "300",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 4,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "20",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "interleaved_B_lag_stays_B",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "200",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "300",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 5,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "200",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "other_instrument_cannot_fill_grid_hole",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "200",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "missing_observation"
+      }
+    },
+    {
+      "name": "mean_one",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "30",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_two_includes_current",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "25",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_three",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 3
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "20",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_fraction_exact",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "1",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "1",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "2",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 3
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "4",
+          "denominator": "3"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_preserves_usdt",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "2",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "3",
+              "available_at": 900
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "USDT",
+        "value": {
+          "numerator": "5",
+          "denominator": "2"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_before_dataset_incomplete",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 0,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "incomplete_window"
+      }
+    },
+    {
+      "name": "mean_grid_hole_incomplete",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 3
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "incomplete_window"
+      }
+    },
+    {
+      "name": "mean_null_member_incomplete",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": null,
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 3
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "incomplete_window"
+      }
+    },
+    {
+      "name": "mean_absent_feature_member_incomplete",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "incomplete_window"
+      }
+    },
+    {
+      "name": "mean_unavailable_member_incomplete",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 901
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": null,
+        "missing": "incomplete_window"
+      }
+    },
+    {
+      "name": "mean_historical_availability_at_decision",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "15",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_interleaved_A",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "200",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "300",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 3
+      },
+      "index": 4,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "20",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_interleaved_B",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "200",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "300",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 3
+      },
+      "index": 5,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "200",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "lag_of_mean_original_decision_availability",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "trailing_mean",
+          "arg": {
+            "op": "feature",
+            "ref": "x@1"
+          },
+          "bars": 2
+        },
+        "bars": 1
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "15",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_of_lag",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "lag",
+          "arg": {
+            "op": "feature",
+            "ref": "x@1"
+          },
+          "bars": 1
+        },
+        "bars": 2
+      },
+      "index": 2,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "15",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "mean_rejects_boolean",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "bars": 2
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "negative_lag_rejected",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": -1
+      },
+      "index": 0,
+      "error_code": "TEMPORAL_GAP"
+    },
+    {
+      "name": "unused_negative_lag_rejected",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "lag",
+          "arg": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          },
+          "bars": -1
+        }
+      },
+      "index": 0,
+      "error_code": "TEMPORAL_GAP"
+    },
+    {
+      "name": "unused_future_rejected",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "future",
+          "arg": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": false
+          },
+          "bars": 1
+        }
+      },
+      "index": 0,
+      "error_code": "TEMPORAL_GAP"
+    },
+    {
+      "name": "unused_outcome_rejected",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "outcome",
+          "arg": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          },
+          "bars": 1
+        }
+      },
+      "index": 0,
+      "error_code": "TEMPORAL_GAP"
+    },
+    {
+      "name": "unused_unknown_operator_rejected",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "unregistered_boolean_operator"
+        }
+      },
+      "index": 0,
+      "error_code": "LANGUAGE_GAP"
+    },
+    {
+      "name": "unused_unknown_feature_rejected",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "or",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "right": {
+          "op": "feature",
+          "ref": "unregistered@1"
+        }
+      },
+      "index": 0,
+      "error_code": "FEATURE_GAP"
+    },
+    {
+      "name": "unused_incompatible_unit_expression_rejected",
+      "catalog": {},
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {}
+        }
+      ],
+      "expression": {
+        "op": "and",
+        "left": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": false
+        },
+        "right": {
+          "op": "eq",
+          "left": {
+            "op": "add",
+            "left": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT",
+              "value": "1"
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": "1"
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "0"
+          }
+        }
+      },
+      "index": 0,
+      "error_code": "TYPE_GAP"
+    },
+    {
+      "name": "lag_resource_limit",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1000001
+      },
+      "index": 0,
+      "error_code": "RESOURCE_GAP"
+    },
+    {
+      "name": "mean_resource_limit",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1000001
+      },
+      "index": 0,
+      "error_code": "RESOURCE_GAP"
+    },
+    {
+      "name": "duplicate_observation_key",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 0,
+      "error_code": "DATA_GAP"
+    },
+    {
+      "name": "reverse_time_order",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 0,
+      "error_code": "DATA_GAP"
+    },
+    {
+      "name": "reverse_instrument_order_at_same_time",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "B",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "feature",
+        "ref": "x@1"
+      },
+      "index": 0,
+      "error_code": "DATA_GAP"
+    },
+    {
+      "name": "future_perturbation_baseline",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "30",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "40",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "15",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "future_perturbation_changed_values",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "999999",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "-999999",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "15",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "future_perturbation_changed_missing_availability",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": null,
+              "available_at": 9999
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "0",
+              "available_at": 9999
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "trailing_mean",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 2
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "15",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "future_append_baseline",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "10",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    },
+    {
+      "name": "future_append_extra_rows",
+      "catalog": {
+        "x@1": {
+          "type": "real",
+          "unit": "ratio"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "10",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "20",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "-1000",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "x@1": {
+              "value": "1000",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "feature",
+          "ref": "x@1"
+        },
+        "bars": 1
+      },
+      "index": 1,
+      "expected": {
+        "type": "real",
+        "unit": "ratio",
+        "value": {
+          "numerator": "10",
+          "denominator": "1"
+        },
+        "missing": null
+      }
+    }
+  ]
+}

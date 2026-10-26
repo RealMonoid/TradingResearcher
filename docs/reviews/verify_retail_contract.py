@@ -35,7 +35,10 @@ ADDED = [
     "docs/reviews/adoption-2026-10-23/preapproval-documents.zip",
     "docs/reviews/adoption-2026-10-23/verification.json",
 ]
-LATER_APPROVED_CHANGED = {"REVIEWING.md": "D086 / agent-inquiry/1.0"}
+LATER_APPROVED_CHANGED = {
+    "REVIEWING.md": "D086 / agent-inquiry/1.0",
+    ".gitattributes": "October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes",
+}
 
 
 def sha(data):

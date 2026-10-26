@@ -1,0 +1,231 @@
+{
+  "date": "2026-10-25",
+  "status": "PASS",
+  "scope": "Exact reference expression interface only; no scientific certificate or live data validation",
+  "purpose": "Implement the approved arithmetic, missingness, Boolean and causal time-lookup subset without narrowing free invention.",
+  "finding": "70 runtime test methods pass, including 112 independently authored expression fixtures; separate review found and verified a fix for the depth boundary.",
+  "warranted_conclusion": "The exercised reference interface conforms to the fixed cases. Full H_exec mapping, scientific freeze, outcome construction and calibrated inference remain pending.",
+  "next_action": "Continue step 3 with separately retained H_idea/H_exec records, explicit semantic mapping and independent certification/freeze interfaces; retain the live-provider inputs for later user decisions.",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests",
+      "exit_code": 0,
+      "tests_passed": 70,
+      "output": ".............................................\r\n----------------------------------------------------------------------\r\nRan 70 tests in 36.457s\r\n\r\nOK\r\n"
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 0,
+      "report": {
+        "status": "PASS",
+        "baseline_files": 103,
+        "unchanged_files": 94,
+        "changed_files": [
+          "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+          ".gitignore",
+          "README.md",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+          "docs/architecture/CURRENT_STATE.md",
+          "tests/test_local_runtime.py",
+          "trading_researcher/__main__.py",
+          "trading_researcher/checks.py",
+          "trading_researcher/coordination.py"
+        ],
+        "new_files": [
+          "docs/reviews/implementation-2026-10-25/baseline.json",
+          "docs/reviews/implementation-2026-10-25/memory-preservation.json",
+          "docs/reviews/implementation-2026-10-25/memory-verification.json",
+          "docs/reviews/implementation-2026-10-25/progress.json",
+          "docs/reviews/implementation-2026-10-25/researcher-verification.json",
+          "docs/reviews/implementation-2026-10-25/verify_implementation.py",
+          "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+          "tests/fixtures/reference_expression_cases.json",
+          "tests/test_expressions.py",
+          "tests/test_memory.py",
+          "tests/test_research_calls.py",
+          "tests/test_researcher.py",
+          "trading_researcher/EXPRESSIONS.md",
+          "trading_researcher/MEMORY.md",
+          "trading_researcher/RESEARCHER.md",
+          "trading_researcher/errors.py",
+          "trading_researcher/expressions.py",
+          "trading_researcher/memory.py",
+          "trading_researcher/memory_demo.py",
+          "trading_researcher/research_calls.py",
+          "trading_researcher/research_demo.py",
+          "trading_researcher/researcher.py"
+        ],
+        "local_document_links": 121,
+        "errors": [],
+        "scope": "Implementation preservation, local link targets and whitespace; no semantic/scientific certification"
+      }
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "report": {
+        "status": "PASS",
+        "checks": {
+          "local_links": 643,
+          "source_files": 5,
+          "decisions": 88,
+          "preserved_original_decisions": 67,
+          "preserved_approved_decisions": 68,
+          "preserved_rejections": 47,
+          "traced_requirements": 30,
+          "generator_acceptance_specs": 3,
+          "diagram_edges": 38,
+          "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+          "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+          "git_diff_check_exit": 0,
+          "later_approved_changed_paths": {
+            "REVIEWING.md": "D086 / agent-inquiry/1.0"
+          },
+          "adoption_baseline_files": 63,
+          "preexisting_files_unchanged": 45,
+          "archived_documents_exact": 20,
+          "preserved_preapproval_decisions": 70,
+          "full_historical_definition_review_generator_texts": 3,
+          "approved_policy_sections_exact_except_status_words": 15,
+          "scoped_open_dispositions_and_acceptance_mappings": 15,
+          "adoption_decision_status_counts_D001_D085": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 63,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          },
+          "decision_status_counts": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 66,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          }
+        },
+        "checked_files_sha256": {
+          "AGENTS.md": "6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9",
+          "README.md": "d31199d27b4061b06dc145666a02bb56a1a70979ecbf10822a9b5ea81bf8b4ea",
+          "docs/architecture/01_PROBLEM_DEFINITION.md": "7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446",
+          "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+          "docs/architecture/05_REQUIREMENTS.md": "b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56",
+          "docs/architecture/06_MASTER_ARCHITECTURE.md": "16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "0107f471752f8d3a47f42c3b5b7e83542deeda890c757aec20d29fc36fa9e2df",
+          "docs/architecture/10_IMPLEMENTATION_ROADMAP.md": "eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2",
+          "docs/architecture/11_OPEN_DECISIONS.md": "68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29",
+          "docs/architecture/12_TRACEABILITY_MATRIX.md": "76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba",
+          "docs/architecture/ARCHITECTURE_REGISTER.json": "a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37",
+          "docs/architecture/CURRENT_STATE.md": "e9d5077171d424d417742701267269ad27776958fe262cd7089ad6bef812fbb6",
+          "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+          "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2",
+          "docs/architecture/04_DEFINITIONS.md": "3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9",
+          "docs/architecture/08_ENGINEERING_REVIEW.md": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c",
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+          "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626",
+          "docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md": "dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e",
+          "docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md": "bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d",
+          "REVIEWING.md": "47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b",
+          "trading_researcher/README.md": "ee737e851d17cd65bf31b0d38644a13d3fe960a57c28aa0efe8b981f4c8ae535",
+          "docs/reviews/verify_system_model.py": "59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef",
+          "docs/reviews/verify_retail_contract.py": "c1aecd79447dafd205a284415ed25d7ba2ad35ebee25f2c108c74d1df19b0e92",
+          "docs/reviews/adoption-2026-10-23/baseline.json": "56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036",
+          "docs/reviews/adoption-2026-10-23/preapproval-documents.zip": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+        },
+        "errors": [],
+        "unverified": [
+          "New-session behavioral efficacy and compaction retention",
+          "Mermaid rendering",
+          "Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately",
+          "D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement",
+          "Complete executable AST/schema/primitive implementations and independent golden fixtures",
+          "Actual data quality, rights, historical availability, model exposure and account/execution costs",
+          "Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately",
+          "Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs",
+          "SRC-001 through SRC-008 and completeness of original conversation"
+        ],
+        "changed_files_since_preapproval": [
+          "AGENTS.md",
+          "README.md",
+          "REVIEWING.md",
+          "docs/architecture/01_PROBLEM_DEFINITION.md",
+          "docs/architecture/02_DECISION_REGISTER.md",
+          "docs/architecture/04_DEFINITIONS.md",
+          "docs/architecture/05_REQUIREMENTS.md",
+          "docs/architecture/06_MASTER_ARCHITECTURE.md",
+          "docs/architecture/07_SCIENTIFIC_EVALUATION.md",
+          "docs/architecture/08_ENGINEERING_REVIEW.md",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+          "docs/architecture/10_IMPLEMENTATION_ROADMAP.md",
+          "docs/architecture/11_OPEN_DECISIONS.md",
+          "docs/architecture/12_TRACEABILITY_MATRIX.md",
+          "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+          "docs/architecture/ARCHITECTURE_REGISTER.json",
+          "docs/architecture/CURRENT_STATE.md",
+          "docs/reviews/verify_system_model.py"
+        ],
+        "added_files": [
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+          "docs/reviews/verify_retail_contract.py",
+          "docs/reviews/adoption-2026-10-23/baseline.json",
+          "docs/reviews/adoption-2026-10-23/preapproval-documents.zip",
+          "docs/reviews/adoption-2026-10-23/verification.json"
+        ],
+        "preserved_proposal_sha256": "22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29",
+        "preapproval_archive_sha256": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+      }
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": "warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'tests/test_local_runtime.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/__main__.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/checks.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/coordination.py', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  ],
+  "independent_fixtures": {
+    "path": "tests/fixtures/reference_expression_cases.json",
+    "sha256": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+    "cases": 112,
+    "expected_values_or_missing": 90,
+    "typed_gaps": 22,
+    "author": "memory_boundary_review",
+    "basis": "EXPRESSIONS.md and research-contract/1.0 sections 4 and 14; implementation neither read nor executed during fixture authorship"
+  },
+  "independent_review": {
+    "reviewer": "memory_boundary_review",
+    "files_changed": false,
+    "conclusion": "No unresolved blocking defect found in the bounded review.",
+    "fixed_defect": "33 node levels accepted despite documented 32; now root-inclusive 32-level boundary tested.",
+    "checks": [
+      "4 expression test methods including 112 cases passed",
+      "Additional 255/257-node, 8192-bit rational and 1000000-step cases passed",
+      "Fixed fixture hash unchanged"
+    ]
+  },
+  "changed_files": [
+    "trading_researcher/expressions.py",
+    "trading_researcher/EXPRESSIONS.md",
+    "tests/test_expressions.py",
+    "tests/fixtures/reference_expression_cases.json",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json"
+  ],
+  "unverified": [
+    "Maximum dataset memory stress",
+    "Truthful source provenance and historical availability",
+    "Independent scientific feature certification and activation",
+    "Faithful H_idea/H_exec mapping and all five relationship estimators",
+    "Atomic scientific freeze/allocation and calibrated inference",
+    "Real provider compatibility, billing, genuine invention and economic usefulness"
+  ]
+}

@@ -1,0 +1,2451 @@
+{
+  "schema": "independent-information-diagnostics-fixtures/1",
+  "authored_at": "2026-10-25",
+  "author": "information_review independent reviewer",
+  "scope": "Exact descriptive report arithmetic and a separately materialized raw-row counterpart; no model fit, power, N_min, calibration or scientific admission. Expected values fixed before reading the new diagnostics implementation.",
+  "moment_conventions": {
+    "grid": "All six aligned time slots remain, including no eligible contributions.",
+    "lag_pairs": "Ordered t-k,t without circular wrap; k=0 included; no pairs yields null, not zero.",
+    "contribution_center": "Global full-grid mean and divisor T-k for positive available pair count.",
+    "outcome_center": "Each instrument eligible-outcome marginal mean; report actual paired counts and pair means separately. This centered product is not generally pairwise-centered covariance.",
+    "score": "T*(Z-muC*C)/totalC - T*(S-q*N)/totalN. Undefined if either required total is zero.",
+    "unknown_condition": "Eligible unknown conditions remain in N and S but not C or Z.",
+    "noneligible": "Zero contribution is not an observed zero outcome. Preserve each ineligibility state."
+  },
+  "fixtures": [
+    {
+      "id": "six_time_hand_report",
+      "construction": "Report-layer composition: valid eligible maturity metadata from the existing materializer, two t2 DATA_GAP cells copied from its missing-row report. This arithmetic table is not claimed realizable from one raw history because deleting t2 also invalidates t1 horizon-1 outcomes.",
+      "report": {
+        "schema": "reference-cases/1",
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "independent-diagnostics-fixture",
+          "data_snapshot_ref": "independent-diagnostics-fixture-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "feature",
+              "ref": "condition@1"
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "feature",
+              "ref": "event@1"
+            }
+          },
+          "outcome_scale": "binary_probability",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "1970-01-01T00:00:00Z",
+            "end": "1970-01-01T01:30:00Z",
+            "instruments": [
+              "A",
+              "B"
+            ]
+          },
+          "as_of": "1970-01-01T01:30:00Z",
+          "max_steps": 10000000
+        },
+        "outcome_unit": "ratio",
+        "cases": [
+          {
+            "decision_time": 0,
+            "instrument": "A",
+            "outcome_anchor": 900,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 0,
+              "end": 900
+            },
+            "trace": {
+              "earliest_observation": 900,
+              "declared_earliest_observation": 900,
+              "latest_available_at": 900,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 0,
+            "instrument": "B",
+            "outcome_anchor": 900,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 0,
+              "end": 900
+            },
+            "trace": {
+              "earliest_observation": 900,
+              "declared_earliest_observation": 900,
+              "latest_available_at": 900,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 900,
+            "instrument": "A",
+            "outcome_anchor": 1800,
+            "scope": true,
+            "condition": null,
+            "outcome": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 900,
+              "end": 1800
+            },
+            "trace": {
+              "earliest_observation": 1800,
+              "declared_earliest_observation": 1800,
+              "latest_available_at": 1800,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 900,
+            "instrument": "B",
+            "outcome_anchor": 1800,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 900,
+              "end": 1800
+            },
+            "trace": {
+              "earliest_observation": 1800,
+              "declared_earliest_observation": 1800,
+              "latest_available_at": 1800,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 1800,
+            "instrument": "A",
+            "outcome_anchor": 2700,
+            "scope": null,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_decision_observation"
+          },
+          {
+            "decision_time": 1800,
+            "instrument": "B",
+            "outcome_anchor": 2700,
+            "scope": null,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_decision_observation"
+          },
+          {
+            "decision_time": 2700,
+            "instrument": "A",
+            "outcome_anchor": 3600,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 2700,
+              "end": 3600
+            },
+            "trace": {
+              "earliest_observation": 3600,
+              "declared_earliest_observation": 3600,
+              "latest_available_at": 3600,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 2700,
+            "instrument": "B",
+            "outcome_anchor": 3600,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 2700,
+              "end": 3600
+            },
+            "trace": {
+              "earliest_observation": 3600,
+              "declared_earliest_observation": 3600,
+              "latest_available_at": 3600,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 3600,
+            "instrument": "A",
+            "outcome_anchor": 4500,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 3600,
+              "end": 4500
+            },
+            "trace": {
+              "earliest_observation": 4500,
+              "declared_earliest_observation": 4500,
+              "latest_available_at": 4500,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 3600,
+            "instrument": "B",
+            "outcome_anchor": 4500,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": {
+              "earliest_observation": 4500,
+              "declared_earliest_observation": 4500,
+              "latest_available_at": 4500,
+              "unknown_input": true,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": [
+                "missing_value"
+              ]
+            },
+            "status": "OUTCOME_MISSING",
+            "reason": "missing_value"
+          },
+          {
+            "decision_time": 4500,
+            "instrument": "A",
+            "outcome_anchor": 5400,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "PARTITION_BOUNDARY",
+            "reason": "anchor_at_or_after_exclusive_end"
+          },
+          {
+            "decision_time": 4500,
+            "instrument": "B",
+            "outcome_anchor": 5400,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "PARTITION_BOUNDARY",
+            "reason": "anchor_at_or_after_exclusive_end"
+          }
+        ],
+        "expected_case_count": 12,
+        "processed_case_count": 12,
+        "state_counts": {
+          "DATA_GAP": 2,
+          "ELIGIBLE": 7,
+          "NOT_YET_OBSERVED": 0,
+          "OUTCOME_MISSING": 1,
+          "OUTCOME_PENDING": 0,
+          "PARTITION_BOUNDARY": 2,
+          "REVIEW_REQUIRED": 0,
+          "SCOPE_FALSE": 0,
+          "SCOPE_UNKNOWN": 0
+        },
+        "processing_complete": true,
+        "outcomes_complete": true,
+        "review_required": false,
+        "status": "PROCESSED",
+        "resource_reason": null,
+        "primitive_steps": 34,
+        "scientific_readiness": false
+      },
+      "lags": [
+        1,
+        2,
+        6
+      ],
+      "expected": {
+        "time_rows": 6,
+        "case_rows": 12,
+        "pooled": {
+          "eligible": 7,
+          "events": 3,
+          "true": {
+            "count": 4,
+            "events": 2,
+            "rate": {
+              "numerator": "1",
+              "denominator": "2"
+            }
+          },
+          "false": {
+            "count": 2,
+            "events": 0,
+            "rate": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          "unknown": {
+            "count": 1,
+            "events": 1,
+            "rate": {
+              "numerator": "1",
+              "denominator": "1"
+            }
+          },
+          "q": {
+            "numerator": "3",
+            "denominator": "7"
+          },
+          "w": {
+            "numerator": "4",
+            "denominator": "7"
+          },
+          "muC": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "effect": {
+            "numerator": "1",
+            "denominator": "14"
+          }
+        },
+        "contributions": [
+          {
+            "time_index": 0,
+            "decision_time": 0,
+            "N": 2,
+            "S": 1,
+            "C": 1,
+            "Z": 1
+          },
+          {
+            "time_index": 1,
+            "decision_time": 900,
+            "N": 2,
+            "S": 1,
+            "C": 1,
+            "Z": 0
+          },
+          {
+            "time_index": 2,
+            "decision_time": 1800,
+            "N": 0,
+            "S": 0,
+            "C": 0,
+            "Z": 0
+          },
+          {
+            "time_index": 3,
+            "decision_time": 2700,
+            "N": 2,
+            "S": 1,
+            "C": 1,
+            "Z": 1
+          },
+          {
+            "time_index": 4,
+            "decision_time": 3600,
+            "N": 1,
+            "S": 0,
+            "C": 1,
+            "Z": 0
+          },
+          {
+            "time_index": 5,
+            "decision_time": 4500,
+            "N": 0,
+            "S": 0,
+            "C": 0,
+            "Z": 0
+          }
+        ],
+        "score": [
+          {
+            "numerator": "123",
+            "denominator": "196"
+          },
+          {
+            "numerator": "-171",
+            "denominator": "196"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "123",
+            "denominator": "196"
+          },
+          {
+            "numerator": "-75",
+            "denominator": "196"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        ],
+        "global_moments": {
+          "N": {
+            "mean": {
+              "numerator": "7",
+              "denominator": "6"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "29",
+                  "denominator": "36"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-43",
+                  "denominator": "180"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "-19",
+                  "denominator": "72"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          },
+          "S": {
+            "mean": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "1",
+                  "denominator": "4"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-1",
+                  "denominator": "20"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "0",
+                  "denominator": "1"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          },
+          "C": {
+            "mean": {
+              "numerator": "2",
+              "denominator": "3"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "2",
+                  "denominator": "9"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-4",
+                  "denominator": "45"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "-5",
+                  "denominator": "36"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          },
+          "Z": {
+            "mean": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "2",
+                  "denominator": "9"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-4",
+                  "denominator": "45"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "-5",
+                  "denominator": "36"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          },
+          "score": {
+            "mean": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "5427",
+                  "denominator": "19208"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-15129",
+                  "denominator": "96040"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "-21033",
+                  "denominator": "153664"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          }
+        },
+        "by_instrument": {
+          "A": {
+            "eligible": 4,
+            "events": 2,
+            "q": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "w": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "true": {
+              "count": 2,
+              "events": 1
+            },
+            "false": {
+              "count": 1,
+              "events": 0
+            },
+            "unknown": {
+              "count": 1,
+              "events": 1
+            },
+            "outcome_lags": [
+              {
+                "lag": 0,
+                "pairs": 4,
+                "left_pair_mean": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "right_pair_mean": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "fixed_marginal_centered_product": {
+                  "numerator": "1",
+                  "denominator": "4"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 2,
+                "left_pair_mean": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "right_pair_mean": {
+                  "numerator": "1",
+                  "denominator": "2"
+                },
+                "fixed_marginal_centered_product": {
+                  "numerator": "1",
+                  "denominator": "4"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 1,
+                "left_pair_mean": {
+                  "numerator": "1",
+                  "denominator": "1"
+                },
+                "right_pair_mean": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "fixed_marginal_centered_product": {
+                  "numerator": "-1",
+                  "denominator": "4"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "left_pair_mean": null,
+                "right_pair_mean": null,
+                "fixed_marginal_centered_product": null
+              }
+            ]
+          },
+          "B": {
+            "eligible": 3,
+            "events": 1,
+            "q": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "w": {
+              "numerator": "2",
+              "denominator": "3"
+            },
+            "true": {
+              "count": 2,
+              "events": 1
+            },
+            "false": {
+              "count": 1,
+              "events": 0
+            },
+            "unknown": {
+              "count": 0,
+              "events": 0
+            },
+            "outcome_lags": [
+              {
+                "lag": 0,
+                "pairs": 3,
+                "left_pair_mean": {
+                  "numerator": "1",
+                  "denominator": "3"
+                },
+                "right_pair_mean": {
+                  "numerator": "1",
+                  "denominator": "3"
+                },
+                "fixed_marginal_centered_product": {
+                  "numerator": "2",
+                  "denominator": "9"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 1,
+                "left_pair_mean": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "right_pair_mean": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "fixed_marginal_centered_product": {
+                  "numerator": "1",
+                  "denominator": "9"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 1,
+                "left_pair_mean": {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                "right_pair_mean": {
+                  "numerator": "1",
+                  "denominator": "1"
+                },
+                "fixed_marginal_centered_product": {
+                  "numerator": "-2",
+                  "denominator": "9"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "left_pair_mean": null,
+                "right_pair_mean": null,
+                "fixed_marginal_centered_product": null
+              }
+            ]
+          }
+        },
+        "common_time_outcome_pairs": [
+          {
+            "left": "A",
+            "right": "B",
+            "lag": 0,
+            "pairs": 3,
+            "left_pair_mean": {
+              "numerator": "2",
+              "denominator": "3"
+            },
+            "right_pair_mean": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "fixed_marginal_centered_product": {
+              "numerator": "-2",
+              "denominator": "9"
+            }
+          }
+        ],
+        "noneligible_runs": {
+          "A": {
+            "count": 2,
+            "longest": 1
+          },
+          "B": {
+            "count": 3,
+            "longest": 2
+          }
+        },
+        "exact_state_counts": {
+          "ELIGIBLE": 7,
+          "DATA_GAP": 2,
+          "OUTCOME_MISSING": 1,
+          "PARTITION_BOUNDARY": 2
+        }
+      }
+    },
+    {
+      "id": "six_time_raw_coherent",
+      "construction": "Entire report directly materialized from the retained raw rows and catalog below; no case edits. The t2 row absence also makes t1 outcomes DATA_GAP.",
+      "raw_catalog": {
+        "condition@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "event@1": {
+          "type": "boolean",
+          "unit": null
+        }
+      },
+      "raw_rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "condition@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "event@1": {
+              "value": false,
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "B",
+          "features": {
+            "condition@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "event@1": {
+              "value": false,
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "condition@1": {
+              "value": null,
+              "available_at": 900
+            },
+            "event@1": {
+              "value": true,
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "B",
+          "features": {
+            "condition@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "event@1": {
+              "value": false,
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "condition@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "event@1": {
+              "value": false,
+              "available_at": 2700
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "B",
+          "features": {
+            "condition@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "event@1": {
+              "value": false,
+              "available_at": 2700
+            }
+          }
+        },
+        {
+          "time": 3600,
+          "instrument": "A",
+          "features": {
+            "condition@1": {
+              "value": true,
+              "available_at": 3600
+            },
+            "event@1": {
+              "value": false,
+              "available_at": 3600
+            }
+          }
+        },
+        {
+          "time": 3600,
+          "instrument": "B",
+          "features": {
+            "condition@1": {
+              "value": true,
+              "available_at": 3600
+            },
+            "event@1": {
+              "value": true,
+              "available_at": 3600
+            }
+          }
+        },
+        {
+          "time": 4500,
+          "instrument": "A",
+          "features": {
+            "condition@1": {
+              "value": true,
+              "available_at": 4500
+            },
+            "event@1": {
+              "value": false,
+              "available_at": 4500
+            }
+          }
+        },
+        {
+          "time": 4500,
+          "instrument": "B",
+          "features": {
+            "condition@1": {
+              "value": true,
+              "available_at": 4500
+            },
+            "event@1": {
+              "value": null,
+              "available_at": 4500
+            }
+          }
+        }
+      ],
+      "report": {
+        "schema": "reference-cases/1",
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "independent-diagnostics-fixture",
+          "data_snapshot_ref": "independent-diagnostics-fixture-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "feature",
+              "ref": "condition@1"
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "feature",
+              "ref": "event@1"
+            }
+          },
+          "outcome_scale": "binary_probability",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "1970-01-01T00:00:00Z",
+            "end": "1970-01-01T01:30:00Z",
+            "instruments": [
+              "A",
+              "B"
+            ]
+          },
+          "as_of": "1970-01-01T01:30:00Z",
+          "max_steps": 10000000
+        },
+        "outcome_unit": "ratio",
+        "cases": [
+          {
+            "decision_time": 0,
+            "instrument": "A",
+            "outcome_anchor": 900,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 0,
+              "end": 900
+            },
+            "trace": {
+              "earliest_observation": 900,
+              "declared_earliest_observation": 900,
+              "latest_available_at": 900,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 0,
+            "instrument": "B",
+            "outcome_anchor": 900,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 0,
+              "end": 900
+            },
+            "trace": {
+              "earliest_observation": 900,
+              "declared_earliest_observation": 900,
+              "latest_available_at": 900,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 900,
+            "instrument": "A",
+            "outcome_anchor": 1800,
+            "scope": true,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_exact_outcome_observation"
+          },
+          {
+            "decision_time": 900,
+            "instrument": "B",
+            "outcome_anchor": 1800,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_exact_outcome_observation"
+          },
+          {
+            "decision_time": 1800,
+            "instrument": "A",
+            "outcome_anchor": 2700,
+            "scope": null,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_decision_observation"
+          },
+          {
+            "decision_time": 1800,
+            "instrument": "B",
+            "outcome_anchor": 2700,
+            "scope": null,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_decision_observation"
+          },
+          {
+            "decision_time": 2700,
+            "instrument": "A",
+            "outcome_anchor": 3600,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 2700,
+              "end": 3600
+            },
+            "trace": {
+              "earliest_observation": 3600,
+              "declared_earliest_observation": 3600,
+              "latest_available_at": 3600,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 2700,
+            "instrument": "B",
+            "outcome_anchor": 3600,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 2700,
+              "end": 3600
+            },
+            "trace": {
+              "earliest_observation": 3600,
+              "declared_earliest_observation": 3600,
+              "latest_available_at": 3600,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 3600,
+            "instrument": "A",
+            "outcome_anchor": 4500,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 3600,
+              "end": 4500
+            },
+            "trace": {
+              "earliest_observation": 4500,
+              "declared_earliest_observation": 4500,
+              "latest_available_at": 4500,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 3600,
+            "instrument": "B",
+            "outcome_anchor": 4500,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": {
+              "earliest_observation": 4500,
+              "declared_earliest_observation": 4500,
+              "latest_available_at": 4500,
+              "unknown_input": true,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": [
+                "missing_value"
+              ]
+            },
+            "status": "OUTCOME_MISSING",
+            "reason": "missing_value"
+          },
+          {
+            "decision_time": 4500,
+            "instrument": "A",
+            "outcome_anchor": 5400,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "PARTITION_BOUNDARY",
+            "reason": "anchor_at_or_after_exclusive_end"
+          },
+          {
+            "decision_time": 4500,
+            "instrument": "B",
+            "outcome_anchor": 5400,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "PARTITION_BOUNDARY",
+            "reason": "anchor_at_or_after_exclusive_end"
+          }
+        ],
+        "expected_case_count": 12,
+        "processed_case_count": 12,
+        "state_counts": {
+          "DATA_GAP": 4,
+          "ELIGIBLE": 5,
+          "NOT_YET_OBSERVED": 0,
+          "OUTCOME_MISSING": 1,
+          "OUTCOME_PENDING": 0,
+          "PARTITION_BOUNDARY": 2,
+          "REVIEW_REQUIRED": 0,
+          "SCOPE_FALSE": 0,
+          "SCOPE_UNKNOWN": 0
+        },
+        "processing_complete": true,
+        "outcomes_complete": true,
+        "review_required": false,
+        "status": "PROCESSED",
+        "resource_reason": null,
+        "primitive_steps": 26,
+        "scientific_readiness": false
+      },
+      "lags": [
+        1,
+        2,
+        6
+      ],
+      "expected": {
+        "time_rows": 6,
+        "case_rows": 12,
+        "pooled": {
+          "eligible": 5,
+          "events": 2,
+          "true": {
+            "count": 3,
+            "events": 2,
+            "rate": {
+              "numerator": "2",
+              "denominator": "3"
+            }
+          },
+          "false": {
+            "count": 2,
+            "events": 0,
+            "rate": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          "unknown": {
+            "count": 0,
+            "events": 0,
+            "rate": null
+          },
+          "q": {
+            "numerator": "2",
+            "denominator": "5"
+          },
+          "w": {
+            "numerator": "3",
+            "denominator": "5"
+          },
+          "muC": {
+            "numerator": "2",
+            "denominator": "3"
+          },
+          "effect": {
+            "numerator": "4",
+            "denominator": "15"
+          }
+        },
+        "contributions": [
+          {
+            "time_index": 0,
+            "decision_time": 0,
+            "N": 2,
+            "S": 1,
+            "C": 1,
+            "Z": 1
+          },
+          {
+            "time_index": 1,
+            "decision_time": 900,
+            "N": 0,
+            "S": 0,
+            "C": 0,
+            "Z": 0
+          },
+          {
+            "time_index": 2,
+            "decision_time": 1800,
+            "N": 0,
+            "S": 0,
+            "C": 0,
+            "Z": 0
+          },
+          {
+            "time_index": 3,
+            "decision_time": 2700,
+            "N": 2,
+            "S": 1,
+            "C": 1,
+            "Z": 1
+          },
+          {
+            "time_index": 4,
+            "decision_time": 3600,
+            "N": 1,
+            "S": 0,
+            "C": 1,
+            "Z": 0
+          },
+          {
+            "time_index": 5,
+            "decision_time": 4500,
+            "N": 0,
+            "S": 0,
+            "C": 0,
+            "Z": 0
+          }
+        ],
+        "score": [
+          {
+            "numerator": "32",
+            "denominator": "75"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "32",
+            "denominator": "75"
+          },
+          {
+            "numerator": "-64",
+            "denominator": "75"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        ],
+        "global_moments": {
+          "N": {
+            "mean": {
+              "numerator": "5",
+              "denominator": "6"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "29",
+                  "denominator": "36"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-43",
+                  "denominator": "180"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "-55",
+                  "denominator": "72"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          },
+          "S": {
+            "mean": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "2",
+                  "denominator": "9"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-4",
+                  "denominator": "45"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "-5",
+                  "denominator": "36"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          },
+          "C": {
+            "mean": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "1",
+                  "denominator": "4"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-1",
+                  "denominator": "20"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "-1",
+                  "denominator": "4"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          },
+          "Z": {
+            "mean": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "2",
+                  "denominator": "9"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-4",
+                  "denominator": "45"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "-5",
+                  "denominator": "36"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          },
+          "score": {
+            "mean": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lags": [
+              {
+                "lag": 0,
+                "pairs": 6,
+                "centered_product": {
+                  "numerator": "1024",
+                  "denominator": "5625"
+                }
+              },
+              {
+                "lag": 1,
+                "pairs": 5,
+                "centered_product": {
+                  "numerator": "-2048",
+                  "denominator": "28125"
+                }
+              },
+              {
+                "lag": 2,
+                "pairs": 4,
+                "centered_product": {
+                  "numerator": "0",
+                  "denominator": "1"
+                }
+              },
+              {
+                "lag": 6,
+                "pairs": 0,
+                "centered_product": null
+              }
+            ]
+          }
+        },
+        "by_instrument": {
+          "A": {
+            "eligible": 3,
+            "events": 1,
+            "q": {
+              "numerator": "1",
+              "denominator": "3"
+            },
+            "w": {
+              "numerator": "2",
+              "denominator": "3"
+            },
+            "lag1": {
+              "lag": 1,
+              "pairs": 1,
+              "left_pair_mean": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "right_pair_mean": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "fixed_marginal_centered_product": {
+                "numerator": "1",
+                "denominator": "9"
+              }
+            }
+          },
+          "B": {
+            "eligible": 2,
+            "events": 1,
+            "q": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "w": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "lag1": {
+              "lag": 1,
+              "pairs": 0,
+              "left_pair_mean": null,
+              "right_pair_mean": null,
+              "fixed_marginal_centered_product": null
+            }
+          }
+        },
+        "common_time_outcome_pairs": [
+          {
+            "left": "A",
+            "right": "B",
+            "lag": 0,
+            "pairs": 2,
+            "left_pair_mean": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "right_pair_mean": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "fixed_marginal_centered_product": {
+              "numerator": "-1",
+              "denominator": "4"
+            }
+          }
+        ],
+        "exact_state_counts": {
+          "ELIGIBLE": 5,
+          "DATA_GAP": 4,
+          "OUTCOME_MISSING": 1,
+          "PARTITION_BOUNDARY": 2
+        }
+      }
+    },
+    {
+      "id": "no_true_condition",
+      "construction": "Report-layer hand variant: true eligible conditions replaced by false, unknown retained.",
+      "report": {
+        "schema": "reference-cases/1",
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "independent-diagnostics-fixture",
+          "data_snapshot_ref": "independent-diagnostics-fixture-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "feature",
+              "ref": "condition@1"
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "feature",
+              "ref": "event@1"
+            }
+          },
+          "outcome_scale": "binary_probability",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "1970-01-01T00:00:00Z",
+            "end": "1970-01-01T01:30:00Z",
+            "instruments": [
+              "A",
+              "B"
+            ]
+          },
+          "as_of": "1970-01-01T01:30:00Z",
+          "max_steps": 10000000
+        },
+        "outcome_unit": "ratio",
+        "cases": [
+          {
+            "decision_time": 0,
+            "instrument": "A",
+            "outcome_anchor": 900,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 0,
+              "end": 900
+            },
+            "trace": {
+              "earliest_observation": 900,
+              "declared_earliest_observation": 900,
+              "latest_available_at": 900,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 0,
+            "instrument": "B",
+            "outcome_anchor": 900,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 0,
+              "end": 900
+            },
+            "trace": {
+              "earliest_observation": 900,
+              "declared_earliest_observation": 900,
+              "latest_available_at": 900,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 900,
+            "instrument": "A",
+            "outcome_anchor": 1800,
+            "scope": true,
+            "condition": null,
+            "outcome": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 900,
+              "end": 1800
+            },
+            "trace": {
+              "earliest_observation": 1800,
+              "declared_earliest_observation": 1800,
+              "latest_available_at": 1800,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 900,
+            "instrument": "B",
+            "outcome_anchor": 1800,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 900,
+              "end": 1800
+            },
+            "trace": {
+              "earliest_observation": 1800,
+              "declared_earliest_observation": 1800,
+              "latest_available_at": 1800,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 1800,
+            "instrument": "A",
+            "outcome_anchor": 2700,
+            "scope": null,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_decision_observation"
+          },
+          {
+            "decision_time": 1800,
+            "instrument": "B",
+            "outcome_anchor": 2700,
+            "scope": null,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_decision_observation"
+          },
+          {
+            "decision_time": 2700,
+            "instrument": "A",
+            "outcome_anchor": 3600,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 2700,
+              "end": 3600
+            },
+            "trace": {
+              "earliest_observation": 3600,
+              "declared_earliest_observation": 3600,
+              "latest_available_at": 3600,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 2700,
+            "instrument": "B",
+            "outcome_anchor": 3600,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 2700,
+              "end": 3600
+            },
+            "trace": {
+              "earliest_observation": 3600,
+              "declared_earliest_observation": 3600,
+              "latest_available_at": 3600,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 3600,
+            "instrument": "A",
+            "outcome_anchor": 4500,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 3600,
+              "end": 4500
+            },
+            "trace": {
+              "earliest_observation": 4500,
+              "declared_earliest_observation": 4500,
+              "latest_available_at": 4500,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 3600,
+            "instrument": "B",
+            "outcome_anchor": 4500,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": {
+              "earliest_observation": 4500,
+              "declared_earliest_observation": 4500,
+              "latest_available_at": 4500,
+              "unknown_input": true,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": [
+                "missing_value"
+              ]
+            },
+            "status": "OUTCOME_MISSING",
+            "reason": "missing_value"
+          },
+          {
+            "decision_time": 4500,
+            "instrument": "A",
+            "outcome_anchor": 5400,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "PARTITION_BOUNDARY",
+            "reason": "anchor_at_or_after_exclusive_end"
+          },
+          {
+            "decision_time": 4500,
+            "instrument": "B",
+            "outcome_anchor": 5400,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "PARTITION_BOUNDARY",
+            "reason": "anchor_at_or_after_exclusive_end"
+          }
+        ],
+        "expected_case_count": 12,
+        "processed_case_count": 12,
+        "state_counts": {
+          "DATA_GAP": 2,
+          "ELIGIBLE": 7,
+          "NOT_YET_OBSERVED": 0,
+          "OUTCOME_MISSING": 1,
+          "OUTCOME_PENDING": 0,
+          "PARTITION_BOUNDARY": 2,
+          "REVIEW_REQUIRED": 0,
+          "SCOPE_FALSE": 0,
+          "SCOPE_UNKNOWN": 0
+        },
+        "processing_complete": true,
+        "outcomes_complete": true,
+        "review_required": false,
+        "status": "PROCESSED",
+        "resource_reason": null,
+        "primitive_steps": 34,
+        "scientific_readiness": false
+      },
+      "lags": [
+        1,
+        2,
+        6
+      ],
+      "expected": {
+        "eligible": 7,
+        "events": 3,
+        "condition_count": 0,
+        "false_count": 6,
+        "unknown_count": 1,
+        "q": {
+          "numerator": "3",
+          "denominator": "7"
+        },
+        "w": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "muC": null,
+        "score": null,
+        "retains_available_count_and_outcome_diagnostics": true
+      }
+    },
+    {
+      "id": "all_zero_observed_binary",
+      "construction": "Report-layer hand variant: each eligible outcome is exactly zero.",
+      "report": {
+        "schema": "reference-cases/1",
+        "request": {
+          "schema": "reference-case-request/1",
+          "candidate_ref": "independent-diagnostics-fixture",
+          "data_snapshot_ref": "independent-diagnostics-fixture-data",
+          "scope_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "feature",
+              "ref": "condition@1"
+            }
+          },
+          "outcome_program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "71d5a644e3314ba52553b100b381c6cdfbb223d5a0a080c319b173ee360795c6",
+            "expression": {
+              "op": "feature",
+              "ref": "event@1"
+            }
+          },
+          "outcome_scale": "binary_probability",
+          "horizon_bars": 1,
+          "universe": {
+            "start": "1970-01-01T00:00:00Z",
+            "end": "1970-01-01T01:30:00Z",
+            "instruments": [
+              "A",
+              "B"
+            ]
+          },
+          "as_of": "1970-01-01T01:30:00Z",
+          "max_steps": 10000000
+        },
+        "outcome_unit": "ratio",
+        "cases": [
+          {
+            "decision_time": 0,
+            "instrument": "A",
+            "outcome_anchor": 900,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 0,
+              "end": 900
+            },
+            "trace": {
+              "earliest_observation": 900,
+              "declared_earliest_observation": 900,
+              "latest_available_at": 900,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 0,
+            "instrument": "B",
+            "outcome_anchor": 900,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 0,
+              "end": 900
+            },
+            "trace": {
+              "earliest_observation": 900,
+              "declared_earliest_observation": 900,
+              "latest_available_at": 900,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 900,
+            "instrument": "A",
+            "outcome_anchor": 1800,
+            "scope": true,
+            "condition": null,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 900,
+              "end": 1800
+            },
+            "trace": {
+              "earliest_observation": 1800,
+              "declared_earliest_observation": 1800,
+              "latest_available_at": 1800,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 900,
+            "instrument": "B",
+            "outcome_anchor": 1800,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 900,
+              "end": 1800
+            },
+            "trace": {
+              "earliest_observation": 1800,
+              "declared_earliest_observation": 1800,
+              "latest_available_at": 1800,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 1800,
+            "instrument": "A",
+            "outcome_anchor": 2700,
+            "scope": null,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_decision_observation"
+          },
+          {
+            "decision_time": 1800,
+            "instrument": "B",
+            "outcome_anchor": 2700,
+            "scope": null,
+            "condition": null,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "DATA_GAP",
+            "reason": "missing_decision_observation"
+          },
+          {
+            "decision_time": 2700,
+            "instrument": "A",
+            "outcome_anchor": 3600,
+            "scope": true,
+            "condition": false,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 2700,
+              "end": 3600
+            },
+            "trace": {
+              "earliest_observation": 3600,
+              "declared_earliest_observation": 3600,
+              "latest_available_at": 3600,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 2700,
+            "instrument": "B",
+            "outcome_anchor": 3600,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 2700,
+              "end": 3600
+            },
+            "trace": {
+              "earliest_observation": 3600,
+              "declared_earliest_observation": 3600,
+              "latest_available_at": 3600,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 3600,
+            "instrument": "A",
+            "outcome_anchor": 4500,
+            "scope": true,
+            "condition": true,
+            "outcome": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "label_information_interval": {
+              "start": 3600,
+              "end": 4500
+            },
+            "trace": {
+              "earliest_observation": 4500,
+              "declared_earliest_observation": 4500,
+              "latest_available_at": 4500,
+              "unknown_input": false,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": []
+            },
+            "status": "ELIGIBLE",
+            "reason": "reference_inputs_observed"
+          },
+          {
+            "decision_time": 3600,
+            "instrument": "B",
+            "outcome_anchor": 4500,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": {
+              "earliest_observation": 4500,
+              "declared_earliest_observation": 4500,
+              "latest_available_at": 4500,
+              "unknown_input": true,
+              "admissible_pending_publication": false,
+              "predecision_input_published_late": false,
+              "outcome_lookback_before_universe": false,
+              "reasons": [
+                "missing_value"
+              ]
+            },
+            "status": "OUTCOME_MISSING",
+            "reason": "missing_value"
+          },
+          {
+            "decision_time": 4500,
+            "instrument": "A",
+            "outcome_anchor": 5400,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "PARTITION_BOUNDARY",
+            "reason": "anchor_at_or_after_exclusive_end"
+          },
+          {
+            "decision_time": 4500,
+            "instrument": "B",
+            "outcome_anchor": 5400,
+            "scope": true,
+            "condition": true,
+            "outcome": null,
+            "label_information_interval": null,
+            "trace": null,
+            "status": "PARTITION_BOUNDARY",
+            "reason": "anchor_at_or_after_exclusive_end"
+          }
+        ],
+        "expected_case_count": 12,
+        "processed_case_count": 12,
+        "state_counts": {
+          "DATA_GAP": 2,
+          "ELIGIBLE": 7,
+          "NOT_YET_OBSERVED": 0,
+          "OUTCOME_MISSING": 1,
+          "OUTCOME_PENDING": 0,
+          "PARTITION_BOUNDARY": 2,
+          "REVIEW_REQUIRED": 0,
+          "SCOPE_FALSE": 0,
+          "SCOPE_UNKNOWN": 0
+        },
+        "processing_complete": true,
+        "outcomes_complete": true,
+        "review_required": false,
+        "status": "PROCESSED",
+        "resource_reason": null,
+        "primitive_steps": 34,
+        "scientific_readiness": false
+      },
+      "lags": [
+        1,
+        2,
+        6
+      ],
+      "expected": {
+        "eligible": 7,
+        "events": 0,
+        "condition_count": 4,
+        "q": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "w": {
+          "numerator": "4",
+          "denominator": "7"
+        },
+        "muC": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "score": [
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        ],
+        "population_degeneracy_established": false
+      }
+    }
+  ]
+}

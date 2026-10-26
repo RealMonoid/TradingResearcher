@@ -1,0 +1,241 @@
+{
+  "schema": "github-publication-independent-review/1",
+  "status": "PASS_BOUNDED_PUBLICATION_REVIEW",
+  "checked_at_utc": "2026-10-26T12:24:24.085781+00:00",
+  "reviewer": "independent publication_review agent",
+  "scope": "Publish the current in-progress framework source, tests, documentation and preserved evidence; no release readiness or scientific validity claim.",
+  "source_sha256": {
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/auxiliary.py": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c",
+    "trading_researcher/coordination.py": "260baf80386345f385b2340b163cb2d0b575ceff999309bbaa3b1e6cade60975",
+    "trading_researcher/storage.py": "1541be1fed6f9deca5b593810a9f4e067bd8d61b4902a7743c4b4b49cd5e884a",
+    "trading_researcher/memory.py": "f2b014119643f577091cb64136f1477be46a2bc96934cf1a2f7387185162910e",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "tests/test_meaning_reviews.py": "7256b5d41cbbb495a36fc9719c35b1e5ea5455c4c17b1b8e63230bd0094911a5",
+    "tests/test_meaning_reviews_adversarial.py": "4344452ff7eebeaedad14edcdd080f068c3bb47b27a00e23ef7c10e7ecd6391b",
+    "tests/meaning_review_support.py": "8c7a0beac896d457f41fe4a056f301d49fe40717d9b1d6adc03cc5299bf1c35a",
+    "tests/fixtures/meaning_review_cases.json": "be419900653305eb986cccb8c40ff4e1779bef1cf6d478e0b8ea49c166a88d09",
+    "tests/fixtures/meaning_review_cases.md": "60d64133ad2a5d309beecd3f882dde59c11f83fd98e8f8f2ae9f61643be3027b",
+    ".gitattributes": "44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c",
+    ".gitignore": "338464220b2cc2a830c5be55e071ff72b20209e59ed81b515a8b9df3a519b267"
+  },
+  "findings": [
+    {
+      "finding": "Existing text normalization would change frozen evidence and fixture bytes",
+      "resolution": "Exact-byte .gitattributes rules now preserve implementation evidence, runtime sources, test sources and fixtures.",
+      "attribute_observations": [
+        "docs/reviews/implementation-2026-10-25/controller-provider-verification.json: text: unset",
+        "trading_researcher/binding.py: text: unset",
+        "tests/fixtures/meaning_review_cases.json: text: unset",
+        "tests/test_meaning_reviews_adversarial.py: text: unset"
+      ]
+    },
+    {
+      "finding": "No publication-blocking issue found in the inspected meaning-review process boundary",
+      "basis": "Inspected complete inventory, retained prior generations, exact protocol, controller invocation binding, independent identity, historical receipts, gap retention, stale assessments and protected schema/operator access; all 20 current focused tests pass."
+    }
+  ],
+  "checks": [
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_meaning_reviews*.py"
+      ],
+      "exit_code": 0,
+      "tests": 20,
+      "duration_seconds": 13.885,
+      "outcome": "PASS",
+      "tool_chunks": [
+        "d95567",
+        "bbb0d5"
+      ]
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        ".trf-runtime/publication-independent-review-2026-10-26.py"
+      ],
+      "exit_code": 0,
+      "outcome": "No supported credential pattern, forbidden private state path or archive scan error detected",
+      "files": 382,
+      "bytes": 39201942,
+      "zip_count": 23,
+      "zip_entries": 1682,
+      "tool_chunks": [
+        "9a3c86"
+      ]
+    },
+    {
+      "command": "git check-ignore .env.local .trf-runtime/openai-integration-budget.sqlite3 .trf-runtime/controller-provider-checks-2026-10-25/real-registry/operator.key",
+      "exit_code": 0,
+      "outcome": "All three private-state paths are ignored",
+      "tool_chunks": [
+        "1296a8"
+      ]
+    },
+    {
+      "command": "git ls-files credential/database filename patterns",
+      "exit_code": 0,
+      "outcome": "No tracked .sqlite3/.db/.key/.env*/credentials/auth.json/.pem paths",
+      "tool_chunks": [
+        "1296a8"
+      ]
+    }
+  ],
+  "archive_manifest": [
+    {
+      "path": "docs/reviews/implementation-2026-10-25/anthropic-provider-evidence.zip",
+      "entries": 125,
+      "expanded_bytes": 1531997,
+      "sha256": "1a47a4ad985ce3a31988673f1331648776c630437084c203ca4454832e7c0ac2"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/auxiliary-research-source-before.zip",
+      "entries": 86,
+      "expanded_bytes": 1509132,
+      "sha256": "fa952b6067e94ef21cd331816b83e1161f098072f9f86da46c318cb301507c0f"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/bootstrap-source-before.zip",
+      "entries": 79,
+      "expanded_bytes": 1489254,
+      "sha256": "4096c62b1139c0183ebaf0fe503ca3a037a5351a1b0111425fcd2e9e998f95c7"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/calibration-count-evidence.zip",
+      "entries": 60,
+      "expanded_bytes": 888815,
+      "sha256": "cc32d9e7dbcf438790bc0b4f09431e6dd3a74b0a89f65ae800b25b9cb2ae7d33"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/calibration-run-evidence.zip",
+      "entries": 60,
+      "expanded_bytes": 890369,
+      "sha256": "cc7c2ef8f9306d5f85444062f0a2993a9aabe350f45cda03753f2debdc97233c"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/context-efficiency-evidence.zip",
+      "entries": 132,
+      "expanded_bytes": 1550615,
+      "sha256": "4b87da978819fa81ab7ae144c0b10e2b04e93ba156e80af1fa1e573a65ed5d86"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/controller-provider-evidence.zip",
+      "entries": 31,
+      "expanded_bytes": 435045,
+      "sha256": "51fbc337bc1c38f8687fa6f278411bbf59ea5e6e43dbe5896a6b60e5892466fb"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/draw-transport-evidence.zip",
+      "entries": 22,
+      "expanded_bytes": 412436,
+      "sha256": "dc46667cccc0074a0ad53a8f5944f4f0fd556bcd257f4e842609eee8c28c6b2c"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/draw-transport-evidence.zip!engineering/source-before.zip",
+      "entries": 46,
+      "expanded_bytes": 656532,
+      "sha256": "669e750144001faa39fceef5e1e3c8896ab379866bd10037caefad619b15371f"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/evaluation-policy-source-baseline.zip",
+      "entries": 3,
+      "expanded_bytes": 121827,
+      "sha256": "0b5d22fc4a4289ef50790df592e0d5d0a1dd7c640b0313da3fc698d389ce36ae"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/information-planning-source-before.zip",
+      "entries": 90,
+      "expanded_bytes": 1606229,
+      "sha256": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/mc-stability-source-before.zip",
+      "entries": 80,
+      "expanded_bytes": 1508564,
+      "sha256": "048c35eae018862c40a2ef98eb1255774ece8897cc6f230bea3c876a2f9077fc"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/measurement-evidence.zip",
+      "entries": 128,
+      "expanded_bytes": 2025395,
+      "sha256": "1f62bba2b30e8e1ade294e27b111318db1d6e9b88cafa10ee6f870e84da0d103"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/measurement-provider-evidence.zip",
+      "entries": 147,
+      "expanded_bytes": 2627921,
+      "sha256": "06e579490919b2394261d7d877cd741eae051d6315a7c6b271d8c3a8b8742096"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-evidence.zip",
+      "entries": 12,
+      "expanded_bytes": 184330,
+      "sha256": "3c67c62379d8bffecb82d177b5a1fd8a8ab378ba8e200c6357e9dc6b8bb96abd"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-source-before.zip",
+      "entries": 92,
+      "expanded_bytes": 1615715,
+      "sha256": "8b0f59e38f59e1f578b4abbf2af929ea3814742f28f701a9033ef810c0f443a7"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/openai-evidence.zip",
+      "entries": 125,
+      "expanded_bytes": 2042979,
+      "sha256": "e889bd2d38055872ddbcb41c01d7eab420d14f5857543e1e743e0d7892df82d0"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/plan-retention-source-before.zip",
+      "entries": 85,
+      "expanded_bytes": 1485948,
+      "sha256": "085a0c43ee3af4591b765e612478bf832fae22a3369896515ad69c83d932ab8b"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/population-model-probe-evidence.zip",
+      "entries": 6,
+      "expanded_bytes": 14607109,
+      "sha256": "1223dfead51ae9b02fc64a05b1402d2fe0a4cf7de306c76ad85facbff42bb231"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/population-model-regression-evidence.zip",
+      "entries": 6,
+      "expanded_bytes": 121865,
+      "sha256": "3801829abc97fbfe53ada288bba041b789be9e9c87336e045186711843332911"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/provider-identity-evidence.zip",
+      "entries": 115,
+      "expanded_bytes": 1851798,
+      "sha256": "5e671768ea9ae97565e736bc61da825930948c9940604c8ae5d17a7eb2c97e37"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/study-evidence.zip",
+      "entries": 132,
+      "expanded_bytes": 49553060,
+      "sha256": "f05067b2c62da5da01b6bfdcfcf02dbecc6388062522b0e2b0c3de82a6ccd6a6"
+    },
+    {
+      "path": "docs/reviews/adoption-2026-10-23/preapproval-documents.zip",
+      "entries": 20,
+      "expanded_bytes": 483165,
+      "sha256": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+    }
+  ],
+  "unverified": [
+    "No paid provider call or genuine mixed-provider research cycle was run by this review.",
+    "The 20 meaning-review tests use mocked provider replies and establish bounded process behavior, not real natural-language judgment quality.",
+    "The predeclared eight-case live meaning-quality probe has not been executed at this checkpoint.",
+    "Pattern-based scanning is not proof that every possible secret or sensitive string is absent.",
+    "No comprehensive security audit, complete-suite rerun, scientific calibration, market edge, atomic scientific freeze or deployment readiness is established.",
+    "Remote publication and final staged-tree byte comparison are the parent agent responsibility; this review does not attest that a push occurred."
+  ]
+}

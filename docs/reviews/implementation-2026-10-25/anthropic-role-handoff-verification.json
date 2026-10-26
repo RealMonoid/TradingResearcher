@@ -1,0 +1,96 @@
+{
+  "schema": "mixed-provider-role-handoff-verification/1",
+  "status": "PASS_OFFLINE_ROLE_HANDOFF",
+  "recorded_at_utc": "2026-10-25T19:23:03.666680+00:00",
+  "scope": "Three primary-agent offline role-handoff cases; no production or scientific change.",
+  "prior_checkpoint": {
+    "file": "anthropic-provider-verification.json",
+    "sha256": "6da5f544eb7e97ac956ceae16a8ea35117e6f54c1ae89a45fc4d96a0e1a01fa0",
+    "archive_sha256": "1a47a4ad985ce3a31988673f1331648776c630437084c203ca4454832e7c0ac2"
+  },
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_anthropic*.py'",
+      "scope": "Existing 35 cases before adding the new handoff test file",
+      "tests": 35,
+      "seconds": 3.332,
+      "exit_code": 0,
+      "tool_chunk": "3c3ef9"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_anthropic_role_handoff.py'",
+      "tests": 3,
+      "seconds": 196.062,
+      "exit_code": 0,
+      "tool_chunk": "9472c9"
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "includes": "verify_system_model and git diff --check",
+      "local_links": 753
+    }
+  ],
+  "initial_failure": {
+    "tool_chunk": "cd9c17",
+    "tests": 13,
+    "errors": 3,
+    "exit_code": 1,
+    "reason": "Test helper shadowed by reused setup profile attribute; ten unrelated imported support tests also discovered.",
+    "correction": "Rename helper to role_profile; import support module instead of its TestCase class. No production change or weakened assertion."
+  },
+  "fresh_unique_cases": 38,
+  "additional_cases_beyond_prior_checkpoint": 3,
+  "independent_review": "No new independent review; prior 23-case review scope unchanged.",
+  "unchanged_production_and_prior_tests": {
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/__main__.py": "781a2ea6d387287ff51fe262b849f1aee5b761d9eed975690857425f3457506d",
+    "tests/test_anthropic_provider_adversarial.py": "a637ea2e3441edb554b199895e3c6b7e02012e20f1eb740e0b13481fa8302ab5",
+    "tests/test_anthropic_provider.py": "7525c4bf4e1eef651fc1407d46b3a207b3dff5f4fc8d5450156250a98f8fac54",
+    "tests/test_anthropic_integration.py": "b09c247d6a8b0351640a8646eff1392bc8802d03a8b8b3c032bf0fe3623ee54d",
+    "tests/test_provider_identity_adversarial.py": "baed06652e6d4a316cb5e4037ec042d099ff43f5f824e5c8f713fd96a8c81a2f"
+  },
+  "preserved_earlier_files": 82,
+  "live_ledger_unchanged": true,
+  "live_ledger_sha256": "36a61c293c0de7951d79da34bdb5061520cafd41ec30b5f3a74aa33bfff43c79",
+  "new_live_calls": 0,
+  "existing_live_usage": {
+    "calls": 10,
+    "tokens": 35084,
+    "conservative_nano_usd": 95105000,
+    "aggregate_cap_nano_usd": 5000000000
+  },
+  "changed_files": [
+    "tests/test_anthropic_role_handoff.py",
+    "trading_researcher/ANTHROPIC.md",
+    "trading_researcher/AUXILIARY_RESEARCH.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/MULTI_MODEL_ROLE_HANDOFF_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/anthropic-role-handoff-verification.json"
+  ],
+  "changed_files_sha256": {
+    "tests/test_anthropic_role_handoff.py": "d179856ef671dc56774a1e8e90a1f7151c1fe7947391a874f5bba3257edb55d3",
+    "trading_researcher/ANTHROPIC.md": "5286b569453b06897c65b10d6dd6a8b14ed05a519f4489b252f8f44a0ef5d2c0",
+    "trading_researcher/AUXILIARY_RESEARCH.md": "d5209d5c8698bde8a4b33a5f6888bbecbeb0d57eb56f3a13859d3bd8f86cb697",
+    "docs/architecture/CURRENT_STATE.md": "016c743a21b99a246a1478e4b17096cd5e272f164339c7b3c4716498d706aa05",
+    "docs/reviews/implementation-2026-10-25/MULTI_MODEL_ROLE_HANDOFF_2026-10-25.md": "0bd869c53b0802e9eb6d4b0b9066e5ea2ab9317bcd0e469965d7978a2c8c97ca",
+    "docs/reviews/implementation-2026-10-25/progress.json": "e6a55b248eec39235d5f5f732e6972a34529d87af015f48b8df9b467c096f63f"
+  },
+  "ignored_helper": ".trf-runtime/anthropic-role-handoff-checks-2026-10-25/finalize.py",
+  "authored_file_checks": {
+    "whitespace": "PASS",
+    "json": "PASS",
+    "local_links": 103
+  },
+  "unverified": [
+    "Actual Claude access, billing and API compatibility",
+    "Substantive model judgment, mixed-model research quality or savings",
+    "HTTP RPC delivery in these three cases",
+    "Gemini, Chinese-provider or OpenCode integration",
+    "Scientific data/semantic admission, nuisance adequacy, information/calibration, freeze and a historical research cycle",
+    "Policy/backtest quality, live-capital authority and the full seven-package objective"
+  ]
+}

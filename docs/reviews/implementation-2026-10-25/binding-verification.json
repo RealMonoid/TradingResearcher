@@ -1,0 +1,197 @@
+{
+  "schema": "bound-computation-verification/1",
+  "status": "PASS_WITH_EXPLICIT_SCIENTIFIC_AND_RUNTIME_LIMITS",
+  "scope": "Bound retained compilation and descriptive development execution; no scientific authority",
+  "changed_files_this_checkpoint": [
+    "trading_researcher/binding.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/storage.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/__main__.py",
+    "trading_researcher/BINDING.md",
+    "trading_researcher/README.md",
+    "tests/binding_support.py",
+    "tests/test_binding.py",
+    "tests/test_binding_adversarial.py",
+    "tests/fixtures/reference_binding_cases.json",
+    "tests/fixtures/reference_binding_expectations.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/binding-review.json",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json"
+  ],
+  "runtime_tests": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "test_count": 215,
+    "reported_seconds": "481.443",
+    "wall_seconds": 481.987,
+    "source_hashes_equal_before_and_after": true,
+    "source_sha256": {
+      "tests/binding_support.py": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0",
+      "tests/fixtures/reference_binance_cases.json": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+      "tests/fixtures/reference_binance_expectations.md": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88",
+      "tests/fixtures/reference_binance_partition_cases.json": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+      "tests/fixtures/reference_binance_partition_expectations.md": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+      "tests/fixtures/reference_binance_quality_cases.json": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+      "tests/fixtures/reference_binance_quality_expectations.md": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+      "tests/fixtures/reference_binding_cases.json": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+      "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257",
+      "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+      "tests/fixtures/reference_feature_cases.json": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+      "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee",
+      "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+      "tests/test_binance_archive.py": "d0d51e95cef4a6b2ceeaf4a788ea19b839377ecf97f9a1ae76dab4cccd15e959",
+      "tests/test_binance_ingest.py": "8201f84b8de45bed381833ec31224f4c1c2e78b9b6541624b1270c56beb55b16",
+      "tests/test_binance_normalize.py": "621238a96e3baa8584466f3bfbfa55ed535e12420ad5fa078e8de8a6eafb5d77",
+      "tests/test_binance_quality.py": "36d8bd7a0e6c0c371e39e699e0e7ab7c8c2d2c23f83a80ebb499338e74a0b0ed",
+      "tests/test_binding.py": "ba338f30875c6ca6c760d28c9f845b2e7ce970bb5649b1c0d00b741eb7bd932e",
+      "tests/test_binding_adversarial.py": "459876e5433449c172beb066791410084cbc87e0fdfc1eaa69ce8a7b6a092997",
+      "tests/test_certification.py": "bcf1fe8780619bd8b26ff551cb12c1ff347a96bedb1eef4aa2b8862d44311dd2",
+      "tests/test_coordination.py": "b928aad7d17efea91b4173fea767c3ca04591d0018da3315f256b6b9931295ff",
+      "tests/test_data.py": "197f902659e2f7e103b5bb5eec7ba280ff0018f91ca5e83241e1b0489bfc01b8",
+      "tests/test_expressions.py": "a927ef0a44c0f81945ffa6e0f5f9858ac526838da5d01d80f6c04f641d52ba02",
+      "tests/test_feature_adversarial.py": "e0782cce5db75b5607be717dd7bc1da6cf6e4000c59838bcb39d36faba2b1b81",
+      "tests/test_features.py": "facfc83ab476ff7c1ba188ccb6e277e759c94296b3347678680d163097c1f498",
+      "tests/test_formalization.py": "25c6e017396fbdf6dcee1825e27e42bd6f296f2d543fdeea6d3fab34af575fe1",
+      "tests/test_local_runtime.py": "17bcae356faf10209f446fffb110a62c0c50261be830b2809b17885858f39153",
+      "tests/test_memory.py": "036a7b1fe19bdd900d9db90dca376ac876bcf1a762047387900e70fa5aaff09a",
+      "tests/test_outcomes.py": "2ecaa33fa2b76792ed6df26924d6f43280138123ed93789d88108437b0237384",
+      "tests/test_research_calls.py": "54e1bcd3987ebc2e3225dc5b87ab3e6eb5f68cf8fe526d1b5de6b71e08603211",
+      "tests/test_researcher.py": "7af611fa7670d4da89718fba5a0fff4d3e8a63e062a31193cc8a338a01e1062f",
+      "tests/test_storage.py": "548d263d12d9aa783b248112f06b60058757a8eea1973a45dc03bde6f9582e8a",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "fd0f57090f6c0964a4c53915f5cb2a89232868e5618535f1954d86b7cbf2f6fb",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "07adb75eeff3bb6dd67b6a5625b82481c619c00e4afd2c1b793668a18cf0e704",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "781fb9ca4ab790688f749fea7cfbe7e5ea78582e8eaf5cbee4ba551e049f8cc8",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0",
+      "trading_researcher/memory.py": "f9a067a8c2f2b4f1686a4848044b4d02fc83613f1d9d433d7af20addbf3a0981",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "776f852184ed42916790565d312a816ab7dce523af6fe7f43d223f077fe9d284",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "2678b7e05f83a979c1a2b527d61230d28b822a1156b3dc09a7764f8d4e5efbba",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/storage.py": "9e8fd3991e053970c0e82663ba13ef3f9c60a866983f4d5645620ad60d5e421f",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "log": ".trf-runtime/binding-checks-2026-10-25/tests.log",
+    "log_sha256": "6a02de898c86893872f14586018ebd51621b558da23b804f57883400aa58c12a"
+  },
+  "independent_review": {
+    "path": "binding-review.json",
+    "sha256": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5"
+  },
+  "fixed_expectations": {
+    "tests/fixtures/reference_binding_cases.json": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+    "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257"
+  },
+  "exercised": [
+    "Six independently fixed numerical scenarios in fresh retained children",
+    "Completed formalization to compile and development execution on an owned synthetic registry",
+    "Operator CLI compile/execute, complete backup/restore, exact artifacts/blobs and repeated execution",
+    "Twenty-six independent admission/lifecycle targets, plus outcome-warmup and malformed-response regressions",
+    "Protected denial before dependency/blob/row reads; raw ancestry cannot be relabeled development",
+    "Intact retained versions with stale installed currency; corrupted/missing/incompatible dependencies denied",
+    "Exact replay rejects changed contrast, partial cases and internally consistent fabricated case states",
+    "Actual owned child timeout, stdout/stderr overflow and cancellation are killed and reaped"
+  ],
+  "unverified": [
+    "Independent semantic fidelity of natural-language ideas and arbitrary new composition/dependency membership",
+    "Scientific acquisition/rights acceptance and historical PIT/vintage; assumed delays remain scenarios",
+    "Evaluation-plan/family/allocation validation, atomic scientific freeze and protected assessment execution",
+    "Statistical calibration, scientific evidence, real LLM discovery, market usefulness and economic results",
+    "Maximum-size throughput and power-loss durability; hostile OS/account isolation is outside the trust boundary",
+    "AmiBroker policy integration, complete temporal monitoring, reporting and message delivery"
+  ],
+  "activity": {
+    "paid_provider_calls": 0,
+    "software_installs": 0,
+    "commits": 0,
+    "pushes": 0,
+    "capital_authority": 0
+  },
+  "checks": {
+    "retail_contract": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "report_sha256": "57c5f5a0b4f358d4dd36b4e21577d420e5b59cc0099c7e0f5c522bc5bd65f215",
+      "counts": {},
+      "errors": []
+    },
+    "implementation_preservation": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "report_sha256": "31582b6c9ed8805627dd9ccdcb777f3f3cb60dfd1eda9ff2a8321b9b6b6ef373",
+      "counts": {
+        "baseline_files": 103,
+        "unchanged_files": 93,
+        "local_document_links": 215
+      },
+      "errors": []
+    },
+    "git_diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/CURRENT_STATE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'tests/test_local_runtime.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/__main__.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/checks.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/coordination.py', LF will be replaced by CRLF the next time Git touches it\n"
+    }
+  },
+  "changed_file_sha256": {
+    "trading_researcher/binding.py": "fd0f57090f6c0964a4c53915f5cb2a89232868e5618535f1954d86b7cbf2f6fb",
+    "trading_researcher/coordination.py": "781fb9ca4ab790688f749fea7cfbe7e5ea78582e8eaf5cbee4ba551e049f8cc8",
+    "trading_researcher/storage.py": "9e8fd3991e053970c0e82663ba13ef3f9c60a866983f4d5645620ad60d5e421f",
+    "trading_researcher/memory.py": "f9a067a8c2f2b4f1686a4848044b4d02fc83613f1d9d433d7af20addbf3a0981",
+    "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+    "trading_researcher/BINDING.md": "6829d05bd8ddff8ec753217e608baaa159cd0646f96ba4cd6f7dd31866cd7de8",
+    "trading_researcher/README.md": "79de01b01db7cd848de12d4edc92e015b097d26e8de5e142904b0e2a65a4924d",
+    "tests/binding_support.py": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0",
+    "tests/test_binding.py": "ba338f30875c6ca6c760d28c9f845b2e7ce970bb5649b1c0d00b741eb7bd932e",
+    "tests/test_binding_adversarial.py": "459876e5433449c172beb066791410084cbc87e0fdfc1eaa69ce8a7b6a092997",
+    "tests/fixtures/reference_binding_cases.json": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+    "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257",
+    "README.md": "29d22dd10a95f37a993951af1ac7eb21c36ea0537ced7e2b5f7e3fb2efd739cb",
+    "docs/architecture/CURRENT_STATE.md": "b2310e596d04b9fee9575520a81f71235eb9e525d1d473cf5dcc55c06570dab2",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "b5d381106ec538a411e9b7b4d43b582d4d60a8082301d193a159cfa464b10c69",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "390050ffee7b5961ef8f9b93264139bf610b368351bb9ffea482bdbd2570dd3b",
+    "docs/reviews/implementation-2026-10-25/progress.json": "5755c49f69bfda36534e42891d695df50978319f6c9db652aded895aef9f55f8",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5"
+  }
+}

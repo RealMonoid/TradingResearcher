@@ -1,0 +1,258 @@
+{
+  "schema": "independent-implementation-review/1",
+  "date": "2026-10-25",
+  "reviewer": "information_review independent agent",
+  "status": "PASS_BOUNDED_EXACT_TRANSPORT_REVIEW",
+  "purpose": "Verify that canonical byte reuse avoids redundant draw serialization while preserving numerical output, retained missingness, stream framing, byte limits and separate replay.",
+  "source_sha256": {
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/study_pipeline.py": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/study_runs.py": "0500d07632ddd6bb00d3773e7b8564e0dc2b8e2718ce6fb306256c188d5c19c7",
+    "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6"
+  },
+  "test_sha256": {
+    "tests/test_draw_transport_adversarial.py": "96644892f056843e96ee6ac9145d5989e41c2af6cad8290a2c0e2ff78444e1e8"
+  },
+  "protected_artifacts_sha256": {
+    "docs/reviews/implementation-2026-10-25/provider-usage-review.json": "a8615302f37456ef29ee203dd37d58cd1e0d54479c5bdde31fdd85fb8048350d",
+    "docs/reviews/implementation-2026-10-25/openai-provider-review.json": "de53f8bb99b37538375ed1051e8b0d522dfae6c3030dcff5da0663e17c07be09",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-baseline.json": "3adfb4f50628ebaaa2349d872422523a91a352437d05011e847347642e14e215",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+    "docs/reviews/implementation-2026-10-25/baseline.json": "0938c679b0c76b9ae3f12f9b8423445b264c30b4f59c9b37d4cc8faa40d0c879",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-results.json": "12d2bb8f83bc1d2f99779cfaed78a5bfccc486578986f0d07e412c0ba3532b57",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+    "docs/reviews/implementation-2026-10-25/binance-registry-retention.json": "344746c5c7591569cb20741d3095bb1a1ddc7e37358349486e2f409439559ad9",
+    "docs/reviews/implementation-2026-10-25/binance-source-inventory.json": "a6d7198d0b0a350e123a6e856825e46cd7a3b7e9c138c2c0ae5a57d5c8cc513b",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+    "docs/reviews/implementation-2026-10-25/bootstrap-baseline.json": "2b4dba278b2c2db67b182f594549cd843ed8d851c1579250f305eaa058dd39d1",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+    "docs/reviews/implementation-2026-10-25/data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+    "docs/reviews/implementation-2026-10-25/feature-results.json": "6edf1dcb1d4a777b85bfafc358bd4c36bac6062bf4a2f3cbfb539e20d59ed39a",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/information-planning-baseline.json": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+    "docs/reviews/implementation-2026-10-25/mc-stability-baseline.json": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+    "docs/reviews/implementation-2026-10-25/measurement-review.json": "b3477a873c0b4967152176d998ffcbf20c218ace9dd970ca1cba88698b0e51c6",
+    "docs/reviews/implementation-2026-10-25/measurement-verification.json": "ffd1c6ebdfa220ff795a36ea13a7e276b950f3d6b03c325791d13a64d58eab22",
+    "docs/reviews/implementation-2026-10-25/memory-preservation.json": "445a51780caca04b35ddd09a8addf1ea3f0fdd6ab7c8d5e09efea4ad5dbb9efc",
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-baseline.json": "bbe364a8d449fc3e09bedcf909d1f0a5da61f2260ea1d64942c4201c76bf529f",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+    "docs/reviews/implementation-2026-10-25/plan-retention-baseline.json": "3d97578b6c68d417f3e5584ee9356f3d5435e3b663208c87b567429af27db430",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+    "docs/reviews/implementation-2026-10-25/population-model-baseline.json": "6b693a0b586259879b0151cb41aefa5395d9dc82965628de125ccb5b67e2b1c7",
+    "docs/reviews/implementation-2026-10-25/population-model-progress.json": "5028d35ac7c13fa84d4937afedd03e7b75aa66e014052d14989cf457c5319a0f",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+    "docs/reviews/implementation-2026-10-25/population-model-verification.json": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b",
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c",
+    "docs/reviews/implementation-2026-10-25/study-review.json": "3d08b38a6b4a8accc07705b625762b61d9b37ccbfae38db31c72b48ecc94f742",
+    "docs/reviews/implementation-2026-10-25/study-verification.json": "1134ed19aa2c02a1ba30d6c6a00f723659b0f035b954e0d2fa0999a46b9a3e43",
+    "docs/reviews/implementation-2026-10-25/CHATGPT_PLAN_INTEGRATION_REVIEW.md": "433bbc5b46809db59c714c6083dde8e4e412c1347d36d4e31f5fbd94097573be",
+    "docs/reviews/implementation-2026-10-25/provider-identity-review.json": "fb903cf72721d1f6134055b32c9509e40685279c75575917f379b18bf8d10d8a",
+    "docs/reviews/implementation-2026-10-25/context-views-review.json": "59cf48da8f5b21fcc2d88386168cf588cc7409c6b688c2ef315706980eb6ce37",
+    "docs/reviews/implementation-2026-10-25/measurement-context-views-review.json": "b0bc16a16537b2a300c6d7a745ef2f977218df9835a87218253819666cc0374b",
+    "docs/reviews/implementation-2026-10-25/perspective-profiles-review.json": "40e042048e0008e4fe6a4272564b6655bcc3a343fdb732a2e1c8b143c5a13cf0",
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-review.json": "b39fe9dd22143fbf7c35628d7db6bf64aff0b1ee35cc75ce0990fb7f6965392d",
+    "docs/reviews/implementation-2026-10-25/calibration-count-review.json": "c1e0c08c56ac3ebaef170d7599cbc34d384a7356d42d62e56bd739b16fde146f",
+    "docs/reviews/implementation-2026-10-25/calibration-run-review.json": "52af14f60ef041eefe6a8509aae70c899bde6eaa44745e7db3ca4123348fc86c"
+  },
+  "authorship_and_oracle_provenance": {
+    "test_authored_before_production": false,
+    "qualification": "The parent requested tests before implementation; context recovery delayed independent authorship until the two-file optimization existed. This is not claimed as independent pre-implementation TDD. No independent failing production test was observed.",
+    "fixed_values_source": "Executed the archived pre-change stationary_bootstrap.py from source-before.zip, SHA c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881, against the unchanged synthetic bootstrap_support report.",
+    "old_oracle": {
+      "source_sha256": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+      "status": "INFORMATION_GAP",
+      "reason": "undefined_resampled_mean",
+      "cases": [
+        {
+          "length": 1,
+          "derived_seed": "39696664487622421858539872872513802409282761918082201277761892593520651756868",
+          "attempted": 19999,
+          "defined": 13681,
+          "undefined": 6318,
+          "interrupted": 0,
+          "interval": null,
+          "replicate_sha256": "44890712739ec3fb70ded193186b99e2d46afed087dcca40daa5e20bba018c06",
+          "interrupted_draw": null
+        },
+        {
+          "length": 2,
+          "derived_seed": "35761314668785232680216432266724479908600200678140311338222725582091677708835",
+          "attempted": 19999,
+          "defined": 15636,
+          "undefined": 4363,
+          "interrupted": 0,
+          "interval": null,
+          "replicate_sha256": "65ee524c8a67bc99411c23861df64a0e2323e2de66f343790e0f741766d3f730",
+          "interrupted_draw": null
+        }
+      ],
+      "records": 39998,
+      "first": [
+        {
+          "schema": "joint-bootstrap-draw/1",
+          "length": 1,
+          "index": 0,
+          "value": null,
+          "scope_count": 4,
+          "condition_count": 0,
+          "segments": 4,
+          "path_sha256": "eaa4670e5a92d6b478489bc746e109d7cb0789fcfcc6e33e68bc3451f8f0b7a9"
+        },
+        {
+          "schema": "joint-bootstrap-draw/1",
+          "length": 1,
+          "index": 1,
+          "value": null,
+          "scope_count": 8,
+          "condition_count": 0,
+          "segments": 4,
+          "path_sha256": "04de0f7eefc31a7a6326b5e7fe8fcd44445bcdf6aa0443b31893e7d42e5c2ebc"
+        },
+        {
+          "schema": "joint-bootstrap-draw/1",
+          "length": 1,
+          "index": 2,
+          "value": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "scope_count": 6,
+          "condition_count": 2,
+          "segments": 4,
+          "path_sha256": "ea0654b71d9e7f029af844ed026666003e8a4cecf09528ec7a8261bdffd48965"
+        }
+      ],
+      "stream_sha256": "81df56509ede327ff35d4c13fd46e919feeed35bd037b2a93c7e3d314a12b938"
+    },
+    "unmodified_test_expectations": true
+  },
+  "scope": [
+    "39,998 prescribed draws of a four-time synthetic report; fixed old-source per-length hashes and exact defined/undefined counts.",
+    "Exact canonical UTF-8 bytes without newline; replicate hashes include exactly one newline per complete draw.",
+    "Both callbacks, bytes only and no callback give identical numerical output; nested legacy callback mutation cannot alter bytes, report input or result.",
+    "Malformed callbacks are rejected before input-gap return; sink exceptions propagate as the same exception; cancellation prefixes and partially completed draws remain correctly distinguished.",
+    "Real population generation plus full bootstrap pipeline in both legacy and byte transports gives identical ordered case/draw stream and complete result; source includes unknown conditions and missingness.",
+    "Actual child_entry writer/replay functions with a deterministic calculator fixture: Unicode/escaping, exact byte limit, one-byte excess, prefix retention, changed/missing/trailing bytes and changed result digest.",
+    "Diff against every retained source file: only stationary_bootstrap.py and study_pipeline.py changed; PRNG, numerical logic, model, Monte Carlo policy, lifecycle, caps and prior source archive unchanged."
+  ],
+  "findings": [],
+  "source_review": {
+    "stationary_bootstrap.py": "The new keyword-only optional callable receives the immutable canonical bytes already used for hashing. The legacy callback still receives a deep copy. Numeric value accounting and sampler order are unchanged.",
+    "study_pipeline.py": "Only draw transport is specialized. The fixed sorted outer JSON framing matches canonical({kind:draw,value:record}); completed cases still use the original canonical path. Both feed one line writer with unchanged pre-write byte cap, checksum, write/replay comparison and final EOF/result verification.",
+    "trust_boundary": "The byte sink is internal transport from the retained calculator, not a new RPC or caller-supplied serialized draw. The draw schema is bounded; this change does not admit arbitrary raw bytes through a public controller operation.",
+    "wall_clock_limit": "Faster execution can complete more work before the same wall-clock cutoff. Exact equality is claimed for complete identical workloads and deterministic segment/caller stop probes, not identical interruption timing under a wall-clock deadline."
+  },
+  "verification": [
+    {
+      "kind": "independent_focused_tests",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_draw_transport_adversarial.py",
+        "-v"
+      ],
+      "tests": 12,
+      "result": "PASS",
+      "unittest_seconds": "14.415",
+      "wrapper_seconds": "14.995025",
+      "exit_code": 0,
+      "source_and_test_drift": false
+    },
+    {
+      "kind": "retained_old_source_oracle",
+      "result": "PASS",
+      "exit_code": 0,
+      "details": "Old calculator executed without changing production; fixed 39,998-draw values retained before writing independent tests."
+    },
+    {
+      "kind": "parent_benchmark_evidence_read_and_reconciled",
+      "result": "PASS",
+      "details": "Independently checked archive source hashes, only-two-file diff, retained baseline stream SHA/size/category counts, all six comparison result/stream hashes, proof counts and medians. Did not rerun the six isolated benchmark attempts."
+    },
+    {
+      "kind": "documentation_whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "result": "PASS",
+      "warnings": "Existing CRLF/LF conversion warnings retained in diff-check.log."
+    },
+    {
+      "kind": "historical_artifacts",
+      "result": "PASS",
+      "count": 59,
+      "details": "Every inherited protected artifact and the previous calibration-run-review preserved byte-for-byte."
+    }
+  ],
+  "performance_evidence": {
+    "ownership": "Parent-observed benchmark, independently inspected retained evidence; not independently timed.",
+    "workload": {
+      "wall_seconds": 1.803503,
+      "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+      "stream_bytes": 15699508,
+      "counts": {
+        "case": 16,
+        "draw": 59997
+      },
+      "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+      "state": "INFORMATION_GAP"
+    },
+    "runs_per_version": 3,
+    "before_median_seconds": "5.828025",
+    "after_median_seconds": "4.829184",
+    "median_reduction_percent_rounded": "17.14",
+    "same_result_and_stream_all_six": true,
+    "qualification": "Three runs per version of the same 16-time development world, alternating order, actual separate generation/replay. Not representative calibration or large-sample performance."
+  },
+  "evidence_files": {
+    ".trf-runtime/draw-transport-independent-review-2026-10-25/legacy-oracle.json": "546064e21f717b697c9581a33b8e26d7df054a382a821eb5fa3dcd41788087ff",
+    ".trf-runtime/draw-transport-independent-review-2026-10-25/independent-initial.json": "c04918c76f1e7288a3391350db4472bc06a74b2044392d68893d081e3adeb056",
+    ".trf-runtime/draw-transport-independent-review-2026-10-25/independent-initial.log": "f0370c676e9afdf0425cb1ba9fd13506affb157fa9b61f6779bc09c4a4f66611",
+    ".trf-runtime/draw-transport-independent-review-2026-10-25/diff-check.log": "0b83848512c2c9df1700f9e441eb27438e1befa153b4d06da66ee60a444661c1",
+    ".trf-runtime/study-performance-2026-10-25/baseline.json": "6696737e3e17f101d8b91f3f1c1da6a8a4b8a17f8a7dd734d5cabf63dd802938",
+    ".trf-runtime/study-performance-2026-10-25/comparison.json": "e2d24d17668ac637ad331960afcd62e4c700a6bf42e3956ef621a6fd0390c497",
+    ".trf-runtime/study-performance-2026-10-25/source-before.zip": "669e750144001faa39fceef5e1e3c8896ab379866bd10037caefad619b15371f"
+  },
+  "warranted_conclusion": "No substantiated objection found in this bounded transport change. Completed numerical results and stream bytes match retained old-source expectations and the legacy path; failure, missingness and replay boundaries remain exercised.",
+  "not_verified": [
+    "No new scientific calibration, model adequacy, market evidence, N_min or capital authority is established.",
+    "The small timing sample does not establish full final-calibration runtime or budget feasibility; broad size/scenario performance is unmeasured.",
+    "Independent child writer tests mock calculator and source/environment discovery. Actual isolated fresh generation/replay timing is parent evidence, not a duplicate independent subprocess run.",
+    "No full framework suite was run by this reviewer; parent owns broader regression.",
+    "No provider API call, key access, installation or real monetary-ledger operation occurred."
+  ],
+  "next_action": "Retain these tests and evidence, finish parent lifecycle regressions, and use the faster unchanged calculator without relaxing counts, limits, missingness or scientific gates."
+}

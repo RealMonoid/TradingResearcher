@@ -1,0 +1,354 @@
+{
+  "schema": "independent-mc-stability-review/1",
+  "review_date": "2026-10-25",
+  "reviewer": "Independent memory_boundary_review agent",
+  "purpose": "Assess exact Monte Carlo rank arithmetic, conservative boundary stability and owned development-policy retention without granting market inference or scientific admission.",
+  "conclusion": {
+    "status": "NO_SUBSTANTIATED_DEFECT_FOUND_WITHIN_REVIEWED_SCOPE",
+    "finding": "Twenty-one independent test methods pass. Fixed rank cases, exhaustive small-sample binomial calculations, discrete atoms, exact decision boundaries, endpoint enlargement and owned interruption/forgery probes agree with the stated candidate. No application correction was required by this review.",
+    "independent_methods": 21,
+    "calibration_performed": false,
+    "scientific_certificate": false,
+    "whole_framework_verdict": false
+  },
+  "authority_and_sources": {
+    "canonical": {
+      "path": "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+      "sha256": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+      "sections": [
+        "5.2 directional and nondirectional decision boundaries",
+        "5.3 fixed bootstrap resamples and Monte Carlo instability",
+        "5.4 information sufficiency",
+        "11 calibration gates",
+        "14 independent implementation certification boundaries"
+      ]
+    },
+    "primary_method_source": {
+      "url": "https://people.stat.sc.edu/hitchcock/notes518fall13sec3132.pdf",
+      "use": "Academic source explaining order-statistic confidence intervals via binomial counts, with conservative coverage at discrete distributions. It was consulted for the statistical relationship, not used as evidence of this implementation's correctness."
+    },
+    "supporting_quantile_source": {
+      "url": "https://search.r-project.org/R/refmans/stats/help/quantile.html",
+      "use": "Primary R documentation distinguishes generalized inverse sample quantiles from continuous type-7 linear interpolation."
+    },
+    "derivation": "The rank-tail inequalities, per-claim four-tail allocation across K sensitivities, reflected endpoint boxes and classification probes were independently derived for this review. Primary sources do not establish market coverage, calibration or exact PRNG probability properties.",
+    "expectation_provenance": "Five explicit rank cases were sent to the implementer before reading monte_carlo.py. The first thirteen-method test file, including its small-n oracle and full-count step/constant examples, was authored before inspecting that source. Four later pure methods and four owned methods were authored during code review. This is not claimed to be a wholly preimplementation fixture bundle."
+  },
+  "reviewed_files": [
+    "trading_researcher/monte_carlo.py",
+    "trading_researcher/stationary_bootstrap.py",
+    "trading_researcher/bootstrap_runs.py",
+    "trading_researcher/evaluation_policy.py",
+    "tests/test_monte_carlo.py",
+    "tests/test_bootstrap_runs.py",
+    "tests/bootstrap_support.py",
+    "trading_researcher/MONTE_CARLO.md"
+  ],
+  "reviewer_changed_files": [
+    {
+      "path": "tests/test_monte_carlo_adversarial.py",
+      "change": "New seventeen-method pure and four-method owned adversarial suite.",
+      "sha256": "72467c6745abc55dcba542b65f88f2947e1a4fa3296451f0eb92061687bd37a4"
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/mc-stability-review.json",
+      "change": "New independent review; earlier reports are preserved."
+    }
+  ],
+  "reviewer_modified_application_files": [],
+  "reviewer_modified_pinned_fixtures": [],
+  "method_assessment": {
+    "lower_rank": "Largest r in 0..n satisfying P(Bin(n,p) < r) <= tail.",
+    "upper_rank": "Smallest r in 1..n+1 satisfying P(Bin(n,p) >= r) <= tail.",
+    "sentinels": "Rank0 denotes negative infinity and rank n+1 positive infinity; neither is clipped to a sample extremum.",
+    "target": "Lower population quantile q_p = inf{x:F(x)>=p} of the fixed conditional bootstrap law. Inclusive order-statistic bounds are conservative at atoms.",
+    "allocation": "Each deduplicated sensitivity receives four one-sided rank-tail bounds with tail beta/(4K). A union bound requires no independence between sensitivities, but the binomial probability interpretation requires iid draws from each fixed conditional law.",
+    "interpolation": "The finite type-7 endpoint is not the population quantile. Each reflected endpoint range is enlarged to contain the actual finite-draw endpoint before combining sensitivities.",
+    "enclosing_ranges": "For the enclosing basic interval, take min across sensitivity lower-endpoint ranges and max across upper-endpoint ranges, with appropriate extended-real endpoint handling.",
+    "decision_rules": "The existing strict directional thresholds and closed nondirectional negative region are retained. Stable means the nominal decision is invariant over the conservative endpoint ranges, not that the decision is scientifically authorized.",
+    "no_new_scientific_authority": "The scoped development candidate leaves scientific_readiness, classification_permitted and selective_reseeding_permitted false. Calibration, information sufficiency, scientific input acceptance and scientific freeze remain open.",
+    "engineering_limits": "n<=19999; rational probability denominator<=2^32; supplied beta denominator<=1000000; existing8192-bit result limits. Exact arithmetic refers to binomial integer/rational computations, not exact finite-PRNG sampling probabilities."
+  },
+  "fixed_checks_before_source_inspection": [
+    {
+      "n": 1,
+      "p": "1/2",
+      "tail": "1/4",
+      "expected_ranks": [
+        0,
+        2
+      ]
+    },
+    {
+      "n": 4,
+      "p": "1/2",
+      "tail": "1/16",
+      "expected_ranks": [
+        1,
+        4
+      ]
+    },
+    {
+      "n": 4,
+      "p": "1/2",
+      "tail": "1/17",
+      "expected_ranks": [
+        0,
+        5
+      ]
+    },
+    {
+      "n": 5,
+      "p": "1/4",
+      "tail": "1/8",
+      "expected_ranks": [
+        0,
+        3
+      ]
+    },
+    {
+      "n": 5,
+      "p": "3/4",
+      "tail": "1/8",
+      "expected_ranks": [
+        3,
+        6
+      ]
+    }
+  ],
+  "independent_coverage": [
+    {
+      "area": "Exact rank arithmetic",
+      "evidence": "180 combinations of n1..12, five probabilities and three tails compared with a separately written direct Fraction/combinatorial probability-sum oracle; reflection and tighter-tail nesting also tested."
+    },
+    {
+      "area": "Discrete atoms",
+      "evidence": "Exhaustive 32 Bernoulli samples for each of two population quantiles, verifying miss probability at most the allocated two tails. A one-observation constant sample retains both unbounded ends."
+    },
+    {
+      "area": "Canonical boundaries",
+      "evidence": "Complete19999 constant replicates exercise positive/negative directional equality, both nondirectional closed-region endpoints, and exact rational offsets of1/10^20."
+    },
+    {
+      "area": "Nontrivial instability",
+      "evidence": "19499 zeros followed by500 ones at estimate1/10, alpha1/20 yield finite interval[3/20,1/5] but lower endpoint range[-4/5,1/5], so the nominal support decision is unstable."
+    },
+    {
+      "area": "Population versus finite interpolation",
+      "evidence": "For19999 draws with one zero followed by ones and alpha1/5000000, the finite upper endpoint -9999/5000000 lies beyond the raw population-quantile bound; the output range explicitly includes it."
+    },
+    {
+      "area": "Sensitivity family",
+      "evidence": "Two constant sensitivity distributions give individual point intervals1/5 and0; their enclosing interval is[0,1/5], inconclusive. Per-tail ranks use beta/(4K)."
+    },
+    {
+      "area": "Endpoint-box classifier",
+      "evidence": "Finite grid enumeration over ordered endpoint ranges in[-2,2], exact boundaries±1, interior midpoints and all three directions. Every box marked stable has a single classification among the enumerated feasible intervals."
+    },
+    {
+      "area": "Missingness/resource/type safety",
+      "evidence": "Incomplete19998 draws and one undefined draw remain NOT_ASSESSED; malformed scalar/identity/counter inputs and over-limit counts/probabilities are rejected; endpoint arithmetic beyond8192bits yields an error, not a verdict."
+    },
+    {
+      "area": "Determinism and mutation",
+      "evidence": "Input ordering does not change the result; input config/lists and global random state are unchanged. validate_config detaches nested caller state."
+    },
+    {
+      "area": "Owned policy authority",
+      "evidence": "Genuine owned plan/execution fixture denies caller delta/direction overrides and worker access. The plan's effect criterion supplies the enriched policy."
+    },
+    {
+      "area": "Durability and retained retry",
+      "evidence": "Injected prelaunch interruption observes the committed exact capsule. Subsequent caller mutation cannot change it; a changed request with the same key conflicts. Retrying the original request succeeds while checkout source access is deliberately denied."
+    },
+    {
+      "area": "Result forgery",
+      "evidence": "Two real-child resource results are modified independently: fabricated assessed/stable/support status and substituted beta. Both are rejected before completed-result publication, retaining only the admitted input capsule."
+    },
+    {
+      "area": "Legacy behavior",
+      "evidence": "No-policy owned calls retain computation schema1, no MC diagnostic or enriched policy, and the explicit unassessed boundary gate."
+    }
+  ],
+  "findings": {
+    "unresolved_substantive": [],
+    "resolved_application_defects_from_this_review": [],
+    "qualification": "No substantiated defect was found. Passing bounded probes is not a universal correctness proof, statistical calibration or confirmation of scientific readiness."
+  },
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_monte_carlo_adversarial.py -v",
+      "stage": "initial thirteen-method harness",
+      "tests": 13,
+      "failures": 0,
+      "errors": 189,
+      "seconds": 3.749,
+      "exit_code": 1,
+      "qualification": "Harness serialization error: Fraction objects were supplied to public rank/quantile APIs that require canonical rational JSON objects. The implementation rejected them. This was not a production counterexample; tests were corrected to serialize the same independently expected values."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_monte_carlo_adversarial.py -v",
+      "stage": "corrected thirteen-method pure run",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 3.794,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_monte_carlo_adversarial.py -v",
+      "stage": "expanded seventeen-method pure run",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 3.998,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_monte_carlo_adversarial.py -v",
+      "stage": "final pure plus owned independent run",
+      "tests": 21,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 82.203,
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check",
+      "stage": "after final independent run",
+      "exit_code": 0,
+      "qualification": "Line-ending conversion warnings only. New untracked files additionally require explicit JSON/AST/whitespace validation."
+    }
+  ],
+  "source_captures": {
+    "initial_mc_source": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "initial_harness": "0ac1074006a744517ae40e3c0ad9cc85f84481f2ea92cb2c4a609d01b67848d4",
+    "final_before": {
+      "tests/binding_support.py": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0",
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/test_bootstrap_runs.py": "e5554ef54ef44d7ff11d9bc61ccfa075023cd67e0c4a6a8c2c71eddfb3c4bed8",
+      "tests/test_monte_carlo.py": "b1bb31d3c21a3187e0db174eeca65b569f4f9508d533f642ab326d62c90fe146",
+      "tests/test_monte_carlo_adversarial.py": "72467c6745abc55dcba542b65f88f2947e1a4fa3296451f0eb92061687bd37a4",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "f14954924b3cddc62b1e79f355e4a1b16d463e06a65ff3cbfe5e79fcda7d244c",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "789d172ad4e4fff99f9f506c65ac9d6b0ca3fdc1bcc8e8a79702704cf2a1daf6",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "final_after": {
+      "tests/binding_support.py": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0",
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/test_bootstrap_runs.py": "e5554ef54ef44d7ff11d9bc61ccfa075023cd67e0c4a6a8c2c71eddfb3c4bed8",
+      "tests/test_monte_carlo.py": "b1bb31d3c21a3187e0db174eeca65b569f4f9508d533f642ab326d62c90fe146",
+      "tests/test_monte_carlo_adversarial.py": "72467c6745abc55dcba542b65f88f2947e1a4fa3296451f0eb92061687bd37a4",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "f14954924b3cddc62b1e79f355e4a1b16d463e06a65ff3cbfe5e79fcda7d244c",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "789d172ad4e4fff99f9f506c65ac9d6b0ca3fdc1bcc8e8a79702704cf2a1daf6",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "final_equal": true,
+    "final_file_count": 36,
+    "qualification": "The final capture contains every current application .py file plus the independent test, root MC/owned tests and two fixture helpers. Before and after hashes are identical. Earlier pure checks retained the same MC implementation; only the final run is represented as the full before/after capture."
+  },
+  "preserved_and_reviewed_artifacts": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+    "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+    "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+    "trading_researcher/MONTE_CARLO.md": "332e324c599ca88d96e81ce05baa1f7fc8bdca43bc98a09084f6ac73da9a0c18"
+  },
+  "documentation_assessment": {
+    "path": "trading_researcher/MONTE_CARLO.md",
+    "outcome": "No material contradiction found with reviewed implementation.",
+    "qualifications": [
+      "Explicit candidate and no adopted beta default",
+      "Per-claim conditional-law scope, not market or claim-family coverage",
+      "No atom coverage-equality claim",
+      "Population-quantile versus type-7 distinction",
+      "Legacy and undefined draws remain unassessed",
+      "No activation, readiness, allocation or evidence release"
+    ]
+  },
+  "remaining_boundaries": [
+    "The probability interpretation is conditional on ideal iid draws from the fixed bootstrap law. Deterministic PRNG replay and the existing approximate finite-uniform/geometric sampler do not independently establish this assumption.",
+    "No Monte Carlo coverage simulation, market-interval calibration, power/N_min derivation or empirical trading study was performed by this reviewer.",
+    "Per-claim beta does not silently become a batch-wide Monte Carlo budget. New exploratory keys and exposed retries cannot be treated as untouched confirmatory evidence.",
+    "A conservative endpoint box can decline stability even where a tighter joint analysis would prove it. Any unbounded endpoint currently declines stability by explicit candidate policy.",
+    "The pure diagnostic has bounded exact work but no internal cancellation callback. Owned execution uses process deadlines and before/after total-budget checks; parent-side validation is not preemptively killed at an exact wall-clock instant.",
+    "Stopped-prefix paths and values retain the earlier structural-only validation boundary; they do not receive numeric resampling replay or an assessed Monte Carlo diagnostic.",
+    "Owned independent fault tests use a genuine synthetic registry and actual isolated child, but stop with a segment cap. Successful complete owned-policy replay is separate parent-run evidence, not an independent command claimed here.",
+    "No new HTTP, backup/restore, power-loss or cross-runtime test was executed by this reviewer for this slice. Existing architecture mechanisms are reused but not newly certified by these tests.",
+    "Trusted host code, the operator and local filesystem remain within the existing trusted boundary. These probes do not establish a hostile same-account sandbox.",
+    "No whole-suite run is claimed by this reviewer; the parent coordinates the complete regression and any real HTTP diagnostic separately."
+  ],
+  "parent_reported_activity_not_independent_evidence": {
+    "note": "The parent reported a prior overlapping-source fixture setup failure:0 executed tests,54.267s,INPUT_OR_REPORT_CHANGED_DURING_VALIDATION. The parent classified it as a scheduling error, then obtained a stable five-method owned pass. The parent also reported a leftover temporary directory named tmpyp3nuz6_ with a lock cleanup warning and no deletion attempt. This reviewer neither executed that run nor inspected or removed that directory.",
+    "no_claim_of_verified_parent_results": true
+  },
+  "next_action": "Use the final stable tests/source capture for the parent's full regression and artifact checks. Proceed toward development-derived information targets and independent calibration without promoting this candidate to scientific authority.",
+  "activity_notes": {
+    "paid_provider_calls": false,
+    "external_messages": false,
+    "runtime_edits": false,
+    "earlier_report_edits": false,
+    "cleanup_or_permission_rejection_in_this_review": false
+  }
+}

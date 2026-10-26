@@ -1,0 +1,227 @@
+{
+  "schema": "independent-implementation-review/1",
+  "date": "2026-10-25",
+  "reviewer": "information_review independent child agent",
+  "status": "PASS_BOUNDED_RUNNER_ACCESS_AND_SOURCE_REVIEW",
+  "purpose": "Review owned single-claim final calibration, retained calculation source, count-event semantics, final-result access isolation, immutable request aliases and bounded summary serialization.",
+  "source_sha256": {
+    "trading_researcher/calibration_runs.py": "518e4ec2d709eab29010bbb618440c1c294384cb0f1132280acd6217e6d74b9a",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/study_runs.py": "0500d07632ddd6bb00d3773e7b8564e0dc2b8e2718ce6fb306256c188d5c19c7",
+    "trading_researcher/study_pipeline.py": "86929369fc5c87df952090af9009e047125f0d9b5c164d17b884b909f6f30d3d",
+    "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+    "trading_researcher/coordination.py": "91ac943f51ef2eb218b7a6a9adfd5c0f9e181f7cd4fe5a48257997672043fe37",
+    "trading_researcher/memory.py": "c24b23cdd750d58c239240beb86d3db65488489d70d38d9af6e52fd3b507ea0c",
+    "trading_researcher/storage.py": "c4948b099a77b7509371ad9f1cefff9441d48c4c71eaae7d228432faecbdd4ed"
+  },
+  "test_sha256": {
+    "tests/test_calibration_access_adversarial.py": "1f4b264488251c21d9f5229f9c2db2ea1aa194a0b1eec227a9eb0dba57970ec4"
+  },
+  "earlier_count_fixture_and_test_sha256": {
+    "tests/test_calibration_adversarial.py": "55b1e863ba4dc8d4d2fe8982880564d96d8c765d356473f9b6300d82077c7572",
+    "tests/fixtures/reference_calibration_counts.json": "c1c7d41e24b20c4b3c170e7051fb597c1e6b761712274c287d008c485ac27ae9",
+    "tests/fixtures/reference_calibration_counts.md": "04e272af558ff9b7c0c469aa5290217a9966c9a3c1807f42f0acb25d6163b303"
+  },
+  "protected_artifacts_sha256": {
+    "docs/reviews/implementation-2026-10-25/provider-usage-review.json": "a8615302f37456ef29ee203dd37d58cd1e0d54479c5bdde31fdd85fb8048350d",
+    "docs/reviews/implementation-2026-10-25/openai-provider-review.json": "de53f8bb99b37538375ed1051e8b0d522dfae6c3030dcff5da0663e17c07be09",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-baseline.json": "3adfb4f50628ebaaa2349d872422523a91a352437d05011e847347642e14e215",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+    "docs/reviews/implementation-2026-10-25/baseline.json": "0938c679b0c76b9ae3f12f9b8423445b264c30b4f59c9b37d4cc8faa40d0c879",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-results.json": "12d2bb8f83bc1d2f99779cfaed78a5bfccc486578986f0d07e412c0ba3532b57",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+    "docs/reviews/implementation-2026-10-25/binance-registry-retention.json": "344746c5c7591569cb20741d3095bb1a1ddc7e37358349486e2f409439559ad9",
+    "docs/reviews/implementation-2026-10-25/binance-source-inventory.json": "a6d7198d0b0a350e123a6e856825e46cd7a3b7e9c138c2c0ae5a57d5c8cc513b",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+    "docs/reviews/implementation-2026-10-25/bootstrap-baseline.json": "2b4dba278b2c2db67b182f594549cd843ed8d851c1579250f305eaa058dd39d1",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+    "docs/reviews/implementation-2026-10-25/data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+    "docs/reviews/implementation-2026-10-25/feature-results.json": "6edf1dcb1d4a777b85bfafc358bd4c36bac6062bf4a2f3cbfb539e20d59ed39a",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/information-planning-baseline.json": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+    "docs/reviews/implementation-2026-10-25/mc-stability-baseline.json": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+    "docs/reviews/implementation-2026-10-25/measurement-review.json": "b3477a873c0b4967152176d998ffcbf20c218ace9dd970ca1cba88698b0e51c6",
+    "docs/reviews/implementation-2026-10-25/measurement-verification.json": "ffd1c6ebdfa220ff795a36ea13a7e276b950f3d6b03c325791d13a64d58eab22",
+    "docs/reviews/implementation-2026-10-25/memory-preservation.json": "445a51780caca04b35ddd09a8addf1ea3f0fdd6ab7c8d5e09efea4ad5dbb9efc",
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-baseline.json": "bbe364a8d449fc3e09bedcf909d1f0a5da61f2260ea1d64942c4201c76bf529f",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+    "docs/reviews/implementation-2026-10-25/plan-retention-baseline.json": "3d97578b6c68d417f3e5584ee9356f3d5435e3b663208c87b567429af27db430",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+    "docs/reviews/implementation-2026-10-25/population-model-baseline.json": "6b693a0b586259879b0151cb41aefa5395d9dc82965628de125ccb5b67e2b1c7",
+    "docs/reviews/implementation-2026-10-25/population-model-progress.json": "5028d35ac7c13fa84d4937afedd03e7b75aa66e014052d14989cf457c5319a0f",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+    "docs/reviews/implementation-2026-10-25/population-model-verification.json": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b",
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c",
+    "docs/reviews/implementation-2026-10-25/study-review.json": "3d08b38a6b4a8accc07705b625762b61d9b37ccbfae38db31c72b48ecc94f742",
+    "docs/reviews/implementation-2026-10-25/study-verification.json": "1134ed19aa2c02a1ba30d6c6a00f723659b0f035b954e0d2fa0999a46b9a3e43",
+    "docs/reviews/implementation-2026-10-25/CHATGPT_PLAN_INTEGRATION_REVIEW.md": "433bbc5b46809db59c714c6083dde8e4e412c1347d36d4e31f5fbd94097573be",
+    "docs/reviews/implementation-2026-10-25/provider-identity-review.json": "fb903cf72721d1f6134055b32c9509e40685279c75575917f379b18bf8d10d8a",
+    "docs/reviews/implementation-2026-10-25/context-views-review.json": "59cf48da8f5b21fcc2d88386168cf588cc7409c6b688c2ef315706980eb6ce37",
+    "docs/reviews/implementation-2026-10-25/measurement-context-views-review.json": "b0bc16a16537b2a300c6d7a745ef2f977218df9835a87218253819666cc0374b",
+    "docs/reviews/implementation-2026-10-25/perspective-profiles-review.json": "40e042048e0008e4fe6a4272564b6655bcc3a343fdb732a2e1c8b143c5a13cf0",
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-review.json": "b39fe9dd22143fbf7c35628d7db6bf64aff0b1ee35cc75ce0990fb7f6965392d",
+    "docs/reviews/implementation-2026-10-25/calibration-count-review.json": "c1e0c08c56ac3ebaef170d7599cbc34d384a7356d42d62e56bd739b16fde146f"
+  },
+  "scope": {
+    "authored_project_files": [
+      "tests/test_calibration_access_adversarial.py",
+      "docs/reviews/implementation-2026-10-25/calibration-run-review.json"
+    ],
+    "reviewer_production_edits": false,
+    "canonical_contract_changes": false,
+    "provider_calls": false,
+    "credentials_or_real_ledgers_accessed": false,
+    "execution": "Disposable SQLite registries; synthetic trusted protected artifacts; real authenticated wrapper, worker, reporter and release RPCs; pure request-alias and full-envelope checks.",
+    "review_only": "Runner identity, source/current-version checks, orphan-recovery call path, seed checks, owned event extraction, scope and target labels were inspected. The reviewer did not independently execute the expensive full retained development/final simulation fixture or full regression."
+  },
+  "findings": [
+    {
+      "id": "FINAL-ACCESS-01",
+      "status": "VERIFIED_PROTECTED",
+      "finding": "The existing generic release mechanism could otherwise admit a released work product without inspecting protected ancestor classes. The new transitive schema guard denies both discovery and formalizer context admission through source_refs or exposure before availability/content/blob access.",
+      "cases": "Direct final input/attempt; add_source development relabeling; add_research sources and depends_on; three source-ref-only layers; real completed/released reporter work products and typed research records; a further source summary of the released output. Ordinary released development reports remain usable."
+    },
+    {
+      "id": "FINAL-ALIAS-01",
+      "status": "FIXED_VERIFIED",
+      "location": "calibration_runs.CalibrationStudies._study_existing_request",
+      "problem": "Python dictionary equality treated max_attempts=True as the frozen integer 1 and seed=False as the frozen integer 0. These invalid changed requests were accepted as aliases without fresh schema validation.",
+      "scope_of_impact": "An exact request-integrity failure; the old retained budget and seeds were not reset by these particular values.",
+      "red_evidence": "The 10-test suite produced exactly two failing subtests for the two Boolean substitutions on source SHA256 89464d02bef54b3540dd092e240e004e9d15548dbb475f3ad2190f2485141059.",
+      "fix": "The parent changed fixed-field comparison to canonical digests. Both unchanged regression cases now reject; changing only the already matched lookup IDs remains allowed."
+    },
+    {
+      "id": "FINAL-ENVELOPE-01",
+      "status": "FIXED_VERIFIED",
+      "location": "calibration_study.validate_count_envelope; calibration_runs._study_inputs",
+      "problem": "A final inventory could fit the world/cohort limits while the completed unavailable-event request exceeded the codec 1 MiB envelope. Two directional stress specifications produced 1,157,786 bytes, although the all-verified representation was 991,898 bytes.",
+      "fix": "Preparation now constructs the full worst-case unavailable representation with all cohort/world entries, the actual applicability declaration, the fixed reason and 64-character owned source identities. Canonical size validation occurs before source capture and child execution.",
+      "verified_cases": [
+        {
+          "direction": "positive",
+          "specifications": 1,
+          "worlds": 768,
+          "unavailable_request_bytes": 579212,
+          "result": "ACCEPTED"
+        },
+        {
+          "direction": "positive",
+          "specifications": 2,
+          "worlds": 1536,
+          "unavailable_request_bytes": 1157786,
+          "result": "REJECTED_BEFORE_EXECUTION"
+        },
+        {
+          "direction": "nondirectional",
+          "specifications": 1,
+          "worlds": 1280,
+          "unavailable_request_bytes": 964928,
+          "result": "ACCEPTED"
+        }
+      ],
+      "qualification": "The pure preparation helper was exercised independently; the owned call site was inspected. Every manifest remained unchanged, including all 1536 worlds in the rejected case. No scientific cells were trimmed."
+    }
+  ],
+  "scientific_and_operational_review": {
+    "events": "Replay-checked VERIFIED outcomes map support at zero, support-or-negative at the boundary, detection at twice delta, and not-covered per scenario. INFORMATION_GAP is a known no-decision only for decision criteria; its interval coverage remains unavailable. Technical and model failures remain unavailable.",
+    "family_scope": "The implemented primary_count=1 is a degenerate joint family; mixed-true-effect multi-claim calibration stays UNAVAILABLE. It does not complete the general mixed-family requirement.",
+    "target": "The target must occur in the completed development grid. A match to the selected development candidate is labeled separately from a studied sensitivity cutoff; n_min and scientific readiness remain unset/false.",
+    "identity": "Final identity binds retained case/model/scientific settings and original calculation source. Known provenance aliases, rationale/order differences and reset controls are excluded from that identity; the retained request separately freezes seed, budget, cost and applicability. This is not a general proof of semantic equivalence between different programs.",
+    "freshness": "The final namespace and complete fixed inventory precede execution; both PRNG streams and world IDs are checked against recorded development/final inventories. Recorded seed disjointness is not proof of mathematical independence or population adequacy.",
+    "source": "The original retained development calculator source is loaded for fresh generation/replay children. The host assessment source is separately pinned. Drift blocks new execution and yields NOT_ASSESSED count interpretation while the operational recovery path remains available.",
+    "accounting": "The existing reservation, settlement, retained failure, same-world retry and orphan fencing lifecycle is reused. All attempts remain in artifact/event history. Unknown orphan usage retains a full reservation and does not authorize blind replacement execution.",
+    "authentication_scope": "Owned attempt and event checks improve input provenance. They do not establish correct market models, sufficient stress applicability, independent semantics, scientific certification or capital authority."
+  },
+  "verification": {
+    "initial_access_fixture_run": {
+      "tests": 8,
+      "failures": 1,
+      "errors": 2,
+      "unittest_seconds": "3.448",
+      "exit_code": 1,
+      "cause": "Reviewer fixture omitted required created_at on trusted final artifacts and did not seal the explicit reporter batch before claim. Only fixture prerequisites were corrected; access expectations remained unchanged."
+    },
+    "corrected_access_run": {
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "unittest_seconds": "2.716",
+      "exit_code": 0
+    },
+    "alias_red_run": {
+      "tests": 10,
+      "failing_subtests": 2,
+      "unittest_seconds": "2.636",
+      "exit_code": 1
+    },
+    "final_independent_run": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_calibration_access_adversarial.py",
+        "-v"
+      ],
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "unittest_seconds": "3.427",
+      "wrapper_seconds": "4.025",
+      "exit_code": 0,
+      "source_and_test_hashes_stable": true
+    },
+    "envelope_reproduction": "Six before-fix representations were measured; the helper was then exercised on all three supported-size examples after the fix. Both scripts exited 0 with explicit expected rejection recorded, not silently ignored.",
+    "git_diff_check_exit_code": 0,
+    "line_ending_warning_count": 9,
+    "historical_artifacts_preserved": 58,
+    "parent_reported_not_independently_rerun": "Before the final two fixes, 3 actual owned integration tests passed in 132.440 seconds, including retained development 3 worlds and final 1 world with separate generation/replay. Parent follow-up calibration and study regression processes were still running when this review was written; no final result is inferred."
+  },
+  "evidence_files": {
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/access-corrected.json": "c4200e45aae9556870cc52b09da203a406ec790d364debe4efdcfb2f1123ab52",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/access-corrected.log": "d44fa006005d08e0f9a458046fc185843f77b084465c3ca69903a9323495edcd",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/access-final.json": "48bf9dd5a9c15202bf553608949ddf3ddf02ab8621be9768516daf9dfe7e36e1",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/access-final.log": "fed173d333a7f4865f30bb2fed1d1dc5094520aeeaf0426b259da9226eb40d8c",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/access-initial.json": "d4867c62217e114b89a7ea7771c248e6d45baef750d24ed2ab39728f8b0ba77f",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/access-initial.log": "ab456cb51e78939f859a1ecc4dcfad79c2d9be537ed8216b88b6ca3c0626c794",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/alias-red.json": "10689225a1dc6e777cdc0f5b50316704869eb7dadf88a99483ed48561df042fd",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/alias-red.log": "4d6dab2ba92ea2e4d5e4fcc0c0c9ea594019aeb628827c06d0e24e9095061371",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/count-envelope-after-fix.json": "1ac79dd424007e8f1460aa43c095f53ba5236c080c47d0a7a1c10ee6a3c75a72",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/count-envelope-before-fix.json": "1f5dd3c2eb81500fabe830e58346933e217d3d08a800514c2c0bf6d697875219",
+    ".trf-runtime/final-calibration-independent-review-2026-10-25/diff-check.log": "0b83848512c2c9df1700f9e441eb27438e1befa153b4d06da66ee60a444661c1"
+  },
+  "warranted_conclusion": "The final source passes the independently exercised access and alias checks and rejects the reproduced oversized final-count envelope before execution. The reviewed single-claim event mapping and source boundaries preserve the stated qualifications. This is bounded engineering evidence, not a completed 256-world scientific calibration or general calibration certificate.",
+  "not_verified": [
+    "No complete 256-world-per-scenario final simulation run was independently executed by this reviewer.",
+    "No multi-claim mixed-truth population construction, heavy-tail return law, market-model adequacy or actual stress-applicability evidence.",
+    "No mathematical PRNG independence, unseen-model-data claim, full-process calibration, information-target admission or capital authority.",
+    "Source-drift reasoning covers the implemented guard/recovery path; arbitrary future schema migration is not certified.",
+    "No full repository regression or independent replay of the parent expensive integration run."
+  ],
+  "next_action": "Preserve the reviewed source and report the parent focused regression outcomes separately. A final assessment may proceed only within its frozen complete inventory and resource envelope; all missing/failed worlds and conditional applicability remain visible."
+}

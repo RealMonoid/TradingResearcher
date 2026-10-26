@@ -1,0 +1,187 @@
+{
+  "schema": "independent-binding-review/1",
+  "profile": "bound-reference/1",
+  "reviewer": "independent memory_boundary_review agent",
+  "review_completed_at": "2026-10-25T05:16:55.090374+00:00",
+  "conclusion": "No remaining blocker found within the reviewed binding and exploratory development-computation slice.",
+  "scientific_readiness": false,
+  "scope": [
+    "Exact completed formalization and authorized source/candidate/catalog/data identity binding",
+    "Retained reference calculator and raw-feature evidence versus installed-source currency",
+    "Development-only execution and inherited exposure",
+    "Fresh retained-source execution, parent acceptance, exact output replay, resource and cancellation boundaries"
+  ],
+  "excluded_scope": [
+    "Whole-framework assessment",
+    "Scientific or natural-language equivalence certification",
+    "Assessment/corroboration evaluation authorization",
+    "Profitability, inference, PIT truth or capital authority"
+  ],
+  "authored_files": [
+    "tests/fixtures/reference_binding_cases.json",
+    "tests/fixtures/reference_binding_expectations.md",
+    "tests/test_binding_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/binding-review.json"
+  ],
+  "runtime_files_modified_by_reviewer": [],
+  "fixture_provenance": {
+    "authored_before_new_implementation_read": true,
+    "existing_expression_outcome_feature_fixtures_unchanged": true,
+    "cases": 32,
+    "numerical_cases": 6,
+    "admission_lifecycle_cases": 26,
+    "json_sha256": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+    "note_sha256": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257",
+    "expected_values": "Hand-assigned exact decimals/rationals and existing adopted semantics; no new binding implementation or reference calculator was used to derive fixture expectations.",
+    "authored_fixture_consistency": "Stdlib-only JSON, hash, source-time/value, rational arithmetic, uniqueness and whitespace checks passed with exit 0."
+  },
+  "findings": [
+    {
+      "id": "BR-01",
+      "severity": "blocking",
+      "status": "resolved",
+      "problem": "Parent acceptance re-executed compilation with current/long-lived calculator code rather than exclusively using the retained version.",
+      "reproduction": "Patch only parent binding.compile_payload to raise AssertionError. The fresh retained child compiled, but parent returned COMPILATION_GAP.",
+      "resolution": "Parent validates request/identity/typed transport bounds. AST interpretation is confined to the retained child. Completed formalization admission checks immutable authorized provenance and prior accepted assessment without re-running current-parent AST validation.",
+      "regression": "test_metadata_compilation_and_stale_parent_function_do_not_execute_parent_calculator"
+    },
+    {
+      "id": "BR-02",
+      "severity": "blocking",
+      "status": "resolved",
+      "problem": "Input selection omitted outcome-required warmup before the candidate universe, falsely reporting an available input as missing.",
+      "reproduction": "Snapshot includes 00:15 close101; candidate starts00:30; horizon1; outcome lag(close,2). Full inputs yield REVIEW_REQUIRED with value101, but prototype selected from00:30 and yielded null/missing_observation.",
+      "resolution": "Warmup includes max(decision lookback, outcome lookback minus horizon), bounded to the same snapshot and resource limit. Existing REVIEW_REQUIRED classification is preserved.",
+      "regression": "test_outcome_review_gap_keeps_available_prior_input"
+    },
+    {
+      "id": "BR-03",
+      "severity": "blocking",
+      "status": "resolved",
+      "problem": "A malformed execution response could publish a forged contrast or a truncated case blob while claiming complete descriptive execution.",
+      "reproduction": "Actual retained execution followed by transport mutation: effect999 accepted, or one-line case file with updated hash accepted despite a complete three-case header.",
+      "resolution": "A separate sequential fresh retained-source process replays the exact hash-bound selected rows and compares the entire header, contrast and every canonical case byte. Parent verifies acknowledgement/request/source/runtime identities before publication.",
+      "regression": "test_malformed_execution_response_cannot_publish_success"
+    },
+    {
+      "id": "BR-04",
+      "severity": "blocking",
+      "status": "resolved",
+      "problem": "The initial consistency-only verifier accepted impossible non-eligible states when counts, contrast and blob hashes were harmonized.",
+      "reproduction": "Change first baseline case ELIGIBLE to SCOPE_FALSE while scope remains true and outcome/trace remain present; recomputed contrast changed1/2 to0 and the first verifier accepted.",
+      "resolution": "Exact deterministic replay replaces a duplicated partial state validator. It rejects both impossible state transitions and internally consistent fabricated values.",
+      "regression": "test_verifier_rejects_self_consistent_contrast_with_impossible_scope_state"
+    }
+  ],
+  "checks": [
+    {
+      "label": "Targeted pre-fix red run",
+      "command": "PowerShell here-string piped to python -B -",
+      "script": "import sys,unittest\nsys.path.insert(0,'tests')\nimport test_binding_adversarial as tests\noriginal=tests.BindingAdversarialTests.setUpClass.__func__\ndef setup(cls):\n original(cls)\n print('FIXTURE_CAPTURE_READY',flush=True)\ntests.BindingAdversarialTests.setUpClass=classmethod(setup)\nsuite=unittest.TestSuite([\n tests.BindingAdversarialTests('test_metadata_compilation_and_stale_parent_function_do_not_execute_parent_calculator'),\n tests.BindingAdversarialTests('test_malformed_execution_response_cannot_publish_success'),\n tests.BindingInputWindowTests('test_outcome_review_gap_keeps_available_prior_input')])\nresult=unittest.TextTestRunner(verbosity=2).run(suite)\nraise SystemExit(not result.wasSuccessful())",
+      "methods": 3,
+      "failures": 4,
+      "errors": 0,
+      "duration_seconds": 67.364,
+      "exit_code": 1,
+      "outcome": "Expected failures for BR-01, BR-02 and both BR-03 variants.",
+      "pre_fix_source_hashes_captured": false
+    },
+    {
+      "label": "First full adversarial run after the first three fixes",
+      "command": "python -B -m unittest discover -s tests -p test_binding_adversarial.py -v",
+      "methods": 13,
+      "failures": 0,
+      "errors": 2,
+      "duration_seconds": 85.391,
+      "exit_code": 1,
+      "outcome": "Runtime regressions passed. Two test-harness errors: SQLite immutability trigger prevented attempted UPDATE/restore, and an intentionally incomplete fixture retained its worker lease. Harness corrected to assert immutable-storage rejection and block incomplete fixture attempts through the public operation."
+    },
+    {
+      "label": "Final independent adversarial run",
+      "command": "python -B -m unittest discover -s tests -p test_binding_adversarial.py -v",
+      "methods": 14,
+      "failures": 0,
+      "errors": 0,
+      "duration_seconds": 80.529,
+      "exit_code": 0,
+      "outcome": "PASS, including BR-04 and repaired harness."
+    },
+    {
+      "label": "Literal discovery-role admission supplement",
+      "command": "PowerShell here-string piped to python -B -",
+      "script": "import tempfile\nfrom unittest.mock import patch\nfrom trading_researcher.coordination import Broker,Denied\nwith tempfile.TemporaryDirectory() as directory:\n broker=Broker(directory)\n try:\n  worker=broker.call(broker.admin_token,'register_worker',name='binding-discovery-negative',role='discovery',capabilities=[])['token']\n  with patch.object(broker,'_artifact',side_effect=AssertionError('Unauthorized artifact read')):\n   for op,args in [('compile_hypothesis',{}),('execute_development',{'compiled_id':'not-readable'})]:\n    try:broker.call(worker,op,**args)\n    except Denied:print(op+': discovery DENIED before artifact read')\n    else:raise AssertionError('Unauthorized operation accepted')\n finally:broker.close()",
+      "operations": 2,
+      "exit_code": 0,
+      "outcome": "Discovery capability denied compile and execute before artifact reads. Main unittest file also exercises formalizer-capability denial."
+    }
+  ],
+  "coverage": {
+    "admission_targets": 26,
+    "tests_file": "tests/test_binding_adversarial.py",
+    "execution_notes": [
+      "Grouped tests execute every listed control/override/response variant; case-name counting alone is not used as proof.",
+      "Main fixture creates genuine raw-feature/reference certificates and completed formalizations in an owned temporary registry.",
+      "Protected partition records are injected through trusted test setup solely to reach denial-before-load; no new formalizer capability is claimed.",
+      "Protected development-wrapper probe exercises actual data admission before blob verification, rather than inventing a ban on all candidate genealogy.",
+      "Installed-source staleness is simulated by a reader mismatch while retained package bytes remain intact.",
+      "Feature-package corruption changes actual owned temporary blob bytes and restores them afterward.",
+      "Missing reference package and runtime mismatch are controlled failure injection at their existing dependency seams, not replacement of Python binaries.",
+      "Original/compiled-byte mutations are rejected by the actual SQLite immutable-record trigger; no trigger is disabled.",
+      "Child response mutations wrap actual execution. Timeout, stdout/stderr overflow and cancellation use real owned processes and assert reap/interruption.",
+      "Compilation row-loader denial is executable; absence of outcome computation in the fresh compile child is additionally established by reviewed source/payload closure.",
+      "Root numerical/CLI/backup suite outcomes are separate from this independent 14-method command and are not claimed here as independently run."
+    ]
+  },
+  "source_evidence": {
+    "initial_capture_timing": "Captured while the final independent test process was running, not before process startup. Implementer declared a stable runtime source window; independent end comparison follows.",
+    "initial_capture": "2026-10-25T05:14:15.027700+00:00",
+    "after_capture": "2026-10-25T05:16:55.090374+00:00",
+    "all_14_tracked_hashes_unchanged": true,
+    "tracked_files": {
+      "trading_researcher/binding.py": "fd0f57090f6c0964a4c53915f5cb2a89232868e5618535f1954d86b7cbf2f6fb",
+      "trading_researcher/coordination.py": "781fb9ca4ab790688f749fea7cfbe7e5ea78582e8eaf5cbee4ba551e049f8cc8",
+      "trading_researcher/storage.py": "9e8fd3991e053970c0e82663ba13ef3f9c60a866983f4d5645620ad60d5e421f",
+      "trading_researcher/memory.py": "f9a067a8c2f2b4f1686a4848044b4d02fc83613f1d9d433d7af20addbf3a0981",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/formalization.py": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "tests/test_binding_adversarial.py": "459876e5433449c172beb066791410084cbc87e0fdfc1eaa69ce8a7b6a092997",
+      "tests/binding_support.py": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0",
+      "tests/fixtures/reference_binding_cases.json": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+      "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257"
+    },
+    "retained_driver_package_capture_timing": "After final independent run; actual fresh-child source closure also verifies its own captured footprint during execution.",
+    "retained_driver_package_capture": "2026-10-25T05:17:28.995832+00:00",
+    "retained_driver_package_files": {
+      "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+      "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+      "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+      "tests/test_expressions.py": "a927ef0a44c0f81945ffa6e0f5f9858ac526838da5d01d80f6c04f641d52ba02",
+      "tests/test_outcomes.py": "2ecaa33fa2b76792ed6df26924d6f43280138123ed93789d88108437b0237384",
+      "trading_researcher/EXPRESSIONS.md": "522a810ec667ba2e4cdbf223d0446f196349484bb5119deeaf121d27bcfb5962",
+      "trading_researcher/OUTCOMES.md": "633f06660ca6199c6e74283b783ecfc336ffce9acf058da4272c60e7699fac0a",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/binding.py": "fd0f57090f6c0964a4c53915f5cb2a89232868e5618535f1954d86b7cbf2f6fb",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6"
+    },
+    "reviewed_binding_document_sha256": "6829d05bd8ddff8ec753217e608baaa159cd0646f96ba4cd6f7dd31866cd7de8"
+  },
+  "remaining_limits": [
+    "These are software/authority-boundary checks, not scientific data acceptance, natural-language equivalence, calibrated inference, independent confirmation, PIT truth or market evidence.",
+    "No real LLM or real-market hypothesis run was performed in this review.",
+    "Maximum-size throughput, memory/disk consumption, near-envelope output admission and power-loss durability were not benchmarked.",
+    "Exact verification repeats bounded computation on the same selected rows; it is a transport/correctness check, not an independent data source or scientific estimator.",
+    "Per-child lifetime limits exclude parent input selection/copying and final integrity transactions.",
+    "Python distributions are fingerprinted rather than archived; incompatible or missing runtimes remain a gap.",
+    "The trusted local operator, host code and OS account remain outside the capability boundary; this is not an OS sandbox.",
+    "Broader composition/dependency certification, scientific freeze/allocation, protected outcome evaluation and live-capital authority remain unimplemented or separately gated."
+  ],
+  "documentation_review": "BINDING.md accurately separates retained-version evidence, descriptive development authority and future scientific work. Clarified that completed assessment supplies parameter-origin provenance and parent input selection/copying occurs outside child lifetime."
+}

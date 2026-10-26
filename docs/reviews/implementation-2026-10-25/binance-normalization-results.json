@@ -1,0 +1,1367 @@
+{
+  "schema": "binance-normalization-results/1",
+  "date": "2026-10-25",
+  "status": "STRUCTURE_VERIFIED_WITH_QUALIFICATIONS",
+  "registry": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-normalized-registry-2026-10-25",
+  "scenario": {
+    "schema": "binance-availability-scenario/1",
+    "delay_seconds": 900,
+    "basis": "assumed",
+    "purpose": "One-grid delayed engineering scenario for the adopted historical source profile; not a measured provider latency or scientific default.",
+    "historical_publication_time": null,
+    "scientific_readiness": false,
+    "chosen_by": "operator implementation continuation within authorized infrastructure scope",
+    "qualification": "Store uncertainty as uncertainty. This choice does not certify PIT availability, approve scientific use, or alter scientific contracts. Alternative delays require separately recorded scenarios; preserve prior rows and exposure."
+  },
+  "partitions": [
+    {
+      "partition": "development",
+      "snapshot_ref": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+      "normalization_ref": "f594c9e3de021e72a788865bd757f9a9ecc17b4373c3002fe5fb5db574e63426",
+      "code_snapshot_ref": "e4ba68ec7ee0a0c97ff147d9e098427b0409ec958f252c65ce11f5ce5ba23543",
+      "data_class": "development",
+      "coverage": {
+        "expected_rows": 280512,
+        "late_samples": {
+          "BTCUSDT.close@binance-spot-15m-v1": 140103,
+          "BTCUSDT.high@binance-spot-15m-v1": 140103,
+          "BTCUSDT.low@binance-spot-15m-v1": 140103,
+          "BTCUSDT.open@binance-spot-15m-v1": 140103,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 140103,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 140103,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 140103,
+          "BTCUSDT.trades@binance-spot-15m-v1": 140103,
+          "BTCUSDT.volume@binance-spot-15m-v1": 140103,
+          "ETHUSDT.close@binance-spot-15m-v1": 140103,
+          "ETHUSDT.high@binance-spot-15m-v1": 140103,
+          "ETHUSDT.low@binance-spot-15m-v1": 140103,
+          "ETHUSDT.open@binance-spot-15m-v1": 140103,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 140103,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 140103,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 140103,
+          "ETHUSDT.trades@binance-spot-15m-v1": 140103,
+          "ETHUSDT.volume@binance-spot-15m-v1": 140103
+        },
+        "missing_features": {
+          "BTCUSDT.close@binance-spot-15m-v1": 140103,
+          "BTCUSDT.high@binance-spot-15m-v1": 140103,
+          "BTCUSDT.low@binance-spot-15m-v1": 140103,
+          "BTCUSDT.open@binance-spot-15m-v1": 140103,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 140103,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 140103,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 140103,
+          "BTCUSDT.trades@binance-spot-15m-v1": 140103,
+          "BTCUSDT.volume@binance-spot-15m-v1": 140103,
+          "ETHUSDT.close@binance-spot-15m-v1": 140103,
+          "ETHUSDT.high@binance-spot-15m-v1": 140103,
+          "ETHUSDT.low@binance-spot-15m-v1": 140103,
+          "ETHUSDT.open@binance-spot-15m-v1": 140103,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 140103,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 140103,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 140103,
+          "ETHUSDT.trades@binance-spot-15m-v1": 140103,
+          "ETHUSDT.volume@binance-spot-15m-v1": 140103
+        },
+        "missing_rows": 306,
+        "null_values": {
+          "BTCUSDT.close@binance-spot-15m-v1": 8,
+          "BTCUSDT.high@binance-spot-15m-v1": 8,
+          "BTCUSDT.low@binance-spot-15m-v1": 8,
+          "BTCUSDT.open@binance-spot-15m-v1": 8,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 8,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 8,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 8,
+          "BTCUSDT.trades@binance-spot-15m-v1": 8,
+          "BTCUSDT.volume@binance-spot-15m-v1": 8,
+          "ETHUSDT.close@binance-spot-15m-v1": 8,
+          "ETHUSDT.high@binance-spot-15m-v1": 8,
+          "ETHUSDT.low@binance-spot-15m-v1": 8,
+          "ETHUSDT.open@binance-spot-15m-v1": 8,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 8,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 8,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 8,
+          "ETHUSDT.trades@binance-spot-15m-v1": 8,
+          "ETHUSDT.volume@binance-spot-15m-v1": 8
+        },
+        "observed_rows": 280206
+      },
+      "selected_invalid_rows": 16,
+      "outside_profile_source_months": [
+        "2019-12"
+      ],
+      "selection_counts": [
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-01",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-02",
+          "selected": 2757,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-03",
+          "selected": 2968,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-04",
+          "selected": 2870,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-05",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-06",
+          "selected": 2866,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-07",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-08",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-09",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-10",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-11",
+          "selected": 2876,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-12",
+          "selected": 2957,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-01",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-02",
+          "selected": 2683,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-03",
+          "selected": 2970,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-04",
+          "selected": 2852,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-05",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-06",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-07",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-08",
+          "selected": 2958,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-09",
+          "selected": 2872,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-10",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-11",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-12",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-01",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-02",
+          "selected": 2688,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-03",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-04",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-05",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-06",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-07",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-08",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-09",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-10",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-11",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-12",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-01",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-02",
+          "selected": 2688,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-03",
+          "selected": 2971,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-04",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-05",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-06",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-07",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-08",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-09",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-10",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-11",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 1,
+          "before": 0,
+          "month": "2023-12",
+          "selected": 2975,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-01",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-02",
+          "selected": 2757,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-03",
+          "selected": 2968,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-04",
+          "selected": 2870,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-05",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-06",
+          "selected": 2866,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-07",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-08",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-09",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-10",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-11",
+          "selected": 2876,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2020-12",
+          "selected": 2957,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-01",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-02",
+          "selected": 2683,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-03",
+          "selected": 2970,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-04",
+          "selected": 2852,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-05",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-06",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-07",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-08",
+          "selected": 2958,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-09",
+          "selected": 2872,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-10",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-11",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2021-12",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-01",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-02",
+          "selected": 2688,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-03",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-04",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-05",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-06",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-07",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-08",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-09",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-10",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-11",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2022-12",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-01",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-02",
+          "selected": 2688,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-03",
+          "selected": 2971,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-04",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-05",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-06",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-07",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-08",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-09",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-10",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2023-11",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 1,
+          "before": 0,
+          "month": "2023-12",
+          "selected": 2975,
+          "symbol": "ETHUSDT"
+        }
+      ],
+      "delay_seconds": 900,
+      "availability_basis": "assumed",
+      "scientific_readiness": false,
+      "exit_code": 0,
+      "duration_ms": 50664
+    },
+    {
+      "partition": "assessment",
+      "snapshot_ref": "6a122807e671e49790cd81d6c469e9a68f6f86bf634b75b5a5677def7c1e79dc",
+      "normalization_ref": "f19e003f56479f2fcc1373663a70e202ce3639335ca5f89517d233eaffab5e30",
+      "code_snapshot_ref": "52b02fa6f8aeb8007cd6eea807845beffba1ee2f888fb0b6b8cd20d865aeb8d9",
+      "data_class": "assessment",
+      "coverage": {
+        "expected_rows": 70272,
+        "late_samples": {
+          "BTCUSDT.close@binance-spot-15m-v1": 35136,
+          "BTCUSDT.high@binance-spot-15m-v1": 35136,
+          "BTCUSDT.low@binance-spot-15m-v1": 35136,
+          "BTCUSDT.open@binance-spot-15m-v1": 35136,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 35136,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 35136,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 35136,
+          "BTCUSDT.trades@binance-spot-15m-v1": 35136,
+          "BTCUSDT.volume@binance-spot-15m-v1": 35136,
+          "ETHUSDT.close@binance-spot-15m-v1": 35136,
+          "ETHUSDT.high@binance-spot-15m-v1": 35136,
+          "ETHUSDT.low@binance-spot-15m-v1": 35136,
+          "ETHUSDT.open@binance-spot-15m-v1": 35136,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 35136,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 35136,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 35136,
+          "ETHUSDT.trades@binance-spot-15m-v1": 35136,
+          "ETHUSDT.volume@binance-spot-15m-v1": 35136
+        },
+        "missing_features": {
+          "BTCUSDT.close@binance-spot-15m-v1": 35136,
+          "BTCUSDT.high@binance-spot-15m-v1": 35136,
+          "BTCUSDT.low@binance-spot-15m-v1": 35136,
+          "BTCUSDT.open@binance-spot-15m-v1": 35136,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 35136,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 35136,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 35136,
+          "BTCUSDT.trades@binance-spot-15m-v1": 35136,
+          "BTCUSDT.volume@binance-spot-15m-v1": 35136,
+          "ETHUSDT.close@binance-spot-15m-v1": 35136,
+          "ETHUSDT.high@binance-spot-15m-v1": 35136,
+          "ETHUSDT.low@binance-spot-15m-v1": 35136,
+          "ETHUSDT.open@binance-spot-15m-v1": 35136,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 35136,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 35136,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 35136,
+          "ETHUSDT.trades@binance-spot-15m-v1": 35136,
+          "ETHUSDT.volume@binance-spot-15m-v1": 35136
+        },
+        "missing_rows": 0,
+        "null_values": {
+          "BTCUSDT.close@binance-spot-15m-v1": 0,
+          "BTCUSDT.high@binance-spot-15m-v1": 0,
+          "BTCUSDT.low@binance-spot-15m-v1": 0,
+          "BTCUSDT.open@binance-spot-15m-v1": 0,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 0,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 0,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 0,
+          "BTCUSDT.trades@binance-spot-15m-v1": 0,
+          "BTCUSDT.volume@binance-spot-15m-v1": 0,
+          "ETHUSDT.close@binance-spot-15m-v1": 0,
+          "ETHUSDT.high@binance-spot-15m-v1": 0,
+          "ETHUSDT.low@binance-spot-15m-v1": 0,
+          "ETHUSDT.open@binance-spot-15m-v1": 0,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 0,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 0,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 0,
+          "ETHUSDT.trades@binance-spot-15m-v1": 0,
+          "ETHUSDT.volume@binance-spot-15m-v1": 0
+        },
+        "observed_rows": 70272
+      },
+      "selected_invalid_rows": 0,
+      "outside_profile_source_months": [],
+      "selection_counts": [
+        {
+          "after": 0,
+          "before": 2975,
+          "month": "2023-12",
+          "selected": 1,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-01",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-02",
+          "selected": 2784,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-03",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-04",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-05",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-06",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-07",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-08",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-09",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-10",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-11",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 1,
+          "before": 0,
+          "month": "2024-12",
+          "selected": 2975,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 2975,
+          "month": "2023-12",
+          "selected": 1,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-01",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-02",
+          "selected": 2784,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-03",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-04",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-05",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-06",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-07",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-08",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-09",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-10",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2024-11",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 1,
+          "before": 0,
+          "month": "2024-12",
+          "selected": 2975,
+          "symbol": "ETHUSDT"
+        }
+      ],
+      "delay_seconds": 900,
+      "availability_basis": "assumed",
+      "scientific_readiness": false,
+      "exit_code": 0,
+      "duration_ms": 17540
+    },
+    {
+      "partition": "corroboration",
+      "snapshot_ref": "a37ebd4ed47798321d6385b6ae2e36890d4bf6f5f1b970d63af823da088fa9e4",
+      "normalization_ref": "024f73e68219ef0346a8517d9579da7ce212e09cb7359d05b78fe513d0b7484d",
+      "code_snapshot_ref": "1b310433c0dde3e62ef50b2d2ccd90ff9f08339f8700854c1608e937689db77b",
+      "data_class": "assessment",
+      "coverage": {
+        "expected_rows": 70080,
+        "late_samples": {
+          "BTCUSDT.close@binance-spot-15m-v1": 35040,
+          "BTCUSDT.high@binance-spot-15m-v1": 35040,
+          "BTCUSDT.low@binance-spot-15m-v1": 35040,
+          "BTCUSDT.open@binance-spot-15m-v1": 35040,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 35040,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 35040,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 35040,
+          "BTCUSDT.trades@binance-spot-15m-v1": 35040,
+          "BTCUSDT.volume@binance-spot-15m-v1": 35040,
+          "ETHUSDT.close@binance-spot-15m-v1": 35040,
+          "ETHUSDT.high@binance-spot-15m-v1": 35040,
+          "ETHUSDT.low@binance-spot-15m-v1": 35040,
+          "ETHUSDT.open@binance-spot-15m-v1": 35040,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 35040,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 35040,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 35040,
+          "ETHUSDT.trades@binance-spot-15m-v1": 35040,
+          "ETHUSDT.volume@binance-spot-15m-v1": 35040
+        },
+        "missing_features": {
+          "BTCUSDT.close@binance-spot-15m-v1": 35040,
+          "BTCUSDT.high@binance-spot-15m-v1": 35040,
+          "BTCUSDT.low@binance-spot-15m-v1": 35040,
+          "BTCUSDT.open@binance-spot-15m-v1": 35040,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 35040,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 35040,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 35040,
+          "BTCUSDT.trades@binance-spot-15m-v1": 35040,
+          "BTCUSDT.volume@binance-spot-15m-v1": 35040,
+          "ETHUSDT.close@binance-spot-15m-v1": 35040,
+          "ETHUSDT.high@binance-spot-15m-v1": 35040,
+          "ETHUSDT.low@binance-spot-15m-v1": 35040,
+          "ETHUSDT.open@binance-spot-15m-v1": 35040,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 35040,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 35040,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 35040,
+          "ETHUSDT.trades@binance-spot-15m-v1": 35040,
+          "ETHUSDT.volume@binance-spot-15m-v1": 35040
+        },
+        "missing_rows": 0,
+        "null_values": {
+          "BTCUSDT.close@binance-spot-15m-v1": 0,
+          "BTCUSDT.high@binance-spot-15m-v1": 0,
+          "BTCUSDT.low@binance-spot-15m-v1": 0,
+          "BTCUSDT.open@binance-spot-15m-v1": 0,
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": 0,
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": 0,
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": 0,
+          "BTCUSDT.trades@binance-spot-15m-v1": 0,
+          "BTCUSDT.volume@binance-spot-15m-v1": 0,
+          "ETHUSDT.close@binance-spot-15m-v1": 0,
+          "ETHUSDT.high@binance-spot-15m-v1": 0,
+          "ETHUSDT.low@binance-spot-15m-v1": 0,
+          "ETHUSDT.open@binance-spot-15m-v1": 0,
+          "ETHUSDT.quote_volume@binance-spot-15m-v1": 0,
+          "ETHUSDT.taker_base_volume@binance-spot-15m-v1": 0,
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1": 0,
+          "ETHUSDT.trades@binance-spot-15m-v1": 0,
+          "ETHUSDT.volume@binance-spot-15m-v1": 0
+        },
+        "observed_rows": 70080
+      },
+      "selected_invalid_rows": 0,
+      "outside_profile_source_months": [],
+      "selection_counts": [
+        {
+          "after": 0,
+          "before": 2975,
+          "month": "2024-12",
+          "selected": 1,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-01",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-02",
+          "selected": 2688,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-03",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-04",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-05",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-06",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-07",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-08",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-09",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-10",
+          "selected": 2976,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-11",
+          "selected": 2880,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 1,
+          "before": 0,
+          "month": "2025-12",
+          "selected": 2975,
+          "symbol": "BTCUSDT"
+        },
+        {
+          "after": 0,
+          "before": 2975,
+          "month": "2024-12",
+          "selected": 1,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-01",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-02",
+          "selected": 2688,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-03",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-04",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-05",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-06",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-07",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-08",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-09",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-10",
+          "selected": 2976,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 0,
+          "before": 0,
+          "month": "2025-11",
+          "selected": 2880,
+          "symbol": "ETHUSDT"
+        },
+        {
+          "after": 1,
+          "before": 0,
+          "month": "2025-12",
+          "selected": 2975,
+          "symbol": "ETHUSDT"
+        }
+      ],
+      "delay_seconds": 900,
+      "availability_basis": "assumed",
+      "scientific_readiness": false,
+      "exit_code": 0,
+      "duration_ms": 17563
+    }
+  ],
+  "backup_and_direct_sample_verification": {
+    "schema": "binance-normalization-replay/1",
+    "status": "PASS",
+    "registry": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-normalized-registry-2026-10-25",
+    "backup": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-normalized-backup-2026-10-25",
+    "restored": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-normalized-restored-2026-10-25",
+    "source_counts": {
+      "artifacts": 974,
+      "blobs": 752,
+      "blob_bytes": 631700486
+    },
+    "restored_counts": {
+      "artifacts": 974,
+      "blobs": 752,
+      "blob_bytes": 631700486
+    },
+    "boundary_and_invalid_sample_checks": [
+      {
+        "partition": "development",
+        "rows_counted": 280206,
+        "all_null_rows": 16,
+        "independently_compared_boundary_or_invalid_rows": 20,
+        "price_values_printed": false,
+        "status": "PASS"
+      },
+      {
+        "partition": "assessment",
+        "rows_counted": 70272,
+        "all_null_rows": 0,
+        "independently_compared_boundary_or_invalid_rows": 4,
+        "price_values_printed": false,
+        "status": "PASS"
+      },
+      {
+        "partition": "corroboration",
+        "rows_counted": 70080,
+        "all_null_rows": 0,
+        "independently_compared_boundary_or_invalid_rows": 4,
+        "price_values_printed": false,
+        "status": "PASS"
+      }
+    ],
+    "snapshot_bundles_compared": 3,
+    "restored_integrity": {
+      "status": "PASS",
+      "events": 976,
+      "foreign_keys": true,
+      "synchronous": "FULL",
+      "schema_version": 1,
+      "scope": "local coordination and research memory integrity only",
+      "research_memory": {
+        "status": "PASS",
+        "records": 0,
+        "version": "research-memory/1",
+        "scientific_authority": false
+      },
+      "blobs": {
+        "status": "PASS",
+        "committed": 752,
+        "quarantined": [],
+        "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+      }
+    },
+    "scope": "Complete byte and record restore plus independent sampled numerical/time mapping; no inference, PIT truth or scientific acceptance"
+  },
+  "scientific_readiness": false,
+  "exposure": "Host/assistant inspected source identities, coverage, null counts and boundary diagnostics. The additional raw CSV/Fraction comparison printed no numerical market prices and no empirical hypothesis results. This does not establish model-unseen history or confirmation eligibility.",
+  "scope": "Decision-time data organization from exact retained sources; all scientific and PIT qualifications persist."
+}

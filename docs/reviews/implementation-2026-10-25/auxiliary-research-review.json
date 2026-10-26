@@ -1,0 +1,298 @@
+{
+  "schema": "independent-auxiliary-research-review/1",
+  "review_date": "2026-10-25",
+  "reviewer": "Independent memory_boundary_review agent",
+  "purpose": "Review shared original-epoch budgets and the provider-neutral auxiliary formalization/semantic-review path, including private input transport, durable accounting, retained failures and non-scientific authority boundaries.",
+  "conclusion": {
+    "status": "NO_REMAINING_BLOCKER_FOUND_WITHIN_REVIEWED_SCOPE",
+    "finding": "After fixing definition provenance admission, the exercised auxiliary path preserves original epoch caps and deadlines, exact request/output binding, separate authenticated reviewer identity, private transcripts and retained failed responses. It records model assertions while always leaving actual independent model review UNVERIFIED and scientific readiness false.",
+    "scientific_certificate": false,
+    "actual_independent_semantic_review_performed": false
+  },
+  "reviewed_files": [
+    "trading_researcher/auxiliary.py",
+    "trading_researcher/research_calls.py",
+    "trading_researcher/researcher.py",
+    "trading_researcher/formalization.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/checks.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/storage.py",
+    "tests/auxiliary_support.py",
+    "tests/test_auxiliary_research.py",
+    "tests/test_auxiliary_pipeline.py"
+  ],
+  "reviewer_changed_files": [
+    {
+      "path": "tests/test_auxiliary_adversarial.py",
+      "change": "New independent suite with sixteen methods, including four malformed-review subcases."
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json",
+      "change": "New independent audit record. Prior reviews remain unchanged."
+    }
+  ],
+  "runtime_files_modified_by_reviewer": [],
+  "existing_fixtures_modified_by_reviewer": [],
+  "implementation_boundary": {
+    "roles": "Epoch-bound formalization/v1 and semantic-review/v1 use one scoped formalizer principal each. Actual formalization creator and semantic-review principal must differ.",
+    "budget": "Per-job auxiliary profiles select prompt/model/generation/output/timeout/retry settings. Original epoch mode, currency, aggregate calls/tokens/cost and original creation time remain authoritative. An auxiliary profile cannot add global budget fields.",
+    "transport": "A reservation must match exactly two canonical messages, the frozen system prompt and canonical typed packet, with tools=[]. Provider calls reserve before dispatch. Unknown usage remains charged at the original bounds.",
+    "completion": "Completed auxiliary output must belong to this exact epoch/job/generation/owner, match the exact input packet and be timely with valid accounting. A completed/rejected model output cannot be selectively retried as a transport failure.",
+    "semantic_record": "Host-owned semantic-review-record/1 derives its report and identity from the owned target and recorded response. It binds request/response IDs and original mapping coverage. actual_independent_model_review remains UNVERIFIED and scientific_readiness false, even when a scripted provider calls itself live and claims faithful.",
+    "retention": "Timeout, expiry, cancellation, refusals and malformed public replies remain in call history; operational blockage or missing empirical evidence is not a market failure.",
+    "definition_provenance": "Every selected owned definition binds the exact catalog input reference; a represented string data_snapshot_ref must also occur in its retained input_refs. Required feature names and type/unit must agree with the target catalog.",
+    "scope": "No scientific freeze, allocation, calibration, semantic equivalence proof, protected assessment outcome access, D087 event, profitability or capital authority is established."
+  },
+  "resolved_findings": [
+    {
+      "id": "AUX-01",
+      "severity": "P1",
+      "title": "Genuine feature definitions could be rebound to a different catalog or represented data snapshot",
+      "initial_source": {
+        "path": "trading_researcher/auxiliary.py",
+        "sha256": "d13c36b51f72c9d8d320493f104f41142f018ab5e924a70ec14bb62f9e6ecfdf",
+        "location": "_auxiliary_packet_for_spec; prior to check_definition_origins"
+      },
+      "reproduction": "Use a genuine host-issued feature-definitions/1 from the owned synthetic normalization/certification fixture. Register the same typed catalog body in a distinct development provenance envelope, then freeze a formalizer context with that catalog and the old definition. _auxiliary_packet_for_spec accepted the mismatch; the independent assertRaises(Invalid) failed.",
+      "impact": "Ownership and type/name compatibility alone did not bind meanings and availability scenario to the particular retained catalog/snapshot presented for review.",
+      "discovery": "Parent flagged the missing input_refs check during parallel static review; the independent agent reproduced the wrong-catalog acceptance with genuine owned artifacts before the fix.",
+      "resolution": "The parent added check_definition_origins to both roles for exact catalog membership, and to semantic review for a represented string snapshot identity, preserving type/unit and used-feature coverage checks.",
+      "fixed_location": {
+        "path": "trading_researcher/auxiliary.py",
+        "line": 37
+      },
+      "regressions": [
+        "test_genuine_definition_cannot_be_rebound_to_another_catalog_envelope",
+        "test_genuine_definition_cannot_be_rebound_to_another_owned_snapshot"
+      ],
+      "evidence_qualification": "The original wrong-catalog assertion was directly red. The wrong-snapshot test did not reach its assertion in the initial run because an independent test harness FIFO cleanup error blocked later claims. It passed after both the runtime provenance fix and harness repair; do not claim a separately observed snapshot red."
+    }
+  ],
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_auxiliary_adversarial.py -k AuxiliaryAdmissionAdversarialTests -v",
+      "outcome": "PASS",
+      "tests": 7,
+      "unittest_seconds": 3.862,
+      "exit_code": 0,
+      "qualification": "Initial fast subset before provenance regression additions/fix; no before/after hash claim for this preliminary command."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_researcher.py -v",
+      "outcome": "PASS",
+      "tests": 10,
+      "unittest_seconds": 8.869,
+      "exit_code": 0,
+      "qualification": "Existing discovery-loop regression suite after dispatch-deadline changes and before the later auxiliary definition-provenance fix. research_calls.py and researcher.py were unchanged by that later fix. Includes actual isolated timeout/cancellation cleanup, transport retries, privacy and malformed/refused replies; no paid provider."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_auxiliary_adversarial.py -v",
+      "outcome": "RED",
+      "tests": 16,
+      "failures": 1,
+      "errors": 10,
+      "unittest_seconds": 55.21,
+      "exit_code": 1,
+      "qualification": "One genuine wrong-catalog assertion failure. Ten cascading harness errors came from leaving an intentionally unclaimed ready job in the coordinator's global FIFO; later workers correctly could not skip it. These are not ten runtime findings. The test cleanup was corrected to use authenticated claim/block operations, with read-only state inspection and no raw database mutation.",
+      "source_capture": "red_before_hashes"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_auxiliary_adversarial.py -v",
+      "outcome": "PASS",
+      "tests": 16,
+      "failures": 0,
+      "errors": 0,
+      "unittest_seconds": 58.883,
+      "exit_code": 0,
+      "source_capture": "final_before_hashes and final_after_hashes",
+      "coverage": "Seven fast budget/admission methods and nine owned-integration methods. One genuine owned feature/reference fixture setup is shared; all provider replies are manual or isolated scripted fixtures."
+    },
+    {
+      "command": "git diff --check",
+      "outcome": "PASS",
+      "exit_code": 0,
+      "qualification": "Run after the final test execution. Git emitted line-ending conversion warnings only; no whitespace error. This tracked-diff check alone does not validate untracked test/audit files."
+    }
+  ],
+  "independent_test_coverage": [
+    {
+      "method": "test_exact_two_message_packet_and_type_strict_profile",
+      "covers": "Boolean-for-integer generation parameter substitution, appended message, changed canonical user packet and nonempty tools are rejected before another reservation."
+    },
+    {
+      "method": "test_original_token_and_cost_caps_are_not_auxiliary_allowances",
+      "covers": "Discovery's already consumed tokens count against the auxiliary reservation; the original zero cost cap cannot become a fresh per-role allowance."
+    },
+    {
+      "method": "test_dispatch_timeout_retains_late_response_without_candidate_authority",
+      "covers": "At the exact call deadline, with lease still live, receipt is late and retained conservatively; output cannot create a formalization."
+    },
+    {
+      "method": "test_original_epoch_end_blocks_output_even_with_live_lease",
+      "covers": "The auxiliary dispatch deadline is clipped to original epoch end; completion at that exact end is denied despite a later lease/job deadline."
+    },
+    {
+      "method": "test_unresolved_call_survives_restart_and_cannot_authorize_new_generation",
+      "covers": "Actual Broker close/reopen preserves an unresolved reservation, blocks the next generation's dispatch, and retains old-generation settlement without granting current result authority."
+    },
+    {
+      "method": "test_completed_output_cannot_be_replaced_or_used_to_start_new_transport_retry",
+      "covers": "Recorded refusal identity is immutable; selective new dispatch after a completed response is denied."
+    },
+    {
+      "method": "test_generic_routes_cannot_mint_review_or_definition_authority",
+      "covers": "Operator generic add_source and worker put_artifact cannot forge semantic-review-record or feature-definitions namespaces."
+    },
+    {
+      "method": "test_candidate_substitution_and_cross_attempt_call_are_rejected",
+      "covers": "Caller cannot alter a received candidate or reuse its call in a resumed generation."
+    },
+    {
+      "method": "test_genuine_definition_cannot_be_rebound_to_another_catalog_envelope",
+      "covers": "Definition admission rejects a distinct catalog provenance envelope even when feature names/types/units match. Direct packet admission seam uses actual owned artifacts."
+    },
+    {
+      "method": "test_genuine_definition_cannot_be_rebound_to_another_owned_snapshot",
+      "covers": "A real second registered snapshot with different retained revision metadata cannot inherit definitions bound to the original snapshot. The draft preserves the unsupported reference as a gap before review admission denies the mismatch."
+    },
+    {
+      "method": "test_self_review_and_unaccepted_draft_targets_are_rejected",
+      "covers": "Self review is denied both at the public enqueue boundary and specifically at the dedicated packet identity check. A released non-result draft from the same completed attempt cannot replace the exact accepted result."
+    },
+    {
+      "method": "test_reviewer_packet_and_read_capability_exclude_formalizer_transcript",
+      "covers": "Reviewer state has only its own effective prompt and empty private transcript. Its packet has no prior provider body or formalizer prompt; explicit read of the prior provider response ID is denied despite inherited exposure."
+    },
+    {
+      "method": "test_review_context_cannot_smuggle_unrelated_diagnostics",
+      "covers": "Adding an unrelated development diagnostic to the review context prevents review job admission."
+    },
+    {
+      "method": "test_relabelled_live_scripted_faithful_review_never_becomes_approval",
+      "covers": "Actual isolated ScriptedProvider execution with mode='live' and a structurally faithful judgment remains UNVERIFIED with false scientific readiness/authority. No network or paid model call occurs."
+    },
+    {
+      "method": "test_malformed_mapping_and_forged_authority_are_retained_without_review",
+      "covers": "Missing mapping coverage, Boolean segment index, inserted scientific authority field and contradictory faithful judgment are rejected while the exact public responses remain retained."
+    },
+    {
+      "method": "test_midcall_cancellation_reaps_child_and_retains_unknown_charge",
+      "covers": "An actual sleeping isolated provider is cancelled, child PID set returns to baseline, unknown conservative charge stays recorded, and no completed artifact result is published."
+    }
+  ],
+  "red_before_hashes": {
+    "tests/auxiliary_support.py": "54bc8077d2511264b4ba6124c9e859588bfd199a9143b4944387dd89184e376a",
+    "tests/test_auxiliary_adversarial.py": "3e6f6b492e8192edd3a5dc7e29ad9d43a56a928b4bbac74cbad4fe417864f20e",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+    "trading_researcher/auxiliary.py": "d13c36b51f72c9d8d320493f104f41142f018ab5e924a70ec14bb62f9e6ecfdf",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+    "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/coordination.py": "427a18600ed0673a393beb048613b05a474c656360a21a5ba8bd6485aed167da",
+    "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/memory.py": "3e5f8e9e9d0902f55c07f890da857110709dd32f2ba2c0a01e54d73de4c40145",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/storage.py": "5c039256d60b4e09f52255ffd6a371d3df399c1653b14e6f36b1edc61ec5f81f",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "final_before_hashes": {
+    "tests/auxiliary_support.py": "54bc8077d2511264b4ba6124c9e859588bfd199a9143b4944387dd89184e376a",
+    "tests/test_auxiliary_adversarial.py": "81695932aae11d6734fcfd23a6694b528b3ffe4ef1670fef8d5878428ffd44e8",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+    "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+    "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/coordination.py": "427a18600ed0673a393beb048613b05a474c656360a21a5ba8bd6485aed167da",
+    "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/memory.py": "3e5f8e9e9d0902f55c07f890da857110709dd32f2ba2c0a01e54d73de4c40145",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/storage.py": "5c039256d60b4e09f52255ffd6a371d3df399c1653b14e6f36b1edc61ec5f81f",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "final_after_hashes": {
+    "tests/auxiliary_support.py": "54bc8077d2511264b4ba6124c9e859588bfd199a9143b4944387dd89184e376a",
+    "tests/test_auxiliary_adversarial.py": "81695932aae11d6734fcfd23a6694b528b3ffe4ef1670fef8d5878428ffd44e8",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+    "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+    "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/coordination.py": "427a18600ed0673a393beb048613b05a474c656360a21a5ba8bd6485aed167da",
+    "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/memory.py": "3e5f8e9e9d0902f55c07f890da857110709dd32f2ba2c0a01e54d73de4c40145",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/storage.py": "5c039256d60b4e09f52255ffd6a371d3df399c1653b14e6f36b1edc61ec5f81f",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "final_hash_comparison": {
+    "equal": true,
+    "file_count": 30,
+    "scope": "All 28 current application Python files plus the independent test and shared auxiliary support helper."
+  },
+  "remaining_boundaries": [
+    "No actual OpenAI, Anthropic, Google or other paid/live model adapter was invoked. Actual provider provenance, tokenization, currency pricing and substantive independent semantic judgment remain unverified.",
+    "A different authenticated principal and private recorded packet establish operational separation only. They do not establish statistical independence, model-backend isolation or a natural-language equivalence proof.",
+    "Provider labels and caller-supplied public responses can be synthetic. The permanent UNVERIFIED/false fields are essential; a faithful report must not by itself unlock scientific freeze or evidence authority.",
+    "Installed adapters and the local operator/host process remain trusted. The multiprocessing boundary is not an OS sandbox against malicious installed code or same-account filesystem/database mutation.",
+    "The independent suite used direct authenticated Broker clients. It did not separately exercise the new auxiliary operations through HTTP RPC, nor perform a new auxiliary-specific backup/restore round trip.",
+    "No new genuine provider timeout, provider-side cancellation guarantee, billing reconciliation or source-signed external transcript was verified. Local child termination and conservative durable reservations were tested.",
+    "Generic typed-source availability and transitive protected ancestry reuse the existing context/storage boundaries; this slice did not rerun all earlier memory/data security fixtures.",
+    "The whole repository suite is the parent's separate verification step. This report's exact independent counts are sixteen auxiliary methods and ten existing researcher methods, not all project tests.",
+    "The review assesses this bounded transport and provenance implementation. No broader framework verdict, market evidence, scientific calibration, allocation or freeze completion is claimed."
+  ],
+  "next_action": "Run the final whole-repository regression and documentation/preservation gates against stable source; continue actual provider provenance and substantive independent semantic review as explicit unfinished work before any scientific freeze.",
+  "activity_notes": "No runtime or pinned fixture edits, no paid provider invocation, no external messages, and no new cleanup rejection occurred in this auxiliary review."
+}

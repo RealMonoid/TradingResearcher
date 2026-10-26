@@ -1,0 +1,23 @@
+# Immutable external storage and complete runtime backups
+
+This implements the external-blob portion of [research-contract/1.0 section 8](../docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md#8-open-08-persistence-serialization-and-recovery). Large payloads are exact files addressed by SHA-256; the SQLite registry owns immutable size/reference records. Supplied bytes are not thereby certified market data, point-in-time features or scientific results.
+
+The host stages a file on the same volume, streams its hash, flushes and fsyncs its bytes, then publishes it with a no-clobber hard link. An existing digest path is rehashed before deduplication; conflicting bytes are never overwritten. The final file is rechecked before its registry metadata and artifact references commit together. A crash before that transaction may leave an orphan file, which grants no read authority. No automatic deletion or retention policy is introduced. Each blob is bounded to 512 MiB; reference source packages have a separate 16 MiB total bound.
+
+`add_blob_source` is an operator-only operation with `path`, `data_class` (`development`, `assessment`, `operations`) and `description`. It records the exact bytes, source filename and receipt time in an owned `blob-source/1` artifact. Receipt time is not proof of historical publication or vintage availability. Source changes during import are rejected. Staging occurs outside the registry lock; final hash verification and reference commitment hold the write lock and may delay worker heartbeats on slow storage or large imports. Generic workers have no file-import or blob-read capability. Later data/feature tools must enforce context, partition and exposure rights before using these bytes.
+
+Blob/source-package namespaces are host-owned. Artifact reads reveal permitted metadata, not a general file or digest-read capability. Internal blob reads require a committed identity and verify the bytes before use. Startup and `verify` inspect all committed blobs. Missing, corrupt or unreadable content is reported as `QUARANTINED` and cannot supply data or a current reference certificate. Metadata remains inspectable for diagnosis. Restoring the exact expected bytes can recover access; history and evidence are not rewritten. The offline `verify` command exits 2 for a quarantine report.
+
+`backup_bundle(destination)` creates a new directory containing a SQLite backup, only the blob identities named by that database snapshot, and a verified manifest. Every copied file is checked before publication. It excludes plaintext operator/worker capability files; preserve those separately. The old database-only `backup` operation remains available only when no blobs are committed, so it cannot silently produce an incomplete backup.
+
+`restore_bundle` accepts a trusted backup, a new destination and the separately preserved matching operator key. It checks the database hash, SQLite integrity/foreign keys, immutable artifact/context hashes, audit chain, exact blob references and every file hash. Manifest-controlled paths cannot escape the bundle or traverse symlinks/junctions. The restored runtime verifies its derived memory projection before the directory is published. Existing destinations and incorrect keys are rejected. Original attempts, deadlines and exposure remain; exclusive-writer startup records interrupted certificate checks without granting a certificate. Worker credentials remain separately managed.
+
+Commands:
+
+```powershell
+python -B -m trading_researcher backup-bundle --directory <registry> --destination <new-backup-directory>
+python -B -m trading_researcher restore-bundle --bundle <backup-directory> --directory <new-registry> --operator-key-file <preserved-key-file>
+python -B -m trading_researcher verify --directory <registry>
+```
+
+The implementation is exercised on Windows with process-exit tests, real backup/restore and corrupted-content tests. Python's [fsync documentation](https://docs.python.org/3.14/library/os.html#os.fsync) describes the Windows `_commit` backend; Microsoft's [FlushFileBuffers requirements](https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-flushfilebuffers) require a writable handle, reflected in the file-flush implementation. File fsync and no-clobber publication do not prove power-loss durability of directory entries, drive caches or storage hardware. Maximum-size throughput, hostile same-account filesystem interference and automatic orphan reclamation remain unverified or unimplemented. These are integrity controls inside the existing trusted local-operator boundary, not encrypted storage or an OS sandbox.

@@ -1,0 +1,3064 @@
+{
+  "schema": "binance-registry-retention/1",
+  "date": "2026-10-25",
+  "status": "RETAINED_WITH_EXPLICIT_GAPS",
+  "registry": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-source-registry-2026-10-25",
+  "sources": [
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "bundle_ref": "bfc7ba9510966b6e0d9f7678d1344125dc990af2b443fd84530bab0d284f14d8",
+      "data_class": "development",
+      "source_sha256": "14ff4aa10ccef7acc0e63d5e349f3a317de016cf0bb40e786cc934af9bf30f29",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:56:31Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:56:31Z",
+      "verified_at": "2026-10-25T03:22:19Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-01",
+      "bundle_ref": "8a4050622271786649c03fb457f7e53456691f34acb041bf9caf0a616ac157ce",
+      "data_class": "development",
+      "source_sha256": "269adceb5ff28efa435a6227cab7c403c1d38411293709bb3891ade38c799b8a",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:56:34Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:56:34Z",
+      "verified_at": "2026-10-25T03:22:19Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-02",
+      "bundle_ref": "32d128d5947306359896b226e74068f4b6a3c4835c29da0b626d01de446de9e1",
+      "data_class": "development",
+      "source_sha256": "b6244fefb7e50c7a93d8b6fa6e8994b364ec7cfd9dd0a983013710f32ebd83ca",
+      "coverage": {
+        "expected_bars": 2784,
+        "present_bars": 2757,
+        "valid_bars": 2756,
+        "invalid_bars": 1,
+        "missing_bars": 27,
+        "gaps": [
+          {
+            "start": 1581213600,
+            "end": 1581217200,
+            "missing_bars": 4
+          },
+          {
+            "start": 1582112700,
+            "end": 1582133400,
+            "missing_bars": 23
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T02:57:27Z",
+      "verified_at": "2026-10-25T03:22:20Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-02",
+      "bundle_ref": "febdba1c0578516ba844d2a82d8b828fc1a086fa6ecf18a2803beb953c38ce0f",
+      "data_class": "development",
+      "source_sha256": "2a533d0886067fcf1d44430177339c1921066f3ae8cdf2266487bba9bc8aaa6c",
+      "coverage": {
+        "expected_bars": 2784,
+        "present_bars": 2757,
+        "valid_bars": 2756,
+        "invalid_bars": 1,
+        "missing_bars": 27,
+        "gaps": [
+          {
+            "start": 1581213600,
+            "end": 1581217200,
+            "missing_bars": 4
+          },
+          {
+            "start": 1582112700,
+            "end": 1582133400,
+            "missing_bars": 23
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T02:59:04Z",
+      "verified_at": "2026-10-25T03:22:20Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-03",
+      "bundle_ref": "96b203b34b2609a660ee4f01cf9fa669866c231ad53073aeefadefb1a6bf8d7d",
+      "data_class": "development",
+      "source_sha256": "a30eb38f382e612ded0db0af7c5164930b07f4cee10db56a7a1759229419692f",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2968,
+        "valid_bars": 2967,
+        "invalid_bars": 1,
+        "missing_bars": 8,
+        "gaps": [
+          {
+            "start": 1583314200,
+            "end": 1583321400,
+            "missing_bars": 8
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T02:59:07Z",
+      "verified_at": "2026-10-25T03:22:20Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-03",
+      "bundle_ref": "c3380aae84b416b43e927d0746391c25c88605c4d22d6d4d7fb1d2a16a4a3c4a",
+      "data_class": "development",
+      "source_sha256": "628ea6f2303e6f885f0826b0e2e7d12f40b4ce9b52c0a9e1fff5f594173ee73a",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2968,
+        "valid_bars": 2967,
+        "invalid_bars": 1,
+        "missing_bars": 8,
+        "gaps": [
+          {
+            "start": 1583314200,
+            "end": 1583321400,
+            "missing_bars": 8
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T02:59:09Z",
+      "verified_at": "2026-10-25T03:22:21Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-04",
+      "bundle_ref": "08600f1de04deec32ec34bf4028866e3e311fe525642c73b39da9083202cf604",
+      "data_class": "development",
+      "source_sha256": "30cde9a387072c2ba948b7fd09e7ee531ebf5d5d02774c845cdc7b18ad1cd897",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2870,
+        "valid_bars": 2870,
+        "invalid_bars": 0,
+        "missing_bars": 10,
+        "gaps": [
+          {
+            "start": 1587780000,
+            "end": 1587789000,
+            "missing_bars": 10
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:12Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:12Z",
+      "verified_at": "2026-10-25T03:22:21Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-04",
+      "bundle_ref": "d646d7a89a4f55717f6a9d4dec8cead26a38ed88ff2b34384d6bac91a7805faf",
+      "data_class": "development",
+      "source_sha256": "b93f9bc42e54a7dd0f9ff4bd55db8c62431df84b70e4f66c01803470a544b535",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2870,
+        "valid_bars": 2870,
+        "invalid_bars": 0,
+        "missing_bars": 10,
+        "gaps": [
+          {
+            "start": 1587780000,
+            "end": 1587789000,
+            "missing_bars": 10
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:15Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:15Z",
+      "verified_at": "2026-10-25T03:22:21Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-05",
+      "bundle_ref": "9c502890be2da10aebf532e79037ef087db6de2691b640b7f9e87f2e2d80882f",
+      "data_class": "development",
+      "source_sha256": "7c3ed6ae81d4e223853484d9c051db3d0d656a26ec7eeb7b257313718aee53ae",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:18Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:18Z",
+      "verified_at": "2026-10-25T03:22:22Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-05",
+      "bundle_ref": "b62c2d6998f16fcdb6552ff1c79ac27237222e82f00f95b68daf8378c745e6a4",
+      "data_class": "development",
+      "source_sha256": "3414af994a5bb2d6848116fa09f04337e638d7a24bfb26eb712653eefcc6b684",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:20Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:20Z",
+      "verified_at": "2026-10-25T03:22:22Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-06",
+      "bundle_ref": "e69d8d643ed5a663cf1762518a2f4044ecb3ecc05faaf1491a857e712fbb0ac5",
+      "data_class": "development",
+      "source_sha256": "c24464e4e45c1dca8f4ea33b687e55b3c7122ac86d5f0ba706eb1a4b27a39e1a",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2866,
+        "valid_bars": 2866,
+        "invalid_bars": 0,
+        "missing_bars": 14,
+        "gaps": [
+          {
+            "start": 1593309600,
+            "end": 1593322200,
+            "missing_bars": 14
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:23Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:23Z",
+      "verified_at": "2026-10-25T03:22:23Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-06",
+      "bundle_ref": "3285feace2593aabce8ed8b529fb3ed0f5c31079d2c2f99b0aba9ee92a934025",
+      "data_class": "development",
+      "source_sha256": "4691d3d201936d4cd913eeea03dd0e78ac7d16340d1f43a1c11429109bb8f7d6",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2866,
+        "valid_bars": 2866,
+        "invalid_bars": 0,
+        "missing_bars": 14,
+        "gaps": [
+          {
+            "start": 1593309600,
+            "end": 1593322200,
+            "missing_bars": 14
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:25Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:25Z",
+      "verified_at": "2026-10-25T03:22:23Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-07",
+      "bundle_ref": "d49dffed077b6823276b019fc0fc430fbc710e1da8e9714d3715032d80e8d0c4",
+      "data_class": "development",
+      "source_sha256": "f822911243747a8b0e924a07b921885835e7b0a13351de372cf4139c40cdade2",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:28Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:28Z",
+      "verified_at": "2026-10-25T03:22:24Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-07",
+      "bundle_ref": "9a69f6d8c3dcda50adf0c607505fdd2bb5673f4cae236ab7a7d8e928961983bb",
+      "data_class": "development",
+      "source_sha256": "7d7e5423619f87760bc480391774b41653923c45a2b0272b908212596597646d",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:31Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:31Z",
+      "verified_at": "2026-10-25T03:22:24Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-08",
+      "bundle_ref": "4cc4a82779bafb8c96897f4b46568ce0a5bf9a65b775cbaee017cf150c074e75",
+      "data_class": "development",
+      "source_sha256": "ffad24f28c47285a35cbf45863170ade9b3bace06616570fa0fd64b964691027",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:34Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:34Z",
+      "verified_at": "2026-10-25T03:22:25Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-08",
+      "bundle_ref": "ba3b8b1859baff58601432ed9a87205c1b8385eec283e206d957ded3871d4d9b",
+      "data_class": "development",
+      "source_sha256": "315b558d47bd02a18aeb55cca50b0da4b00603b8b16fed44d807c76c2167b3ff",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:37Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:37Z",
+      "verified_at": "2026-10-25T03:22:25Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-09",
+      "bundle_ref": "1ee211867e6219e79cf12e7d1b0b7b05142628b854ba9da7e6806d4717d1c79d",
+      "data_class": "development",
+      "source_sha256": "237a934a3c3ade4ea5cf39a75efa5de9e98cddb7edb94376033ba51fa7db6fca",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:39Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:39Z",
+      "verified_at": "2026-10-25T03:22:25Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-09",
+      "bundle_ref": "d095c27dcef933e6e7f2d0f65a5ba841ece342ed1ee1954e9dc52ed36154fce2",
+      "data_class": "development",
+      "source_sha256": "5434014e3a450dd938c86346aedb7b1fe7006826d21f1a3cbcbd194c6e5a5746",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:42Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:42Z",
+      "verified_at": "2026-10-25T03:22:26Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-10",
+      "bundle_ref": "31c58f149717241181944d3e0afe10627926b69a3d889235bd9c98eb30964686",
+      "data_class": "development",
+      "source_sha256": "f2e83ead1439d584e2752d71cf25dac6627b9d36fe69f7a66d7893c90f50d1bc",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:45Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:45Z",
+      "verified_at": "2026-10-25T03:22:26Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-10",
+      "bundle_ref": "7f5be4e98579115a04856678cf561c7d795d1285a242b98b30ddb15904bc4a7d",
+      "data_class": "development",
+      "source_sha256": "f6913ad27d11ed4dcf7eab4627c2865ae76d5137611b8ddea1cae66e7443d3d4",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:48Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:48Z",
+      "verified_at": "2026-10-25T03:22:27Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-11",
+      "bundle_ref": "a4f013fc61bcf465a21dd7d5070d6a41b8f914e8dbd6f1665a12f188c7e29b33",
+      "data_class": "development",
+      "source_sha256": "c31f2d6deba5e8efaaf31b78fc2297b89e77583fe1aa94bd73e087ee183e7230",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2876,
+        "valid_bars": 2876,
+        "invalid_bars": 0,
+        "missing_bars": 4,
+        "gaps": [
+          {
+            "start": 1606716000,
+            "end": 1606719600,
+            "missing_bars": 4
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:50Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:50Z",
+      "verified_at": "2026-10-25T03:22:27Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-11",
+      "bundle_ref": "96640dc62eda0efe290143e89356f20cbd096f3aa0a9daa2d371b6f627739b13",
+      "data_class": "development",
+      "source_sha256": "dee7e0bd662e972fb2e5db53c1f10d2b099e9a1fbf3d8c56d34f45bd4dacd170",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2876,
+        "valid_bars": 2876,
+        "invalid_bars": 0,
+        "missing_bars": 4,
+        "gaps": [
+          {
+            "start": 1606716000,
+            "end": 1606719600,
+            "missing_bars": 4
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:59:53Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:59:53Z",
+      "verified_at": "2026-10-25T03:22:28Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2020-12",
+      "bundle_ref": "797112cef0281b7eb9bf72f31fa9a02db78534407997c9efb6678326f5cc0fde",
+      "data_class": "development",
+      "source_sha256": "3a475065da72155378457feba7101ebc2870b2f9c4c13fd4650a8fb8fc0bd556",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2957,
+        "valid_bars": 2956,
+        "invalid_bars": 1,
+        "missing_bars": 19,
+        "gaps": [
+          {
+            "start": 1608560100,
+            "end": 1608573600,
+            "missing_bars": 15
+          },
+          {
+            "start": 1608861600,
+            "end": 1608865200,
+            "missing_bars": 4
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T02:59:56Z",
+      "verified_at": "2026-10-25T03:22:28Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2020-12",
+      "bundle_ref": "13678ae9579631171383a0a4e2eba0e779f3c52ba92a5ad9ee398215ea2c7e50",
+      "data_class": "development",
+      "source_sha256": "90bb2554b7484a55b8b5cd774339af64954fed194a517b0c462337594e4a6c87",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2957,
+        "valid_bars": 2956,
+        "invalid_bars": 1,
+        "missing_bars": 19,
+        "gaps": [
+          {
+            "start": 1608560100,
+            "end": 1608573600,
+            "missing_bars": 15
+          },
+          {
+            "start": 1608861600,
+            "end": 1608865200,
+            "missing_bars": 4
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T02:59:59Z",
+      "verified_at": "2026-10-25T03:22:28Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-01",
+      "bundle_ref": "8e7a3cf787dc358934063f81747ada2bca976f9d9444a8913a8f1fc5b27948d1",
+      "data_class": "development",
+      "source_sha256": "6843a77858ccecccae6e5e7161d6f6bd376cfe0d3729772dbe942f0fa44cc014",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:02Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:02Z",
+      "verified_at": "2026-10-25T03:22:29Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-01",
+      "bundle_ref": "5b6768e73c3fd4681d1ec7eb634403ca051da0575e13898212149bc45d93180c",
+      "data_class": "development",
+      "source_sha256": "e2406c1bbb90bc480baf49e4a93f35a7372522c6bc12fe878290dfe22122a037",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:04Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:04Z",
+      "verified_at": "2026-10-25T03:22:29Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-02",
+      "bundle_ref": "5e5d34598b409db69431cfcac1852ce68ffa9de7c42eda26bbe83c316d1e0673",
+      "data_class": "development",
+      "source_sha256": "24eb0f052202cd03fc305cbf9d7214597a001caaa9139e72947acf09f95133ca",
+      "coverage": {
+        "expected_bars": 2688,
+        "present_bars": 2683,
+        "valid_bars": 2682,
+        "invalid_bars": 1,
+        "missing_bars": 5,
+        "gaps": [
+          {
+            "start": 1613015100,
+            "end": 1613019600,
+            "missing_bars": 5
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:00:07Z",
+      "verified_at": "2026-10-25T03:22:29Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-02",
+      "bundle_ref": "a80b498f38143cf14a3db7e27460ed8061449d469dd17fe97b7d62e76e742f08",
+      "data_class": "development",
+      "source_sha256": "4d23b2526dd6641347377f07fcb49ae9e679547af3f7f59e0e17712d30a8d46d",
+      "coverage": {
+        "expected_bars": 2688,
+        "present_bars": 2683,
+        "valid_bars": 2682,
+        "invalid_bars": 1,
+        "missing_bars": 5,
+        "gaps": [
+          {
+            "start": 1613015100,
+            "end": 1613019600,
+            "missing_bars": 5
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:00:09Z",
+      "verified_at": "2026-10-25T03:22:30Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-03",
+      "bundle_ref": "4d864d87b181d1cdddc64034d615afaa9c944c5fb89fa4fd7d3e6a4d8f23863d",
+      "data_class": "development",
+      "source_sha256": "d74d00cc17a123177ad35220e13560d02551aeb9be19568b5c5939a745378467",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2970,
+        "valid_bars": 2970,
+        "invalid_bars": 0,
+        "missing_bars": 6,
+        "gaps": [
+          {
+            "start": 1614996000,
+            "end": 1615001400,
+            "missing_bars": 6
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:12Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:12Z",
+      "verified_at": "2026-10-25T03:22:30Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-03",
+      "bundle_ref": "96ec881803ad09cfc95fd5a58196b4a2072a3a6b263683285ed20529e4033d08",
+      "data_class": "development",
+      "source_sha256": "a7b4393e62e21b45cd90d380ad39179e71ae5b61cafcdfa72a53847698a96c00",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2970,
+        "valid_bars": 2970,
+        "invalid_bars": 0,
+        "missing_bars": 6,
+        "gaps": [
+          {
+            "start": 1614996000,
+            "end": 1615001400,
+            "missing_bars": 6
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:15Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:15Z",
+      "verified_at": "2026-10-25T03:22:30Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-04",
+      "bundle_ref": "f325eba83f028ec00ea1774eda3c797e5b94e9ca1f14faecf619aaa99dce3a83",
+      "data_class": "development",
+      "source_sha256": "726831d8c9aa1eebc87e0390a713515272b682f04a4972bc9c2b046c192db3dd",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2852,
+        "valid_bars": 2851,
+        "invalid_bars": 1,
+        "missing_bars": 28,
+        "gaps": [
+          {
+            "start": 1618884000,
+            "end": 1618893000,
+            "missing_bars": 10
+          },
+          {
+            "start": 1619324100,
+            "end": 1619340300,
+            "missing_bars": 18
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:00:18Z",
+      "verified_at": "2026-10-25T03:22:31Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-04",
+      "bundle_ref": "15c82092d447540c152236a22cc103ca14a72d57cc0c53520613cb2453262ba4",
+      "data_class": "development",
+      "source_sha256": "44885c842d243bd510f239d4d874b47aeba692fa5524dfd8582235a69e34ef7b",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2852,
+        "valid_bars": 2851,
+        "invalid_bars": 1,
+        "missing_bars": 28,
+        "gaps": [
+          {
+            "start": 1618884000,
+            "end": 1618893000,
+            "missing_bars": 10
+          },
+          {
+            "start": 1619324100,
+            "end": 1619340300,
+            "missing_bars": 18
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:00:20Z",
+      "verified_at": "2026-10-25T03:22:31Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-05",
+      "bundle_ref": "212f28f7e95e9dca312047b3399c4840e379c031a1adb730b92edd1a322cae43",
+      "data_class": "development",
+      "source_sha256": "caaba406287692f4cc1bbe01fedaa1bd7b876b91963bdc10f3ff97e8fe85a937",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:23Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:23Z",
+      "verified_at": "2026-10-25T03:22:32Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-05",
+      "bundle_ref": "1f26ecfe3a84ff8f10d48b0cf410170f2c370131f6c152fe3733c23e8dbf6c2c",
+      "data_class": "development",
+      "source_sha256": "58bf17d178103f713c00618bc5d58442af0d2f73f7998d7d283256fe84cfa310",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:26Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:26Z",
+      "verified_at": "2026-10-25T03:22:32Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-06",
+      "bundle_ref": "e13caab42a73a936967519c4c26949e8b463066ef740bb91c57447e00a83ea13",
+      "data_class": "development",
+      "source_sha256": "d846f92c7e69ed84602eb20d46989ab0de52aff994e8e9b6e8346899cf342ce3",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:28Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:28Z",
+      "verified_at": "2026-10-25T03:22:32Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-06",
+      "bundle_ref": "2687f536603252438d5601c33469a9ab7601fbe8beedaec264cc348cdd99d994",
+      "data_class": "development",
+      "source_sha256": "bd8e9bac03b093325aa8f3af274e8c28418218bf0f149d469a7979e25863b400",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:31Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:31Z",
+      "verified_at": "2026-10-25T03:22:33Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-07",
+      "bundle_ref": "a448483b20ed0c0fbfc42bde9994040c7501ad7fdd4ddf1913ff23c0b6d20f2c",
+      "data_class": "development",
+      "source_sha256": "83ba2f412e7dd2bb9a90a3dd354d31d1b9f2123518fd7bd397ff7dd5139f6416",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:34Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:34Z",
+      "verified_at": "2026-10-25T03:22:33Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-07",
+      "bundle_ref": "7099440a907c502e810a63b20a1b0ee53ecee32a94b6e3300bb9cc78896f6ff3",
+      "data_class": "development",
+      "source_sha256": "6ee54be607ccdecc9a6603fb7eeee78d5d11d7c32fa9e5e60daf523e6b6c5586",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:36Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:36Z",
+      "verified_at": "2026-10-25T03:22:34Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-08",
+      "bundle_ref": "905fc89a720e6338f6a7635ed69c00859c67cf56ea31ac92f53ca2db99f372c8",
+      "data_class": "development",
+      "source_sha256": "78f3a8a41652082a37cdf565fe3d41ffbdf54a562ab1738aff572916b65acec8",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2958,
+        "valid_bars": 2957,
+        "invalid_bars": 1,
+        "missing_bars": 18,
+        "gaps": [
+          {
+            "start": 1628820000,
+            "end": 1628836200,
+            "missing_bars": 18
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:00:38Z",
+      "verified_at": "2026-10-25T03:22:34Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-08",
+      "bundle_ref": "ba40d6a2a8efad705e5bc3cb42269f7bcccd3e9de31d039eeee1e0a735584c20",
+      "data_class": "development",
+      "source_sha256": "de0f4966647d874cb7e84e8b01ff58b3dd6dc1a64b355f02620565231e14af51",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2958,
+        "valid_bars": 2957,
+        "invalid_bars": 1,
+        "missing_bars": 18,
+        "gaps": [
+          {
+            "start": 1628820000,
+            "end": 1628836200,
+            "missing_bars": 18
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:00:41Z",
+      "verified_at": "2026-10-25T03:22:34Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-09",
+      "bundle_ref": "a23d2ec921664012ecc0e92b2d1f7bd052ad017f28c024bc5a7c9b301223710b",
+      "data_class": "development",
+      "source_sha256": "7feb7064ebbc87150a84965d01fce371b2e7341f7148288aa6da011747c651a2",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2872,
+        "valid_bars": 2872,
+        "invalid_bars": 0,
+        "missing_bars": 8,
+        "gaps": [
+          {
+            "start": 1632898800,
+            "end": 1632906000,
+            "missing_bars": 8
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:44Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:44Z",
+      "verified_at": "2026-10-25T03:22:35Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-09",
+      "bundle_ref": "b28b5adcca98288366791c9ba9bebdbec396085142d2b8487600fb1ca64c1559",
+      "data_class": "development",
+      "source_sha256": "cc0716ae699a46bc70268f361f262b22293c1e70f8a512c10a0e138d21a0b91f",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2872,
+        "valid_bars": 2872,
+        "invalid_bars": 0,
+        "missing_bars": 8,
+        "gaps": [
+          {
+            "start": 1632898800,
+            "end": 1632906000,
+            "missing_bars": 8
+          }
+        ]
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:46Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:46Z",
+      "verified_at": "2026-10-25T03:22:35Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-10",
+      "bundle_ref": "557c402f86dafb9c05454c0a12c89b0b56dfb7a7a23d61c09b12738d9666df0a",
+      "data_class": "development",
+      "source_sha256": "a45ce50c7a39ee2affbd708c7c75da77e65106b3e33963cae8d080665c50e2f4",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:49Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:49Z",
+      "verified_at": "2026-10-25T03:22:36Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-10",
+      "bundle_ref": "283aea3a5a775e2b328010abc2a54b9d7c69a1bc7a25ed4f6779a7a830659b49",
+      "data_class": "development",
+      "source_sha256": "92b87d8a4e152b5dd37be9a29e18a0944db765937b1d8f4b0a98980b45a875a3",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:52Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:52Z",
+      "verified_at": "2026-10-25T03:22:36Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-11",
+      "bundle_ref": "6106e5e0d9e3461990ce79adef6db4790602213dc79480fd96c976decc5ddaf0",
+      "data_class": "development",
+      "source_sha256": "e06943fceee11f55792f37db195b971e25ae760a74e8454687eb165d4d2d3245",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:54Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:54Z",
+      "verified_at": "2026-10-25T03:22:36Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-11",
+      "bundle_ref": "7171711e2e6d122603f2ae2f084e96f4ba83229fd6e69d051e856a9dc2c8298f",
+      "data_class": "development",
+      "source_sha256": "193c04c739d8559c9eb33baf1042ab246e801a55f159675d3db6d7d05e608a63",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:00:57Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:00:57Z",
+      "verified_at": "2026-10-25T03:22:37Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2021-12",
+      "bundle_ref": "44a9c91cb7e848ee175e03309ae6a308ac159036ac556f4441549bb99b405149",
+      "data_class": "development",
+      "source_sha256": "de414f1034c3d8dcc22babbb46f535a2dc22ba4271f5b4f6244c750b835b2d56",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2975,
+        "invalid_bars": 1,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:01:00Z",
+      "verified_at": "2026-10-25T03:22:37Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2021-12",
+      "bundle_ref": "febe620690aeacf4d45d9d8f3e403303afdf0ca834e4b77da0ad74abad7e80fd",
+      "data_class": "development",
+      "source_sha256": "559f7fd36f130d24faa71dca3f98c0792e4738efef0eec85bc4be45fdb1a7236",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2975,
+        "invalid_bars": 1,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:01:02Z",
+      "verified_at": "2026-10-25T03:22:37Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-01",
+      "bundle_ref": "09f27759b20b7592cae82889a003bb4386d9fa13ff2828cf3154e8ad27ab21bb",
+      "data_class": "development",
+      "source_sha256": "300080aa204e169178a3497ca092017d5d495569c8b9e45b62a9c59a78806d78",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:04Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:04Z",
+      "verified_at": "2026-10-25T03:22:38Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-01",
+      "bundle_ref": "c6c51c79db51b4757b3adf0e18a2f56fc5475d6fad23bc969d092a456da88d78",
+      "data_class": "development",
+      "source_sha256": "4911b38219be1e362e491b3851d8e328daead54b23a606dd7a4472359b9b68e0",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:07Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:07Z",
+      "verified_at": "2026-10-25T03:22:38Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-02",
+      "bundle_ref": "606fdd3c883e63c698ecf2fe0bac39d4167ca8c2fdfa6f581bfb07bc3e050d09",
+      "data_class": "development",
+      "source_sha256": "8404afc5559fe8350ac223a60a2b6833f2d739d28bb338cef3bfc3460f19420e",
+      "coverage": {
+        "expected_bars": 2688,
+        "present_bars": 2688,
+        "valid_bars": 2688,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:09Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:09Z",
+      "verified_at": "2026-10-25T03:22:39Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-02",
+      "bundle_ref": "be438c506f3e909a357500e805786dea4df60b7b5a5f0420ce3dd53bb34acb7c",
+      "data_class": "development",
+      "source_sha256": "6fb02341ab7804e45368b4f62ea395f1f38e5fd6431333c3cee639029c5b4442",
+      "coverage": {
+        "expected_bars": 2688,
+        "present_bars": 2688,
+        "valid_bars": 2688,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:12Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:12Z",
+      "verified_at": "2026-10-25T03:22:39Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-03",
+      "bundle_ref": "8b10bbab8b2f33fb97c677d246f04c51a7778efdee2b31df893fd841ff0f586e",
+      "data_class": "development",
+      "source_sha256": "7d03549d3a64e16a1bd7eb3ed4053ae2a00e5afcf18ff42dea9f21bf4c77e2fa",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:15Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:15Z",
+      "verified_at": "2026-10-25T03:22:40Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-03",
+      "bundle_ref": "f0031fa29e8ca46b4221227484cecfdb747b04ac7342aae7fa6444569d83604f",
+      "data_class": "development",
+      "source_sha256": "48023f6f3c0c867b9f109ce03a676337186f21cffbb764be5664da0830a5010c",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:17Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:17Z",
+      "verified_at": "2026-10-25T03:22:40Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-04",
+      "bundle_ref": "ad815ee48f6c845b8d140d5e5f04757b390d88ee624d8f6f5924f0ab25f77a49",
+      "data_class": "development",
+      "source_sha256": "f619f7a893a6d159bfc455b272d5a7936fb7d91ea48e4971fdca10a080454c5d",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:20Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:20Z",
+      "verified_at": "2026-10-25T03:22:40Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-04",
+      "bundle_ref": "57adc96367349aea4d29d66567b9abd5052a84e4cfe96c822649162fe7c54616",
+      "data_class": "development",
+      "source_sha256": "8c43f3e34ce373c17f96642b10ee4afb69edd5cab4f7947202ebfc1bb2cfe948",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:23Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:23Z",
+      "verified_at": "2026-10-25T03:22:41Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-05",
+      "bundle_ref": "2710fbd1fa88d9fc58d4de85723ecf451e5e909447fdaebcd02ebd2f07780fab",
+      "data_class": "development",
+      "source_sha256": "204bea0ee180cec329d0bb7aa0fd1c3ae505fc122c1306762431b1799ce916ae",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:26Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:26Z",
+      "verified_at": "2026-10-25T03:22:41Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-05",
+      "bundle_ref": "b6e1c82783963ac4647637018406254f06f6ae95383244153d41b274a5a68b0b",
+      "data_class": "development",
+      "source_sha256": "74cc53d8182350890d4c495d6a1f66bf9adf58f5ab3009a3bd50fd4352ede3c2",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:29Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:29Z",
+      "verified_at": "2026-10-25T03:22:42Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-06",
+      "bundle_ref": "de46d35c1b082ab36d95283d5110690145d8d7ec0c3c01eab37cd9c10f878994",
+      "data_class": "development",
+      "source_sha256": "3ed46b9bb8ab9c59e9e0db91ae54bd484632691d5b9f95799030fbbf5ff7b85f",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:32Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:32Z",
+      "verified_at": "2026-10-25T03:22:42Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-06",
+      "bundle_ref": "28129556436b1e541360b5746885e42c8bdcc7e1574928b2417b35f30b87206d",
+      "data_class": "development",
+      "source_sha256": "c80cb9934d3bb1eb0e1300ef19514c6d7bb71f580f71929d571363a5bd9df5aa",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:35Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:35Z",
+      "verified_at": "2026-10-25T03:22:42Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-07",
+      "bundle_ref": "8895accfe7e85fc6f432fc4114ea9526fdd9b1478c59fccd671543a7659f160f",
+      "data_class": "development",
+      "source_sha256": "34d40d3d640fac8d13768e5bacbaeb3284e26a71641d2f91551c25041095eebf",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:38Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:38Z",
+      "verified_at": "2026-10-25T03:22:43Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-07",
+      "bundle_ref": "a9cdfd96f0e027c62828383d014b2664ca49e0f8e69a5bf74a08c187cc69decc",
+      "data_class": "development",
+      "source_sha256": "cdc51ff3f6d5aa66c0b685bdf6284ec9750ff70009fca0cd607ccac3098e7053",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:41Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:41Z",
+      "verified_at": "2026-10-25T03:22:43Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-08",
+      "bundle_ref": "97211d9b1180c027bbf113e890658bef31249d9997f4e34f519d9e2b081c3e2f",
+      "data_class": "development",
+      "source_sha256": "6fe9c2149fe56da51eb897f4b27ee3ab7ee6c8a067feeb2d6794661310b29519",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:44Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:44Z",
+      "verified_at": "2026-10-25T03:22:44Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-08",
+      "bundle_ref": "6db2a7f988576dd8f9297f4e6221ab868c6d300cbff5dcddbccee194f63874cb",
+      "data_class": "development",
+      "source_sha256": "656a0741af894c0be116cdbbe8e4b007c8e35f44f9b204187bebb9ae9497abd6",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:47Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:47Z",
+      "verified_at": "2026-10-25T03:22:44Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-09",
+      "bundle_ref": "eed4c576c920a7c8bbc81eef0915a2d74d09c232eb7549a4771d32bdc5798c79",
+      "data_class": "development",
+      "source_sha256": "56bf07b966fb872dda57ad414695b99a235ee96d5c4375a2e4eafd00cd1f4079",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:50Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:50Z",
+      "verified_at": "2026-10-25T03:22:45Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-09",
+      "bundle_ref": "657a9e986d71898c32197f3c74b2916e490adaccc32933f571c45893447350d5",
+      "data_class": "development",
+      "source_sha256": "6e383b838410fbe0de769fd39c70565ab9ac5f37df763862e09e7e3dbbabc5eb",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:52Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:52Z",
+      "verified_at": "2026-10-25T03:22:45Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-10",
+      "bundle_ref": "832c5e777222d26ba6b56642c6d3c6b8ff27dc42bf873b5b1247d833721faaa0",
+      "data_class": "development",
+      "source_sha256": "b4e675cf4ffd2db10598981682cded055926849153748258c4f1f74a7932d693",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:55Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:55Z",
+      "verified_at": "2026-10-25T03:22:45Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-10",
+      "bundle_ref": "a65ce9462a537ee19c278ab668f3a09a9de7a88bd148f5f7afe03c717e3696e4",
+      "data_class": "development",
+      "source_sha256": "4468807f03c3b3f714329997f3affaf940025e56ae838360eace55f5c4e1d2dd",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:01:58Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:01:58Z",
+      "verified_at": "2026-10-25T03:22:46Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-11",
+      "bundle_ref": "18e7aa7aa4e528e8ca9135d75cae6de012bd458245ed90115261557474b5d915",
+      "data_class": "development",
+      "source_sha256": "52e73ea00e871c891c6ad1e63a1a877cb435c292288a81ac3034467c6e4bb967",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:00Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:00Z",
+      "verified_at": "2026-10-25T03:22:46Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-11",
+      "bundle_ref": "53a5ffbaef47c469b917617d857235564243e127c5c1afeac3d15fb486fef712",
+      "data_class": "development",
+      "source_sha256": "b07bdffeb41c72114adcd597e56b0b393f2faf6935f1c49b056ae13657a51456",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:03Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:03Z",
+      "verified_at": "2026-10-25T03:22:47Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2022-12",
+      "bundle_ref": "bb570b8f4422f87af454df98c276948eec9e45ca694f34f01d81970e989aa943",
+      "data_class": "development",
+      "source_sha256": "c84ab72275af0b2bfe104bb2e707e612b215882ccbfbb18e96017d6a4807e873",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:06Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:06Z",
+      "verified_at": "2026-10-25T03:22:47Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2022-12",
+      "bundle_ref": "6259fd4b1926c99d203cc51c2c2a5540cf9b8436de8d3a9a5ce2daa5c5f8d254",
+      "data_class": "development",
+      "source_sha256": "32cd3d3f5c9dad3dba4c5699eeb601f3cf727587f7c21f815306562c1a247741",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:09Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:09Z",
+      "verified_at": "2026-10-25T03:22:48Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-01",
+      "bundle_ref": "4ee0b4fd540e565a830347caa9b63e54259995888cb399858c2e05471c15a0b2",
+      "data_class": "development",
+      "source_sha256": "c27cfc2866d880ed08744aaef0a0f5b9ba5e65ba27bd0c98a3b9b3d3a33a87f3",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:12Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:12Z",
+      "verified_at": "2026-10-25T03:22:48Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-01",
+      "bundle_ref": "b81b58a95a6c8278ce3fc73674061c6e11bb87e30b3cd9189986a901fa215651",
+      "data_class": "development",
+      "source_sha256": "4718a2a218697c4c2246ee83553b45fdbf17635757ef6a501987cbf9ec829778",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:14Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:14Z",
+      "verified_at": "2026-10-25T03:22:48Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-02",
+      "bundle_ref": "e1796c9e914d6b3e1c0799669d022266ab439e4d4e1009b9c8500b6b8b053936",
+      "data_class": "development",
+      "source_sha256": "80ae56b7b589d1c84cbcbaaa8f74f1c1fa6f29f15ed8661a7aa7de151a3ce4d1",
+      "coverage": {
+        "expected_bars": 2688,
+        "present_bars": 2688,
+        "valid_bars": 2688,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:16Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:16Z",
+      "verified_at": "2026-10-25T03:22:49Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-02",
+      "bundle_ref": "98217a8e5e3e474d88fea00482022910d9a4a7e2321bcb6cc615c82ba1364cc0",
+      "data_class": "development",
+      "source_sha256": "8f9638192cc4e33a5d508968deda991d9008a6a2b6477313cf3f1f149c233c84",
+      "coverage": {
+        "expected_bars": 2688,
+        "present_bars": 2688,
+        "valid_bars": 2688,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:19Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:19Z",
+      "verified_at": "2026-10-25T03:22:49Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-03",
+      "bundle_ref": "886c632a2828b45aaac6eb2fd5cb471c97bacdb3467a43a538ffec2801256972",
+      "data_class": "development",
+      "source_sha256": "6d8f2986903fc2696bb14ed7ae592d6c49d2f14fabecbef02ec9c2d37ac80e8c",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2971,
+        "valid_bars": 2970,
+        "invalid_bars": 1,
+        "missing_bars": 5,
+        "gaps": [
+          {
+            "start": 1679661900,
+            "end": 1679666400,
+            "missing_bars": 5
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:02:22Z",
+      "verified_at": "2026-10-25T03:22:50Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-03",
+      "bundle_ref": "6ffe3e57039e4404dcdcc1f9a68196f01a8d5e4427f028edacf27513700a2142",
+      "data_class": "development",
+      "source_sha256": "e96e7f0ce53537f564e019528a22e3e036dfc9005f57a0e382eaab636f04b20b",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2971,
+        "valid_bars": 2970,
+        "invalid_bars": 1,
+        "missing_bars": 5,
+        "gaps": [
+          {
+            "start": 1679661900,
+            "end": 1679666400,
+            "missing_bars": 5
+          }
+        ]
+      },
+      "receipt_file_binding": "UNVERIFIED_LEGACY_FAILURE",
+      "retrieved_at": null,
+      "original_receipt_retrieved_at": "2026-10-25T03:02:24Z",
+      "verified_at": "2026-10-25T03:22:50Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-04",
+      "bundle_ref": "fce4f06f13615a5bf85a5051a45c3408a3b265b9684f787105748b2a2b2d246d",
+      "data_class": "development",
+      "source_sha256": "69925cb48318f047e4c6131ebcee01bb065f3fb672d3b9db61139c91df51e2c8",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:25Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:25Z",
+      "verified_at": "2026-10-25T03:22:50Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-04",
+      "bundle_ref": "5fcbcad51f5ff1b1852b1c8c125f0346e5998cb22559b8796aa677cd6668a5fb",
+      "data_class": "development",
+      "source_sha256": "c38ab4f6f78607220092a3b2ff1170ef27c5d7afaf7e5242432fe527ee0f86be",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:28Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:28Z",
+      "verified_at": "2026-10-25T03:22:51Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-05",
+      "bundle_ref": "6eed4f7c05675b18f44da7dd622272ef06695ba58a74577d24a9fd67530c19b5",
+      "data_class": "development",
+      "source_sha256": "f4f31332b3183b98e11e9f12d4e72caa75945a555070353d402b9b3d32aa7c6a",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:31Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:31Z",
+      "verified_at": "2026-10-25T03:22:51Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-05",
+      "bundle_ref": "1fe789efd146bc69415c1644a1d95e1f6bee27173db7f05bfab6074d2451b486",
+      "data_class": "development",
+      "source_sha256": "5a073a2e2d114b32487aa3815407c8caaacbca26f8fb78ac6e77e53eda15f739",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:34Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:34Z",
+      "verified_at": "2026-10-25T03:22:52Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-06",
+      "bundle_ref": "bf30f23439e83e6c1da69fd7dddc6d2931836e160da72a42a42489e0a9f106c5",
+      "data_class": "development",
+      "source_sha256": "421f531f4104138b9f4df67b43875fb163c6ae33418a0e46dcd483be271e83d3",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:36Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:36Z",
+      "verified_at": "2026-10-25T03:22:52Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-06",
+      "bundle_ref": "9d4c99017f0e2d8b4290363a58afbd37f2a7324e359fd4ff5229819fe21a2d0b",
+      "data_class": "development",
+      "source_sha256": "f7700674303092b74143b902415345b434dbda51e652291d712c799596db07d0",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:38Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:38Z",
+      "verified_at": "2026-10-25T03:22:52Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-07",
+      "bundle_ref": "36205844cdf3735aadefb315372cb040965ce576ed83de43f1966ce80bb11a0b",
+      "data_class": "development",
+      "source_sha256": "7d764d81c244e238071977f2fdd98784e3a2bce956aa502797188092d8c8f291",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:41Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:41Z",
+      "verified_at": "2026-10-25T03:22:53Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-07",
+      "bundle_ref": "081f89531e1e6c07b35191d9b3acbfa6ecd9ae719a0a722597964cb6884d5620",
+      "data_class": "development",
+      "source_sha256": "a62616e149d5cf65ceeecd420f932c54931f76e96b3440fc64bcba82ba5e6c46",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:44Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:44Z",
+      "verified_at": "2026-10-25T03:22:53Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-08",
+      "bundle_ref": "5fd9543831e1def4302153ff39b56bae677628f2733ee51c4f875cbda9b8a446",
+      "data_class": "development",
+      "source_sha256": "b83b0f8f0419851efe065bf847ed6402a3676f78488cc74e92947cf89c355ee2",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:47Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:47Z",
+      "verified_at": "2026-10-25T03:22:54Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-08",
+      "bundle_ref": "a8baac21b5d8946687be735bdbd6a3208ad758deed24d99aaedb0099ff87d92b",
+      "data_class": "development",
+      "source_sha256": "6e32ceddad1ed044e9c279ac2f6dd0bf2775765b27c40380604b53bd224bda0f",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:50Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:50Z",
+      "verified_at": "2026-10-25T03:22:54Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-09",
+      "bundle_ref": "0f9dc4ad6a24be3b1aae7cd4421e130fa5b88bc329855221c0d8c64ff7edddf4",
+      "data_class": "development",
+      "source_sha256": "87e660a4208618dedc83e0b0d870d6d6028cc9443db2ed78567c1f3019be5737",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:53Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:53Z",
+      "verified_at": "2026-10-25T03:22:55Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-09",
+      "bundle_ref": "e07f414f82d36321fbb0595c55076d00aa94d18e1da4c9eadd3349d3575d7fe5",
+      "data_class": "development",
+      "source_sha256": "e43c2871a0fa928eacb3af341238ceeceb11df2f54194a0e864a85dcbba7f391",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:55Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:55Z",
+      "verified_at": "2026-10-25T03:22:55Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-10",
+      "bundle_ref": "72c10419035327e0e95b8ac7fb05e1b6cbae2537aa4a2c6e2f41cca70c603b41",
+      "data_class": "development",
+      "source_sha256": "7ccc5e6cb4517c2ed0aeb26863ffcb82870cb9b8f47cee7767bed8581ac68a3c",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:02:58Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:02:58Z",
+      "verified_at": "2026-10-25T03:22:55Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-10",
+      "bundle_ref": "1545e64fb1fbd5c7df25964ee606e749e807d9c7efd6d3419ca74c1d03a27c82",
+      "data_class": "development",
+      "source_sha256": "650a0617df9639e007e14ec735a5a83d15cec057dc9bf34dd5d57c9e816e95f9",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:01Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:01Z",
+      "verified_at": "2026-10-25T03:22:56Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-11",
+      "bundle_ref": "4710ff26d91a76adee8493ea1c78c62ff1dd328bfd064e19492327c893ed75e5",
+      "data_class": "development",
+      "source_sha256": "627de37e3933fa4247108a7ae85927685d400e15672495975db5d893494b35a8",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:03Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:03Z",
+      "verified_at": "2026-10-25T03:22:56Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-11",
+      "bundle_ref": "8d0600ea627409104c993359c7cddbd99abdcc677ca60bde3d62f841b06673dd",
+      "data_class": "development",
+      "source_sha256": "c537d52ea63a254477dfe67f7a66484c20fbd37f0f17fe481d3ccb4bf9b1c0fb",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:06Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:06Z",
+      "verified_at": "2026-10-25T03:22:57Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2023-12",
+      "bundle_ref": "d860c155cdd517fbb2cf31beb712a521f4603a9f03d50e3d0273d60cdf4b310d",
+      "data_class": "development",
+      "source_sha256": "052dd2b2c6fa6f81c4139258f55349950d23ee0823a66e15a2b8ac904ebc32d3",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:09Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:09Z",
+      "verified_at": "2026-10-25T03:22:57Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2023-12",
+      "bundle_ref": "f2328df1e13f9410716f15e6585eef46a6bfd8d8f23421f3cb6ab1d22cc9888c",
+      "data_class": "development",
+      "source_sha256": "aff4ccbe01d21d19112925274c592e37ca5e84743cefad8aac6120e5c9b34fc6",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:12Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:12Z",
+      "verified_at": "2026-10-25T03:22:58Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-01",
+      "bundle_ref": "218c60e215b17aec9c502c3f33d1d695977d1b92104ec45cd4ed5fd51b0f2a4c",
+      "data_class": "assessment",
+      "source_sha256": "1884fad02ff86930e1e004d85f8155438a454a6e708a2a67ca88646ac76f5610",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:14Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:14Z",
+      "verified_at": "2026-10-25T03:22:58Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-01",
+      "bundle_ref": "1ff2307cbc3c39d78c4bafa1dbaa6e15c0d9a93ba1eb12a6afa5e6c8f93069da",
+      "data_class": "assessment",
+      "source_sha256": "b8d9ce302f705bb1262cab33d544c4ede585c2b9165195d7048b6985edd1a9a4",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:17Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:17Z",
+      "verified_at": "2026-10-25T03:22:58Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-02",
+      "bundle_ref": "9bbab48f6ad1bf29e094675f35ba1fd62afab7b63ece8fdd27ee56e7de2f2268",
+      "data_class": "assessment",
+      "source_sha256": "7621f87a8fa1d2588fdaebacdd30333d2feaa05b453118c7c697f17aa27f4720",
+      "coverage": {
+        "expected_bars": 2784,
+        "present_bars": 2784,
+        "valid_bars": 2784,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:19Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:19Z",
+      "verified_at": "2026-10-25T03:22:59Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-02",
+      "bundle_ref": "a5572090e40e7b97c02842f2d8ebd83c46d6db763df2aa3ceeef5b6a9916e803",
+      "data_class": "assessment",
+      "source_sha256": "752f9a159200cbf45bf5f713e925bd1c4b84c4d2c4202b30c021d259b84a0402",
+      "coverage": {
+        "expected_bars": 2784,
+        "present_bars": 2784,
+        "valid_bars": 2784,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:22Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:22Z",
+      "verified_at": "2026-10-25T03:22:59Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-03",
+      "bundle_ref": "4e3f927387e45c4e7314527b09261c139e8e801a0d1dae1d5611e5eee1587111",
+      "data_class": "assessment",
+      "source_sha256": "e94c2546e6f757c08ff4aba18a93d759af47fee3700165f2696417609bf418f4",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:25Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:25Z",
+      "verified_at": "2026-10-25T03:23:00Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-03",
+      "bundle_ref": "0b31d32c9617cec9ec42219485a7b3c6fb1da88677b2adbc004d42c7db6a1d39",
+      "data_class": "assessment",
+      "source_sha256": "79dbdca5656fcb53bf051b40dbf6940c7b99e880d1ca38ebaf724135073a6174",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:27Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:27Z",
+      "verified_at": "2026-10-25T03:23:00Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-04",
+      "bundle_ref": "f5d16266ce1b4b78fab0ebb02257fb1456e6f743caa1841a986c3acf8cce0505",
+      "data_class": "assessment",
+      "source_sha256": "fde006dba67848d6e736b229688190cbeea04c398042df22a7a26eb2bc76fa0b",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:30Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:30Z",
+      "verified_at": "2026-10-25T03:23:01Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-04",
+      "bundle_ref": "01df2ec352ef575fb2b1b5bc6d2e5187f4cfbd0514f31b65ecba9c00961cebe4",
+      "data_class": "assessment",
+      "source_sha256": "023bc4fa955f64b7871b433a73221e749bca7f31e75efc5c5171444ad4cdc4ac",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:33Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:33Z",
+      "verified_at": "2026-10-25T03:23:01Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-05",
+      "bundle_ref": "404136dc076256bbc0c79c28eee7b1e2bb63f800e044c9d02421dab602da95ce",
+      "data_class": "assessment",
+      "source_sha256": "6c3b6882d5083589dec5e6b8112cd9cda94cc2de295682089de6d283825efad1",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:36Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:36Z",
+      "verified_at": "2026-10-25T03:23:01Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-05",
+      "bundle_ref": "3d31cf3e73d8f2a60b40a7e1c2df476413e398d11088ab655d38f9b5209e2a43",
+      "data_class": "assessment",
+      "source_sha256": "71fb49f90e26c1acf9e475268f7ac75921ac7893676714a129ce9e1db4ab176a",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:39Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:39Z",
+      "verified_at": "2026-10-25T03:23:02Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-06",
+      "bundle_ref": "8a9cd53e094e68c1c34c51c0dc78cf495c52f5e3ed92b112671123f7560398c1",
+      "data_class": "assessment",
+      "source_sha256": "a3115c66aae5947cdd97a263bd2ae39b28805e2948b0f153f2f2fc6181aa92a5",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:42Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:42Z",
+      "verified_at": "2026-10-25T03:23:02Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-06",
+      "bundle_ref": "fc0d6a1e6507d44fb598cc01572f16d2728ed36f3a2bf7367530f79d9f5db3bd",
+      "data_class": "assessment",
+      "source_sha256": "2420ac47814a3d862c6c0f2ce4a40bf61e4531d16956b6b2916840a6d9d5a78e",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:45Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:45Z",
+      "verified_at": "2026-10-25T03:23:03Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-07",
+      "bundle_ref": "f29b2c576477946cd4ddb70411598d9818fe9bfc5129775b9b80adae87b97e7e",
+      "data_class": "assessment",
+      "source_sha256": "ec2d09f705f225632bd120e6fc4af9075590d2417816edb004e6729e90aced35",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:48Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:48Z",
+      "verified_at": "2026-10-25T03:23:03Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-07",
+      "bundle_ref": "479975334a33bc7a19006c145c00fdf0ab87d58667db55240f1a3afae169d0c1",
+      "data_class": "assessment",
+      "source_sha256": "77671362e26efb73811e56d42f773bf3813010f7c17542a883a29f9a094bfbb0",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:50Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:50Z",
+      "verified_at": "2026-10-25T03:23:04Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-08",
+      "bundle_ref": "56d8dbd9edefd1fe88599fc24f6ba99f73212d8cb29b054b7190eed6a9de4a76",
+      "data_class": "assessment",
+      "source_sha256": "54fecf17078a8fb0d1a6ec16be6a64003947bf411e2697ced2815162cb69a7b0",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:52Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:52Z",
+      "verified_at": "2026-10-25T03:23:04Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-08",
+      "bundle_ref": "81a4e5ae865786ad9f66b189b4730125b427d1b1f855692d80945333e8077cfb",
+      "data_class": "assessment",
+      "source_sha256": "29200542ff4a3499a99f5eda8aafc387b29a203bd3684e41f20c748ce64ff420",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:53Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:53Z",
+      "verified_at": "2026-10-25T03:23:04Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-09",
+      "bundle_ref": "def3c2fd13de98f7a5dd780544f7ef226265d8d40af5868ac53e3c97953dc0af",
+      "data_class": "assessment",
+      "source_sha256": "e4d1b71536ec880ac772a42aacdb12fa6db0751fe5b4a6fd5a345fcd947f5579",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:56Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:56Z",
+      "verified_at": "2026-10-25T03:23:05Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-09",
+      "bundle_ref": "4422dbfff037334f7f5acd49e3b65449184b261f0436d6360cfea50b19d32ade",
+      "data_class": "assessment",
+      "source_sha256": "20c1611b9931c78226ac8b9034ba0210514d44f565791aa2203c990f44cff668",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:03:59Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:03:59Z",
+      "verified_at": "2026-10-25T03:23:05Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-10",
+      "bundle_ref": "86a0e8499521f1cb8cc74cb670d5a0d415c8f912cc7fe870a5ff8ef4ec1f8284",
+      "data_class": "assessment",
+      "source_sha256": "637ad8d7c3df180637cd4a65970e220d02aca6bc852e3e7d8dc6ccfbb5d7d9cb",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:02Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:02Z",
+      "verified_at": "2026-10-25T03:23:06Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-10",
+      "bundle_ref": "475fb8f742918c914be54aaa8db5c851af1f90afacc1d420e0ee3139c936369f",
+      "data_class": "assessment",
+      "source_sha256": "e43c2a3f09a173deb3e2ab1edc03b4ebac129f1c8e4dfab8aeae185a69b19011",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:04Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:04Z",
+      "verified_at": "2026-10-25T03:23:06Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-11",
+      "bundle_ref": "96082128a08c4b8d068d34411172940c8ff7feaa87ef2b1ab1316c99768fbc9b",
+      "data_class": "assessment",
+      "source_sha256": "74368a671fcf241c4f1846bf451a63045ca68860d9e525a1c3969b9e47b819ba",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:07Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:07Z",
+      "verified_at": "2026-10-25T03:23:07Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-11",
+      "bundle_ref": "8c26b4e1ed77805054bfb28c1e19b69dedf93343c00e5bbb4010679e5261d48c",
+      "data_class": "assessment",
+      "source_sha256": "416c0498ef6a9e48e0c45e02bfbb7e17c1e1203574ca7fce617e38b4c1454091",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:10Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:10Z",
+      "verified_at": "2026-10-25T03:23:07Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2024-12",
+      "bundle_ref": "2130dbd23613403873697d5c0c8fa7ea9638ba6f0a144599fbfc6e2188b7d012",
+      "data_class": "assessment",
+      "source_sha256": "b239e92908fa6fdcd5bec56f2d19bb2b68956b4a282bb394f7b64baa520d95d8",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:13Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:13Z",
+      "verified_at": "2026-10-25T03:23:07Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2024-12",
+      "bundle_ref": "6cf4f2c8745b5ed1b2312c9910755672f45853ed344118c9b18738808e2dd743",
+      "data_class": "assessment",
+      "source_sha256": "9c09431684853a322c955514eea843e388181233514b80500791a6b7b6dea08c",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:16Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:16Z",
+      "verified_at": "2026-10-25T03:23:08Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-01",
+      "bundle_ref": "288606f619840aff2bd4c0c1d466c59cbda7eb9b2d9f4278ffb7c1108b138b20",
+      "data_class": "assessment",
+      "source_sha256": "4b259d50eab871287ee98d5a46fd034eb6a83df88078bdba87735ab1a8321653",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:56:36Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:56:36Z",
+      "verified_at": "2026-10-25T03:23:08Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-01",
+      "bundle_ref": "8ba6a4c0bfa03e207479e417bc150a8c05821d6dd3c5b9b8175b52aa30d6b1d7",
+      "data_class": "assessment",
+      "source_sha256": "1bffc752791af36e0b186b725d0cb4b50344d5d8a288b9b162b3b55e71a08268",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T02:56:38Z",
+      "original_receipt_retrieved_at": "2026-10-25T02:56:38Z",
+      "verified_at": "2026-10-25T03:23:09Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-02",
+      "bundle_ref": "6e25aa1cd4d48379ecb54adb401920745411789ad4475760603291f66927f32d",
+      "data_class": "assessment",
+      "source_sha256": "acf2e1241a8f1924fd3ac0043564d85cb76fe1dc6783383bc0298cca676fb0a2",
+      "coverage": {
+        "expected_bars": 2688,
+        "present_bars": 2688,
+        "valid_bars": 2688,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:19Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:19Z",
+      "verified_at": "2026-10-25T03:23:09Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-02",
+      "bundle_ref": "fe49c027e80434c1787a52a647f2cca8c6d16c348e7c6d865b3b34a2910bce51",
+      "data_class": "assessment",
+      "source_sha256": "53d58feb197a65b220fc00c1836ab2e1d4d94d9caab9583ea0f6d2c8a233f529",
+      "coverage": {
+        "expected_bars": 2688,
+        "present_bars": 2688,
+        "valid_bars": 2688,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:22Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:22Z",
+      "verified_at": "2026-10-25T03:23:09Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-03",
+      "bundle_ref": "5131f09e65adf82231031481938e37c754456907503e70210d68967dcc831b27",
+      "data_class": "assessment",
+      "source_sha256": "af4fc223397261ec7fe0c995ebf7b7a44e34bab57702603e4f7ab89dc40beb4e",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:25Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:25Z",
+      "verified_at": "2026-10-25T03:23:10Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-03",
+      "bundle_ref": "28b0d4b095376ab765978b710727ac360823513d751e327938cb272da0d5e7c7",
+      "data_class": "assessment",
+      "source_sha256": "59ff05f5632e7c75efea55423830d8d25aec1fca080b5ce4452c9902bf683603",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:28Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:28Z",
+      "verified_at": "2026-10-25T03:23:10Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-04",
+      "bundle_ref": "30319e2efed56203d6cf4cad03fb76141c88479d6191acc23f2ddb0404ff7a1c",
+      "data_class": "assessment",
+      "source_sha256": "23d28cf65a155975b542b101ff4f5f1f037d08393dc0c75d7cbcb0fe3730815a",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:31Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:31Z",
+      "verified_at": "2026-10-25T03:23:11Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-04",
+      "bundle_ref": "8439f687da0607b26339d6fd209be782b92af287670025688443a3ee6c91770c",
+      "data_class": "assessment",
+      "source_sha256": "731e89f69ac78a4b3be8b03e204069b8d557dc2d07d12a340dd70f1d927f420c",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:33Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:33Z",
+      "verified_at": "2026-10-25T03:23:11Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-05",
+      "bundle_ref": "875c257e0e65c18874a271008ade390004a0e9f830b7e27e7fea937e7a529bd0",
+      "data_class": "assessment",
+      "source_sha256": "806aa736df00f7e466a27af86582bc7a38e5444afc123f9f301171b9eb74892d",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:36Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:36Z",
+      "verified_at": "2026-10-25T03:23:12Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-05",
+      "bundle_ref": "3137df02f83216b698da7e12174ab071128e6c28ce0df9f8d0de5cf41dcaab31",
+      "data_class": "assessment",
+      "source_sha256": "83a5ce7d7f1c165e9ef3f4c9b76a306a8bf1282001099de42f7b228e5acff500",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:39Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:39Z",
+      "verified_at": "2026-10-25T03:23:12Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-06",
+      "bundle_ref": "b8460fe52c240f6201bdd2228c4e48a454358bc4d101609f6f475388d440038a",
+      "data_class": "assessment",
+      "source_sha256": "5ed5b8f531695fe560192dd638bfe3252d6e33bf35c560cf2fb843fd58f60948",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:42Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:42Z",
+      "verified_at": "2026-10-25T03:23:12Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-06",
+      "bundle_ref": "2ec425b7a07ce4633b2f675c0433c93fabec29ad7c37277119b8dea201dcd534",
+      "data_class": "assessment",
+      "source_sha256": "d7c20084feb0439ac4c65f47873da0ad95a00ee3facfd9e18759ac069c31877c",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:45Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:45Z",
+      "verified_at": "2026-10-25T03:23:13Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-07",
+      "bundle_ref": "5fa9cea2966daf71ccc8ba5231ed41458fcff1072bcd71504f14f4614075e0b0",
+      "data_class": "assessment",
+      "source_sha256": "dd8e391c830b210d80a2b77b5d4310e47acfca708c99f437239796df958db6b0",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:47Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:47Z",
+      "verified_at": "2026-10-25T03:23:13Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-07",
+      "bundle_ref": "2255a4ff85b21a500d414f4a041cd9c2a3688f734b1dd9198296f21fc803bb89",
+      "data_class": "assessment",
+      "source_sha256": "39820873a12de7af45c3927f26c3fa28782acf12daf74f3f9bf947190f1b0bbc",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:50Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:50Z",
+      "verified_at": "2026-10-25T03:23:14Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-08",
+      "bundle_ref": "0e81816052b113285a6cabdd4b2859c86d0c1eb4147ada0eff6c71fcb9cd18a1",
+      "data_class": "assessment",
+      "source_sha256": "43c34922d4cfe47bc07da76cb5721b7159e11f3fbe94d594c2b7f915d6e12016",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:53Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:53Z",
+      "verified_at": "2026-10-25T03:23:14Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-08",
+      "bundle_ref": "95c69e78e4bbf7e0a620c559468367f41089691699f0e414ae841efcb7bfd79f",
+      "data_class": "assessment",
+      "source_sha256": "2262abcf42a597532a9808c70503f87656db789f8502bd48feb46cafcf89ccba",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:56Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:56Z",
+      "verified_at": "2026-10-25T03:23:15Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-09",
+      "bundle_ref": "14548ec463e0954762fa4d450fb0dba6d6eeef8ac75be5432f52c8ca73ab3c85",
+      "data_class": "assessment",
+      "source_sha256": "bfedf4de813a2da8c87ab4659b0f67f4fae07f288bf92b668befe9b37ed5add8",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:04:59Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:04:59Z",
+      "verified_at": "2026-10-25T03:23:15Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-09",
+      "bundle_ref": "76db3bc984631431f424e6ef0faae4778cc2fdde70bc46d67bbc980e6495d5ce",
+      "data_class": "assessment",
+      "source_sha256": "67789964334819f58224be162aa0d7fffb85ec39994f0055e036fc6bf60aeb88",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:05:01Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:05:01Z",
+      "verified_at": "2026-10-25T03:23:15Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-10",
+      "bundle_ref": "ecd8e714a61c929b588f8ed6b11a5043d81a080c4c7ac2d65ade91e2fe456aaf",
+      "data_class": "assessment",
+      "source_sha256": "2302a4dfbb23d7b5230d1107c53277fae60ca8d7cd4ae7c8b5aea29954b126c2",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:05:04Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:05:04Z",
+      "verified_at": "2026-10-25T03:23:16Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-10",
+      "bundle_ref": "902e4b24bd39cb51b0596fc6a7fbd5b4a81028a62208e9f5373af8d020b66a79",
+      "data_class": "assessment",
+      "source_sha256": "e23b0c1999eb5a589b032aa908344f8dc9d6fdc1a3ab6b2e33d00334c556d6a3",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:05:07Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:05:07Z",
+      "verified_at": "2026-10-25T03:23:16Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-11",
+      "bundle_ref": "02c8438192e81939c62b0a19c70a46b7fa42b0ccf70df000fcba1c431993fc84",
+      "data_class": "assessment",
+      "source_sha256": "2ae86d84bcafecd0426f86b0da71c0be818408a48b952264292d349bb4facbf1",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:05:10Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:05:10Z",
+      "verified_at": "2026-10-25T03:23:17Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-11",
+      "bundle_ref": "2830bebe86641264b1770ca911a27c24656a7f0c0c323c321ddc59182ff3d803",
+      "data_class": "assessment",
+      "source_sha256": "3bc441e6d4108a31d9d23c5b1a19ea2f9344c6221e1001f50c1aa4427e1dc54a",
+      "coverage": {
+        "expected_bars": 2880,
+        "present_bars": 2880,
+        "valid_bars": 2880,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:05:13Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:05:13Z",
+      "verified_at": "2026-10-25T03:23:17Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "month": "2025-12",
+      "bundle_ref": "494d60360177526075697e7d585b67020e063d015f9843072b83fd7372cea1fb",
+      "data_class": "assessment",
+      "source_sha256": "4f99a3abbc909ddee3237a0e28931886ea01de137b67403f5a0753a85508af22",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:05:16Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:05:16Z",
+      "verified_at": "2026-10-25T03:23:18Z"
+    },
+    {
+      "symbol": "ETHUSDT",
+      "month": "2025-12",
+      "bundle_ref": "f87c81013d09306a0731f5df2ba75cca848e1c398760b93eb988daade4e37222",
+      "data_class": "assessment",
+      "source_sha256": "752deffc33acb8ce36686ba3c7be3991d00316d6e35687678aece9306f724878",
+      "coverage": {
+        "expected_bars": 2976,
+        "present_bars": 2976,
+        "valid_bars": 2976,
+        "invalid_bars": 0,
+        "missing_bars": 0,
+        "gaps": []
+      },
+      "receipt_file_binding": "VERIFIED_FILE_HASHES",
+      "retrieved_at": "2026-10-25T03:05:18Z",
+      "original_receipt_retrieved_at": "2026-10-25T03:05:18Z",
+      "verified_at": "2026-10-25T03:23:18Z"
+    }
+  ],
+  "counts": {
+    "sources": 144,
+    "VERIFIED_FILE_HASHES": 128,
+    "expected_bars": 420864,
+    "present_bars": 420560,
+    "valid_bars": 420544,
+    "invalid_bars": 16,
+    "missing_bars": 304,
+    "UNVERIFIED_LEGACY_FAILURE": 16
+  },
+  "provider_documents_ref": "88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438",
+  "retained_code_ref": "ffb61230671ee06982f5d036318eaa2320411691cb392ec51f4b8b0f4e4e0b9b",
+  "retained_code_files": {
+    "trading_researcher/__init__.py": {
+      "artifact_ref": "2ef7efa2826ccd53b8fd04f8cd60d9cad3bd21839ce9bbe41012050191b77f0a",
+      "sha256": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336"
+    },
+    "trading_researcher/__main__.py": {
+      "artifact_ref": "62dd53a0e074b35f94fd44e401f5670a7240496f6bf1644a38805fcb0657b147",
+      "sha256": "001be1299c2eac964e9f5ee5cd39317aa9cb833f473945ec34c7317913076a90"
+    },
+    "trading_researcher/binance_archive.py": {
+      "artifact_ref": "84928c44f424142fa6c244799fb9bdc3825e0cbf9e5dff4e48dd66b1d3f912f4",
+      "sha256": "ce5ab7e078964676594f7aec9e7a6104df75393b905f8a08d1c1e9619017af08"
+    },
+    "trading_researcher/binance_ingest.py": {
+      "artifact_ref": "62597b1a07bce2873e218de42212ae5b31ea0bcb6ae676c9b3e639c9d1c8a943",
+      "sha256": "2e651cb1f1216a7e47d2ae0a3f52efaa20ec31831e9e5ab861cba6586dec5036"
+    },
+    "trading_researcher/binance_quality.py": {
+      "artifact_ref": "d1f6a7e1ec64cd1a761b549288af084aca1c2943ca47126c9c242a83fcd97061",
+      "sha256": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df"
+    },
+    "trading_researcher/certification.py": {
+      "artifact_ref": "bb5f1ccbc8e296542f5f3a381babfb7cb5e6466be115df3f7ca690bd7abcfd95",
+      "sha256": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743"
+    },
+    "trading_researcher/checks.py": {
+      "artifact_ref": "9c891745e8eded3fde1f4d04ee1b03ce05cf51a0db178992f1f0ceed495535f2",
+      "sha256": "07adb75eeff3bb6dd67b6a5625b82481c619c00e4afd2c1b793668a18cf0e704"
+    },
+    "trading_researcher/codec.py": {
+      "artifact_ref": "4222898a77a928e844eed188689060039494528dd8bcd71eec997cb9f8c2d414",
+      "sha256": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602"
+    },
+    "trading_researcher/coordination.py": {
+      "artifact_ref": "d04685c79893dfe1ae68951c97a6fb3165134852a2cd57ab09c3db544dfceeb2",
+      "sha256": "71def6d35a6819241d61e1643fefb5aa525554a4121913e1aef98c4f0c3b5c2d"
+    },
+    "trading_researcher/data.py": {
+      "artifact_ref": "3db305bba7211a24a7df1a0b94d1c330311600d2b061759d69f4e662ede068ea",
+      "sha256": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c"
+    },
+    "trading_researcher/errors.py": {
+      "artifact_ref": "81921f98065f585d7f8d2ff56dfdc9236d2d0757cbeeff92625a5f271de5c2b4",
+      "sha256": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c"
+    },
+    "trading_researcher/expressions.py": {
+      "artifact_ref": "f2e03d47f1a555d60c35c1e410a488e5ac872b451a451982926f97ef1b000f0f",
+      "sha256": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226"
+    },
+    "trading_researcher/formalization.py": {
+      "artifact_ref": "30e67bb02326ec96382d337904a8e71955c977aaa886e074a5dc5fe71555f5a2",
+      "sha256": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0"
+    },
+    "trading_researcher/memory.py": {
+      "artifact_ref": "c65cfddfe7e39e2de205c2ab125a69ea9c9d7bcf49d9cde71d1985ffc1387936",
+      "sha256": "f01cfe0bdbc6c0c3e9582d8ce5e691b8a98e5d9b59e90433db83d6fab1939712"
+    },
+    "trading_researcher/memory_demo.py": {
+      "artifact_ref": "5ac7ef50cde714c31eaf2882dabe597f5845d8530ec28d70d53145ebd281f17d",
+      "sha256": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c"
+    },
+    "trading_researcher/outcomes.py": {
+      "artifact_ref": "b096c6786cade23ba45bea006878b819634027062e36bf7cbccaed5627f57566",
+      "sha256": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6"
+    },
+    "trading_researcher/research_calls.py": {
+      "artifact_ref": "60ea05f576eeff28d0495c89f162b195b350735650e2a422facecbbf66872574",
+      "sha256": "776f852184ed42916790565d312a816ab7dce523af6fe7f43d223f077fe9d284"
+    },
+    "trading_researcher/research_demo.py": {
+      "artifact_ref": "d424690b838413e3bf5090b6ea21c2d080cf2ae1221a8831d46b89714577e509",
+      "sha256": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490"
+    },
+    "trading_researcher/researcher.py": {
+      "artifact_ref": "3338f340ea6c62dfb777e97a64c008f394b12fcd26bd09cb33f20fb8aac18b52",
+      "sha256": "2678b7e05f83a979c1a2b527d61230d28b822a1156b3dc09a7764f8d4e5efbba"
+    },
+    "trading_researcher/server.py": {
+      "artifact_ref": "68c800ed6c4893003a7e0385d5a56dd2f43dec4cf3409320a2be495ad8183ec0",
+      "sha256": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527"
+    },
+    "trading_researcher/storage.py": {
+      "artifact_ref": "693305c9e03947f950547990fdf55041ec64c22659ca14489eef0a4e3e373268",
+      "sha256": "25377afc850d17a6cf9db83bde0e46105250bf2248a83c84400fd7416b80b01c"
+    },
+    "trading_researcher/worker.py": {
+      "artifact_ref": "98ad84424727dcbf5f8b5f44f4cd60905db8be5da289f0b825f70ec0ec072f59",
+      "sha256": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    }
+  },
+  "scientific_readiness": false,
+  "availability_scenario_selected": false,
+  "normalized_data_snapshots_created": false,
+  "exposure": "Operator/assistant inspected source identities, coverage, file hashes and invalid timestamp reasons; numerical market values and empirical hypothesis results not printed. This is not an independence claim.",
+  "backup_verification": {
+    "schema": "binance-source-backup-verification/1",
+    "status": "PASS",
+    "registry": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-source-registry-2026-10-25",
+    "backup": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-source-backup-2026-10-25",
+    "restored": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-source-restored-2026-10-25",
+    "source_counts": {
+      "artifacts": 891,
+      "blobs": 745,
+      "blob_bytes": 277538327
+    },
+    "restored_counts": {
+      "artifacts": 891,
+      "blobs": 745,
+      "blob_bytes": 277538327
+    },
+    "source_bundles_compared": 144,
+    "restored_registry_integrity": {
+      "status": "PASS",
+      "events": 892,
+      "foreign_keys": true,
+      "synchronous": "FULL",
+      "schema_version": 1,
+      "scope": "local coordination and research memory integrity only",
+      "research_memory": {
+        "status": "PASS",
+        "records": 0,
+        "version": "research-memory/1",
+        "scientific_authority": false
+      },
+      "blobs": {
+        "status": "PASS",
+        "committed": 745,
+        "quarantined": [],
+        "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+      }
+    },
+    "scope": "Complete retained source bytes, immutable records and audit chain; no normalized data snapshot or scientific acceptance"
+  },
+  "interpretation": "Exact currently retained sources and quality flags; not scientific acceptance or historical-vintage proof. Source bar counts use opening times, not later partitioned decision instants."
+}

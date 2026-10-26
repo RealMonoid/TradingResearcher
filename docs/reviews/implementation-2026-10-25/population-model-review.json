@@ -1,0 +1,176 @@
+{
+  "schema": "independent-population-model-review/1",
+  "date": "2026-10-25",
+  "reviewer_role": "Independent statistical-data reviewer; no production edits",
+  "purpose": "Check the development-only binary population-world prerequisite against the retained information assessment and research contract sections 5.3, 5.4 and 11. This review is not a whole-framework assessment.",
+  "conclusion": "No remaining substantiated implementation defect found in the bounded review after the recorded fixes. Fixed mathematical identities and adversarial software checks support the declared estimator-response stress model only; they do not establish market adequacy, calibration, power or N_min.",
+  "source_context": [
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md sections 5.3, 5.4 and 11",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json",
+    "Existing owned evaluation plans, development execution bindings, retained diagnostics and source-byte replay"
+  ],
+  "reviewed_implementation": [
+    "trading_researcher/population_models.py: specification, validate_specification, build_model, _bernoulli, generate_world",
+    "trading_researcher/population_runs.py: owner validation, child source capture, case stream and separate byte replay",
+    "trading_researcher/coordination.py: dispatch",
+    "trading_researcher/storage.py: reserved operation namespace",
+    "trading_researcher/memory.py: creation-time guard"
+  ],
+  "mathematical_assessment": {
+    "population": "With development eligible q and w=P(C=true | eligible), including unknown C in the denominator, p_true=q+e and p_other=q-w*e/(1-w) imply w*p_true+(1-w)*p_other=q and p_true-q=e. Feasibility and 0<w<1, 0<q<1 are checked without clipping.",
+    "mask_and_latent_stationarity": "Uniform initialization and exact rational restart probability 1/L preserve the full joint time-mask marginal. Independent uniform integer common/private states, refreshed with probability 1-rho, preserve threshold marginals. Independent per-instrument common-share choices preserve these marginals. This is an ideal probability-law argument, not a finite PRNG certification.",
+    "population_not_realized_ratio": "The identities describe eligible nonterminal row-population conditioning. They do not assert that finite-sample realized ratios equal those identities, or that their expectations do; ratios can be undefined. No failed world is retried to obtain a desired realized contrast.",
+    "conditional_covariance": "For fixed thresholds pA,pB, common share lambda gives same-time cross-instrument covariance lambda^2*(min(pA,pB)-pA*pB). Same-instrument positive lag k has factor rho^k*(lambda^2+(1-lambda)^2). Raw empirical products also contain mask and conditional-mean structure; negative raw products alone do not prove impossible membership in this latent model.",
+    "calendar": "Artificial terminal-horizon censoring is retained. Source boundary and source missing outcomes cannot masquerade as maturity on the synthetic calendar. terminal_censored_cases counts true-scope terminal relabels, including already missing outcomes; it is not the number of otherwise eligible cells lost.",
+    "scope": "Parameters are declared stress assumptions, not fitted or certified. Reports use synthetic estimator-level programs, explicitly record raw_AST_executed=false and cannot claim original H_exec replay."
+  },
+  "fixed_hand_expectations": {
+    "development_q": "3/7",
+    "development_w": "4/7",
+    "exact_lattice": 420,
+    "rates": [
+      {
+        "effect": "0",
+        "p_true": "3/7",
+        "p_other": "3/7"
+      },
+      {
+        "effect": "1/20",
+        "p_true": "67/140",
+        "p_other": "38/105"
+      },
+      {
+        "effect": "1/10",
+        "p_true": "37/70",
+        "p_other": "31/105"
+      },
+      {
+        "effect": "-1/20",
+        "p_true": "53/140",
+        "p_other": "52/105"
+      },
+      {
+        "effect": "-1/10",
+        "p_true": "23/70",
+        "p_other": "59/105"
+      }
+    ],
+    "covariance_oracle": "An independent enumeration of 500 common/private lattice and share-choice atoms gives means 3/5, 2/5 and same-time cross covariance 1/25 at lambda=1/2. The separate mathematical lag-one mixed-threshold expression is 2/75 at rho=1/3; this is not empirical calibration."
+  },
+  "findings_and_disposition": [
+    {
+      "finding": "Source boundary and terminal synthetic maturity could be confused by direct resampling.",
+      "evidence": "Design concern raised before the final implementation read; not a claimed observed failing runtime test.",
+      "disposition": "Parent normalized source PARTITION_BOUNDARY and true-scope DATA_GAP to interior OUTCOME_MISSING; true-scope terminal cells become PARTITION_BOUNDARY. Independent fixed-fixture tests verify source status/index provenance and maturity precedence."
+    },
+    {
+      "finding": "A model containing only the correct schema caused raw KeyError diagnostics.",
+      "evidence": "Independent direct pre-fix probe caught KeyError and printed it; the probe process itself exited 0.",
+      "disposition": "Parent uses checked model.get inputs before rebuilding. Independent tests now require controlled Invalid for malformed and missing model fields."
+    },
+    {
+      "finding": "Individually accepted exact rational effects could create an LCM too large for decimal conversion.",
+      "evidence": "Independent direct pre-fix probe using Fraction(1,10**2000+d) for d in (1,3,7) caught raw ValueError at Python decimal conversion; the probe process itself exited 0.",
+      "disposition": "Parent retains exact_lattice_resource_envelope and lattice_size=null without decimal conversion. Independent test preserves all scenarios and denies generation. This pure-API case is outside the current owned plan effect pattern."
+    },
+    {
+      "finding": "Parent added detached returned diagnostics.",
+      "evidence": "Parent-initiated hardening, not an independently observed pre-fix failure.",
+      "disposition": "Independent test mutates the returned diagnostics, confirms the caller input is unchanged, and rejects the tampered model."
+    }
+  ],
+  "independent_validation": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_population_models_adversarial.py",
+      "-v"
+    ],
+    "test_count": 11,
+    "unittest_reported_seconds": 0.121,
+    "wrapper_wall_seconds": 0.469,
+    "exit_code": 0,
+    "log": ".trf-runtime/population-model-independent-review-2026-10-25/tests.log",
+    "log_sha256": "445e05be838abdf59e00c3d9141258809b8dc7eb1f422bf8d384365dbd6c7888",
+    "source_capture": ".trf-runtime/population-model-independent-review-2026-10-25/tests-result.json",
+    "captured_file_count": 41,
+    "source_before_equals_after": true,
+    "coverage": [
+      "All signed population identities including unknown C; fixed hand rates and lattice",
+      "Independent common-lattice probability oracle and finite-sample distinction",
+      "Exact integer Bernoulli atoms without floating random draws",
+      "Controlled full joint mask continuation/restart and latent update sequences, including ineligible times",
+      "Common-share endpoints and persistence keep/refresh",
+      "Source boundary, missing outcome, decision gap and synthetic terminal precedence; no retry for empty eligible samples",
+      "Input immutability and detached diagnostics",
+      "Malformed model/specification, exact probability bounds, seed/scenario/time/horizon and source/model tampering",
+      "Huge exact lattice resource gap, degenerate identification and infeasible scenarios retained without selective generation"
+    ]
+  },
+  "owned_path_review": {
+    "source_findings": "Diagnostics ownership and matching plan/execution are validated before retained source reads. Effect scenarios come from the owned plan; request fields cannot override them. Source/runtime/input/spec/seed are retained before the child. A separate process checks exact case bytes and summary digest. No scientific admission or capital authority is created.",
+    "execution_boundary": "Reviewer performed source review only for the population owner operation. Parent owner tests, HTTP probes and full regression are separate evidence and are not presented here as reviewer-executed checks."
+  },
+  "captured_hashes": {
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+    "trading_researcher/coordination.py": "517050063928d8a5e74727327c8baaae109834a6de7132b43db47e9cd3d6238f",
+    "trading_researcher/memory.py": "6d5f7923730fe3c0aae1c2ffdfaa8398f2c86d436ee2091ab26150232eaefdd9",
+    "trading_researcher/storage.py": "cf0f7586348b815a9318fd9f33a48db2f9210d37264e4b6bf7cd4dbe195dbb95",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/stationary_bootstrap.py": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+    "tests/test_population_models.py": "ec1a41057b620829eb6a5b285cae25b05e937375193bb3ed75da09b19256b074",
+    "tests/test_population_models_adversarial.py": "8bb5f12a49aaf435dd4c4018918343bf869502bae47a15606656674c8749d180",
+    "tests/fixtures/information_diagnostics_cases.json": "e2b8233b7b8ed1917f9392eb0c989279837f88219843371f35740908ccbb6b6f",
+    "tests/fixtures/information_diagnostics_expectations.md": "a30e91ec64b2e2bbc307a3e6b9ba4e54902aaa23dd4ed2ce926060eda670d065",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+    "docs/reviews/implementation-2026-10-25/data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c"
+  },
+  "preservation": "Previously frozen information fixtures, planning assessment, review reports and verification reports are retained byte-for-byte in the captured set. Earlier reviews describe their own source snapshots; this review does not retroactively extend them.",
+  "reviewer_changed_files": [
+    "tests/test_population_models_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json"
+  ],
+  "unverified_boundaries": [
+    "Parameter fitting, model adequacy for real markets and stationarity certification",
+    "Power and precision search, N_min and full research-path calibration",
+    "Raw feature, original H_exec AST or market-process replay",
+    "Scientific admission, temporal applicability, economic benefit and capital authority",
+    "Owner runtime integration and complete regression are checked separately by the parent"
+  ],
+  "next_action": "Retain this bounded prerequisite and complete the parent full regression. A subsequent actual information study must still evaluate the declared model envelope and power/precision criteria before any N_min claim."
+}

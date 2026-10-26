@@ -1,0 +1,204 @@
+{
+  "schema": "independent-implementation-review/1",
+  "date": "2026-10-25",
+  "reviewer": "information_review independent child agent",
+  "status": "PASS_BOUNDED_COUNT_KERNEL",
+  "purpose": "Independently derive and verify the adopted one-sided calibration count checks while preserving missing results, cohort separation and the absence of scientific authentication.",
+  "source_sha256": {
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/information_study.py": "030c2d5bef9d327874591a5b8902bf8d2e7f1e88b87558e37e970d348e4cda04",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6"
+  },
+  "test_sha256": {
+    "tests/test_calibration_adversarial.py": "55b1e863ba4dc8d4d2fe8982880564d96d8c765d356473f9b6300d82077c7572",
+    "tests/fixtures/reference_calibration_counts.json": "c1c7d41e24b20c4b3c170e7051fb597c1e6b761712274c287d008c485ac27ae9",
+    "tests/fixtures/reference_calibration_counts.md": "04e272af558ff9b7c0c469aa5290217a9966c9a3c1807f42f0acb25d6163b303"
+  },
+  "authority_sha256": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+    "docs/reviews/implementation-2026-10-25/INFORMATION_STUDY_IMPLEMENTATION.md": "9fa00d6ea4106110b16cc6d948f65a990f9dbda5c79616ada09a30b212dba83c"
+  },
+  "protected_artifacts_sha256": {
+    "docs/reviews/implementation-2026-10-25/provider-usage-review.json": "a8615302f37456ef29ee203dd37d58cd1e0d54479c5bdde31fdd85fb8048350d",
+    "docs/reviews/implementation-2026-10-25/openai-provider-review.json": "de53f8bb99b37538375ed1051e8b0d522dfae6c3030dcff5da0663e17c07be09",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-baseline.json": "3adfb4f50628ebaaa2349d872422523a91a352437d05011e847347642e14e215",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+    "docs/reviews/implementation-2026-10-25/baseline.json": "0938c679b0c76b9ae3f12f9b8423445b264c30b4f59c9b37d4cc8faa40d0c879",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-results.json": "12d2bb8f83bc1d2f99779cfaed78a5bfccc486578986f0d07e412c0ba3532b57",
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+    "docs/reviews/implementation-2026-10-25/binance-registry-retention.json": "344746c5c7591569cb20741d3095bb1a1ddc7e37358349486e2f409439559ad9",
+    "docs/reviews/implementation-2026-10-25/binance-source-inventory.json": "a6d7198d0b0a350e123a6e856825e46cd7a3b7e9c138c2c0ae5a57d5c8cc513b",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+    "docs/reviews/implementation-2026-10-25/bootstrap-baseline.json": "2b4dba278b2c2db67b182f594549cd843ed8d851c1579250f305eaa058dd39d1",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+    "docs/reviews/implementation-2026-10-25/data-verification.json": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+    "docs/reviews/implementation-2026-10-25/feature-results.json": "6edf1dcb1d4a777b85bfafc358bd4c36bac6062bf4a2f3cbfb539e20d59ed39a",
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/information-planning-baseline.json": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+    "docs/reviews/implementation-2026-10-25/mc-stability-baseline.json": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+    "docs/reviews/implementation-2026-10-25/measurement-review.json": "b3477a873c0b4967152176d998ffcbf20c218ace9dd970ca1cba88698b0e51c6",
+    "docs/reviews/implementation-2026-10-25/measurement-verification.json": "ffd1c6ebdfa220ff795a36ea13a7e276b950f3d6b03c325791d13a64d58eab22",
+    "docs/reviews/implementation-2026-10-25/memory-preservation.json": "445a51780caca04b35ddd09a8addf1ea3f0fdd6ab7c8d5e09efea4ad5dbb9efc",
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-baseline.json": "bbe364a8d449fc3e09bedcf909d1f0a5da61f2260ea1d64942c4201c76bf529f",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+    "docs/reviews/implementation-2026-10-25/plan-retention-baseline.json": "3d97578b6c68d417f3e5584ee9356f3d5435e3b663208c87b567429af27db430",
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+    "docs/reviews/implementation-2026-10-25/population-model-baseline.json": "6b693a0b586259879b0151cb41aefa5395d9dc82965628de125ccb5b67e2b1c7",
+    "docs/reviews/implementation-2026-10-25/population-model-progress.json": "5028d35ac7c13fa84d4937afedd03e7b75aa66e014052d14989cf457c5319a0f",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+    "docs/reviews/implementation-2026-10-25/population-model-verification.json": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b",
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c",
+    "docs/reviews/implementation-2026-10-25/study-review.json": "3d08b38a6b4a8accc07705b625762b61d9b37ccbfae38db31c72b48ecc94f742",
+    "docs/reviews/implementation-2026-10-25/study-verification.json": "1134ed19aa2c02a1ba30d6c6a00f723659b0f035b954e0d2fa0999a46b9a3e43",
+    "docs/reviews/implementation-2026-10-25/CHATGPT_PLAN_INTEGRATION_REVIEW.md": "433bbc5b46809db59c714c6083dde8e4e412c1347d36d4e31f5fbd94097573be",
+    "docs/reviews/implementation-2026-10-25/provider-identity-review.json": "fb903cf72721d1f6134055b32c9509e40685279c75575917f379b18bf8d10d8a",
+    "docs/reviews/implementation-2026-10-25/context-views-review.json": "59cf48da8f5b21fcc2d88386168cf588cc7409c6b688c2ef315706980eb6ce37",
+    "docs/reviews/implementation-2026-10-25/measurement-context-views-review.json": "b0bc16a16537b2a300c6d7a745ef2f977218df9835a87218253819666cc0374b",
+    "docs/reviews/implementation-2026-10-25/perspective-profiles-review.json": "40e042048e0008e4fe6a4272564b6655bcc3a343fdb732a2e1c8b143c5a13cf0",
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-review.json": "b39fe9dd22143fbf7c35628d7db6bf64aff0b1ee35cc75ce0990fb7f6965392d"
+  },
+  "scope": {
+    "authored_files": [
+      "tests/fixtures/reference_calibration_counts.json",
+      "tests/fixtures/reference_calibration_counts.md",
+      "tests/test_calibration_adversarial.py",
+      "docs/reviews/implementation-2026-10-25/calibration-count-review.json"
+    ],
+    "reviewer_production_changes": false,
+    "canonical_changes": false,
+    "network_inference": false,
+    "credential_or_real_ledger_access": false,
+    "reviewed_functions": [
+      "calibration.one_sided_bound",
+      "calibration.evaluate_cohort",
+      "calibration.assess_calibration",
+      "information_study._tail_compare/outer_interval",
+      "codec bounded canonical/type validation"
+    ],
+    "excluded": "The separate request-file CLI and its tests are parent-owned. No owned simulation runner, source authentication, final seed reservation, freshness assertion, certificate or model-adequacy evidence is implemented or established by this count kernel."
+  },
+  "fixture_provenance": {
+    "frozen_before_production_existed": true,
+    "frozen_json_sha256": "c1c7d41e24b20c4b3c170e7051fb597c1e6b761712274c287d008c485ac27ae9",
+    "frozen_note_sha256": "04e272af558ff9b7c0c469aa5290217a9966c9a3c1807f42f0acb25d6163b303",
+    "production_imports_for_derivation": false,
+    "probability_package_used": false,
+    "derivation": "Direct integer sums of comb(n,j)*a**j*(b-a)**(n-j), divided by b**n, for inclusive lower/upper binomial tails. Solve tail=1/20 on the 2^40 grid; verify both endpoint inequalities. Exact n=1 roots and complementary endpoints cross-check the result. Threshold decisions use exact tails at 1/10 and 7/10, not decimal displays.",
+    "contents": {
+      "endpoint_brackets": 18,
+      "threshold_comparisons": 7,
+      "point_design_cases": 2,
+      "semantic_counterexamples": 3
+    },
+    "external_reference_access": "The existing study note links NIST and SciPy. A new public-document retrieval did not complete before cancellation; no fresh external-reference verification is claimed. Expectations derive from the adopted local contract and independently executed arithmetic."
+  },
+  "scientific_interpretation": {
+    "authority": "D081 and research-contract/1.0 section 11; section 5.4 separates the 80 percent information-study design target.",
+    "error_gate": "Each complete 256-world false_support, boundary_decisive or joint_miscoverage cohort uses a one-sided exact 95 percent upper bound at most 0.10.",
+    "detection_gate": "A complete 256-world detection cohort uses a one-sided exact 95 percent lower bound at least 0.70. The 80 percent point target is reported separately.",
+    "boundary_event": "At true theta=delta, either false support or false negative is an erroneous decisive classification. The supplied Boolean must describe their union, including the applicable nondirectional boundary. A 17-plus-17 disjoint-tail fixture has 34 events and fails; two separately passing tails do not replace the union.",
+    "joint_event": "One event represents any required interval missing its own truth in a joint claim batch. Instruments and individual claims within one world are not extra independent repetitions.",
+    "unknowns": "Missing or unavailable events remain NOT_ASSESSED with the planned denominator of 256; no renormalized point or bound is issued. The future owned runner must authenticate whether a scientific abstention has a known event value, distinct from a technical/unknown outcome. This kernel does not choose that policy.",
+    "cohorts": "Each declared world law is assessed separately. All four criterion types are required; applicable stress declarations refer to existing cohorts. Shared source artifacts and repeated world identifiers across different criteria are allowed; within each cohort the 256 planned identifiers and observations are unique.",
+    "confidence_scope": "One-sided 95 percent bounds are pointwise and assume independent outer worlds under the declared law. A conjunction of count checks does not certify a simultaneous confidence statement, market adequacy, or full-process calibration."
+  },
+  "fixed_oracles": {
+    "upper_17_of_256": "107692130211/1099511627776; PASS",
+    "upper_18_of_256": "112683933245/1099511627776; FAIL",
+    "lower_191_of_256": "766786605589/1099511627776; FAIL",
+    "lower_192_of_256": "771293486821/1099511627776; PASS",
+    "point_204_of_256": "51/64; below 4/5 although the lower-bound calibration check passes",
+    "point_205_of_256": "205/256; at least 4/5 and the lower-bound calibration check passes",
+    "coarse_display": "At bits=8, U17 is 26/256 (above 0.10) and L192 is 179/256 (below 0.70). The exact tail comparisons still pass both counts; admission must not depend on outward display rounding.",
+    "failure_and_incompleteness": "A completed 18-error failure remains visible while an unavailable detection world makes the overall status NOT_ASSESSED.",
+    "stress_separation": "A separate zero-error null cohort cannot hide the original 18-error failed cohort by pooling.",
+    "limits": "One through 256 trials and bits 8 through 64 for the arithmetic helper; exactly 256 predeclared worlds per cohort and at most 16 cohorts for assessment."
+  },
+  "findings": [
+    {
+      "status": "NO_SUBSTANTIATED_DEFECT_FOUND",
+      "scope": "The exercised arithmetic, complete-cohort checks, schema/type gates, failure precedence, no-pooling rule, mutation isolation and authority disclaimers. This is not proof of correctness outside the tested envelope."
+    },
+    {
+      "status": "PRESERVED_NON_AUTHORITY",
+      "finding": "PASS_COUNTS_ONLY remains scientific_readiness false and n_min null. Top-level input_authentication, freshness, event_semantics and applicability_evidence stay UNVERIFIED; an applicability reason or source reference is not empirical certification."
+    }
+  ],
+  "verification": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_calibration_adversarial.py",
+      "-v"
+    ],
+    "tests": 17,
+    "failures": 0,
+    "errors": 0,
+    "unittest_seconds": "1.231",
+    "wrapper_seconds": "1.594",
+    "exit_code": 0,
+    "first_run_passed": true,
+    "unchanged_source_tests_and_fixtures_during_run": true,
+    "test_sha256": "55b1e863ba4dc8d4d2fe8982880564d96d8c765d356473f9b6300d82077c7572",
+    "coverage": [
+      "18 frozen brackets and independently recomputed exact tail inequalities",
+      "Exact endpoints, closed-form roots and strict integer/resource validation",
+      "All four count criteria, distinct calibration versus point-design thresholds",
+      "Coarse display cannot change exact threshold decisions",
+      "Empty, missing and unavailable records never renormalize",
+      "Failure-plus-incomplete precedence and unpooled stress worlds",
+      "Per-cohort ID uniqueness and manifest/world/source binding",
+      "Malformed states, Boolean substitutions, forged metadata and applicability declarations",
+      "Sixteen-cohort limit",
+      "Canonical request hashing, unchanged inputs, detached outputs and cached result isolation",
+      "Stable counts under record permutation, with changed input hash",
+      "No scientific/authentication/freshness claims"
+    ],
+    "git_diff_check_exit_code": 0,
+    "line_ending_warning_count": 9,
+    "historical_artifacts_preserved": 57,
+    "not_rerun": "The parent primary tests and CLI tests were not independently rerun; this report counts only the 17 named independent tests. No full-suite claim."
+  },
+  "evidence_files": {
+    ".trf-runtime/calibration-count-independent-review-2026-10-25/diff-check.log": "0b83848512c2c9df1700f9e441eb27438e1befa153b4d06da66ee60a444661c1",
+    ".trf-runtime/calibration-count-independent-review-2026-10-25/initial-independent.json": "794bb49eed52dba35b48101827af7ec5706a0feb9f899e9e5b63e74ae4924f4e",
+    ".trf-runtime/calibration-count-independent-review-2026-10-25/initial-independent.log": "e21e34a2ee1ade0146026e9287331b59c80823f30844ea6b9f99256065f49998"
+  },
+  "warranted_conclusion": "The tested kernel implements the adopted count comparisons and explicit incomplete-result behavior. Fixed independent expectations remain unchanged. No estimator has thereby passed fresh empirical calibration; supplied Boolean outcomes and source declarations remain unauthenticated.",
+  "remaining_uncertainty": [
+    "Whether an owned runner generates the correct boundary, mixed-effect joint-coverage, heavy-tail, overlap and common-shock events under adequate population laws.",
+    "Fresh final seed separation, frozen estimator versions, authenticated event/source binding, process isolation and actual retained simulation failures.",
+    "Applicability justifications and dependence between outer worlds; simulation model adequacy for market inference.",
+    "Scientific certification, information-target admission, full-process calibration and economic usefulness."
+  ],
+  "next_action": "Integrate the verified kernel with a separately reviewed owned calibration manifest and runner that retains sources, seeds, execution outcomes and all gaps. Keep count checks descriptive until those authentication, freshness, event-semantics and applicability prerequisites are satisfied."
+}

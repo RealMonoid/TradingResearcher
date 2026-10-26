@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-25",
+  "status": "PASS",
+  "scope": "Binding of supplied normalized data and qualified provenance; no acquisition or scientific acceptance",
+  "purpose": "Bind exact data/catalog/raw-source identities and keep missingness, historical availability uncertainty and protected ancestry intact before independent scientific execution.",
+  "finding": "144 runtime test methods passed, including 17 data methods, actual authenticated HTTP registration, exact-window loading and complete backup restoration.",
+  "warranted_conclusion": "The exercised host can retain structurally checked data snapshots and reject malformed, corrupt, out-of-partition or improperly relabeled inputs without partial snapshot commitment. Supplied provenance assertions stay unverified.",
+  "next_action": "Continue step 3 by connecting actual adopted Binance archive acquisition to retained raw/checksum sources and independently checked normalization, preserving unknown historical availability. Then certify supported feature definitions and complete scientific execution, plan/allocation and freeze. Shared challenge/formalizer call accounting remains necessary before a live LLM loop.",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_data.py",
+      "exit_code": 0,
+      "tests_passed": 17,
+      "duration_seconds": 6.225
+    },
+    {
+      "command": "python -B -m unittest discover -s tests",
+      "exit_code": 0,
+      "tests_passed": 144,
+      "duration_seconds": 76.672,
+      "output_summary": "Ran 144 tests in 76.672s; OK"
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "local_links": 668,
+      "decisions": 88,
+      "requirements": 30,
+      "errors": []
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "baseline_files": 103,
+      "unchanged_files": 93,
+      "authorized_changes": 10,
+      "local_document_links": 168,
+      "errors": []
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output_summary": "No whitespace errors; existing Windows CRLF normalization warnings."
+    }
+  ],
+  "red_green_evidence": [
+    {
+      "issue": "Missing data registration and owned namespace",
+      "red": "Initial three tests: two errors and one failure, exit 1",
+      "green": "Host dispatch, source binding and namespace ownership implemented; initial three tests PASS."
+    },
+    {
+      "issue": "Non-dictionary source bodies escaped validation; direct caller could mutate manifest during unlocked scan",
+      "red": "13-test suite: one error, one failure, exit 1",
+      "green": "Explicit body type check and canonical argument copy; 13 tests PASS."
+    },
+    {
+      "issue": "Returned acceptance-gate list shared the module constant",
+      "red": "Focused mutation regression failed, exit 1",
+      "green": "Immutable tuple constant plus per-record list; 14 tests PASS."
+    },
+    {
+      "issue": "Malformed catalog identities reached SQLite; availability accepted unrepresentable seconds",
+      "red": "Focused catalog test produced five errors; availability test three failures; both exit 1",
+      "green": "Explicit scalar reference validation and documented representable UTC domain; 16 tests PASS, then HTTP coverage added."
+    }
+  ],
+  "independent_review": {
+    "reviewer": "memory_boundary_review",
+    "status": "PASS",
+    "result": "No unresolved blocker after fixes.",
+    "data_suite": {
+      "tests_passed": 16,
+      "duration_seconds": 5.317,
+      "exit_code": 0
+    },
+    "additional_probes": [
+      "Transitive assessment/operations ancestry rejected atomically.",
+      "Corrupt non-row raw ancestor prevents loading.",
+      "Exact subwindow and returned-object isolation preserve retained data.",
+      "Uncommitted/staged digest rejected without partial artifact.",
+      "Worker cannot call private loader.",
+      "UTC maximum remains qualified rather than blocked by a latency rule."
+    ],
+    "files_changed_by_review": [],
+    "documentation_review": "No substantive authority/provenance overclaim. Clarified blank-line rejection, per-list reference limits and aggregate coverage as requested."
+  },
+  "changed_files_this_checkpoint": [
+    "trading_researcher/data.py",
+    "trading_researcher/DATA.md",
+    "tests/test_data.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/storage.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/FORMALIZATION.md",
+    "trading_researcher/README.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/data-verification.json"
+  ],
+  "checked_files_sha256": {
+    "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+    "trading_researcher/DATA.md": "be8fc51b42c52cc01753df55a127972bc91bddf12e5ed7eeb7a831ff8ae70687",
+    "tests/test_data.py": "197f902659e2f7e103b5bb5eec7ba280ff0018f91ca5e83241e1b0489bfc01b8",
+    "trading_researcher/coordination.py": "71def6d35a6819241d61e1643fefb5aa525554a4121913e1aef98c4f0c3b5c2d",
+    "trading_researcher/storage.py": "25377afc850d17a6cf9db83bde0e46105250bf2248a83c84400fd7416b80b01c",
+    "trading_researcher/memory.py": "f01cfe0bdbc6c0c3e9582d8ce5e691b8a98e5d9b59e90433db83d6fab1939712",
+    "trading_researcher/FORMALIZATION.md": "4b8b044445de45d7cac436bf17c78d550d598d5c262915b201ae8d5f51a84ad7",
+    "trading_researcher/README.md": "a5147036e750879312f46740a8650079031927540091f0d0b46eaf9af60c6eb8",
+    "README.md": "bd5c5186d367b5dbf69262b100a6bcb0f334d5a7129502d583ac527d24c0f5fe",
+    "docs/architecture/CURRENT_STATE.md": "82a632ce75b109171201a3acfdae269978398d2c60547ee4ae99ff3faa98982b",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "94fce89f12dfc75dd5ad8164c9b3c018a969c14b57b670c65591c7e707ac88db",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "e08293fe82499b1d788ea81c72cd1426c6b5ea8a91814ec037321b8705b1a18e"
+  },
+  "unverified": [
+    "The complete seven-package objective remains in progress.",
+    "All new data tests use synthetic fixtures; no actual Binance research dataset was acquired in this checkpoint.",
+    "Provider checksum authenticity, OHLCV invariants, transformation fidelity, rights and historical availability truth are not established by structural registration.",
+    "The private loader is a trusted-host seam, not a scientific authorization boundary; future execution must enforce context, partition, exposure and freeze permissions before calling it.",
+    "Per-feature/semantic certification, calibrated evaluation, allocation/freeze, scientific memory publication, strategy and temporal/reporting work remain incomplete.",
+    "Maximum-size dataset throughput/memory and hardware power-loss behavior remain unverified; final ancestor hashing can delay worker heartbeats.",
+    "No paid provider call, software installation, commit or push occurred in this checkpoint."
+  ]
+}

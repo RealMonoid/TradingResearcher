@@ -1,0 +1,323 @@
+{
+  "schema": "independent-evaluation-policy-review/1",
+  "review_date": "2026-10-25",
+  "reviewer": "Independent memory_boundary_review agent",
+  "purpose": "Review the approved historical-batch policy kernel and owned development-only evaluation-plan preparation against fixed independent expectations and concrete adverse probes.",
+  "conclusion": {
+    "status": "NO_REMAINING_BLOCKER_FOUND_WITHIN_REVIEWED_SCOPE",
+    "scientific_certificate": false,
+    "scope": "Policy arithmetic, bounded profile membership, immutable plan preparation, source execution binding and data/access boundary; no scientific readiness or empirical verdict."
+  },
+  "reviewed_files": [
+    "trading_researcher/evaluation_policy.py",
+    "trading_researcher/evaluation_plans.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/memory.py",
+    "tests/test_evaluation_policy.py",
+    "tests/test_evaluation_plans.py",
+    "trading_researcher/EVALUATION_POLICY.md"
+  ],
+  "reviewer_authored_files": [
+    "tests/test_evaluation_policy_adversarial.py",
+    "tests/test_evaluation_plans_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json"
+  ],
+  "runtime_files_modified_by_reviewer": [],
+  "fixed_expectations": {
+    "schema": "reference-evaluation-policy-cases/1",
+    "cases": 91,
+    "kernel_cases_exercised": 81,
+    "allocation_state_machine_cases_pending": 10,
+    "files": {
+      "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+      "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe"
+    },
+    "provenance": "Authored before viewing the new policy implementation from research-contract/1.0 sections 5, 12 and 14 and blueprint interface context. No fixture bytes changed during implementation review."
+  },
+  "resolved_findings": [
+    {
+      "id": "EP-01",
+      "finding": "Unbounded intermediate/final exact arithmetic",
+      "reproduction": "quantile([1/(2**8190-1),1/(2**8190+1)],1/2) raised raw integer-string ValueError; basic_interval(point=2**8191-1, replicates=[-(2**8191-1)],alpha=1/20) returned an 8193-bit endpoint rejected by its own input reader.",
+      "remediation": "Check the 8192-bit normalized numerator/denominator envelope before serializing policy arithmetic; reject with typed resource failure and no returned partial interval.",
+      "regressions": [
+        "test_quantile_growth_returns_typed_resource_failure",
+        "test_basic_interval_final_growth_returns_typed_resource_failure",
+        "test_large_exact_cancellation_remains_usable"
+      ],
+      "status": "RESOLVED",
+      "current_remediation_location": {
+        "file": "trading_researcher/evaluation_policy.py",
+        "line": 19
+      }
+    },
+    {
+      "id": "EP-02",
+      "finding": "Wrong raw-close unit admitted to the return profile",
+      "reproduction": "Changing the BTCUSDT close definition's unit from USDT/BTC to BTC still admitted the 24h return profile.",
+      "remediation": "Require the exact symbol-qualified raw-close identity, matching real type and price unit; do not infer membership from ratio output or a close-like label.",
+      "regressions": [
+        "test_raw_close_unit_mismatch_is_not_a_return_profile",
+        "test_price_like_name_does_not_replace_volume_semantics",
+        "test_boolean_type_cannot_replace_real_close"
+      ],
+      "status": "RESOLVED",
+      "current_remediation_location": {
+        "file": "trading_researcher/evaluation_policy.py",
+        "line": 173
+      }
+    },
+    {
+      "id": "EP-03",
+      "finding": "Canonical request did not govern later calculation",
+      "reproduction": "A caller-owned dependence mapping was changed after admission: persisted request retained base_length4 while the plan used base_length8, seed999 and an unvalidated replacement diagnostic reference.",
+      "remediation": "Bind all validation, dependency gathering, child input and final commitment to the canonical detached request copy.",
+      "regressions": [
+        "test_plan_and_idempotency_request_use_same_copied_dependence"
+      ],
+      "status": "RESOLVED",
+      "current_remediation_location": {
+        "file": "trading_researcher/evaluation_plans.py",
+        "line": 130
+      }
+    },
+    {
+      "id": "EP-04",
+      "finding": "Unavailable diagnostic cases accepted as a basis",
+      "reproduction": "A genuine retained development execution remained accepted as diagnostic basis after its case blob was corrupted or removed.",
+      "remediation": "Verify the exact committed case-blob binding, SHA256 and size before dependency use and again before final commitment.",
+      "regressions": [
+        "test_corrupt_diagnostic_case_bytes_cannot_be_admitted_as_available_basis",
+        "test_missing_diagnostic_case_bytes_cannot_be_admitted_as_available_basis"
+      ],
+      "status": "RESOLVED",
+      "current_remediation_location": {
+        "file": "trading_researcher/evaluation_plans.py",
+        "line": 106
+      }
+    },
+    {
+      "id": "EP-05",
+      "finding": "Import-time disk hash did not establish executed source",
+      "reproduction": "In a temporary copied package, import evaluation_policy, replace its file, then import evaluation_plans: current disk footprint equaled LOADED_SOURCE while the bound draft_plan function was the old import. No project source was modified.",
+      "remediation": "Execute calculation and independent exact replay in separate fresh -I -S -B children from retained copied source; bind request/result hashes, full source footprint and runtime; recheck sources and dependencies before commit.",
+      "regressions": [
+        "test_plan_calculation_ignores_stale_parent_imports",
+        "test_source_version_mismatch_denies_before_source_staging"
+      ],
+      "status": "RESOLVED",
+      "current_remediation_location": {
+        "file": "trading_researcher/evaluation_plans.py",
+        "line": 38
+      }
+    }
+  ],
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_evaluation_policy_adversarial.py -v",
+      "phase": "initial_red",
+      "methods": 12,
+      "failures": 2,
+      "errors": 1,
+      "seconds": 0.01,
+      "exit_code": 1,
+      "source_sha256": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "details": "Two numeric-envelope variants and wrong raw-price unit reproduced; the other nine methods passed."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_evaluation_policy.py -v",
+      "phase": "initial_fixed_fixture_check",
+      "methods": 2,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 0.003,
+      "exit_code": 0,
+      "details": "81 fixed kernel cases; 10 allocation-state cases explicitly skipped as future integration."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_evaluation_policy_adversarial.py -v",
+      "phase": "kernel_fix_recheck",
+      "methods": 12,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 0.008,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_evaluation_plans_adversarial.py -v",
+      "phase": "initial_integration_red",
+      "methods": 12,
+      "failures": 3,
+      "errors": 0,
+      "seconds": 123.441,
+      "exit_code": 1,
+      "details": "Eight independent methods plus four root methods unintentionally discovered through a class import. The test harness was corrected to import the support module. Failures were request/caller mutation and missing/corrupt diagnostic case blobs. Pre-fix integration source hash was not captured."
+    },
+    {
+      "command": "temporary-package Python child with -I -S -B; evaluation_policy import, copied-file replacement, then evaluation_plans import",
+      "phase": "source_provenance_reproducer",
+      "exit_code": 0,
+      "result": {
+        "recorded_disk_matches": true,
+        "executed_function_is_old": true,
+        "disk_contains_replacement": true
+      },
+      "details": "Only an isolated temporary copy was changed; root workspace files were untouched."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_evaluation_plans_adversarial.py -v",
+      "phase": "nine_method_integration_fix_recheck",
+      "methods": 9,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 80.802,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_evaluation_plans_adversarial.py -v",
+      "phase": "final_independent_integration_recheck",
+      "methods": 11,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 84.81,
+      "exit_code": 0,
+      "details": "Includes empty child response, altered delta rejected by actual exact replay, injected cancellation/timeout with no pending attempt, rollback, stale parent imports and all earlier admission fixes."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_evaluation_policy*.py' -v",
+      "phase": "final_kernel_recheck",
+      "methods": 14,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 0.01,
+      "exit_code": 0,
+      "details": "Two existing methods exercising81 fixed expectations plus12 independent adverse methods; allocation10 remain pending."
+    },
+    {
+      "command": "git diff --check -- tests/test_evaluation_policy_adversarial.py tests/test_evaluation_plans_adversarial.py",
+      "phase": "test_whitespace_check",
+      "exit_code": 0
+    }
+  ],
+  "coverage_qualifications": [
+    "All real owned-plan fixtures create authenticated source/data/feature/reference/formalization/compilation/development-execution records. They use a synthetic Boolean claim, not a discovered market hypothesis.",
+    "Protected-data denial is exercised through deliberately injected trusted snapshot metadata and spies that fail on dependency/blob access. No assessment formalization or protected data access was manufactured.",
+    "Caller mutation uses a deterministic dependency-call hook to expose the same mutable-alias window that a concurrent local caller could exploit.",
+    "Source mismatch and parent-import isolation use mocks or a temporary package; project runtime source is not edited.",
+    "The new malformed-response test mutates the first real child result's delta and relies on the second real retained replay to reject it.",
+    "New cancellation and timeout tests inject KeyboardInterrupt/TimeoutError at evaluation_plans._run_child to verify no false plan and no pending attempt. Actual process kill/reap behavior belongs to the existing shared launcher tests and was not newly re-proven by these injected exceptions.",
+    "The transaction rollback test injects failure before commit and checks absence of a visible artifact/reservation before a successful retry. It is not a power-loss test.",
+    "Plan family size remains provisional; the ten independent allocation-state fixtures are not claimed exercised by this draft seam."
+  ],
+  "remaining_limits": [
+    "No actual independent semantic model/human judgment was performed. A mapping assertion or another process is not proof of natural-language equivalence.",
+    "No stationary-block bootstrap sampler, narrow calibration result, information target, valid assessment interval, scientific freeze, atomic batch allocation or protected execution/publication authority is established by this slice.",
+    "Feature/source replay does not establish historical PIT truth or scientific data/exposure acceptance. Availability assumptions remain qualified.",
+    "Separate exact replay checks deterministic response integrity using the same implementation. It is not a different statistical estimator or independent proof of scientific validity.",
+    "Parent authentication, metadata/hash validation, input copying, source staging and final integrity checks lie outside each child process timeout.",
+    "Maximum-size datasets, worst-case artifact-scan latency, memory/disk exhaustion and machine power loss were not benchmarked in this review.",
+    "The trusted host/operator and OS remain outside the hostile-code threat model; runtime binaries are fingerprinted rather than archived.",
+    "An existing idempotent draft is historical retrieval, not automatic renewed scientific readiness or a refreshed validation claim.",
+    "An interrupted plan attempt durably records kind, compiled input identity, time and terminal status. Its exact request key/dependence payload and source capsule are committed only for a completed draft/gap, so this interruption log alone cannot replay the exact failed calculation."
+  ],
+  "source_evidence": {
+    "before": {
+      "captured_at": "2026-10-25T05:51:06.949474+00:00",
+      "files": {
+        "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+        "trading_researcher/evaluation_plans.py": "8be418bc8907a400e45f291a76a9e3a38ce3840c3ed06b5ba02f1b337d811100",
+        "trading_researcher/coordination.py": "750ca1deeca7cef92d92b2bc24542e15e690db09279c3541d2f78d3bbaacb400",
+        "trading_researcher/memory.py": "16110ec6a5ce5d249294cbf0e8a711d45c91f9c394db36df1eca709eeac3275d",
+        "tests/test_evaluation_policy.py": "8401a2afae6651245ebc81104d157320f7ac5509706841495151432c7ae685e6",
+        "tests/test_evaluation_policy_adversarial.py": "314aa73be6940e161a8e4213b7fdd8e8a3fae5d4e6451213391577215c2ff5c9",
+        "tests/test_evaluation_plans.py": "82775936e5de1f4f1ee6174667b4ddb28bfcf2bcb8525a16e1284284b341680e",
+        "tests/test_evaluation_plans_adversarial.py": "f8d93a578332bba9f66546debb27502c72cda87e5ae098891b5ab83c69d60f0b",
+        "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+        "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe"
+      },
+      "source_capsule": {
+        "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+        "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+        "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+        "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+        "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+        "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+        "trading_researcher/binding.py": "fd0f57090f6c0964a4c53915f5cb2a89232868e5618535f1954d86b7cbf2f6fb",
+        "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+        "trading_researcher/checks.py": "07adb75eeff3bb6dd67b6a5625b82481c619c00e4afd2c1b793668a18cf0e704",
+        "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+        "trading_researcher/coordination.py": "750ca1deeca7cef92d92b2bc24542e15e690db09279c3541d2f78d3bbaacb400",
+        "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+        "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+        "trading_researcher/evaluation_plans.py": "8be418bc8907a400e45f291a76a9e3a38ce3840c3ed06b5ba02f1b337d811100",
+        "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+        "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+        "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+        "trading_researcher/formalization.py": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0",
+        "trading_researcher/memory.py": "16110ec6a5ce5d249294cbf0e8a711d45c91f9c394db36df1eca709eeac3275d",
+        "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+        "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+        "trading_researcher/research_calls.py": "776f852184ed42916790565d312a816ab7dce523af6fe7f43d223f077fe9d284",
+        "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+        "trading_researcher/researcher.py": "2678b7e05f83a979c1a2b527d61230d28b822a1156b3dc09a7764f8d4e5efbba",
+        "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+        "trading_researcher/storage.py": "53793fdd5d427d184ce91ddb992d91e66634b743ca349b0af073416a9616e956",
+        "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+      }
+    },
+    "after": {
+      "captured_at": "2026-10-25T05:53:04.024963+00:00",
+      "files": {
+        "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+        "trading_researcher/evaluation_plans.py": "8be418bc8907a400e45f291a76a9e3a38ce3840c3ed06b5ba02f1b337d811100",
+        "trading_researcher/coordination.py": "750ca1deeca7cef92d92b2bc24542e15e690db09279c3541d2f78d3bbaacb400",
+        "trading_researcher/memory.py": "16110ec6a5ce5d249294cbf0e8a711d45c91f9c394db36df1eca709eeac3275d",
+        "tests/test_evaluation_policy.py": "8401a2afae6651245ebc81104d157320f7ac5509706841495151432c7ae685e6",
+        "tests/test_evaluation_policy_adversarial.py": "314aa73be6940e161a8e4213b7fdd8e8a3fae5d4e6451213391577215c2ff5c9",
+        "tests/test_evaluation_plans.py": "82775936e5de1f4f1ee6174667b4ddb28bfcf2bcb8525a16e1284284b341680e",
+        "tests/test_evaluation_plans_adversarial.py": "f8d93a578332bba9f66546debb27502c72cda87e5ae098891b5ab83c69d60f0b",
+        "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+        "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe"
+      },
+      "source_capsule": {
+        "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+        "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+        "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+        "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+        "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+        "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+        "trading_researcher/binding.py": "fd0f57090f6c0964a4c53915f5cb2a89232868e5618535f1954d86b7cbf2f6fb",
+        "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+        "trading_researcher/checks.py": "07adb75eeff3bb6dd67b6a5625b82481c619c00e4afd2c1b793668a18cf0e704",
+        "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+        "trading_researcher/coordination.py": "750ca1deeca7cef92d92b2bc24542e15e690db09279c3541d2f78d3bbaacb400",
+        "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+        "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+        "trading_researcher/evaluation_plans.py": "8be418bc8907a400e45f291a76a9e3a38ce3840c3ed06b5ba02f1b337d811100",
+        "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+        "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+        "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+        "trading_researcher/formalization.py": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0",
+        "trading_researcher/memory.py": "16110ec6a5ce5d249294cbf0e8a711d45c91f9c394db36df1eca709eeac3275d",
+        "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+        "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+        "trading_researcher/research_calls.py": "776f852184ed42916790565d312a816ab7dce523af6fe7f43d223f077fe9d284",
+        "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+        "trading_researcher/researcher.py": "2678b7e05f83a979c1a2b527d61230d28b822a1156b3dc09a7764f8d4e5efbba",
+        "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+        "trading_researcher/storage.py": "53793fdd5d427d184ce91ddb992d91e66634b743ca349b0af073416a9616e956",
+        "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+      }
+    },
+    "tracked_files_unchanged": true,
+    "source_capsule_unchanged": true,
+    "tracked_file_count": 10,
+    "source_capsule_file_count": 27,
+    "timing": "Captured immediately before the final11-method integration run and after it; the final14-method kernel check ran alongside the after-capture. No source/test changes occurred between the captures."
+  },
+  "documentation_review": {
+    "file": "trading_researcher/EVALUATION_POLICY.md",
+    "sha256": "239df19bea1ad900631252e497cb55b7301fbbc78750941eb021fc69447e5e6b",
+    "finding": "Matches bounded implementation and explicitly separates policy draft/source verification from scientific admission, actual semantic review, calibration and freeze."
+  }
+}

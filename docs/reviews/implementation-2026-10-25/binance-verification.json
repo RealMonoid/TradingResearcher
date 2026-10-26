@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-25",
+  "status": "PASS_WITH_RETAINED_SOURCE_GAPS",
+  "scope": "Public archive acquisition/integrity and independently exercised strict complete-bar normalization; no scientific data acceptance",
+  "purpose": "Retain the adopted real source files, verify retrieved provider checksums and exact normalization while exposing source defects and preserving historical-availability uncertainty.",
+  "finding": "158 runtime tests pass. All 144 adopted monthly archives were acquired and freshly revalidated against their retrieved checksum files. 128 pass strict normalization; 16 retain timestamp gaps. Original bytes are preserved.",
+  "warranted_conclusion": "The bounded adapter can acquire and recheck exact sources, distinguish units, preserve quantity/time meaning and stop incompatible input without silent repair. Matching hashes do not establish historical publication or scientific suitability.",
+  "next_action": "Continue step 3 with explicit row-level quality gaps for irregular complete-bar inputs, preserving raw sources and missing coverage; ingest acquired files into committed blob storage, construct partition-bound normalized snapshots with explicit availability assumptions, and certify supported features. Then complete bound execution and atomic freeze/allocation with compatible calibration.",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_binance_archive.py",
+      "exit_code": 0,
+      "tests_passed": 14,
+      "duration_seconds": 0.29,
+      "golden_cases": 43
+    },
+    {
+      "command": "python -B -m unittest discover -s tests",
+      "exit_code": 0,
+      "tests_passed": 158,
+      "duration_seconds": 79.86,
+      "output_summary": "Ran 158 tests in 79.860s; OK"
+    },
+    {
+      "command": "python -B -m trading_researcher acquire-binance-month --symbol BTCUSDT --month 2025-01 --directory .trf-runtime/binance-cli-acquisition-probe-2026-10-25",
+      "exit_code": 0,
+      "status": "SOURCE_INTEGRITY_CHECKED",
+      "observed_bars": 2976
+    },
+    {
+      "command": "python -B -m trading_researcher inspect-binance-month --directory .trf-runtime/binance-acquisition-2026-10-25/BTCUSDT-2020-01",
+      "exit_code": 0,
+      "status": "SOURCE_INTEGRITY_CHECKED",
+      "network_used": false
+    },
+    {
+      "command": "Sequential adopted-profile acquisition via acquire_month/read_acquisition, every BTCUSDT/ETHUSDT month2020-01 through2025-12",
+      "exit_code": 0,
+      "archives": 144,
+      "strict_passes": 128,
+      "retained_failures": 16
+    },
+    {
+      "command": "Fresh byte/checksum/CSV/receipt revalidation and timestamp-only inspection of rejected sources; binance-source-inventory.json",
+      "exit_code": 0,
+      "checksum_matches": 144,
+      "strict_passes": 128,
+      "retained_gaps": 16,
+      "timestamp_issues": 16,
+      "raw_rows_total": 420560,
+      "missing_bars_in_passed_files": 84
+    },
+    {
+      "command": "git check-ignore .trf-runtime/binance-acquisition-2026-10-25/provider-documents/documents.json",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "local_links": 673,
+      "decisions": 88,
+      "requirements": 30,
+      "errors": []
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "baseline_files": 103,
+      "unchanged_files": 93,
+      "authorized_changes": 10,
+      "local_document_links": 178,
+      "errors": []
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output_summary": "No whitespace errors; existing Windows CRLF normalization warnings."
+    }
+  ],
+  "source_inventory": "docs/reviews/implementation-2026-10-25/binance-source-inventory.json",
+  "runtime_data_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\binance-acquisition-2026-10-25",
+  "independent_review": {
+    "reviewer": "memory_boundary_review",
+    "result": "No unresolved blocker in reviewed parser/container/cache/download boundaries after fixes.",
+    "independent_fixture_sha256": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+    "fixture_authorship": "43 expectations fixed before implementation read/import.",
+    "targeted_recheck": {
+      "tests_passed": 6,
+      "duration_seconds": 0.188,
+      "exit_code": 0
+    },
+    "fixed_findings": [
+      "Receipt reuse admitted altered scientific/availability/rights/time fields; now exact qualified schema and ordered valid times are required.",
+      "Buffered reads and lateEOF weakened deadline; bounded read1 checks plus owned child hard lifetime added.",
+      "splitlines removed embedded quoted newlines; preserved CSV input now rejects invalid multiline quantities.",
+      "csv.Error and zlib.error escaped typed rejection; mapped to Invalid.",
+      "Caller cancellation left the network child running; BaseException now kills/reaps before propagating."
+    ],
+    "documentation_review": "No substantive overclaim. Clarified successful-only hash manifests and provider-document URLs.",
+    "limits": "Reviewer did not independently verify complete live acquisition, provider truth or scientific suitability."
+  },
+  "observed_source_issue": {
+    "symbol": "BTCUSDT",
+    "month": "2020-02",
+    "line": 1771,
+    "open_raw": 1582111800000,
+    "close_raw": 1582112132286,
+    "expected_complete_bar_close": 1582112699999,
+    "interpretation": "Checksum-matching original is incompatible with the strict complete-bar specification; no timestamp repair performed."
+  },
+  "primary_references": [
+    {
+      "url": "https://github.com/binance/binance-public-data",
+      "use": "Archive schema,2025 unit transition, checksums and revision caveat."
+    },
+    {
+      "url": "https://github.com/binance/binance-public-data/blob/master/TERMS_AND_CONDITIONS.md",
+      "use": "Acquisition-time personal non-production scope and live/commercial restrictions; exact bytes retained."
+    },
+    {
+      "url": "https://github.com/binance/binance-public-data/issues/77",
+      "use": "Provider repository discussion of related maintenance/timestamp irregularities; local source bytes independently establish current failures."
+    }
+  ],
+  "changed_files_this_checkpoint": [
+    "trading_researcher/binance_archive.py",
+    "trading_researcher/BINANCE.md",
+    "tests/test_binance_archive.py",
+    "tests/fixtures/reference_binance_cases.json",
+    "tests/fixtures/reference_binance_expectations.md",
+    "trading_researcher/__main__.py",
+    "trading_researcher/README.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/binance-source-inventory.json",
+    "docs/reviews/implementation-2026-10-25/binance-verification.json"
+  ],
+  "checked_files_sha256": {
+    "trading_researcher/binance_archive.py": "78584d2811a39c87d464e8ae4e5df0e25ddd9e021d8f454ea76f1514be4cb0af",
+    "trading_researcher/BINANCE.md": "2b5f940d542f819764ae62c2d2c389761711028bb9b40b87c6bd733e0fdbb410",
+    "tests/test_binance_archive.py": "d0d51e95cef4a6b2ceeaf4a788ea19b839377ecf97f9a1ae76dab4cccd15e959",
+    "tests/fixtures/reference_binance_cases.json": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+    "tests/fixtures/reference_binance_expectations.md": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88",
+    "trading_researcher/__main__.py": "4c35573306b97449bd155b88b55e2613c576316c7187e5a9b77e82a3400ea5df",
+    "trading_researcher/README.md": "dc8d91405fe7d4362137a6deaa2f9ae4e57b1a3666b41fad2a5b6045dcf44818",
+    "README.md": "23c231cb04c27eaf798670b39f2bc84cc02906dff263e7cddfb4c3ef2dc0ce80",
+    "docs/architecture/CURRENT_STATE.md": "f353812ab4755d22e3d558b5a19da94ee55064b40cf4c12edcbb555dcce4e0b3",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "6d64e0a227944daba65e790502d685232bf85f98a42380584de1373a08b447b3",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "7b32d0e6633f593196276b60988da8a720175089eacf3acb7c28e3312a0b50b9",
+    "docs/reviews/implementation-2026-10-25/binance-source-inventory.json": "a6d7198d0b0a350e123a6e856825e46cd7a3b7e9c138c2c0ae5a57d5c8cc513b"
+  },
+  "unverified": [
+    "The complete seven-package objective remains in progress.",
+    "Sixteen rejected source files and missing bars remain data gaps; row-level quality policy, partition integration and feature certification are not complete.",
+    "Original acquisition directories are outside registry backup bundles until ingested as committed blobs.",
+    "Source checksum matching is against retrieved provider assertions; it does not authenticate historical vintage, publication latency, underlying market correctness or unrestricted rights.",
+    "Availability delays are explicit test/scenario inputs without a verified production latency assumption.",
+    "No scientific experiment, calibrated evaluator result, complete freeze/allocation, live LLM cycle or trading authority follows.",
+    "Maximum-size production throughput, adversarial same-account isolation and hardware power-loss durability remain unverified.",
+    "No paid API call, software installation, commit or push occurred."
+  ]
+}

@@ -1,0 +1,372 @@
+{
+  "schema": "information-planning-verification/1",
+  "status": "PASS_WITH_EXPLICIT_INFORMATION_AND_CALIBRATION_LIMITS",
+  "purpose": "Remove a measured arithmetic cost obstacle to the actual simulation-based information plan without changing the estimator or scientific meaning.",
+  "finding": "Integral sufficient statistics use exact Python integers under the same bit envelope; per-draw means retain exact Fraction division. Retained-reference comparisons cover complete results/draw hashes, fractional fallbacks, numeric boundaries and stopped prefixes. A planning assessment specifies the next owned binary population-model study and preserves its limitations.",
+  "warranted_conclusion": "The exercised calculation is reference-equivalent and faster on the stated synthetic workloads. No information target, calibrated power, full-study feasibility or framework-speed claim follows.",
+  "changed_files_this_checkpoint": [
+    "trading_researcher/stationary_bootstrap.py",
+    "tests/bootstrap_oracle.py",
+    "tests/test_exact_bootstrap_acceleration.py",
+    "tests/test_exact_bootstrap_acceleration_adversarial.py",
+    "tests/test_stationary_bootstrap_adversarial.py",
+    "trading_researcher/STATIONARY_BOOTSTRAP.md",
+    "trading_researcher/EVALUATION_POLICY.md",
+    "trading_researcher/README.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/information-planning-baseline.json",
+    "docs/reviews/implementation-2026-10-25/information-planning-source-before.zip",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json",
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json"
+  ],
+  "resumption_check": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_exact_bootstrap_acceleration_adversarial.py",
+      "-v"
+    ],
+    "tests": 12,
+    "seconds": 4.321,
+    "exit_code": 0,
+    "scope": "Fresh focused run after local access recovered; complete-suite evidence below is retained and current-source-bound, not represented as a newly repeated full run."
+  },
+  "baseline": {
+    "path": "information-planning-baseline.json",
+    "sha256": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea",
+    "archive": "information-planning-source-before.zip",
+    "archive_sha256": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+    "retained_files": 90
+  },
+  "runtime_tests": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "test_count": 358,
+    "reported_seconds": "1299.702",
+    "wall_seconds": 1300.595,
+    "source_sha256": {
+      "tests/auxiliary_support.py": "54bc8077d2511264b4ba6124c9e859588bfd199a9143b4944387dd89184e376a",
+      "tests/binding_support.py": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0",
+      "tests/bootstrap_oracle.py": "83b9c8422b6ba061c2cf5240541ae00d3cee3417f4589b9e0e1d4273a82b1286",
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/fixtures/reference_binance_cases.json": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+      "tests/fixtures/reference_binance_expectations.md": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88",
+      "tests/fixtures/reference_binance_partition_cases.json": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+      "tests/fixtures/reference_binance_partition_expectations.md": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+      "tests/fixtures/reference_binance_quality_cases.json": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+      "tests/fixtures/reference_binance_quality_expectations.md": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+      "tests/fixtures/reference_binding_cases.json": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+      "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257",
+      "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+      "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe",
+      "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+      "tests/fixtures/reference_feature_cases.json": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+      "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee",
+      "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+      "tests/test_auxiliary_adversarial.py": "81695932aae11d6734fcfd23a6694b528b3ffe4ef1670fef8d5878428ffd44e8",
+      "tests/test_auxiliary_pipeline.py": "fbe6a17b2bc1db9f011214c47f449796b87fb16d67dc40f8fdf1a968fd2c52c1",
+      "tests/test_auxiliary_research.py": "d3af8f63d4d663099bd4238cfbe82c0f4c51726168c0b6cd10dc0c0d1ccddacf",
+      "tests/test_binance_archive.py": "d0d51e95cef4a6b2ceeaf4a788ea19b839377ecf97f9a1ae76dab4cccd15e959",
+      "tests/test_binance_ingest.py": "8201f84b8de45bed381833ec31224f4c1c2e78b9b6541624b1270c56beb55b16",
+      "tests/test_binance_normalize.py": "621238a96e3baa8584466f3bfbfa55ed535e12420ad5fa078e8de8a6eafb5d77",
+      "tests/test_binance_quality.py": "36d8bd7a0e6c0c371e39e699e0e7ab7c8c2d2c23f83a80ebb499338e74a0b0ed",
+      "tests/test_binding.py": "ba338f30875c6ca6c760d28c9f845b2e7ce970bb5649b1c0d00b741eb7bd932e",
+      "tests/test_binding_adversarial.py": "459876e5433449c172beb066791410084cbc87e0fdfc1eaa69ce8a7b6a092997",
+      "tests/test_bootstrap_runs.py": "e5554ef54ef44d7ff11d9bc61ccfa075023cd67e0c4a6a8c2c71eddfb3c4bed8",
+      "tests/test_bootstrap_runs_adversarial.py": "1f01bfac83b013f2daef8d7ef8ec42c8ae27630ed7e10b82d7e64abe69f0ddac",
+      "tests/test_certification.py": "bcf1fe8780619bd8b26ff551cb12c1ff347a96bedb1eef4aa2b8862d44311dd2",
+      "tests/test_coordination.py": "b928aad7d17efea91b4173fea767c3ca04591d0018da3315f256b6b9931295ff",
+      "tests/test_data.py": "197f902659e2f7e103b5bb5eec7ba280ff0018f91ca5e83241e1b0489bfc01b8",
+      "tests/test_evaluation_plans.py": "82775936e5de1f4f1ee6174667b4ddb28bfcf2bcb8525a16e1284284b341680e",
+      "tests/test_evaluation_plans_adversarial.py": "4fbe37415e8bdbe905789f688607ed5be765bd000f80969bcbd6cd52b97ef659",
+      "tests/test_evaluation_policy.py": "8401a2afae6651245ebc81104d157320f7ac5509706841495151432c7ae685e6",
+      "tests/test_evaluation_policy_adversarial.py": "314aa73be6940e161a8e4213b7fdd8e8a3fae5d4e6451213391577215c2ff5c9",
+      "tests/test_exact_bootstrap_acceleration.py": "b249a6849c58a33bba51f357a9bc6b4abef3912e2adcca99851be2ca66ff6b55",
+      "tests/test_exact_bootstrap_acceleration_adversarial.py": "32ffafad8892c9a00489cb90b22a6c2abec3e5dfac4e5ee88261ea6d6c62ff8a",
+      "tests/test_expressions.py": "a927ef0a44c0f81945ffa6e0f5f9858ac526838da5d01d80f6c04f641d52ba02",
+      "tests/test_feature_adversarial.py": "e0782cce5db75b5607be717dd7bc1da6cf6e4000c59838bcb39d36faba2b1b81",
+      "tests/test_features.py": "facfc83ab476ff7c1ba188ccb6e277e759c94296b3347678680d163097c1f498",
+      "tests/test_formalization.py": "25c6e017396fbdf6dcee1825e27e42bd6f296f2d543fdeea6d3fab34af575fe1",
+      "tests/test_local_runtime.py": "17bcae356faf10209f446fffb110a62c0c50261be830b2809b17885858f39153",
+      "tests/test_memory.py": "036a7b1fe19bdd900d9db90dca376ac876bcf1a762047387900e70fa5aaff09a",
+      "tests/test_monte_carlo.py": "b1bb31d3c21a3187e0db174eeca65b569f4f9508d533f642ab326d62c90fe146",
+      "tests/test_monte_carlo_adversarial.py": "72467c6745abc55dcba542b65f88f2947e1a4fa3296451f0eb92061687bd37a4",
+      "tests/test_outcomes.py": "2ecaa33fa2b76792ed6df26924d6f43280138123ed93789d88108437b0237384",
+      "tests/test_plan_retention.py": "f05f47fe74ca41bbdf3a32f6bdfb33153d1311e721a1f4e0ad180cc79efe89b0",
+      "tests/test_plan_retention_adversarial.py": "08c91bc3f2607fc208127a941939d0d757cbcebdd0edfe9b69872b12b40eff3b",
+      "tests/test_research_calls.py": "54e1bcd3987ebc2e3225dc5b87ab3e6eb5f68cf8fe526d1b5de6b71e08603211",
+      "tests/test_researcher.py": "7af611fa7670d4da89718fba5a0fff4d3e8a63e062a31193cc8a338a01e1062f",
+      "tests/test_stationary_bootstrap.py": "ff74e2bef4aeb520308a5e98d09634dddd9aa601e6a3430d34ab3b3916455fb8",
+      "tests/test_stationary_bootstrap_adversarial.py": "f3174a148f499bc83ad4ecdc5ae443c7c8741ac84ae51b0f6ae99559bd4c7c21",
+      "tests/test_storage.py": "548d263d12d9aa783b248112f06b60058757a8eea1973a45dc03bde6f9582e8a",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "f14954924b3cddc62b1e79f355e4a1b16d463e06a65ff3cbfe5e79fcda7d244c",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "source_hashes_equal_before_and_after": true,
+    "log": ".trf-runtime/information-planning-checks-2026-10-25/tests.log",
+    "log_sha256": "c56d01bf06ed4843ab93f489a443a7ece66656573f2f9447a8e292865f2d75b7",
+    "report": ".trf-runtime/information-planning-checks-2026-10-25/tests-result.json",
+    "report_sha256": "0a72aede84453792132bfddad7ee220c259241602f304772a267c49433133258"
+  },
+  "independent_review": {
+    "path": "information-planning-review.json",
+    "sha256": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+    "new_tests": 12,
+    "new_test_seconds": 3.802,
+    "prior_tests": 13,
+    "prior_test_seconds": 6.421,
+    "exit_codes": [
+      0,
+      0
+    ],
+    "conclusion": {
+      "independent_methods": 25,
+      "new_methods": 12,
+      "prior_methods_rechecked": 13,
+      "scientific_readiness": false,
+      "information_target_established": false,
+      "performance_measured_by_reviewer": false,
+      "finding": "Exact integer optimization matches the preserved Fraction oracle on exercised public draws, full streams, numeric boundaries and interruption behavior. The repaired prior exact-prefix assertion and the complete prior adversarial file pass. This is a compute prerequisite, not an implemented nuisance/power study."
+    }
+  },
+  "methodology_assessment": {
+    "path": "information-planning-assessment.json",
+    "sha256": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "qualification": "Read-only methodology guidance, not an implemented study or scientific contract. The independent review qualifies its earlier nonbinary-path recommendation: the implementation accelerates all integral statistics and keeps nonintegral statistics rational."
+  },
+  "focused_reference_check": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_exact_bootstrap_acceleration.py",
+      "-v"
+    ],
+    "tests": 4,
+    "seconds": 17.108,
+    "exit_code": 0
+  },
+  "red_and_compatibility_history": [
+    {
+      "check": "Paired pre-change workload target",
+      "reported_exit_code": 2,
+      "powershell_tool_exit_code": 1,
+      "finding": "Before optimization, two alternating pairs produced speedup 1.019647468; the predeclared 1.5x local-workload target failed. The output/result hashes already matched."
+    },
+    {
+      "check": "Prior private-prefix hand arithmetic test",
+      "tests": 1,
+      "seconds": 0.002,
+      "exit_code": 1,
+      "finding": "The old test used Python / on formerly Fraction prefix values. Integer prefixes exposed a test-only float division. Repaired the assertion with explicit Fraction division and retained every expected mathematical value; no production or scientific rule was changed."
+    },
+    {
+      "check": "Repaired private-prefix hand arithmetic test",
+      "tests": 1,
+      "seconds": 0.001,
+      "exit_code": 0
+    }
+  ],
+  "paired_benchmarks": {
+    "before": {
+      "status": "PERFORMANCE_TARGET_NOT_MET",
+      "exit_code": 2,
+      "time_rows": 2048,
+      "pairs": 2,
+      "draws_per_calculation": 59997,
+      "medians_seconds": {
+        "reference": 8.845400999999999,
+        "current": 8.67496
+      },
+      "speedup": 1.0196474681151266,
+      "result_hash": "6d3c69fabdb37398eae536c6f0be010ee2c353794ffde1734af5124ccfb06efb",
+      "sources_stable": true,
+      "reference_archive_sha256": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+      "report": ".trf-runtime/information-planning-checks-2026-10-25/before.json",
+      "report_sha256": "58e312ea816e92132988d6c02ba24fb506270513ae22a735e2c090713667cee9"
+    },
+    "after": {
+      "status": "PASS",
+      "exit_code": 0,
+      "time_rows": 2048,
+      "pairs": 2,
+      "draws_per_calculation": 59997,
+      "medians_seconds": {
+        "reference": 8.6331515,
+        "current": 4.0053705
+      },
+      "speedup": 2.155393989145324,
+      "result_hash": "6d3c69fabdb37398eae536c6f0be010ee2c353794ffde1734af5124ccfb06efb",
+      "sources_stable": true,
+      "reference_archive_sha256": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+      "report": ".trf-runtime/information-planning-checks-2026-10-25/after.json",
+      "report_sha256": "2fc16c507e6250261424483194dae5e056961644bd1845cf1c27b7d6c3e3da2d"
+    },
+    "year-after": {
+      "status": "PASS",
+      "exit_code": 0,
+      "time_rows": 35136,
+      "pairs": 1,
+      "draws_per_calculation": 59997,
+      "medians_seconds": {
+        "reference": 134.584272,
+        "current": 48.595123
+      },
+      "speedup": 2.7695016226216773,
+      "result_hash": "85591537ecdcadefa6fa3dc96c28e7559ba8687e23e705758417c6c731adc2db",
+      "sources_stable": true,
+      "reference_archive_sha256": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+      "report": ".trf-runtime/information-planning-checks-2026-10-25/year-after.json",
+      "report_sha256": "e13dd7a2c2b421303e36927f01099e0ca62aa9ef4a6f93a736754f7140fde97e"
+    }
+  },
+  "benchmark_script_sha256": "6883edcae5e4adaa5f35281a655baa605bebe15dc3e201178399f208e67da854",
+  "benchmark_environment": {
+    "cpu": "AMD Ryzen 7 8745HS",
+    "physical_cores": 8,
+    "logical_processors": 16,
+    "basis": "Read-only Win32_Processor inspection during this turn",
+    "intentional_concurrent_project_tests": false,
+    "qualification": "Ordinary system background activity was not controlled; two small-workload pairs and one large pair do not quantify timing uncertainty."
+  },
+  "illustrative_remaining_cost": {
+    "assumption": "One target, three effects, 256 complete datasets per effect, each costing the measured large-workload current calculation time; no replay/retention/setup overhead.",
+    "serial_seconds": 37321.054464,
+    "qualification": "An illustrative extrapolation, not a measured study or a universal required planning count. Actual target/lag/model profiles and bounded parallel execution need their own cost preflight."
+  },
+  "http_smoke": {
+    "report": ".trf-runtime/information-planning-checks-2026-10-25/assessed-http-result.json",
+    "report_sha256": "67466745f9262716ff6ff0fa4ea962d1f2fa011ee84378d5244d12f7d86ba642",
+    "script_sha256": "088a5e30a580ce91ce4599bf8f77d826094f53f9992ddd670632491720fa3309",
+    "status": "PASS",
+    "exit_code": 0,
+    "wall_seconds": 149.051,
+    "retained_draws": 59997,
+    "diagnostic_status": "ASSESSED_UNCALIBRATED",
+    "qualification": "Genuine authenticated loopback operation with synthetic data, owned retained input/source and separate replay. It ran concurrently with full regression and is not a speed benchmark."
+  },
+  "preserved_prior_reports_sha256": {
+    "auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "mc-stability-verification.json": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb"
+  },
+  "remaining_boundaries": [
+    "No owned nuisance/dependence profile or actual N_min/power study has yet been implemented.",
+    "Binary population-model assumptions, heterogeneity, missingness and actual dependence adequacy remain to be specified and checked.",
+    "A faithful 24-hour return-process generator and coherent joint-family calibration worlds remain separate work.",
+    "The 60-minute calibration budget and complete planning-grid feasibility have not been demonstrated.",
+    "Narrow/full-process calibration, scientific data/exposure and semantic acceptance, provider provenance and atomic scientific allocation/freeze remain incomplete.",
+    "No scientific evaluation, paid provider call, order, capital authority, new software installation, commit or push occurred in this checkpoint."
+  ],
+  "next_action": "Implement owned development nuisance/dependence diagnostics and the predeclared finite binary population-model information study, using the actual fixed-count estimator and MC rule. Fit the concrete target/lag/world profile to a measured resource budget before launch; do not reduce resamples or substitute normal/IF power. Retain return-model and joint-family calibration gaps, then complete independent calibration and atomic scientific allocation/freeze. Genuine provider provenance remains required for actual LLM discovery.",
+  "goal_status": "IN_PROGRESS",
+  "checks": {
+    "retail_contract": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "report_sha256": "88cb5ef820e7a2e8fcd288572d9ef922af60357a06fbd65af7c5ff7a5eb700e5",
+      "status": "PASS"
+    },
+    "implementation_preservation": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "report_sha256": "5997da318d43378ff32b79cc96094a991a9022d9a8c3db9607ffb66308369039",
+      "status": "PASS",
+      "local_document_links": 282
+    },
+    "git_diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "report_sha256": "569d107c93a1ba25aedd8d8527fab2b31d201d8b508380c0fb6cf43ae58784b9"
+    }
+  },
+  "changed_file_sha256": {
+    "trading_researcher/stationary_bootstrap.py": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+    "tests/bootstrap_oracle.py": "83b9c8422b6ba061c2cf5240541ae00d3cee3417f4589b9e0e1d4273a82b1286",
+    "tests/test_exact_bootstrap_acceleration.py": "b249a6849c58a33bba51f357a9bc6b4abef3912e2adcca99851be2ca66ff6b55",
+    "tests/test_exact_bootstrap_acceleration_adversarial.py": "32ffafad8892c9a00489cb90b22a6c2abec3e5dfac4e5ee88261ea6d6c62ff8a",
+    "tests/test_stationary_bootstrap_adversarial.py": "f3174a148f499bc83ad4ecdc5ae443c7c8741ac84ae51b0f6ae99559bd4c7c21",
+    "trading_researcher/STATIONARY_BOOTSTRAP.md": "3937c48bb89d5d85f3f36f0f64d418616c7d65311ed31aa00466e727fb49311b",
+    "trading_researcher/EVALUATION_POLICY.md": "2e5d999ea6141fb3501951a825df039c7ee3dc78ce1808eb80e4d81370327016",
+    "trading_researcher/README.md": "98f2fe50e7e74b9c1d44c79950a6ae376d846ce17455d5c252ceecf702754e8f",
+    "README.md": "fe31c7977c278877ddc63e27532aa7e1fa5b2d3bb143b1b9fda79aa85d7f65bf",
+    "docs/architecture/CURRENT_STATE.md": "c43b300d8da0651cfd3a204ccf1f63a3b3f88680a66a01546e96a99835e2890d",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "1b1b1b32e377f1e6840ec9b041075263e9f3e0cac037620543790c034797d773",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "ff8f2c2d5cff93d85ae2920002d925403d68027217ded65589b3c23694b2634b",
+    "docs/reviews/implementation-2026-10-25/progress.json": "3101ec57ab845b0725cc11b7c9db485cfbe023116c0e98fd9885fa1f56e45293",
+    "docs/reviews/implementation-2026-10-25/information-planning-baseline.json": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea",
+    "docs/reviews/implementation-2026-10-25/information-planning-source-before.zip": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f"
+  }
+}

@@ -1,0 +1,1735 @@
+{
+  "schema": "github-publication-verification/1",
+  "status": "PASS_BOUNDED_PUBLICATION_CHECKPOINT",
+  "checked_at_utc": "2026-10-26T12:25:49.821767+00:00",
+  "base_commit": "0db94668bb315c23ed824246abf0c0b02cf668f6",
+  "destination": "https://github.com/RealMonoid/TradingResearcher",
+  "branch": "codex/architecture",
+  "unique_fresh_tests": 121,
+  "parent_tests": 101,
+  "independent_meaning_review_tests": 20,
+  "commands": [
+    {
+      "label": "auxiliary",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary*.py"
+      ],
+      "started_at_utc": "2026-10-26T12:21:18.027271+00:00",
+      "elapsed_seconds": 145.219944,
+      "exit_code": 0,
+      "log_sha256": "d2baf99e4c76d1b5883300856e34a3494e6a317a1531b31a12efcb447c8df4a0",
+      "output_tail": "........................\n----------------------------------------------------------------------\nRan 24 tests in 144.660s\n\nOK\n"
+    },
+    {
+      "label": "implementation-1793017431511754500",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "started_at_utc": "2026-10-26T12:23:51.219938+00:00",
+      "elapsed_seconds": 0.292551,
+      "exit_code": 0,
+      "log_sha256": "70d28b34c05ee43ca2bae2dd5783866d2bcde4ce5f38a6e2a549b79c576460fa",
+      "output_tail": "rsarial.py\",\n    \"tests/test_memory.py\",\n    \"tests/test_monte_carlo.py\",\n    \"tests/test_monte_carlo_adversarial.py\",\n    \"tests/test_openai_provider.py\",\n    \"tests/test_openai_provider_adversarial.py\",\n    \"tests/test_openai_provider_metadata_adversarial.py\",\n    \"tests/test_outcomes.py\",\n    \"tests/test_perspective_profiles.py\",\n    \"tests/test_perspective_profiles_adversarial.py\",\n    \"tests/test_plan_retention.py\",\n    \"tests/test_plan_retention_adversarial.py\",\n    \"tests/test_population_models.py\",\n    \"tests/test_population_models_adversarial.py\",\n    \"tests/test_population_runs.py\",\n    \"tests/test_provider_identity.py\",\n    \"tests/test_provider_identity_adversarial.py\",\n    \"tests/test_provider_usage.py\",\n    \"tests/test_provider_usage_adversarial.py\",\n    \"tests/test_research_calls.py\",\n    \"tests/test_researcher.py\",\n    \"tests/test_stationary_bootstrap.py\",\n    \"tests/test_stationary_bootstrap_adversarial.py\",\n    \"tests/test_storage.py\",\n    \"tests/test_study_runs.py\",\n    \"tests/test_study_runs_adversarial.py\",\n    \"trading_researcher/ANTHROPIC.md\",\n    \"trading_researcher/AUXILIARY_RESEARCH.md\",\n    \"trading_researcher/BINANCE.md\",\n    \"trading_researcher/BINANCE_NORMALIZATION.md\",\n    \"trading_researcher/BINDING.md\",\n    \"trading_researcher/CALIBRATION.md\",\n    \"trading_researcher/CERTIFICATION.md\",\n    \"trading_researcher/CONTROLLER_PROVIDERS.md\",\n    \"trading_researcher/DATA.md\",\n    \"trading_researcher/EVALUATION_POLICY.md\",\n    \"trading_researcher/EXPRESSIONS.md\",\n    \"trading_researcher/FEATURES.md\",\n    \"trading_researcher/FORMALIZATION.md\",\n    \"trading_researcher/INFORMATION_DIAGNOSTICS.md\",\n    \"trading_researcher/INFORMATION_STUDIES.md\",\n    \"trading_researcher/MEASUREMENTS.md\",\n    \"trading_researcher/MEMORY.md\",\n    \"trading_researcher/MONTE_CARLO.md\",\n    \"trading_researcher/OPENAI.md\",\n    \"trading_researcher/OUTCOMES.md\",\n    \"trading_researcher/POPULATION_MODELS.md\",\n    \"trading_researcher/RESEARCHER.md\",\n    \"trading_researcher/STATIONARY_BOOTSTRAP.md\",\n    \"trading_researcher/STORAGE.md\",\n    \"trading_researcher/anthropic_provider.py\",\n    \"trading_researcher/auxiliary.py\",\n    \"trading_researcher/binance_archive.py\",\n    \"trading_researcher/binance_ingest.py\",\n    \"trading_researcher/binance_normalize.py\",\n    \"trading_researcher/binance_quality.py\",\n    \"trading_researcher/binding.py\",\n    \"trading_researcher/bootstrap_runs.py\",\n    \"trading_researcher/calibration.py\",\n    \"trading_researcher/calibration_runs.py\",\n    \"trading_researcher/calibration_study.py\",\n    \"trading_researcher/certification.py\",\n    \"trading_researcher/context_views.py\",\n    \"trading_researcher/controller_providers.py\",\n    \"trading_researcher/data.py\",\n    \"trading_researcher/errors.py\",\n    \"trading_researcher/evaluation_plans.py\",\n    \"trading_researcher/evaluation_policy.py\",\n    \"trading_researcher/expressions.py\",\n    \"trading_researcher/features.py\",\n    \"trading_researcher/formalization.py\",\n    \"trading_researcher/information_diagnostics.py\",\n    \"trading_researcher/information_runs.py\",\n    \"trading_researcher/information_study.py\",\n    \"trading_researcher/meaning_reviews.py\",\n    \"trading_researcher/measurements.py\",\n    \"trading_researcher/memory.py\",\n    \"trading_researcher/memory_demo.py\",\n    \"trading_researcher/monte_carlo.py\",\n    \"trading_researcher/openai_provider.py\",\n    \"trading_researcher/outcomes.py\",\n    \"trading_researcher/population_models.py\",\n    \"trading_researcher/population_runs.py\",\n    \"trading_researcher/provider_usage.py\",\n    \"trading_researcher/research_calls.py\",\n    \"trading_researcher/research_demo.py\",\n    \"trading_researcher/researcher.py\",\n    \"trading_researcher/stationary_bootstrap.py\",\n    \"trading_researcher/storage.py\",\n    \"trading_researcher/study_pipeline.py\",\n    \"trading_researcher/study_runs.py\"\n  ],\n  \"local_document_links\": 452,\n  \"errors\": [],\n  \"scope\": \"Implementation preservation, local link targets and whitespace; no semantic/scientific certification\"\n}\n"
+    },
+    {
+      "label": "implementation",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "started_at_utc": "2026-10-26T12:23:07.185636+00:00",
+      "elapsed_seconds": 0.295214,
+      "exit_code": 0,
+      "log_sha256": "12db883f0019fe03874c982902dfbccb3242f62554f6a2994f1c7a44a8f3e9d4",
+      "output_tail": "rsarial.py\",\n    \"tests/test_memory.py\",\n    \"tests/test_monte_carlo.py\",\n    \"tests/test_monte_carlo_adversarial.py\",\n    \"tests/test_openai_provider.py\",\n    \"tests/test_openai_provider_adversarial.py\",\n    \"tests/test_openai_provider_metadata_adversarial.py\",\n    \"tests/test_outcomes.py\",\n    \"tests/test_perspective_profiles.py\",\n    \"tests/test_perspective_profiles_adversarial.py\",\n    \"tests/test_plan_retention.py\",\n    \"tests/test_plan_retention_adversarial.py\",\n    \"tests/test_population_models.py\",\n    \"tests/test_population_models_adversarial.py\",\n    \"tests/test_population_runs.py\",\n    \"tests/test_provider_identity.py\",\n    \"tests/test_provider_identity_adversarial.py\",\n    \"tests/test_provider_usage.py\",\n    \"tests/test_provider_usage_adversarial.py\",\n    \"tests/test_research_calls.py\",\n    \"tests/test_researcher.py\",\n    \"tests/test_stationary_bootstrap.py\",\n    \"tests/test_stationary_bootstrap_adversarial.py\",\n    \"tests/test_storage.py\",\n    \"tests/test_study_runs.py\",\n    \"tests/test_study_runs_adversarial.py\",\n    \"trading_researcher/ANTHROPIC.md\",\n    \"trading_researcher/AUXILIARY_RESEARCH.md\",\n    \"trading_researcher/BINANCE.md\",\n    \"trading_researcher/BINANCE_NORMALIZATION.md\",\n    \"trading_researcher/BINDING.md\",\n    \"trading_researcher/CALIBRATION.md\",\n    \"trading_researcher/CERTIFICATION.md\",\n    \"trading_researcher/CONTROLLER_PROVIDERS.md\",\n    \"trading_researcher/DATA.md\",\n    \"trading_researcher/EVALUATION_POLICY.md\",\n    \"trading_researcher/EXPRESSIONS.md\",\n    \"trading_researcher/FEATURES.md\",\n    \"trading_researcher/FORMALIZATION.md\",\n    \"trading_researcher/INFORMATION_DIAGNOSTICS.md\",\n    \"trading_researcher/INFORMATION_STUDIES.md\",\n    \"trading_researcher/MEASUREMENTS.md\",\n    \"trading_researcher/MEMORY.md\",\n    \"trading_researcher/MONTE_CARLO.md\",\n    \"trading_researcher/OPENAI.md\",\n    \"trading_researcher/OUTCOMES.md\",\n    \"trading_researcher/POPULATION_MODELS.md\",\n    \"trading_researcher/RESEARCHER.md\",\n    \"trading_researcher/STATIONARY_BOOTSTRAP.md\",\n    \"trading_researcher/STORAGE.md\",\n    \"trading_researcher/anthropic_provider.py\",\n    \"trading_researcher/auxiliary.py\",\n    \"trading_researcher/binance_archive.py\",\n    \"trading_researcher/binance_ingest.py\",\n    \"trading_researcher/binance_normalize.py\",\n    \"trading_researcher/binance_quality.py\",\n    \"trading_researcher/binding.py\",\n    \"trading_researcher/bootstrap_runs.py\",\n    \"trading_researcher/calibration.py\",\n    \"trading_researcher/calibration_runs.py\",\n    \"trading_researcher/calibration_study.py\",\n    \"trading_researcher/certification.py\",\n    \"trading_researcher/context_views.py\",\n    \"trading_researcher/controller_providers.py\",\n    \"trading_researcher/data.py\",\n    \"trading_researcher/errors.py\",\n    \"trading_researcher/evaluation_plans.py\",\n    \"trading_researcher/evaluation_policy.py\",\n    \"trading_researcher/expressions.py\",\n    \"trading_researcher/features.py\",\n    \"trading_researcher/formalization.py\",\n    \"trading_researcher/information_diagnostics.py\",\n    \"trading_researcher/information_runs.py\",\n    \"trading_researcher/information_study.py\",\n    \"trading_researcher/meaning_reviews.py\",\n    \"trading_researcher/measurements.py\",\n    \"trading_researcher/memory.py\",\n    \"trading_researcher/memory_demo.py\",\n    \"trading_researcher/monte_carlo.py\",\n    \"trading_researcher/openai_provider.py\",\n    \"trading_researcher/outcomes.py\",\n    \"trading_researcher/population_models.py\",\n    \"trading_researcher/population_runs.py\",\n    \"trading_researcher/provider_usage.py\",\n    \"trading_researcher/research_calls.py\",\n    \"trading_researcher/research_demo.py\",\n    \"trading_researcher/researcher.py\",\n    \"trading_researcher/stationary_bootstrap.py\",\n    \"trading_researcher/storage.py\",\n    \"trading_researcher/study_pipeline.py\",\n    \"trading_researcher/study_runs.py\"\n  ],\n  \"local_document_links\": 452,\n  \"errors\": [],\n  \"scope\": \"Implementation preservation, local link targets and whitespace; no semantic/scientific certification\"\n}\n"
+    },
+    {
+      "label": "retail-contract-1793017425574421600",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "started_at_utc": "2026-10-26T12:23:39.990986+00:00",
+      "elapsed_seconds": 5.584085,
+      "exit_code": 0,
+      "log_sha256": "4a3e311f9aab6f2665d74968cc74b4272acf41710b3040dec3a4ab4dfdc3112e",
+      "output_tail": "5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\",\n    \".gitattributes\": \"44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c\",\n    \"docs/reviews/verify_system_model.py\": \"59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef\",\n    \"docs/reviews/verify_retail_contract.py\": \"e8ad4dfc1eb0474f68e6df3b1e28e80009353ef32932c7c9d7826ab59e82d9c9\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\": \"56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\",\n    \"Complete executable AST/schema/primitive implementations and independent golden fixtures\",\n    \"Actual data quality, rights, historical availability, model exposure and account/execution costs\",\n    \"Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately\",\n    \"Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs\",\n    \"SRC-001 through SRC-008 and completeness of original conversation\"\n  ],\n  \"changed_files_since_preapproval\": [\n    \".gitattributes\",\n    \"AGENTS.md\",\n    \"README.md\",\n    \"REVIEWING.md\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_system_model.py\"\n  ],\n  \"added_files\": [\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\",\n    \"docs/reviews/adoption-2026-10-23/verification.json\"\n  ],\n  \"preserved_proposal_sha256\": \"22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29\",\n  \"preapproval_archive_sha256\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n}\n"
+    },
+    {
+      "label": "retail-contract",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "started_at_utc": "2026-10-26T12:22:56.187454+00:00",
+      "elapsed_seconds": 5.500208,
+      "exit_code": 1,
+      "log_sha256": "76d636dcaf79259b8fd178e7aa3b37d6cb619135af22ad02a35ad26e433f7c24",
+      "output_tail": "ORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\",\n    \".gitattributes\": \"30d70cb13faeb45417192c00b46171c0d7ca73e8ac1ed3056d2750756df9bbe0\",\n    \"docs/reviews/verify_system_model.py\": \"59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef\",\n    \"docs/reviews/verify_retail_contract.py\": \"c1aecd79447dafd205a284415ed25d7ba2ad35ebee25f2c108c74d1df19b0e92\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\": \"56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n  },\n  \"errors\": [\n    \"Unexpected changes since adoption baseline: ['.gitattributes', 'AGENTS.md', 'README.md', 'REVIEWING.md', 'docs/architecture/01_PROBLEM_DEFINITION.md', 'docs/architecture/02_DECISION_REGISTER.md', 'docs/architecture/04_DEFINITIONS.md', 'docs/architecture/05_REQUIREMENTS.md', 'docs/architecture/06_MASTER_ARCHITECTURE.md', 'docs/architecture/07_SCIENTIFIC_EVALUATION.md', 'docs/architecture/08_ENGINEERING_REVIEW.md', 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md', 'docs/architecture/10_IMPLEMENTATION_ROADMAP.md', 'docs/architecture/11_OPEN_DECISIONS.md', 'docs/architecture/12_TRACEABILITY_MATRIX.md', 'docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md', 'docs/architecture/ARCHITECTURE_REGISTER.json', 'docs/architecture/CURRENT_STATE.md', 'docs/reviews/verify_system_model.py']\"\n  ],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\",\n    \"Complete executable AST/schema/primitive implementations and independent golden fixtures\",\n    \"Actual data quality, rights, historical availability, model exposure and account/execution costs\",\n    \"Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately\",\n    \"Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs\",\n    \"SRC-001 through SRC-008 and completeness of original conversation\"\n  ],\n  \"changed_files_since_preapproval\": [\n    \".gitattributes\",\n    \"AGENTS.md\",\n    \"README.md\",\n    \"REVIEWING.md\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_system_model.py\"\n  ],\n  \"added_files\": [\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\",\n    \"docs/reviews/adoption-2026-10-23/verification.json\"\n  ],\n  \"preserved_proposal_sha256\": \"22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29\",\n  \"preapproval_archive_sha256\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n}\n"
+    },
+    {
+      "label": "system-model-1793017431218562300",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "started_at_utc": "2026-10-26T12:23:45.575869+00:00",
+      "elapsed_seconds": 5.643273,
+      "exit_code": 0,
+      "log_sha256": "c466bf0211bf54275eb740e3ab724bf790ce6f8000442a02de64307f61bca568",
+      "output_tail": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 764,\n    \"source_files\": 5,\n    \"decisions\": 88,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Not checked; rerun with retained --baseline inventory\",\n    \"git_diff_check_exit\": 0\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"69232b307d73485ef0878b824e40bc3854a5b76e97672b93246b77b22fa6803c\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"0191b59fbfc69cd3a4fe3046446c09c3c19d281f29314b9b6b3d3b132e386079\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37\",\n    \"docs/architecture/CURRENT_STATE.md\": \"bb7ffad62ffa286d3efdbd58ab433f93f8145b4d23481abeb59278337850b4b7\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\"\n  ]\n}\n"
+    },
+    {
+      "label": "system-model",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "started_at_utc": "2026-10-26T12:23:01.688538+00:00",
+      "elapsed_seconds": 5.496301,
+      "exit_code": 0,
+      "log_sha256": "c466bf0211bf54275eb740e3ab724bf790ce6f8000442a02de64307f61bca568",
+      "output_tail": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 764,\n    \"source_files\": 5,\n    \"decisions\": 88,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Not checked; rerun with retained --baseline inventory\",\n    \"git_diff_check_exit\": 0\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"69232b307d73485ef0878b824e40bc3854a5b76e97672b93246b77b22fa6803c\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"0191b59fbfc69cd3a4fe3046446c09c3c19d281f29314b9b6b3d3b132e386079\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37\",\n    \"docs/architecture/CURRENT_STATE.md\": \"bb7ffad62ffa286d3efdbd58ab433f93f8145b4d23481abeb59278337850b4b7\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\"\n  ]\n}\n"
+    },
+    {
+      "label": "test_controller_providers",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_controller_providers*.py"
+      ],
+      "started_at_utc": "2026-10-26T12:21:07.334102+00:00",
+      "elapsed_seconds": 7.694683,
+      "exit_code": 0,
+      "log_sha256": "7bae5597384ef8eaae3b6dc63a64ebadce32387a6b2c1eb1868091f94100f73f",
+      "output_tail": "..................\n----------------------------------------------------------------------\nRan 18 tests in 7.131s\n\nOK\n"
+    },
+    {
+      "label": "test_formalization",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_formalization.py"
+      ],
+      "started_at_utc": "2026-10-26T12:21:50.879240+00:00",
+      "elapsed_seconds": 5.409957,
+      "exit_code": 0,
+      "log_sha256": "4ef85cb41944b4e017a641367b345e48532926f3ba41c518a2622647adeb41f7",
+      "output_tail": "............\n----------------------------------------------------------------------\nRan 12 tests in 4.910s\n\nOK\n"
+    },
+    {
+      "label": "test_local_runtime",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_local_runtime.py"
+      ],
+      "started_at_utc": "2026-10-26T12:21:35.072332+00:00",
+      "elapsed_seconds": 15.806188,
+      "exit_code": 0,
+      "log_sha256": "1d3e5062466455c5099609b1683a850203caad773f06eb5b97b2913990dd4536",
+      "output_tail": "........\n----------------------------------------------------------------------\nRan 8 tests in 15.280s\n\nOK\n"
+    },
+    {
+      "label": "test_memory",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_memory.py"
+      ],
+      "started_at_utc": "2026-10-26T12:21:18.661207+00:00",
+      "elapsed_seconds": 8.814191,
+      "exit_code": 0,
+      "log_sha256": "e4f1519659453f90f62aeb2c7719dfe8386468230829f74ce39567f616072268",
+      "output_tail": ".................\n----------------------------------------------------------------------\nRan 17 tests in 8.372s\n\nOK\n"
+    },
+    {
+      "label": "test_research_calls",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_research_calls.py"
+      ],
+      "started_at_utc": "2026-10-26T12:21:15.029580+00:00",
+      "elapsed_seconds": 3.630828,
+      "exit_code": 0,
+      "log_sha256": "f2e04936541faeb374b6688b61eaae715723f4f519e6be8db4aeeb991c240bba",
+      "output_tail": "..........\n----------------------------------------------------------------------\nRan 10 tests in 3.161s\n\nOK\n"
+    },
+    {
+      "label": "test_storage",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_storage.py"
+      ],
+      "started_at_utc": "2026-10-26T12:21:27.475982+00:00",
+      "elapsed_seconds": 7.595749,
+      "exit_code": 0,
+      "log_sha256": "5ecbd32b7fa6c4aebc74d2b62a171d76e3f05e344e03ed18d7642a201acce6c5",
+      "output_tail": "............\n----------------------------------------------------------------------\nRan 12 tests in 7.131s\n\nOK\n"
+    },
+    {
+      "label": "whitespace-1793017431566468900",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at_utc": "2026-10-26T12:23:51.513270+00:00",
+      "elapsed_seconds": 0.054151,
+      "exit_code": 0,
+      "log_sha256": "31e385486a04fdaa5e0990d6293c0222f171f2302a52c8eadce61ec71d7f757f",
+      "output_tail": "warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/CURRENT_STATE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/reviews/verify_retail_contract.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/README.md', CRLF will be replaced by LF the next time Git touches it\n"
+    },
+    {
+      "label": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at_utc": "2026-10-26T12:23:07.481752+00:00",
+      "elapsed_seconds": 0.048731,
+      "exit_code": 0,
+      "log_sha256": "70039974c6dc29729639fec4ed5d7a04ec43e0cbe174c8bc8bd88202c1eb6aea",
+      "output_tail": "warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'README.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/CURRENT_STATE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'tests/test_local_runtime.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'trading_researcher/README.md', CRLF will be replaced by LF the next time Git touches it\n"
+    }
+  ],
+  "independent_review": "github-publication-review-2026-10-26.json",
+  "staged_check_exit_code": 0,
+  "exact_byte_files_verified": 272,
+  "changed_files": {
+    ".gitattributes": {
+      "git_blob": "d58bd3f361218ac89955503e39f31dd1740943eb",
+      "published_sha256": "44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c",
+      "workspace_sha256": "44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c"
+    },
+    ".gitignore": {
+      "git_blob": "a017c13375fa513f68b3ed721ecdb43c4e01feb0",
+      "published_sha256": "338464220b2cc2a830c5be55e071ff72b20209e59ed81b515a8b9df3a519b267",
+      "workspace_sha256": "338464220b2cc2a830c5be55e071ff72b20209e59ed81b515a8b9df3a519b267"
+    },
+    "README.md": {
+      "git_blob": "b699e74a14987c8d933cd15126b68866a6fb612b",
+      "published_sha256": "6108e45a5e3b7b5a10b9a26953d15c9ec1bc3b7cdf894f52641f17cb249ef20e",
+      "workspace_sha256": "69232b307d73485ef0878b824e40bc3854a5b76e97672b93246b77b22fa6803c"
+    },
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": {
+      "git_blob": "587d30fc4ecd1f97b9ba4f60ac0469cae8a6fc6c",
+      "published_sha256": "d7a2db2d2be450ef312cb7e6f5a4d08f5a0d42681df21e37853e17ca2f364d1a",
+      "workspace_sha256": "0191b59fbfc69cd3a4fe3046446c09c3c19d281f29314b9b6b3d3b132e386079"
+    },
+    "docs/architecture/CURRENT_STATE.md": {
+      "git_blob": "3577deca1f3d1679a1c7123dbb210a0f6bcb8522",
+      "published_sha256": "d669120531d34cdf6f8691596146b9bbde1e25a76228312f11c6ebbd10fe2e3f",
+      "workspace_sha256": "bb7ffad62ffa286d3efdbd58ab433f93f8145b4d23481abeb59278337850b4b7"
+    },
+    "docs/reviews/implementation-2026-10-25/ANTHROPIC_TRANSPORT_2026-10-25.md": {
+      "git_blob": "3265dc0783289ecdf1252d5e7457b01376d68d78",
+      "published_sha256": "0ce8439f9200d9c8009f87605e7f5ccd7a2b2267cf7e02a3d73e574dc1bb4b6e",
+      "workspace_sha256": "0ce8439f9200d9c8009f87605e7f5ccd7a2b2267cf7e02a3d73e574dc1bb4b6e"
+    },
+    "docs/reviews/implementation-2026-10-25/CHATGPT_PLAN_INTEGRATION_REVIEW.md": {
+      "git_blob": "e774f4960cc66caf926de371bee3b178b285e8c3",
+      "published_sha256": "433bbc5b46809db59c714c6083dde8e4e412c1347d36d4e31f5fbd94097573be",
+      "workspace_sha256": "433bbc5b46809db59c714c6083dde8e4e412c1347d36d4e31f5fbd94097573be"
+    },
+    "docs/reviews/implementation-2026-10-25/CHEAP_WORKER_REVIEW_2026-10-25.md": {
+      "git_blob": "aa15088821304bd563890280a9ee5babffb643d7",
+      "published_sha256": "72ab941740677587666edd19b8649f03c3f8e87a68184a94892ae19a10eba525",
+      "workspace_sha256": "72ab941740677587666edd19b8649f03c3f8e87a68184a94892ae19a10eba525"
+    },
+    "docs/reviews/implementation-2026-10-25/GITHUB_PUBLICATION_2026-10-26.md": {
+      "git_blob": "199bff5b472a404f114b0de57f49955819f09d08",
+      "published_sha256": "839c666a89503f7d046ef0a5e42449a956bb754ee4a14073036fb1940d839596",
+      "workspace_sha256": "839c666a89503f7d046ef0a5e42449a956bb754ee4a14073036fb1940d839596"
+    },
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md": {
+      "git_blob": "7d81656f66cf952dde095c0218d2028cb0ca4b27",
+      "published_sha256": "61fd580673a6f9b4e7956c872266fe1d9893b12bd43292e5592e3cf83fe45040",
+      "workspace_sha256": "61fd580673a6f9b4e7956c872266fe1d9893b12bd43292e5592e3cf83fe45040"
+    },
+    "docs/reviews/implementation-2026-10-25/INFORMATION_STUDY_IMPLEMENTATION.md": {
+      "git_blob": "d916d56ce610255951744d2e43649c665801c201",
+      "published_sha256": "9fa00d6ea4106110b16cc6d948f65a990f9dbda5c79616ada09a30b212dba83c",
+      "workspace_sha256": "9fa00d6ea4106110b16cc6d948f65a990f9dbda5c79616ada09a30b212dba83c"
+    },
+    "docs/reviews/implementation-2026-10-25/MULTI_MODEL_FIRST_RUN_2026-10-25.md": {
+      "git_blob": "ff05b4c1d6fe9acf5a25982c9c52f98078ee7bf2",
+      "published_sha256": "df3809b59f943eba9b86ca690fa5c1e1ce0e83880a36ec8039a906b551fd3f16",
+      "workspace_sha256": "df3809b59f943eba9b86ca690fa5c1e1ce0e83880a36ec8039a906b551fd3f16"
+    },
+    "docs/reviews/implementation-2026-10-25/MULTI_MODEL_ROLE_HANDOFF_2026-10-25.md": {
+      "git_blob": "58f2645f6980622ced28f363a7a3f5a73f88889f",
+      "published_sha256": "0bd869c53b0802e9eb6d4b0b9066e5ea2ab9317bcd0e469965d7978a2c8c97ca",
+      "workspace_sha256": "0bd869c53b0802e9eb6d4b0b9066e5ea2ab9317bcd0e469965d7978a2c8c97ca"
+    },
+    "docs/reviews/implementation-2026-10-25/OPENAI_MEASUREMENT_INTEGRATION_2026-10-25.md": {
+      "git_blob": "1517ba699b1265c634a4ee10b3ae77f0f7b73c41",
+      "published_sha256": "e44f1ac1bca402109956dd11118141aacea6e346d44ceb505b3e3bece33ddd78",
+      "workspace_sha256": "e44f1ac1bca402109956dd11118141aacea6e346d44ceb505b3e3bece33ddd78"
+    },
+    "docs/reviews/implementation-2026-10-25/OPENAI_USAGE_2026-10-25.md": {
+      "git_blob": "8d5e5c069b598923fac008a1b739c8fdd07bf7d9",
+      "published_sha256": "3038d61994a6a5b20bec22e8aebba00ba10fd240dd18727dcf2280aac50b32fe",
+      "workspace_sha256": "3038d61994a6a5b20bec22e8aebba00ba10fd240dd18727dcf2280aac50b32fe"
+    },
+    "docs/reviews/implementation-2026-10-25/OPENAI_USAGE_IDENTITY_2026-10-25.md": {
+      "git_blob": "5f7e62079b781c158ddb60bde819a31c3076d805",
+      "published_sha256": "fc069a3581f7a7a1d0a2227cd27435382709aafcf44204a551d9c247549fa8c9",
+      "workspace_sha256": "fc069a3581f7a7a1d0a2227cd27435382709aafcf44204a551d9c247549fa8c9"
+    },
+    "docs/reviews/implementation-2026-10-25/TOKEN_EFFICIENCY_RESEARCH_2026-10-25.md": {
+      "git_blob": "6ffef31d312b1709478c68baaadadb5280b931b1",
+      "published_sha256": "e2863ccb81b40381bcaadb27a9c074aa0e32bf58d1c379110efd93cc6d342441",
+      "workspace_sha256": "e2863ccb81b40381bcaadb27a9c074aa0e32bf58d1c379110efd93cc6d342441"
+    },
+    "docs/reviews/implementation-2026-10-25/USER_TOOL_CANDIDATES_2026-10-25.md": {
+      "git_blob": "144cefcfd49caddc9d7715244a9bb97fd0987863",
+      "published_sha256": "3396e48535495a8e0d38b0a91c820e062f46f305a57d6099dd8daa337ac89428",
+      "workspace_sha256": "3396e48535495a8e0d38b0a91c820e062f46f305a57d6099dd8daa337ac89428"
+    },
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-evidence.zip": {
+      "git_blob": "05912d1ec809d04b74f556ad68530d943735426a",
+      "published_sha256": "1a47a4ad985ce3a31988673f1331648776c630437084c203ca4454832e7c0ac2",
+      "workspace_sha256": "1a47a4ad985ce3a31988673f1331648776c630437084c203ca4454832e7c0ac2"
+    },
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-review.json": {
+      "git_blob": "f5c00caac114bf1bb68c4aa2dab49651011ddad7",
+      "published_sha256": "b39fe9dd22143fbf7c35628d7db6bf64aff0b1ee35cc75ce0990fb7f6965392d",
+      "workspace_sha256": "b39fe9dd22143fbf7c35628d7db6bf64aff0b1ee35cc75ce0990fb7f6965392d"
+    },
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-verification.json": {
+      "git_blob": "0b4f79f3663aa7b40a1be795b031002e1d1c06f7",
+      "published_sha256": "6da5f544eb7e97ac956ceae16a8ea35117e6f54c1ae89a45fc4d96a0e1a01fa0",
+      "workspace_sha256": "6da5f544eb7e97ac956ceae16a8ea35117e6f54c1ae89a45fc4d96a0e1a01fa0"
+    },
+    "docs/reviews/implementation-2026-10-25/anthropic-role-handoff-verification.json": {
+      "git_blob": "698d73e485aca069275dafdbf3a499834d29ad60",
+      "published_sha256": "11f51b43fd7ca08fb5c460f3cc4678e7038e20f886eb38a0aa68e941bb5a2ac4",
+      "workspace_sha256": "11f51b43fd7ca08fb5c460f3cc4678e7038e20f886eb38a0aa68e941bb5a2ac4"
+    },
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-baseline.json": {
+      "git_blob": "cc90289c1016a7bdd02f72da39a5e26bca19c62e",
+      "published_sha256": "3adfb4f50628ebaaa2349d872422523a91a352437d05011e847347642e14e215",
+      "workspace_sha256": "3adfb4f50628ebaaa2349d872422523a91a352437d05011e847347642e14e215"
+    },
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json": {
+      "git_blob": "0d1e11323136f9e4ee88cd67ebc62d1c3b318a0d",
+      "published_sha256": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+      "workspace_sha256": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd"
+    },
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-source-before.zip": {
+      "git_blob": "709fe25a374d4d9b2ddeef025778a0e968c85439",
+      "published_sha256": "fa952b6067e94ef21cd331816b83e1161f098072f9f86da46c318cb301507c0f",
+      "workspace_sha256": "fa952b6067e94ef21cd331816b83e1161f098072f9f86da46c318cb301507c0f"
+    },
+    "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json": {
+      "git_blob": "aba28d920bf99092bd215a4e1d316ccda851351f",
+      "published_sha256": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2",
+      "workspace_sha256": "5ac0dcb9971d28ffc25ccfa4f205d88db3429fd6d36fdb30cdd4028ba36ef2b2"
+    },
+    "docs/reviews/implementation-2026-10-25/baseline.json": {
+      "git_blob": "b491fb5088881d58f5a7b2ebaa00243630121287",
+      "published_sha256": "0938c679b0c76b9ae3f12f9b8423445b264c30b4f59c9b37d4cc8faa40d0c879",
+      "workspace_sha256": "0938c679b0c76b9ae3f12f9b8423445b264c30b4f59c9b37d4cc8faa40d0c879"
+    },
+    "docs/reviews/implementation-2026-10-25/binance-normalization-results.json": {
+      "git_blob": "90f7d79805c8210966b3b8c3364a6b07852ea9a4",
+      "published_sha256": "12d2bb8f83bc1d2f99779cfaed78a5bfccc486578986f0d07e412c0ba3532b57",
+      "workspace_sha256": "12d2bb8f83bc1d2f99779cfaed78a5bfccc486578986f0d07e412c0ba3532b57"
+    },
+    "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json": {
+      "git_blob": "d86b7733b3df964ad87aad06942116b967859689",
+      "published_sha256": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9",
+      "workspace_sha256": "87d9b2797f596de5df50b37512e4ed39341625f12d887752b833be2c401571d9"
+    },
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json": {
+      "git_blob": "2c95c508c4eaf57ebf44cc129e34ddc2aefb471b",
+      "published_sha256": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3",
+      "workspace_sha256": "8699c7151f445b36b35bbadb63200e1251cb128280b517a35d1014de2cefd7f3"
+    },
+    "docs/reviews/implementation-2026-10-25/binance-registry-retention.json": {
+      "git_blob": "6e3a820104742d6d1d8cd1f83350ad5f73592208",
+      "published_sha256": "344746c5c7591569cb20741d3095bb1a1ddc7e37358349486e2f409439559ad9",
+      "workspace_sha256": "344746c5c7591569cb20741d3095bb1a1ddc7e37358349486e2f409439559ad9"
+    },
+    "docs/reviews/implementation-2026-10-25/binance-source-inventory.json": {
+      "git_blob": "9b65dda55036341bc00125a873233b3dba54dd45",
+      "published_sha256": "a6d7198d0b0a350e123a6e856825e46cd7a3b7e9c138c2c0ae5a57d5c8cc513b",
+      "workspace_sha256": "a6d7198d0b0a350e123a6e856825e46cd7a3b7e9c138c2c0ae5a57d5c8cc513b"
+    },
+    "docs/reviews/implementation-2026-10-25/binance-verification.json": {
+      "git_blob": "8a6dba740d21755ae9d6e60eb4bdbe6a41629cf0",
+      "published_sha256": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3",
+      "workspace_sha256": "de59800da11d71f61457593f27c21f74a6bcbd1989ab9853c7aec6d4aed343b3"
+    },
+    "docs/reviews/implementation-2026-10-25/binding-review.json": {
+      "git_blob": "a87456b43ff88cb5df32be605ca2d9aba78278c0",
+      "published_sha256": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+      "workspace_sha256": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5"
+    },
+    "docs/reviews/implementation-2026-10-25/binding-verification.json": {
+      "git_blob": "3f5a81e364d506d923d97e7d74915f288b9eaefb",
+      "published_sha256": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b",
+      "workspace_sha256": "96135f38a7a81be50bef9eaa3baf537ea0088e98186b0c73fa15c97f00c37f7b"
+    },
+    "docs/reviews/implementation-2026-10-25/bootstrap-baseline.json": {
+      "git_blob": "0c4debbf79b3862df401de3166525d70bdc68484",
+      "published_sha256": "2b4dba278b2c2db67b182f594549cd843ed8d851c1579250f305eaa058dd39d1",
+      "workspace_sha256": "2b4dba278b2c2db67b182f594549cd843ed8d851c1579250f305eaa058dd39d1"
+    },
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": {
+      "git_blob": "3afc57044d76917ab8273a4fb5483a35fdaaba11",
+      "published_sha256": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+      "workspace_sha256": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9"
+    },
+    "docs/reviews/implementation-2026-10-25/bootstrap-source-before.zip": {
+      "git_blob": "94babb2f7a1fc80a28a8e15ccafff0ec5062bc58",
+      "published_sha256": "4096c62b1139c0183ebaf0fe503ca3a037a5351a1b0111425fcd2e9e998f95c7",
+      "workspace_sha256": "4096c62b1139c0183ebaf0fe503ca3a037a5351a1b0111425fcd2e9e998f95c7"
+    },
+    "docs/reviews/implementation-2026-10-25/bootstrap-verification.json": {
+      "git_blob": "be64f1b886368f191e89fba50587b1efbd8f48b6",
+      "published_sha256": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c",
+      "workspace_sha256": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c"
+    },
+    "docs/reviews/implementation-2026-10-25/calibration-count-evidence.zip": {
+      "git_blob": "4484e05dd52b22cecfc0f0db16853b045e385870",
+      "published_sha256": "cc32d9e7dbcf438790bc0b4f09431e6dd3a74b0a89f65ae800b25b9cb2ae7d33",
+      "workspace_sha256": "cc32d9e7dbcf438790bc0b4f09431e6dd3a74b0a89f65ae800b25b9cb2ae7d33"
+    },
+    "docs/reviews/implementation-2026-10-25/calibration-count-review.json": {
+      "git_blob": "5462aab9d51e43fa8983272bdfcd50e702c2eff9",
+      "published_sha256": "c1e0c08c56ac3ebaef170d7599cbc34d384a7356d42d62e56bd739b16fde146f",
+      "workspace_sha256": "c1e0c08c56ac3ebaef170d7599cbc34d384a7356d42d62e56bd739b16fde146f"
+    },
+    "docs/reviews/implementation-2026-10-25/calibration-count-verification.json": {
+      "git_blob": "4083c9a6f0c11a101dd2ececd489dbcbfb0f90af",
+      "published_sha256": "f0495e2e0731a467150fd6b45fb98a0017c33a4fa570d386f5c443dab4621faf",
+      "workspace_sha256": "f0495e2e0731a467150fd6b45fb98a0017c33a4fa570d386f5c443dab4621faf"
+    },
+    "docs/reviews/implementation-2026-10-25/calibration-run-evidence.zip": {
+      "git_blob": "9558283ab71de63f69d05b22d888f26ea546bdfb",
+      "published_sha256": "cc7c2ef8f9306d5f85444062f0a2993a9aabe350f45cda03753f2debdc97233c",
+      "workspace_sha256": "cc7c2ef8f9306d5f85444062f0a2993a9aabe350f45cda03753f2debdc97233c"
+    },
+    "docs/reviews/implementation-2026-10-25/calibration-run-review.json": {
+      "git_blob": "807444624ff205b95eb9b2f2046f8704ae362fca",
+      "published_sha256": "52af14f60ef041eefe6a8509aae70c899bde6eaa44745e7db3ca4123348fc86c",
+      "workspace_sha256": "52af14f60ef041eefe6a8509aae70c899bde6eaa44745e7db3ca4123348fc86c"
+    },
+    "docs/reviews/implementation-2026-10-25/calibration-run-verification.json": {
+      "git_blob": "45e5fee6b769400acfb33d833846e28921d284db",
+      "published_sha256": "383c92c89b38726eeb9c2ce0b0a2508bfae82eed5d1607bbc4119f0baffeca8e",
+      "workspace_sha256": "383c92c89b38726eeb9c2ce0b0a2508bfae82eed5d1607bbc4119f0baffeca8e"
+    },
+    "docs/reviews/implementation-2026-10-25/certification-verification.json": {
+      "git_blob": "19cf9588f7b9fd5bd84bd962d3baa12d2ad574ba",
+      "published_sha256": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238",
+      "workspace_sha256": "45ea7bd82844b197b6b081796bc291ff94a2973903f1f7ad8b74065c2c1e5238"
+    },
+    "docs/reviews/implementation-2026-10-25/context-efficiency-evidence.zip": {
+      "git_blob": "a50cdc543ebe56f1d3d612aaeb5bbc68d10c5cd1",
+      "published_sha256": "4b87da978819fa81ab7ae144c0b10e2b04e93ba156e80af1fa1e573a65ed5d86",
+      "workspace_sha256": "4b87da978819fa81ab7ae144c0b10e2b04e93ba156e80af1fa1e573a65ed5d86"
+    },
+    "docs/reviews/implementation-2026-10-25/context-efficiency-observation.json": {
+      "git_blob": "e08f202b6b7881404d89fb5c0eaea968b3715f3d",
+      "published_sha256": "0a3a06f17681f0e614d68bb0736b8ac139ff0a615a9fdfcd29a1a02fb439558a",
+      "workspace_sha256": "0a3a06f17681f0e614d68bb0736b8ac139ff0a615a9fdfcd29a1a02fb439558a"
+    },
+    "docs/reviews/implementation-2026-10-25/context-efficiency-verification.json": {
+      "git_blob": "8f3cbc067e00a037b3d587510e007623c7203057",
+      "published_sha256": "75d6a828d2e3c1489fdcef2bf7d77a000960909784ca60f45d9f46aa74c309de",
+      "workspace_sha256": "75d6a828d2e3c1489fdcef2bf7d77a000960909784ca60f45d9f46aa74c309de"
+    },
+    "docs/reviews/implementation-2026-10-25/context-views-review.json": {
+      "git_blob": "f50c8795052d319b056ad5615e921692245c60a5",
+      "published_sha256": "59cf48da8f5b21fcc2d88386168cf588cc7409c6b688c2ef315706980eb6ce37",
+      "workspace_sha256": "59cf48da8f5b21fcc2d88386168cf588cc7409c6b688c2ef315706980eb6ce37"
+    },
+    "docs/reviews/implementation-2026-10-25/controller-provider-evidence.zip": {
+      "git_blob": "1db5e6ebb42e2821ca48022f474c2295751c3fc1",
+      "published_sha256": "51fbc337bc1c38f8687fa6f278411bbf59ea5e6e43dbe5896a6b60e5892466fb",
+      "workspace_sha256": "51fbc337bc1c38f8687fa6f278411bbf59ea5e6e43dbe5896a6b60e5892466fb"
+    },
+    "docs/reviews/implementation-2026-10-25/controller-provider-live.json": {
+      "git_blob": "deb4985dd972807c8716091906910809f66ee942",
+      "published_sha256": "fcce420f33a0743f222498e1876c16db0011930a95a44447dd887fd8511b9e2e",
+      "workspace_sha256": "fcce420f33a0743f222498e1876c16db0011930a95a44447dd887fd8511b9e2e"
+    },
+    "docs/reviews/implementation-2026-10-25/controller-provider-review.json": {
+      "git_blob": "05fba1464f1f700ab0d202c623064a30e4ccaeb1",
+      "published_sha256": "e54c3857bfc2856a7aceb6bed2a946d67a6b8c5f49aa3822de6739ec76cbb71c",
+      "workspace_sha256": "e54c3857bfc2856a7aceb6bed2a946d67a6b8c5f49aa3822de6739ec76cbb71c"
+    },
+    "docs/reviews/implementation-2026-10-25/controller-provider-usage.json": {
+      "git_blob": "0fc99b193c441173c6a2ea78802faf80cd3ed20f",
+      "published_sha256": "2a9f0193f7320448b5d5f8552d8755a454329f9812cb9b49a9818da746c47c29",
+      "workspace_sha256": "2a9f0193f7320448b5d5f8552d8755a454329f9812cb9b49a9818da746c47c29"
+    },
+    "docs/reviews/implementation-2026-10-25/controller-provider-verification.json": {
+      "git_blob": "e857390a54b7d4c16f12fdf6cab8d4e4ed30efc1",
+      "published_sha256": "8b8a69c1a0709389fa7d8e50946913877899d52cfd5fe9dcc6c4830ebd4482f2",
+      "workspace_sha256": "8b8a69c1a0709389fa7d8e50946913877899d52cfd5fe9dcc6c4830ebd4482f2"
+    },
+    "docs/reviews/implementation-2026-10-25/data-verification.json": {
+      "git_blob": "4a39015693a9d60993989436b37deb08599cf416",
+      "published_sha256": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743",
+      "workspace_sha256": "a09ec8e542ecefad73183214c778100290c20a491713cab8d1eac52902b94743"
+    },
+    "docs/reviews/implementation-2026-10-25/draw-transport-evidence.zip": {
+      "git_blob": "7ade637e90c2eb356c05960cdbaca8538dcea9a3",
+      "published_sha256": "dc46667cccc0074a0ad53a8f5944f4f0fd556bcd257f4e842609eee8c28c6b2c",
+      "workspace_sha256": "dc46667cccc0074a0ad53a8f5944f4f0fd556bcd257f4e842609eee8c28c6b2c"
+    },
+    "docs/reviews/implementation-2026-10-25/draw-transport-review.json": {
+      "git_blob": "249fe3992191d0ca7000a75df494ba270276c57d",
+      "published_sha256": "182759c2b8063176b1ad667459c6d410bf0561531f10fdbaae45955e69f6b6db",
+      "workspace_sha256": "182759c2b8063176b1ad667459c6d410bf0561531f10fdbaae45955e69f6b6db"
+    },
+    "docs/reviews/implementation-2026-10-25/draw-transport-verification.json": {
+      "git_blob": "cfba39ad178d5225fac3739ecbf78f5c0d295427",
+      "published_sha256": "8fdd8623cea186587277eca2d2461cccc7399e8efff0ecffc5445021ed967abe",
+      "workspace_sha256": "8fdd8623cea186587277eca2d2461cccc7399e8efff0ecffc5445021ed967abe"
+    },
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": {
+      "git_blob": "015ad522c6a8025d10a9e89b9ad8fd4abc52624c",
+      "published_sha256": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+      "workspace_sha256": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0"
+    },
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-source-baseline.zip": {
+      "git_blob": "938277e285d0c28d170b81517fc55fc0b3afdd2f",
+      "published_sha256": "0b5d22fc4a4289ef50790df592e0d5d0a1dd7c640b0313da3fc698d389ce36ae",
+      "workspace_sha256": "0b5d22fc4a4289ef50790df592e0d5d0a1dd7c640b0313da3fc698d389ce36ae"
+    },
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json": {
+      "git_blob": "af5fe620f9b29089d605a24e49ee6d285b4da6d3",
+      "published_sha256": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6",
+      "workspace_sha256": "1d107e593c008b8a5fdad4cff6f860d61b5a53b0ebe76d0aad82633f44b254f6"
+    },
+    "docs/reviews/implementation-2026-10-25/expressions-verification.json": {
+      "git_blob": "0261522374e2926c34a1094d6137208253b56878",
+      "published_sha256": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce",
+      "workspace_sha256": "c0a8310fa9dd97dbc1573cc17454b4a5a378136b815135fd96e45362e6f1ebce"
+    },
+    "docs/reviews/implementation-2026-10-25/feature-results.json": {
+      "git_blob": "67a6e9faab3251bdbb35e118dd3654819246fe5e",
+      "published_sha256": "6edf1dcb1d4a777b85bfafc358bd4c36bac6062bf4a2f3cbfb539e20d59ed39a",
+      "workspace_sha256": "6edf1dcb1d4a777b85bfafc358bd4c36bac6062bf4a2f3cbfb539e20d59ed39a"
+    },
+    "docs/reviews/implementation-2026-10-25/feature-verification.json": {
+      "git_blob": "765c1cd643ab9120fc0229c55b59ef6e882cc1b5",
+      "published_sha256": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9",
+      "workspace_sha256": "316f05553dd4854e9ff3187cac19819700ed02304dfb7f446d9615b02d0262e9"
+    },
+    "docs/reviews/implementation-2026-10-25/formalization-verification.json": {
+      "git_blob": "a7bc32898ceec78c6bbf434c25b477615f6a12f2",
+      "published_sha256": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca",
+      "workspace_sha256": "7053a3f7bf33506ba1002269eae8ff1186448aeb960b7ecd64a1b7a7f98876ca"
+    },
+    "docs/reviews/implementation-2026-10-25/github-publication-review-2026-10-26.json": {
+      "git_blob": "e9f3a30ac6d333ec5a6e77e3e41dec4f30910598",
+      "published_sha256": "ce05b6e3a505ca32831a023d97d6b16b8907eba34397da3e27254d25720ed157",
+      "workspace_sha256": "ce05b6e3a505ca32831a023d97d6b16b8907eba34397da3e27254d25720ed157"
+    },
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": {
+      "git_blob": "7780f81132988ceaca88e542312ea20c5cc0b851",
+      "published_sha256": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+      "workspace_sha256": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f"
+    },
+    "docs/reviews/implementation-2026-10-25/information-planning-baseline.json": {
+      "git_blob": "827465a0516d55256d1ca7c68f8e89bf164845d5",
+      "published_sha256": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea",
+      "workspace_sha256": "029da90c3c908c1280e6aec4495d87b9cf079a3123069f0805e06b181c1a82ea"
+    },
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json": {
+      "git_blob": "394e1f9a571eab0ca08f2e0f525521f9bfceba9f",
+      "published_sha256": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f",
+      "workspace_sha256": "f6a5e8c134fa42a48b870552bf4d822bfbe48bb1add8da9b94703782eab0fd5f"
+    },
+    "docs/reviews/implementation-2026-10-25/information-planning-source-before.zip": {
+      "git_blob": "4a1674921cc890a6ee604aea290860cfd03a95f7",
+      "published_sha256": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+      "workspace_sha256": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3"
+    },
+    "docs/reviews/implementation-2026-10-25/information-planning-verification.json": {
+      "git_blob": "ac051850baf86c9ad034868870ba997aa243275c",
+      "published_sha256": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567",
+      "workspace_sha256": "e316d9fe201e370564d409fba36f41ecffbaed348fd23852d116418ad16cd567"
+    },
+    "docs/reviews/implementation-2026-10-25/mc-stability-baseline.json": {
+      "git_blob": "f77d3dbd654152638d5380bc2230501a9fc94e16",
+      "published_sha256": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed",
+      "workspace_sha256": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed"
+    },
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": {
+      "git_blob": "6d006e84ae3bd11811ed9f1bb47fda8be8b1f2c4",
+      "published_sha256": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+      "workspace_sha256": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59"
+    },
+    "docs/reviews/implementation-2026-10-25/mc-stability-source-before.zip": {
+      "git_blob": "85bce17a21f1ddf2d89adfe9b125a3b968b8f04a",
+      "published_sha256": "048c35eae018862c40a2ef98eb1255774ece8897cc6f230bea3c876a2f9077fc",
+      "workspace_sha256": "048c35eae018862c40a2ef98eb1255774ece8897cc6f230bea3c876a2f9077fc"
+    },
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json": {
+      "git_blob": "e928b0efebfe379f9f178157d4226ef384015f4a",
+      "published_sha256": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb",
+      "workspace_sha256": "27308c8e0d0c9a15a22196729eb9a7c60ec5b44e465edbd7f8ad07c042391acb"
+    },
+    "docs/reviews/implementation-2026-10-25/measurement-context-views-review.json": {
+      "git_blob": "5e0a767826475988fd4cbd7212ee115e6ac589c6",
+      "published_sha256": "b0bc16a16537b2a300c6d7a745ef2f977218df9835a87218253819666cc0374b",
+      "workspace_sha256": "b0bc16a16537b2a300c6d7a745ef2f977218df9835a87218253819666cc0374b"
+    },
+    "docs/reviews/implementation-2026-10-25/measurement-evidence.zip": {
+      "git_blob": "72d6f78fd85b725408fb3a543582903be88f6908",
+      "published_sha256": "1f62bba2b30e8e1ade294e27b111318db1d6e9b88cafa10ee6f870e84da0d103",
+      "workspace_sha256": "1f62bba2b30e8e1ade294e27b111318db1d6e9b88cafa10ee6f870e84da0d103"
+    },
+    "docs/reviews/implementation-2026-10-25/measurement-provider-evidence.zip": {
+      "git_blob": "6ba2b7e03332d6c0a958ef66f94299b821a294ba",
+      "published_sha256": "06e579490919b2394261d7d877cd741eae051d6315a7c6b271d8c3a8b8742096",
+      "workspace_sha256": "06e579490919b2394261d7d877cd741eae051d6315a7c6b271d8c3a8b8742096"
+    },
+    "docs/reviews/implementation-2026-10-25/measurement-provider-observation.json": {
+      "git_blob": "71c070b6734fde75f7d8d381076f30d9091cd5d9",
+      "published_sha256": "95d9c8785fdbfe3f8a5bbe22f1158967873d304513cec9cc054aa5cf8ca41bf0",
+      "workspace_sha256": "95d9c8785fdbfe3f8a5bbe22f1158967873d304513cec9cc054aa5cf8ca41bf0"
+    },
+    "docs/reviews/implementation-2026-10-25/measurement-provider-usage.json": {
+      "git_blob": "b525862ebfc4663b0bf38c2e66305c13ce4b28db",
+      "published_sha256": "83e61f946529cc7d3aa3c424f1cd1dc7a21f99901f5488dbaa086c7598604050",
+      "workspace_sha256": "83e61f946529cc7d3aa3c424f1cd1dc7a21f99901f5488dbaa086c7598604050"
+    },
+    "docs/reviews/implementation-2026-10-25/measurement-provider-verification.json": {
+      "git_blob": "e12e4bf9cf63131ffdd0c8fc81253f42b7304854",
+      "published_sha256": "573c834de0df1962b0e6897646bffe24c9a9f64918c5c7719a21a818b06be621",
+      "workspace_sha256": "573c834de0df1962b0e6897646bffe24c9a9f64918c5c7719a21a818b06be621"
+    },
+    "docs/reviews/implementation-2026-10-25/measurement-review.json": {
+      "git_blob": "3e25f6973cda6d8cd89b032f7915115a7db6bfc8",
+      "published_sha256": "b3477a873c0b4967152176d998ffcbf20c218ace9dd970ca1cba88698b0e51c6",
+      "workspace_sha256": "b3477a873c0b4967152176d998ffcbf20c218ace9dd970ca1cba88698b0e51c6"
+    },
+    "docs/reviews/implementation-2026-10-25/measurement-verification.json": {
+      "git_blob": "ec6c7feb5fbab771cc0611cee82bd4953aae1d81",
+      "published_sha256": "ffd1c6ebdfa220ff795a36ea13a7e276b950f3d6b03c325791d13a64d58eab22",
+      "workspace_sha256": "ffd1c6ebdfa220ff795a36ea13a7e276b950f3d6b03c325791d13a64d58eab22"
+    },
+    "docs/reviews/implementation-2026-10-25/memory-preservation.json": {
+      "git_blob": "fbf5720420d61ed773ed6878c7d93fce3f8a9908",
+      "published_sha256": "445a51780caca04b35ddd09a8addf1ea3f0fdd6ab7c8d5e09efea4ad5dbb9efc",
+      "workspace_sha256": "445a51780caca04b35ddd09a8addf1ea3f0fdd6ab7c8d5e09efea4ad5dbb9efc"
+    },
+    "docs/reviews/implementation-2026-10-25/memory-verification.json": {
+      "git_blob": "58aa2875e7dd4293cd2e671db57a69ec2f43a187",
+      "published_sha256": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40",
+      "workspace_sha256": "3a5887405fbebf84a60198d49c585c46192bb7228ca7b9b0317bf2f412a2cb40"
+    },
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-baseline.json": {
+      "git_blob": "680a4d4fc9439dd6f8f55b8f2f57410cc129d8f7",
+      "published_sha256": "bbe364a8d449fc3e09bedcf909d1f0a5da61f2260ea1d64942c4201c76bf529f",
+      "workspace_sha256": "bbe364a8d449fc3e09bedcf909d1f0a5da61f2260ea1d64942c4201c76bf529f"
+    },
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-evidence.zip": {
+      "git_blob": "664cf26407f1525bf88b676c63ef387bac72facd",
+      "published_sha256": "3c67c62379d8bffecb82d177b5a1fd8a8ab378ba8e200c6357e9dc6b8bb96abd",
+      "workspace_sha256": "3c67c62379d8bffecb82d177b5a1fd8a8ab378ba8e200c6357e9dc6b8bb96abd"
+    },
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json": {
+      "git_blob": "5fb7c698790f83b507a14cb411746598db498656",
+      "published_sha256": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859",
+      "workspace_sha256": "2c8020b63412e4bf2866269b22b4028ddb25a8fea567a18cd7d836631db86859"
+    },
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-source-before.zip": {
+      "git_blob": "087ff4a367f5d6560749a8450c32e61ddb87c5d5",
+      "published_sha256": "8b0f59e38f59e1f578b4abbf2af929ea3814742f28f701a9033ef810c0f443a7",
+      "workspace_sha256": "8b0f59e38f59e1f578b4abbf2af929ea3814742f28f701a9033ef810c0f443a7"
+    },
+    "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json": {
+      "git_blob": "b56595358c312d79e6a3fdef258b1fd46bbb474f",
+      "published_sha256": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16",
+      "workspace_sha256": "6c02a2d0664fd7ee752bbbc7fdbf795b7716270896d4b5233d4d59b48d208d16"
+    },
+    "docs/reviews/implementation-2026-10-25/openai-evidence.zip": {
+      "git_blob": "3e7374f3e21db56d95fe291b558181165b473996",
+      "published_sha256": "e889bd2d38055872ddbcb41c01d7eab420d14f5857543e1e743e0d7892df82d0",
+      "workspace_sha256": "e889bd2d38055872ddbcb41c01d7eab420d14f5857543e1e743e0d7892df82d0"
+    },
+    "docs/reviews/implementation-2026-10-25/openai-initial-usage.json": {
+      "git_blob": "280ad8fc5af961fea5970f219f317e572c9a2619",
+      "published_sha256": "e6ea03ad0c9ddc9921ba42969a129b115ad0ea8bc002443064912a42bc7edabd",
+      "workspace_sha256": "e6ea03ad0c9ddc9921ba42969a129b115ad0ea8bc002443064912a42bc7edabd"
+    },
+    "docs/reviews/implementation-2026-10-25/openai-provider-review.json": {
+      "git_blob": "8e0f509acad9a007117b71c45c2ff4f8bc56477c",
+      "published_sha256": "de53f8bb99b37538375ed1051e8b0d522dfae6c3030dcff5da0663e17c07be09",
+      "workspace_sha256": "de53f8bb99b37538375ed1051e8b0d522dfae6c3030dcff5da0663e17c07be09"
+    },
+    "docs/reviews/implementation-2026-10-25/openai-verification.json": {
+      "git_blob": "6765789b573c278295e349dfe8d29f5d46e44e5d",
+      "published_sha256": "2984ea6a12f0ebe9922eb43775555988843137a6092c0b65e9b445c3caa3e71e",
+      "workspace_sha256": "2984ea6a12f0ebe9922eb43775555988843137a6092c0b65e9b445c3caa3e71e"
+    },
+    "docs/reviews/implementation-2026-10-25/outcomes-verification.json": {
+      "git_blob": "819195fdee21b3dc949f0e1a8903b78da057422d",
+      "published_sha256": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d",
+      "workspace_sha256": "4d76acfaf26bf41697697c18e18bf30f29999269827fb8a81854423f4a64407d"
+    },
+    "docs/reviews/implementation-2026-10-25/perspective-profiles-review.json": {
+      "git_blob": "4087cf009292fe0f6891fda377b8a7325e4e9a93",
+      "published_sha256": "40e042048e0008e4fe6a4272564b6655bcc3a343fdb732a2e1c8b143c5a13cf0",
+      "workspace_sha256": "40e042048e0008e4fe6a4272564b6655bcc3a343fdb732a2e1c8b143c5a13cf0"
+    },
+    "docs/reviews/implementation-2026-10-25/perspective-profiles-verification.json": {
+      "git_blob": "a37dbfd6ecd7e76ab48d09bf8c151e05a997f323",
+      "published_sha256": "e6290be4d2cc54e82a48de0785013568e1fa1a0cd7e387f0f3d8a8d1847fdfbc",
+      "workspace_sha256": "e6290be4d2cc54e82a48de0785013568e1fa1a0cd7e387f0f3d8a8d1847fdfbc"
+    },
+    "docs/reviews/implementation-2026-10-25/plan-retention-baseline.json": {
+      "git_blob": "837b3b7d12c5ec372b5e6c73b9ff98fe603b0208",
+      "published_sha256": "3d97578b6c68d417f3e5584ee9356f3d5435e3b663208c87b567429af27db430",
+      "workspace_sha256": "3d97578b6c68d417f3e5584ee9356f3d5435e3b663208c87b567429af27db430"
+    },
+    "docs/reviews/implementation-2026-10-25/plan-retention-review.json": {
+      "git_blob": "b17f387030f627c9b02dbc8cad827e50ba0b8afa",
+      "published_sha256": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+      "workspace_sha256": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb"
+    },
+    "docs/reviews/implementation-2026-10-25/plan-retention-source-before.zip": {
+      "git_blob": "a72b6cb0fef3aa06a7f1a25758962d8d7ca94906",
+      "published_sha256": "085a0c43ee3af4591b765e612478bf832fae22a3369896515ad69c83d932ab8b",
+      "workspace_sha256": "085a0c43ee3af4591b765e612478bf832fae22a3369896515ad69c83d932ab8b"
+    },
+    "docs/reviews/implementation-2026-10-25/plan-retention-verification.json": {
+      "git_blob": "8a8be8e3930baecfa1cf65e0373913859e13e748",
+      "published_sha256": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0",
+      "workspace_sha256": "f4c5baa8ec3fc4551bce4229dc8a6cf2b397eb0b88bc2f85e57e113ffd39d7f0"
+    },
+    "docs/reviews/implementation-2026-10-25/population-model-baseline.json": {
+      "git_blob": "a1894c9fdc0005a9688af8e1463ccda4a86bb0d1",
+      "published_sha256": "6b693a0b586259879b0151cb41aefa5395d9dc82965628de125ccb5b67e2b1c7",
+      "workspace_sha256": "6b693a0b586259879b0151cb41aefa5395d9dc82965628de125ccb5b67e2b1c7"
+    },
+    "docs/reviews/implementation-2026-10-25/population-model-probe-evidence.zip": {
+      "git_blob": "dcce3277f3866b1685220ffeba958fe21946f246",
+      "published_sha256": "1223dfead51ae9b02fc64a05b1402d2fe0a4cf7de306c76ad85facbff42bb231",
+      "workspace_sha256": "1223dfead51ae9b02fc64a05b1402d2fe0a4cf7de306c76ad85facbff42bb231"
+    },
+    "docs/reviews/implementation-2026-10-25/population-model-progress.json": {
+      "git_blob": "7d7cfec97bd6e87ef96d487bf7b7019d246cafc0",
+      "published_sha256": "5028d35ac7c13fa84d4937afedd03e7b75aa66e014052d14989cf457c5319a0f",
+      "workspace_sha256": "5028d35ac7c13fa84d4937afedd03e7b75aa66e014052d14989cf457c5319a0f"
+    },
+    "docs/reviews/implementation-2026-10-25/population-model-regression-evidence.zip": {
+      "git_blob": "7e12a249004c9928eba3d85b002a52c54809325a",
+      "published_sha256": "3801829abc97fbfe53ada288bba041b789be9e9c87336e045186711843332911",
+      "workspace_sha256": "3801829abc97fbfe53ada288bba041b789be9e9c87336e045186711843332911"
+    },
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": {
+      "git_blob": "f2b33ba6535cf8a528fd713a0dd6478d02f61134",
+      "published_sha256": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+      "workspace_sha256": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333"
+    },
+    "docs/reviews/implementation-2026-10-25/population-model-verification.json": {
+      "git_blob": "2ef5237ab49f141032d881ee0ebb2f8939c6ae15",
+      "published_sha256": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b",
+      "workspace_sha256": "d588fa11a878332740322b4e35de5a1d540d907b3f1a660dd56615268502d83b"
+    },
+    "docs/reviews/implementation-2026-10-25/progress.json": {
+      "git_blob": "61ea69ba4e70a77e3e981d5b95872ef62a227b4b",
+      "published_sha256": "e38a7a3a1a7e2f972f2ba9495c284bfb5467d3f9ed97a834048a224d6fe09024",
+      "workspace_sha256": "e38a7a3a1a7e2f972f2ba9495c284bfb5467d3f9ed97a834048a224d6fe09024"
+    },
+    "docs/reviews/implementation-2026-10-25/provider-identity-evidence.zip": {
+      "git_blob": "d20171b6861ad6166195cc5854e212ca0f780969",
+      "published_sha256": "5e671768ea9ae97565e736bc61da825930948c9940604c8ae5d17a7eb2c97e37",
+      "workspace_sha256": "5e671768ea9ae97565e736bc61da825930948c9940604c8ae5d17a7eb2c97e37"
+    },
+    "docs/reviews/implementation-2026-10-25/provider-identity-observation.json": {
+      "git_blob": "a020328776f70f5eea1b51cca6ffa0729198dc27",
+      "published_sha256": "c452cb43a94a12f073271a04e95b061d694ac470c3dfefffa705288e27552fb4",
+      "workspace_sha256": "c452cb43a94a12f073271a04e95b061d694ac470c3dfefffa705288e27552fb4"
+    },
+    "docs/reviews/implementation-2026-10-25/provider-identity-review.json": {
+      "git_blob": "6e815d261ddf756b63c4cb0654fec2ab5b6e5696",
+      "published_sha256": "fb903cf72721d1f6134055b32c9509e40685279c75575917f379b18bf8d10d8a",
+      "workspace_sha256": "fb903cf72721d1f6134055b32c9509e40685279c75575917f379b18bf8d10d8a"
+    },
+    "docs/reviews/implementation-2026-10-25/provider-identity-verification.json": {
+      "git_blob": "b5d62691cdcb77bacb20808ebd24ea6be26896bf",
+      "published_sha256": "5fe57c16c30492a4ff08c75b6e3d004f81c28e8b5f1d7cf2e815e6cbb186f2db",
+      "workspace_sha256": "5fe57c16c30492a4ff08c75b6e3d004f81c28e8b5f1d7cf2e815e6cbb186f2db"
+    },
+    "docs/reviews/implementation-2026-10-25/provider-usage-review.json": {
+      "git_blob": "c8ccb941a709d37411b661b93b47713a083c659d",
+      "published_sha256": "a8615302f37456ef29ee203dd37d58cd1e0d54479c5bdde31fdd85fb8048350d",
+      "workspace_sha256": "a8615302f37456ef29ee203dd37d58cd1e0d54479c5bdde31fdd85fb8048350d"
+    },
+    "docs/reviews/implementation-2026-10-25/researcher-verification.json": {
+      "git_blob": "26a674a909b2b28793ef3e04c3e6c4a8a5fcf982",
+      "published_sha256": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f",
+      "workspace_sha256": "ea8223b5e3ca5deb6b2fbcef87bc46ad76b3b9975c8cba127bd1965dd9f87c1f"
+    },
+    "docs/reviews/implementation-2026-10-25/storage-verification.json": {
+      "git_blob": "f365b87726da88ffe2333009a199eb15023e377f",
+      "published_sha256": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c",
+      "workspace_sha256": "fdf24c788d9fc0377fe787de63f3a11499a9aef2a9fd9547ce8e0dd02f9ee54c"
+    },
+    "docs/reviews/implementation-2026-10-25/study-evidence.zip": {
+      "git_blob": "527454a02e3b47763dce99d29206a1ade3bedd68",
+      "published_sha256": "f05067b2c62da5da01b6bfdcfcf02dbecc6388062522b0e2b0c3de82a6ccd6a6",
+      "workspace_sha256": "f05067b2c62da5da01b6bfdcfcf02dbecc6388062522b0e2b0c3de82a6ccd6a6"
+    },
+    "docs/reviews/implementation-2026-10-25/study-review.json": {
+      "git_blob": "9e68682e87e3317691904141c2c94ba089ea7a0e",
+      "published_sha256": "3d08b38a6b4a8accc07705b625762b61d9b37ccbfae38db31c72b48ecc94f742",
+      "workspace_sha256": "3d08b38a6b4a8accc07705b625762b61d9b37ccbfae38db31c72b48ecc94f742"
+    },
+    "docs/reviews/implementation-2026-10-25/study-verification.json": {
+      "git_blob": "e8bad3592fc7f42f97aa236d1cd1daff37fb54fc",
+      "published_sha256": "1134ed19aa2c02a1ba30d6c6a00f723659b0f035b954e0d2fa0999a46b9a3e43",
+      "workspace_sha256": "1134ed19aa2c02a1ba30d6c6a00f723659b0f035b954e0d2fa0999a46b9a3e43"
+    },
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py": {
+      "git_blob": "ba2a0ba3c19e9da0cb07befc7d38c832d23538a4",
+      "published_sha256": "f26ea8b897c8ae6e12148e47a3ce4cb1cc9ef92e58021df0354cebdcb49a8ea6",
+      "workspace_sha256": "f26ea8b897c8ae6e12148e47a3ce4cb1cc9ef92e58021df0354cebdcb49a8ea6"
+    },
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": {
+      "git_blob": "6b5dcf6c8b9891f0a96cb5857a0528cfce017a15",
+      "published_sha256": "b7ee8a1e672b5b803ddab784c4f31098c483c560ffdd07012c416b63890322d9",
+      "workspace_sha256": "3e47f18f37462c45709182f2549dd1314b95e6cff22a5cdcfa37a4b830b2cd28"
+    },
+    "docs/reviews/verify_retail_contract.py": {
+      "git_blob": "78faefecec09fd78f47e718ff44cb090e32a3beb",
+      "published_sha256": "e8ad4dfc1eb0474f68e6df3b1e28e80009353ef32932c7c9d7826ab59e82d9c9",
+      "workspace_sha256": "e8ad4dfc1eb0474f68e6df3b1e28e80009353ef32932c7c9d7826ab59e82d9c9"
+    },
+    "tests/auxiliary_support.py": {
+      "git_blob": "903f9acb8cfff219ae49219eb23675f48f577814",
+      "published_sha256": "54bc8077d2511264b4ba6124c9e859588bfd199a9143b4944387dd89184e376a",
+      "workspace_sha256": "54bc8077d2511264b4ba6124c9e859588bfd199a9143b4944387dd89184e376a"
+    },
+    "tests/binding_support.py": {
+      "git_blob": "068f8b9eef4173153803426370cbff9057f01866",
+      "published_sha256": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0",
+      "workspace_sha256": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0"
+    },
+    "tests/bootstrap_oracle.py": {
+      "git_blob": "7624e3a2486e98d115ffecc0ac51d0acb2cce78d",
+      "published_sha256": "83b9c8422b6ba061c2cf5240541ae00d3cee3417f4589b9e0e1d4273a82b1286",
+      "workspace_sha256": "83b9c8422b6ba061c2cf5240541ae00d3cee3417f4589b9e0e1d4273a82b1286"
+    },
+    "tests/bootstrap_support.py": {
+      "git_blob": "8517259ee61f0bc2d4717f8af4f1a89d9370af06",
+      "published_sha256": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "workspace_sha256": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540"
+    },
+    "tests/controller_provider_support.py": {
+      "git_blob": "345d7feff0fdb05a4c3a2135b4a0b1d4e694bb72",
+      "published_sha256": "1ddb31884f69d74c0b6e5d3e5d23204e3048f01aaa62ffa91f606b910b4174cd",
+      "workspace_sha256": "1ddb31884f69d74c0b6e5d3e5d23204e3048f01aaa62ffa91f606b910b4174cd"
+    },
+    "tests/fixtures/information_diagnostics_cases.json": {
+      "git_blob": "9b0cbf3dd98980cfa79a83464244e12e22cb7d63",
+      "published_sha256": "e2b8233b7b8ed1917f9392eb0c989279837f88219843371f35740908ccbb6b6f",
+      "workspace_sha256": "e2b8233b7b8ed1917f9392eb0c989279837f88219843371f35740908ccbb6b6f"
+    },
+    "tests/fixtures/information_diagnostics_expectations.md": {
+      "git_blob": "c58a6133e37fd73a91255073034f7a3164f00b10",
+      "published_sha256": "a30e91ec64b2e2bbc307a3e6b9ba4e54902aaa23dd4ed2ce926060eda670d065",
+      "workspace_sha256": "a30e91ec64b2e2bbc307a3e6b9ba4e54902aaa23dd4ed2ce926060eda670d065"
+    },
+    "tests/fixtures/meaning_review_cases.json": {
+      "git_blob": "f1814bb5cc5320a7070989f1e6d24aca655aadd7",
+      "published_sha256": "be419900653305eb986cccb8c40ff4e1779bef1cf6d478e0b8ea49c166a88d09",
+      "workspace_sha256": "be419900653305eb986cccb8c40ff4e1779bef1cf6d478e0b8ea49c166a88d09"
+    },
+    "tests/fixtures/meaning_review_cases.md": {
+      "git_blob": "aa9430002ab234ede8c908c46b4966a42ab651e8",
+      "published_sha256": "60d64133ad2a5d309beecd3f882dde59c11f83fd98e8f8f2ae9f61643be3027b",
+      "workspace_sha256": "60d64133ad2a5d309beecd3f882dde59c11f83fd98e8f8f2ae9f61643be3027b"
+    },
+    "tests/fixtures/reference_binance_cases.json": {
+      "git_blob": "3c62ec08dd24b280980e11cd2ffd493bc399e660",
+      "published_sha256": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+      "workspace_sha256": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00"
+    },
+    "tests/fixtures/reference_binance_expectations.md": {
+      "git_blob": "7525244d3bfc08e53eb12ea5e3baa89892f25fab",
+      "published_sha256": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88",
+      "workspace_sha256": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88"
+    },
+    "tests/fixtures/reference_binance_partition_cases.json": {
+      "git_blob": "020bfc61460c8753e3b145e0ee0c544f9e68fc93",
+      "published_sha256": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+      "workspace_sha256": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0"
+    },
+    "tests/fixtures/reference_binance_partition_expectations.md": {
+      "git_blob": "0cc6a3b95cba31395c2ae829415475d0647fa046",
+      "published_sha256": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+      "workspace_sha256": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8"
+    },
+    "tests/fixtures/reference_binance_quality_cases.json": {
+      "git_blob": "6d840caad27101bf4e0e44341972ffd0397f65bb",
+      "published_sha256": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+      "workspace_sha256": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a"
+    },
+    "tests/fixtures/reference_binance_quality_expectations.md": {
+      "git_blob": "ea2b0f5b05cbae6618e81f31c1e2c79c2758eb67",
+      "published_sha256": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+      "workspace_sha256": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c"
+    },
+    "tests/fixtures/reference_binding_cases.json": {
+      "git_blob": "d892e63eadcdb7ad7abd1382d54de2f525fb6a0c",
+      "published_sha256": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+      "workspace_sha256": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6"
+    },
+    "tests/fixtures/reference_binding_expectations.md": {
+      "git_blob": "e37a08535bfeedf7ce082e7673233b0efd8aed70",
+      "published_sha256": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257",
+      "workspace_sha256": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257"
+    },
+    "tests/fixtures/reference_calibration_counts.json": {
+      "git_blob": "be275aca4a9b7378fe046a942819be88c456fe76",
+      "published_sha256": "c1c7d41e24b20c4b3c170e7051fb597c1e6b761712274c287d008c485ac27ae9",
+      "workspace_sha256": "c1c7d41e24b20c4b3c170e7051fb597c1e6b761712274c287d008c485ac27ae9"
+    },
+    "tests/fixtures/reference_calibration_counts.md": {
+      "git_blob": "ffb42a5af96fd9fe24140584d33160ee483917e5",
+      "published_sha256": "04e272af558ff9b7c0c469aa5290217a9966c9a3c1807f42f0acb25d6163b303",
+      "workspace_sha256": "04e272af558ff9b7c0c469aa5290217a9966c9a3c1807f42f0acb25d6163b303"
+    },
+    "tests/fixtures/reference_evaluation_policy_cases.json": {
+      "git_blob": "b9bff2d8a7a27474d8b8aaddb96e809fefecc7c0",
+      "published_sha256": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+      "workspace_sha256": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960"
+    },
+    "tests/fixtures/reference_evaluation_policy_expectations.md": {
+      "git_blob": "79b06fe6a00a03a1268703d3755d8690cc7f2382",
+      "published_sha256": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe",
+      "workspace_sha256": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe"
+    },
+    "tests/fixtures/reference_expression_cases.json": {
+      "git_blob": "815dd93d5d5a3b4db123e27e940a04415e7a5152",
+      "published_sha256": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+      "workspace_sha256": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1"
+    },
+    "tests/fixtures/reference_feature_cases.json": {
+      "git_blob": "883bf3c7887cc42a55a7ebd84316f42e0a5782c2",
+      "published_sha256": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+      "workspace_sha256": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081"
+    },
+    "tests/fixtures/reference_feature_expectations.md": {
+      "git_blob": "3ec219eee1f701b95fa05e1a62735762945922ea",
+      "published_sha256": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee",
+      "workspace_sha256": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee"
+    },
+    "tests/fixtures/reference_outcome_cases.json": {
+      "git_blob": "027c98df4822d3e97ed6fa3001390e2206f7af1e",
+      "published_sha256": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+      "workspace_sha256": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817"
+    },
+    "tests/meaning_review_support.py": {
+      "git_blob": "c17f39d8037ad3b0b09d464cdc85b73819ada4af",
+      "published_sha256": "8c7a0beac896d457f41fe4a056f301d49fe40717d9b1d6adc03cc5299bf1c35a",
+      "workspace_sha256": "8c7a0beac896d457f41fe4a056f301d49fe40717d9b1d6adc03cc5299bf1c35a"
+    },
+    "tests/test_anthropic_integration.py": {
+      "git_blob": "f28e3871a8ddf76bc0b19519a0990be62259d306",
+      "published_sha256": "b09c247d6a8b0351640a8646eff1392bc8802d03a8b8b3c032bf0fe3623ee54d",
+      "workspace_sha256": "b09c247d6a8b0351640a8646eff1392bc8802d03a8b8b3c032bf0fe3623ee54d"
+    },
+    "tests/test_anthropic_provider.py": {
+      "git_blob": "aecd4f50d89f6e3c3b8cbd552f086b471b387a8f",
+      "published_sha256": "7525c4bf4e1eef651fc1407d46b3a207b3dff5f4fc8d5450156250a98f8fac54",
+      "workspace_sha256": "7525c4bf4e1eef651fc1407d46b3a207b3dff5f4fc8d5450156250a98f8fac54"
+    },
+    "tests/test_anthropic_provider_adversarial.py": {
+      "git_blob": "e576e619f581ccf1b382d6bec6317648f4ee897e",
+      "published_sha256": "a637ea2e3441edb554b199895e3c6b7e02012e20f1eb740e0b13481fa8302ab5",
+      "workspace_sha256": "a637ea2e3441edb554b199895e3c6b7e02012e20f1eb740e0b13481fa8302ab5"
+    },
+    "tests/test_anthropic_role_handoff.py": {
+      "git_blob": "945404dc1535923def2161dd16804a49173b0780",
+      "published_sha256": "d179856ef671dc56774a1e8e90a1f7151c1fe7947391a874f5bba3257edb55d3",
+      "workspace_sha256": "d179856ef671dc56774a1e8e90a1f7151c1fe7947391a874f5bba3257edb55d3"
+    },
+    "tests/test_auxiliary_adversarial.py": {
+      "git_blob": "c44d32eff821ab1707aa7313ca85108d258511eb",
+      "published_sha256": "81695932aae11d6734fcfd23a6694b528b3ffe4ef1670fef8d5878428ffd44e8",
+      "workspace_sha256": "81695932aae11d6734fcfd23a6694b528b3ffe4ef1670fef8d5878428ffd44e8"
+    },
+    "tests/test_auxiliary_pipeline.py": {
+      "git_blob": "ad81a3a2ae311259555b4d31eb22852af91cd720",
+      "published_sha256": "fbe6a17b2bc1db9f011214c47f449796b87fb16d67dc40f8fdf1a968fd2c52c1",
+      "workspace_sha256": "fbe6a17b2bc1db9f011214c47f449796b87fb16d67dc40f8fdf1a968fd2c52c1"
+    },
+    "tests/test_auxiliary_research.py": {
+      "git_blob": "e082e5849dd53e4d76a3a3dca88b33a3367a3eeb",
+      "published_sha256": "d3af8f63d4d663099bd4238cfbe82c0f4c51726168c0b6cd10dc0c0d1ccddacf",
+      "workspace_sha256": "d3af8f63d4d663099bd4238cfbe82c0f4c51726168c0b6cd10dc0c0d1ccddacf"
+    },
+    "tests/test_binance_archive.py": {
+      "git_blob": "7fecffc0bea2032e0cd5e81c07cf1ad26868c45b",
+      "published_sha256": "d0d51e95cef4a6b2ceeaf4a788ea19b839377ecf97f9a1ae76dab4cccd15e959",
+      "workspace_sha256": "d0d51e95cef4a6b2ceeaf4a788ea19b839377ecf97f9a1ae76dab4cccd15e959"
+    },
+    "tests/test_binance_ingest.py": {
+      "git_blob": "fcf87b7f1cab5f154be8d3e05d1b3f50812f5f48",
+      "published_sha256": "8201f84b8de45bed381833ec31224f4c1c2e78b9b6541624b1270c56beb55b16",
+      "workspace_sha256": "8201f84b8de45bed381833ec31224f4c1c2e78b9b6541624b1270c56beb55b16"
+    },
+    "tests/test_binance_normalize.py": {
+      "git_blob": "84b0c3f614e4eb5a356225831dea366b07252102",
+      "published_sha256": "621238a96e3baa8584466f3bfbfa55ed535e12420ad5fa078e8de8a6eafb5d77",
+      "workspace_sha256": "621238a96e3baa8584466f3bfbfa55ed535e12420ad5fa078e8de8a6eafb5d77"
+    },
+    "tests/test_binance_quality.py": {
+      "git_blob": "ecb1b7d9a6bed99100b34a17e46d7863ae7f426c",
+      "published_sha256": "36d8bd7a0e6c0c371e39e699e0e7ab7c8c2d2c23f83a80ebb499338e74a0b0ed",
+      "workspace_sha256": "36d8bd7a0e6c0c371e39e699e0e7ab7c8c2d2c23f83a80ebb499338e74a0b0ed"
+    },
+    "tests/test_binding.py": {
+      "git_blob": "ac1059ed1d8f6defbb07d48a051dd7191f64f5f3",
+      "published_sha256": "ba338f30875c6ca6c760d28c9f845b2e7ce970bb5649b1c0d00b741eb7bd932e",
+      "workspace_sha256": "ba338f30875c6ca6c760d28c9f845b2e7ce970bb5649b1c0d00b741eb7bd932e"
+    },
+    "tests/test_binding_adversarial.py": {
+      "git_blob": "daae2f1dd6ab11250d7df34aad6764abbdb76b9c",
+      "published_sha256": "459876e5433449c172beb066791410084cbc87e0fdfc1eaa69ce8a7b6a092997",
+      "workspace_sha256": "459876e5433449c172beb066791410084cbc87e0fdfc1eaa69ce8a7b6a092997"
+    },
+    "tests/test_bootstrap_runs.py": {
+      "git_blob": "55b35ea2cb45eec3d857f2bb3c075da47642e083",
+      "published_sha256": "e5554ef54ef44d7ff11d9bc61ccfa075023cd67e0c4a6a8c2c71eddfb3c4bed8",
+      "workspace_sha256": "e5554ef54ef44d7ff11d9bc61ccfa075023cd67e0c4a6a8c2c71eddfb3c4bed8"
+    },
+    "tests/test_bootstrap_runs_adversarial.py": {
+      "git_blob": "2292993ff5c6d78a555b685a2031434275042158",
+      "published_sha256": "1f01bfac83b013f2daef8d7ef8ec42c8ae27630ed7e10b82d7e64abe69f0ddac",
+      "workspace_sha256": "1f01bfac83b013f2daef8d7ef8ec42c8ae27630ed7e10b82d7e64abe69f0ddac"
+    },
+    "tests/test_calibration.py": {
+      "git_blob": "6b8f91f5cb18e73bf184269064dce2178418c5c0",
+      "published_sha256": "db8b8b1a8b7a1b68bda6f0ce4399cbb9ec3016dba52989e5b2e3e0181ae1babe",
+      "workspace_sha256": "db8b8b1a8b7a1b68bda6f0ce4399cbb9ec3016dba52989e5b2e3e0181ae1babe"
+    },
+    "tests/test_calibration_access_adversarial.py": {
+      "git_blob": "f131f2fad8a52419d9e6b9e2e4e773ae5c1ebd36",
+      "published_sha256": "1f4b264488251c21d9f5229f9c2db2ea1aa194a0b1eec227a9eb0dba57970ec4",
+      "workspace_sha256": "1f4b264488251c21d9f5229f9c2db2ea1aa194a0b1eec227a9eb0dba57970ec4"
+    },
+    "tests/test_calibration_adversarial.py": {
+      "git_blob": "22c124a6bd3b9b6c7e0770cd9eb47755743c3ac0",
+      "published_sha256": "55b1e863ba4dc8d4d2fe8982880564d96d8c765d356473f9b6300d82077c7572",
+      "workspace_sha256": "55b1e863ba4dc8d4d2fe8982880564d96d8c765d356473f9b6300d82077c7572"
+    },
+    "tests/test_calibration_cli.py": {
+      "git_blob": "907cc45935470694f21831804638d8c22d508bb4",
+      "published_sha256": "fab1c8ca17dfac77f788b9f33a5901bc175ff4162dd959c543de63e6a99824c0",
+      "workspace_sha256": "fab1c8ca17dfac77f788b9f33a5901bc175ff4162dd959c543de63e6a99824c0"
+    },
+    "tests/test_calibration_runs.py": {
+      "git_blob": "c41a82b25d09ce1969ddf9680eb07c63510e73a7",
+      "published_sha256": "a17b94d95f2bb231c45aa809dcaa5415fc70ccdccba9560012dfcb357fa1e4f1",
+      "workspace_sha256": "a17b94d95f2bb231c45aa809dcaa5415fc70ccdccba9560012dfcb357fa1e4f1"
+    },
+    "tests/test_calibration_study.py": {
+      "git_blob": "9c6f349036e223470de82e6ea490ed054ebcdb9b",
+      "published_sha256": "05f82722f78c103807778c26a4222fed6b069e5c43730281f057b56c7ab009ee",
+      "workspace_sha256": "05f82722f78c103807778c26a4222fed6b069e5c43730281f057b56c7ab009ee"
+    },
+    "tests/test_certification.py": {
+      "git_blob": "f76f4801bbcd079829a6396dbeee5852df33bcf5",
+      "published_sha256": "bcf1fe8780619bd8b26ff551cb12c1ff347a96bedb1eef4aa2b8862d44311dd2",
+      "workspace_sha256": "bcf1fe8780619bd8b26ff551cb12c1ff347a96bedb1eef4aa2b8862d44311dd2"
+    },
+    "tests/test_context_views.py": {
+      "git_blob": "e2197fbb0385da88613e2b7a07d8767accb60c7f",
+      "published_sha256": "ab192393723010bb4b74abed32dcfbf4ff244da46c81ef6f2c158e375a185dc9",
+      "workspace_sha256": "ab192393723010bb4b74abed32dcfbf4ff244da46c81ef6f2c158e375a185dc9"
+    },
+    "tests/test_context_views_adversarial.py": {
+      "git_blob": "2227719005f7c7022cbf68fd93a0039b418cd457",
+      "published_sha256": "09861ac11240077e4372e639d0cbf6f8658b22928a5ae9922adea2f4d8b33474",
+      "workspace_sha256": "09861ac11240077e4372e639d0cbf6f8658b22928a5ae9922adea2f4d8b33474"
+    },
+    "tests/test_controller_providers.py": {
+      "git_blob": "fcd23c1fbab3e48aaa0bcbb5b9d1589d3ef10e94",
+      "published_sha256": "dd0ed93da5e0e28dbabf9cf8e90309daeebd63e977346dee21af89d7191a16f4",
+      "workspace_sha256": "dd0ed93da5e0e28dbabf9cf8e90309daeebd63e977346dee21af89d7191a16f4"
+    },
+    "tests/test_controller_providers_adversarial.py": {
+      "git_blob": "462dd73a36952c59b042efabf3e00e74acb32244",
+      "published_sha256": "a25bb7df4d6bddbd5f21caa7971083f066c8c8bb731c9761b9a0bb22a75e338d",
+      "workspace_sha256": "a25bb7df4d6bddbd5f21caa7971083f066c8c8bb731c9761b9a0bb22a75e338d"
+    },
+    "tests/test_data.py": {
+      "git_blob": "267296f1bce69d71e379f41305cff2f34f0a2cbf",
+      "published_sha256": "197f902659e2f7e103b5bb5eec7ba280ff0018f91ca5e83241e1b0489bfc01b8",
+      "workspace_sha256": "197f902659e2f7e103b5bb5eec7ba280ff0018f91ca5e83241e1b0489bfc01b8"
+    },
+    "tests/test_draw_transport.py": {
+      "git_blob": "e70d526a9d7d11bbd2d58511098c1c6dc7102cf4",
+      "published_sha256": "e0a44b5c2f1a2b29cd641c52e5eafae1a1c4eaaf528c90f57b26022db228cedd",
+      "workspace_sha256": "e0a44b5c2f1a2b29cd641c52e5eafae1a1c4eaaf528c90f57b26022db228cedd"
+    },
+    "tests/test_draw_transport_adversarial.py": {
+      "git_blob": "7a4179473397494280125ef37c5c254b472ff277",
+      "published_sha256": "96644892f056843e96ee6ac9145d5989e41c2af6cad8290a2c0e2ff78444e1e8",
+      "workspace_sha256": "96644892f056843e96ee6ac9145d5989e41c2af6cad8290a2c0e2ff78444e1e8"
+    },
+    "tests/test_evaluation_plans.py": {
+      "git_blob": "867c4be133ad49f69668f8c3fc8a802869e310e8",
+      "published_sha256": "82775936e5de1f4f1ee6174667b4ddb28bfcf2bcb8525a16e1284284b341680e",
+      "workspace_sha256": "82775936e5de1f4f1ee6174667b4ddb28bfcf2bcb8525a16e1284284b341680e"
+    },
+    "tests/test_evaluation_plans_adversarial.py": {
+      "git_blob": "65c3c80f071178f5a3039770b081117d177ed8c6",
+      "published_sha256": "4fbe37415e8bdbe905789f688607ed5be765bd000f80969bcbd6cd52b97ef659",
+      "workspace_sha256": "4fbe37415e8bdbe905789f688607ed5be765bd000f80969bcbd6cd52b97ef659"
+    },
+    "tests/test_evaluation_policy.py": {
+      "git_blob": "b8e4b2aebeda5ae3c34ed4a0d762b2bda9bab6d6",
+      "published_sha256": "8401a2afae6651245ebc81104d157320f7ac5509706841495151432c7ae685e6",
+      "workspace_sha256": "8401a2afae6651245ebc81104d157320f7ac5509706841495151432c7ae685e6"
+    },
+    "tests/test_evaluation_policy_adversarial.py": {
+      "git_blob": "2830f4ba845758da37b98230fb1dbe5f6506e1de",
+      "published_sha256": "314aa73be6940e161a8e4213b7fdd8e8a3fae5d4e6451213391577215c2ff5c9",
+      "workspace_sha256": "314aa73be6940e161a8e4213b7fdd8e8a3fae5d4e6451213391577215c2ff5c9"
+    },
+    "tests/test_exact_bootstrap_acceleration.py": {
+      "git_blob": "034931f1b8c96646c3febf89a5af5710f785c9e5",
+      "published_sha256": "b249a6849c58a33bba51f357a9bc6b4abef3912e2adcca99851be2ca66ff6b55",
+      "workspace_sha256": "b249a6849c58a33bba51f357a9bc6b4abef3912e2adcca99851be2ca66ff6b55"
+    },
+    "tests/test_exact_bootstrap_acceleration_adversarial.py": {
+      "git_blob": "01bd92f76c3f5a91cda9eb2272ff77c078427887",
+      "published_sha256": "32ffafad8892c9a00489cb90b22a6c2abec3e5dfac4e5ee88261ea6d6c62ff8a",
+      "workspace_sha256": "32ffafad8892c9a00489cb90b22a6c2abec3e5dfac4e5ee88261ea6d6c62ff8a"
+    },
+    "tests/test_expressions.py": {
+      "git_blob": "1ccfe4ba8465e43bf32f371f068c8505d97df491",
+      "published_sha256": "a927ef0a44c0f81945ffa6e0f5f9858ac526838da5d01d80f6c04f641d52ba02",
+      "workspace_sha256": "a927ef0a44c0f81945ffa6e0f5f9858ac526838da5d01d80f6c04f641d52ba02"
+    },
+    "tests/test_feature_adversarial.py": {
+      "git_blob": "b021f1343c3437f4640258a301df6109585c89f2",
+      "published_sha256": "e0782cce5db75b5607be717dd7bc1da6cf6e4000c59838bcb39d36faba2b1b81",
+      "workspace_sha256": "e0782cce5db75b5607be717dd7bc1da6cf6e4000c59838bcb39d36faba2b1b81"
+    },
+    "tests/test_features.py": {
+      "git_blob": "a07b8e64f73ad0f24b463c30d5c013a103b44dd4",
+      "published_sha256": "facfc83ab476ff7c1ba188ccb6e277e759c94296b3347678680d163097c1f498",
+      "workspace_sha256": "facfc83ab476ff7c1ba188ccb6e277e759c94296b3347678680d163097c1f498"
+    },
+    "tests/test_formalization.py": {
+      "git_blob": "f4bd51615ac55e5ca943247e5adf83be4517e87e",
+      "published_sha256": "25c6e017396fbdf6dcee1825e27e42bd6f296f2d543fdeea6d3fab34af575fe1",
+      "workspace_sha256": "25c6e017396fbdf6dcee1825e27e42bd6f296f2d543fdeea6d3fab34af575fe1"
+    },
+    "tests/test_information_diagnostics.py": {
+      "git_blob": "2b2a19ffe7123cb3e09885763e1999210e5deb2b",
+      "published_sha256": "223553ac1b422a834bfe056d9e3d5b2cb5c94dedd554179f0e841b216485b6fe",
+      "workspace_sha256": "223553ac1b422a834bfe056d9e3d5b2cb5c94dedd554179f0e841b216485b6fe"
+    },
+    "tests/test_information_diagnostics_adversarial.py": {
+      "git_blob": "2d46f6a0f04452bf7a17060a7d07a6b8ac346e38",
+      "published_sha256": "c82c3e6232a6a6a05287ecbc07da20ad75615d9886fc1c8d2edb31e940584f53",
+      "workspace_sha256": "c82c3e6232a6a6a05287ecbc07da20ad75615d9886fc1c8d2edb31e940584f53"
+    },
+    "tests/test_information_runs.py": {
+      "git_blob": "8a43c287c5defbe9b3436bd8747658afbd0cc02f",
+      "published_sha256": "1b2c4d9a598e30779f383a830fa4e24babb971a526066dee0b87e5d67242c350",
+      "workspace_sha256": "1b2c4d9a598e30779f383a830fa4e24babb971a526066dee0b87e5d67242c350"
+    },
+    "tests/test_information_runs_adversarial.py": {
+      "git_blob": "612af7dccf036b920bcce052d7e0ad0d9a14f92e",
+      "published_sha256": "163bc8b69a14343fe40316cb78f700c42a10b76e084b24f1664f79c74f251824",
+      "workspace_sha256": "163bc8b69a14343fe40316cb78f700c42a10b76e084b24f1664f79c74f251824"
+    },
+    "tests/test_information_study.py": {
+      "git_blob": "f4f9b138a0aba9be8190bb2818789e1cc77e5736",
+      "published_sha256": "04f01a54b9fba7b37b6f3a20c954bb0740625bbb6bfe56724ff3065826dd8392",
+      "workspace_sha256": "04f01a54b9fba7b37b6f3a20c954bb0740625bbb6bfe56724ff3065826dd8392"
+    },
+    "tests/test_information_study_adversarial.py": {
+      "git_blob": "742c913a61af3ef6efedbf4669d3bd354d2cda3f",
+      "published_sha256": "3d5044038abf1ce126c481739e686c2e8b4ed260ad60f367e5fbb3b9f383e316",
+      "workspace_sha256": "3d5044038abf1ce126c481739e686c2e8b4ed260ad60f367e5fbb3b9f383e316"
+    },
+    "tests/test_local_runtime.py": {
+      "git_blob": "a37652c10105cb72df0a294122433a4811d3cbf2",
+      "published_sha256": "17bcae356faf10209f446fffb110a62c0c50261be830b2809b17885858f39153",
+      "workspace_sha256": "17bcae356faf10209f446fffb110a62c0c50261be830b2809b17885858f39153"
+    },
+    "tests/test_meaning_reviews.py": {
+      "git_blob": "8222e1c560af3254cc275be8704a65dec0ffcaf2",
+      "published_sha256": "7256b5d41cbbb495a36fc9719c35b1e5ea5455c4c17b1b8e63230bd0094911a5",
+      "workspace_sha256": "7256b5d41cbbb495a36fc9719c35b1e5ea5455c4c17b1b8e63230bd0094911a5"
+    },
+    "tests/test_meaning_reviews_adversarial.py": {
+      "git_blob": "0c2b6718c30b526ab53bb6f7a2155f116b79749c",
+      "published_sha256": "4344452ff7eebeaedad14edcdd080f068c3bb47b27a00e23ef7c10e7ecd6391b",
+      "workspace_sha256": "4344452ff7eebeaedad14edcdd080f068c3bb47b27a00e23ef7c10e7ecd6391b"
+    },
+    "tests/test_measurement_context_views_adversarial.py": {
+      "git_blob": "29f0b17da034a0a551fd80130fe7c615e86e4e3f",
+      "published_sha256": "b89119decea02b546c3da3941728bcbb8380a9a8b8fcc93254f72c898e210288",
+      "workspace_sha256": "b89119decea02b546c3da3941728bcbb8380a9a8b8fcc93254f72c898e210288"
+    },
+    "tests/test_measurements.py": {
+      "git_blob": "f14130bddacd817085446e1c33470b891da7d17b",
+      "published_sha256": "aec464bb0b1d1704fad3cda2df019247e17550c658ffa84396c3afeb6914dcf1",
+      "workspace_sha256": "aec464bb0b1d1704fad3cda2df019247e17550c658ffa84396c3afeb6914dcf1"
+    },
+    "tests/test_measurements_adversarial.py": {
+      "git_blob": "7a6680ffb53e254f9c605cc4c5095024d7ea01fc",
+      "published_sha256": "7120e1317f65e5ffb7dfaee67edc252ca4dcf08759f7fff7106d42f634bbdd6f",
+      "workspace_sha256": "7120e1317f65e5ffb7dfaee67edc252ca4dcf08759f7fff7106d42f634bbdd6f"
+    },
+    "tests/test_memory.py": {
+      "git_blob": "c4d8779f59a976061e84178180c7ec32d6a76033",
+      "published_sha256": "036a7b1fe19bdd900d9db90dca376ac876bcf1a762047387900e70fa5aaff09a",
+      "workspace_sha256": "036a7b1fe19bdd900d9db90dca376ac876bcf1a762047387900e70fa5aaff09a"
+    },
+    "tests/test_monte_carlo.py": {
+      "git_blob": "78317c32984ae8a5ad399e8429e3754711f77f72",
+      "published_sha256": "b1bb31d3c21a3187e0db174eeca65b569f4f9508d533f642ab326d62c90fe146",
+      "workspace_sha256": "b1bb31d3c21a3187e0db174eeca65b569f4f9508d533f642ab326d62c90fe146"
+    },
+    "tests/test_monte_carlo_adversarial.py": {
+      "git_blob": "902a990aca8695b6efd004f1d447325b7dfc4be1",
+      "published_sha256": "72467c6745abc55dcba542b65f88f2947e1a4fa3296451f0eb92061687bd37a4",
+      "workspace_sha256": "72467c6745abc55dcba542b65f88f2947e1a4fa3296451f0eb92061687bd37a4"
+    },
+    "tests/test_openai_provider.py": {
+      "git_blob": "7c89d4a2e9d04f00cca8f83985351ee6fd2dd815",
+      "published_sha256": "084cfcedcabe98e24551bcca580a32c28fb263acd153b5bf3c8f6a959dc6e22a",
+      "workspace_sha256": "084cfcedcabe98e24551bcca580a32c28fb263acd153b5bf3c8f6a959dc6e22a"
+    },
+    "tests/test_openai_provider_adversarial.py": {
+      "git_blob": "ae27c7988b24b4a1c970586453791f02d336bea5",
+      "published_sha256": "1aa6e34b3948acc332d4c15f356610552adacaa733e1a0ed81aa593df0c77a3a",
+      "workspace_sha256": "1aa6e34b3948acc332d4c15f356610552adacaa733e1a0ed81aa593df0c77a3a"
+    },
+    "tests/test_openai_provider_metadata_adversarial.py": {
+      "git_blob": "bde3cd0581c1479d644528c38e05bef5d833b2ef",
+      "published_sha256": "ddc9c93739e0dc0dead6999b352807578783e12b355928c20433b204d40bd87c",
+      "workspace_sha256": "ddc9c93739e0dc0dead6999b352807578783e12b355928c20433b204d40bd87c"
+    },
+    "tests/test_outcomes.py": {
+      "git_blob": "38c7e28a1282d8bc8b20a4f2e8f60861a423c016",
+      "published_sha256": "2ecaa33fa2b76792ed6df26924d6f43280138123ed93789d88108437b0237384",
+      "workspace_sha256": "2ecaa33fa2b76792ed6df26924d6f43280138123ed93789d88108437b0237384"
+    },
+    "tests/test_perspective_profiles.py": {
+      "git_blob": "29f195db1922e1f8fcdaca726939c3f5a1c9930b",
+      "published_sha256": "e7a64a47b2edd8d32911e024250d4ff87f9e00a342650b53f122cdee5a159596",
+      "workspace_sha256": "e7a64a47b2edd8d32911e024250d4ff87f9e00a342650b53f122cdee5a159596"
+    },
+    "tests/test_perspective_profiles_adversarial.py": {
+      "git_blob": "1dbb4563c537323a1ec27a2fe67b2eb5e33b4b52",
+      "published_sha256": "00bc2df81c10b48ba5eb072b4babe3c454933c25f7d7f8da8f65ec61921d771c",
+      "workspace_sha256": "00bc2df81c10b48ba5eb072b4babe3c454933c25f7d7f8da8f65ec61921d771c"
+    },
+    "tests/test_plan_retention.py": {
+      "git_blob": "7c380be68f6e9bc3c1ccfd0362e874f876a1147b",
+      "published_sha256": "f05f47fe74ca41bbdf3a32f6bdfb33153d1311e721a1f4e0ad180cc79efe89b0",
+      "workspace_sha256": "f05f47fe74ca41bbdf3a32f6bdfb33153d1311e721a1f4e0ad180cc79efe89b0"
+    },
+    "tests/test_plan_retention_adversarial.py": {
+      "git_blob": "c4a2a1498abe628b2e0251710f2134b666706275",
+      "published_sha256": "08c91bc3f2607fc208127a941939d0d757cbcebdd0edfe9b69872b12b40eff3b",
+      "workspace_sha256": "08c91bc3f2607fc208127a941939d0d757cbcebdd0edfe9b69872b12b40eff3b"
+    },
+    "tests/test_population_models.py": {
+      "git_blob": "1b03e7f0efa6e59d07405248576516dfa93e49a2",
+      "published_sha256": "ec1a41057b620829eb6a5b285cae25b05e937375193bb3ed75da09b19256b074",
+      "workspace_sha256": "ec1a41057b620829eb6a5b285cae25b05e937375193bb3ed75da09b19256b074"
+    },
+    "tests/test_population_models_adversarial.py": {
+      "git_blob": "7e79f89aa8a7e9d121bb45b714a612f02b7683a1",
+      "published_sha256": "8bb5f12a49aaf435dd4c4018918343bf869502bae47a15606656674c8749d180",
+      "workspace_sha256": "8bb5f12a49aaf435dd4c4018918343bf869502bae47a15606656674c8749d180"
+    },
+    "tests/test_population_runs.py": {
+      "git_blob": "ace56087a6c7131c799457b10904782625084b8b",
+      "published_sha256": "cb06cbbbaf218393c190ada50491c029fa08014408de326ab700da1617aedab8",
+      "workspace_sha256": "cb06cbbbaf218393c190ada50491c029fa08014408de326ab700da1617aedab8"
+    },
+    "tests/test_provider_identity.py": {
+      "git_blob": "134262fdc8607962357fda5e192ba75162d3ddb3",
+      "published_sha256": "aa4cd7dcc54296835d41cd9abf17af0b8013ced98a5f664f0ac16b6aedb516b9",
+      "workspace_sha256": "aa4cd7dcc54296835d41cd9abf17af0b8013ced98a5f664f0ac16b6aedb516b9"
+    },
+    "tests/test_provider_identity_adversarial.py": {
+      "git_blob": "d0dee7a0428629e5af57fc5df7af3f6becd6bef6",
+      "published_sha256": "baed06652e6d4a316cb5e4037ec042d099ff43f5f824e5c8f713fd96a8c81a2f",
+      "workspace_sha256": "baed06652e6d4a316cb5e4037ec042d099ff43f5f824e5c8f713fd96a8c81a2f"
+    },
+    "tests/test_provider_usage.py": {
+      "git_blob": "74bb3df556a725b93dd8d28d7f8c9795b900ae30",
+      "published_sha256": "2a8a524d703d9b41d41e584731f20207cff450bafd3c6adafa436d110f55f8c6",
+      "workspace_sha256": "2a8a524d703d9b41d41e584731f20207cff450bafd3c6adafa436d110f55f8c6"
+    },
+    "tests/test_provider_usage_adversarial.py": {
+      "git_blob": "179bd098ac4dd2a893060d9f020ac3a9fa5fc362",
+      "published_sha256": "3e74d24b07ee323ebc4f2c62bdcc5ada162e468b22e530f7de9503cb00bc89b4",
+      "workspace_sha256": "3e74d24b07ee323ebc4f2c62bdcc5ada162e468b22e530f7de9503cb00bc89b4"
+    },
+    "tests/test_research_calls.py": {
+      "git_blob": "938424f997b727abd4bf641d89d23069e624c1fb",
+      "published_sha256": "54e1bcd3987ebc2e3225dc5b87ab3e6eb5f68cf8fe526d1b5de6b71e08603211",
+      "workspace_sha256": "54e1bcd3987ebc2e3225dc5b87ab3e6eb5f68cf8fe526d1b5de6b71e08603211"
+    },
+    "tests/test_researcher.py": {
+      "git_blob": "9461cfbbc57f0aa4010b68f17d788cbb2a75fdd0",
+      "published_sha256": "7af611fa7670d4da89718fba5a0fff4d3e8a63e062a31193cc8a338a01e1062f",
+      "workspace_sha256": "7af611fa7670d4da89718fba5a0fff4d3e8a63e062a31193cc8a338a01e1062f"
+    },
+    "tests/test_stationary_bootstrap.py": {
+      "git_blob": "81bee16c3d42cf05e2670e5ed898be4465c69f9b",
+      "published_sha256": "ff74e2bef4aeb520308a5e98d09634dddd9aa601e6a3430d34ab3b3916455fb8",
+      "workspace_sha256": "ff74e2bef4aeb520308a5e98d09634dddd9aa601e6a3430d34ab3b3916455fb8"
+    },
+    "tests/test_stationary_bootstrap_adversarial.py": {
+      "git_blob": "0b5e60858ac41421b8737b1269b5606f905c61ff",
+      "published_sha256": "f3174a148f499bc83ad4ecdc5ae443c7c8741ac84ae51b0f6ae99559bd4c7c21",
+      "workspace_sha256": "f3174a148f499bc83ad4ecdc5ae443c7c8741ac84ae51b0f6ae99559bd4c7c21"
+    },
+    "tests/test_storage.py": {
+      "git_blob": "4f3b86dc5a4bf6bf3dc44716e91cd8959788dca2",
+      "published_sha256": "548d263d12d9aa783b248112f06b60058757a8eea1973a45dc03bde6f9582e8a",
+      "workspace_sha256": "548d263d12d9aa783b248112f06b60058757a8eea1973a45dc03bde6f9582e8a"
+    },
+    "tests/test_study_runs.py": {
+      "git_blob": "aee48ef7feb822da81f155303e8fe1192c5168de",
+      "published_sha256": "787130844dc9767192bf43b6a0d798b337bceeee1c3ec07eadee7e5bd68c4446",
+      "workspace_sha256": "787130844dc9767192bf43b6a0d798b337bceeee1c3ec07eadee7e5bd68c4446"
+    },
+    "tests/test_study_runs_adversarial.py": {
+      "git_blob": "9f6f48e90d27ec498f6ee52d417401d12bc43f38",
+      "published_sha256": "ab5ca216353d313e67bdd82307d6f6b035665c4f781c97d686e73307d068d4b7",
+      "workspace_sha256": "ab5ca216353d313e67bdd82307d6f6b035665c4f781c97d686e73307d068d4b7"
+    },
+    "trading_researcher/ANTHROPIC.md": {
+      "git_blob": "67e633569fbe3cdbaf3ea46f0d07953e65a6cb45",
+      "published_sha256": "5286b569453b06897c65b10d6dd6a8b14ed05a519f4489b252f8f44a0ef5d2c0",
+      "workspace_sha256": "5286b569453b06897c65b10d6dd6a8b14ed05a519f4489b252f8f44a0ef5d2c0"
+    },
+    "trading_researcher/AUXILIARY_RESEARCH.md": {
+      "git_blob": "4040ee3d708e494530cbe3cb2bad831cfe718af0",
+      "published_sha256": "1dae1395ed945f6009931dab9476c67a5d2a349d3799cdc5c711ee7d0f5b6c8c",
+      "workspace_sha256": "1dae1395ed945f6009931dab9476c67a5d2a349d3799cdc5c711ee7d0f5b6c8c"
+    },
+    "trading_researcher/BINANCE.md": {
+      "git_blob": "dcc6222197ebe9fa51547056c6b96ca13e43c2b2",
+      "published_sha256": "147841892ba24dc4de19cc2bd7e0391e999e77524e69999ce75107006f3224b2",
+      "workspace_sha256": "147841892ba24dc4de19cc2bd7e0391e999e77524e69999ce75107006f3224b2"
+    },
+    "trading_researcher/BINANCE_NORMALIZATION.md": {
+      "git_blob": "30f60dab088829c383f5099e53f5aa97799f2783",
+      "published_sha256": "6303faf2009a6a5858a33ce381d8a44fcf66840ea461793a2aef3a0a096c6577",
+      "workspace_sha256": "6303faf2009a6a5858a33ce381d8a44fcf66840ea461793a2aef3a0a096c6577"
+    },
+    "trading_researcher/BINDING.md": {
+      "git_blob": "8580c7ff05d6f1618f5f0d87f3148c50a5f24da7",
+      "published_sha256": "60bf15b32b657922410f30c9c98e3659dda60ad42505062ee41b232c04ecff8e",
+      "workspace_sha256": "6829d05bd8ddff8ec753217e608baaa159cd0646f96ba4cd6f7dd31866cd7de8"
+    },
+    "trading_researcher/CALIBRATION.md": {
+      "git_blob": "234dc82a8301adde89e4ff868778d29bf2c6dd7e",
+      "published_sha256": "7d5b3f912f53373e56ca48b58245584b824487605127d23ceccc0cbe6d245c62",
+      "workspace_sha256": "7d5b3f912f53373e56ca48b58245584b824487605127d23ceccc0cbe6d245c62"
+    },
+    "trading_researcher/CERTIFICATION.md": {
+      "git_blob": "437c54f2ca008548f5afb68ebee4ed93d041f8e9",
+      "published_sha256": "c03db08a3cc71c095c5a478c1d2b020dbc2e7da75bfb4e06c7880d59d107d9ee",
+      "workspace_sha256": "c03db08a3cc71c095c5a478c1d2b020dbc2e7da75bfb4e06c7880d59d107d9ee"
+    },
+    "trading_researcher/CONTROLLER_PROVIDERS.md": {
+      "git_blob": "8f71b350d8a8671eced9930ec16816046b370b3b",
+      "published_sha256": "91554e631bcf08430aac470a7c77bca8779ccdce4d2b1ab14a0d56b0a777168d",
+      "workspace_sha256": "91554e631bcf08430aac470a7c77bca8779ccdce4d2b1ab14a0d56b0a777168d"
+    },
+    "trading_researcher/DATA.md": {
+      "git_blob": "33636d7a37253093d9021fab4d656e615541886d",
+      "published_sha256": "be8fc51b42c52cc01753df55a127972bc91bddf12e5ed7eeb7a831ff8ae70687",
+      "workspace_sha256": "be8fc51b42c52cc01753df55a127972bc91bddf12e5ed7eeb7a831ff8ae70687"
+    },
+    "trading_researcher/EVALUATION_POLICY.md": {
+      "git_blob": "26d47f25a047346cefb6e34e6b6599ba3ab522ea",
+      "published_sha256": "9398dcaa5b3db76e8d2369246b673b964df60e1fe2193426a7d55cf4ab97f40f",
+      "workspace_sha256": "9398dcaa5b3db76e8d2369246b673b964df60e1fe2193426a7d55cf4ab97f40f"
+    },
+    "trading_researcher/EXPRESSIONS.md": {
+      "git_blob": "efb358b8274e0bcc0649f9e5d70e12f1ebed8896",
+      "published_sha256": "522a810ec667ba2e4cdbf223d0446f196349484bb5119deeaf121d27bcfb5962",
+      "workspace_sha256": "522a810ec667ba2e4cdbf223d0446f196349484bb5119deeaf121d27bcfb5962"
+    },
+    "trading_researcher/FEATURES.md": {
+      "git_blob": "9575ff0d61375719f3940e76d0214765e5de648a",
+      "published_sha256": "b803cd95938cebb3ea5ac584c3923f5462ae8aae84562e8f43b07612e4ef85c8",
+      "workspace_sha256": "b803cd95938cebb3ea5ac584c3923f5462ae8aae84562e8f43b07612e4ef85c8"
+    },
+    "trading_researcher/FORMALIZATION.md": {
+      "git_blob": "88c674d931718522b51fecb2749d2fd3a360601d",
+      "published_sha256": "d447abd8f7448c930c7b099014f48b98f52973e96b718a20044f3b8994d26ca8",
+      "workspace_sha256": "d447abd8f7448c930c7b099014f48b98f52973e96b718a20044f3b8994d26ca8"
+    },
+    "trading_researcher/INFORMATION_DIAGNOSTICS.md": {
+      "git_blob": "a07e11cdc7737fdb30899590f2132f49f8a90af0",
+      "published_sha256": "096b2b06a422cbe99e385b33a46beb13372dba86c19ec024ad3fc5f74c367b92",
+      "workspace_sha256": "096b2b06a422cbe99e385b33a46beb13372dba86c19ec024ad3fc5f74c367b92"
+    },
+    "trading_researcher/INFORMATION_STUDIES.md": {
+      "git_blob": "cb1905181eaaffac342c0a8d2d28acc6f60c24fe",
+      "published_sha256": "7a1626a74f474290a0f0d5b3d62b2654cb59c9e718071c296fb6b154e3825f8d",
+      "workspace_sha256": "7a1626a74f474290a0f0d5b3d62b2654cb59c9e718071c296fb6b154e3825f8d"
+    },
+    "trading_researcher/MEASUREMENTS.md": {
+      "git_blob": "6516ef0ac4d5281ee7d21e40cc18e85432af16b3",
+      "published_sha256": "983c6f59eb058902e5d8ded3ef8aba5cf6cd491bd64d152e86027ff60cafa15c",
+      "workspace_sha256": "983c6f59eb058902e5d8ded3ef8aba5cf6cd491bd64d152e86027ff60cafa15c"
+    },
+    "trading_researcher/MEMORY.md": {
+      "git_blob": "63acb2e5fa38aab5a6eb9d8f9ad1fe3d9f6fc305",
+      "published_sha256": "a74510af628768a80f920d55236e476edb67c85cbe58b027a3842389b7224b78",
+      "workspace_sha256": "a74510af628768a80f920d55236e476edb67c85cbe58b027a3842389b7224b78"
+    },
+    "trading_researcher/MONTE_CARLO.md": {
+      "git_blob": "a815bb905c3098b5bf1c2128720421508d0fddb2",
+      "published_sha256": "332e324c599ca88d96e81ce05baa1f7fc8bdca43bc98a09084f6ac73da9a0c18",
+      "workspace_sha256": "332e324c599ca88d96e81ce05baa1f7fc8bdca43bc98a09084f6ac73da9a0c18"
+    },
+    "trading_researcher/OPENAI.md": {
+      "git_blob": "3556873b5f062cd337d5e47f8428a538faadbd9b",
+      "published_sha256": "e8df4cdd2ed16d5fb2fb1753f56ac64a4877fcc6d415712177a2f6880ea91d44",
+      "workspace_sha256": "e8df4cdd2ed16d5fb2fb1753f56ac64a4877fcc6d415712177a2f6880ea91d44"
+    },
+    "trading_researcher/OUTCOMES.md": {
+      "git_blob": "1cc8c61e40505f1d40aede0e5afb130af30a5423",
+      "published_sha256": "633f06660ca6199c6e74283b783ecfc336ffce9acf058da4272c60e7699fac0a",
+      "workspace_sha256": "633f06660ca6199c6e74283b783ecfc336ffce9acf058da4272c60e7699fac0a"
+    },
+    "trading_researcher/POPULATION_MODELS.md": {
+      "git_blob": "f700c8e5e5af0aa9bc6ac06c8d9305974f115cad",
+      "published_sha256": "9718e7c5044c97bfd2d284970c61eaf1b323094aed96dda1a38de6885a9b6331",
+      "workspace_sha256": "9718e7c5044c97bfd2d284970c61eaf1b323094aed96dda1a38de6885a9b6331"
+    },
+    "trading_researcher/README.md": {
+      "git_blob": "1cb51ec9bc75ac368db92272148f50412557d80a",
+      "published_sha256": "3289043d735768919ebae761a9216d7c591cb3c4924daec69e9de55ad6842c7f",
+      "workspace_sha256": "644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256"
+    },
+    "trading_researcher/RESEARCHER.md": {
+      "git_blob": "37f50549787c94ba9b60fcdfb4ed22c606ade012",
+      "published_sha256": "663be03c2158a0f59130023a09bc04b1a532da8466a68423fdc557f84da792ef",
+      "workspace_sha256": "663be03c2158a0f59130023a09bc04b1a532da8466a68423fdc557f84da792ef"
+    },
+    "trading_researcher/STATIONARY_BOOTSTRAP.md": {
+      "git_blob": "379b2787c5d61efc865a77e0d5a32511e1e0b7d2",
+      "published_sha256": "5312464bc78873008db046ec5118a2ecc27f6c0e5f96bc1d166c8c9283d404c1",
+      "workspace_sha256": "5312464bc78873008db046ec5118a2ecc27f6c0e5f96bc1d166c8c9283d404c1"
+    },
+    "trading_researcher/STORAGE.md": {
+      "git_blob": "24e71eedc482e2a4ab4bbfb3921484d253d0807a",
+      "published_sha256": "3163a033e985d3cb80a590f8e70fa13255ef0dce15cf51f7929d176142ae286a",
+      "workspace_sha256": "3163a033e985d3cb80a590f8e70fa13255ef0dce15cf51f7929d176142ae286a"
+    },
+    "trading_researcher/__main__.py": {
+      "git_blob": "9b2cf5709b7fe0f99d2fb6feffe2d5caeed12f47",
+      "published_sha256": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+      "workspace_sha256": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20"
+    },
+    "trading_researcher/anthropic_provider.py": {
+      "git_blob": "fe4d29912e786f3941f1a29a8bdb11f01439382b",
+      "published_sha256": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+      "workspace_sha256": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f"
+    },
+    "trading_researcher/auxiliary.py": {
+      "git_blob": "8986c1f9cf9d05d93287c527e91b2016e3a5a674",
+      "published_sha256": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c",
+      "workspace_sha256": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c"
+    },
+    "trading_researcher/binance_archive.py": {
+      "git_blob": "0ef102a7e9be83243bb7c79f91241329a4fa56bb",
+      "published_sha256": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "workspace_sha256": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab"
+    },
+    "trading_researcher/binance_ingest.py": {
+      "git_blob": "1ccbab4e83d0775408db1f1c57924ab7f90082ce",
+      "published_sha256": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "workspace_sha256": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0"
+    },
+    "trading_researcher/binance_normalize.py": {
+      "git_blob": "32749f85559ffce8d08f030eff0842075864d393",
+      "published_sha256": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "workspace_sha256": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348"
+    },
+    "trading_researcher/binance_quality.py": {
+      "git_blob": "e9bd8b9bfd14eba79a334868b7f0c425c6d293de",
+      "published_sha256": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "workspace_sha256": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df"
+    },
+    "trading_researcher/binding.py": {
+      "git_blob": "40d490d5bc3c9db915921e8b891ef59dbd3ea264",
+      "published_sha256": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "workspace_sha256": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c"
+    },
+    "trading_researcher/bootstrap_runs.py": {
+      "git_blob": "a2eaf7f6ba2663ae9ecfe5939bdbd4309c417db7",
+      "published_sha256": "2abfbd49e81914f30fb1ae1a410e06b133ae759e496c609865d321c68eebe156",
+      "workspace_sha256": "2abfbd49e81914f30fb1ae1a410e06b133ae759e496c609865d321c68eebe156"
+    },
+    "trading_researcher/calibration.py": {
+      "git_blob": "ddae10c3d84f9747e9ac271fa11a230c00f126d0",
+      "published_sha256": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+      "workspace_sha256": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b"
+    },
+    "trading_researcher/calibration_runs.py": {
+      "git_blob": "5cd0bf9ef42c9e641695902a98506479bdcfff3d",
+      "published_sha256": "518e4ec2d709eab29010bbb618440c1c294384cb0f1132280acd6217e6d74b9a",
+      "workspace_sha256": "518e4ec2d709eab29010bbb618440c1c294384cb0f1132280acd6217e6d74b9a"
+    },
+    "trading_researcher/calibration_study.py": {
+      "git_blob": "c3971c094ebd4060a73e7aea99c5d3ee24bc232c",
+      "published_sha256": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+      "workspace_sha256": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3"
+    },
+    "trading_researcher/certification.py": {
+      "git_blob": "52e6ba02dbd9b42e324c033295da66114c9a604a",
+      "published_sha256": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "workspace_sha256": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743"
+    },
+    "trading_researcher/checks.py": {
+      "git_blob": "a72fe9ddad887535f34546cc6d7be2606d421d25",
+      "published_sha256": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "workspace_sha256": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d"
+    },
+    "trading_researcher/context_views.py": {
+      "git_blob": "fdab5f617d570b83d542082b4c38ebe090176d54",
+      "published_sha256": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+      "workspace_sha256": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6"
+    },
+    "trading_researcher/controller_providers.py": {
+      "git_blob": "b44b615c1a3a585eac072769ded66607d3bf4e3f",
+      "published_sha256": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+      "workspace_sha256": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e"
+    },
+    "trading_researcher/coordination.py": {
+      "git_blob": "5a2af958cb90e16868fa5625a4ed02daa5d85274",
+      "published_sha256": "260baf80386345f385b2340b163cb2d0b575ceff999309bbaa3b1e6cade60975",
+      "workspace_sha256": "260baf80386345f385b2340b163cb2d0b575ceff999309bbaa3b1e6cade60975"
+    },
+    "trading_researcher/data.py": {
+      "git_blob": "d49058fa3ec29361682d35e05b502d730283712e",
+      "published_sha256": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "workspace_sha256": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c"
+    },
+    "trading_researcher/errors.py": {
+      "git_blob": "bac0b7c9edc853ec4b01d781b92ed6edcf2a70a1",
+      "published_sha256": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "workspace_sha256": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c"
+    },
+    "trading_researcher/evaluation_plans.py": {
+      "git_blob": "ce6cf59e5239239118515bd3b977c4ba85a46b91",
+      "published_sha256": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "workspace_sha256": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1"
+    },
+    "trading_researcher/evaluation_policy.py": {
+      "git_blob": "43d591677ba58c19184fa1090207168c3621a394",
+      "published_sha256": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "workspace_sha256": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce"
+    },
+    "trading_researcher/expressions.py": {
+      "git_blob": "a8beb4c61ea6b0c08aa489356e2e01e1df5a6e41",
+      "published_sha256": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "workspace_sha256": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226"
+    },
+    "trading_researcher/features.py": {
+      "git_blob": "ddf972d9e4d2fc5378f6cb94ee9677f69f3dbb72",
+      "published_sha256": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "workspace_sha256": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e"
+    },
+    "trading_researcher/formalization.py": {
+      "git_blob": "66ef4f24cac9e1a7d6a0ed8a8f1254c596c8a788",
+      "published_sha256": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "workspace_sha256": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3"
+    },
+    "trading_researcher/information_diagnostics.py": {
+      "git_blob": "e8bbedc2acbe18cf88fc67b9ec47450ad0f503f5",
+      "published_sha256": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+      "workspace_sha256": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4"
+    },
+    "trading_researcher/information_runs.py": {
+      "git_blob": "db05e8919bdd86b6d00a57939081c512f12d52f2",
+      "published_sha256": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+      "workspace_sha256": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379"
+    },
+    "trading_researcher/information_study.py": {
+      "git_blob": "79aac49b8f3eb3e0454d8dfa3b1a8b7807b98627",
+      "published_sha256": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+      "workspace_sha256": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88"
+    },
+    "trading_researcher/meaning_reviews.py": {
+      "git_blob": "7bc4f9284c7bd61e984f2c862759b2e145328543",
+      "published_sha256": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+      "workspace_sha256": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee"
+    },
+    "trading_researcher/measurements.py": {
+      "git_blob": "dfb9b5c01fd511dec0880ae58fcaed76a4d222cf",
+      "published_sha256": "239b0a0ca39885a3aa3347d14f250404bf719b4a39b3f6318b2d3d40773b3be2",
+      "workspace_sha256": "239b0a0ca39885a3aa3347d14f250404bf719b4a39b3f6318b2d3d40773b3be2"
+    },
+    "trading_researcher/memory.py": {
+      "git_blob": "7b0ab0f55222f367d6920f5977a11fef7fadce81",
+      "published_sha256": "f2b014119643f577091cb64136f1477be46a2bc96934cf1a2f7387185162910e",
+      "workspace_sha256": "f2b014119643f577091cb64136f1477be46a2bc96934cf1a2f7387185162910e"
+    },
+    "trading_researcher/memory_demo.py": {
+      "git_blob": "2a1b4bb305596df56f0ad8fd29010812621e4c56",
+      "published_sha256": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "workspace_sha256": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c"
+    },
+    "trading_researcher/monte_carlo.py": {
+      "git_blob": "604e3d186c18cb5b704311c872221146435d2489",
+      "published_sha256": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "workspace_sha256": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de"
+    },
+    "trading_researcher/openai_provider.py": {
+      "git_blob": "79d0ea211181bbfc6cba21b9315f37cbd6774023",
+      "published_sha256": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+      "workspace_sha256": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980"
+    },
+    "trading_researcher/outcomes.py": {
+      "git_blob": "52407dc42a8ed85a0ae55269e6509e28839f83a9",
+      "published_sha256": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "workspace_sha256": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6"
+    },
+    "trading_researcher/population_models.py": {
+      "git_blob": "a9f3494b0dbd515d4cba06da5f4ddfddff898005",
+      "published_sha256": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+      "workspace_sha256": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e"
+    },
+    "trading_researcher/population_runs.py": {
+      "git_blob": "fd50190c65d65de9abd4952aadc380269f9cbbcc",
+      "published_sha256": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+      "workspace_sha256": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001"
+    },
+    "trading_researcher/provider_usage.py": {
+      "git_blob": "480932def97318b309f64a1caad0f16bbcd6a999",
+      "published_sha256": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+      "workspace_sha256": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045"
+    },
+    "trading_researcher/research_calls.py": {
+      "git_blob": "31efce0d6a1a65fa146d66ef851822c7b9a59bb1",
+      "published_sha256": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+      "workspace_sha256": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599"
+    },
+    "trading_researcher/research_demo.py": {
+      "git_blob": "854d0aed04903e0d0de9d86e699ece9f6d8222cd",
+      "published_sha256": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "workspace_sha256": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490"
+    },
+    "trading_researcher/researcher.py": {
+      "git_blob": "91e5342c46856a49ca9fcd8b02bdd489657ce837",
+      "published_sha256": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+      "workspace_sha256": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e"
+    },
+    "trading_researcher/stationary_bootstrap.py": {
+      "git_blob": "f8ab807f66d804dae2c4582342a3d1456ff56788",
+      "published_sha256": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+      "workspace_sha256": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7"
+    },
+    "trading_researcher/storage.py": {
+      "git_blob": "b8fb5414add0cc43e67a811f542511ee3899f59e",
+      "published_sha256": "1541be1fed6f9deca5b593810a9f4e067bd8d61b4902a7743c4b4b49cd5e884a",
+      "workspace_sha256": "1541be1fed6f9deca5b593810a9f4e067bd8d61b4902a7743c4b4b49cd5e884a"
+    },
+    "trading_researcher/study_pipeline.py": {
+      "git_blob": "3044ff3bd7dc5494b81839422d1825bc4fe6c1e7",
+      "published_sha256": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+      "workspace_sha256": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d"
+    },
+    "trading_researcher/study_runs.py": {
+      "git_blob": "8bc68c86b4a15f1ab0de18296d3beaa56840df91",
+      "published_sha256": "0500d07632ddd6bb00d3773e7b8564e0dc2b8e2718ce6fb306256c188d5c19c7",
+      "workspace_sha256": "0500d07632ddd6bb00d3773e7b8564e0dc2b8e2718ce6fb306256c188d5c19c7"
+    }
+  },
+  "self_exclusion": "This newly authored verification file is added after the compared staged inventory; its bytes are checked separately before commitment.",
+  "initial_failure": "The first retail-contract check rejected the newly authorized .gitattributes change; the explicit later-publication path was then recorded without altering scientific requirements. The fresh rerun passed.",
+  "exclusions": [
+    "Ignored credentials and environment files",
+    "Private runtime registries, market downloads and local logs"
+  ],
+  "unverified": [
+    "Entire growing test suite not rerun",
+    "Live meaning-review fixture quality",
+    "Live mixed-provider research",
+    "Scientific readiness and complete first historical cycle",
+    "Comprehensive security audit",
+    "Fresh clone on every platform"
+  ],
+  "publication": "Prepared and checked locally; remote commit confirmation is performed after the normal Git push."
+}

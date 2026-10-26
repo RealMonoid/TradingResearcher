@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-25",
+  "status": "PASS_WITH_RETAINED_SOURCE_AND_PROVENANCE_GAPS",
+  "purpose": "Preserve unusable but unambiguously keyed complete-bar inputs without repair or scientific exclusion decisions, and bind exact acquired sources in complete registry backups.",
+  "scope": "Keyed source quality and owned retention; no scientific data acceptance.",
+  "finding": "144 sources preserve420560 present bars:420544 valid complete and16 invalid keyed bars;304 expected source bars are absent. All source bytes and quality rows survive a complete registry backup/restore.",
+  "warranted_conclusion": "The adapter distinguishes invalid-present and absent records, emits no usable value for an invalid keyed bar, rejects ambiguous sources, and retains sources with explicit receipt/time limitations. This is not proof of ignorable missingness, historical publication or scientific suitability.",
+  "next_action": "Continue step 3 with partition-bound normalized snapshots from committed source bundles, explicit assumed availability and unchanged quality/missingness. Preserve exact year-boundary observations and source ancestry. Then implement feature/semantic certification, bound scientific execution and atomic plan/allocation/freeze with compatible calibration.",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_binance*.py'",
+      "exit_code": 0,
+      "tests_passed": 28,
+      "duration_seconds": 4.371,
+      "strict_fixed_cases": 43,
+      "quality_fixed_cases": 32
+    },
+    {
+      "command": "python -B -m unittest discover -s tests",
+      "exit_code": 0,
+      "tests_passed": 172,
+      "duration_seconds": 87.36
+    },
+    {
+      "command": "python -B - (fresh audit of all 144 exact ZIP/checksum/CSV sources)",
+      "exit_code": 0,
+      "counts": {
+        "sources": 144,
+        "VERIFIED_FILE_HASHES": 128,
+        "expected_bars": 420864,
+        "present_bars": 420560,
+        "valid_bars": 420544,
+        "invalid_bars": 16,
+        "missing_bars": 304,
+        "UNVERIFIED_LEGACY_FAILURE": 16
+      }
+    },
+    {
+      "command": "python -B - (retain_provider_documents,retain_acquisition,code-source retention,verify)",
+      "exit_code": 0,
+      "sources_retained": 144,
+      "integrity": "PASS"
+    },
+    {
+      "command": "python -B - (backup_bundle,restore_bundle,verify and compare144 source bundles)",
+      "exit_code": 0,
+      "status": "PASS",
+      "artifacts": 891,
+      "blobs": 745,
+      "blob_bytes": 277538327
+    },
+    {
+      "command": "git check-ignore .trf-runtime/binance-source-registry-2026-10-25/registry.sqlite3 .trf-runtime/binance-source-backup-2026-10-25/registry.sqlite3 .trf-runtime/binance-source-restored-2026-10-25/registry.sqlite3",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "local_links": 675,
+      "decisions": 88,
+      "requirements": 30,
+      "errors": []
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "baseline_files": 103,
+      "unchanged_files": 93,
+      "authorized_changes": 10,
+      "local_document_links": 182,
+      "errors": []
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output_summary": "No whitespace errors; existing Windows CRLF normalization warnings only."
+    }
+  ],
+  "independent_review": {
+    "reviewer": "memory_boundary_review",
+    "result": "No unresolved blocker in reviewed quality/retention boundary after the reproduced receipt-binding fix.",
+    "quality_fixture_sha256": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+    "expectations_sha256": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+    "fixed_finding": "Legacy failure receipts with files={} admitted substituted internally consistent files while asserting an unbound old retrieval time. Derived records now expose UNVERIFIED_LEGACY_FAILURE and null retrieved_at; original time remains separately retained. New failed acquisitions record completed hashes before parsing and retention verifies them.",
+    "red_green": "Two new regressions failed before fix;28 focused tests pass after fix. Original 43 and new 32 independent cases remain unchanged.",
+    "independent_probes": [
+      "Worker authorization before file reads",
+      "Ambiguous duplicate keys fail before imports",
+      "Captured bytes remain stable if source paths mutate",
+      "Interrupted multi-file import leaves only supplied raw source authority and no bundle",
+      "Exact source and complete quality records survive backup/restore",
+      "Legacy replacement cannot inherit original receipt time",
+      "Bound failed-receipt replacement rejected before registry changes"
+    ],
+    "recheck": {
+      "tests_passed": 28,
+      "duration_seconds": 4.206,
+      "exit_code": 0
+    },
+    "limits": "Independent reviewer did not verify actual full dataset ingestion or scientific acceptance."
+  },
+  "retention_record": "docs/reviews/implementation-2026-10-25/binance-registry-retention.json",
+  "changed_files_this_checkpoint": [
+    "trading_researcher/binance_archive.py",
+    "trading_researcher/binance_quality.py",
+    "trading_researcher/binance_ingest.py",
+    "trading_researcher/__main__.py",
+    "tests/test_binance_quality.py",
+    "tests/test_binance_ingest.py",
+    "tests/fixtures/reference_binance_quality_cases.json",
+    "tests/fixtures/reference_binance_quality_expectations.md",
+    "trading_researcher/BINANCE.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/binance-registry-retention.json",
+    "docs/reviews/implementation-2026-10-25/binance-quality-verification.json"
+  ],
+  "checked_files_sha256": {
+    "trading_researcher/binance_archive.py": "ce5ab7e078964676594f7aec9e7a6104df75393b905f8a08d1c1e9619017af08",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binance_ingest.py": "2e651cb1f1216a7e47d2ae0a3f52efaa20ec31831e9e5ab861cba6586dec5036",
+    "trading_researcher/__main__.py": "001be1299c2eac964e9f5ee5cd39317aa9cb833f473945ec34c7317913076a90",
+    "tests/test_binance_quality.py": "36d8bd7a0e6c0c371e39e699e0e7ab7c8c2d2c23f83a80ebb499338e74a0b0ed",
+    "tests/test_binance_ingest.py": "8201f84b8de45bed381833ec31224f4c1c2e78b9b6541624b1270c56beb55b16",
+    "tests/fixtures/reference_binance_quality_cases.json": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+    "tests/fixtures/reference_binance_quality_expectations.md": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+    "trading_researcher/BINANCE.md": "bf6ad20644ae36d12d0b915600880e831f0ac2fd7389d60c4aa3acbe6d4c43c1",
+    "README.md": "8c2828ff8e66e5f445764b6891461989c4bfe8b59bbd7369befacc56df14a052",
+    "docs/architecture/CURRENT_STATE.md": "d27d7c1009f95aa51f00443eb84a33de5cf9c7b169b0c2e31decd5472382f91f",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "5a4c74e7326a859031b6596cba2b77b02e75ee24b656b360c9377c909a3da7a8",
+    "docs/reviews/implementation-2026-10-25/progress.json": "85e3770f9dfca520371d00210b367c18dd8f9edebbf8ee886982b1d8700ab248",
+    "docs/reviews/implementation-2026-10-25/binance-registry-retention.json": "344746c5c7591569cb20741d3095bb1a1ddc7e37358349486e2f409439559ad9"
+  },
+  "unverified": [
+    "Full seven-package goal remains active/incomplete; package 3 continues.",
+    "No partition-bound real normalized data snapshot or real availability scenario has been selected/created at this checkpoint.",
+    "Sixteeninvalid bars and304 absent bars remain data quality gaps; no scientific missingness/exclusion policy or market evidence follows.",
+    "Sixteenlegacy failure receipts lack file/time binding; current verification cannot recreate an authenticated historical vintage.",
+    "Provider publication times, scientific data/feature acceptance, semantic equivalence, calibrated inference, scientific freeze/allocation and live provider integration remain incomplete.",
+    "Retained source checkout is not proof of executed-code identity; this source bundle is not a scientific certificate.",
+    "Trusted local OS/operator boundary, hardware power-loss durability and adversarial administrator resistance are not established.",
+    "No paid API call, additional software installation, Git commit or push performed in this checkpoint."
+  ]
+}

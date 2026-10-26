@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "baseline_files": 103,
+  "unchanged_files": 94,
+  "changed_files": [
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    ".gitignore",
+    "README.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "tests/test_local_runtime.py",
+    "trading_researcher/__main__.py",
+    "trading_researcher/checks.py",
+    "trading_researcher/coordination.py"
+  ],
+  "unauthorized_changes": [],
+  "local_document_links": 109,
+  "errors": [],
+  "scope": "Implementation documentation and preservation; not runtime or scientific certification"
+}

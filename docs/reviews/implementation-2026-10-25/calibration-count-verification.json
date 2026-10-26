@@ -1,0 +1,123 @@
+{
+  "schema": "calibration-count-engineering-verification/1",
+  "status": "PASS_BOUNDED_COUNT_ASSESSMENT",
+  "recorded_at_utc": "2026-10-25T19:52:36.581011+00:00",
+  "scope": "Executable adopted count thresholds and read-only CLI; no authenticated final-calibration runner.",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_calibration*.py'",
+      "tests": 23,
+      "seconds": 3.631,
+      "exit_code": 0,
+      "tool_chunk": "f917ae"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_information_study*.py'",
+      "tests": 19,
+      "seconds": 0.626,
+      "exit_code": 0,
+      "tool_chunk": "287bb1"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_provider_usage*.py'",
+      "tests": 11,
+      "seconds": 0.395,
+      "exit_code": 0,
+      "tool_chunk": "f697f8"
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "includes": "verify_system_model and git diff --check",
+      "local_links": 756
+    }
+  ],
+  "unique_tests_passed": 53,
+  "independent_review": {
+    "file": "calibration-count-review.json",
+    "tests": 17,
+    "seconds": 1.231,
+    "exit_code": 0,
+    "scope": "Count kernel, not CLI",
+    "sha256": "c1e0c08c56ac3ebaef170d7599cbc34d384a7356d42d62e56bd739b16fde146f"
+  },
+  "red_checks": [
+    {
+      "tool_chunk": "b7e253",
+      "exit_code": 1,
+      "reason": "Production module absent before implementation"
+    },
+    {
+      "tool_chunk": "4ab212",
+      "exit_code": 1,
+      "reason": "CLI command absent before implementation"
+    }
+  ],
+  "changed_files": [
+    "trading_researcher/calibration.py",
+    "tests/test_calibration_adversarial.py",
+    "tests/fixtures/reference_calibration_counts.json",
+    "tests/fixtures/reference_calibration_counts.md",
+    "docs/reviews/implementation-2026-10-25/calibration-count-review.json",
+    "trading_researcher/__main__.py",
+    "tests/test_calibration.py",
+    "tests/test_calibration_cli.py",
+    "trading_researcher/CALIBRATION.md",
+    "trading_researcher/INFORMATION_STUDIES.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/calibration-count-verification.json",
+    "docs/reviews/implementation-2026-10-25/calibration-count-evidence.zip"
+  ],
+  "changed_files_sha256": {
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "tests/test_calibration_adversarial.py": "55b1e863ba4dc8d4d2fe8982880564d96d8c765d356473f9b6300d82077c7572",
+    "tests/fixtures/reference_calibration_counts.json": "c1c7d41e24b20c4b3c170e7051fb597c1e6b761712274c287d008c485ac27ae9",
+    "tests/fixtures/reference_calibration_counts.md": "04e272af558ff9b7c0c469aa5290217a9966c9a3c1807f42f0acb25d6163b303",
+    "docs/reviews/implementation-2026-10-25/calibration-count-review.json": "c1e0c08c56ac3ebaef170d7599cbc34d384a7356d42d62e56bd739b16fde146f",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+    "tests/test_calibration.py": "db8b8b1a8b7a1b68bda6f0ce4399cbb9ec3016dba52989e5b2e3e0181ae1babe",
+    "tests/test_calibration_cli.py": "fab1c8ca17dfac77f788b9f33a5901bc175ff4162dd959c543de63e6a99824c0",
+    "trading_researcher/CALIBRATION.md": "d1b852baecb5ccea95f050b0d16acfd721166a2fbdd921a0f2cdcc49c1c3adc7",
+    "trading_researcher/INFORMATION_STUDIES.md": "650d3f3f80b04c825c533781264bcb318e6626c9de0696f46470df51454119b3",
+    "README.md": "18a0d5655e911362f6d91685da699a0ea53d2e6400609f5cca8cfa68a5c1bda2",
+    "docs/architecture/CURRENT_STATE.md": "26ad64afc382a3385d2978fc80fc513848945a30f2aac348357e02567433f146",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "41229c4f3a550184b775791d5c30b0f04a6249974d00f50b9f4e59b7e1ce8a6d",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md": "eba5b94cfe5aa7428ec9cf964f6fabb33617366f9e6049015c710a9e6bec0233",
+    "docs/reviews/implementation-2026-10-25/progress.json": "c053f34dd976771678c94235c465e68a282805ce1e6f782baabfa79ad10f4693"
+  },
+  "ignored_helpers": [
+    ".trf-runtime/calibration-count-checks-2026-10-25/baseline.py",
+    ".trf-runtime/calibration-count-checks-2026-10-25/finalize.py"
+  ],
+  "preserved_baseline_files": 149,
+  "authored_checks": {
+    "whitespace": "PASS",
+    "json": "PASS",
+    "local_link_targets": 229
+  },
+  "live_ledger_unchanged": true,
+  "live_ledger_sha256": "36a61c293c0de7951d79da34bdb5061520cafd41ec30b5f3a74aa33bfff43c79",
+  "new_provider_calls": 0,
+  "new_simulated_worlds": 0,
+  "existing_live_usage": {
+    "calls": 10,
+    "tokens": 35084,
+    "conservative_nano_usd": 95105000,
+    "aggregate_cap_nano_usd": 5000000000
+  },
+  "unverified": [
+    "Authenticated event extraction and complete final-calibration execution",
+    "Fresh reserved final seeds and independence from development/tuning",
+    "Declared event meanings, stress applicability and nuisance/population model adequacy",
+    "Actual independent semantic judgment and scientific data admission",
+    "N_min, scientific freeze/allocation, complete historical research cycle",
+    "Scientific validity, full-process calibration, policy/backtest quality, live capital and full seven-package completion"
+  ],
+  "next_action": "Bind the count assessment to owned frozen final-calibration events after establishing the development model/information target; preserve remaining semantic/data/freeze gates.",
+  "evidence_archive_sha256": "cc32d9e7dbcf438790bc0b4f09431e6dd3a74b0a89f65ae800b25b9cb2ae7d33",
+  "archive_scope": "Current application source, new tests/fixtures, changed guides and independent review; no credentials or market data."
+}

@@ -1,0 +1,2889 @@
+{
+  "schema": "reference-evaluation-policy-cases/1",
+  "contract_version": "research-contract/1.0",
+  "profile": "historical-batch-v1",
+  "scope": "Independent pure arithmetic and policy expectations; no estimator calibration, natural-language proof, data authorization, scientific readiness or empirical result.",
+  "source_sha256": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "b5d381106ec538a411e9b7b4d43b582d4d60a8082301d193a159cfa464b10c69",
+    "docs/reviews/RETAIL_RESEARCH_CONTRACT_PROPOSAL_2026-10-23.md": "22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29"
+  },
+  "cases": [
+    {
+      "name": "positive_strict_support",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "3",
+            "denominator": "50"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "SUPPORTED_INITIAL",
+        "theta_interval": [
+          {
+            "numerator": "3",
+            "denominator": "50"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "positive_practical_negative_not_zero",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "1",
+            "denominator": "50"
+          },
+          {
+            "numerator": "1",
+            "denominator": "25"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": [
+          {
+            "numerator": "1",
+            "denominator": "50"
+          },
+          {
+            "numerator": "1",
+            "denominator": "25"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "positive_lower_equals_delta",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": [
+          {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "positive_upper_equals_delta",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "1",
+            "denominator": "50"
+          },
+          {
+            "numerator": "1",
+            "denominator": "20"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": [
+          {
+            "numerator": "1",
+            "denominator": "50"
+          },
+          {
+            "numerator": "1",
+            "denominator": "20"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "positive_point_equals_delta",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "1",
+            "denominator": "20"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": [
+          {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "1",
+            "denominator": "20"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "positive_straddles_delta",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "1",
+            "denominator": "25"
+          },
+          {
+            "numerator": "3",
+            "denominator": "50"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": [
+          {
+            "numerator": "1",
+            "denominator": "25"
+          },
+          {
+            "numerator": "3",
+            "denominator": "50"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "positive_opposite_effect",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "-2",
+            "denominator": "25"
+          },
+          {
+            "numerator": "-3",
+            "denominator": "50"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": [
+          {
+            "numerator": "-2",
+            "denominator": "25"
+          },
+          {
+            "numerator": "-3",
+            "denominator": "50"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "negative_direction_reverses_interval",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "negative",
+        "effect_interval": [
+          {
+            "numerator": "-2",
+            "denominator": "25"
+          },
+          {
+            "numerator": "-3",
+            "denominator": "50"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "SUPPORTED_INITIAL",
+        "theta_interval": [
+          {
+            "numerator": "3",
+            "denominator": "50"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "negative_direction_practical_negative",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "negative",
+        "effect_interval": [
+          {
+            "numerator": "-1",
+            "denominator": "25"
+          },
+          {
+            "numerator": "-1",
+            "denominator": "50"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": [
+          {
+            "numerator": "1",
+            "denominator": "50"
+          },
+          {
+            "numerator": "1",
+            "denominator": "25"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "negative_direction_lower_equals_delta",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "negative",
+        "effect_interval": [
+          {
+            "numerator": "-2",
+            "denominator": "25"
+          },
+          {
+            "numerator": "-1",
+            "denominator": "20"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": [
+          {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "negative_direction_upper_equals_delta",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "negative",
+        "effect_interval": [
+          {
+            "numerator": "-1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "-1",
+            "denominator": "50"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": [
+          {
+            "numerator": "1",
+            "denominator": "50"
+          },
+          {
+            "numerator": "1",
+            "denominator": "20"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "negative_direction_opposite_effect",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "negative",
+        "effect_interval": [
+          {
+            "numerator": "3",
+            "denominator": "50"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": [
+          {
+            "numerator": "-2",
+            "denominator": "25"
+          },
+          {
+            "numerator": "-3",
+            "denominator": "50"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_positive_outside",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "3",
+            "denominator": "50"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "SUPPORTED_INITIAL",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_negative_outside",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "-2",
+            "denominator": "25"
+          },
+          {
+            "numerator": "-3",
+            "denominator": "50"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "SUPPORTED_INITIAL",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_strict_interior",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "-1",
+            "denominator": "25"
+          },
+          {
+            "numerator": "1",
+            "denominator": "25"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_full_closed_region",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "-1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "1",
+            "denominator": "20"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_positive_endpoint_singleton",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "1",
+            "denominator": "20"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_negative_endpoint_singleton",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "-1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "-1",
+            "denominator": "20"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_inside_touches_lower",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "-1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "1",
+            "denominator": "50"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_NEGATIVE",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_outside_touches_positive",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_outside_touches_negative",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "-2",
+            "denominator": "25"
+          },
+          {
+            "numerator": "-1",
+            "denominator": "20"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "nondirectional_spans_both_exteriors",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "nondirectional",
+        "effect_interval": [
+          {
+            "numerator": "-2",
+            "denominator": "25"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "theta_interval": null
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "Conditional classification of an already valid interval only; other scientific admission gates are assumed satisfied."
+    },
+    {
+      "name": "reject_zero_delta",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "delta": {
+          "numerator": "0",
+          "denominator": "1"
+        }
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "No valid interval decision is defined for this input; do not coerce it."
+    },
+    {
+      "name": "reject_negative_delta",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "delta": {
+          "numerator": "-1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "No valid interval decision is defined for this input; do not coerce it."
+    },
+    {
+      "name": "reject_reversed_interval",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "positive",
+        "effect_interval": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "No valid interval decision is defined for this input; do not coerce it."
+    },
+    {
+      "name": "reject_unsupported_claim_direction",
+      "operation": "classify_interval",
+      "input": {
+        "direction": "equivalence",
+        "effect_interval": [
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          }
+        ],
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.2"
+      ],
+      "reason": "No valid interval decision is defined for this input; do not coerce it."
+    },
+    {
+      "name": "family_m_1",
+      "operation": "family_budget",
+      "input": {
+        "m": 1
+      },
+      "expected": {
+        "family_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "two_sided_tail_probability": {
+          "numerator": "1",
+          "denominator": "40"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact 0.05/m; no claim-independence assumption."
+    },
+    {
+      "name": "family_m_2",
+      "operation": "family_budget",
+      "input": {
+        "m": 2
+      },
+      "expected": {
+        "family_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "40"
+        },
+        "two_sided_tail_probability": {
+          "numerator": "1",
+          "denominator": "80"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact 0.05/m; no claim-independence assumption."
+    },
+    {
+      "name": "family_m_3",
+      "operation": "family_budget",
+      "input": {
+        "m": 3
+      },
+      "expected": {
+        "family_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "60"
+        },
+        "two_sided_tail_probability": {
+          "numerator": "1",
+          "denominator": "120"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact 0.05/m; no claim-independence assumption."
+    },
+    {
+      "name": "family_m_4",
+      "operation": "family_budget",
+      "input": {
+        "m": 4
+      },
+      "expected": {
+        "family_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "80"
+        },
+        "two_sided_tail_probability": {
+          "numerator": "1",
+          "denominator": "160"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact 0.05/m; no claim-independence assumption."
+    },
+    {
+      "name": "family_m_5",
+      "operation": "family_budget",
+      "input": {
+        "m": 5
+      },
+      "expected": {
+        "family_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "100"
+        },
+        "two_sided_tail_probability": {
+          "numerator": "1",
+          "denominator": "200"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact 0.05/m; no claim-independence assumption."
+    },
+    {
+      "name": "family_m_6",
+      "operation": "family_budget",
+      "input": {
+        "m": 6
+      },
+      "expected": {
+        "family_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "120"
+        },
+        "two_sided_tail_probability": {
+          "numerator": "1",
+          "denominator": "240"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact 0.05/m; no claim-independence assumption."
+    },
+    {
+      "name": "family_m_7",
+      "operation": "family_budget",
+      "input": {
+        "m": 7
+      },
+      "expected": {
+        "family_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "140"
+        },
+        "two_sided_tail_probability": {
+          "numerator": "1",
+          "denominator": "280"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact 0.05/m; no claim-independence assumption."
+    },
+    {
+      "name": "family_m_8",
+      "operation": "family_budget",
+      "input": {
+        "m": 8
+      },
+      "expected": {
+        "family_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "160"
+        },
+        "two_sided_tail_probability": {
+          "numerator": "1",
+          "denominator": "320"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact 0.05/m; no claim-independence assumption."
+    },
+    {
+      "name": "family_reject_zero",
+      "operation": "family_budget",
+      "input": {
+        "m": 0
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Frozen primary-claim count must be an integer from one through eight."
+    },
+    {
+      "name": "family_reject_nine",
+      "operation": "family_budget",
+      "input": {
+        "m": 9
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Frozen primary-claim count must be an integer from one through eight."
+    },
+    {
+      "name": "family_reject_boolean",
+      "operation": "family_budget",
+      "input": {
+        "m": true
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Frozen primary-claim count must be an integer from one through eight."
+    },
+    {
+      "name": "family_reject_fractional",
+      "operation": "family_budget",
+      "input": {
+        "m": "3/2"
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.2",
+        "12"
+      ],
+      "reason": "Frozen primary-claim count must be an integer from one through eight."
+    },
+    {
+      "name": "blocks_unit_horizon_deduplicates",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 1,
+        "base_length_bars": 1
+      },
+      "expected": {
+        "lengths_bars": [
+          1,
+          2
+        ],
+        "resamples_per_length": 19999
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Distinct prespecified max(horizon,ceil(base/2)), base, 2*base lengths; never select the narrowest result."
+    },
+    {
+      "name": "blocks_even_base",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 1,
+        "base_length_bars": 4
+      },
+      "expected": {
+        "lengths_bars": [
+          2,
+          4,
+          8
+        ],
+        "resamples_per_length": 19999
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Distinct prespecified max(horizon,ceil(base/2)), base, 2*base lengths; never select the narrowest result."
+    },
+    {
+      "name": "blocks_odd_base_rounds_half_up",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 1,
+        "base_length_bars": 5
+      },
+      "expected": {
+        "lengths_bars": [
+          3,
+          5,
+          10
+        ],
+        "resamples_per_length": 19999
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Distinct prespecified max(horizon,ceil(base/2)), base, 2*base lengths; never select the narrowest result."
+    },
+    {
+      "name": "blocks_half_horizon_floor",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 3,
+        "base_length_bars": 5
+      },
+      "expected": {
+        "lengths_bars": [
+          3,
+          5,
+          10
+        ],
+        "resamples_per_length": 19999
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Distinct prespecified max(horizon,ceil(base/2)), base, 2*base lengths; never select the narrowest result."
+    },
+    {
+      "name": "blocks_base_equals_horizon",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 3,
+        "base_length_bars": 3
+      },
+      "expected": {
+        "lengths_bars": [
+          3,
+          6
+        ],
+        "resamples_per_length": 19999
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Distinct prespecified max(horizon,ceil(base/2)), base, 2*base lengths; never select the narrowest result."
+    },
+    {
+      "name": "blocks_daily_horizon_base96",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 96,
+        "base_length_bars": 96
+      },
+      "expected": {
+        "lengths_bars": [
+          96,
+          192
+        ],
+        "resamples_per_length": 19999
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Distinct prespecified max(horizon,ceil(base/2)), base, 2*base lengths; never select the narrowest result."
+    },
+    {
+      "name": "blocks_daily_horizon_base97",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 96,
+        "base_length_bars": 97
+      },
+      "expected": {
+        "lengths_bars": [
+          96,
+          97,
+          194
+        ],
+        "resamples_per_length": 19999
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Distinct prespecified max(horizon,ceil(base/2)), base, 2*base lengths; never select the narrowest result."
+    },
+    {
+      "name": "blocks_daily_horizon_base193",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 96,
+        "base_length_bars": 193
+      },
+      "expected": {
+        "lengths_bars": [
+          97,
+          193,
+          386
+        ],
+        "resamples_per_length": 19999
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Distinct prespecified max(horizon,ceil(base/2)), base, 2*base lengths; never select the narrowest result."
+    },
+    {
+      "name": "blocks_reject_base_below_horizon",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 3,
+        "base_length_bars": 2
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "The base and horizon are positive integer observation counts, with base at least the full overlapping outcome horizon."
+    },
+    {
+      "name": "blocks_reject_zero_horizon",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 0,
+        "base_length_bars": 1
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "The base and horizon are positive integer observation counts, with base at least the full overlapping outcome horizon."
+    },
+    {
+      "name": "blocks_reject_fractional_base",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 1,
+        "base_length_bars": "5/2"
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "The base and horizon are positive integer observation counts, with base at least the full overlapping outcome horizon."
+    },
+    {
+      "name": "blocks_reject_boolean_base",
+      "operation": "block_lengths",
+      "input": {
+        "max_outcome_horizon_bars": 1,
+        "base_length_bars": true
+      },
+      "expected": {
+        "accepted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "The base and horizon are positive integer observation counts, with base at least the full overlapping outcome horizon."
+    },
+    {
+      "name": "profile_simple_24h_return_BTCUSDT",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": true,
+        "profile": "simple_return_24h_10bp",
+        "delta": {
+          "numerator": "1",
+          "denominator": "1000"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "96*900=86400 seconds; future close divided by the same certified raw close 96 bars earlier, minus one. Recognition is a bounded capability, not an NL-equivalence proof."
+    },
+    {
+      "name": "profile_simple_24h_return_ETHUSDT",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "ETHUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "ETHUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "ETHUSDT.close@binance-spot-15m-v1": {
+            "symbol": "ETHUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/ETH",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": true,
+        "profile": "simple_return_24h_10bp",
+        "delta": {
+          "numerator": "1",
+          "denominator": "1000"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "96*900=86400 seconds; future close divided by the same certified raw close 96 bars earlier, minus one. Recognition is a bounded capability, not an NL-equivalence proof."
+    },
+    {
+      "name": "profile_binary_1_bars",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "binary_probability",
+        "outcome_type": "boolean",
+        "outcome_unit": null,
+        "grid_seconds": 900,
+        "outcome_bars": 1,
+        "outcome_program": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "verified_feature_definitions": {},
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": true,
+        "profile": "binary_probability_5pp",
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "Binary contrast uses Boolean outcomes and ratio estimand units; the approved binary target has no universal 24-hour requirement."
+    },
+    {
+      "name": "profile_binary_96_bars",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "binary_probability",
+        "outcome_type": "boolean",
+        "outcome_unit": null,
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "verified_feature_definitions": {},
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": true,
+        "profile": "binary_probability_5pp",
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "Binary contrast uses Boolean outcomes and ratio estimand units; the approved binary target has no universal 24-hour requirement."
+    },
+    {
+      "name": "profile_reject_24h_volume_ratio",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.volume@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.volume@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "volume",
+            "type": "real",
+            "unit": "BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "A dimensionless 24h volume change is not a price return, even with the same AST shape and horizon."
+    },
+    {
+      "name": "profile_reject_non24h_return",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 95,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 95
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "A 23h45m return is not the approved 24-hour profile; preserve the different claim."
+    },
+    {
+      "name": "profile_reject_24h_anchor_wrong_baseline",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 95
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "At the 24h future anchor, a 95-bar denominator measures a different return interval."
+    },
+    {
+      "name": "profile_reject_price_level",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "USDT/BTC",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "feature",
+          "ref": "BTCUSDT.close@binance-spot-15m-v1"
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "A future price level is not a dimensionless 24h return."
+    },
+    {
+      "name": "profile_reject_real_labeled_binary",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "binary_probability",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "A caller-supplied scale label cannot turn a real output into a Boolean probability outcome."
+    },
+    {
+      "name": "profile_reject_unverified_close_definition",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {},
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "Feature name spelling is not evidence of raw-close semantics or certification."
+    },
+    {
+      "name": "profile_reject_cross_symbol_denominator",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "ETHUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "Cross-symbol division is not a single instrument simple return and may also violate units."
+    },
+    {
+      "name": "profile_reject_generator_smaller_delta",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": {
+          "numerator": "1",
+          "denominator": "10000"
+        },
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "The generator cannot replace assigned ten basis points by one basis point."
+    },
+    {
+      "name": "profile_reject_complement_substitution",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "conditional-minus-scope-mean/1",
+        "comparator": "condition_complement",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "The adopted canonical target is condition minus whole scope, not condition minus complement."
+    },
+    {
+      "name": "profile_reject_policy_profit_substitution",
+      "operation": "profile_membership",
+      "input": {
+        "estimand": "net-policy-value/1",
+        "comparator": "whole_scope",
+        "outcome_scale": "quantity",
+        "outcome_type": "real",
+        "outcome_unit": "ratio",
+        "grid_seconds": 900,
+        "outcome_bars": 96,
+        "outcome_program": {
+          "op": "sub",
+          "left": {
+            "op": "div",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 96
+            }
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "ratio",
+            "value": "1"
+          }
+        },
+        "verified_feature_definitions": {
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "symbol": "BTCUSDT",
+            "field": "close",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "specification_version": "binance-spot-15m-v1"
+          }
+        },
+        "requested_delta": null,
+        "estimand_unit": "ratio"
+      },
+      "expected": {
+        "eligible": false,
+        "profile": null,
+        "delta": null
+      },
+      "source_sections": [
+        "5.2",
+        "14"
+      ],
+      "reason": "The pilot return profile cannot stand in for policy net value above a separately frozen opportunity-cost hurdle."
+    },
+    {
+      "name": "bootstrap_all_required_draws_defined",
+      "operation": "bootstrap_completeness",
+      "input": {
+        "required_lengths": [
+          96,
+          192
+        ],
+        "cases": [
+          {
+            "length": 96,
+            "attempted": 19999,
+            "defined": 19999,
+            "undefined": 0
+          },
+          {
+            "length": 192,
+            "attempted": 19999,
+            "defined": 19999,
+            "undefined": 0
+          }
+        ]
+      },
+      "expected": {
+        "interval_construction_permitted": true,
+        "discard_undefined_draws_permitted": false,
+        "retain_descriptive_results": true,
+        "decisive_classification_permitted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Completeness alone never certifies an interval or scientific decision. Any undefined required mean prevents inferential classification; no draw deletion or replacement to hide it."
+    },
+    {
+      "name": "bootstrap_one_undefined_draw",
+      "operation": "bootstrap_completeness",
+      "input": {
+        "required_lengths": [
+          96,
+          192
+        ],
+        "cases": [
+          {
+            "length": 96,
+            "attempted": 19999,
+            "defined": 19998,
+            "undefined": 1
+          },
+          {
+            "length": 192,
+            "attempted": 19999,
+            "defined": 19999,
+            "undefined": 0
+          }
+        ]
+      },
+      "expected": {
+        "interval_construction_permitted": false,
+        "discard_undefined_draws_permitted": false,
+        "retain_descriptive_results": true,
+        "decisive_classification_permitted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Completeness alone never certifies an interval or scientific decision. Any undefined required mean prevents inferential classification; no draw deletion or replacement to hide it."
+    },
+    {
+      "name": "bootstrap_all_conditional_means_undefined",
+      "operation": "bootstrap_completeness",
+      "input": {
+        "required_lengths": [
+          96,
+          192
+        ],
+        "cases": [
+          {
+            "length": 96,
+            "attempted": 19999,
+            "defined": 0,
+            "undefined": 19999
+          },
+          {
+            "length": 192,
+            "attempted": 19999,
+            "defined": 19999,
+            "undefined": 0
+          }
+        ]
+      },
+      "expected": {
+        "interval_construction_permitted": false,
+        "discard_undefined_draws_permitted": false,
+        "retain_descriptive_results": true,
+        "decisive_classification_permitted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Completeness alone never certifies an interval or scientific decision. Any undefined required mean prevents inferential classification; no draw deletion or replacement to hide it."
+    },
+    {
+      "name": "bootstrap_too_few_draws",
+      "operation": "bootstrap_completeness",
+      "input": {
+        "required_lengths": [
+          96,
+          192
+        ],
+        "cases": [
+          {
+            "length": 96,
+            "attempted": 19998,
+            "defined": 19998,
+            "undefined": 0
+          },
+          {
+            "length": 192,
+            "attempted": 19999,
+            "defined": 19999,
+            "undefined": 0
+          }
+        ]
+      },
+      "expected": {
+        "interval_construction_permitted": false,
+        "discard_undefined_draws_permitted": false,
+        "retain_descriptive_results": true,
+        "decisive_classification_permitted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Completeness alone never certifies an interval or scientific decision. Any undefined required mean prevents inferential classification; no draw deletion or replacement to hide it."
+    },
+    {
+      "name": "bootstrap_missing_sensitivity_case",
+      "operation": "bootstrap_completeness",
+      "input": {
+        "required_lengths": [
+          96,
+          192
+        ],
+        "cases": [
+          {
+            "length": 96,
+            "attempted": 19999,
+            "defined": 19999,
+            "undefined": 0
+          }
+        ]
+      },
+      "expected": {
+        "interval_construction_permitted": false,
+        "discard_undefined_draws_permitted": false,
+        "retain_descriptive_results": true,
+        "decisive_classification_permitted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Completeness alone never certifies an interval or scientific decision. Any undefined required mean prevents inferential classification; no draw deletion or replacement to hide it."
+    },
+    {
+      "name": "bootstrap_draw_discard_and_refill",
+      "operation": "bootstrap_completeness",
+      "input": {
+        "required_lengths": [
+          96,
+          192
+        ],
+        "cases": [
+          {
+            "length": 96,
+            "attempted": 20000,
+            "defined": 19999,
+            "undefined": 1
+          },
+          {
+            "length": 192,
+            "attempted": 19999,
+            "defined": 19999,
+            "undefined": 0
+          }
+        ]
+      },
+      "expected": {
+        "interval_construction_permitted": false,
+        "discard_undefined_draws_permitted": false,
+        "retain_descriptive_results": true,
+        "decisive_classification_permitted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Completeness alone never certifies an interval or scientific decision. Any undefined required mean prevents inferential classification; no draw deletion or replacement to hide it."
+    },
+    {
+      "name": "basic_interval_linear_rank_hand_case",
+      "operation": "basic_interval",
+      "input": {
+        "estimate": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "replicates_sorted": [
+          {
+            "numerator": "-1",
+            "denominator": "10"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          {
+            "numerator": "1",
+            "denominator": "5"
+          },
+          {
+            "numerator": "3",
+            "denominator": "10"
+          }
+        ],
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "lower_quantile_probability": {
+          "numerator": "1",
+          "denominator": "40"
+        },
+        "upper_quantile_probability": {
+          "numerator": "39",
+          "denominator": "40"
+        },
+        "lower_rank": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "upper_rank": {
+          "numerator": "39",
+          "denominator": "10"
+        },
+        "lower_quantile": {
+          "numerator": "-9",
+          "denominator": "100"
+        },
+        "upper_quantile": {
+          "numerator": "29",
+          "denominator": "100"
+        },
+        "basic_interval": [
+          {
+            "numerator": "-9",
+            "denominator": "100"
+          },
+          {
+            "numerator": "29",
+            "denominator": "100"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Five replicates are an arithmetic-only fixture, not a valid 19,999-draw assessment. Linear interpolation: ranks0.1/3.9; reflect the quantiles around estimate0.1."
+    },
+    {
+      "name": "basic_interval_not_percentile_interval",
+      "operation": "basic_interval",
+      "input": {
+        "estimate": {
+          "numerator": "1",
+          "denominator": "5"
+        },
+        "replicates_sorted": [
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          {
+            "numerator": "1",
+            "denominator": "5"
+          },
+          {
+            "numerator": "2",
+            "denominator": "5"
+          },
+          {
+            "numerator": "3",
+            "denominator": "5"
+          }
+        ],
+        "marginal_noncoverage": {
+          "numerator": "1",
+          "denominator": "20"
+        }
+      },
+      "expected": {
+        "lower_quantile_probability": {
+          "numerator": "1",
+          "denominator": "40"
+        },
+        "upper_quantile_probability": {
+          "numerator": "39",
+          "denominator": "40"
+        },
+        "lower_rank": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "upper_rank": {
+          "numerator": "39",
+          "denominator": "10"
+        },
+        "lower_quantile": {
+          "numerator": "1",
+          "denominator": "100"
+        },
+        "upper_quantile": {
+          "numerator": "29",
+          "denominator": "50"
+        },
+        "basic_interval": [
+          {
+            "numerator": "-9",
+            "denominator": "50"
+          },
+          {
+            "numerator": "39",
+            "denominator": "100"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "2*estimate=0.4; q0.975=0.58 and q0.025=0.01, giving[-0.18,0.39], not the percentile interval[0.01,0.58]."
+    },
+    {
+      "name": "enclosing_interval_preserves_wide_sensitivity",
+      "operation": "enclosing_interval",
+      "input": {
+        "intervals": [
+          [
+            {
+              "numerator": "3",
+              "denominator": "50"
+            },
+            {
+              "numerator": "2",
+              "denominator": "25"
+            }
+          ],
+          [
+            {
+              "numerator": "1",
+              "denominator": "25"
+            },
+            {
+              "numerator": "1",
+              "denominator": "10"
+            }
+          ],
+          [
+            {
+              "numerator": "1",
+              "denominator": "50"
+            },
+            {
+              "numerator": "3",
+              "denominator": "25"
+            }
+          ]
+        ]
+      },
+      "expected": {
+        "interval": [
+          {
+            "numerator": "1",
+            "denominator": "50"
+          },
+          {
+            "numerator": "3",
+            "denominator": "25"
+          }
+        ]
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "Take the lowest lower bound and highest upper bound; do not select the narrowest supportive interval."
+    },
+    {
+      "name": "enclosing_interval_missing_required_case",
+      "operation": "enclosing_interval",
+      "input": {
+        "intervals": [
+          [
+            {
+              "numerator": "3",
+              "denominator": "50"
+            },
+            {
+              "numerator": "2",
+              "denominator": "25"
+            }
+          ],
+          null,
+          [
+            {
+              "numerator": "1",
+              "denominator": "50"
+            },
+            {
+              "numerator": "3",
+              "denominator": "25"
+            }
+          ]
+        ]
+      },
+      "expected": {
+        "interval": null,
+        "decisive_classification_permitted": false,
+        "retain_descriptive_results": true
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "One absent required sensitivity interval blocks inference across the family of cases."
+    },
+    {
+      "name": "monte_carlo_instability_is_inconclusive",
+      "operation": "classification_readiness",
+      "input": {
+        "valid_interval": [
+          {
+            "numerator": "3",
+            "denominator": "50"
+          },
+          {
+            "numerator": "2",
+            "denominator": "25"
+          }
+        ],
+        "direction": "positive",
+        "delta": {
+          "numerator": "1",
+          "denominator": "20"
+        },
+        "monte_carlo_instability_near_boundary": true
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "selective_reseeding_permitted": false
+      },
+      "source_sections": [
+        "5.3"
+      ],
+      "reason": "The uncertainty diagnostic is assumed already established under its frozen implementation; this fixture invents no universal instability threshold."
+    },
+    {
+      "name": "release_early_success_no_release",
+      "operation": "release_policy",
+      "input": {
+        "fixed_trigger_reached": false,
+        "all_primary_claims_complete": false,
+        "technical_termination": false,
+        "technical_failure_policy_frozen": true,
+        "requested_outputs": [
+          "effect",
+          "interval",
+          "rank",
+          "pass_fail"
+        ]
+      },
+      "expected": {
+        "scientific_outputs_releasable": false,
+        "technical_status_only_releasable": false
+      },
+      "source_sections": [
+        "5.1",
+        "12"
+      ],
+      "reason": "No assessment effect/rank/pass-fail leak before the fixed whole-batch boundary; a frozen technical termination can report its failure, without opportunistic partial scientific rankings."
+    },
+    {
+      "name": "release_complete_before_fixed_trigger_no_release",
+      "operation": "release_policy",
+      "input": {
+        "fixed_trigger_reached": false,
+        "all_primary_claims_complete": true,
+        "technical_termination": false,
+        "technical_failure_policy_frozen": true,
+        "requested_outputs": [
+          "effect",
+          "interval",
+          "rank",
+          "pass_fail"
+        ]
+      },
+      "expected": {
+        "scientific_outputs_releasable": false,
+        "technical_status_only_releasable": false
+      },
+      "source_sections": [
+        "5.1",
+        "12"
+      ],
+      "reason": "No assessment effect/rank/pass-fail leak before the fixed whole-batch boundary; a frozen technical termination can report its failure, without opportunistic partial scientific rankings."
+    },
+    {
+      "name": "release_fixed_trigger_partial_batch_no_release",
+      "operation": "release_policy",
+      "input": {
+        "fixed_trigger_reached": true,
+        "all_primary_claims_complete": false,
+        "technical_termination": false,
+        "technical_failure_policy_frozen": true,
+        "requested_outputs": [
+          "effect",
+          "interval",
+          "rank",
+          "pass_fail"
+        ]
+      },
+      "expected": {
+        "scientific_outputs_releasable": false,
+        "technical_status_only_releasable": false
+      },
+      "source_sections": [
+        "5.1",
+        "12"
+      ],
+      "reason": "No assessment effect/rank/pass-fail leak before the fixed whole-batch boundary; a frozen technical termination can report its failure, without opportunistic partial scientific rankings."
+    },
+    {
+      "name": "release_complete_fixed_batch_releases",
+      "operation": "release_policy",
+      "input": {
+        "fixed_trigger_reached": true,
+        "all_primary_claims_complete": true,
+        "technical_termination": false,
+        "technical_failure_policy_frozen": true,
+        "requested_outputs": [
+          "effect",
+          "interval",
+          "rank",
+          "pass_fail"
+        ]
+      },
+      "expected": {
+        "scientific_outputs_releasable": true,
+        "technical_status_only_releasable": false
+      },
+      "source_sections": [
+        "5.1",
+        "12"
+      ],
+      "reason": "No assessment effect/rank/pass-fail leak before the fixed whole-batch boundary; a frozen technical termination can report its failure, without opportunistic partial scientific rankings."
+    },
+    {
+      "name": "release_technical_termination_no_partial_rank",
+      "operation": "release_policy",
+      "input": {
+        "fixed_trigger_reached": true,
+        "all_primary_claims_complete": false,
+        "technical_termination": true,
+        "technical_failure_policy_frozen": true,
+        "requested_outputs": [
+          "effect",
+          "interval",
+          "rank",
+          "pass_fail"
+        ]
+      },
+      "expected": {
+        "scientific_outputs_releasable": false,
+        "technical_status_only_releasable": true
+      },
+      "source_sections": [
+        "5.1",
+        "12"
+      ],
+      "reason": "No assessment effect/rank/pass-fail leak before the fixed whole-batch boundary; a frozen technical termination can report its failure, without opportunistic partial scientific rankings."
+    },
+    {
+      "name": "release_unfrozen_technical_stop_policy_no_release",
+      "operation": "release_policy",
+      "input": {
+        "fixed_trigger_reached": true,
+        "all_primary_claims_complete": false,
+        "technical_termination": true,
+        "technical_failure_policy_frozen": false,
+        "requested_outputs": [
+          "effect",
+          "interval",
+          "rank",
+          "pass_fail"
+        ]
+      },
+      "expected": {
+        "scientific_outputs_releasable": false,
+        "technical_status_only_releasable": false
+      },
+      "source_sections": [
+        "5.1",
+        "12"
+      ],
+      "reason": "No assessment effect/rank/pass-fail leak before the fixed whole-batch boundary; a frozen technical termination can report its failure, without opportunistic partial scientific rankings."
+    },
+    {
+      "name": "allocation_late_candidate",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "add_primary_after_freeze"
+      },
+      "expected": {
+        "allowed": false
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "Changed membership cannot enter a frozen family."
+    },
+    {
+      "name": "allocation_topic_labels_do_not_split_family",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "split_error_budget_by_descriptive_topics"
+      },
+      "expected": {
+        "allowed": false
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "The family is the complete batch for the common decision, including primary subgroups/interactions/policies."
+    },
+    {
+      "name": "allocation_no_result_view_budget_refund",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "refund_error_budget_after_result_view"
+      },
+      "expected": {
+        "allowed": false
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "Error budget cannot be refunded after an outcome is observed."
+    },
+    {
+      "name": "allocation_exact_duplicate_links_trial",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "register_exact_duplicate"
+      },
+      "expected": {
+        "new_independent_trial": false,
+        "link_existing_trial": true
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "Exact duplicates link to their prior trial; execution retries do not add evidence."
+    },
+    {
+      "name": "allocation_changed_horizon_new_claim",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "change_horizon"
+      },
+      "expected": {
+        "same_frozen_trial_permitted": false,
+        "new_claim_required": true
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "A changed horizon preserves ancestry and needs a new claim; this does not promise remaining confirmation allocation."
+    },
+    {
+      "name": "allocation_shared_assessment_predeclared",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "share_observations_within_predeclared_family"
+      },
+      "expected": {
+        "allowed_subject_to_dependence_exposure_policy": true
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "Shared rows are allowed; no invented requirement of one dataset per idea."
+    },
+    {
+      "name": "allocation_unselected_retained",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "candidate_not_selected"
+      },
+      "expected": {
+        "retain_in_queue": true,
+        "empirical_negative": false
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "Selection is not scientific evaluation."
+    },
+    {
+      "name": "allocation_resource_stop_not_falsification",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "stop_for_insufficient_information"
+      },
+      "expected": {
+        "scientific_outcome": "TESTED_INCONCLUSIVE",
+        "resource_action": "STOP"
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "A plan-governed precision shortfall can end immediately without waiting for new outcomes or claiming falsification."
+    },
+    {
+      "name": "allocation_no_post_result_claim_kind_switch",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "switch_directional_to_nondirectional_after_result"
+      },
+      "expected": {
+        "allowed": false
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "Changing the asserted effect set after seeing the result is forbidden."
+    },
+    {
+      "name": "allocation_distinct_batches_not_joint_five_percent",
+      "operation": "allocation_invariant",
+      "input": {
+        "event": "combine_primary_and_corroboration_without_split"
+      },
+      "expected": {
+        "campaign_wide_0_05_claim_permitted": false
+      },
+      "source_sections": [
+        "5.1",
+        "5.2",
+        "12"
+      ],
+      "reason": "Each reserved batch has a separate stated error claim; no automatic combined campaign-wide 5% claim."
+    }
+  ]
+}

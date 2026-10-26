@@ -1,0 +1,253 @@
+{
+  "schema": "information-planning-assessment/1",
+  "date": "2026-10-25",
+  "author": "Independent memory_boundary_review agent",
+  "purpose": "Define the smallest faithful development-only dependence, nuisance and sample-information continuation before implementation; identify actual semantic and compute blockers.",
+  "status": "DESIGN_RECOMMENDATION_NOT_SCIENTIFIC_APPROVAL",
+  "scope": {
+    "read_only_runtime_review": true,
+    "tests_changed": false,
+    "application_changed": false,
+    "new_artifact": "docs/reviews/implementation-2026-10-25/information-planning-assessment.json",
+    "whole_framework_verdict": false,
+    "calibrated_power_or_n_min_established": false
+  },
+  "governing_sources": [
+    {
+      "path": "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+      "sha256": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+      "sections": [
+        "5.2 approved effects and directional/nondirectional decisions",
+        "5.3 actual fixed-count joint bootstrap",
+        "5.4 development-only nuisance simulation and80% design target",
+        "9 separate30-minute batch and60-minute narrow-calibration caps",
+        "11 fresh256-dataset calibration worlds and exact bounds",
+        "12 allocation/freeze",
+        "14 implementation versus scientific meaning"
+      ]
+    },
+    {
+      "path": "docs/architecture/11_OPEN_DECISIONS.md",
+      "entries": [
+        "OPEN-05 exact development-derived dependence and information targets are required run inputs",
+        "OPEN-11 study-specific repetitions remain pre-outcome plan inputs"
+      ]
+    },
+    {
+      "path": "trading_researcher/evaluation_policy.py",
+      "use": "Existing draft fixes the pilot effect/direction, family policy, bootstrap profile and a currently missing n_min; simple-return membership is exact24h same-price AST plus certified raw close identity."
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/mc-stability-review.json",
+      "sha256": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+      "use": "Prior bounded conformance review; not a calibration result."
+    }
+  ],
+  "literature": [
+    {
+      "url": "https://arxiv.org/html/1712.03198",
+      "title": "Morris, White and Crowther: Using simulation studies to evaluate statistical methods",
+      "use": "Separate aims, data-generating mechanisms, estimands, methods and performance measures; simulation performance itself has Monte Carlo uncertainty. This does not set the project's numerical defaults."
+    },
+    {
+      "url": "https://users.ssc.wisc.edu/~behansen/718/Politis%20Romano.pdf",
+      "title": "Politis and Romano: The Stationary Bootstrap",
+      "use": "Methodological family of the adopted estimator; not evidence of finite-sample coverage for the pilot."
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html",
+      "title": "SciPy proportion_ci documentation",
+      "use": "Primary implementation documentation identifies the exact Clopper-Pearson method. No SciPy installation is required for exact threshold comparisons."
+    },
+    {
+      "url": "https://bashtage.github.io/arch/doc/bootstrap/generated/arch.bootstrap.optimal_block_length.html",
+      "title": "arch optimal_block_length documentation",
+      "use": "Shows that automatic block selection is a specific estimator with tuning and failure conditions, not a generic proof of adequate dependence. No new selector is adopted by this note."
+    }
+  ],
+  "recommendation": {
+    "immediate_action": "Qualify and benchmark a semantics-preserving binary integer fast path against the retained Fraction implementation before running a power grid.",
+    "first_information_profile": "Owned development-only, pooled binary population-contrast planning with a frozen joint mask law and declared serial/common-shock latent response model.",
+    "reject_substitution": "Centered influence-function or normal/variance calculations may be separately labeled screening/cost diagnostics. They cannot supply actual-bootstrap detection power, replace generated Boolean outcomes, or complete n_min.",
+    "preserve_return_branch": "Keep24h simple-return hypotheses intact. A separate faithful return generator remains required; a binary model is not an implementation of that branch.",
+    "integration": "Attach nuisance fit, assumption diagnostics, model/seed/target profile and all world results to the existing exact owned plan/execution ancestry. Produce a new immutable information-plan candidate, not an unconnected utility or a mutation of an old plan."
+  },
+  "binary_population_model": {
+    "target": "Population E[Y | eligible scope,C=true] minus E[Y | eligible scope], using the same row weighting as the adopted estimator. This differs from the realized finite-world sample contrast.",
+    "inputs": "Use only the declared owned development execution. Keep the aligned joint time grid, scope/maturity/missingness masks, all instruments and C=true/false/unknown distinctions. Unknown C remains in the scope baseline.",
+    "mask_law": "A frozen circular stationary joint-mask resampler can inherit development population marginals. Resample all instrument masks together; do not compress zero-contribution times or independently resample conditions/missingness. Its parameters and any exogenous-missingness assumption must be explicit.",
+    "parameters": {
+      "q": "Development pooled eligible-scope success rate.",
+      "w": "Development population fraction of eligible scope rows with C=true, not the fraction among only known C.",
+      "e": "Signed population effect: direction times0,delta,2delta. For nondirectional designs, predeclare both positive and negative alternatives or clearly limit the branch; do not choose the easier sign after results.",
+      "p_true": "q+e",
+      "p_not_true": "q-w*e/(1-w)"
+    },
+    "requirements": [
+      "0<w<1 for a nonzero target",
+      "Both probabilities must lie in[0,1]",
+      "No clipping, smaller effect substitution or post-simulation adjustment of observed group means",
+      "No dropping infeasible worlds and retrying a favorable one"
+    ],
+    "exact_counterexample": {
+      "w": "1/2",
+      "q": "1/2",
+      "effect": "1/10",
+      "correct_rates": {
+        "true": "3/5",
+        "not_true": "2/5"
+      },
+      "incorrect_rates": {
+        "true": "3/5",
+        "not_true": "1/2"
+      },
+      "incorrect_effect": "1/20"
+    },
+    "random_mask_fraction": "Compute probabilities from the fixed population model, not each world's realized counts, unless a different conditional-design model is explicitly selected. Random finite-world denominators and their bias belong in the evaluated method's performance. They do not change the fixed population truth.",
+    "dependent_responses": "A small declared candidate uses stationary uniform latent states with probabilistic persistence plus a common-shock component and instrument-specific components. Threshold at the fixed p_true or p_not_true. Uniform marginals preserve the target rates; the dependence parameters are assumptions fitted only from development or assigned as explicit stress scenarios.",
+    "finite_rng_precision": "For rational rates, exact integer Bernoulli draws or a declared common lattice can avoid silently replacing the intended population probabilities with float-threshold probabilities. Runtime/PRNG and the numerical probability-law qualification must remain recorded.",
+    "nuisance_fit": "Retain empirical rates and counts by instrument and condition, mask/gap runs, serial covariances of joint contrast-score/count contributions, and cross-instrument dependence. Any parameter grid/objective/lag set and tie rule are fixed before power outcomes. Do not optimize nuisance parameters to maximize simulated power.",
+    "limitations": [
+      "A pooled homogeneous response-rate model is a narrow assumption. It does not preserve arbitrary instrument-specific heterogeneity merely because all instruments share timestamps.",
+      "A common within-instrument shift does not generally give the same pooled effect when instrument weights differ between C and S.",
+      "A positive-persistence/common-shock-only model cannot silently represent observed negative or otherwise unsupported dependence.",
+      "An empirical zero/one event rate or undefined covariance does not prove a degenerate population or sufficient information; inadequate nuisance identification stays a gap.",
+      "A fitted response model is an assumption about hypothetical worlds, not a claim that the real market follows that model.",
+      "Response/mask-level calibration tests the frozen estimator. It does not certify the original natural-language idea, all raw-feature semantics, or the complete discovery/selection process."
+    ]
+  },
+  "dependence_path": {
+    "measurements": "Persist full-grid scope/condition count contributions, outcome residual/contrast-score diagnostics, per-instrument and pooled rate/missingness summaries, and explicit lag-dependent coverage. Ineligible rows contribute zero to a score sum without inventing an observed zero outcome.",
+    "block_length": "The existing predeclared base length must remain at least the outcome horizon and receive a traceable development rationale. Half/base/double and their horizon floor remain unchanged.",
+    "no_false_certificate": "Flat or insignificant empirical autocorrelation is not proof of independence/stationarity. A quantitative automatic selector is its own versioned candidate, with degeneracy checks and later calibration; it cannot supply a universal lower bound on information.",
+    "model_fit_gate": "If the declared small model cannot reproduce the required development diagnostics within its predeclared interpretation, retain MODEL_OR_INFORMATION_GAP or run an explicitly frozen stress family. Do not tune the final calibration worlds after seeing their results."
+  },
+  "return_limitation": {
+    "membership": "The ten-basis-point profile applies to the bound same-close96-bar simple return, not any ratio-valued response.",
+    "minimum": "A return simulation must preserve gross-return positivity, declared horizon/overlap, joint instruments and the scope/condition/missingness target. Adding a constant to arbitrary centered residuals can generate returns below-1.",
+    "concrete_counterexample": "A simple return of-0.99 shifted by-0.02 becomes-1.01, impossible for two positive spot prices.",
+    "full_path_route": "For claims of full executable-return simulation, generate a declared positive15-minute price process, retain warmup/future horizon, then run the actual96-bar return expression and relevant candidate calculations. The planted population contrast must be analytically established or have separately bounded truth uncertainty.",
+    "narrower_route": "A direct dependent positive-gross-return response model can be an explicitly estimator-level study if its target and limitations are independently justified; it cannot be labeled full-H_exec or whole-market calibration.",
+    "current_disposition": "Do not coerce returns into the binary or influence-function branch. Preserve a typed return-model gap while advancing the binary path and plan a separate return-generator conformance slice."
+  },
+  "concrete_owned_flow": [
+    {
+      "step": 1,
+      "action": "Accelerate only exact binary sufficient sums using Python unbounded integers first. Preserve PRNG draws, segment paths, full-grid contributions, per-draw exact means/contrast, undefined ordinals, callbacks, stopping and MC policy. Keep nonbinary data on the reference path and prove type admission."
+    },
+    {
+      "step": 2,
+      "action": "Read the exact owned development execution/plan and compute retained nuisance/dependence diagnostics. Bind source versions, certificates, case bytes and exposure; no assessment/corroboration input."
+    },
+    {
+      "step": 3,
+      "action": "Before simulation, retain an immutable profile containing model/version, population truths, nuisance assumptions, dependence parameters, finite target grid, scenario effects, number of worlds, seed families, actual estimator/MC configuration, resource/storage caps, candidate-target rule and treatment of every failure."
+    },
+    {
+      "step": 4,
+      "action": "Generate each world from its fixed recipe and run the actual19999-draw-per-sensitivity estimator and current MC decision procedure. A simulation world is one joint multi-instrument dataset; bars/instruments/bootstrap draws are not independent outer replicates."
+    },
+    {
+      "step": 5,
+      "action": "Retain every world identity/truth/result, support/negative/inconclusive counts, information gaps, technical failures, interval coverage and power uncertainty. Do not filter undefined or failed outcomes to create a favorable denominator."
+    },
+    {
+      "step": 6,
+      "action": "Publish the complete finite-grid development study, its smallest tested eligible candidate under the frozen rule, attainable precision and assumptions. If the grid/cap is incomplete, leave n_min unresolved. Do not reduce delta, resample selectively or extrapolate an untested target as established."
+    },
+    {
+      "step": 7,
+      "action": "Freeze the chosen method/version and selected candidate information target before fresh narrow calibration. Execute the contract's256 fresh datasets per declared world with disjoint protected seed/data streams, boundary/null/planted scenarios and joint family cases. Calibration failure produces a gap or a new version requiring genuinely new final draws."
+    },
+    {
+      "step": 8,
+      "action": "Only after required independent conformance/calibration and scientific input/semantic/allocation gates can the information target enter an actual scientific freeze. These development objects grant no assessment access, evidence release or capital authority."
+    }
+  ],
+  "target_grid_and_counts": {
+    "required_unit": "A target must bind joint calendar/grid positions plus eligible-scope and conditioned counts or their model distribution; none is an effective-independent-observation count.",
+    "finite_grid": "Use an explicit ordered set of feasible joint-time window lengths bounded by the intended fixed historical window and matured-label boundary. Record exact scope/condition counts for fixed-design masks, or their distributions for a population mask model.",
+    "candidate_example_only": "A four-point geometric grid ending at the maximum declared usable historical window is an implementable engineering starting point. Its exact values are run-profile inputs, not universal N_min defaults.",
+    "smallest": "Report smallest tested eligible grid target, not an unproved minimum over every possible integer sample size. Do not assume monotone power when mask counts, dependence or phase can change.",
+    "m_binding": "The current family count remains provisional until actual primary membership is bound. Any planning result is conditional on its specified m and marginal alpha; a changed family policy requires a new compatible plan/study.",
+    "planning_repetitions_recommendation": "A fixed64-world development screening profile is a concrete bounded candidate, not an adopted default or final certificate. At power0.8 its Monte Carlo SE is0.05, so it supplies a rough planning curve. Use a different explicitly frozen count if the measured budget warrants it; never add worlds until a favorable crossing.",
+    "selection_rule": "Keep the approved80% design target distinct from a confidence-bound requirement. A point-estimated80% grid crossing with reported uncertainty may nominate a development target; it does not prove true power>=80%. Requiring a lower bound>=80% would be an additional conservative policy and must be stated, not silently imported.",
+    "selection_uncertainty": "Pointwise grid confidence bounds are not automatically simultaneous or selection-adjusted. A separately declared simultaneous allocation or fresh selected-target check is needed for such a claim. Final calibration draws must not be the same worlds used to choose the target.",
+    "final_count": "256 fresh datasets per declared calibration world is the approved narrow-calibration requirement. Finishing fewer leaves calibration incomplete.",
+    "failures": "Completed inconclusive/information-gap outcomes remain in operating-characteristic denominators and are not detections. Technical failures remain explicit incomplete/invalid executions; they cannot silently certify a low false-support rate by being omitted or recoded as successful negative checks."
+  },
+  "exact_calibration_gate_arithmetic": {
+    "derivation": "For a one-sided95% Clopper-Pearson upper bound<=u, compare BinomialCDF(k;n,u)<=0.05. For a one-sided95% lower bound>=l, compare BinomialSurvival(k-1;n,l)<=0.05. These exact tail comparisons avoid an approximate inverse-beta solver for the gate.",
+    "n": 256,
+    "erroneous_decisions_maximum_for_upper_bound_at_most_0_10": 17,
+    "detections_minimum_for_lower_bound_at_least_0_70": 192,
+    "note": "These counts implement the already approved tolerances.205/256 is the first count with a point estimate>=80%; it is a different quantity.",
+    "required_worlds": "Include zero effect, actual boundary effectdelta, planted2delta, heavy-tail/overlap/common-shock stresses where applicable, and joint mixed-effect claim-family miscoverage. For a real family sharing outcomes, preserve coherent shared data; unrelated simulated outcomes are not proof of calibration for overlapping claims.",
+    "verification": {
+      "command": "python -B - (in-memory Fraction/combinatorial enumeration of all257 counts at p=1/10 and7/10)",
+      "exit_code": 0,
+      "output": [
+        "upper_at_most_0.10 admits k=0..17",
+        "lower_at_least_0.70 admits k=192..256",
+        "MCSE at0.8:64 worlds0.05;256 worlds0.025"
+      ],
+      "qualification": "Arithmetic check only; no estimator calibration or tests/app edits."
+    }
+  },
+  "resource_assessment": {
+    "measured_input": {
+      "seconds": 154,
+      "joint_timestamps": 35136,
+      "inner_draws": 59997,
+      "source": "Parent-reported current kernel measurement; not independently rerun in this read-only methodology review."
+    },
+    "extrapolations_without_replay_or_retention": [
+      {
+        "targets": 1,
+        "effect_scenarios": 3,
+        "worlds_per_scenario": 256,
+        "estimated_seconds": 118272,
+        "estimated_hours": "32.8533"
+      },
+      {
+        "targets": 1,
+        "effect_scenarios": 3,
+        "worlds_per_scenario": 64,
+        "estimated_seconds": 29568,
+        "estimated_hours": "8.2133"
+      }
+    ],
+    "cap": "The adopted narrow-calibration cap is60 minutes, not a promised runtime. A finite development study also needs an explicit shared aggregate cap; retries cannot reset it.",
+    "immediate_conclusion": "Exact acceleration and measured full-workload costing are prerequisites to launching a realistic grid. A small fast synthetic case does not establish that the35136-timestamp study fits.",
+    "acceleration_boundary": "Python unbounded integer sufficient statistics are ordinary implementation work if exact equivalence is established. Fixed-width/vector/native paths require overflow analysis, pinned runtime/source and independent comparison before use. Normal approximations, changed inner draw counts, discarded failures or changed endpoints would alter the scientific method.",
+    "additional_costs": "Measure generation, all bootstrap sensitivities, MC diagnostics, retained-source replay, hashing and storage. Retention may need a lossless compact representation of exact sufficient counts rather than enormous repetitive JSON; any new representation needs replay/conformance, not automatic data loss.",
+    "continuation": "If the complete declared study still cannot fit, return RESOURCE_STOP/UNATTAINABLE_WITHIN_BUDGET with retained work and a recorded continuation decision. Do not describe the partial study as the approved256-world calibration."
+  },
+  "governance": {
+    "within_authorized_implementation": [
+      "Development-only diagnostics and explicitly versioned nuisance scenarios for the existing mean/rate contrast",
+      "Exact implementation acceleration with independent equivalence tests",
+      "Run-specific fixed targets, simulation counts and seeds retained before outcomes",
+      "Typed feasibility, information and resource gaps",
+      "Candidate conformance/calibration under the existing contract"
+    ],
+    "not_automatically_a_user_decision": "Choosing a transparent development simulation profile is an expected run-input/implementation task under sections5.4 and11. It can be built and reviewed as an uncalibrated candidate without asking the user to invent statistical internals.",
+    "requires_explicit_new_meaning_review": [
+      "Changing the estimand or outcome interpretation",
+      "Changing approved delta/effect profile, decision thresholds or release rules",
+      "Using influence-function/normal power as if it were the approved actual bootstrap procedure",
+      "Reducing fixed inner draws or silently expanding resource authority",
+      "Replacing the80% design target or70%/10% calibration tolerances",
+      "Treating a fitted nuisance world as universally true market dynamics or bypassing scientific acceptance/freeze"
+    ],
+    "scope_uncertainty": "If model membership or truth mapping cannot be established for a particular claim, retain the affected profile gap. Do not force all binary/return meanings into one convenient generator."
+  },
+  "concrete_blockers": [
+    "Current full-workload cost exceeds the approved calibration cap by a large margin.",
+    "No faithful return-model truth/overlap mapping has yet been implemented or independently checked.",
+    "A final information target cannot be universal while family membership, nuisance adequacy, scientific data acceptance and actual calibration remain unresolved.",
+    "Joint-family calibration for overlapping claims needs coherent shared synthetic outcomes, not independent per-claim datasets.",
+    "The latent pooled binary model's assumptions and nuisance fitting algorithm still need explicit pre-run specification and independent conformance."
+  ],
+  "next_action": "Proceed with the parent's exact binary integer fast-path implementation and independent reference comparison. Then bind the development diagnostics and finite population-model study into the owned plan path; do not launch a power grid until measured complete-study cost and fixed profile fit the authorized resource boundary."
+}

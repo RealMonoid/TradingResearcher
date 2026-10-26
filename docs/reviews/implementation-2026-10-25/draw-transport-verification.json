@@ -1,0 +1,456 @@
+{
+  "schema": "draw-transport-engineering-verification/1",
+  "status": "PASS_EXACT_DRAW_TRANSPORT",
+  "recorded_at_utc": "2026-10-25T20:42:35.552108+00:00",
+  "purpose": "Reduce measured duplicate draw serialization/copying while preserving exact calculation and retained replay.",
+  "source": "https://docs.python.org/3.14/library/profile.html",
+  "source_use": "Primary profiler documentation: profile to locate work; use separate unprofiled timing comparisons.",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_draw_transport*.py'",
+      "tests": 13,
+      "seconds": "16.350",
+      "tool_chunk": "101eaf",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_stationary_bootstrap*.py'",
+      "tests": 19,
+      "seconds": "17.581",
+      "tool_chunk": "3859fd",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_exact_bootstrap_acceleration*.py'",
+      "tests": 16,
+      "seconds": "33.854",
+      "tool_chunk": "fe55b2",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_study_runs*.py'",
+      "tests": 13,
+      "seconds": "245.979",
+      "tool_chunk": "2e0808",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_calibration_runs.py'",
+      "tests": 3,
+      "seconds": "144.816",
+      "tool_chunk": "980a4e",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "includes": "verify_system_model and git diff --check",
+      "result": {
+        "status": "PASS",
+        "checks": {
+          "local_links": 759,
+          "source_files": 5,
+          "decisions": 88,
+          "preserved_original_decisions": 67,
+          "preserved_approved_decisions": 68,
+          "preserved_rejections": 47,
+          "traced_requirements": 30,
+          "generator_acceptance_specs": 3,
+          "diagram_edges": 38,
+          "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+          "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+          "git_diff_check_exit": 0,
+          "later_approved_changed_paths": {
+            "REVIEWING.md": "D086 / agent-inquiry/1.0"
+          },
+          "adoption_baseline_files": 63,
+          "preexisting_files_unchanged": 45,
+          "archived_documents_exact": 20,
+          "preserved_preapproval_decisions": 70,
+          "full_historical_definition_review_generator_texts": 3,
+          "approved_policy_sections_exact_except_status_words": 15,
+          "scoped_open_dispositions_and_acceptance_mappings": 15,
+          "adoption_decision_status_counts_D001_D085": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 63,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          },
+          "decision_status_counts": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 66,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          }
+        },
+        "checked_files_sha256": {
+          "AGENTS.md": "6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9",
+          "README.md": "1d3bf44b888d8bf28045e0aa695c44d8086d569725f12144bda81b5ee3acfa71",
+          "docs/architecture/01_PROBLEM_DEFINITION.md": "7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446",
+          "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d",
+          "docs/architecture/05_REQUIREMENTS.md": "b83e0e8b1f7d0c8561faea30425030e21ef28abcedf13ad7adebdf4a0dd0ce56",
+          "docs/architecture/06_MASTER_ARCHITECTURE.md": "16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "0191b59fbfc69cd3a4fe3046446c09c3c19d281f29314b9b6b3d3b132e386079",
+          "docs/architecture/10_IMPLEMENTATION_ROADMAP.md": "eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2",
+          "docs/architecture/11_OPEN_DECISIONS.md": "68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29",
+          "docs/architecture/12_TRACEABILITY_MATRIX.md": "76d4840c1de81789429f7e937888ba6b3731f1d09d7777c80c7ea6526d1bacba",
+          "docs/architecture/ARCHITECTURE_REGISTER.json": "a62fd070ce8c0b7e84203120001b315ad2305eaea5ab671978831f7769a18a37",
+          "docs/architecture/CURRENT_STATE.md": "c0b3089b2339ccb0cd6b89783b2a7e06ee868de5a86267777a9883ae4211e671",
+          "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+          "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2",
+          "docs/architecture/04_DEFINITIONS.md": "3a986d031c4bbd36d9ef84703ca57c51ccb6b48ca4ae08d9777fdd8efc1d27d9",
+          "docs/architecture/08_ENGINEERING_REVIEW.md": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c",
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+          "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626",
+          "docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md": "dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e",
+          "docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md": "bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d",
+          "REVIEWING.md": "47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b",
+          "trading_researcher/README.md": "644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256",
+          "docs/reviews/verify_system_model.py": "59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef",
+          "docs/reviews/verify_retail_contract.py": "c1aecd79447dafd205a284415ed25d7ba2ad35ebee25f2c108c74d1df19b0e92",
+          "docs/reviews/adoption-2026-10-23/baseline.json": "56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036",
+          "docs/reviews/adoption-2026-10-23/preapproval-documents.zip": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+        },
+        "errors": [],
+        "unverified": [
+          "New-session behavioral efficacy and compaction retention",
+          "Mermaid rendering",
+          "Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately",
+          "D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement",
+          "Complete executable AST/schema/primitive implementations and independent golden fixtures",
+          "Actual data quality, rights, historical availability, model exposure and account/execution costs",
+          "Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately",
+          "Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs",
+          "SRC-001 through SRC-008 and completeness of original conversation"
+        ],
+        "changed_files_since_preapproval": [
+          "AGENTS.md",
+          "README.md",
+          "REVIEWING.md",
+          "docs/architecture/01_PROBLEM_DEFINITION.md",
+          "docs/architecture/02_DECISION_REGISTER.md",
+          "docs/architecture/04_DEFINITIONS.md",
+          "docs/architecture/05_REQUIREMENTS.md",
+          "docs/architecture/06_MASTER_ARCHITECTURE.md",
+          "docs/architecture/07_SCIENTIFIC_EVALUATION.md",
+          "docs/architecture/08_ENGINEERING_REVIEW.md",
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+          "docs/architecture/10_IMPLEMENTATION_ROADMAP.md",
+          "docs/architecture/11_OPEN_DECISIONS.md",
+          "docs/architecture/12_TRACEABILITY_MATRIX.md",
+          "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+          "docs/architecture/ARCHITECTURE_REGISTER.json",
+          "docs/architecture/CURRENT_STATE.md",
+          "docs/reviews/verify_system_model.py"
+        ],
+        "added_files": [
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+          "docs/reviews/verify_retail_contract.py",
+          "docs/reviews/adoption-2026-10-23/baseline.json",
+          "docs/reviews/adoption-2026-10-23/preapproval-documents.zip",
+          "docs/reviews/adoption-2026-10-23/verification.json"
+        ],
+        "preserved_proposal_sha256": "22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29",
+        "preapproval_archive_sha256": "16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18"
+      }
+    }
+  ],
+  "unique_tests_passed": 64,
+  "independent_review": {
+    "path": "draw-transport-review.json",
+    "sha256": "182759c2b8063176b1ad667459c6d410bf0561531f10fdbaae45955e69f6b6db",
+    "tests": 12,
+    "seconds": "14.415",
+    "exit_code": 0,
+    "included_in_parent_count": true,
+    "test_provenance": "Authored after production change; fixed expected values use archived old calculator and old canonical transport."
+  },
+  "benchmark": {
+    "status": "PASS_EXACT_ALTERNATING_CHILD_REPLAY",
+    "runs": [
+      {
+        "source": "before",
+        "seconds": 5.478213,
+        "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+        "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+        "proofs": 2,
+        "meter": {
+          "materialized_bytes": 32905762,
+          "accounting_complete": true
+        }
+      },
+      {
+        "source": "after",
+        "seconds": 4.336929,
+        "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+        "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+        "proofs": 2,
+        "meter": {
+          "materialized_bytes": 32907354,
+          "accounting_complete": true
+        }
+      },
+      {
+        "source": "after",
+        "seconds": 4.843297,
+        "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+        "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+        "proofs": 2,
+        "meter": {
+          "materialized_bytes": 32907354,
+          "accounting_complete": true
+        }
+      },
+      {
+        "source": "before",
+        "seconds": 5.862833,
+        "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+        "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+        "proofs": 2,
+        "meter": {
+          "materialized_bytes": 32905762,
+          "accounting_complete": true
+        }
+      },
+      {
+        "source": "before",
+        "seconds": 5.828025,
+        "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+        "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+        "proofs": 2,
+        "meter": {
+          "materialized_bytes": 32905762,
+          "accounting_complete": true
+        }
+      },
+      {
+        "source": "after",
+        "seconds": 4.829184,
+        "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+        "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+        "proofs": 2,
+        "meter": {
+          "materialized_bytes": 32907354,
+          "accounting_complete": true
+        }
+      }
+    ],
+    "seconds": {
+      "before": [
+        5.478213,
+        5.828025,
+        5.862833
+      ],
+      "after": [
+        4.336929,
+        4.829184,
+        4.843297
+      ]
+    },
+    "before_median": 5.828025,
+    "after_median": 4.829184,
+    "after_source_sha256": {
+      "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "2abfbd49e81914f30fb1ae1a410e06b133ae759e496c609865d321c68eebe156",
+      "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+      "trading_researcher/calibration_runs.py": "518e4ec2d709eab29010bbb618440c1c294384cb0f1132280acd6217e6d74b9a",
+      "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+      "trading_researcher/coordination.py": "91ac943f51ef2eb218b7a6a9adfd5c0f9e181f7cd4fe5a48257997672043fe37",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+      "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+      "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+      "trading_researcher/measurements.py": "239b0a0ca39885a3aa3347d14f250404bf719b4a39b3f6318b2d3d40773b3be2",
+      "trading_researcher/memory.py": "c24b23cdd750d58c239240beb86d3db65488489d70d38d9af6e52fd3b507ea0c",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+      "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+      "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+      "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+      "trading_researcher/research_calls.py": "69b0895042107bbd3d528bba5c9624762c1d01c329bf00b09320adbb04b1e900",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+      "trading_researcher/storage.py": "c4948b099a77b7509371ad9f1cefff9441d48c4c71eaae7d228432faecbdd4ed",
+      "trading_researcher/study_pipeline.py": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+      "trading_researcher/study_runs.py": "0500d07632ddd6bb00d3773e7b8564e0dc2b8e2718ce6fb306256c188d5c19c7",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20"
+    },
+    "qualification": "Three runs per version of the same 16-time development world, alternating order, actual separate generation/replay. Not representative calibration or large-sample performance.",
+    "median_ratio_after_over_before": 0.8286141531650945
+  },
+  "baseline_profile": {
+    "status": "PROFILED_IDENTICAL_RETAINED_WORLD",
+    "original_observation_sha256": "b6a0e442469f237508cce881a6f87a79d8a07e3e54878d230a57ba2f5cc3b672",
+    "source_sha256": {
+      "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "2abfbd49e81914f30fb1ae1a410e06b133ae759e496c609865d321c68eebe156",
+      "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+      "trading_researcher/calibration_runs.py": "518e4ec2d709eab29010bbb618440c1c294384cb0f1132280acd6217e6d74b9a",
+      "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+      "trading_researcher/coordination.py": "91ac943f51ef2eb218b7a6a9adfd5c0f9e181f7cd4fe5a48257997672043fe37",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+      "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+      "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+      "trading_researcher/measurements.py": "239b0a0ca39885a3aa3347d14f250404bf719b4a39b3f6318b2d3d40773b3be2",
+      "trading_researcher/memory.py": "c24b23cdd750d58c239240beb86d3db65488489d70d38d9af6e52fd3b507ea0c",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+      "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+      "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+      "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+      "trading_researcher/research_calls.py": "69b0895042107bbd3d528bba5c9624762c1d01c329bf00b09320adbb04b1e900",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+      "trading_researcher/storage.py": "c4948b099a77b7509371ad9f1cefff9441d48c4c71eaae7d228432faecbdd4ed",
+      "trading_researcher/study_pipeline.py": "86929369fc5c87df952090af9009e047125f0d9b5c164d17b884b909f6f30d3d",
+      "trading_researcher/study_runs.py": "0500d07632ddd6bb00d3773e7b8564e0dc2b8e2718ce6fb306256c188d5c19c7",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20"
+    },
+    "baseline": {
+      "wall_seconds": 1.803503,
+      "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+      "stream_bytes": 15699508,
+      "counts": {
+        "case": 16,
+        "draw": 59997
+      },
+      "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+      "state": "INFORMATION_GAP"
+    },
+    "profiled": {
+      "wall_seconds": 8.597897,
+      "stream_sha256": "af76c161aeb318dbf54941694ed46f7f50f3df4fa9a775b142edc72fb949c528",
+      "stream_bytes": 15699508,
+      "counts": {
+        "case": 16,
+        "draw": 59997
+      },
+      "result_sha256": "0a93ee127a8fb9772f28f350683028598bfe06edb216fb2d6041afbadbae1e81",
+      "state": "INFORMATION_GAP"
+    },
+    "qualification": "One retained development world. Profiling timings are instrumented; use unprofiled comparisons for speed. No new study selection, provider call or calibration."
+  },
+  "changed_files": [
+    "trading_researcher/stationary_bootstrap.py",
+    "trading_researcher/study_pipeline.py",
+    "tests/test_draw_transport.py",
+    "tests/test_draw_transport_adversarial.py",
+    "trading_researcher/STATIONARY_BOOTSTRAP.md",
+    "trading_researcher/INFORMATION_STUDIES.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/draw-transport-review.json",
+    "docs/reviews/implementation-2026-10-25/draw-transport-verification.json",
+    "docs/reviews/implementation-2026-10-25/draw-transport-evidence.zip"
+  ],
+  "changed_files_sha256": {
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/study_pipeline.py": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+    "tests/test_draw_transport.py": "e0a44b5c2f1a2b29cd641c52e5eafae1a1c4eaaf528c90f57b26022db228cedd",
+    "tests/test_draw_transport_adversarial.py": "96644892f056843e96ee6ac9145d5989e41c2af6cad8290a2c0e2ff78444e1e8",
+    "trading_researcher/STATIONARY_BOOTSTRAP.md": "5312464bc78873008db046ec5118a2ecc27f6c0e5f96bc1d166c8c9283d404c1",
+    "trading_researcher/INFORMATION_STUDIES.md": "7a1626a74f474290a0f0d5b3d62b2654cb59c9e718071c296fb6b154e3825f8d",
+    "docs/architecture/CURRENT_STATE.md": "c0b3089b2339ccb0cd6b89783b2a7e06ee868de5a86267777a9883ae4211e671",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "be7d77666a99cd05e161d4a899f90678cc2fab1f42bcb429db4dd53d15cfc048",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md": "029b37089d07f8cca2847dea8fc4f88b477d7fa8818e2336830efc44ad6cbd0b",
+    "docs/reviews/implementation-2026-10-25/progress.json": "99e0980d2cb4dc5ef6f9f1e6c7df66b006701b3743709b2fc47eff2b2e3f2e72",
+    "docs/reviews/implementation-2026-10-25/draw-transport-review.json": "182759c2b8063176b1ad667459c6d410bf0561531f10fdbaae45955e69f6b6db"
+  },
+  "unchanged_application_files": 44,
+  "unchanged_prior_artifacts": 59,
+  "contract_unchanged": true,
+  "live_ledger_unchanged": true,
+  "live_ledger_sha256": "36a61c293c0de7951d79da34bdb5061520cafd41ec30b5f3a74aa33bfff43c79",
+  "existing_live_usage": {
+    "calls": 10,
+    "tokens": 35084,
+    "conservative_nano_usd": 95105000,
+    "aggregate_cap_nano_usd": 5000000000
+  },
+  "new_provider_calls": 0,
+  "new_simulation_scope": "Repeat fixed development input for performance and correctness only; no fresh final calibration cohort or new scientific interpretation.",
+  "authored_checks": {
+    "whitespace": "PASS",
+    "json": "PASS",
+    "local_links": 179
+  },
+  "red_checks": [
+    {
+      "tool_chunk": "d72b8d",
+      "exit_code": 1,
+      "reason": "Byte callback absent before implementation"
+    },
+    {
+      "tool_chunk": "eb8e7f",
+      "exit_code": 1,
+      "reason": "Profiling helper used nonexistent blob helper name; corrected before collecting data"
+    }
+  ],
+  "unverified": [
+    "Representative larger-sample and full-study budget feasibility",
+    "Stationarity, denominator adequacy and justified population/stress law",
+    "Complete final calibration and coherent mixed-truth multi-claim worlds",
+    "Scientific data/meaning admission and atomic freeze",
+    "Genuine mixed-model research, policy/backtest efficacy and full seven-package completion"
+  ],
+  "next_action": "Continue necessary scientific inputs and full-family calibration capability; do not infer a passing study budget or scientific validity from this small exact workload.",
+  "archive_sha256": "dc46667cccc0074a0ad53a8f5944f4f0fd556bcd257f4e842609eee8c28c6b2c",
+  "archive_scope": "Source baseline, exact changed code/tests/guides and measurements; excludes private cases, registry, credentials and raw retained request."
+}

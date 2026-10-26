@@ -1,0 +1,133 @@
+{
+  "schema": "anthropic-transport-engineering-verification/1",
+  "status": "PASS_BOUNDED_OFFLINE_TRANSPORT",
+  "recorded_at_utc": "2026-10-25T19:11:29.162450+00:00",
+  "scope": "Offline protocol/accounting and mixed-controller fixture; not live provider/scientific validation.",
+  "unique_tests_passed": 79,
+  "completed_checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_anthropic*.py'",
+      "tests": 35,
+      "seconds": 3.313,
+      "exit_code": 0,
+      "tool_chunk": "32e82b"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_provider*.py'",
+      "tests": 19,
+      "seconds": 1.079,
+      "exit_code": 0,
+      "tool_chunk": "d81f93"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_openai*.py'",
+      "tests": 25,
+      "seconds": 2.209,
+      "exit_code": 0,
+      "tool_chunk": "9f9791"
+    },
+    {
+      "command": "python -B -m trading_researcher provider-usage --ledger .trf-runtime/openai-integration-budget.sqlite3",
+      "exit_code": 0,
+      "tool_chunk": "623c10"
+    },
+    {
+      "command": "python -B -m trading_researcher openai-usage --ledger .trf-runtime/openai-integration-budget.sqlite3",
+      "exit_code": 0,
+      "tool_chunk": "55c7ae"
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "includes": "verify_system_model and git diff --check",
+      "local_links": 752
+    }
+  ],
+  "independent_review": {
+    "file": "anthropic-provider-review.json",
+    "sha256": "b39fe9dd22143fbf7c35628d7db6bf64aff0b1ee35cc75ce0990fb7f6965392d",
+    "tests": 23,
+    "seconds": 0.457,
+    "exit_code": 0
+  },
+  "changed_files": [
+    "trading_researcher/anthropic_provider.py",
+    "trading_researcher/openai_provider.py",
+    "trading_researcher/provider_usage.py",
+    "trading_researcher/__main__.py",
+    "tests/test_anthropic_provider_adversarial.py",
+    "tests/test_anthropic_provider.py",
+    "tests/test_anthropic_integration.py",
+    "tests/test_provider_identity_adversarial.py",
+    "trading_researcher/ANTHROPIC.md",
+    "trading_researcher/OPENAI.md",
+    "trading_researcher/RESEARCHER.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/ANTHROPIC_TRANSPORT_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-review.json",
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-verification.json",
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-evidence.zip"
+  ],
+  "ignored_helpers": [
+    ".trf-runtime/anthropic-provider-checks-2026-10-25/baseline.py",
+    ".trf-runtime/anthropic-provider-checks-2026-10-25/finalize.py"
+  ],
+  "checked_files_sha256": {
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/__main__.py": "781a2ea6d387287ff51fe262b849f1aee5b761d9eed975690857425f3457506d",
+    "tests/test_anthropic_provider_adversarial.py": "a637ea2e3441edb554b199895e3c6b7e02012e20f1eb740e0b13481fa8302ab5",
+    "tests/test_anthropic_provider.py": "7525c4bf4e1eef651fc1407d46b3a207b3dff5f4fc8d5450156250a98f8fac54",
+    "tests/test_anthropic_integration.py": "b09c247d6a8b0351640a8646eff1392bc8802d03a8b8b3c032bf0fe3623ee54d",
+    "tests/test_provider_identity_adversarial.py": "baed06652e6d4a316cb5e4037ec042d099ff43f5f824e5c8f713fd96a8c81a2f",
+    "trading_researcher/ANTHROPIC.md": "b580e668615f1d7deac63bc95041610e8df2785f630207069afc802c519d1e79",
+    "trading_researcher/OPENAI.md": "e8df4cdd2ed16d5fb2fb1753f56ac64a4877fcc6d415712177a2f6880ea91d44",
+    "trading_researcher/RESEARCHER.md": "663be03c2158a0f59130023a09bc04b1a532da8466a68423fdc557f84da792ef",
+    "README.md": "46f13a99886f16a89c62c29a43a551581adea14bda484dfd52a18ff0e6f299ca",
+    "docs/architecture/CURRENT_STATE.md": "1f8c996680427fd92b17f956132106035708b95a7f67aa262ecf2a0836401f39",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "b355f7be5f6123e41b523780204c770101499ef84537534d4c73ab8f1efae511",
+    "docs/reviews/implementation-2026-10-25/ANTHROPIC_TRANSPORT_2026-10-25.md": "0ce8439f9200d9c8009f87605e7f5ccd7a2b2267cf7e02a3d73e574dc1bb4b6e",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md": "39216b621110949124fb8f38e41beefa2c455001ced831374000ff80bc08ce5d",
+    "docs/reviews/implementation-2026-10-25/progress.json": "18f14affb18c738b27069f8b7823d1d21c7357401b93dd21aa9935feb7ac540d",
+    "docs/reviews/implementation-2026-10-25/anthropic-provider-review.json": "b39fe9dd22143fbf7c35628d7db6bf64aff0b1ee35cc75ce0990fb7f6965392d"
+  },
+  "preserved_baseline_files": 82,
+  "live_openai_ledger_sha256": "36a61c293c0de7951d79da34bdb5061520cafd41ec30b5f3a74aa33bfff43c79",
+  "live_ledger_unchanged": true,
+  "live_calls_this_continuation": 0,
+  "existing_usage": {
+    "calls": 10,
+    "tokens": 35084,
+    "conservative_nano_usd": 95105000,
+    "aggregate_cap_nano_usd": 5000000000
+  },
+  "mixed_fixture": {
+    "calls": 4,
+    "inclusive_tokens": 680,
+    "conservative_nano_usd": 2900000,
+    "actual_network": false,
+    "scientific_authority": false
+  },
+  "authored_checks": {
+    "whitespace": "PASS",
+    "local_link_targets": 234,
+    "json": "PASS",
+    "cli_alias_same_json_content": "PASS",
+    "cli_alias_comparison_note": "Initial byte comparison failed only on JSON object key order; parsed reports match without changing either report."
+  },
+  "unverified": [
+    "Actual Anthropic credentials, billing and live compatibility",
+    "Real mixed-model research, semantic quality, scientific validity or cost advantage",
+    "Guaranteed provider invoice cap; token counting is an estimate",
+    "Provider execution timestamps and immutable backend revision",
+    "Scientific data/semantic admission, nuisance adequacy, information/calibration and atomic freeze",
+    "Complete seven-package objective and any live-capital authority"
+  ],
+  "evidence_archive_sha256": "1a47a4ad985ce3a31988673f1331648776c630437084c203ca4454832e7c0ac2",
+  "evidence_archive_scope": "Current Python source/tests, changed guides, review, baseline and check output; not a full workspace or data backup."
+}

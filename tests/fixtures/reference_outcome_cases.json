@@ -1,0 +1,5582 @@
+{
+  "schema": "reference-outcome-cases/1",
+  "cases": [
+    {
+      "name": "exact_future_anchor_quantity",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "999",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "9999",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "-1",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "decision_condition_unavailable_until_later",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "late_outcome_publication_completed",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T00:44:59Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "-1",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "anchor_at_partition_boundary",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "800",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 2,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null,
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 1,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "publication_beyond_partition_is_missing",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 3000
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "OUTCOME_MISSING",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          null,
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 1,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "binary_false_is_zero_missing_is_excluded",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": null,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "b@1"
+          }
+        },
+        "outcome_scale": "binary_probability",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T01:00:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "OUTCOME_MISSING",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          null,
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 2
+      }
+    },
+    {
+      "name": "unknown_condition_remains_in_whole_scope",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": null,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "whole_scope_contrast_not_complement",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "1",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "3",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "3",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "-1",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "return_uses_explicit_lagged_decision_baseline",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "110",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "99",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "sub",
+            "left": {
+              "op": "div",
+              "left": {
+                "op": "feature",
+                "ref": "p@1"
+              },
+              "right": {
+                "op": "lag",
+                "arg": {
+                  "op": "feature",
+                  "ref": "p@1"
+                },
+                "bars": 1
+              }
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": "1"
+            }
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          {
+            "numerator": "-1",
+            "denominator": "10"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "1",
+          "denominator": "10"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "no_conditioned_cases",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": null,
+        "scope_count": 2,
+        "condition_count": 0
+      }
+    },
+    {
+      "name": "publication_at_last_admissible_second",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 2699
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "-1",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "publication_at_exclusive_end_is_excluded",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "OUTCOME_MISSING",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          null,
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 1,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "decimal_contrast_is_exact",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0.1",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0.2",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          {
+            "numerator": "1",
+            "denominator": "5"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "-1",
+          "denominator": "20"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "two_bar_horizon_uses_exact_anchors",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "1",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "8",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 2,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T01:00:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          {
+            "numerator": "8",
+            "denominator": "1"
+          },
+          null,
+          null
+        ],
+        "effect": {
+          "numerator": "-2",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "binary_whole_scope_probability_contrast",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "b@1"
+          }
+        },
+        "outcome_scale": "binary_probability",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "scope_count": 2,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "all_conditions_true_equals_whole_scope",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 2,
+        "condition_count": 2
+      }
+    },
+    {
+      "name": "missing_anchor_never_substitutes_next_row",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "50",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "100",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "DATA_GAP",
+          "DATA_GAP",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          null,
+          null,
+          null
+        ],
+        "effect": null,
+        "scope_count": 0,
+        "condition_count": 0
+      }
+    },
+    {
+      "name": "multi_instrument_exact_anchor_isolation",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 0,
+          "instrument": "B",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "B",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "10",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "B",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "20",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "B",
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "10",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          {
+            "numerator": "20",
+            "denominator": "1"
+          },
+          null,
+          null
+        ],
+        "effect": {
+          "numerator": "-6",
+          "denominator": "1"
+        },
+        "scope_count": 4,
+        "condition_count": 2
+      }
+    },
+    {
+      "name": "decision_scope_unavailable_until_later",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "s@1"
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "SCOPE_UNKNOWN",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          null,
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 1,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "late_outcome_publication_still_pending",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T00:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "OUTCOME_PENDING",
+          "OUTCOME_PENDING",
+          "NOT_YET_OBSERVED"
+        ],
+        "outcome_values": [
+          null,
+          null,
+          null
+        ],
+        "effect": null,
+        "scope_count": null,
+        "condition_count": null
+      }
+    },
+    {
+      "name": "new_bar_does_not_complete_two_bar_horizon",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "8",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 2,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T01:00:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T00:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "OUTCOME_PENDING",
+          "OUTCOME_PENDING",
+          "NOT_YET_OBSERVED",
+          "NOT_YET_OBSERVED"
+        ],
+        "outcome_values": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "effect": null,
+        "scope_count": null,
+        "condition_count": null
+      }
+    },
+    {
+      "name": "no_scope_cases_are_information_gap",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "s@1"
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "SCOPE_FALSE",
+          "SCOPE_FALSE",
+          "SCOPE_FALSE"
+        ],
+        "outcome_values": [
+          null,
+          null,
+          null
+        ],
+        "effect": null,
+        "scope_count": 0,
+        "condition_count": 0
+      }
+    },
+    {
+      "name": "unknown_scope_is_not_true",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": null,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": null,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": null,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "s@1"
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "SCOPE_UNKNOWN",
+          "SCOPE_UNKNOWN",
+          "SCOPE_UNKNOWN"
+        ],
+        "outcome_values": [
+          null,
+          null,
+          null
+        ],
+        "effect": null,
+        "scope_count": 0,
+        "condition_count": 0
+      }
+    },
+    {
+      "name": "resource_stop_before_first_completed_case",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 1
+      },
+      "expected": {
+        "case_states": [],
+        "outcome_values": [],
+        "effect": null,
+        "scope_count": null,
+        "condition_count": null
+      }
+    },
+    {
+      "name": "decision_warmup_available_before_partition_start",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "110",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "7",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "99",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "9",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "ge",
+            "left": {
+              "op": "trailing_mean",
+              "arg": {
+                "op": "feature",
+                "ref": "p@1"
+              },
+              "bars": 2
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT",
+              "value": "105"
+            }
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:15:00Z",
+          "end": "1970-01-01T01:00:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "SCOPE_FALSE",
+          "SCOPE_FALSE"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "7",
+            "denominator": "1"
+          },
+          null,
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 1,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "unknown_conditions_leave_no_conditioned_denominator",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": null,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": null,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "2",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": null,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "4",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "y@1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:00:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "2",
+            "denominator": "1"
+          },
+          {
+            "numerator": "4",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": null,
+        "scope_count": 2,
+        "condition_count": 0
+      }
+    },
+    {
+      "name": "determinate_true_with_missing_operand_requires_review",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": null,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "or",
+            "left": {
+              "op": "feature",
+              "ref": "b@1"
+            },
+            "right": {
+              "op": "feature",
+              "ref": "s@1"
+            }
+          }
+        },
+        "outcome_scale": "binary_probability",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "REVIEW_REQUIRED",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": null,
+        "scope_count": null,
+        "condition_count": null
+      }
+    },
+    {
+      "name": "determinate_false_with_unavailable_operand_requires_review",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 3000
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "and",
+            "left": {
+              "op": "feature",
+              "ref": "b@1"
+            },
+            "right": {
+              "op": "feature",
+              "ref": "s@1"
+            }
+          }
+        },
+        "outcome_scale": "binary_probability",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T00:45:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "REVIEW_REQUIRED",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          {
+            "numerator": "1",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": null,
+        "scope_count": null,
+        "condition_count": null
+      }
+    },
+    {
+      "name": "predecision_outcome_operand_published_later_requires_review",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "7",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "s@1"
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "lag",
+            "arg": {
+              "op": "feature",
+              "ref": "y@1"
+            },
+            "bars": 2
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T01:00:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "SCOPE_FALSE",
+          "REVIEW_REQUIRED",
+          "SCOPE_FALSE",
+          "SCOPE_FALSE"
+        ],
+        "outcome_values": [
+          null,
+          {
+            "numerator": "7",
+            "denominator": "1"
+          },
+          null,
+          null
+        ],
+        "effect": null,
+        "scope_count": null,
+        "condition_count": null
+      }
+    },
+    {
+      "name": "predecision_outcome_operand_already_available",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "7",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "s@1"
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "lag",
+            "arg": {
+              "op": "feature",
+              "ref": "y@1"
+            },
+            "bars": 2
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:00:00Z",
+          "end": "1970-01-01T01:00:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "SCOPE_FALSE",
+          "ELIGIBLE",
+          "SCOPE_FALSE",
+          "SCOPE_FALSE"
+        ],
+        "outcome_values": [
+          null,
+          {
+            "numerator": "7",
+            "denominator": "1"
+          },
+          null,
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 1,
+        "condition_count": 1
+      }
+    },
+    {
+      "name": "outcome_lookback_before_partition_requires_review",
+      "catalog": {
+        "c@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "s@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "y@1": {
+          "type": "real",
+          "unit": "USDT"
+        },
+        "b@1": {
+          "type": "boolean",
+          "unit": null
+        },
+        "p@1": {
+          "type": "real",
+          "unit": "USDT"
+        }
+      },
+      "rows": [
+        {
+          "time": 0,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 0
+            },
+            "y@1": {
+              "value": "7",
+              "available_at": 0
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 0
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 0
+            }
+          }
+        },
+        {
+          "time": 900,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "s@1": {
+              "value": true,
+              "available_at": 900
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 900
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 900
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 900
+            }
+          }
+        },
+        {
+          "time": 1800,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 1800
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 1800
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 1800
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 1800
+            }
+          }
+        },
+        {
+          "time": 2700,
+          "instrument": "A",
+          "features": {
+            "c@1": {
+              "value": true,
+              "available_at": 2700
+            },
+            "s@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "y@1": {
+              "value": "0",
+              "available_at": 2700
+            },
+            "b@1": {
+              "value": false,
+              "available_at": 2700
+            },
+            "p@1": {
+              "value": "100",
+              "available_at": 2700
+            }
+          }
+        }
+      ],
+      "request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:candidate",
+        "data_snapshot_ref": "fixture:data",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "s@1"
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "feature",
+            "ref": "c@1"
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "47e6238e22aa5c635399614d39945dde8cb842e206dc61af59c58a61021a81f0",
+          "expression": {
+            "op": "lag",
+            "arg": {
+              "op": "feature",
+              "ref": "y@1"
+            },
+            "bars": 2
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "1970-01-01T00:15:00Z",
+          "end": "1970-01-01T01:00:00Z",
+          "instruments": [
+            "A"
+          ]
+        },
+        "as_of": "1970-01-01T01:15:00Z",
+        "max_steps": 10000
+      },
+      "expected": {
+        "case_states": [
+          "REVIEW_REQUIRED",
+          "SCOPE_FALSE",
+          "SCOPE_FALSE"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "7",
+            "denominator": "1"
+          },
+          null,
+          null
+        ],
+        "effect": null,
+        "scope_count": null,
+        "condition_count": null
+      }
+    }
+  ]
+}

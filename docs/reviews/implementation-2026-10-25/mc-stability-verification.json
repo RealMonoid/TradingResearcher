@@ -1,0 +1,305 @@
+{
+  "schema": "mc-stability-verification/1",
+  "status": "PASS_WITH_EXPLICIT_CALIBRATION_AND_AUTHORITY_LIMITS",
+  "purpose": "Implement and bind a predeclared development-only Monte Carlo boundary diagnostic without changing scientific authority.",
+  "finding": "Exact binomial rank bands propagate through the prescribed basic/sensitivity interval and retain unstable/unassessed cases. Owned inputs capture the explicit policy before resampling; returned diagnostics are checked against retained draws and completed source replay.",
+  "warranted_conclusion": "The exercised candidate implements its stated arithmetic and development binding. No calibration, market coverage, information target or scientific admission is established.",
+  "changed_files_this_checkpoint": [
+    "trading_researcher/monte_carlo.py",
+    "trading_researcher/stationary_bootstrap.py",
+    "trading_researcher/bootstrap_runs.py",
+    "tests/test_monte_carlo.py",
+    "tests/test_bootstrap_runs.py",
+    "tests/test_monte_carlo_adversarial.py",
+    "trading_researcher/MONTE_CARLO.md",
+    "trading_researcher/STATIONARY_BOOTSTRAP.md",
+    "trading_researcher/README.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/mc-stability-baseline.json",
+    "docs/reviews/implementation-2026-10-25/mc-stability-source-before.zip",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json",
+    "docs/reviews/implementation-2026-10-25/mc-stability-verification.json"
+  ],
+  "baseline": {
+    "path": "mc-stability-baseline.json",
+    "sha256": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed",
+    "archive": "mc-stability-source-before.zip",
+    "archive_sha256": "048c35eae018862c40a2ef98eb1255774ece8897cc6f230bea3c876a2f9077fc",
+    "retained_files": 80,
+    "unchanged_files_preserved": 70,
+    "additional_prior_fixture_hashes_unchanged": {
+      "tests/fixtures/reference_binance_expectations.md": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88",
+      "tests/fixtures/reference_binance_partition_expectations.md": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+      "tests/fixtures/reference_binance_quality_expectations.md": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+      "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257",
+      "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe",
+      "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee"
+    }
+  },
+  "runtime_tests": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "test_count": 342,
+    "reported_seconds": "1293.090",
+    "wall_seconds": 1294.776,
+    "source_sha256": {
+      "tests/auxiliary_support.py": "54bc8077d2511264b4ba6124c9e859588bfd199a9143b4944387dd89184e376a",
+      "tests/binding_support.py": "5272d69b62328350acb7e8829b8d47d2c6e292eabf20185e116cb2f9490314f0",
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/fixtures/reference_binance_cases.json": "a951d1a6cff1e459afb0588f2286c66c9b9533db375c6dc8a27515a4244ada00",
+      "tests/fixtures/reference_binance_expectations.md": "99352ae4859272ca473f3c87673ab575ff965a0c3f93c45f018f11f742c24d88",
+      "tests/fixtures/reference_binance_partition_cases.json": "7921f6119c8f23ef4bb0c366624d1a4fda01baf98dd5531b6733e6c2ed373ae0",
+      "tests/fixtures/reference_binance_partition_expectations.md": "404f96342e539db3b25287c242aad0d6367eb1f0a62a068c9f06181a35ba18a8",
+      "tests/fixtures/reference_binance_quality_cases.json": "c71da72c766f01a055590b65bf9ddcc84add0bde15a6b114d79007217a34c67a",
+      "tests/fixtures/reference_binance_quality_expectations.md": "9abb1559cc038bb3c2b716b9e3ed96224cd9a22b124c4870875f0d659a9e6c2c",
+      "tests/fixtures/reference_binding_cases.json": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+      "tests/fixtures/reference_binding_expectations.md": "0b75562800cdea40f34bd5aca1476b225001814596af37d7e9dd4b5bdc229257",
+      "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+      "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe",
+      "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+      "tests/fixtures/reference_feature_cases.json": "57a7b923aa975cfa6fe4b588e162364449f0ccaed033dc3cd2730c49e6021081",
+      "tests/fixtures/reference_feature_expectations.md": "dfe226e663270702473c5efc16bf008f6bf30ce670ed619e63693539dd3794ee",
+      "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+      "tests/test_auxiliary_adversarial.py": "81695932aae11d6734fcfd23a6694b528b3ffe4ef1670fef8d5878428ffd44e8",
+      "tests/test_auxiliary_pipeline.py": "fbe6a17b2bc1db9f011214c47f449796b87fb16d67dc40f8fdf1a968fd2c52c1",
+      "tests/test_auxiliary_research.py": "d3af8f63d4d663099bd4238cfbe82c0f4c51726168c0b6cd10dc0c0d1ccddacf",
+      "tests/test_binance_archive.py": "d0d51e95cef4a6b2ceeaf4a788ea19b839377ecf97f9a1ae76dab4cccd15e959",
+      "tests/test_binance_ingest.py": "8201f84b8de45bed381833ec31224f4c1c2e78b9b6541624b1270c56beb55b16",
+      "tests/test_binance_normalize.py": "621238a96e3baa8584466f3bfbfa55ed535e12420ad5fa078e8de8a6eafb5d77",
+      "tests/test_binance_quality.py": "36d8bd7a0e6c0c371e39e699e0e7ab7c8c2d2c23f83a80ebb499338e74a0b0ed",
+      "tests/test_binding.py": "ba338f30875c6ca6c760d28c9f845b2e7ce970bb5649b1c0d00b741eb7bd932e",
+      "tests/test_binding_adversarial.py": "459876e5433449c172beb066791410084cbc87e0fdfc1eaa69ce8a7b6a092997",
+      "tests/test_bootstrap_runs.py": "e5554ef54ef44d7ff11d9bc61ccfa075023cd67e0c4a6a8c2c71eddfb3c4bed8",
+      "tests/test_bootstrap_runs_adversarial.py": "1f01bfac83b013f2daef8d7ef8ec42c8ae27630ed7e10b82d7e64abe69f0ddac",
+      "tests/test_certification.py": "bcf1fe8780619bd8b26ff551cb12c1ff347a96bedb1eef4aa2b8862d44311dd2",
+      "tests/test_coordination.py": "b928aad7d17efea91b4173fea767c3ca04591d0018da3315f256b6b9931295ff",
+      "tests/test_data.py": "197f902659e2f7e103b5bb5eec7ba280ff0018f91ca5e83241e1b0489bfc01b8",
+      "tests/test_evaluation_plans.py": "82775936e5de1f4f1ee6174667b4ddb28bfcf2bcb8525a16e1284284b341680e",
+      "tests/test_evaluation_plans_adversarial.py": "4fbe37415e8bdbe905789f688607ed5be765bd000f80969bcbd6cd52b97ef659",
+      "tests/test_evaluation_policy.py": "8401a2afae6651245ebc81104d157320f7ac5509706841495151432c7ae685e6",
+      "tests/test_evaluation_policy_adversarial.py": "314aa73be6940e161a8e4213b7fdd8e8a3fae5d4e6451213391577215c2ff5c9",
+      "tests/test_expressions.py": "a927ef0a44c0f81945ffa6e0f5f9858ac526838da5d01d80f6c04f641d52ba02",
+      "tests/test_feature_adversarial.py": "e0782cce5db75b5607be717dd7bc1da6cf6e4000c59838bcb39d36faba2b1b81",
+      "tests/test_features.py": "facfc83ab476ff7c1ba188ccb6e277e759c94296b3347678680d163097c1f498",
+      "tests/test_formalization.py": "25c6e017396fbdf6dcee1825e27e42bd6f296f2d543fdeea6d3fab34af575fe1",
+      "tests/test_local_runtime.py": "17bcae356faf10209f446fffb110a62c0c50261be830b2809b17885858f39153",
+      "tests/test_memory.py": "036a7b1fe19bdd900d9db90dca376ac876bcf1a762047387900e70fa5aaff09a",
+      "tests/test_monte_carlo.py": "b1bb31d3c21a3187e0db174eeca65b569f4f9508d533f642ab326d62c90fe146",
+      "tests/test_monte_carlo_adversarial.py": "72467c6745abc55dcba542b65f88f2947e1a4fa3296451f0eb92061687bd37a4",
+      "tests/test_outcomes.py": "2ecaa33fa2b76792ed6df26924d6f43280138123ed93789d88108437b0237384",
+      "tests/test_plan_retention.py": "f05f47fe74ca41bbdf3a32f6bdfb33153d1311e721a1f4e0ad180cc79efe89b0",
+      "tests/test_plan_retention_adversarial.py": "08c91bc3f2607fc208127a941939d0d757cbcebdd0edfe9b69872b12b40eff3b",
+      "tests/test_research_calls.py": "54e1bcd3987ebc2e3225dc5b87ab3e6eb5f68cf8fe526d1b5de6b71e08603211",
+      "tests/test_researcher.py": "7af611fa7670d4da89718fba5a0fff4d3e8a63e062a31193cc8a338a01e1062f",
+      "tests/test_stationary_bootstrap.py": "ff74e2bef4aeb520308a5e98d09634dddd9aa601e6a3430d34ab3b3916455fb8",
+      "tests/test_stationary_bootstrap_adversarial.py": "fa4a8eb0f9a069f81a27b92e5c758aee857de70136208506e7618199b703a5b0",
+      "tests/test_storage.py": "548d263d12d9aa783b248112f06b60058757a8eea1973a45dc03bde6f9582e8a",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "f14954924b3cddc62b1e79f355e4a1b16d463e06a65ff3cbfe5e79fcda7d244c",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "789d172ad4e4fff99f9f506c65ac9d6b0ca3fdc1bcc8e8a79702704cf2a1daf6",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "source_hashes_equal_before_and_after": true,
+    "log": ".trf-runtime/mc-stability-checks-2026-10-25/tests.log",
+    "log_sha256": "28639cd4deec2cbaf366f273fe58db2991b578df70d6803a23bafd305870b5fb",
+    "result": ".trf-runtime/mc-stability-checks-2026-10-25/tests-result.json",
+    "result_sha256": "68c643e1b1a2dad3dd0f06c65faa86eb8073675f83bbea1bc7d160b3295c3228"
+  },
+  "independent_review": {
+    "path": "mc-stability-review.json",
+    "sha256": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "tests": 21,
+    "seconds": 82.203,
+    "exit_code": 0,
+    "conclusion": {
+      "status": "NO_SUBSTANTIATED_DEFECT_FOUND_WITHIN_REVIEWED_SCOPE",
+      "finding": "Twenty-one independent test methods pass. Fixed rank cases, exhaustive small-sample binomial calculations, discrete atoms, exact decision boundaries, endpoint enlargement and owned interruption/forgery probes agree with the stated candidate. No application correction was required by this review.",
+      "independent_methods": 21,
+      "calibration_performed": false,
+      "scientific_certificate": false,
+      "whole_framework_verdict": false
+    }
+  },
+  "focused_checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_monte_carlo.py -v",
+      "tests": 6,
+      "seconds": 6.757,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_stationary_bootstrap*.py -v",
+      "tests": 19,
+      "seconds": 19.707,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bootstrap_runs.py -v",
+      "tests": 5,
+      "seconds": 94.664,
+      "exit_code": 0
+    }
+  ],
+  "red_and_harness_history": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_monte_carlo.py -v",
+      "exit_code": 1,
+      "loader_errors": 1,
+      "seconds": 0.0,
+      "finding": "New module did not exist. This is a transcript-observed red; a separate pre-red test-file hash was not captured."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_monte_carlo.py -k test_sampler -v",
+      "exit_code": 1,
+      "tests": 1,
+      "seconds": 2.283,
+      "finding": "Legacy sampler rejected the explicit mc_policy design before integration."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bootstrap_runs.py -k test_explicit_mc -v",
+      "exit_code": 1,
+      "tests": 0,
+      "seconds": 54.267,
+      "finding": "Discarded as a red signal: parent edited source during fixture certification, correctly producing INPUT_OR_REPORT_CHANGED_DURING_VALIDATION. The stable five-test rerun passed.",
+      "cleanup": "Failed fixture emitted a lock cleanup warning at C:/Users/monoi/AppData/Local/Temp/tmpyp3nuz6_; no cleanup retry was attempted."
+    },
+    {
+      "command": "python -B .trf-runtime/mc-stability-checks-2026-10-25/assessed_http_smoke.py",
+      "exit_code": 1,
+      "finding": "Smoke harness retained the old closed broker after normalization reopened it; corrected only the ignored harness reference. Application files were unchanged."
+    }
+  ],
+  "http_smoke": {
+    "report": ".trf-runtime/mc-stability-checks-2026-10-25/http-smoke-result.json",
+    "report_sha256": "5e8a4ff353ea8263fcb2a6e11e27b33b2215fccf7e1401261938117d3689fc5f",
+    "script_sha256": "893aa97e29e65c7e00bbfbfe6c0e8dfe3321c7f2887e0349cd1ec15e10f587b3",
+    "exit_code": 0,
+    "status": "PASS",
+    "wall_seconds": 81.649,
+    "retained_draws": 59997,
+    "diagnostic_status": "NOT_ASSESSED",
+    "qualification": "Real HTTP exercises the information-gap path; this is not a completed stability assessment."
+  },
+  "assessed_http_smoke": {
+    "report": ".trf-runtime/mc-stability-checks-2026-10-25/assessed-http-result.json",
+    "report_sha256": "bb40c00a7d7f0f4b52fe351eb8f1e5f1a98cc7731fb3d70403a8a69ead880217",
+    "script_sha256": "088a5e30a580ce91ce4599bf8f77d826094f53f9992ddd670632491720fa3309",
+    "exit_code": 0,
+    "status": "PASS",
+    "wall_seconds": 146.341,
+    "retained_draws": 59997,
+    "diagnostic_status": "ASSESSED_UNCALIBRATED",
+    "boundary_stable": true,
+    "qualification": "Prespecified synthetic 64-bar constant-event path exercises complete owned diagnostic/validation/replay; no market or calibration result."
+  },
+  "preserved_prior_reports_sha256": {
+    "auxiliary-research-review.json": "1480e9861ef184fc67e64039199076648bf7ce1f18126256f93e25115d7272dd",
+    "binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5",
+    "bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "plan-retention-review.json": "3e751b2012624fbdb4e0f26239172b2d46fb8f20beebf7611449a6c91b08ddbb",
+    "bootstrap-verification.json": "569b79d907a7e927923a414dc371cb11b4012a1b1e3d0074e29b5ad7f9561c3c"
+  },
+  "remaining_boundaries": [
+    "The diagnostic is an uncalibrated candidate, with explicit development beta and no scientific default or activation.",
+    "The rank probability interpretation assumes iid replicates of a fixed conditional bootstrap law; PRNG replay does not establish that assumption or market coverage.",
+    "Development nuisance/dependence assumptions, denominator adequacy and N_min remain unimplemented.",
+    "Approved fresh-world narrow and full-process calibration remain unperformed.",
+    "Scientific data/PIT/exposure acceptance, genuine provider/semantic provenance and atomic scientific allocation/freeze remain incomplete.",
+    "Resource-stopped draw paths/values retain the preceding structural-only validation limit.",
+    "No paid provider call, scientific assessment, trade, live authority, commit or push occurred in this checkpoint."
+  ],
+  "next_action": "Implement development-only dependence/nuisance and N_min derivation for the existing stationary candidate, then independently calibrate the estimator and MC diagnostic and complete atomic scientific family/allocation/freeze. Genuine provider provenance remains required for actual LLM discovery and substantive independent meaning review.",
+  "goal_status": "IN_PROGRESS",
+  "checks": {
+    "retail_contract": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "report_sha256": "2772094523328bde12d68c70962c99ea08f746c25d02317787c5e2474965c5d2",
+      "status": "PASS"
+    },
+    "implementation_preservation": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "report_sha256": "ccc450d490cf686bd0bb5ea7859c5e48515b42e177510d3bfbe3ac94251373d0",
+      "status": "PASS",
+      "local_document_links": 274
+    },
+    "git_diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "report_sha256": "569d107c93a1ba25aedd8d8527fab2b31d201d8b508380c0fb6cf43ae58784b9"
+    }
+  },
+  "changed_file_sha256": {
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/stationary_bootstrap.py": "789d172ad4e4fff99f9f506c65ac9d6b0ca3fdc1bcc8e8a79702704cf2a1daf6",
+    "trading_researcher/bootstrap_runs.py": "f14954924b3cddc62b1e79f355e4a1b16d463e06a65ff3cbfe5e79fcda7d244c",
+    "tests/test_monte_carlo.py": "b1bb31d3c21a3187e0db174eeca65b569f4f9508d533f642ab326d62c90fe146",
+    "tests/test_bootstrap_runs.py": "e5554ef54ef44d7ff11d9bc61ccfa075023cd67e0c4a6a8c2c71eddfb3c4bed8",
+    "tests/test_monte_carlo_adversarial.py": "72467c6745abc55dcba542b65f88f2947e1a4fa3296451f0eb92061687bd37a4",
+    "trading_researcher/MONTE_CARLO.md": "332e324c599ca88d96e81ce05baa1f7fc8bdca43bc98a09084f6ac73da9a0c18",
+    "trading_researcher/STATIONARY_BOOTSTRAP.md": "65fa95001879c5e7896b6c339eb86926d0d669adb987c74cd96d4dcc08292de6",
+    "trading_researcher/README.md": "b54374be4b4f8aef93a595cefcdc3e703e6752ad7ab846e1e80120c8a22a3018",
+    "README.md": "9eaeafe424534dbc4eb9d759388ab502a35d4430be5af9e79a55125e9509e335",
+    "docs/architecture/CURRENT_STATE.md": "8edfd011c1403a89d1c08bcd99099977d97fd502055351ce98e57294a397cdba",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "43a969c0e3935d1c940168ad8f13844f095cca0973a8f80db3364ddb6b8c6a82",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "5c1a3637bc5c877211a223236ccb5401e6fb184846e69bc88fc544630d5cfd2f",
+    "docs/reviews/implementation-2026-10-25/progress.json": "aa1e33a67fbf0d1f0a5aa2995f377faad75afca477ec3b8f6319122144fcc10e",
+    "docs/reviews/implementation-2026-10-25/mc-stability-baseline.json": "ae01da5651d5c9467c41ca9abf372db02be51b8a4a36f68770c97454bf3586ed",
+    "docs/reviews/implementation-2026-10-25/mc-stability-source-before.zip": "048c35eae018862c40a2ef98eb1255774ece8897cc6f230bea3c876a2f9077fc",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59"
+  }
+}

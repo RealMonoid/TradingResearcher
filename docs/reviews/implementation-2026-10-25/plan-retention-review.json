@@ -1,0 +1,320 @@
+{
+  "schema": "independent-plan-retention-review/1",
+  "review_date": "2026-10-25",
+  "reviewer": "Independent memory_boundary_review agent",
+  "purpose": "Close and independently verify the previously explicit gap in exact failed evaluation-plan request/payload/dependency/source retention without creating scientific authority.",
+  "conclusion": {
+    "status": "NO_REMAINING_BLOCKER_FOUND_WITHIN_REVIEWED_SCOPE",
+    "finding": "Admitted plan attempts now durably bind their exact canonical request, calculation payload, dependency/exposure closure and source bytes before child launch; interruption, restart, retained replay and backup preserve that closure.",
+    "scientific_certificate": false
+  },
+  "prior_review": {
+    "path": "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json",
+    "sha256": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "preserved_without_edit": true,
+    "relationship": "This later review closes the stated failed-request/source retention limitation. It does not rewrite the earlier checkpoint's source versions or conclusions."
+  },
+  "reviewed_files": [
+    "trading_researcher/evaluation_plans.py",
+    "trading_researcher/binding.py",
+    "trading_researcher/storage.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/EVALUATION_POLICY.md",
+    "tests/test_plan_retention.py"
+  ],
+  "reviewer_changed_files": [
+    {
+      "path": "tests/test_plan_retention_adversarial.py",
+      "change": "New independent eight-method retention/recovery suite."
+    },
+    {
+      "path": "tests/test_evaluation_plans_adversarial.py",
+      "change": "Only failure-path artifact-count assertions were narrowed to completed evaluation-plan/1 records, with a counting helper, and the rollback test was renamed to reflect no visible completed draft. Retained input capsules are now required after admitted failures."
+    },
+    {
+      "path": "docs/reviews/implementation-2026-10-25/plan-retention-review.json",
+      "change": "New independent audit record; previous reviews untouched."
+    }
+  ],
+  "runtime_files_modified_by_reviewer": [],
+  "existing_fixtures_modified_by_reviewer": [],
+  "implementation_boundary": {
+    "input_schema": "evaluation-plan-input/1",
+    "completed_schema": "evaluation-plan/1",
+    "before_launch": "Source blobs are staged, flushed and verified; capsule references and STARTED event commit atomically before a calculation launcher is called.",
+    "retained_fields": [
+      "created_at",
+      "canonical request and request_hash",
+      "exact payload and payload_hash",
+      "source_files and source_footprint",
+      "bootstrap_sha256",
+      "runtime_identity",
+      "source_refs",
+      "inherited exposure",
+      "scientific_readiness:false",
+      "allocation_reserved:false",
+      "frozen:false"
+    ],
+    "attempt_projection": [
+      "retained_input_id",
+      "terminal reason",
+      "STARTED/COMPLETED/INTERRUPTED",
+      "legacy retained_input_id:null"
+    ],
+    "retry_rule": "The first admitted key binds the immutable request and source closure. A different request conflicts even after interruption; the same request retries from retained bytes and revalidates live immutable dependencies. New source semantics cannot silently replace this closure.",
+    "concurrent_rule": "Concurrent matching attempts share one capsule and final plan identity. Success reuse requires matching capsule and deterministic result hash.",
+    "access_rule": "Operator-owned operation and reserved input namespace; development class, full exposure and creation-time ancestry remain enforced.",
+    "authority": "Operational retention only; no semantic review, calibrated inference, scientific freeze, scientific allocation or protected outcome access."
+  },
+  "findings": [
+    {
+      "id": "PR-01",
+      "status": "RESOLVED",
+      "prior_limitation": "Interrupted plan attempts previously retained an input identity/status but no durable exact request/payload/source capsule.",
+      "remediation": "Atomic admitted input capsule and STARTED record, durable source blob references, explicit completed linkage and retained retry.",
+      "locations": [
+        {
+          "file": "trading_researcher/evaluation_plans.py",
+          "line": 118
+        },
+        {
+          "file": "trading_researcher/binding.py",
+          "line": 332
+        }
+      ]
+    },
+    {
+      "id": "PR-02",
+      "status": "RESOLVED",
+      "finding": "The first retention implementation still consulted the mutable checkout unconditionally on a retained retry.",
+      "remediation": "Checkout capture/version guards apply to new input admission; retained retries load and verify their archived source/runtime/dependency closure without consulting source_bundle.",
+      "locations": [
+        {
+          "file": "trading_researcher/evaluation_plans.py",
+          "line": 202
+        }
+      ],
+      "evidence": "Initial code inspection showed the unconditional source_bundle call. The parent removed it before the stable independent run; backup/replay with source_bundle forced to fail now passes."
+    }
+  ],
+  "independent_checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_plan_retention_adversarial.py -v",
+      "phase": "concurrent_edit_setup_abort",
+      "methods": 0,
+      "failures": 0,
+      "errors": 1,
+      "seconds": 50.389,
+      "exit_code": 1,
+      "qualification": "The first ready signal was followed by a runtime edit while the real feature-certificate fixture was being captured. INPUT_OR_REPORT_CHANGED_DURING_VALIDATION stopped setUpClass. No retention assertion ran; this is not a demonstrated retention regression. Fixture construction also reported an unclosed writer/resource cleanup warning."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_plan_retention_adversarial.py -v",
+      "phase": "final_stable_retention_run",
+      "methods": 8,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 85.844,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_evaluation_plans_adversarial.py -v",
+      "phase": "prior_integration_regression_run",
+      "methods": 11,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 88.507,
+      "exit_code": 0,
+      "qualification": "Runs the earlier malformed-response, cancellation, typed admission and source binding regressions with the explicitly scoped retained-capsule assertion adjustment."
+    }
+  ],
+  "parent_reported_checks": [
+    {
+      "command": "tests/test_plan_retention.py root three-method preimplementation run",
+      "phase": "reported_red",
+      "methods": 3,
+      "failures": 1,
+      "errors": 2,
+      "seconds": 60.648,
+      "exit_code": 1,
+      "qualification": "Reported by parent, not independently run by this reviewer. Missing retained_input_id and failed-key rebinding were reproduced."
+    },
+    {
+      "command": "tests/test_plan_retention.py root three-method run",
+      "phase": "reported_green_before_checkout_independence_adjustment",
+      "methods": 3,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 65.366,
+      "exit_code": 0,
+      "qualification": "Reported by parent before the precise checkout-independent retry change; parent full suite must re-exercise this after that change."
+    }
+  ],
+  "independent_acceptance_coverage": [
+    {
+      "test": "test_admission_transaction_rollback_launches_nothing",
+      "proof": "Exception while recording STARTED rolls back both capsule and attempt; no child launches."
+    },
+    {
+      "test": "test_concurrent_identical_retries_share_capsule_and_final_identity",
+      "proof": "Two real parallel calculation attempts synchronize at the launcher and converge on one capsule and final plan, with two completed attempts and no pending work."
+    },
+    {
+      "test": "test_conflicting_retry_cannot_replace_admitted_request",
+      "proof": "Changing the frozen request seed under an interrupted key is denied before any child launch; original capsule remains identical."
+    },
+    {
+      "test": "test_incomplete_backup_cannot_omit_committed_capsule_source",
+      "proof": "Removing a committed source blob causes verified backup refusal without a successful destination."
+    },
+    {
+      "test": "test_interrupted_capsule_backup_restore_and_retry_use_retained_bytes",
+      "proof": "Full database/blob backup and restoration preserve exact capsule and source hashes; actual retry succeeds with mutable checkout source_bundle unavailable and links the original capsule."
+    },
+    {
+      "test": "test_missing_or_corrupt_retained_source_never_uses_checkout_fallback",
+      "proof": "Both corrupted and missing source cases fail before execution; no checkout substitution occurs."
+    },
+    {
+      "test": "test_real_writer_crash_retains_exact_inputs_and_restart_reason",
+      "proof": "A real writer subprocess exits with os._exit(37) at the first child-launch seam. Reopening records previous_writer_ended, retains exact request/payload/source bytes and exposes no completed plan."
+    },
+    {
+      "test": "test_request_namespace_worker_and_earlier_context_boundaries",
+      "proof": "Generic source forgery and worker preparation are denied; a wrapper cannot admit a later capsule into an earlier context. Compiled and diagnostic ancestry/exposure remain included."
+    }
+  ],
+  "source_evidence": {
+    "before": {
+      "captured_at": "2026-10-25T06:16:56.545369+00:00",
+      "files": {
+        "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+        "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+        "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+        "trading_researcher/storage.py": "009638faac07fb3d0ed775d038ba2d054ae2476dd8421bf2c769a5de46fdd953",
+        "trading_researcher/memory.py": "c9a156b9216d8b3c0e8effa1d80bdfee66782e43a01ca1f1430a051a9282191c",
+        "trading_researcher/coordination.py": "750ca1deeca7cef92d92b2bc24542e15e690db09279c3541d2f78d3bbaacb400",
+        "tests/test_plan_retention_adversarial.py": "08c91bc3f2607fc208127a941939d0d757cbcebdd0edfe9b69872b12b40eff3b",
+        "tests/test_evaluation_plans_adversarial.py": "4fbe37415e8bdbe905789f688607ed5be765bd000f80969bcbd6cd52b97ef659",
+        "tests/test_plan_retention.py": "f05f47fe74ca41bbdf3a32f6bdfb33153d1311e721a1f4e0ad180cc79efe89b0",
+        "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+        "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe"
+      },
+      "source_capsule": {
+        "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+        "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+        "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+        "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+        "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+        "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+        "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+        "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+        "trading_researcher/checks.py": "07adb75eeff3bb6dd67b6a5625b82481c619c00e4afd2c1b793668a18cf0e704",
+        "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+        "trading_researcher/coordination.py": "750ca1deeca7cef92d92b2bc24542e15e690db09279c3541d2f78d3bbaacb400",
+        "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+        "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+        "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+        "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+        "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+        "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+        "trading_researcher/formalization.py": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0",
+        "trading_researcher/memory.py": "c9a156b9216d8b3c0e8effa1d80bdfee66782e43a01ca1f1430a051a9282191c",
+        "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+        "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+        "trading_researcher/research_calls.py": "776f852184ed42916790565d312a816ab7dce523af6fe7f43d223f077fe9d284",
+        "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+        "trading_researcher/researcher.py": "2678b7e05f83a979c1a2b527d61230d28b822a1156b3dc09a7764f8d4e5efbba",
+        "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+        "trading_researcher/storage.py": "009638faac07fb3d0ed775d038ba2d054ae2476dd8421bf2c769a5de46fdd953",
+        "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+      }
+    },
+    "after": {
+      "captured_at": "2026-10-25T06:19:10.857141+00:00",
+      "files": {
+        "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+        "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+        "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+        "trading_researcher/storage.py": "009638faac07fb3d0ed775d038ba2d054ae2476dd8421bf2c769a5de46fdd953",
+        "trading_researcher/memory.py": "c9a156b9216d8b3c0e8effa1d80bdfee66782e43a01ca1f1430a051a9282191c",
+        "trading_researcher/coordination.py": "750ca1deeca7cef92d92b2bc24542e15e690db09279c3541d2f78d3bbaacb400",
+        "tests/test_plan_retention_adversarial.py": "08c91bc3f2607fc208127a941939d0d757cbcebdd0edfe9b69872b12b40eff3b",
+        "tests/test_evaluation_plans_adversarial.py": "4fbe37415e8bdbe905789f688607ed5be765bd000f80969bcbd6cd52b97ef659",
+        "tests/test_plan_retention.py": "f05f47fe74ca41bbdf3a32f6bdfb33153d1311e721a1f4e0ad180cc79efe89b0",
+        "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+        "tests/fixtures/reference_evaluation_policy_expectations.md": "5ea255227f4972db052af8b980b4ab17ae4d1b64c086de9f83fa691b7079cdbe"
+      },
+      "source_capsule": {
+        "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+        "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+        "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+        "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+        "trading_researcher/binance_normalize.py": "e3db0cc0201781f13d05a210b8d565e2b3d179a6a13b6126bfff996e3cded784",
+        "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+        "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+        "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+        "trading_researcher/checks.py": "07adb75eeff3bb6dd67b6a5625b82481c619c00e4afd2c1b793668a18cf0e704",
+        "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+        "trading_researcher/coordination.py": "750ca1deeca7cef92d92b2bc24542e15e690db09279c3541d2f78d3bbaacb400",
+        "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+        "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+        "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+        "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+        "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+        "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+        "trading_researcher/formalization.py": "3daf90409de1faea5a1d198a95de562c3800f19f25b30cc035dafd22667366f0",
+        "trading_researcher/memory.py": "c9a156b9216d8b3c0e8effa1d80bdfee66782e43a01ca1f1430a051a9282191c",
+        "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+        "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+        "trading_researcher/research_calls.py": "776f852184ed42916790565d312a816ab7dce523af6fe7f43d223f077fe9d284",
+        "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+        "trading_researcher/researcher.py": "2678b7e05f83a979c1a2b527d61230d28b822a1156b3dc09a7764f8d4e5efbba",
+        "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+        "trading_researcher/storage.py": "009638faac07fb3d0ed775d038ba2d054ae2476dd8421bf2c769a5de46fdd953",
+        "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+      }
+    },
+    "tracked_files_unchanged": true,
+    "source_capsule_unchanged": true,
+    "tracked_file_count": 11,
+    "source_capsule_file_count": 27,
+    "timing": "Hashes captured after the final runtime-stable signal, immediately before both independent test commands, and after both completed."
+  },
+  "documentation_review": {
+    "path": "trading_researcher/EVALUATION_POLICY.md",
+    "sha256": "c50fd6f4560c33d53fcdbf3794606776ec5ba8ab4cc1959a4481dc542cc361f4",
+    "finding": "Documents admitted capsule retention, persistent key binding, checkout-independent retained replay, legacy null input references, environment limitations and no scientific authority. No material overclaim found."
+  },
+  "preserved_prior_artifacts": {
+    "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json": "09871c451aeca70139357c3b928982970aa2227fd1e01131cb9d64cc9e912ba0",
+    "docs/reviews/implementation-2026-10-25/binding-review.json": "4abbf261ec0fcf52f9bb21aa36d4eb04c9333bc0087a61182afc89c28b5a85e5"
+  },
+  "limitations": [
+    "Synthetic owned-registry hypotheses/data exercise infrastructure. No live model/provider call, market inference, independent semantic judgment, scientific freeze/allocation or calibrated estimator was exercised.",
+    "Physical power-loss durability is not demonstrated by the successful real process-exit test.",
+    "Admission runtime identity fingerprints Python implementation/executable/runtime DLLs, rather than archiving the runtime. Completed children additionally record loaded standard-library fingerprints; a prelaunch interruption has no completed-child environment report.",
+    "Current compatible host/runtime and intact immutable dependencies remain necessary for retained replay. Historical byte retention does not grant current scientific readiness or revived access permissions.",
+    "Legacy attempts lacking retained_input_id remain honestly incomplete and are not reconstructed from later files.",
+    "Malformed or unauthorized requests rejected before admission are not executed attempts and do not create admitted capsules.",
+    "An existing completed plan returned idempotently is historical retrieval, not renewed scientific validation.",
+    "Maximum-size source blobs, worst-case contention/latency, memory/disk exhaustion and hostile same-account modifications were not benchmarked.",
+    "The first concurrent-edit setup left one temporary fixture directory; automatic approval review rejected its cleanup, so it remains and no alternate deletion or escalation was attempted."
+  ],
+  "cleanup_activity": {
+    "path": "C:\\Users\\monoi\\AppData\\Local\\Temp\\tmph6nkb8e2",
+    "purpose": "Remove only the temporary registry created by the review run that aborted during fixture construction.",
+    "command": "$reviewTemporaryPath = 'C:\\Users\\monoi\\AppData\\Local\\Temp\\tmph6nkb8e2'\nif (Test-Path -LiteralPath $reviewTemporaryPath) {\n    $reviewResolved = (Resolve-Path -LiteralPath $reviewTemporaryPath).Path\n    $reviewTempParent = [System.IO.Path]::GetTempPath().TrimEnd('\\')\n    if ($reviewResolved -ne $reviewTemporaryPath -or (Split-Path -Parent $reviewResolved) -ne $reviewTempParent) { throw 'Unexpected fixture cleanup target' }\n    Remove-Item -LiteralPath $reviewResolved -Recurse -Force\n    Write-Output 'Removed only the terminated review fixture directory.'\n}",
+    "outcome": "NOT_EXECUTED_AUTOMATIC_APPROVAL_REVIEW_REJECTION",
+    "reason": "blocked by policy",
+    "reason_detail": "Tool returned CreateProcess Rejected before execution; no more specific reason was supplied.",
+    "alternate_deletion_attempted": false,
+    "permission_escalation_attempted": false
+  },
+  "historical_evidence_correction": {
+    "record": "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json",
+    "field": "checks[0].source_sha256",
+    "correction": "The c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce hash was captured after the initial red run, not before it, and equals the subsequently fixed kernel. It must not be used as a pre-fix source identifier. The exact pre-fix kernel hash is unavailable.",
+    "unaffected": "The observed red failure outputs, final passing results, independent fixtures and final before/after source hashes remain valid. The earlier report is preserved unchanged; this new record supplies the qualification."
+  }
+}

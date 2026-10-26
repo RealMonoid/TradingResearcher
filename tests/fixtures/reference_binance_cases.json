@@ -1,0 +1,1149 @@
+{
+  "schema": "reference-binance-cases/1",
+  "authorship": "Independent hand-calculated expectations authored before reading binance_archive.py",
+  "sources": [
+    "https://github.com/binance/binance-public-data/blob/master/README.md",
+    "https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints"
+  ],
+  "notes": [
+    "Synthetic values; no downloaded market data or historical-vintage claims.",
+    "Reason labels classify fixture failures; implementations may map them to existing structured data errors.",
+    "Parse stage preserves normalized boundary timestamps; later partition handling must retain boundary exclusions explicitly.",
+    "Archive ZIP bytes are deterministic synthetic container fixtures; hashes verify those exact bytes, not independent data truth."
+  ],
+  "unit_mapping": {
+    "BTCUSDT": {
+      "price": "USDT/BTC",
+      "base_volume": "BTC",
+      "quote_volume": "USDT",
+      "trades": "count"
+    },
+    "ETHUSDT": {
+      "price": "USDT/ETH",
+      "base_volume": "ETH",
+      "quote_volume": "USDT",
+      "trades": "count"
+    }
+  },
+  "archives": {
+    "valid_one_csv": {
+      "bytes_base64": "UEsDBBQAAAAAAAAAIVD+XWF4VQAAAFUAAAAXAAAAQlRDVVNEVC0xNW0tMjAyMC0wMS5jc3YxNTc3ODM2ODAwMDAwLDEwLjAwMCwxMi4wMDAsOS4wMDAsMTEuMDAwLDQuMDAwLDE1Nzc4Mzc2OTk5OTksNDIuMDAwLDQsMi4wMDAsMjIuMDAwLDAKUEsBAhQAFAAAAAAAAAAhUP5dYXhVAAAAVQAAABcAAAAAAAAAAAAAAIABAAAAAEJUQ1VTRFQtMTVtLTIwMjAtMDEuY3N2UEsFBgAAAAABAAEARQAAAIoAAAAAAA==",
+      "sha256": "30a5b7288dc4b84657e657ef71bd2bd2c3a47f00fdffd99d920b3166772a6b55"
+    },
+    "wrong_member_name": {
+      "bytes_base64": "UEsDBBQAAAAAAAAAIVD+XWF4VQAAAFUAAAAXAAAARVRIVVNEVC0xNW0tMjAyMC0wMS5jc3YxNTc3ODM2ODAwMDAwLDEwLjAwMCwxMi4wMDAsOS4wMDAsMTEuMDAwLDQuMDAwLDE1Nzc4Mzc2OTk5OTksNDIuMDAwLDQsMi4wMDAsMjIuMDAwLDAKUEsBAhQAFAAAAAAAAAAhUP5dYXhVAAAAVQAAABcAAAAAAAAAAAAAAIABAAAAAEVUSFVTRFQtMTVtLTIwMjAtMDEuY3N2UEsFBgAAAAABAAEARQAAAIoAAAAAAA==",
+      "sha256": "1d1f0ea6edc13ccdeb6050f6d26a672b981f88501c1a65134daf9c7bd355548a"
+    },
+    "traversal_member": {
+      "bytes_base64": "UEsDBBQAAAAAAAAAIVD+XWF4VQAAAFUAAAAaAAAALi4vQlRDVVNEVC0xNW0tMjAyMC0wMS5jc3YxNTc3ODM2ODAwMDAwLDEwLjAwMCwxMi4wMDAsOS4wMDAsMTEuMDAwLDQuMDAwLDE1Nzc4Mzc2OTk5OTksNDIuMDAwLDQsMi4wMDAsMjIuMDAwLDAKUEsBAhQAFAAAAAAAAAAhUP5dYXhVAAAAVQAAABoAAAAAAAAAAAAAAIABAAAAAC4uL0JUQ1VTRFQtMTVtLTIwMjAtMDEuY3N2UEsFBgAAAAABAAEASAAAAI0AAAAAAA==",
+      "sha256": "d3e8835ce73f65910775e072e9c5ee85649747da07620bcd48e349c1bbad697f"
+    },
+    "multiple_members": {
+      "bytes_base64": "UEsDBBQAAAAAAAAAIVD+XWF4VQAAAFUAAAAXAAAAQlRDVVNEVC0xNW0tMjAyMC0wMS5jc3YxNTc3ODM2ODAwMDAwLDEwLjAwMCwxMi4wMDAsOS4wMDAsMTEuMDAwLDQuMDAwLDE1Nzc4Mzc2OTk5OTksNDIuMDAwLDQsMi4wMDAsMjIuMDAwLDAKUEsDBBQAAAAAAAAAIVBlDT9NBQAAAAUAAAAJAAAAZXh0cmEudHh0ZXh0cmFQSwECFAAUAAAAAAAAACFQ/l1heFUAAABVAAAAFwAAAAAAAAAAAAAAgAEAAAAAQlRDVVNEVC0xNW0tMjAyMC0wMS5jc3ZQSwECFAAUAAAAAAAAACFQZQ0/TQUAAAAFAAAACQAAAAAAAAAAAAAAgAGKAAAAZXh0cmEudHh0UEsFBgAAAAACAAIAfAAAALYAAAAAAA==",
+      "sha256": "4841ae7be8d0298cf4d422a0d52daa848abac24258b64f44ae10694c75c9159e"
+    },
+    "duplicate_members": {
+      "bytes_base64": "UEsDBBQAAAAAAAAAIVD+XWF4VQAAAFUAAAAXAAAAQlRDVVNEVC0xNW0tMjAyMC0wMS5jc3YxNTc3ODM2ODAwMDAwLDEwLjAwMCwxMi4wMDAsOS4wMDAsMTEuMDAwLDQuMDAwLDE1Nzc4Mzc2OTk5OTksNDIuMDAwLDQsMi4wMDAsMjIuMDAwLDAKUEsDBBQAAAAAAAAAIVD+XWF4VQAAAFUAAAAXAAAAQlRDVVNEVC0xNW0tMjAyMC0wMS5jc3YxNTc3ODM2ODAwMDAwLDEwLjAwMCwxMi4wMDAsOS4wMDAsMTEuMDAwLDQuMDAwLDE1Nzc4Mzc2OTk5OTksNDIuMDAwLDQsMi4wMDAsMjIuMDAwLDAKUEsBAhQAFAAAAAAAAAAhUP5dYXhVAAAAVQAAABcAAAAAAAAAAAAAAIABAAAAAEJUQ1VTRFQtMTVtLTIwMjAtMDEuY3N2UEsBAhQAFAAAAAAAAAAhUP5dYXhVAAAAVQAAABcAAAAAAAAAAAAAAIABigAAAEJUQ1VTRFQtMTVtLTIwMjAtMDEuY3N2UEsFBgAAAAACAAIAigAAABQBAAAAAA==",
+      "sha256": "7a0e5ff3bf966c306dec8c86ecd746986b8fe87676ff491ba3225b9a625bf7ad"
+    },
+    "not_zip": {
+      "bytes_base64": "bm90IGEgWklQIGFyY2hpdmU=",
+      "sha256": "6b73de250c0513b43e61962e67def702c95e0d337fcdef59d3e6c2c672e3ea2b"
+    },
+    "truncated_zip": {
+      "bytes_base64": "UEsDBBQAAAAAAAAAIVD+XWF4VQAAAFUAAAAXAAAAQlRDVVNEVC0xNW0tMjAyMC0wMS5jc3YxNTc3ODM2ODAwMDAwLDEwLjAwMCwxMi4wMDAsOS4wMDAsMTEuMDAwLDQuMDAwLDE1Nzc4Mzc2OTk5OTksNDIuMDAwLDQsMi4wMDAsMjIuMDAwLDAKUEsBAhQAFAAAAAAAAAAhUP5dYXhVAAAAVQAAABcAAAAAAAAAAAAAAIABAAAAAEJUQ1VTRFQtMTVtLTIwMjAtMDEuY3N2UEsFBgAAAAABAA==",
+      "sha256": "9138cbb8f486a062ea22fbb287b37cc52d70813efe18b9e3750a185b56081acd"
+    },
+    "crc_corrupt_member": {
+      "bytes_base64": "UEsDBBQAAAAAAAAAIVD+XWF4VQAAAFUAAAAXAAAAQlRDVVNEVC0xNW0tMjAyMC0wMS5jc3YyNTc3ODM2ODAwMDAwLDEwLjAwMCwxMi4wMDAsOS4wMDAsMTEuMDAwLDQuMDAwLDE1Nzc4Mzc2OTk5OTksNDIuMDAwLDQsMi4wMDAsMjIuMDAwLDAKUEsBAhQAFAAAAAAAAAAhUP5dYXhVAAAAVQAAABcAAAAAAAAAAAAAAIABAAAAAEJUQ1VTRFQtMTVtLTIwMjAtMDEuY3N2UEsFBgAAAAABAAEARQAAAIoAAAAAAA==",
+      "sha256": "c0df9b4f43010da333a11f8725849ffa26271304decb6c3d2f7949aa68c37194"
+    }
+  },
+  "cases": [
+    {
+      "name": "btc_milliseconds_exact_exclusive_close",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": true,
+        "bars": [
+          {
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "open": "10",
+            "high": "12",
+            "low": "9",
+            "close": "11",
+            "volume": "4",
+            "quote_volume": "42",
+            "trades": 4,
+            "taker_base_volume": "2",
+            "taker_quote_volume": "22"
+          }
+        ],
+        "historical_publication_time": null
+      }
+    },
+    {
+      "name": "eth_microseconds_exact_exclusive_close",
+      "kind": "parse_csv",
+      "symbol": "ETHUSDT",
+      "month": "2025-01",
+      "timestamp_unit": "microseconds",
+      "csv_rows": [
+        [
+          "1735689600000000",
+          "2000.00",
+          "2010.00",
+          "1990.00",
+          "2005.00",
+          "0.400",
+          "1735690499999999",
+          "800.500",
+          "4",
+          "0.200",
+          "401.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": true,
+        "bars": [
+          {
+            "open_time": 1735689600,
+            "end_time": 1735690500,
+            "open": "2000",
+            "high": "2010",
+            "low": "1990",
+            "close": "2005",
+            "volume": "0.4",
+            "quote_volume": "800.5",
+            "trades": 4,
+            "taker_base_volume": "0.2",
+            "taker_quote_volume": "401"
+          }
+        ],
+        "historical_publication_time": null
+      }
+    },
+    {
+      "name": "decimal_precision_is_preserved",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000000000000000001",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000000000000000001",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": true,
+        "bars": [
+          {
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "open": "10.000000000000000001",
+            "high": "12",
+            "low": "9",
+            "close": "11",
+            "volume": "4",
+            "quote_volume": "42.000000000000000001",
+            "trades": 4,
+            "taker_base_volume": "2",
+            "taker_quote_volume": "22"
+          }
+        ],
+        "historical_publication_time": null
+      }
+    },
+    {
+      "name": "missing_middle_bar_is_not_filled",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ],
+        [
+          "1577838600000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577839499999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": true,
+        "bars": [
+          {
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "open": "10",
+            "high": "12",
+            "low": "9",
+            "close": "11",
+            "volume": "4",
+            "quote_volume": "42",
+            "trades": 4,
+            "taker_base_volume": "2",
+            "taker_quote_volume": "22"
+          },
+          {
+            "open_time": 1577838600,
+            "end_time": 1577839500,
+            "open": "10",
+            "high": "12",
+            "low": "9",
+            "close": "11",
+            "volume": "4",
+            "quote_volume": "42",
+            "trades": 4,
+            "taker_base_volume": "2",
+            "taker_quote_volume": "22"
+          }
+        ],
+        "historical_publication_time": null
+      }
+    },
+    {
+      "name": "zero_activity_bar_is_not_missing",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.0000",
+          "10.0000",
+          "10.0000",
+          "10.0000",
+          "0",
+          "1577837699999",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": true,
+        "bars": [
+          {
+            "open_time": 1577836800,
+            "end_time": 1577837700,
+            "open": "10",
+            "high": "10",
+            "low": "10",
+            "close": "10",
+            "volume": "0",
+            "quote_volume": "0",
+            "trades": 0,
+            "taker_base_volume": "0",
+            "taker_quote_volume": "0"
+          }
+        ],
+        "historical_publication_time": null
+      }
+    },
+    {
+      "name": "month_final_bar_end_is_next_month",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1580514300000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1580515199999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": true,
+        "bars": [
+          {
+            "open_time": 1580514300,
+            "end_time": 1580515200,
+            "open": "10",
+            "high": "12",
+            "low": "9",
+            "close": "11",
+            "volume": "4",
+            "quote_volume": "42",
+            "trades": 4,
+            "taker_base_volume": "2",
+            "taker_quote_volume": "22"
+          }
+        ],
+        "historical_publication_time": null
+      }
+    },
+    {
+      "name": "development_final_bar_end_is_assessment_boundary",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2023-12",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1704066300000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1704067199999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": true,
+        "bars": [
+          {
+            "open_time": 1704066300,
+            "end_time": 1704067200,
+            "open": "10",
+            "high": "12",
+            "low": "9",
+            "close": "11",
+            "volume": "4",
+            "quote_volume": "42",
+            "trades": 4,
+            "taker_base_volume": "2",
+            "taker_quote_volume": "22"
+          }
+        ],
+        "historical_publication_time": null
+      }
+    },
+    {
+      "name": "last_pretransition_archive_stays_milliseconds",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2024-12",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1735688700000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1735689599999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": true,
+        "bars": [
+          {
+            "open_time": 1735688700,
+            "end_time": 1735689600,
+            "open": "10",
+            "high": "12",
+            "low": "9",
+            "close": "11",
+            "volume": "4",
+            "quote_volume": "42",
+            "trades": 4,
+            "taker_base_volume": "2",
+            "taker_quote_volume": "22"
+          }
+        ],
+        "historical_publication_time": null
+      }
+    },
+    {
+      "name": "misaligned_open_time",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836801000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "OFF_GRID_OPEN"
+      }
+    },
+    {
+      "name": "exclusive_boundary_in_source_close_field",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837700000",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "INVALID_BAR_END"
+      }
+    },
+    {
+      "name": "wrong_last_millisecond",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699998",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "INVALID_BAR_END"
+      }
+    },
+    {
+      "name": "open_outside_declared_month",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1580515200000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "OUTSIDE_ARCHIVE_MONTH"
+      }
+    },
+    {
+      "name": "high_below_open",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "9.5",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "OHLC_ORDER"
+      }
+    },
+    {
+      "name": "low_above_close",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "11.5",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "OHLC_ORDER"
+      }
+    },
+    {
+      "name": "nonpositive_price",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "0",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "NONPOSITIVE_PRICE"
+      }
+    },
+    {
+      "name": "negative_base_volume",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "-1",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "NEGATIVE_QUANTITY"
+      }
+    },
+    {
+      "name": "taker_base_exceeds_total",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "4.1",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "TAKER_EXCEEDS_TOTAL"
+      }
+    },
+    {
+      "name": "taker_quote_exceeds_total",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "42.1",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "TAKER_EXCEEDS_TOTAL"
+      }
+    },
+    {
+      "name": "fractional_trade_count",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4.5",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "INVALID_TRADE_COUNT"
+      }
+    },
+    {
+      "name": "nonfinite_price",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "NaN",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "INVALID_DECIMAL"
+      }
+    },
+    {
+      "name": "scientific_notation_price",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "1e1",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "INVALID_DECIMAL"
+      }
+    },
+    {
+      "name": "duplicate_open_timestamp",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ],
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "DUPLICATE_OR_REVERSED_TIME"
+      }
+    },
+    {
+      "name": "reverse_timestamp_order",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577838600000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577839499999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ],
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "DUPLICATE_OR_REVERSED_TIME"
+      }
+    },
+    {
+      "name": "missing_csv_column",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "COLUMN_COUNT"
+      }
+    },
+    {
+      "name": "extra_csv_column",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0",
+          "extra"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "COLUMN_COUNT"
+      }
+    },
+    {
+      "name": "empty_csv_archive",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [],
+      "expected": {
+        "accepted": false,
+        "reason": "EMPTY_ARCHIVE"
+      }
+    },
+    {
+      "name": "2025_archive_with_millisecond_rows",
+      "kind": "parse_csv",
+      "symbol": "ETHUSDT",
+      "month": "2025-01",
+      "timestamp_unit": "microseconds",
+      "csv_rows": [
+        [
+          "1735689600000",
+          "2000.00",
+          "2010.00",
+          "1990.00",
+          "2005.00",
+          "0.400",
+          "1735690499999",
+          "800.500",
+          "4",
+          "0.200",
+          "401.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "TIMESTAMP_UNIT_OR_RANGE"
+      }
+    },
+    {
+      "name": "pre2025_archive_with_microsecond_rows",
+      "kind": "parse_csv",
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "timestamp_unit": "milliseconds",
+      "csv_rows": [
+        [
+          "1577836800000000",
+          "10.000",
+          "12.000",
+          "9.000",
+          "11.000",
+          "4.000",
+          "1577837699999999",
+          "42.000",
+          "4",
+          "2.000",
+          "22.000",
+          "0"
+        ]
+      ],
+      "expected": {
+        "accepted": false,
+        "reason": "TIMESTAMP_UNIT_OR_RANGE"
+      }
+    },
+    {
+      "name": "checksum_exact_archive",
+      "kind": "verify_checksum",
+      "archive_ref": "valid_one_csv",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "checksum_text": "30a5b7288dc4b84657e657ef71bd2bd2c3a47f00fdffd99d920b3166772a6b55  BTCUSDT-15m-2020-01.zip\n",
+      "expected": {
+        "accepted": true,
+        "sha256": "30a5b7288dc4b84657e657ef71bd2bd2c3a47f00fdffd99d920b3166772a6b55"
+      }
+    },
+    {
+      "name": "checksum_wrong_hash",
+      "kind": "verify_checksum",
+      "archive_ref": "valid_one_csv",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "checksum_text": "0000000000000000000000000000000000000000000000000000000000000000  BTCUSDT-15m-2020-01.zip\n",
+      "expected": {
+        "accepted": false,
+        "reason": "CHECKSUM_MISMATCH"
+      }
+    },
+    {
+      "name": "checksum_wrong_filename",
+      "kind": "verify_checksum",
+      "archive_ref": "valid_one_csv",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "checksum_text": "30a5b7288dc4b84657e657ef71bd2bd2c3a47f00fdffd99d920b3166772a6b55  ETHUSDT-15m-2020-01.zip\n",
+      "expected": {
+        "accepted": false,
+        "reason": "CHECKSUM_FILENAME"
+      }
+    },
+    {
+      "name": "checksum_extra_record",
+      "kind": "verify_checksum",
+      "archive_ref": "valid_one_csv",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "checksum_text": "30a5b7288dc4b84657e657ef71bd2bd2c3a47f00fdffd99d920b3166772a6b55  BTCUSDT-15m-2020-01.zip\n30a5b7288dc4b84657e657ef71bd2bd2c3a47f00fdffd99d920b3166772a6b55  other.zip\n",
+      "expected": {
+        "accepted": false,
+        "reason": "CHECKSUM_FORMAT"
+      }
+    },
+    {
+      "name": "checksum_missing_hash",
+      "kind": "verify_checksum",
+      "archive_ref": "valid_one_csv",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "checksum_text": "  BTCUSDT-15m-2020-01.zip\n",
+      "expected": {
+        "accepted": false,
+        "reason": "CHECKSUM_FORMAT"
+      }
+    },
+    {
+      "name": "zip_valid_one_csv",
+      "kind": "read_archive",
+      "archive_ref": "valid_one_csv",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "expected_member": "BTCUSDT-15m-2020-01.csv",
+      "expected": {
+        "accepted": true,
+        "csv_text": "1577836800000,10.000,12.000,9.000,11.000,4.000,1577837699999,42.000,4,2.000,22.000,0\n"
+      }
+    },
+    {
+      "name": "zip_wrong_member_name",
+      "kind": "read_archive",
+      "archive_ref": "wrong_member_name",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "expected_member": "BTCUSDT-15m-2020-01.csv",
+      "expected": {
+        "accepted": false,
+        "reason": "ZIP_MEMBER_NAME"
+      }
+    },
+    {
+      "name": "zip_traversal_member",
+      "kind": "read_archive",
+      "archive_ref": "traversal_member",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "expected_member": "BTCUSDT-15m-2020-01.csv",
+      "expected": {
+        "accepted": false,
+        "reason": "ZIP_MEMBER_NAME"
+      }
+    },
+    {
+      "name": "zip_multiple_members",
+      "kind": "read_archive",
+      "archive_ref": "multiple_members",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "expected_member": "BTCUSDT-15m-2020-01.csv",
+      "expected": {
+        "accepted": false,
+        "reason": "ZIP_MEMBER_COUNT"
+      }
+    },
+    {
+      "name": "zip_duplicate_members",
+      "kind": "read_archive",
+      "archive_ref": "duplicate_members",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "expected_member": "BTCUSDT-15m-2020-01.csv",
+      "expected": {
+        "accepted": false,
+        "reason": "ZIP_MEMBER_COUNT"
+      }
+    },
+    {
+      "name": "zip_not_zip",
+      "kind": "read_archive",
+      "archive_ref": "not_zip",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "expected_member": "BTCUSDT-15m-2020-01.csv",
+      "expected": {
+        "accepted": false,
+        "reason": "ZIP_FORMAT"
+      }
+    },
+    {
+      "name": "zip_truncated_zip",
+      "kind": "read_archive",
+      "archive_ref": "truncated_zip",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "expected_member": "BTCUSDT-15m-2020-01.csv",
+      "expected": {
+        "accepted": false,
+        "reason": "ZIP_FORMAT"
+      }
+    },
+    {
+      "name": "explicit_delay_0_is_assumption_not_publication",
+      "kind": "availability_scenario",
+      "bar_end_time": 1577837700,
+      "delay_seconds": 0,
+      "expected": {
+        "row_time": 1577837700,
+        "available_at": 1577837700,
+        "availability_basis": "assumed",
+        "historical_publication_time": null,
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "explicit_delay_5_is_assumption_not_publication",
+      "kind": "availability_scenario",
+      "bar_end_time": 1577837700,
+      "delay_seconds": 5,
+      "expected": {
+        "row_time": 1577837700,
+        "available_at": 1577837705,
+        "availability_basis": "assumed",
+        "historical_publication_time": null,
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "zip_member_crc_mismatch",
+      "kind": "read_archive",
+      "archive_ref": "crc_corrupt_member",
+      "archive_name": "BTCUSDT-15m-2020-01.zip",
+      "expected_member": "BTCUSDT-15m-2020-01.csv",
+      "expected": {
+        "accepted": false,
+        "reason": "ZIP_CRC"
+      }
+    }
+  ]
+}

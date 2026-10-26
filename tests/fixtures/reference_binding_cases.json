@@ -1,0 +1,1606 @@
+{
+  "schema": "reference-binding-cases/1",
+  "baseline": {
+    "identity_aliases": {
+      "idea": "fixture:idea",
+      "formalization": "fixture:formalization",
+      "catalog": "fixture:catalog",
+      "data_snapshot": "fixture:data_snapshot",
+      "feature_certificate": "fixture:feature_certificate",
+      "feature_definitions": "fixture:feature_definitions",
+      "reference_certificate": "fixture:reference_certificate",
+      "reference_package": "fixture:reference_package"
+    },
+    "partition": "development",
+    "source": {
+      "symbol": "BTCUSDT",
+      "month": "2020-01",
+      "raw_csv": "1577836800000,101,101,101,101,0,1577837699999,0,0,0,0,0\n1577837700000,102,102,102,102,0,1577838599999,0,0,0,0,0\n1577838600000,103,103,103,103,0,1577839499999,0,0,0,0,0\n"
+    },
+    "delay_seconds": 0,
+    "catalog": {
+      "BTCUSDT.open@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "USDT/BTC"
+      },
+      "BTCUSDT.high@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "USDT/BTC"
+      },
+      "BTCUSDT.low@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "USDT/BTC"
+      },
+      "BTCUSDT.close@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "USDT/BTC"
+      },
+      "BTCUSDT.volume@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "BTC"
+      },
+      "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "USDT"
+      },
+      "BTCUSDT.trades@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "count"
+      },
+      "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "BTC"
+      },
+      "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+        "type": "real",
+        "unit": "USDT"
+      }
+    },
+    "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+    "rows": [
+      {
+        "time": 1577837700,
+        "instrument": "BTCUSDT",
+        "features": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "value": "101",
+            "available_at": 1577837700
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "value": "101",
+            "available_at": 1577837700
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "value": "101",
+            "available_at": 1577837700
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "value": "101",
+            "available_at": 1577837700
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577837700
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577837700
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577837700
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577837700
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577837700
+          }
+        }
+      },
+      {
+        "time": 1577838600,
+        "instrument": "BTCUSDT",
+        "features": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "value": "102",
+            "available_at": 1577838600
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "value": "102",
+            "available_at": 1577838600
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "value": "102",
+            "available_at": 1577838600
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "value": "102",
+            "available_at": 1577838600
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577838600
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577838600
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577838600
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577838600
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577838600
+          }
+        }
+      },
+      {
+        "time": 1577839500,
+        "instrument": "BTCUSDT",
+        "features": {
+          "BTCUSDT.open@binance-spot-15m-v1": {
+            "value": "103",
+            "available_at": 1577839500
+          },
+          "BTCUSDT.high@binance-spot-15m-v1": {
+            "value": "103",
+            "available_at": 1577839500
+          },
+          "BTCUSDT.low@binance-spot-15m-v1": {
+            "value": "103",
+            "available_at": 1577839500
+          },
+          "BTCUSDT.close@binance-spot-15m-v1": {
+            "value": "103",
+            "available_at": 1577839500
+          },
+          "BTCUSDT.volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577839500
+          },
+          "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577839500
+          },
+          "BTCUSDT.trades@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577839500
+          },
+          "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577839500
+          },
+          "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+            "value": "0",
+            "available_at": 1577839500
+          }
+        }
+      }
+    ],
+    "original_idea_text": "Compare the close at the exact next 15-minute observation inside the fixed scope when the current close exceeds 101 USDT per BTC.",
+    "candidate": {
+      "schema": "hypothesis-exec/1",
+      "idea_ref": "fixture:idea",
+      "claim_kind": "difference",
+      "estimand": {
+        "kind": "conditional-minus-scope-mean/1",
+        "unit": "USDT/BTC",
+        "weighting": "equal_rows",
+        "missingness": "scope-true-outcome-observed/1",
+        "condition_unknown": "exclude-from-condition-retain-in-scope",
+        "nuisance_fit": "none",
+        "direction": "positive"
+      },
+      "scope_ast": {
+        "schema": "research-ast/1",
+        "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+        "expression": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "condition_ast": {
+        "schema": "research-ast/1",
+        "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+        "expression": {
+          "op": "gt",
+          "left": {
+            "op": "feature",
+            "ref": "BTCUSDT.close@binance-spot-15m-v1"
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "value": "101"
+          }
+        }
+      },
+      "outcome": {
+        "program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "feature",
+            "ref": "BTCUSDT.close@binance-spot-15m-v1"
+          }
+        },
+        "scale": "quantity"
+      },
+      "comparator": {
+        "kind": "whole_scope"
+      },
+      "horizons": {
+        "grid_seconds": 900,
+        "outcome_bars": 1
+      },
+      "test_universe": {
+        "start": "2020-01-01T00:15:00Z",
+        "end": "2020-01-01T01:00:00Z",
+        "instruments": [
+          "BTCUSDT"
+        ],
+        "data_snapshot_ref": "fixture:data_snapshot"
+      },
+      "parameter_origins": [
+        {
+          "path": "/scope_ast/expression/value",
+          "basis": "preexisting_specification",
+          "source_refs": [],
+          "rationale": "Independent synthetic binding case; no empirical threshold selection."
+        },
+        {
+          "path": "/condition_ast/expression/right/value",
+          "basis": "preexisting_specification",
+          "source_refs": [],
+          "rationale": "Independent synthetic binding case; no empirical threshold selection."
+        },
+        {
+          "path": "/horizons/outcome_bars",
+          "basis": "preexisting_specification",
+          "source_refs": [],
+          "rationale": "Independent synthetic binding case; no empirical threshold selection."
+        }
+      ],
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1"
+      ]
+    },
+    "semantic_report": {
+      "status": "equivalent",
+      "segments": [
+        {
+          "text": "Compare the close at the exact next 15-minute observation inside the fixed scope when the current close exceeds 101 USDT per BTC.",
+          "path": "/estimand",
+          "interpretation": "Retained synthetic formalizer assertion; not independent proof of natural-language fidelity."
+        }
+      ],
+      "differences": []
+    },
+    "compile_options": {
+      "as_of": "2020-01-01T00:59:59Z",
+      "max_steps": 10000
+    },
+    "expected_compiled_request": {
+      "schema": "reference-case-request/1",
+      "candidate_ref": "fixture:formalization",
+      "data_snapshot_ref": "fixture:data_snapshot",
+      "scope_program": {
+        "schema": "research-ast/1",
+        "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+        "expression": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        }
+      },
+      "condition_program": {
+        "schema": "research-ast/1",
+        "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+        "expression": {
+          "op": "gt",
+          "left": {
+            "op": "feature",
+            "ref": "BTCUSDT.close@binance-spot-15m-v1"
+          },
+          "right": {
+            "op": "literal",
+            "type": "real",
+            "unit": "USDT/BTC",
+            "value": "101"
+          }
+        }
+      },
+      "outcome_program": {
+        "schema": "research-ast/1",
+        "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+        "expression": {
+          "op": "feature",
+          "ref": "BTCUSDT.close@binance-spot-15m-v1"
+        }
+      },
+      "outcome_scale": "quantity",
+      "horizon_bars": 1,
+      "universe": {
+        "start": "2020-01-01T00:15:00Z",
+        "end": "2020-01-01T01:00:00Z",
+        "instruments": [
+          "BTCUSDT"
+        ]
+      },
+      "as_of": "2020-01-01T00:59:59Z",
+      "max_steps": 10000
+    },
+    "template_candidate_sha256": "11cdaa4739fe61a74ba2dfbf7bce97da22878c3d11cedb80fcd2a32f5c906313",
+    "template_request_sha256": "bab8f67ee2ba191d7fc4a179cda71d8ca9932a39783a1ab121fad2d086bae34f",
+    "required_preconditions": [
+      "genuine formalizer record submitted as the accepted result of its completed attempt",
+      "original idea/catalog/parameter sources authorized to that formalizer attempt",
+      "exact owned snapshot and catalog named by the candidate",
+      "genuine raw-feature certificate for this exact snapshot and definitions",
+      "intact retained reference-calculator certificate/package with compatible execution runtime"
+    ],
+    "expected_authority": {
+      "scientific_readiness": false,
+      "semantic_equivalence_certified": false,
+      "inferential_classification": null,
+      "eligible_outcome_batch_event": false,
+      "capital_authority": false,
+      "scope": "development_descriptive_only"
+    }
+  },
+  "cases": [
+    {
+      "name": "exact_binding_and_whole_scope_contrast",
+      "kind": "development_calculation",
+      "base": "baseline",
+      "change": {},
+      "expected": {
+        "compile_allowed": true,
+        "execution_allowed": true,
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "102",
+            "denominator": "1"
+          },
+          {
+            "numerator": "103",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "scope_count": 2,
+        "condition_count": 1,
+        "scientific_readiness": false,
+        "eligible_outcome_batch_event": false,
+        "condition_values": [
+          false,
+          true,
+          true
+        ]
+      }
+    },
+    {
+      "name": "assumed_delay_does_not_make_current_condition_available",
+      "kind": "development_calculation",
+      "base": "baseline",
+      "change": {
+        "delay_seconds": 5,
+        "rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837705
+              }
+            }
+          },
+          {
+            "time": 1577838600,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "102",
+                "available_at": 1577838605
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "102",
+                "available_at": 1577838605
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "102",
+                "available_at": 1577838605
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "102",
+                "available_at": 1577838605
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577838605
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577838605
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577838605
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577838605
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577838605
+              }
+            }
+          },
+          {
+            "time": 1577839500,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839505
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839505
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839505
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839505
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839505
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839505
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839505
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839505
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839505
+              }
+            }
+          }
+        ]
+      },
+      "expected": {
+        "compile_allowed": true,
+        "execution_allowed": true,
+        "case_states": [
+          "ELIGIBLE",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          {
+            "numerator": "102",
+            "denominator": "1"
+          },
+          {
+            "numerator": "103",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": null,
+        "scope_count": 2,
+        "condition_count": 0,
+        "scientific_readiness": false,
+        "eligible_outcome_batch_event": false,
+        "condition_values": [
+          null,
+          null,
+          null
+        ]
+      }
+    },
+    {
+      "name": "missing_anchor_does_not_substitute_later_row",
+      "kind": "development_calculation",
+      "base": "baseline",
+      "change": {
+        "source_raw_csv": "1577836800000,101,101,101,101,0,1577837699999,0,0,0,0,0\n1577838600000,103,103,103,103,0,1577839499999,0,0,0,0,0\n",
+        "rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              }
+            }
+          },
+          {
+            "time": 1577839500,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              }
+            }
+          }
+        ]
+      },
+      "expected": {
+        "compile_allowed": true,
+        "execution_allowed": true,
+        "case_states": [
+          "DATA_GAP",
+          "DATA_GAP",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          null,
+          null,
+          null
+        ],
+        "effect": null,
+        "scope_count": 0,
+        "condition_count": 0,
+        "scientific_readiness": false,
+        "eligible_outcome_batch_event": false
+      }
+    },
+    {
+      "name": "invalid_present_bar_stays_null_and_unknown_condition_stays_in_scope",
+      "kind": "development_calculation",
+      "base": "baseline",
+      "change": {
+        "source_raw_csv": "1577836800000,101,101,101,101,0,1577837699999,0,0,0,0,0\n1577837700000,102,102,102,102,0,1577838299999,0,0,0,0,0\n1577838600000,103,103,103,103,0,1577839499999,0,0,0,0,0\n",
+        "rows": [
+          {
+            "time": 1577837700,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "101",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577837700
+              }
+            }
+          },
+          {
+            "time": 1577838600,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": null,
+                "available_at": 1577838600
+              }
+            }
+          },
+          {
+            "time": 1577839500,
+            "instrument": "BTCUSDT",
+            "features": {
+              "BTCUSDT.open@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.high@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.low@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.close@binance-spot-15m-v1": {
+                "value": "103",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.trades@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              },
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+                "value": "0",
+                "available_at": 1577839500
+              }
+            }
+          }
+        ]
+      },
+      "expected": {
+        "compile_allowed": true,
+        "execution_allowed": true,
+        "case_states": [
+          "OUTCOME_MISSING",
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "outcome_values": [
+          null,
+          {
+            "numerator": "103",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": null,
+        "scope_count": 1,
+        "condition_count": 0,
+        "scientific_readiness": false,
+        "eligible_outcome_batch_event": false,
+        "condition_values": [
+          false,
+          null,
+          true
+        ]
+      }
+    },
+    {
+      "name": "resource_stop_is_not_a_complete_descriptive_result",
+      "kind": "development_calculation",
+      "base": "baseline",
+      "change": {
+        "compile_options": {
+          "max_steps": 1
+        }
+      },
+      "expected": {
+        "compile_allowed": true,
+        "execution_allowed": true,
+        "case_states": [],
+        "outcome_values": [],
+        "effect": null,
+        "scope_count": null,
+        "condition_count": null,
+        "scientific_readiness": false,
+        "eligible_outcome_batch_event": false,
+        "processing_complete": false,
+        "status": "RESOURCE_STOP"
+      }
+    },
+    {
+      "name": "decision_lag_loads_authorized_snapshot_warmup",
+      "kind": "development_calculation",
+      "base": "baseline",
+      "change": {
+        "candidate": {
+          "schema": "hypothesis-exec/1",
+          "idea_ref": "fixture:idea",
+          "claim_kind": "difference",
+          "estimand": {
+            "kind": "conditional-minus-scope-mean/1",
+            "unit": "USDT/BTC",
+            "weighting": "equal_rows",
+            "missingness": "scope-true-outcome-observed/1",
+            "condition_unknown": "exclude-from-condition-retain-in-scope",
+            "nuisance_fit": "none",
+            "direction": "positive"
+          },
+          "scope_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": true
+            }
+          },
+          "condition_ast": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "arg": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                },
+                "bars": 1
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "USDT/BTC",
+                "value": "100"
+              }
+            }
+          },
+          "outcome": {
+            "program": {
+              "schema": "research-ast/1",
+              "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+              "expression": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              }
+            },
+            "scale": "quantity"
+          },
+          "comparator": {
+            "kind": "whole_scope"
+          },
+          "horizons": {
+            "grid_seconds": 900,
+            "outcome_bars": 1
+          },
+          "test_universe": {
+            "start": "2020-01-01T00:30:00Z",
+            "end": "2020-01-01T01:00:00Z",
+            "instruments": [
+              "BTCUSDT"
+            ],
+            "data_snapshot_ref": "fixture:data_snapshot"
+          },
+          "parameter_origins": [
+            {
+              "path": "/scope_ast/expression/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independent synthetic binding case; no empirical threshold selection."
+            },
+            {
+              "path": "/condition_ast/expression/right/value",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independent synthetic binding case; no empirical threshold selection."
+            },
+            {
+              "path": "/horizons/outcome_bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independent synthetic binding case; no empirical threshold selection."
+            },
+            {
+              "path": "/condition_ast/expression/left/bars",
+              "basis": "preexisting_specification",
+              "source_refs": [],
+              "rationale": "Independent exact prior-grid decision warmup case."
+            }
+          ],
+          "feature_refs": [
+            "BTCUSDT.close@binance-spot-15m-v1"
+          ]
+        },
+        "original_idea_text": "Compare the exact next-bar close in the fixed scope when the previous 15-minute close exceeds 100 USDT per BTC."
+      },
+      "expected_compiled_request": {
+        "schema": "reference-case-request/1",
+        "candidate_ref": "fixture:formalization",
+        "data_snapshot_ref": "fixture:data_snapshot",
+        "scope_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "gt",
+            "left": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "BTCUSDT.close@binance-spot-15m-v1"
+              },
+              "bars": 1
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT/BTC",
+              "value": "100"
+            }
+          }
+        },
+        "outcome_program": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "feature",
+            "ref": "BTCUSDT.close@binance-spot-15m-v1"
+          }
+        },
+        "outcome_scale": "quantity",
+        "horizon_bars": 1,
+        "universe": {
+          "start": "2020-01-01T00:30:00Z",
+          "end": "2020-01-01T01:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ]
+        },
+        "as_of": "2020-01-01T00:59:59Z",
+        "max_steps": 10000
+      },
+      "required_input_rows": [
+        {
+          "time": 1577837700,
+          "instrument": "BTCUSDT",
+          "features": {
+            "BTCUSDT.open@binance-spot-15m-v1": {
+              "value": "101",
+              "available_at": 1577837700
+            },
+            "BTCUSDT.high@binance-spot-15m-v1": {
+              "value": "101",
+              "available_at": 1577837700
+            },
+            "BTCUSDT.low@binance-spot-15m-v1": {
+              "value": "101",
+              "available_at": 1577837700
+            },
+            "BTCUSDT.close@binance-spot-15m-v1": {
+              "value": "101",
+              "available_at": 1577837700
+            },
+            "BTCUSDT.volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577837700
+            },
+            "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577837700
+            },
+            "BTCUSDT.trades@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577837700
+            },
+            "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577837700
+            },
+            "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577837700
+            }
+          }
+        },
+        {
+          "time": 1577838600,
+          "instrument": "BTCUSDT",
+          "features": {
+            "BTCUSDT.open@binance-spot-15m-v1": {
+              "value": "102",
+              "available_at": 1577838600
+            },
+            "BTCUSDT.high@binance-spot-15m-v1": {
+              "value": "102",
+              "available_at": 1577838600
+            },
+            "BTCUSDT.low@binance-spot-15m-v1": {
+              "value": "102",
+              "available_at": 1577838600
+            },
+            "BTCUSDT.close@binance-spot-15m-v1": {
+              "value": "102",
+              "available_at": 1577838600
+            },
+            "BTCUSDT.volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577838600
+            },
+            "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577838600
+            },
+            "BTCUSDT.trades@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577838600
+            },
+            "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577838600
+            },
+            "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577838600
+            }
+          }
+        },
+        {
+          "time": 1577839500,
+          "instrument": "BTCUSDT",
+          "features": {
+            "BTCUSDT.open@binance-spot-15m-v1": {
+              "value": "103",
+              "available_at": 1577839500
+            },
+            "BTCUSDT.high@binance-spot-15m-v1": {
+              "value": "103",
+              "available_at": 1577839500
+            },
+            "BTCUSDT.low@binance-spot-15m-v1": {
+              "value": "103",
+              "available_at": 1577839500
+            },
+            "BTCUSDT.close@binance-spot-15m-v1": {
+              "value": "103",
+              "available_at": 1577839500
+            },
+            "BTCUSDT.volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577839500
+            },
+            "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577839500
+            },
+            "BTCUSDT.trades@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577839500
+            },
+            "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577839500
+            },
+            "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+              "value": "0",
+              "available_at": 1577839500
+            }
+          }
+        }
+      ],
+      "expected": {
+        "compile_allowed": true,
+        "execution_allowed": true,
+        "case_states": [
+          "ELIGIBLE",
+          "PARTITION_BOUNDARY"
+        ],
+        "condition_values": [
+          true,
+          true
+        ],
+        "outcome_values": [
+          {
+            "numerator": "103",
+            "denominator": "1"
+          },
+          null
+        ],
+        "effect": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "scope_count": 1,
+        "condition_count": 1,
+        "scientific_readiness": false,
+        "eligible_outcome_batch_event": false
+      }
+    },
+    {
+      "name": "uncompleted_draft_is_not_a_completed_candidate",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "formalization_attempt": "running_not_accepted"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Retained draft existence does not establish accepted operational completion.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "counterfeit_formalization_source_is_denied",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "formalization_origin": "generic_source"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Only the genuine retained formalization namespace and its original attempt may bind.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "different_original_idea_or_candidate_bytes_are_denied",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "formalization_original_idea": "different text"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Recompute original-idea/candidate/semantic assertions from the authorized retained record.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "unsupported_or_ambiguous_draft_remains_a_gap",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "formalization_assessment": "RETAINED_GAP",
+        "semantic_status": "ambiguous"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "No coercion into a supported difference or proof of semantic equivalence.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "candidate_snapshot_reference_cannot_be_substituted",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "candidate_data_snapshot_ref": "fixture:other_data_snapshot"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "The nested candidate must name the exact bound snapshot.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "different_catalog_identity_is_not_silently_aliased",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "formalization_catalog_id": "fixture:other_catalog_with_identical_content"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Require the declared exact catalog identity as well as compatible content hash.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "program_catalog_hash_must_match_bound_catalog",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "condition_program_catalog_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Compile the original AST against its exact declared catalog; never rewrite its hash.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "feature_certificate_must_bind_same_snapshot",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "feature_certificate_data_snapshot_id": "fixture:other_data_snapshot"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "A correct raw-field algorithm certificate for another data version is insufficient.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "generic_feature_certificate_cannot_grant_authority",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "feature_certificate_origin": "generic_source"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Resolve and verify a protected host-issued certificate, not body claims.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "generic_reference_certificate_cannot_grant_authority",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "reference_certificate_origin": "generic_source"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Resolve and verify the host-issued implementation certificate and exact retained package.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "installed_stale_feature_code_with_intact_evidence_is_not_revoked",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "feature_installed_status": "STALE",
+        "feature_retained_package": "intact",
+        "feature_data_closure": "unchanged",
+        "installed_difference": "unrelated_application_module_added"
+      },
+      "expected": {
+        "allowed": true,
+        "reason": "Installed currency is separate from retained raw-field conformance for exact immutable rows.",
+        "scientific_readiness": false,
+        "retained_evidence_usable": true,
+        "installed_currency": "STALE"
+      }
+    },
+    {
+      "name": "installed_stale_reference_code_uses_exact_retained_implementation",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "reference_installed_status": "STALE",
+        "reference_retained_package": "intact",
+        "runtime": "matching_certified_runtime"
+      },
+      "expected": {
+        "allowed": true,
+        "reason": "Run the exact retained certified calculator, never substitute currently installed code.",
+        "scientific_readiness": false,
+        "executed_source": "exact_bound_retained_reference_package"
+      }
+    },
+    {
+      "name": "corrupt_retained_feature_package_blocks_binding",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "feature_retained_package": "one_byte_changed"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Installed-source staleness is not equivalent to corrupt retained evidence.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "missing_retained_reference_package_blocks_execution",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "reference_retained_package": "missing_blob"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "There is no fallback to installed calculator code.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "runtime_mismatch_blocks_bound_execution",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "runtime": "different_executable_or_library_fingerprint"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Intact source alone does not certify a different execution runtime.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "assessment_outcomes_denied_before_loading",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "trusted_test_setup": "inject already bound protected compiled metadata; do not bypass real formalizer permissions",
+        "snapshot_partition": "assessment"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "No assessment outcome computation before the missing scientific plan/allocation/freeze.",
+        "scientific_readiness": false,
+        "data_or_blob_loader_calls": 0,
+        "outcome_calculator_calls": 0
+      }
+    },
+    {
+      "name": "corroboration_outcomes_denied_before_loading",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "trusted_test_setup": "inject already bound protected compiled metadata; do not bypass real formalizer permissions",
+        "snapshot_partition": "corroboration"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Reserved corroboration cannot be evaluated through a development operation.",
+        "scientific_readiness": false,
+        "data_or_blob_loader_calls": 0,
+        "outcome_calculator_calls": 0
+      }
+    },
+    {
+      "name": "development_label_cannot_launder_protected_ancestry",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "trusted_test_setup": "inject a development wrapper retaining an assessment ancestor"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Inspect complete inherited exposure; relabeling cannot grant outcome access.",
+        "scientific_readiness": false,
+        "outcome_calculator_calls": 0
+      }
+    },
+    {
+      "name": "metadata_only_compilation_does_not_compute_outcomes",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "spy": "calculator_row_loader_and_outcome_functions"
+      },
+      "expected": {
+        "allowed": true,
+        "reason": "Compilation may verify immutable bytes but must not materialize market rows or outcomes.",
+        "scientific_readiness": false,
+        "calculator_row_loader_calls": 0,
+        "outcome_calculator_calls": 0
+      }
+    },
+    {
+      "name": "execution_accepts_no_candidate_data_or_control_overrides",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "extra_arguments_to_try_separately": {
+          "candidate": {},
+          "data_snapshot_id": "fixture:other_data_snapshot",
+          "as_of": "2020-01-01T00:30:00Z",
+          "max_steps": 1
+        }
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Execute accepts only the exact compiled identity; new choices require a new binding.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "changed_compiled_request_cannot_keep_old_identity",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "compiled_request_mutation": {
+          "horizon_bars": 2
+        },
+        "keep_old_identity": true
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Verify immutable request/content and dependency bindings before execution.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "worker_cannot_invoke_host_binding_or_execution",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "both",
+      "change": {
+        "actor_role": "discovery_worker"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "The new operator operation does not add a model data-access route.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "mandatory_compile_controls_are_explicit_and_typed",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "compile",
+      "change": {
+        "controls_to_try_separately": [
+          {
+            "omit": "as_of"
+          },
+          {
+            "omit": "max_steps"
+          },
+          {
+            "max_steps": true
+          },
+          {
+            "max_steps": 10000001
+          }
+        ]
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Reject omitted/ill-typed/out-of-envelope controls; no silent default or budget expansion.",
+        "scientific_readiness": false
+      }
+    },
+    {
+      "name": "child_response_must_match_exact_request_and_source",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "response_mutations_to_try_separately": [
+          "wrong_request_hash",
+          "wrong_candidate_ref",
+          "wrong_data_snapshot_ref",
+          "wrong_source_footprint",
+          "scientific_readiness_true",
+          "partial_processing_claimed_complete"
+        ]
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "A returned result is not authority unless exact identities, schemas, completion and resource fields validate.",
+        "scientific_readiness": false,
+        "complete_result_committed": false
+      }
+    },
+    {
+      "name": "timeout_or_output_overflow_cannot_publish_success",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "child_failures_to_try_separately": [
+          "lifetime_exceeded",
+          "stdout_limit_exceeded",
+          "stderr_limit_exceeded"
+        ]
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Kill and reap the owned child and retain the bounded failure/attempt state.",
+        "scientific_readiness": false,
+        "complete_result_committed": false,
+        "child_left_running": false
+      }
+    },
+    {
+      "name": "caller_abort_retains_interruption_without_success",
+      "kind": "binding_admission",
+      "base": "baseline",
+      "stage": "execute",
+      "change": {
+        "caller_signal": "KeyboardInterrupt_during_child_wait"
+      },
+      "expected": {
+        "allowed": false,
+        "reason": "Kill and reap; retain interruption; do not turn an unfinished calculation into a complete result.",
+        "scientific_readiness": false,
+        "complete_result_committed": false,
+        "child_left_running": false
+      }
+    }
+  ]
+}

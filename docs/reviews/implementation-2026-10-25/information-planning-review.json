@@ -1,0 +1,250 @@
+{
+  "schema": "independent-exact-bootstrap-acceleration-review/1",
+  "date": "2026-10-25",
+  "reviewer": "Independent memory_boundary_review agent",
+  "purpose": "Check exact integer sufficient-statistic acceleration against the preserved Fraction implementation as a prerequisite to actual development information planning.",
+  "status": "NO_SUBSTANTIATED_CORRECTNESS_DEFECT_FOUND_WITHIN_EXERCISED_SCOPE",
+  "methodology_note": {
+    "path": "docs/reviews/implementation-2026-10-25/information-planning-assessment.json",
+    "sha256": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f"
+  },
+  "scope_clarification": "The earlier methodology note recommended keeping nonbinary data on the reference path. That implementation suggestion is narrower than necessary. The implemented optimization uses unbounded integer arithmetic for every integer-valued sufficient statistic, including integral quantity outcomes; nonintegral sufficient statistics continue with Fraction. Exact rational per-draw division and all scientific meanings remain unchanged. The original note is preserved; this clarification does not introduce a return simulation model.",
+  "oracle": {
+    "path": "docs/reviews/implementation-2026-10-25/information-planning-source-before.zip",
+    "sha256": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+    "entries": 90,
+    "sampler_sha256": "789d172ad4e4fff99f9f506c65ac9d6b0ca3fdc1bcc8e8a79702704cf2a1daf6",
+    "verification": "Archive bytes and archived sampler bytes independently hashed. The helper extracts archived application modules and imports them under an isolated package alias, not the current trading_researcher package."
+  },
+  "changed_by_reviewer": [
+    "tests/test_exact_bootstrap_acceleration_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json",
+    "docs/reviews/implementation-2026-10-25/information-planning-review.json"
+  ],
+  "application_modified_by_reviewer": false,
+  "pinned_fixtures_modified_by_reviewer": false,
+  "prior_reports_modified_by_reviewer": false,
+  "observed_implementation": {
+    "changed_application_file": "trading_researcher/stationary_bootstrap.py",
+    "changes": [
+      "Integer _bounded values keep unbounded Python integer type with the same8192-bit limit.",
+      "Prefix/draw sums start at integer zero and parsed denominator1 observations use their numerator.",
+      "Per-draw means explicitly construct Fraction(sum,count), retaining exact fractional results when both sums/counts are integers.",
+      "Nonintegral observations remain exact Fraction arithmetic."
+    ],
+    "untouched_semantics": [
+      "Declared PRNG/version/seed and segment path construction",
+      "Joint full-grid resampling and row weighting",
+      "Fixed19999 draws per deduplicated sensitivity",
+      "Unknown conditions and undefined denominators",
+      "Per-mean and final numeric envelopes",
+      "Draw ordinals, path hashes, canonical callback records",
+      "Stop checks and explicit failure retention",
+      "Basic intervals, sensitivity enclosure and MC policy",
+      "Scientific readiness and classification permission"
+    ]
+  },
+  "independent_cases": [
+    "Archived oracle sampler SHA matches the previous reviewed source.",
+    "Hand prefixes preserve unknown-condition baseline participation and an empty time bucket; contrast remains-8/3.",
+    "A real public draw from integer sufficient sums returns exact-8/3 without float division.",
+    "Opposite signed values beyond2^53 preserve the hand contrast18014398509481985/2.",
+    "Signed8192-bit integer limits match the preserved Fraction oracle.",
+    "A transient oversized prefix is rejected even if a later integer would cancel it.",
+    "Mixed-sign nonintegral quantities preserve reference draw bytes.",
+    "A complete39998-draw two-sensitivity run compares every canonical stream byte via a cumulative SHA, plus the complete result digest.",
+    "Segment caps1,2,7,23 retain the same partial ordinals, hashes and prefixes.",
+    "Callback-triggered cancellation preserves completed draws, detached input state and the original draw hash despite caller mutation.",
+    "Preexisting cancellation and sink exceptions never become completed results.",
+    "Boolean metadata, malformed rational scalars and a binary outcome outside0/1 are rejected by both implementations."
+  ],
+  "findings": {
+    "unresolved_production_defects": [],
+    "resolved_production_defects_from_this_review": [],
+    "harness_compatibility": {
+      "issue": "The earlier hand-prefix test divided newly integer values with Python /, producing a float rather than its former implicit Fraction arithmetic.",
+      "reproduced_command": "python -B -m unittest discover -s tests -p test_stationary_bootstrap_adversarial.py -k hand_contrast -v",
+      "result": {
+        "tests": 1,
+        "failures": 1,
+        "seconds": 0.002,
+        "exit_code": 1
+      },
+      "observed": "-2.666666666666667 != Fraction(-8,3)",
+      "remedy": "Parent changed only the test expression to Fraction(conditional,nc)-Fraction(total,n); independent expected values and pinned fixtures are unchanged.",
+      "qualification": "This is private-type test harness compatibility, not evidence of incorrect production draw arithmetic. Production already constructed exact Fraction means."
+    }
+  },
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_exact_bootstrap_acceleration_adversarial.py -v",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 3.802,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_stationary_bootstrap_adversarial.py -v",
+      "tests": 13,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 6.421,
+      "exit_code": 0,
+      "qualification": "Rechecks the earlier adversarial source after the parent's explicit Fraction test-only repair; fixed expected values are unchanged."
+    }
+  ],
+  "source_captures": {
+    "before": {
+      "docs/reviews/implementation-2026-10-25/information-planning-source-before.zip": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+      "tests/bootstrap_oracle.py": "83b9c8422b6ba061c2cf5240541ae00d3cee3417f4589b9e0e1d4273a82b1286",
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/test_exact_bootstrap_acceleration.py": "b249a6849c58a33bba51f357a9bc6b4abef3912e2adcca99851be2ca66ff6b55",
+      "tests/test_exact_bootstrap_acceleration_adversarial.py": "32ffafad8892c9a00489cb90b22a6c2abec3e5dfac4e5ee88261ea6d6c62ff8a",
+      "tests/test_stationary_bootstrap_adversarial.py": "f3174a148f499bc83ad4ecdc5ae443c7c8741ac84ae51b0f6ae99559bd4c7c21",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "f14954924b3cddc62b1e79f355e4a1b16d463e06a65ff3cbfe5e79fcda7d244c",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "after": {
+      "docs/reviews/implementation-2026-10-25/information-planning-source-before.zip": "c437848d6e8285a1c64ed29d92437d431da1f055e6ee132bac8ccdc9c4363ea3",
+      "tests/bootstrap_oracle.py": "83b9c8422b6ba061c2cf5240541ae00d3cee3417f4589b9e0e1d4273a82b1286",
+      "tests/bootstrap_support.py": "b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540",
+      "tests/test_exact_bootstrap_acceleration.py": "b249a6849c58a33bba51f357a9bc6b4abef3912e2adcca99851be2ca66ff6b55",
+      "tests/test_exact_bootstrap_acceleration_adversarial.py": "32ffafad8892c9a00489cb90b22a6c2abec3e5dfac4e5ee88261ea6d6c62ff8a",
+      "tests/test_stationary_bootstrap_adversarial.py": "f3174a148f499bc83ad4ecdc5ae443c7c8741ac84ae51b0f6ae99559bd4c7c21",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "f14954924b3cddc62b1e79f355e4a1b16d463e06a65ff3cbfe5e79fcda7d244c",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "17f511c6aaa733b9fe48ed191a0c0b9f7079d63d4d86b744980efd73455ab4c9",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/memory.py": "7fe5b0e46d9129ffaae8f00a8e8b9c18f3736bf45179d56cd7acb1b39f00a576",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+      "trading_researcher/storage.py": "79abb56e3b6e3ec34df9370e3106c3c235c521c7e5df89281acfbcc97fe0939a",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "equal": true,
+    "count": 37,
+    "changed_application_paths_against_archive": [
+      "trading_researcher/stationary_bootstrap.py"
+    ]
+  },
+  "remaining_boundaries": [
+    "This conformance review does not establish power, N_min, nuisance-model validity or statistical calibration.",
+    "The simulation study and owned information-target path remain future implementation; this is a compute prerequisite.",
+    "Integer arithmetic also accelerates integral quantity observations; fractional return workloads can have different performance.",
+    "Wall-time resource stops can retain more work after acceleration. Equality probes use deterministic limits/cancellation rather than asserting identical wall-clock stopping prefixes.",
+    "The archived oracle is run under a separate import alias in the same Python process, not a hostile-process sandbox.",
+    "No benchmark was run by this reviewer; paired timing belongs to the parent's separate quiet benchmark window.",
+    "No new scientific authority, release permission or market profitability claim follows."
+  ],
+  "activity": {
+    "paid_providers": false,
+    "external_messages": false,
+    "new_permission_rejection": false
+  },
+  "conclusion": {
+    "independent_methods": 25,
+    "new_methods": 12,
+    "prior_methods_rechecked": 13,
+    "scientific_readiness": false,
+    "information_target_established": false,
+    "performance_measured_by_reviewer": false,
+    "finding": "Exact integer optimization matches the preserved Fraction oracle on exercised public draws, full streams, numeric boundaries and interruption behavior. The repaired prior exact-prefix assertion and the complete prior adversarial file pass. This is a compute prerequisite, not an implemented nuisance/power study."
+  },
+  "parent_reported_benchmarks": {
+    "qualification": "Reported by parent after a reserved quiet benchmark window. This reviewer did not execute the timing runs, intentionally ran no tests during that window and does not claim independently measured timing. The parent owns the retained benchmark evidence.",
+    "before_change_gate": {
+      "timestamps": 2048,
+      "alternating_pairs": 2,
+      "current_median_seconds": 8.67496,
+      "reference_median_seconds": 8.845401,
+      "speed_ratio": 1.01965,
+      "target_ratio": 1.5,
+      "outcome": "Target not met, as expected for the unchanged implementation. Internal exit2 surfaced as PowerShell tool exit1."
+    },
+    "after_change": [
+      {
+        "timestamps": 2048,
+        "alternating_pairs": 2,
+        "current_median_seconds": 4.0053705,
+        "reference_median_seconds": 8.6331515,
+        "speed_ratio": 2.155394,
+        "draws_per_run": 59997,
+        "exit_code": 0
+      },
+      {
+        "timestamps": 35136,
+        "pairs": 1,
+        "current_seconds": 48.595123,
+        "reference_seconds": 134.584272,
+        "speed_ratio": 2.769502,
+        "draws_per_run": 59997,
+        "exit_code": 0
+      }
+    ],
+    "parent_reported_integrity": "All compared result hashes, including exact draw stream hashes, match; source hashes stable.",
+    "limits": "These are synthetic integer-valued workload measurements, not an end-to-end research acceleration result or a general fractional-return benchmark.",
+    "cost_illustration": "48.595123 seconds times3 effect scenarios times256 datasets is37321.054464 seconds, about10.37 hours for one full-size grid target before additional generation, replay/retention or stress worlds. This extrapolation does not show60-minute feasibility."
+  },
+  "preserved_artifacts": {
+    "docs/reviews/implementation-2026-10-25/information-planning-assessment.json": "8a54ccec9718eacc70607cf72c032e3cc9d3f4b87bca9048c6f6f68b9e07221f",
+    "docs/reviews/implementation-2026-10-25/mc-stability-review.json": "c74fa6b22acd82a8d77feee3c8fb9a165acd773ffc99164d1311d443f0e2fe59",
+    "docs/reviews/implementation-2026-10-25/bootstrap-review.json": "4084f18b6d21ce372336050d9f9bc8225441bcda4db0174f4e244ed568f6dba9",
+    "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960",
+    "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+    "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d"
+  },
+  "next_action": "Use the parent's full regression/HTTP checks to finish the compute checkpoint. Then advance the owned development nuisance/information study described by the methodology note, with an honest complete-study cost decision; do not claim that exact acceleration has supplied N_min or calibration."
+}

@@ -1,0 +1,525 @@
+{
+  "schema": "context-efficiency-count-observation/1",
+  "status": "PASS_COUNT_ONLY",
+  "observed_at_utc": "2026-10-25T17:59:16.874601+00:00",
+  "model_identity": {
+    "catalog_name": "GPT-6.1 Sol",
+    "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "catalog_version": "6.1",
+    "immutable_snapshot_id": null,
+    "immutable_snapshot_status": "UNKNOWN",
+    "reported_model": null,
+    "requested_model": "gpt-6.1-sol"
+  },
+  "baseline_report_sha256": "fc69fec184ded931e946a0b22ee6a5b0576f5fe55c56e70c9a809e23af70f426",
+  "baseline_request_sha256": "e7f455809d2489aebaeb417b3e1834ad86cd103d070851571184baa480203b9a",
+  "baseline_input_tokens": 43730,
+  "projected_input_tokens": 3456,
+  "saved_initial_input_tokens": 40274,
+  "original_wire_bytes": 87405,
+  "projected_wire_bytes": 12529,
+  "reconstruction": [
+    {
+      "artifact_id": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+      "path": [
+        "exposure"
+      ],
+      "items": 607,
+      "pages": 10,
+      "sha256": "ce0ce055ab127c9f3dc977cc6b4f94db945007b855971a5e31c66e092b182ce7",
+      "exact": true
+    },
+    {
+      "artifact_id": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+      "path": [
+        "source_refs"
+      ],
+      "items": 197,
+      "pages": 4,
+      "sha256": "a18e98fe6d2a0659a7c745a42411cdfa2d9d40e7a4e0c361ef6a1c669077054c",
+      "exact": true
+    },
+    {
+      "artifact_id": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+      "path": [
+        "body",
+        "manifest",
+        "provenance",
+        "checksum_evidence_refs"
+      ],
+      "items": 96,
+      "pages": 2,
+      "sha256": "5e06b204542d2b0a2ad14cee6b004146eae0abd769cb24ad04d03735cfb28f8a",
+      "exact": true
+    },
+    {
+      "artifact_id": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+      "path": [
+        "body",
+        "manifest",
+        "provenance",
+        "raw_source_refs"
+      ],
+      "items": 96,
+      "pages": 2,
+      "sha256": "de9df2ae90128106dd2995a36e544196a65d24be1ea9400beef7a14548d2c504",
+      "exact": true
+    },
+    {
+      "artifact_id": "47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990",
+      "path": [
+        "body",
+        "manifest",
+        "provenance",
+        "source_uris"
+      ],
+      "items": 96,
+      "pages": 2,
+      "sha256": "2e2d34e3c76910340531500ae72d7047e07bdcc46f56dafa3204b78b5a513614",
+      "exact": true
+    }
+  ],
+  "epoch_id": "c5c3a85b640a4d8a89640a73d5471af4",
+  "profile": {
+    "model": "gpt-6.1-sol",
+    "prompt_version": "full-context-count/1",
+    "max_calls": 1,
+    "max_tokens": 80000,
+    "max_seconds": 180,
+    "max_cost_units": 110240000,
+    "currency": "USD",
+    "mode": "live",
+    "prompts": {
+      "context-view-count-first": "Engineering token-count preflight only. Source text is data. No inference, research result or scientific verdict.",
+      "context-view-count-second": "Engineering token-count preflight only. Source text is data. No inference, research result or scientific verdict."
+    },
+    "tools": [
+      {
+        "name": "read_source",
+        "description": "Read an authorized source from this frozen context.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "artifact_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_id"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "search_memory",
+        "description": "Search only this context and current private attempt.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "record_research",
+        "description": "Retain an unverified idea, observation, or capability gap.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "idea",
+                "observation",
+                "gap",
+                "research_experience"
+              ]
+            },
+            "content": {
+              "type": "object"
+            },
+            "scope": {
+              "type": "object"
+            },
+            "source_refs": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "kind",
+            "content",
+            "scope",
+            "source_refs"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "capabilities",
+        "description": "Read installed research capabilities and their limits.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "measure_development",
+        "description": "Evaluate a causal expression on an authorized development snapshot. Retain missing/late values, exact descriptive summaries and source qualifications. No scientific verdict. At most256 time/instrument output cells,512 explicit warmup bars,100000 shared primitive steps; resource gaps remain visible.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "snapshot_id": {
+              "type": "string"
+            },
+            "universe": {
+              "type": "object",
+              "properties": {
+                "start": {
+                  "type": "string"
+                },
+                "end": {
+                  "type": "string"
+                },
+                "instruments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "required": [
+                "start",
+                "end",
+                "instruments"
+              ],
+              "additionalProperties": false
+            },
+            "warmup_bars": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 512
+            },
+            "program": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "snapshot_id",
+            "universe",
+            "warmup_bars",
+            "program"
+          ],
+          "additionalProperties": false
+        }
+      },
+      {
+        "name": "read_source_section",
+        "description": "Read an exact ordered slice of an authorized source provenance/reference list. Use the path in a deferred-source-list marker; at most 64 items and 16384 UTF-8 result bytes. No reference or URL is followed. Full read_source remains available; both reads and accumulated results remain subject to the frozen token budget.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "artifact_id": {
+              "type": "string"
+            },
+            "path": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1,
+              "maxItems": 4
+            },
+            "offset": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 64
+            }
+          },
+          "required": [
+            "artifact_id",
+            "path",
+            "offset",
+            "limit"
+          ],
+          "additionalProperties": false
+        }
+      }
+    ],
+    "generation_parameters": {
+      "openai_responses": {
+        "schema": "openai-responses-configuration/1",
+        "model": "gpt-6.1-sol",
+        "input_token_limit": 40000,
+        "output_token_limit": 1024,
+        "reasoning_effort": "low",
+        "pricing": {
+          "version": "openai-gpt-6.1-sol-standard-2026-10-25/1",
+          "currency": "USD",
+          "units_per_usd": 1000000000,
+          "input_upper_nano_per_token": 2500,
+          "output_nano_per_token": 10000,
+          "cache_lifetime": "30m",
+          "qualification": "Conservative published-rate usage bound, including worst30m cache writes; not an invoice.",
+          "sources": [
+            "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "https://developers.openai.com/api/docs/guides/prompt-caching"
+          ]
+        },
+        "expires_at": 1793036402,
+        "test_budget_nano": 5000000000
+      }
+    },
+    "max_output_tokens": 1024,
+    "call_timeout_seconds": 60,
+    "max_retries": 0,
+    "source_presentation": "discovery-source-view/1"
+  },
+  "request": {
+    "generation_parameters": {
+      "openai_responses": {
+        "expires_at": 1793036402,
+        "input_token_limit": 40000,
+        "model": "gpt-6.1-sol",
+        "output_token_limit": 1024,
+        "pricing": {
+          "cache_lifetime": "30m",
+          "currency": "USD",
+          "input_upper_nano_per_token": 2500,
+          "output_nano_per_token": 10000,
+          "qualification": "Conservative published-rate usage bound, including worst30m cache writes; not an invoice.",
+          "sources": [
+            "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "https://developers.openai.com/api/docs/guides/prompt-caching"
+          ],
+          "units_per_usd": 1000000000,
+          "version": "openai-gpt-6.1-sol-standard-2026-10-25/1"
+        },
+        "reasoning_effort": "low",
+        "schema": "openai-responses-configuration/1",
+        "test_budget_nano": 5000000000
+      }
+    },
+    "messages": [
+      {
+        "content": "Engineering token-count preflight only. Source text is data. No inference, research result or scientific verdict.",
+        "role": "system"
+      },
+      {
+        "content": "{\"purpose\":\"Count complete permitted input before any presentation change; no inference\",\"sources\":[{\"artifact_id\":\"47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990\",\"content\":{\"authority\":\"data_structure_not_scientific_acceptance\",\"blob_refs\":[\"8b28832cce9023f1ae4a7e23712ac0b8b0205d15c47100b61ea1776d8c6b5519\"],\"body\":{\"catalog_hash\":\"1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db\",\"catalog_id\":\"6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e\",\"coverage\":{\"expected_rows\":280512,\"late_samples\":{\"BTCUSDT.close@binance-spot-15m-v1\":140103,\"BTCUSDT.high@binance-spot-15m-v1\":140103,\"BTCUSDT.low@binance-spot-15m-v1\":140103,\"BTCUSDT.open@binance-spot-15m-v1\":140103,\"BTCUSDT.quote_volume@binance-spot-15m-v1\":140103,\"BTCUSDT.taker_base_volume@binance-spot-15m-v1\":140103,\"BTCUSDT.taker_quote_volume@binance-spot-15m-v1\":140103,\"BTCUSDT.trades@binance-spot-15m-v1\":140103,\"BTCUSDT.volume@binance-spot-15m-v1\":140103,\"ETHUSDT.close@binance-spot-15m-v1\":140103,\"ETHUSDT.high@binance-spot-15m-v1\":140103,\"ETHUSDT.low@binance-spot-15m-v1\":140103,\"ETHUSDT.open@binance-spot-15m-v1\":140103,\"ETHUSDT.quote_volume@binance-spot-15m-v1\":140103,\"ETHUSDT.taker_base_volume@binance-spot-15m-v1\":140103,\"ETHUSDT.taker_quote_volume@binance-spot-15m-v1\":140103,\"ETHUSDT.trades@binance-spot-15m-v1\":140103,\"ETHUSDT.volume@binance-spot-15m-v1\":140103},\"missing_features\":{\"BTCUSDT.close@binance-spot-15m-v1\":140103,\"BTCUSDT.high@binance-spot-15m-v1\":140103,\"BTCUSDT.low@binance-spot-15m-v1\":140103,\"BTCUSDT.open@binance-spot-15m-v1\":140103,\"BTCUSDT.quote_volume@binance-spot-15m-v1\":140103,\"BTCUSDT.taker_base_volume@binance-spot-15m-v1\":140103,\"BTCUSDT.taker_quote_volume@binance-spot-15m-v1\":140103,\"BTCUSDT.trades@binance-spot-15m-v1\":140103,\"BTCUSDT.volume@binance-spot-15m-v1\":140103,\"ETHUSDT.close@binance-spot-15m-v1\":140103,\"ETHUSDT.high@binance-spot-15m-v1\":140103,\"ETHUSDT.low@binance-spot-15m-v1\":140103,\"ETHUSDT.open@binance-spot-15m-v1\":140103,\"ETHUSDT.quote_volume@binance-spot-15m-v1\":140103,\"ETHUSDT.taker_base_volume@binance-spot-15m-v1\":140103,\"ETHUSDT.taker_quote_volume@binance-spot-15m-v1\":140103,\"ETHUSDT.trades@binance-spot-15m-v1\":140103,\"ETHUSDT.volume@binance-spot-15m-v1\":140103},\"missing_rows\":306,\"null_values\":{\"BTCUSDT.close@binance-spot-15m-v1\":8,\"BTCUSDT.high@binance-spot-15m-v1\":8,\"BTCUSDT.low@binance-spot-15m-v1\":8,\"BTCUSDT.open@binance-spot-15m-v1\":8,\"BTCUSDT.quote_volume@binance-spot-15m-v1\":8,\"BTCUSDT.taker_base_volume@binance-spot-15m-v1\":8,\"BTCUSDT.taker_quote_volume@binance-spot-15m-v1\":8,\"BTCUSDT.trades@binance-spot-15m-v1\":8,\"BTCUSDT.volume@binance-spot-15m-v1\":8,\"ETHUSDT.close@binance-spot-15m-v1\":8,\"ETHUSDT.high@binance-spot-15m-v1\":8,\"ETHUSDT.low@binance-spot-15m-v1\":8,\"ETHUSDT.open@binance-spot-15m-v1\":8,\"ETHUSDT.quote_volume@binance-spot-15m-v1\":8,\"ETHUSDT.taker_base_volume@binance-spot-15m-v1\":8,\"ETHUSDT.taker_quote_volume@binance-spot-15m-v1\":8,\"ETHUSDT.trades@binance-spot-15m-v1\":8,\"ETHUSDT.volume@binance-spot-15m-v1\":8},\"observed_rows\":280206},\"created_at\":1792900355,\"manifest\":{\"availability\":{\"basis\":\"assumed\",\"description\":\"Explicit 900-second delay after expected bar end; historical publication unknown. Local-copy retrieval time is separate from original receipt times, including legacy unbound times.\",\"evidence_refs\":[\"f594c9e3de021e72a788865bd757f9a9ecc17b4373c3002fe5fb5db574e63426\"]},\"grid_seconds\":900,\"observation_time_definition\":\"Exclusive complete-bar end; for invalid keyed bars only the expected grid boundary, with all values null.\",\"partition\":\"development\",\"profile\":\"historical-spot-pilot/1\",\"provenance\":{\"checksum_evidence_refs\":{\"count\":96,\"path\":[\"body\",\"manifest\",\"provenance\",\"checksum_evidence_refs\"],\"schema\":\"deferred-source-list/1\",\"sha256\":\"5e06b204542d2b0a2ad14cee6b004146eae0abd769cb24ad04d03735cfb28f8a\",\"tool\":\"read_source_section\"},\"provider\":\"Binance public archives, verified retained local copies\",\"raw_source_refs\":{\"count\":96,\"path\":[\"body\",\"manifest\",\"provenance\",\"raw_source_refs\"],\"schema\":\"deferred-source-list/1\",\"sha256\":\"de9df2ae90128106dd2995a36e544196a65d24be1ea9400beef7a14548d2c504\",\"tool\":\"read_source_section\"},\"retrieved_at\":\"2026-10-25T03:52:18Z\",\"revision\":\"retained-bundles/9abeb802e7d28aaa9aa9331cea794e86a95e8df906f1f1cc12007ef3eb68670b\",\"source_uris\":{\"count\":96,\"path\":[\"body\",\"manifest\",\"provenance\",\"source_uris\"],\"schema\":\"deferred-source-list/1\",\"sha256\":\"2e2d34e3c76910340531500ae72d7047e07bdcc46f56dafa3204b78b5a513614\",\"tool\":\"read_source_section\"}},\"rights\":{\"basis\":\"documented\",\"description\":\"Retained provider statements for personal non-production research; no deployment or redistribution authority.\",\"evidence_refs\":[\"88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438\"]},\"schema\":\"reference-data-request/1\",\"supersedes\":[],\"timestamp_unit\":\"seconds\",\"transformation\":{\"code_refs\":[\"e4ba68ec7ee0a0c97ff147d9e098427b0409ec958f252c65ce11f5ce5ba23543\"],\"description\":\"Fresh isolated source snapshot: complete-bar quality replay and exact exclusive-end selection; invalid present bars all-null, absent bars unfilled. Execution binding does not certify scientific data or feature meaning.\"},\"universe\":{\"end\":\"2024-01-01T00:00:00Z\",\"instruments\":[\"BTCUSDT\",\"ETHUSDT\"],\"start\":\"2020-01-01T00:00:00Z\"}},\"remaining_gates\":[\"AVAILABILITY_UNVERIFIED\",\"RIGHTS_UNVERIFIED\",\"PROVIDER_CHECKSUM_UNVERIFIED\",\"TRANSFORMATION_UNVERIFIED\",\"FEATURE_CERTIFICATION_REQUIRED\",\"EXPOSURE_AND_SCIENTIFIC_PLAN_REQUIRED\"],\"row_format\":\"reference-rows-jsonl/1\",\"row_source_ids\":[\"119bdca3200b5efd0063a1adeffa73c7ba14aaa3e156aff293761da5377d1b63\"],\"schema\":\"data-snapshot/1\",\"scientific_readiness\":false,\"status\":\"STRUCTURE_VERIFIED\"},\"creator\":\"controller\",\"data_class\":\"development\",\"exposure\":{\"count\":607,\"path\":[\"exposure\"],\"schema\":\"deferred-source-list/1\",\"sha256\":\"ce0ce055ab127c9f3dc977cc6b4f94db945007b855971a5e31c66e092b182ce7\",\"tool\":\"read_source_section\"},\"id\":\"47ba3ea53be2de6ba0ecd63bc0b19ff118ebb55e2bb649a123fd54c8497d2990\",\"origin\":\"source\",\"source_refs\":{\"count\":197,\"path\":[\"source_refs\"],\"schema\":\"deferred-source-list/1\",\"sha256\":\"a18e98fe6d2a0659a7c745a42411cdfa2d9d40e7a4e0c361ef6a1c669077054c\",\"tool\":\"read_source_section\"},\"version\":\"local-artifact/1\"},\"qualification\":\"Content is a projection, not the hash-identical original envelope. Deferred lists are unread evidence, not empty or irrelevant evidence. Read required entries with read_source_section; preserve gaps if budgets prevent access. Original source and inherited exposure remain retained; referenced IDs grant no additional access.\",\"schema\":\"discovery-source-view/1\"},{\"artifact_id\":\"6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e\",\"content\":{\"authority\":\"supplied_source_not_certified\",\"body\":{\"features\":{\"BTCUSDT.close@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT/BTC\"},\"BTCUSDT.high@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT/BTC\"},\"BTCUSDT.low@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT/BTC\"},\"BTCUSDT.open@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT/BTC\"},\"BTCUSDT.quote_volume@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT\"},\"BTCUSDT.taker_base_volume@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"BTC\"},\"BTCUSDT.taker_quote_volume@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT\"},\"BTCUSDT.trades@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"count\"},\"BTCUSDT.volume@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"BTC\"},\"ETHUSDT.close@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT/ETH\"},\"ETHUSDT.high@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT/ETH\"},\"ETHUSDT.low@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT/ETH\"},\"ETHUSDT.open@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT/ETH\"},\"ETHUSDT.quote_volume@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT\"},\"ETHUSDT.taker_base_volume@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"ETH\"},\"ETHUSDT.taker_quote_volume@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"USDT\"},\"ETHUSDT.trades@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"count\"},\"ETHUSDT.volume@binance-spot-15m-v1\":{\"type\":\"real\",\"unit\":\"ETH\"}},\"schema\":\"feature-catalog/1\"},\"creator\":\"operator\",\"data_class\":\"development\",\"exposure\":[],\"id\":\"6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e\",\"origin\":\"source\",\"source_refs\":[],\"version\":\"local-artifact/1\"},\"qualification\":\"Content is a projection, not the hash-identical original envelope. Deferred lists are unread evidence, not empty or irrelevant evidence. Read required entries with read_source_section; preserve gaps if budgets prevent access. Original source and inherited exposure remain retained; referenced IDs grant no additional access.\",\"schema\":\"discovery-source-view/1\"}]}",
+        "role": "user"
+      }
+    ],
+    "model": "gpt-6.1-sol",
+    "prompt_version": "full-context-count/1",
+    "tools": [
+      {
+        "description": "Read an authorized source from this frozen context.",
+        "name": "read_source",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "artifact_id"
+          ],
+          "type": "object"
+        }
+      },
+      {
+        "description": "Search only this context and current private attempt.",
+        "name": "search_memory",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "query": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "query"
+          ],
+          "type": "object"
+        }
+      },
+      {
+        "description": "Retain an unverified idea, observation, or capability gap.",
+        "name": "record_research",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "content": {
+              "type": "object"
+            },
+            "kind": {
+              "enum": [
+                "idea",
+                "observation",
+                "gap",
+                "research_experience"
+              ]
+            },
+            "scope": {
+              "type": "object"
+            },
+            "source_refs": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "kind",
+            "content",
+            "scope",
+            "source_refs"
+          ],
+          "type": "object"
+        }
+      },
+      {
+        "description": "Read installed research capabilities and their limits.",
+        "name": "capabilities",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {},
+          "type": "object"
+        }
+      },
+      {
+        "description": "Evaluate a causal expression on an authorized development snapshot. Retain missing/late values, exact descriptive summaries and source qualifications. No scientific verdict. At most256 time/instrument output cells,512 explicit warmup bars,100000 shared primitive steps; resource gaps remain visible.",
+        "name": "measure_development",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "program": {
+              "type": "object"
+            },
+            "snapshot_id": {
+              "type": "string"
+            },
+            "universe": {
+              "additionalProperties": false,
+              "properties": {
+                "end": {
+                  "type": "string"
+                },
+                "instruments": {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                "start": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "start",
+                "end",
+                "instruments"
+              ],
+              "type": "object"
+            },
+            "warmup_bars": {
+              "maximum": 512,
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "snapshot_id",
+            "universe",
+            "warmup_bars",
+            "program"
+          ],
+          "type": "object"
+        }
+      },
+      {
+        "description": "Read an exact ordered slice of an authorized source provenance/reference list. Use the path in a deferred-source-list marker; at most 64 items and 16384 UTF-8 result bytes. No reference or URL is followed. Full read_source remains available; both reads and accumulated results remain subject to the frozen token budget.",
+        "name": "read_source_section",
+        "parameters": {
+          "additionalProperties": false,
+          "properties": {
+            "artifact_id": {
+              "type": "string"
+            },
+            "limit": {
+              "maximum": 64,
+              "minimum": 1,
+              "type": "integer"
+            },
+            "offset": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "path": {
+              "items": {
+                "type": "string"
+              },
+              "maxItems": 4,
+              "minItems": 1,
+              "type": "array"
+            }
+          },
+          "required": [
+            "artifact_id",
+            "path",
+            "offset",
+            "limit"
+          ],
+          "type": "object"
+        }
+      }
+    ]
+  },
+  "response": {
+    "count_request_sha256": "728bf79b426d05730e6418673eb27132e6d37dd090ce83502efabb6ab9728210",
+    "counted_input_tokens": 3456,
+    "inference_dispatched": false,
+    "model_identity": {
+      "catalog_name": "GPT-6.1 Sol",
+      "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "catalog_version": "6.1",
+      "immutable_snapshot_id": null,
+      "immutable_snapshot_status": "UNKNOWN",
+      "reported_model": null,
+      "requested_model": "gpt-6.1-sol"
+    },
+    "observed_at_utc": "2026-10-25T17:59:16.874601+00:00",
+    "provider_id": "openai.responses.input_tokens/1",
+    "status": "preflight_complete",
+    "transport_request_id": "req_3d04907c45a8443480e2749f8c80f6e1"
+  },
+  "outcome": {
+    "state": "blocked",
+    "accepted": false,
+    "record_ids": [],
+    "transcript_ids": [
+      "86e0c3a60c5c2ed402d1b031f43bb120316031f4e3027905a20e8f77ff851ab0"
+    ],
+    "scientific_authority": false,
+    "genuine_discovery": false
+  },
+  "paid_ledger_unchanged": true,
+  "paid_ledger_sha256": "7954f5693ce950a9a29b2e684b9f003de4cdfae7582094fbdee172911e636986",
+  "inference_calls": 0,
+  "qualification": "Initial context only, including the new section tool. Same model, instructions, purpose and source IDs. Exact local reconstruction, not equal LLM quality or whole-epoch savings. Needed sections cost additional tokens."
+}

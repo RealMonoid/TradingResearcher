@@ -1,0 +1,154 @@
+{
+  "schema": "controller-provider-live-observation/1",
+  "status": "PASS_SYNTHETIC_UNSUPPORTED_IDEA_HANDOFF",
+  "elapsed_seconds": 10.835789,
+  "new_calls": [
+    {
+      "dispatch_id": "controller-6ac299a49af94effb4de6bf5c3413c03:0",
+      "request_sha256": "2ad8cddcf97b4650d662d295fdf9b083e5df454d4b2ab7f1e38565c590590bf8",
+      "reserved_nano": 35240000,
+      "charged_nano": 1417500,
+      "state": "settled",
+      "created_at": 1792962310,
+      "admitted_at_utc": "2026-10-25T21:05:10Z",
+      "settled_at_utc": "2026-10-25T21:05:13Z",
+      "metadata": {
+        "counted_input_tokens": 483,
+        "epoch_id": "ed45da00cfca49f586219ad8b2a2bb2f",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "controller-auxiliary-probe/1",
+        "run_id": "controller-6ac299a49af94effb4de6bf5c3413c03",
+        "worker": "formalizer"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_07d43507b27d8ab2016ade6f073d8887d29f090446c800cf51",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_9a702c5fa4944d4481cdea1ec1e56bf8",
+        "usage": {
+          "cost_units": 1417500,
+          "input_tokens": 483,
+          "output_tokens": 21
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-3daff4e1e62e408793796d58f88fc5c7:0",
+      "request_sha256": "8a66c8583af22edc1d2cfce8f67930ad0faa1e80d62473608a1c2e7637cb0e3b",
+      "reserved_nano": 35240000,
+      "charged_nano": 5750000,
+      "state": "settled",
+      "created_at": 1792962314,
+      "admitted_at_utc": "2026-10-25T21:05:14Z",
+      "settled_at_utc": "2026-10-25T21:05:19Z",
+      "metadata": {
+        "counted_input_tokens": 1612,
+        "epoch_id": "ed45da00cfca49f586219ad8b2a2bb2f",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "controller-auxiliary-review-probe/1",
+        "run_id": "controller-3daff4e1e62e408793796d58f88fc5c7",
+        "worker": "reviewer"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0281beebd9eb9c65016ade6f0b2cdc87d2b8b8c56c536df2fd",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 24
+        },
+        "transport_request_id": "req_df3ba643a60e44609c8fb558622c5d5d",
+        "usage": {
+          "cost_units": 5750000,
+          "input_tokens": 1612,
+          "output_tokens": 172
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    }
+  ],
+  "epoch_usage": {
+    "calls": 2,
+    "cost_units": 7167500,
+    "tokens": 2288
+  },
+  "invocation_ids": [
+    "936d7c154d019b131089779a371e65adde0387584eb12a9f07cd2930183a5510",
+    "4ee8330b33e22d21b88947921ccc11a8003d88a24cbc47d0e9e4c355ade99d76"
+  ],
+  "formalization_id": "ed87d7faf1a3fd36408ddcf3ba99cd0a4473154e226c3889ab226823cb9f90ac",
+  "review_id": "a50a967bdaf011ad403b2144551275cb3ccc93e66321bbdf606814c9ff5517da",
+  "model_review": {
+    "added_assumptions": [],
+    "conflicts": [],
+    "judgment": "faithful",
+    "mapping_checks": [],
+    "omitted_assumptions": [],
+    "reason": "The retained-gap record preserves the original question about a trader's unrecorded private mood predicting the next BTCUSDT closing-price change at 15-minute observations. It supplies no candidate, substitute predictor, or empirical conclusion. The empty catalog provides no features supporting operationalization, so retaining the idea as unsupported is consistent with the supplied material. The generic LANGUAGE_GAP explanation does not specifically diagnose the unavailable mood input, but does not change the preserved idea or assert that its predictive hypothesis failed.",
+    "unresolved_meaning": []
+  },
+  "retained_review_actual_independence_status": "UNVERIFIED",
+  "registry_integrity": "ok",
+  "ledger_and_request_response_binding": "PASS",
+  "aggregate_ledger_sha256": "eda7409cfc6d130c2928dbc81b4d997d707c8e5b94d99a27074beb216fb37ccf",
+  "qualification": "Genuine direct API transport on synthetic unsupported-idea input. Formalization output was explicitly constrained; the separate review is model-generated. No free discovery, scientific evidence, general semantic correctness or mixed-provider result."
+}

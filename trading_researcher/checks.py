@@ -4,9 +4,12 @@ from fractions import Fraction
 import re
 
 from .codec import Invalid, text, canonical
+from .memory import validate_record
+from .formalization import validate_record as validate_formalization
+from .auxiliary import validate_review_record
 
 DECIMAL = re.compile(r'-?(?:0|[1-9][0-9]*)(?:\.[0-9]+)?\Z')
-VERSIONS = {'draft/v1', 'source-report/v1', 'decimal-sum/v1'}
+VERSIONS = {'draft/v1', 'source-report/v1', 'decimal-sum/v1', 'research-record/v1', 'formalization/v1','semantic-review/v1'}
 
 
 def decimal_sum(sources):
@@ -36,6 +39,15 @@ def source_report(sources):
 
 
 def validate(kind, result, sources):
+    if kind=='semantic-review/v1':
+        validate_review_record(result,sources)
+        return 'Review input/response binding checked; actual independent model judgment and scientific readiness remain unverified'
+    if kind == 'formalization/v1':
+        validate_formalization(result, sources)
+        return 'Formalization retention and structure checked; no semantic/scientific certificate issued'
+    if kind == 'research-record/v1':
+        validate_record(result)
+        return 'Research record structure checked; claims and interpretations remain unverified'
     if kind == 'draft/v1':
         if type(result) is not dict or set(result) != {'finding', 'interpretation', 'uncertainty', 'next_action'}:
             raise Invalid('A draft needs finding, interpretation, uncertainty and next_action')

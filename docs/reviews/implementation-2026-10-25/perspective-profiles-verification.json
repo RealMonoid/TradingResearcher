@@ -1,0 +1,97 @@
+{
+  "schema": "perspective-profile-engineering-verification/1",
+  "recorded_at_utc": "2026-10-25T18:45:14.045347+00:00",
+  "status": "PASS_BOUNDED_PROFILE_SELECTION",
+  "checks_run_by_primary_before_finalizer": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_perspective_profiles.py",
+      "tests": 6,
+      "seconds": 2.953,
+      "exit_code": 0,
+      "tool_chunk": "50826b"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_research*.py'",
+      "tests": 20,
+      "seconds": 15.908,
+      "exit_code": 0,
+      "tool_chunk": "e4c19d"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_auxiliary*.py'",
+      "tests": 24,
+      "seconds": 138.253,
+      "exit_code": 0,
+      "tool_chunk": "2e2208"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_context_views*.py'",
+      "tests": 24,
+      "seconds": 5.192,
+      "exit_code": 0,
+      "tool_chunk": "fbef6f"
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "tool_chunk": "f537c9",
+      "includes": "verify_system_model checks and git diff --check"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_perspective_profiles_adversarial.py",
+      "tests": 9,
+      "seconds": 5.414,
+      "exit_code": 0,
+      "tool_chunk": "6cd2a0"
+    }
+  ],
+  "unique_fixture_tests_passed": 83,
+  "independent_review": "perspective-profiles-review.json",
+  "independent_review_sha256": "40e042048e0008e4fe6a4272564b6655bcc3a343fdb732a2e1c8b143c5a13cf0",
+  "changed_files": [
+    "trading_researcher/research_calls.py",
+    "tests/test_perspective_profiles.py",
+    "tests/test_perspective_profiles_adversarial.py",
+    "trading_researcher/RESEARCHER.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/MULTI_MODEL_FIRST_RUN_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/perspective-profiles-review.json",
+    ".trf-runtime/perspective-profiles-checks-2026-10-25/finalize.py",
+    "docs/reviews/implementation-2026-10-25/perspective-profiles-verification.json"
+  ],
+  "checked_files_sha256": {
+    "trading_researcher/research_calls.py": "69b0895042107bbd3d528bba5c9624762c1d01c329bf00b09320adbb04b1e900",
+    "tests/test_perspective_profiles.py": "e7a64a47b2edd8d32911e024250d4ff87f9e00a342650b53f122cdee5a159596",
+    "tests/test_perspective_profiles_adversarial.py": "00bc2df81c10b48ba5eb072b4babe3c454933c25f7d7f8da8f65ec61921d771c",
+    "trading_researcher/RESEARCHER.md": "5231f147dea67d03e9f86233f1b1481d75431334246197e788d8149ddcc0b91b",
+    "docs/architecture/CURRENT_STATE.md": "e42edeba6adbb5a71da935e119266e5181004263c10c0ff631b46adebddb6d8b",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "39d96d2ed67a34ca55f6ad406bd1e09c208bbf9f9449dec2b4ab43114b943377",
+    "docs/reviews/implementation-2026-10-25/progress.json": "610d8c0a2c48dd9e5c14d56b60f561c3ea81f93ea524c82c04c6bce66188b367",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md": "53da642e8ad30220e050c3a1778f0e376c1eb80f47ca545aa604359f78f22c47",
+    "docs/reviews/implementation-2026-10-25/MULTI_MODEL_FIRST_RUN_2026-10-25.md": "df3809b59f943eba9b86ca690fa5c1e1ce0e83880a36ec8039a906b551fd3f16",
+    "docs/reviews/implementation-2026-10-25/perspective-profiles-review.json": "40e042048e0008e4fe6a4272564b6655bcc3a343fdb732a2e1c8b143c5a13cf0",
+    ".trf-runtime/perspective-profiles-checks-2026-10-25/finalize.py": "7d6a558c31032f1686da350ea386e6e501ab701564819ddf2d3ea9556e5e8ed0"
+  },
+  "additional_validation": {
+    "authored_whitespace": "PASS",
+    "local_link_targets": 161,
+    "progress_and_review_json": "PASS"
+  },
+  "live_calls_this_continuation": 0,
+  "opencode": {
+    "installed_package_version": "1.18.29",
+    "source_commit": "16747470f976aca3d362ad730bcd3fe82ecc2c9a",
+    "inspection": "read-only package metadata and targeted pinned source; not executed"
+  },
+  "unverified": [
+    "New live providers and their credentials/billing/availability",
+    "Complete cross-provider usage/model/version/UTC accounting",
+    "OpenCode bridge controls and runtime behavior",
+    "Actual mixed-model research and quality or cost advantage",
+    "Scientific data/semantic admission, nuisance adequacy, calibration and freeze",
+    "Full seven-package goal, market usefulness and live deployment"
+  ]
+}

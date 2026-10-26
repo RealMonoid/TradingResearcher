@@ -1,0 +1,1060 @@
+{
+  "schema": "meaning-review-cases/1",
+  "authorship": {
+    "role": "independent reviewer",
+    "date": "2026-10-25",
+    "model_calls_before_freeze": 0,
+    "expectations_basis": "Independently complete natural-language specification, exact supported candidate fields, three-valued Boolean truth table and hand-checkable rational arithmetic. Formalizer assertions are deliberately not used as ground truth.",
+    "reference_binding_fixture": {
+      "path": "tests/fixtures/reference_binding_cases.json",
+      "sha256": "484bf3f73850760502e41d1cdf070c4cd666dc2c384805cfed99cfc3598859f6",
+      "reuse": "Candidate shape, catalog, identity aliases and existing raw feature semantics only; the reference fixture short original and asserted equivalence are not a positive semantic oracle."
+    }
+  },
+  "identity_aliases": {
+    "idea": "fixture:idea",
+    "formalization": "fixture:formalization",
+    "catalog": "fixture:catalog",
+    "data_snapshot": "fixture:data_snapshot",
+    "feature_certificate": "fixture:feature_certificate",
+    "feature_definitions": "fixture:feature_definitions",
+    "reference_certificate": "fixture:reference_certificate",
+    "reference_package": "fixture:reference_package"
+  },
+  "catalog": {
+    "BTCUSDT.open@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "USDT/BTC"
+    },
+    "BTCUSDT.high@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "USDT/BTC"
+    },
+    "BTCUSDT.low@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "USDT/BTC"
+    },
+    "BTCUSDT.close@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "USDT/BTC"
+    },
+    "BTCUSDT.volume@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "BTC"
+    },
+    "BTCUSDT.quote_volume@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "USDT"
+    },
+    "BTCUSDT.trades@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "count"
+    },
+    "BTCUSDT.taker_base_volume@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "BTC"
+    },
+    "BTCUSDT.taker_quote_volume@binance-spot-15m-v1": {
+      "type": "real",
+      "unit": "USDT"
+    }
+  },
+  "feature_meanings": [
+    {
+      "feature_ref": "BTCUSDT.close@binance-spot-15m-v1",
+      "type": "real",
+      "unit": "USDT/BTC",
+      "source": "Binance spot BTCUSDT 15-minute kline close; zero-based CSV field 4.",
+      "transformation": "Exact decimal field projection; positive price, no return calculation, smoothing, interpolation or fitted parameter.",
+      "row_time": "Expected exclusive end of the source 15-minute bar on the 900-second UTC grid.",
+      "source_timestamp_units": "Milliseconds before 2025; microseconds from 2025 under the retained raw normalization specification.",
+      "missingness": "An invalid keyed bar has null symbol fields; an absent bar has no row; fields of other instruments are absent. Missing is not zero or false.",
+      "availability": {
+        "basis": "assumed",
+        "delay_seconds": 0,
+        "rule": "row_time + delay_seconds",
+        "historical_publication_time": null
+      },
+      "interpretation_at_decision": "The condition reads this feature at t with cutoff t.",
+      "interpretation_as_outcome": "The outcome program reads this same feature at the declared future anchor, only after maturity and availability checks.",
+      "authority": "Versioned fixture description of the existing raw feature meaning, not a feature certificate or historical PIT verification."
+    }
+  ],
+  "expected_judgment_semantics": {
+    "faithful": "Matches the explicit original, including a faithful instruction to retain an unsupported gap. This is not a mathematical proof or scientific certificate.",
+    "different": "At least one explicit original semantic choice is contradicted.",
+    "uncertain": "The original lacks required meaning or the supplied information cannot establish the mapping; do not invent missing commitments."
+  },
+  "three_valued_equivalence": [
+    {
+      "condition": true,
+      "not_condition": false,
+      "not_not_condition": true
+    },
+    {
+      "condition": false,
+      "not_condition": true,
+      "not_not_condition": false
+    },
+    {
+      "condition": null,
+      "not_condition": null,
+      "not_not_condition": null
+    }
+  ],
+  "counterexamples": [
+    {
+      "id": "equal-observed-result-does-not-establish-meaning",
+      "unit": "USDT/BTC",
+      "rows": [
+        {
+          "condition": true,
+          "outcome": "102"
+        },
+        {
+          "condition": true,
+          "outcome": "104"
+        },
+        {
+          "condition": false,
+          "outcome": "97"
+        },
+        {
+          "condition": null,
+          "outcome": "101"
+        }
+      ],
+      "original_contrast": {
+        "numerator": "2",
+        "denominator": "1"
+      },
+      "mutated_contrast": {
+        "numerator": "2",
+        "denominator": "1"
+      },
+      "original_scope_count": 4,
+      "mutated_scope_count": 3,
+      "condition_count": 2,
+      "qualification": "Independent abstract eligible-row example, not a replay of the three-decision reference snapshot. Both observed contrasts equal 2 although the denominator policies differ."
+    },
+    {
+      "id": "same-mutation-separating-example",
+      "unit": "USDT/BTC",
+      "rows": [
+        {
+          "condition": true,
+          "outcome": "102"
+        },
+        {
+          "condition": true,
+          "outcome": "104"
+        },
+        {
+          "condition": false,
+          "outcome": "97"
+        },
+        {
+          "condition": null,
+          "outcome": "109"
+        }
+      ],
+      "original_contrast": {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      "mutated_contrast": {
+        "numerator": "2",
+        "denominator": "1"
+      },
+      "original_scope_count": 4,
+      "mutated_scope_count": 3,
+      "condition_count": 2,
+      "qualification": "Changing only the unknown-condition outcome to 109 makes the semantic discrepancy numerically visible: original 0, mutant 2."
+    }
+  ],
+  "cases": [
+    {
+      "id": "complete-faithful",
+      "original_hypothesis_text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+      "candidate": {
+        "schema": "hypothesis-exec/1",
+        "idea_ref": "fixture:idea",
+        "claim_kind": "difference",
+        "estimand": {
+          "kind": "conditional-minus-scope-mean/1",
+          "unit": "USDT/BTC",
+          "weighting": "equal_rows",
+          "missingness": "scope-true-outcome-observed/1",
+          "condition_unknown": "exclude-from-condition-retain-in-scope",
+          "nuisance_fit": "none",
+          "direction": "positive"
+        },
+        "scope_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "gt",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT/BTC",
+              "value": "101"
+            }
+          }
+        },
+        "outcome": {
+          "program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "scale": "quantity"
+        },
+        "comparator": {
+          "kind": "whole_scope"
+        },
+        "horizons": {
+          "grid_seconds": 900,
+          "outcome_bars": 1
+        },
+        "test_universe": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T01:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ],
+          "data_snapshot_ref": "fixture:data_snapshot"
+        },
+        "parameter_origins": [
+          {
+            "path": "/scope_ast/expression/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/condition_ast/expression/right/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/horizons/outcome_bars",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          }
+        ],
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ]
+      },
+      "semantic_report": {
+        "status": "equivalent",
+        "segments": [
+          {
+            "text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+            "path": "/estimand",
+            "interpretation": "Synthetic formalizer assertion for adversarial review; this assertion is not the independent expected judgment."
+          }
+        ],
+        "differences": []
+      },
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1"
+      ],
+      "fixture_change": "Unchanged complete supported quantity claim.",
+      "expected": {
+        "judgment": "faithful",
+        "reason": "Every target semantic choice is expressly present in the original and agrees with the supplied feature meaning.",
+        "affected_paths": [],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": true,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      }
+    },
+    {
+      "id": "double-negation-equivalent",
+      "original_hypothesis_text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+      "candidate": {
+        "schema": "hypothesis-exec/1",
+        "idea_ref": "fixture:idea",
+        "claim_kind": "difference",
+        "estimand": {
+          "kind": "conditional-minus-scope-mean/1",
+          "unit": "USDT/BTC",
+          "weighting": "equal_rows",
+          "missingness": "scope-true-outcome-observed/1",
+          "condition_unknown": "exclude-from-condition-retain-in-scope",
+          "nuisance_fit": "none",
+          "direction": "positive"
+        },
+        "scope_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "not",
+            "arg": {
+              "op": "not",
+              "arg": {
+                "op": "gt",
+                "left": {
+                  "op": "feature",
+                  "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                },
+                "right": {
+                  "op": "literal",
+                  "type": "real",
+                  "unit": "USDT/BTC",
+                  "value": "101"
+                }
+              }
+            }
+          }
+        },
+        "outcome": {
+          "program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "scale": "quantity"
+        },
+        "comparator": {
+          "kind": "whole_scope"
+        },
+        "horizons": {
+          "grid_seconds": 900,
+          "outcome_bars": 1
+        },
+        "test_universe": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T01:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ],
+          "data_snapshot_ref": "fixture:data_snapshot"
+        },
+        "parameter_origins": [
+          {
+            "path": "/scope_ast/expression/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/condition_ast/expression/arg/arg/right/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/horizons/outcome_bars",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          }
+        ],
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ]
+      },
+      "semantic_report": {
+        "status": "equivalent",
+        "segments": [
+          {
+            "text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+            "path": "/estimand",
+            "interpretation": "Synthetic formalizer assertion for adversarial review; this assertion is not the independent expected judgment."
+          }
+        ],
+        "differences": []
+      },
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1"
+      ],
+      "fixture_change": "Wrap only C in NOT NOT under the same three-valued Boolean rule; move the parameter-origin pointer without changing its value.",
+      "expected": {
+        "judgment": "faithful",
+        "reason": "Double negation preserves true, false and unknown, so condition membership and both denominators are unchanged. Syntax alone is not a semantic difference.",
+        "affected_paths": [
+          "/condition_ast/expression"
+        ],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": true,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      }
+    },
+    {
+      "id": "changed-horizon",
+      "original_hypothesis_text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+      "candidate": {
+        "schema": "hypothesis-exec/1",
+        "idea_ref": "fixture:idea",
+        "claim_kind": "difference",
+        "estimand": {
+          "kind": "conditional-minus-scope-mean/1",
+          "unit": "USDT/BTC",
+          "weighting": "equal_rows",
+          "missingness": "scope-true-outcome-observed/1",
+          "condition_unknown": "exclude-from-condition-retain-in-scope",
+          "nuisance_fit": "none",
+          "direction": "positive"
+        },
+        "scope_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "gt",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT/BTC",
+              "value": "101"
+            }
+          }
+        },
+        "outcome": {
+          "program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "scale": "quantity"
+        },
+        "comparator": {
+          "kind": "whole_scope"
+        },
+        "horizons": {
+          "grid_seconds": 900,
+          "outcome_bars": 2
+        },
+        "test_universe": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T01:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ],
+          "data_snapshot_ref": "fixture:data_snapshot"
+        },
+        "parameter_origins": [
+          {
+            "path": "/scope_ast/expression/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/condition_ast/expression/right/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/horizons/outcome_bars",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          }
+        ],
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ]
+      },
+      "semantic_report": {
+        "status": "equivalent",
+        "segments": [
+          {
+            "text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+            "path": "/estimand",
+            "interpretation": "Synthetic formalizer assertion for adversarial review; this assertion is not the independent expected judgment."
+          }
+        ],
+        "differences": []
+      },
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1"
+      ],
+      "fixture_change": "Only outcome_bars changes from 1 to 2; the original still requires t+900 seconds.",
+      "expected": {
+        "judgment": "different",
+        "reason": "The candidate reads the close at t+1800 seconds instead of the expressly stated t+900-second anchor.",
+        "affected_paths": [
+          "/horizons/outcome_bars"
+        ],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      }
+    },
+    {
+      "id": "changed-comparator",
+      "original_hypothesis_text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+      "candidate": {
+        "schema": "hypothesis-exec/1",
+        "idea_ref": "fixture:idea",
+        "claim_kind": "difference",
+        "estimand": {
+          "kind": "conditional-minus-scope-mean/1",
+          "unit": "USDT/BTC",
+          "weighting": "equal_rows",
+          "missingness": "scope-true-outcome-observed/1",
+          "condition_unknown": "exclude-from-condition-retain-in-scope",
+          "nuisance_fit": "none",
+          "direction": "positive"
+        },
+        "scope_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "gt",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT/BTC",
+              "value": "101"
+            }
+          }
+        },
+        "outcome": {
+          "program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "scale": "quantity"
+        },
+        "comparator": {
+          "kind": "condition_complement"
+        },
+        "horizons": {
+          "grid_seconds": 900,
+          "outcome_bars": 1
+        },
+        "test_universe": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T01:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ],
+          "data_snapshot_ref": "fixture:data_snapshot"
+        },
+        "parameter_origins": [
+          {
+            "path": "/scope_ast/expression/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/condition_ast/expression/right/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/horizons/outcome_bars",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          }
+        ],
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ]
+      },
+      "semantic_report": {
+        "status": "equivalent",
+        "segments": [
+          {
+            "text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+            "path": "/estimand",
+            "interpretation": "Synthetic formalizer assertion for adversarial review; this assertion is not the independent expected judgment."
+          }
+        ],
+        "differences": []
+      },
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1"
+      ],
+      "fixture_change": "Replace whole_scope with condition_complement; this is also outside the installed contrast capability.",
+      "expected": {
+        "judgment": "different",
+        "reason": "The second mean is restricted to a complement rather than all eligible scope rows including condition-true rows. Structural rejection does not replace noticing this meaning change.",
+        "affected_paths": [
+          "/comparator"
+        ],
+        "target_structure_status": "RETAINED_GAP",
+        "target_gap_code": "EVALUATION_GAP",
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      }
+    },
+    {
+      "id": "changed-direction",
+      "original_hypothesis_text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+      "candidate": {
+        "schema": "hypothesis-exec/1",
+        "idea_ref": "fixture:idea",
+        "claim_kind": "difference",
+        "estimand": {
+          "kind": "conditional-minus-scope-mean/1",
+          "unit": "USDT/BTC",
+          "weighting": "equal_rows",
+          "missingness": "scope-true-outcome-observed/1",
+          "condition_unknown": "exclude-from-condition-retain-in-scope",
+          "nuisance_fit": "none",
+          "direction": "negative"
+        },
+        "scope_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "gt",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT/BTC",
+              "value": "101"
+            }
+          }
+        },
+        "outcome": {
+          "program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "scale": "quantity"
+        },
+        "comparator": {
+          "kind": "whole_scope"
+        },
+        "horizons": {
+          "grid_seconds": 900,
+          "outcome_bars": 1
+        },
+        "test_universe": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T01:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ],
+          "data_snapshot_ref": "fixture:data_snapshot"
+        },
+        "parameter_origins": [
+          {
+            "path": "/scope_ast/expression/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/condition_ast/expression/right/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/horizons/outcome_bars",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          }
+        ],
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ]
+      },
+      "semantic_report": {
+        "status": "equivalent",
+        "segments": [
+          {
+            "text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+            "path": "/estimand",
+            "interpretation": "Synthetic formalizer assertion for adversarial review; this assertion is not the independent expected judgment."
+          }
+        ],
+        "differences": []
+      },
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1"
+      ],
+      "fixture_change": "Only the explicit direction changes from positive to negative.",
+      "expected": {
+        "judgment": "different",
+        "reason": "The original claims a positive conditional-minus-scope difference; the candidate specifies its negative direction.",
+        "affected_paths": [
+          "/estimand/direction"
+        ],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      }
+    },
+    {
+      "id": "unknown-condition-denominator-exclusion",
+      "original_hypothesis_text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+      "candidate": {
+        "schema": "hypothesis-exec/1",
+        "idea_ref": "fixture:idea",
+        "claim_kind": "difference",
+        "estimand": {
+          "kind": "conditional-minus-scope-mean/1",
+          "unit": "USDT/BTC",
+          "weighting": "equal_rows",
+          "missingness": "scope-true-outcome-observed/1",
+          "condition_unknown": "exclude-from-condition-and-scope",
+          "nuisance_fit": "none",
+          "direction": "positive"
+        },
+        "scope_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "gt",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT/BTC",
+              "value": "101"
+            }
+          }
+        },
+        "outcome": {
+          "program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "scale": "quantity"
+        },
+        "comparator": {
+          "kind": "whole_scope"
+        },
+        "horizons": {
+          "grid_seconds": 900,
+          "outcome_bars": 1
+        },
+        "test_universe": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T01:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ],
+          "data_snapshot_ref": "fixture:data_snapshot"
+        },
+        "parameter_origins": [
+          {
+            "path": "/scope_ast/expression/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/condition_ast/expression/right/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/horizons/outcome_bars",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          }
+        ],
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ]
+      },
+      "semantic_report": {
+        "status": "equivalent",
+        "segments": [
+          {
+            "text": "I claim a positive conditional-minus-whole-scope difference in the arithmetic mean of the exact next 15-minute close of BTCUSDT, measured in USDT per BTC. The fixed development snapshot is fixture:data_snapshot. Decision times are on the 900-second UTC grid from 2020-01-01T00:15:00Z inclusive to 2020-01-01T01:00:00Z exclusive, for BTCUSDT only. The scope predicate is literal true at every existing decision observation in that universe; no additional session, instrument, price, volatility, or outcome filter is imposed. The condition C at decision time t is that BTCUSDT.close@binance-spot-15m-v1 at t is strictly greater than 101 USDT per BTC. That feature is the exact decimal close field of the spot 15-minute bar whose expected exclusive end is t, not its open, a return, or the next bar. The outcome Y is the same close feature at the exact anchor t plus 900 seconds, evaluated as an observed quantity; it is not a price change, return, or binary increase indicator. The first term is the arithmetic mean of Y for eligible scope rows where C is true. The second term is the arithmetic mean of Y over all eligible scope rows, including rows where C is true, false, or unknown; it is not the complement of C. Each eligible decision-time/instrument row receives equal weight in each applicable mean; there is no volume weighting, nuisance fit, or fitted state. An eligible row has scope true and a mature, observed outcome at its exact anchor strictly before the exclusive universe end and available by the evaluation cutoff. Unknown C excludes a row only from the first term and retains it in the second term when Y is observed. Missing or unavailable Y excludes the row from both means; retain the missing, pending, and boundary categories instead of replacing them with zero, false, interpolation, or a nearest-row value. Current condition inputs must be available at decision time t. In this explicitly assumed availability scenario, each keyed bar is available at its expected exclusive end plus zero seconds; actual historical publication times are unknown. The outcome remains unavailable to the decision at t and is read only after its horizon and required availability have elapsed. The grid, dates, instrument, literal-true scope, threshold 101, one-bar horizon, equal-row weighting, denominator, and positive direction are preexisting specifications stated here, not selected or fitted from observed outcomes. A positive difference is the stated directional claim; no causal effect, return, trading-policy profit, predictive support, or scientific readiness is asserted by this specification.",
+            "path": "/estimand",
+            "interpretation": "Synthetic formalizer assertion for adversarial review; this assertion is not the independent expected judgment."
+          }
+        ],
+        "differences": []
+      },
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1"
+      ],
+      "fixture_change": "Exclude unknown C from the whole-scope denominator as well as the condition term.",
+      "expected": {
+        "judgment": "different",
+        "reason": "The original expressly retains unknown-condition rows with observed outcomes in the whole-scope mean. Matching one observed contrast cannot justify dropping them.",
+        "affected_paths": [
+          "/estimand/condition_unknown"
+        ],
+        "target_structure_status": "RETAINED_GAP",
+        "target_gap_code": "EVALUATION_GAP",
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      }
+    },
+    {
+      "id": "underspecified-original",
+      "original_hypothesis_text": "Compare the close at the exact next 15-minute observation when the current BTCUSDT close exceeds 101 USDT per BTC.",
+      "candidate": {
+        "schema": "hypothesis-exec/1",
+        "idea_ref": "fixture:idea",
+        "claim_kind": "difference",
+        "estimand": {
+          "kind": "conditional-minus-scope-mean/1",
+          "unit": "USDT/BTC",
+          "weighting": "equal_rows",
+          "missingness": "scope-true-outcome-observed/1",
+          "condition_unknown": "exclude-from-condition-retain-in-scope",
+          "nuisance_fit": "none",
+          "direction": "positive"
+        },
+        "scope_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "literal",
+            "type": "boolean",
+            "unit": null,
+            "value": true
+          }
+        },
+        "condition_ast": {
+          "schema": "research-ast/1",
+          "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+          "expression": {
+            "op": "gt",
+            "left": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "USDT/BTC",
+              "value": "101"
+            }
+          }
+        },
+        "outcome": {
+          "program": {
+            "schema": "research-ast/1",
+            "catalog_hash": "c5ac79c761cf1970a0ca516c5ac89524295ff21f7e8f96a2f7605f27db573704",
+            "expression": {
+              "op": "feature",
+              "ref": "BTCUSDT.close@binance-spot-15m-v1"
+            }
+          },
+          "scale": "quantity"
+        },
+        "comparator": {
+          "kind": "whole_scope"
+        },
+        "horizons": {
+          "grid_seconds": 900,
+          "outcome_bars": 1
+        },
+        "test_universe": {
+          "start": "2020-01-01T00:15:00Z",
+          "end": "2020-01-01T01:00:00Z",
+          "instruments": [
+            "BTCUSDT"
+          ],
+          "data_snapshot_ref": "fixture:data_snapshot"
+        },
+        "parameter_origins": [
+          {
+            "path": "/scope_ast/expression/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/condition_ast/expression/right/value",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          },
+          {
+            "path": "/horizons/outcome_bars",
+            "basis": "preexisting_specification",
+            "source_refs": [],
+            "rationale": "Independent synthetic binding case; no empirical threshold selection."
+          }
+        ],
+        "feature_refs": [
+          "BTCUSDT.close@binance-spot-15m-v1"
+        ]
+      },
+      "semantic_report": {
+        "status": "equivalent",
+        "segments": [
+          {
+            "text": "Compare the close at the exact next 15-minute observation when the current BTCUSDT close exceeds 101 USDT per BTC.",
+            "path": "/estimand",
+            "interpretation": "Synthetic formalizer assertion for adversarial review; this assertion is not the independent expected judgment."
+          }
+        ],
+        "differences": []
+      },
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1"
+      ],
+      "fixture_change": "Use the complete candidate with an original that does not specify direction, denominator, weighting, universe boundaries, missingness or parameter-selection basis.",
+      "expected": {
+        "judgment": "uncertain",
+        "reason": "The candidate makes unresolved choices that the original does not establish. No explicit contradiction is needed to reject a claim of verified faithfulness. Preserve the missing choices rather than silently supply them.",
+        "affected_paths": [
+          "/estimand/direction",
+          "/comparator",
+          "/estimand/weighting",
+          "/test_universe",
+          "/estimand/missingness",
+          "/estimand/condition_unknown",
+          "/parameter_origins"
+        ],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      }
+    },
+    {
+      "id": "unsupported-question-retained-gap",
+      "original_hypothesis_text": "Retain the following question as an unsupported research gap: does a persistent hidden-liquidity absorption pattern in BTCUSDT order-book events precede a change in later prices? The present snapshot supplies only 15-minute spot OHLCV bars, not order-book events or hidden-liquidity observations. Persistent absorption and the later-price comparison have not been given executable definitions. Preserve this question and those missing inputs and definitions. Do not substitute a candle, volume threshold, fixed horizon, or other available proxy and call it the same claim. Until the missing data and meanings are supplied and reviewed, retain no executable candidate and grant no execution authority.",
+      "candidate": null,
+      "semantic_report": null,
+      "feature_refs": [],
+      "fixture_change": "There is deliberately no executable proxy; the target retains the original unsupported question and its gaps.",
+      "expected": {
+        "judgment": "faithful",
+        "reason": "Retaining no executable candidate follows the explicit preservation instruction. This is faithfulness of gap retention, not an assertion of H_exec equivalence or executable readiness.",
+        "affected_paths": [],
+        "target_structure_status": "RETAINED_GAP",
+        "target_gap_code": "LANGUAGE_GAP",
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      }
+    }
+  ],
+  "execution_rules": [
+    "Freeze and hash these fixture bytes before the first model response; do not change expected judgments or reasons to fit model replies.",
+    "Do not pass expected judgments, reasons, case IDs or fixture_change descriptions to the model. Use only the original, candidate/retained gap, supplied feature meanings and the frozen substantive review protocol.",
+    "Record every planned case and outcome, including refusal, malformed output, missing response and disagreement. Do not rerun only errors and report a favorable subset.",
+    "No accuracy percentage, acceptance quota, scientific validity, certified feature status or capital authority is established by this finite fixture set.",
+    "The underspecified case can be structurally accepted by the existing formalizer-assertion checker while remaining semantically uncertain; these are different dimensions.",
+    "Any model observation is separate from these independent expected judgments. A faithful retained-gap review cannot satisfy the executable-candidate prerequisite."
+  ]
+}

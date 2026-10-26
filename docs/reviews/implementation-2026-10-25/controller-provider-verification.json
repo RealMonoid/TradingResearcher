@@ -1,0 +1,260 @@
+{
+  "schema": "controller-provider-verification/1",
+  "status": "PASS_BOUNDED_CONTROLLER_DISPATCH",
+  "checked_at_utc": "2026-10-25T21:11:40.991997+00:00",
+  "purpose": "Distinguish host-owned direct adapter execution from worker-submitted or merely live-labeled responses without altering scientific authority.",
+  "changed_files": [
+    "trading_researcher/controller_providers.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/research_calls.py",
+    "trading_researcher/auxiliary.py",
+    "trading_researcher/storage.py",
+    "trading_researcher/memory.py",
+    "tests/controller_provider_support.py",
+    "tests/test_controller_providers.py",
+    "tests/test_controller_providers_adversarial.py",
+    "trading_researcher/CONTROLLER_PROVIDERS.md",
+    "trading_researcher/AUXILIARY_RESEARCH.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/controller-provider-review.json",
+    "docs/reviews/implementation-2026-10-25/controller-provider-live.json",
+    "docs/reviews/implementation-2026-10-25/controller-provider-usage.json",
+    "docs\\reviews\\implementation-2026-10-25\\controller-provider-verification.json",
+    "docs\\reviews\\implementation-2026-10-25\\controller-provider-evidence.zip"
+  ],
+  "runtime_helpers": [
+    ".trf-runtime\\controller-provider-checks-2026-10-25\\baseline.py",
+    ".trf-runtime\\controller-provider-checks-2026-10-25\\document.py",
+    ".trf-runtime\\controller-provider-checks-2026-10-25\\finalize.py",
+    ".trf-runtime\\controller-provider-checks-2026-10-25\\live_probe.py"
+  ],
+  "source_sha256": {
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "232ce0da57920206c500deb10d7381b9fa59a9df541f0b9707dc38569e855094",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/auxiliary.py": "5dc10b20401c252ca30233c758cfabfe37b1becee07bb8b006b6b0ecb92f483b",
+    "trading_researcher/storage.py": "feface135e65708a4b4deaa21e66d460f1add0af27bd97a40206cb9755bab999",
+    "trading_researcher/memory.py": "f6e5558e6c5b8037765bcffb27b3093874dc2d1d1face9c2ce1a8c7df9cc4c5f",
+    "tests/controller_provider_support.py": "1ddb31884f69d74c0b6e5d3e5d23204e3048f01aaa62ffa91f606b910b4174cd",
+    "tests/test_controller_providers.py": "dd0ed93da5e0e28dbabf9cf8e90309daeebd63e977346dee21af89d7191a16f4",
+    "tests/test_controller_providers_adversarial.py": "a25bb7df4d6bddbd5f21caa7971083f066c8c8bb731c9761b9a0bb22a75e338d",
+    "trading_researcher/CONTROLLER_PROVIDERS.md": "91554e631bcf08430aac470a7c77bca8779ccdce4d2b1ab14a0d56b0a777168d",
+    "trading_researcher/AUXILIARY_RESEARCH.md": "1dae1395ed945f6009931dab9476c67a5d2a349d3799cdc5c711ee7d0f5b6c8c",
+    "README.md": "120e6f33ab5a9a95bd85fe18a3069ae6ad2ba9fa29c4fa82eb321235b9cd8858",
+    "docs/architecture/CURRENT_STATE.md": "d3cd892749c21f1eaf1250a7401d3f5fc4a98bd9f26dcd33b57e291575afb77f",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "3e47f18f37462c45709182f2549dd1314b95e6cff22a5cdcfa37a4b830b2cd28",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md": "61fd580673a6f9b4e7956c872266fe1d9893b12bd43292e5592e3cf83fe45040",
+    "docs/reviews/implementation-2026-10-25/progress.json": "e38a7a3a1a7e2f972f2ba9495c284bfb5467d3f9ed97a834048a224d6fe09024",
+    "docs/reviews/implementation-2026-10-25/controller-provider-review.json": "e54c3857bfc2856a7aceb6bed2a946d67a6b8c5f49aa3822de6739ec76cbb71c",
+    "docs/reviews/implementation-2026-10-25/controller-provider-live.json": "fcce420f33a0743f222498e1876c16db0011930a95a44447dd887fd8511b9e2e",
+    "docs/reviews/implementation-2026-10-25/controller-provider-usage.json": "2a9f0193f7320448b5d5f8552d8755a454329f9812cb9b49a9818da746c47c29"
+  },
+  "fresh_checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_controller_providers*.py"
+      ],
+      "exit_code": 0,
+      "log": ".trf-runtime\\controller-provider-checks-2026-10-25\\focused-final-2.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "log": ".trf-runtime\\controller-provider-checks-2026-10-25\\retail-contract-2.log"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "exit_code": 0,
+      "log": ".trf-runtime\\controller-provider-checks-2026-10-25\\system-model-2.log"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log": ".trf-runtime\\controller-provider-checks-2026-10-25\\git-diff-check-2.log"
+    }
+  ],
+  "syntax_whitespace_and_local_links": "PASS",
+  "regression_checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary*.py"
+      ],
+      "tests": 24,
+      "seconds": 146.857,
+      "exit_code": 0,
+      "observed_tool_chunk": "57d285"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_research_calls.py"
+      ],
+      "tests": 10,
+      "seconds": 4.611,
+      "exit_code": 0,
+      "observed_tool_chunk": "58d78a"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_local_runtime.py"
+      ],
+      "tests": 8,
+      "seconds": 16.727,
+      "exit_code": 0,
+      "observed_tool_chunk": "ac321d"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_memory.py"
+      ],
+      "tests": 17,
+      "seconds": 8.391,
+      "exit_code": 0,
+      "observed_tool_chunk": "d65db2"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_storage.py"
+      ],
+      "tests": 12,
+      "seconds": 9.016,
+      "exit_code": 0,
+      "observed_tool_chunk": "8d8300"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_researcher.py"
+      ],
+      "tests": 10,
+      "seconds": 12.548,
+      "exit_code": 0,
+      "observed_tool_chunk": "85c744"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_openai_provider.py"
+      ],
+      "tests": 6,
+      "seconds": 0.118,
+      "exit_code": 0,
+      "observed_tool_chunk": "3bb5d9"
+    }
+  ],
+  "unique_tests_passed": 105,
+  "focused_tests": 18,
+  "independently_authored_tests": 14,
+  "earlier_observations": [
+    "Initial heavy-fixture red: 3 tests, exit1, 207.533s; two missing constructor-argument errors plus one source-drift fixture failure while editing. Not a clean three-case feature red.",
+    "Intermediate old harness: 3 tests, exit1, 312.226s, stale fixture cleanup/source issues. Replaced with a small owned-registry fixture and explicit cleanup; no production rule relaxed.",
+    "Independent initial run:14 tests, exit1; one real bool/int configuration alias and four sequential-fixture setup errors. Canonical route comparison and isolated fixture branch handling resolve them.",
+    "An initial combined documentation patch did not apply because a heading anchor was absent; no partial mutation. Corrected patch applied before final checks.",
+    "Initial finalizer:18 focused tests PASS in7.797s; contract validation exit1 solely because its link pointed to this not-yet-created report. An explicit IN_PROGRESS record now precedes link validation; original failed log retained."
+  ],
+  "preservation": {
+    "unchanged_baseline_files": 265,
+    "unchanged_application_files": 41,
+    "unchanged_prior_frozen_review_artifacts": 94
+  },
+  "live_probe": {
+    "calls": 2,
+    "tokens": 2288,
+    "conservative_nano_usd": 7167500,
+    "elapsed_seconds": 10.835789,
+    "source": "controller-provider-live.json",
+    "binding_check": "PASS exact request/response/provider-ledger IDs, usage, model and UTC timestamps; registry integrity ok"
+  },
+  "aggregate_usage": {
+    "calls": 12,
+    "tokens": 37372,
+    "conservative_nano_usd": 102272500,
+    "cap_nano_usd": 5000000000
+  },
+  "not_verified": [
+    "General semantic admission or arbitrary hypothesis faithfulness",
+    "Live Claude/Gemini/Chinese-model compatibility or model diversity",
+    "Complete scientific calibration, atomic scientific freeze, first historical cycle, backtest validity or profitability",
+    "Remote cryptographic model attestation, immutable vendor weights, OS sandbox or resistance to a malicious local operator",
+    "Full-workload speed or token-quality equivalence; the 10.835789s observation covers this small handoff only",
+    "Remote cancellation/refund, automatic orphan reconciliation, cloud delivery or GitHub publication"
+  ],
+  "next_action": "Keep the full seven-package goal active; connect substantive independent meaning review to scientific admission within approved semantics, then resolve data/exposure, information/calibration and atomic freeze prerequisites."
+}

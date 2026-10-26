@@ -7,3 +7,8 @@ sources/** -text
 docs/reviews/session-understanding/** -text whitespace=cr-at-eol
 # Captured responses may retain blank lines at EOF as part of the evidence.
 docs/reviews/session-understanding/responses/** whitespace=cr-at-eol,-blank-at-eof
+# Published evidence and runtime snapshots use exact-byte source identities.
+docs/reviews/implementation-2026-10-25/** -text whitespace=cr-at-eol
+trading_researcher/*.py -text whitespace=cr-at-eol
+tests/*.py -text whitespace=cr-at-eol
+tests/fixtures/** -text whitespace=cr-at-eol

@@ -1,0 +1,141 @@
+{
+  "schema": "independent-implementation-review/1",
+  "date": "2026-10-25",
+  "reviewer": "information_review independent agent",
+  "status": "PASS_BOUNDED_OFFLINE_CONTROLLER_PROVENANCE_REVIEW",
+  "purpose": "Check the new controller-owned auxiliary invocation boundary without changing semantic judgments, scientific contracts or prior provider observations.",
+  "source_sha256": {
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "232ce0da57920206c500deb10d7381b9fa59a9df541f0b9707dc38569e855094",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/auxiliary.py": "5dc10b20401c252ca30233c758cfabfe37b1becee07bb8b006b6b0ecb92f483b",
+    "trading_researcher/storage.py": "feface135e65708a4b4deaa21e66d460f1add0af27bd97a40206cb9755bab999",
+    "trading_researcher/memory.py": "f6e5558e6c5b8037765bcffb27b3093874dc2d1d1face9c2ce1a8c7df9cc4c5f",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602"
+  },
+  "test_sha256": {
+    "tests/test_controller_providers_adversarial.py": "a25bb7df4d6bddbd5f21caa7971083f066c8c8bb731c9761b9a0bb22a75e338d",
+    "tests/controller_provider_support.py": "1ddb31884f69d74c0b6e5d3e5d23204e3048f01aaa62ffa91f606b910b4174cd"
+  },
+  "fixed_accounting_expectations": {
+    "input_token_bound": 20000,
+    "output_token_limit": 1024,
+    "reserved_tokens": 21024,
+    "input_nano_per_token": 2500,
+    "output_nano_per_token": 10000,
+    "reserved_cost_nano": 60240000,
+    "returned_mock_usage": {
+      "input_tokens": 100,
+      "output_tokens": 100,
+      "cost_units": 1
+    },
+    "qualification": "Provider usage and responses are synthetic mocks. Admission arithmetic is an exact local adapter bound, not an observed invoice or model usage."
+  },
+  "finding": {
+    "id": "controller-route-canonical-configuration",
+    "status": "FIXED",
+    "observed_failure": "A route with integer input_token_limit=1 accepted a frozen request containing boolean True and dispatched the mock. Existing adapter equality used Python equality, which treats True as 1.",
+    "consequence": "The dispatched adapter configuration could differ in exact JSON type from the frozen request. This violates exact profile binding; no monetary overrun or real paid call was demonstrated.",
+    "fix": "The controller compares canonical generation parameters to the exact selected backend configuration before reservation or dispatch.",
+    "red_source_sha256": "48dc66f86e3a01de3c5390744e30cc810bf260727c6c7dbcd0cc4e5f31629bcc",
+    "green_source_sha256": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "test_expectation_unchanged": true
+  },
+  "verification": [
+    {
+      "kind": "independent_initial",
+      "tests": 14,
+      "failures": 1,
+      "errors": 4,
+      "unittest_seconds": "6.066",
+      "wrapper_seconds": "6.653787",
+      "exit_code": 1,
+      "qualification": "The one failure is the canonical-configuration defect. Four errors were reviewer fixture setup: multiple jobs were claimed while the broker intentionally permits only one running job globally. They did not identify four application defects."
+    },
+    {
+      "kind": "independent_final",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_controller_providers_adversarial.py",
+        "-v"
+      ],
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "unittest_seconds": "6.745",
+      "wrapper_seconds": "7.374284",
+      "exit_code": 0,
+      "source_drift": false,
+      "fixture_correction": "End the previous independent branch before claiming another; use an unclaimed second worker for identity-spoofing checks. No security expectation was weakened."
+    },
+    {
+      "kind": "documentation_and_artifacts",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "details": "Also parsed new test AST and review JSON, checked new-file whitespace and retained source/test/evidence hashes."
+    },
+    {
+      "kind": "historical_preservation",
+      "count": 60,
+      "result": "PASS",
+      "details": "Prior protected artifacts and previous independent draw-transport test bytes remain unchanged."
+    }
+  ],
+  "tested_boundaries": [
+    "Concurrent same-key caller receives unresolved identity while one dispatch proceeds; different key cannot bypass the original reservation; heartbeat succeeds while _invoke runs outside the transaction/registry lock; completed same-key lookup is idempotent.",
+    "Simulated abrupt host interruption leaves the full 21,024-token/60,240,000-nano reservation across real Broker close/reopen; neither new key nor worker completion repeats or settles it.",
+    "Public finish rejects host calls; internal/host_owned RPC flags and private settle operation names do not bypass admission.",
+    "Both pending and completed legacy worker keys are refused rather than upgraded to controller provenance.",
+    "Caller route/config nested mutation cannot change the chosen built-in adapter; captured request hash, stable controller-call run identity and USD unit scale are bound; credential/budget paths are absent from invocation artifacts; nonexistent temporary key/ledger paths remain absent.",
+    "Configuration value and bool/int mismatches, non-USD mode, fixture mode, missing route, insufficient token budget and insufficient cost budget fail before dispatch.",
+    "Arbitrary adapter/backend/request/config RPC injection, protected schema writes including future namespace versions, other-worker lease and operator impersonation are rejected.",
+    "Source drift creates a retained unusable record and suppresses response from invoke and idempotent lookup; record_formalization also rejects that retained call.",
+    "Lost lease and runner cancellation are observed; late reply is retained without usable invoke response; unknown usage or token/money overruns cannot supply formalization and overruns halt the epoch.",
+    "Runner outputs keep actual_independent_model_review=UNVERIFIED and no scientific authority."
+  ],
+  "source_review": [
+    "Admission derives the exact frozen auxiliary packet, constructs only an installed built-in adapter, and atomically inserts reservation, protected input artifact and provider_invocations identity before external execution.",
+    "The public finish wrapper and private settlement helper are separate; the private helper is absent from Broker worker/admin operation allowlists.",
+    "Completion retains source stability and response usability. Auxiliary result extraction enforces the durable host gate; legacy transport remains explicitly unverified.",
+    "Protected namespace checks and immutable invocation identity/result/delete triggers prevent normal RPC callers from minting or replacing host provenance.",
+    "Source fingerprints observe local installed files. They are not a signed remote attestation or a defense against malicious local administrators/OS code modification.",
+    "Retained audit records may remain visible through existing authorized audit/transcript reads. The tested restriction is usable invoke delivery and auxiliary-result acceptance, not universal concealment of every historical response."
+  ],
+  "evidence_files": {
+    ".trf-runtime/controller-provider-independent-review-2026-10-25/independent-initial.json": "296f78327428cd03a55d791fd009f4a2027a0bf13174237c749b9f8a9c3c88e8",
+    ".trf-runtime/controller-provider-independent-review-2026-10-25/independent-initial.log": "d52839abeb6cc7965b5f580b2d6240f83f4ebea95b3e59d0708e60258f603a06",
+    ".trf-runtime/controller-provider-independent-review-2026-10-25/independent-final.json": "46b64aa646faf506843b4923f7e14890745a4df3b54253c88c61b35246ee6c9e",
+    ".trf-runtime/controller-provider-independent-review-2026-10-25/independent-final.log": "d1074143bea597d316541c051d7e016989280f283bd7f7a48c7491c1055935e9",
+    ".trf-runtime/controller-provider-independent-review-2026-10-25/diff-check.log": "0b83848512c2c9df1700f9e441eb27438e1befa153b4d06da66ee60a444661c1",
+    ".trf-runtime/controller-provider-independent-review-2026-10-25/protected-artifacts.json": "9d5f755cffa82d6603e47afcde7496b61748db213cffc45da152e6c765b5d07a"
+  },
+  "previous_review": {
+    "path": "docs/reviews/implementation-2026-10-25/draw-transport-review.json",
+    "sha256": "182759c2b8063176b1ad667459c6d410bf0561531f10fdbaae45955e69f6b6db"
+  },
+  "warranted_conclusion": "The reviewed local boundary distinguishes controller-owned dispatch from worker-asserted or historical scripted transport, with the observed exact-type binding defect corrected. These tests establish offline software behavior only.",
+  "not_verified": [
+    "No actual provider request, credential read, real spend-ledger access or paid inference was made by this reviewer; _invoke is mocked in every dispatch test.",
+    "The independent integration fixture exercises the OpenAI built-in route. Anthropic route selection was inspected in source but no independent Anthropic host-route or network execution is claimed here.",
+    "No remote model/version attestation, semantic correctness, independent thought, calibration, scientific readiness or capital authority is established.",
+    "No full framework regression was run; parent owns broader and any separately authorized live checks.",
+    "This path assumes trusted local operator configuration, installed runtime and OS. It does not recover an unresolved call automatically or upgrade old unverified responses."
+  ],
+  "next_action": "Retain the corrected test and source pins. Keep any later live transport observations in a separate artifact; semantic review remains UNVERIFIED until separately justified integration."
+}

@@ -1,0 +1,316 @@
+{
+  "objective": "Implement the complete seven-step execution plan as far as independently possible; report only genuine remaining user decisions at final completion",
+  "status": "IN_PROGRESS",
+  "control_manifest": "C:\\Users\\monoi\\.codex\\plugins\\cache\\openai-curated-remote\\ai-psychiatry\\0.6.0\\.ai\\manifests\\skills.json",
+  "active_control": "never-stop",
+  "controls": {
+    "install-framework": {
+      "status": "NOT_APPLICABLE",
+      "evidence": "Implementing TradingResearcher, not installing AI Psychiatry"
+    },
+    "executive-control": {
+      "status": "SATISFIED",
+      "evidence": "Seven-package scope retained; start real memory behavior tests now"
+    },
+    "attention-reset": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "stop-overthinking": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "stop-compulsive-verification": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "flatten-recursive-investigation": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "evidence-gate": {
+      "status": "SATISFIED",
+      "evidence": "105 unique current tests PASS, including14 independently authored controller-provenance cases; two actual OpenAI auxiliary calls accepted on a synthetic unsupported-idea handoff. Exact command outcomes, source identity, usage and remaining limits are in controller-provider-verification.json. No scientific admission or full research cycle."
+    },
+    "recover-from-deadlock-livelock": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "completion-gate": {
+      "status": "PENDING",
+      "evidence": "The full seven-package objective remains incomplete."
+    },
+    "loophole-hunter": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "framework-red-team": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "anti-gaming": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "false-progress-detector": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "blocker-validator": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "hidden-recursion-detector": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "strategy-laundering-detector": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "scope-laundering-detector": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "completion-evidence": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "memory-validator": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "context-balance": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "underthinking-detector": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "reasoning-balance": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "investigation-floor": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "decision-readiness": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "root-cause-validator": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "evidence-floor": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "executive-override": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "rule-conflict-resolver": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    },
+    "never-stop": {
+      "status": "ACTIVE",
+      "evidence": "Explicit goal implementation request; continue independent work before missing-input decisions"
+    },
+    "direct-communication": {
+      "status": "CHECKED",
+      "evidence": "Loaded inventory; activated only for an observed need"
+    }
+  },
+  "packages": [
+    {
+      "step": 1,
+      "status": "FOUNDATION_IMPLEMENTED",
+      "evidence": [
+        "trading_researcher/MEMORY.md",
+        "docs/reviews/implementation-2026-10-25/memory-verification.json",
+        "docs/reviews/implementation-2026-10-25/memory-preservation.json",
+        "trading_researcher/STORAGE.md",
+        "docs/reviews/implementation-2026-10-25/storage-verification.json"
+      ],
+      "remaining_action": "External immutable storage, corruption quarantine, complete backup/restore and migration are verified. Qualified evidence/policy publication and terminal scientific batch handling still require scientific integration. Automatic orphan reclamation is not implemented."
+    },
+    {
+      "step": 2,
+      "status": "IN_PROGRESS",
+      "evidence": [
+        "trading_researcher/RESEARCHER.md",
+        "docs/reviews/implementation-2026-10-25/researcher-verification.json",
+        "trading_researcher/AUXILIARY_RESEARCH.md",
+        "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json",
+        "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json",
+        "trading_researcher/MEASUREMENTS.md",
+        "docs/reviews/implementation-2026-10-25/measurement-review.json",
+        "docs/reviews/implementation-2026-10-25/measurement-verification.json",
+        "trading_researcher/OPENAI.md",
+        "docs/reviews/implementation-2026-10-25/openai-verification.json",
+        "docs/reviews/implementation-2026-10-25/provider-usage-review.json",
+        "docs/reviews/implementation-2026-10-25/openai-initial-usage.json",
+        "docs/reviews/implementation-2026-10-25/provider-identity-verification.json",
+        "docs/reviews/implementation-2026-10-25/context-efficiency-verification.json",
+        "docs/reviews/implementation-2026-10-25/TOKEN_EFFICIENCY_RESEARCH_2026-10-25.md",
+        "docs/reviews/implementation-2026-10-25/USER_TOOL_CANDIDATES_2026-10-25.md",
+        "docs/reviews/implementation-2026-10-25/measurement-provider-verification.json",
+        "docs/reviews/implementation-2026-10-25/CHEAP_WORKER_REVIEW_2026-10-25.md",
+        "docs/reviews/implementation-2026-10-25/MULTI_MODEL_FIRST_RUN_2026-10-25.md",
+        "trading_researcher/ANTHROPIC.md",
+        "docs/reviews/implementation-2026-10-25/ANTHROPIC_TRANSPORT_2026-10-25.md",
+        "docs/reviews/implementation-2026-10-25/anthropic-provider-verification.json",
+        "docs/reviews/implementation-2026-10-25/MULTI_MODEL_ROLE_HANDOFF_2026-10-25.md",
+        "docs/reviews/implementation-2026-10-25/anthropic-role-handoff-verification.json"
+      ],
+      "remaining_action": "The direct Claude adapter and mixed OpenAI/Claude controller fixtures now pass offline checks with shared accounting and provider/model/version/UTC reporting. Actual Anthropic credentials, paid authorization and live compatibility remain prerequisites for the mixed-model first cycle. OpenCode remains optional and inactive. Continue scientific prerequisites in steps 3/4 before step 5; no cheap-model routing or research-quality parity is claimed."
+    },
+    {
+      "step": 3,
+      "status": "IN_PROGRESS",
+      "evidence": [
+        "trading_researcher/EXPRESSIONS.md",
+        "tests/fixtures/reference_expression_cases.json",
+        "docs/reviews/implementation-2026-10-25/expressions-verification.json",
+        "trading_researcher/FORMALIZATION.md",
+        "docs/reviews/implementation-2026-10-25/formalization-verification.json",
+        "trading_researcher/OUTCOMES.md",
+        "tests/fixtures/reference_outcome_cases.json",
+        "docs/reviews/implementation-2026-10-25/outcomes-verification.json",
+        "trading_researcher/CERTIFICATION.md",
+        "docs/reviews/implementation-2026-10-25/certification-verification.json",
+        "docs/reviews/implementation-2026-10-25/storage-verification.json",
+        "trading_researcher/DATA.md",
+        "docs/reviews/implementation-2026-10-25/data-verification.json",
+        "trading_researcher/BINANCE.md",
+        "tests/fixtures/reference_binance_cases.json",
+        "docs/reviews/implementation-2026-10-25/binance-source-inventory.json",
+        "docs/reviews/implementation-2026-10-25/binance-verification.json",
+        "docs/reviews/implementation-2026-10-25/binance-registry-retention.json",
+        "docs/reviews/implementation-2026-10-25/binance-quality-verification.json",
+        "trading_researcher/binance_quality.py",
+        "trading_researcher/binance_ingest.py",
+        "tests/fixtures/reference_binance_quality_cases.json",
+        "trading_researcher/BINANCE_NORMALIZATION.md",
+        "tests/fixtures/reference_binance_partition_cases.json",
+        "docs/reviews/implementation-2026-10-25/binance-normalization-results.json",
+        "docs/reviews/implementation-2026-10-25/binance-normalization-verification.json",
+        "trading_researcher/FEATURES.md",
+        "tests/fixtures/reference_feature_cases.json",
+        "docs/reviews/implementation-2026-10-25/feature-results.json",
+        "docs/reviews/implementation-2026-10-25/feature-verification.json",
+        "trading_researcher/BINDING.md",
+        "docs/reviews/implementation-2026-10-25/binding-review.json",
+        "docs/reviews/implementation-2026-10-25/binding-verification.json",
+        "trading_researcher/EVALUATION_POLICY.md",
+        "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json",
+        "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json",
+        "docs/reviews/implementation-2026-10-25/plan-retention-verification.json",
+        "docs/reviews/implementation-2026-10-25/plan-retention-review.json",
+        "trading_researcher/AUXILIARY_RESEARCH.md",
+        "docs/reviews/implementation-2026-10-25/auxiliary-research-verification.json",
+        "docs/reviews/implementation-2026-10-25/auxiliary-research-review.json",
+        "trading_researcher/CONTROLLER_PROVIDERS.md",
+        "docs/reviews/implementation-2026-10-25/controller-provider-review.json",
+        "docs/reviews/implementation-2026-10-25/controller-provider-verification.json",
+        "docs/reviews/implementation-2026-10-25/controller-provider-live.json"
+      ],
+      "remaining_action": "Host-owned direct invocation is implemented and exercised with actual OpenAI calls on synthetic unsupported-idea input. Substantive general semantic admission, scientific data/exposure acceptance, calibrated information/evaluation profiles and atomic allocation/freeze remain open. The legacy review schema deliberately remains UNVERIFIED rather than conflating invocation provenance with semantic certification."
+    },
+    {
+      "step": 4,
+      "status": "IN_PROGRESS",
+      "evidence": [
+        "trading_researcher/EVALUATION_POLICY.md",
+        "docs/reviews/implementation-2026-10-25/evaluation-policy-review.json",
+        "docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json",
+        "trading_researcher/STATIONARY_BOOTSTRAP.md",
+        "docs/reviews/implementation-2026-10-25/bootstrap-verification.json",
+        "docs/reviews/implementation-2026-10-25/bootstrap-review.json",
+        "trading_researcher/MONTE_CARLO.md",
+        "docs/reviews/implementation-2026-10-25/mc-stability-review.json",
+        "docs/reviews/implementation-2026-10-25/mc-stability-verification.json",
+        "docs/reviews/implementation-2026-10-25/information-planning-assessment.json",
+        "docs/reviews/implementation-2026-10-25/information-planning-review.json",
+        "docs/reviews/implementation-2026-10-25/information-planning-verification.json",
+        "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-review.json",
+        "docs/reviews/implementation-2026-10-25/nuisance-diagnostics-verification.json",
+        "trading_researcher/POPULATION_MODELS.md",
+        "docs/reviews/implementation-2026-10-25/population-model-review.json",
+        "docs/reviews/implementation-2026-10-25/population-model-progress.json",
+        "docs/reviews/implementation-2026-10-25/population-model-verification.json",
+        "docs/reviews/implementation-2026-10-25/INFORMATION_STUDY_IMPLEMENTATION.md",
+        "trading_researcher/INFORMATION_STUDIES.md",
+        "docs/reviews/implementation-2026-10-25/study-review.json",
+        "docs/reviews/implementation-2026-10-25/study-verification.json",
+        "trading_researcher/CALIBRATION.md",
+        "docs/reviews/implementation-2026-10-25/calibration-count-review.json",
+        "docs/reviews/implementation-2026-10-25/calibration-count-verification.json",
+        "trading_researcher/calibration_runs.py",
+        "docs/reviews/implementation-2026-10-25/calibration-run-verification.json",
+        "docs/reviews/implementation-2026-10-25/draw-transport-verification.json"
+      ],
+      "remaining_action": "Owned finite development studies, exact calibration-count arithmetic/CLI and protected single-claim final-series orchestration are implemented. Complete final calibration, coherent mixed-truth multi-claim worlds, adequate development nuisance/stress models and meaningful information targets remain required alongside scientific admission and freeze. Recorded seed disjointness does not certify independent sampling. Later AmiBroker/reporting packages remain in the full seven-package objective."
+    },
+    {
+      "step": 5,
+      "status": "NOT_STARTED",
+      "evidence": [],
+      "remaining_action": "Implement and verify all exit criteria in execution-plan/0.1"
+    },
+    {
+      "step": 6,
+      "status": "NOT_STARTED",
+      "evidence": [],
+      "remaining_action": "Implement and verify all exit criteria in execution-plan/0.1"
+    },
+    {
+      "step": 7,
+      "status": "NOT_STARTED",
+      "evidence": [],
+      "remaining_action": "Implement and verify all exit criteria in execution-plan/0.1"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "API_ACCESS",
+      "status": "LIVE_API_ACCESS_VERIFIED_BOUNDED",
+      "scope": "OpenAI only; ignored local env destination; no plaintext in artifacts",
+      "need": "Four actual API calls completed. No new top-up needed for this probe; account balance and invoice remain unchecked. ChatGPT-plan preview is incompatible with the current remote output cap."
+    },
+    {
+      "id": "PAID_RUN_CAP",
+      "status": "APPROVED",
+      "currency": "USD",
+      "maximum_total": "5.00",
+      "scope": "Aggregate across all initial actual OpenAI integration tests, not per epoch or retry",
+      "need": "Retain durable cumulative reservations before paid dispatch; do not silently fall back from subscription access to API billing."
+    }
+  ],
+  "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
+  "next_action": "Continue step3/4 faithful formalization and independently observed meaning review, data/exposure acceptance, nuisance adequacy, information/calibration and atomic scientific admission. The second direct provider transport and mixed-controller fixtures are now implemented; actual Anthropic access/spending and live compatibility remain required before the first mixed-model research cycle. Reuse the aggregate ledger if expanded provider spending is approved. No automatic cheap routing, OpenCode bridge, quality-equivalence or scientific-success claim is activated.",
+  "continuation_audit": {
+    "previous_goal_turn": "no_progress_verification_only",
+    "current_goal_turn": "progress",
+    "basis": "This continuation closes the auxiliary worker-response provenance gap with host-owned direct dispatch, independent adversarial checks and actual bounded OpenAI handoff calls. The full seven-package goal remains incomplete; scientific prerequisites remain open.",
+    "blocking_threshold_met": false,
+    "full_objective_complete": false
+  },
+  "external_inputs_needed": [
+    "Before actual Anthropic calls: safely configured API key/workspace and explicit spending authorization covering this provider. The prior OpenAI USD5 authorization is not automatically extended. Other authorized scientific implementation work can continue meanwhile."
+  ],
+  "token_usage": {
+    "ledger": ".trf-runtime/openai-integration-budget.sqlite3",
+    "snapshot": "docs/reviews/implementation-2026-10-25/controller-provider-usage.json",
+    "reported_tokens": 37372,
+    "conservative_nano_usd": 102272500,
+    "aggregate_authorization_nano_usd": 5000000000,
+    "future_recording": "Automatic per admitted OpenAI call: requested/reported model, public catalog name/version/source, explicit unknown immutable snapshot, UTC admission/local settlement times, input/output and optional token subsets. Historical gaps remain unknown.",
+    "identity_and_time_observation": "docs/reviews/implementation-2026-10-25/provider-identity-observation.json",
+    "context_efficiency_observation": "docs/reviews/implementation-2026-10-25/context-efficiency-observation.json"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "schema": "population-model-checkpoint/1",
+  "status": "VERIFIED_PROGRESS_FULL_REGRESSION_RUNNING",
+  "goal_status": "IN_PROGRESS",
+  "changed_files_this_checkpoint": [
+    "README.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/population-model-baseline.json",
+    "docs/reviews/implementation-2026-10-25/population-model-probe-evidence.zip",
+    "docs/reviews/implementation-2026-10-25/population-model-progress.json",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "tests/test_population_models.py",
+    "tests/test_population_models_adversarial.py",
+    "tests/test_population_runs.py",
+    "trading_researcher/INFORMATION_DIAGNOSTICS.md",
+    "trading_researcher/POPULATION_MODELS.md",
+    "trading_researcher/README.md",
+    "trading_researcher/coordination.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/population_models.py",
+    "trading_researcher/population_runs.py",
+    "trading_researcher/storage.py"
+  ],
+  "changed_file_sha256": {
+    "README.md": "60c3f5bf6ccb387280ac2cc4586cde8fc08f3b41ba5060cee15963688f82d6eb",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "713e1df62e14b5eb1ce020102f29a2930d5552098edc94d09d5b54908c10f06e",
+    "docs/architecture/CURRENT_STATE.md": "51041be399b547bf01ebeb6dcf274eb3702752fe52564c0f1b3ffffc6f522069",
+    "docs/reviews/implementation-2026-10-25/IMPLEMENTATION_SUMMARY_2026-10-25.md": "d80c23d43bf2105768b6471d5daaf1538353c735dbe62a82d6a99caf87f94121",
+    "docs/reviews/implementation-2026-10-25/population-model-baseline.json": "6b693a0b586259879b0151cb41aefa5395d9dc82965628de125ccb5b67e2b1c7",
+    "docs/reviews/implementation-2026-10-25/population-model-probe-evidence.zip": "1223dfead51ae9b02fc64a05b1402d2fe0a4cf7de306c76ad85facbff42bb231",
+    "docs/reviews/implementation-2026-10-25/population-model-review.json": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333",
+    "docs/reviews/implementation-2026-10-25/progress.json": "d8cebf02db9608dcf7d58c6ef6a7f504dde368a9ef6ea89873d9ace808da5487",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "c1a33d6fc334bbf99f0ad45f32cde4ca65219b20c2be86086edda683abd1617c",
+    "tests/test_population_models.py": "ec1a41057b620829eb6a5b285cae25b05e937375193bb3ed75da09b19256b074",
+    "tests/test_population_models_adversarial.py": "8bb5f12a49aaf435dd4c4018918343bf869502bae47a15606656674c8749d180",
+    "tests/test_population_runs.py": "cb06cbbbaf218393c190ada50491c029fa08014408de326ab700da1617aedab8",
+    "trading_researcher/INFORMATION_DIAGNOSTICS.md": "096b2b06a422cbe99e385b33a46beb13372dba86c19ec024ad3fc5f74c367b92",
+    "trading_researcher/POPULATION_MODELS.md": "9718e7c5044c97bfd2d284970c61eaf1b323094aed96dda1a38de6885a9b6331",
+    "trading_researcher/README.md": "81a75f11a7f78a751f4c27df62184324e76f59743d4c9dc7d039668528926374",
+    "trading_researcher/coordination.py": "517050063928d8a5e74727327c8baaae109834a6de7132b43db47e9cd3d6238f",
+    "trading_researcher/memory.py": "6d5f7923730fe3c0aae1c2ffdfaa8398f2c86d436ee2091ab26150232eaefdd9",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+    "trading_researcher/storage.py": "cf0f7586348b815a9318fd9f33a48db2f9210d37264e4b6bf7cd4dbe195dbb95"
+  },
+  "current_source_pure_tests": {
+    "command": [
+      "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_population_models*.py",
+      "-v"
+    ],
+    "tests": 16,
+    "seconds": "0.316",
+    "exit_code": 0,
+    "basis": "Observed structured exec result 8a4310"
+  },
+  "focused_owned_tests": {
+    "tests": 4,
+    "seconds": "95.378",
+    "exit_code": 0,
+    "qualification": "Before final pure output-detachment fix; current owned HTTP probe separately passed."
+  },
+  "independent_review": {
+    "path": "population-model-review.json",
+    "sha256": "f1aa7677a1fb2513cf9d9afe67a5b1627811761a2669d4a27d71f29defde6333"
+  },
+  "probe": {
+    "status": "PASS_WITH_EXPLICIT_MODEL_AND_CALIBRATION_LIMITS",
+    "profile_sha256": "447f7f2018fc86d4bd4f0619c9a263f9fa940013e1744767abc13945f252e653",
+    "exit_code": 0,
+    "world_artifact_id": "211f73d87434bedc7cd94663e4b329bb7d82952a5f8bfa354ac3fcc986d0476e",
+    "input_capsule_id": "2628e246c6dd4f5a1e57ac9497db4f7cc8d7e9e3248e5f18fe92ff36f35c0d0b",
+    "world_blob": {
+      "sha256": "2b2cf4693bf35f351ed5cd84a698f87e687af0ff561679cc898cc3ed6c61054f",
+      "size": 78210
+    },
+    "generation_and_replay_seconds": 8.573,
+    "bootstrap_seconds": 11.183,
+    "bootstrap_status": "COMPUTED_UNCALIBRATED",
+    "bootstrap_draws": 59997,
+    "bootstrap_draw_sha256": "b8072e4a7624f5348911a101d25cc4449ac211974162ff5b545da1f8cc63ceba",
+    "monte_carlo_status": "ASSESSED_UNCALIBRATED",
+    "source_hashes": {
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "a00835bc71898dbe8ff769114ff2bd8759bb0bf0b6576c96676ce6abf38c5e35",
+      "trading_researcher/auxiliary.py": "5ea4b68f71d10ca837eb7bc355bac3b0213e0bd9e5e564b626634fae66c44c77",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+      "trading_researcher/bootstrap_runs.py": "2abfbd49e81914f30fb1ae1a410e06b133ae759e496c609865d321c68eebe156",
+      "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/coordination.py": "517050063928d8a5e74727327c8baaae109834a6de7132b43db47e9cd3d6238f",
+      "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+      "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+      "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+      "trading_researcher/memory.py": "6d5f7923730fe3c0aae1c2ffdfaa8398f2c86d436ee2091ab26150232eaefdd9",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+      "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+      "trading_researcher/research_calls.py": "d20e3e2bf6296d934d01253e4cfc30a3b678b070272b72cbb8aa17f2617ad304",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "32c8a19f52bf12df58f1e87bddbcef0b287ef3572655ed2b6b85e3ee67310b04",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/stationary_bootstrap.py": "c37b316304739004abaa822f0c460363db34ca86b000c18081cdb688df9d8881",
+      "trading_researcher/storage.py": "cf0f7586348b815a9318fd9f33a48db2f9210d37264e4b6bf7cd4dbe195dbb95",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "model_status": "MODEL_SPECIFIED",
+    "time_rows": 128,
+    "population": {
+      "q": {
+        "denominator": "47",
+        "numerator": "19"
+      },
+      "target": "pooled_eligible_E_Y_given_true_minus_E_Y",
+      "truth_is_not_realized_sample_contrast": true,
+      "w": {
+        "denominator": "94",
+        "numerator": "39"
+      },
+      "weighting": "eligible_instrument_rows_in_stationary_joint_mask_law"
+    },
+    "truth": {
+      "effect": {
+        "denominator": "10",
+        "numerator": "1"
+      },
+      "feasible": true,
+      "p_other": {
+        "denominator": "25850",
+        "numerator": "8617"
+      },
+      "p_true": {
+        "denominator": "470",
+        "numerator": "237"
+      }
+    },
+    "n_min": null,
+    "scientific_readiness": false,
+    "qualification": "One fixed HTTP/estimator integration and cost probe. No target search, power estimate or calibration."
+  },
+  "checks": {
+    "retail_contract": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    "implementation_preservation": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  },
+  "prior_reports_preserved": 60,
+  "evidence_archive": {
+    "path": "population-model-probe-evidence.zip",
+    "sha256": "1223dfead51ae9b02fc64a05b1402d2fe0a4cf7de306c76ad85facbff42bb231",
+    "members_sha256": {
+      "current_world_probe.py": "ed7ee0760c1b391afc52e2e1c718daf426415b374085390f1848c591cfddda46",
+      "current-world-profile.json": "447f7f2018fc86d4bd4f0619c9a263f9fa940013e1744767abc13945f252e653",
+      "current-world-result.json": "cdc401c98a02b8b77bf28c6dd80d6213c7c52ffb6ba8959a120ca7c08308e3cf",
+      "current-draws.jsonl": "b8072e4a7624f5348911a101d25cc4449ac211974162ff5b545da1f8cc63ceba",
+      "current-bootstrap.json": "2252e84ec2a5493a78c0e4f0c913638b43be161e76cc880dfa542e181e525421",
+      "baseline.json": "b5b8f25f35e58cbfab2bf3f2864da853222fd63927f5627e68ee27301090dfc2"
+    }
+  },
+  "full_regression": {
+    "status": "RUNNING_LAST_OBSERVED",
+    "session_id": 86006,
+    "runner": ".trf-runtime/population-model-checks-2026-10-25/run_checks.py",
+    "result": ".trf-runtime/population-model-checks-2026-10-25/tests-result.json",
+    "rule": "Poll the existing session. Do not restart because observation timed out. Verify terminal output and before/after source hashes before claiming pass."
+  },
+  "unverified": [
+    "Full current-source regression until terminal result is checked",
+    "Population model fit/adequacy",
+    "Complete predeclared power study and N_min",
+    "Fresh narrow and full-process calibration",
+    "Faithful return and coherent joint-family worlds",
+    "Scientific data/semantic acceptance and atomic freeze",
+    "Live LLM adapter and real invention",
+    "General AmiBroker policy adapter",
+    "Domain monitoring and delivery"
+  ],
+  "next_action": "Finish the running regression, then write final checkpoint verification and update the summary. Continue with the complete fixed-profile information study under the original seven-package objective."
+}

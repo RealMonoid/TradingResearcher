@@ -1,0 +1,51 @@
+# Historical evaluation policy and owned plan preparation
+
+This continuation implements exact arithmetic for the approved `historical-batch-v1` rules and an operator-owned plan-preparation path. It is a prerequisite for scientific evaluation and freeze, not their completion. The [retail contract](../docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md) sections 5 and 12 remain the authority.
+
+## Executable policy arithmetic
+
+The pure [policy module](evaluation_policy.py) implements:
+
+- One through eight primary claims, family noncoverage 0.05, marginal noncoverage `0.05 / m` and two-sided intervals. The policy needs valid marginal coverage; it assumes no independence between claims and establishes no coverage by itself.
+- Directional support when the oriented lower bound exceeds the assigned positive delta, negative when the upper bound is below delta, and inconclusive at equality or other overlap. Negative-direction claims reverse and negate both interval bounds.
+- Nondirectional support when the interval is strictly outside `[-delta, delta]`, negative when it is contained in that explicitly closed region, and otherwise inconclusive. Endpoint inclusion follows that separate closed-set rule; it does not replace the directional equality rule.
+- The five-percentage-point probability target and the ten-basis-point simple 24-hour return target. The latter requires the actual `(close / lag(close, 96)) - 1` expression on the 900-second grid, the same certified symbol-specific raw close and its price unit. A volume ratio, price level, different horizon or generator-supplied delta does not acquire this profile. Other meanings remain gaps without rewriting the original idea.
+- Deduplicated half/base/double block lengths, upward rounding and the outcome-overlap lower bound. Every required sensitivity needs 19,999 attempted and defined draws. Undefined draws, discarded-and-replaced draws and missing sensitivities cannot be hidden.
+- Exact linear quantiles at `(B - 1) * p`, basic-interval reflection and the enclosing interval across the prespecified sensitivities. Arithmetic growth beyond the 8,192-bit rational envelope raises a typed resource failure. No floating-point approximation silently changes a boundary decision.
+- Fixed whole-batch release prerequisites, a technical-status-only termination path, and inconclusive classification for an already established Monte Carlo instability diagnostic. These functions do not implement the diagnostic or grant registry release permissions.
+
+The caller of a pure function must supply an admitted, appropriately calibrated interval or authenticated feature/compiler description where required. A calculated status label is not an EvidenceRecord. The later [joint stationary-bootstrap candidate](STATIONARY_BOOTSTRAP.md) implements actual fixed-count sampling and owned exploratory development runs. An optional [Monte Carlo boundary diagnostic](MONTE_CARLO.md) now exists as an explicitly uncalibrated development candidate. [Owned information diagnostics](INFORMATION_DIAGNOSTICS.md) provide development rates, grid moments and pair coverage; nuisance-model fitting, statistical calibration/admission and N_min remain incomplete. The small replicate arrays in arithmetic fixtures do not replace the mandatory assessment resample count.
+
+## Owned preparation operation
+
+The operator RPC is:
+
+```text
+prepare_evaluation_plan(key, compiled_id, primary_count, dependence)
+```
+
+Use the existing `rpc` CLI request-file interface against the owned server. `dependence` requires an integer `base_length`, a rationale, one through sixteen `development_refs`, and `randomness` with explicit `algorithm`, `version` and integer `seed`. No default seed, dependence justification or nuisance estimate is invented. The generator cannot override delta through this operation.
+
+The host accepts an owned compiled development hypothesis and its compatible retained calculation/data/feature dependencies. Development references must be genuine owned descriptive executions on the same snapshot. Their committed case blobs must exist and match both hash and size. Supplied sources, protected data and worker requests are denied before the affected dependent reads. The request is canonically copied before admission; later caller mutation cannot change the calculated plan or its idempotency identity.
+
+The calculation runs in fresh isolated Python against a retained application source capsule. A separate fresh process repeats the same calculation and verifies its complete result hash. The parent verifies request/source/runtime identities and rechecks dependencies, diagnostic bytes and source version before commitment. This avoids treating import-time disk hashes as proof of which previously loaded dependency function ran. The source capsule is bounded to 128 application files and 16 MiB. Python and loaded standard-library files are fingerprinted rather than archived. This is source binding and transport verification, not independent semantic or statistical certification.
+
+Before either calculation child launches, preparation atomically commits an immutable `evaluation-plan-input/1` capsule, its source-blob references and the attempt's STARTED event. The development-class capsule retains the detached canonical request, exact calculation payload, dependency references, inherited exposure, bootstrap hash, Python runtime identity and application source bytes. This is operational input retention; it does not reserve a scientific allocation or freeze a trial.
+
+The first admitted request key binds that capsule even if execution is interrupted. Same key/different request is a conflict. Same key/same request starts a new attempt against the original retained payload and source, rechecking its bytes, runtime compatibility and live dependency identities. A source upgrade needs a new key to request a new calculation version. Retained replay never substitutes or requires calculation sources from the checkout. A completed request returns its existing immutable plan; simultaneous matching attempts converge on one input capsule and one final plan. A contradictory completed calculation is rejected rather than overwriting the first result.
+
+`inspect_bound_computations` exposes `retained_input_id` and a terminal `reason`. The operator can retrieve that capsule with `get_artifact`; a completed plan also records `input_capsule_id` and includes it in its ancestry. Failure during the final plan transaction leaves the admitted input and interrupted attempt intact without publishing a draft. Failure before admission commitment starts no child and grants no reference to staged source files. Reopening the registry marks unfinished attempts interrupted without erasing their exact inputs. Complete database/blob backups include admitted capsules and their source files.
+
+The namespace cannot be supplied through generic source or worker APIs. Capsule creation time and inherited exposure apply to later contexts, including wrappers. Invalid or unauthorized requests rejected before admission are not represented as executed attempts. Older attempts that predate this capability retain `retained_input_id: null`; their missing inputs are not reconstructed from later files. Python is fingerprinted rather than archived, and completed children supply their loaded-standard-library fingerprints; an interrupted prelaunch attempt has no completed-child environment report. Each child retains the existing time, output, cancellation and reaping limits. Parent admission, copying and integrity checks are outside the child timeout.
+
+`evaluation-plan/1` is a protected namespace. A successful preparation record has `POLICY_DRAFT`, `frozen: false`, `allocation_reserved: false` and `scientific_readiness: false`. Its family count is provisional and must be recomputed from actual frozen batch membership. Its N_min remains null with a calibrated-information-target requirement; planned power and the zero/delta/2*delta sensitivities follow the adopted contract. Merely supplying a PRNG name or development rationale does not validate that method or its assumptions.
+
+No assessment access, budget reservation, scientific result release, semantic approval or empirical claim follows from this draft. Genuine independent review must assess the exact original idea, executable candidate and mappings; replaying a formalizer's self-declared equivalence in another process cannot supply that judgment.
+
+## Evidence and unfinished requirements
+
+The independent [91-case fixture](../tests/fixtures/reference_evaluation_policy_cases.json) and [authorship note](../tests/fixtures/reference_evaluation_policy_expectations.md) were fixed before the implementation was inspected. The policy suite exercises 81 cases. The ten allocation-state cases remain explicitly pending for the future campaign/freeze state machine; they are not counted as verified behavior. Additional adversarial tests cover arithmetic growth, units, false Boolean/count coercion, undefined draws, input mutation, unavailable diagnostic blobs, stale imports and transaction failures.
+
+The [source baseline archive](../docs/reviews/implementation-2026-10-25/evaluation-policy-source-baseline.zip) preserves the three exact source documents pinned by the fixture, including the blueprint before its descriptive implementation update. Archive member hashes must match the fixture's source hashes; later documentation does not replace those source versions.
+
+[Policy verification](../docs/reviews/implementation-2026-10-25/evaluation-policy-verification.json) records the preceding arithmetic/preparation checkpoint. [Retention verification](../docs/reviews/implementation-2026-10-25/plan-retention-verification.json) records the later admitted-input recovery changes, exact commands and independent review. Owned-registry tests use synthetic hypotheses and data. They do not establish historical PIT, scientific acquisition/rights acceptance, actual independent model review, full composition certification, calibrated inference, atomic scientific allocation/freeze, real LLM discovery or market usefulness. The trusted host account and installed controller remain outside the isolation boundary. Process-exit recovery does not prove durability under physical power loss.

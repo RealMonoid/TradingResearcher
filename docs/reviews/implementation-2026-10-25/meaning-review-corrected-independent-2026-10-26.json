@@ -1,0 +1,240 @@
+{
+  "schema": "meaning-review-corrected-independent-review/1",
+  "status": "PASS_FINITE_EIGHT_CASE_TECHNICAL_COMPARISON",
+  "checked_at_utc": "2026-10-26T12:56:43.759910+00:00",
+  "reviewer": "independent publication_review agent",
+  "source_sha256": {
+    "meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "auxiliary.py": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c",
+    "formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c"
+  },
+  "fixture_sha256": "be419900653305eb986cccb8c40ff4e1779bef1cf6d478e0b8ea49c166a88d09",
+  "evidence_sha256": {
+    "plan.json": "225aa639df12ef052e984d88bdf53b4b0ca1a368403f2e14f670ec9f9e8c298e",
+    "prepared.json": "d4de726d733aa4aba43c3d49c4f3eb1b84d3c1556c9c6203b550b6e4c9b34adf",
+    "independent-preflight.json": "f9f7935315eacc26ad005f77a6e73709ef8739e210b0c114db0f99812e0f08ee",
+    "run-started.json": "b530de64e8954b1c894d8e04b03d86b1de423880f114b0b25a931d7e995882cc",
+    "live-result.json": "19b45d5942dde533c82d37cd1627e247618f2f4bf8b2dffe9061d6459cb4445c",
+    "preparation-recovery.json": "671956438a08980ea9c5825339679eeee1a2ff391b7bc051e28abce03bd92f24"
+  },
+  "observations": [
+    {
+      "ordinal": 0,
+      "case_id": "complete-faithful",
+      "expected": "faithful",
+      "observed": "faithful",
+      "independent_semantic_review": "SATISFIED",
+      "response_id": "e62673b8b36ac945df3c16777960533f26fd9b4b94d8ca753dd5ab372bf39be1",
+      "owned_invocation_id": "1ce695fd50aaa7ee70b88290a76f8609b5e7f3b988ebf9b38463f188f86f4988",
+      "counted_input_tokens": 10987,
+      "usage": {
+        "cost_units": 31427500,
+        "input_tokens": 10987,
+        "output_tokens": 396
+      },
+      "admitted_at_utc": "2026-10-26T12:51:03Z",
+      "settled_at_utc": "2026-10-26T12:51:19Z"
+    },
+    {
+      "ordinal": 1,
+      "case_id": "double-negation-equivalent",
+      "expected": "faithful",
+      "observed": "faithful",
+      "independent_semantic_review": "SATISFIED",
+      "response_id": "5a8ed6111af0530a3be259a19c2bef2c2062ff7dee7fa44af7f7b52a0d8e9c64",
+      "owned_invocation_id": "35b1cc6e5fa617d42d7dd207250c367d21cc5714c47bfe4afd8165bf0d44bdff",
+      "counted_input_tokens": 11004,
+      "usage": {
+        "cost_units": 31920000,
+        "input_tokens": 11004,
+        "output_tokens": 441
+      },
+      "admitted_at_utc": "2026-10-26T12:51:20Z",
+      "settled_at_utc": "2026-10-26T12:51:32Z"
+    },
+    {
+      "ordinal": 2,
+      "case_id": "changed-horizon",
+      "expected": "different",
+      "observed": "different",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_id": "a20607848c9fd8b1bc175d610a4677382bce1a876ddc51088f541be27457a7c8",
+      "owned_invocation_id": "b0405dfaa86d056bbb639df23207cf7630a2b460196cad0c7904dc4e89192525",
+      "counted_input_tokens": 11021,
+      "usage": {
+        "cost_units": 32592500,
+        "input_tokens": 11021,
+        "output_tokens": 504
+      },
+      "admitted_at_utc": "2026-10-26T12:51:33Z",
+      "settled_at_utc": "2026-10-26T12:52:12Z"
+    },
+    {
+      "ordinal": 3,
+      "case_id": "changed-comparator",
+      "expected": "different",
+      "observed": "different",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_id": "55d82e19181a96dfe5a263ab81ebcf9cbcbec18cae19a0ab8a132c5988391f51",
+      "owned_invocation_id": "305cabfbbe8d7b4072c12e077210638ab66ad3834a4fa780eca11db86a82064f",
+      "counted_input_tokens": 10942,
+      "usage": {
+        "cost_units": 32295000,
+        "input_tokens": 10942,
+        "output_tokens": 494
+      },
+      "admitted_at_utc": "2026-10-26T12:52:14Z",
+      "settled_at_utc": "2026-10-26T12:52:27Z"
+    },
+    {
+      "ordinal": 4,
+      "case_id": "changed-direction",
+      "expected": "different",
+      "observed": "different",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_id": "8e07f9ae4c8b8d963d0ab4545e224568348b5484554d4cd23fdbdb1a28d13db3",
+      "owned_invocation_id": "72824bdb13d268766c1c2571a91ab678fc6811bff4283eb9ed8c227838a682f0",
+      "counted_input_tokens": 10999,
+      "usage": {
+        "cost_units": 31247500,
+        "input_tokens": 10999,
+        "output_tokens": 375
+      },
+      "admitted_at_utc": "2026-10-26T12:52:29Z",
+      "settled_at_utc": "2026-10-26T12:52:41Z"
+    },
+    {
+      "ordinal": 5,
+      "case_id": "unknown-condition-denominator-exclusion",
+      "expected": "different",
+      "observed": "different",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_id": "a44c52bc66649d6694ec2d26f4fc6142503a2f264f52548de880fe2eabe63ce0",
+      "owned_invocation_id": "3c3fc8ac726f40c43357a4a32185d6900e1552d95ed01b0e0bdb88b646dd3dcc",
+      "counted_input_tokens": 10950,
+      "usage": {
+        "cost_units": 31945000,
+        "input_tokens": 10950,
+        "output_tokens": 457
+      },
+      "admitted_at_utc": "2026-10-26T12:52:42Z",
+      "settled_at_utc": "2026-10-26T12:52:54Z"
+    },
+    {
+      "ordinal": 6,
+      "case_id": "underspecified-original",
+      "expected": "uncertain",
+      "observed": "uncertain",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_id": "9f36d82d59e8f2733ef75642489acdda9e776823372dcc3883b707bf0793a354",
+      "owned_invocation_id": "2fe7eb1705603d7a2192a456f03dae1ba67b8cb8c2589d77979554803dfa99b1",
+      "counted_input_tokens": 10019,
+      "usage": {
+        "cost_units": 30917500,
+        "input_tokens": 10019,
+        "output_tokens": 587
+      },
+      "admitted_at_utc": "2026-10-26T12:52:55Z",
+      "settled_at_utc": "2026-10-26T12:53:09Z"
+    },
+    {
+      "ordinal": 7,
+      "case_id": "unsupported-question-retained-gap",
+      "expected": "faithful",
+      "observed": "faithful",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_id": "bb7a47e9acf9a205a3888144c886ac188a5a944501b2cac71e5d358e866c4bad",
+      "owned_invocation_id": "42128c4f09fb8442b470f493c7f7435f05aecdc8dcf5a52963c1915e4a37d88c",
+      "counted_input_tokens": 9323,
+      "usage": {
+        "cost_units": 25647500,
+        "input_tokens": 9323,
+        "output_tokens": 234
+      },
+      "admitted_at_utc": "2026-10-26T12:53:11Z",
+      "settled_at_utc": "2026-10-26T12:53:19Z"
+    }
+  ],
+  "epochs": [
+    {
+      "epoch_id": "003c03904c684077aa299a96c84af922",
+      "created_at_unchanged": 1793018473,
+      "usage": {
+        "calls": 4,
+        "cost_units": 63347500,
+        "tokens": 62446
+      },
+      "qualification": "Epoch token accounting includes scripted UTF-8 byte counts as well as actual provider tokens; it is not actual model-token consumption."
+    },
+    {
+      "epoch_id": "de78b2bb52d349709f5832e0d032fc73",
+      "created_at_unchanged": 1793018869,
+      "usage": {
+        "calls": 4,
+        "cost_units": 64887500,
+        "tokens": 62542
+      },
+      "qualification": "Epoch token accounting includes scripted UTF-8 byte counts as well as actual provider tokens; it is not actual model-token consumption."
+    },
+    {
+      "epoch_id": "8a7b75787c1846f1bb12b521b7f48926",
+      "created_at_unchanged": 1793018872,
+      "usage": {
+        "calls": 4,
+        "cost_units": 63192500,
+        "tokens": 62347
+      },
+      "qualification": "Epoch token accounting includes scripted UTF-8 byte counts as well as actual provider tokens; it is not actual model-token consumption."
+    },
+    {
+      "epoch_id": "9b3247590fd4434fbce0c546cc532ad2",
+      "created_at_unchanged": 1793018874,
+      "usage": {
+        "calls": 4,
+        "cost_units": 56565000,
+        "tokens": 48049
+      },
+      "qualification": "Epoch token accounting includes scripted UTF-8 byte counts as well as actual provider tokens; it is not actual model-token consumption."
+    }
+  ],
+  "interpretation": [
+    "Both positive controls preserve the specified meaning. The double-negation case explicitly retains unknown values.",
+    "Four altered candidates are correctly distinguished: future horizon, complement comparator, direction, and exclusion of condition-unknown rows from the scope mean.",
+    "The underspecified original remains uncertain despite supplied representation semantics. The reviewer explicitly distinguishes schema definitions from unprovided hypothesis commitments.",
+    "The unsupported order-book question remains a faithful null-candidate gap; no OHLCV proxy or negative market result is invented.",
+    "Only the two structurally supported faithful controls satisfy the existing review-process prerequisite. No case grants scientific readiness.",
+    "Neutral provenance explains an identity alias and the already implemented exact-anchor rule uniformly across all eight cases. It does not supply expected labels or change original candidate meanings."
+  ],
+  "usage": {
+    "actual_generation_calls": 8,
+    "input_tokens": 85245,
+    "output_tokens": 3488,
+    "total_tokens": 88733,
+    "conservative_charge_nano_usd": 247992500,
+    "model": "gpt-6.1-sol",
+    "catalog_version": "6.1",
+    "immutable_backend_snapshot": "UNKNOWN",
+    "admitted_at_utc": "2026-10-26T12:51:03Z",
+    "settled_at_utc": "2026-10-26T12:53:19Z",
+    "elapsed_seconds": 138.517258,
+    "aggregate_calls": 22,
+    "aggregate_total_tokens": 145641,
+    "aggregate_conservative_charge_nano_usd": 404925000,
+    "aggregate_cap_nano_usd": 5000000000
+  },
+  "retained_history": {
+    "previous_incomplete_probe": "0c71720a45c5628028274e9e72e2135dd406b22c82bad50491235785fe919e92",
+    "previous_independent_review": "5fa6552128e7229eb2c2b1253b295e3ee5261c79626a2ced077e364ce0f2ab9b",
+    "failed_preparations": "Earlier queue ordering and nested-scope validation failures, the offline syntax correction and the restore rename failure are preserved; no paid calls were made by those failed preparations.",
+    "recovery": "Used the existing attempt-3 registry and original first epoch/configuration. No new restoration, certification, timestamp reset or budget reset was performed during recovery."
+  },
+  "verification": "Read-only independent assertions checked all eight frozen cases, retained provider responses, controller invocation bindings, receipts, original epochs, complete call inventory and ledger deltas; current production/test/fixture diff against published 32eccc2 is empty.",
+  "unverified": [
+    "This is a finite engineering comparison after documented packet/cap corrections, not a fresh scientific holdout or a general natural-language fidelity guarantee.",
+    "Formalizations were scripted, not generated by a live model. No free discovery, first genuine research cycle, or mixed-provider research occurred.",
+    "No scientific calibration, feature/data acceptance, atomic scientific freeze, profitability or deployment authority follows.",
+    "Configured-rate charges are conservative bounds, not invoice reconciliation. The immutable backend snapshot is unavailable."
+  ]
+}

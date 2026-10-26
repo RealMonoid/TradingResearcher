@@ -98,6 +98,8 @@ Authorized method comparisons run when their predeclared inputs are ready. An ab
 
 ## Progress, authority, and rollback
 
+The [October 26 meaning-review checkpoint](../implementation-2026-10-25/MEANING_REVIEW_OBSERVATION_2026-10-26.md) advances the separate review-process prerequisite within package 3. Twenty offline tests pass, and all eight actual judgments match the fixed expectations in the corrected full comparison. Earlier incomplete attempts remain retained. Next connect current review evidence to the remaining admission workflow, preserving data/exposure, calibration and freeze gates. This does not complete package 3, scientific admission or the first research cycle.
+
 Use this file as the single sequence checklist. Record package status, evidence paths, and the next unmet exit condition when execution advances; update verified capability coverage and Current State through the existing maintenance process. Keep status messages short: completed package, check result, next package. Do not create an additional competing roadmap for each tool choice.
 
 The selected sequence is ordinary engineering planning within the existing purpose. It does not alter accepted definitions, adopt the entire research proposal as a new scientific contract, or authorize live capital. Routine implementation choices can follow this sequence within the active task's authorization. Material changes to scientific meaning still follow D008/D026; present a concrete proposal only if that boundary is actually encountered.

@@ -1,0 +1,197 @@
+{
+  "schema": "meaning-review-live-independent-review/1",
+  "status": "INCOMPLETE_MODEL_QUALITY_PROBE",
+  "checked_at_utc": "2026-10-26T12:41:19.688757+00:00",
+  "reviewer": "independent publication_review agent",
+  "scope": "All eight predeclared technical review slots; retained provider transcripts and controller assessment, not model-selection or market evidence.",
+  "evidence_sha256": {
+    "plan.json": "fd267c591d37d173ac06caf13e72c0497f4375b9f638909fd3460c2ea2c4c4a1",
+    "prepared.json": "408bd8882ae988f68bc445332c0ad2983849f812d383b0b47d439d8092ee6c04",
+    "independent-preflight.json": "7df8026dcdd5fc278c681b6f583bc0122ef4dc71b6265815c7bb365ca40b920f",
+    "run-started.json": "4132f9ff98a98bc8bc1e36c29e7ecf7cedbb974500a2e3f61ab0fc046f37bba4",
+    "live-result.json": "0c71720a45c5628028274e9e72e2135dd406b22c82bad50491235785fe919e92"
+  },
+  "fixture_sha256": "be419900653305eb986cccb8c40ff4e1779bef1cf6d478e0b8ea49c166a88d09",
+  "observations": [
+    {
+      "ordinal": 0,
+      "case_id": "complete-faithful",
+      "classification": "NOT_ASSESSED_INPUT_LIMIT",
+      "response_status": "input_limit",
+      "counted_input_tokens": 10710,
+      "observed_judgment": null,
+      "expected_judgment": "faithful",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_artifact_id": "748ee2b05618ba9d43bd5894bff1de5338e561b65f00f9893f5b130877e49e16",
+      "usage": {
+        "cost_units": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "ordinal": 1,
+      "case_id": "double-negation-equivalent",
+      "classification": "NOT_ASSESSED_INPUT_LIMIT",
+      "response_status": "input_limit",
+      "counted_input_tokens": 10774,
+      "observed_judgment": null,
+      "expected_judgment": "faithful",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_artifact_id": "c73543ed7244b0631fa781e2d09eb14db733ab34f22b5d0376520426f01dd90d",
+      "usage": {
+        "cost_units": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "ordinal": 2,
+      "case_id": "changed-horizon",
+      "classification": "NOT_ASSESSED_INPUT_LIMIT",
+      "response_status": "input_limit",
+      "counted_input_tokens": 10754,
+      "observed_judgment": null,
+      "expected_judgment": "different",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_artifact_id": "4436059247b09de086a432b101136448b3471de407bf8251dfdec3bc91c19ee1",
+      "usage": {
+        "cost_units": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "ordinal": 3,
+      "case_id": "changed-comparator",
+      "classification": "NOT_ASSESSED_INPUT_LIMIT",
+      "response_status": "input_limit",
+      "counted_input_tokens": 10666,
+      "observed_judgment": null,
+      "expected_judgment": "different",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_artifact_id": "e86550e8a8ce7b0b0aee2700658bd753a766012d99b909cf6b5163cd63a7d3d5",
+      "usage": {
+        "cost_units": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "ordinal": 4,
+      "case_id": "changed-direction",
+      "classification": "NOT_ASSESSED_INPUT_LIMIT",
+      "response_status": "input_limit",
+      "counted_input_tokens": 10771,
+      "observed_judgment": null,
+      "expected_judgment": "different",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_artifact_id": "da7e1501b103ac21af37c037d8e58424272e1845a42ed7db67d170db88a613cf",
+      "usage": {
+        "cost_units": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "ordinal": 5,
+      "case_id": "unknown-condition-denominator-exclusion",
+      "classification": "NOT_ASSESSED_INPUT_LIMIT",
+      "response_status": "input_limit",
+      "counted_input_tokens": 10723,
+      "observed_judgment": null,
+      "expected_judgment": "different",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_artifact_id": "ac4aeb44229c3f05d917502a1fce5365a358da2b3587e44d15305eae7af948cf",
+      "usage": {
+        "cost_units": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    {
+      "ordinal": 6,
+      "case_id": "underspecified-original",
+      "classification": "FINITE_CASE_JUDGMENT_MATCH",
+      "response_status": "completed",
+      "counted_input_tokens": 9739,
+      "observed_judgment": "uncertain",
+      "expected_judgment": "uncertain",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_artifact_id": "9e9b16944c5393b34576bcbe24478b1458f6992161763246c7fbc8769f27cd61",
+      "usage": {
+        "cost_units": 29837500,
+        "input_tokens": 9739,
+        "output_tokens": 549
+      }
+    },
+    {
+      "ordinal": 7,
+      "case_id": "unsupported-question-retained-gap",
+      "classification": "FINITE_CASE_JUDGMENT_MATCH",
+      "response_status": "completed",
+      "counted_input_tokens": 9021,
+      "observed_judgment": "faithful",
+      "expected_judgment": "faithful",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "response_artifact_id": "2b7b9b8ce95f6a22b2458781940a7545176eabd01fdf3e8a799d50393788ca9f",
+      "usage": {
+        "cost_units": 24822500,
+        "input_tokens": 9021,
+        "output_tokens": 227
+      }
+    }
+  ],
+  "findings": [
+    {
+      "finding": "Six slots did not reach model generation because their exact counted input exceeded the frozen 10,000-token limit.",
+      "conclusion": "These are missing quality observations, not incorrect model judgments. The budget guard worked and charged no generation tokens for those six slots."
+    },
+    {
+      "finding": "The underspecified-original case returned uncertain and named the missing direction, comparator, weighting, universe and missingness commitments.",
+      "conclusion": "This finite negative-control judgment agrees with the predeclared expectation; it does not validate all novel natural-language mappings."
+    },
+    {
+      "finding": "The unsupported-question case returned faithful retention with a null executable candidate and no invented OHLCV proxy.",
+      "conclusion": "This finite gap-retention judgment agrees with the expectation; the controller correctly retained NOT_SATISFIED and scientific_readiness=false."
+    },
+    {
+      "finding": "Original text for slots 0-5 names fixture:data_snapshot, while executable candidates bind an owned snapshot identity; no explicit alias map was model-visible.",
+      "conclusion": "This input-provenance confound was found after dispatch began. Those six slots did not generate a model answer, so it cannot explain an observed wrong judgment; it must be resolved before interpreting a later positive-control trial."
+    },
+    {
+      "finding": "The independent preflight checked bytes, input separation, source equality, queue ordering and budget ceilings but did not establish the exact model-token fit or detect the snapshot-alias confound before dispatch.",
+      "conclusion": "The earlier preflight PASS was bounded to its listed checks and is not a complete quality-readiness pass."
+    },
+    {
+      "finding": "The underspecified-case response also notes that horizon fields alone do not establish exact-anchor behavior on absent rows.",
+      "conclusion": "A later review packet should supply the applicable existing typed-language semantics with provenance, without changing the scientific contract or giving golden case answers."
+    }
+  ],
+  "actual_generation_usage": {
+    "calls": 2,
+    "input_tokens": 18760,
+    "output_tokens": 776,
+    "total_tokens": 19536,
+    "conservative_charge_nano_usd": 54660000,
+    "model": "gpt-6.1-sol",
+    "catalog_version": "6.1",
+    "immutable_backend_snapshot": "UNKNOWN",
+    "admitted_at_utc": "2026-10-26T12:37:28Z",
+    "settled_at_utc": "2026-10-26T12:37:55Z",
+    "qualification": "Provider-reported token usage and conservative configured-rate charges, not invoice reconciliation."
+  },
+  "aggregate_usage": {
+    "calls": 14,
+    "total_tokens": 56908,
+    "conservative_charge_nano_usd": 156932500,
+    "cap_nano_usd": 5000000000
+  },
+  "next_action": "Retain this incomplete run and both preparation attempts. Before a separately versioned technical repetition, make fixture identity substitution explicit and bind the existing language semantics; preflight exact input counts against finite per-call, epoch and aggregate caps. Preserve all eight cases and prior outcomes, and do not select only favorable results or claim a fresh holdout.",
+  "unverified": [
+    "Six planned model judgments remain unavailable.",
+    "No complete eight-case quality pass or empirical natural-language fidelity guarantee.",
+    "No free discovery or actual model formalization; original executable candidates were scripted fixtures.",
+    "No scientific readiness, calibration, market edge, mixed-provider research, or first genuine research cycle."
+  ]
+}

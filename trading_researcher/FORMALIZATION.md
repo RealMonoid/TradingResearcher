@@ -1,5 +1,7 @@
 # Retained formalization records
 
+The [independent meaning-review assessment](MEANING_REVIEWS.md) separately records whether a complete controller-observed comparison process satisfies that prerequisite for an exact target. Model judgment remains fallible and does not authorize scientific execution.
+
 This implements the draft boundary of IF-03/04 under D002/D074. The worker operation `record_formalization` requires a current formalizer lease and an idea plus catalog already authorized to that attempt. The original idea artifact and its exact text remain separate from the candidate. Candidates admitted under the retained-envelope size/depth bounds are retained, including unsupported expressions or ambiguous meaning. Neither a draft nor an accepted operational submission grants scientific readiness.
 
 A `formalization-record/1` contains its idea/catalog references, the exact original idea body, the exact submitted candidate, a semantic report, UTC creation time, a deterministic structural assessment, and `scientific_readiness: false`. It is immutable and inherits the complete attempt/base exposure. The controller also journals an observation or a typed gap, linked to the retained draft. Generic artifact writes cannot impersonate this record namespace. No new registry table or scientific state migration is needed for drafts.

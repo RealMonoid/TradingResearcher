@@ -1,0 +1,1013 @@
+{
+  "schema": "meaning-review-live-comparison/1",
+  "status": "ALL_FIXED_CASES_MATCHED",
+  "recorded_at_utc": "2026-10-26T12:53:53.815361+00:00",
+  "fixture_sha256": "be419900653305eb986cccb8c40ff4e1779bef1cf6d478e0b8ea49c166a88d09",
+  "prior_incomplete_probe": "meaning-review-live-independent-2026-10-26.json",
+  "corrected_probe_elapsed_seconds": 138.517258,
+  "observations": [
+    {
+      "case_id": "complete-faithful",
+      "status": "OBSERVED",
+      "expected": {
+        "judgment": "faithful",
+        "reason": "Every target semantic choice is expressly present in the original and agrees with the supplied feature meaning.",
+        "affected_paths": [],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": true,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      },
+      "observed_judgment": "faithful",
+      "judgment_matches": true,
+      "prerequisite_matches": true,
+      "review": {
+        "added_assumptions": [],
+        "conflicts": [],
+        "judgment": "faithful",
+        "mapping_checks": [
+          {
+            "judgment": "faithful",
+            "reason": "Independent comparison of the full segment with the candidate and supplied definitions finds the direction, population, dates, feature identity, strict condition, exact future anchor, quantity unit, whole-scope denominator, weighting, unknown-condition treatment, and outcome eligibility preserved. The original explicitly supplies the parameter choices and assumed availability scenario; the attached representation rules establish the snapshot alias and exact-anchor boundary behavior. The formalizer's equivalence assertion is not needed for this conclusion.",
+            "segment": 0
+          }
+        ],
+        "omitted_assumptions": [],
+        "reason": "The candidate preserves the explicitly specified positive conditional-minus-whole-scope arithmetic-mean difference, not a comparison against the condition's complement. It retains BTCUSDT only, the stated half-open decision-time interval, literal-true scope, strict current-close threshold of 101 USDT/BTC, equal-row weighting, and no nuisance fit. The outcome is the close quantity in USDT/BTC at exactly t+900 seconds under the supplied anchor interpretation, not a return or next-available observation. The supplied close definition matches the original exact decimal spot-bar close at its expected exclusive end. The explicit unknown-condition and missing-outcome rules agree with the original denominator. The supplied anchor interpretation retains maturity, availability, and exclusive-boundary categories, and the feature definitions supply the explicitly assumed zero-second availability delay. Snapshot identity is established by the original's explicit alias. Parameter values originate in the preserved specification rather than being inferred from data. This is a finding about retained meaning, not verification of implementation, historical availability, or scientific readiness.",
+        "unresolved_meaning": []
+      },
+      "review_artifact_id": "a9416d88b6e369625f262fbb13c0a65b1be60056ada815cebea9970e27b05017",
+      "assessment_id": "1a6a5025a7297df8ec6f3c34b806ce9b04415554438af7516926f3b3c688c656",
+      "independent_semantic_review": "SATISFIED",
+      "scientific_readiness": false
+    },
+    {
+      "case_id": "double-negation-equivalent",
+      "status": "OBSERVED",
+      "expected": {
+        "judgment": "faithful",
+        "reason": "Double negation preserves true, false and unknown, so condition membership and both denominators are unchanged. Syntax alone is not a semantic difference.",
+        "affected_paths": [
+          "/condition_ast/expression"
+        ],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": true,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      },
+      "observed_judgment": "faithful",
+      "judgment_matches": true,
+      "prerequisite_matches": true,
+      "review": {
+        "added_assumptions": [],
+        "conflicts": [],
+        "judgment": "faithful",
+        "mapping_checks": [
+          {
+            "judgment": "faithful",
+            "reason": "Independent comparison of the full mapped passage with the candidate and supplied definitions finds the direction, population, denominator, exact future price anchor and unit, weighting, availability assumptions, missingness, and unknown-condition treatment preserved. The double-negated predicate is equivalent to the original strict threshold with unknown preserved. The snapshot alias and exact-anchor interpretation are explicitly supplied representation definitions rather than new hypothesis commitments.",
+            "segment": 0
+          }
+        ],
+        "omitted_assumptions": [],
+        "reason": "The candidate retains the explicitly specified positive conditional-minus-whole-scope arithmetic-mean difference, not a comparison with the condition's complement. It preserves BTCUSDT, the snapshot identity through the supplied alias, the 900-second grid and stated date interval, literal-true scope, and the strict close > 101 USDT/BTC condition. Double negation preserves that condition, including unknown values; it does not convert unknown to false. The catalog and definitions identify the feature as the exact decimal close of the bar ending at the decision anchor. The outcome is that same price quantity at exactly t + 900 seconds, not a return, change, or next available observation. The supplied anchor interpretation retains the exclusive-end boundary and missing, pending, and unavailable outcome categories. Equal-row weighting, no nuisance fit, exclusion of missing outcomes from both means, and retention of condition-unknown rows only in the whole-scope mean match the original. Zero-delay availability is explicitly assumed in both the original and supplied definitions, not asserted as historical fact. The parameter values are established by the preserved original specification. This is a review of retained meaning, not certification of execution, features, or scientific readiness.",
+        "unresolved_meaning": []
+      },
+      "review_artifact_id": "089d12c8ea62760eba05997e2ae3b3142a6a24f173c9079813e2a8e365c9dec4",
+      "assessment_id": "80103c2a95e5abf471d669404432b28ffa0e811881ba72dce817773c978025a8",
+      "independent_semantic_review": "SATISFIED",
+      "scientific_readiness": false
+    },
+    {
+      "case_id": "changed-horizon",
+      "status": "OBSERVED",
+      "expected": {
+        "judgment": "different",
+        "reason": "The candidate reads the close at t+1800 seconds instead of the expressly stated t+900-second anchor.",
+        "affected_paths": [
+          "/horizons/outcome_bars"
+        ],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      },
+      "observed_judgment": "different",
+      "judgment_matches": true,
+      "prerequisite_matches": true,
+      "review": {
+        "added_assumptions": [
+          "The candidate imposes a two-bar, 1800-second future observation horizon not supported by the original specification."
+        ],
+        "conflicts": [
+          "The /horizons/outcome_bars value is 2, but the original explicitly specifies one bar; the supplied language interpretation makes these different exact timestamps, not alternative representations.",
+          "The parameter-origin entry labels the two-bar horizon a preexisting specification, although the preserved original establishes a one-bar horizon.",
+          "With outcomes required strictly before 01:00:00Z, the original permits outcome anchors for decision times 00:15 and 00:30, whereas the candidate's two-bar horizon permits only the 00:15 decision time, subject to observation and availability."
+        ],
+        "judgment": "different",
+        "mapping_checks": [
+          {
+            "judgment": "different",
+            "reason": "The segment explicitly defines Y as the close at t+900 seconds and identifies a preexisting one-bar horizon. The executable candidate instead evaluates that feature at t+1800 seconds. Although the remaining central estimand, condition, scope, unit, weighting, and unknown/missing-value rules align, this changed anchor and resulting boundary eligibility prevent semantic equivalence.",
+            "segment": 0
+          }
+        ],
+        "omitted_assumptions": [
+          "The candidate does not retain the original's required one-bar, 900-second outcome anchor."
+        ],
+        "reason": "The candidate changes the explicitly specified one-bar outcome horizon to two bars. Under the supplied exact-anchor interpretation, outcome_bars=2 with grid_seconds=900 observes the close at t+1800 seconds, whereas the original requires t+900 seconds. This changes both the outcome and which decision rows have an outcome strictly before the exclusive universe end. The positive direction, BTCUSDT universe and dates, literal-true scope, strict close >101 condition, close quantity in USDT/BTC, conditional-minus-whole-scope denominator, equal-row weighting, unknown-condition handling, and observed-outcome exclusion otherwise align. The supplied close definition also agrees with the original exact decimal close at the bar's expected exclusive end and its explicitly assumed zero-second availability. The formalizer's equivalence assertion does not resolve the horizon conflict.",
+        "unresolved_meaning": []
+      },
+      "review_artifact_id": "6688fd3e882dfb54ee570d9736711a5207116bc37560fa338d788f092c24623e",
+      "assessment_id": "0a0a67e6005ce600efa03d9a41fa49e32d0222fe7453772a4efb957ff9a55c27",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "scientific_readiness": false
+    },
+    {
+      "case_id": "changed-comparator",
+      "status": "OBSERVED",
+      "expected": {
+        "judgment": "different",
+        "reason": "The second mean is restricted to a complement rather than all eligible scope rows including condition-true rows. Structural rejection does not replace noticing this meaning change.",
+        "affected_paths": [
+          "/comparator"
+        ],
+        "target_structure_status": "RETAINED_GAP",
+        "target_gap_code": "EVALUATION_GAP",
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      },
+      "observed_judgment": "different",
+      "judgment_matches": true,
+      "prerequisite_matches": true,
+      "review": {
+        "added_assumptions": [
+          "The comparator field adds a condition-complement comparison population that the original explicitly rejects."
+        ],
+        "conflicts": [
+          "candidate.comparator.kind='condition_complement' conflicts with the original's explicit whole-scope comparator.",
+          "The complement comparator conflicts internally with estimand.kind='conditional-minus-scope-mean/1' and its rule retaining condition-unknown rows in scope.",
+          "The semantic report's equivalent status and empty differences list overlook this explicit comparator discrepancy."
+        ],
+        "judgment": "different",
+        "mapping_checks": [
+          {
+            "judgment": "different",
+            "reason": "The mapped passage explicitly excludes a complement comparator, but the candidate declares one. Its estimand otherwise retains the stated positive whole-scope contrast, observed-outcome exclusions, unknown-condition handling, and equal weighting. The feature is correctly the exact decimal close at the expected exclusive bar end, and the supplied anchor interpretation supports the one-bar exact future observation rather than a next-available-row value. Threshold, horizon, scope, direction, and zero-delay availability have explicit original specification support. These matches do not cure the contradictory comparison population.",
+            "segment": 0
+          }
+        ],
+        "omitted_assumptions": [
+          "The comparator field fails to preserve the original requirement that the second mean include every eligible scope row, including condition-true and condition-unknown rows."
+        ],
+        "reason": "The candidate introduces an explicit condition-complement comparator, although the original expressly requires the whole eligible scope, including condition-true, condition-false, and condition-unknown rows. This also contradicts the candidate's own conditional-minus-scope estimand. A complement comparison changes the denominator and generally the difference's magnitude and unknown-condition behavior; it is not an equivalent representation. The positive direction, instrument, dates, literal-true scope, strict threshold, equal-row weighting, quantity outcome in USDT/BTC, and exact t+900-second anchor otherwise match the original and supplied definitions. Retaining an evaluation gap does not resolve the comparator conflict or establish equivalence.",
+        "unresolved_meaning": [
+          "The candidate supplies incompatible comparator and estimand declarations without establishing which governs execution; choosing either silently would not resolve the submitted representation faithfully."
+        ]
+      },
+      "review_artifact_id": "1ac0014aebd16ebb65273c098eb6851379cb78bb89d510b04678af21f3902ef9",
+      "assessment_id": "00efa69c8c72d1abdaa10b3b8078c433dc6b2fd94ff439fca36c7bc866043a67",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "scientific_readiness": false
+    },
+    {
+      "case_id": "changed-direction",
+      "status": "OBSERVED",
+      "expected": {
+        "judgment": "different",
+        "reason": "The original claims a positive conditional-minus-scope difference; the candidate specifies its negative direction.",
+        "affected_paths": [
+          "/estimand/direction"
+        ],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      },
+      "observed_judgment": "different",
+      "judgment_matches": true,
+      "prerequisite_matches": true,
+      "review": {
+        "added_assumptions": [],
+        "conflicts": [
+          "The original repeatedly specifies a positive difference; the executable candidate specifies /estimand/direction = negative.",
+          "The semantic report declares equivalence and lists no differences despite the directional reversal."
+        ],
+        "judgment": "different",
+        "mapping_checks": [
+          {
+            "judgment": "different",
+            "reason": "This segment explicitly claims a positive conditional-minus-whole-scope difference, but its mapped estimand specifies negative direction. The remaining specified contrast, population, feature meaning, outcome anchor and unit, weighting, availability assumptions, and unknown/missing-value behavior align; they do not resolve the opposite directional claim.",
+            "segment": 0
+          }
+        ],
+        "omitted_assumptions": [],
+        "reason": "The candidate reverses the explicitly stated directional claim: the original asserts a positive conditional-minus-whole-scope mean difference, whereas /estimand/direction is negative. This changes the hypothesis even though the underlying contrast is otherwise retained. The snapshot alias, BTCUSDT-only date range, literal-true scope, strict close > 101 condition, exact t + 900-second close outcome in USDT/BTC, whole-scope denominator, equal-row weighting, and no nuisance fit match the specification. The supplied anchor interpretation and feature definitions also preserve exact-anchor observation, zero-delay assumed availability, and exclusion of missing outcomes without substituting a nearest row. Unknown conditions remain in the scope mean but not the conditional mean. The formalizer's equivalence assertion is therefore contradicted by the candidate itself; this is a meaning difference, not a finding about market performance or scientific readiness.",
+        "unresolved_meaning": []
+      },
+      "review_artifact_id": "ed19af3ae4621914ece8d9cd7cc5b5d059896c473c7b75bc018c43901aea5cf0",
+      "assessment_id": "cb7f23c4dc0b421aa13b9831edd405106a901ca8bb937fb2614e823131ed66ba",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "scientific_readiness": false
+    },
+    {
+      "case_id": "unknown-condition-denominator-exclusion",
+      "status": "OBSERVED",
+      "expected": {
+        "judgment": "different",
+        "reason": "The original expressly retains unknown-condition rows with observed outcomes in the whole-scope mean. Matching one observed contrast cannot justify dropping them.",
+        "affected_paths": [
+          "/estimand/condition_unknown"
+        ],
+        "target_structure_status": "RETAINED_GAP",
+        "target_gap_code": "EVALUATION_GAP",
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      },
+      "observed_judgment": "different",
+      "judgment_matches": true,
+      "prerequisite_matches": true,
+      "review": {
+        "added_assumptions": [
+          "Eligibility for the whole-scope mean additionally requires that the condition be known."
+        ],
+        "conflicts": [
+          "Candidate /estimand/condition_unknown is 'exclude-from-condition-and-scope', contradicting the original rule that unknown C excludes a row only from the conditional mean.",
+          "The semantic report declares equivalence and lists no differences despite the changed comparison population; the retained evaluation-gap label does not repair this semantic difference."
+        ],
+        "judgment": "different",
+        "mapping_checks": [
+          {
+            "judgment": "different",
+            "reason": "This segment explicitly defines the second mean over eligible condition-true, condition-false, and condition-unknown rows. The mapped candidate excludes the last category from both means. Other specified direction, scope, feature, horizon, unit, weighting, and preexisting numerical parameters align, but they do not compensate for the changed whole-scope denominator. This is a meaning difference, not a finding about market performance or scientific readiness.",
+            "segment": 0
+          }
+        ],
+        "omitted_assumptions": [
+          "The original requirement to retain eligible, observed-outcome rows with unknown condition in the whole-scope mean is not preserved."
+        ],
+        "reason": "The candidate changes the comparison population: its condition_unknown='exclude-from-condition-and-scope' removes condition-unknown rows from the whole-scope mean, whereas the original explicitly retains those rows whenever their outcomes are eligible and observed. Thus the denominator and estimand differ, regardless of whether this snapshot happens to contain such rows. The positive direction, BTCUSDT-only universe and dates, literal-true scope, strict close > 101 condition, exact t+900-second close outcome in USDT/BTC, equal-row weighting, and absence of nuisance fitting otherwise match. The supplied definitions support the stated close-field meaning and assumed zero-second availability, and the explicit identity and anchor specifications support the snapshot binding and exact future anchor. The formalizer's equivalence assertion does not resolve the explicit unknown-condition conflict.",
+        "unresolved_meaning": []
+      },
+      "review_artifact_id": "3211b47833e60f92d5e74c4866bbbf60ade1334fd1245eb6cf38142cbe491628",
+      "assessment_id": "51ccd082763b6decb086b957228a2f09df0e259d7ddcbcd76cfda91383918341",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "scientific_readiness": false
+    },
+    {
+      "case_id": "underspecified-original",
+      "status": "OBSERVED",
+      "expected": {
+        "judgment": "uncertain",
+        "reason": "The candidate makes unresolved choices that the original does not establish. No explicit contradiction is needed to reject a claim of verified faithfulness. Preserve the missing choices rather than silently supply them.",
+        "affected_paths": [
+          "/estimand/direction",
+          "/comparator",
+          "/estimand/weighting",
+          "/test_universe",
+          "/estimand/missingness",
+          "/estimand/condition_unknown",
+          "/parameter_origins"
+        ],
+        "target_structure_status": "STRUCTURE_CHECKED",
+        "target_gap_code": null,
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      },
+      "observed_judgment": "uncertain",
+      "judgment_matches": true,
+      "prerequisite_matches": true,
+      "review": {
+        "added_assumptions": [
+          "A positive direction is imposed although the original states no direction.",
+          "Comparison is defined as a conditional mean minus the whole-scope mean, with equal weighting of eligible rows; neither the comparator nor this aggregation is specified in the original.",
+          "The candidate restricts the universe to 2020-01-01T00:15:00Z through the exclusive 2020-01-01T01:00:00Z boundary and uses an otherwise universally true scope; these dates are not established as original commitments.",
+          "The candidate excludes missing outcomes from both means and retains condition-unknown rows only in the scope mean. This is the canonical installed estimand rule, but the original does not select that estimand or those policies."
+        ],
+        "conflicts": [],
+        "judgment": "uncertain",
+        "mapping_checks": [
+          {
+            "judgment": "uncertain",
+            "reason": "The close feature is an exact projection of the BTCUSDT bar close in USDT/BTC, so close > 101 and the price-level outcome are appropriate. One 900-second horizon preserves the explicitly specified exact future anchor, including not substituting a later available row. But mapping the entire sentence to a positive conditional-minus-scope mean supplies a direction, comparator, aggregation, weighting, and missingness behavior that the sentence and its representation-only specifications do not establish.",
+            "segment": 0
+          }
+        ],
+        "omitted_assumptions": [],
+        "reason": "The candidate preserves the explicit BTCUSDT close threshold, price-level outcome in USDT/BTC, and exact t+900-second observation rather than the next available row. However, the original asks only to 'compare' and establishes neither a positive direction nor a comparison population or mean-based estimand. The candidate supplies a positive conditional-minus-whole-scope mean, equal-row weighting, dates, and missingness rules. The representation and identity specifications explicitly do not add original-hypothesis commitments. Consequently, equivalence is not established; this is not a judgment about market success or feature certification.",
+        "unresolved_meaning": [
+          "The intended comparison population, aggregation, and direction remain unspecified.",
+          "The original does not establish weighting or treatment of unknown conditions and missing, immature, or unavailable outcomes.",
+          "The threshold 101 and one-bar horizon are supported directly by the text, but the claimed preexisting origin of the universally true scope is unsupported by the supplied original specification; the parameter-origin entries contain no source references.",
+          "The supplied definitions explicitly assume zero-second availability and distinguish absent bars from invalid keyed bars. These are measurement specifications, not evidence that the original selected the candidate's statistical eligibility rules."
+        ]
+      },
+      "review_artifact_id": "9f340bd67fddfa4ae6daa0bb949f0a41cc9d57821346043cc464774eddf9abf0",
+      "assessment_id": "380a7ff662fb1134f49226fb276447d1069da5dbad8f694e2d91b1070d9b6c18",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "scientific_readiness": false
+    },
+    {
+      "case_id": "unsupported-question-retained-gap",
+      "status": "OBSERVED",
+      "expected": {
+        "judgment": "faithful",
+        "reason": "Retaining no executable candidate follows the explicit preservation instruction. This is faithfulness of gap retention, not an assertion of H_exec equivalence or executable readiness.",
+        "affected_paths": [],
+        "target_structure_status": "RETAINED_GAP",
+        "target_gap_code": "LANGUAGE_GAP",
+        "review_prerequisite_met_if_authenticated": false,
+        "scientific_readiness": false,
+        "execution_authorized": false
+      },
+      "observed_judgment": "faithful",
+      "judgment_matches": true,
+      "prerequisite_matches": true,
+      "review": {
+        "added_assumptions": [],
+        "conflicts": [],
+        "judgment": "faithful",
+        "mapping_checks": [],
+        "omitted_assumptions": [],
+        "reason": "The formalization faithfully retains the original unsupported research question and leaves the candidate null. It neither replaces hidden-liquidity absorption in BTCUSDT order-book events with bar-based proxies nor invents a directional price claim, comparison population, outcome unit, horizon, weighting, or missingness policy. The supplied catalog and exact definitions describe only raw 15-minute spot bar fields, including taker volumes and trade counts; they do not define order-book events or hidden-liquidity absorption. Retaining a gap is therefore consistent with the original request. The generic LANGUAGE_GAP explanation is less informative than the preserved original text, but that text retains the missing inputs and undefined meanings. This judgment concerns faithful retention only: it does not establish executability, execution authority, feature certification, or a negative scientific result.",
+        "unresolved_meaning": []
+      },
+      "review_artifact_id": "96461a4d582eef4b12a1c8e95c9ada22e5bcf26c74f9c9f920505fe5b972654a",
+      "assessment_id": "c53e3c45b3365818e81053d6712eb274a4b7a6a3ddea05b58a1cd1e334678dd4",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "scientific_readiness": false
+    }
+  ],
+  "corrected_probe_calls": [
+    {
+      "dispatch_id": "controller-97b14b3bba904f709f25883068e37bb0:0",
+      "request_sha256": "3acba069e47c4fe2f8380625930e086f7be8d0111cb5cafefe1f4e11eb9804d4",
+      "reserved_nano": 45240000,
+      "charged_nano": 31427500,
+      "state": "settled",
+      "created_at": 1793019063,
+      "admitted_at_utc": "2026-10-26T12:51:03Z",
+      "settled_at_utc": "2026-10-26T12:51:19Z",
+      "metadata": {
+        "counted_input_tokens": 10987,
+        "epoch_id": "003c03904c684077aa299a96c84af922",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-97b14b3bba904f709f25883068e37bb0",
+        "worker": "slot-0-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0725707b2ca54a93016adf4cb4e3fc87d291423de09df111be",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_b852397f6b5747f9bd93376dc2890a07",
+        "usage": {
+          "cost_units": 31427500,
+          "input_tokens": 10987,
+          "output_tokens": 396
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-4d15e06e1aed431dbb8a8f1753d41b19:0",
+      "request_sha256": "b470b4f3a5c6a3ee8b1334b490fc4253be3999a14f96defcd9e8c1e5ecb9c1fa",
+      "reserved_nano": 45240000,
+      "charged_nano": 31920000,
+      "state": "settled",
+      "created_at": 1793019080,
+      "admitted_at_utc": "2026-10-26T12:51:20Z",
+      "settled_at_utc": "2026-10-26T12:51:32Z",
+      "metadata": {
+        "counted_input_tokens": 11004,
+        "epoch_id": "003c03904c684077aa299a96c84af922",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-4d15e06e1aed431dbb8a8f1753d41b19",
+        "worker": "slot-1-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0a5e905c261f0d57016adf4cc61d0c87d2ad0205edcebb79dd",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 24
+        },
+        "transport_request_id": "req_5d9553953b7f4c449cb52218529097d8",
+        "usage": {
+          "cost_units": 31920000,
+          "input_tokens": 11004,
+          "output_tokens": 441
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-f67269d8dfcb4022936cc70467ee225b:0",
+      "request_sha256": "b15ac1b4185a355552703c64c1f97cd23577b63c12013d82dcaf96d5f164c772",
+      "reserved_nano": 45240000,
+      "charged_nano": 32592500,
+      "state": "settled",
+      "created_at": 1793019093,
+      "admitted_at_utc": "2026-10-26T12:51:33Z",
+      "settled_at_utc": "2026-10-26T12:52:12Z",
+      "metadata": {
+        "counted_input_tokens": 11021,
+        "epoch_id": "de78b2bb52d349709f5832e0d032fc73",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-f67269d8dfcb4022936cc70467ee225b",
+        "worker": "slot-2-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0f585d7c938a87bd016adf4cd2aa7887d2879ea3fb9a80c05e",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_5db1ff6c10be4713b2674a6d3ff74004",
+        "usage": {
+          "cost_units": 32592500,
+          "input_tokens": 11021,
+          "output_tokens": 504
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-613c00fb7dfa41cbb483d861947398b6:0",
+      "request_sha256": "2b4892e669a8c3f248b8abc3aece62fc67d7cfd440a6733d9eac55a4a660f65e",
+      "reserved_nano": 45240000,
+      "charged_nano": 32295000,
+      "state": "settled",
+      "created_at": 1793019134,
+      "admitted_at_utc": "2026-10-26T12:52:14Z",
+      "settled_at_utc": "2026-10-26T12:52:27Z",
+      "metadata": {
+        "counted_input_tokens": 10942,
+        "epoch_id": "de78b2bb52d349709f5832e0d032fc73",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-613c00fb7dfa41cbb483d861947398b6",
+        "worker": "slot-3-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_05d6dc66cb8d21e9016adf4cfbcd9087d2ac9378b962043369",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_a7e080b3c4434b2ab3cde3b333e1a99d",
+        "usage": {
+          "cost_units": 32295000,
+          "input_tokens": 10942,
+          "output_tokens": 494
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-f447a148e92941beb349769d60f274bc:0",
+      "request_sha256": "e5a4d305f7f2e98fcaf099269f9c364eaef0841f108c292e252c5dd890336443",
+      "reserved_nano": 45240000,
+      "charged_nano": 31247500,
+      "state": "settled",
+      "created_at": 1793019149,
+      "admitted_at_utc": "2026-10-26T12:52:29Z",
+      "settled_at_utc": "2026-10-26T12:52:41Z",
+      "metadata": {
+        "counted_input_tokens": 10999,
+        "epoch_id": "8a7b75787c1846f1bb12b521b7f48926",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-f447a148e92941beb349769d60f274bc",
+        "worker": "slot-4-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0313d854e685f917016adf4d0a990887d2a3215afbb5047ab5",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_343182a7461b4ec99ac6da72a797deb3",
+        "usage": {
+          "cost_units": 31247500,
+          "input_tokens": 10999,
+          "output_tokens": 375
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-07ab88dd2bbc440aa7663a48ce1990bb:0",
+      "request_sha256": "ffe7d2e04c58af5a25e73456ecd33687b25ced800cf1f424e6b529e871ddcddd",
+      "reserved_nano": 45240000,
+      "charged_nano": 31945000,
+      "state": "settled",
+      "created_at": 1793019162,
+      "admitted_at_utc": "2026-10-26T12:52:42Z",
+      "settled_at_utc": "2026-10-26T12:52:54Z",
+      "metadata": {
+        "counted_input_tokens": 10950,
+        "epoch_id": "8a7b75787c1846f1bb12b521b7f48926",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-07ab88dd2bbc440aa7663a48ce1990bb",
+        "worker": "slot-5-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0c3e5d3bb97632cb016adf4d17d70487d29ce9bd38b5fb5a9b",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_b28427e57862413ba45f6bb15d5e4fdc",
+        "usage": {
+          "cost_units": 31945000,
+          "input_tokens": 10950,
+          "output_tokens": 457
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-e9795022bd5048a9a1407ccd2047afb2:0",
+      "request_sha256": "7aeee99a17cb9dab39c7998d8b45166381585a1dd71a6bfaf52ab35bf390896e",
+      "reserved_nano": 45240000,
+      "charged_nano": 30917500,
+      "state": "settled",
+      "created_at": 1793019175,
+      "admitted_at_utc": "2026-10-26T12:52:55Z",
+      "settled_at_utc": "2026-10-26T12:53:09Z",
+      "metadata": {
+        "counted_input_tokens": 10019,
+        "epoch_id": "9b3247590fd4434fbce0c546cc532ad2",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-e9795022bd5048a9a1407ccd2047afb2",
+        "worker": "slot-6-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_03085a321784e9b8016adf4d2517f887d2998955f05e570022",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_b6f1784efa094dd88f140d5d3490786c",
+        "usage": {
+          "cost_units": 30917500,
+          "input_tokens": 10019,
+          "output_tokens": 587
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-ec905c49f2f641f89eac4fd9b8a5ead2:0",
+      "request_sha256": "023a0043f770ac241ee39006787b060d0340d5225a156c6158813381f07632c7",
+      "reserved_nano": 45240000,
+      "charged_nano": 25647500,
+      "state": "settled",
+      "created_at": 1793019191,
+      "admitted_at_utc": "2026-10-26T12:53:11Z",
+      "settled_at_utc": "2026-10-26T12:53:19Z",
+      "metadata": {
+        "counted_input_tokens": 9323,
+        "epoch_id": "9b3247590fd4434fbce0c546cc532ad2",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-ec905c49f2f641f89eac4fd9b8a5ead2",
+        "worker": "slot-7-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_023e46f75e04cd36016adf4d34bc0c87d2a90eb12d6317cdea",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_5e94f56b61774deda8296a16dce09fcc",
+        "usage": {
+          "cost_units": 25647500,
+          "input_tokens": 9323,
+          "output_tokens": 234
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    }
+  ],
+  "epoch_usage": [
+    {
+      "calls": 4,
+      "cost_units": 63347500,
+      "tokens": 62446
+    },
+    {
+      "calls": 4,
+      "cost_units": 64887500,
+      "tokens": 62542
+    },
+    {
+      "calls": 4,
+      "cost_units": 63192500,
+      "tokens": 62347
+    },
+    {
+      "calls": 4,
+      "cost_units": 56565000,
+      "tokens": 48049
+    }
+  ],
+  "aggregate_totals": {
+    "calls": 22,
+    "known_usage_calls": 22,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 140198,
+    "known_output_tokens": 5443,
+    "known_total_tokens": 145641,
+    "exact_total_tokens": 145641,
+    "known_cached_input_tokens": 19616,
+    "cached_detail_calls": 22,
+    "exact_cached_input_tokens": 19616,
+    "known_reasoning_output_tokens": 48,
+    "reasoning_detail_calls": 22,
+    "exact_reasoning_output_tokens": 48
+  },
+  "aggregate_money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 404925000,
+    "available_nano": 4595075000,
+    "halted": false
+  },
+  "aggregate_models": [
+    {
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": null,
+        "catalog_source": null,
+        "catalog_version": null,
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol"
+      },
+      "calls": 4,
+      "known_usage_calls": 4,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 2038,
+      "known_output_tokens": 134,
+      "known_total_tokens": 2172,
+      "exact_total_tokens": 2172,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 4,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 4,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "calls": 18,
+      "known_usage_calls": 18,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 138160,
+      "known_output_tokens": 5309,
+      "known_total_tokens": 143469,
+      "exact_total_tokens": 143469,
+      "known_cached_input_tokens": 19616,
+      "cached_detail_calls": 18,
+      "exact_cached_input_tokens": 19616,
+      "known_reasoning_output_tokens": 48,
+      "reasoning_detail_calls": 18,
+      "exact_reasoning_output_tokens": 48
+    }
+  ],
+  "registry_verification": {
+    "blobs": {
+      "committed": 68,
+      "orphan_policy": "uncommitted files confer no authority; no automatic deletion",
+      "quarantined": [],
+      "status": "PASS"
+    },
+    "events": 345,
+    "foreign_keys": true,
+    "research_memory": {
+      "records": 32,
+      "scientific_authority": false,
+      "status": "PASS",
+      "version": "research-memory/1"
+    },
+    "schema_version": 1,
+    "scope": "local coordination and research memory integrity only",
+    "status": "PASS",
+    "synchronous": "FULL"
+  },
+  "source_identity": {
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/auxiliary.py": "8b73dee0d5a9107f5644dae238bc634f335d6539e4354e1b001ac0c034bc189c",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "9d4e8f55adc94ada9c35a0c3bbdeff98f1306f09f87ca0193de894042c92ac9c",
+    "trading_researcher/bootstrap_runs.py": "2abfbd49e81914f30fb1ae1a410e06b133ae759e496c609865d321c68eebe156",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "518e4ec2d709eab29010bbb618440c1c294384cb0f1132280acd6217e6d74b9a",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/certification.py": "a68354ae0b148bffdac3a97e6d0efa8bc4b6aff413888c62854f830bf320b743",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "260baf80386345f385b2340b163cb2d0b575ceff999309bbaa3b1e6cade60975",
+    "trading_researcher/data.py": "ca00ff187757508ce4848b8fdc62eb6f1af54daba9e9458f160016831247830c",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "16d03d789a1f60054b4dbb2de9a6ca215995ce32fad3bba527f4c469c3d559c1",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/features.py": "6f8acea593dbcbd7b7fd8578613baa51a9fcd617ba649495e954a0ea1b14b82e",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/information_study.py": "6fe62b85c608b997b261afd47fcc55266f814021ccc5327e2ea1a142b7a07d88",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/measurements.py": "239b0a0ca39885a3aa3347d14f250404bf719b4a39b3f6318b2d3d40773b3be2",
+    "trading_researcher/memory.py": "f2b014119643f577091cb64136f1477be46a2bc96934cf1a2f7387185162910e",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "44b6ab4e2181809847405cfe4c3317f79ee6849d406f24e23b73927c5b9a3001",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "1541be1fed6f9deca5b593810a9f4e067bd8d61b4902a7743c4b4b49cd5e884a",
+    "trading_researcher/study_pipeline.py": "d3fc3f9ce5c704219b86a832a4628d0322ddc49a765256f293b4cdd69c4b554d",
+    "trading_researcher/study_runs.py": "0500d07632ddd6bb00d3773e7b8564e0dc2b8e2718ce6fb306256c188d5c19c7",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "qualification": "Finite technical comparison on eight prewritten formalizations, not free discovery, a statistical quality guarantee, certified semantic equivalence or scientific readiness. The earlier incomplete probe and all preparation failures remain retained. The two positive process prerequisites are not downstream scientific admission.",
+  "unverified": [
+    "Generalization beyond these cases and this model invocation",
+    "Immutable provider model snapshot",
+    "Live mixed-provider research",
+    "Downstream scientific admission, data/exposure acceptance, calibration and freeze",
+    "Market or policy usefulness"
+  ]
+}

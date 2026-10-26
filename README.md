@@ -10,9 +10,11 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [latest meaning-review observation](docs/reviews/implementation-2026-10-25/MEANING_REVIEW_OBSERVATION_2026-10-26.md) records a corrected complete comparison: all eight actual model judgments match the independently fixed expectations, with earlier incomplete attempts retained. Two exact targets satisfy only the independent-review process prerequisite; scientific admission remains unfinished. Aggregate framework usage is now 145,641 tokens and a conservative USD 0.404925.
+
 The [October 26 publication checkpoint](docs/reviews/implementation-2026-10-25/GITHUB_PUBLICATION_2026-10-26.md) publishes the complete implementation work in progress, including the newly added independent meaning-review assessment. Its offline process checks are separate from actual model-quality validation and scientific admission. Credentials, private registries and market-data downloads remain local.
 
-The [controller-owned direct provider path](trading_researcher/CONTROLLER_PROVIDERS.md) now retains genuine auxiliary invocation provenance independently of worker-submitted replies. Two actual OpenAI calls exercised an unsupported-idea handoff and a separate review. Total recorded framework usage is 37,372 tokens and a conservative USD 0.1022725; scientific admission remains unfinished.
+The [controller-owned direct provider path](trading_researcher/CONTROLLER_PROVIDERS.md) retains genuine auxiliary invocation provenance independently of worker-submitted replies. Two actual OpenAI calls exercised an unsupported-idea handoff and a separate review. At that earlier checkpoint, recorded framework usage was 37,372 tokens and a conservative USD 0.1022725; scientific admission remains unfinished.
 
 The [direct Claude adapter](trading_researcher/ANTHROPIC.md) now prepares the user-requested mixed-model research run. A controller test exercises OpenAI and Claude native tool loops with mocked HTTPS, shared accounting and isolated contexts. This is offline protocol evidence; live Claude compatibility and mixed-model research quality remain unverified.
 

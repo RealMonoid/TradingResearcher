@@ -30,7 +30,7 @@
     },
     "evidence-gate": {
       "status": "SATISFIED",
-      "evidence": "105 unique current tests PASS, including14 independently authored controller-provenance cases; two actual OpenAI auxiliary calls accepted on a synthetic unsupported-idea handoff. Exact command outcomes, source identity, usage and remaining limits are in controller-provider-verification.json. No scientific admission or full research cycle."
+      "evidence": "121 fresh tests passed before publication at 32eccc2. Production/test/fixture bytes remain unchanged. All eight actual judgments match the independently fixed expectations in the corrected full comparison; earlier incomplete observations and preparation failures remain retained. Independent review, fresh documentation checks, exact usage and limits are in meaning-review-verification-2026-10-26.json. No scientific admission or full research cycle."
     },
     "recover-from-deadlock-livelock": {
       "status": "CHECKED",
@@ -305,12 +305,23 @@
   ],
   "token_usage": {
     "ledger": ".trf-runtime/openai-integration-budget.sqlite3",
-    "snapshot": "docs/reviews/implementation-2026-10-25/controller-provider-usage.json",
-    "reported_tokens": 37372,
-    "conservative_nano_usd": 102272500,
+    "snapshot": "docs/reviews/implementation-2026-10-25/meaning-review-usage-2026-10-26.json",
+    "reported_tokens": 145641,
+    "conservative_nano_usd": 404925000,
     "aggregate_authorization_nano_usd": 5000000000,
     "future_recording": "Automatic per admitted OpenAI call: requested/reported model, public catalog name/version/source, explicit unknown immutable snapshot, UTC admission/local settlement times, input/output and optional token subsets. Historical gaps remain unknown.",
     "identity_and_time_observation": "docs/reviews/implementation-2026-10-25/provider-identity-observation.json",
     "context_efficiency_observation": "docs/reviews/implementation-2026-10-25/context-efficiency-observation.json"
+  },
+  "meaning_review_checkpoint": {
+    "date": "2026-10-26",
+    "status": "ALL_FIXED_CASES_MATCHED",
+    "evidence": "docs/reviews/implementation-2026-10-25/meaning-review-live-2026-10-26.json",
+    "software_tests": 20,
+    "model_fixture_cases": 8,
+    "earlier_incomplete_probe_retained": true,
+    "scientific_readiness": false,
+    "full_objective_complete": false,
+    "next": "Connect current immutable review evidence to remaining admission prerequisites without weakening data/exposure, calibration or atomic-freeze gates."
   }
 }

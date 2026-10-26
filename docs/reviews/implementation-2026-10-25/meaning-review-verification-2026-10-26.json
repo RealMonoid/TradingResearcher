@@ -1,0 +1,107 @@
+{
+  "schema": "meaning-review-verification/1",
+  "status": "PASS_BOUNDED_PROCESS_AND_FINITE_LIVE_COMPARISON",
+  "checked_at_utc": "2026-10-26T12:58:40.216102+00:00",
+  "production_source_commit": "32eccc2b06beb26c7c56237aae32a5081a337a37",
+  "software_test_reference": "github-publication-verification-2026-10-26.json",
+  "software_tests_passed_this_turn": 121,
+  "software_qualification": "Tests ran before the first publication; current production, tests and fixed fixtures are byte-identical. No repeat run is claimed.",
+  "live_commands": [
+    {
+      "command": "python -B .trf-runtime/meaning-review-checks-2026-10-26/live_probe-attempt-2.py run",
+      "exit_code": 1,
+      "interpretation": "Incomplete first comparison: six count-only input-limit responses and two actual judgments; all retained."
+    },
+    {
+      "command": "python -B .trf-runtime/meaning-review-checks-2026-10-26/live_probe.py run",
+      "exit_code": 0,
+      "interpretation": "Corrected complete comparison: all eight actual judgments and gate outcomes match fixed expectations."
+    }
+  ],
+  "fresh_checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "HEAD",
+        "--",
+        "trading_researcher/*.py",
+        "tests/*.py",
+        "tests/fixtures"
+      ],
+      "exit_code": 0,
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "8af0fb1f56552f0fa2b4e4ffd4feb8c86537f7ed11b4144c6c0562bcc422d8cd"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_system_model.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "f332229e2a4500a2a265be0d474b744708e37b5ad058c19ec5a039c749894c94"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "log_sha256": "4bf8ccd7e49bae64924c322bb6a762f4ca19a7579a9c122c1e53aa8c105ab81b"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "log_sha256": "448528bbdd0c30c693ac097f1597a16638674d932822cc8e1795a5b9ce4dbc85"
+    }
+  ],
+  "probe_syntax_parse": "PASS",
+  "capsule_crc": "PASS",
+  "capsule_entries": 197,
+  "capsule_sha256": "3fa125e0bab3cd5ec3a4e316a3a752c5904decb53a3922393e47cf012c103247",
+  "independent_review": "meaning-review-corrected-independent-2026-10-26.json",
+  "changed_files": {
+    "README.md": "9e7fad02b98fb7df6b579582e330c136596e3560519fbb9c8d8eaa7d5cbfc28e",
+    "docs/architecture/CURRENT_STATE.md": "e7c1a306c4a5e1e748c9a14a0a96ba756127501bb554593c70bfcf573bfce006",
+    "docs/reviews/implementation-2026-10-25/MEANING_REVIEW_OBSERVATION_2026-10-26.md": "a70a4228592b63d796398bf1e2507fcacbe5e6a9a41a02e7e31888b4faeeb42b",
+    "docs/reviews/implementation-2026-10-25/meaning-review-capsule-audit-2026-10-26.json": "391de82edc72508cedd6af14cfa46fdb5b6ad138f6a8ee17b46d02b0f1871259",
+    "docs/reviews/implementation-2026-10-25/meaning-review-corrected-independent-2026-10-26.json": "d7d3e08e4078872f4d487e3d479b830c2f5e4bd1b8a01f6a34472d7f8d4542a7",
+    "docs/reviews/implementation-2026-10-25/meaning-review-evidence-2026-10-26.zip": "3fa125e0bab3cd5ec3a4e316a3a752c5904decb53a3922393e47cf012c103247",
+    "docs/reviews/implementation-2026-10-25/meaning-review-live-2026-10-26.json": "5f9519c719146c6335e4ac7b8541cd829b59ca36ca7bdb824a6101e99cf9e5a4",
+    "docs/reviews/implementation-2026-10-25/meaning-review-live-independent-2026-10-26.json": "5fa6552128e7229eb2c2b1253b295e3ee5261c79626a2ced077e364ce0f2ab9b",
+    "docs/reviews/implementation-2026-10-25/meaning-review-usage-2026-10-26.json": "6a1c91907becac50b72dd2f13decc30e666a1e19161bd52c34eada91cc3b8f25",
+    "docs/reviews/implementation-2026-10-25/progress.json": "53ca6bb3ccc976db0027eb101bfbe1345c76aa8e02f4ce10a28e477bf0658a2e",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "133ff347666498336abace34e544d600f1e0632e1071532bf57cf31f60a6b363",
+    "trading_researcher/FORMALIZATION.md": "7be82540b85da538e25e705452fdc5fb74d0311e89732b07e059fc8f900c8455",
+    "trading_researcher/MEANING_REVIEWS.md": "b9ad21fde158f59754da5bddfa47b747a051feee0b7efcacd50a276b4eeb2b4f"
+  },
+  "self_exclusion": "This newly written verification file is checked by the subsequent staged whitespace/publication checks.",
+  "preparation_failures_retained": [
+    "Sequential queue order; corrected without changing controller behavior",
+    "Nested scope object rejected; represented as an existing bounded string instead",
+    "Offline syntax correction before execution",
+    "Windows restore staging rename denied; reused an intact unused registry with its original epoch/configuration"
+  ],
+  "unverified": [
+    "This is a finite engineering comparison after documented packet/cap corrections, not a fresh scientific holdout or a general natural-language fidelity guarantee.",
+    "Formalizations were scripted, not generated by a live model. No free discovery, first genuine research cycle, or mixed-provider research occurred.",
+    "No scientific calibration, feature/data acceptance, atomic scientific freeze, profitability or deployment authority follows.",
+    "Configured-rate charges are conservative bounds, not invoice reconciliation. The immutable backend snapshot is unavailable."
+  ],
+  "full_objective_complete": false
+}

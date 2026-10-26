@@ -1,0 +1,420 @@
+{
+  "schema": "independent-ordered-replicate-reuse-review/1",
+  "created_at": "2026-10-26T18:43:54.573117+00:00",
+  "reviewer": "/root/publication_review",
+  "baseline_commit": "dc3e6fcf55367bac8250eab20f99fbada13e26b8",
+  "status": "PASS_BOUNDED_EXACT_REUSE_AND_MEASURED_WORKLOAD_GAIN",
+  "purpose": "Verify a local parse/sort reuse optimization with identical arithmetic, validation, recorded draws and scientific boundaries, and independently assess the measured workload evidence.",
+  "production_scope": [
+    "trading_researcher/evaluation_policy.py",
+    "trading_researcher/monte_carlo.py"
+  ],
+  "findings": [
+    {
+      "id": "tail-envelope-failure-precedence",
+      "status": "FIXED",
+      "before": "The first optimized basic_interval validated/sorted replicates before encoding alpha/2. With valid 8192-bit alpha and simultaneously invalid replicates, the previous RESOURCE_GAP was replaced by a list or EVALUATION_GAP error.",
+      "after": "The public wrapper preflights the original alpha/2 numeric envelope before parsing draws. The internal interval helper retains the original probability, quantile and reflected-endpoint encoding bounds.",
+      "independent_counterexamples": [
+        "empty list",
+        "one undefined replicate",
+        "20000 replicate entries"
+      ],
+      "qualification": "This preservation issue was identified during implementation and confirmed by an independent three-subcase red test before the correction."
+    }
+  ],
+  "remaining_substantiated_production_blockers": [],
+  "reviewed_invariants": [
+    "Every input replicate is read and validated before a quantile endpoint can be selected, including late invalid and non-normalized rationals. Input list/length and canonical rational bounds remain enforced.",
+    "The private ordered snapshot is a detached immutable tuple of Fractions, local to one call. There is no cross-input/result cache, float conversion or skipped replicate.",
+    "Type-7 interpolation, alpha/2 and 1-alpha/2 encoding, quantile encoding, reflected basic interval endpoints and the 8192-bit arithmetic envelope remain exact.",
+    "Public quantile and basic_interval retain signatures; quantile_band retains its original shape gate. Undefined/incomplete diagnose inputs retain their original early NOT_ASSESSED behavior.",
+    "Instrumented basic_interval orders once. diagnose orders once per sensitivity length and reuses that tuple for both rank bands and the basic interval. Across the existing bootstrap plus MC path this reduces six ordering passes per length to two.",
+    "Rank bounds, tie handling, unbounded ends, boundary equality and positive/negative/nondirectional classifications are unchanged.",
+    "Only two production source files differ in the benchmark. World/seed/draw generation, gzip format, retention/replay, limits and scientific acceptance thresholds are unchanged."
+  ],
+  "checks": {
+    "before_implementation_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ordered_replicates_independent.py"
+      ],
+      "started_at": "2026-10-26T18:35:50.911826+00:00",
+      "finished_at": "2026-10-26T18:35:53.888029+00:00",
+      "seconds": 2.976203,
+      "exit_code": 1,
+      "log": "20261026T183550-0e785877.log",
+      "record_sha256": "c35c31843d4a35cdb1357492ca9c67b6026b99e1df034734fdde6a8638e2130c",
+      "log_sha256": "c3a11b5ad198e27893eb4b0306f3d57a4ee8f122ad9d82b51ffa4991ff7f0f5f",
+      "test_count": 15,
+      "unittest_seconds": 2.683
+    },
+    "before_note": "Eleven old-behavior/oracle cases passed; four cases failed because the proposed private ordered helpers did not yet exist.",
+    "initial_implementation_green_inspected": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ordered_replicates_independent.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T18:36:38.451419+00:00",
+      "finished_at": "2026-10-26T18:36:41.105766+00:00",
+      "seconds": 2.654347,
+      "exit_code": 0,
+      "log": "20261026T183638-da3dd14c.log",
+      "record_sha256": "5646339a625cef869f45874c292debdaa9a396f6250f9409236288ba05c206ba",
+      "log_sha256": "ed0fac31b52934476ed1852d808adfff5823005dfc54955431f537b48545504c",
+      "test_count": 15,
+      "unittest_seconds": 2.342
+    },
+    "combined_invalid_input_red": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ordered_replicates_independent.py"
+      ],
+      "started_at": "2026-10-26T18:37:29.734944+00:00",
+      "finished_at": "2026-10-26T18:37:32.527780+00:00",
+      "seconds": 2.792836,
+      "exit_code": 1,
+      "log": "20261026T183729-d47d8c0f.log",
+      "record_sha256": "f998ca3a2d6320ead822d0602b0ec1d8cea8bb911ca87eb3ed90be5170cdebc2",
+      "log_sha256": "9e14a5b1d7270a56488c83b6dc4a8aa81e92d9d95d07daf6a9118a4e032eb338",
+      "test_count": 16,
+      "unittest_seconds": 2.449
+    },
+    "parent_green_after_precedence_fix": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ordered_replicates_independent.py",
+        "-v"
+      ],
+      "started_at": "2026-10-26T18:38:11.053248+00:00",
+      "finished_at": "2026-10-26T18:38:13.679526+00:00",
+      "seconds": 2.626278,
+      "exit_code": 0,
+      "log": "20261026T183811-fefef986.log",
+      "record_sha256": "82a3daf8ced6c1525ec003a062f399819b2800524dba599932ff78dd86371403",
+      "log_sha256": "0b1414b7efb7a689754d4d3e2eef6db4afc22bba9f723aafd3b0b82f81a1bf49",
+      "test_count": 16,
+      "unittest_seconds": 2.334
+    },
+    "independent_final_green": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ordered_replicates_independent.py"
+      ],
+      "started_at": "2026-10-26T18:41:09.101510+00:00",
+      "finished_at": "2026-10-26T18:41:12.405919+00:00",
+      "seconds": 3.304409,
+      "exit_code": 0,
+      "log": "20261026T184109-b46ef4c0.log",
+      "record_sha256": "6074fdfead23660783ca94ab1330c9bf0636d7034e26558f54c53b47270eb18c",
+      "log_sha256": "124e0bb43848db7f40c1e73cfff1ad0610382a9d13b0de49e08cf983cc7c9cb0",
+      "test_count": 16,
+      "unittest_seconds": 2.819
+    },
+    "actual_alternating_benchmark": {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        ".trf-runtime/calibration-cost-checks-2026-10-26/benchmark.py"
+      ],
+      "started_at": "2026-10-26T18:38:15.405265+00:00",
+      "finished_at": "2026-10-26T18:40:13.378616+00:00",
+      "seconds": 117.973351,
+      "exit_code": 0,
+      "log": "20261026T183815-758186bf.log",
+      "record_sha256": "894b4a56e474eace68c7f1bd40e44683e28b81f976f9f369926179b965f0e7a4",
+      "log_sha256": "273420f5da5173f6c18469987d0290409794c402d0ae9566e95bb62fa99ee7a6",
+      "test_count": null,
+      "unittest_seconds": null
+    },
+    "whitespace": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "started_at": "2026-10-26T18:43:51.724330+00:00",
+      "finished_at": "2026-10-26T18:43:51.801942+00:00",
+      "seconds": 0.077612,
+      "exit_code": 0,
+      "log": "20261026T184351-2580bbcc.log",
+      "record_sha256": "e6e99803337fe45359b1d6625c8bc2bbc0997207d0a9854fedf1b1550c4f24f5",
+      "log_sha256": "def7a0357eb308b78f547dfdc8a6d8c5e49bf4ad32a3c5d384c107d36936b71c",
+      "test_count": null,
+      "unittest_seconds": null
+    },
+    "unique_independent_tests": 16,
+    "other_regressions": "Other parent-owned regression groups were still pending when this bounded review was prepared; no success or full-suite coverage is inferred."
+  },
+  "oracle_scope": {
+    "negative_tied_type7": "Sorted [-3,-3,1,5] gives quartiles -3 and 2, median -1; basic interval at point1/alpha1/2 is [0,5].",
+    "high_precision": "Two values 1 +/- 2**-200 retain exact 201-bit half-step interpolation.",
+    "numeric_limits": "alpha=1/2**8191 is readable, but its encoded alpha/2 exceeds 8192 bits and must fail, even with singleton zero draws; interpolation/reflection overflows also retain their errors.",
+    "monte_carlo": "Complete 19999-replicate diagnostics, including two lengths and all directions, equal the full retained baseline outputs. Missing/undefined prechecks and atoms are compared separately.",
+    "baseline_package": "57 unchanged source files loaded under a separate package name; no replacement of original relative imports."
+  },
+  "benchmark": {
+    "record_sha256": "a34d2a20e002c85575af70f27d3d0df4ca2f788b6ef77162b3ab1a10645fc3ee",
+    "script_sha256": "229e2e2e027656b65c47d0b9f06b61f5582c284308958452de4c77f9471ff76c",
+    "sequence": "AB BA AB",
+    "runs": [
+      {
+        "index": 0,
+        "label": "before",
+        "seconds": 21.62844679999762,
+        "proof_count": 2,
+        "complete_result_and_stream_equal": true,
+        "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+        "stream_blob": {
+          "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+          "size": 4079481
+        },
+        "stream_encoding": {
+          "compression": {
+            "filename": "",
+            "level": 6,
+            "mtime": 0,
+            "name": "gzip",
+            "zlib_runtime_version": "1.3.1.zlib-ng",
+            "zlib_version": "1.3.1.zlib-ng"
+          },
+          "decoded_blob": {
+            "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+            "size": 22787327
+          },
+          "schema": "study-stream-gzip/1"
+        },
+        "charged_bytes": 19148378
+      },
+      {
+        "index": 1,
+        "label": "after",
+        "seconds": 17.38081140000213,
+        "proof_count": 2,
+        "complete_result_and_stream_equal": true,
+        "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+        "stream_blob": {
+          "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+          "size": 4079481
+        },
+        "stream_encoding": {
+          "compression": {
+            "filename": "",
+            "level": 6,
+            "mtime": 0,
+            "name": "gzip",
+            "zlib_runtime_version": "1.3.1.zlib-ng",
+            "zlib_version": "1.3.1.zlib-ng"
+          },
+          "decoded_blob": {
+            "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+            "size": 22787327
+          },
+          "schema": "study-stream-gzip/1"
+        },
+        "charged_bytes": 19150036
+      },
+      {
+        "index": 2,
+        "label": "after",
+        "seconds": 17.394816700001684,
+        "proof_count": 2,
+        "complete_result_and_stream_equal": true,
+        "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+        "stream_blob": {
+          "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+          "size": 4079481
+        },
+        "stream_encoding": {
+          "compression": {
+            "filename": "",
+            "level": 6,
+            "mtime": 0,
+            "name": "gzip",
+            "zlib_runtime_version": "1.3.1.zlib-ng",
+            "zlib_version": "1.3.1.zlib-ng"
+          },
+          "decoded_blob": {
+            "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+            "size": 22787327
+          },
+          "schema": "study-stream-gzip/1"
+        },
+        "charged_bytes": 19150036
+      },
+      {
+        "index": 3,
+        "label": "before",
+        "seconds": 21.927861200001644,
+        "proof_count": 2,
+        "complete_result_and_stream_equal": true,
+        "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+        "stream_blob": {
+          "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+          "size": 4079481
+        },
+        "stream_encoding": {
+          "compression": {
+            "filename": "",
+            "level": 6,
+            "mtime": 0,
+            "name": "gzip",
+            "zlib_runtime_version": "1.3.1.zlib-ng",
+            "zlib_version": "1.3.1.zlib-ng"
+          },
+          "decoded_blob": {
+            "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+            "size": 22787327
+          },
+          "schema": "study-stream-gzip/1"
+        },
+        "charged_bytes": 19148378
+      },
+      {
+        "index": 4,
+        "label": "before",
+        "seconds": 22.2888157999987,
+        "proof_count": 2,
+        "complete_result_and_stream_equal": true,
+        "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+        "stream_blob": {
+          "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+          "size": 4079481
+        },
+        "stream_encoding": {
+          "compression": {
+            "filename": "",
+            "level": 6,
+            "mtime": 0,
+            "name": "gzip",
+            "zlib_runtime_version": "1.3.1.zlib-ng",
+            "zlib_version": "1.3.1.zlib-ng"
+          },
+          "decoded_blob": {
+            "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+            "size": 22787327
+          },
+          "schema": "study-stream-gzip/1"
+        },
+        "charged_bytes": 19148378
+      },
+      {
+        "index": 5,
+        "label": "after",
+        "seconds": 16.886296500000753,
+        "proof_count": 2,
+        "complete_result_and_stream_equal": true,
+        "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+        "stream_blob": {
+          "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+          "size": 4079481
+        },
+        "stream_encoding": {
+          "compression": {
+            "filename": "",
+            "level": 6,
+            "mtime": 0,
+            "name": "gzip",
+            "zlib_runtime_version": "1.3.1.zlib-ng",
+            "zlib_version": "1.3.1.zlib-ng"
+          },
+          "decoded_blob": {
+            "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+            "size": 22787327
+          },
+          "schema": "study-stream-gzip/1"
+        },
+        "charged_bytes": 19150036
+      }
+    ],
+    "medians_seconds": {
+      "before": 21.927861200001644,
+      "after": 17.38081140000213
+    },
+    "median_reduction_percent": 20.736403603280618,
+    "after_max_below_before_min": true,
+    "complete_generation_replay_pairs": 6,
+    "interpretation": "Three alternating old/new pipeline observations per version for one fixed synthetic family. Each pipeline uses separate generation and replay processes. All complete results and encoded streams are exactly equal. The recorded engineering gate exceeded5% median reduction and disjoint timing ranges; this is not a broad workload guarantee or statistical calibration result.",
+    "profile_qualification": "The earlier 40.09-second cProfile observation identified repeated ordering cost; its instrumented timing is not used as a speed benchmark."
+  },
+  "resource_limits": {
+    "current_initial_compute_cap_seconds": 3600,
+    "current_installed_logical_storage_cap_bytes": 4294967296,
+    "illustrative_1024_world_seconds_at_new_median": 17797.95087360218,
+    "illustrative_1024_world_bytes_at_observed_new_charge": 19609636864,
+    "qualification": "Same-workload extrapolation, not an executed full series. The optimized workload still exceeds the currently installed initial compute/storage envelope."
+  },
+  "continuation_contract_reading": {
+    "authority": "research-contract/1.0 section9, adopted by D079; D030 bounded iteration remains applicable.",
+    "finding": "Section9 expressly allows additional computation after a recorded continuation decision. The60-minute cap is an initial resource stop, not a permanent lifetime prohibition. The4GiB amount is an installed profile bound rather than a numeric scientific requirement in that section.",
+    "required_design_boundary": "Any subsequent bounded continuation must preserve immutable worlds, seeds, source version and required draws, keep cumulative prior costs/failures, and avoid alias resets or selective replacement. More computation cannot replace missing independent observations.",
+    "not_done_here": "No continuation authorization, budget change or continuation implementation was created by this performance step."
+  },
+  "limitations": [
+    "Six repeated timing observations use the same fixed world. They are not six fresh calibration worlds or evidence of market-model adequacy.",
+    "The observed roughly20.7% reduction applies to this local workload and machine; it does not establish the contract-level50% whole-workflow acceleration claim.",
+    "No complete final calibration, justified N_min, full-process calibration, scientific freeze, protected market evaluation, profitability or paid provider activity is established.",
+    "Exact equality is exercised over specified boundaries and preserved full outputs, not claimed as a formal proof for every possible input.",
+    "The full repository suite was not run by this reviewer."
+  ],
+  "next_action": "Finish the pending affected regressions, then design a recorded bounded continuation under section9 with unchanged world/source identity and cumulative resource history before attempting the complete calibration workload.",
+  "source_sha256": {
+    "tests/fixtures/study-source-dc3e6fc.zip": "7b6ae8230d46af0e072736be9f905310d9b8936d2cdff3fde2becc3fd92cc014",
+    "tests/study_stream_support.py": "4be0fe0798de9855e6fd5d764f76fdb5292b6719353c35258cc11b7b2ea97970",
+    "tests/test_ordered_replicates_independent.py": "c0e99683a9cd95303863ed89aeec1f5e06c676a8fbd921e536fc93d3fc6bb3d1",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+    "trading_researcher/family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+    "trading_researcher/monte_carlo.py": "aaad96be04df167a4b80fbe557ec11fc1461dbcad15fa28daea7d9ef7124a4cb",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/study_pipeline.py": "9cf4cbddc2c3facc657a0d675a6e945251314c62594f6d17ab0173d6201b9bb7",
+    "trading_researcher/study_runs.py": "0311e70eb2d3dd7b3e9d088ede140c7150f032b7028ed796d3c2d1574b3415bf",
+    "trading_researcher/study_stream.py": "ccdacccac038a0e340603f922e8f722a7342b7f66cf00552c27a9c796d9820dd"
+  },
+  "canonical_authority_sha256": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/02_DECISION_REGISTER.md": "2db689bf2d057aa746afe00955129b489c972a6f582910ba762f5bf8c9247c0d"
+  },
+  "reviewer_changed_files": [
+    "tests/test_ordered_replicates_independent.py",
+    ".trf-runtime/calibration-cost-checks-2026-10-26/independent-review.json"
+  ],
+  "procedure_sha256": "f5ab33697c9bb75e439688afae4efad7560dfdba55ea4249152fec4d58d992a5"
+}

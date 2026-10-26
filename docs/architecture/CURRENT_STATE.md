@@ -1,8 +1,10 @@
 # Current State
 
-Updated October 26, 2026 for qualified private plan preparation after public protected-period declarations, exact private bindings, development data use, composition conformance and meaning-review integration. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
+Updated October 26, 2026 for exact ordered-replicate reuse after lossless stream retention, joint-family series and qualified private plan preparation. This is a descriptive handoff. Authority remains in the [Decision Register](02_DECISION_REGISTER.md), [Rejected Decisions](03_REJECTED_DECISIONS.md), versioned [Definitions](04_DEFINITIONS.md) and adopted contracts.
 
 ## Repository and existing artifacts
+
+The [ordered-replicate continuation](../reviews/implementation-2026-10-25/ORDERED_REPLICATES_2026-10-26.md) reuses exact validated sorted values within each interval/Monte Carlo call. Three cold paired actual-source runs preserve complete results and all 79,996 draw records, with a 20.74% median pipeline runtime reduction. Existing numeric bounds, failure precedence and classification semantics remain intact. Full-series storage/compute remains unresolved; contract section 9 permits additional computation only with a recorded continuation decision, which the runner does not yet implement. No paid provider or protected market evaluation occurred.
 
 The [lossless stream continuation](../reviews/implementation-2026-10-25/STREAM_RETENTION_2026-10-26.md) adds bounded, versioned gzip retention, exact encoded-byte replay, decoded integrity checks and legacy raw-source compatibility. The paired 64-row mixed-family fixture retains all 79,996 draws and identical complete results, reducing charged storage by 79.62%. No speed gain is demonstrated. Even the reduced cost projects above existing full-series limits; complete calibration and the remaining scientific/research/policy/reporting work are unfinished. No paid provider or protected market evaluation occurred.
 

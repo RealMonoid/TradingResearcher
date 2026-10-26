@@ -57,9 +57,14 @@ def block_lengths(horizon_bars, base_length):
     return sorted({max(horizon_bars,(base_length+1)//2),base_length,2*base_length})
 
 
-def quantile(values, probability):
+def _ordered_replicates(values):
+    """Validate every supplied draw and detach an exact ordered local snapshot."""
     require(type(values) is list and 1 <= len(values) <= MAX_RESAMPLES,'A bounded nonempty replicate list is required')
-    ordered = sorted(_read_rational(item) for item in values)
+    return tuple(sorted(_read_rational(item) for item in values))
+
+
+def _quantile_ordered(ordered, probability):
+    """Internal kernel for a fully validated tuple; probability gates stay exact."""
     p = _read_rational(probability)
     require(0 <= p <= 1,'Quantile probability must be between zero and one')
     rank = (len(ordered)-1)*p
@@ -68,14 +73,24 @@ def quantile(values, probability):
     return _rational(ordered[left] if not remainder else ordered[left]*(1-remainder)+ordered[left+1]*remainder)
 
 
+def quantile(values, probability):
+    return _quantile_ordered(_ordered_replicates(values), probability)
+
+
+def _basic_interval_ordered(point, ordered, alpha):
+    # Keep the original intermediate rational envelopes, including alpha/2.
+    lower_quantile = _read_rational(_quantile_ordered(ordered,_rational(alpha/2)))
+    upper_quantile = _read_rational(_quantile_ordered(ordered,_rational(1-alpha/2)))
+    return {'lower':_rational(2*point-upper_quantile),'upper':_rational(2*point-lower_quantile)}
+
+
 def basic_interval(estimate, replicates, marginal_noncoverage):
     """Small exact arithmetic kernel; caller must separately establish draw validity."""
     point,alpha = _read_rational(estimate),_read_rational(marginal_noncoverage)
     require(0 < alpha < 1,'Marginal noncoverage must be strictly between zero and one')
+    _rational(alpha/2)  # Preserve the original tail-envelope failure before draw validation.
     # Undefined replicates fail instead of being discarded and renormalized.
-    lower_quantile = _read_rational(quantile(replicates,_rational(alpha/2)))
-    upper_quantile = _read_rational(quantile(replicates,_rational(1-alpha/2)))
-    return {'lower':_rational(2*point-upper_quantile),'upper':_rational(2*point-lower_quantile)}
+    return _basic_interval_ordered(point,_ordered_replicates(replicates),alpha)
 
 
 def enclosing_interval(intervals):

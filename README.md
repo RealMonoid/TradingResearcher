@@ -10,6 +10,8 @@ The economic objective is profitably usable hypotheses after realistic costs, no
 
 ## Start here
 
+The [exact ordered-replicate optimization](docs/reviews/implementation-2026-10-25/ORDERED_REPLICATES_2026-10-26.md) removes repeated parsing/sorting within interval and Monte Carlo calculations. Three cold paired pipeline runs preserve complete results and all stream bytes, with a 20.74% median runtime reduction on the fixed synthetic fixture. Complete calibration and resource continuation remain unfinished.
+
 The [lossless study-retention checkpoint](docs/reviews/implementation-2026-10-25/STREAM_RETENTION_2026-10-26.md) preserves every case/draw and separate replay while compressing new study streams. A paired actual-source fixture confirms identical results and decoded bytes, with 79.62% less charged storage. It demonstrates no speed gain; complete-series storage/compute feasibility remains unresolved.
 
 The [joint-family series controller](trading_researcher/CALIBRATION.md#owned-joint-family-series) now binds shared-template simulations to fixed development/final inventories, aggregate resource accounting, protected final records and complete-denominator count assessment. Actual lifecycle tests execute four development worlds and one final world with failure/retry/replay/recovery. The full calibration and practical resource feasibility remain unfinished.

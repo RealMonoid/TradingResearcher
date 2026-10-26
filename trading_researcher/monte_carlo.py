@@ -8,7 +8,7 @@ from fractions import Fraction
 from functools import lru_cache
 
 from .codec import integer
-from .evaluation_policy import (MAX_RESAMPLES, _rational, basic_interval,
+from .evaluation_policy import (MAX_RESAMPLES, _rational, _ordered_replicates, _basic_interval_ordered,
                                 classify_interval, enclosing_interval, require)
 from .outcomes import _read_rational
 
@@ -68,12 +68,15 @@ P[Bin(n,p)>=l]<=tail. Inclusive quantile bands remain conservative at atoms.
     return list(_rank_core(n,p.numerator,p.denominator,tail.numerator,tail.denominator))
 
 
+def _quantile_band_ordered(ordered, probability, tail_noncoverage):
+    low,high=rank_bounds(len(ordered),probability,tail_noncoverage)
+    return {'ranks':[low,high],'lower':None if low==0 else _rational(ordered[low-1]),
+            'upper':None if high==len(ordered)+1 else _rational(ordered[high-1])}
+
+
 def quantile_band(values, probability, tail_noncoverage):
     require(type(values) is list and 1<=len(values)<=MAX_RESAMPLES,'Bounded defined draw list required')
-    ordered=sorted(_read_rational(value) for value in values)
-    low,high=rank_bounds(len(values),probability,tail_noncoverage)
-    return {'ranks':[low,high],'lower':None if low==0 else _rational(ordered[low-1]),
-            'upper':None if high==len(values)+1 else _rational(ordered[high-1])}
+    return _quantile_band_ordered(_ordered_replicates(values),probability,tail_noncoverage)
 
 
 def unassessed(config, reason):
@@ -110,9 +113,10 @@ def diagnose(estimate, replicates_by_length, marginal_noncoverage, config):
     cases=[]
     def reflected(value):return None if value is None else _rational(2*point-_read_rational(value))
     for length,values in sorted(replicates_by_length.items()):
-        low=quantile_band(values,_rational(alpha/2),_rational(tail))
-        high=quantile_band(values,_rational(1-alpha/2),_rational(tail))
-        interval=basic_interval(estimate,values,marginal_noncoverage)
+        ordered=_ordered_replicates(values)
+        low=_quantile_band_ordered(ordered,_rational(alpha/2),_rational(tail))
+        high=_quantile_band_ordered(ordered,_rational(1-alpha/2),_rational(tail))
+        interval=_basic_interval_ordered(point,ordered,alpha)
         bounds={'lower':[reflected(high['upper']),reflected(high['lower'])],
                 'upper':[reflected(low['upper']),reflected(low['lower'])]}
         # Include the observed type-7 endpoints even in an extreme MC realization.

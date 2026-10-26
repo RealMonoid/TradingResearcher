@@ -1,5 +1,7 @@
 # Historical evaluation policy and owned plan preparation
 
+The [ordered-replicate optimization](../docs/reviews/implementation-2026-10-25/ORDERED_REPLICATES_2026-10-26.md) validates and sorts a basic interval's exact replicate list once, then shares that detached tuple between its two quantiles. Intermediate rational envelopes and error precedence remain enforced. This local reuse introduces no cache, approximation, changed public signature or scientific rule.
+
 This continuation implements exact arithmetic for the approved `historical-batch-v1` rules and an operator-owned plan-preparation path. It is a prerequisite for scientific evaluation and freeze, not their completion. The [retail contract](../docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md) sections 5 and 12 remain the authority.
 
 ## Executable policy arithmetic

@@ -292,11 +292,11 @@
     }
   ],
   "authorization": "User delegated the seven-package implementation; later approved secure OpenAI key provisioning and USD5 aggregate for initial API integration tests. User resumed with pause vorbei. No change to scientific meaning or capital authority.",
-  "next_action": "Continue resolving full-series storage and computation costs: lossless gzip reduced observed charged bytes by 79.62% but the 1024-world projection still exceeds 4GiB/60min. Preserve every draw/world/failure. Then complete nuisance/stress adequacy, information targets, actual final calibration, campaign/reservation and scientific freeze, mixed-provider research, policy/AmiBroker and reporting.",
+  "next_action": "Implement the contract section9 recorded bounded resource-continuation path after reviewing exact ownership, immutable world/source identity, cumulative budget/failure accounting and D030 stopping rules; no alias resets or replacement draws. The 60-minute initial cap and 4GiB installed envelope are unchanged here. Then complete actual nuisance/stress/information/final-calibration work and the full campaign, scientific freeze, mixed-provider research, policy/AmiBroker and reporting objective.",
   "continuation_audit": {
     "previous_goal_turn": "no_progress_verification_only",
     "current_goal_turn": "progress",
-    "basis": "Lossless bounded study transport and family byte callback now preserve all actual old/new results and streams with lower measured storage; full-series feasibility remains unresolved.",
+    "basis": "Profile-selected redundant exact ordering removed; 92 targeted tests and six cold actual pipeline executions retain all outputs with a 20.74% median workload gain. Contract section9 supports inspecting a recorded bounded continuation path next.",
     "blocking_threshold_met": false,
     "full_objective_complete": false
   },
@@ -421,6 +421,18 @@
     "encoded_charged_bytes": 19148378,
     "paired_results_and_decoded_stream_identical": true,
     "speed_gain_demonstrated": false,
+    "provider_calls": 0,
+    "scientific_readiness": false,
+    "full_objective_complete": false
+  },
+  "ordered_replicates_checkpoint": {
+    "date": "2026-10-26",
+    "status": "FOCUSED_CHECKS_PASS",
+    "unique_focused_tests": 92,
+    "verification": "docs/reviews/implementation-2026-10-25/ordered-replicates-verification-2026-10-26.json",
+    "cold_pipeline_executions": 6,
+    "paired_result_and_encoded_stream_identical": true,
+    "median_runtime_reduction_percent": 20.736403603280618,
     "provider_calls": 0,
     "scientific_readiness": false,
     "full_objective_complete": false

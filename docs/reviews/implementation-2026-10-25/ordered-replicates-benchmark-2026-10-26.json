@@ -1,0 +1,303 @@
+{
+  "schema": "paired-ordered-replicates-benchmark/1",
+  "started_at": "2026-10-26T18:38:15.818460+00:00",
+  "finished_at": "2026-10-26T18:40:13.347286+00:00",
+  "sequence": "AB BA AB",
+  "runs": [
+    {
+      "index": 0,
+      "label": "before",
+      "seconds": 21.62844679999762,
+      "proof_count": 2,
+      "complete_result_and_stream_equal": true,
+      "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+      "stream_blob": {
+        "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+        "size": 4079481
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+          "size": 22787327
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "charged_bytes": 19148378
+    },
+    {
+      "index": 1,
+      "label": "after",
+      "seconds": 17.38081140000213,
+      "proof_count": 2,
+      "complete_result_and_stream_equal": true,
+      "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+      "stream_blob": {
+        "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+        "size": 4079481
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+          "size": 22787327
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "charged_bytes": 19150036
+    },
+    {
+      "index": 2,
+      "label": "after",
+      "seconds": 17.394816700001684,
+      "proof_count": 2,
+      "complete_result_and_stream_equal": true,
+      "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+      "stream_blob": {
+        "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+        "size": 4079481
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+          "size": 22787327
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "charged_bytes": 19150036
+    },
+    {
+      "index": 3,
+      "label": "before",
+      "seconds": 21.927861200001644,
+      "proof_count": 2,
+      "complete_result_and_stream_equal": true,
+      "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+      "stream_blob": {
+        "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+        "size": 4079481
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+          "size": 22787327
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "charged_bytes": 19148378
+    },
+    {
+      "index": 4,
+      "label": "before",
+      "seconds": 22.2888157999987,
+      "proof_count": 2,
+      "complete_result_and_stream_equal": true,
+      "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+      "stream_blob": {
+        "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+        "size": 4079481
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+          "size": 22787327
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "charged_bytes": 19148378
+    },
+    {
+      "index": 5,
+      "label": "after",
+      "seconds": 16.886296500000753,
+      "proof_count": 2,
+      "complete_result_and_stream_equal": true,
+      "result_hash": "ceba93af9855c6241565f2425fda7d28f048585e3804aea517b61aa4a0d46256",
+      "stream_blob": {
+        "sha256": "0080db9aed0218d632fab699efc7319728ed781122ce9b2a3558ec78ee54b260",
+        "size": 4079481
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "3cb48233db11755c164353dade2cad0d76867799555b05e4294a1eacebb834b0",
+          "size": 22787327
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "charged_bytes": 19150036
+    }
+  ],
+  "medians_seconds": {
+    "before": 21.927861200001644,
+    "after": 17.38081140000213
+  },
+  "median_reduction_percent": 20.736403603280618,
+  "after_max_below_before_min": true,
+  "source_before": {
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/auxiliary.py": "539e230d8508225229073e5a8e428629b8daf81a31005bf20bfe50a1f8752e57",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "bfb195ad9c1e27bd4ff8a8159cfd0a0b986f31565814ffa714f90e95daf36aaf",
+    "trading_researcher/bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "c172032e3c76a6dfaa69b67257e58d9ff0066adf82da03032eb547091e781c5a",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/composition.py": "2a234f84263c13fab214c1730eac326c578f2d8ad01149a81294133026727acd",
+    "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "a0856d4d1ca6ebc5b1c4b8452b75f8ff563b8c77781e459d5d740974302cb4a9",
+    "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+    "trading_researcher/data_targets.py": "4ea784c8eefb3eceb8183b6adefdf09adfaf15ac329fb233317eb0cb0dd91697",
+    "trading_researcher/data_use.py": "b670913e14e446b7d38ba5b1c53886f9167235d6fb8b786a893379488b554794",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "f2ba6e19fd7734f5e347782b0a225b12d54536722c7a7c02e054f8e3bdef5484",
+    "trading_researcher/evaluation_policy.py": "c58e62b93b4bbaabbb01cba9ba76e1eebd25c7776d49d6e5af6ebcbccd0f0bce",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/family_models.py": "d0819d0e7b297daed74ac5b6afad7abfac83b57b3e66659ceb2c8c0307ab1d11",
+    "trading_researcher/family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+    "trading_researcher/family_study.py": "9153cd667aed7bdad52226d6d33e9eba3b1cf529fc25a5fefd4eaae19ccf2ba0",
+    "trading_researcher/family_study_runs.py": "1e38a9bce9d9013a8b73e92e397bd9a667838cb400fbd6bc8e648e658763804f",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/information_study.py": "817f9221f9a9de3ed0e6a203be3c06213c1c43d48c68910cee02cabe6b509866",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+    "trading_researcher/memory.py": "a569e4f695110cecc20c6a56eba147dbdf6c1c5fe8c51f1e6431e08f485fcacc",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/monte_carlo.py": "102f43eab401fd5bab96c7bc49cdac14f83268785831e57bad08260e298042de",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "a6ded70258275d251d058053bd7a7bbb95fe824842a440b5a6af41d692024ae4",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/revocations.py": "506cce427a17147cf41cc60f9322fe0f2a6ace2536b0198a8a6f1edac22eab08",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "2b470c26330c998e40b512dba06aa1a40b0aa2b2f7d2f861db8070569c8b9e3f",
+    "trading_researcher/study_pipeline.py": "9cf4cbddc2c3facc657a0d675a6e945251314c62594f6d17ab0173d6201b9bb7",
+    "trading_researcher/study_runs.py": "0311e70eb2d3dd7b3e9d088ede140c7150f032b7028ed796d3c2d1574b3415bf",
+    "trading_researcher/study_stream.py": "ccdacccac038a0e340603f922e8f722a7342b7f66cf00552c27a9c796d9820dd",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "source_after": {
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/auxiliary.py": "539e230d8508225229073e5a8e428629b8daf81a31005bf20bfe50a1f8752e57",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "bfb195ad9c1e27bd4ff8a8159cfd0a0b986f31565814ffa714f90e95daf36aaf",
+    "trading_researcher/bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "c172032e3c76a6dfaa69b67257e58d9ff0066adf82da03032eb547091e781c5a",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/composition.py": "2a234f84263c13fab214c1730eac326c578f2d8ad01149a81294133026727acd",
+    "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "a0856d4d1ca6ebc5b1c4b8452b75f8ff563b8c77781e459d5d740974302cb4a9",
+    "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+    "trading_researcher/data_targets.py": "4ea784c8eefb3eceb8183b6adefdf09adfaf15ac329fb233317eb0cb0dd91697",
+    "trading_researcher/data_use.py": "b670913e14e446b7d38ba5b1c53886f9167235d6fb8b786a893379488b554794",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "f2ba6e19fd7734f5e347782b0a225b12d54536722c7a7c02e054f8e3bdef5484",
+    "trading_researcher/evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+    "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+    "trading_researcher/family_models.py": "d0819d0e7b297daed74ac5b6afad7abfac83b57b3e66659ceb2c8c0307ab1d11",
+    "trading_researcher/family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+    "trading_researcher/family_study.py": "9153cd667aed7bdad52226d6d33e9eba3b1cf529fc25a5fefd4eaae19ccf2ba0",
+    "trading_researcher/family_study_runs.py": "1e38a9bce9d9013a8b73e92e397bd9a667838cb400fbd6bc8e648e658763804f",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/information_study.py": "817f9221f9a9de3ed0e6a203be3c06213c1c43d48c68910cee02cabe6b509866",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+    "trading_researcher/memory.py": "a569e4f695110cecc20c6a56eba147dbdf6c1c5fe8c51f1e6431e08f485fcacc",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/monte_carlo.py": "aaad96be04df167a4b80fbe557ec11fc1461dbcad15fa28daea7d9ef7124a4cb",
+    "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+    "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+    "trading_researcher/population_models.py": "a5b8e09c2fc1267dbf3eda983dbe8d954923024740003f3b944fb6c6d20f6d9e",
+    "trading_researcher/population_runs.py": "a6ded70258275d251d058053bd7a7bbb95fe824842a440b5a6af41d692024ae4",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+    "trading_researcher/revocations.py": "506cce427a17147cf41cc60f9322fe0f2a6ace2536b0198a8a6f1edac22eab08",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "2b470c26330c998e40b512dba06aa1a40b0aa2b2f7d2f861db8070569c8b9e3f",
+    "trading_researcher/study_pipeline.py": "9cf4cbddc2c3facc657a0d675a6e945251314c62594f6d17ab0173d6201b9bb7",
+    "trading_researcher/study_runs.py": "0311e70eb2d3dd7b3e9d088ede140c7150f032b7028ed796d3c2d1574b3415bf",
+    "trading_researcher/study_stream.py": "ccdacccac038a0e340603f922e8f722a7342b7f66cf00552c27a9c796d9820dd",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+  },
+  "qualification": "Three cold process pairs for one fixed synthetic family, each with complete generation/replay. No full calibration or broad hardware/workload guarantee.",
+  "scientific_readiness": false,
+  "provider_calls": 0
+}

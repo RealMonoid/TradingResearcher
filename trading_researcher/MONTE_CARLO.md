@@ -1,5 +1,7 @@
 # Development Monte Carlo boundary diagnostic
 
+The [ordered-replicate optimization](../docs/reviews/implementation-2026-10-25/ORDERED_REPLICATES_2026-10-26.md) reuses one fully validated exact ordering per sensitivity across both rank bands and its basic interval. Undefined/completeness checks, exact rank arithmetic, unbounded endpoints and classification boundaries stay unchanged. Three paired actual-source pipeline runs demonstrate a 20.74% median reduction on one fixed synthetic workload; this is not calibration or a universal runtime guarantee.
+
 The optional diagnostic in [monte_carlo.py](monte_carlo.py) advances the boundary-instability requirement in [research-contract/1.0 section 5.3](../docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md#53-dependence-and-uncertainty-dispatch). It is an **uncalibrated implementation candidate**. It does not activate an evidence rule, certify a bootstrap law, change delta, satisfy N_min, or issue scientific readiness.
 
 ## Explicit inputs before execution

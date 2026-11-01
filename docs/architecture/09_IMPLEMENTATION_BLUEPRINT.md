@@ -269,3 +269,22 @@ The separate [exact case/diagnostic library](../../trading_researcher/EXACT_COMP
 The [exact research adapter](../../trading_researcher/EXACT_RESEARCH.md) now implements explicit H_exec/3 and formalization/3 recording/submission plus complete contract transport to both roles. Its [bounded qualification](../reviews/implementation-2026-10-25/exact-formalization-2026-11-01.json) covers structural analysis, native temporary-registry identity/lease/response binding, later release, review-input preservation and the independent-review authority boundary. These native fixture tests explicitly seed prior definition metadata and synthetic replies. The full finite entry point's constructor/source inventory passes; funded finite source/currentness admission, genuinely certified input integration, composition certification and owned computation/replay remain unqualified. Existing versions and pinned sources are preserved.
 
 The [retained exact runtime](../../trading_researcher/EXACT_RUNTIME.md) and [owned source qualification](../../trading_researcher/EXACT_CERTIFICATION.md) now have [scoped verification](../reviews/implementation-2026-10-25/exact-runtime-2026-11-01.json). Native temporary registries retain the actual 26-file capsule before a real isolated 51-method child, with exact descriptor/environment/currentness checks and narrowly typed D083 revocation. Separate execute/replay children reproduce both complete synthetic streams and the known full-interval resource stop. These checks introduce no market-data load, model call or production enrollment. Original-idea composition, certified data/use/meaning gates, controlled native hypothesis execution and the complete finite research route remain open; replay is operational evidence only.
+
+### Qualified historical feedback reads
+
+The optional [historical reader](../../trading_researcher/feedback/HISTORICAL.md)
+adds D084 implementation conformance for explicitly bound, already released
+paired/breakout records. It executes the unchanged retained raw implementation
+against fixed expectations and full normalization replay, preserving the old
+certificate's STALE status and every original result/release. A separate current
+installed-source seal and private read-only view discharge only installed-package
+currency for those identities; new execution/publication still requires CURRENT.
+
+The [D098 evidence](../reviews/adoption-exact-resources-2026-11-01/verification.json)
+records actual complete inherited-context PASS at the checked source, including
+the existing scalar review's financial fence through read-only legacy binding
+and exact call-sequence inspection. No provider/key capability or spent grant is
+restored. The revised source has 13 focused independent checks; earlier synthetic
+and raw/protocol tests retain their exact historical scope. Final original-A
+native/source/role/count/funding admission and the full scientific cycle remain
+separate and incomplete.

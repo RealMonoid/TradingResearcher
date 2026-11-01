@@ -4,24 +4,107 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
 
 ## Resume handoff
 
-- **Objective:** implement the full accepted specification within valid permissions/resources; the seven-package plan orders work and cannot narrow mandatory scope. Free invention, faithful formalization, independent evaluation and zero capital authority remain binding.
-- **Work plan:** [Implementation Sequence](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#current-execution-priority-october-31-2026) is the sole operational plan; current user instructions govern scope.
-- **Requested timing:** measure the first complete actual idea-to-independently-checked-report path under the [package 5 timing instruction](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#first-complete-cycle-timing-user-request-november-1-2026), retaining the original start, full wall-clock total, phase durations, waits/repairs and unknown intervals. Reuse existing records; instrumentation and a complete measured run remain pending. No extra paid run, budget or scientific authority follows.
-- **New approved integration:** D096 / [inquiry-feedback/1.0](25_METACOGNITION_DUAL_SPACE_INQUIRY.md) is binding. At the next safe work boundary follow the [same-plan checkpoint](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#metacognition-and-dual-space-integration-november-1-2026): reuse inquiry/feedback and observable-improvement records, version future profiles, independently check affected behavior, and observe scoped usefulness/cost. Unknown benefit is not a new entry gate; runtime qualification remains pending. [Documentation evidence](../reviews/adoption-metacognition-2026-11-01/verification.json).
-- **Approved diagnostic practice:** the four [accepted applications](15_AGENT_INQUIRY_DISCIPLINE.md#approved-diagnostic-practice-without-additional-process) were independently mapped to the current profile-2 guidance without a substantiated missing meaning. The user-approved [DQ case kit](../../trading_researcher/inquiry/DIAGNOSTIC_CASES.md) now provides four base cases plus three countervariants and protected expectations on the existing call path. Scripted checks are not actual AC/DQ model behavior or usefulness; those remain pending through the same-plan checkpoint. Document 25 retains its bound source bytes; no new process or spending follows.
-- **Completed here:** [D097 controlled native execution](../reviews/implementation-2026-10-25/exact-execution-2026-11-01.json): genuinely normalized/certified synthetic input, complete finite role/controller/ledger path, current data-use/meaning/source gates, owned compile/composition,3case stream and fresh separate replay. This is software qualification only, with scripted provider replies/counts; actual original A and production enrollment remain unqualified.
-- **Checks:** [D098 evidence](../reviews/adoption-exact-resources-2026-11-01/verification.json) retains prior34 native/14 role methods and final22 [historical-reader](../../trading_researcher/feedback/HISTORICAL.md) methods (5 owner,17 independent). Genuine tiny raw checks and synthetic paired protocol seams pass; original historical-context qualification remains unexecuted. Fresh full raw certification175e is CURRENT after125 fixed checks/full replay; originalf4e remains STALE and unchanged.
-- **Resource observation:** formalizer38092reservedinput+32000output costs at mostUSD0.415230. Historical reviewer43346input hold+4000output brings the conditional total to117438tokens/USD0.563595, leavingUSD0.010990 againstUSD0.574585available. Actual reviewer fit is unknown; ordinary80k/new native allocation is unresolved. Prior synthetic-quarter timing is not complete-cycle or typical-throughput evidence.
-- **Next action:** run the prepared genuine historical-feedback qualification at the real registry identity, then verify unchanged inherited context. Qualify fresh raw/source/context and separate auxiliary-only original-A allocation before inference; recount any changed final packet. Follow the sole plan; ordinary80k, seven revoked grants and USD0.574585 remain.
-- **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a24-pass/1-error review exposing noncanonical-object rejection persistence are retained. Final v2 omits unsupported host objects explicitly while keeping errors/case bytes; it never coerces them into accepted counters. Earlier v2 defects and flat timing recovery retain their evidence and unknown durations.
-- **Scientific boundary:** retained zero-case means remain undefined. For the singleton, empirical weighting cannot learn conditional-outcome variation; the whole-scope baseline may vary. No new practical-effect profile or bootstrap alone repairs that support limitation.
-- **Working tree/processes:** full development snapshot prepared for authorized GitHub publication. Historical adapter/guide/tests are opt-in and actual context remains unqualified. Local raw recertification created a new certificate without changing old evidence; no new inference/context/job/grant/source release or AmiBroker mutation. Count billing remains unknown;53inference calls and all7revoked grants remain.
-- **Research result:** original scalar and paired development paths have descriptive reports; latest paired breakout has one qualified observed case. Zero/one-condition limitations prevent reliable population or economic conclusions.
-- **Evidence:** [latest paired result](../reviews/implementation-2026-10-25/PAIRED_BREAKOUT_RESULT_2026-10-30.md), [earlier paired result](../reviews/implementation-2026-10-25/PAIRED_DESCRIPTIVE_RESULT_2026-10-30.md), [current status/evidence register](../reviews/implementation-2026-10-25/progress.json).
-- **Usage:** shared inference ledger now 53 known calls / 1,236,478tokens /USD4.425415 ofUSD5; USD0.574585 remains. The latest real trial added 3 calls /172,162tokens /USD0.4686925. The [real-trial record](../reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json) retains per-call requested/reported model, catalog 6.1, UTC, prompts, exact tokens and conservative charges. Immutable snapshot, count-service billing and invoices remain unknown; construction counters are separate.
-- **Open boundaries:** full scientific admission, information/calibration, protected assessment, atomic freeze, mixed-provider live cycle, economic validation and reporting/delivery remain incomplete. Compact docs grant no new authority.
-- **Quality priority:** context/cost savings are subordinate to required framework behavior, architectural understanding, independent verification and evidence. No blanket cheaper-model preference applies; restore needed context before dependent work. The [construction workflow](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#codex-build-sessions-and-context) now makes reuse, complete bounded slices and version-reconciled independent parallel work explicit; measured benefit remains unestablished. [Clarification checks](../reviews/implementation-2026-10-25/context-quality-verification-2026-10-31.json) cover documentation/preservation, not measured quality equivalence.
-- **Session rule:** follow the plan's [build-session workflow](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#codex-build-sessions-and-context). When a new chat is recommended, explicitly tell the user and provide a copyable prompt with the exact next action and evidence. A second window of the same chat is not a new session.
+- **Objective:** implement the full accepted specification within valid permissions/resources; the
+  seven-package plan orders work and cannot narrow mandatory scope. Free invention, faithful formalization,
+  independent evaluation and zero capital authority remain binding.
+
+- **Work plan:** [Implementation
+  Sequence](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#current-execution-priority-october-31-2026)
+  is the sole operational plan; current user instructions govern scope.
+
+- **Requested timing:** measure the first complete actual idea-to-independently-checked-report path under
+  the [package 5 timing
+  instruction](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#first-complete-cycle-timing-user-request-november-1-2026),
+  retaining the original start, full wall-clock total, phase durations, waits/repairs and unknown intervals.
+  Reuse existing records; instrumentation and a complete measured run remain pending. No extra paid run,
+  budget or scientific authority follows.
+
+- **New approved integration:** D096 / [inquiry-feedback/1.0](25_METACOGNITION_DUAL_SPACE_INQUIRY.md) is
+  binding. At the next safe work boundary follow the [same-plan
+  checkpoint](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#metacognition-and-dual-space-integration-november-1-2026):
+  reuse inquiry/feedback and observable-improvement records, version future profiles, independently check
+  affected behavior, and observe scoped usefulness/cost. Unknown benefit is not a new entry gate; runtime
+  qualification remains pending. [Documentation
+  evidence](../reviews/adoption-metacognition-2026-11-01/verification.json).
+
+- **Approved diagnostic practice:** the four [accepted
+  applications](15_AGENT_INQUIRY_DISCIPLINE.md#approved-diagnostic-practice-without-additional-process) were
+  independently mapped to the current profile-2 guidance without a substantiated missing meaning. The
+  user-approved [DQ case kit](../../trading_researcher/inquiry/DIAGNOSTIC_CASES.md) now provides four base
+  cases plus three countervariants and protected expectations on the existing call path. Scripted checks are
+  not actual AC/DQ model behavior or usefulness; those remain pending through the same-plan checkpoint.
+  Document 25 retains its bound source bytes; no new process or spending follows.
+
+- **Completed here:** [D097 controlled native
+  execution](../reviews/implementation-2026-10-25/exact-execution-2026-11-01.json): genuinely
+  normalized/certified synthetic input, complete finite role/controller/ledger path, current
+  data-use/meaning/source gates, owned compile/composition, 3 case stream and fresh separate replay. This is
+  software qualification only, with scripted provider replies/counts; actual original A and production
+  enrollment remain unqualified.
+
+- **Checks:** [D098 evidence](../reviews/adoption-exact-resources-2026-11-01/verification.json) retains
+  earlier native/role/historical tests at their exact sources. The financial-reader correction passed 13
+  independent methods (8 new, 5 existing); its 12 prior raw/protocol methods were not rerun for this delta.
+  Actual original-package 125 checks/full replay and the complete unchanged historical context passed in
+  194.834 seconds. Qualification fbdb is current at the checked source/time; original f4e remains STALE.
+  See the [reader guide](../../trading_researcher/feedback/HISTORICAL.md).
+
+- **Resource observation:** the earlier 37,964-input wire / 38,092-input bound is planning evidence.
+  Full unchanged outputs plus the historical reviewer hold projected 117,438 tokens / USD 0.563595. A new
+  raw/context packet and actual reviewer require fresh counting and admission; fit is unproven. USD 0.574585
+  remains under shared USD 5, ordinary 80k stays unchanged, and a new auxiliary-only allocation is pending.
+
+- **Next action:** implement the reviewed minimal auxiliary-only original-A two-slot allocation, preserving
+  full roles/inputs and all seven revoked grants. Freeze final adapter sources, qualify native/raw/context
+  currency and recount changed complete packets before conditional funding/admission. Follow the sole plan;
+  original A/null, exposure, USD 0.574585 and the original idea timestamp remain.
+
+- **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a 24-pass
+  / 1-error review exposing noncanonical-object rejection persistence are retained. Final v2 omits
+  unsupported host objects explicitly while keeping errors/case bytes; it never coerces them into accepted
+  counters. Earlier v2 defects and flat timing recovery retain their evidence and unknown durations.
+
+- **Scientific boundary:** retained zero-case means remain undefined. For the singleton, empirical weighting
+  cannot learn conditional-outcome variation; the whole-scope baseline may vary. No new practical-effect
+  profile or bootstrap alone repairs that support limitation.
+
+- **Working tree/processes:** GitHub checkpoint e2e70ac is verified remotely. The later local financial-read
+  correction and real-context proof are complete; no checks remain live at this closeout. The concurrent
+  whitespace-only handoff edit is preserved. No new inference/context/job/spending grant/source release or
+  AmiBroker mutation; all seven old grants remain revoked. Scientific/native original-A admission is pending.
+
+- **Research result:** original scalar and paired development paths have descriptive reports; latest paired
+  breakout has one qualified observed case. Zero/one-condition limitations prevent reliable population or
+  economic conclusions.
+
+- **Evidence:** [latest paired
+  result](../reviews/implementation-2026-10-25/PAIRED_BREAKOUT_RESULT_2026-10-30.md), [earlier paired
+  result](../reviews/implementation-2026-10-25/PAIRED_DESCRIPTIVE_RESULT_2026-10-30.md), [current
+  status/evidence register](../reviews/implementation-2026-10-25/progress.json).
+
+- **Usage:** shared inference ledger now 53 known calls / 1,236,478tokens /USD4.425415 ofUSD5; USD 0.574585
+  remains. The latest real trial added 3 calls / 172,162 tokens / USD 0.4686925. The [real-trial
+  record](../reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json) retains per-call
+  requested/reported model, catalog 6.1, UTC, prompts, exact tokens and conservative charges. Immutable
+  snapshot, count-service billing and invoices remain unknown; construction counters are separate.
+
+- **Open boundaries:** full scientific admission, information/calibration, protected assessment, atomic
+  freeze, mixed-provider live cycle, economic validation and reporting/delivery remain incomplete. Compact
+  docs grant no new authority.
+
+- **Quality priority:** context/cost savings are subordinate to required framework behavior, architectural
+  understanding, independent verification and evidence. No blanket cheaper-model preference applies; restore
+  needed context before dependent work. The [construction
+  workflow](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#codex-build-sessions-and-context)
+  now makes reuse, complete bounded slices and version-reconciled independent parallel work explicit;
+  measured benefit remains unestablished. [Clarification
+  checks](../reviews/implementation-2026-10-25/context-quality-verification-2026-10-31.json) cover
+  documentation/preservation, not measured quality equivalence.
+
+- **Session rule:** follow the plan's [build-session
+  workflow](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#codex-build-sessions-and-context).
+  When a new chat is recommended, explicitly tell the user and provide a copyable prompt with the exact next
+  action and evidence. A second window of the same chat is not a new session.
 
 ## Immediate next action
 

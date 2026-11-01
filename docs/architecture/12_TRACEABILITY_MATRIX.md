@@ -295,3 +295,12 @@ D097 / [bounded-exact-compositions/1.0](26_BOUNDED_EXACT_COMPOSITIONS.md) maps R
 
 
 | D098 | ACCEPTED | SESSION-2026-11-01-EXACT-RESOURCES | REQ-018; existing REQ-003/005/011/013/014/022/026/030 | [Separate exact resource version](27_EXACT_COMPUTATION_RESOURCES.md):20M perchild/40M aggregate/shared1800s; new native/source qualification remains pending. Existing checks, old10M records and independent meaning remain; no new API/grant/scientific authority. |
+
+The [historical-feedback qualification](../reviews/adoption-exact-resources-2026-11-01/verification.json)
+advances scoped REQ-007/013/022/028/030 under D070/D078/D083/D084: immutable source
+and release retention, exact intended-use currentness, read-only financial-fence
+inspection and unchanged independent meaning/data-use checks. Actual full
+inherited-context PASS is bound to its source/time; the old raw certificate stays
+STALE and all seven spending grants stay revoked. These implementation/access
+checks complete no scientific acceptance criterion, new inference allocation or
+protected/native original-A admission.

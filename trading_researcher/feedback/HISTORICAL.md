@@ -38,6 +38,17 @@ run. A new compilation, execution or publication uses the unchanged CURRENT
 raw-certification gate on the normal broker. This is neither general STALE
 acceptance nor a raw-certification override.
 
+An existing independent-review continuation also needs its historical financial
+fence. The view copies only the operator-selected budget-file location,
+provider identifier and fixed USD 5 cap; it copies no key path or arbitrary
+provider configuration. It reads the existing ledger in SQLite read-only and
+query-only mode, checks the cap, reuses the unchanged original binding validator
+and compares the exact native call-ID sequence. Only the original inventory's
+`continuation_authorizations` projection is reconstructed; all other fields and
+references remain unchanged. No ledger is constructed, schema created or
+provider route enabled. Missing or mismatched evidence retains a gap. A revoked
+grant stays revoked; historical inspection cannot authorize another dispatch.
+
 Failed attempts retain a gap; interrupted attempts remain in existing bound
 computation history. Qualification dependencies participate in the existing
 typed technical graph, including direct operator revocation of the new record.

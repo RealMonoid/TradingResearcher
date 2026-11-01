@@ -3,7 +3,7 @@
 No feature-status override: the sole substituted check is installed-package
 currency inside a private, read-only historical evidence view.
 """
-from contextlib import contextmanager
+from contextlib import closing, contextmanager
 import hashlib
 import os
 from pathlib import Path
@@ -14,12 +14,15 @@ from ..binding import require
 from ..certification import _environment_current
 from ..codec import Invalid, canonical, decode, digest, integer, strings, text
 from ..errors import Conflict, Denied
+from ..epoch_budget import AGGREGATE_CAP
 from ..exact_execution_v2 import ExactExecutionBrokerV2
 from ..features import binding, footprint, read_bundle, run_validation, validate_report, valid_names
 from ..paired_computation import PairedComputation
 from ..paired_development import CONTRACT
 from ..paired_formalization import SCHEMA as FORMALIZATION, validate_record
+from ..openai_provider import MODEL
 from ..revocations import SCHEMA as REVOCATION, AUTHORITY as REVOCATION_AUTHORITY
+from .. import review_continuation as legacy_review
 from . import paired, breakout
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -154,6 +157,11 @@ class HistoricalFeedbackBroker(ExactExecutionBrokerV2):
         view.__dict__ = self.__dict__.copy()
         view.__dict__.pop('admin_token', None)
         view._provider_routes = {}
+        route = self._provider_routes.get(MODEL)
+        config = route.get('config') if type(route) is dict else None
+        view._historical_financial_route = ({'provider':route.get('provider'),
+            'budget_file':route.get('budget_file'),'test_budget_nano':config.get('test_budget_nano')}
+            if type(config) is dict else None)
         view._historical_allowed = {x['compiled_id']: x for x in bindings}
         view._historical_active_pair = None
         view._db = sqlite3.connect((self.directory/'registry.sqlite3').as_uri()+'?mode=ro', uri=True,
@@ -318,6 +326,46 @@ class _HistoricalEvidenceView(HistoricalFeedbackBroker):
 
     def _released_feature_evidence(self, artifact, epoch, research_time):
         return ExactExecutionBrokerV2._released_feature_evidence(self, artifact, epoch, research_time)
+
+    def _meaning_inventory(self, target):
+        inventory, refs = super()._meaning_inventory(target)
+        metadata = self._historical_financial_route
+        if 'continuation_authorizations' not in inventory or metadata is None:
+            return inventory, refs
+        # The old meaning inspector requires a historical external fence, not
+        # a usable provider. Preserve that exact inspection using only reads;
+        # constructing SpendLedger would take a write transaction/create schema.
+        original_epoch = self._job(target['job_id'])['spec'].get('research_epoch_id')
+        entries = []
+        for job in inventory['jobs']:
+            if job['spec'].get('research_epoch_id') == original_epoch:
+                continue
+            try:
+                require(metadata['provider'] == 'openai'
+                    and type(metadata['test_budget_nano']) is int
+                    and metadata['test_budget_nano'] == AGGREGATE_CAP,
+                    'Historical inspection requires the existing host-selected USD5 ledger')
+                path = Path(metadata['budget_file'])
+                require(path.is_file() and not path.is_symlink(), 'Historical spend ledger is missing or unsupported')
+                epoch = self._epoch(job['spec']['research_epoch_id'])
+                with closing(sqlite3.connect(path.resolve().as_uri()+'?mode=ro', uri=True)) as db:
+                    db.execute('PRAGMA query_only=ON')
+                    db.execute('BEGIN')
+                    cap = db.execute('SELECT cap FROM budget WHERE singleton=1').fetchone()
+                    require(cap is not None and type(cap[0]) is int and cap[0] == AGGREGATE_CAP,
+                            'Historical external budget differs from the existing cap')
+                    state = legacy_review.row(self, epoch, db)
+                    actual = [row[0] for row in self._db.execute(
+                        'SELECT id FROM research_calls WHERE epoch_id=? ORDER BY rowid', (epoch['id'],))]
+                    require(actual == [call['call_id'] for call in state['calls']],
+                            'External review fence differs from retained native calls')
+                # Same projection as the original inspector: administrative
+                # closure stays revoked and never becomes dispatch permission.
+                entry = {'job_id':job['id'],'binding':state['binding'],'calls':state['calls']}
+            except (Invalid, Denied, OSError, sqlite3.Error, TypeError, KeyError, ValueError) as exc:
+                entry = {'job_id':job['id'],'authorization_gap':str(exc)}
+            entries.append(entry)
+        return {**inventory, 'continuation_authorizations':entries}, refs
 
     def _paired_compiled(self, identity):
         selected = self._historical_allowed.get(identity)

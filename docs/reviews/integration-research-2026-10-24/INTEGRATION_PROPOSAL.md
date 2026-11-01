@@ -779,6 +779,23 @@ That source review ran no tests or registry operations and establishes neither
 implementation correctness nor actual-context admission. Broader eligibility
 or exposure changes remain outside this disposition.
 
+Actual follow-through at source `f68110ba` qualified both listed paired releases
+using the unchanged original 89-file raw package and full replay, with the
+separate 109-file installed seal. Complete inherited-context checking then
+correctly stopped at an older scalar meaning inventory. Read-only diagnosis
+found exactly one difference: the private view's absent provider routes also
+hid the existing historical financial fence. Reconstructing that field through
+the unchanged legacy binding validator and exact native call IDs over the
+original read-only ledger reproduced the entire original inventory hash;
+data-use, review jobs and policy were unchanged and every grant remained revoked.
+The bounded correction carries only credential-free budget metadata and reads
+the existing fence without ledger construction, schema writes or a provider
+route. It changes no meaning judgment or dispatch permission. Eight new
+independent regressions plus five existing view cases pass at the revised
+source; the first qualification/source and failure remain retained. Fresh
+real-identity qualification and complete context checking are separate from
+these software checks and are recorded in the existing D098 evidence.
+
 ## Acceptance, integration and rollback
 
 Independent cases must demonstrate addition-only source growth with genuine

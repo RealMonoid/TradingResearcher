@@ -1,7 +1,7 @@
 {
   "schema": "exact-resource-adoption-verification/1",
   "at_utc": "2026-11-01T20:19:56.659357+00:00",
-  "status": "HISTORICAL_READER_BOUNDED_CHECKS_PASS_ACTUAL_CONTEXT_PENDING",
+  "status": "ACTUAL_HISTORICAL_CONTEXT_PASS_AUXILIARY_ALLOCATION_PENDING",
   "decision": "D098",
   "contract": "exact-computation-resources/2.0",
   "purpose": "Adopt the exact directly approved engineering resource revision without changing old sources, scientific meaning or paid authority.",
@@ -328,7 +328,8 @@
     "trading_researcher/feedback/historical.py",
     "trading_researcher/feedback/HISTORICAL.md",
     "tests/test_historical_feedback.py",
-    "tests/test_historical_feedback_review.py"
+    "tests/test_historical_feedback_review.py",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md"
   ],
   "unverified": [
     "Inherited paired-feedback/source currentness correction, fresh current raw qualification and actual original-A native enrollment; no global stale bypass or immutable-record retargeting",
@@ -378,7 +379,7 @@
     "docs/architecture/02_DECISION_REGISTER.md": "3cf01b97da6b6b90ff00a3f47dfd692aeb96336ac380861b6e119f00392330b7",
     "docs/architecture/ARCHITECTURE_REGISTER.json": "ef095c09c46c1ec3af13f953f2d1a4876fc0fed0f23ec6b3f6fd8a75789e97a5",
     "docs/architecture/04_DEFINITIONS.md": "6823e0a749049c9ba5ed9c265aed7d282e7bc81f157b9cd77fb9eb63fef4d56f",
-    "docs/architecture/12_TRACEABILITY_MATRIX.md": "bfbcd598346ada33c473dee6fa62f703cf50dd7ae1d82965f5d2ca69a3e7ae59",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "a98b77ac2adf298bcd7fe2561de1b26463ac242902106e8af4ce48fb04b85dbf",
     "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "0578f55ff518254f788aee59239ee17513e23567529c76808f5305e40045e28f",
     "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "93ca0c81bc950ba66a715baee55d7e4c72d8cf5cfad0a137ea8efcbc0aa38148",
     "docs/architecture/CURRENT_STATE.md": "2604056c5c1ea5adacc8d8d724a9205086140df78cbed9b402746e1510d90e82",
@@ -404,10 +405,11 @@
     "trading_researcher/EXACT_PROFILES_V2.md": "3a4d5a693f62400aa07963a04e982e675508e089b03bdc438c8e449d3d16bc53",
     "tests/test_exact_profiles_v2.py": "6f723f2a204b9ddaa85cf299be12022b6010c788efdac66d6017466e392664f1",
     "tests/test_exact_profiles_v2_review.py": "4c167637f29e980c9f0c31eb453b6b476b322f0c821c19b656c3bf8ec5efb1c8",
-    "trading_researcher/feedback/historical.py": "f68110ba4a0d73794eef3e6e9eccc47687eac6a58b56694f056e9cbea2af4bfa",
-    "trading_researcher/feedback/HISTORICAL.md": "edce9c62472bb302376d42114af830f1cbf45945e55c0672ac0d2c8e568658a7",
+    "trading_researcher/feedback/historical.py": "921986c4ec4a5107bdaa7af7b5ae66d8ff8d8d255333417edf9d04934628206d",
+    "trading_researcher/feedback/HISTORICAL.md": "f8a0ac61094d846135157d25c935b49357e34feb4c6e1b586eb85b3f01413445",
     "tests/test_historical_feedback.py": "efe0c6cc0d022de173a8867db1a255d00c8c2d869cc239de9ab88c605556d1e3",
-    "tests/test_historical_feedback_review.py": "e188faacfe232e08e01c5cd8e69e98a8710ebff350d1069a330280160b212391"
+    "tests/test_historical_feedback_review.py": "7dbd91147d877341bb39441161830a3acaa9d768564157d35e90e8652b049a6a",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "08a24007d9bdcecf28f6d9f4f67ee8b70d361a9f43ef8e746c50b070ebd8a4ec"
   },
   "external_workflow_edit": {
     "owner_thread": "01a1982f-b53c-7d61-8df6-e5a9aa8e86f2",
@@ -3324,6 +3326,147 @@
       "output_tokens": 87924,
       "reasoning_output_tokens": 53066,
       "total_tokens": 16767906
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "historical_financial_read_revision": {
+    "status": "PASS_ACTUAL_HISTORICAL_CONTEXT_AT_CHECKED_SOURCE",
+    "at_utc": "2026-11-01T21:39:42.640188+00:00",
+    "qualification_id": "fbdbfba1140f06dee637ae741618abcb8e3b3c9149587e2d4e2d47238e6d948f",
+    "purpose": "Fresh original-package qualification followed by complete unchanged historical-context checks, including read-only inspection of the original revoked financial fence. No new model call, context, grant or source release.",
+    "source_sha256": {
+      "trading_researcher/feedback/historical.py": "921986c4ec4a5107bdaa7af7b5ae66d8ff8d8d255333417edf9d04934628206d",
+      "tests/test_historical_feedback_review.py": "7dbd91147d877341bb39441161830a3acaa9d768564157d35e90e8652b049a6a"
+    },
+    "fresh_independent_check": {
+      "command": "PYTHONPATH=tests; Python314/python.exe -B -m unittest test_historical_feedback_review.HistoricalAuthorizationInventoryReview test_historical_feedback_review.HistoricalViewReview -v",
+      "exit_code": 0,
+      "tests": 13,
+      "new_tests": 8,
+      "existing_view_tests": 5,
+      "seconds": 7.085,
+      "skipped": 0,
+      "tool_chunk": "9d5dd2"
+    },
+    "previous_checks_scope": "The f681 source had22 owner/independent methods. Its12 independent raw/protocol methods were not rerun for this financial-read delta; source-qualified earlier evidence remains retained.",
+    "actual_check": {
+      "command": "python -B .trf-runtime/exact-resource-adoption-2026-11-01/qualify_historical_finance.py",
+      "exit_code": 0,
+      "tool_chunks": [
+        "8463d6",
+        "c89cee"
+      ],
+      "elapsed_seconds": 194.83433479996165,
+      "original_package_files": 89,
+      "installed_package_files": 109,
+      "fixed_checks": {
+        "archive_cases": 43,
+        "definition_cases": 18,
+        "partition_cases": 22,
+        "projection_cases": 10,
+        "quality_cases": 32
+      },
+      "actual_context_check": "PASS",
+      "original_raw_status": "STALE",
+      "feature_status_override": false,
+      "context_and_bound_original_artifacts_unchanged": true,
+      "counts_before": {
+        "research_calls": 43,
+        "contexts": 58,
+        "jobs": 43,
+        "releases": 47
+      },
+      "counts_after": {
+        "research_calls": 43,
+        "contexts": 58,
+        "jobs": 43,
+        "releases": 47
+      }
+    },
+    "receipt_sha256": {
+      "historical-financial-qualification-start.json": "bec5cb38c6d5612519b17018976607797298fbd91d17d8020d6eda59c21825d8",
+      "historical-financial-qualification-operation.json": "4b774965b9f98728d0e96cd46f167e0fa85a29ddc2086a9b420080e1f45399e2",
+      "historical-financial-qualification-result.json": "1a8e06f2cfb73dfad8fcdebf0f3ab6e4051476c3ed2536ff779fc970f0436f12"
+    },
+    "independent_reconciliation": {
+      "tool_chunk": "28926d",
+      "exit_code": 0,
+      "seconds": 0.509,
+      "scope": "Artifact ID/report/sourcepins, receipt consistency and actual read-only ledger:53settled known calls,capUSD5,USD0.574585residual,7revoked grants. Context/release byte preservation uses the native assertion and bound IDs, not an independent second production-body reread."
+    },
+    "prior_actual_attempt": {
+      "qualification_id": "6fcbd62b54dd4095f863465debdb2462af38fc06001345d2dc4d4df93fb6f417",
+      "source_sha256": "f68110ba4a0d73794eef3e6e9eccc47687eac6a58b56694f056e9cbea2af4bfa",
+      "command_exit_code": 1,
+      "tool_chunks": [
+        "b48027",
+        "046a53"
+      ],
+      "scope": "Both paired releases qualified; full context halted because provider-free reader also hid the old financial fence. Original result/source retained, not relabelled as complete success."
+    },
+    "diagnosis": {
+      "tool_chunks": [
+        "50564e",
+        "5bb331",
+        "de11dc",
+        "e97336"
+      ],
+      "exit_code": 0,
+      "only_changed_inventory_field": "continuation_authorizations",
+      "read_only_reconstruction_matches_full_original_inventory": true,
+      "original_inventory_sha256": "ed886dc113c814a9e94a5df3b89a4b6f21179de93550955938c86c3a83a4a106"
+    },
+    "regression_red": {
+      "tool_chunk": "25e1af",
+      "exit_code": 1,
+      "seconds": 0.336,
+      "fixture_cleanup_issue": "a56afe also exposed a corrected test-only SQLite closing issue"
+    },
+    "new_inference_calls": 0,
+    "new_grants": 0,
+    "native_original_A_admission": false,
+    "scientific_readiness": false,
+    "next_action": "Implement the independently reviewed minimal auxiliary-only original-A two-slot allocation under standing document24 spending authority, without discovery, old-slot reuse or a successor grant. Preserve the exact full v5 formalizer/high32k and unchanged independent reviewer/low4k, original A/null/B and complete exposure. Freeze all final adapter sources, then qualify final native/source/raw/intended-context currency and count the changed complete wires before conditional cash/token/slot admission. The earlier37964-input count is planning evidence only; actual reviewer fit is unknown. Ordinary80k and per-call80k remain, with a separate explicit bounded disposition needed for this path. All7old grants stay revoked and USD0.574585 remains within sharedUSD5. No paid inference, scientific classification, protected access or capital authority follows. Preserve the first original idea timestamp; the full accepted specification remains incomplete.",
+    "documentation_checks": [
+      {
+        "command": "python -B docs/reviews/verify_system_model.py",
+        "exit_code": 0,
+        "tool_chunk": "eb709f"
+      },
+      {
+        "command": "python -B docs/reviews/verify_retail_contract.py",
+        "exit_code": 0,
+        "tool_chunk": "d01128"
+      },
+      {
+        "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+        "exit_code": 0,
+        "tool_chunk": "73566a"
+      },
+      {
+        "command": "git diff --check",
+        "exit_code": 0,
+        "tool_chunk": "673a25"
+      }
+    ]
+  },
+  "prior_financial_stage_status": "HISTORICAL_READER_BOUNDED_CHECKS_PASS_ACTUAL_CONTEXT_PENDING",
+  "financial_read_stage_construction_usage": {
+    "scope": "Main construction since historical software snapshot: Git publication, actual qualification/diagnosis, financial-read repair, independent checks and real complete-context qualification; separate from inference. Child aggregation unavailable.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T21:10:03.613Z",
+    "snapshot_at_utc": "2026-11-01T21:45:02.050Z",
+    "tokens": {
+      "input_tokens": 13496194,
+      "cached_input_tokens": 13451264,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 52043,
+      "reasoning_output_tokens": 35479,
+      "total_tokens": 13548237
     },
     "input_includes_cached": true,
     "reasoning_is_subset_of_output": true,

@@ -4,7 +4,7 @@ Raw conformance uses the existing genuine normalization/certification fixture.
 Synthetic release/record seams below establish protocol behavior only, never
 qualification of an actual historical result or relocated spending authority.
 """
-from contextlib import closing
+from contextlib import closing, contextmanager
 from copy import deepcopy
 import hashlib
 from pathlib import Path
@@ -19,6 +19,9 @@ from trading_researcher.feedback import historical, paired, breakout
 from trading_researcher.paired_computation import PairedComputation
 import test_features as raw_fixtures
 from trading_researcher import features
+from trading_researcher import review_continuation as legacy_continuation
+from trading_researcher import epoch_budget
+from trading_researcher.openai_provider import MODEL
 
 
 REJECT = (Invalid, Conflict, Denied)
@@ -107,6 +110,165 @@ class HistoricalViewReview(unittest.TestCase):
                     with self.assertRaises(REJECT):
                         view._paired_dependencies('same-form', 'same-cert')
                     inherited.assert_called_once_with(view, 'same-form', 'same-cert')
+
+
+class HistoricalAuthorizationInventoryReview(unittest.TestCase):
+    """Cheap read-capability regressions, not a new meaning assessment.
+
+The parent inventory and original-history helper are explicit fixed seams. The
+existing legacy binding/row validator and an actual disposable external SQLite
+file remain real. Native call-ID reads use a fixed query proxy; no provider,
+real grant, scientific result or full raw fixture is created by this class.
+"""
+
+    @contextmanager
+    def reader(self, *, route_cap=5_000_000_000, ledger_cap=5_000_000_000,
+               provider='openai', native_calls=('settled-call',), ledger_calls=('settled-call',),
+               bad_binding=False, missing_file=False, no_route=False, revoked=1):
+        with tempfile.TemporaryDirectory() as root, closing(
+                historical.HistoricalFeedbackBroker(Path(root) / 'registry')) as broker:
+            path = Path(root) / 'external-budget.sqlite3'
+            epoch = {'id': 'review-epoch', 'request_key': 'fixed-request', 'created_at': 100,
+                     'request': {'review_continuation': {'policy': legacy_continuation.POLICY}},
+                     'state': 'halted'}
+            original = {'target_id': 'fixed-original-target', 'epoch_id': 'original-epoch',
+                        'usage': {'fixed': 'retained'}, 'calls_sha256': 'a' * 64}
+            with patch.object(legacy_continuation, 'original', return_value=original):
+                bound = legacy_continuation.binding(broker, epoch)
+                entries = [{'call_id': name, 'job_id': 'independent-review'} for name in ledger_calls]
+                if not missing_file:
+                    with closing(sqlite3.connect(path)) as db, db:
+                        db.execute('CREATE TABLE budget(singleton INTEGER PRIMARY KEY, cap INTEGER NOT NULL)')
+                        db.execute('INSERT INTO budget VALUES(1,?)', (ledger_cap,))
+                        db.execute('CREATE TABLE research_epoch_budget_grants(approval TEXT PRIMARY KEY, binding TEXT, calls TEXT, revoked INTEGER)')
+                        db.execute('INSERT INTO research_epoch_budget_grants VALUES(?,?,?,?)',
+                                   (legacy_continuation.APPROVAL,
+                                    canonical({**bound, 'request_key': 'wrong'}) if bad_binding else canonical(bound),
+                                    canonical(entries), revoked))
+                broker._provider_routes = {} if no_route else {MODEL: {
+                    'provider': provider, 'budget_file': str(path),
+                    'key_file': 'KEY_PATH_MUST_NOT_ENTER_THE_READER',
+                    'config': {'test_budget_nano': route_cap, 'secret_extra': 'CONFIG_SECRET_MUST_NOT_ENTER'}}}
+                baseline = {'formalization_id': 'target', 'jobs': [
+                    {'id': 'independent-review', 'spec': {'research_epoch_id': epoch['id']},
+                     'state': 'completed', 'calls': ['unaltered call record'], 'attempts': ['unaltered attempt']}],
+                    'policy': {'exact': 'unchanged parent policy'},
+                    'other_fields': {'unknowns': [None, False], 'failure': 'must remain verbatim'},
+                    'continuation_authorizations': [{'job_id': 'independent-review',
+                        'authorization_gap': 'The overlay requires the existing host-selected OpenAI spend ledger'}]}
+                expected = deepcopy(baseline)
+                expected['continuation_authorizations'] = [{'job_id': 'independent-review',
+                                                             'binding': bound, 'calls': entries}]
+                refs = {'target', 'old-gap', 'original-source'}
+                with broker._historical_view(provisional=[]) as view:
+                    connection = view._db
+                    class NativeCallList:
+                        def execute(self, sql, parameters=()):
+                            if 'SELECT id FROM research_calls WHERE epoch_id=' in sql:
+                                if tuple(parameters) != (epoch['id'],):
+                                    raise AssertionError('Wrong original native epoch inspected')
+                                return [(name,) for name in native_calls]
+                            return connection.execute(sql, parameters)
+                        def close(self):
+                            connection.close()
+                    view._db = NativeCallList()
+                    view._job = Mock(return_value={'spec': {'research_epoch_id': 'original-epoch'}})
+                    view._epoch = Mock(return_value=epoch)
+                    with patch.object(historical.ExactExecutionBrokerV2, '_meaning_inventory',
+                                      return_value=(deepcopy(baseline), set(refs))):
+                        yield view, {'id': 'target', 'job_id': 'original-job'}, baseline, expected, refs, path
+
+    def test_readonly_reconstruction_restores_the_entire_original_parent_inventory(self):
+        with self.reader() as (view, target, baseline, expected, refs, path):
+            before = path.read_bytes()
+            inventory, actual_refs = view._meaning_inventory(target)
+            self.assertEqual(canonical(inventory), canonical(expected))
+            self.assertEqual(actual_refs, refs)
+            self.assertEqual(path.read_bytes(), before)
+            self.assertEqual({k: v for k, v in inventory.items() if k != 'continuation_authorizations'},
+                             {k: v for k, v in baseline.items() if k != 'continuation_authorizations'})
+
+    def test_external_reader_is_uri_readonly_query_only_and_never_constructs_a_ledger(self):
+        with self.reader() as (view, target, baseline, expected, refs, path):
+            connect = sqlite3.connect
+            opened = []
+            class Watched(sqlite3.Connection):
+                def execute(connection, sql, parameters=()):
+                    if sql.lstrip().upper().startswith('SELECT'):
+                        self.assertEqual(sqlite3.Connection.execute(connection, 'PRAGMA query_only').fetchone()[0], 1)
+                    if sql.lstrip().upper().startswith(('INSERT', 'UPDATE', 'DELETE', 'CREATE', 'DROP', 'ALTER')):
+                        raise AssertionError('Historical read attempted external mutation')
+                    return sqlite3.Connection.execute(connection, sql, parameters)
+            def readonly(database, *args, **kwargs):
+                self.assertIn('mode=ro', str(database))
+                self.assertIs(kwargs.get('uri'), True)
+                opened.append(str(database))
+                kwargs['factory'] = Watched
+                return connect(database, *args, **kwargs)
+            before = path.read_bytes()
+            with patch.object(historical.sqlite3, 'connect', side_effect=readonly), \
+                    patch.object(epoch_budget, 'SpendLedger', side_effect=AssertionError('Ledger construction')), \
+                    patch.object(epoch_budget, '_schema', side_effect=AssertionError('Ledger schema write')):
+                inventory, actual_refs = view._meaning_inventory(target)
+            self.assertEqual(inventory, expected)
+            self.assertEqual(actual_refs, refs)
+            self.assertTrue(opened)
+            self.assertEqual(path.read_bytes(), before)
+
+    def test_read_capability_copies_no_key_provider_route_or_arbitrary_configuration(self):
+        with self.reader() as (view, target, baseline, expected, refs, path):
+            self.assertEqual(view._provider_routes, {})
+            self.assertNotIn('admin_token', view.__dict__)
+            self.assertNotIn('KEY_PATH_MUST_NOT_ENTER_THE_READER', repr(view.__dict__))
+            self.assertNotIn('CONFIG_SECRET_MUST_NOT_ENTER', repr(view.__dict__))
+            inventory, _ = view._meaning_inventory(target)
+            self.assertEqual(inventory, expected)
+            with self.assertRaises(Denied):
+                view.call
+
+    def test_wrong_route_or_database_cap_retains_the_parent_authorization_gap(self):
+        for options in ({'route_cap': 4_999_999_999}, {'route_cap': 5_000_000_000.0},
+                        {'ledger_cap': 5_000_000_001}, {'provider': 'other'}, {'no_route': True}):
+            with self.subTest(options=options), self.reader(**options) as (view, target, baseline, expected, refs, path):
+                inventory, actual_refs = view._meaning_inventory(target)
+                entry = inventory['continuation_authorizations'][0]
+                self.assertIn('authorization_gap', entry)
+                self.assertNotIn('binding', entry)
+                self.assertEqual(actual_refs, refs)
+                self.assertEqual(inventory['other_fields'], baseline['other_fields'])
+
+    def test_wrong_binding_or_native_call_list_cannot_restore_authorization(self):
+        for options in ({'bad_binding': True}, {'native_calls': ()},
+                        {'native_calls': ('different-call',)}, {'ledger_calls': ('settled-call', 'extra-call')}):
+            with self.subTest(options=options), self.reader(**options) as (view, target, baseline, expected, refs, path):
+                inventory, actual_refs = view._meaning_inventory(target)
+                self.assertIn('authorization_gap', inventory['continuation_authorizations'][0])
+                self.assertNotIn('binding', inventory['continuation_authorizations'][0])
+                self.assertEqual(actual_refs, refs)
+                self.assertEqual(inventory['policy'], baseline['policy'])
+
+    def test_missing_ledger_is_not_created(self):
+        with self.reader(missing_file=True) as (view, target, baseline, expected, refs, path):
+            self.assertFalse(path.exists())
+            inventory, _ = view._meaning_inventory(target)
+            self.assertIn('authorization_gap', inventory['continuation_authorizations'][0])
+            self.assertFalse(path.exists())
+
+    def test_revoked_administrative_closure_remains_historically_inspectable(self):
+        with self.reader(revoked=1) as (view, target, baseline, expected, refs, path):
+            inventory, _ = view._meaning_inventory(target)
+            self.assertEqual(inventory, expected)
+            with closing(sqlite3.connect(path.as_uri() + '?mode=ro', uri=True)) as db:
+                self.assertEqual(db.execute('SELECT revoked FROM research_epoch_budget_grants').fetchone()[0], 1)
+
+    def test_absent_continuation_field_never_opens_the_external_ledger(self):
+        with self.reader() as (view, target, baseline, expected, refs, path):
+            plain = {k: v for k, v in baseline.items() if k != 'continuation_authorizations'}
+            with patch.object(historical.ExactExecutionBrokerV2, '_meaning_inventory', return_value=(plain, refs)), \
+                    patch.object(historical.sqlite3, 'connect', side_effect=AssertionError('Unneeded ledger read')):
+                inventory, actual_refs = view._meaning_inventory(target)
+            self.assertEqual(inventory, plain)
+            self.assertEqual(actual_refs, refs)
 
 
 class HistoricalProtocolReview(unittest.TestCase):

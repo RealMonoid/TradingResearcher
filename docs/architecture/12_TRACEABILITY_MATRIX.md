@@ -213,6 +213,19 @@ The later D088 [reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#futur
 
 Operational records use their own versioned envelopes. A successful job is not a scientific verdict or a completed research acceptance test. The full requirements and adopted definitions are unchanged.
 
+### Scientific batch transaction substrate (November 1, 2026)
+
+The [operator transaction path](../../trading_researcher/EVALUATION_POLICY.md#atomic-batch-commitment-and-admission-boundary)
+advances D078/D082, ENG-03/04/13 and REQ-005/007/019 through IF-05. Independent
+synthetic cases cover immutable closure, source/runtime binding, exact duplicate
+linkage, retained unselected ideas, family conflicts, concurrent reservation,
+actual pre/post-COMMIT process exit, rollback, exposure, HTTP and backup/restore.
+The existing fixed policy fixture remains unchanged; only its exact-duplicate and
+unselected-retention allocation cases are directly mapped here. The other eight
+allocation-policy cases are not claimed complete. Production retains admission
+gaps; no real scientific freeze, corroboration, full package exit, calibration or
+protected access is established. Exact outcomes are in the existing progress register.
+
 ## D090 scoped resource overlay
 
 [research-epoch-feedback-budget/1.0](19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md) affects REQ-004/014/022/023/030 and D079 only for one explicit development epoch. Verification must cover complete feedback, exact provider configuration, one-use and ordered-call persistence across restart/restore, fixed nonrefundable stage limits, unknown usage and revocation. Approval alone establishes neither implementation nor research quality; ordinary budgets and scientific gates remain unchanged.

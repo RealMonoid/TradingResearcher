@@ -223,7 +223,7 @@
         "docs/reviews/implementation-2026-10-25/controller-provider-verification.json",
         "docs/reviews/implementation-2026-10-25/controller-provider-live.json"
       ],
-      "remaining_action": "Exact ETH/BTC formalizations, separately authenticated current meaning reviews, approved single-instrument bounded primitives, required-input reporting, development data-use qualification and deterministic replay are exercised. General scientific data/exposure acceptance, applicable calibrated evaluation/information profiles and atomic scientific allocation/freeze remain open. Descriptive completion does not grant protected assessment access or general semantic approval."
+      "remaining_action": "Atomic operator/registry transaction machinery is verified at finite synthetic scope; production stays ADMISSION_GAP. Complete scientific selection/data/exposure admission, applicable calibration/information, qualified market outcome reservations, corroboration and scientific execution/release remain required. Full package exits remain open."
     },
     {
       "step": 4,
@@ -261,7 +261,7 @@
         "docs/reviews/implementation-2026-10-25/LAG_LINKED_POPULATION_2026-10-26.md",
         "docs/reviews/implementation-2026-10-25/lag-linked-verification-2026-10-26.json"
       ],
-      "remaining_action": "Owned finite study controllers and coherent mixed-truth joint synthetic families are implemented at the documented narrow engineering scope. Complete final calibration, market-relevant nuisance/stress adequacy and justified information targets remain open. The finite feasibility checkpoint is closed with retained gaps; calibration/model-family expansion remains deferred under execution_plan. Empty conditioned samples in the original ETH/BTC reports do not justify a new estimator or practical-effect profile."
+      "remaining_action": "Prepare the justified development nuisance/stress and information profile for an eligible binary contrast, then complete existing development/final inventories under actual fixed resources. All partial/failed worlds and source versions remain; count-only calibration and smallest tested candidates do not establish N_min or scientific admission."
     },
     {
       "step": 5,
@@ -319,7 +319,7 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "Implement the missing atomic scientific freeze/allocation transaction through the existing registry and operator caller under D078/D082 and IF-05. Inspect the actual request/plan/certification/data-use/dependency interfaces and existing fixed acceptance fixtures first; cover complete immutable input closure, idempotency/conflicts, concurrent reservation, crash rollback, retained attempts and exposure. Independently check actual integration and failure paths with synthetic inputs. Keep scientific use denied until all applicable admission/calibration/information gates pass. Retain full package 3/4 exits; ask promptly with a researched proposal for any unresolved user decision. Original-A continuation is on hold; no new paid research grant, model call or protected assessment access is authorized.",
+  "next_action": "Prepare one justified claim-scoped binary mean/rate-contrast nuisance/stress and information profile from permitted development diagnostics under contract 14 sections 5.3/5.4/11, then reuse the existing development/final controllers within actual fixed resources. Exact dependence/randomness/target/adequacy inputs are still required; do not issue a count-only certificate or promote a smallest tested target into N_min. Retain scientific selection/data/exposure and corroboration gaps.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -5526,5 +5526,173 @@
       "implementation_status": "Workflow adoption documented; scientific core and complete feedback/frequency capabilities remain incomplete",
       "not_authorized": "Blanket numerical migration, budget increase, weakened checks, protected assessment access, old-grant reuse, public publication or resuming the separately paused builder"
     }
+  },
+  "scientific_freeze_transaction_2026_11_01": {
+    "status": "TRANSACTION_SUBSTRATE_VERIFIED_PRODUCTION_ADMISSION_BLOCKED",
+    "purpose": "Close the D078/D082 IF-05 atomic registry/operator transaction machinery without promoting preparation checks into scientific admission.",
+    "requirements": [
+      "REQ-005",
+      "REQ-007",
+      "REQ-019",
+      "ENG-03",
+      "ENG-04",
+      "ENG-13"
+    ],
+    "source_base": "93664d9",
+    "implementation": [
+      "trading_researcher/scientific_freeze.py",
+      "trading_researcher/coordination.py",
+      "trading_researcher/storage.py",
+      "trading_researcher/revocations.py"
+    ],
+    "independent_tests": "tests/test_scientific_freeze_independent.py",
+    "integration_tests": "tests/test_scientific_freeze.py",
+    "library_reuse": {
+      "decision": "Reuse existing Python sqlite3/SQLite BEGIN IMMEDIATE, immutable artifacts/blobs, source_bundle/footprint, runtime identity and bound-attempt recovery. No new dependency or numeric change.",
+      "runtime": "Python 3.14.2 / SQLite 3.50.4 observed locally",
+      "primary_sources_checked_2026_11_01": [
+        "https://www.sqlite.org/atomiccommit.html",
+        "https://www.sqlite.org/lang_transaction.html",
+        "https://docs.python.org/3/library/sqlite3.html"
+      ],
+      "custom_scope": "Framework-owned request identity, exact immutable closure, batch/trial/allocation bindings, scientific admission denials and exposure/conflict rules; a generic transaction library cannot define these meanings."
+    },
+    "findings": "Existing plan, data-use and calibration owners deliberately do not issue scientific readiness. Production always retains sourced admission gaps; no public override. Successful transaction cases replace only the private admission judgment with finite synthetic fixtures.",
+    "preserved_boundaries": "Original-A paused and AUXILIARY_RESOURCES.md untouched; no real registry/provider/market/2024 operation, no research spending or renewed grant, no numerical or scientific-policy change.",
+    "failure_history": [
+      "Root regression failed before implementation: operator freeze caller absent (1 failure).",
+      "Initial patch was rejected atomically because a storage.py context line differed; no partial edits.",
+      "Independent absent-API baseline failed; first fixture follow-up used a missing campaign anchor and was corrected to a real retained source without weakening expectations.",
+      "Source changes during independent/root fixture processes correctly caused source-currency denials; these runs are retained as failures, not passes. Root first real-plan run: 2 executed tests / 3 errors, 226.615 seconds, including duplicate imported fixture setup; import discovery corrected.",
+      "Independent review found retry checker drift and missing dedicated orphan visibility; both corrected.",
+      "Central review extended single-file source capture to complete existing bounded package/runtime; pre-delta passing tests are not the final-source evidence.",
+      "Local commit initially failed because Git author identity was not configured. Existing repository identity from the last four commits is reused only for this commit command; no global configuration change or publication."
+    ],
+    "historical_within_this_slice_checks": [
+      {
+        "command": "python -B -m unittest discover -s tests -p test_scientific_freeze_independent.py -v",
+        "tests": 22,
+        "seconds": "17.796",
+        "exit_code": 0,
+        "scope": "Before complete-package/runtime delta; superseded for affected source binding"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_coordination.py -v",
+        "tests": 21,
+        "seconds": "13.950",
+        "exit_code": 0,
+        "scope": "Existing registry behavior; complete-package delta is only in new optional freeze path"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_storage.py -v",
+        "tests": 12,
+        "seconds": "10.812",
+        "exit_code": 0,
+        "scope": "Affected reserved namespace plus existing storage/restore/crash machinery"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_evaluation_policy.py -v",
+        "tests": 2,
+        "seconds": "0.003",
+        "exit_code": 0,
+        "scope": "Unchanged 81 fixed arithmetic/policy cases; ten allocation cases excluded by that suite"
+      }
+    ],
+    "construction_effort": {
+      "wall_seconds": "UNKNOWN; source analysis and initial timings were not metered",
+      "coordination": "One independent acceptance author/reviewer; centrally reconciled results, fixture corrections and source-drift rework retained",
+      "model_tokens_and_billed_cost": "UNKNOWN; separate from framework research-call ledger"
+    },
+    "remaining": [
+      "Actual scientific selection/ranking and complete campaign chronology/exposure admission",
+      "Applicable calibrated evaluator and justified information target",
+      "Qualified exact market outcome reservation representation beyond finite synthetic kernel",
+      "Pre-reserved corroboration, dependence and whole-batch scientific release",
+      "Actual same-trial scientific execution attempts and contradictory-success quarantine",
+      "Full package 3/4 exits, protected evaluation and complete scientific/economic cycle"
+    ],
+    "completed_acceptance": [
+      "Existing operator/HTTP caller commits the finite synthetic allocation, trials and manifest atomically; no partial trial survives pre-COMMIT crash or rollback.",
+      "Immutable request/full bounded source/runtime closure, matching-key identity, duplicate linkage, conflicting membership/record reservations and concurrent slot requests are checked.",
+      "Failed/conflicting/interrupted attempts and inherited exposure remain visible, with backup/restore and original artifact bytes preserved.",
+      "Unmodified real plan caller retains scientific admission gaps without outcome-row access; workers and generic sources cannot grant authority."
+    ],
+    "final_checks": [
+      {
+        "command": "python -B -m unittest discover -s tests -p test_scientific_freeze_independent.py",
+        "tests": 25,
+        "seconds": "58.371",
+        "exit_code": 0,
+        "role": "central final-source run; independently authored acceptance cases"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_scientific_freeze_independent.py",
+        "tests": 25,
+        "seconds": "54.295",
+        "exit_code": 0,
+        "role": "independent author final-source run, centrally reconciled against matching hashes"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_scientific_freeze.py -v",
+        "tests": 2,
+        "seconds": "120.058",
+        "exit_code": 0,
+        "role": "real owned plan preparation and unmodified production admission denial"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_revocations.py -v",
+        "tests": 3,
+        "seconds": "1.110",
+        "exit_code": 0,
+        "role": "affected typed dependency machinery regression"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_scientific_freeze.py -k typed_commitment -v",
+        "tests": 1,
+        "seconds": "0.350",
+        "exit_code": 0,
+        "role": "New typed manifest dependency revocation propagates while immutable history is retained; no scientific assertion"
+      }
+    ],
+    "source_sha256": {
+      "trading_researcher/scientific_freeze.py": "80067ad562ec35e72c17325eeaeb3228d6a7df727c2b97fe03b75ede1a9d25e1",
+      "trading_researcher/coordination.py": "6d61a10f3bf993c046b98fb45a24d0210757103bfc18e7de1e41c1a3545d9e9a",
+      "trading_researcher/storage.py": "9eb23c3c234beea950946334a2f9be179e4a42b7e52b0cf17d441ac0c58ea1d9",
+      "trading_researcher/revocations.py": "f4f085d66a370c12e1f97557e6b0107b8e4d72eabe9468c786358835933b2d9c",
+      "tests/test_scientific_freeze.py": "d2fe3666dbe34bd3ecef3173d9a4771f7bc27466603989ca0518285712eef683",
+      "tests/test_scientific_freeze_independent.py": "b04be629b6333b94ae845bc2646bf7dcdd37ca0fe0c81e78e57b6d38d8f854c1"
+    },
+    "package_footprint_sha256": "45ad349d0a392ed6827f0acc57ca8dcbc95a8010195e536f4b4878ecc161fd9d",
+    "package_source_files": 104,
+    "independent_review": {
+      "status": "NO_REMAINING_SUBSTANTIATED_DEFECT_IN_BOUNDED_KERNEL",
+      "reviewer": "freeze_acceptance",
+      "limits": "Synthetic transaction and denied-production paths only; no scientific admission, adequacy, corroboration or release proof"
+    },
+    "documentation_checks": {
+      "status": "PASS_FINAL_AFFECTED_DOCUMENTATION",
+      "verify_system_model_exit": 0,
+      "verify_retail_contract_exit": 0,
+      "verify_implementation_exit": 0,
+      "git_diff_check_exit": 0,
+      "scope": "Links, preservation, traceability and whitespace; final evidence/handoff mutation requires affected documentation refresh"
+    },
+    "next_action": "Prepare one justified claim-scoped binary mean/rate-contrast nuisance/stress and information profile from permitted development diagnostics under contract 14 sections 5.3/5.4/11, then reuse the existing development/final controllers within actual fixed resources. Exact dependence/randomness/target/adequacy inputs are still required; do not issue a count-only certificate or promote a smallest tested target into N_min. Retain scientific selection/data/exposure and corroboration gaps.",
+    "retained_auxiliary_draft_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
+    "changed_files": [
+      "trading_researcher/scientific_freeze.py",
+      "trading_researcher/coordination.py",
+      "trading_researcher/storage.py",
+      "trading_researcher/revocations.py",
+      "tests/test_scientific_freeze.py",
+      "tests/test_scientific_freeze_independent.py",
+      "trading_researcher/EVALUATION_POLICY.md",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+      "docs/architecture/12_TRACEABILITY_MATRIX.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+      "docs/reviews/implementation-2026-10-25/progress.json"
+    ],
+    "unverified_boundary": "No full-project test suite or complete IF-05/package 3/4 acceptance claimed. The final affected implementation checks cover 66 distinct methods across current and applicable unchanged-owner regressions; independent-author rerun is not added to that count. Physical power loss, real admission, protected access, scientific/economic usefulness remain unverified."
   }
 }

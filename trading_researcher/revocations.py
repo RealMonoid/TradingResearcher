@@ -113,6 +113,9 @@ class DependencyRevocations:
             return [body['data_snapshot_id'],body['source_package_id'],args['feature_certificate_id'],args['reference_certificate_id'],
                 *([args['data_target_binding_id']] if 'data_target_binding_id' in args else [])]
         if schema=='reference-execution/1':return [body['compiled_id']]
+        if schema in ('scientific-freeze-input/1', 'scientific-freeze-attempt/1',
+                      'scientific-allocation/1', 'scientific-trial/1', 'frozen-manifest/1'):
+            return list(artifact['source_refs'])
         if schema=='data-use-assessment/1':return [body['compiled_id']]
         if schema=='composition-input/1':return [body['compiled_id'],body['source_package_id']]
         if schema=='composition-certificate/1':return [body['input_capsule_id']]

@@ -34,7 +34,7 @@ The optional `meaning_review_at_preparation` snapshot is historical evidence. Pr
 
 Before intended use, the operator calls `inspect_evaluation_plan(plan_id)`. This read-only result retains the original `POLICY_DRAFT` or `EVALUATION_GAP` status and reports fresh `meaning_review` currency plus `current_remaining_gates`. Only a currently satisfied, correctly scoped review removes `independent_semantic_review` from this derived list. New pending or conflicting reviews and changed policy sources reopen it. The raw child-calculated plan and its original gate list remain unchanged. Legacy preparations without a review retain every gate. An evaluation gap has `current_remaining_gates: null`, never an empty list suggesting readiness.
 
-This inspection is an instantaneous prerequisite view, not a durable admission token. A future scientific freeze must recheck within its own atomic transaction. It does not certify the currency or adequacy of other prerequisites. Data/exposure acceptance, composition conformance, calibrated estimator/information planning and atomic allocation/freeze remain separate gates. All three authority flags remain false. The [integration checkpoint](../docs/reviews/implementation-2026-10-25/PLAN_MEANING_INTEGRATION_2026-10-26.md) records verification and limits.
+This inspection is an instantaneous prerequisite view, not a durable admission token. The scientific-freeze caller rechecks within its own atomic transaction and currently retains an admission gap. It does not certify the currency or adequacy of other prerequisites. Data/exposure acceptance, composition conformance, calibrated estimator/information planning and atomic allocation/freeze remain separate gates. All three authority flags remain false. The [integration checkpoint](../docs/reviews/implementation-2026-10-25/PLAN_MEANING_INTEGRATION_2026-10-26.md) records verification and limits.
 
 Use the existing `rpc` CLI request-file interface against the owned server. `dependence` requires an integer `base_length`, a rationale, one through sixteen `development_refs`, and `randomness` with explicit `algorithm`, `version` and integer `seed`. No default seed, dependence justification or nuisance estimate is invented. The generator cannot override delta through this operation.
 
@@ -56,6 +56,48 @@ The namespace cannot be supplied through generic source or worker APIs. Capsule 
 
 No assessment access, budget reservation, scientific result release, semantic approval or empirical claim follows from this draft. Genuine independent review must assess the exact original idea, executable candidate and mappings; replaying a formalizer's self-declared equivalence in another process cannot supply that judgment.
 
+## Atomic batch commitment and admission boundary
+
+The operator RPC `freeze_scientific_batch(key, campaign_id, role, plan_ids,
+selection_record_ref, reservation_spec_ref)` accepts retained references only.
+`plan_ids` is an ordered family of one through eight unique plans. The campaign,
+selection criteria/reasons (including queued ideas), and reservation specification
+must already be retained. Supplied sources are not admission certificates. There
+is no public readiness override, worker route, generated code or extra spending.
+
+[scientific_freeze.py](scientific_freeze.py) reuses the existing SQLite transaction,
+immutable artifact/blob storage, source-capture helpers and attempt recovery.
+It commits allocation, trials, manifest, typed references and event together.
+An input capsule and STARTED event commit first; final rollback grants no partial
+trial. Failures and rejected conflicting requests remain retained. Actual process
+exit is covered on both sides of COMMIT; physical power-loss durability is untested.
+The capsule binds the complete bounded top-level source package and Python runtime.
+An unfinished retry cannot silently switch them. A completed-key lookup returns
+historical identities and grants no renewed intended-use permission.
+
+Matching keys return the original manifest; conflicting content fails. An exact
+batch duplicate under another key links the same trials. The family cannot gain
+late members or refund error allocation. Members may share outcomes within their
+one predeclared family; another allocation cannot reserve those same qualified
+record identities. Distinct snapshot IDs are not proof of disjoint outcomes.
+The kernel uses the existing 256-reference envelope and rejects overflow without
+truncation. General large-population reservation representation remains unfinished.
+
+**Current production behavior is ADMISSION_GAP.** The private host resolver reads
+the current plan/dependency owners inside the final transaction. Exploration or
+private-plan data qualification and count-calibration checks cannot establish
+scientific data/exposure/selection admission, a justified information target or
+applicable calibrated evaluator. Corroboration pre-reservation/dependence, ranking,
+scientific execution, same-trial execution retries, contradictory-result quarantine
+and whole-batch scientific release remain open. No protected outcome access follows.
+
+The independent transaction tests replace only that private scientific judgment
+with finite synthetic records; even synthetic manifests grant no execution/access
+authority. `inspect_scientific_freezes` exposes terminal attempts and recovered
+incomplete attempts. Current results, source identities, retained failures and
+limits are recorded in the existing [progress register](../docs/reviews/implementation-2026-10-25/progress.json).
+This closes transaction machinery at its stated scope, not IF-05 or package 3/4.
+
 ## Evidence and unfinished requirements
 
 The `data_use_assessment_id` binds the [qualified data-use assessment](DATA_USE.md) to this exact compilation. It is optional for legacy development drafts and mandatory for private-target drafts. The input capsule and completed plan retain `data_use_at_preparation`, and commitment rechecks it. Current inspection can remove `scientific_data_and_exposure_acceptance` only for `exact_compiled_development_exploration_only`. Private plans report `exact_private_target_preparation_only`, retain that scientific gate and report `protected_selection_and_reservation_review: NOT_ASSESSED`. `protected_target_admission` remains false for both routes. Unknown model exposure, assumed availability, existing outcome eligibility gaps, all other gates and historical raw plan bytes are preserved. Scientific protected-data admission and allocation remain future requirements.
@@ -64,7 +106,7 @@ An optional `composition_certificate_id` binds the [independent composition chec
 
 [Technical revocation](REVOCATIONS.md) is checked for the compiled hypothesis and every declared development diagnostic before new use and commitment. A diagnostic can carry a different compiler dependency. `inspect_evaluation_plan` additionally reports fresh `dependency_use`; historical plan/calculator bytes stay unchanged. A completed request key is not a new admission token.
 
-The independent [91-case fixture](../tests/fixtures/reference_evaluation_policy_cases.json) and [authorship note](../tests/fixtures/reference_evaluation_policy_expectations.md) were fixed before the implementation was inspected. The policy suite exercises 81 cases. The ten allocation-state cases remain explicitly pending for the future campaign/freeze state machine; they are not counted as verified behavior. Additional adversarial tests cover arithmetic growth, units, false Boolean/count coercion, undefined draws, input mutation, unavailable diagnostic blobs, stale imports and transaction failures.
+The independent [91-case fixture](../tests/fixtures/reference_evaluation_policy_cases.json) and [authorship note](../tests/fixtures/reference_evaluation_policy_expectations.md) were fixed before the implementation was inspected. The policy suite exercises 81 cases. Two allocation-state cases now map directly to the independent transaction tests below; the other eight remain pending and are not counted as verified behavior. Additional adversarial tests cover arithmetic growth, units, false Boolean/count coercion, undefined draws, input mutation, unavailable diagnostic blobs, stale imports and transaction failures.
 
 The [source baseline archive](../docs/reviews/implementation-2026-10-25/evaluation-policy-source-baseline.zip) preserves the three exact source documents pinned by the fixture, including the blueprint before its descriptive implementation update. Archive member hashes must match the fixture's source hashes; later documentation does not replace those source versions.
 

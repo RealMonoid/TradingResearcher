@@ -203,6 +203,17 @@ IN PROGRESS. Preserve H_idea separately from H_exec. Reuse reference expressions
 
 [Detailed scope and original implementation evidence](IMPLEMENTATION_SEQUENCE_2026-10-25_SNAPSHOT_2026-10-31.md#3-faithful-formalization-certification-and-freeze).
 
+**November 1 atomic transaction slice:** The existing operator/registry now has
+[atomic batch commitment](../../../trading_researcher/EVALUATION_POLICY.md#atomic-batch-commitment-and-admission-boundary)
+with retained inputs/attempts, full bounded source/runtime closure, trial/manifest/
+allocation atomicity, exact duplicate linkage, conflicts and recovery. Current
+production retains ADMISSION_GAP; synthetic host-admission substitution checks
+transaction behavior only. Scientific selection/data/exposure acceptance,
+applicable calibration/information, actual outcome-record qualification,
+corroboration pre-reservation and scientific execution/release remain open. Keep
+all package exits and the original-A hold. Exact current checks and failures are
+in the existing progress register; no full package or scientific completion follows.
+
 ### 4. Independent computation and narrow scientific calibration
 
 IN PROGRESS. Reuse independent calculation, bootstrap/MC candidates and retained study/series controllers. Scientific classification requires the applicable calibrated profile, defensible information target and adequate assumptions. Preserve fixed worlds, final draws, failures, replay and cumulative resource stops. Engineering timing/storage checks and partial synthetic cohorts do not establish calibration. No new simulator family by default.

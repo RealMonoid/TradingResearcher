@@ -41,6 +41,7 @@ from .revocations import DependencyRevocations
 from .composition import CompositionCertification
 from .data_use import DataUseAssessments
 from .data_targets import DataTargets
+from .scientific_freeze import ScientificFreeze
 
 
 SCHEMA = '''
@@ -71,7 +72,7 @@ CREATE TABLE IF NOT EXISTS events(seq INTEGER PRIMARY KEY, previous_hash TEXT NO
 '''
 
 
-class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews, DependencyRevocations, CompositionCertification, DataUseAssessments, DataTargets):
+class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews, DependencyRevocations, CompositionCertification, DataUseAssessments, DataTargets, ScientificFreeze):
     def __init__(self, directory, clock=None, *, provider_routes=None):
         self._provider_routes = provider_routes_config(provider_routes)
         self.directory = Path(directory).resolve()
@@ -241,6 +242,8 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
         if op == 'run_development_bootstrap':
             return self._run_development_bootstrap_external(token, args)
         canonical(args)
+        if op == 'freeze_scientific_batch':
+            return self._freeze_scientific_batch_external(token, args)
         if op == 'compile_hypothesis':
             return self._compile_hypothesis_external(token, args)
         if op == 'certify_composition':
@@ -275,7 +278,8 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
                          'inspect_reference_checks', 'feature_certificate_status', 'inspect_feature_checks',
                          'inspect_bound_computations','assess_meaning_review','inspect_meaning_review','inspect_evaluation_plan',
                          'revoke_dependency','inspect_dependency_use','composition_certificate_status','assess_data_use','inspect_data_use',
-                         'declare_data_target','bind_data_target','release_feature_evidence','publish_development_feedback'}
+                         'declare_data_target','bind_data_target','release_feature_evidence','publish_development_feedback',
+                         'inspect_scientific_freezes'}
             allowed = admin_ops if actor['role'] == 'operator' else worker_ops
             if op not in allowed:
                 raise Denied('Operation unavailable for this capability')

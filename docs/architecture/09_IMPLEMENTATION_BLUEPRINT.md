@@ -114,6 +114,14 @@ For vectorbt, specify synthetic paths with known entries, exits, fees, slippage,
 
 For Hermes, verify permitted-tool-only operation, immutable session context, profile isolation, provenance-preserving retrieval and suppression/routing of material automatic skill or memory changes. For Harness2 patterns, demonstrate that proposer/composer cannot reach final validation data or scores through files, tools or network. All probes remain unexecuted in this task.
 
+The [atomic batch commitment](../../trading_researcher/EVALUATION_POLICY.md#atomic-batch-commitment-and-admission-boundary)
+now supplies the operator/registry transaction substrate for IF-05: durable inputs,
+atomic allocation/trials/manifest, conflict/idempotency and retained crash recovery.
+Its production admission resolver remains closed. Synthetic host-admission
+substitution qualifies transaction behavior only; applicable calibration,
+information, scientific selection/data acceptance, corroboration and scientific
+execution/release remain required. See the existing progress register for checks.
+
 ## Build boundaries
 
 ### Binding generator feedback and assessment extension

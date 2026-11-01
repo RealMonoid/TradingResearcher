@@ -68,7 +68,20 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
   raw/context packet and actual reviewer require fresh counting and admission; fit is unproven. USD 0.574585
   remains under shared USD 5, ordinary 80k stays unchanged, and the original-A auxiliary allocation is on hold under the approved core priority.
 
-- **Next action:** Implement the missing atomic scientific freeze/allocation transaction through the existing registry and operator caller under D078/D082 and IF-05. Inspect the actual request/plan/certification/data-use/dependency interfaces and existing fixed acceptance fixtures first; cover complete immutable input closure, idempotency/conflicts, concurrent reservation, crash rollback, retained attempts and exposure. Independently check actual integration and failure paths with synthetic inputs. Keep scientific use denied until all applicable admission/calibration/information gates pass. Retain full package 3/4 exits; ask promptly with a researched proposal for any unresolved user decision. Original-A continuation is on hold; no new paid research grant, model call or protected assessment access is authorized.
+- **Scientific-core progress:** the operator/registry atomic transaction substrate now retains full bounded
+  source/runtime/input closure, commits allocation/trials/manifest together, and preserves conflicts,
+  failed attempts and crash recovery. Production stays ADMISSION_GAP; successful software tests substitute
+  only a private host judgment with synthetic records. [Scope and limits](../../trading_researcher/EVALUATION_POLICY.md#atomic-batch-commitment-and-admission-boundary).
+
+- **Checks:** 25 independently authored transaction methods, 3 caller/typed-dependency methods and 38
+  applicable registry/storage/policy/revocation regressions pass; [exact versions, timings and retained
+  failed runs](../reviews/implementation-2026-10-25/progress.json). No full package or scientific pass follows.
+
+- **Next action:** prepare a justified claim-scoped binary nuisance/stress and information profile from
+  permitted development diagnostics, then reuse the existing study/final-calibration controllers under
+  the actual fixed resources. Connect scientific selection/data/exposure admission under packages 3/4. No existing exploratory/private-plan qualification is a
+  scientific certificate. Research required user decisions promptly; preserve the original-A hold,
+  complete package exits, no new spending and no protected assessment access.
 
 - **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a 24-pass
   / 1-error review exposing noncanonical-object rejection persistence are retained. Final v2 omits
@@ -99,7 +112,7 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
   requested/reported model, catalog 6.1, UTC, prompts, exact tokens and conservative charges. Immutable
   snapshot, count-service billing and invoices remain unknown; construction counters are separate.
 
-- **Open boundaries:** full scientific admission, information/calibration, protected assessment, atomic
+- **Open boundaries:** full scientific admission, information/calibration, protected assessment, scientifically admitted
   freeze, mixed-provider live cycle, economic validation and reporting/delivery remain incomplete. Compact
   docs grant no new authority.
 

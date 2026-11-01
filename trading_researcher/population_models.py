@@ -32,6 +32,9 @@ def specification(mask_mean_block, persistence, common_share, rationale):
 
 
 def validate_specification(spec):
+    if type(spec) is dict and spec.get('schema') == 'lag-linked-second-order-spec/1':
+        from .second_order_population import validate_specification as validate_second
+        return validate_second(spec)
     if type(spec) is dict and spec.get('schema') == 'lag-linked-binary-spec/1':
         from .lag_population import validate_specification as validate_linked
         return validate_linked(spec)
@@ -49,6 +52,9 @@ def validate_specification(spec):
 
 def build_model(report, diagnostics, spec, effects):
     """Bind empirical q,w and all declared effects; never fit to power outcomes."""
+    if type(spec) is dict and spec.get('schema') == 'lag-linked-second-order-spec/1':
+        from .second_order_population import build_model as build_second
+        return build_second(report, diagnostics, spec, effects)
     if type(spec) is dict and spec.get('schema') == 'lag-linked-binary-spec/1':
         from .lag_population import build_model as build_linked
         return build_linked(report, diagnostics, spec, effects)
@@ -135,6 +141,9 @@ def generate_world(report, model, scenario, time_rows, seed):
     rows have the same stationary mask marginal, so this independent calendar
     restriction leaves population q,w unchanged; realized ratios still vary.
     """
+    if type(model) is dict and model.get('schema') == 'lag-linked-second-order-model/1':
+        from .second_order_population import generate_world as generate_second
+        return generate_second(report, model, scenario, time_rows, seed)
     if type(model) is dict and model.get('schema') == 'lag-linked-binary-model/1':
         from .lag_population import generate_world as generate_linked
         return generate_linked(report, model, scenario, time_rows, seed)

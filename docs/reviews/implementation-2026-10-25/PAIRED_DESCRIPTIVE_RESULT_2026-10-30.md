@@ -1,0 +1,19 @@
+# Original BTC/ETH development result
+
+Date: October 30, 2026. Status: **COMPUTED_UNCALIBRATED; INFORMATION_GAP/no_conditioned_cases.**
+
+The retained original idea asks whether ETH subsequently catches up with BTC after a common short selloff followed by stronger immediate BTC recovery. The model's original thresholds, complete-input requirements, one-hour relative logarithmic outcome, equal timestamp weights and January–March 2023 scope remain unchanged. This is a descriptive comparison of historical market observations, not a trading policy.
+
+The [exact result and evidence identities](paired-format-correction-result-2026-10-30.json) contain 8,640 paired decision timestamps: the complete condition is true at zero, false at 8,627 and unknown at 13. There are 8,625 observed outcomes, ten outcomes unavailable because of missing inputs and five boundary-censored outcomes. Unknown conditions with observed outcomes remain in the whole-scope denominator, as specified. No April data or protected assessment outcomes were used.
+
+With zero condition-true observations, the conditional mean and conditional-minus-scope effect are undefined. The result neither supports nor falsifies the original hypothesis. Resampling these same observations cannot supply a missing conditional population. The report does not select new thresholds or dates to rescue the claim.
+
+Technical evidence comprises a complete model-generated formalization, a separate SATISFIED independent meaning review, 91 candidate-bound synthetic scenarios covering 1,092 cases, qualified original-data execution, a separate process replay and an independent original-formula audit of all 8,640 actual cases. A further [read-only audit](paired-result-independent-audit-2026-10-30.json) independently checks the retained case bytes, counts, outward numerical bounds, source bindings, usage and closed grants. Its first exact-mean comparison was an audit expectation error: the adopted arithmetic rounds outward. That failed assertion and its correction to enclosure containment remain recorded; no calculated result was changed.
+
+The earlier D093 unsupported-language response and D094 complete response with an incorrectly shaped horizon field remain retained. D095 produced its own new complete candidate; no manually corrected draft was promoted. The new condition tree is grouped differently from the rejected draft, while independent meaning, synthetic and actual-formula checks support the original semantics.
+
+The D095 model continuation took 281.642 seconds. Actual market execution together with separate replay and original-formula audit took 46.058 seconds; this excludes earlier development, feature qualification and synthetic composition checks. These are measured timings for this one run, not a general latency or acceleration guarantee.
+
+The two new calls used 70,063 input and 18,249 output tokens, totaling 88,312. Their conservative cost bound is USD 0.3576475. The shared ledger now records 48 settled calls, 968,991 tokens and USD 3.54477, leaving USD 1.45523 of the original USD 5 cap. The later discretionary-spending instruction does not reset prior charges; the existing dollar cap is retained without assuming euro/dollar equivalence. [Per-call usage](paired-format-correction-usage-2026-10-30.json) records requested and reported `gpt-6.1-sol`, catalog version 6.1, unknown immutable snapshot identity, and admission/settlement dates and times in UTC. The conservative ledger is not a verified provider invoice.
+
+The full framework goal remains incomplete. Scientific data/exposure admission, calibration and freeze, protected assessment, live mixed-provider research, and economic/policy evaluation require their own evidence. Follow the sole implementation plan for the next authorized work; this report is an observation, not a competing plan or new scientific contract.

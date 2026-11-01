@@ -1,0 +1,20 @@
+{
+  "changed_scope": [
+    "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md",
+    "docs/architecture/02_DECISION_REGISTER.md",
+    "docs/architecture/ARCHITECTURE_REGISTER.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/architecture/CURRENT_STATE.md"
+  ],
+  "before_sha256": {
+    "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "ba2f585093ce71fe6bcc605112a7af0f47c9b77039a45fad8683064889d7a031",
+    "docs/architecture/02_DECISION_REGISTER.md": "1e6bf93ef32d27d9accdc78e9cb8f7362af2ab786cd63e1883e86479ff2f6e89",
+    "docs/architecture/ARCHITECTURE_REGISTER.json": "e2e19dd1804f1550ee75f23744785b62160f75eb4c254230538faf78f0f61f6b",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "6c9494ff6eec963247a8f0730b2bf173ee69d70891e0bd302fd04bb91239a6bd",
+    "docs/architecture/CURRENT_STATE.md": "d4b6e4a4c55da41cf1a3053f214832fd3c3c06e575143e98c6639172119646de"
+  },
+  "protected_sha256": {
+    "docs/architecture/25_METACOGNITION_DUAL_SPACE_INQUIRY.md": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf",
+    "docs/reviews/DIAGNOSIS_QUALITY_LITERATURE_REVIEW_2026-11-01.md": "bd8636d35b3353826adcd27c67781217eaceaa64e33d08b0fad4b421e0c49a7e"
+  }
+}

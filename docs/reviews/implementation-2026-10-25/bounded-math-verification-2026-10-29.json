@@ -1,0 +1,440 @@
+{
+  "schema": "bounded-math-verification/1",
+  "recorded_at_utc": "2026-10-29T02:25:19.576219+00:00",
+  "changed_implementation_files": [
+    "trading_researcher/bounded_math.py",
+    "trading_researcher/bounded_outcomes.py",
+    "trading_researcher/outcomes.py",
+    "trading_researcher/certification.py",
+    "trading_researcher/binding.py",
+    "trading_researcher/formalization.py",
+    "trading_researcher/evaluation_plans.py",
+    "trading_researcher/auxiliary.py"
+  ],
+  "test_results": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bounded_math.py -q",
+      "tests": 22,
+      "exit_code": 0,
+      "seconds": null,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bounded_outcomes.py -q",
+      "tests": 24,
+      "exit_code": 0,
+      "seconds": null,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_outcomes.py -q",
+      "tests": 12,
+      "exit_code": 0,
+      "seconds": null,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_formalization.py -q",
+      "tests": 13,
+      "exit_code": 0,
+      "seconds": 4.841,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_certification.py -q",
+      "tests": 21,
+      "exit_code": 0,
+      "seconds": 27.626,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bounded_binding.py -q",
+      "tests": 6,
+      "exit_code": 0,
+      "seconds": 101.862,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_binding.py -q",
+      "tests": 5,
+      "exit_code": 0,
+      "seconds": 118.181,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bounded_scientific_gate.py -q",
+      "tests": 3,
+      "exit_code": 0,
+      "seconds": 0.001,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_bounded_auxiliary_contract.py -q",
+      "tests": 3,
+      "exit_code": 0,
+      "seconds": 0.017,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_meaning_reviews.py -q",
+      "tests": 8,
+      "exit_code": 0,
+      "seconds": 5.778,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_evaluation_plans.py -q",
+      "tests": 5,
+      "exit_code": 0,
+      "seconds": 97.296,
+      "qualification": "Unknown timing is null; prior successful checks are not reruns after unrelated edits."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_three_valued_validity_gate.py -q",
+      "tests": 8,
+      "exit_code": 0,
+      "seconds": 0.356
+    }
+  ],
+  "certificate": {
+    "profile": "reference-computation/2",
+    "id": "9c05de17b873487975ff9647a65d88a186bf9f0f2a57afd9876a145ca4e20b6e",
+    "status": "CERTIFIED",
+    "expression_cases": 112,
+    "outcome_cases": 31,
+    "supplemental_tests": 62,
+    "capability_probes": 9
+  },
+  "issue_timeline": [
+    {
+      "stage": "independent primitive checks",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "issue": "Parameter-path ordering and missing bounded-report request handling failed fixed independent expectations.",
+      "resolution": "Preserve legacy preorder and raise a typed validation gap; unchanged independent suites pass."
+    },
+    {
+      "stage": "formalization structural admission",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "issue": "Malformed None/list/string programs raised AttributeError rather than retaining the candidate.",
+      "before": {
+        "tests": 13,
+        "subtest_errors": 9,
+        "exit_code": 1
+      },
+      "after": {
+        "tests": 13,
+        "exit_code": 0,
+        "seconds": 4.841
+      },
+      "resolution": "Require dict before reading the optional schema; keep malformed inputs as retained language gaps."
+    },
+    {
+      "stage": "scientific-plan input boundary",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "issue": "Bounded targets and diagnostics reached snapshot/blob access before explicit scalar-plan rejection.",
+      "before": {
+        "tests": 3,
+        "errors": 2,
+        "exit_code": 1
+      },
+      "after": {
+        "tests": 3,
+        "exit_code": 0
+      },
+      "resolution": "Deny each bounded schema before the respective data access."
+    },
+    {
+      "stage": "independent meaning-review packet",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "issue": "AST2 review lacked exact approved operator semantics; missing/changed document was not rejected.",
+      "before": {
+        "tests": 3,
+        "failures": 3,
+        "exit_code": 1
+      },
+      "after": {
+        "tests": 3,
+        "exit_code": 0
+      },
+      "resolution": "Add AST2-only pinned contract text/hash and typed missing/mismatch rejection. Legacy packet unchanged."
+    },
+    {
+      "stage": "legacy plan regression setup",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "issue": "Feature certification observed auxiliary.py changing during validation; INPUT_OR_REPORT_CHANGED_DURING_VALIDATION. Fixture cleanup also reported unclosed registry handles.",
+      "before": {
+        "setUpClass_errors": 1,
+        "exit_code": 1,
+        "seconds": 76.521
+      },
+      "after": {
+        "tests": 5,
+        "exit_code": 0,
+        "seconds": 97.296
+      },
+      "resolution": "Finish source edits and rerun unchanged with stable runtime bytes. No weakening of the currency check; no general cleanup fix claimed."
+    },
+    {
+      "stage": "harness review before dispatch",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "issue": "Wrong operation/route field and a deep-copied reviewer configuration would fail before dispatch.",
+      "resolution": "Use execute_development, restart with the next exact route, replace copied frozen settings and assert identical counted wire payload. Fixed before paid calls."
+    },
+    {
+      "stage": "checkpoint publishing helper",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "issue": "Initial record_checkpoint.py read used platform encoding and raised UnicodeDecodeError after a partial registry-document write.",
+      "resolution": "Preserved first helper, selected UTF-8 and idempotent exact D089 identity; corrected run exit 0."
+    },
+    {
+      "stage": "formalization",
+      "started_at_utc": "2026-10-29T02:18:47.284431+00:00",
+      "ended_at_utc": "2026-10-29T02:19:02.053575+00:00",
+      "issue": "No executable candidate and no explanatory semantic report returned.",
+      "resolution": "Retain all original bytes and gap; no outcome execution or automatic new epoch.",
+      "paid_call": {
+        "stage": "formalization",
+        "dispatch_id": "controller-37391aadefe3437ab028ddf7a440ee8b:0",
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "admitted_at_utc": "2026-10-29T02:18:48Z",
+        "settled_at_utc": "2026-10-29T02:19:01Z",
+        "usage": {
+          "cost_units": 64777500,
+          "input_tokens": 24587,
+          "output_tokens": 331
+        },
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 308
+        },
+        "charged_nano_usd": 64777500
+      }
+    },
+    {
+      "stage": "meaning_review",
+      "started_at_utc": "2026-10-29T02:19:06.325852+00:00",
+      "ended_at_utc": "2026-10-29T02:19:17.251507+00:00",
+      "issue": "Independent reviewer cannot establish fidelity without a candidate.",
+      "resolution": "Retain all original bytes and gap; no outcome execution or automatic new epoch.",
+      "paid_call": {
+        "stage": "meaning_review",
+        "dispatch_id": "controller-bc91f039bb79444db228973ba2e92440:0",
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "admitted_at_utc": "2026-10-29T02:19:07Z",
+        "settled_at_utc": "2026-10-29T02:19:16Z",
+        "usage": {
+          "cost_units": 46067500,
+          "input_tokens": 16795,
+          "output_tokens": 408
+        },
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 26
+        },
+        "charged_nano_usd": 46067500
+      }
+    },
+    {
+      "stage": "correction harness preparation before calls",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "issue": "A broad worker-name replacement collided with the longer job name; preparation assertion exited 1 before a new epoch or paid call.",
+      "resolution": "Use exact quoted worker identifiers; preserved original attempt; corrected helper and prepare commands exited 0."
+    }
+  ],
+  "documentation_gates": [
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": {
+        "local_links": 817,
+        "source_files": 5,
+        "decisions": 89,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+        "git_diff_check_exit": 0,
+        "later_approved_changed_paths": {
+          "REVIEWING.md": "D086 / agent-inquiry/1.0",
+          ".gitattributes": "October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes"
+        },
+        "adoption_baseline_files": 63,
+        "preexisting_files_unchanged": 44,
+        "archived_documents_exact": 20,
+        "preserved_preapproval_decisions": 70,
+        "full_historical_definition_review_generator_texts": 3,
+        "approved_policy_sections_exact_except_status_words": 15,
+        "scoped_open_dispositions_and_acceptance_mappings": 15,
+        "adoption_decision_status_counts_D001_D085": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 63,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        },
+        "decision_status_counts": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 67,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        }
+      },
+      "observed_at_utc": "2026-10-29T02:37:07.460660+00:00"
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "summary": {
+        "baseline_files": 103,
+        "unchanged_files": 85,
+        "local_document_links": 795
+      },
+      "observed_at_utc": "2026-10-29T02:37:07.720718+00:00"
+    }
+  ],
+  "unverified": [
+    "substantive faithful model formalization",
+    "genuine descriptive result",
+    "scientific calibration/information sufficiency",
+    "economic usefulness",
+    "immutable provider model snapshot",
+    "actual invoice"
+  ],
+  "scientific_readiness": false,
+  "full_objective_complete": false,
+  "final_inspection": {
+    "status": "REPORTING_GAP_CONFIRMED_IN_CONDITION_PATH",
+    "source": "trading_researcher/outcomes.py::_case; trading_researcher/expressions.py::_calculate; trading_researcher/bounded_outcomes.py::materialize_bounded",
+    "finding": "Condition evaluation receives no trace, and only conditioned.value is stored. Complete-window and Boolean missing causes can collapse; outcome traces and state/reason fields already retain some distinct causes.",
+    "warranted_conclusion": "The model identified a real bounded reporting limitation. This is not proof of mathematical inexpressibility or a negative market hypothesis.",
+    "remaining_uncertainty": "Exact minimal reporting contract, overlapping reason counts, distinction between declared invalidity and synthetic unknown literals, and faithfulness of any new diagnostic record remain to be resolved.",
+    "next_action": "Follow execution_plan: assess the smallest descriptive reason-count integration for the exact original ETH reporting requirement. Condition causes are currently discarded; some outcome/boundary causes already exist. Preserve original meaning and old case bytes. No automatic further paid retry, additional operators or calibration/model-family expansion."
+  },
+  "changed_files": [
+    "docs/architecture/02_DECISION_REGISTER.md",
+    "docs/architecture/04_DEFINITIONS.md",
+    "docs/architecture/05_REQUIREMENTS.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md",
+    "docs/architecture/ARCHITECTURE_REGISTER.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/bounded-eth-correction-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/bounded-eth-correction-usage-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/bounded-math-observation-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/bounded-math-usage-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/bounded-math-verification-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/feasibility-design-2026-10-27.json",
+    "docs/reviews/implementation-2026-10-25/feasibility-exploration-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/feasibility-precision-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/feasibility-usage-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "tests/test_bounded_auxiliary_contract.py",
+    "tests/test_bounded_binding.py",
+    "tests/test_bounded_math.py",
+    "tests/test_bounded_outcomes.py",
+    "tests/test_bounded_scientific_gate.py",
+    "tests/test_formalization.py",
+    "tests/test_three_valued_validity_gate.py",
+    "trading_researcher/BOUNDED_MATH.md",
+    "trading_researcher/FORMALIZATION.md",
+    "trading_researcher/auxiliary.py",
+    "trading_researcher/binding.py",
+    "trading_researcher/bounded_math.py",
+    "trading_researcher/bounded_outcomes.py",
+    "trading_researcher/certification.py",
+    "trading_researcher/evaluation_plans.py",
+    "trading_researcher/formalization.py",
+    "trading_researcher/outcomes.py"
+  ],
+  "preserved_unfinished_files": [
+    "tests/test_second_order_population.py",
+    "trading_researcher/family_models.py",
+    "trading_researcher/lag_population.py",
+    "trading_researcher/population_models.py",
+    "trading_researcher/second_order_population.py"
+  ],
+  "file_sha256": {
+    "docs/architecture/02_DECISION_REGISTER.md": "c550709458947b5f9974c2ee365ef17c3d0a77e64e02930a68026de67894b86f",
+    "docs/architecture/04_DEFINITIONS.md": "6a9a55e3d5f1a6ff0c8df9ecdf4fda8fc4f9931ca15d49db8b9ffc68620fa534",
+    "docs/architecture/05_REQUIREMENTS.md": "d1bf09bd3c7fa889d4780c275b87a2ddec40f144329c2df0f7f57e9a06e6037e",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "d9980954d728ba616876c3d79ed93c02856b01e72c41369600e06e23122e28a0",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "f9f2f79e27a474723eed7eb8ee87464c5cece644cc14057e61e5469f7b51ee4a",
+    "docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md": "6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f",
+    "docs/architecture/ARCHITECTURE_REGISTER.json": "c3ff9c96af66de161599ce5d8f1ddcd49df03117f54aee57ec091153a29ddf1a",
+    "docs/architecture/CURRENT_STATE.md": "b839784050e9756c9744857d7f94e1dee7cc8d0ca95967ca371a046f90e9355f",
+    "docs/reviews/implementation-2026-10-25/bounded-eth-correction-2026-10-29.json": "0c40e26fe01f3e156b03a6fde26c884fbc7fb907b796f48e7df4bb718f2ea716",
+    "docs/reviews/implementation-2026-10-25/bounded-eth-correction-usage-2026-10-29.json": "e053b7fc6766d351925a900ab66dc884b1fc040156a7640d75493df063cc2037",
+    "docs/reviews/implementation-2026-10-25/bounded-math-observation-2026-10-29.json": "e931e9a0e0b6e9eec53eb6e5a2ed2fdfdad62b1ca0ad1b7480079dcf6e5f5900",
+    "docs/reviews/implementation-2026-10-25/bounded-math-usage-2026-10-29.json": "9c8af94c0bf78d88af14bbe0fa49f79a3daed3bfc8b1006f6c0a4b0a9afdae86",
+    "docs/reviews/implementation-2026-10-25/feasibility-design-2026-10-27.json": "ed6337d777897b566dcd8fffcdeec42557a6f26d2c241299928e3fc2206e7ea6",
+    "docs/reviews/implementation-2026-10-25/feasibility-exploration-2026-10-29.json": "cfcbfcb6f528d8dc3fdaa4f6b4ce63c706c3d739fc1a114d7d75464e480b01c6",
+    "docs/reviews/implementation-2026-10-25/feasibility-precision-2026-10-29.json": "a43836e135866cfb1ac9628517f624b41edca83f913fa63da7ce21f6507cea57",
+    "docs/reviews/implementation-2026-10-25/feasibility-usage-2026-10-29.json": "266666caae3f15058c120281a0f34e3bc499de42d3404723f9685b9729100763",
+    "docs/reviews/implementation-2026-10-25/progress.json": "0337622875904e260ddeeb52af09d0edd2e3ca3b0c2e61a83442e583af4cf97f",
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py": "6df3505e2c28ed912675af3c4a2672f490b65895ac80031642b32462b1515531",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "4eb796298410a6c4327fa3d6e5c8a2420ab9f0ed5da2834f0d7bf55341a27101",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "11ab15c31c01d953ba2f48ec4fc5fc5bca23b10b95911fc9c915e8b4fc26192d",
+    "tests/test_bounded_auxiliary_contract.py": "ec2cfce67ac6da2e9d2fb31bde09390b8ea6d3359435480335a2d50833fa848f",
+    "tests/test_bounded_binding.py": "8fdc9f1e93b6094bbe4760e06ef9b4c4e24d64a99287241d8659db12493e0770",
+    "tests/test_bounded_math.py": "18ef315b989c908fb3d48f001a19fb7ba678db597d4cce120ed0b28a1af15392",
+    "tests/test_bounded_outcomes.py": "45448d44f7c4cafe2d6ce1c053bb0fb1915bbecda0216862c80c32c24506de94",
+    "tests/test_bounded_scientific_gate.py": "12f939fc1aec062c27e32435d4139189791c6db33ebad7652f34a80d31dc602e",
+    "tests/test_formalization.py": "466897b31572572e10b4f9d1feaa6f91579ea4310b2fed64e0eb59bb2fc99185",
+    "tests/test_three_valued_validity_gate.py": "bfc28723e68af3a69ad3b6ee6c28813250fcea7bed839ed5fd5c4421906d064a",
+    "trading_researcher/BOUNDED_MATH.md": "0a099e9ab1298f190b77d0e8ac645cd123f74da6574efe2a9c17c7763045090b",
+    "trading_researcher/FORMALIZATION.md": "2dddf5eae7f8c6788c34354d995a563f2686cd590298559727b30ed07adc6ac3",
+    "trading_researcher/auxiliary.py": "db8b0077e595301ce3b9e75412c82225ded88938e6bf7e2e3fab754111b0c5a0",
+    "trading_researcher/binding.py": "0648624b9d134e8f9b6a193419c05d96b3904aedb6041c94189419bc8179a4ee",
+    "trading_researcher/bounded_math.py": "162825b3588c882b03f2fc81a2d444546b0b63ee2db5aca757a78bb0f21fea95",
+    "trading_researcher/bounded_outcomes.py": "f7148cbce58a357f7f797092e523f6f5d3f514ccadb5eddab9e581e33a9c5bac",
+    "trading_researcher/certification.py": "cb5823b62e2984864eae397f3de09de9be921714750920ec21ef6727ca7c30aa",
+    "trading_researcher/evaluation_plans.py": "ff84d61d13f08ec8c5a55bc508cc5929d8db3cd30b193fb686f2d052e0c5192a",
+    "trading_researcher/formalization.py": "857d53bc9c5b84a89329b2857e525a011ad01e841171c5dc7adc252309cc7696",
+    "trading_researcher/outcomes.py": "51e5d4575855f72f8d1c413d4decd5aaf19eb2dd7f4326a2fc2699002caec573"
+  }
+}

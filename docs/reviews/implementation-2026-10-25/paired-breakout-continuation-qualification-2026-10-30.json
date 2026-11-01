@@ -1,0 +1,517 @@
+{
+  "schema": "paired-breakout-continuation-qualification/1",
+  "at_utc": "2026-10-30T16:01:55.863436+00:00",
+  "status": "QUALIFIED_RESOURCE_AND_TRANSPORT_IMPLEMENTATION",
+  "authority": "October 30 direct user instruction delegates bounded spending within the original aggregate allowance; no new scientific permission is inferred.",
+  "idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+  "independent_review": {
+    "schema": "independent-paired-breakout-resource-qualification/2",
+    "status": "PASS",
+    "date": "2026-10-30",
+    "scope": "Still-unclaimed second-original allocation resized to 48000/32000 formalization and unchanged76000/4000 independent review, total160000 tokens, USD0.670 slot reservation under USD0.70 cap and original shared USD5.",
+    "production_sources": {
+      "trading_researcher/paired_breakout/budget.py": "54b3f039945f26a3f2973311e246a50bcf7cab8e36ecfb53623fba2aaca01704",
+      "trading_researcher/paired_breakout/dispatch.py": "327dc2bb4764e5a37d6fb74e6109bcd487f212c826d742cebf63070de6dae7b4",
+      "trading_researcher/paired_breakout/research.py": "a5c8888897e989370914900a68b696a0074e5508bdd2721ad5899fcd378b071a",
+      "trading_researcher/paired_breakout/providers.py": "e4a90a0fbc7dd9f51fd619d25578d44885628f317ff9e58d2ea06cb9aab7071f",
+      "trading_researcher/paired_breakout/CONTINUATION.md": "54517881a21ae5955ce48bd23f56b9994393acd60d966285765c4b6dfbbd79b1",
+      "trading_researcher/paired_breakout/host.py": "e1dcebdaeccbc9cb9fbd8efe6d3b905d82a7554f3c6aaab70d8f519eed807f02",
+      "trading_researcher/paired_breakout/composition.py": "bf6651b6b17005f9af964c8709dd4d041593215132b4de1404ea8d1e56b35962",
+      "trading_researcher/paired_breakout/runtime.py": "86a6dde79edd0b2a0f439c7b01e69d9624deea1bd727a2453dbb959f499359d4"
+    },
+    "test_file": "tests/test_paired_breakout_budget.py",
+    "test_sha256": "9c22a1ade23b81476527bdc6f693194bd59aab3ea55ff594b514a232e3c903a4",
+    "previous_evidence": {
+      "qualification": "independent-qualification.json",
+      "qualification_sha256": "6c6dacffb1bb567c8f28030218838a5d057dc0064da8a53c847b54dd3a61444e",
+      "unused_source_preparation_directory": "unused-allocation-600m",
+      "retained_test": "independent-test-before-resize.py",
+      "retained_test_sha256": "60a158153951c563dcc83a92117230d0e846bae938d167493a7d62bad41785a5",
+      "independent_size_evidence": "independent-output-size.json",
+      "independent_size_assessment": "independent-output-assessment.json"
+    },
+    "checks": [
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_budget.py -v",
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "unittest_seconds": 3.832,
+        "command_wall_seconds": 4.8408494,
+        "exit_code": 0,
+        "tool_chunk": "1a83dc"
+      },
+      {
+        "command": "python -B .trf-runtime/paired-breakout-continuation-2026-10-30/independent-resize-delta.py",
+        "exit_code": 0,
+        "command_wall_seconds": 0.383182,
+        "tool_chunk": "9ee918",
+        "finding": "Budget AST is identical to the retained unused draft after reversing exactly two formal input constants, three output constants, the one cost cap and exact specification hash. Research, dispatch and provider modules are byte-identical to that draft. The specification diff changes only resources and their sizing rationale."
+      }
+    ],
+    "independent_test_change": "Only the selected synthetic profile/route input-output limits, cost cap, slot cost and exact admissible/over-limit numeric expectations changed. Authentication, prior-grant closure, role/prompt/packet integrity, source-currentness, concurrency, rollback, reservation fencing, revocation, legacy delegation and invocation/settlement assertions are unchanged.",
+    "review_findings": [
+      "All three earlier grants must remain consumed and revoked. The shared spend ledger and exact single-use approval identity are not reset.",
+      "The two slots remain sequential and nonrecyclable, each80000 tokens. Formalization reservation440000000 plus review230000000 equals670000000 nanoUSD, below the700000000 cap.",
+      "Pending/unknown spending and insufficient remaining shared USD5 allowance still fail closed.",
+      "Real registry rollback after external claim preserves permanent consumption; simultaneous claims have one winner; stale/cross-registry inventories cannot obtain new slots.",
+      "Full original prompt, high formalizer reasoning, independent low-reasoning reviewer, fixed model, current source closure and exact owned packet remain required.",
+      "Controller sources are captured before mocked transport and compared before result usability. Source failure after response retains settlement but marks the response unusable.",
+      "Four copied epoch methods and controller invocation controls remain equivalent under the previously declared narrow import/source changes.",
+      "The private runner's revised profile setup preserves the old complete prompt/model/reasoning and changes only formal input/output allocation and epoch cost/output bounds; it selects the separately pinned v2 qualification and preparation."
+    ],
+    "fixture_qualification": {
+      "budget_unit_tests": "Real temporary shared SQLite money ledger and registry call inventory; explicitly substituted source qualification/source identity/full packet construction.",
+      "actual_broker_rollback": "Real authenticated epoch RPC, contexts, external claim and registry transaction rollback; only raw feature qualification and synthetic selected idea identity substituted.",
+      "actual_controller_invocation": "Real temporary jobs, leases, complete requests, invocation records and usage settlement; mocked network transport only. No actual model response or model-quality claim."
+    },
+    "limits": [
+      "No production registry, shared real spend ledger, market rows, secrets or provider API were accessed or changed by this independent review.",
+      "The output-size analysis is a bounded illustration, not tokenization, a completion guarantee or a model-authored candidate.",
+      "Actual complete formalizer and later reviewer inputs must still fit their separately frozen slots; oversize, incomplete or semantically unsupported results remain retained gaps.",
+      "The revised grant was described by the parent as unclaimed. This review did not independently inspect the production ledger to confirm its state.",
+      "These software checks create no scientific validity, profitability, independent historical evidence, protected assessment, live trading or capital authority."
+    ],
+    "conclusion": "No substantiated resource/security objection found to the exact revised implementation. Continue only through its unchanged admission, source, accounting and independent semantic gates.",
+    "scientific_readiness": false
+  },
+  "initial_unused_allocation_review": {
+    "schema": "independent-paired-breakout-resource-qualification/1",
+    "status": "PASS",
+    "date": "2026-10-30",
+    "scope": "Exact tested 160000-token, two-call, USD0.60 second-original resource policy and source-bound controller dispatch; offline engineering checks only.",
+    "production_sources": {
+      "trading_researcher/paired_breakout/budget.py": "2dc192e65c23b5c0eaf43eb79ea3ed9b52917d2f61d0771a656f5298493e365c",
+      "trading_researcher/paired_breakout/dispatch.py": "327dc2bb4764e5a37d6fb74e6109bcd487f212c826d742cebf63070de6dae7b4",
+      "trading_researcher/paired_breakout/research.py": "a5c8888897e989370914900a68b696a0074e5508bdd2721ad5899fcd378b071a",
+      "trading_researcher/paired_breakout/providers.py": "e4a90a0fbc7dd9f51fd619d25578d44885628f317ff9e58d2ea06cb9aab7071f",
+      "trading_researcher/paired_breakout/CONTINUATION.md": "43a86463ab84e116289479c5d5658f5ec4d2315adf926209b03a5877c139a657",
+      "trading_researcher/paired_breakout/host.py": "e1dcebdaeccbc9cb9fbd8efe6d3b905d82a7554f3c6aaab70d8f519eed807f02",
+      "trading_researcher/paired_breakout/composition.py": "bf6651b6b17005f9af964c8709dd4d041593215132b4de1404ea8d1e56b35962",
+      "trading_researcher/paired_breakout/runtime.py": "86a6dde79edd0b2a0f439c7b01e69d9624deea1bd727a2453dbb959f499359d4"
+    },
+    "test_file": "tests/test_paired_breakout_budget.py",
+    "test_sha256": "60a158153951c563dcc83a92117230d0e846bae938d167493a7d62bad41785a5",
+    "checks": [
+      {
+        "stage": "Observed absent-module RED before implementation",
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_budget.py -v",
+        "tests": 1,
+        "errors": 1,
+        "exit_code": 1,
+        "unittest_seconds": 0.0,
+        "command_wall_seconds": 0.4120549,
+        "tool_chunk": "5eff4d",
+        "error": "ImportError: cannot import name budget from trading_researcher.paired_breakout"
+      },
+      {
+        "stage": "First completed suite; one test-spy binding mismatch, not a runtime defect",
+        "tests": 13,
+        "failures": 1,
+        "errors": 0,
+        "exit_code": 1,
+        "unittest_seconds": 3.421,
+        "tool_chunk": "517eab",
+        "correction": "The explicit FeedbackBudgetBroker._research_spec_check(self,spec) call includes self in the patched class-method spy. Adjusted only that assertion to its actual Python binding; no authorization expectation weakened."
+      },
+      {
+        "stage": "Final complete independent suite including real registry rollback",
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_budget.py -v",
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "unittest_seconds": 3.979,
+        "command_wall_seconds": 4.9970257,
+        "exit_code": 0,
+        "tool_chunk": "306650"
+      }
+    ],
+    "boundaries_checked": [
+      "Exact retained second idea and unchanged complete formalizer/reviewer prompts, role settings and paired contract.",
+      "All D093/D094/D095 grants must be present, consumed and revoked; old historical rows remain unchanged.",
+      "Two ordered nonrecyclable slots: 62000+18000 and 76000+4000 tokens; USD0.335+USD0.230 maximum slot reservations, each within80000 tokens.",
+      "USD0.60 continuation cap inside the unchanged aggregate USD5; pending or unknown money and insufficient remaining allowance deny admission.",
+      "Real SQLite simultaneous claims permit exactly one winner; duplicate, different registry, reopened ledger and stale call inventory cannot reset the external fence.",
+      "Actual Broker epoch transaction failure after external claim rolls back the registry epoch but preserves the consumed external grant and denies recreation.",
+      "Operator-only creation/revocation, no discovery or retry stage, current source and protected-ancestry guards, exact owned packet comparison and valid completed same-epoch review target.",
+      "Four copied epoch methods are AST-identical after only relative-import and dispatch-module normalization.",
+      "Controller invocation method is AST-identical after only two source-map extensions and widening the post-response source-check exception handling to OSError/Denied/Invalid.",
+      "Actual owned offline invocation captures all new source modules before mocked transport and preserves idempotent acknowledgement.",
+      "Post-response source drift or disappearance settles usage and retains the response as unusable; no scientific readiness is granted.",
+      "Old policy routing delegates unchanged; default old brokers receive no new resource policy."
+    ],
+    "surrogates_and_limits": [
+      "Budget unit fixtures use genuine temporary spend ledgers and SQLite inventories, with explicit synthetic source qualification, source identity and complete packet builders.",
+      "Actual Broker rollback fixture substitutes only the selected synthetic idea identity and raw feature qualification; real authentication, contexts, transaction rollback, external claim and persistent denial remain active.",
+      "Controller integration tests use real temporary broker/jobs/leases/requests/invocation records/settlement with mocked network transport only. They do not prove a real provider response or model comprehension.",
+      "No production registry, real shared spend ledger, market data, secret or provider API was accessed or changed by this independent review.",
+      "Finite software tests do not guarantee successful output completion within the resource slots; full input counting and fail-closed runtime limits remain mandatory.",
+      "No scientific meaning, statistical validity, profitability, protected assessment or capital authority is created.",
+      "Any later allocation or production-source change falls outside these exact pinned test results and requires a separately recorded affected check."
+    ],
+    "conclusion": "No substantiated resource/security blocker found for the exact tested implementation. The separate output-size investigation is a feasibility estimate, not an admission or quality guarantee.",
+    "scientific_readiness": false
+  },
+  "independent_output_size": {
+    "schema": "independent-output-size-observation/1",
+    "status": "OFFLINE_SIZING_ONLY",
+    "source_sha256": "6b785a8378f1ff4457aef5f004538a2af8eb6f406e5e0eedd8763b265fdaf89e",
+    "old_actual": {
+      "candidate_compact_utf8_bytes": 31174,
+      "parameter_origins_count": 59,
+      "parameter_origins_compact_utf8_bytes": 17320,
+      "feature_refs_count": 8,
+      "scope": {
+        "nodes": 1,
+        "depth_levels": 1,
+        "compact_utf8_bytes": 58,
+        "numeric_literal_parameter_occurrences": 0,
+        "bar_parameter_occurrences": 0,
+        "operators": {
+          "literal": 1
+        }
+      },
+      "condition": {
+        "nodes": 224,
+        "depth_levels": 11,
+        "compact_utf8_bytes": 11658,
+        "numeric_literal_parameter_occurrences": 44,
+        "bar_parameter_occurrences": 6,
+        "operators": {
+          "or": 1,
+          "and": 47,
+          "literal": 45,
+          "not": 1,
+          "lag": 6,
+          "le": 14,
+          "feature_at": 64,
+          "ge": 10,
+          "gt": 24,
+          "div": 8,
+          "sub": 4
+        }
+      },
+      "outcome": {
+        "nodes": 15,
+        "depth_levels": 6,
+        "compact_utf8_bytes": 668,
+        "numeric_literal_parameter_occurrences": 1,
+        "bar_parameter_occurrences": 4,
+        "operators": {
+          "mul": 1,
+          "sub": 1,
+          "ln": 2,
+          "div": 2,
+          "lag": 4,
+          "feature_at": 4,
+          "literal": 1
+        }
+      },
+      "candidate_without_parameter_origins_bytes": 13833,
+      "parameter_occurrences_in_programs": 55
+    },
+    "new_analysis_fixture": {
+      "candidate_compact_utf8_bytes": 13443,
+      "parameter_origins_count": 0,
+      "parameter_origins_compact_utf8_bytes": 2,
+      "feature_refs_count": 6,
+      "scope": {
+        "nodes": 1,
+        "depth_levels": 1,
+        "compact_utf8_bytes": 58,
+        "numeric_literal_parameter_occurrences": 0,
+        "bar_parameter_occurrences": 0,
+        "operators": {
+          "literal": 1
+        }
+      },
+      "condition": {
+        "nodes": 230,
+        "depth_levels": 12,
+        "compact_utf8_bytes": 11384,
+        "numeric_literal_parameter_occurrences": 20,
+        "bar_parameter_occurrences": 41,
+        "operators": {
+          "lag": 37,
+          "eq": 1,
+          "gt": 1,
+          "literal": 20,
+          "add": 3,
+          "div": 4,
+          "feature_at": 75,
+          "trailing_mean": 4,
+          "and": 18,
+          "or": 15,
+          "le": 17,
+          "mul": 18,
+          "ge": 17
+        }
+      },
+      "outcome": {
+        "nodes": 15,
+        "depth_levels": 6,
+        "compact_utf8_bytes": 668,
+        "numeric_literal_parameter_occurrences": 1,
+        "bar_parameter_occurrences": 4,
+        "operators": {
+          "mul": 1,
+          "sub": 1,
+          "ln": 2,
+          "div": 2,
+          "lag": 4,
+          "feature_at": 4,
+          "literal": 1
+        }
+      },
+      "candidate_without_parameter_origins_bytes": 13420,
+      "parameter_occurrences_in_programs": 66
+    },
+    "old_semantic_report": {
+      "keys": [
+        "differences",
+        "segments",
+        "status"
+      ],
+      "compact_utf8_bytes": 17823
+    },
+    "old_complete_output_compact_utf8_bytes": 49047,
+    "old_actual_tokens": {
+      "input": 28997,
+      "output": 17151,
+      "reasoning": 3496,
+      "nonreasoning_output_difference": 13655,
+      "unused_18000_cap": 849
+    },
+    "limits": [
+      "The new tree is an analysis fixture, never accepted H_exec or a model-output forecast.",
+      "Its parameter_origins are intentionally empty and it has no model semantic_report; it cannot be compared as a complete response.",
+      "Compact byte counts are not token counts; output tokenization and reasoning lengths remain unknown.",
+      "Finite shape comparison cannot guarantee completion under any output cap."
+    ]
+  },
+  "independent_output_assessment": {
+    "schema": "independent-output-resource-assessment/1",
+    "status": "BOUNDED_FEASIBILITY_ESTIMATE",
+    "evidence": ".trf-runtime/paired-breakout-continuation-2026-10-30/independent-output-size.json",
+    "finding": "The proposed condition's AST is comparable in compact size, but the prior successful formalization had only 849 output tokens of headroom and the new witness requires more individual parameter-origin entries. An 18000-token output cap is practicable in principle but fragile.",
+    "observed": {
+      "old_condition_nodes": 224,
+      "new_analysis_condition_nodes": 230,
+      "old_condition_compact_bytes": 11658,
+      "new_analysis_condition_compact_bytes": 11384,
+      "old_program_parameter_occurrences": 55,
+      "new_analysis_program_parameter_occurrences": 66,
+      "old_parameter_origin_entries": 59,
+      "old_parameter_origin_bytes": 17320,
+      "old_semantic_report_bytes": 17823,
+      "old_full_compact_output_bytes": 49047,
+      "old_output_tokens": 17151,
+      "old_reasoning_tokens": 3496,
+      "old_unused_output_tokens": 849
+    },
+    "illustration_not_prediction": {
+      "assumptions": [
+        "Use the new analysis tree only as a size witness, never as accepted H_exec or a proposed model response.",
+        "Retain the old four non-program origin entries, giving 70 rather than 59 total entries.",
+        "Keep the old average compact bytes per origin and the old semantic-report size.",
+        "Use the old nonreasoning tokens per compact output byte and keep reasoning at 3496 tokens."
+      ],
+      "approximate_net_extra_bytes": 2816,
+      "approximate_full_output_size_increase_percent": 5.7,
+      "approximate_total_output_tokens": 17935,
+      "qualification": "This illustration nearly exhausts the old cap, but is not tokenizer measurement, an upper bound, a lower bound or a probabilistic completion forecast."
+    },
+    "resource_disposition_opinion": "Reallocating the unchanged 80000-token formalization slot to 48000 input and 32000 output is a defensible precaution under the stated delegated budget. At the parent's measured full input bound of29083 it retains18917 input tokens of room. The proposed total160000-token/670000000-nanoUSD slot reservation and700000000-nanoUSD cap preserve the per-call and original shared USD5 bounds. Exact32000 necessity is not established and completion is not guaranteed.",
+    "requirements_preserved": [
+      "Keep model, high reasoning, complete prompt and source packet unchanged.",
+      "Keep the independent reviewer and all semantic/source/execution gates.",
+      "Preserve the unused USD0.60 preparation and exact prior qualification as historical evidence; any changed allocation needs matching frozen config and affected tests before claim.",
+      "No truncation, hand repair, output substitution or old grant reset."
+    ],
+    "not_performed": [
+      "Provider token count by this reviewer",
+      "Inference",
+      "Market data read",
+      "Registry mutation",
+      "Accepted candidate creation"
+    ],
+    "scientific_readiness": false
+  },
+  "root_checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_paired_breakout_budget.py -v",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "seconds": 3.87,
+      "exit_code": 0,
+      "tool_chunk": "f6a50e"
+    },
+    {
+      "command": "python -B .trf-runtime/paired-breakout-continuation-2026-10-30/check_static.py",
+      "exit_code": 0,
+      "tool_chunk": "13cd49",
+      "scope": "Four unchanged control-flow ASTs, bounded provider-source delta, exact slot arithmetic, unchanged 83 top-level modules."
+    },
+    {
+      "command": "python -B .trf-runtime/paired-format-correction-2026-10-30/check_feedback_sources.py",
+      "exit_code": 0,
+      "tool_chunk": "a1fe46",
+      "scope": "Unchanged feature/numerical source closures and legacy feedback helpers."
+    },
+    {
+      "command": "python -B .trf-runtime/paired-breakout-continuation-2026-10-30/continue.py prepare",
+      "exit_code": 0,
+      "tool_chunk": "7ce7e9",
+      "scope": "Actual current source/feature qualification, original release, complete input count, no paid model call."
+    }
+  ],
+  "preparation_failure_retained": {
+    "failure": "First preparation denied the unreleased second-perspective work product before context creation or a provider call.",
+    "correction": "Release the entire already-completed original discovery batch to epoch124 using the existing operator release API.",
+    "release": {
+      "at_utc": "2026-10-30T15:49:11.845403+00:00",
+      "batch_id": "41caf4bf3c8c475f9301182cd61fe41c",
+      "release": {
+        "artifact_ids": [
+          "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+          "c2cde48a782ff2e6711034301fc69e697a01e8318b211183bc05c273817708dc"
+        ],
+        "epoch": 124
+      },
+      "qualification": "Release of complete already-closed original discovery batch; no new model call or scientific acceptance."
+    }
+  },
+  "preflight": {
+    "count": {
+      "counted_input_tokens": 28955,
+      "input_bound": 29083,
+      "wire_sha256": "14065e3e516564b6f24a2d52ef68fa3ab03103eb5ec8ecc0aa0a8fca31be3775",
+      "transport_request_id": "req_d25f2ef344cb4384a16e9b83a8f00c1c",
+      "observed_at_utc": "2026-10-30T15:57:12.908199+00:00",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "qualification": "Count-only request; no inference or invoice."
+    },
+    "complete_path_allocation": {
+      "formalization": {
+        "input": 48000,
+        "output": 32000,
+        "nano": 440000000
+      },
+      "review": {
+        "input": 76000,
+        "output": 4000,
+        "nano": 230000000
+      },
+      "tokens": 160000,
+      "nano": 670000000,
+      "review_input_status": "Exact target does not exist before formalization; count the complete target and all sources before dispatch. Oversize ends with a retained gap; no truncation."
+    },
+    "epoch_token_cap": 160000,
+    "epoch_cost_cap_nano": 700000000,
+    "max_calls": 2,
+    "max_seconds": 1800,
+    "per_call_seconds": 360,
+    "retry_count": 0,
+    "paired_certificate_id": "e07f559ea0fb3235a426e1db669e9b79e72dddccf25161f2de83f9ffa6e41dd8",
+    "feature_certificate_id": "f4e0088e92279bfd540d35cf7e0165809224ca484a826207ed6d997fbb9da218",
+    "tariff": {
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "checked_utc_date": "2026-10-30",
+      "input_usd_per_million": "2.00",
+      "cache_write_usd_per_million": "2.50",
+      "output_usd_per_million": "10.00",
+      "input_upper_nano_per_token": 2500,
+      "output_nano_per_token": 10000,
+      "invoice_verified": false
+    },
+    "usage_before": {
+      "totals": {
+        "calls": 48,
+        "known_usage_calls": 48,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 819352,
+        "known_output_tokens": 149639,
+        "known_total_tokens": 968991,
+        "exact_total_tokens": 968991,
+        "known_cached_input_tokens": 20971,
+        "cached_detail_calls": 48,
+        "exact_cached_input_tokens": 20971,
+        "known_reasoning_output_tokens": 42022,
+        "reasoning_detail_calls": 48,
+        "exact_reasoning_output_tokens": 42022
+      },
+      "money": {
+        "currency": "USD",
+        "units_per_usd": 1000000000,
+        "cap_nano": 5000000000,
+        "charged_nano": 3544770000,
+        "available_nano": 1455230000,
+        "halted": false
+      }
+    },
+    "source_identity": {
+      "docs/architecture/23_PAIRED_DEVELOPMENT.md": "5452da26300174b729faff0a30881a7ede0522429c57baf0f5d9968d281d994e",
+      "docs/architecture/24_PAIRED_FORMAT_CORRECTION.md": "42028a29d3553efed746381d46499e577e70c7321114027a6d0a635592e5a9fa",
+      "tests/paired_original_oracle.py": "b18059528214cde32429d10a7f1adb50b217c79ec40dd31ae5cc49e7ee5a1e85",
+      "tests/test_paired_development_adversarial.py": "00fb8dd938d6400a7fd543bff36509da86aa2ca023f99a01bc2fe29fddaa8ff4",
+      "trading_researcher/PAIRED_DEVELOPMENT.md": "14c925ad3996400132c73b8362442665f6c66417ccf94d02865907490bb30c89",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+      "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+      "trading_researcher/bounded_outcomes.py": "82c5003723b0482884f07860d7c43e4109e70e7e28588a9631187b7b1dfdce22",
+      "trading_researcher/certification.py": "a1b554dbb8c42fcc7751f285f4a93064e05cb078ac96e70c90599946262c0ca9",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/controller_providers.py": "c0685f2a1cc82819f985488f1c31b55a220d9b33f3036a083b1d725f72fdb238",
+      "trading_researcher/epoch_budget_dispatch.py": "c8da17c375a49ddd355e21b9b925be4cd7f079905af46c370e0b8dbfd5d510da",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+      "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+      "trading_researcher/paired_broker.py": "7f10f3210f99ccc2bc8e8c1caceb4ec683ff0fd3df484c794f3650a574d14081",
+      "trading_researcher/paired_budget.py": "48c079d7a807b0b7881c67cf820f62bd5e01561d2306ca0f12e53418f1d0193a",
+      "trading_researcher/paired_composition.py": "a3114860fb33e130287d9558b636f7be3ebc3413a67dea8ffb862d27ceed3ce8",
+      "trading_researcher/paired_computation.py": "897ff79604921274845534978aa4ecaadc30f5a454eee1d825ec9d7e35fe5afc",
+      "trading_researcher/paired_correction_budget.py": "8405d8d3b5098aea97a22a8e2264048c6861cf957707d22b8757f872f982400c",
+      "trading_researcher/paired_development.py": "a9a9e47c46ad0f21a125e46bfd33e5e95ac7ee43f866f822105924b91243492b",
+      "trading_researcher/paired_formalization.py": "eed89d13f977789526a80791a49df682f2978c7318fcd10995b4ccd3a93bfe1d",
+      "trading_researcher/paired_research.py": "ad1ad0037506200b262bde9228d54c71d27550e94bed1fe82515d67a9c61718d",
+      "trading_researcher/paired_revocations.py": "02e6a337d0cdf5eab9c783aaa95ab5b580720b6aeab15d2c2d6b3b0302a0ed06",
+      "trading_researcher/paired_runtime.py": "4df771cac32d652add27eba8afec4a84cd92fea0911c791f45621cbd8629c2ae",
+      "tests/paired_breakout_oracle.py": "97e9288a835441ea5e039619b12782972d980eec50861b7b58dfcfe02e32d7d2",
+      "trading_researcher/paired_breakout/__init__.py": "aae53a58da7662a185823aed262656632b3aca13fe7ab760c10cd200651ce4b7",
+      "trading_researcher/paired_breakout/composition.py": "bf6651b6b17005f9af964c8709dd4d041593215132b4de1404ea8d1e56b35962",
+      "trading_researcher/paired_breakout/runtime.py": "86a6dde79edd0b2a0f439c7b01e69d9624deea1bd727a2453dbb959f499359d4",
+      "trading_researcher/paired_breakout/host.py": "e1dcebdaeccbc9cb9fbd8efe6d3b905d82a7554f3c6aaab70d8f519eed807f02",
+      "trading_researcher/feedback/paired.py": "9d923031883f621269adf5636e5432553ae8099fd653f0149d79cdbf4324bcd7",
+      "trading_researcher/paired_breakout/budget.py": "54b3f039945f26a3f2973311e246a50bcf7cab8e36ecfb53623fba2aaca01704",
+      "trading_researcher/paired_breakout/dispatch.py": "327dc2bb4764e5a37d6fb74e6109bcd487f212c826d742cebf63070de6dae7b4",
+      "trading_researcher/paired_breakout/providers.py": "e4a90a0fbc7dd9f51fd619d25578d44885628f317ff9e58d2ea06cb9aab7071f",
+      "trading_researcher/paired_breakout/research.py": "a5c8888897e989370914900a68b696a0074e5508bdd2721ad5899fcd378b071a",
+      "trading_researcher/paired_breakout/CONTINUATION.md": "54517881a21ae5955ce48bd23f56b9994393acd60d966285765c4b6dfbbd79b1"
+    }
+  },
+  "private_input_hashes": {
+    "prepared.json": "006c32162ad6890ff9bdf66728ba15d4fb6ee3e05fc76c18b751eda9d2b997c9",
+    "prepared-v2.json": "11425e6439ec2445ccfdf1ed409866b4a3fa1e29f73dd88898c2a240087d9b42",
+    "continue.py": "1b1a2209b4d0c3110399b9c131ef5f67363ecc5543dfb859cad0b99714f047ef",
+    "independent-qualification.json": "6c6dacffb1bb567c8f28030218838a5d057dc0064da8a53c847b54dd3a61444e",
+    "independent-qualification-v2.json": "3987305398a1973ca25753bd991caecfe6edd18179345760e87c08871e422aec"
+  },
+  "unverified": [
+    "Actual model completion and independent meaning judgment are separate subsequent evidence.",
+    "The second actual candidate and full review packet do not exist at preparation; oversized packets stop without truncation.",
+    "Software tests and output-size illustrations do not establish scientific validity, profitability or protected-assessment readiness.",
+    "Conservative spend accounting is not a verified provider invoice; immutable provider snapshot remains unknown."
+  ],
+  "scientific_readiness": false
+}

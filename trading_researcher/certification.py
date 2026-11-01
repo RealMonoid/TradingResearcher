@@ -36,21 +36,82 @@ SCOPE = {'interfaces': ['research-ast/1', 'reference-cases/1', 'reference-contra
          'not_certified': ['supplied_features_or_data', 'semantic_equivalence', 'scientific_evidence',
                            'calibration', 'D087_events', 'capital_authority', 'OS_sandbox']}
 
+BOUNDED_PROFILE = 'reference-computation/2'
+# Independent expectations frozen after the separate D089 conformance review.
+BOUNDED_PINS = {
+    'docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md': '6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f',
+    'tests/test_bounded_math.py': '18ef315b989c908fb3d48f001a19fb7ba678db597d4cce120ed0b28a1af15392',
+    'tests/test_bounded_outcomes.py': '45448d44f7c4cafe2d6ce1c053bb0fb1915bbecda0216862c80c32c24506de94',
+}
+
+DIAGNOSTIC_PROFILE = 'reference-computation/3'
+DIAGNOSTIC_PINS = {
+    'trading_researcher/CASE_DIAGNOSTICS.md': '54917962e900cc637cbe8e78b193f82842929078d65ca5e243f74a7dc855eed5',
+    'tests/test_case_diagnostics.py': '423b1ae4449a9098dc8ba4d671f42d90560ec3dd9649ad8b5f106a7d36a6347a',
+}
+
+REQUIRED_PROFILE = 'reference-computation/4'
+REQUIRED_PINS = {
+    'trading_researcher/REQUIRED_INPUTS.md': '2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c',
+    'tests/test_required_inputs.py': 'aaa9ce55cb52101811b48624ddcd42957ff5050ea53735c407a96194e32a8fc4',
+}
+
+
+def configuration(profile=PROFILE):
+    if profile == REQUIRED_PROFILE:
+        base = configuration(DIAGNOSTIC_PROFILE)
+        return {'files': tuple(sorted(set(base['files']) | set(REQUIRED_PINS)
+                | {'trading_researcher/required_inputs.py'})),
+            'pins': {**base['pins'], **REQUIRED_PINS},
+            'checks': {**base['checks'], 'supplemental_tests': 87},
+            'scope': {**deepcopy(base['scope']), 'reporting_contract': 'case-diagnostics/2',
+                'evaluation_contract': 'required-inputs/1', 'interfaces': [*base['scope']['interfaces'],
+                    'required-input-bounded-reference-cases/1', 'required-input-bounded-reference-contrast/1',
+                    'diagnostic-required-input-bounded-reference-cases/1']},
+            'tests': (*base['tests'], 'test_required_inputs.py')}
+    if profile == DIAGNOSTIC_PROFILE:
+        base = configuration(BOUNDED_PROFILE)
+        return {'files': tuple(sorted(set(base['files']) | set(DIAGNOSTIC_PINS)
+                | {'trading_researcher/case_diagnostics.py'})),
+            'pins': {**base['pins'], **DIAGNOSTIC_PINS},
+            'checks': {**base['checks'], 'supplemental_tests': 71},
+            'scope': {**deepcopy(base['scope']), 'reporting_contract': 'case-diagnostics/1',
+                'interfaces': [*base['scope']['interfaces'], 'diagnostic-bounded-reference-cases/1']},
+            'tests': (*base['tests'], 'test_case_diagnostics.py')}
+    if profile == PROFILE:
+        return {'files': FILES, 'pins': PINS, 'checks': EXPECTED_CHECKS, 'scope': SCOPE,
+                'tests': ('test_expressions.py', 'test_outcomes.py')}
+    if profile != BOUNDED_PROFILE:
+        raise Invalid('Unknown fixed reference conformance profile')
+    files = tuple(sorted(set(FILES) | set(BOUNDED_PINS) | {
+        'trading_researcher/bounded_math.py', 'trading_researcher/bounded_outcomes.py'}))
+    return {'files': files, 'pins': {**PINS, **BOUNDED_PINS},
+        'checks': {**EXPECTED_CHECKS, 'supplemental_tests': 62},
+        'scope': {**deepcopy(SCOPE), 'interfaces': [*SCOPE['interfaces'], 'research-ast/2',
+            'bounded-reference-cases/1', 'bounded-reference-contrast/1'],
+            'numerical_contract': 'bounded-math/1.0'},
+        'tests': ('test_expressions.py', 'test_outcomes.py', 'test_bounded_math.py', 'test_bounded_outcomes.py')}
+
 
 def _sha(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
-def read_bundle():
-    return {name: (ROOT / name).read_bytes() for name in FILES}
+def read_bundle(profile=PROFILE):
+    return {name: (ROOT / name).read_bytes() for name in configuration(profile)['files']}
+
+
+def _profile_bundle(profile):
+    return read_bundle() if profile == PROFILE else read_bundle(profile)
 
 
 def _footprint(bundle):
     return {name: _sha(raw) for name, raw in sorted(bundle.items())}
 
 
-def _pins_match(footprint):
-    return set(footprint) == set(FILES) and all(footprint[name] == value for name, value in PINS.items())
+def _pins_match(footprint, profile=PROFILE):
+    config = configuration(profile)
+    return set(footprint) == set(config['files']) and all(footprint[name] == value for name, value in config['pins'].items())
 
 
 def _runtime_identity():
@@ -70,7 +131,7 @@ def _runtime_path_allowed(path):
             and not {'site-packages', 'dist-packages'} & {part.casefold() for part in path.parts})
 
 
-def _runtime_environment():
+def _runtime_environment(allowed_files=FILES):
     base = Path(sys.base_prefix).resolve()
     libraries = {}
     for module_name, module in tuple(sys.modules.items()):
@@ -81,7 +142,7 @@ def _runtime_environment():
         if (_runtime_path_allowed(path) and path.is_file()
                 and module_name.split('.')[0] in sys.stdlib_module_names):
             libraries[path.relative_to(base).as_posix()] = _sha(path.read_bytes())
-        elif path.is_relative_to(ROOT) and path.relative_to(ROOT).as_posix() in FILES:
+        elif path.is_relative_to(ROOT) and path.relative_to(ROOT).as_posix() in allowed_files:
             continue
         else:
             raise Invalid('Executed module is outside the fixed dependency closure')
@@ -112,8 +173,8 @@ def _environment_current(environment):
     return True
 
 
-def _report(status, reason, footprint=None, checks=None, environment=None):
-    return {'profile': PROFILE, 'scope': deepcopy(SCOPE), 'status': status, 'reason': reason,
+def _report(status, reason, footprint=None, checks=None, environment=None, *, profile=PROFILE):
+    return {'profile': profile, 'scope': deepcopy(configuration(profile)['scope']), 'status': status, 'reason': reason,
             'footprint': footprint or {}, 'checks': checks or {}, 'environment': environment,
             'scientific_readiness': False}
 
@@ -123,22 +184,25 @@ def _require(condition):
         raise Invalid('Conformance mismatch')
 
 
-def _check_counts_valid(checks):
-    if type(checks) is not dict or set(checks) != set(EXPECTED_CHECKS):
+def _check_counts_valid(checks, profile=PROFILE):
+    expected = configuration(profile)['checks']
+    if type(checks) is not dict or set(checks) != set(expected):
         return False
     for name, value in checks.items():
-        maximum = EXPECTED_CHECKS[name] or EXPECTED_CHECKS['supplemental_tests']
+        maximum = expected[name] or expected['supplemental_tests']
         if type(value) is not int or not 0 <= value <= maximum:
             return False
     return True
 
 
-def _child_validation():
-    bundle = read_bundle()
+def _child_validation(profile=PROFILE):
+    config = configuration(profile)
+    report = lambda *args: _report(*args, profile=profile)
+    bundle = _profile_bundle(profile)
     footprint = _footprint(bundle)
-    if not _pins_match(footprint):
-        return _report('CERTIFICATION_GAP', 'PINNED_INPUT_CHANGED', footprint)
-    checks = dict.fromkeys(EXPECTED_CHECKS, 0)
+    if not _pins_match(footprint, profile):
+        return report('CERTIFICATION_GAP', 'PINNED_INPUT_CHANGED', footprint)
+    checks = dict.fromkeys(config['checks'], 0)
     try:
         from .expressions import ExpressionGap, ReferenceEngine
         from .outcomes import materialize_reference, reference_contrast
@@ -182,27 +246,29 @@ def _child_validation():
                 raise Invalid('Unexpected expression capability')
             checks['capability_probes'] += 1
         suite = unittest.TestSuite()
-        for name in ('test_expressions.py', 'test_outcomes.py'):
+        for name in config['tests']:
             suite.addTests(unittest.defaultTestLoader.discover(str(ROOT / 'tests'), pattern=name))
         result = unittest.TextTestRunner(stream=io.StringIO()).run(suite)
         checks.update(supplemental_tests=result.testsRun, skipped=len(result.skipped),
                       failures=len(result.failures), errors=len(result.errors),
                       unexpected_successes=len(result.unexpectedSuccesses))
-        _require(result.wasSuccessful() and not result.expectedFailures and checks == EXPECTED_CHECKS)
-        _require(_footprint(read_bundle()) == footprint)
-        return _report('CERTIFIED', 'FIXED_CONFORMANCE_PASSED', footprint, checks, _runtime_environment())
+        _require(result.wasSuccessful() and not result.expectedFailures and checks == config['checks'])
+        _require(_footprint(_profile_bundle(profile)) == footprint)
+        return report('CERTIFIED', 'FIXED_CONFORMANCE_PASSED', footprint, checks, _runtime_environment(config['files']))
     except Exception:
-        return _report('CERTIFICATION_GAP', 'CONFORMANCE_FAILED', footprint, checks)
+        return report('CERTIFICATION_GAP', 'CONFORMANCE_FAILED', footprint, checks)
 
 
-def run_reference_validation(bundle=None):
+def run_reference_validation(bundle=None, *, profile=PROFILE):
     """Validate a copied source snapshot; the broker rechecks workspace before storing."""
     footprint = {}
+    config = configuration(profile)
+    result_report = lambda *args: _report(*args, profile=profile)
     try:
-        bundle = read_bundle() if bundle is None else deepcopy(bundle)
+        bundle = _profile_bundle(profile) if bundle is None else deepcopy(bundle)
         footprint = _footprint(bundle)
-        if not _pins_match(footprint):
-            return _report('CERTIFICATION_GAP', 'PINNED_INPUT_CHANGED', footprint)
+        if not _pins_match(footprint, profile):
+            return result_report('CERTIFICATION_GAP', 'PINNED_INPUT_CHANGED', footprint)
         with tempfile.TemporaryDirectory(prefix='trading-reference-check-') as temporary:
             snapshot = Path(temporary)
             for name, raw in bundle.items():
@@ -214,40 +280,40 @@ def run_reference_validation(bundle=None):
             try:
                 completed = subprocess.run(
                     [sys.executable, '-I', '-S', '-B', '-X', 'pycache_prefix=' + str(snapshot / 'cache'),
-                     '-c', bootstrap, str(snapshot)], cwd=snapshot,
+                     '-c', bootstrap, str(snapshot), profile], cwd=snapshot,
                     stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=30, check=False)
             except subprocess.TimeoutExpired:
-                return _report('CERTIFICATION_GAP', 'VALIDATOR_TIMEOUT', footprint)
+                return result_report('CERTIFICATION_GAP', 'VALIDATOR_TIMEOUT', footprint)
             # Parent-owned verification, independent of the child's reported hashes.
-            copied = {name: (snapshot / name).read_bytes() for name in FILES}
+            copied = {name: (snapshot / name).read_bytes() for name in config['files']}
             if _footprint(copied) != footprint:
-                return _report('CERTIFICATION_GAP', 'VALIDATION_SNAPSHOT_CHANGED', footprint)
+                return result_report('CERTIFICATION_GAP', 'VALIDATION_SNAPSHOT_CHANGED', footprint)
             if completed.returncode != 0 or completed.stderr or len(completed.stdout) > 1048576:
-                return _report('CERTIFICATION_GAP', 'VALIDATOR_PROCESS_FAILED', footprint)
+                return result_report('CERTIFICATION_GAP', 'VALIDATOR_PROCESS_FAILED', footprint)
             try:
                 report = decode(completed.stdout)
             except Invalid:
-                return _report('CERTIFICATION_GAP', 'INVALID_VALIDATOR_RESPONSE', footprint)
-            if (type(report) is not dict or set(report) != set(_report('', ''))
-                    or report['profile'] != PROFILE or report['scope'] != SCOPE
+                return result_report('CERTIFICATION_GAP', 'INVALID_VALIDATOR_RESPONSE', footprint)
+            if (type(report) is not dict or set(report) != set(result_report('', ''))
+                    or report['profile'] != profile or report['scope'] != config['scope']
                     or report['footprint'] != footprint or report['scientific_readiness'] is not False
                     or report['status'] not in ('CERTIFIED', 'CERTIFICATION_GAP')
                     or len(canonical(report).encode('utf-8')) > MAX_BYTES - 8192):
-                return _report('CERTIFICATION_GAP', 'INVALID_VALIDATOR_RESPONSE', footprint)
+                return result_report('CERTIFICATION_GAP', 'INVALID_VALIDATOR_RESPONSE', footprint)
             if report['status'] == 'CERTIFIED' and (
-                    report['reason'] != 'FIXED_CONFORMANCE_PASSED' or not _check_counts_valid(report['checks'])
-                    or report['checks'] != EXPECTED_CHECKS
+                    report['reason'] != 'FIXED_CONFORMANCE_PASSED' or not _check_counts_valid(report['checks'], profile)
+                    or report['checks'] != config['checks']
                     or not _environment_current(report['environment'])):
-                return _report('CERTIFICATION_GAP', 'INVALID_VALIDATOR_RESPONSE', footprint)
+                return result_report('CERTIFICATION_GAP', 'INVALID_VALIDATOR_RESPONSE', footprint)
             if report['status'] == 'CERTIFICATION_GAP' and (
                     report['environment'] is not None
                     or report['reason'] not in ('PINNED_INPUT_CHANGED', 'CONFORMANCE_FAILED')
                     or (report['reason'] == 'PINNED_INPUT_CHANGED' and report['checks'] != {})
-                    or (report['reason'] == 'CONFORMANCE_FAILED' and not _check_counts_valid(report['checks']))):
-                return _report('CERTIFICATION_GAP', 'INVALID_VALIDATOR_RESPONSE', footprint)
+                    or (report['reason'] == 'CONFORMANCE_FAILED' and not _check_counts_valid(report['checks'], profile))):
+                return result_report('CERTIFICATION_GAP', 'INVALID_VALIDATOR_RESPONSE', footprint)
             return report
     except (OSError, ValueError, TypeError):
-        return _report('CERTIFICATION_GAP', 'VALIDATOR_INPUT_OR_RUNTIME_UNAVAILABLE', footprint)
+        return result_report('CERTIFICATION_GAP', 'VALIDATOR_INPUT_OR_RUNTIME_UNAVAILABLE', footprint)
 
 
 class ReferenceCertification:
@@ -284,8 +350,8 @@ class ReferenceCertification:
         return {'attempts': list(reversed(attempts[-limit:])), 'total': len(attempts),
                 'pending': sum(item['state'] == 'STARTED' for item in attempts), 'scientific_authority': False}
 
-    def _retain_reference_package(self, bundle):
-        if set(bundle) != set(FILES) or any(type(raw) is not bytes for raw in bundle.values()):
+    def _retain_reference_package(self, bundle, profile=PROFILE):
+        if set(bundle) != set(configuration(profile)['files']) or any(type(raw) is not bytes for raw in bundle.values()):
             raise Invalid('Reference package must contain the exact allowlisted source closure')
         if sum(len(raw) for raw in bundle.values()) > 16 * 1024 * 1024:
             raise Invalid('Reference source package exceeds the 16 MiB resource envelope')
@@ -298,8 +364,8 @@ class ReferenceCertification:
                 'blob_refs': sorted({value['sha256'] for value in files.values()}),
                 'authority': 'retained_source_not_certified',
                 'body': {'schema': 'reference-source-package/1', 'created_at': self._now(),
-                         'profile': PROFILE, 'files': files, 'footprint': _footprint(bundle)}})
-            self._event('controller', 'reference_source_retained', artifact_id=result['id'], profile=PROFILE)
+                         'profile': profile, 'files': files, 'footprint': _footprint(bundle)}})
+            self._event('controller', 'reference_source_retained', artifact_id=result['id'], profile=profile)
             return result['id']
 
     def _load_reference_package(self, package_id):
@@ -309,8 +375,8 @@ class ReferenceCertification:
         if (artifact['creator'] != 'controller' or artifact['origin'] != 'controller'
                 or artifact.get('authority') != 'retained_source_not_certified'
                 or type(body) is not dict or set(body) != {'schema', 'created_at', 'profile', 'files', 'footprint'}
-                or body['schema'] != 'reference-source-package/1' or body['profile'] != PROFILE
-                or type(body['files']) is not dict or set(body['files']) != set(FILES)):
+                or body['schema'] != 'reference-source-package/1' or body['profile'] not in (PROFILE, BOUNDED_PROFILE, DIAGNOSTIC_PROFILE, REQUIRED_PROFILE)
+                or type(body['files']) is not dict or set(body['files']) != set(configuration(body['profile'])['files'])):
             raise Invalid('Expected a host-owned source package for the exact reference profile')
         self._require_usable_dependencies(package_id)
         bundle, identities, size = {}, set(), 0
@@ -334,22 +400,27 @@ class ReferenceCertification:
             actor = self._principal(token)
             if actor['role'] != 'operator':
                 raise Denied('Reference certification is owned by the host')
-        expected = {'source_package_id'} if retained else set()
-        if set(args) != expected:
+        if (retained and set(args) != {'source_package_id'}
+                or not retained and not set(args) <= {'profile'}):
             raise Invalid('Reference certification accepts no code, path or expectation overrides')
+        profile = args.get('profile', PROFILE)
+        if retained:
+            profile = self._artifact(text(args['source_package_id'], 'source_package_id'))['body'].get('profile')
+        configuration(profile)
+        make_report = lambda *values: _report(*values, profile=profile)
         package_id, bundle, report = args.get('source_package_id'), None, None
         if retained:
             try:
                 with self._mutex:
                     bundle = self._load_reference_package(package_id)
             except Conflict:
-                report = _report('CERTIFICATION_GAP', 'RETAINED_SOURCE_UNAVAILABLE')
+                report = make_report('CERTIFICATION_GAP', 'RETAINED_SOURCE_UNAVAILABLE')
         else:
             try:
-                bundle = read_bundle()
-                package_id = self._retain_reference_package(bundle)
+                bundle = _profile_bundle(profile)
+                package_id = self._retain_reference_package(bundle, profile)
             except (OSError, ValueError, TypeError, Conflict):
-                report = _report('CERTIFICATION_GAP', 'SOURCE_PACKAGE_UNAVAILABLE')
+                report = make_report('CERTIFICATION_GAP', 'SOURCE_PACKAGE_UNAVAILABLE')
         attempt_id = uuid.uuid4().hex
         with self._transaction():
             actor = self._principal(token)
@@ -361,8 +432,10 @@ class ReferenceCertification:
             try:
                 with self._mutex:self._require_usable_dependencies(package_id)
             except (Invalid,Denied):
-                report = _report('CERTIFICATION_GAP', 'SOURCE_PACKAGE_REVOKED_OR_UNSUPPORTED')
-            else:report = run_reference_validation(bundle)
+                report = make_report('CERTIFICATION_GAP', 'SOURCE_PACKAGE_REVOKED_OR_UNSUPPORTED')
+            else:
+                report = (run_reference_validation(bundle) if profile == PROFILE
+                          else run_reference_validation(bundle, profile=profile))
         with self._transaction():
             actor = self._principal(token)
             if actor['role'] != 'operator':
@@ -371,7 +444,7 @@ class ReferenceCertification:
                 try:
                     current = _footprint(self._load_reference_package(package_id)) == report['footprint']
                     if not retained:
-                        current = current and _footprint(read_bundle()) == report['footprint']
+                        current = current and _footprint(_profile_bundle(profile)) == report['footprint']
                     current = current and _environment_current(report['environment'])
                 except (OSError, ValueError, TypeError, Conflict, Denied):
                     current = False
@@ -386,7 +459,7 @@ class ReferenceCertification:
                 'source_refs': [package_id] if package_id else [],
                 'exposure': [package_id] if package_id else [], 'authority': 'implementation_conformance_only'})
             self._event('controller', 'reference_certification_checked', artifact_id=artifact['id'],
-                        status=body['status'], profile=PROFILE, attempt_id=attempt_id)
+                        status=body['status'], profile=profile, attempt_id=attempt_id)
             canonical(artifact)
             return artifact
 
@@ -397,7 +470,8 @@ class ReferenceCertification:
         if (artifact['creator'] != 'controller' or artifact['origin'] != 'controller'
                 or artifact.get('authority') != 'implementation_conformance_only'
                 or type(body) is not dict or body.get('schema') != SCHEMA
-                or body.get('profile') != PROFILE or body.get('scope') != SCOPE):
+                or body.get('profile') not in (PROFILE, BOUNDED_PROFILE, DIAGNOSTIC_PROFILE, REQUIRED_PROFILE)
+                or body.get('scope') != configuration(body['profile'])['scope']):
             raise Invalid('Expected a host-issued certificate for the exact reference profile')
         if self._dependency_use(certificate_id)['status']=='INVALIDATED_BY_DEPENDENCY':
             return {'certificate_id':certificate_id,'status':'INVALIDATED_BY_DEPENDENCY',
@@ -418,8 +492,8 @@ class ReferenceCertification:
                 return {'certificate_id': certificate_id, 'status': 'QUARANTINED',
                         'retained_source_status': 'UNAVAILABLE', 'scientific_readiness': False}
             try:
-                current = _footprint(read_bundle()) == body['footprint']
-                current = current and _pins_match(body['footprint']) and _environment_current(body['environment'])
+                current = _footprint(_profile_bundle(body['profile'])) == body['footprint']
+                current = current and _pins_match(body['footprint'], body['profile']) and _environment_current(body['environment'])
             except (OSError, ValueError, TypeError):
                 current = False
             status = 'CURRENT' if current else 'STALE'
@@ -430,4 +504,5 @@ class ReferenceCertification:
 
 
 if __name__ == '__main__':
-    print(json.dumps(_child_validation(), ensure_ascii=False, sort_keys=True))
+    selected_profile = sys.argv[2] if len(sys.argv) > 2 else PROFILE
+    print(json.dumps(_child_validation(selected_profile), ensure_ascii=False, sort_keys=True))

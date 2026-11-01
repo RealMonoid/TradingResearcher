@@ -1,0 +1,459 @@
+{
+  "schema": "case-diagnostics-verification/1",
+  "final_document_checks": [{"command":"python -B docs/reviews/verify_retail_contract.py","exit_code":0},{"command":"python -B docs/reviews/implementation-2026-10-25/verify_implementation.py","exit_code":0},{"command":"git diff --check","exit_code":0}],
+  "verification_record_excluded_from_own_hash_manifest": true,
+  "usage_metadata_qualification": "All three actual calls in this slice retain model name, public catalog version and admission/settlement UTC times. Four historical October25 calls predate complete version/settlement metadata; their null fields remain unknown rather than backfilled. Immutable backend snapshot IDs remain unknown. The first final evidence checker incorrectly required complete metadata on those historical records (exit1); corrected validation distinguishes them from the three new calls.",
+  "recorded_at_utc": "2026-10-29T03:19:55.586613+00:00",
+  "purpose": "Remove the original ETH reason-reporting gap without changing scientific semantics or numerical projection.",
+  "status": "TECHNICAL_CONFORMANCE_VERIFIED",
+  "profile": "reference-computation/3",
+  "reporting_contract": "case-diagnostics/1",
+  "tests": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_case_diagnostics.py -q",
+      "tests": 9,
+      "seconds": 0.613,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_diagnostic_auxiliary.py -q",
+      "tests": 4,
+      "seconds": 0.018,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_diagnostic_scientific_gate.py -q",
+      "tests": 1,
+      "seconds": 0.0,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_diagnostic_binding.py -v",
+      "tests": 6,
+      "passed": 5,
+      "errors": 1,
+      "exit_code": 1,
+      "seconds": 108.457,
+      "qualification": "All five lifecycle tests passed. New downgrade fixture omitted required recorded fixture-call provenance; no runtime defect or paid call."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_diagnostic_binding.py -k requested_reporting_contract -v",
+      "tests": 1,
+      "exit_code": 0,
+      "seconds": 96.572,
+      "qualification": "Corrected zero-cost fixture transport; exact /2 downgrade denial before child use and /3 compilation. No real provider invocation."
+    },
+    {
+      "command": "python -B .trf-runtime/feasibility-checkpoint-2026-10-27/check_retained_driver_compatibility.py",
+      "exit_code": 0,
+      "result": "Actual HEAD pre-D089 /1 certification source with current binding imports and selects exact /1 closure."
+    },
+    {
+      "command": "python -B .trf-runtime/feasibility-checkpoint-2026-10-27/check_outcome_cutoff.py",
+      "exit_code": 0,
+      "seconds": 0.494,
+      "result": "Two additional-delay counterexamples, fixed-delay equivalence, exact selected metadata/source check; no market outcomes."
+    }
+  ],
+  "issue_timeline": [
+    {
+      "stage": "pure source/base consistency",
+      "issue": "Removed decision row could disagree with an existing completed base case.",
+      "before": "9 tests, 1 failure, exit 1",
+      "after": "Unchanged independent expectations: 9 pass, exit 0.",
+      "resolution": "Require decision presence and replayed value/trace agreement; preserve base bytes.",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED"
+    },
+    {
+      "stage": "optional auxiliary packet",
+      "issue": "Optional reporting contract was not accepted or bound to the review packet.",
+      "before": "4 tests, 2 errors and 1 failure, exit 1",
+      "after": "4 pass, exit 0.",
+      "resolution": "Pinned same-version formalization/review contract, reject omission, addition or changed text.",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED"
+    },
+    {
+      "stage": "owned certification retention",
+      "issue": "Both retained-package and certificate-status profile allowlists omitted /3.",
+      "before": "0 tests reached, setup error, 96.606 seconds, exit 1. Generic SOURCE_CHANGED_DURING_VALIDATION label; captured hashes matched, no concurrent mutation evidenced.",
+      "resolution": "Extend the two exact profile allowlists. Keep fixed closure and pins.",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED"
+    },
+    {
+      "stage": "legacy retained-driver compatibility",
+      "issue": "Actual HEAD /1 certification source lacks configuration and optional profile constants.",
+      "before": "ImportError(configuration), exit 1",
+      "after": "Actual retained /1 surface import and profile check pass, exit 0.",
+      "resolution": "Binding-local profile identifiers and lazy imports after /1 selection.",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED"
+    },
+    {
+      "stage": "owned compile after compatibility change",
+      "issue": "One host dependency method still referenced configuration without its local import.",
+      "before": "0 tests reached, setup NameError, 78.753 seconds, exit 1",
+      "resolution": "Import configuration locally at the host dependency method; unchanged lifecycle expectations rerun.",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED"
+    },
+    {
+      "stage": "new downgrade test fixture",
+      "issue": "Independent fixture omitted mandatory recorded provider-call provenance for an epoch-bound formalization.",
+      "before": "Five lifecycle tests passed, one fixture setup error, exit 1, 108.457 seconds.",
+      "resolution": "Supply existing zero-cost synthetic transport provenance and rerun only the new test. Runtime unchanged; no real invocation.",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED"
+    },
+    {
+      "stage": "post-execution direct-formula fidelity audit",
+      "recorded_at_utc": "2026-10-29T03:49:12.468844+00:00",
+      "issue": "Missing decision-container row at 2023-03-24T14:00:00Z excludes available required outcome prices; original whole-scope count8626 versus implementation8625.",
+      "status": "OPEN_BOUNDED_IMPLEMENTATION_CORRECTION",
+      "condition_counts": "Independent zero true,8437 false,203 unknown; all stored conditions match. Diagnostic198 counts evaluated unknowns only; five containers were not evaluated.",
+      "next_action": "Separately version and independently certify removal of non-required container prerequisites under approved original meaning. Preserve old versions and do not patch one observed row."
+    }
+  ],
+  "owned_evidence": [
+    "Actual /2 and /3 certification, compilation, execution and separate replay.",
+    "Byte-exact numerical case projection and unchanged contrast.",
+    "Diagnostic-only resource stop retains completed base result and explicit incomplete counts.",
+    "Backup/restore and retained-source revalidation without installed workspace sources.",
+    "Explicit reporting contract cannot be downgraded to /2."
+  ],
+  "fixed_certificate_checks": {
+    "expression_cases": 112,
+    "outcome_cases": 31,
+    "supplemental_tests": 71,
+    "capability_probes": 9
+  },
+  "legacy_v2_supplemental_tests": 62,
+  "changed_files": [
+    "docs/reviews/implementation-2026-10-25/case-diagnostics-verification-2026-10-29.json",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/eth-diagnostic-output-correction-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/eth-diagnostic-output-usage-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/eth-diagnostic-reopening-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/eth-diagnostic-usage-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "tests/test_case_diagnostics.py",
+    "tests/test_diagnostic_auxiliary.py",
+    "tests/test_diagnostic_binding.py",
+    "tests/test_diagnostic_scientific_gate.py",
+    "trading_researcher/BOUNDED_MATH.md",
+    "trading_researcher/CASE_DIAGNOSTICS.md",
+    "trading_researcher/auxiliary.py",
+    "trading_researcher/binding.py",
+    "trading_researcher/case_diagnostics.py",
+    "trading_researcher/certification.py",
+    "trading_researcher/evaluation_plans.py"
+  ],
+  "file_sha256": {
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "8bfbcc18a509c7f0fe1f1b1c957fd51f583855909242f44a1c14a049a02f9363",
+    "docs/architecture/CURRENT_STATE.md": "425532a91dbc910f895576438062a5087ca07c89b1997dbdef41a0a91814b335",
+    "docs/reviews/implementation-2026-10-25/eth-diagnostic-output-correction-2026-10-29.json": "8ea02c2f12ba1b799ab3c68026505766b7fe2547004a59cf311bad4ba559e854",
+    "docs/reviews/implementation-2026-10-25/eth-diagnostic-output-usage-2026-10-29.json": "1b40974a214d254ff4138e214c3e798400f7d8b4d4936f0aa4225b151856734e",
+    "docs/reviews/implementation-2026-10-25/eth-diagnostic-reopening-2026-10-29.json": "ccabb5ba83b3645f83eac7c2866665358724465e98ddb6b4d6b1440c1353e3c8",
+    "docs/reviews/implementation-2026-10-25/eth-diagnostic-usage-2026-10-29.json": "50c1778a312192842c8da862c0f7b6c08a3ff9d3303b6e60e633cdea386be4d0",
+    "docs/reviews/implementation-2026-10-25/progress.json": "f36c17434425f6e7a9c51b1930e4a5cdbf440d72830b095e5c79724e88d49b07",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "774d42e9e2f2d38e9de97231a0fae2d702c04ab87f47919cd698b7711f880f2f",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "6bfaff940353a38cd24a71b2cd6610fba34c8de5ef6f28ac6c6f488b4d8b1840",
+    "tests/test_case_diagnostics.py": "423b1ae4449a9098dc8ba4d671f42d90560ec3dd9649ad8b5f106a7d36a6347a",
+    "tests/test_diagnostic_auxiliary.py": "c721a982cfa595d18d8ff5798f805e106e4183aec94c8938314e0521ba37ae62",
+    "tests/test_diagnostic_binding.py": "0eae2feb0b966991ed83a4e974ca80b831df7d9fbadc0d8715fc4742b1ee8419",
+    "tests/test_diagnostic_scientific_gate.py": "8a664663c4c735c7c3d6c4035438b981f3f2f5b2971c2df894ac084c8f6c4163",
+    "trading_researcher/BOUNDED_MATH.md": "5ab0ec3b050a52827856ad307d80133ed784ac3cc378e07a1d26907bba24dad0",
+    "trading_researcher/CASE_DIAGNOSTICS.md": "54917962e900cc637cbe8e78b193f82842929078d65ca5e243f74a7dc855eed5",
+    "trading_researcher/auxiliary.py": "5895b118660823cb487093e22a38d2e0809245ed90cd2dda9eac2bb1a17a17ff",
+    "trading_researcher/binding.py": "e17772345f0e684a508eb77b3c404bf11f2bf1608b237c9bbe1cd5bac24adba1",
+    "trading_researcher/case_diagnostics.py": "1c3975746e30a54605f1166af7def3bdabd0153c1e41949dee21378f2beea6e9",
+    "trading_researcher/certification.py": "d7945bc2859e9c50394113ca148baeb56fec07046d67e2fbb0d215d908c1fdae",
+    "trading_researcher/evaluation_plans.py": "00b1c7438f662deba68aad4d5a4a7e8adbf47d1884bb8076fdb70d91a260b390"
+  },
+  "scientific_readiness": false,
+  "new_paid_calls_for_implementation": 0,
+  "unverified": [
+    "Complete original-idea population fidelity: one observed outcome is incorrectly excluded; correction remains unimplemented.",
+    "Generic original anchor-capped availability for additional-delay snapshots; only exact certified fixed-delay dependencies qualified.",
+    "Adequate market model, final calibration, information sufficiency, protected admission, policy profitability.",
+    "Unknown model-training exposure and assumed historical availability do not establish unseen data."
+  ],
+  "cutoff_scope_check": {
+    "schema": "private-outcome-cutoff-check/1",
+    "synthetic": {
+      "fixed_900_second_case_equal": true,
+      "additional_delay_counterexamples": [
+        {
+          "feature": "close@1",
+          "key": 3600,
+          "available_at": 4501,
+          "anchor": 4500,
+          "global_cutoff": 8999,
+          "original_cutoff": 4500,
+          "global_status": "ELIGIBLE",
+          "anchor_status": "OUTCOME_PENDING",
+          "anchor_reason": "required_publication_not_available"
+        },
+        {
+          "feature": "open@1",
+          "key": 900,
+          "available_at": 4501,
+          "anchor": 4500,
+          "global_cutoff": 8999,
+          "original_cutoff": 4500,
+          "global_status": "ELIGIBLE",
+          "anchor_status": "OUTCOME_PENDING",
+          "anchor_reason": "required_publication_not_available"
+        }
+      ]
+    },
+    "selected_metadata": {
+      "snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+      "feature_certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+      "normalization_id": "b65098bcbe61a8d5085fdf4d61cb7e0e8d6bc981d007dd46cf134a15aae36441",
+      "delay_seconds": 900,
+      "availability_basis": "assumed",
+      "historical_publication_time": null,
+      "normalizer_sources_match_certificate": {
+        "trading_researcher/binance_archive.py": true,
+        "trading_researcher/binance_quality.py": true,
+        "trading_researcher/binance_normalize.py": true
+      },
+      "certificate_reason": "FIXED_CASES_AND_FULL_SOURCE_REPLAY_PASSED",
+      "qualification": "Metadata/source inspection only; current compiler must still enforce intact certificate and row digest gates."
+    },
+    "provider_calls": 0,
+    "market_values_read": false,
+    "conclusion": "The two cutoffs differ for extra-late samples. On the fixed certified 900-second-delay snapshot, intended close availability equals the anchor and open availability precedes it by 2700 seconds, so that difference is unreachable for the exact intended outcome inputs. This is snapshot-qualified equivalence, not generic support for anchor-capped availability."
+  },
+  "original_formula_audit": {
+    "schema": "independent-original-eth-formula-check/1",
+    "idea_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+    "original_text_sha256": "ef8d9c2897d27129cfd72178231f408a5283869fbcced3d54a70bd40c4a2276f",
+    "snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+    "execution_id": "65ac7f5c58369ddf81a40cbb3d9f2d284f55e4b55d5da16e819c01b9e660e474",
+    "rows": {
+      "sha256": "ed39a972a8fc1a563d60415c9c8859e8d8b6ca9efb6d25290df62b3390b2f705",
+      "size": 7236352
+    },
+    "case_blob": {
+      "sha256": "a26b7c5c8eecb8604758e9f73bba23b9abbb5c124c5527c3db0916bf7a853fd9",
+      "size": 12210981
+    },
+    "checked_rows": 8635,
+    "checked_decisions": 8640,
+    "method": "Direct Fraction arithmetic and ordinary sorted even median of all 96 preceding quote volumes; original finite/validity/availability rules; no runtime AST evaluation.",
+    "original_condition_counts": {
+      "true": 0,
+      "false": 8437,
+      "unknown": 203
+    },
+    "original_condition_unknown_causes_overlapping": {
+      "outside_universe": 97,
+      "invalid_under_original_checks": 4,
+      "null_value": 97,
+      "absent_row": 101
+    },
+    "original_outcome_counts": {
+      "observed": 8626,
+      "missing": 14,
+      "condition_true_with_observed_outcome": 0
+    },
+    "predicate_true_counts_among_fully_valid_conditions": {
+      "buy_share_ge_065": 238,
+      "quote_volume_ge_twice_median": 1553,
+      "high_excursion_ge_003": 1544,
+      "retained_return_0_to_0005": 985
+    },
+    "execution_state_counts": {
+      "ELIGIBLE": 8625,
+      "DATA_GAP": 10,
+      "PARTITION_BOUNDARY": 5
+    },
+    "data_gap_rows": [
+      {
+        "decision_time": 1679658300,
+        "decision_utc": "2023-03-24T11:45:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_exact_outcome_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "null_value"
+        ],
+        "original_condition": false,
+        "decision_row_present": true,
+        "anchor_row_present": false,
+        "required_open_key": "2023-03-24T12:00:00Z",
+        "required_close_key": "2023-03-24T12:45:00Z"
+      },
+      {
+        "decision_time": 1679659200,
+        "decision_utc": "2023-03-24T12:00:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_exact_outcome_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "absent_row"
+        ],
+        "original_condition": null,
+        "decision_row_present": true,
+        "anchor_row_present": false,
+        "required_open_key": "2023-03-24T12:15:00Z",
+        "required_close_key": "2023-03-24T13:00:00Z"
+      },
+      {
+        "decision_time": 1679660100,
+        "decision_utc": "2023-03-24T12:15:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_exact_outcome_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "absent_row"
+        ],
+        "original_condition": null,
+        "decision_row_present": true,
+        "anchor_row_present": false,
+        "required_open_key": "2023-03-24T12:30:00Z",
+        "required_close_key": "2023-03-24T13:15:00Z"
+      },
+      {
+        "decision_time": 1679661000,
+        "decision_utc": "2023-03-24T12:30:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_exact_outcome_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "absent_row",
+          "null_value"
+        ],
+        "original_condition": null,
+        "decision_row_present": true,
+        "anchor_row_present": false,
+        "required_open_key": "2023-03-24T12:45:00Z",
+        "required_close_key": "2023-03-24T13:30:00Z"
+      },
+      {
+        "decision_time": 1679661900,
+        "decision_utc": "2023-03-24T12:45:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_exact_outcome_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "absent_row"
+        ],
+        "original_condition": null,
+        "decision_row_present": true,
+        "anchor_row_present": false,
+        "required_open_key": "2023-03-24T13:00:00Z",
+        "required_close_key": "2023-03-24T13:45:00Z"
+      },
+      {
+        "decision_time": 1679662800,
+        "decision_utc": "2023-03-24T13:00:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_decision_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "absent_row"
+        ],
+        "original_condition": null,
+        "decision_row_present": false,
+        "anchor_row_present": true,
+        "required_open_key": "2023-03-24T13:15:00Z",
+        "required_close_key": "2023-03-24T14:00:00Z"
+      },
+      {
+        "decision_time": 1679663700,
+        "decision_utc": "2023-03-24T13:15:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_decision_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "absent_row"
+        ],
+        "original_condition": null,
+        "decision_row_present": false,
+        "anchor_row_present": true,
+        "required_open_key": "2023-03-24T13:30:00Z",
+        "required_close_key": "2023-03-24T14:15:00Z"
+      },
+      {
+        "decision_time": 1679664600,
+        "decision_utc": "2023-03-24T13:30:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_decision_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "absent_row"
+        ],
+        "original_condition": null,
+        "decision_row_present": false,
+        "anchor_row_present": true,
+        "required_open_key": "2023-03-24T13:45:00Z",
+        "required_close_key": "2023-03-24T14:30:00Z"
+      },
+      {
+        "decision_time": 1679665500,
+        "decision_utc": "2023-03-24T13:45:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_decision_observation",
+        "original_outcome_observed": false,
+        "original_outcome_missing_reasons": [
+          "absent_row"
+        ],
+        "original_condition": null,
+        "decision_row_present": false,
+        "anchor_row_present": true,
+        "required_open_key": "2023-03-24T14:00:00Z",
+        "required_close_key": "2023-03-24T14:45:00Z"
+      },
+      {
+        "decision_time": 1679666400,
+        "decision_utc": "2023-03-24T14:00:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_decision_observation",
+        "original_outcome_observed": true,
+        "original_outcome_missing_reasons": [],
+        "original_condition": null,
+        "decision_row_present": false,
+        "anchor_row_present": true,
+        "required_open_key": "2023-03-24T14:15:00Z",
+        "required_close_key": "2023-03-24T15:00:00Z"
+      }
+    ],
+    "omitted_original_observed_outcomes": [
+      {
+        "decision_time": 1679666400,
+        "decision_utc": "2023-03-24T14:00:00Z",
+        "execution_status": "DATA_GAP",
+        "execution_reason": "missing_decision_observation",
+        "original_outcome_observed": true,
+        "original_outcome_missing_reasons": [],
+        "original_condition": null,
+        "decision_row_present": false,
+        "anchor_row_present": true,
+        "required_open_key": "2023-03-24T14:15:00Z",
+        "required_close_key": "2023-03-24T15:00:00Z"
+      }
+    ],
+    "wrongly_included_outcomes": [],
+    "condition_value_differences": [],
+    "provider_calls": 0,
+    "protected_or_outside_scope_data_read": false,
+    "numeric_log_values_computed": false,
+    "scientific_readiness": false,
+    "command": "python -B .trf-runtime/feasibility-checkpoint-2026-10-27/check_original_eth_formula.py",
+    "exit_code": 0,
+    "seconds": 4.35,
+    "script_sha256": "53cf1a5bd9cba4d0208e00ea8b8c07710b7bdf2b82f2c04b228c3081c39b63ea",
+    "qualification": "Independent direct formulas; no shared AST evaluator or logarithmic values. Result establishes a counterexample to original-population fidelity, not a corrected certified execution."
+  },
+  "actual_model_calls_this_slice": 3,
+  "successful_extension_acceptance": false,
+  "full_objective_complete": false
+}

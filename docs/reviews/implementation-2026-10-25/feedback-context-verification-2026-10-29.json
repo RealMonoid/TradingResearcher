@@ -1,0 +1,339 @@
+{
+  "schema": "feedback-context-verification/1",
+  "recorded_at_utc": "2026-10-29T06:21:19.093550+00:00",
+  "status": "EXACT_REFERENCE_PAGING_VERIFIED_FULL_PATH_NOT_ADMITTED",
+  "purpose": "Reduce the measured complete-feedback initial-input blocker without removing ideas, failures, qualifiers, exposure or exact source availability.",
+  "changes": {
+    "profile": "discovery-source-view/3",
+    "activation": "Explicit optional new profiles only; no actual epoch was created.",
+    "new_tool": "read_feedback_references",
+    "page_limits": {
+      "items": 64,
+      "canonical_utf8_bytes": 16384
+    },
+    "new_paths": [
+      "body.cohort.artifact_ids",
+      "body.retained_research_records.<canonical_index>.source_refs",
+      "body.retained_research_records.<canonical_index>.exposure"
+    ],
+    "conditions": "At least 1024 canonical bytes, string arrays only, exact controller/development manifest envelope; authenticate original read first.",
+    "unchanged_visible_content": "All seven retained idea/gap bodies, all jobs/attempts/failure descriptions, reports and qualifications.",
+    "legacy_behavior": "Omitted profile and versions 1/2 preserve their tool inventories and source/measurement representation. Full source reads remain full.",
+    "quality_boundary": "Exact structural preservation and retrieval, not demonstrated behavioral quality equivalence."
+  },
+  "actual_preflight": {
+    "observed_at_utc": "2026-10-29T06:12:40.064289+00:00",
+    "source_ids": [
+      "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+      "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+      "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035"
+    ],
+    "source_sizes": [
+      {
+        "id": "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+        "schema": "research-record/1",
+        "full_bytes": 17737,
+        "view_bytes": 2108
+      },
+      {
+        "id": "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+        "schema": "research-record/1",
+        "full_bytes": 18311,
+        "view_bytes": 2682
+      },
+      {
+        "id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "schema": "development-feedback-manifest/1",
+        "full_bytes": 165887,
+        "view_bytes": 61147
+      },
+      {
+        "id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "schema": "feature-catalog/1",
+        "full_bytes": 1572,
+        "view_bytes": 2053
+      },
+      {
+        "id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "schema": "data-snapshot/1",
+        "full_bytes": 16048,
+        "view_bytes": 7627
+      }
+    ],
+    "requests": [
+      {
+        "perspective": "feas-20261029-a",
+        "normalized_request_sha256": "568980222825cf14379806c300d362a442bacf3ed767f6c92de901635393d64c",
+        "wire_sha256": "215b089d1ed253774c11ad7e7e0c37a26a71c5f5ce694a5fbf77280ea3f5d368",
+        "wire_bytes": 87731,
+        "input_tokens": 28110,
+        "response": {
+          "object": "response.input_tokens",
+          "input_tokens": 28110
+        },
+        "transport_request_id": "req_80868d417aa24ff49dd6ac8a48b61771",
+        "counted_at_utc": "2026-10-29T06:12:39.646480+00:00"
+      },
+      {
+        "perspective": "feas-20261029-b",
+        "normalized_request_sha256": "82bce3755e8336e4482af076bfc0485d1cee6bc8945538d3b4cd5d23d2b9abbf",
+        "wire_sha256": "6795f5e7f7c165f3070760a4d21d788d8210bd530d625ee936fdc03c6d1148b4",
+        "wire_bytes": 87792,
+        "input_tokens": 28120,
+        "response": {
+          "object": "response.input_tokens",
+          "input_tokens": 28120
+        },
+        "transport_request_id": "req_229e8e98ffee459884304bf609ed92aa",
+        "counted_at_utc": "2026-10-29T06:12:40.064267+00:00"
+      }
+    ],
+    "existing_feedback_context_freshness": "PASS",
+    "new_context_created": false,
+    "model_identity": {
+      "requested_model": "gpt-6.1-sol",
+      "reported_model": null,
+      "catalog_name": "GPT-6.1 Sol",
+      "catalog_version": "6.1",
+      "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "immutable_snapshot_id": null,
+      "immutable_snapshot_status": "UNKNOWN"
+    },
+    "wall_seconds": "3.5985098000019207",
+    "legacy_source_bytes_match": true,
+    "whole_original_envelopes_reconstructed_exactly": 5,
+    "input_count_requests": 2,
+    "inference_calls": 0,
+    "new_inference_tokens": 0,
+    "new_recorded_inference_charge_nano": 0,
+    "registry_writes": 0,
+    "protected_reads": 0
+  },
+  "exact_recovery": {
+    "original_envelopes": 5,
+    "deferred_lists": 14,
+    "pages": 37,
+    "source": "All original values and order reconstructed from exact paginated lists; complete page bytes retained privately."
+  },
+  "token_comparison": {
+    "before": 139522,
+    "after": 56230,
+    "reduction": 83292,
+    "reduction_percent": "59.698112",
+    "scope": "Same initial source selection, purpose, prompts, provider configuration; added explicit tool/view only. Future pages, responses and downstream work excluded."
+  },
+  "checks": [
+    {
+      "name": "context_views",
+      "cmd": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B -m unittest discover -s tests -p 'test_*context_views*.py'",
+      "chunk_id": "fc1ded",
+      "wall_time_seconds": 10.0013248,
+      "original_token_count": 7,
+      "output": ".....................................................\r\n----------------------------------------------------------------------\r\nRan 53 tests in 10.638s\r\n\r\nOK\r\n",
+      "exit_code": 0
+    },
+    {
+      "name": "research_calls",
+      "cmd": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B -m unittest discover -s tests -p test_research_calls.py",
+      "chunk_id": "7e438a",
+      "wall_time_seconds": 5.71697,
+      "exit_code": 0,
+      "original_token_count": 29,
+      "output": "..........\r\n----------------------------------------------------------------------\r\nRan 10 tests in 4.961s\r\n\r\nOK\r\n"
+    },
+    {
+      "name": "researcher",
+      "cmd": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B -m unittest discover -s tests -p test_researcher.py",
+      "chunk_id": "abee70",
+      "wall_time_seconds": 10.0011186,
+      "original_token_count": 2,
+      "output": "..........\r\n----------------------------------------------------------------------\r\nRan 10 tests in 11.682s\r\n\r\nOK\r\n",
+      "exit_code": 0
+    }
+  ],
+  "distinct_focused_tests": 73,
+  "documentation_checks": {
+    "verify_retail_contract.py": {"status": "PASS", "exit_code": 0, "local_links": 837},
+    "verify_implementation.py": {"status": "PASS", "exit_code": 0, "baseline_files": 103, "local_document_links": 837},
+    "git diff --check": {"status": "PASS", "exit_code": 0, "qualification": "Existing CRLF normalization warnings only."},
+    "exact_log": ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-context-documentation-checks.json"
+  },
+  "independent_review": {
+    "agent": "/root/exploratory_preflight",
+    "tests": 15,
+    "included_in_73": true,
+    "test_file_sha256": "b14073750c05491c503247d86ce7373188bf83eb020574405a09f53cb5dec47f",
+    "finding": "No substantiated implementation blocker found.",
+    "scope": "Exact recovery, spoofed envelopes, hostile paths/types, auth ordering, old behavior and source/measurement retention; not scientific or model-quality evidence."
+  },
+  "failure_history": [
+    {
+      "stage": "Preimplementation loop tests",
+      "outcome": "2 errors: missing optional profile/API; RED exit 1. Final 4 loop/measurement tests pass as part of 53 context-view tests."
+    },
+    {
+      "stage": "Independent first test",
+      "outcome": "Assumed minItems=1; changed expected value to3 because shortest allowed path has3 components. No production defect."
+    },
+    {
+      "stage": "Concurrent aggregate test",
+      "outcome": "53 tests, 1 stale maxItems=5 expectation while implementation had narrowed to4; final reviewer-owned expectation corrected and all53 pass."
+    }
+  ],
+  "source_sha256": {
+    "trading_researcher/context_views.py": "2b008e1145c1c7facd45a5366b549f9021c5b5366e7d7b6085ba933cb57018b0",
+    "trading_researcher/researcher.py": "6404fbf66334a13112a67871977e212ef27dac93b8cf2da94933d8a667867abc",
+    "trading_researcher/research_calls.py": "ff3f8a28d90888f0bc9ef9449ae0bcd3e0e8c97248ad74f662ff748729fef143",
+    "tests/test_feedback_context_views.py": "4a10788f6b17f107fc3015b229ef769e92b16a8276e179f93b330223c1043354",
+    "tests/test_feedback_context_views_adversarial.py": "b14073750c05491c503247d86ce7373188bf83eb020574405a09f53cb5dec47f",
+    "tests/test_measurement_context_views_adversarial.py": "9c1b97bc185e4c0f9603daabb0b37dacec3abd6878b4f07dc0d5ff887fa849d3"
+  },
+  "preserved_baseline_sha256": {
+    ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-context-source-baseline/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+    ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-context-source-baseline/research_calls.py": "19b9ed82fc07a78161ef29cfe1c51b87d8195b46283e13ba8276301123aa8dcb",
+    ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-context-source-baseline/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e"
+  },
+  "pinned_contracts_unchanged": {
+    "docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md": "6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f",
+    "trading_researcher/REQUIRED_INPUTS.md": "2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c",
+    "trading_researcher/CASE_DIAGNOSTICS.md": "54917962e900cc637cbe8e78b193f82842929078d65ca5e243f74a7dc855eed5"
+  },
+  "private_evidence": [
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/measure_feedback_context.py",
+      "sha256": "4076c7af1fcd2788da11d324224aa349bad12b32b26321624f1e6372494ee625"
+    },
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-context-local-preflight.json",
+      "sha256": "56fa6a74baa81210b08c59640d137b65da3bd8de7862b252fc46c0b271bf30e5"
+    },
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-context-token-preflight.json",
+      "sha256": "ee1b217046805954a87c821996b4568a4d31bea4b138b6360152154ba9b2d6a3"
+    },
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-context-checks.json",
+      "sha256": "15649e0294ff0388324d2a206c31f740cc57a6da914c7294950b261a2993d73c"
+    }
+  ],
+  "usage": {
+    "totals": {
+      "calls": 37,
+      "known_usage_calls": 37,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 467801,
+      "known_output_tokens": 69622,
+      "known_total_tokens": 537423,
+      "exact_total_tokens": 537423,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 37,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 23053,
+      "reasoning_detail_calls": 37,
+      "exact_reasoning_output_tokens": 23053
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 1865722500,
+      "available_nano": 3134277500,
+      "halted": false
+    },
+    "models": [
+      {
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": null,
+          "catalog_source": null,
+          "catalog_version": null,
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "calls": 4,
+        "known_usage_calls": 4,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 2038,
+        "known_output_tokens": 134,
+        "known_total_tokens": 2172,
+        "exact_total_tokens": 2172,
+        "known_cached_input_tokens": 0,
+        "cached_detail_calls": 4,
+        "exact_cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "reasoning_detail_calls": 4,
+        "exact_reasoning_output_tokens": 0
+      },
+      {
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "calls": 33,
+        "known_usage_calls": 33,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 465763,
+        "known_output_tokens": 69488,
+        "known_total_tokens": 535251,
+        "exact_total_tokens": 535251,
+        "known_cached_input_tokens": 20971,
+        "cached_detail_calls": 33,
+        "exact_cached_input_tokens": 20971,
+        "known_reasoning_output_tokens": 23053,
+        "reasoning_detail_calls": 33,
+        "exact_reasoning_output_tokens": 23053
+      }
+    ],
+    "timestamp_basis": "UTC; admission and durable local settlement, not provider execution start/end. Missing historical fields are not backfilled."
+  },
+  "resource_decision": {
+    "current_epoch_ceiling": 80000,
+    "status": "AWAITING_USER_APPROVAL",
+    "proposal": "research-epoch-feedback-budget/1.0",
+    "proposed_epoch_count": 1,
+    "proposed_max_tokens": 240000,
+    "reserved_tokens": 239501,
+    "reserved_input_tokens": 193501,
+    "reserved_output_tokens": 46000,
+    "conservative_reservation_nano": 943752500,
+    "proposed_epoch_cost_cap_nano": 1000000000,
+    "aggregate_cap_nano": 5000000000,
+    "new_limit_implemented": false,
+    "reason": "Even reduced initial inputs plus12,000 discovery output tokens leave11,770, insufficient for the prior79,015-token faithful formalization/review allowance. Current contract section9 fixes80,000.",
+    "qualification": "Future full packet sizes are unknown. Proposed reservations are enforced stop limits, not a guarantee that a newly invented idea or tool response fits."
+  },
+  "changed_project_files": [
+    "trading_researcher/context_views.py",
+    "trading_researcher/researcher.py",
+    "trading_researcher/research_calls.py",
+    "tests/test_feedback_context_views.py",
+    "tests/test_feedback_context_views_adversarial.py",
+    "tests/test_measurement_context_views_adversarial.py",
+    "trading_researcher/RESEARCHER.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/feedback-context-verification-2026-10-29.json"
+  ],
+  "unverified": [
+    "Behavioral research-quality equivalence",
+    "Total-run token saving after all needed pages",
+    "Admission or execution of a new discovery unit",
+    "Approval/implementation of the proposed resource overlay",
+    "Provider invoice and actual mixed-provider execution",
+    "Scientific classification/calibration, protected assessment and economic value"
+  ]
+}

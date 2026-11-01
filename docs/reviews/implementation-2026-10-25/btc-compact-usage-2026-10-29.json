@@ -1,0 +1,3498 @@
+{
+  "schema": "framework-provider-usage-report/3",
+  "provider": "openai",
+  "providers": [
+    "openai"
+  ],
+  "scope": "Inference dispatches in this ledger; excludes Codex chat and scripted fixture counters.",
+  "qualification": "Provider-reported tokens. Known sums exclude unknown receipts. Cached/reasoning counts are subsets. Currency is a conservative published-rate bound, not an invoice.",
+  "totals": {
+    "calls": 41,
+    "known_usage_calls": 41,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 572810,
+    "known_output_tokens": 107757,
+    "known_total_tokens": 680567,
+    "exact_total_tokens": 680567,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 41,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 34114,
+    "reasoning_detail_calls": 41,
+    "exact_reasoning_output_tokens": 34114
+  },
+  "runs": [
+    {
+      "epoch_id": "976394322efb4d96b63899c6b5c3fa43",
+      "run_id": "375fa69d70d543d5a1f10d90afac8edb",
+      "worker": "first",
+      "model_identity": {
+        "catalog_name": null,
+        "catalog_source": null,
+        "catalog_version": null,
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 2,
+      "known_usage_calls": 2,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1019,
+      "known_output_tokens": 67,
+      "known_total_tokens": 1086,
+      "exact_total_tokens": 1086,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 2,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 2,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "976394322efb4d96b63899c6b5c3fa43",
+      "run_id": "cbf1df6af34a41c7a62fcf9398c199f9",
+      "worker": "second",
+      "model_identity": {
+        "catalog_name": null,
+        "catalog_source": null,
+        "catalog_version": null,
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 2,
+      "known_usage_calls": 2,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1019,
+      "known_output_tokens": 67,
+      "known_total_tokens": 1086,
+      "exact_total_tokens": 1086,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 2,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 2,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "34eac15d389d4ec6be716db62b4fc03a",
+      "run_id": "bf944d9b394a49a89c1ac050bdaad3a0",
+      "worker": "openai-measurement-first",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 3,
+      "known_usage_calls": 3,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 16048,
+      "known_output_tokens": 432,
+      "known_total_tokens": 16480,
+      "exact_total_tokens": 16480,
+      "known_cached_input_tokens": 9814,
+      "cached_detail_calls": 3,
+      "exact_cached_input_tokens": 9814,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 3,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "34eac15d389d4ec6be716db62b4fc03a",
+      "run_id": "f865e248abc045cba832765072f091d3",
+      "worker": "openai-measurement-second",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 3,
+      "known_usage_calls": 3,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 16012,
+      "known_output_tokens": 420,
+      "known_total_tokens": 16432,
+      "exact_total_tokens": 16432,
+      "known_cached_input_tokens": 9802,
+      "cached_detail_calls": 3,
+      "exact_cached_input_tokens": 9802,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 3,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "ed45da00cfca49f586219ad8b2a2bb2f",
+      "run_id": "controller-6ac299a49af94effb4de6bf5c3413c03",
+      "worker": "formalizer",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 483,
+      "known_output_tokens": 21,
+      "known_total_tokens": 504,
+      "exact_total_tokens": 504,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "ed45da00cfca49f586219ad8b2a2bb2f",
+      "run_id": "controller-3daff4e1e62e408793796d58f88fc5c7",
+      "worker": "reviewer",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1612,
+      "known_output_tokens": 172,
+      "known_total_tokens": 1784,
+      "exact_total_tokens": 1784,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 24,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 24
+    },
+    {
+      "epoch_id": "40896268550a4f93bcb6ef312839643e",
+      "run_id": "controller-77c37d553a474f4da67f830df2c01532",
+      "worker": "slot-6-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 9739,
+      "known_output_tokens": 549,
+      "known_total_tokens": 10288,
+      "exact_total_tokens": 10288,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "40896268550a4f93bcb6ef312839643e",
+      "run_id": "controller-94e58a78c3f04ca089dd6b6be466e61c",
+      "worker": "slot-7-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 9021,
+      "known_output_tokens": 227,
+      "known_total_tokens": 9248,
+      "exact_total_tokens": 9248,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "003c03904c684077aa299a96c84af922",
+      "run_id": "controller-97b14b3bba904f709f25883068e37bb0",
+      "worker": "slot-0-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 10987,
+      "known_output_tokens": 396,
+      "known_total_tokens": 11383,
+      "exact_total_tokens": 11383,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "003c03904c684077aa299a96c84af922",
+      "run_id": "controller-4d15e06e1aed431dbb8a8f1753d41b19",
+      "worker": "slot-1-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 11004,
+      "known_output_tokens": 441,
+      "known_total_tokens": 11445,
+      "exact_total_tokens": 11445,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 24,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 24
+    },
+    {
+      "epoch_id": "de78b2bb52d349709f5832e0d032fc73",
+      "run_id": "controller-f67269d8dfcb4022936cc70467ee225b",
+      "worker": "slot-2-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 11021,
+      "known_output_tokens": 504,
+      "known_total_tokens": 11525,
+      "exact_total_tokens": 11525,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "de78b2bb52d349709f5832e0d032fc73",
+      "run_id": "controller-613c00fb7dfa41cbb483d861947398b6",
+      "worker": "slot-3-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 10942,
+      "known_output_tokens": 494,
+      "known_total_tokens": 11436,
+      "exact_total_tokens": 11436,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "8a7b75787c1846f1bb12b521b7f48926",
+      "run_id": "controller-f447a148e92941beb349769d60f274bc",
+      "worker": "slot-4-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 10999,
+      "known_output_tokens": 375,
+      "known_total_tokens": 11374,
+      "exact_total_tokens": 11374,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "8a7b75787c1846f1bb12b521b7f48926",
+      "run_id": "controller-07ab88dd2bbc440aa7663a48ce1990bb",
+      "worker": "slot-5-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 10950,
+      "known_output_tokens": 457,
+      "known_total_tokens": 11407,
+      "exact_total_tokens": 11407,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "9b3247590fd4434fbce0c546cc532ad2",
+      "run_id": "controller-e9795022bd5048a9a1407ccd2047afb2",
+      "worker": "slot-6-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 10019,
+      "known_output_tokens": 587,
+      "known_total_tokens": 10606,
+      "exact_total_tokens": 10606,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "9b3247590fd4434fbce0c546cc532ad2",
+      "run_id": "controller-ec905c49f2f641f89eac4fd9b8a5ead2",
+      "worker": "slot-7-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 9323,
+      "known_output_tokens": 234,
+      "known_total_tokens": 9557,
+      "exact_total_tokens": 9557,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "7b7294088ce8471dab63da9054786950",
+      "run_id": "2842d9ae5e7e46f780d6fd846eeeb6e1",
+      "worker": "feas-20261029-a",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 4738,
+      "known_output_tokens": 1570,
+      "known_total_tokens": 6308,
+      "exact_total_tokens": 6308,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 210,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 210
+    },
+    {
+      "epoch_id": "7b7294088ce8471dab63da9054786950",
+      "run_id": "1f7999cfecd946448a35388c643f9253",
+      "worker": "feas-20261029-b",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 4748,
+      "known_output_tokens": 1572,
+      "known_total_tokens": 6320,
+      "exact_total_tokens": 6320,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 253,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 253
+    },
+    {
+      "epoch_id": "7b7294088ce8471dab63da9054786950",
+      "run_id": "controller-4452a85db786461dbd3fb8bdfe1d2f8c",
+      "worker": "feas-20261029-a-f2",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 24390,
+      "known_output_tokens": 21,
+      "known_total_tokens": 24411,
+      "exact_total_tokens": 24411,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "7b7294088ce8471dab63da9054786950",
+      "run_id": "controller-cc260524f37446f49e8e0af10d33f4a2",
+      "worker": "feas-20261029-b-f2",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 24357,
+      "known_output_tokens": 42,
+      "known_total_tokens": 24399,
+      "exact_total_tokens": 24399,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 19,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 19
+    },
+    {
+      "epoch_id": "36c86aebbd264e2bb76ecfedfc570b44",
+      "run_id": "controller-37391aadefe3437ab028ddf7a440ee8b",
+      "worker": "d089-eth-f",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 24587,
+      "known_output_tokens": 331,
+      "known_total_tokens": 24918,
+      "exact_total_tokens": 24918,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 308,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 308
+    },
+    {
+      "epoch_id": "36c86aebbd264e2bb76ecfedfc570b44",
+      "run_id": "controller-bc91f039bb79444db228973ba2e92440",
+      "worker": "d089-eth-r",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 16795,
+      "known_output_tokens": 408,
+      "known_total_tokens": 17203,
+      "exact_total_tokens": 17203,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 26,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 26
+    },
+    {
+      "epoch_id": "8528841000a64800a10935fa403b4f32",
+      "run_id": "controller-c8cdd08b0e4749379cd57153dce291cf",
+      "worker": "d089-eth-f2",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 24746,
+      "known_output_tokens": 4126,
+      "known_total_tokens": 28872,
+      "exact_total_tokens": 28872,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 3919,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 3919
+    },
+    {
+      "epoch_id": "8528841000a64800a10935fa403b4f32",
+      "run_id": "controller-55232666d3ee462f96131c5cd9bdeb48",
+      "worker": "d089-eth-r2",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 16989,
+      "known_output_tokens": 494,
+      "known_total_tokens": 17483,
+      "exact_total_tokens": 17483,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "epoch_id": "0ea965ae8047476c90edff36220d07b7",
+      "run_id": "controller-b38d8122340e49039cc5544d2a5e841a",
+      "worker": "d089-eth-f3",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 25987,
+      "known_output_tokens": 14000,
+      "known_total_tokens": 39987,
+      "exact_total_tokens": 39987,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 7126,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 7126
+    },
+    {
+      "epoch_id": "9817753ffc364d55bed2a2e218107843",
+      "run_id": "controller-e652ca7a387e43d4b0e7b3e9809067a3",
+      "worker": "d089-eth-f4",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 25985,
+      "known_output_tokens": 13610,
+      "known_total_tokens": 39595,
+      "exact_total_tokens": 39595,
+      "known_cached_input_tokens": 1355,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 1355,
+      "known_reasoning_output_tokens": 4660,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 4660
+    },
+    {
+      "epoch_id": "9817753ffc364d55bed2a2e218107843",
+      "run_id": "controller-7949729000d44345af34f60edbec058e",
+      "worker": "d089-eth-r4",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 26736,
+      "known_output_tokens": 1002,
+      "known_total_tokens": 27738,
+      "exact_total_tokens": 27738,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 47,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 47
+    },
+    {
+      "epoch_id": "f703f09710e24e33ba9e4dda3ff04aaf",
+      "run_id": "controller-3f8523115dee4c0188ab3d8b68950447",
+      "worker": "d089-eth-f5",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 26207,
+      "known_output_tokens": 12308,
+      "known_total_tokens": 38515,
+      "exact_total_tokens": 38515,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 3106,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 3106
+    },
+    {
+      "epoch_id": "f703f09710e24e33ba9e4dda3ff04aaf",
+      "run_id": "controller-6971d2c35d1f441fb25d3900fea16b1f",
+      "worker": "d089-eth-r5",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 26618,
+      "known_output_tokens": 1321,
+      "known_total_tokens": 27939,
+      "exact_total_tokens": 27939,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 151,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 151
+    },
+    {
+      "epoch_id": "08af4f8239ed4ee585778f153d702df4",
+      "run_id": "controller-c54de1d95c134472a27c71308fee7834",
+      "worker": "d089-eth-f6",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 26887,
+      "known_output_tokens": 12317,
+      "known_total_tokens": 39204,
+      "exact_total_tokens": 39204,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 3106,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 3106
+    },
+    {
+      "epoch_id": "08af4f8239ed4ee585778f153d702df4",
+      "run_id": "controller-af9621b4581a4cefa44fbaf07bd6a446",
+      "worker": "d089-eth-r6",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 27833,
+      "known_output_tokens": 1057,
+      "known_total_tokens": 28890,
+      "exact_total_tokens": 28890,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 74,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 74
+    },
+    {
+      "epoch_id": "32481d653e9a46e08552f3e8d9dc206c",
+      "run_id": "a554a92d7972407495fc8504b06a3b4f",
+      "worker": "feedback-20261029-a",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 28110,
+      "known_output_tokens": 1542,
+      "known_total_tokens": 29652,
+      "exact_total_tokens": 29652,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 92,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 92
+    },
+    {
+      "epoch_id": "32481d653e9a46e08552f3e8d9dc206c",
+      "run_id": "c15c467fa04949d9b6fff67cf1ae62e0",
+      "worker": "feedback-20261029-b",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 28120,
+      "known_output_tokens": 1844,
+      "known_total_tokens": 29964,
+      "exact_total_tokens": 29964,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 106,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 106
+    },
+    {
+      "epoch_id": "f08a8c9752bd4b55a11aed8f143a6a02",
+      "run_id": "controller-ebcb3993b798426e828e2a9f38ecd3c1",
+      "worker": "d091-btc-formalizer",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 24336,
+      "known_output_tokens": 18000,
+      "known_total_tokens": 42336,
+      "exact_total_tokens": 42336,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 5872,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 5872
+    },
+    {
+      "epoch_id": "83a7e355615d4354a19bcc61a9406370",
+      "run_id": "controller-2064ce3fe44149a6b62d83fbdfcc2e28",
+      "worker": "btc-compact-formalizer",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider": "openai",
+      "calls": 1,
+      "known_usage_calls": 1,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 24443,
+      "known_output_tokens": 16749,
+      "known_total_tokens": 41192,
+      "exact_total_tokens": 41192,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 1,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 4991,
+      "reasoning_detail_calls": 1,
+      "exact_reasoning_output_tokens": 4991
+    }
+  ],
+  "models": [
+    {
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": null,
+        "catalog_source": null,
+        "catalog_version": null,
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol"
+      },
+      "calls": 4,
+      "known_usage_calls": 4,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 2038,
+      "known_output_tokens": 134,
+      "known_total_tokens": 2172,
+      "exact_total_tokens": 2172,
+      "known_cached_input_tokens": 0,
+      "cached_detail_calls": 4,
+      "exact_cached_input_tokens": 0,
+      "known_reasoning_output_tokens": 0,
+      "reasoning_detail_calls": 4,
+      "exact_reasoning_output_tokens": 0
+    },
+    {
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "calls": 37,
+      "known_usage_calls": 37,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 570772,
+      "known_output_tokens": 107623,
+      "known_total_tokens": 678395,
+      "exact_total_tokens": 678395,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 37,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 34114,
+      "reasoning_detail_calls": 37,
+      "exact_reasoning_output_tokens": 34114
+    }
+  ],
+  "timestamp_basis": "UTC; admission and durable local settlement, not provider execution start/end. Missing historical fields are not backfilled.",
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 2509595000,
+    "available_nano": 2490405000,
+    "halted": false
+  },
+  "calls": [
+    {
+      "dispatch_id": "375fa69d70d543d5a1f10d90afac8edb:0",
+      "request_sha256": "44f3db7f851f556c7304a02a571122d2ed96b4254c0da30ba7ab6e4c1b3f017a",
+      "reserved_nano": 30240000,
+      "charged_nano": 1330000,
+      "state": "settled",
+      "created_at": 1792948742,
+      "admitted_at_utc": "2026-10-25T17:19:02Z",
+      "settled_at_utc": null,
+      "metadata": {
+        "counted_input_tokens": 476,
+        "epoch_id": "976394322efb4d96b63899c6b5c3fa43",
+        "model": "gpt-6.1-sol",
+        "ordinal": 0,
+        "prompt_version": "openai-integration/1",
+        "run_id": "375fa69d70d543d5a1f10d90afac8edb",
+        "worker": "first"
+      },
+      "receipt": {
+        "provider_request_id": "resp_0912ed8d5317f4db016ade3a07368487d2bfbdcef2682b0b09",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_9cd145b60f7747eeb1034a39d334fe37",
+        "usage": {
+          "cost_units": 1330000,
+          "input_tokens": 476,
+          "output_tokens": 14
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_source": null,
+        "catalog_version": null,
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "catalog_name": null
+      }
+    },
+    {
+      "dispatch_id": "375fa69d70d543d5a1f10d90afac8edb:1",
+      "request_sha256": "481bac659ef97f9a0c6311d960022819b8e25b581d459e6e0bb1af3bd5432838",
+      "reserved_nano": 30240000,
+      "charged_nano": 1887500,
+      "state": "settled",
+      "created_at": 1792948745,
+      "admitted_at_utc": "2026-10-25T17:19:05Z",
+      "settled_at_utc": null,
+      "metadata": {
+        "counted_input_tokens": 543,
+        "epoch_id": "976394322efb4d96b63899c6b5c3fa43",
+        "model": "gpt-6.1-sol",
+        "ordinal": 1,
+        "prompt_version": "openai-integration/1",
+        "run_id": "375fa69d70d543d5a1f10d90afac8edb",
+        "worker": "first"
+      },
+      "receipt": {
+        "provider_request_id": "resp_0912ed8d5317f4db016ade3a0a017887d2aa43b184c322b01b",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_b24918985aac4e4898688760b1be66dd",
+        "usage": {
+          "cost_units": 1887500,
+          "input_tokens": 543,
+          "output_tokens": 53
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_source": null,
+        "catalog_version": null,
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "catalog_name": null
+      }
+    },
+    {
+      "dispatch_id": "cbf1df6af34a41c7a62fcf9398c199f9:0",
+      "request_sha256": "a51123250f9dc3d76fd6e6adb56ff947201829d9f24b1d4f87eb1bd9540e73e2",
+      "reserved_nano": 30240000,
+      "charged_nano": 1330000,
+      "state": "settled",
+      "created_at": 1792948749,
+      "admitted_at_utc": "2026-10-25T17:19:09Z",
+      "settled_at_utc": null,
+      "metadata": {
+        "counted_input_tokens": 476,
+        "epoch_id": "976394322efb4d96b63899c6b5c3fa43",
+        "model": "gpt-6.1-sol",
+        "ordinal": 0,
+        "prompt_version": "openai-integration/1",
+        "run_id": "cbf1df6af34a41c7a62fcf9398c199f9",
+        "worker": "second"
+      },
+      "receipt": {
+        "provider_request_id": "resp_0f6a29e06afb6e1d016ade3a0d8c2c87d2b7e68a32df780727",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_e33e45e8646c41ccad917a65fb0ae21f",
+        "usage": {
+          "cost_units": 1330000,
+          "input_tokens": 476,
+          "output_tokens": 14
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_source": null,
+        "catalog_version": null,
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "catalog_name": null
+      }
+    },
+    {
+      "dispatch_id": "cbf1df6af34a41c7a62fcf9398c199f9:1",
+      "request_sha256": "849afb9242ce6f0100242e1c437341b3797e4fa732e8fdba2a357e96f20b686d",
+      "reserved_nano": 30240000,
+      "charged_nano": 1887500,
+      "state": "settled",
+      "created_at": 1792948752,
+      "admitted_at_utc": "2026-10-25T17:19:12Z",
+      "settled_at_utc": null,
+      "metadata": {
+        "counted_input_tokens": 543,
+        "epoch_id": "976394322efb4d96b63899c6b5c3fa43",
+        "model": "gpt-6.1-sol",
+        "ordinal": 1,
+        "prompt_version": "openai-integration/1",
+        "run_id": "cbf1df6af34a41c7a62fcf9398c199f9",
+        "worker": "second"
+      },
+      "receipt": {
+        "provider_request_id": "resp_0f6a29e06afb6e1d016ade3a10ae6887d2941a56aaf2d63b92",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_bb6b2ba7c46b4abe8e656275966226e8",
+        "usage": {
+          "cost_units": 1887500,
+          "input_tokens": 543,
+          "output_tokens": 53
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_source": null,
+        "catalog_version": null,
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "catalog_name": null
+      }
+    },
+    {
+      "dispatch_id": "bf944d9b394a49a89c1ac050bdaad3a0:0",
+      "request_sha256": "95a46677d358ab123d735f22ef8892ebcdb96819a52a00b3ce80717f4a4c073c",
+      "reserved_nano": 50480000,
+      "charged_nano": 11637500,
+      "state": "settled",
+      "created_at": 1792952613,
+      "admitted_at_utc": "2026-10-25T18:23:33Z",
+      "settled_at_utc": "2026-10-25T18:23:37Z",
+      "metadata": {
+        "counted_input_tokens": 3879,
+        "epoch_id": "34eac15d389d4ec6be716db62b4fc03a",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "openai-measurement-transport/1",
+        "run_id": "bf944d9b394a49a89c1ac050bdaad3a0",
+        "worker": "openai-measurement-first"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_00decf9648f689af016ade4926128087d2803f2449569318c5",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_feb0de01d3344082b63bbfd93d6a5dce",
+        "usage": {
+          "cost_units": 11637500,
+          "input_tokens": 3879,
+          "output_tokens": 194
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "bf944d9b394a49a89c1ac050bdaad3a0:1",
+      "request_sha256": "bf3e4f3bc3452816668fff1c28f861d3709b894f7fd54ecd10c13e384da984c6",
+      "reserved_nano": 50480000,
+      "charged_nano": 15582500,
+      "state": "settled",
+      "created_at": 1792952645,
+      "admitted_at_utc": "2026-10-25T18:24:05Z",
+      "settled_at_utc": "2026-10-25T18:24:07Z",
+      "metadata": {
+        "counted_input_tokens": 5941,
+        "epoch_id": "34eac15d389d4ec6be716db62b4fc03a",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 1,
+        "prompt_version": "openai-measurement-transport/1",
+        "run_id": "bf944d9b394a49a89c1ac050bdaad3a0",
+        "worker": "openai-measurement-first"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_00decf9648f689af016ade4945c23887d2a8f93bf53afee3ad",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 3876,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_0a577c274ccc43bd80ad9736f9b0e8ed",
+        "usage": {
+          "cost_units": 15582500,
+          "input_tokens": 5941,
+          "output_tokens": 73
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "bf944d9b394a49a89c1ac050bdaad3a0:2",
+      "request_sha256": "35ce3f59c25c9918459d23cdf9b9014764b1f0b4d09df224f7b4f5180b55d38e",
+      "reserved_nano": 50480000,
+      "charged_nano": 17220000,
+      "state": "settled",
+      "created_at": 1792952649,
+      "admitted_at_utc": "2026-10-25T18:24:09Z",
+      "settled_at_utc": "2026-10-25T18:24:12Z",
+      "metadata": {
+        "counted_input_tokens": 6228,
+        "epoch_id": "34eac15d389d4ec6be716db62b4fc03a",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 2,
+        "prompt_version": "openai-measurement-transport/1",
+        "run_id": "bf944d9b394a49a89c1ac050bdaad3a0",
+        "worker": "openai-measurement-first"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_00decf9648f689af016ade494996ec87d2b45153d52037ad6c",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 5938,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_c5fc6e3aff5641509665abbbdf69a0c1",
+        "usage": {
+          "cost_units": 17220000,
+          "input_tokens": 6228,
+          "output_tokens": 165
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "f865e248abc045cba832765072f091d3:0",
+      "request_sha256": "bd17feb24a315d970b70f2d79b245f108695ec6cc3f17cab2a53776ec6b29374",
+      "reserved_nano": 50480000,
+      "charged_nano": 11637500,
+      "state": "settled",
+      "created_at": 1792952654,
+      "admitted_at_utc": "2026-10-25T18:24:14Z",
+      "settled_at_utc": "2026-10-25T18:24:17Z",
+      "metadata": {
+        "counted_input_tokens": 3879,
+        "epoch_id": "34eac15d389d4ec6be716db62b4fc03a",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "openai-measurement-transport/1",
+        "run_id": "f865e248abc045cba832765072f091d3",
+        "worker": "openai-measurement-second"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0c89dab8eaabcc1e016ade494f38f087d294d1ab4c8fe11c7b",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_13d55e28ca2049a5bb884df5ad2ff4cf",
+        "usage": {
+          "cost_units": 11637500,
+          "input_tokens": 3879,
+          "output_tokens": 194
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "f865e248abc045cba832765072f091d3:1",
+      "request_sha256": "7c9d41f5a79ea6bc1a0893def775a4947f3983d1869cda0a679975ff4ce29ea3",
+      "reserved_nano": 50480000,
+      "charged_nano": 15492500,
+      "state": "settled",
+      "created_at": 1792952683,
+      "admitted_at_utc": "2026-10-25T18:24:43Z",
+      "settled_at_utc": "2026-10-25T18:24:46Z",
+      "metadata": {
+        "counted_input_tokens": 5929,
+        "epoch_id": "34eac15d389d4ec6be716db62b4fc03a",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 1,
+        "prompt_version": "openai-measurement-transport/1",
+        "run_id": "f865e248abc045cba832765072f091d3",
+        "worker": "openai-measurement-second"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0c89dab8eaabcc1e016ade496c382c87d29b4baa2e28de1430",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 3876,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_cf2185e4eb784fcc9295f4b9d49b06a5",
+        "usage": {
+          "cost_units": 15492500,
+          "input_tokens": 5929,
+          "output_tokens": 67
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "f865e248abc045cba832765072f091d3:2",
+      "request_sha256": "9eb80b485872aa56c2cad78638cc1b3c2dffe6998b26df1a2091f7849bf960d6",
+      "reserved_nano": 50480000,
+      "charged_nano": 17100000,
+      "state": "settled",
+      "created_at": 1792952687,
+      "admitted_at_utc": "2026-10-25T18:24:47Z",
+      "settled_at_utc": "2026-10-25T18:24:50Z",
+      "metadata": {
+        "counted_input_tokens": 6204,
+        "epoch_id": "34eac15d389d4ec6be716db62b4fc03a",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 2,
+        "prompt_version": "openai-measurement-transport/1",
+        "run_id": "f865e248abc045cba832765072f091d3",
+        "worker": "openai-measurement-second"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0c89dab8eaabcc1e016ade4970064087d2a3aa2a8b56280e96",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 5926,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_00e77a8d65d147419a86dbc02ffaa37d",
+        "usage": {
+          "cost_units": 17100000,
+          "input_tokens": 6204,
+          "output_tokens": 159
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-6ac299a49af94effb4de6bf5c3413c03:0",
+      "request_sha256": "2ad8cddcf97b4650d662d295fdf9b083e5df454d4b2ab7f1e38565c590590bf8",
+      "reserved_nano": 35240000,
+      "charged_nano": 1417500,
+      "state": "settled",
+      "created_at": 1792962310,
+      "admitted_at_utc": "2026-10-25T21:05:10Z",
+      "settled_at_utc": "2026-10-25T21:05:13Z",
+      "metadata": {
+        "counted_input_tokens": 483,
+        "epoch_id": "ed45da00cfca49f586219ad8b2a2bb2f",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "controller-auxiliary-probe/1",
+        "run_id": "controller-6ac299a49af94effb4de6bf5c3413c03",
+        "worker": "formalizer"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_07d43507b27d8ab2016ade6f073d8887d29f090446c800cf51",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_9a702c5fa4944d4481cdea1ec1e56bf8",
+        "usage": {
+          "cost_units": 1417500,
+          "input_tokens": 483,
+          "output_tokens": 21
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-3daff4e1e62e408793796d58f88fc5c7:0",
+      "request_sha256": "8a66c8583af22edc1d2cfce8f67930ad0faa1e80d62473608a1c2e7637cb0e3b",
+      "reserved_nano": 35240000,
+      "charged_nano": 5750000,
+      "state": "settled",
+      "created_at": 1792962314,
+      "admitted_at_utc": "2026-10-25T21:05:14Z",
+      "settled_at_utc": "2026-10-25T21:05:19Z",
+      "metadata": {
+        "counted_input_tokens": 1612,
+        "epoch_id": "ed45da00cfca49f586219ad8b2a2bb2f",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "controller-auxiliary-review-probe/1",
+        "run_id": "controller-3daff4e1e62e408793796d58f88fc5c7",
+        "worker": "reviewer"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0281beebd9eb9c65016ade6f0b2cdc87d2b8b8c56c536df2fd",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 24
+        },
+        "transport_request_id": "req_df3ba643a60e44609c8fb558622c5d5d",
+        "usage": {
+          "cost_units": 5750000,
+          "input_tokens": 1612,
+          "output_tokens": 172
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-77c37d553a474f4da67f830df2c01532:0",
+      "request_sha256": "12c194f1bf2793d4f8f6afb084c5a593b1bdfbef158e3f628d7d7b73b491de7e",
+      "reserved_nano": 35240000,
+      "charged_nano": 29837500,
+      "state": "settled",
+      "created_at": 1793018248,
+      "admitted_at_utc": "2026-10-26T12:37:28Z",
+      "settled_at_utc": "2026-10-26T12:37:46Z",
+      "metadata": {
+        "counted_input_tokens": 9739,
+        "epoch_id": "40896268550a4f93bcb6ef312839643e",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-77c37d553a474f4da67f830df2c01532",
+        "worker": "slot-6-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0883fe07d045ca72016adf4985987c87d288f00713b177b861",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_91a753fe755646239e7b906a33dd362b",
+        "usage": {
+          "cost_units": 29837500,
+          "input_tokens": 9739,
+          "output_tokens": 549
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-94e58a78c3f04ca089dd6b6be466e61c:0",
+      "request_sha256": "1174bb2b9937b30c91b3729f20092388f246a80226eaa6f232a24cc03577c9fa",
+      "reserved_nano": 35240000,
+      "charged_nano": 24822500,
+      "state": "settled",
+      "created_at": 1793018267,
+      "admitted_at_utc": "2026-10-26T12:37:47Z",
+      "settled_at_utc": "2026-10-26T12:37:55Z",
+      "metadata": {
+        "counted_input_tokens": 9021,
+        "epoch_id": "40896268550a4f93bcb6ef312839643e",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-94e58a78c3f04ca089dd6b6be466e61c",
+        "worker": "slot-7-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_089ded039cac71be016adf4999157087d29cde44ac38916360",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_6bb8926465a04da5b190033f4a275fa1",
+        "usage": {
+          "cost_units": 24822500,
+          "input_tokens": 9021,
+          "output_tokens": 227
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-97b14b3bba904f709f25883068e37bb0:0",
+      "request_sha256": "3acba069e47c4fe2f8380625930e086f7be8d0111cb5cafefe1f4e11eb9804d4",
+      "reserved_nano": 45240000,
+      "charged_nano": 31427500,
+      "state": "settled",
+      "created_at": 1793019063,
+      "admitted_at_utc": "2026-10-26T12:51:03Z",
+      "settled_at_utc": "2026-10-26T12:51:19Z",
+      "metadata": {
+        "counted_input_tokens": 10987,
+        "epoch_id": "003c03904c684077aa299a96c84af922",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-97b14b3bba904f709f25883068e37bb0",
+        "worker": "slot-0-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0725707b2ca54a93016adf4cb4e3fc87d291423de09df111be",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_b852397f6b5747f9bd93376dc2890a07",
+        "usage": {
+          "cost_units": 31427500,
+          "input_tokens": 10987,
+          "output_tokens": 396
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-4d15e06e1aed431dbb8a8f1753d41b19:0",
+      "request_sha256": "b470b4f3a5c6a3ee8b1334b490fc4253be3999a14f96defcd9e8c1e5ecb9c1fa",
+      "reserved_nano": 45240000,
+      "charged_nano": 31920000,
+      "state": "settled",
+      "created_at": 1793019080,
+      "admitted_at_utc": "2026-10-26T12:51:20Z",
+      "settled_at_utc": "2026-10-26T12:51:32Z",
+      "metadata": {
+        "counted_input_tokens": 11004,
+        "epoch_id": "003c03904c684077aa299a96c84af922",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-4d15e06e1aed431dbb8a8f1753d41b19",
+        "worker": "slot-1-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0a5e905c261f0d57016adf4cc61d0c87d2ad0205edcebb79dd",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 24
+        },
+        "transport_request_id": "req_5d9553953b7f4c449cb52218529097d8",
+        "usage": {
+          "cost_units": 31920000,
+          "input_tokens": 11004,
+          "output_tokens": 441
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-f67269d8dfcb4022936cc70467ee225b:0",
+      "request_sha256": "b15ac1b4185a355552703c64c1f97cd23577b63c12013d82dcaf96d5f164c772",
+      "reserved_nano": 45240000,
+      "charged_nano": 32592500,
+      "state": "settled",
+      "created_at": 1793019093,
+      "admitted_at_utc": "2026-10-26T12:51:33Z",
+      "settled_at_utc": "2026-10-26T12:52:12Z",
+      "metadata": {
+        "counted_input_tokens": 11021,
+        "epoch_id": "de78b2bb52d349709f5832e0d032fc73",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-f67269d8dfcb4022936cc70467ee225b",
+        "worker": "slot-2-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0f585d7c938a87bd016adf4cd2aa7887d2879ea3fb9a80c05e",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_5db1ff6c10be4713b2674a6d3ff74004",
+        "usage": {
+          "cost_units": 32592500,
+          "input_tokens": 11021,
+          "output_tokens": 504
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-613c00fb7dfa41cbb483d861947398b6:0",
+      "request_sha256": "2b4892e669a8c3f248b8abc3aece62fc67d7cfd440a6733d9eac55a4a660f65e",
+      "reserved_nano": 45240000,
+      "charged_nano": 32295000,
+      "state": "settled",
+      "created_at": 1793019134,
+      "admitted_at_utc": "2026-10-26T12:52:14Z",
+      "settled_at_utc": "2026-10-26T12:52:27Z",
+      "metadata": {
+        "counted_input_tokens": 10942,
+        "epoch_id": "de78b2bb52d349709f5832e0d032fc73",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-613c00fb7dfa41cbb483d861947398b6",
+        "worker": "slot-3-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_05d6dc66cb8d21e9016adf4cfbcd9087d2ac9378b962043369",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_a7e080b3c4434b2ab3cde3b333e1a99d",
+        "usage": {
+          "cost_units": 32295000,
+          "input_tokens": 10942,
+          "output_tokens": 494
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-f447a148e92941beb349769d60f274bc:0",
+      "request_sha256": "e5a4d305f7f2e98fcaf099269f9c364eaef0841f108c292e252c5dd890336443",
+      "reserved_nano": 45240000,
+      "charged_nano": 31247500,
+      "state": "settled",
+      "created_at": 1793019149,
+      "admitted_at_utc": "2026-10-26T12:52:29Z",
+      "settled_at_utc": "2026-10-26T12:52:41Z",
+      "metadata": {
+        "counted_input_tokens": 10999,
+        "epoch_id": "8a7b75787c1846f1bb12b521b7f48926",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-f447a148e92941beb349769d60f274bc",
+        "worker": "slot-4-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0313d854e685f917016adf4d0a990887d2a3215afbb5047ab5",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_343182a7461b4ec99ac6da72a797deb3",
+        "usage": {
+          "cost_units": 31247500,
+          "input_tokens": 10999,
+          "output_tokens": 375
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-07ab88dd2bbc440aa7663a48ce1990bb:0",
+      "request_sha256": "ffe7d2e04c58af5a25e73456ecd33687b25ced800cf1f424e6b529e871ddcddd",
+      "reserved_nano": 45240000,
+      "charged_nano": 31945000,
+      "state": "settled",
+      "created_at": 1793019162,
+      "admitted_at_utc": "2026-10-26T12:52:42Z",
+      "settled_at_utc": "2026-10-26T12:52:54Z",
+      "metadata": {
+        "counted_input_tokens": 10950,
+        "epoch_id": "8a7b75787c1846f1bb12b521b7f48926",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-07ab88dd2bbc440aa7663a48ce1990bb",
+        "worker": "slot-5-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0c3e5d3bb97632cb016adf4d17d70487d29ce9bd38b5fb5a9b",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_b28427e57862413ba45f6bb15d5e4fdc",
+        "usage": {
+          "cost_units": 31945000,
+          "input_tokens": 10950,
+          "output_tokens": 457
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-e9795022bd5048a9a1407ccd2047afb2:0",
+      "request_sha256": "7aeee99a17cb9dab39c7998d8b45166381585a1dd71a6bfaf52ab35bf390896e",
+      "reserved_nano": 45240000,
+      "charged_nano": 30917500,
+      "state": "settled",
+      "created_at": 1793019175,
+      "admitted_at_utc": "2026-10-26T12:52:55Z",
+      "settled_at_utc": "2026-10-26T12:53:09Z",
+      "metadata": {
+        "counted_input_tokens": 10019,
+        "epoch_id": "9b3247590fd4434fbce0c546cc532ad2",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-e9795022bd5048a9a1407ccd2047afb2",
+        "worker": "slot-6-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_03085a321784e9b8016adf4d2517f887d2998955f05e570022",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_b6f1784efa094dd88f140d5d3490786c",
+        "usage": {
+          "cost_units": 30917500,
+          "input_tokens": 10019,
+          "output_tokens": 587
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-ec905c49f2f641f89eac4fd9b8a5ead2:0",
+      "request_sha256": "023a0043f770ac241ee39006787b060d0340d5225a156c6158813381f07632c7",
+      "reserved_nano": 45240000,
+      "charged_nano": 25647500,
+      "state": "settled",
+      "created_at": 1793019191,
+      "admitted_at_utc": "2026-10-26T12:53:11Z",
+      "settled_at_utc": "2026-10-26T12:53:19Z",
+      "metadata": {
+        "counted_input_tokens": 9323,
+        "epoch_id": "9b3247590fd4434fbce0c546cc532ad2",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-ec905c49f2f641f89eac4fd9b8a5ead2",
+        "worker": "slot-7-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_023e46f75e04cd36016adf4d34bc0c87d2a90eb12d6317cdea",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_5e94f56b61774deda8296a16dce09fcc",
+        "usage": {
+          "cost_units": 25647500,
+          "input_tokens": 9323,
+          "output_tokens": 234
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "2842d9ae5e7e46f780d6fd846eeeb6e1:0",
+      "request_sha256": "f162e39ed059db022a32563d060cbad3d855e6c7bd487166102b06ae003135d0",
+      "reserved_nano": 110000000,
+      "charged_nano": 27545000,
+      "state": "settled",
+      "created_at": 1793235968,
+      "admitted_at_utc": "2026-10-29T01:06:08Z",
+      "settled_at_utc": "2026-10-29T01:06:44Z",
+      "metadata": {
+        "counted_input_tokens": 4738,
+        "epoch_id": "7b7294088ce8471dab63da9054786950",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "free-development-feasibility/1",
+        "run_id": "2842d9ae5e7e46f780d6fd846eeeb6e1",
+        "worker": "feas-20261029-a"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0a761f6e752361a1016ae29c004ad487d29ed1dbe650add374",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 210
+        },
+        "transport_request_id": "req_2b9fd9db65d44b4ca0e50b8707a30d6b",
+        "usage": {
+          "cost_units": 27545000,
+          "input_tokens": 4738,
+          "output_tokens": 1570
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "1f7999cfecd946448a35388c643f9253:0",
+      "request_sha256": "8f4d6b7c2581e5425e5a9e26425c501d3a2fbfdf143975adb96cc328a7d6398e",
+      "reserved_nano": 110000000,
+      "charged_nano": 27590000,
+      "state": "settled",
+      "created_at": 1793236006,
+      "admitted_at_utc": "2026-10-29T01:06:46Z",
+      "settled_at_utc": "2026-10-29T01:07:19Z",
+      "metadata": {
+        "counted_input_tokens": 4748,
+        "epoch_id": "7b7294088ce8471dab63da9054786950",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "free-development-feasibility/1",
+        "run_id": "1f7999cfecd946448a35388c643f9253",
+        "worker": "feas-20261029-b"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0572df6ef9ac8f51016ae29c26886887d287dc0c4e925827a4",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 253
+        },
+        "transport_request_id": "req_f5aaacc0ede545138ca4c125ed596a80",
+        "usage": {
+          "cost_units": 27590000,
+          "input_tokens": 4748,
+          "output_tokens": 1572
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-4452a85db786461dbd3fb8bdfe1d2f8c:0",
+      "request_sha256": "e6f8fdaf5a8f82fd37177d073da8f0df78534a2d15547b982193945f1c9613f9",
+      "reserved_nano": 121295000,
+      "charged_nano": 61185000,
+      "state": "settled",
+      "created_at": 1793236310,
+      "admitted_at_utc": "2026-10-29T01:11:50Z",
+      "settled_at_utc": "2026-10-29T01:11:52Z",
+      "metadata": {
+        "counted_input_tokens": 24390,
+        "epoch_id": "7b7294088ce8471dab63da9054786950",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-development-formalization/1",
+        "run_id": "controller-4452a85db786461dbd3fb8bdfe1d2f8c",
+        "worker": "feas-20261029-a-f2"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_04995a0b66f2b661016ae29d56691887d2b4bf7dd6d9afeb5a",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_4c817443e8274e5d9b8007f5df509ddc",
+        "usage": {
+          "cost_units": 61185000,
+          "input_tokens": 24390,
+          "output_tokens": 21
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-cc260524f37446f49e8e0af10d33f4a2:0",
+      "request_sha256": "13e7f7aebb2a4a0e2807a025ca0f16e263c2cd9f25991cebdf1c33198503650c",
+      "reserved_nano": 121212500,
+      "charged_nano": 61312500,
+      "state": "settled",
+      "created_at": 1793236321,
+      "admitted_at_utc": "2026-10-29T01:12:01Z",
+      "settled_at_utc": "2026-10-29T01:12:03Z",
+      "metadata": {
+        "counted_input_tokens": 24357,
+        "epoch_id": "7b7294088ce8471dab63da9054786950",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-development-formalization/1",
+        "run_id": "controller-cc260524f37446f49e8e0af10d33f4a2",
+        "worker": "feas-20261029-b-f2"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_062f9dcd716035e6016ae29d61792087d2a623f8ae04b440a6",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 19
+        },
+        "transport_request_id": "req_66cdd116dc63436585b3dee76a565e22",
+        "usage": {
+          "cost_units": 61312500,
+          "input_tokens": 24357,
+          "output_tokens": 42
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-37391aadefe3437ab028ddf7a440ee8b:0",
+      "request_sha256": "8eeb0abc03ddf808353970e7e954d4f4d2ea11619e17a9c2e5d904d9754e61c7",
+      "reserved_nano": 161787500,
+      "charged_nano": 64777500,
+      "state": "settled",
+      "created_at": 1793240328,
+      "admitted_at_utc": "2026-10-29T02:18:48Z",
+      "settled_at_utc": "2026-10-29T02:19:01Z",
+      "metadata": {
+        "counted_input_tokens": 24587,
+        "epoch_id": "36c86aebbd264e2bb76ecfedfc570b44",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-development-formalization-bounded/1",
+        "run_id": "controller-37391aadefe3437ab028ddf7a440ee8b",
+        "worker": "d089-eth-f"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0389e62055cdff75016ae2ad08960487d2a505d7072e3ceb99",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 308
+        },
+        "transport_request_id": "req_15f0813299944a4b805d5693a37ef73e",
+        "usage": {
+          "cost_units": 64777500,
+          "input_tokens": 24587,
+          "output_tokens": 331
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-bc91f039bb79444db228973ba2e92440:0",
+      "request_sha256": "84185e76b3750cac7b68810ba6e6d2fb1490a71b7cacf687423db591292a0354",
+      "reserved_nano": 102307500,
+      "charged_nano": 46067500,
+      "state": "settled",
+      "created_at": 1793240347,
+      "admitted_at_utc": "2026-10-29T02:19:07Z",
+      "settled_at_utc": "2026-10-29T02:19:16Z",
+      "metadata": {
+        "counted_input_tokens": 16795,
+        "epoch_id": "36c86aebbd264e2bb76ecfedfc570b44",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-bc91f039bb79444db228973ba2e92440",
+        "worker": "d089-eth-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0e299da6d51f2457016ae2ad1b4b6c87d2b7fc74ec2412cb61",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 26
+        },
+        "transport_request_id": "req_9e4fb07c9b36402d8320e93074689a67",
+        "usage": {
+          "cost_units": 46067500,
+          "input_tokens": 16795,
+          "output_tokens": 408
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-c8cdd08b0e4749379cd57153dce291cf:0",
+      "request_sha256": "0286930cd536216ab38b4f7503afeecf0cdd45f86f6e9156b8087499c748ea74",
+      "reserved_nano": 182185000,
+      "charged_nano": 103125000,
+      "state": "settled",
+      "created_at": 1793241038,
+      "admitted_at_utc": "2026-10-29T02:30:38Z",
+      "settled_at_utc": "2026-10-29T02:32:07Z",
+      "metadata": {
+        "counted_input_tokens": 24746,
+        "epoch_id": "8528841000a64800a10935fa403b4f32",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-development-formalization-bounded/2",
+        "run_id": "controller-c8cdd08b0e4749379cd57153dce291cf",
+        "worker": "d089-eth-f2"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_051a84f1d1d4ae70016ae2afce724c87d2bfc8b210aa462707",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 3919
+        },
+        "transport_request_id": "req_3ff86778a2354652a3d7e8fdcb6756ea",
+        "usage": {
+          "cost_units": 103125000,
+          "input_tokens": 24746,
+          "output_tokens": 4126
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-55232666d3ee462f96131c5cd9bdeb48:0",
+      "request_sha256": "ea57401cb952043795a4876b75c0239277ec12c4ea04f2ba9af288fb75a19956",
+      "reserved_nano": 102792500,
+      "charged_nano": 47412500,
+      "state": "settled",
+      "created_at": 1793241133,
+      "admitted_at_utc": "2026-10-29T02:32:13Z",
+      "settled_at_utc": "2026-10-29T02:32:23Z",
+      "metadata": {
+        "counted_input_tokens": 16989,
+        "epoch_id": "8528841000a64800a10935fa403b4f32",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-55232666d3ee462f96131c5cd9bdeb48",
+        "worker": "d089-eth-r2"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_094f4a63eb9184db016ae2b02d611887d28294af088fb9c75b",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_3f25b2b3bd334039b598beab48058c86",
+        "usage": {
+          "cost_units": 47412500,
+          "input_tokens": 16989,
+          "output_tokens": 494
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-b38d8122340e49039cc5544d2a5e841a:0",
+      "request_sha256": "0fffa16a5f28626994cb19330fcaaa1b001595aae6c83a54ace6859faca19e7e",
+      "reserved_nano": 205287500,
+      "charged_nano": 204967500,
+      "state": "settled",
+      "created_at": 1793244044,
+      "admitted_at_utc": "2026-10-29T03:20:44Z",
+      "settled_at_utc": "2026-10-29T03:23:54Z",
+      "metadata": {
+        "counted_input_tokens": 25987,
+        "epoch_id": "0ea965ae8047476c90edff36220d07b7",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-development-formalization-diagnostic/1",
+        "run_id": "controller-b38d8122340e49039cc5544d2a5e841a",
+        "worker": "d089-eth-f3"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0d01db8f81d7d95a016ae2bb8c309087d298d303f67126f1bb",
+        "response_status": "incomplete",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 7126
+        },
+        "transport_request_id": "req_7b801e1b849d4d4481dc263a08331490",
+        "usage": {
+          "cost_units": 204967500,
+          "input_tokens": 25987,
+          "output_tokens": 14000
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-e652ca7a387e43d4b0e7b3e9809067a3:0",
+      "request_sha256": "d84109828710713a69bcac3cd28fec0d8674cb078ad6dd583bd07e7c829ec938",
+      "reserved_nano": 245282500,
+      "charged_nano": 201062500,
+      "state": "settled",
+      "created_at": 1793244648,
+      "admitted_at_utc": "2026-10-29T03:30:48Z",
+      "settled_at_utc": "2026-10-29T03:33:26Z",
+      "metadata": {
+        "counted_input_tokens": 25985,
+        "epoch_id": "9817753ffc364d55bed2a2e218107843",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-development-formalization-diagnostic/1",
+        "run_id": "controller-e652ca7a387e43d4b0e7b3e9809067a3",
+        "worker": "d089-eth-f4"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_07e4f86a73cec026016ae2bde86d4487d2aa5f8cc397c47a5e",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 1355,
+          "reasoning_output_tokens": 4660
+        },
+        "transport_request_id": "req_b286a8c3cd794fa48154496732d9785d",
+        "usage": {
+          "cost_units": 201062500,
+          "input_tokens": 25985,
+          "output_tokens": 13610
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-7949729000d44345af34f60edbec058e:0",
+      "request_sha256": "dde8ffa6fadc2bf53485733d1a628e6fa8ac5fe37e8b006ddb24deea51ae216e",
+      "reserved_nano": 107160000,
+      "charged_nano": 76860000,
+      "state": "settled",
+      "created_at": 1793244812,
+      "admitted_at_utc": "2026-10-29T03:33:32Z",
+      "settled_at_utc": "2026-10-29T03:33:49Z",
+      "metadata": {
+        "counted_input_tokens": 26736,
+        "epoch_id": "9817753ffc364d55bed2a2e218107843",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-7949729000d44345af34f60edbec058e",
+        "worker": "d089-eth-r4"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0e5463f2c9895ad6016ae2be8cc3e087d29de9d5e6f0e4053e",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 47
+        },
+        "transport_request_id": "req_c25babc489fe48c9b2f85623845cb634",
+        "usage": {
+          "cost_units": 76860000,
+          "input_tokens": 26736,
+          "output_tokens": 1002
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-3f8523115dee4c0188ab3d8b68950447:0",
+      "request_sha256": "ccb9f965ac8a5ccef2cf3a4cea231355d8898441687a405ac75274cc598f0b69",
+      "reserved_nano": 245837500,
+      "charged_nano": 188597500,
+      "state": "settled",
+      "created_at": 1793247150,
+      "admitted_at_utc": "2026-10-29T04:12:30Z",
+      "settled_at_utc": "2026-10-29T04:14:45Z",
+      "metadata": {
+        "counted_input_tokens": 26207,
+        "epoch_id": "f703f09710e24e33ba9e4dda3ff04aaf",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-development-formalization-required-inputs/1",
+        "run_id": "controller-3f8523115dee4c0188ab3d8b68950447",
+        "worker": "d089-eth-f5"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_000c784a86e5e3e2016ae2c7aeded087d28dde04c6ee726905",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 3106
+        },
+        "transport_request_id": "req_1f1cde410d70442a9267241e0733ba3e",
+        "usage": {
+          "cost_units": 188597500,
+          "input_tokens": 26207,
+          "output_tokens": 12308
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-6971d2c35d1f441fb25d3900fea16b1f:0",
+      "request_sha256": "174fda365bf834c035346db48042591bc7c0df4ff34544954d0c8bc495632124",
+      "reserved_nano": 106865000,
+      "charged_nano": 79755000,
+      "state": "settled",
+      "created_at": 1793247292,
+      "admitted_at_utc": "2026-10-29T04:14:52Z",
+      "settled_at_utc": "2026-10-29T04:15:19Z",
+      "metadata": {
+        "counted_input_tokens": 26618,
+        "epoch_id": "f703f09710e24e33ba9e4dda3ff04aaf",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-6971d2c35d1f441fb25d3900fea16b1f",
+        "worker": "d089-eth-r5"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0224eb59d42f109c016ae2c83be15087d2b0536dba04021c84",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 151
+        },
+        "transport_request_id": "req_7d7f973ff639471d8a21561a3cabdc3f",
+        "usage": {
+          "cost_units": 79755000,
+          "input_tokens": 26618,
+          "output_tokens": 1321
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-c54de1d95c134472a27c71308fee7834:0",
+      "request_sha256": "adfbee648449f9cc3949fd07a684da9e676da5140a8b6e3e42a626c34d601098",
+      "reserved_nano": 247537500,
+      "charged_nano": 190387500,
+      "state": "settled",
+      "created_at": 1793249348,
+      "admitted_at_utc": "2026-10-29T04:49:08Z",
+      "settled_at_utc": "2026-10-29T04:51:23Z",
+      "metadata": {
+        "counted_input_tokens": 26887,
+        "epoch_id": "08af4f8239ed4ee585778f153d702df4",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-development-formalization-evidence-handoff/1",
+        "run_id": "controller-c54de1d95c134472a27c71308fee7834",
+        "worker": "d089-eth-f6"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0f746037f68db380016ae2d0447d9887d2907fed69b4a93852",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 3106
+        },
+        "transport_request_id": "req_3c385d3aa1ad4203a39674f6b77fa22d",
+        "usage": {
+          "cost_units": 190387500,
+          "input_tokens": 26887,
+          "output_tokens": 12317
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-af9621b4581a4cefa44fbaf07bd6a446:0",
+      "request_sha256": "dce5b7545e6dfa267c925536829d13aee2d192ee58b8ece132d701fd0d04e3c2",
+      "reserved_nano": 109902500,
+      "charged_nano": 80152500,
+      "state": "settled",
+      "created_at": 1793249503,
+      "admitted_at_utc": "2026-10-29T04:51:43Z",
+      "settled_at_utc": "2026-10-29T04:52:03Z",
+      "metadata": {
+        "counted_input_tokens": 27833,
+        "epoch_id": "08af4f8239ed4ee585778f153d702df4",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-af9621b4581a4cefa44fbaf07bd6a446",
+        "worker": "d089-eth-r6"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0a01eb484c57c1b1016ae2d0df800087d2bc1d5368c16ef75f",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 74
+        },
+        "transport_request_id": "req_af3fd88e60ab4884a5df7e03d05d0176",
+        "usage": {
+          "cost_units": 80152500,
+          "input_tokens": 27833,
+          "output_tokens": 1057
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "a554a92d7972407495fc8504b06a3b4f:0",
+      "request_sha256": "215b089d1ed253774c11ad7e7e0c37a26a71c5f5ce694a5fbf77280ea3f5d368",
+      "reserved_nano": 130595000,
+      "charged_nano": 85695000,
+      "state": "settled",
+      "created_at": 1793276370,
+      "admitted_at_utc": "2026-10-29T12:19:30Z",
+      "settled_at_utc": "2026-10-29T12:20:03Z",
+      "metadata": {
+        "counted_input_tokens": 28110,
+        "epoch_id": "32481d653e9a46e08552f3e8d9dc206c",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "feedback-development-discovery/1",
+        "run_id": "a554a92d7972407495fc8504b06a3b4f",
+        "worker": "feedback-20261029-a"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0fd994004ee7c9de016ae339d31f2887d2beec56b855124a58",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 92
+        },
+        "transport_request_id": "req_d1e462391ba94894b95a9fb716be212a",
+        "usage": {
+          "cost_units": 85695000,
+          "input_tokens": 28110,
+          "output_tokens": 1542
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "c15c467fa04949d9b6fff67cf1ae62e0:0",
+      "request_sha256": "6795f5e7f7c165f3070760a4d21d788d8210bd530d625ee936fdc03c6d1148b4",
+      "reserved_nano": 130620000,
+      "charged_nano": 88740000,
+      "state": "settled",
+      "created_at": 1793276418,
+      "admitted_at_utc": "2026-10-29T12:20:18Z",
+      "settled_at_utc": "2026-10-29T12:21:01Z",
+      "metadata": {
+        "counted_input_tokens": 28120,
+        "epoch_id": "32481d653e9a46e08552f3e8d9dc206c",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "feedback-development-discovery/1",
+        "run_id": "c15c467fa04949d9b6fff67cf1ae62e0",
+        "worker": "feedback-20261029-b"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0989803b879c5525016ae33a03267487d2b5ed05d25c1ba4f3",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 106
+        },
+        "transport_request_id": "req_39cd9bce10a84712a08f40a041a2f763",
+        "usage": {
+          "cost_units": 88740000,
+          "input_tokens": 28120,
+          "output_tokens": 1844
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-ebcb3993b798426e828e2a9f38ecd3c1:0",
+      "request_sha256": "71f7847ddec4e3298b4f2a560f520b4399cf1759d06daafc073af3de7c9ac755",
+      "reserved_nano": 241160000,
+      "charged_nano": 240840000,
+      "state": "settled",
+      "created_at": 1793306870,
+      "admitted_at_utc": "2026-10-29T20:47:50Z",
+      "settled_at_utc": "2026-10-29T20:51:06Z",
+      "metadata": {
+        "counted_input_tokens": 24336,
+        "epoch_id": "f08a8c9752bd4b55a11aed8f143a6a02",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-btc-bounded-reuse/1",
+        "run_id": "controller-ebcb3993b798426e828e2a9f38ecd3c1",
+        "worker": "d091-btc-formalizer"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0863663f534d0ae6016ae3b0f722e087d282043bc5b3eb167e",
+        "response_status": "incomplete",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 5872
+        },
+        "transport_request_id": "req_b113c63a88ad4b68920145c5e4d109e6",
+        "usage": {
+          "cost_units": 240840000,
+          "input_tokens": 24336,
+          "output_tokens": 18000
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-2064ce3fe44149a6b62d83fbdfcc2e28:0",
+      "request_sha256": "0c7ce1ee9f5ba971789385fead431065ff3bcca6298c2b8ea0209caeba397a13",
+      "reserved_nano": 241427500,
+      "charged_nano": 228597500,
+      "state": "settled",
+      "created_at": 1793312241,
+      "admitted_at_utc": "2026-10-29T22:17:21Z",
+      "settled_at_utc": "2026-10-29T22:20:06Z",
+      "metadata": {
+        "counted_input_tokens": 24443,
+        "epoch_id": "83a7e355615d4354a19bcc61a9406370",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-btc-compact-output/1",
+        "run_id": "controller-2064ce3fe44149a6b62d83fbdfcc2e28",
+        "worker": "btc-compact-formalizer"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0fe6aa9d4671fe13016ae3c5f23c8087d2bc2ca547a63bd296",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 4991
+        },
+        "transport_request_id": "req_9e226266c4fe490bad5b887c3157eb28",
+        "usage": {
+          "cost_units": 228597500,
+          "input_tokens": 24443,
+          "output_tokens": 16749
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    }
+  ]
+}

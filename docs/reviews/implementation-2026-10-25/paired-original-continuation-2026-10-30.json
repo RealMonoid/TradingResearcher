@@ -1,0 +1,224 @@
+{
+  "schema": "paired-original-continuation-observation/1",
+  "at_utc": "2026-10-30T12:54:01.715738+00:00",
+  "status": "COMPLETED_WITH_RETAINED_FORMALIZATION_FORMAT_GAP",
+  "decision": "D094",
+  "epoch_id": "9437567cebe54dc7a2ca22c1cf3f2c10",
+  "idea_id": "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+  "formalization_id": "2570cc9fe22b64547ae90a009b043782aa04a268eb8c4feadf8fe3ae84bd86c5",
+  "job_id": "864d606f07414a97b2d3cfefed1b108e",
+  "started_at_utc": "2026-10-30T12:44:39.973575+00:00",
+  "ended_at_utc": "2026-10-30T12:48:09.970214+00:00",
+  "wall_seconds": 218.66610690001107,
+  "assessment": {
+    "gap": {
+      "code": "LANGUAGE_GAP",
+      "reason": "Required fields are absent or unexpected",
+      "reopen_condition": "Resolve the named meaning/capability/input gap under approved semantics"
+    },
+    "mapping_authority": "unverified_formalizer_assertion",
+    "required_before_freeze": [
+      "independent_semantic_review",
+      "feature_certification",
+      "data_and_exposure_review",
+      "calibrated_evaluation_profile",
+      "complete_evaluation_plan",
+      "atomic_allocation_and_freeze"
+    ],
+    "stage": "FORMALIZING",
+    "status": "RETAINED_GAP"
+  },
+  "specific_observed_defect": {
+    "path": "/horizons",
+    "actual_type": "array",
+    "expected_type": "object",
+    "retained_value": [
+      {
+        "grid_seconds": 900,
+        "outcome_bars": 5
+      }
+    ],
+    "qualification": "Complete response retained unchanged. No coercion, accepted repair or market computation."
+  },
+  "call": {
+    "dispatch_id": "controller-0c3e71b7346f46e1856cddff08a44c91:0",
+    "request_sha256": "7fa0949fa28011813bfef53855d978de16f4df9bda56b1a4004d092c575d8f32",
+    "reserved_nano": 335000000,
+    "charged_nano": 249982500,
+    "state": "settled",
+    "created_at": 1793364305,
+    "admitted_at_utc": "2026-10-30T12:45:05Z",
+    "settled_at_utc": "2026-10-30T12:48:06Z",
+    "metadata": {
+      "counted_input_tokens": 28881,
+      "epoch_id": "9437567cebe54dc7a2ca22c1cf3f2c10",
+      "model": "gpt-6.1-sol",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": null,
+        "requested_model": "gpt-6.1-sol"
+      },
+      "ordinal": 0,
+      "prompt_version": "faithful-paired-development-formalization/1",
+      "run_id": "controller-0c3e71b7346f46e1856cddff08a44c91",
+      "worker": "paired-original-20261030-f"
+    },
+    "receipt": {
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "provider_request_id": "resp_020d22b1fee1e354016ae491521b1087d2a3120945d4f9a782",
+      "response_status": "completed",
+      "token_details": {
+        "cached_input_tokens": 0,
+        "reasoning_output_tokens": 3566
+      },
+      "transport_request_id": "req_6546bd1efa4844c297da336ca95f2fef",
+      "usage": {
+        "cost_units": 249982500,
+        "input_tokens": 28881,
+        "output_tokens": 17778
+      }
+    },
+    "provider": "openai",
+    "model_identity": {
+      "catalog_name": "GPT-6.1 Sol",
+      "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "catalog_version": "6.1",
+      "immutable_snapshot_id": null,
+      "immutable_snapshot_status": "UNKNOWN",
+      "reported_model": "gpt-6.1-sol",
+      "requested_model": "gpt-6.1-sol"
+    }
+  },
+  "usage_after": {
+    "totals": {
+      "calls": 46,
+      "known_usage_calls": 46,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 749289,
+      "known_output_tokens": 131390,
+      "known_total_tokens": 880679,
+      "exact_total_tokens": 880679,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 46,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 38476,
+      "reasoning_detail_calls": 46,
+      "exact_reasoning_output_tokens": 38476
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 3187122500,
+      "available_nano": 1812877500,
+      "halted": false
+    },
+    "models": [
+      {
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": null,
+          "catalog_source": null,
+          "catalog_version": null,
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "calls": 4,
+        "known_usage_calls": 4,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 2038,
+        "known_output_tokens": 134,
+        "known_total_tokens": 2172,
+        "exact_total_tokens": 2172,
+        "known_cached_input_tokens": 0,
+        "cached_detail_calls": 4,
+        "exact_cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "reasoning_detail_calls": 4,
+        "exact_reasoning_output_tokens": 0
+      },
+      {
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "calls": 42,
+        "known_usage_calls": 42,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 747251,
+        "known_output_tokens": 131256,
+        "known_total_tokens": 878507,
+        "exact_total_tokens": 878507,
+        "known_cached_input_tokens": 20971,
+        "cached_detail_calls": 42,
+        "exact_cached_input_tokens": 20971,
+        "known_reasoning_output_tokens": 38476,
+        "reasoning_detail_calls": 42,
+        "exact_reasoning_output_tokens": 38476
+      }
+    ],
+    "timestamp_basis": "UTC; admission and durable local settlement, not provider execution start/end. Missing historical fields are not backfilled.",
+    "qualification": "Provider-reported tokens. Known sums exclude unknown receipts. Cached/reasoning counts are subsets. Currency is a conservative published-rate bound, not an invoice."
+  },
+  "grant_closure": {
+    "at_utc": "2026-10-30T12:48:10.372366+00:00",
+    "revocation": {
+      "epoch_id": "9437567cebe54dc7a2ca22c1cf3f2c10",
+      "pending_calls_still_require_settlement": true,
+      "status": "REVOKED"
+    }
+  },
+  "registry_integrity": {
+    "blobs": {
+      "committed": 992,
+      "orphan_policy": "uncommitted files confer no authority; no automatic deletion",
+      "quarantined": [],
+      "status": "PASS"
+    },
+    "events": 1883,
+    "foreign_keys": true,
+    "research_memory": {
+      "records": 61,
+      "scientific_authority": false,
+      "status": "PASS",
+      "version": "research-memory/1"
+    },
+    "schema_version": 1,
+    "scope": "local coordination and research memory integrity only",
+    "status": "PASS",
+    "synchronous": "FULL"
+  },
+  "review_dispatched": false,
+  "market_computation_dispatched": false,
+  "protected_outcomes_accessed": false,
+  "qualification": "A format rejection is neither empirical rejection nor evidence that the original idea is impossible. No faithful executable candidate is admitted.",
+  "next_action": "Finish exact offline defect diagnosis, then prepare a separately bounded formatting-correction continuation under the later direct discretionary-budget instruction. Preserve the consumed D094 grant and all scientific gates.",
+  "scientific_readiness": false,
+  "private_evidence": {
+    "prepared.json": "0102bac19e0ee11c19b075f86f2dafc31337228bb260c1b24f2ad2a5a9945592",
+    "run-start.json": "1a3d7cd99f036e725a1e91fa5c9f170f9fef61ae04c061ee038bd25d62f357ea",
+    "formalization.json": "fd0ad51966d31691a0a50307ef4aa9ec4d15ca66fbed750d39691a0f3aad9f28",
+    "grant-closure.json": "3d8b17ca8111ad6907ab328c36586ee68cd126be806e21410600bf161e5ebc01",
+    "run-result.json": "bb402507de096d306b1ae38a65b19c4e6a077fdfb037c545cc8a4b3aafa896b0"
+  }
+}

@@ -1,0 +1,1156 @@
+{
+  "schema": "eth-required-input-observation/1",
+  "recorded_at_utc": "2026-10-29T04:16:42.050351+00:00",
+  "continuation_decision": {
+    "schema": "bounded-continuation-decision/1",
+    "recorded_at_utc": "2026-10-29T04:11:57.143090+00:00",
+    "status": "TECHNICAL_PREREQUISITES_VERIFIED_ONE_BOUNDED_ATTEMPT",
+    "prior_attempt": "eth-diagnostic-output-correction-2026-10-29.json",
+    "new_evidence": "required-input-verification-2026-10-29.json",
+    "reason": "The independently detected population exclusion now has a separately versioned, independently tested dependency-only correction. A fresh explicit report2 formalization and meaning review is required; prior report1 judgments cannot silently migrate.",
+    "scope": "Unchanged original ETH idea, Q1 2023 authorized development data. No new discovery, threshold tuning, manual candidate, temporal-cutoff change or calibration-family expansion.",
+    "limits": {
+      "new_model_calls": 2,
+      "epoch_tokens": 80000,
+      "epoch_seconds": 1800,
+      "cost_nano_usd": 1000000000,
+      "aggregate_authorization_nano_usd": 5000000000,
+      "primitive_steps": 10000000
+    },
+    "output_allocation": {
+      "formalization_output": 18000,
+      "review_input": 31000,
+      "review_output": 4000
+    },
+    "stop": "Retain any gap; no automatic paid retry, budget reset, truncation or old candidate repair.",
+    "post_execution_check": "Independently apply the unchanged original formula to all8640 decisions and crosscheck all observed logarithmic enclosures; preserve the earlier discrepant audit.",
+    "scientific_readiness": false
+  },
+  "prior_attempt": "eth-diagnostic-output-correction-2026-10-29.json",
+  "idea_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+  "scope": "Same original ETH idea, Q1 2023 development only, separately versioned required-input correction; no new discovery.",
+  "epoch_id": "f703f09710e24e33ba9e4dda3ff04aaf",
+  "stages": [
+    {
+      "stage": "formalization",
+      "started_at_utc": "2026-10-29T04:12:29.733347+00:00",
+      "ended_at_utc": "2026-10-29T04:14:46.366768+00:00",
+      "outcome": {
+        "accepted": true,
+        "artifact_id": "919c1333a4b70e923445a5e79026966f7218ddafa67ea75fa952c18d08548877",
+        "check": "formalization/v1",
+        "message": "Formalization retention and structure checked; no semantic/scientific certificate issued",
+        "scientific_authority": false,
+        "state": "completed",
+        "transcript_ids": [
+          "3e8299d70330c837c3901e925e8467db177228d506cb283c621fc60acb45ad6d"
+        ],
+        "provider_mode": "live",
+        "actual_independent_model_review": "UNVERIFIED"
+      },
+      "artifact_id": "919c1333a4b70e923445a5e79026966f7218ddafa67ea75fa952c18d08548877",
+      "status": null,
+      "body_sha256": "7fdf0fa4aeca65d955dd2990b88072da6dde6d26844c8faf26a975937dc103f7",
+      "candidate_present": true,
+      "structural_assessment": {
+        "gap": {
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate",
+          "reopen_condition": "Resolve the named meaning/capability/input gap under approved semantics"
+        },
+        "mapping_authority": "unverified_formalizer_assertion",
+        "required_before_freeze": [
+          "independent_semantic_review",
+          "feature_certification",
+          "data_and_exposure_review",
+          "calibrated_evaluation_profile",
+          "complete_evaluation_plan",
+          "atomic_allocation_and_freeze"
+        ],
+        "stage": "FORMALIZING",
+        "status": "RETAINED_GAP"
+      },
+      "semantic_report": {
+        "differences": [],
+        "segments": [
+          {
+            "interpretation": "The executable claim is the negative descriptive conditional-minus-whole-scope mean difference. Replenishing supply and latent demand remain proposed mechanisms, not measured outcomes or identified causal effects. No empirical result, profitability finding, or scientific acceptance is asserted.",
+            "path": "/candidate/estimand",
+            "text": "Hypothesis: unusually intense aggressive buying that produces an intrabar rally but almost no retained gain in ETHUSDT reflects replenishing passive sell supply rather than latent bullish demand. Contrary to the standard intuition that high taker-buy participation and high turnover predict continuation, I hypothesize a lower subsequent one-hour ETH return after this failed buying impulse than across the whole eligible ETH scope. This is an original, untested development hypothesis, not evidence of profitability or a causal conclusion.\n\n"
+          },
+          {
+            "interpretation": "The universe is ETHUSDT only, with the exact inclusive start, exclusive end, and 900-second grid. Scope is true at every declared decision coordinate, not just at existing market rows. Under the explicitly supplied required-inputs/1 implementation selected by reference-computation/4, all actual feature dependencies must remain inside this interval; earlier dependencies are not fetched from December. Missing signal or window dependencies make the condition unknown without removing an otherwise observed outcome from the whole-scope population. Development exposure and unknown training exposure remain qualifications.",
+            "path": "/candidate/test_universe",
+            "text": "Instrument and dates: Binance spot ETHUSDT only; BTCUSDT is not used. Decision times t are every UTC 900-second grid point in [2023-01-01T00:00:00Z, 2023-04-01T00:00:00Z). All input observations must also lie within that interval; no December warmup or other historical inputs are permitted. All historical information is development exposure, and training exposure is unknown.\n\n"
+          },
+          {
+            "interpretation": "The outer one-bar lag evaluates both the validity predicate and the signal predicate at s=t-900. Historical reads retain the original decision cutoff, including the exclusive-end cap; they do not acquire a historical-anchor cutoff. Supplied definition dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab binds exclusive-end keys and the assumed 900-second delay. Missing or additionally unavailable reads remain unknown. This uses the supplied structural timing definition without certifying historical publication truth.",
+            "path": "/candidate/condition_ast/expression",
+            "text": "Timing: raw observations are keyed by exclusive bar end s. Their availability is assumed to be s+900 seconds, not established historical publication truth. At decision t use the signal bar ending s=t-900; never use the bar ending t. Respect any additional recorded unavailability. Conditions are evaluated with as_of=t and cutoff min(t, 2023-04-01T00:00:00Z minus one second).\n\n"
+          },
+          {
+            "interpretation": "At the signal anchor, P at /candidate/condition_ast/expression/arg/left/right is exactly the five inclusive comparisons implementing the four stated criteria, with the retained-gain interval split into its two endpoints. Each median is lag(trailing_median(Q,96),1), giving exactly s-900 through s-86400 and the exact average of the two central sorted observations. The complete-validity composition is at /candidate/condition_ast/expression/arg. Its identical V copies are at /candidate/condition_ast/expression/arg/left/left and /candidate/condition_ast/expression/arg/right/left/arg. In V, the left branch checks O_s>0, Q_s>0, and the complete median M_s>0; the right-left branch checks B_s>=0 and B_s<=Q_s; the right-right self-equalities require observed H_s and C_s. O_s, Q_s, B_s and all 96 baseline observations must likewise be present to make V true. Finite execution admission and the supplied raw-feature validity/null transformations supply finite scalar inputs; self-equality is not a nonfinite-input detector. Thus V is true only when all required condition inputs are complete, available and valid. G=(V AND P) OR ((NOT V) AND unknown) yields P only for V=true and unknown otherwise, including when another signal comparison is false. No threshold, median, eligibility rule or fitting choice is changed. This mapping is offered for independent review, not as evidence that such review has occurred.",
+            "path": "/candidate/condition_ast/expression/arg",
+            "text": "Exact condition: let O_s, H_s, C_s, Q_s, and B_s be ETH open, high, close, quote volume, and taker quote volume for the signal bar. Let M_s be the ordinary median of quote volumes at the preceding 96 exact grid ends s-900k, k=1,...,96; for 96 observations use the arithmetic average of the two central sorted values. Require all 96 observations, without skipping or substitution. The condition is true exactly when B_s/Q_s >= 0.65, Q_s >= 2*M_s, H_s/O_s-1 >= 0.003, and 0 <= C_s/O_s-1 <= 0.0005. Require finite values, O_s>0, Q_s>0, M_s>0, and 0<=B_s<=Q_s. No additional screening or tuning is proposed. A 65% buy share represents materially one-sided aggressive flow; twice the preceding day's median turnover distinguishes a participation burst from ordinary noise; a 30-basis-point upward excursion with only zero to five basis points retained isolates failed upward progress. The 96-bar baseline spans one day without requiring an additional regime model. These are mechanism-motivated exploratory choices, not fitted thresholds.\n\n"
+          },
+          {
+            "interpretation": "At h=5 the anchor is a=t+4500. lag(close,1) reads C at a-900=t+3600, and lag(open,4) reads O at a-3600=t+900. Their ratio is dimensionless; multiplication by the basis-point conversion literal gives log basis points. The supplied raw price definitions require positive decimals and transform invalid keyed bars to null; execution admission requires finite inputs. Consequently both observed raw prices are finite and positive, rather than merely accepting a positive ratio of two invalid negative prices. Missing required rows, values, availability or permitted keys leave Y missing. The fixed-delay dependency check is explicit: the close is available at a and the open at a-2700. For elapsed in-universe anchors, a later inherited as_of cutoff cannot newly admit either fixed-delay input compared with the original anchor cutoff; the exclusive-end cap is retained. No unused decision or outcome-anchor container is required by required-inputs/1. This is a dependency mapping, not a claim of completed snapshot replay or historical availability verification. Natural logarithm uses bounded-math/1.0 outward enclosures, not a simple-return replacement or midpoint decision. The future open remains solely an outcome input.",
+            "path": "/candidate/outcome/program/expression",
+            "text": "Outcome: choose positive integer h=5, so the outcome evaluation anchor is a=t+4500 seconds. Define Y_t=10000*ln(C_{t+3600}/O_{t+900}), using ETH bar-end keys. The denominator is the opening price of the bar spanning t to t+900; the numerator is the close of the bar ending t+3600. Thus Y describes the market's one-hour price change starting at decision t, expressed in log basis points. It is not a return from the stale signal close. At anchor a, the final close has its assumed 900-second publication delay satisfied. Both prices must be finite and positive, available by cutoff min(a, 2023-04-01T00:00:00Z minus one second), and have keys within the permitted interval. Near-end outcomes lacking these requirements remain missing; do not obtain April data or shorten the horizon. The future opening price is an outcome measurement, not information available to the condition or an assumed executable fill. Raw ETH prices have units USDT/ETH; only their ratios and Y are dimensionless.\n\n"
+          },
+          {
+            "interpretation": "The estimator is mean(Y|C=true,S=true,Y observed) minus mean(Y|S=true,Y observed), with equal decision-row weights, no nuisance fitting and a negative direction. The scope baseline includes condition-true, condition-false and condition-unknown rows. It is neither a complement comparison nor a claim that the conditional mean is below zero. Overlapping outcomes are retained; independence is not asserted.",
+            "path": "/candidate/estimand",
+            "text": "Comparison and weighting: the target descriptive contrast is the equal-decision-row mean Y among condition-true rows minus the equal-decision-row mean Y across the entire ETH decision grid with observed Y, including condition-false and condition-unknown rows. This intentionally uses the whole-scope benchmark, not a matched control or false-only group. The hypothesized contrast is negative. It need not imply that the conditional mean itself is negative. Overlapping hourly outcomes remain included with equal weight; they are not independent observations.\n\n"
+          },
+          {
+            "interpretation": "The supplied inputs.reporting_contract explicitly requests case-diagnostics/2, pinned by sha256 2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c; this candidate requires its required-inputs/1 evaluation via reference-computation/4, not the old /2 or /3 population. All declared scope-true coordinates receive condition evaluation, even without decision containers. Only actual raw feature reads require rows, and every median argument at every exact position is required. Unknown conditions remain in the observed whole-scope denominator. Diagnostics map boundary censoring to the contract's boundary category; absent rows to absent required rows; unavailable data to unavailable-data events; missing warmup to missing-warmup and, where applicable, pre-universe-dependency events; condition unknown to the evaluated unknown-condition category. Original invalid values map to traced domain/typed-null and missing-value/feature observations with their source qualifications, together with failed or unknown complete-validity checks, not to an invented undifferentiated cause. The exact recognized guard path is /candidate/condition_ast/expression/arg beneath the outer lag; V paths are /candidate/condition_ast/expression/arg/left/left and /candidate/condition_ast/expression/arg/right/left/arg. V=false records failure of at least one stated validity check; V=unknown records unresolved required completeness/availability/validity, with overlapping actual-read events distinguishing available causes. Source-invalid-to-null observations retain their raw transformation qualification; a literal null is not a missing market feature, and nonfinite execution inputs fail row admission. Categories overlap and count each row once per category. No unused coordinate is counted as missing market data. Missing Y enters neither mean; an empty conditional group is undefined/INFORMATION_GAP, not zero. Numerical or diagnostic resource exhaustion must be reported explicitly, with partial diagnostic processed/unprocessed counts and RESOURCE_STOP rather than silent completeness; numerical incompleteness yields no effect. No diagnostic computation or independent conformance replay is claimed here.",
+            "path": "/candidate/estimand/missingness",
+            "text": "Missingness: if any required condition input or baseline observation is absent, null, unavailable, invalid under the stated checks, or outside the interval, label the condition unknown rather than false; use complete-condition evaluation rather than inferring false from a partial conjunction. Never forward-fill. Condition-unknown rows stay in scope and enter the whole-scope outcome mean when Y is observed, but never enter the conditional mean. Missing Y is excluded from either mean, with separate counts retained for boundary censoring, absent rows, invalid values, unavailable data, missing warmup, and condition unknown. An empty conditional group leaves the contrast undefined. These rules make the descriptive estimand an observed-outcome contrast, with selection limitations rather than an implied result for missing outcomes.\n\n"
+          },
+          {
+            "interpretation": "Only the specified descriptive difference is formalized. Economic mechanisms, alternative explanations and possible later policy uses remain narrative motivations and unresolved evidence requirements, not additional executable claims. No execution policy, cost model, fill assumption, profitability, inference, scientific acceptance or measurement result is supplied. Structural feature definitions and this semantic mapping do not certify historical availability, provenance, feature meaning, exposure history or independent review.",
+            "path": "/candidate/claim_kind",
+            "text": "Economic bridge and gaps: passive sellers may repeatedly replenish offers while urgent buyers consume liquidity; after the burst, depleted buying interest could expose downside. Alternatively, the same pattern could be temporary inventory transfer before a breakout, and taker classification cannot identify informed traders, actual replenishment, or order-book absorption. Those mechanisms require unavailable book, cancellation, participant, and cross-venue evidence. A lower future return could inform a later investigation of delaying purchases or reducing exposure, but no execution policy is specified or tested. Fees, spread, slippage, latency, market impact, order size, fill probability, inventory constraints, and any borrowing assumptions are missing. No profit, empirical success, or scientific acceptance is claimed. No measurement was requested. Source projections establish only supplied structure and feature descriptions; historical availability, feature certification, provenance gates, and unread inherited exposure details remain unresolved rather than assumed verified."
+          }
+        ],
+        "status": "equivalent"
+      }
+    },
+    {
+      "stage": "meaning_review",
+      "started_at_utc": "2026-10-29T04:14:50.218790+00:00",
+      "ended_at_utc": "2026-10-29T04:15:19.585156+00:00",
+      "outcome": {
+        "accepted": true,
+        "artifact_id": "229325b1d7fbe767981b98745c59929a6f42054d1e4ab9a3f14ca9947833f03d",
+        "check": "semantic-review/v1",
+        "message": "Review input/response binding checked; actual independent model judgment and scientific readiness remain unverified",
+        "scientific_authority": false,
+        "state": "completed",
+        "transcript_ids": [
+          "d244593d847ac561b3cdf7349adad743ec1e91d26c77f9f5178da941e503d021"
+        ],
+        "provider_mode": "live",
+        "actual_independent_model_review": "UNVERIFIED"
+      },
+      "artifact_id": "229325b1d7fbe767981b98745c59929a6f42054d1e4ab9a3f14ca9947833f03d",
+      "status": null,
+      "body_sha256": "e18dae315c1dc6689b136599d9113e0e5b8cea5f60387e08bd867c19afc5a07b",
+      "review": {
+        "added_assumptions": [
+          "The outcome mapping relies on exact fixed-delay dependency behavior making a later inherited as_of cutoff equivalent to the original min(a, exclusive_end minus one second) cutoff, including any additional recorded unavailability."
+        ],
+        "conflicts": [
+          "The reporting contract explicitly states that it does not add an anchor-capped outcome cutoff, whereas the original specifies availability by min(a, exclusive_end minus one second). This difference remains consequential unless dependency-specific equivalence is established."
+        ],
+        "judgment": "uncertain",
+        "mapping_checks": [
+          {
+            "judgment": "faithful",
+            "reason": "The candidate specifies a negative descriptive contrast, not a negative conditional return level, causal identification, profitability, or an empirical finding. The economic mechanism remains a retained hypothesis.",
+            "segment": 0
+          },
+          {
+            "judgment": "faithful",
+            "reason": "ETHUSDT alone, the stated start and exclusive end, full decision-grid enumeration, and no pre-universe dependencies are preserved by the universe and supplied required-input evaluation contract. Missing unrelated row containers do not restrict the population.",
+            "segment": 1
+          },
+          {
+            "judgment": "faithful",
+            "reason": "The outer lag selects s=t-900. Supplied definitions use exclusive bar-end keys and an explicitly assumed 900-second delay, and the required-input contract retains the original decision cutoff for condition reads rather than moving it to the historical expression anchor.",
+            "segment": 2
+          },
+          {
+            "judgment": "faithful",
+            "reason": "The actual AST retains the inclusive buy-share, turnover, excursion, and retained-gain thresholds. The lagged 96-observation median excludes the signal bar and requires every exact observation. With admitted finite raw inputs, V checks the specified completeness and validity requirements. For V=true the guarded expression yields P; for V=false or unknown it yields unknown, even if a signal comparison is false. Threshold values are explicitly established by the original, although some provenance paths are stale.",
+            "segment": 3
+          },
+          {
+            "judgment": "uncertain",
+            "reason": "At a=t+4500, lag(close,1) and lag(open,4) correctly select C at t+3600 and O at t+900. The natural logarithm and 10000 scaling preserve log basis points, and supplied positive-price definitions support the price domains. However, the inherited outcome cutoff is not the original anchor-capped cutoff. Nominal fixed-delay arithmetic alone does not prove equivalence when additional recorded unavailability is possible.",
+            "segment": 4
+          },
+          {
+            "judgment": "faithful",
+            "reason": "The estimator preserves equal decision-row weighting, condition-true minus entire observed-outcome scope, inclusion of false and unknown conditions in the benchmark, negative direction, and retention of overlapping outcomes without an independence claim.",
+            "segment": 5
+          },
+          {
+            "judgment": "uncertain",
+            "reason": "The condition guard, whole-grid evaluation, exclusion of missing outcomes from both means, unknown-condition denominator treatment, empty-group behavior, and requested diagnostic categories preserve the original rules. But outcome observedness can depend on the unresolved cutoff difference, so the resulting missingness and comparison population are not yet established as equivalent.",
+            "segment": 6
+          },
+          {
+            "judgment": "faithful",
+            "reason": "The formalization retains mechanisms and alternative explanations as narrative motivations, not measured replenishment or causal conclusions. It does not add an execution policy, assumed fills, cost model, profit result, or scientific acceptance, and retains the stated evidence and provenance limitations.",
+            "segment": 7
+          }
+        ],
+        "omitted_assumptions": [
+          "The executable outcome profile does not directly retain the original anchor-capped availability rule; it relies instead on a separately verified equivalence condition."
+        ],
+        "reason": "The candidate preserves the substantive negative, equal-row conditional-minus-whole-scope contrast, ETH-only dates, signal thresholds, complete 96-bar median, and specified logarithmic outcome price keys. Its complete-validity Boolean composition also preserves unknown rather than false for incomplete or invalid condition inputs under three-valued semantics. However, exact temporal equivalence is not established: the supplied execution contract explicitly uses an inherited outcome cutoff rather than the original anchor-capped cutoff, and permits this idea only after separate verification that the cutoffs coincide for its dependencies. That verification is not supplied. Fixed nominal 900-second delays explain coincidence for ordinary inputs but do not establish it for additionally recorded unavailability, which the original expressly requires respecting. Several parameter-origin paths also appear stale relative to the actual guarded expression. These are unresolved meaning and traceability issues, not evidence against the hypothesis or a judgment about implementation certification.",
+        "unresolved_meaning": [
+          "No supplied dependency verification establishes that additionally unavailable outcome prices cannot become admissible after the original observation anchor under the inherited cutoff.",
+          "Several parameter-origin paths do not track the added complete-validity guard structure. For example, /condition_ast/expression/arg/left/right/left/left/right/value does not identify the stated 0.65 literal in the actual expression. The intended constants can be checked directly, but the path-level provenance assertions need correction.",
+          "The record's retained-gap assessment says a mapping path is absent while its semantic report asserts equivalence. Neither assertion resolves the concrete temporal and provenance issues."
+        ]
+      },
+      "review_assessment": {
+        "independent_semantic_review": "NOT_SATISFIED",
+        "gaps": [
+          {
+            "code": "FORMALIZATION_GAP",
+            "reason": "A faithful review of retained uncertainty does not make a candidate executable"
+          },
+          {
+            "call_id": "6971d2c35d1f441fb25d3900fea16b1f",
+            "code": "MEANING_DIFFERENCE_OR_UNCERTAINTY",
+            "job_id": "d5321787c62a4529ae7698821c554fa2",
+            "reason": "A retained review reports different or uncertain meaning"
+          }
+        ],
+        "scientific_readiness": false
+      }
+    }
+  ],
+  "new_calls": [
+    {
+      "provider": "openai",
+      "dispatch_id": "controller-3f8523115dee4c0188ab3d8b68950447:0",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T04:12:30Z",
+      "settled_at_utc": "2026-10-29T04:14:45Z",
+      "charged_nano": 188597500,
+      "state": "settled",
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_000c784a86e5e3e2016ae2c7aeded087d28dde04c6ee726905",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 3106
+        },
+        "transport_request_id": "req_1f1cde410d70442a9267241e0733ba3e",
+        "usage": {
+          "cost_units": 188597500,
+          "input_tokens": 26207,
+          "output_tokens": 12308
+        }
+      }
+    },
+    {
+      "provider": "openai",
+      "dispatch_id": "controller-6971d2c35d1f441fb25d3900fea16b1f:0",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T04:14:52Z",
+      "settled_at_utc": "2026-10-29T04:15:19Z",
+      "charged_nano": 79755000,
+      "state": "settled",
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0224eb59d42f109c016ae2c83be15087d2b0536dba04021c84",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 151
+        },
+        "transport_request_id": "req_7d7f973ff639471d8a21561a3cabdc3f",
+        "usage": {
+          "cost_units": 79755000,
+          "input_tokens": 26618,
+          "output_tokens": 1321
+        }
+      }
+    }
+  ],
+  "full_path_token_reservation": 79335,
+  "full_path_cost_bound_nano_usd": 363337500,
+  "finished_at_utc": "2026-10-29T04:15:19.935699+00:00",
+  "wall_seconds": 173.55937210000047,
+  "new_reported_tokens": 66454,
+  "new_conservative_cost_nano_usd": 268352500,
+  "aggregate_tokens": 469329,
+  "aggregate_conservative_cost_nano_usd": 1595182500,
+  "remaining_authorization_nano_usd": 3404817500,
+  "independent_formula_audit": null,
+  "complete_original_descriptive_report": false,
+  "scientific_readiness": false,
+  "protected_outcomes_accessed": false,
+  "automatic_further_retry": false,
+  "full_objective_complete": false,
+  "offline_protocol_diagnosis": {
+    "schema": "offline-formalization-protocol-diagnosis/1",
+    "qualification": "Read-only structural diagnosis only. No original candidate, report or request is repaired, admitted, or mutated. No market data or provider calls.",
+    "formalization_id": "919c1333a4b70e923445a5e79026966f7218ddafa67ea75fa952c18d08548877",
+    "input_file_sha256": {
+      "formalization.json": "8f8c30ee79ae793738d74b6af35368b0f02aabe142c9795719628e52f34b8f05",
+      "meaning-review.json": "7887a544b8599e568d83a4f8d0facf2861f0fc96282253761c9fdb347b661248",
+      "prepared.json": "cf1b6b89dbcb675c2b8e17078d60a015d123610fe2efe164ae97a1126096247c"
+    },
+    "prompt": {
+      "version": "faithful-development-formalization-required-inputs/1",
+      "sha256": "a35282dfef35808f0c31fe37b7ed7e36cf885d31f779c7bb0c81eb540a802c43",
+      "pointer_sentences": [
+        "Use meaningful candidate JSON pointers and interpretations; a mapping assertion is not independent review",
+        "Paths must exist",
+        "Keep parameter rationales concise while retaining every required pointer and source"
+      ],
+      "explicit_candidate_root_phrase_present": false
+    },
+    "semantic_segments": [
+      {
+        "index": 0,
+        "path": "/candidate/estimand",
+        "candidate_root": {
+          "resolved": false,
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate"
+        },
+        "response_wrapper_root": {
+          "resolved": true,
+          "value": "<container>"
+        }
+      },
+      {
+        "index": 1,
+        "path": "/candidate/test_universe",
+        "candidate_root": {
+          "resolved": false,
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate"
+        },
+        "response_wrapper_root": {
+          "resolved": true,
+          "value": "<container>"
+        }
+      },
+      {
+        "index": 2,
+        "path": "/candidate/condition_ast/expression",
+        "candidate_root": {
+          "resolved": false,
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate"
+        },
+        "response_wrapper_root": {
+          "resolved": true,
+          "value": "<container>"
+        }
+      },
+      {
+        "index": 3,
+        "path": "/candidate/condition_ast/expression/arg",
+        "candidate_root": {
+          "resolved": false,
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate"
+        },
+        "response_wrapper_root": {
+          "resolved": true,
+          "value": "<container>"
+        }
+      },
+      {
+        "index": 4,
+        "path": "/candidate/outcome/program/expression",
+        "candidate_root": {
+          "resolved": false,
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate"
+        },
+        "response_wrapper_root": {
+          "resolved": true,
+          "value": "<container>"
+        }
+      },
+      {
+        "index": 5,
+        "path": "/candidate/estimand",
+        "candidate_root": {
+          "resolved": false,
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate"
+        },
+        "response_wrapper_root": {
+          "resolved": true,
+          "value": "<container>"
+        }
+      },
+      {
+        "index": 6,
+        "path": "/candidate/estimand/missingness",
+        "candidate_root": {
+          "resolved": false,
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate"
+        },
+        "response_wrapper_root": {
+          "resolved": true,
+          "value": "scope-true-outcome-observed/1"
+        }
+      },
+      {
+        "index": 7,
+        "path": "/candidate/claim_kind",
+        "candidate_root": {
+          "resolved": false,
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate"
+        },
+        "response_wrapper_root": {
+          "resolved": true,
+          "value": "difference"
+        }
+      }
+    ],
+    "additional_static_checks": [
+      {
+        "name": "exact_candidate_fields",
+        "passed": true
+      },
+      {
+        "name": "candidate_schema",
+        "passed": true
+      },
+      {
+        "name": "original_idea_reference",
+        "passed": true
+      },
+      {
+        "name": "exact_semantic_report_fields",
+        "passed": true
+      },
+      {
+        "name": "declared_equivalent_without_differences",
+        "passed": true
+      },
+      {
+        "name": "segment_count",
+        "passed": true
+      },
+      {
+        "name": "segment_0_shape_and_text",
+        "passed": true
+      },
+      {
+        "name": "segment_1_shape_and_text",
+        "passed": true
+      },
+      {
+        "name": "segment_2_shape_and_text",
+        "passed": true
+      },
+      {
+        "name": "segment_3_shape_and_text",
+        "passed": true
+      },
+      {
+        "name": "segment_4_shape_and_text",
+        "passed": true
+      },
+      {
+        "name": "segment_5_shape_and_text",
+        "passed": true
+      },
+      {
+        "name": "segment_6_shape_and_text",
+        "passed": true
+      },
+      {
+        "name": "segment_7_shape_and_text",
+        "passed": true
+      },
+      {
+        "name": "exact_concatenated_original_text",
+        "passed": true
+      },
+      {
+        "name": "installed_claim_and_comparator",
+        "passed": true
+      },
+      {
+        "name": "exact_estimand_fields",
+        "passed": true
+      },
+      {
+        "name": "installed_estimand",
+        "passed": true
+      },
+      {
+        "name": "exact_outcome_fields",
+        "passed": true
+      },
+      {
+        "name": "exact_horizon_fields",
+        "passed": true
+      },
+      {
+        "name": "horizon_domain",
+        "passed": true
+      },
+      {
+        "name": "exact_universe_fields",
+        "passed": true
+      },
+      {
+        "name": "universe_dates_and_instruments",
+        "passed": true
+      },
+      {
+        "name": "authorized_snapshot",
+        "passed": true
+      },
+      {
+        "name": "/scope_ast_static_description",
+        "passed": true
+      },
+      {
+        "name": "/condition_ast_static_description",
+        "passed": true
+      },
+      {
+        "name": "/outcome/program_static_description",
+        "passed": true
+      },
+      {
+        "name": "independent_parameter_enumeration_agrees",
+        "passed": true
+      },
+      {
+        "name": "scope_condition_boolean",
+        "passed": true
+      },
+      {
+        "name": "outcome_quantity_unit",
+        "passed": true
+      },
+      {
+        "name": "exact_feature_reference_closure",
+        "passed": true
+      },
+      {
+        "name": "feature_reference_strings",
+        "passed": true
+      },
+      {
+        "name": "bounded_origin_list",
+        "passed": true
+      },
+      {
+        "name": "origin_0_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_0_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_1_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_1_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_2_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_2_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_3_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_3_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_4_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_4_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_5_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_5_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_6_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_6_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_7_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_7_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_8_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_8_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_9_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_9_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_10_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_10_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_11_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_11_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_12_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_12_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_13_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_13_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_14_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_14_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_15_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_15_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_16_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_16_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_17_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_17_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_18_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_18_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_19_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_19_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_20_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_20_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_21_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_21_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_22_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_22_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_23_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_23_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_24_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_24_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_25_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_25_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_26_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_26_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_27_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_27_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_28_fields",
+        "passed": true
+      },
+      {
+        "name": "origin_28_metadata",
+        "passed": true
+      },
+      {
+        "name": "origin_paths_unique",
+        "passed": true
+      }
+    ],
+    "program_sizes": {
+      "/scope_ast": {
+        "nodes": 1,
+        "depth": 1
+      },
+      "/condition_ast": {
+        "nodes": 101,
+        "depth": 10
+      },
+      "/outcome/program": {
+        "nodes": 8,
+        "depth": 5
+      }
+    },
+    "program_descriptions": {
+      "/scope_ast": {
+        "type": "boolean",
+        "unit": null,
+        "feature_refs": [],
+        "parameter_paths": [
+          "/expression/value"
+        ]
+      },
+      "/condition_ast": {
+        "type": "boolean",
+        "unit": null,
+        "feature_refs": [
+          "ETHUSDT.close@binance-spot-15m-v1",
+          "ETHUSDT.high@binance-spot-15m-v1",
+          "ETHUSDT.open@binance-spot-15m-v1",
+          "ETHUSDT.quote_volume@binance-spot-15m-v1",
+          "ETHUSDT.taker_quote_volume@binance-spot-15m-v1"
+        ],
+        "parameter_paths": [
+          "/expression/bars",
+          "/expression/arg/left/left/left/left/left/right/value",
+          "/expression/arg/left/left/left/left/right/right/value",
+          "/expression/arg/left/left/left/right/left/bars",
+          "/expression/arg/left/left/left/right/left/arg/bars",
+          "/expression/arg/left/left/left/right/right/value",
+          "/expression/arg/left/left/right/left/left/right/value",
+          "/expression/arg/left/right/left/left/right/value",
+          "/expression/arg/left/right/left/right/right/left/value",
+          "/expression/arg/left/right/left/right/right/right/bars",
+          "/expression/arg/left/right/left/right/right/right/arg/bars",
+          "/expression/arg/left/right/right/left/left/right/value",
+          "/expression/arg/left/right/right/left/right/value",
+          "/expression/arg/left/right/right/right/left/left/right/value",
+          "/expression/arg/left/right/right/right/left/right/value",
+          "/expression/arg/left/right/right/right/right/left/right/value",
+          "/expression/arg/left/right/right/right/right/right/value",
+          "/expression/arg/right/left/arg/left/left/left/right/value",
+          "/expression/arg/right/left/arg/left/left/right/right/value",
+          "/expression/arg/right/left/arg/left/right/left/bars",
+          "/expression/arg/right/left/arg/left/right/left/arg/bars",
+          "/expression/arg/right/left/arg/left/right/right/value",
+          "/expression/arg/right/left/arg/right/left/left/right/value",
+          "/expression/arg/right/right/value"
+        ]
+      },
+      "/outcome/program": {
+        "type": "real",
+        "unit": "basis_points",
+        "feature_refs": [
+          "ETHUSDT.close@binance-spot-15m-v1",
+          "ETHUSDT.open@binance-spot-15m-v1"
+        ],
+        "parameter_paths": [
+          "/expression/left/value",
+          "/expression/right/arg/left/bars",
+          "/expression/right/arg/right/bars"
+        ]
+      }
+    },
+    "parameter_origins": [
+      {
+        "index": 0,
+        "path": "/scope_ast/expression/value",
+        "resolved": true,
+        "value": true,
+        "required_parameter_path": true,
+        "rationale": "Original Instrument and dates and Comparison and weighting specify the entire ETH decision grid, without additional screening."
+      },
+      {
+        "index": 1,
+        "path": "/condition_ast/expression/bars",
+        "resolved": true,
+        "value": 1,
+        "required_parameter_path": true,
+        "rationale": "Original Timing selects s=t-900, one grid bar before the decision."
+      },
+      {
+        "index": 2,
+        "path": "/condition_ast/expression/arg/left/left/left/left/left/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition requires O_s>0."
+      },
+      {
+        "index": 3,
+        "path": "/condition_ast/expression/arg/left/left/left/left/right/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition requires Q_s>0."
+      },
+      {
+        "index": 4,
+        "path": "/condition_ast/expression/arg/left/left/left/right/left/bars",
+        "resolved": true,
+        "value": 1,
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition starts the median at s-900, excluding the signal bar."
+      },
+      {
+        "index": 5,
+        "path": "/condition_ast/expression/arg/left/left/left/right/left/arg/bars",
+        "resolved": true,
+        "value": 96,
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition requires all 96 preceding exact quote-volume observations."
+      },
+      {
+        "index": 6,
+        "path": "/condition_ast/expression/arg/left/left/left/right/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition requires M_s>0."
+      },
+      {
+        "index": 7,
+        "path": "/condition_ast/expression/arg/left/left/right/left/left/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition requires 0<=B_s<=Q_s."
+      },
+      {
+        "index": 8,
+        "path": "/condition_ast/expression/arg/left/right/left/left/right/value",
+        "resolved": true,
+        "value": "0.65",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition chooses B_s/Q_s>=0.65."
+      },
+      {
+        "index": 9,
+        "path": "/condition_ast/expression/arg/left/right/left/right/right/left/value",
+        "resolved": true,
+        "value": "2",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition chooses Q_s>=2*M_s."
+      },
+      {
+        "index": 10,
+        "path": "/condition_ast/expression/arg/left/right/left/right/right/right/bars",
+        "resolved": true,
+        "value": 1,
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition places the median immediately before the signal bar."
+      },
+      {
+        "index": 11,
+        "path": "/condition_ast/expression/arg/left/right/left/right/right/right/arg/bars",
+        "resolved": true,
+        "value": 96,
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition specifies the same complete 96-observation median."
+      },
+      {
+        "index": 12,
+        "path": "/condition_ast/expression/arg/left/right/right/left/left/right/value",
+        "resolved": true,
+        "value": "1",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition defines the excursion as H_s/O_s-1."
+      },
+      {
+        "index": 13,
+        "path": "/condition_ast/expression/arg/left/right/right/left/right/value",
+        "resolved": true,
+        "value": "0.003",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition chooses H_s/O_s-1>=0.003."
+      },
+      {
+        "index": 14,
+        "path": "/condition_ast/expression/arg/left/right/right/right/left/left/right/value",
+        "resolved": true,
+        "value": "1",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition defines retained gain as C_s/O_s-1."
+      },
+      {
+        "index": 15,
+        "path": "/condition_ast/expression/arg/left/right/right/right/left/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition sets the inclusive retained-gain lower bound to zero."
+      },
+      {
+        "index": 16,
+        "path": "/condition_ast/expression/arg/left/right/right/right/right/left/right/value",
+        "resolved": true,
+        "value": "1",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition uses C_s/O_s-1 also for the upper-bound comparison."
+      },
+      {
+        "index": 17,
+        "path": "/condition_ast/expression/arg/left/right/right/right/right/right/value",
+        "resolved": true,
+        "value": "0.0005",
+        "required_parameter_path": true,
+        "rationale": "Original Exact condition sets the inclusive retained-gain upper bound to 0.0005."
+      },
+      {
+        "index": 18,
+        "path": "/condition_ast/expression/arg/right/left/arg/left/left/left/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Identical guard copy of the original O_s>0 requirement."
+      },
+      {
+        "index": 19,
+        "path": "/condition_ast/expression/arg/right/left/arg/left/left/right/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Identical guard copy of the original Q_s>0 requirement."
+      },
+      {
+        "index": 20,
+        "path": "/condition_ast/expression/arg/right/left/arg/left/right/left/bars",
+        "resolved": true,
+        "value": 1,
+        "required_parameter_path": true,
+        "rationale": "Identical guard copy of the original one-bar exclusion before the median window."
+      },
+      {
+        "index": 21,
+        "path": "/condition_ast/expression/arg/right/left/arg/left/right/left/arg/bars",
+        "resolved": true,
+        "value": 96,
+        "required_parameter_path": true,
+        "rationale": "Identical guard copy of the original complete 96-observation median."
+      },
+      {
+        "index": 22,
+        "path": "/condition_ast/expression/arg/right/left/arg/left/right/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Identical guard copy of the original M_s>0 requirement."
+      },
+      {
+        "index": 23,
+        "path": "/condition_ast/expression/arg/right/left/arg/right/left/left/right/value",
+        "resolved": true,
+        "value": "0",
+        "required_parameter_path": true,
+        "rationale": "Identical guard copy of the original 0<=B_s<=Q_s requirement."
+      },
+      {
+        "index": 24,
+        "path": "/condition_ast/expression/arg/right/right/value",
+        "resolved": true,
+        "value": null,
+        "required_parameter_path": true,
+        "rationale": "Original Missingness requires unknown, not false, whenever any required condition input fails completeness or validity."
+      },
+      {
+        "index": 25,
+        "path": "/outcome/program/expression/left/value",
+        "resolved": true,
+        "value": "10000",
+        "required_parameter_path": true,
+        "rationale": "Original Outcome defines Y_t=10000*ln(C_{t+3600}/O_{t+900})."
+      },
+      {
+        "index": 26,
+        "path": "/outcome/program/expression/right/arg/left/bars",
+        "resolved": true,
+        "value": 1,
+        "required_parameter_path": true,
+        "rationale": "Original Outcome places C_{t+3600} one grid bar before a=t+4500."
+      },
+      {
+        "index": 27,
+        "path": "/outcome/program/expression/right/arg/right/bars",
+        "resolved": true,
+        "value": 4,
+        "required_parameter_path": true,
+        "rationale": "Original Outcome places O_{t+900} four grid bars before a=t+4500."
+      },
+      {
+        "index": 28,
+        "path": "/horizons/outcome_bars",
+        "resolved": true,
+        "value": 5,
+        "required_parameter_path": true,
+        "rationale": "Original Outcome explicitly chooses positive integer h=5."
+      }
+    ],
+    "required_parameter_count": 29,
+    "missing_parameter_origins": [],
+    "extraneous_parameter_origin_paths": [],
+    "meaning_review": {
+      "judgment": "uncertain",
+      "unresolved_meaning": [
+        "No supplied dependency verification establishes that additionally unavailable outcome prices cannot become admissible after the original observation anchor under the inherited cutoff.",
+        "Several parameter-origin paths do not track the added complete-validity guard structure. For example, /condition_ast/expression/arg/left/right/left/left/right/value does not identify the stated 0.65 literal in the actual expression. The intended constants can be checked directly, but the path-level provenance assertions need correction.",
+        "The record's retained-gap assessment says a mapping path is absent while its semantic report asserts equivalence. Neither assertion resolves the concrete temporal and provenance issues."
+      ],
+      "actual_packet_keys": [
+        "catalog",
+        "context_id",
+        "definitions",
+        "expression_contract",
+        "formalization",
+        "inputs",
+        "qualification",
+        "reporting_contract",
+        "schema"
+      ],
+      "request_id": "54ae0f0fa180844304d0217a6eb37a2d3ccd1649e1a46494fcb8dd62f3a25a32",
+      "input_hash": "ca2d7053b387af7a53cd99f720571a84f197bfbb23731f1b2db73fedf60a37b5",
+      "qualification": "Only the exact packet is evidence supplied to this reviewer. Host-private later checks do not retroactively enter it."
+    },
+    "inputs_unchanged": true,
+    "elapsed_seconds": 0.05901599999924656
+  },
+  "retained_gap_interpretation": {
+    "semantic_pointer_errors": 8,
+    "parameter_origin_errors": 0,
+    "reviewer_origin_allegation_reproduced": false,
+    "missing_reviewer_evidence": "Exact dependency-specific cutoff equivalence.",
+    "new_compilation_or_execution": false,
+    "manual_repair": false,
+    "engineering_replay_evidence": "required-input-verification-2026-10-29.json",
+    "engineering_replay_changes_research_authority": false
+  }
+}

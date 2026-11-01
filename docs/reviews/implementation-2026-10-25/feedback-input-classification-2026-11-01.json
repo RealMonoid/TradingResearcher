@@ -1,0 +1,523 @@
+{
+  "schema": "feedback-input-semantic-classification/1",
+  "status": "READ_ONLY_CLASSIFICATION_COMPLETE_NO_ACTIVATION",
+  "recorded_at_utc": "2026-11-01T00:54:02.507201+00:00",
+  "purpose": "Determine whether the remaining initial packet is dispensable audit detail or contains required feedback, before choosing another representation.",
+  "candidate_sha256": "1f46efe447e28de2873cfc3b1c9afaac88b242350ca2eedb16bf863c18bb6ef2",
+  "original_prepared_sha256": "4c92dac5cc3cc35ed69f862fea392c84b2c2dcdbc59eccecc305310f50e3059d",
+  "selected_sources_unchanged": 13,
+  "leaf_values_inspected": 3277,
+  "manifest_record_counts": [
+    7,
+    8,
+    12
+  ],
+  "record_occurrences": 27,
+  "unique_immutable_records": 12,
+  "overlap": [
+    {
+      "left": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "right": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+      "shared_ids": [
+        "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06"
+      ],
+      "exact_shared_record_ids": [
+        "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06"
+      ],
+      "conflicting_shared_ids": [],
+      "exact_shared_full_record_canonical_bytes_not_initial_savings": 77792,
+      "left_only_ids": [],
+      "right_only_ids": [
+        "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+      ]
+    },
+    {
+      "left": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "right": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+      "shared_ids": [
+        "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06"
+      ],
+      "exact_shared_record_ids": [
+        "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06"
+      ],
+      "conflicting_shared_ids": [],
+      "exact_shared_full_record_canonical_bytes_not_initial_savings": 77792,
+      "left_only_ids": [],
+      "right_only_ids": [
+        "0455997260940c50693b3c36a820285dc409f563885fe971851080def421a68e",
+        "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+        "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+        "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+        "debd721be92ca1268414c92d703c8163a5aae5f1c733784ce4fe39905067452c"
+      ]
+    },
+    {
+      "left": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+      "right": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+      "shared_ids": [
+        "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+        "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06"
+      ],
+      "exact_shared_record_ids": [
+        "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+        "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06"
+      ],
+      "conflicting_shared_ids": [],
+      "exact_shared_full_record_canonical_bytes_not_initial_savings": 101765,
+      "left_only_ids": [],
+      "right_only_ids": [
+        "0455997260940c50693b3c36a820285dc409f563885fe971851080def421a68e",
+        "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+        "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+        "debd721be92ca1268414c92d703c8163a5aae5f1c733784ce4fe39905067452c"
+      ]
+    }
+  ],
+  "all_original_same_id_record_values_equal": true,
+  "all30job_detail_occurrences_retained": true,
+  "unique_scalar_blocked_occurrences_missing_from_latest": [
+    {
+      "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "path": [
+        "body",
+        "cohort",
+        "jobs",
+        "9",
+        "detail"
+      ],
+      "job_id": "5edd5d7c219045e89793484dfc345d4c",
+      "detail": {
+        "needs": [
+          "auxiliary research continuation"
+        ],
+        "reason": "Provider ended without a final auxiliary result; its public response is retained",
+        "retry_when": "Resolve the recorded cause within the original epoch and task budgets"
+      },
+      "detail_sha256": "b6644db87917e9c4deff669e6967e96c852fcae84dc381a822d51c6a7cb287ec"
+    },
+    {
+      "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "path": [
+        "body",
+        "cohort",
+        "jobs",
+        "11",
+        "detail"
+      ],
+      "job_id": "7ab26d2ba54b4578a89ec0fd7a0e4da0",
+      "detail": {
+        "needs": [
+          "auxiliary research continuation"
+        ],
+        "reason": "Provider ended without a final auxiliary result; its public response is retained",
+        "retry_when": "Resolve the recorded cause within the original epoch and task budgets"
+      },
+      "detail_sha256": "b6644db87917e9c4deff669e6967e96c852fcae84dc381a822d51c6a7cb287ec"
+    },
+    {
+      "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "path": [
+        "body",
+        "cohort",
+        "jobs",
+        "16",
+        "detail"
+      ],
+      "job_id": "e35d0379b4ef4c7dad76c7fce18a5134",
+      "detail": {
+        "needs": [
+          "auxiliary research continuation"
+        ],
+        "reason": "Provider ended without a final auxiliary result; its public response is retained",
+        "retry_when": "Resolve the recorded cause within the original epoch and task budgets"
+      },
+      "detail_sha256": "b6644db87917e9c4deff669e6967e96c852fcae84dc381a822d51c6a7cb287ec"
+    },
+    {
+      "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+      "path": [
+        "body",
+        "cohort",
+        "jobs",
+        "2",
+        "detail"
+      ],
+      "job_id": "4ee75abbfe8a4f4b91a44711c9754636",
+      "detail": {
+        "needs": [
+          "auxiliary research continuation"
+        ],
+        "reason": "Provider ended without a final auxiliary result; its public response is retained",
+        "retry_when": "Resolve the recorded cause within the original epoch and task budgets"
+      },
+      "detail_sha256": "b6644db87917e9c4deff669e6967e96c852fcae84dc381a822d51c6a7cb287ec"
+    },
+    {
+      "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+      "path": [
+        "body",
+        "cohort",
+        "jobs",
+        "4",
+        "detail"
+      ],
+      "job_id": "b5bad845ba614279a32a9d635da50b28",
+      "detail": {
+        "needs": [
+          "research continuation"
+        ],
+        "reason": "Controller stopped research: text must be a nonempty bounded string",
+        "retry_when": "The recorded cause is resolved within the original budgets"
+      },
+      "detail_sha256": "54c80e3cace532851cab9693681031b031ac0863ec3f09a8d6db66bce632b36a"
+    }
+  ],
+  "inline_ancestry_reference_candidates": [
+    {
+      "artifact_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+      "path": [
+        "body",
+        "evidence_at_publication",
+        "data_use",
+        "prior_knowledge",
+        "artifact_ids"
+      ],
+      "entries": 294,
+      "bytes": 19699,
+      "sha256": "ade983ef37e17f89fd14fadd1728e92eb5448b44d53da99e27cdeb6012664b06"
+    },
+    {
+      "artifact_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+      "path": [
+        "body",
+        "evidence_at_publication",
+        "data_use",
+        "prior_knowledge",
+        "context_ids"
+      ],
+      "entries": 22,
+      "bytes": 1475,
+      "sha256": "625f4321f03dae00ce6cf4244df87a8359f50622fae56d9572f1563a24df2986"
+    }
+  ],
+  "classifications": [
+    {
+      "paths": [
+        "All non-manifest source bodies",
+        "All interpretation-critical qualifications, versions, scope, costs, time, permissions and exposure findings"
+      ],
+      "disposition": "KEEP_CURRENT_CONTENT_UNCHANGED",
+      "basis": "D070/document13 minimum observation/interpretation/use information; byte size does not establish irrelevance."
+    },
+    {
+      "paths": [
+        "body/retained_research_records/*/body"
+      ],
+      "disposition": "FULL_CONTENT_MUST_REMAIN_INITIALLY_VISIBLE",
+      "finding": "27 occurrences contain 12 exact immutable records: five original idea bodies and seven gap bodies. All shared original whole-record values match, including bindings. Position-specific view markers differ; do not compare projected records as if original values.",
+      "permitted_investigation": "A separate exact inline body table can be reviewed; no record selection, summary or hidden retrieval is established."
+    },
+    {
+      "paths": [
+        "body/cohort/jobs",
+        "body/cohort/jobs/*/attempts",
+        "body/cohort/batches",
+        "body/cohort/calls",
+        "body/cohort/epochs",
+        "body/cohort/bound_attempts"
+      ],
+      "disposition": "NO_WHOLE_CONTAINER_DEFERRAL_CLASSIFIED",
+      "counterexample": "The old scalar jobs carry five blocked occurrences with two failure causes absent from latest cohort and retained records. Other fields include observed state, version/time, costs and resource conditions. Whole-container omission/paging is not approved merely as audit compression."
+    },
+    {
+      "paths": [
+        "body/evidence_at_publication/data_use",
+        "body/evidence_at_publication/meaning_review",
+        "body/evidence_at_publication/case_verification",
+        "body/evidence_at_publication/original_formula_audit"
+      ],
+      "disposition": "KEEP_SUBSTANTIVE_FINDINGS_INLINE",
+      "basis": "Actual data-use block contains rights, availability, prior-exposure basis, gaps, UNKNOWN training exposure, qualification and independent-confirmation limits. Source/publication currentness is a separate gate."
+    },
+    {
+      "paths": [
+        [
+          "body",
+          "evidence_at_publication",
+          "data_use",
+          "prior_knowledge",
+          "artifact_ids"
+        ],
+        [
+          "body",
+          "evidence_at_publication",
+          "data_use",
+          "prior_knowledge",
+          "context_ids"
+        ]
+      ],
+      "disposition": "NARROW_ROUTINE_EXACT_REFERENCE_TRANSPORT_CANDIDATE_ONLY",
+      "basis": "The inspected294artifact and22context identities are ordered ancestry-reference arrays. Exact paging is analogous to existing reference/exposure transport if original values/count/digest/order, all accompanying findings, access/currentness and no-ID-following remain enforced. Existing tools do not accept these deep paths; no automatic activation follows."
+    },
+    {
+      "paths": [
+        "All other fields or unknown shapes"
+      ],
+      "disposition": "UNCHANGED_FAIL_CLOSED",
+      "basis": "No field-name heuristic authorizes omission. General relevance selection, summaries or a changed influence/exposure policy require the appropriate material review."
+    }
+  ],
+  "independent_review_status": "PASS_READ_ONLY_CLASSIFICATION_WITH_MEMBERSHIP_LIMITS",
+  "independent_authority_membership": {
+    "D070": "Relevant failures/conflicts/stale lessons must remain retrievable; not every retained record must be injected into every prompt. Retrieval/use still needs policy/version, selected identities, selection reason, context/epoch/use record and inherited exposure.",
+    "document14_section14": "Already approved semantics may be implemented under independent unchanged conformance checks. New material generator/retrieval meaning needs D008/D026 review and approval; uncertain membership remains a specific gap.",
+    "narrow_reference_scope": "Potential routine transport work is restricted here to explicitly identified reference/hash values with exact restoration, typed ownership, authenticated parent reads, revocation, budgets and full retained-source access. No general permission to page arbitrary strings or containers is established.",
+    "whole_jobs_attempts_or_evidence": "Not classified as routine reference paging: they contain original causes, uncertainty, permission, time/resource observations and qualifications. Moving complete blocks out of the initial prompt could be a material retrieval-policy change.",
+    "factorization_membership": "For the exact body-only, initially-inline design reviewed below, conditional routine mechanical-presentation membership is substantiated; no new scientific or retrieval meaning was found. A new schema/profile still needs independent specification, implementation, reconstruction/runtime and actual visible-wire qualification. This is technical versioning, not proof of material D026 status. Any omitted/deferred body, new selection/ranking, authority/exposure merge or opaque/private codec falls outside that conditional finding.",
+    "D093_private_codec": "Remains inactive; this review activates neither a private codec nor any successor presentation."
+  },
+  "independent_coverage": {
+    "standalone_research_records": 8,
+    "manifest_count": 3,
+    "job_objects": 30,
+    "attempt_objects": 30,
+    "unique_original_idea_texts_read_in_full": 5,
+    "unique_retained_gap_bodies": 7,
+    "owner_methods": [
+      "collect_cohort and _evidence in scalar, paired and breakout publishers",
+      "paired data-use construction and feedback override",
+      "prior_knowledge ancestry traversal",
+      "bound_attempts event-derived shape"
+    ],
+    "complete_leaf_inventory": "Not duplicated here; controller owns its independent physical inventory."
+  },
+  "conditional_body_only_design_review": {
+    "object": "Exact proposed documentation design only: factor retained_research_records[i].body across the three known owned manifests into an initially inline readable JSON body_table keyed by original record identity and body SHA-256. Each ordered occurrence retains all metadata and its current reference markers; only body becomes a typed inline-table pointer.",
+    "classification": "CONDITIONAL_ROUTINE_MECHANICAL_PRESENTATION_CANDIDATE",
+    "material_scientific_or_retrieval_change_substantiated": false,
+    "reason": "The design does not select, rank, summarize or fetch fewer substantive records. Every one of the 12 complete original bodies remains initially visible exactly once; all 27 ordered occurrences, their authority/exposure bindings, all 30 jobs/attempt details and all eight standalone reports remain represented. Exact deterministic expansion returns the current candidate views. Changing a JSON representation or failing an old profile validator is not by itself a change to scientific meaning, evidence rules or retrieval selection.",
+    "owner_basis": [
+      {
+        "path": "docs/architecture/02_DECISION_REGISTER.md",
+        "section": "D026 Change control",
+        "quote": "User approval for semantic or goal changes; unresolved implementation choices remain proposals.",
+        "application": "Version and qualify the representation; do not infer a semantic/goal change merely from a new schema or old-adapter rejection."
+      },
+      {
+        "path": "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+        "section": "Minimum retained information",
+        "quote": "Material prompt, retrieval-policy, language or evidence changes follow D026; routine use within an already approved policy does not create a new approval gate for every retrieval.",
+        "application": "All observations, interpretations, failure feedback, selection identities and exposure remain present under this design; no new relevance rule is introduced."
+      },
+      {
+        "path": "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+        "section": "14, points 2-4",
+        "application": "Independently qualify an implementation under unchanged approved semantics. New primitive/evidence/applicability/material retrieval meaning or genuinely uncertain semantic membership requires review; naming a transport implementation routine is insufficient."
+      }
+    ],
+    "conditions_for_this_classification": [
+      "All complete original bodies, including exact text, original-language content, scope, relations, timing, missingness and uncertainty, are initially visible as ordinary readable JSON. No opaque private compression, hidden file, lazy fetch or external decoder is required to read the text.",
+      "Preserve every ordered occurrence and its id, creator, authority, source_refs, exposure and current marker paths/tools exactly. Do not give a shared table entry a merged authority or reset exposure.",
+      "Restrict recognition to the exact known owned schema/authority families and validated record shapes; unknown shapes remain fully inline unchanged.",
+      "Reject conflicting bodies for the same original identity, inconsistent identity/hash bindings, missing/multiple table targets and invalid pointer shapes. Never choose one conflicting source as preferred.",
+      "Exact body-table expansion must reconstruct the current candidate views, then the existing authorized reference pages must reconstruct all 13 original envelopes byte-identically under the canonical encoder.",
+      "Bind the actual new user-visible JSON and exact tools in a versioned frozen request/profile. Do not retain a different frozen request and apply a hidden transport rewrite.",
+      "Original system prompts, roles, model/settings, job/attempt failure causes, eight standalone reports, resource limits and scientific authorities remain unchanged. D093 private codec and imports remain inactive.",
+      "No record-selection, retrieval-ranking, evidence-weighting or scientific-status rule is introduced under the guise of factoring."
+    ],
+    "material_counterexamples_if_design_changes": [
+      "Only a subset of unique bodies is initially visible, selected by relevance, success, outcome or a new rule.",
+      "Original body text moves behind a tool call, unread placeholder, budget-sensitive fetch or opaque encoding.",
+      "The two scalar manifests or their unique job/attempt failure causes are omitted because retained records overlap.",
+      "Shared records merge different authority/exposure metadata, conflicting same-ID body variants or per-manifest availability restrictions.",
+      "A new influence/weighting rule treats repeated membership as additional evidence or suppresses conflicting/stale feedback."
+    ],
+    "separate_unverified_boundaries": [
+      "No factoring specification, renderer, runtime/profile adapter or frozen-wire binding has been implemented or certified here.",
+      "Structural reconstruction proves field preservation for tested cases, not model comprehension, equal discovery behavior or quality equivalence after repetition changes.",
+      "No evidence in this review establishes ordinary token/full-path fit, native current grants/publication status or research admission."
+    ],
+    "next_action": "Write the small opt-in JSON presentation specification and acceptance cases for this exact body-only factoring plus the two narrow ancestry reference arrays. Independently review collision rejection, unchanged metadata/markers, complete expansion and actual visible-wire binding before implementation or activation. No extra user approval is substantiated solely by this mechanical design; obtain review if a concrete semantic/material retrieval deviation appears."
+  },
+  "documentation_design_review": {
+    "status": "PASS_DOCUMENTATION_DESIGN_CONFORMANCE_ONLY",
+    "at_utc": "2026-11-01T00:53:21.003309+00:00",
+    "path": "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "section": "November 1: exact initially inline body factoring",
+    "document_sha256": "dd51bd9be339ca0a429a577ac452760f53fd3071ff83b70d6d943c99fc348a3e",
+    "section_utf8_sha256": "462e629e3fe069228b9ca6037dccdbd99b00799572ac7f75c3354ff6678968f7",
+    "conclusion": "The appended inactive specification preserves the exact conditional body-only design already reviewed. No new scientific or retrieval meaning is substantiated within its stated conditions.",
+    "conformance": [
+      "Same 13 selected sources; all 12 complete bodies initially visible once in ordinary readable JSON; all 27 ordered occurrences retain their original identity/creator/authority/references/exposure and current marker paths/tools.",
+      "Only the body field is replaced by an exact typed inline pointer; no fetch, ranking, summary or merged authority/exposure. Same-ID conflict and immutable-binding checks, exact target/pointer/hash rules and unknown-shape inline preservation are specified.",
+      "All eight standalone reports, 30 job/attempt histories and unique older scalar failure causes remain unchanged; whole jobs/attempts/data_use/evidence blobs are outside routine paging.",
+      "Only the two specified artifact-relative ancestry paths are additional page candidates. Each path has FIVE components, outside the unchanged old four-component tool. Their typed identity meanings, parent authentication, no ID following, bounds, revocation and resource accounting remain explicit.",
+      "D093 private codec and consumed grants remain inactive. The document activates no renderer, tool, worker, count, inference, new model, increased cap or scientific/capital authority.",
+      "Required acceptance is explicitly future work, with structural reconstruction separated from model comprehension/quality, runtime qualification, exact frozen visible-wire binding and complete-path admission. Rollback preserves original history and exposure."
+    ],
+    "tests_or_runtime_actions_performed": "NONE: targeted documentation read and review JSON update only.",
+    "precision_correction": "Corrected six-component to five-component in implementation_membership_limit; content is a view wrapper and is not part of either artifact-relative tool path.",
+    "remaining_limits": "This conformance review certifies no implementation, runtime behavior, quality equivalence, token fit, current source/grant status or research admission."
+  },
+  "warranted_conclusion": "No blanket audit-only classification is supported. Exact repeated bodies and two narrow ancestry-reference leaves are concrete mechanical presentation candidates; whole source/cohort/evidence omission loses required feedback or has unresolved material policy consequences.",
+  "remaining_uncertainty": [
+    "No factoring renderer, actual expanded packet, new runtime or new token count exists.",
+    "The exact body-only design has conditional routine-semantic membership; independent implementation/expansion/access/runtime certification remains required.",
+    "Model-quality equivalence, full ordinary-epoch fit, current native grants and scientific/economic validity remain unverified."
+  ],
+  "active_policy_changed": false,
+  "active_renderer_changed": false,
+  "new_api_calls": 0,
+  "new_inference_calls": 0,
+  "registry_writes": 0,
+  "ledger_unchanged": true,
+  "usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "retained_probe_failure": {
+    "command": "python -B .trf-runtime/feedback-input-classification-2026-11-01/inspect.py",
+    "exit_code": 1,
+    "chunk_id": "d26e9d",
+    "observation": "Initial probe incorrectly assumed same-ID projected records would be equal. Deferred markers contain position-specific paths.",
+    "correction": "Compare original retained record values for equality; retain any actual conflicting versions explicitly. Do not infer initial byte savings from full original sizes."
+  },
+  "controller_check": {
+    "command": "python -B .trf-runtime/feedback-input-classification-2026-11-01/inspect.py",
+    "exit_code": 0,
+    "chunk_id": "aba403",
+    "scope": "Physical inventory and exact original-value comparisons only; not an activation or empirical-quality test."
+  },
+  "private_evidence_sha256": {
+    "inspect.py": "066a40c101ce4a1d2a932e1c7aab4a3ebd046f2d26251985af6b3da1db67844c",
+    "inventory.json": "49fd225d775a67a00202e1f6ca8ace24839ad31923d3880e2bbfee55c6207b3c",
+    "independent-review.json": "d54b2482586ddbbeaa809af4767780f83297d59fa83b538697453611c4e642e8",
+    "record.py": "02f982adbf517fca37d77bb93a3c39eac6779c9b7132fe7da94f2d6828874d39",
+    "finalize.py": "905904f9f812e4d94ff81f2497d9fca54b0a1fef76d2f108ab1c6b0738638b8a"
+  },
+  "source_owners_sha256": {
+    "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md": "0874945cef5d08bd8c023b8e83def3ea99ed94004d61e301beb5ca9f0afa2763",
+    "trading_researcher/development_feedback.py": "163f03ca7977edd9b13ea9114c9126226d896821a768dd89c446fade0e6bf68b",
+    "trading_researcher/feedback/paired.py": "9d923031883f621269adf5636e5432553ae8099fd653f0149d79cdbf4324bcd7",
+    "trading_researcher/feedback/breakout.py": "7bd421eaf7de078d2f997dbdd2d5a441dfab15a98c16b1538ae75b7fe5087153",
+    "trading_researcher/paired_computation.py": "897ff79604921274845534978aa4ecaadc30f5a454eee1d825ec9d7e35fe5afc",
+    "trading_researcher/data_use.py": "74396b216d08bdee2bcd45864ffb753113d7ca8f55c3fce1874d3eba97d0bbd6",
+    "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+    "trading_researcher/context_views.py": "2b008e1145c1c7facd45a5366b549f9021c5b5366e7d7b6085ba933cb57018b0",
+    "trading_researcher/feedback/reference_views.py": "a52cf7457e3e029c7e6b85ccd4bf0b2d66e0077a2044aef24c3326ce470466a0",
+    "docs/architecture/02_DECISION_REGISTER.md": "86d679b64819ce5a913fde071ce8d2b5ae42868b15432d0df18bedeea32fb772"
+  },
+  "next_action": "Prepare and independently qualify one isolated inactive candidate for exact inline factoring of duplicate retained record bodies, plus only the two identified ancestry-reference arrays. Keep every unique full original body initially visible, all ordered manifest occurrences and their unchanged creator/authority/source/exposure bindings, all 30 jobs, attempts and failure causes, eight standalone reports and the same 13 sources. Use the concrete versioned design in INTEGRATION_PROPOSAL.md; establish unchanged-semantic membership before implementation/activation and keep D093 private codecs inactive. Require exact expansion to the prior views and all original envelopes, conflict/tamper/denial checks and independent fixed cases; no source selection, summaries, relevance filter or scientific change. No new count, runtime integration or inference is admitted by this classification. After qualification only, select a separately bounded candidate count before any full-path/runtime admission decision. Keep the ordinary 80,000-token and 30-minute caps and original shared USD budget; expired settings need a fresh binding before any eventual live use. If membership cannot be established, retain the exact gap and route the specific material proposal under D008/D026; do not silently activate it.",
+  "scientific_contract_changed": false,
+  "changed_files": [
+    "docs/reviews/implementation-2026-10-25/feedback-input-classification-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md"
+  ],
+  "private_helpers_and_evidence": ".trf-runtime/feedback-input-classification-2026-11-01/",
+  "construction_usage": {
+    "scope": "Main Codex chat from this classification continuation through the snapshot; separate from framework inference usage.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T00:40:47.479Z",
+    "snapshot_at_utc": "2026-11-01T00:54:03.411Z",
+    "delta": {
+      "input_tokens": 6325079,
+      "cached_input_tokens": 6289536,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 30676,
+      "reasoning_output_tokens": 17000,
+      "total_tokens": 6355755
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "child_branch_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "documentation_checks": [
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": [],
+      "additional_errors": [],
+      "local_document_links": null,
+      "qualification": "Contract/document structure only."
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ],
+      "additional_errors": [],
+      "local_document_links": 1146,
+      "qualification": "Global FAIL remains for the exact two pre-existing baseline errors."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ]
+}

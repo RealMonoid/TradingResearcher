@@ -1,0 +1,281 @@
+{
+  "schema": "independent-paired-breakout-actual-reconciliation/1",
+  "status": "PASS",
+  "at_utc": "2026-10-30T16:17:19.674215+00:00",
+  "elapsed_seconds": 1.4041866000043228,
+  "execution_id": "8456955e281d7e4f9c50c33ba7763597d87a06ee24c66bd6f1a09bed82003980",
+  "candidate_sha256": "6030f39d815297c96eb48a78cec93123edaa5bdee11b61a5765c50d3c21abaa6",
+  "source_files_sha256": {
+    "prepared-v2.json": "11425e6439ec2445ccfdf1ed409866b4a3fa1e29f73dd88898c2a240087d9b42",
+    "run-result.json": "794ca1ed2e4a54e7f336afb63d9109245bba1bfc8ae435ab9adc9e049a66a872",
+    "grant-closure.json": "4b46c428a1abbf17a6a4a4a584f152a70b6533a9a3c07a9866d50febd8575bcc",
+    "formalization.json": "d8cfa9816392735a228731a2318c9561c3ff3a0f90e08dd9aade6f18b39d09cc",
+    "review.json": "1e24b619759e9963ef74a04fb09bb3c5a026b7b714aab5c643483f0a44f39120",
+    "compiled.json": "c98bab46125eb44ea12686cc91c406e4b2e131fb9ae53dde448c2a4d6ab340c9",
+    "composition.json": "e1ab1c7839055cc09aaa5d934e34067d19befdc97f98588f19fd0eb860920708",
+    "execution.json": "7b65a0d837fd7ec4275a3404847872d62999d53c7ab7929647b921bd1ae60d28",
+    "independent-actual-candidate.json": "c08703e85fe7346f12f0453b8dbc7e6d16dc0a62c323d549bd1bbc57abdcc1ec"
+  },
+  "script_sha256": "ee6c66fa4fd3ef1dad41a94866b60b000f9eb88935f94dda132927f5c113c98f",
+  "purpose": "Reconcile exact retained call accounting and authorized case bytes, counts and descriptive interval aggregates.",
+  "calls": [
+    {
+      "role": "formalizer",
+      "worker": "paired-breakout-continuation-20261030-f",
+      "admitted_at_utc": "2026-10-30T16:00:46Z",
+      "settled_at_utc": "2026-10-30T16:05:25Z",
+      "elapsed_receipt_seconds": 279,
+      "input_tokens": 28955,
+      "output_tokens": 22066,
+      "reasoning_output_tokens": 6494,
+      "charged_nano_usd": 293047500,
+      "reserved_nano_usd": 440000000,
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "request_sha256": "14065e3e516564b6f24a2d52ef68fa3ab03103eb5ec8ecc0aa0a8fca31be3775"
+    },
+    {
+      "role": "independent_reviewer",
+      "worker": "paired-breakout-continuation-20261030-r",
+      "admitted_at_utc": "2026-10-30T16:06:17Z",
+      "settled_at_utc": "2026-10-30T16:06:40Z",
+      "elapsed_receipt_seconds": 23,
+      "input_tokens": 43218,
+      "output_tokens": 1086,
+      "reasoning_output_tokens": 71,
+      "charged_nano_usd": 118905000,
+      "reserved_nano_usd": 230000000,
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "request_sha256": "4c0d73966d60173c324abff0564963af67f5a85215a182a2b4ab0d3aa9dab1da"
+    }
+  ],
+  "new_input_tokens": 72173,
+  "new_output_tokens": 23152,
+  "new_total_tokens": 95325,
+  "new_charged_nano_usd": 411952500,
+  "aggregate_total_tokens": 1064316,
+  "aggregate_money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "prior_grants_at_preparation": {
+    "SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET": {
+      "revoked": true,
+      "retained_call_count": 3
+    },
+    "SESSION-2026-10-30-PAIRED-DEVELOPMENT": {
+      "revoked": true,
+      "retained_call_count": 1
+    },
+    "SESSION-2026-10-30-DISCRETIONARY-BUDGET-PAIRED-CORRECTION": {
+      "revoked": true,
+      "retained_call_count": 2
+    }
+  },
+  "current_grant_closure": {
+    "at_utc": "2026-10-30T16:06:49.330197+00:00",
+    "revocation": {
+      "epoch_id": "c04f6879e5194c31b67edac200add00f",
+      "pending_calls_still_require_settlement": true,
+      "status": "REVOKED"
+    }
+  },
+  "composition": {
+    "profile": "paired-breakout-composition/1",
+    "scenario_count": 299,
+    "checked_cases": 8970,
+    "oracle_sha256": "97e9288a835441ea5e039619b12782972d980eec50861b7b58dfcfe02e32d7d2"
+  },
+  "case_blob": {
+    "sha256": "8132450f0ca3a49ea2cd6a60df16e1bda7093e92bd6ad6c2e10ccba69e51b592",
+    "size": 108043230,
+    "physically_read_only_hashed": true
+  },
+  "case_count": 8640,
+  "state_counts": {
+    "ELIGIBLE": 8625,
+    "OUTCOME_MISSING": 10,
+    "PARTITION_BOUNDARY": 5
+  },
+  "condition_counts": {
+    "unknown": 43,
+    "false": 8596,
+    "true": 1
+  },
+  "condition_outcome_counts": {
+    "true": {
+      "observed": 1,
+      "missing": 0
+    },
+    "false": {
+      "observed": 8590,
+      "missing": 6
+    },
+    "unknown": {
+      "observed": 34,
+      "missing": 9
+    }
+  },
+  "overlapping_reason_counts": {
+    "condition_unknown": 43,
+    "missing_warmup": 17,
+    "missing_value": 19,
+    "absent_row": 26,
+    "boundary_censoring": 5
+  },
+  "scope_count": 8625,
+  "condition_count": 1,
+  "single_true_case": [
+    {
+      "decision_time": 1674435600,
+      "decision_at_utc": "2023-01-23T01:00:00+00:00",
+      "outcome_anchor": 1674440100,
+      "outcome": {
+        "lower": {
+          "denominator": "166153499473114484112975882535043072",
+          "numerator": "3255519066220516047898205530070516875"
+        },
+        "schema": "bounded-real/1",
+        "upper": {
+          "denominator": "10633823966279326983230456482242756608",
+          "numerator": "208353220238113027065485153924513243125"
+        }
+      }
+    }
+  ],
+  "maximum_case_interval_width": {
+    "numerator": "165625",
+    "denominator": "10633823966279326983230456482242756608"
+  },
+  "aggregate_intervals": {
+    "scope_mean": {
+      "published_exact_rationals": {
+        "schema": "bounded-real/1",
+        "lower": {
+          "numerator": "-44361616682752681714069532977488317301",
+          "denominator": "85070591730234615865843651857942052864"
+        },
+        "upper": {
+          "numerator": "-177446466731010726856278131909949403975",
+          "denominator": "340282366920938463463374607431768211456"
+        }
+      },
+      "direct_exact_endpoint_average": {
+        "schema": "bounded-real/1",
+        "lower": {
+          "numerator": "-765237887777483759567699443861673469125",
+          "denominator": "1467467707346547123685802994549500411904"
+        },
+        "upper": {
+          "numerator": "-765237887777483759567699443861656819725",
+          "denominator": "1467467707346547123685802994549500411904"
+        }
+      },
+      "decimal_display_only": {
+        "lower": "-0.5214682980391952303376208299723335535498704005088814431",
+        "upper": "-0.5214682980391952303376208299723221946627350643100760969",
+        "width": "1.135888713533619880534622889257750859757340712834154770E-32"
+      }
+    },
+    "condition_mean": {
+      "published_exact_rationals": {
+        "schema": "bounded-real/1",
+        "lower": {
+          "numerator": "3255519066220516047898205530070516875",
+          "denominator": "166153499473114484112975882535043072"
+        },
+        "upper": {
+          "numerator": "208353220238113027065485153924513243125",
+          "denominator": "10633823966279326983230456482242756608"
+        }
+      },
+      "direct_exact_endpoint_average": {
+        "schema": "bounded-real/1",
+        "lower": {
+          "numerator": "3255519066220516047898205530070516875",
+          "denominator": "166153499473114484112975882535043072"
+        },
+        "upper": {
+          "numerator": "208353220238113027065485153924513243125",
+          "denominator": "10633823966279326983230456482242756608"
+        }
+      },
+      "decimal_display_only": {
+        "lower": "19.59344266924270145789873303596962375349788983472132536",
+        "upper": "19.59344266924270145789873303596963909369916806557330435",
+        "width": "1.534020127823085197899201181075030609553358551587574216E-32"
+      }
+    },
+    "effect": {
+      "published_exact_rationals": {
+        "schema": "bounded-real/1",
+        "lower": {
+          "numerator": "6844749514350627592951803057494367963975",
+          "denominator": "340282366920938463463374607431768211456"
+        },
+        "upper": {
+          "numerator": "1711187378587656898237950764373594262301",
+          "denominator": "85070591730234615865843651857942052864"
+        }
+      },
+      "direct_exact_endpoint_average": {
+        "schema": "bounded-real/1",
+        "lower": {
+          "numerator": "29517982280637081494604650685444461859725",
+          "denominator": "1467467707346547123685802994549500411904"
+        },
+        "upper": {
+          "numerator": "29517982280637081494604650685444501020375",
+          "denominator": "1467467707346547123685802994549500411904"
+        }
+      },
+      "decimal_display_only": {
+        "lower": "20.11491096728189668823635386594194594816062489903140146",
+        "upper": "20.11491096728189668823635386594197264724903846608218580",
+        "width": "2.669908841356705078433824070332781469310699264421728985E-32"
+      }
+    }
+  },
+  "retained_verification_and_original_audit_consistent": true,
+  "capsule_id": "c32432bd8485f219b06f60c313c65e2446e9e9d072def6fd4cd52d0c47ed0c14",
+  "candidate_check": {
+    "result_file": "independent-actual-candidate.json",
+    "exit_code": 0,
+    "elapsed_seconds": 24.949673499999335,
+    "scenarios": 299,
+    "case_checks": 8970,
+    "initial_helper_issue": "The first helper expectation omitted the two valid pair-member parameter-origin paths; exit1 was corrected only in the helper. No candidate/runtime defect or repair."
+  },
+  "reconciliation_helper_correction": "Initial exit1 compared the database envelope with the exported artifact including its separately stored id. A read-only key comparison established id as the only difference; the helper now verifies digest(envelope)==id and exact remaining bytes/fields. No retained artifact was changed.",
+  "warranted_conclusion": "No discrepancy found in the unchanged candidate synthetic check, saved accounting, exact case blob, case counts or interval aggregates. The result remains descriptive only.",
+  "limitations": [
+    "This pass reads the authorized retained case blob, not raw source market rows; the separately retained original-formula audit was reconciled, not rerun here.",
+    "The arithmetic enclosures bound numerical calculation error; they are not confidence or prediction intervals and do not quantify statistical uncertainty.",
+    "One condition-true observed case does not establish scientific support, reproducibility in unseen data, economic value or profitability.",
+    "The provider reports model gpt-6.1-sol and catalog version6.1, but no immutable snapshot identifier; version status remains UNKNOWN.",
+    "USD charges are conservative retained accounting under the frozen tariff, not a reconciled provider invoice.",
+    "Grant closure and prior grants are checked against retained receipts, not by reopening the live spend ledger.",
+    "No model call, registry/ledger mutation, raw market-row import, computation rerun, candidate replacement or scientific authority was created."
+  ],
+  "next_action": "Retain this descriptive result and its limitations in the selected operational handoff; any later use must preserve existing currentness and authority gates.",
+  "scientific_readiness": false
+}

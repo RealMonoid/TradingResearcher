@@ -2,6 +2,8 @@
 
 Version: reconstruction-1 + generator-contract/1.0 + research-contract/1.0 + agent-inquiry/1.0 + temporal-diagnostic-invocation/1.0 + monitoring-visibility/1.0 (October 24, 2026). D086 adopts the agent working discipline; D087 adopts automatic invocation of a predeclared temporal diagnostic plan; D088 adopts background orchestration and user-visible reporting for authorized temporal work. Earlier scientific contracts remain versioned and unchanged in their stated scope. D001-D070 retain their historical wording and statuses; D071-D085 record the approved scoped resolutions. Counts include historical dispositions; an older OPEN/AMBIGUOUS/DEFERRED record is not a current blocker where the explicit resolution below applies. This revision implements binding specification changes, not application code.
 
+D096 adds [inquiry-feedback/1.0](25_METACOGNITION_DUAL_SPACE_INQUIRY.md), November 1, 2026: metacognitive inquiry choices, dual-space search, and observable incremental improvement within existing authority. Prior contract versions remain applicable; adoption does not establish runtime activation or benefit.
+
 ## Reading authority and counts
 
 Statuses describe recovered decisions, not implementation completion. A quoted proposal is not acceptance; an explicit acceptance refers to the immediately preceding qualified reply. Contextual consolidation is labeled and has weaker attribution than a direct user instruction. The final master prompt is not used as retrospective acceptance. Counts use the atomic decision units below and are not counts of approval messages.
@@ -9,7 +11,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 66 |
+| ACCEPTED | 76 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -1282,3 +1284,132 @@ The user subsequently approved the documentation remedy in the [System Model Rev
 **Source and acceptance:** SESSION-2026-10-24-MONITORING-VISIBILITY. The user accepted the preceding bounded method-comparison direction and requested background execution, prompt contact and status reports; a follow-up clarification selected the future Framework function, weekly reports and immediate actionable notices, without a separate Codex reminder. See [approval and scope](17_MONITORING_VISIBILITY_AND_REPORTING.md#approval-and-scope). This is a later current-session source, not an addition to the original archive.
 
 **Change control:** monitoring-visibility/1.0 specifies operational orchestration and reporting. Scientific method activation remains under D008/D026/D084 and live authority under D080. Preserve prior contracts and all plans, attempts, reports, notices, delivery failures and exposure. Runtime scheduling, message delivery, behavioral tests and economic usefulness are unverified.
+
+### D089 — Bounded median and logarithmic-outcome primitives
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** A freely invented single-instrument ETH idea cannot be represented faithfully by the current mean-only, exact-rational expression slice.
+
+**Decision, reason and alternative:** Adopt [bounded-math/1.0](18_BOUNDED_MATH_PRIMITIVES.md): complete causal trailing medians and outcome-only natural logarithms, with proven rational numerical enclosures at the approved basis-point accuracy. Preserve the original idea and unknown-input behavior instead of substituting a mean, simple return or false condition. Cross-instrument traversal remains a separate gap. This is an optional versioned extension, not a new general language or scientific evaluator.
+
+**Affected components / dependencies:** CMP-02/03/04/05/06/07; IF-03/04/08/09; REQ-002/003/005/011/026; D002–D004/D008/D026/D074/D084 and contract sections 4/14. Existing classification, calibration, data/exposure and spending gates remain separate.
+
+**Source and acceptance:** SESSION-2026-10-29-BOUNDED-MATH. The user selected "Begrenzte Erweiterung freigeben (empfohlen)" in response to the exact linked proposal; see [approval and scope](18_BOUNDED_MATH_PRIMITIVES.md#approval-and-scope). This is later-session approval, not an archival attribution.
+
+**Change control:** bounded-math/1.0; preserve legacy research-ast/1, source capsules, results and exposure. Disable the optional extension for rollback; never delete trials or numerical bounds. Successful acceptance requires independent conformance, faithful review and bounded-error descriptive execution. Implementation and empirical usefulness are not established by approval.
+
+### D090 — One-use feedback-informed research epoch budget
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** Exact feedback paging reduces the initial two-perspective context to 56,230 tokens, but the complete path with preserved outputs and independent review does not fit D079's ordinary 80,000-token ceiling.
+
+**Decision, reason and alternative:** Adopt the optional [research-epoch-feedback-budget/1.0](19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md) for exactly one new development epoch: at most 240,000 tokens and USD 1 within the existing USD 5 shared cap. Preserve the 12-call, 1,800-second and per-call ceilings, both perspectives, full meaning/review and every attempt. Ordinary epochs stay at 80,000. A persistent one-use claim prevents reset, reuse and stale-backup replay; no simpler hypothesis or reduced evidence replaces the intended work.
+
+**Affected components / dependencies:** CMP-02/03/04/12; IF-02/03; REQ-004/014/022/023/030; D008/D026/D079 and contract section 9. Existing scientific, exposure, provider and capital boundaries remain binding.
+
+**Source and acceptance:** SESSION-2026-10-29-FEEDBACK-BUDGET. The user selected "Einmalige Ausnahme freigeben (empfohlen)" in response to the exact linked one-epoch proposal. See [approval and scope](19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md#approval-and-scope); this is later-session approval, not retrospective archival attribution.
+
+**Change control:** This optional version extends D079 only for the one authorized epoch. Preserve historical contracts, source bytes, usage, failed attempts and exposure. Rollback disables further use without recycling the claim; pending provider calls still require settlement. Implementation, admission and research quality must be verified separately.
+
+### D091 — Reuse of bounded primitives and one BTC continuation
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** The retained new BTC idea uses an existing logarithmic outcome, but D089 activates its unchanged primitives only for the original ETH idea.
+
+**Decision, reason and alternative:** Adopt [bounded-math-reuse/1.0](20_BOUNDED_MATH_REUSE.md): permit the same certified meanings for further single-instrument development hypotheses, with each new exact membership, data, faithful-review and execution/replay gate preserved. Authorize one retained-BTC continuation with two calls, 80,000 tokens and USD 0.50 within the original USD 5 cap. Do not invent a simpler idea or silently reuse the exhausted D090 grant.
+
+**Affected components / dependencies:** CMP-02/03/04/05/06/07/12; IF-02/03/04/08/09; REQ-002/003/004/005/011/014/022/023/026/030; D008/D026/D079/D084/D089. No mathematical meaning, scientific estimator, protected-data or capital authority changes.
+
+**Source and acceptance:** SESSION-2026-10-29-BOUNDED-MATH-REUSE. The user instructed "fortsetzen" immediately after the concrete pending reuse/BTC approval request. See the exact [approval context and proposal hash](20_BOUNDED_MATH_REUSE.md#approval-and-provenance). Automatic goal-continuation messages are not treated as approval.
+
+**Change control:** Preserve D089/D090 bytes and prior failures, exposure and accounting. Both auxiliary roles receive the exact versioned extension. Disable future opt-in reuse for rollback; no automatic retry/reset. Independent per-hypothesis meaning and deterministic checks remain required; acceptance is not scientific success.
+
+### D092 — One independent BTC review continuation
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** The full review of the completed BTC formalization would exceed its original epoch reservation by 254 tokens; the installed runtime permits only same-epoch review.
+
+**Decision, reason and alternative:** Adopt [independent-review-continuation/1.0](21_INDEPENDENT_REVIEW_CONTINUATION.md) for exactly the retained target and missing reviewer call. Bind a new review-only epoch to the preserved original epoch and usage, with one call, 40,000 tokens, 600 seconds and USD 0.15 inside the original USD 5. Both admission and historical assessment verify the explicit relation; a durable external claim prevents repetition. Ordinary epoch rules, legacy review policy and all prior attempts remain unchanged.
+
+**Affected components / dependencies:** CMP-03/04/12; REQ-004/014/022/023; D008/D026/D079/D091. No mathematical, scientific, protected-data or capital boundary changes.
+
+**Source and acceptance:** SESSION-2026-10-29-INDEPENDENT-BTC-REVIEW. The user selected "Einen Prüferaufruf freigeben (empfohlen)" for the exact one-review proposal. See [approval and scope](21_INDEPENDENT_REVIEW_CONTINUATION.md#approval-and-scope). This is explicit later-session approval, not automatic continuation authority.
+
+**Change control:** Disable or revoke future admission without refunding the claim. Preserve actual epoch identities, exposure, accounting and historical receipts. A complete independent review, current deterministic qualifications and original-formula audit remain prerequisites; resource authorization establishes no scientific success.
+
+### D093 — One complete-feedback research epoch
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** Complete closed ETH/BTC feedback and full downstream reservations exceed ordinary epoch resources.
+
+**Decision, reason and alternative:** Adopt [research-epoch-feedback-budget/2.0](22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md) for exactly one development epoch: six calls, 420,000 tokens, USD 1.40 and 1,800 seconds inside the original USD 5. Fix all six nonrecyclable slots before discovery; preserve models, reasoning, full sources and independent review. Keep the private codec inactive.
+
+**Affected components / dependencies:** CMP-02/03/04/12; REQ-004/014/022/023/030; D008/D026/D030/D079. D090-D092 remain consumed, with prior source versions and failures preserved.
+
+**Source and acceptance:** SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET. The user selected "Einmaligen Durchlauf freigeben (empfohlen)" for question `call_60d5471bd6124c139e17cb325090497f`. See [approval and provenance](22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md#approval-and-provenance).
+
+**Change control:** One durable external claim, exact source/profile binding, independent tests and current legacy feedback checks precede activation. Revoke without refunding consumed work. No retry, successor, scientific meaning, protected access or capital authority is authorized.
+
+### D094 — Fixed-pair development evaluation and retained-idea continuation
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Decision:** Adopt [paired-development/1.0](23_PAIRED_DEVELOPMENT.md) for the fixed BTCUSDT/ETHUSDT development pair: explicit versioned selectors, one paired case per timestamp, exact units/required inputs and outcome-anchor availability. Independent qualification precedes activation. Preserve old single-instrument schemas and source versions. Exactly one retained-original-idea continuation permits two calls, 160,000 tokens, USD0.60 and 1,800 seconds inside the existing aggregate budget; no retry, successor or discovery follows from this grant.
+
+**Source and acceptance:** SESSION-2026-10-30-PAIRED-DEVELOPMENT; question `call_85316df080454897a4b03fa3425b7b0a`, reply "Paar-Erweiterung und einen Durchlauf freigeben (empfohlen)".
+
+**Dependencies:** D008/D026/D074/D079/D084/D089/D091; REQ-002/003/004/005/011/013/014/022/023/026/028/030; CMP-02/03/04/05/06/07/12. Scientific calibration, protected assessment and capital authority remain absent. Rollback disables new admission, preserving all history and spent grants.
+
+### D095 — One original paired format correction under delegated spending
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Decision:** Record the independently reviewed [bounded resource disposition](24_PAIRED_FORMAT_CORRECTION.md) selected under the later direct discretionary-budget instruction. Exactly one new faithful formalization and, only after a non-null STRUCTURE_CHECKED candidate, one separate independent review; two calls,160,000tokens,USD0.60,1,800seconds within the remaining original aggregate budget. Preserve scientific semantics, full source packets, role/model settings, old failures and the consumed/revoked D094 grant. No manually accepted syntax repair.
+
+**Source:** SESSION-2026-10-30-DISCRETIONARY-BUDGET. This is delegated operator resource selection, not a new scientific contract or a reset of earlier authorization. REQ-004/014/022/023/028; CMP-01/02/03/06/07/12.
+
+
+### D096 — Metacognitive inquiry, dual-space search, and observable improvement
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Problem:** Reflection and feedback can produce extra text without improving investigation choices; adoption and implementation can be confused with demonstrated usefulness.
+
+**Decision, reason and alternative:** Adopt [inquiry-feedback/1.0](25_METACOGNITION_DUAL_SPACE_INQUIRY.md) as the binding addendum to agent-inquiry/1.0 and generator-contract/1.0. I1–I7 and F1–F5 link fallible source-grounded uncertainty diagnoses, justified permitted actions, pre-outcome purpose, independently checked observations, corrections, and scoped later use. Preserve the five examples and AC-01–AC-12 as future behavioral specifications. Reuse the existing improvement loop to observe candidate changes, actual effects and complete costs, pending/failed reviews, and justified retention/revision/rollback. Choose measurements for the claimed improvement; no single score or universal target. The user's clarifications explicitly permit incremental learning during valid bounded work without advance proof of benefit or a new benchmark prerequisite.
+
+**Affected components / dependencies:** CMP-01/02/03/04/06/07/11/12; IF-02/03/08/12/13; REQ-014/028/029/030 with existing REQ-004/005/006/013/020/021/022/023/027 safeguards. D001/D008/D014/D016/D019/D025/D026/D028/D030/D068/D070/D079/D082/D086 retain scope and authority.
+
+**Source and acceptance:** SESSION-2026-11-01-METACOGNITION, direct approval of proposal/0.1 and later user clarifications; exact quotations, immutable proposal hash, and transfer limits are retained in [approval and provenance](25_METACOGNITION_DUAL_SPACE_INQUIRY.md#approval-and-provenance). The user authorized informing the ongoing construction chat and integration at its next safe work boundary.
+
+**Purpose clarification:** D069 remains the ultimate economic objective: science supports profitable usability after realistic costs, execution constraints, considered risk and research burden. Reliable/faster research is an intermediate capability, not economic success. Individual investigations need not prove profit in advance; neither academic output nor endless exploration is an independent objective.
+
+**Approved operational clarification (November 1, 2026):** The user's subsequent "freigabe" adopts the four [diagnostic practices without additional process](15_AGENT_INQUIRY_DISCIPLINE.md#approved-diagnostic-practice-without-additional-process): discriminating checks for consequential diagnoses, separation of diagnostic confidence from justified action, proportionate persistence at existing boundaries, and separate diagnostic support/action usefulness. These clarify I1–I7/F1–F5 and DQ-01–DQ-03 using existing records; they adopt no new statistical method, gate, budget, form, or universal score. Document 25's versioned source bytes and the literature review remain preserved.
+
+**Change control:** Versioned integration and applicable independent checks precede future-profile activation; current frozen runs, budgets, scientific rules, exposure, and perspective isolation remain intact. Ordinary learning within approved policy is allowed; material changes still require D008/D026. Rollback retains all records and spent resources. Documentation checks, useful episodes, comparative improvement, scientific validity, and economic usefulness remain distinct claims.
+
+
+### D097 — Bounded exact scalar compositions
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Decision:** Adopt [bounded-exact-compositions/1.0](26_BOUNDED_EXACT_COMPOSITIONS.md), opt-in scalar research-ast/4: exact dimensionless integer power, complete causal ratio product and Kleene Boolean windows, and outcome-only absolute value with rigorous enclosures. Keep existing versions, 256-node/32-level/8,192-bit/step/time limits, complete validity/unknown rules and independent checks. No new decision logarithm, unit algebra, scientific evidence or capital authority.
+
+**Source and acceptance:** SESSION-2026-11-01-EXACT-COMPOSITIONS; question call_8b9787d357e24ae6b8f5917b22cac043, direct reply “Vier Bausteine freigeben (empfohlen)”. The approval-time proposal and manifest are preserved in [adoption evidence](../reviews/adoption-exact-compositions-2026-11-01/approval.json). Specification acceptance is not implementation qualification, an accepted H_exec or a new spending grant.
+
+**Dependencies:** D008/D026/D084/D089/D091/D094; research-contract sections 6/9/14; REQ-002/003/004/005/011/014/022/023/026/030. Rollback disables new admission while retaining all old/new history, exposure and charges.
+
+
+### D098 — Explicit exact-computation resource revision
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Decision:** Adopt [exact-computation-resources/2.0](27_EXACT_COMPUTATION_RESOURCES.md): a separate opt-in resource version with at most20M primitive steps per child/request shared by plain calculation and diagnostics,40M aggregate execute plus fresh separate replay, and the unchanged shared1,800-second whole-operation deadline. Preserve full observed-case equality, immutable numerical-base binding, exact case-byte/canonical replay and all AST4/numerical/structural/stream/event limits. Neutral recognition of the existing-operator strict guard grants no scientific-validity meaning. Old10M APIs, sources, profiles and records remain unchanged.
+
+**Source and acceptance:** SESSION-2026-11-01-EXACT-RESOURCES; direct answer “20M-Grenze freigeben (empfohlen)” to questioncall_eedff1460ff440fd9220d7d636951df6. The [approval record](../reviews/adoption-exact-resources-2026-11-01/approval.json) preserves exact approval-time proposal bytes. This scoped version resolves the former D095/D097 ceiling wait; it creates no implementation certificate or production activation.
+
+**Dependencies and boundaries:** D008/D026/D084/D094/D095/D097; contract sections6/9/14 and REQ-003/005/011/013/014/018/022/026/030. No additional API money, paid-call authorization, token exception, old grant/slot reset, automatic retry/successor, protected-data or scientific/capital authority follows. Fresh owned runtime/source, mapping/composition, complete role contracts and actual context/data-use/meaning/count/funding gates precede use. Rollback unselects future admission and preserves all old/new records, source/exposure, failures and charges.

@@ -1,0 +1,31 @@
+{
+  "schema": "closed-d093-backup-observation/1",
+  "status": "PASS",
+  "at_utc": "2026-10-30T11:23:32.340863+00:00",
+  "purpose": "Verify complete durable backup/restore of current registry and all referenced blobs after the new real research attempt.",
+  "epoch_id": "647cb4fd972545e1a37c3f20226f5486",
+  "backup": {
+    "status": "PASS",
+    "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\paired-proposal-2026-10-30\\closed-d093-backup",
+    "blobs": 958,
+    "credentials_included": false
+  },
+  "restoration": {
+    "status": "PASS",
+    "directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\paired-proposal-2026-10-30\\closed-d093-restored",
+    "blobs": 958,
+    "projection_validation": "PASS",
+    "credentials": "separately supplied matching operator key"
+  },
+  "wall_seconds": 34.5179189999908,
+  "logical_bytes": 862041762,
+  "blob_count": 958,
+  "closed_epoch_and_call_rows_exact": true,
+  "provider_invocations_exact": true,
+  "exact_request_and_response_artifacts": true,
+  "backup_credentials_included": false,
+  "shared_spend_ledger_unchanged": true,
+  "new_provider_calls": 0,
+  "scientific_readiness": false,
+  "qualification": "The shared external spend ledger stays outside registry rollback. A restored different registry does not acquire a reusable grant. This storage check establishes no paired semantics, new data access, model faithfulness or scientific validity."
+}

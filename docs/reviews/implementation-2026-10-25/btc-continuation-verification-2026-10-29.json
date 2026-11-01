@@ -1,0 +1,490 @@
+{
+  "schema": "d091-preflight-verification/1",
+  "observed_at_utc": "2026-10-29T20:45:40.019422+00:00",
+  "status": "PASS",
+  "focused_tests": 31,
+  "tests": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_scope_contract.py"
+      ],
+      "exit_code": 0,
+      "tests": 5,
+      "wall_seconds": 0.4036484999960521,
+      "stdout": "",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.011s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_provenance_view.py"
+      ],
+      "exit_code": 0,
+      "tests": 5,
+      "wall_seconds": 0.3610684999875957,
+      "stdout": "",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_provenance_adversarial.py"
+      ],
+      "exit_code": 0,
+      "tests": 4,
+      "wall_seconds": 2.320779700006824,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 1.686s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_openai_provider.py"
+      ],
+      "exit_code": 0,
+      "tests": 6,
+      "wall_seconds": 0.44450339999457356,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.108s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_counted_openai_reservations.py"
+      ],
+      "exit_code": 0,
+      "tests": 4,
+      "wall_seconds": 0.36165429999527987,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.026s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_controller_providers.py"
+      ],
+      "exit_code": 0,
+      "tests": 4,
+      "wall_seconds": 2.679124200003571,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 2.044s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_bounded_auxiliary_contract.py"
+      ],
+      "exit_code": 0,
+      "tests": 3,
+      "wall_seconds": 0.3479670999950031,
+      "stdout": "",
+      "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+    }
+  ],
+  "project_checks": [
+    {
+      "name": "retail",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 854,\n    \"source_files\": 5,\n    \"decisions\": 91,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Checked against this adoption's preapproval inventory\",\n    \"git_diff_check_exit\": 0,\n    \"later_approved_changed_paths\": {\n      \"REVIEWING.md\": \"D086 / agent-inquiry/1.0\",\n      \".gitattributes\": \"October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes\"\n    },\n    \"adoption_baseline_files\": 63,\n    \"preexisting_files_unchanged\": 44,\n    \"archived_documents_exact\": 20,\n    \"preserved_preapproval_decisions\": 70,\n    \"full_historical_definition_review_generator_texts\": 3,\n    \"approved_policy_sections_exact_except_status_words\": 15,\n    \"scoped_open_dispositions_and_acceptance_mappings\": 15,\n    \"adoption_decision_status_counts_D001_D085\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 63,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    },\n    \"decision_status_counts\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 69,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    }\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"2cd452145f5236d58f7f724cc1560f0905d8a1344f79bb89e769ab87d881182e\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"f8a3af2d9c9d87248d0323d56966ece69c67fa680b91b37dc5e5e1825c1214b2\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"73d927f19188bbaf2bfb3d1edf31e0e587dc6e0762d393d4a8eea88cf485e870\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"215febd38e7e0a07e2ee4a7d347740675328b36ded702c99bfd85882a9d0e1fc\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"49e72562dc98b28723c73a08257ce58831cb5bb4ccde6f14c28bc8e8d60b21d1\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"439f50e29ebd513488348b2279d84c736599a581e9f614799efad6fbcd735eb7\",\n    \"docs/architecture/CURRENT_STATE.md\": \"d45e80eb6f01710368e3b2f833185202b161901b95abb2a1f50ab039c4247dd3\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"fdbf972760b8c16ececbb4116cc1d9f077349d8dc37a859386826800f8808aa5\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\",\n    \".gitattributes\": \"44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c\",\n    \"docs/reviews/verify_system_model.py\": \"59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef\",\n    \"docs/reviews/verify_retail_contract.py\": \"e8ad4dfc1eb0474f68e6df3b1e28e80009353ef32932c7c9d7826ab59e82d9c9\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\": \"56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\",\n    \"Complete executable AST/schema/primitive implementations and independent golden fixtures\",\n    \"Actual data quality, rights, historical availability, model exposure and account/execution costs\",\n    \"Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately\",\n    \"Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs\",\n    \"SRC-001 through SRC-008 and completeness of original conversation\"\n  ],\n  \"changed_files_since_preapproval\": [\n    \".gitattributes\",\n    \"AGENTS.md\",\n    \"README.md\",\n    \"REVIEWING.md\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_system_model.py\"\n  ],\n  \"added_files\": [\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\",\n    \"docs/reviews/adoption-2026-10-23/verification.json\"\n  ],\n  \"preserved_proposal_sha256\": \"22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29\",\n  \"preapproval_archive_sha256\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "implementation",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"baseline_files\": 103,\n  \"unchanged_files\": 85,\n  \"changed_files\": [\n    \"docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md\",\n    \".gitattributes\",\n    \".gitignore\",\n    \"README.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"tests/test_local_runtime.py\",\n    \"trading_researcher/README.md\",\n    \"trading_researcher/__main__.py\",\n    \"trading_researcher/checks.py\",\n    \"trading_researcher/coordination.py\"\n  ],\n  \"new_files\": [\n    \"docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md\",\n    \"docs/architecture/19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md\",\n    \"docs/architecture/20_BOUNDED_MATH_REUSE.md\",\n    \"docs/reviews/implementation-2026-10-25/auxiliary-transport-final-check-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/auxiliary-transport-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/availability-handoff-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-eth-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-eth-correction-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-observation-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-expression-preflight-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/case-diagnostics-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/development-feedback-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-output-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-output-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-reopening-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-evidence-handoff-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-evidence-handoff-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-required-input-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-required-input-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-design-2026-10-27.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-exploration-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-precision-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-budget-final-check-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-budget-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-context-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-research-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-research-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/required-input-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/scientific-admission-boundary-2026-10-29.json\",\n    \"tests/test_auxiliary_availability.py\",\n    \"tests/test_auxiliary_provenance_adversarial.py\",\n    \"tests/test_auxiliary_provenance_view.py\",\n    \"tests/test_auxiliary_scope_contract.py\",\n    \"tests/test_bounded_auxiliary_contract.py\",\n    \"tests/test_bounded_binding.py\",\n    \"tests/test_bounded_math.py\",\n    \"tests/test_bounded_outcomes.py\",\n    \"tests/test_bounded_scientific_gate.py\",\n    \"tests/test_case_diagnostics.py\",\n    \"tests/test_counted_openai_reservations.py\",\n    \"tests/test_development_feedback.py\",\n    \"tests/test_development_feedback_release.py\",\n    \"tests/test_diagnostic_auxiliary.py\",\n    \"tests/test_diagnostic_binding.py\",\n    \"tests/test_diagnostic_scientific_gate.py\",\n    \"tests/test_epoch_budget_overlay_adversarial.py\",\n    \"tests/test_feature_evidence_release.py\",\n    \"tests/test_feature_release_knowledge.py\",\n    \"tests/test_feedback_context_views.py\",\n    \"tests/test_feedback_context_views_adversarial.py\",\n    \"tests/test_long_idea_text_adversarial.py\",\n    \"tests/test_required_binding.py\",\n    \"tests/test_required_contract.py\",\n    \"tests/test_required_inputs.py\",\n    \"tests/test_second_order_population.py\",\n    \"tests/test_three_valued_validity_gate.py\",\n    \"trading_researcher/BOUNDED_MATH.md\",\n    \"trading_researcher/CASE_DIAGNOSTICS.md\",\n    \"trading_researcher/REQUIRED_INPUTS.md\",\n    \"trading_researcher/auxiliary_availability.py\",\n    \"trading_researcher/auxiliary_views.py\",\n    \"trading_researcher/bounded_math.py\",\n    \"trading_researcher/bounded_outcomes.py\",\n    \"trading_researcher/case_diagnostics.py\",\n    \"trading_researcher/development_feedback.py\",\n    \"trading_researcher/epoch_budget.py\",\n    \"trading_researcher/required_inputs.py\",\n    \"trading_researcher/second_order_population.py\"\n  ],\n  \"local_document_links\": 868,\n  \"errors\": [],\n  \"scope\": \"Implementation preservation, local link targets and whitespace; no semantic/scientific certification\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "runtime_sha256": {
+    "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+    "trading_researcher/auxiliary.py": "975f4eff94f10bd89b1daf879cc4b62b2d4cb363e1d1d5a2c08517619ecfd13a",
+    "trading_researcher/auxiliary_availability.py": "0ab3de244567813ca4414e9c77c2c00579225dcb621418a449a06805c2252232",
+    "trading_researcher/auxiliary_views.py": "07a7a53ebcfe12a1fee7f26299a3ff046b83ff8efd3a5a581dd6b1d00ed23306",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+    "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+    "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+    "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+    "trading_researcher/bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+    "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+    "trading_researcher/bounded_outcomes.py": "82c5003723b0482884f07860d7c43e4109e70e7e28588a9631187b7b1dfdce22",
+    "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+    "trading_researcher/calibration_runs.py": "dfae620aa8434bd0de54a98d262c5fc7c31059d07e370d1493df46a3c338db1b",
+    "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+    "trading_researcher/case_diagnostics.py": "85fb071c30d2474ca512c1918317c9eebf18aaa31924a607e4090db727c1d7be",
+    "trading_researcher/certification.py": "a1b554dbb8c42fcc7751f285f4a93064e05cb078ac96e70c90599946262c0ca9",
+    "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/composition.py": "2a234f84263c13fab214c1730eac326c578f2d8ad01149a81294133026727acd",
+    "trading_researcher/context_views.py": "2b008e1145c1c7facd45a5366b549f9021c5b5366e7d7b6085ba933cb57018b0",
+    "trading_researcher/controller_providers.py": "6787ea6a97e88c179fce77e109202e6b5da7d42e5b7ca7af5595e2524872ea86",
+    "trading_researcher/coordination.py": "99d4316ddb9d114da43731f4cc0935106a79ce12c41b8feba402a02c47e0e70b",
+    "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+    "trading_researcher/data_targets.py": "4ea784c8eefb3eceb8183b6adefdf09adfaf15ac329fb233317eb0cb0dd91697",
+    "trading_researcher/data_use.py": "74396b216d08bdee2bcd45864ffb753113d7ca8f55c3fce1874d3eba97d0bbd6",
+    "trading_researcher/development_feedback.py": "163f03ca7977edd9b13ea9114c9126226d896821a768dd89c446fade0e6bf68b",
+    "trading_researcher/epoch_budget.py": "514985059255014af7bf80e18204e2c32d67210a1e5534fceb52769b96f34f2a",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/evaluation_plans.py": "32de8189f8603e6ac8089895eb2ff9fc675769a763f1cc99ed064bd9ca836016",
+    "trading_researcher/evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+    "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+    "trading_researcher/family_models.py": "0f7cd65e62a9664d1b6645b2f36eb4a6805fcd48ec59b3f0814bb9baf5dbf92e",
+    "trading_researcher/family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+    "trading_researcher/family_study.py": "9153cd667aed7bdad52226d6d33e9eba3b1cf529fc25a5fefd4eaae19ccf2ba0",
+    "trading_researcher/family_study_runs.py": "1e38a9bce9d9013a8b73e92e397bd9a667838cb400fbd6bc8e648e658763804f",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/formalization.py": "857d53bc9c5b84a89329b2857e525a011ad01e841171c5dc7adc252309cc7696",
+    "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+    "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+    "trading_researcher/information_study.py": "ede0c49cc21a96c9759a9a68e6fcee1522df498e5105996fbb1a456f319277be",
+    "trading_researcher/lag_population.py": "94fbadbc9d54e880222861a07d81d5f9123b128293dcec43ec844825272d4dbe",
+    "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "trading_researcher/measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+    "trading_researcher/memory.py": "abab9b73fd8525bb053be11866c08cf34e73843cf4dd305668f6ba87421979e7",
+    "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+    "trading_researcher/monte_carlo.py": "aaad96be04df167a4b80fbe557ec11fc1461dbcad15fa28daea7d9ef7124a4cb",
+    "trading_researcher/openai_provider.py": "9e6c3ab791e8f5db9aee341ab2212b0a675f3dc8b8f1a4f50ffea52bad72e6f9",
+    "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+    "trading_researcher/population_models.py": "a0e0dc0344772b095d0ee9fef0c469a826c7007db305643ce30d31c394fa8d10",
+    "trading_researcher/population_runs.py": "a6ded70258275d251d058053bd7a7bbb95fe824842a440b5a6af41d692024ae4",
+    "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+    "trading_researcher/required_inputs.py": "0b00db49cc9016df46730d5f6974d69725bb86febd25e3610d1f0931ea0ca45b",
+    "trading_researcher/researcher.py": "6404fbf66334a13112a67871977e212ef27dac93b8cf2da94933d8a667867abc",
+    "trading_researcher/research_calls.py": "49786557a7f733783de032ea3274a913fdd956d66a3a81b5c8e9fae73c11b4d8",
+    "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+    "trading_researcher/revocations.py": "65e9f3197f590a651d5ca76b8bd24590ea60336922a2410177fc0b8a7d933f52",
+    "trading_researcher/second_order_population.py": "5314fea8e5fa14b70fea84e37dfd46c3c5d3d7fcfa39aa3b6ff02c2700201178",
+    "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+    "trading_researcher/source_process_scope.py": "ca6ba80ae63761bfe8e9c93117bf3b2e1c9c68bb9d0a7c2c227a65e6269b64ba",
+    "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+    "trading_researcher/storage.py": "b5875a64249041de241f637feb56f0db706c95d27ffb8a52ec5fa11dfef7b12b",
+    "trading_researcher/study_pipeline.py": "9cf4cbddc2c3facc657a0d675a6e945251314c62594f6d17ab0173d6201b9bb7",
+    "trading_researcher/study_resources.py": "436d3ac62638b6088cf07a26f6aa2be6da0932ad252982f1edb9514b83a971dd",
+    "trading_researcher/study_runs.py": "344471ce51d7d8b849cda734fb1aadcc4957609ea5e544322790bcb47117264a",
+    "trading_researcher/study_stream.py": "ccdacccac038a0e340603f922e8f722a7342b7f66cf00552c27a9c796d9820dd",
+    "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20"
+  },
+  "approval": {
+    "schema": "bounded-math-reuse-approval/1",
+    "recorded_at_utc": "2026-10-29T20:40:14.599068+00:00",
+    "source": "SESSION-2026-10-29-BOUNDED-MATH-REUSE",
+    "user_quote": "fortsetzen",
+    "decision": "D091",
+    "proposal_sha256": "f40b46ccb7ce6338395aca747313070ca3a5a21e7f9405b6c6ea47f70407e308",
+    "contract_path": "docs/architecture/20_BOUNDED_MATH_REUSE.md",
+    "contract_sha256": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+    "status": "ACCEPTED_NOT_YET_EXECUTED",
+    "max_calls": 2,
+    "max_tokens": 80000,
+    "max_seconds": 1800,
+    "max_cost_nano": 500000000,
+    "aggregate_cap_nano": 5000000000,
+    "tariff_verified_at_utc": "2026-10-29T20:40:14.599348+00:00",
+    "tariff_sources": [
+      "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "https://developers.openai.com/api/docs/guides/prompt-caching"
+    ],
+    "tariff_finding": "Standard USD2 input, USD2.50 cache-write and USD10 output per million; default30m cache multiplier1.25. Installed conservative USD2.50/10 bound unchanged. No inference or invoice verification."
+  },
+  "maximum_two_slot_cost_nano": 365000000,
+  "meaning_policy_preservation": "auxiliary.py/meaning_reviews.py/formalization.py unchanged by D091; original ETH review remains separately checked at preparation.",
+  "red": "Before implementation five tests ran with two capability errors (unsupported config and missing present keyword), exit1; final five pass.",
+  "retained_documentation_failure": "First retail gate failed because the new decision needed its accepted-status count, supplemental approval source and forward/reverse trace rows. Added those exact adoption records; no verifier weakening or runtime change. Reused the same 31 passing source tests and reran the documentation gates.",
+  "new_inference_calls": 0,
+  "unverified": "Actual complete-input admission, independent actual model meaning judgment, exact BTC execution and scientific/economic meaning.",
+  "terminal_inspection": {
+    "schema": "d091-terminal-gap/1",
+    "observed_at_utc": "2026-10-29T20:57:07.874433+00:00",
+    "status": "STOPPED_OUTPUT_RESOURCE_GAP",
+    "epoch_id": "f08a8c9752bd4b55a11aed8f143a6a02",
+    "job_id": "4ee75abbfe8a4f4b91a44711c9754636",
+    "job_state": "blocked",
+    "reason": "Provider ended without a final auxiliary result; its public response is retained",
+    "response_id": "c0ba664865561b229dcfba603aa30a71eb7d77c824fcdcb3a2d69e31b12b5230",
+    "raw_public_output_characters": 48592,
+    "raw_public_output_sha256": "359e3dfdc9d6a8e4f006126d403be34edac6353f7903fe4d64bfa9ef2c71dc61",
+    "json_parse_gap": {
+      "message": "Unterminated string starting at",
+      "line": 1241,
+      "column": 22,
+      "character": 48591
+    },
+    "last_public_characters": " \"source_refs\": [\"a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32\"],\n        \"rationale\": \"Episode Q_s>0.\"\n      },\n      {\n        \"path\": \"/condition_ast/expression/arg/right/left/arg/right/left/left/right/left/bars\",\n        \"basis\": \"preexisting_specification\",\n        \"source_refs\": [\"a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32\"],\n        \"rationale\": \"Earlier episode bar b-d.\"\n      },\n      {\n        \"path\": \"/condition_ast/expression/arg/right/left/arg/right/left/left/right/right/value\",\n        \"basis\": \"preexisting_specification\",\n        \"source_refs\": [\"a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32\"],\n        \"rationale\": \"",
+    "incomplete_section": "candidate.parameter_origins: a rationale string is unfinished; required subsequent content cannot be presumed.",
+    "limit_evidence": "Provider and message status incomplete; output usage equals the frozen 18,000 limit. The provider incomplete_details reason is not retained by this adapter, so no exact provider reason code is asserted.",
+    "formalization_accepted": false,
+    "review_calls": 0,
+    "market_calculations": 0,
+    "new_calls": [
+      {
+        "dispatch_id": "controller-ebcb3993b798426e828e2a9f38ecd3c1:0",
+        "request_sha256": "71f7847ddec4e3298b4f2a560f520b4399cf1759d06daafc073af3de7c9ac755",
+        "reserved_nano": 241160000,
+        "charged_nano": 240840000,
+        "state": "settled",
+        "created_at": 1793306870,
+        "admitted_at_utc": "2026-10-29T20:47:50Z",
+        "settled_at_utc": "2026-10-29T20:51:06Z",
+        "metadata": {
+          "counted_input_tokens": 24336,
+          "epoch_id": "f08a8c9752bd4b55a11aed8f143a6a02",
+          "model": "gpt-6.1-sol",
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": null,
+            "requested_model": "gpt-6.1-sol"
+          },
+          "ordinal": 0,
+          "prompt_version": "faithful-btc-bounded-reuse/1",
+          "run_id": "controller-ebcb3993b798426e828e2a9f38ecd3c1",
+          "worker": "d091-btc-formalizer"
+        },
+        "receipt": {
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": "gpt-6.1-sol",
+            "requested_model": "gpt-6.1-sol"
+          },
+          "provider_request_id": "resp_0863663f534d0ae6016ae3b0f722e087d282043bc5b3eb167e",
+          "response_status": "incomplete",
+          "token_details": {
+            "cached_input_tokens": 0,
+            "reasoning_output_tokens": 5872
+          },
+          "transport_request_id": "req_b113c63a88ad4b68920145c5e4d109e6",
+          "usage": {
+            "cost_units": 240840000,
+            "input_tokens": 24336,
+            "output_tokens": 18000
+          }
+        },
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        }
+      }
+    ],
+    "wall_seconds": 216.65127360000042,
+    "started_at_utc": "2026-10-29T20:47:37.814465+00:00",
+    "ended_at_utc": "2026-10-29T20:51:07.249693+00:00",
+    "no_retry": "The unique external run-start fence is retained. This one-use continuation is ended; its unused reviewer slot is not a retry allowance.",
+    "ordinary_epoch_state_at_run_end": "active",
+    "epoch_state_qualification": "Ordinary epoch inspection preserves its raw active state; no ordinary-epoch revoke endpoint exists. The one-use driver fence, operator boundary and original wall deadline apply. No shared-ledger or registry reset occurred.",
+    "d090_still_consumed_and_revoked": true,
+    "full_wire_reconstruction": "PASS",
+    "registry_integrity": {
+      "status": "PASS",
+      "events": 1736,
+      "foreign_keys": true,
+      "synchronous": "FULL",
+      "schema_version": 1,
+      "scope": "local coordination and research memory integrity only",
+      "research_memory": {
+        "status": "PASS",
+        "records": 48,
+        "version": "research-memory/1",
+        "scientific_authority": false
+      },
+      "blobs": {
+        "status": "PASS",
+        "committed": 957,
+        "quarantined": [],
+        "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+      }
+    },
+    "usage_unchanged_by_inspection": true,
+    "scientific_readiness": false,
+    "protected_outcomes_accessed": false
+  },
+  "independent_terminal_review": {
+    "schema": "independent-btc-terminal-review/1",
+    "status": "VERIFIED_RETAINED_FORMALIZATION_GAP",
+    "scope": "Read-only verification of the single D091 attempt, its public output and settled accounting; not a candidate reconstruction or formula audit.",
+    "idea_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+    "epoch_id": "f08a8c9752bd4b55a11aed8f143a6a02",
+    "job_id": "4ee75abbfe8a4f4b91a44711c9754636",
+    "call_id": "ebcb3993b798426e828e2a9f38ecd3c1",
+    "transcript_id": "c0ba664865561b229dcfba603aa30a71eb7d77c824fcdcb3a2d69e31b12b5230",
+    "source_files": {
+      "run-result.json": "a9488dc7d5c841964fd485d0e80d29eacbcc0219c4289d2f91f737611840044b",
+      "formalization.json": "f22a7e6ab4b4de3b4543e806fa587714e0dc6d2eecc7bfe124f0df6caef89f2f"
+    },
+    "terminal_output": {
+      "provider_status": "incomplete",
+      "public_message_status": "incomplete",
+      "public_message_phase": "final_answer",
+      "public_output_text_characters": 48592,
+      "public_output_text_utf8_bytes": 48592,
+      "public_output_text_sha256": "359e3dfdc9d6a8e4f006126d403be34edac6353f7903fe4d64bfa9ef2c71dc61",
+      "strict_json_parse": "INVALID_UNTERMINATED_STRING",
+      "unfinished_json_location": "candidate.parameter_origins[63].rationale",
+      "unfinished_parameter_path": "/condition_ast/expression/arg/right/left/arg/right/left/left/right/right/value",
+      "unfinished_section": "The 64th parameter-origin entry has begun its rationale string but has no closing quote. The parameter_origins array, candidate object and complete response are unfinished.",
+      "required_sections_not_reached": [
+        "candidate.feature_refs",
+        "semantic_report"
+      ],
+      "formalization_job_state": "blocked",
+      "formalization_accepted": false,
+      "accepted_candidate_artifact": null,
+      "normalized_response_output": null,
+      "cap_observation": "Reported output tokens equal the frozen 18000-token output cap. This is consistent with exhaustion of that cap; a separate provider incomplete_details reason was not retained, so none is invented."
+    },
+    "accounting": {
+      "new_paid_calls": 1,
+      "state": "settled",
+      "usage_unknown": false,
+      "input_tokens": 24336,
+      "output_tokens": 18000,
+      "total_tokens": 42336,
+      "reasoning_output_tokens": 5872,
+      "reasoning_token_interpretation": "Subset of the 18000 output tokens; do not add it a second time.",
+      "cached_input_tokens": 0,
+      "reserved_nano_usd": 241160000,
+      "charged_nano_usd": 240840000,
+      "charged_usd": "0.24084",
+      "charge_basis": "conservative_published_rate_upper_bound",
+      "independent_charge_arithmetic": "24336 * 2500 + 18000 * 10000 = 240840000 nanoUSD",
+      "provider_invoice_verified": false,
+      "admitted_at_utc": "2026-10-29T20:47:50Z",
+      "settled_at_utc": "2026-10-29T20:51:06Z",
+      "run_wall_seconds": 216.65127360000042,
+      "requested_model": "gpt-6.1-sol",
+      "reported_model": "gpt-6.1-sol",
+      "catalog_version": "6.1",
+      "immutable_snapshot_id": null,
+      "immutable_snapshot_status": "UNKNOWN",
+      "aggregate_calls_after": 40,
+      "aggregate_tokens_before": 597039,
+      "aggregate_tokens_after": 639375,
+      "aggregate_charged_nano_before": 2040157500,
+      "aggregate_charged_nano_after": 2280997500,
+      "aggregate_cap_nano": 5000000000,
+      "aggregate_available_nano_after": 2719002500
+    },
+    "continuation_assessment": {
+      "independent_meaning_review_performed": false,
+      "actual_formula_audit_performed": false,
+      "market_outcome_computed": false,
+      "candidate_reconstructed_or_repaired": false,
+      "second_paid_call_warranted_for_this_attempt": false,
+      "reason": "There is no complete accepted formalization to provide to the reserved independent reviewer. D091 authorized at most one formalizer call and one reviewer call, not a second formalizer attempt or response-completion call. Unspent tokens or dollars do not reopen the closed attempt. Any further paid continuation needs a separately reviewed and explicitly approved plan; it cannot treat this partial JSON as an accepted candidate.",
+      "scientific_readiness": false
+    },
+    "review_boundaries": {
+      "provider_calls_by_reviewer": 0,
+      "market_rows_read_by_reviewer": 0,
+      "registry_writes_by_reviewer": 0,
+      "encrypted_reasoning_interpreted_or_printed": false,
+      "frozen_checker_sha256": "4b05a15222a5c355ec64dc870ff17597ac38b7057926b2f69ff59e92529069e1",
+      "frozen_checker_changed": false,
+      "only_new_file": "independent-terminal-review.json"
+    }
+  },
+  "terminal_source_sha256": {
+    "approval.json": "97220db016ae244d982ad74fbb0ac91e0667734c9c02d13d82b0c67e0562fd12",
+    "proposal-before-approval.md": "f40b46ccb7ce6338395aca747313070ca3a5a21e7f9405b6c6ea47f70407e308",
+    "prepared.json": "897caa2159b24d911a3a3168e5b5b6768cf30344a12755c101cc056804d2061a",
+    "research.py": "b56666324172547cf5d2eb1b5bcadf524f3773fe0ad71a910082803c8c7ee5e4",
+    "run-start.json": "4f1b5bbc904ec90161db687008d2cf4e47102e3a26570f01155e480bc24f5fd3",
+    "run-result.json": "a9488dc7d5c841964fd485d0e80d29eacbcc0219c4289d2f91f737611840044b",
+    "formalization-packet.json": "569661becea6e7939ef7a150007e9342303c3f5a28ba56d2957e442da6216834",
+    "terminal-inspection.json": "9ac47273768daa489bdcaddacd693f3c74dd764428a8561c0dc6518ac6afb69f",
+    "one-use-terminal.json": "8b309d3255fcde7f2db58e2242583790c484f9a70260055613991544b5d6d6b9",
+    "incomplete-public-output.txt": "359e3dfdc9d6a8e4f006126d403be34edac6353f7903fe4d64bfa9ef2c71dc61"
+  },
+  "terminal_verification_at_utc": "2026-10-29T20:57:07.874433+00:00",
+  "terminal_unverified": [
+    "Faithful complete BTC formalization, independent model review, market execution, separate replay and actual original-formula audit.",
+    "Research quality equivalence or completion under another output representation; no such change is activated.",
+    "Scientific calibration, protected evaluation, economic usefulness, live-capital authority, provider invoice and immutable model snapshot.",
+    "A new full backup/restore after this actual attempt; registry integrity alone is not that test."
+  ]
+}

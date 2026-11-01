@@ -12,3 +12,16 @@ docs/reviews/implementation-2026-10-25/** -text whitespace=cr-at-eol
 trading_researcher/*.py -text whitespace=cr-at-eol
 tests/*.py -text whitespace=cr-at-eol
 tests/fixtures/** -text whitespace=cr-at-eol
+# November 1 publication: recursive source and retained contract/evidence bytes.
+# Nested Python and archived proposals also carry immutable SHA-256 identities.
+trading_researcher/** -text whitespace=cr-at-eol
+tests/** -text whitespace=cr-at-eol
+tools/** -text whitespace=cr-at-eol
+docs/architecture/** -text whitespace=cr-at-eol
+docs/reviews/** -text whitespace=cr-at-eol
+*_SNAPSHOT_*.md -text whitespace=cr-at-eol
+# Preserve exact captured vendor text and already qualified module versions.
+tests/fixtures/paired_provider_documents/README.md.source whitespace=cr-at-eol,-blank-at-eol
+trading_researcher/paired_research.py whitespace=cr-at-eol,-blank-at-eof
+trading_researcher/paired_revocations.py whitespace=cr-at-eol,-blank-at-eof
+trading_researcher/review_continuation.py whitespace=cr-at-eol,-blank-at-eof

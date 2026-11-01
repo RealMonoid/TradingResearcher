@@ -1,6 +1,6 @@
 {
-  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1+temporal-diagnostic-invocation-1+monitoring-visibility-1",
-  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline. D087 uses SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC for a later approved invocation extension. D088 uses SESSION-2026-10-24-MONITORING-VISIBILITY for operational reporting; prior scientific contracts remain versioned.",
+  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1+temporal-diagnostic-invocation-1+monitoring-visibility-1+inquiry-feedback-1 + bounded-exact-compositions-1 + exact-computation-resources-2",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline. D087 uses SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC for a later approved invocation extension. D088 uses SESSION-2026-10-24-MONITORING-VISIBILITY for operational reporting; prior scientific contracts remain versioned. D096 uses SESSION-2026-11-01-METACOGNITION for the approved inquiry/feedback addendum and incremental observable-improvement clarifications; original source bytes and earlier decisions remain preserved. D097 uses SESSION-2026-11-01-EXACT-COMPOSITIONS; direct answer and exact approval-time proposal are preserved in document26/adoption evidence. D098 uses SESSION-2026-11-01-EXACT-RESOURCES for the direct20M/40M local resource decision; exact proposal bytes and answer remain in document27/adoption evidence. D097 and all old10M profiles remain unchanged.",
   "decisions": [
     {
       "id": "D001",
@@ -1958,6 +1958,226 @@
       "acceptance_basis": "Direct user acceptance of bounded method comparison and request for automatic background work, prompt contact and status reports; follow-up clarification chose Framework-only, weekly plus immediate actionable notices.",
       "normative": true,
       "change_control": "monitoring-visibility/1.0 covers operational orchestration and reporting; new scientific meaning remains under D008/D026/D084 and live authority under D080. Preserve plans, reports, alerts, delivery failures and exposure. Runtime and delivery unverified."
+    },
+    {
+      "id": "D089",
+      "status": "ACCEPTED",
+      "title": "Bounded median and logarithmic-outcome primitives",
+      "problem": "A freely invented ETH idea needs complete causal medians and logarithmic returns absent from the installed expression slice.",
+      "rationale_and_alternative": "Adopt optional bounded-math/1.0: faithful median/log outcomes with proven outward numerical bounds instead of changing the original idea. Cross-instrument traversal remains a gap.",
+      "requirement": "REQ-002",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-07"
+      ],
+      "sources": [
+        "SESSION-2026-10-29-BOUNDED-MATH"
+      ],
+      "acceptance_basis": "User selected the explicit bounded-extension approval after the linked proposal specified scope, numerical error bounds, validation and rollback.",
+      "normative": true,
+      "change_control": "D008/D026/D084; optional version preserves legacy source/results and exposure. Independent conformance, faithful review and descriptive execution remain required; no scientific or spending authority follows."
+    },
+    {
+      "id": "D090",
+      "status": "ACCEPTED",
+      "title": "One-use feedback research epoch resource overlay",
+      "problem": "The complete feedback-informed discovery, formalization and independent review path cannot fit the ordinary 80000-token epoch ceiling.",
+      "rationale_and_alternative": "Adopt research-epoch-feedback-budget/1.0 for exactly one development epoch with at most 240000 tokens and USD1 inside the existing USD5 cap; retain the ordinary ceiling, full meaning and independent review.",
+      "requirement": "REQ-023",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-29-FEEDBACK-BUDGET"
+      ],
+      "acceptance_basis": "User selected the explicit one-use exception after reviewing the linked proposal, allocations, verification and rollback.",
+      "normative": true,
+      "change_control": "D008/D026/D079; persistent one-use binding and nonrecyclable slots. No scientific meaning, new provider, protected access or capital authority. Ordinary profiles and prior results remain unchanged."
+    },
+    {
+      "id": "D091",
+      "status": "ACCEPTED",
+      "title": "Bounded primitive reuse and one BTC continuation",
+      "problem": "The existing logarithmic outcome is scoped to the original ETH idea while a new retained BTC idea needs the same meaning.",
+      "rationale_and_alternative": "Adopt bounded-math-reuse/1.0 for source-qualified single-instrument development hypotheses, preserving every per-idea gate; one two-call/80000-token/USD0.50 BTC continuation inside existing USD5. No D090 reset or simpler substituted idea.",
+      "requirement": "REQ-002",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-07",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-29-BOUNDED-MATH-REUSE"
+      ],
+      "acceptance_basis": "Direct user instruction fortsetzen in immediate response to the concrete pending reuse and finite BTC continuation approval request; proposal bytes retained.",
+      "normative": true,
+      "change_control": "D008/D026/D079/D084/D089; no changed primitive meaning or scientific authority, current per-idea qualification and independent review, preserved historical scopes and irreversible consumption."
+    },
+    {
+      "id": "D092",
+      "status": "ACCEPTED",
+      "title": "One independent BTC review continuation",
+      "problem": "The unchanged full independent review exceeds the original epoch reservation by 254 tokens.",
+      "rationale_and_alternative": "Adopt independent-review-continuation/1.0 for exactly one retained-target review, with a new explicitly linked 40000-token/600-second/USD0.15 epoch inside existing USD5; no original budget reset.",
+      "requirement": "REQ-004",
+      "components": [
+        "CMP-03",
+        "CMP-04",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-29-INDEPENDENT-BTC-REVIEW"
+      ],
+      "acceptance_basis": "Direct answer Einen Pr\u00fcferaufruf freigeben (empfohlen) to the exact one-independent-review proposal; preserved proposal and reply.",
+      "normative": true,
+      "change_control": "D008/D026/D079/D091; unchanged meanings, original exposure, legacy policy and prior attempts; durable one-use linkage. No scientific or capital authority."
+    },
+    {
+      "id": "D093",
+      "status": "ACCEPTED",
+      "title": "One complete-feedback research epoch",
+      "problem": "Full closed ETH/BTC feedback and unchanged downstream reservations exceed ordinary epoch resources.",
+      "rationale_and_alternative": "Adopt research-epoch-feedback-budget/2.0 for one six-call/420000-token/1800-second/USD1.40 development epoch inside original USD5; retain fixed slots, full sources and all spent grants.",
+      "requirement": "REQ-023",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET"
+      ],
+      "acceptance_basis": "Direct explicit one-run approval, question call_60d5471bd6124c139e17cb325090497f; original proposal and reply retained.",
+      "normative": true,
+      "change_control": "D008/D026/D030/D079; no scientific meaning, ordinary budget, protected-data or capital authority changes. No retry or successor."
+    },
+    {
+      "id": "D094",
+      "status": "ACCEPTED",
+      "title": "Fixed-pair development evaluation and one retained-idea continuation",
+      "problem": "The retained original BTC/ETH idea needs simultaneous instrument reads and one paired case per timestamp.",
+      "rationale_and_alternative": "Adopt paired-development/1.0 with explicit selectors, required inputs, anchor availability and units; retain the original idea rather than substitute scalar populations. One two-call/160000-token/USD0.60/1800-second continuation inside original shared USD5.",
+      "requirement": "REQ-003",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-07",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-30-PAIRED-DEVELOPMENT"
+      ],
+      "acceptance_basis": "Direct approval, question call_85316df080454897a4b03fa3425b7b0a; exact proposal and reply retained.",
+      "normative": true,
+      "change_control": "D008/D026/D074/D079/D084; independent tests and current legacy currency before activation; no scientific classification, protected outcomes or capital authority."
+    },
+    {
+      "id": "D095",
+      "status": "ACCEPTED",
+      "title": "One original paired format correction under delegated spending",
+      "problem": "D094 retained a complete response with a singleton horizon array; the original expressions pass independent synthetic diagnosis.",
+      "rationale_and_alternative": "One separately bound two-call/160000-token/USD0.60/1800-second format correction and independent review under the later direct discretionary budget; preserve original meaning, complete sources and all prior charges/grants.",
+      "requirement": "REQ-014",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-03",
+        "CMP-06",
+        "CMP-07",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-10-30-DISCRETIONARY-BUDGET"
+      ],
+      "acceptance_basis": "Explicit user delegation of necessary work within the existing aggregate budget; concrete bounded selection independently reviewed before implementation.",
+      "normative": true,
+      "change_control": "Resource disposition only under D079; D094 scientific semantics and historical closed grant unchanged. No protected outcomes, scientific classification or capital authority."
+    },
+    {
+      "id": "D096",
+      "status": "ACCEPTED",
+      "title": "Metacognitive inquiry, dual-space search, and observable improvement",
+      "problem": "Reflection and feedback can add burden without demonstrated improvement in research decisions.",
+      "operational_clarification": "November 1, 2026 user freigabe: document 15, Approved diagnostic practice without additional process, clarifies D096 through discriminating checks, separate diagnostic confidence/action justification, proportionate persistence, and separate support/usefulness assessment. Reuse existing records and DQ-01 through DQ-03; no new method, form, gate, budget or empirical success claim. Document 25 source bytes and the research review remain preserved.",
+      "rationale_and_alternative": "Adopt inquiry-feedback/1.0: seven inquiry rules, five feedback rules, five examples, twelve future acceptance cases, and observable incremental improvement through existing roles/records. Learn during valid bounded work; no advance-benefit gate, compulsory mode controller, universal score, or new benchmark workstream. D069 economic usefulness is the ultimate purpose; scientific discipline and process gains are means, with full research burden visible and no advance-profit gate for individual inquiry.",
+      "requirement": "REQ-014",
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-06",
+        "CMP-07",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-11-01-METACOGNITION"
+      ],
+      "acceptance_basis": "Direct user approval of proposal/0.1 and subsequent incremental-learning, observable self-improvement, and measurement clarifications; exact provenance retained in document 25.",
+      "normative": true,
+      "change_control": "D008/D026; independent qualification and versioned future activation; no changed frozen profiles, exposure, scientific authority, allocation, or spending. Retain failed changes and distinguish conformance from benefit."
+    },
+    {
+      "id": "D097",
+      "status": "ACCEPTED",
+      "title": "Bounded exact scalar compositions",
+      "problem": "A retained original hypothesis needs compact exact ratio powers/window products and an absolute logarithmic outcome without altering its meaning.",
+      "rationale_and_alternative": "Adopt bounded-exact-compositions/1.0 / opt-in AST4: integer_power, trailing_product, trailing_all, outcome-only abs. Preserve all existing versions and fixed resource/unknown/time/unit constraints. No decision-log expansion or proxy substitution.",
+      "requirement": "REQ-003",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-07",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-11-01-EXACT-COMPOSITIONS"
+      ],
+      "acceptance_basis": "Direct answer Vier Bausteine freigeben (empfohlen) to question call_8b9787d357e24ae6b8f5917b22cac043; exact proposal bytes and independent static review preserved.",
+      "normative": true,
+      "change_control": "D008/D026; approved specification only. Independent implementation/mapping qualification and actual native/source/cash admission precede use. Preserve failed attempts, exposure, old versions and spent grants."
+    },
+    {
+      "id": "D098",
+      "status": "ACCEPTED",
+      "title": "Explicit exact-computation resource revision",
+      "problem": "The concrete complete plain/diagnostic/replay encoding exceeds the old10M shared primitive allowance; removing independent checks is not an accepted correction.",
+      "rationale_and_alternative": "Adopt separate exact-computation-resources/2.0:20M shared per child,40M aggregate execute+fresh replay,shared1800s. Preserve every numerical, structural, source/meaning and independent check. Keep old source/profile/10M versions unchanged rather than silently relabelling work or dropping plain comparison.",
+      "requirement": "REQ-018",
+      "components": [
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-07",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-11-01-EXACT-RESOURCES"
+      ],
+      "acceptance_basis": "Direct answer20M-Grenze freigeben (empfohlen) to questioncall_eedff1460ff440fd9220d7d636951df6; exact approval-time proposal preserved.",
+      "normative": true,
+      "change_control": "D008/D026; specification approval only. New owned source/runtime, role contracts, compile/composition/execution and actual source/context/data-use/meaning/count/funding qualification precede intended use. No additional API money, grant reset, retry/successor, token exception or scientific/capital authority."
     }
   ],
   "rejections": [
@@ -2991,6 +3211,76 @@
       "date": "2026-10-24",
       "record": "17_MONITORING_VISIBILITY_AND_REPORTING.md#approval-and-scope",
       "scope": "User accepted a bounded method-comparison direction and requested automatic background work and user contact. Follow-up chose future Framework functionality, weekly reports and immediate actionable notices, with no Codex reminder. No scientific method or live authority was approved."
+    },
+    {
+      "id": "SESSION-2026-10-29-BOUNDED-MATH",
+      "kind": "direct_user_approval",
+      "date": "2026-10-29",
+      "record": "18_BOUNDED_MATH_PRIMITIVES.md#approval-and-scope",
+      "scope": "Explicit approval of the bounded median and logarithmic-outcome proposal, including proven numerical enclosures, independent validation and rollback. Cross-instrument expression, scientific evaluation and new spending remain outside approval."
+    },
+    {
+      "id": "SESSION-2026-10-29-FEEDBACK-BUDGET",
+      "kind": "direct_user_approval",
+      "date": "2026-10-29",
+      "record": "19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md#approval-and-scope",
+      "scope": "Explicit one-use 240000-token/USD1 development epoch exception within the original USD5 aggregate. Ordinary budgets, scientific meaning, protected-data permissions and provider authority remain unchanged."
+    },
+    {
+      "id": "SESSION-2026-10-29-BOUNDED-MATH-REUSE",
+      "kind": "direct_user_approval",
+      "date": "2026-10-29",
+      "record": "20_BOUNDED_MATH_REUSE.md#approval-and-provenance",
+      "scope": "Direct fortsetzen instruction in immediate context of the concrete pending primitive-reuse and finite BTC proposal. Unchanged existing mathematical meanings for single-instrument development use, one two-call/80000-token/USD0.50 BTC continuation inside existing USD5. No D090 reset or scientific authority."
+    },
+    {
+      "id": "SESSION-2026-10-29-INDEPENDENT-BTC-REVIEW",
+      "kind": "direct_user_approval",
+      "date": "2026-10-29",
+      "record": "21_INDEPENDENT_REVIEW_CONTINUATION.md#approval-and-scope",
+      "scope": "Direct explicit one-review approval; exact retained BTC target, one call, 40000 tokens, 600 seconds and USD0.15 inside original USD5. No epoch reset or semantic change."
+    },
+    {
+      "id": "SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET",
+      "kind": "direct_user_approval",
+      "date": "2026-10-30",
+      "record": "22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md#approval-and-provenance",
+      "scope": "Direct one-run approval; fixed six-slot complete-feedback allocation, 420000 tokens, USD1.40, 1800 seconds inside original USD5. Preserve D090-D092 and all scientific boundaries."
+    },
+    {
+      "id": "SESSION-2026-10-30-PAIRED-DEVELOPMENT",
+      "kind": "direct_user_approval",
+      "date": "2026-10-30",
+      "record": "23_PAIRED_DEVELOPMENT.md#approval-and-provenance",
+      "scope": "Fixed BTC/ETH paired semantics and exactly one retained-idea continuation; preserve prior contracts and spent grants."
+    },
+    {
+      "id": "SESSION-2026-10-30-DISCRETIONARY-BUDGET",
+      "kind": "direct_user_delegation",
+      "date": "2026-10-30",
+      "record": "24_PAIRED_FORMAT_CORRECTION.md#authority-and-provenance",
+      "scope": "Autonomous work within existing aggregate spending; this concrete allocation is one bounded original paired format correction, no grant reset or scientific change."
+    },
+    {
+      "id": "SESSION-2026-11-01-METACOGNITION",
+      "kind": "direct_user_approval_and_clarification",
+      "date": "2026-11-01",
+      "record": "25_METACOGNITION_DUAL_SPACE_INQUIRY.md#approval-and-provenance",
+      "scope": "Binding inquiry/feedback extension, next-safe-boundary integration and notification; incremental learning and observable improvement under existing governance, without proof-of-benefit entry gate."
+    },
+    {
+      "id": "SESSION-2026-11-01-EXACT-COMPOSITIONS",
+      "kind": "direct_user_approval",
+      "date": "2026-11-01",
+      "record": "26_BOUNDED_EXACT_COMPOSITIONS.md#approval-and-preserved-source",
+      "scope": "Approved four bounded exact scalar composition operators; preserve prior versions, independent acceptance, source/exposure and original budget. No automatic paid successor or scientific/capital authority."
+    },
+    {
+      "id": "SESSION-2026-11-01-EXACT-RESOURCES",
+      "kind": "direct_user_approval",
+      "date": "2026-11-01",
+      "record": "27_EXACT_COMPUTATION_RESOURCES.md#approval-and-preserved-source",
+      "scope": "Separate20M perchild/40M aggregate exact-computation resource version under unchanged shared1800s and complete independent checks; existing scientific/API/token/grant boundaries retained."
     }
   ],
   "decision_resolutions": [

@@ -1,0 +1,250 @@
+{
+  "schema": "one-use-epoch-overlay-verification/1",
+  "observed_at_utc": "2026-10-29T12:19:08.278588+00:00",
+  "status": "SOFTWARE_BOUNDARIES_AND_ACTUAL_INPUT_PREFLIGHT_VERIFIED",
+  "decision": "D090",
+  "contract": "research-epoch-feedback-budget/1.0",
+  "purpose": "Implement the explicitly approved single complete feedback-informed development path without changing ordinary budgets or scientific meaning.",
+  "changed_files": [
+    "trading_researcher/epoch_budget.py",
+    "trading_researcher/research_calls.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/controller_providers.py",
+    "trading_researcher/openai_provider.py",
+    "tests/test_epoch_budget_overlay_adversarial.py",
+    "tests/test_counted_openai_reservations.py",
+    "docs/architecture/19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md",
+    "docs/architecture/02_DECISION_REGISTER.md",
+    "docs/architecture/ARCHITECTURE_REGISTER.json",
+    "docs/architecture/04_DEFINITIONS.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "docs/reviews/implementation-2026-10-25/progress.json"
+  ],
+  "file_sha256_at_verification": {
+    "trading_researcher/epoch_budget.py": "514985059255014af7bf80e18204e2c32d67210a1e5534fceb52769b96f34f2a",
+    "trading_researcher/research_calls.py": "49786557a7f733783de032ea3274a913fdd956d66a3a81b5c8e9fae73c11b4d8",
+    "trading_researcher/coordination.py": "99d4316ddb9d114da43731f4cc0935106a79ce12c41b8feba402a02c47e0e70b",
+    "trading_researcher/controller_providers.py": "d38a522cbd1f3f0e343e68e0959b39bf9ec85ae5722f6c754836b79549502b53",
+    "trading_researcher/openai_provider.py": "7923b60a455ce124a2122a3d93f7462a3022b459ca7a035ab034cb98717d7324",
+    "tests/test_epoch_budget_overlay_adversarial.py": "967d0e92631a609c15a359794e9787bc9e4b8e0a8cb6a6eea3ea4d5b7f125f12",
+    "tests/test_counted_openai_reservations.py": "fcd1f94dd1075c765b4e8272fa4b960e1e762e6093d340714dcba4131a88d3c5",
+    "docs/architecture/19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md": "80453cb2e45e1f6efd4a748644bf1d6d1863feca1ca8f0e512f12de995b311fd",
+    "docs/architecture/02_DECISION_REGISTER.md": "885f7b97af4d3de3d94429588117524b300f612a71b9bb2b46eec3e004801956",
+    "docs/architecture/ARCHITECTURE_REGISTER.json": "191c66fa0f63e335158e7bedcdb7dd1b48dc7608486b6a3f2a2945814a654e05",
+    "docs/architecture/04_DEFINITIONS.md": "fb92e5192517ea3f49aa979d9499e0ec0d217cce85051b15a184a07403f5fda2",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "8cbd58ee648df75aaa00dc00fe6a033e36e743ca86927b9c29469590a93a2c98",
+    "docs/architecture/CURRENT_STATE.md": "e537c15ece971e6bf7c4261c9ddb2e73966edf90172b594753f0f36fbc035b25",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "9e6cbf0ef40f34ad7f524864b967f08e85c6ca159e2f0c96f19c2c2b0bfd912a",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "31c1fd4b780305b5731461414be68b45ce8a400ee2dc89313056701b8401da87",
+    "docs/reviews/implementation-2026-10-25/progress.json": "5bca6876fd9b4caa68fef9b93b5d7b8e678c5958c1b068f9b8be67c488d66b8b"
+  },
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_epoch_budget_overlay_adversarial.py",
+      "tests": 16,
+      "seconds": "17.025",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_counted_openai_reservations.py",
+      "tests": 4,
+      "seconds": "0.024",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_research_calls.py",
+      "tests": 10,
+      "seconds": "3.482",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_openai_provider.py",
+      "tests": 6,
+      "seconds": "0.138",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_controller_providers.py",
+      "tests": 4,
+      "seconds": "1.986",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_coordination.py",
+      "tests": 21,
+      "seconds": "10.532",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_local_runtime.py",
+      "tests": 8,
+      "seconds": "16.576",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_researcher.py",
+      "tests": 10,
+      "seconds": "9.302",
+      "exit_code": 0
+    }
+  ],
+  "distinct_focused_tests": 79,
+  "document_checks": {
+    "retail_contract": {
+      "exit_code": 0,
+      "decisions": 90,
+      "local_links": 842
+    },
+    "implementation_preservation": {
+      "exit_code": 0,
+      "baseline_files": 103,
+      "local_links": 844
+    },
+    "git_diff_check": {
+      "exit_code": 0
+    }
+  },
+  "independent_review": {
+    "test_file": "tests/test_epoch_budget_overlay_adversarial.py",
+    "source_sha256": "967d0e92631a609c15a359794e9787bc9e4b8e0a8cb6a6eea3ea4d5b7f125f12",
+    "coverage": "Real public Broker and shared temporary SpendLedger boundaries; complete trio, malformed settings, fixed role slots, concurrent claim, stale restore, rollback fences, pending/unknown money, revoke and post-revoke settlement; all six slots sum239501tokens/943752500nanoUSD despite zero reported usage.",
+    "limits": "Only expensive meaning/data-use inspectors are synthetic in fixture. No actual credentials, provider invocation or scientific meaning was reviewed by these tests.",
+    "harness_review": "Independent read-only review found and confirmed fixes for immutable feature release and AST1/profile4 incompatibility; no further concrete scoped blocker found."
+  },
+  "failures_retained": [
+    {
+      "test": "Counted adapter initial RED",
+      "result": "4 missing-class errors, exit1,0.006s; implemented and all4pass."
+    },
+    {
+      "test": "malformed perspective settings",
+      "result": "4 AttributeErrors, exit1,1.077s; typed guard fixed, unchanged independent cases pass."
+    },
+    {
+      "test": "complete feedback trio",
+      "result": "Manifest-only admission consumed grant,1failure+1error,exit1,1.045s; exact released trio required before claim; unchanged test passes."
+    },
+    {
+      "test": "retail documentation adoption",
+      "result": "exit1: missing status total, supplemental source and forward/reverse traces; actual D090 links/records completed, same gate exit0."
+    },
+    {
+      "test": "actual preparation",
+      "result": {
+        "status": "RETAINED_PREPARATION_FAILURE",
+        "command": "python -B .trf-runtime/feedback-budget-adoption-2026-10-29/research.py prepare",
+        "exit_code": 1,
+        "reason": "Existing feature certificate release starts at epoch111. Attempt to replace its immutable target with114 correctly raised Conflict.",
+        "new_inference_calls": 0,
+        "new_research_epochs": 0,
+        "one_use_claim_consumed": false,
+        "input_count_requests": 2,
+        "input_count_receipts": "NOT_RETAINED: two successful requests preceded the failing preparation save. Counts satisfied initial bounds; exact transport IDs/timestamps are unavailable and are not reconstructed.",
+        "correction": "Reuse existing epoch111 release, valid at114/115. Persist each future full-count receipt immediately before subsequent operations. This is one bounded infrastructure preparation correction, not a paid inference retry."
+      }
+    },
+    {
+      "test": "prepared packet review",
+      "result": {
+        "status": "PREPARED_PACKET_REJECTED_BEFORE_CLAIM",
+        "retained_packet": "prepared.json",
+        "findings": [
+          "Independent reviewer found AST1 was incompatible with case-diagnostics/2 and reference-computation/4. The new idea cannot inherit the original-ETH-only optional operator scope.",
+          "Actual retained feedback context contained the three published feedback artifacts; the measured proposal context also included the snapshot and catalog. This explains the reduced24461/24471 counts and is not a valid full-proposal preflight."
+        ],
+        "correction": "Prepare a new exact five-source context; retain full original prompt and reference-computation/1 with explicit compatibility prerequisites. Unsupported new meaning remains a gap. Preserve prior prepared packet unchanged as rejected before use.",
+        "new_research_epochs": 0,
+        "one_use_claim_consumed": false,
+        "new_inference_calls": 0,
+        "input_count_requests": 2,
+        "count_receipts": "Retained separately with model identity, UTC and transport IDs."
+      }
+    }
+  ],
+  "threat_model": {
+    "input": "Untrusted model/source content and worker RPC inputs.",
+    "sinks": "Operator-created one-use epoch, controller call reservation and installed OpenAI HTTPS adapter reading the existing local key.",
+    "controls": "Operator-only create/revoke; no model-selected ledger/key path; exact frozen installed config; owned complete feedback; external immutable approval binding and ordered call fences; fixed nonrecyclable stage allocations; shared USD5 spend ledger; unknown/pending fail closed.",
+    "trust_assumptions": "Trusted local operator, installed adapters, OS and preservation of shared ledger. An administrator replacing all authoritative stores is outside this boundary.",
+    "secrets": "No key read by reviewer/tests or retained in evidence; actual existing adapter reads ignored .env.local only for authorized provider requests."
+  },
+  "actual_preflight": {
+    "at_utc": "2026-10-29T12:17:16.746918+00:00",
+    "context_id": "7820dba7c0be66d4a977646366d56800a7cfa24faedd2c07941c5b8e43604f80",
+    "source_ids": [
+      "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+      "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+      "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035"
+    ],
+    "initial_counts": [
+      {
+        "worker": "feedback-20261029-a",
+        "counted_input_tokens": 28110,
+        "input_bound": 28238,
+        "wire_sha256": "215b089d1ed253774c11ad7e7e0c37a26a71c5f5ce694a5fbf77280ea3f5d368",
+        "transport_request_id": "req_3bd5c89211f245b08eee858a99ee3be3",
+        "observed_at_utc": "2026-10-29T12:17:14.840864+00:00",
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        },
+        "qualification": "Full input count; not inference usage or invoice."
+      },
+      {
+        "worker": "feedback-20261029-b",
+        "counted_input_tokens": 28120,
+        "input_bound": 28248,
+        "wire_sha256": "6795f5e7f7c165f3070760a4d21d788d8210bd530d625ee936fdc03c6d1148b4",
+        "transport_request_id": "req_19b68daaa7fe47e59592cd183b8884d7",
+        "observed_at_utc": "2026-10-29T12:17:15.266899+00:00",
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        },
+        "qualification": "Full input count; not inference usage or invoice."
+      }
+    ],
+    "selection": "Only the first perspective final primary idea, fixed before discovery; no fallback or outcome selection. Both perspectives and every intermediate record are retained.",
+    "reservation": {
+      "tokens": 239501,
+      "cost_bound_nano": 943752500,
+      "unused_slots_recyclable": false
+    },
+    "future_packets": "Unknown until invented; full formalization/review counts must fit fixed slots without truncation.",
+    "tariff_recheck": {
+      "at_utc": "2026-10-29T12:17:16.758595+00:00",
+      "sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "https://developers.openai.com/api/docs/guides/prompt-caching"
+      ],
+      "finding": "Official model page confirms USD2 ordinary input, USD2.50 cache writes and USD10 output per million; default30m multiplier1.25. Existing conservative bound unchanged."
+    },
+    "reference_certificate_id": "5704a83761ebc0e2cd529f8012d2ee3f01dca0649214975eb6f3be5c477333db",
+    "d089_scope": "No new operator activation for a new idea; unsupported meaning remains a retained gap."
+  },
+  "new_inference_calls_at_preflight": 0,
+  "prior_aggregate_tokens": 537423,
+  "prior_aggregate_conservative_cost_usd": "1.8657225",
+  "unverified": [
+    "New model behavior, full future packets and complete actual path before invocation.",
+    "Scientific calibration, historical PIT truth, economic usefulness and protected assessment.",
+    "Provider invoice and immutable model snapshot; snapshot identity remains UNKNOWN.",
+    "Two first failed-preparation count receipts were not retained; their exact timestamps/IDs are unknown."
+  ],
+  "next_action": "Run exactly one admitted epoch; preserve all gaps without automatic retry. Audit any reviewed executable original formula independently before deterministic calculation."
+}

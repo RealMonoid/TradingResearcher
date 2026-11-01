@@ -7,6 +7,7 @@ The operator must reuse one spend ledger across all epochs in the approved scope
 from copy import deepcopy
 from contextlib import contextmanager
 from dataclasses import dataclass,field
+from datetime import datetime, timezone
 import hashlib
 import http.client
 import json
@@ -21,6 +22,14 @@ from .errors import Conflict,Denied
 from .provider_usage import report_connection,validate_receipt,validate_identity
 
 MODEL='gpt-6.1-sol'
+COMPACT_OUTPUT_SUFFIX = ('\nOutput serialization only: emit the entire final JSON object compactly, '
+    'with no indentation, line breaks or whitespace outside JSON strings. '
+    'Preserve every required key, complete AST, parameter origin, source reference, '
+    'feature reference and semantic-report mapping. Do not abbreviate, omit, '
+    'summarize, repair or change any scientific content. Whitespace inside strings '
+    'must keep its intended content. If a faithful candidate is unavailable, retain '
+    'the full required explicit gap report using the existing schema. '
+    'This instruction changes formatting only; all earlier requirements still apply.')
 PRICING={'version':'openai-gpt-6.1-sol-standard-2026-10-25/1','currency':'USD','units_per_usd':1000000000,
     'input_upper_nano_per_token':2500,'output_nano_per_token':10000,'cache_lifetime':'30m',
     'qualification':'Conservative published-rate usage bound, including worst30m cache writes; not an invoice.',
@@ -43,8 +52,20 @@ def configuration(input_token_limit=20000,output_token_limit=4096,now=None):
     _config(result);return result
 
 def _config(config):
-    require(type(config) is dict and set(config)=={'schema','model','input_token_limit','output_token_limit',
-        'reasoning_effort','pricing','expires_at','test_budget_nano'},'Exact frozen API configuration required')
+    required={'schema','model','input_token_limit','output_token_limit',
+        'reasoning_effort','pricing','expires_at','test_budget_nano'}
+    require(type(config) is dict and required<=set(config)<=required|{'source_presentation','bounded_math_scope','output_formatting'},'Exact frozen API configuration required')
+    if 'source_presentation' in config:
+        from .auxiliary_views import PROFILE
+        require(config['source_presentation']==PROFILE,'Unsupported API source presentation')
+    if 'bounded_math_scope' in config:
+        from .auxiliary_views import PROFILE, REUSE_SCOPE
+        require(config['bounded_math_scope']==REUSE_SCOPE and config.get('source_presentation')==PROFILE,
+                'Bounded-math scope needs the exact opt-in auxiliary representation')
+    if 'output_formatting' in config:
+        from .auxiliary_views import REUSE_SCOPE
+        require(config['output_formatting']=='compact-json/1' and config.get('bounded_math_scope')==REUSE_SCOPE,
+                'Compact output requires the explicit bounded auxiliary scope')
     require(config['schema']=='openai-responses-configuration/1' and config['model']==MODEL
         and config['reasoning_effort'] in ('low','medium','high','xhigh','max')
         and config['pricing']==PRICING,'Unsupported API model, reasoning or tariff')
@@ -100,13 +121,25 @@ def wire_request(request,config):
     require(request['model']==config['model'] and request['generation_parameters']=={'openai_responses':config},
         'API request differs from its frozen configuration')
     require(type(request['tools']) is list and type(request['messages']) is list,'Explicit tools and messages required')
+    messages=request['messages']
+    if 'source_presentation' in config:
+        from .auxiliary_views import present
+        require(not request['tools'] and len(messages)==2
+            and all(type(m) is dict and set(m)=={'role','content'} and type(m['content']) is str for m in messages)
+            and [m['role'] for m in messages]==['system','user'],
+            'Auxiliary reference transport requires a complete two-message request without tools')
+        messages=deepcopy(messages)
+        messages[1]['content']=canonical(present(decode(messages[1]['content']),
+                                                bounded_math_scope=config.get('bounded_math_scope')))
+        if 'output_formatting' in config:
+            messages[0]['content']+=COMPACT_OUTPUT_SUFFIX
     tools=[];names=set()
     for tool in request['tools']:
         require(type(tool) is dict and set(tool)=={'name','description','parameters'}
             and type(tool['name']) is str and tool['name'] not in names,'Invalid or repeated tool definition')
         names.add(tool['name']);tools.append({'type':'function',**deepcopy(tool),'strict':False})
     history=[];pending={};seen=set()
-    for message in request['messages']:
+    for message in messages:
         require(type(message) is dict and set(message)=={'role','content'} and type(message['content']) is str,
             'Normalized public messages required')
         role=message['role']
@@ -392,3 +425,38 @@ class OpenAIResponsesProvider:
             public={'status':'failed','provider_id':'openai.responses/1','error_type':type(exc).__name__}
             if isinstance(exc,WireFailure):public.update(error_kind=exc.kind,http_status=exc.status,transport_request_id=exc.request_id)
             return {'response':public,'usage':None if reserved is not None else {'input_tokens':0,'output_tokens':0,'cost_units':0}}
+
+
+@dataclass
+class CountedOpenAIResponsesProvider(OpenAIResponsesProvider):
+    """Opt-in exact full-input admission within the unchanged frozen ceiling.
+
+    Count-only requests precede controller reservation; inherited dispatch still
+    recounts before inference and retains the original monetary ledger checks.
+    No source is summarized or removed. The installed adapter, not the model,
+    chooses bounds. Counts/UTC/identity are public operational receipts.
+    """
+    count_receipts: list = field(default_factory=list, init=False, repr=False)
+    _counted_bounds: dict = field(default_factory=dict, init=False, repr=False)
+
+    def reservation(self, request, output_limit):
+        ceiling = super().reservation(request, output_limit)
+        payload = wire_request(request, self.config)
+        identity = digest(payload)
+        if identity not in self._counted_bounds:
+            require(len(self._counted_bounds) < 12, 'Exact-count reservation inventory exhausted')
+            counted, request_id = _post('/v1/responses/input_tokens',
+                {name: payload[name] for name in ('model', 'input', 'tools', 'reasoning', 'text', 'parallel_tool_calls')},
+                _key(self.key_file), time.monotonic() + 60)
+            require(counted.get('object') == 'response.input_tokens', 'Invalid input-count response')
+            tokens = integer(counted.get('input_tokens'), 'counted input tokens')
+            require(tokens <= ceiling['input_token_bound'], 'Full input exceeds its frozen ceiling')
+            bound = min(tokens + 128, ceiling['input_token_bound'])
+            self._counted_bounds[identity] = {'input_token_bound': bound, 'output_token_limit': output_limit,
+                                             'cost_bound_units': cost_bound(bound, output_limit)}
+            self.count_receipts.append({'schema': 'openai-exact-input-reservation/1',
+                'wire_request_sha256': identity, 'counted_input_tokens': tokens, 'input_token_bound': bound,
+                'transport_request_id': request_id, 'model_identity': provider_identity(),
+                'observed_at_utc': datetime.now(timezone.utc).isoformat(),
+                'qualification': 'Input-count receipt, not inference usage or an invoice.'})
+        return deepcopy(self._counted_bounds[identity])

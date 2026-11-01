@@ -1,0 +1,272 @@
+{
+  "schema": "exact-controlled-feedback-qualification/1",
+  "status": "PASS_SCOPED_CONTROLLED_IMPORT_ADAPTER_NOT_ACTUAL_ADMISSION",
+  "at_utc": "2026-11-01T17:01:14.015971+00:00",
+  "python_version": "3.14.2",
+  "purpose": "Remove the demonstrated exact-route bypass of existing controlled development-feedback data-use/context owners without weakening exposure or scientific rules.",
+  "previous_goal_turn_audit": {
+    "classification": "NO_PROGRESS_GATE_ONLY_RECHECK",
+    "reason": "The preceding turn repeated 14 profile tests. Actual read-only ancestry diagnosis and the new opt-in import route now advance admission preparation."
+  },
+  "authority": "D094/D097 implementation within unchanged approved meanings; D037 feedback firewall and existing controlled-release rules remain binding. No new resource or spending authority.",
+  "source_sha256": {
+    "trading_researcher/exact_feedback.py": "4c3a01c01ab31d6008de64dcb79a53c0e2a1ce55380d2deece19c7ca2cbdb71d",
+    "trading_researcher/EXACT_FEEDBACK.md": "7b59df2034a24932ad4d55104d9148d4964cac0ffdd869d8c21973fb15edc7a3",
+    "tests/test_exact_feedback.py": "aa99a4d4165bfbe1dfb2f07e7f126a69417d9d800513d091fa787038132d9d69",
+    "tests/test_exact_feedback_review.py": "8c41da9b732d4ffd66f3da6a04fff68460b74ed34403fb0104258a6a75341d44"
+  },
+  "unchanged_previous_source_bytes": {
+    "trading_researcher/exact_profiles.py": "2870ca08252a89a3913ceaf180f11ec5a051ced04aea7f203ac4098ebc477c88",
+    "trading_researcher/EXACT_PROFILES.md": "bf53a12482f1d33956b7f2f6fca3d0cf203355473e5510acaa78d01cfd06cf33",
+    "tests/test_exact_profiles.py": "34847bce57329f5f78d10a7422d09c3a4f5a8e1e6199fe61bbfaac6d6ef1c86c",
+    "tests/test_exact_profiles_review.py": "60b93ba42773e0db2e1da3e593fd998898caafcc8d1bafee67c1d1225afa1356",
+    "tests/fixtures/exact_formalizer_base_v3.json": "fb572a9246847b4f29f34850524d7dc3cacadd0348d16d71c4280c1e03c82362",
+    "trading_researcher/exact_resource_candidate.py": "3e015bc1f73ed939ec53dc04eb41f9388a126a1672482f6494a1eacae8f76765",
+    "trading_researcher/EXACT_RESOURCE_PROPOSAL.md": "8cc4ce73402035a5f27d7c2651beebaf4249baa60741f5bf00c76ddd8bbbe7c7",
+    "tests/test_exact_resource_candidate.py": "bdf9d3ff9535785447374451e370e1d513caaeeccdf4c306e0566decb73ee735",
+    "tests/test_exact_resource_candidate_review.py": "d0afcc7f0ec74badd4c002377b7c8dfcc71b5534e662e3022e448fa7f4c102e1",
+    "trading_researcher/exact_execution.py": "f563d2dcb78d450e7f28eece1cde91b543acd99ec3830f1b22630539fea8070d",
+    "trading_researcher/exact_composition.py": "f36fb1329bee772e6ecec32774123c1c35eb17464544f6ecca0634d6942f480d",
+    "trading_researcher/exact_meaning.py": "eaa83aedc3d0232512e4ca85ea80456a5cd0c79bc1a2c478137138f86ce933e0",
+    "trading_researcher/exact_revocations.py": "287ce9b6c4ec21780858dbb676120711b60017d5b1e232264d25ccd51b1b8123",
+    "trading_researcher/EXACT_EXECUTION.md": "c2dd28113c4cc1e1ed7c18ed9f3f35530eec46222b08cd74e0ab105a68a7c506",
+    "tests/exact_execution_support.py": "383ca281cd19e7f19fcd66f6f56651ac26473e0ce9975cf38f711f8b964ec639",
+    "tests/test_exact_execution.py": "68050119bee6e0453faf482b2d8a3c0284970e8ebe4fef7d68b65dc29ed8cbd9",
+    "tests/test_exact_execution_review.py": "2798845e2376be3dccc8728f01747aaadd99cfbba8902e9e0b32702f42fe326f"
+  },
+  "actual_ancestry_evidence": {
+    "path": ".trf-runtime/exact-feedback-2026-11-01/actual-ancestry.json",
+    "sha256": "0e784de1178e782691282dda22474df1aa49d613e29ed30c561fdbe06deb4e2b",
+    "read_only": true,
+    "original_A_ancestors": 366,
+    "null_formalization_ancestors": 373,
+    "generic_operations": 3,
+    "recognized_as_existing_technical_provenance": 3,
+    "protected": 0,
+    "unresolved": 0,
+    "all_ancestry_retained": true,
+    "limitation": "Classifier comparison only; no actual current controlled release/context/source eligibility or data-use/admission pass."
+  },
+  "correction": {
+    "entry_point": "ExactFeedbackBroker",
+    "profile": "exact-controlled-feedback/1",
+    "data_use_schema": "exact-development-data-use/2",
+    "routing": "Mandatory complete context check, then unchanged second-original and paired import owners and their generic data-use base.",
+    "source_binding": "New adapter/guide/second-original owner in both full execution and owned runtime source identities; inherited identities preserved. Drift fails closed.",
+    "preservation": "Existing exact/paired/numerical brokers, original/null formalization, all source/exposure ancestry, rights/protected/uncontrolled-operation gaps, consumed grants and fixed resource caps remain.",
+    "old_capsules": "New findings have an explicit distinct schema/source binding; no silent substitution into an old frozen compilation."
+  },
+  "checks": [
+    {
+      "at_utc": "2026-11-01 16:57:05 UTC",
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_feedback.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_complete_native_route_retains_versioned_data_use_and_fresh_replay (test_exact_feedback.ExactFeedbackNativeTests.test_complete_native_route_retains_versioned_data_use_and_fresh_replay) ... ok\r\ntest_existing_data_use_result_is_preserved_as_a_distinct_version (test_exact_feedback.ExactFeedbackNativeTests.test_existing_data_use_result_is_preserved_as_a_distinct_version) ... ok\r\ntest_new_source_identity_is_in_both_native_and_runtime_bindings (test_exact_feedback.ExactFeedbackNativeTests.test_new_source_identity_is_in_both_native_and_runtime_bindings) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 136.126s\r\n\r\nOK\r\n",
+      "test_methods": 3,
+      "elapsed_seconds": 136.126,
+      "tool_chunks": [
+        "dd0892",
+        "30428f",
+        "348a25"
+      ],
+      "qualification": "Fresh temporary native fixture; fixed synthetic provider replies and counts, no actual provider or production registry."
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_feedback_review.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_both_real_import_chains_preserve_nonoperations_gaps_and_full_context (test_exact_feedback_review.ExactFeedbackReview.test_both_real_import_chains_preserve_nonoperations_gaps_and_full_context) ... ok\ntest_every_inherited_release_must_be_in_the_authorized_context (test_exact_feedback_review.ExactFeedbackReview.test_every_inherited_release_must_be_in_the_authorized_context) ... ok\ntest_existing_exact_and_new_multiple_inheritance_routes_remain_distinct (test_exact_feedback_review.ExactFeedbackReview.test_existing_exact_and_new_multiple_inheritance_routes_remain_distinct) ... ok\ntest_genuine_owned_technical_metadata_is_not_removed_from_ancestry (test_exact_feedback_review.ExactFeedbackReview.test_genuine_owned_technical_metadata_is_not_removed_from_ancestry) ... ok\ntest_invalid_or_lookalike_packages_stay_operations (test_exact_feedback_review.ExactFeedbackReview.test_invalid_or_lookalike_packages_stay_operations) ... ok\ntest_malformed_release_is_not_a_controlled_import (test_exact_feedback_review.ExactFeedbackReview.test_malformed_release_is_not_a_controlled_import) ... ok\ntest_paired_release_does_not_exempt_unrecognized_second_family_metadata (test_exact_feedback_review.ExactFeedbackReview.test_paired_release_does_not_exempt_unrecognized_second_family_metadata) ... ok\ntest_release_context_failure_precedes_upstream_numeric_findings (test_exact_feedback_review.ExactFeedbackReview.test_release_context_failure_precedes_upstream_numeric_findings) ... ok\ntest_revoked_release_or_manifest_denies_old_context_before_numeric_work (test_exact_feedback_review.ExactFeedbackReview.test_revoked_release_or_manifest_denies_old_context_before_numeric_work) ... ok\ntest_source_drift_fences_runtime_identity_and_data_use_without_refresh (test_exact_feedback_review.ExactFeedbackReview.test_source_drift_fences_runtime_identity_and_data_use_without_refresh) ... ok\ntest_unrelated_operations_protected_and_unresolved_ancestry_are_retained (test_exact_feedback_review.ExactFeedbackReview.test_unrelated_operations_protected_and_unresolved_ancestry_are_retained) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 6.924s\n\nOK\n",
+      "test_methods": 11,
+      "skipped": 0
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_paired_feedback.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_transaction_rollback_and_immutable_duplicate_release (test_paired_feedback.PairedAtomicPublicationBoundary.test_transaction_rollback_and_immutable_duplicate_release) ... ok\ntest_operator_only_reserved_sources_and_source_identity (test_paired_feedback.PairedFeedbackBoundaries.test_operator_only_reserved_sources_and_source_identity) ... ok\ntest_schema2_timestamp_uses_the_retained_utc_string (test_paired_feedback.PairedFeedbackBoundaries.test_schema2_timestamp_uses_the_retained_utc_string) ... ok\ntest_unaffected_data_use_delegates_exactly (test_paired_feedback.PairedFeedbackBoundaries.test_unaffected_data_use_delegates_exactly) ... ok\ntest_actual_owned_metadata_is_technical_and_ancestry_is_not_removed (test_paired_feedback.PairedMetadataBoundaries.test_actual_owned_metadata_is_technical_and_ancestry_is_not_removed) ... ok\ntest_descendant_import_preserves_other_gaps_and_uncontrolled_ancestry (test_paired_feedback.PairedMetadataBoundaries.test_descendant_import_preserves_other_gaps_and_uncontrolled_ancestry) ... ok\ntest_malformed_metadata_is_typed_or_remains_operations (test_paired_feedback.PairedMetadataBoundaries.test_malformed_metadata_is_typed_or_remains_operations) ... ok\ntest_wrong_package_or_certificate_profile_cannot_be_exempted (test_paired_feedback.PairedMetadataBoundaries.test_wrong_package_or_certificate_profile_cannot_be_exempted) ... ok\ntest_actual_evidence_publish_context_restore_and_revocation_on_private_clone (test_paired_feedback.PairedRetainedResultLifecycle.test_actual_evidence_publish_context_restore_and_revocation_on_private_clone) ... skipped 'Opt-in retained-result fixture requires an explicitly selected read-only source registry'\n\n----------------------------------------------------------------------\nRan 9 tests in 4.943s\n\nOK (skipped=1)\n",
+      "test_methods": 9,
+      "skipped": 1
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_paired_breakout_feedback.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_atomic_publication_rollback_time_fencing_and_single_case_qualification (test_paired_breakout_feedback.BreakoutFeedbackBoundaries.test_atomic_publication_rollback_time_fencing_and_single_case_qualification) ... ok\ntest_current_owned_package_only_is_technical_and_ancestry_is_preserved (test_paired_breakout_feedback.BreakoutFeedbackBoundaries.test_current_owned_package_only_is_technical_and_ancestry_is_preserved) ... ok\ntest_operator_namespaces_and_inherited_source_identity_preserved (test_paired_breakout_feedback.BreakoutFeedbackBoundaries.test_operator_namespaces_and_inherited_source_identity_preserved) ... ok\ntest_unaffected_descendant_data_use_delegates_exactly (test_paired_breakout_feedback.BreakoutFeedbackBoundaries.test_unaffected_descendant_data_use_delegates_exactly) ... ok\ntest_wrong_execution_profile_is_denied_before_dependency_or_blob_load (test_paired_breakout_feedback.BreakoutFeedbackBoundaries.test_wrong_execution_profile_is_denied_before_dependency_or_blob_load) ... ok\ntest_actual_closed_result_publish_read_restore_revoke_on_physical_clone (test_paired_breakout_feedback.BreakoutRetainedFeedbackLifecycle.test_actual_closed_result_publish_read_restore_revoke_on_physical_clone) ... skipped 'An explicitly selected read-only source registry is required for the physical-clone lifecycle'\n\n----------------------------------------------------------------------\nRan 6 tests in 2.022s\n\nOK (skipped=1)\n",
+      "test_methods": 6,
+      "skipped": 1
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_feature_release_knowledge.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_exact_sorted_refs_and_distinct_identity_roles_are_required (test_feature_release_knowledge.FeatureReleaseKnowledgeTests.test_exact_sorted_refs_and_distinct_identity_roles_are_required) ... ok\ntest_exposure_edges_and_opaque_annotations_survive_technical_classification (test_feature_release_knowledge.FeatureReleaseKnowledgeTests.test_exposure_edges_and_opaque_annotations_survive_technical_classification) ... ok\ntest_linked_metadata_must_match_ownership_class_and_grant_ids (test_feature_release_knowledge.FeatureReleaseKnowledgeTests.test_linked_metadata_must_match_ownership_class_and_grant_ids) ... ok\ntest_malformed_body_and_identity_types_fail_closed (test_feature_release_knowledge.FeatureReleaseKnowledgeTests.test_malformed_body_and_identity_types_fail_closed) ... ok\ntest_owned_exact_grant_is_technical_without_status_or_source_scans (test_feature_release_knowledge.FeatureReleaseKnowledgeTests.test_owned_exact_grant_is_technical_without_status_or_source_scans) ... ok\ntest_schema_owner_authority_and_exact_body_cannot_be_forged (test_feature_release_knowledge.FeatureReleaseKnowledgeTests.test_schema_owner_authority_and_exact_body_cannot_be_forged) ... ok\ntest_technical_wrapper_still_traverses_operations_and_protected_source_edges (test_feature_release_knowledge.FeatureReleaseKnowledgeTests.test_technical_wrapper_still_traverses_operations_and_protected_source_edges) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 2.410s\n\nOK\n",
+      "test_methods": 7,
+      "skipped": 0
+    }
+  ],
+  "test_methods": 36,
+  "skipped_methods": 2,
+  "passed_methods": 34,
+  "new_native_methods": 3,
+  "independently_authored_new_methods": 11,
+  "independent_review": "Existing paired_view_review agent independently reviewed source/MRO and authored provider-free hostile metadata/release tests. Consult its test source for isolated upstream evidence seams; no actual protected/production registry or provider was used.",
+  "native_observation": {
+    "fresh_normalization_feature_runtime_certificates": true,
+    "new_entry_point_before_certification_and_epoch": true,
+    "synthetic_native_roles_and_counts": true,
+    "unchanged_independent_reviewer": true,
+    "compiled_and_composition_checked": true,
+    "complete_cases": 3,
+    "fresh_replay": true,
+    "root_native_seconds": 136.126,
+    "scientific_readiness": false,
+    "limit": "Fresh no-feedback synthetic path plus isolated controlled-feedback tests; not a complete actual-market feedback descendant or actual LLM review."
+  },
+  "retained_failures": [
+    {
+      "tool_chunk": "b3b510",
+      "exit_code": 1,
+      "finding": "Private diagnostic named inspect.py shadowed stdlib inspect during import. Renamed ancestry_probe.py; read-only probe then passed05108d without changing validation or source classification."
+    },
+    {
+      "tool_chunk": "726e5e",
+      "exit_code": 1,
+      "methods": 11,
+      "passed": 10,
+      "errors": 1,
+      "finding": "Independent component fixture accepted one mock argument; the explicit legacy class call correctly supplied self and dependencies. Only the owned fixture signature changed to accept both calling forms and return the same findings. Corrected independent run c6b557 passed11/0skips in6.953s; no production change or expectation weakening."
+    }
+  ],
+  "resource_decision": {
+    "specific_ceiling_decision_received": false,
+    "proposed20m_activation": false,
+    "current_per_child_primitive_steps": 10000000
+  },
+  "research_usage": {
+    "totals": {
+      "calls": 53,
+      "known_usage_calls": 53,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1058582,
+      "known_output_tokens": 177896,
+      "known_total_tokens": 1236478,
+      "exact_total_tokens": 1236478,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 53,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 49754,
+      "reasoning_detail_calls": 53,
+      "exact_reasoning_output_tokens": 49754
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 4425415000,
+      "available_nano": 574585000,
+      "halted": false
+    },
+    "per_call_model_version_utc_history": "docs/reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json",
+    "immutable_served_snapshot": "UNKNOWN",
+    "count_service_billing": "UNVERIFIED",
+    "invoice_reconciled": false
+  },
+  "construction_usage_through_snapshot": {
+    "scope": "Main construction since profile snapshot, including gate-only recheck, actual diagnosis, implementation and checks; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T16:41:26.902Z",
+    "snapshot_at_utc": "2026-11-01T17:01:03.955Z",
+    "tokens": {
+      "input_tokens": 7041839,
+      "cached_input_tokens": 6874752,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 31910,
+      "reasoning_output_tokens": 11755,
+      "total_tokens": 7073749
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "new_model_calls": 0,
+  "new_count_calls": 0,
+  "new_production_grants": 0,
+  "production_registry_mutated": false,
+  "actual_native_admission": false,
+  "model_behavior_verified": false,
+  "scientific_readiness": false,
+  "objective_complete": false,
+  "work_plan_priority_preserved": "Obtain the specific decision on the fully prepared opt-in20M-per-child/40M-aggregate primitive ceiling, with unchanged shared1800-second deadline and all plain/observed/canonical-replay checks retained. The offline implementation and independent boundary/full-quarter audits are ready; its engineering profile remains pending, unregistered and unselected. Do not infer this ceiling revision from money discretion or activate it before the specific D097 constraint is resolved. After approval, preserve the proposal/source bytes and adopt the scoped resource version with provenance; qualify the new owned runtime/source/compile/composition/execution route, then complete actual AST4 role profiles/full wires and fresh original-scope source/input/data-use/meaning/count/funding admission. The added inactive module changes future all-Python host inventory, so historical native source observations do not establish current intended-use admission. Preserve actual original A null formalization, all source/exposure/failure histories and all seven revoked grants. The original USD5 ledger retains USD0.574585; no paid call, grant reset, retry/successor or scientific/assessment/capital upgrade is authorized by this proposal. Continue independent authorized work while awaiting the specific ceiling decision. Preserve separately owned DQ kit without claiming actual model behavior. The seven-package objective remains active and incomplete.",
+  "unverified": [
+    "Pending specific20M resource decision and subsequent separately bound source/profile version",
+    "Actual original-A complete current context/source/release/data-use admission and accepted formalization/independent meaning",
+    "Optional retained-result lifecycle tests skipped unless their explicit private-clone fixture is supplied",
+    "Actual full wire counts, fresh configuration/pricing/funding and a complete descriptive A report",
+    "Scientific information/calibration/protected assessment/freeze, economic/policy usefulness, actual DQ behavior",
+    "Immutable served model snapshot, count billing, invoices and child construction-usage aggregation",
+    "Global implementation-verifier preexisting master/discipline baseline not reaudited"
+  ],
+  "changed_files": [
+    "trading_researcher/exact_feedback.py",
+    "trading_researcher/EXACT_FEEDBACK.md",
+    "tests/test_exact_feedback.py",
+    "tests/test_exact_feedback_review.py",
+    "docs/reviews/implementation-2026-10-25/exact-feedback-2026-11-01.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json"
+  ]
+}

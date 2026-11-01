@@ -1,0 +1,248 @@
+{
+  "schema": "exact-formalizer-profile-preparation/1",
+  "status": "PASS_SCOPED_PROFILE_REQUEST_CONSTRUCTION_NOT_ADMITTED",
+  "at_utc": "2026-11-01T16:42:25.464581+00:00",
+  "python_version": "3.14.2",
+  "purpose": "Prepare actual generic AST4 role instructions independently while the specific computation-ceiling decision remains pending.",
+  "previous_goal_turn_audit": {
+    "classification": "NO_PROGRESS_GATE_ONLY_RECHECK",
+    "reason": "The preceding gate-only recheck repeated existing evidence. This independent authorized role correction changes the actual prepared profile without activating pending resources."
+  },
+  "authority": "D097 approved AST4/H_exec3 transport and unchanged independent review; no new operator, resource limit, provider, paid call or epoch.",
+  "source_sha256": {
+    "trading_researcher/exact_profiles.py": "2870ca08252a89a3913ceaf180f11ec5a051ced04aea7f203ac4098ebc477c88",
+    "trading_researcher/EXACT_PROFILES.md": "bf53a12482f1d33956b7f2f6fca3d0cf203355473e5510acaa78d01cfd06cf33",
+    "tests/test_exact_profiles.py": "34847bce57329f5f78d10a7422d09c3a4f5a8e1e6199fe61bbfaac6d6ef1c86c",
+    "tests/test_exact_profiles_review.py": "60b93ba42773e0db2e1da3e593fd998898caafcc8d1bafee67c1d1225afa1356",
+    "tests/fixtures/exact_formalizer_base_v3.json": "fb572a9246847b4f29f34850524d7dc3cacadd0348d16d71c4280c1e03c82362"
+  },
+  "baseline": {
+    "source_path": ".trf-runtime/inquiry-admission-2026-11-01/role-profiles-v3.json",
+    "source_sha256": "4eab065c7cac2bb4d89da8ccca61b512a0776de0eb5b7c975f81a02a4a1ec12b",
+    "profile_version": "faithful-native-formalization/3",
+    "prompt_characters": 8184,
+    "prompt_sha256": "8752022153d1291a684eee9535224937ced3c4f1b01518411f8ee01f2593389b",
+    "profile_sha256": "306142d083af19d6dad602677c6f66e04759a1da5bfa65873697a07dee26ec2d"
+  },
+  "prepared": {
+    "private_evidence": ".trf-runtime/exact-profile-2026-11-01/prepared.json",
+    "sha256": "1d3f16595d7d17733ca9a0dc0fada126570ef255db0c6c4aea93c04fe1677ab9",
+    "profile_version": "faithful-exact-formalization/4",
+    "prompt_characters": 8186,
+    "prompt_sha256": "5d203c4ff5942b11f4b5a30350326a94c4caf0c6eaedcd85a5fc0aae4e5656ca",
+    "profile_sha256": "472f9a3996a220a842b317b0d86e1d5a9e7ba76b5d9eee4eebf969f3c18826d5",
+    "unchanged_settings_sha256": "95c305653f32d79dbf013f75b13eab871c260ba2d1612576102d489a32837a21",
+    "contracts_sha256": "fa309ac67f5eef332f58b245c60254de33448daa6039cf3156d5428b48fe1af9",
+    "reviewer_entire_profile_unchanged": true,
+    "model": "gpt-6.1-sol",
+    "max_output_tokens": 32000,
+    "reasoning_effort": "high",
+    "primitive_steps": 10000000,
+    "native_admission": false,
+    "configuration_freshness": "NOT_CHECKED"
+  },
+  "correction": {
+    "actual_conflicts": [
+      "Old system prompt forces H_exec1 despite exact adapter requiring H_exec3",
+      "Old scalar branch selects AST1/2 despite current AST4 contract",
+      "Old syntax forbids abs despite approved outcome-only operator"
+    ],
+    "new_scope": "Generic single-instrument H_exec3/allAST4 quantity/basis_points; gaps preserve unsupported original ideas.",
+    "preserved": "Full faithfulness/null-gap/source/parameter mapping, catalog identity, causal/availability/unknown/denominator/enclosure/reporting/format obligations; model/reasoning/output/settings/reviewer unchanged.",
+    "scope_specific_removal": "Paired/binary/legacy branches removed only from this new scalar profile; legacy roles remain byte-identical.",
+    "not_introduced": "No original-A thresholds/windows/horizon/date defaults, cheaper-model substitution, cap increase or accepted model-semantic claim."
+  },
+  "top_level_methods": 44,
+  "new_methods": 14,
+  "independently_authored_new_methods": 10,
+  "legacy_methods": 30,
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_profiles*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_actual_complete_contract_bytes_are_required_without_scope_upgrade (test_exact_profiles.ExactProfileTests.test_actual_complete_contract_bytes_are_required_without_scope_upgrade) ... ok\ntest_actual_roles_and_non_prompt_settings_are_preserved (test_exact_profiles.ExactProfileTests.test_actual_roles_and_non_prompt_settings_are_preserved) ... ok\ntest_full_request_contracts_and_provider_wire_are_lossless (test_exact_profiles.ExactProfileTests.test_full_request_contracts_and_provider_wire_are_lossless) ... ok\ntest_modified_source_prompt_or_independent_review_is_rejected (test_exact_profiles.ExactProfileTests.test_modified_source_prompt_or_independent_review_is_rejected) ... ok\ntest_actual_baseline_binding_and_only_language_prompt_fields_change (test_exact_profiles_review.ExactProfilesReview.test_actual_baseline_binding_and_only_language_prompt_fields_change) ... ok\ntest_digests_bind_whole_base_new_prompt_settings_and_contract_bytes (test_exact_profiles_review.ExactProfilesReview.test_digests_bind_whole_base_new_prompt_settings_and_contract_bytes) ... ok\ntest_each_complete_bound_contract_is_required_without_text_or_hash_repair (test_exact_profiles_review.ExactProfilesReview.test_each_complete_bound_contract_is_required_without_text_or_hash_repair) ... ok\ntest_language_contradiction_lint_and_no_idea_specific_default_instructions (test_exact_profiles_review.ExactProfilesReview.test_language_contradiction_lint_and_no_idea_specific_default_instructions) ... ok\ntest_modified_or_incomplete_construction_cannot_emit_a_request (test_exact_profiles_review.ExactProfilesReview.test_modified_or_incomplete_construction_cannot_emit_a_request) ... ok\ntest_normalized_and_wire_requests_preserve_complete_packet_without_provider_use (test_exact_profiles_review.ExactProfilesReview.test_normalized_and_wire_requests_preserve_complete_packet_without_provider_use) ... ok\ntest_output_detachment_and_repeat_application_rejection (test_exact_profiles_review.ExactProfilesReview.test_output_detachment_and_repeat_application_rejection) ... ok\ntest_prompt_over_limit_fails_without_trimming_or_input_mutation (test_exact_profiles_review.ExactProfilesReview.test_prompt_over_limit_fails_without_trimming_or_input_mutation) ... ok\ntest_shared_full_meaning_enclosure_mapping_and_format_instructions_are_preserved (test_exact_profiles_review.ExactProfilesReview.test_shared_full_meaning_enclosure_mapping_and_format_instructions_are_preserved) ... ok\ntest_unknown_sources_or_changed_reviewer_are_not_silently_adapted (test_exact_profiles_review.ExactProfilesReview.test_unknown_sources_or_changed_reviewer_are_not_silently_adapted) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 0.215s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_inquiry_profile*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_bad_shapes_and_repeated_application_fail (test_inquiry_profile.InquiryProfileTests.test_bad_shapes_and_repeated_application_fail) ... ok\ntest_both_effective_role_versions_change_without_changing_role_parameters (test_inquiry_profile.InquiryProfileTests.test_both_effective_role_versions_change_without_changing_role_parameters) ... ok\ntest_exact_verification_rejects_prompt_manifest_and_budget_substitution (test_inquiry_profile.InquiryProfileTests.test_exact_verification_rejects_prompt_manifest_and_budget_substitution) ... ok\ntest_original_values_and_source_bytes_survive_without_shared_mutability (test_inquiry_profile.InquiryProfileTests.test_original_values_and_source_bytes_survive_without_shared_mutability) ... ok\ntest_oversized_prompt_fails_instead_of_truncating_original_meaning (test_inquiry_profile.InquiryProfileTests.test_oversized_prompt_fails_instead_of_truncating_original_meaning) ... ok\ntest_wrong_contract_bytes_are_not_labeled_as_the_accepted_source (test_inquiry_profile.InquiryProfileTests.test_wrong_contract_bytes_are_not_labeled_as_the_accepted_source) ... ok\ntest_cap_stops_scripted_tool_continuation_without_reset_or_scientific_negative (test_inquiry_profile_review.InquiryControllerReviewTests.test_cap_stops_scripted_tool_continuation_without_reset_or_scientific_negative) ... ok\ntest_effective_role_versions_and_original_prompts_reach_frozen_requests (test_inquiry_profile_review.InquiryControllerReviewTests.test_effective_role_versions_and_original_prompts_reach_frozen_requests) ... ok\ntest_later_release_context_inherits_original_exposure_without_rewriting_it (test_inquiry_profile_review.InquiryControllerReviewTests.test_later_release_context_inherits_original_exposure_without_rewriting_it) ... ok\ntest_profile_constructor_does_not_admit_malformed_roles_or_missing_body_table_runtime (test_inquiry_profile_review.InquiryControllerReviewTests.test_profile_constructor_does_not_admit_malformed_roles_or_missing_body_table_runtime) ... ok\ntest_protected_read_and_new_memory_fields_do_not_gain_authority_from_d096 (test_inquiry_profile_review.InquiryControllerReviewTests.test_protected_read_and_new_memory_fields_do_not_gain_authority_from_d096) ... ok\ntest_scripted_purpose_then_check_then_correction_preserves_original_and_peer_isolation (test_inquiry_profile_review.InquiryControllerReviewTests.test_scripted_purpose_then_check_then_correction_preserves_original_and_peer_isolation) ... ok\ntest_structural_acceptance_does_not_certify_retrospective_purpose_compliance (test_inquiry_profile_review.InquiryControllerReviewTests.test_structural_acceptance_does_not_certify_retrospective_purpose_compliance)\nDeliberate scripted F1 failure exposes the limit of profile construction. ... ok\ntest_valid_records_do_not_certify_false_unresolved_or_lucky_diagnoses (test_inquiry_profile_review.InquiryControllerReviewTests.test_valid_records_do_not_certify_false_unresolved_or_lucky_diagnoses)\nDeliberately bad scripted DQ claims remain unverified, not DQ passes. ... ok\ntest_actual_retained_prompt_headroom_is_visible_and_overflow_is_not_repaired (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_actual_retained_prompt_headroom_is_visible_and_overflow_is_not_repaired) ... ok\ntest_authorized_refresh_preserves_old_owner_and_old_review_without_relabeling (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_authorized_refresh_preserves_old_owner_and_old_review_without_relabeling) ... ok\ntest_deep_detachment_in_both_directions_and_deterministic_build (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_deep_detachment_in_both_directions_and_deterministic_build) ... ok\ntest_exact_character_boundary_and_unicode_are_preserved_without_trimming (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_exact_character_boundary_and_unicode_are_preserved_without_trimming) ... ok\ntest_exact_contract_bytes_not_normalized_translated_or_reencoded (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_exact_contract_bytes_not_normalized_translated_or_reencoded) ... ok\ntest_exact_independent_profile_and_manifest_binding (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_exact_independent_profile_and_manifest_binding) ... ok\ntest_minimal_role_shapes_are_only_structural_not_controller_admission (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_minimal_role_shapes_are_only_structural_not_controller_admission) ... ok\ntest_repeat_application_cannot_hide_behind_an_old_version (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_repeat_application_cannot_hide_behind_an_old_version) ... ok\ntest_structural_verification_rejects_all_binding_and_profile_substitutions (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_structural_verification_rejects_all_binding_and_profile_substitutions) ... ok\ntest_two_explicit_valid_prompts_and_both_optional_roles_are_required (test_inquiry_profile_review.InquiryProfileStructureReviewTests.test_two_explicit_valid_prompts_and_both_optional_roles_are_required) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 14.927s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_research.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_auxiliary_call_uses_original_budget_and_private_profile (test_auxiliary_research.AuxiliaryBudgetTests.test_auxiliary_call_uses_original_budget_and_private_profile) ... ok\ntest_auxiliary_creation_does_not_reset_expired_epoch (test_auxiliary_research.AuxiliaryBudgetTests.test_auxiliary_creation_does_not_reset_expired_epoch) ... ok\ntest_auxiliary_profile_cannot_add_budget_or_bypass_epoch (test_auxiliary_research.AuxiliaryBudgetTests.test_auxiliary_profile_cannot_add_budget_or_bypass_epoch) ... ok\ntest_recorded_response_identity_distinguishes_boolean_and_integer (test_auxiliary_research.AuxiliaryBudgetTests.test_recorded_response_identity_distinguishes_boolean_and_integer) ... ok\ntest_malformed_judgment_has_a_typed_failure (test_auxiliary_research.ReviewShapeTests.test_malformed_judgment_has_a_typed_failure) ... ok\ntest_missing_representation_still_allows_a_retained_uncertainty_report (test_auxiliary_research.ReviewShapeTests.test_missing_representation_still_allows_a_retained_uncertainty_report) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 1.675s\n\nOK\n"
+    }
+  ],
+  "independent_review": {
+    "reviewer": "paired_view_review",
+    "new_tests": 10,
+    "full_prompt_review": "No substantiated retained-obligation omission found; static scope/coverage only, not actual model comprehension or equivalent quality.",
+    "transport": "Synthetic normalized and provider-wire inputs restored all source bodies, ordered references and full contract bytes without provider use; not authenticated native context membership."
+  },
+  "retained_failures": [
+    {
+      "tool_chunk": "1e2a69",
+      "finding": "8519-character draft exceeded existing8192 bound; fail closed, no truncation or source/cap weakening."
+    },
+    {
+      "tool_chunk": "1d82d7",
+      "finding": "8194-character draft still exceeded bound; compacted wording while preserving independent-reviewed obligations."
+    },
+    {
+      "tool_chunk": "1d4e7f",
+      "finding": "Missing require diagnostic message raised TypeError; fixed exact call, retained failure."
+    },
+    {
+      "tool_chunk": "ebe74d",
+      "finding": "Private readable prompt export used platform newline translation; preserved original bytes and wrote the exact already prepared UTF-8 prompt bytes. Request/profile strings were unchanged; validator was not relaxed."
+    },
+    {
+      "stage": "independent source review",
+      "finding": "Missing construction keys could raise KeyError; typed completeness guard fixed before independent test run. No claimed RED execution."
+    },
+    {
+      "private_evidence": ".trf-runtime/exact-profile-2026-11-01/checks.json",
+      "exit_code": 5,
+      "finding": "Mistyped legacy suite name ran zero tests; preserved failed launcher and ran actual6-method auxiliary suite. Prior14/24 passing results retained, not relabelled."
+    }
+  ],
+  "unchanged_prior_resource_source_bytes": {
+    "trading_researcher/exact_resource_candidate.py": "3e015bc1f73ed939ec53dc04eb41f9388a126a1672482f6494a1eacae8f76765",
+    "trading_researcher/EXACT_RESOURCE_PROPOSAL.md": "8cc4ce73402035a5f27d7c2651beebaf4249baa60741f5bf00c76ddd8bbbe7c7",
+    "tests/test_exact_resource_candidate.py": "bdf9d3ff9535785447374451e370e1d513caaeeccdf4c306e0566decb73ee735",
+    "tests/test_exact_resource_candidate_review.py": "d0afcc7f0ec74badd4c002377b7c8dfcc71b5534e662e3022e448fa7f4c102e1"
+  },
+  "unchanged_prior_native_source_bytes": {
+    "trading_researcher/exact_execution.py": "f563d2dcb78d450e7f28eece1cde91b543acd99ec3830f1b22630539fea8070d",
+    "trading_researcher/exact_composition.py": "f36fb1329bee772e6ecec32774123c1c35eb17464544f6ecca0634d6942f480d",
+    "trading_researcher/exact_meaning.py": "eaa83aedc3d0232512e4ca85ea80456a5cd0c79bc1a2c478137138f86ce933e0",
+    "trading_researcher/exact_revocations.py": "287ce9b6c4ec21780858dbb676120711b60017d5b1e232264d25ccd51b1b8123",
+    "trading_researcher/EXACT_EXECUTION.md": "c2dd28113c4cc1e1ed7c18ed9f3f35530eec46222b08cd74e0ab105a68a7c506",
+    "tests/exact_execution_support.py": "383ca281cd19e7f19fcd66f6f56651ac26473e0ce9975cf38f711f8b964ec639",
+    "tests/test_exact_execution.py": "68050119bee6e0453faf482b2d8a3c0284970e8ebe4fef7d68b65dc29ed8cbd9",
+    "tests/test_exact_execution_review.py": "2798845e2376be3dccc8728f01747aaadd99cfbba8902e9e0b32702f42fe326f"
+  },
+  "resource_decision": {
+    "specific_ceiling_decision_received": false,
+    "proposed20m_activation": false,
+    "note": "Current4 profile retains10M. Any later approved resource revision requires an explicit new profile/source version; do not mutate frozen profiles."
+  },
+  "research_usage": {
+    "totals": {
+      "calls": 53,
+      "known_usage_calls": 53,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1058582,
+      "known_output_tokens": 177896,
+      "known_total_tokens": 1236478,
+      "exact_total_tokens": 1236478,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 53,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 49754,
+      "reasoning_detail_calls": 53,
+      "exact_reasoning_output_tokens": 49754
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 4425415000,
+      "available_nano": 574585000,
+      "halted": false
+    },
+    "per_call_model_version_utc_history": "docs/reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json",
+    "immutable_served_snapshot": "UNKNOWN",
+    "count_service_billing": "UNVERIFIED",
+    "invoice_reconciled": false
+  },
+  "construction_usage_through_snapshot": {
+    "scope": "Main construction since resource-proposal snapshot, including gate recheck/design/rework; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T16:10:14.566Z",
+    "snapshot_at_utc": "2026-11-01T16:41:26.902Z",
+    "tokens": {
+      "input_tokens": 14395810,
+      "cached_input_tokens": 14361216,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 48225,
+      "reasoning_output_tokens": 31850,
+      "total_tokens": 14444035
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "preservation": {
+    "old_runtime_pins_exact": 37,
+    "historical_inquiry_member_hashes_exact": 117,
+    "actual_A_still_original_null_formalization": true,
+    "shared_model_calls": 53,
+    "old_grants_still_revoked": 7
+  },
+  "new_research_model_calls": 0,
+  "new_count_calls": 0,
+  "new_production_grants": 0,
+  "production_registry_mutated": false,
+  "native_admission": false,
+  "model_behavior_verified": false,
+  "scientific_readiness": false,
+  "objective_complete": false,
+  "unverified": [
+    "Specific20M ceiling decision and source/native intended-use qualification",
+    "Actual complete original-A packet/current authorized context/feature/data-use/exposure membership",
+    "Fresh provider configuration/pricing, complete real wire counts, token fit and funded role admission",
+    "Actual model comprehension/fidelity/quality, independent actual meaning and first complete A report",
+    "Scientific information/calibration/protected assessment/freeze, economic/policy usefulness and actual DQ behavior",
+    "Immutable served snapshot, count-service billing, invoices and child construction-usage aggregation",
+    "Global implementation verifier preexisting master/discipline baseline not reaudited"
+  ],
+  "changed_files": [
+    "trading_researcher/exact_profiles.py",
+    "trading_researcher/EXACT_PROFILES.md",
+    "tests/test_exact_profiles.py",
+    "tests/test_exact_profiles_review.py",
+    "tests/fixtures/exact_formalizer_base_v3.json",
+    "docs/reviews/implementation-2026-10-25/exact-profile-2026-11-01.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json"
+  ],
+  "work_plan_priority_preserved": "Obtain the specific decision on the fully prepared opt-in20M-per-child/40M-aggregate primitive ceiling, with unchanged shared1800-second deadline and all plain/observed/canonical-replay checks retained. The offline implementation and independent boundary/full-quarter audits are ready; its engineering profile remains pending, unregistered and unselected. Do not infer this ceiling revision from money discretion or activate it before the specific D097 constraint is resolved. After approval, preserve the proposal/source bytes and adopt the scoped resource version with provenance; qualify the new owned runtime/source/compile/composition/execution route, then complete actual AST4 role profiles/full wires and fresh original-scope source/input/data-use/meaning/count/funding admission. The added inactive module changes future all-Python host inventory, so historical native source observations do not establish current intended-use admission. Preserve actual original A null formalization, all source/exposure/failure histories and all seven revoked grants. The original USD5 ledger retains USD0.574585; no paid call, grant reset, retry/successor or scientific/assessment/capital upgrade is authorized by this proposal. Continue independent authorized work while awaiting the specific ceiling decision. Preserve separately owned DQ kit without claiming actual model behavior. The seven-package objective remains active and incomplete.",
+  "bounded_next_action": "After the pending ceiling decision, bind the prepared language profile to the accepted resource/source version without mutating frozen roles, then qualify actual complete original-scope input/wire/count/funding admission."
+}

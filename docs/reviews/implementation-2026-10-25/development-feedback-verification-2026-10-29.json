@@ -1,0 +1,234 @@
+{
+  "schema": "development-feedback-verification/1",
+  "recorded_at_utc": "2026-10-29T05:42:41.563032+00:00",
+  "purpose": "Close the actual development feedback handoff under D070 without relabeling blocked jobs or granting scientific authority.",
+  "result": {
+    "status": "DEVELOPMENT_FEEDBACK_PUBLISHED_AND_RESTORED",
+    "evidence": "docs/reviews/implementation-2026-10-25/development-feedback-verification-2026-10-29.json",
+    "request": {
+      "root_epoch_id": "7b7294088ce8471dab63da9054786950",
+      "execution_id": "62cff0ef9503481047add4193a8ab5894d2758ed0d3a2d27b648ad1f73e906dd",
+      "data_use_assessment_id": "a1a4932218f3c2f5c62b6d06c36e7395284c716b252eb53421b359d15642e972",
+      "meaning_review_assessment_id": "c8c5309f3f109ce00c9c8c3fdb48d6be409eb9ab6de3746b9a17efa2830373b5",
+      "target_epoch": 113
+    },
+    "published_ids": {
+      "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "observation_id": "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+      "experience_id": "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+      "grant_id": "0dc4b987496b12316f3841f20de1f9acf0c69047714f9f5c2db503c16a076a57"
+    },
+    "context_id": "fea89d92d4bdad86cea014df1053f8bcda1e5681f4f632bdee2ff3f859cc7e03",
+    "observed_at_utc": "2026-10-29T05:41:39.649072+00:00",
+    "wall_seconds": "57.48310759999731",
+    "ideas": 2,
+    "epochs": 7,
+    "jobs": 17,
+    "job_states": {
+      "completed": 14,
+      "blocked": 3
+    },
+    "calls": 17,
+    "source_artifacts": 242,
+    "readable_idea_gap_records": 7,
+    "all_existing_records_preserved": true,
+    "backup_restore": "PASS",
+    "new_provider_calls": 0,
+    "new_tokens": 0,
+    "new_cost_usd": "0",
+    "scientific_readiness": false,
+    "market_model_entries": 0
+  },
+  "changed_files": [
+    "trading_researcher/development_feedback.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/storage.py",
+    "trading_researcher/revocations.py",
+    "trading_researcher/controller_providers.py",
+    "trading_researcher/research_calls.py",
+    "tests/test_development_feedback.py",
+    "tests/test_development_feedback_release.py",
+    "trading_researcher/MEMORY.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/development-feedback-verification-2026-10-29.json"
+  ],
+  "source_sha256": {
+    "trading_researcher/development_feedback.py": "163f03ca7977edd9b13ea9114c9126226d896821a768dd89c446fade0e6bf68b",
+    "trading_researcher/coordination.py": "74ec441cd6499c19134d0f68226546a1c8022c004a25ce5522fc1d019720b76b",
+    "trading_researcher/memory.py": "aa3c90a150068bee7d056090a8aece3d2e34e576e94b4a805173486d83acac82",
+    "trading_researcher/storage.py": "b5875a64249041de241f637feb56f0db706c95d27ffb8a52ec5fa11dfef7b12b",
+    "trading_researcher/revocations.py": "65e9f3197f590a651d5ca76b8bd24590ea60336922a2410177fc0b8a7d933f52",
+    "trading_researcher/controller_providers.py": "1cc702c8569b89c1168a2d7afdd5a718fc7dc3629cd7a55b00f1f59c53e1f80a",
+    "trading_researcher/research_calls.py": "19b9ed82fc07a78161ef29cfe1c51b87d8195b46283e13ba8276301123aa8dcb",
+    "tests/test_development_feedback.py": "20318927e3989dd8373bce16a937e9dc55eed5e5426a458df3110e61d6169184",
+    "tests/test_development_feedback_release.py": "f72e40ea1e869b6f1e74dc3ef26510958a85bdd5713de991c487f4704dc569b8"
+  },
+  "preserved_before_change_sha256": {
+    "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+    "trading_researcher/coordination.py": "4fbcf3e84024dd440c0817fe2e9c9c636bbe8766e84d53f3299a8de2623607bd",
+    "trading_researcher/memory.py": "ba6863f08477ab023a833af0a34a31091b3d6694aae8edb742f2fe48aa94859e",
+    "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+    "trading_researcher/revocations.py": "a1e9be625474b82d7e3f3c5b39834c94ada681b41a66170352f26ae7297b4610",
+    "trading_researcher/storage.py": "39e66fe16081bcc3610d27815d554efa9ddc72f368f27cc6a08cd7fbc5d2b861"
+  },
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_development_feedback*.py -v",
+      "tests": 21,
+      "seconds": "16.421",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_development_feedback_release.py -v",
+      "tests": 12,
+      "seconds": "9.473",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_local_runtime.py -v",
+      "tests": 8,
+      "seconds": "15.823",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_memory.py -v",
+      "tests": 17,
+      "seconds": "9.638",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_coordination.py -v",
+      "tests": 21,
+      "seconds": "12.587",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_revocations*.py -v",
+      "tests": 18,
+      "seconds": "12.697",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_controller_providers.py -v",
+      "tests": 4,
+      "seconds": "3.123",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_research_calls.py -v",
+      "tests": 10,
+      "seconds": "4.722",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ],
+  "unique_passing_tests": 100,
+  "project_checks": [
+    {"command": "python -B docs/reviews/verify_retail_contract.py", "exit_code": 0, "status": "PASS", "local_links": 832},
+    {"command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py", "exit_code": 0, "status": "PASS", "baseline_files": 103, "local_links": 827},
+    {"command": "git diff --check", "exit_code": 0, "status": "PASS", "note": "Existing CRLF-to-LF normalization warnings; no whitespace error."}
+  ],
+  "test_count_note": "The final12 release tests supersede the11 release tests in the earlier21-test combined run; counts are deduplicated.",
+  "actual_checks": {
+    "read_only_cohort": {
+      "status": "PASS",
+      "seconds": "14.4312385000012",
+      "registry_writes": 0
+    },
+    "read_only_evidence": {
+      "status": "PASS",
+      "seconds": "16.823296300000948",
+      "verified_cases": 8640,
+      "registry_writes": 0
+    },
+    "publication_command": "python -B .trf-runtime/feasibility-checkpoint-2026-10-27/publish_feedback_handoff.py --execute",
+    "publication_exit_code": 0,
+    "backup_blobs": 957,
+    "backup_restore": "Actual complete registry-plus-blob bundle restored in a separate directory; four artifact identities, context, idempotency and empty Market Model match."
+  },
+  "retained_failures_and_fixes": [
+    {
+      "stage": "independent_cohort_test",
+      "finding": "Earlier retained non-final discovery idea omitted its later auxiliary epoch.",
+      "red_exit_code": 1,
+      "fix": "Collect all typed ideas from original discovery jobs before workflow closure."
+    },
+    {
+      "stage": "owned_metadata_review",
+      "finding": "Authentic meaning-review assessment uses work_product, not development.",
+      "fix": "Require that exact known owned schema/authority/data class; development execution and snapshot constraints unchanged."
+    },
+    {
+      "stage": "independent_grant_test",
+      "finding": "Semantic review is not a supported executable technical dependency.",
+      "red_exit_code": 1,
+      "fix": "Track execution/data-use technical versions and check exact meaning inventory freshness separately."
+    },
+    {
+      "stage": "independent_malformed_evidence_test",
+      "finding": "None result/verification caused untyped TypeError.",
+      "red_exit_code": 1,
+      "fix": "Validate required metadata shapes before evidence use or blob reads."
+    },
+    {
+      "stage": "independent_readable_feedback_test",
+      "finding": "IDs alone did not let workers read retained blocked gaps.",
+      "red_exit_code": 1,
+      "fix": "Include exact complete idea/gap projection in the explicitly selectable manifest; raw execution/source access stays denied."
+    },
+    {
+      "stage": "independent_provider_test",
+      "finding": "Direct auxiliary dispatch bypassed public context recheck.",
+      "red_exit_code": 1,
+      "fix": "Check inherited grants before backend construction and before each new shared reservation; preserve acknowledgements/accounting."
+    },
+    {
+      "stage": "actual_harness_start",
+      "finding": "Broker has no context-manager protocol.",
+      "exit_code": 1,
+      "publication_committed": false,
+      "fix": "Use contextlib.closing in the local harness."
+    },
+    {
+      "stage": "actual_publication",
+      "finding": "Captured manifest time preceded typed-record creation on the advancing real clock.",
+      "exit_code": 1,
+      "publication_committed": false,
+      "fix": "Independent advancing-clock RED reproduced; each record captures its own valid availability and grant time follows records."
+    }
+  ],
+  "independent_review": {
+    "agent": "exploratory_preflight",
+    "scope": "Independent fixed tests and narrow publication/access/revocation review. No remaining known blocker in inspected scope.",
+    "fixture_limits": "Synthetic owned computation metadata; existing data-use and meaning-review inspectors mocked only in boundary tests. Actual owned checks and publication run separately without those mocks."
+  },
+  "usage_unchanged": {
+    "tokens": 537423,
+    "conservative_cost_usd": "1.8657225",
+    "approved_aggregate_usd": "5",
+    "model": "gpt-6.1-sol",
+    "catalog_version": "6.1",
+    "immutable_snapshot": "UNKNOWN",
+    "record": "docs/reviews/implementation-2026-10-25/eth-evidence-handoff-usage-2026-10-29.json"
+  },
+  "private_evidence": ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-handoff",
+  "rollback": "Preserved pre-change entrypoint bytes and complete published backup; do not erase immutable research history, exposure or published records. Revoke the scoped grant if later evidence makes use inappropriate.",
+  "unverified": [
+    "No new LLM run consumed the published context; actual retrieval/descendant behavior is exercised by synthetic workers.",
+    "No scientific/assessment terminal-batch publication, final calibration, information target, protected evaluation or freeze.",
+    "No economic-usefulness, mixed-provider quality or complete seven-package claim; already sent external calls cannot be unsent.",
+    "Backups and restore were exercised locally, not under arbitrary power loss or filesystem failure."
+  ]
+}

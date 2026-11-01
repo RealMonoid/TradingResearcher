@@ -1,0 +1,547 @@
+{
+  "schema": "inline-feedback-body-candidate-count/1",
+  "at_utc": "2026-11-01T01:04:39.869081+00:00",
+  "status": "NOT_ADMITTED_INITIAL_INPUTS_EXCEED_CAP",
+  "initial_input_tokens": 134416,
+  "receipts": [
+    {
+      "scope": "CANDIDATE_WIRE_ONLY",
+      "perspective": "feas-20261029-a",
+      "input_tokens": 67203,
+      "input_bound": 67331,
+      "wire_sha256": "ab7afcdcd04968c0f0e7cabaeb1f67a267baec510ad03099f7310ed286b3dbf7",
+      "at_utc": "2026-11-01T01:04:38.851087+00:00",
+      "response_at_utc": "2026-11-01T01:04:39.282884+00:00",
+      "transport_request_id": "req_9147648249784759971d445660fb4df1",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "qualification": "Input count only; retained expired config, no inference usage or invoice/current runtime admission."
+    },
+    {
+      "scope": "CANDIDATE_WIRE_ONLY",
+      "perspective": "feas-20261029-b",
+      "input_tokens": 67213,
+      "input_bound": 67341,
+      "wire_sha256": "be80066fd6a5cbd0f74b04103baf3c1adcc4db7934d534ac8be2d951a2e5cef3",
+      "at_utc": "2026-11-01T01:04:39.286222+00:00",
+      "response_at_utc": "2026-11-01T01:04:39.860496+00:00",
+      "transport_request_id": "req_d5a62f7e4d694e50bc19382237f82ab2",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "qualification": "Input count only; retained expired config, no inference usage or invoice/current runtime admission."
+    }
+  ],
+  "ordinary_epoch_cap": 80000,
+  "per_call_input_cap": 74000,
+  "unreserved_downstream_inputs_outputs_tools": "UNKNOWN_NOT_ZERO",
+  "configuration_expiry": 1793444124,
+  "runtime_integration": "NOT_IMPLEMENTED",
+  "elapsed_seconds": 1.0200378999870736,
+  "new_inference_calls": 0,
+  "new_epochs": 0,
+  "new_jobs": 0,
+  "registry_unchanged": true,
+  "ledger_unchanged": true,
+  "scientific_readiness": false,
+  "recorded_at_utc": "2026-11-01T01:09:16.756325+00:00",
+  "purpose": "Qualify exact initially inline body factoring and two ancestry pages; measure its actual candidate input before runtime integration.",
+  "source_file": "trading_researcher/feedback/inline_bodies.py",
+  "source_sha256": "d99ad9a4ba2972628c0d38d5db0287f0116e3acfc9414f04ac1678e01655baaa",
+  "full_unique_bodies_initially_visible": 12,
+  "ordered_body_occurrences": 27,
+  "unchanged_job_histories": 30,
+  "unchanged_standalone_reports": 8,
+  "same_selected_sources": 13,
+  "root_reconstruction": {
+    "prior_views": 13,
+    "original_envelopes": 13,
+    "ancestry_pages": 6,
+    "old_pages": {
+      "read_source_section": 75,
+      "read_feedback_references": 41,
+      "read_paired_feedback_references": 44
+    }
+  },
+  "independent_reconstruction": {
+    "independent_expected_packet": "Built directly from the prior candidate views, two independently calculated ancestry markers and the original 27 body occurrences; exact entire packet equality passed.",
+    "full_unique_bodies_initially_inline": 12,
+    "ordered_body_occurrences": 27,
+    "unchanged_job_histories": 30,
+    "unchanged_standalone_reports": 8,
+    "same_selected_source_ids": true,
+    "layered_pipeline": "Body expansion leaves two new ancestry markers; their exact pages reproduce all 13 prior candidate views; old exact pages reconstruct all 13 original envelopes.",
+    "prior_views_reconstructed": 13,
+    "full_original_envelopes_reconstructed": 13,
+    "independent_page_limit": 13,
+    "page_counts": {
+      "ancestry": 25,
+      "read_source_section": 339,
+      "read_feedback_references": 201,
+      "read_paired_feedback_references": 208
+    },
+    "original_envelope_hashes": [
+      {
+        "artifact_id": "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+        "canonical_envelope_sha256": "f2fb7a7085ee9cd9c41ba07a0a4d18e94094f30260ffa580f0998a080b51fe79",
+        "reconstructed_sha256": "f2fb7a7085ee9cd9c41ba07a0a4d18e94094f30260ffa580f0998a080b51fe79"
+      },
+      {
+        "artifact_id": "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+        "canonical_envelope_sha256": "92995921dfad02a024ada09dbef69e2e8aac6f365c81191c9911e29f79f615f5",
+        "reconstructed_sha256": "92995921dfad02a024ada09dbef69e2e8aac6f365c81191c9911e29f79f615f5"
+      },
+      {
+        "artifact_id": "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+        "canonical_envelope_sha256": "36d06f7bdcba8b46303c29709bc6716befdd82bc9139a0607492812efa399fcf",
+        "reconstructed_sha256": "36d06f7bdcba8b46303c29709bc6716befdd82bc9139a0607492812efa399fcf"
+      },
+      {
+        "artifact_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "canonical_envelope_sha256": "02a7e5d6a793a09f048226807c5324e8a4c8828eeb3de0a5323524b1606a8a2d",
+        "reconstructed_sha256": "02a7e5d6a793a09f048226807c5324e8a4c8828eeb3de0a5323524b1606a8a2d"
+      },
+      {
+        "artifact_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "canonical_envelope_sha256": "1aba299f9d9e078d4e58b96ac91719c6f0d351d98e2013259297d0ccb45166f5",
+        "reconstructed_sha256": "1aba299f9d9e078d4e58b96ac91719c6f0d351d98e2013259297d0ccb45166f5"
+      },
+      {
+        "artifact_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "canonical_envelope_sha256": "683f64e64921d172e3d9a88102749e569cdc36513b6572bc43110d1eec3c736a",
+        "reconstructed_sha256": "683f64e64921d172e3d9a88102749e569cdc36513b6572bc43110d1eec3c736a"
+      },
+      {
+        "artifact_id": "8406f5358e30347f8c827d1e92f0475816843876ce482b9e6c52d1ad1e5a05d9",
+        "canonical_envelope_sha256": "08c699a53272267052e5349432e52fad2235cbb71e37c97e4a097b02671fbcc8",
+        "reconstructed_sha256": "08c699a53272267052e5349432e52fad2235cbb71e37c97e4a097b02671fbcc8"
+      },
+      {
+        "artifact_id": "98b2d5c7c81ece3e62cfcaba1f45962a9431e6689d54629439477b90a2c96cc4",
+        "canonical_envelope_sha256": "035ae8185dbf84739fa24af003aef6ce8dbd658c8066d2ddd5dac0f52d5eab29",
+        "reconstructed_sha256": "035ae8185dbf84739fa24af003aef6ce8dbd658c8066d2ddd5dac0f52d5eab29"
+      },
+      {
+        "artifact_id": "a5b544c12d11c4f503b725fa9e70d7b1a5c351c6cfa7108e75f480d8d46eacc1",
+        "canonical_envelope_sha256": "4a3386cdf30b76e7c79e387cecda6821bdea9754723620211157b6f79eff11f7",
+        "reconstructed_sha256": "4a3386cdf30b76e7c79e387cecda6821bdea9754723620211157b6f79eff11f7"
+      },
+      {
+        "artifact_id": "ac31436f73c2a1e8ab685477d1459e01737561ce8c8dda467e9dabb1b237c117",
+        "canonical_envelope_sha256": "314f7841258697e42be771810b56c44a66d9e551a995aaab246f4c0c8fcbdd36",
+        "reconstructed_sha256": "314f7841258697e42be771810b56c44a66d9e551a995aaab246f4c0c8fcbdd36"
+      },
+      {
+        "artifact_id": "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+        "canonical_envelope_sha256": "ccd89eaa779aef0ed4dd02ce2c86c7aab448a1cc04193d779118d097c92c5eb2",
+        "reconstructed_sha256": "ccd89eaa779aef0ed4dd02ce2c86c7aab448a1cc04193d779118d097c92c5eb2"
+      },
+      {
+        "artifact_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "canonical_envelope_sha256": "22a1eaf98a45c69614d465e9fb8b2c19fd89964bb28fe84e27965e6ab20a4071",
+        "reconstructed_sha256": "22a1eaf98a45c69614d465e9fb8b2c19fd89964bb28fe84e27965e6ab20a4071"
+      },
+      {
+        "artifact_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "canonical_envelope_sha256": "08fe829c2701815173a716c2bee3f39353eba5b5ae227e93fe6c2323731fe777",
+        "reconstructed_sha256": "08fe829c2701815173a716c2bee3f39353eba5b5ae227e93fe6c2323731fe777"
+      }
+    ],
+    "occurrence_bindings": [
+      {
+        "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "record_index": 0,
+        "record_id": "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "body_sha256": "aa85ca46c65fef9941730d43f4e291700893bb1247d8780522cb2e758abda03f"
+      },
+      {
+        "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "record_index": 1,
+        "record_id": "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "body_sha256": "a7d8277784382e9de04ba6ffa5a879944cf42077e7a143f9042ae74d12724e2c"
+      },
+      {
+        "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "record_index": 2,
+        "record_id": "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "body_sha256": "86bcbf2b526aeaf843d6f042bf3c5ee8be64e4c61c9080e604448d6cbacf55cc"
+      },
+      {
+        "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "record_index": 3,
+        "record_id": "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "body_sha256": "a3ed270d16bb61645a49ccbf7ecf38b08a6fd29aaeb70e92ec7740e14f7a1e01"
+      },
+      {
+        "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "record_index": 4,
+        "record_id": "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "body_sha256": "966e45342a9bde6bcba9dedc0ca6b6c271146c27df87e9d1a0a7ff970b82ec99"
+      },
+      {
+        "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "record_index": 5,
+        "record_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "body_sha256": "fae67c55261c71516f5e81c564ef421634f56282b63cd17bbbf91e8aae2c2822"
+      },
+      {
+        "manifest_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "record_index": 6,
+        "record_id": "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06",
+        "body_sha256": "2ee37e93ab7fe79a4a86c2dced424d8f03e97c84a0733d961800b6e0508d5dc8"
+      },
+      {
+        "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "record_index": 0,
+        "record_id": "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "body_sha256": "aa85ca46c65fef9941730d43f4e291700893bb1247d8780522cb2e758abda03f"
+      },
+      {
+        "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "record_index": 1,
+        "record_id": "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "body_sha256": "a7d8277784382e9de04ba6ffa5a879944cf42077e7a143f9042ae74d12724e2c"
+      },
+      {
+        "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "record_index": 2,
+        "record_id": "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "body_sha256": "86bcbf2b526aeaf843d6f042bf3c5ee8be64e4c61c9080e604448d6cbacf55cc"
+      },
+      {
+        "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "record_index": 3,
+        "record_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+        "body_sha256": "7a379e15cc00ae5b255c54618e62d6b5a3c33c7a92e91b58c6d4846cbe4397f8"
+      },
+      {
+        "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "record_index": 4,
+        "record_id": "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "body_sha256": "a3ed270d16bb61645a49ccbf7ecf38b08a6fd29aaeb70e92ec7740e14f7a1e01"
+      },
+      {
+        "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "record_index": 5,
+        "record_id": "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "body_sha256": "966e45342a9bde6bcba9dedc0ca6b6c271146c27df87e9d1a0a7ff970b82ec99"
+      },
+      {
+        "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "record_index": 6,
+        "record_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "body_sha256": "fae67c55261c71516f5e81c564ef421634f56282b63cd17bbbf91e8aae2c2822"
+      },
+      {
+        "manifest_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "record_index": 7,
+        "record_id": "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06",
+        "body_sha256": "2ee37e93ab7fe79a4a86c2dced424d8f03e97c84a0733d961800b6e0508d5dc8"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 0,
+        "record_id": "0455997260940c50693b3c36a820285dc409f563885fe971851080def421a68e",
+        "body_sha256": "0793fe475b5f4f67e0d80b6fe746dd62f2c8073e95068bbc073af6f7d2be1d90"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 1,
+        "record_id": "202fe42c4864bc41e8fe1cb2679d0d3f07ed4b2fc43dff38db69599aa12d8f26",
+        "body_sha256": "aa85ca46c65fef9941730d43f4e291700893bb1247d8780522cb2e758abda03f"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 2,
+        "record_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+        "body_sha256": "2f0adc7f60598551865a2441ee467271a0a419bf59a256b7facd4f6cdbef8c82"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 3,
+        "record_id": "6a6f6f4bc9bb50624862b04444d74d1ee86d5ebb5ae3b7eed1e7452f41b48a5d",
+        "body_sha256": "a7d8277784382e9de04ba6ffa5a879944cf42077e7a143f9042ae74d12724e2c"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 4,
+        "record_id": "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+        "body_sha256": "dfd9c696c6595377db300c32b17dddc4650398988526b0ec618932c47f58e36b"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 5,
+        "record_id": "982acbdfa7f2cbfb9544e8204cee3b75a22d511afdadd2c16a8e17fd249809c9",
+        "body_sha256": "86bcbf2b526aeaf843d6f042bf3c5ee8be64e4c61c9080e604448d6cbacf55cc"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 6,
+        "record_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+        "body_sha256": "7a379e15cc00ae5b255c54618e62d6b5a3c33c7a92e91b58c6d4846cbe4397f8"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 7,
+        "record_id": "b9c88f05231bf95a0d87fa95e8145e9a6e804114b59b6548f9ccbc2ce0258feb",
+        "body_sha256": "a3ed270d16bb61645a49ccbf7ecf38b08a6fd29aaeb70e92ec7740e14f7a1e01"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 8,
+        "record_id": "de0263d5d2fb109a67d62320f71ab64364de5df431e1e7a43c326d3869da3750",
+        "body_sha256": "966e45342a9bde6bcba9dedc0ca6b6c271146c27df87e9d1a0a7ff970b82ec99"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 9,
+        "record_id": "debd721be92ca1268414c92d703c8163a5aae5f1c733784ce4fe39905067452c",
+        "body_sha256": "02782db69a1aa81ca5b102d17c97d69aa67335167c8f0cae022ed0ebdb67bfc0"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 10,
+        "record_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+        "body_sha256": "fae67c55261c71516f5e81c564ef421634f56282b63cd17bbbf91e8aae2c2822"
+      },
+      {
+        "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "record_index": 11,
+        "record_id": "f73e2674e6eb5c54f40520e13ce78b41df964529a6164914ecfcc78f8761dc06",
+        "body_sha256": "2ee37e93ab7fe79a4a86c2dced424d8f03e97c84a0733d961800b6e0508d5dc8"
+      }
+    ],
+    "wire_checks": [
+      {
+        "perspective": "feas-20261029-a",
+        "wire_sha256": "ab7afcdcd04968c0f0e7cabaeb1f67a267baec510ad03099f7310ed286b3dbf7",
+        "same_system_prompt_model_settings": true,
+        "exact_packet_initially_visible": true
+      },
+      {
+        "perspective": "feas-20261029-b",
+        "wire_sha256": "be80066fd6a5cbd0f74b04103baf3c1adcc4db7934d534ac8be2d951a2e5cef3",
+        "same_system_prompt_model_settings": true,
+        "exact_packet_initially_visible": true
+      }
+    ],
+    "all_37_pinned_sources_unchanged": true,
+    "pin_manifest_sha256": "11425e6439ec2445ccfdf1ed409866b4a3fa1e29f73dd88898c2a240087d9b42"
+  },
+  "retained_initial_findings": [
+    {
+      "id": "INLINE-01",
+      "source_sha256": "411661921e6b00bde58bf3cbb5a0585a14d40f9aecf1e6a16333912aae7346a2",
+      "finding": "Unknown original retained body using the reserved inline pointer schema was emitted unchanged by build but misinterpreted by expand, producing an unexpandable packet.",
+      "initial_probe_outcome": "Build emitted output; subsequent verify raised Invalid.",
+      "disposition": "Controller source correction now raises an explicit representation gap before emission; original source remains unchanged and no scientific idea denial follows. Independent reserved-tag regression passes."
+    },
+    {
+      "id": "INLINE-02",
+      "source_sha256": "411661921e6b00bde58bf3cbb5a0585a14d40f9aecf1e6a16333912aae7346a2",
+      "finding": "Replacing all pointers for one target with exact literal bodies and deleting that table target passed old verify despite violating the specified canonical once-inline table representation.",
+      "initial_probe_outcome": "Noncanonical factoring bypass was accepted. Expanded authorized field values were exact; this was representation conformance, not unauthorized source access.",
+      "disposition": "Controller source correction adds canonical packet equality to caller-authorized build output after expansion binding. Independent bypass regression passes."
+    }
+  ],
+  "retained_test_author_failure": {
+    "initial_combined_run": "25 tests, 24 passed, one failed: wrong data-use schema test compared factored packet directly with unfactored base view.",
+    "correction": "The test now compares after body expansion, preserving the ancestry-owner expectation while allowing independent valid body factoring.",
+    "final_combined_run": "25 passed; no implementation was changed for this test error."
+  },
+  "old_user_content_bytes": 233830,
+  "new_user_content_bytes": 185008,
+  "previous_initial_input_tokens": 165780,
+  "current_initial_input_tokens": 134416,
+  "comparison_qualification": "Observed count receipts under the same requested model alias/catalog and role settings; immutable served snapshot and model-quality equivalence remain unknown. Bytes and tokens are separate measures.",
+  "four_call_no_followup_reference_path": {
+    "slots": [
+      {
+        "stage": "discovery_a",
+        "input_bound": 67331,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228327500
+      },
+      {
+        "stage": "discovery_b",
+        "input_bound": 67341,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228352500
+      },
+      {
+        "stage": "formalization_reference_role",
+        "input_bound": 62000,
+        "output_limit": 18000,
+        "cost_bound_nano_usd": 335000000
+      },
+      {
+        "stage": "independent_review_reference_role",
+        "input_bound": 76000,
+        "output_limit": 4000,
+        "cost_bound_nano_usd": 230000000
+      }
+    ],
+    "total_reserved_tokens": 306672,
+    "cost_bound_nano_usd": 1021680000,
+    "available_nano_usd": 1043277500,
+    "headroom_nano_usd": 21597500,
+    "status": "ARITHMETIC_ONLY_NOT_ADMITTED",
+    "qualification": "No tool-followup or retry slot exists in this path. Future formalization/review packets are unknown and must fit full counted role inputs before dispatch. These reference output bounds are not universal scientific minimums or a newly frozen policy. Ordinary epoch limit, expired config and missing runtime/currentness/grant binding still block admission."
+  },
+  "controller_checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_inline_feedback_bodies*.py' -v",
+      "exit_code": 0,
+      "tests": 25,
+      "seconds": 0.495,
+      "chunk_id": "a4291f"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_feedback_context_views.py -v",
+      "exit_code": 0,
+      "tests": 4,
+      "seconds": 2.638,
+      "chunk_id": "4febed"
+    },
+    {
+      "command": "python -B .trf-runtime/inline-feedback-bodies-2026-11-01/probe.py prepare",
+      "exit_code": 0,
+      "chunk_id": "3deb41"
+    },
+    {
+      "command": "python -B .trf-runtime/inline-feedback-bodies-2026-11-01/probe.py count",
+      "exit_code": 0,
+      "chunk_id": "7a0e03"
+    }
+  ],
+  "independent_review_status": "PASS_INACTIVE_INLINE_BODY_CANDIDATE",
+  "independent_count_review_status": "PASS_COUNT_ONLY_NOT_ADMITTED",
+  "private_evidence_sha256": {
+    "probe.py": "26b20bcb81deca8288f50dee47baefe60a8d34420bcf88397d51c3c9f6d3bf65",
+    "candidate.json": "e61eaf96a4f5d03eb3b3c332feba809c180958ae98d2ad94ef7dcb49fa452ba6",
+    "prepare-start.json": "4f848a69dbf69c4e526c91eddd0914a202daeefb976aab1d1f52ef0728ad853c",
+    "count-start.json": "9c683437bb4938f2f2cecf691f64d2114b2e1250366e7fbcd63feba6c27c962d",
+    "input-count-0.json": "19c85e07d628ad5cf7345ba5f30e309ab709106b7080d70722b980180484365c",
+    "input-count-1.json": "9e51038476a7c5bc2e2df1523d10b359fa436a5155b2ff37e49eda8d94c5cecd",
+    "count-result.json": "8273fbfbe6ab1b53ec0ba3a6952672140bba4225afdf2ba6d103100f6d417e47",
+    "independent-review.json": "3be33008042c62264f21717bc45063dc051bfe6ae8a0d00f1b66bd5732145e70",
+    "independent-count-review.json": "c586df5467f0aa810b2dd00c82ace955a56523d5d0369499b0d342ee598951ca",
+    "initial-implementation.py.txt": "33ef34b14c02f581a9a0f94d0b5da08208e3b75142d91fef593ab87ee708afec",
+    "closeout.py": "965301899dda32fe4fdef7e395828f960ab3a095c5faaf3ea6a819834a9530af"
+  },
+  "usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "registry_before_and_after": {
+    "artifacts": 1418,
+    "contexts": 57,
+    "events": 1981,
+    "research_epochs": 20,
+    "job_specs": 40,
+    "research_calls": 40
+  },
+  "all_37_pinned_sources_unchanged": true,
+  "native_currentness": "NOT_REVALIDATED; retained source snapshot only.",
+  "configuration_expiry_utc": "2026-10-31T10:55:24+00:00",
+  "configuration_status": "EXPIRED_RETAINED_FOR_COUNT_DIAGNOSTIC_ONLY",
+  "unverified": [
+    "Live worker/profile integration and actual frozen-ledger request binding.",
+    "Current native sources/grants, provider pricing and fresh configuration.",
+    "An authorized complete-path reservation covering the selected tool/stop rules.",
+    "Model behavior/research quality after repetition changes.",
+    "Scientific calibration/admission, economic usefulness and seven-package completion."
+  ],
+  "active_renderer_changed": false,
+  "scientific_contract_changed": false,
+  "construction_usage": {
+    "scope": "Main Codex construction chat from this implementation continuation through snapshot; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T00:55:12.021Z",
+    "snapshot_at_utc": "2026-11-01T01:09:13.361Z",
+    "delta": {
+      "input_tokens": 6860621,
+      "cached_input_tokens": 6835968,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 37670,
+      "reasoning_output_tokens": 19557,
+      "total_tokens": 6898291
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "child_branch_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "next_action": "Stop default presentation expansion and prepare one bounded full-path resource/authority review for this exact qualified packet. Reconcile the two actual discovery counts with unchanged formalization/reviewer role upper bounds and the remaining original shared USD budget; distinguish a four-call path with no tool follow-up from a reservation that covers arbitrary tool continuations. Assess whether a separately recorded finite operator allocation is within the existing discretionary-spending instruction; do not inherit/reset consumed grants or silently extend the ordinary 80,000-token cap. Verify current provider pricing, fresh configuration binding, allowed current sources/grants, necessary opt-in runtime/frozen-wire integration and complete stage admission before any inference. Unknown future full packets remain unknown until counted; no truncation, model/role downgrade, semantic change, automatic retry or hidden continuation is allowed. A budget-fitting arithmetic path is not an admitted epoch or guaranteed research result; retain exact resource/semantic gaps and use D008/D026 if a material scientific change is required.",
+  "private_helpers_and_evidence": ".trf-runtime/inline-feedback-bodies-2026-11-01/",
+  "changed_files": [
+    "trading_researcher/feedback/inline_bodies.py",
+    "tests/test_inline_feedback_bodies.py",
+    "tests/test_inline_feedback_bodies_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/inline-feedback-bodies-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md"
+  ],
+  "documentation_checks": [
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": [],
+      "additional_errors": [],
+      "local_document_links": null,
+      "qualification": "Documentation/contract structure only."
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ],
+      "additional_errors": [],
+      "local_document_links": 1148,
+      "qualification": "The global validator remains FAIL for these exact pre-existing errors."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ]
+}

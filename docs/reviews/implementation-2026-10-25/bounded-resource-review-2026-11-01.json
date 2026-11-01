@@ -1,0 +1,306 @@
+{
+  "schema": "bounded-research-resource-review/1",
+  "status": "CONDITIONAL_OPTIONS_REVIEWED_NO_ADMISSION",
+  "recorded_at_utc": "2026-11-01T01:40:23.655656+00:00",
+  "purpose": "Determine an honest funded path preserving full source inputs and role quality before implementing/activating future research; reconcile the new D096 handoff at a safe boundary.",
+  "authority": "The existing direct discretionary instruction supports a new finite operator-selected resource disposition, not reuse of D095 or another spent grant. No disposition/grant/cap/epoch is activated here.",
+  "official_tariff_sources": [
+    "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "https://developers.openai.com/api/docs/guides/prompt-caching"
+  ],
+  "official_standard_per_million_usd": {
+    "input": "2.00",
+    "cached_input": "0.10",
+    "cache_write_30m": "2.50",
+    "output": "10.00"
+  },
+  "tariff_scope": "Standard api.openai.com/default tier, at most 76,000 input tokens per call, 30-minute total cache-write rate; no long-context or regional premium in this declared wire.",
+  "retained_18k_path": {
+    "slots": [
+      {
+        "stage": "discovery_a",
+        "input_bound": 67331,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228327500
+      },
+      {
+        "stage": "discovery_b",
+        "input_bound": 67341,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228352500
+      },
+      {
+        "stage": "formalization",
+        "input_bound": 62000,
+        "output_limit": 18000,
+        "cost_bound_nano_usd": 335000000
+      },
+      {
+        "stage": "independent_review",
+        "input_bound": 76000,
+        "output_limit": 4000,
+        "cost_bound_nano_usd": 230000000
+      }
+    ],
+    "reserved_tokens": 306672,
+    "cost_bound_nano_usd": 1021680000,
+    "extra_tool_followup_or_retry_slots": 0,
+    "status": "CONDITIONAL_PATH_ARITHMETIC_NOT_ADMITTED"
+  },
+  "retained_32k_fixed_path": {
+    "slots": [
+      {
+        "stage": "discovery_a",
+        "input_bound": 67331,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228327500
+      },
+      {
+        "stage": "discovery_b",
+        "input_bound": 67341,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228352500
+      },
+      {
+        "stage": "formalization",
+        "input_bound": 47293,
+        "output_limit": 32000,
+        "cost_bound_nano_usd": 438232500
+      },
+      {
+        "stage": "independent_review",
+        "input_bound": 43346,
+        "output_limit": 4000,
+        "cost_bound_nano_usd": 148365000
+      }
+    ],
+    "tokens": 273311,
+    "cost_bound_nano_usd": 1043277500
+  },
+  "measured_reference_path": {
+    "slots": [
+      {
+        "stage": "discovery_a",
+        "input_bound": 67331,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228327500
+      },
+      {
+        "stage": "discovery_b",
+        "input_bound": 67341,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228352500
+      },
+      {
+        "stage": "formalization",
+        "input_bound": 29083,
+        "output_limit": 32000,
+        "cost_bound_nano_usd": 392707500
+      },
+      {
+        "stage": "independent_review",
+        "input_bound": 43346,
+        "output_limit": 4000,
+        "cost_bound_nano_usd": 148365000
+      }
+    ],
+    "tokens": 255101,
+    "cost_bound_nano_usd": 997752500
+  },
+  "all_role_maxima_path": {
+    "slots": [
+      {
+        "stage": "discovery_a",
+        "input_bound": 67331,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228327500
+      },
+      {
+        "stage": "discovery_b",
+        "input_bound": 67341,
+        "output_limit": 6000,
+        "cost_bound_nano_usd": 228352500
+      },
+      {
+        "stage": "formalization",
+        "input_bound": 48000,
+        "output_limit": 32000,
+        "cost_bound_nano_usd": 440000000
+      },
+      {
+        "stage": "independent_review",
+        "input_bound": 76000,
+        "output_limit": 4000,
+        "cost_bound_nano_usd": 230000000
+      }
+    ],
+    "tokens": 306672,
+    "cost_bound_nano_usd": 1126680000
+  },
+  "conditional_resource_design": {
+    "max_calls": 4,
+    "max_tokens": 306672,
+    "max_cost_nano_usd": 1043277500,
+    "max_seconds": 1800,
+    "role_input_ceilings": {
+      "discovery": 74000,
+      "formalization": 48000,
+      "review": 76000
+    },
+    "role_outputs": {
+      "discovery": 6000,
+      "formalization": 32000,
+      "review": 4000
+    },
+    "initial_reference_path_hold_nano": 997752500,
+    "unallocated_margin_nano": 45525000,
+    "rule": "Exactly four monotonic single-use stage slots. Before each dispatch, count the complete actual packet plus128, preserve its full role output limit, and enforce the unchanged epoch/shared monetary cap. Reserve nonzero measured-reference full-output bounds for every later mandatory stage; known future discovery inputs use their exact frozen bounds. Any request needing more than the available margin or role input ceiling stops before the call. After honest settlement, unused reservation money inside this new epoch may fund a larger full later packet within the original role/epoch ceilings; spent charges, call slots and old grants are never reset. No extra followup/retry call or cheaper/partial input is created.",
+    "review_specific": "Once the first three calls have settled, admit the full counted reviewer packet up to76000only if its full4000output reservation fits the then-available capped funds. If not, retain a review resource gap and no scientific success.",
+    "guarantee": "Conditional complete-path possibility only. All role maxima together exceed the current cash remainder byUSD0.0834025; unknown new packets may terminate. No unconditional complete-cycle coverage is claimed."
+  },
+  "known_counterexamples": {
+    "formal_output": 22066,
+    "review_input": 43218,
+    "review_input_plus128": 43346,
+    "consequence": "18,000 output tokens are not enough for that retained case; a 42,639-token review bound also excludes its full packet. These are specific observations, not universal minima. Keep 32,000-token output room and count all future full packets; conditional holds/money gates remain to be implemented."
+  },
+  "disconfirmed_assumption": "D093 did not require tool followups: both initial public discovery responses were final, zero function calls. This supports a four-call possibility, not a forecast for the new packet or D096.",
+  "configuration_correction": {
+    "finding": "The first draft copied D093 transport flags into latest32k role assumptions. Those flags affect auxiliary presentation and compact suffix, so the description was not exact latest-role preservation.",
+    "correction": "Derive formalizer/reviewer configurations from the exact latest paired continuation and change expiry only. Keep the first draft as evidence; no API call or grant used it."
+  },
+  "fresh_role_baseline": ".trf-runtime/paired-breakout-continuation-2026-10-30/prepared-v2.json",
+  "configuration_refresh_scope": "Expiry only relative to exact latest formal/review configs; no source/compact flags silently added. Future D096 profiles still need appropriate prompt/configuration/native-route binding.",
+  "first_perspective_target_rule": "Predeclare first perspective as the sole formalization target before outputs. Preserve the second perspective independently. First-perspective gap/tool-only/nonfinal or invalid candidate remains terminal; no fallback after observing failure/cost/outcome.",
+  "independent_review_status": "PASS_BOUNDED_RESOURCE_REVIEW_NOT_ADMITTED",
+  "D096_safe_boundary": {
+    "decision": "D096",
+    "contract": "inquiry-feedback/1.0",
+    "owner": "docs/architecture/25_METACOGNITION_DUAL_SPACE_INQUIRY.md",
+    "owner_sha256": "b0aee80c2d8b2f19a26e755240fa72321d5f2466bfc3acf765770e4e525ffc8e",
+    "source_thread": "01a194a6-14cb-7d20-9408-9063c10a3b92",
+    "handoff_received": true,
+    "live_calls_at_reconciliation": 0,
+    "atomic_registry_operations_at_reconciliation": 0,
+    "construction_application": "Sources, pre-result purpose, counterexamples, corrected configuration baseline and disconfirmed tool-first interpretation retained in existing review artifacts. No market verdict or improvement claim follows.",
+    "existing_coverage": [
+      {
+        "owner": "trading_researcher/memory.py:FIELDS/RELATIONS",
+        "covered": "Idea question/assumptions/uncertainty, observation measurement, gap reason/reopen condition, attempt outcome/details, research_experience interpretation/next_action and source relations already exist."
+      },
+      {
+        "owner": "trading_researcher/researcher.py:run_research_once/_tool",
+        "covered": "Frozen purpose/context and full provider request/response precede tool execution; exact tool results and private attempt identity are retained. Role/access/budget and perspective controls remain installed."
+      },
+      {
+        "owner": "trading_researcher/feedback/{paired,breakout}.py",
+        "covered": "Owned released cohorts preserve failures, source/exposure and typed observation/interpretation records; currentness and later-context checks exist."
+      }
+    ],
+    "missing_slice": "No explicit source-bound D096 discovery prompt/profile integration or independently qualified prospective-purpose/correction-use behavior is demonstrated. Select an isolated profile adapter using existing records, not a new platform.",
+    "behavioral_AC_cases_executed_by_this_checkpoint": 0,
+    "runtime_activated": false,
+    "usefulness_demonstrated": false
+  },
+  "observed_useful_episode": "Independent review caught a specific transport-baseline mismatch before any API call; v2 corrected it. This is one checked correction, not an error-rate or causal improvement estimate.",
+  "usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "old_grants_revoked": 6,
+  "new_grants": 0,
+  "new_epochs": 0,
+  "new_jobs": 0,
+  "new_api_calls": 0,
+  "new_inference_calls": 0,
+  "unverified": [
+    "New epoch grant and tested settlement/hold/token/money fences.",
+    "D096 prompt/profile integration and relevant independent behavioral qualification.",
+    "Actual future full inputs, current native grants, runtime/frozen-wire binding and final admission.",
+    "Guaranteed complete-cycle coverage, model quality, comparative benefit, scientific calibration or economic usefulness."
+  ],
+  "next_action": "Implement and independently qualify one isolated versioned D096 discovery prompt/profile adapter using the existing memory fields and provider/tool transcripts. Preserve free invention, original ideas, source/exposure closure, perspective isolation, evaluator authority and immutable prior profiles. Map instruction, structural and deterministic control coverage separately from unexecuted model-behavior AC cases; add no mandatory reflection call, store, agent platform or benchmark. Then rebuild/count the actual future packets and review the protected four-stage resource disposition inside the original shared USD cap before any new grant, epoch or inference. The retained old wire counts and fresh paired-role configurations are diagnostic baselines, not an automatically compatible or admitted D096 configuration. Keep unknown full future inputs explicit, role output room, bounded stage holds and honest terminal gaps; no old grant, spent charge or call-slot reset.",
+  "private_helpers_and_evidence": ".trf-runtime/bounded-research-resource-2026-11-01/",
+  "private_evidence_sha256": {
+    "prepare.py": "9a821f9548144a4591403c54c10af3a4e21965edcb63cc2048821605c31b07c1",
+    "preparation.json": "a9909c4ddce66d7964ed64cd38b28fb529366b370f62f38ab3c2a36b43245528",
+    "pricing-evidence.json": "a3e9f163ac0dda3c850e35adf03971bb42808dcbe19e1587dc7053443c465fc8",
+    "refresh.py": "d79f9c5159f9505a12d1d56cd97da9cd432ce17a6e676eed2e7668d8ce90f927",
+    "preparation-v2.json": "8625666f3e0dabcc7036c73da086d4331a5aa63cc34d76510637fb48b7fe7de1",
+    "independent-review.json": "4f9aa4d28f336d9c31735af7b2ac7add2dff5dcdb7d124de1694fcf8dd39596f",
+    "closeout.py": "04a656d1de974ea26b5fbe48f1a5f144ac3e25b2856a860f6b2cd6f996d3abe1"
+  },
+  "construction_usage": {
+    "scope": "Main Codex chat resource review through snapshot; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T01:10:21.424Z",
+    "snapshot_at_utc": "2026-11-01T01:39:56.938Z",
+    "delta": {
+      "input_tokens": 18853976,
+      "cached_input_tokens": 18367232,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 57443,
+      "reasoning_output_tokens": 41778,
+      "total_tokens": 18911419
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "changed_files": [
+    "docs/reviews/implementation-2026-10-25/bounded-resource-review-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md"
+  ],
+  "documentation_checks": [
+    {
+      "command": "python -B docs/reviews/adoption-metacognition-2026-11-01/verify_adoption.py",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL_TWO_PREEXISTING_BASELINE_ERRORS"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ],
+  "final_controller_check": {
+    "command": "python -B .trf-runtime/bounded-research-resource-2026-11-01/closeout.py check",
+    "exit_code": 0,
+    "chunk_id": "b8e2b5"
+  },
+  "scope_validator_update": "Recognize only the newly user-approved D096 document13 addendum; preserve the two older baseline flags in documents06 and15."
+}

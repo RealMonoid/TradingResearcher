@@ -1,0 +1,260 @@
+{
+  "schema": "feedback-informed-development-attempt/1",
+  "observed_at_utc": "2026-10-29T12:25:15.383983+00:00",
+  "status": "FINITE_ATTEMPT_STOPPED_WITH_RETAINED_GAPS",
+  "decision": "D090",
+  "epoch_id": "32481d653e9a46e08552f3e8d9dc206c",
+  "purpose": "One new free development research epoch with complete prior feedback, without changing the original claims or scientific rules.",
+  "selection": "Only the first perspective final primary idea, fixed before discovery; no fallback or outcome selection. Both perspectives and every intermediate record are retained.",
+  "source_ids": [
+    "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+    "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+    "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+    "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+    "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035"
+  ],
+  "wall_seconds": 119.22251310000138,
+  "new_calls": [
+    {
+      "dispatch_id": "a554a92d7972407495fc8504b06a3b4f:0",
+      "request_sha256": "215b089d1ed253774c11ad7e7e0c37a26a71c5f5ce694a5fbf77280ea3f5d368",
+      "reserved_nano": 130595000,
+      "charged_nano": 85695000,
+      "state": "settled",
+      "created_at": 1793276370,
+      "admitted_at_utc": "2026-10-29T12:19:30Z",
+      "settled_at_utc": "2026-10-29T12:20:03Z",
+      "metadata": {
+        "counted_input_tokens": 28110,
+        "epoch_id": "32481d653e9a46e08552f3e8d9dc206c",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "feedback-development-discovery/1",
+        "run_id": "a554a92d7972407495fc8504b06a3b4f",
+        "worker": "feedback-20261029-a"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0fd994004ee7c9de016ae339d31f2887d2beec56b855124a58",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 92
+        },
+        "transport_request_id": "req_d1e462391ba94894b95a9fb716be212a",
+        "usage": {
+          "cost_units": 85695000,
+          "input_tokens": 28110,
+          "output_tokens": 1542
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "c15c467fa04949d9b6fff67cf1ae62e0:0",
+      "request_sha256": "6795f5e7f7c165f3070760a4d21d788d8210bd530d625ee936fdc03c6d1148b4",
+      "reserved_nano": 130620000,
+      "charged_nano": 88740000,
+      "state": "settled",
+      "created_at": 1793276418,
+      "admitted_at_utc": "2026-10-29T12:20:18Z",
+      "settled_at_utc": "2026-10-29T12:21:01Z",
+      "metadata": {
+        "counted_input_tokens": 28120,
+        "epoch_id": "32481d653e9a46e08552f3e8d9dc206c",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "feedback-development-discovery/1",
+        "run_id": "c15c467fa04949d9b6fff67cf1ae62e0",
+        "worker": "feedback-20261029-b"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0989803b879c5525016ae33a03267487d2b5ed05d25c1ba4f3",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 106
+        },
+        "transport_request_id": "req_39cd9bce10a84712a08f40a041a2f763",
+        "usage": {
+          "cost_units": 88740000,
+          "input_tokens": 28120,
+          "output_tokens": 1844
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    }
+  ],
+  "new_tokens": 59616,
+  "new_conservative_cost_usd": "0.174435",
+  "aggregate_tokens": 597039,
+  "aggregate_conservative_cost_usd": "2.0401575",
+  "remaining_original_usd5_allowance": "2.9598425",
+  "billing_qualification": "Provider-reported tokens. Known sums exclude unknown receipts. Cached/reasoning counts are subsets. Currency is a conservative published-rate bound, not an invoice.",
+  "primary_idea": {
+    "id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+    "status": "STRUCTURALLY_ACCEPTED_UNFORMALIZED_UNTESTED",
+    "record": {
+      "content": {
+        "text": "Hypothesis: a BTC buying episode carried by unusually many small transactions, with persistent buyer-initiated participation but ordinary total turnover, predicts higher subsequent one-hour BTC returns relative to the whole eligible BTC scope. The mechanism conjectured is persistent execution of sliced parent buy orders: elevated transaction frequency without a proportionate increase in notional turnover may reflect repeated small child orders rather than a single completed block. Two consecutive buyer-dominated bars and upward price progress suggest that liquidity suppliers are allowing prices to adjust rather than fully absorbing demand. Remaining parent-order demand could continue after the reporting delay. Trade fragmentation can also arise from exchange matching, retail activity, or market-maker behavior, so these proxies do not establish parent orders.\n\nThis is a new exploratory claim, not a revision of either retained ETH absorption hypothesis. Their dates, thresholds, outcomes and original claims remain unchanged and scientifically untested. The supplied closed checkpoint reports zero conditioned cases and an undefined contrast for its exact original scope; this neither falsifies those mechanisms nor supports this new one. I make no measurement call and claim no empirical success.\n\nScope: Binance spot BTCUSDT only; ETHUSDT is not used. One equally weighted decision row per UTC 900-second timestamp t in [2023-01-01T00:00:00Z, 2023-04-01T00:00:00Z). All raw input keys must lie within this same interval. No pre-January warmup, April observations, external inputs or 2024/2025 inputs are allowed. All history is development exposure; training exposure is unknown.\n\nTiming: let d=900 seconds and b=t-d. Keys represent exclusive complete-bar ends. A raw observation ending s is usable only after s+d, and only if otherwise available. Publication at s+d is an assumption, not proven historical point-in-time truth. At any evaluation anchor a use availability cutoff min(a, 2023-04-01T00:00:00Z minus one second). Assess the condition at t using bars ending b and b-d, never raw features ending t.\n\nExact condition: write N_s for BTC trade count, Q_s for quote volume, B_s for taker quote volume, and O_s,C_s for open and close. Define baseline means MN=(sum of N_{b-k*d} for k=2,...,17)/16 and MQ=(sum of Q_{b-k*d} for k=2,...,17)/16. Thus the baseline is the 16 exact bars immediately preceding the two-bar episode and excludes both episode bars. The condition is true exactly when, for EACH s in {b-d,b}, N_s >= 2*MN, 0.75*MQ <= Q_s <= 1.25*MQ, and B_s/Q_s >= 0.60, AND C_b/O_{b-d}-1 >= 0.001. Require all inputs finite, episode Q_s>0, baseline Q_s>=0, MQ>0, all trade counts positive integers, and 0<=B_s<=Q_s; both endpoint prices must be positive. No other filters apply.\n\nRationale for every numeric choice: 16 bars provide a local four-hour activity reference; two consecutive bars require persistence over 30 minutes rather than a single matching burst. Twice baseline transaction count with turnover within 75%-125% of baseline isolates substantially smaller average prints while avoiding a turnover collapse. A 60% taker-buy share requires a meaningful directional majority without implying that every small print is a buy. A 0.1% two-bar rise requires ten basis points of realized upward progress. These are mechanism-motivated exploratory commitments, not thresholds fitted to counts or outcomes. Interpreting taker quote volume as buyer-initiated turnover remains subject to feature certification.\n\nOutcome: choose positive integer h=5; evaluate at a=t+5*d. Define Y(t)=10000*ln(C_{t+4*d}/C_t), using BTC closes keyed by exclusive bar ends. This measures the one-hour market log return from t to t+3600 seconds in log basis points. The fifth interval permits the terminal close its assumed publication delay. Both closes must be finite, positive, within the permitted interval and available by the anchor cutoff. C_t is an outcome input, unavailable to the condition at t, not an executable entry price. Raw prices have units USDT/BTC; their ratio is dimensionless.\n\nComparison: the hypothesized descriptive contrast is strictly positive: equal-row mean Y among condition-true rows minus equal-row mean Y across the whole decision scope with observed Y, including condition-false and condition-unknown rows. This intentionally uses the installed whole-scope benchmark, not a false-only, matched, causal or beta-adjusted comparison. It does not require the conditional return itself to be positive. Include overlapping outcomes without thinning; rows are not independent samples.\n\nMissingness: require all 16 baseline bars and both episode bars without interpolation, shortening or substitution. Any absent, null, nonfinite, invalid, out-of-range or unavailable required condition input makes the complete condition unknown, even if another component appears false. Unknown-condition rows remain in scope and contribute to its mean when Y is observed, but never to the conditioned mean. Missing or unavailable outcome prices make Y missing; exclude these rows from both mean denominators while retaining their counts. Keep explicit counts for true, false and unknown conditions, missing outcomes by condition status, missing warmup, absent rows, invalid values, late/unavailable values and boundary censoring. Never extend the horizon beyond Q1 or substitute an endpoint. Empty mean populations leave the contrast undefined. The estimand concerns observed outcomes only, with missingness selection unresolved.\n\nEconomic bridge and gaps: continuation could motivate a later investigation of purchase timing or inventory acquisition, but this is not a policy trial. Parent-order identity, trade-side-specific size distributions, order-book replenishment, cancellations and cross-venue demand are unavailable; aggregate trade counts cannot distinguish child-order slicing from many matches against one order. Those requirements remain gaps rather than asserted evidence. An executable policy, attainable post-delay quotes, order size, fees, spread, fill probability, slippage, latency, market impact and inventory constraints are unspecified. No profit or causal inference follows. Supplied structure does not certify feature semantics, transformation, rights, checksums or historical publication. Deferred provenance and inherited exposure lists remain unread, not empty or verified; the supplied cohort is qualified development feedback, not independent confirmation."
+      },
+      "kind": "idea",
+      "scope": {
+        "purpose": "genuine development exploration"
+      },
+      "source_refs": [
+        "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e"
+      ]
+    },
+    "source_response_id": "ffedcea6c994d00e818cf829ccede9d93851d8cd32a208690e1d4682c774c873"
+  },
+  "second_perspective": {
+    "status": "BLOCKED_RETAINED_FULL_RESPONSE_NOT_ACCEPTED_IDEA_RECORD",
+    "response_id": "9e35c9b98c678214ccc2060cb3bf506ed5c1d1dab6751e044a5cbd822acfab28",
+    "job_id": "b5bad845ba614279a32a9d635da50b28",
+    "reason": "Controller stopped research: text must be a nonempty bounded string",
+    "actual_characters": 8255,
+    "field_limit_characters": 8192,
+    "overflow_characters": 63,
+    "original_output": {
+      "record": {
+        "content": {
+          "text": "New hypothesis: a synchronized BTC\u2013ETH advance despite predominantly seller-initiated BTC turnover can signal upward repricing of passive liquidity rather than a rally lacking buying conviction. I hypothesize that BTC subsequently has a higher two-hour log return than its whole-scope average. The countermechanism to the standard intuition is that aggressive buying need not drive a durable advance: passive buyers may raise bids while passive sellers withdraw or raise offers, allowing seller-initiated transactions to occur at progressively higher prices. ETH's simultaneous advance supplies a coarse common-market repricing check. This mechanism is conjectural; OHLCV cannot establish quote withdrawal, bid migration, or trader intent.\n\nRelationship to exposed development feedback: this is a distinct question, not a repair of either original ETH sell-supply hypothesis. Their original thresholds, dates, directions, outcomes, and scientifically untested claims remain unchanged. The supplied closed checkpoint reports zero conditioned cases and an undefined contrast for its exact executed scope; that is an information gap, not falsification. I have seen that feedback and the supplied workflow and retained-gap projections. This proposal is consequently exposed development exploration, not independent confirmation. No new measurement is requested, and no empirical success or profit is claimed. Deferred exposure/reference lists remain unread, not empty or irrelevant; I do not claim complete underlying-cohort inspection.\n\nScope: Binance spot BTCUSDT and ETHUSDT, with BTC the outcome instrument and ETH used only in the condition. Each UTC 900-second decision-grid timestamp t in [2023-01-01T00:00:00Z, 2023-04-01T00:00:00Z) contributes one paired row, not two instrument rows. Every input bar-end key must also fall in that interval. There is no December warmup, April endpoint, external input, or 2024/2025 input. All historical information is development exposure; training exposure is unknown.\n\nTiming: let d=900 seconds and let bar timestamps denote exclusive complete-bar ends. Assume a raw bar ending s becomes available at s+d, but do not treat this assumption as established historical point-in-time truth. At any evaluation anchor a the availability cutoff is min(a, 2023-04-01T00:00:00Z minus one second). Also respect any additional recorded unavailability. Set b=t-d for condition evaluation at t; never use raw bar features ending t in the condition.\n\nExact condition: over the four exact bar ends b, b-d, b-2d, b-3d, define Q as the sum of BTC quote_volume and T as the sum of BTC taker_quote_volume. Define R_B=BTC close(b)/BTC open(b-3d)-1 and R_E=ETH close(b)/ETH open(b-3d)-1. The condition is true exactly when T/Q <= 0.45, R_B >= 0.002, and R_E >= 0.002. Require all four BTC volume observations and both instruments' endpoint prices; all required values must be finite, prices strictly positive, each quote volume nonnegative, each taker quote volume between zero and its corresponding quote volume inclusive, and Q strictly positive. Require all four bars to exist for both instruments, even though intermediate ETH prices are not used. No volume burst, trade-count, volatility, or calendar filter is added. Four bars represent a one-hour sustained episode rather than an individual candle. The 45% maximum taker-buy share requires at least a 55% seller-initiated share, meaningfully away from balanced flow without requiring an extreme. A 0.2% simple advance in each instrument demands visible positive progress and same-direction market participation. These choices express this new mechanism; they are not fitted to rescue the earlier zero-case result, and their incidence is unknown. Summed quote volumes produce a quote-turnover-weighted initiation share within the hour, not an average of four bar shares. Interpretation of taker quote volume as buyer-initiated turnover remains a feature-semantic certification gap.\n\nOutcome: choose positive integer h=9, so the future evaluation anchor is a=t+8100 seconds. Define Y_t=10000*ln(BTC close(t+8d)/BTC close(t)). This measures BTC's two-hour close-to-close log return starting at decision timestamp t, in log basis points. At anchor a the terminal close has satisfied the assumed one-bar publication delay. The starting close at t is unavailable to the condition at t and is solely an outcome input, not an executable entry assumption. Require both prices finite and positive, with permitted bar-end keys and availability by the future-anchor cutoff. Do not replace these endpoints or shorten the horizon. BTC prices have units USDT/BTC; ETH prices have units USDT/ETH. Only within-symbol price ratios and the stated return are dimensionless; raw prices are never compared across symbols.\n\nComparison and direction: the target contrast is the arithmetic mean Y over condition-true paired timestamps minus the arithmetic mean Y across the entire paired decision grid with observed Y, including condition-false and condition-unknown timestamps in that benchmark. I deliberately choose this whole-scope comparison, not a false-only, rally-matched, initiation-share-matched, or causal control population. The predicted contrast is positive; this does not require the conditional return itself to be positive. Every eligible observed-outcome timestamp receives equal weight in its respective mean. All overlapping two-hour outcomes remain included; row counts are not independent sample sizes. There is no beta adjustment, volatility normalization, or instrument weighting.\n\nMissingness and boundaries: evaluate the condition only with the complete required input set. Any required absent row, missing or nonfinite value, invalid input, out-of-scope key, or unavailable value makes condition status unknown rather than false, even if another observed clause fails. Do not interpolate, forward-fill, skip a bar, or truncate the four-bar episode. This explicitly preserves early-quarter missing warmup. Unknown-condition rows remain in scope and enter the whole-scope mean whenever Y is observed, but not the conditional mean. Missing or unavailable outcome inputs make Y missing and exclude that row from both outcome-mean denominators while retaining it in scope accounting. Retain total rows, true/false/unknown counts, missing outcomes by condition status, and separate reasons for boundary censoring, missing warmup, absent rows, invalid/null inputs, and unavailable values. If either mean has no observed outcomes, the contrast is undefined. These commitments define an observed-outcome descriptive estimand, not an assumption that missing outcomes resemble observed ones.\n\nEconomic interpretation and counterarguments: a positive contrast would be consistent with passive liquidity repricing that outlasts the measured seller-initiated flow. It would not identify that mechanism. The same pattern could represent temporary sell-side absorption before a decline, cross-venue arbitrage, changing common news, or aggregation and initiation-classification artifacts. ETH confirmation does not remove those explanations, and the unconditional benchmark does not isolate incremental information beyond a synchronized rally. Establishing passive repricing requires unavailable order-book updates, cancellations, spread/depth histories, participant information, and cross-venue evidence; preserve these as gaps rather than replacing the mechanism with a price-only claim.\n\nEconomic bridge: the question could motivate a later investigation of whether low taker-buy participation should discourage BTC exposure after a market-wide advance. This is not a policy trial: no entry, sizing, exit, or inventory policy is specified. Attainable post-delay quotes, fees, spread, slippage, latency, fill probability, order size, market impact, opportunity costs, and risk limits are missing. The outcome close is a measurement endpoint, not a fill. Source structure and supplied projections do not certify historical availability, rights, checksums, transformations, feature meaning, or scientific readiness; the retained language and semantic gaps and unread inherited exposure details remain qualifications. No scientific or economic conclusion follows from proposing this hypothesis."
+        },
+        "kind": "idea",
+        "scope": {
+          "purpose": "genuine development exploration"
+        },
+        "source_refs": [
+          "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+          "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e"
+        ]
+      },
+      "status": "final"
+    },
+    "independent_local_reproduction": "text must be a nonempty bounded string",
+    "qualification": "No truncation, summary replacement, manual registration or new paid retry; complete output remains in the immutable provider response."
+  },
+  "formalization_preflight": {
+    "stage": "formalization_preflight",
+    "counted_input_tokens": 30160,
+    "input_bound": 30288,
+    "wire_sha256": "bef060ab09d2d1e53e55c7430e885f54b7cb301e3949a0e3e1bd8c6f2117ba55",
+    "transport_request_id": "req_f0bd2d7d64cf40e48036257e0714384e",
+    "observed_at_utc": "2026-10-29T12:21:06.655316+00:00",
+    "model_identity": {
+      "requested_model": "gpt-6.1-sol",
+      "reported_model": null,
+      "catalog_name": "GPT-6.1 Sol",
+      "catalog_version": "6.1",
+      "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "immutable_snapshot_id": null,
+      "immutable_snapshot_status": "UNKNOWN"
+    },
+    "qualification": "Full input count; not inference usage or invoice.",
+    "limit": 27015,
+    "status": "NOT_DISPATCHED_FULL_INPUT_EXCEEDS_FIXED_SLOT",
+    "raw_input_excess": 3145,
+    "bounded_input_excess": 3273,
+    "exact_packet_reconstructed_and_hash_matched": true,
+    "retained_packet_path": ".trf-runtime\\feedback-budget-adoption-2026-10-29\\retained-formalization-input.json",
+    "retained_packet_sha256": "fce75702bade5b8df7fabd0516f574e00f64999abe992dbed36b7107ecf88fb7"
+  },
+  "formalization_calls": 0,
+  "review_calls": 0,
+  "market_calculations": 0,
+  "protected_outcomes_accessed": false,
+  "overlay_revoked_after_finite_stop": true,
+  "one_use_claim_retained": true,
+  "registry_integrity": {
+    "status": "PASS",
+    "events": 1715,
+    "foreign_keys": true,
+    "synchronous": "FULL",
+    "schema_version": 1,
+    "scope": "local coordination and research memory integrity only",
+    "research_memory": {
+      "status": "PASS",
+      "records": 47,
+      "version": "research-memory/1",
+      "scientific_authority": false
+    },
+    "blobs": {
+      "status": "PASS",
+      "committed": 957,
+      "quarantined": [],
+      "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+    }
+  },
+  "findings": [
+    "Both model perspectives produced substantive free hypotheses from the same five-source context; the second failed structural field-size admission, not empirical testing.",
+    "The new primary BTC claim uses a logarithmic outcome; the current D089 activation is scoped to the prior ETH idea. No new optional meaning was activated.",
+    "The whole formalization input exceeds its fixed allocation even though the overall epoch and USD allowance have unused capacity. Unused slots are not silently reassigned.",
+    "No formalization, independent model meaning review, market calculation, scientific verdict or profitability result follows. Original ETH idea/result and all prior failures remain unchanged."
+  ],
+  "next_action": "Inspect only the exact long-text retention and complete auxiliary-packet size boundaries offline. Prepare the smallest reviewable continuation, including any required operator-scope/resource decision; no automatic new epoch, grant reset, source truncation or paid retry.",
+  "source_preservation": {
+    "research_helper_sha256": "10d91e3196b7208b19ee419ed8be44d277a4e8293eacd334b2a5d2d3c045aa9d",
+    "run_result_sha256": "3a932960ae1c4e31f44a8c9fe9949748597718918813ae04a603c4c54deded14"
+  },
+  "unverified": [
+    "Research/behavioral quality equivalence of source paging.",
+    "Independent meaning and executable representation of both new ideas.",
+    "Scientific calibration, protected evaluation and economic usefulness.",
+    "Provider invoice, immutable model snapshot and a new full actual backup/restore."
+  ]
+}

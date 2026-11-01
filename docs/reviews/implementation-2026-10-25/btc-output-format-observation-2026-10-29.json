@@ -1,0 +1,35 @@
+{
+  "schema": "formalization-output-whitespace-observation/1",
+  "observed_at_utc": "2026-10-29T20:58:26.408213+00:00",
+  "purpose": "Measure formatting overhead and exact preservation before proposing a single formatting-only continuation.",
+  "status": "OFFLINE_EQUIVALENCE_ONLY_NO_NEW_INFERENCE",
+  "btc_incomplete_prefix": {
+    "original_chars": 48592,
+    "compact_chars": 25385,
+    "removed_formatting_chars": 23207,
+    "original_sha256": "359e3dfdc9d6a8e4f006126d403be34edac6353f7903fe4d64bfa9ef2c71dc61",
+    "unchanged_lexical_strings": true,
+    "still_invalid_and_unaccepted": true
+  },
+  "prior_complete_eth_response": {
+    "source": ".trf-runtime/feasibility-checkpoint-2026-10-27/eth-evidence-handoff-correction/run-result.json",
+    "source_sha256": "f42008057fe6a2e142109f974af1d99d46ba934947ba2dadb89db4b99894463d",
+    "original_chars": 39694,
+    "compact_chars": 27559,
+    "removed_formatting_chars": 12135,
+    "exact_parsed_object_roundtrip": true,
+    "unchanged_lexical_strings": true
+  },
+  "synthetic_roundtrip_cases": 6,
+  "proposed_prompt": {
+    "status": "PROPOSED_ONLY_NOT_ACTIVATED",
+    "path": ".trf-runtime/btc-continuation-2026-10-29/proposed-compact-formalizer-prompt.txt",
+    "original_prompt_sha256": "70edf29cbabc7bbdd8432737bbb8897e1e2a3c6860daa21e77b0bba0aba6d13f",
+    "proposed_prompt_sha256": "87e1c8ae4c820a88c517cfc7f15f6aff4355a5ff36bc888708bf5b24f00acc0b",
+    "append_only_suffix": "\nOutput serialization only: emit the entire final JSON object compactly, with no indentation, line breaks or whitespace outside JSON strings. Preserve every required key, complete AST, parameter origin, source reference, feature reference and semantic-report mapping. Do not abbreviate, omit, summarize, repair or change any scientific content. Whitespace inside strings must keep its intended content. If a faithful candidate is unavailable, retain the full required explicit gap report using the existing schema. This instruction changes formatting only; all earlier requirements still apply.",
+    "other_settings": "Unchanged model, high reasoning, complete inputs, schema, role isolation and independent review; actual full input admission remains required."
+  },
+  "new_inference_calls": 0,
+  "new_input_count_requests": 0,
+  "limitations": "Character savings are not token savings. This does not predict the missing BTC sections or a future output size, guarantee formatting compliance, prove research-quality equivalence or authorize a new paid call. Never repair or execute the partial BTC response."
+}

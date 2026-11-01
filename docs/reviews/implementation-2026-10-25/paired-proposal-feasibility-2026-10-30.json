@@ -1,0 +1,359 @@
+{
+  "schema": "paired-proposal-finite-shape-check/1",
+  "at_utc": "2026-10-30T11:20:07.584183+00:00",
+  "status": "PASS_PROPOSAL_ONLY_NO_ACTIVATION",
+  "proposed_expression_shape": {
+    "scope": {
+      "nodes": 1,
+      "depth": 1
+    },
+    "condition": {
+      "nodes": 224,
+      "depth": 11
+    },
+    "outcome": {
+      "nodes": 15,
+      "depth": 6
+    }
+  },
+  "outcome_unit": "basis_points",
+  "threshold_cases": [
+    {
+      "case": "all_exact_boundaries",
+      "expected": true,
+      "actual": true
+    },
+    {
+      "case": "btc_recovery_below_threshold",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "case": "eth_rebounds",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "case": "eth_flow_above_threshold",
+      "expected": false,
+      "actual": false
+    },
+    {
+      "case": "zero_quote",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "case": "negative_taker",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "case": "taker_exceeds_quote",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "case": "missing_price",
+      "expected": null,
+      "actual": null
+    },
+    {
+      "case": "missing_other_symbol_even_when_false",
+      "expected": null,
+      "actual": null
+    }
+  ],
+  "complete_grid_arithmetic": {
+    "paired_timestamps": 8640,
+    "scalar_two_instrument_cases": 17280,
+    "synthetic_condition_warmup_unknown": 2,
+    "synthetic_observed_outcomes": 8635,
+    "synthetic_boundary_missing_outcomes": 5,
+    "assumption": "Complete synthetic Q1 grid, positive valid values, every feature available exactly900seconds after its raw key. No actual market count."
+  },
+  "candidate_continuation_resource_proposal": {
+    "calls": 2,
+    "slots": [
+      [
+        62000,
+        18000
+      ],
+      [
+        76000,
+        4000
+      ]
+    ],
+    "tokens": 160000,
+    "tariff_bound_nano": 565000000,
+    "proposed_hard_cap_nano": 600000000,
+    "remaining_original_budget_after_full_proposed_cap_nano": 1462860000,
+    "actual_future_packet_counts": "UNKNOWN; count before each dispatch, no truncation or retry."
+  },
+  "script_sha256": "41230469eb1376102b421ce3ffb9b5b2c11b647b7bd8378a7f8543d058ef1d60",
+  "production_activated": false,
+  "registry_writes": 0,
+  "provider_calls": 0,
+  "market_rows_read": false,
+  "qualification": "Symbolic capacity and direct threshold arithmetic only. No executable paired interpreter, full candidate, independent certificate, model faithfulness or empirical result. The future owned model must produce its own full original-meaning mapping.",
+  "prior_failure": "Initial arithmetic/shape assertions passed, but final JSON roundtrip compared Python tuples to decoded lists. V2 corrected this with native JSON lists. V3 uses the installed ln spelling. Independent review found the output scale literal needed basis_points rather than ratio; V4 corrects that unit tag. Counts and arithmetic are unchanged. Earlier scripts/outputs retained; no hypothetical tree was executed.",
+  "independent_review": {
+    "schema": "independent-paired-proposal-review/1",
+    "purpose": "Bounded independent proposal review against the exact retained D093 idea and existing single-instrument contracts; no implementation activation.",
+    "status": "NO_SUBSTANTIATED_OBJECTION_AFTER_RECORDED_CORRECTIONS",
+    "approval_status": "PROPOSED_ONLY_USER_APPROVAL_REQUIRED",
+    "original_idea_id": "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+    "retained_gap_id": "20aeb22cef22f57f30e639c10736f9a28b20c7bb16d03e2c5bc8ff95dbd262ff",
+    "corrected_findings": [
+      {
+        "finding": "The first probe used a ratio-unit 10000 scale literal, so its proposed output would not have the original basis_points unit.",
+        "resolution": "V4 uses lit(10000,'basis_points'); the proposal now states the final output unit. Node/depth counts are unchanged. Earlier scripts/results remain retained."
+      },
+      {
+        "finding": "A positive price ratio does not establish individually positive endpoint prices: two negative endpoints can yield a positive ratio.",
+        "resolution": "The proposal now explicitly binds all four endpoint closes to the existing certified raw-binance-feature-definition/1 positive_decimal domain and invalid-keyed-bar-to-null behavior, with both-negative/zero/null counterexamples. Missing/stale domain evidence is a gap; this does not constrain arbitrary legitimate signed-feature ratios."
+      }
+    ],
+    "independent_checks": {
+      "status": "PASS_INDEPENDENT_PROPOSAL_ARITHMETIC",
+      "shape": {
+        "scope": {
+          "nodes": 1,
+          "depth": 1
+        },
+        "condition": {
+          "nodes": 224,
+          "depth": 11
+        },
+        "outcome": {
+          "nodes": 15,
+          "depth": 6
+        }
+      },
+      "shape_components": {
+        "validity_per_symbol": 19,
+        "validity_both_symbols": 39,
+        "validity_two_times": 81,
+        "predicates_per_bar": 27,
+        "predicates_two_times": 57
+      },
+      "threshold_checks": [
+        {
+          "case": "all_exact_boundaries",
+          "expected": true,
+          "actual": true
+        },
+        {
+          "case": "btc_recovery_below_threshold",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "case": "eth_rebounds",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "case": "eth_flow_above_threshold",
+          "expected": false,
+          "actual": false
+        },
+        {
+          "case": "zero_quote",
+          "expected": null,
+          "actual": null
+        },
+        {
+          "case": "negative_taker",
+          "expected": null,
+          "actual": null
+        },
+        {
+          "case": "taker_exceeds_quote",
+          "expected": null,
+          "actual": null
+        },
+        {
+          "case": "missing_price",
+          "expected": null,
+          "actual": null
+        },
+        {
+          "case": "missing_other_symbol_even_when_false",
+          "expected": null,
+          "actual": null
+        }
+      ],
+      "paired_grid": 8640,
+      "unknown_lookback_indices": [
+        0,
+        1
+      ],
+      "missing_outcome_indices": [
+        8635,
+        8636,
+        8637,
+        8638,
+        8639
+      ],
+      "observed_synthetic_outcomes": 8635,
+      "total_tokens": 160000,
+      "cost_nano": 565000000,
+      "after_full_cap_nano": 1462860000,
+      "method": "Independent combinatorial node accounting, scaled-integer cross multiplication without probe functions, datetime dependency availability enumeration, and Decimal USD arithmetic."
+    },
+    "independent_check_process": {
+      "exit_code": 0,
+      "wall_seconds": 0.3478059,
+      "probe_functions_executed": false
+    },
+    "reproducible_threshold_method": {
+      "integer_scale": 10000,
+      "base_rows": {
+        "B_e": [
+          1000000,
+          996000,
+          1000000,
+          400000
+        ],
+        "E_e": [
+          2000000,
+          1992000,
+          1000000,
+          400000
+        ],
+        "B_b": [
+          1000000,
+          1002000,
+          1000000,
+          550000
+        ],
+        "E_b": [
+          2000000,
+          2000000,
+          1000000,
+          450000
+        ]
+      },
+      "fields": [
+        "open",
+        "close",
+        "quote_volume",
+        "taker_quote_volume"
+      ],
+      "validity": "Each of the four required bars exists with four non-null entries; open>0, close>0, quote>0 and 0<=taker<=quote. Reject any invalid required input as unknown before predicate evaluation.",
+      "predicates": [
+        "250*BTC_shock_close <= 249*BTC_shock_open",
+        "250*ETH_shock_close <= 249*ETH_shock_open",
+        "5*BTC_shock_taker <= 2*BTC_shock_quote",
+        "5*ETH_shock_taker <= 2*ETH_shock_quote",
+        "500*BTC_recovery_close >= 501*BTC_recovery_open",
+        "20*BTC_recovery_taker >= 11*BTC_recovery_quote",
+        "ETH_recovery_close <= ETH_recovery_open",
+        "20*ETH_recovery_taker <= 9*ETH_recovery_quote"
+      ],
+      "qualification": "These nine supplied finite examples are independently reproduced; they are not exhaustive interpreter conformance or every required future acceptance case."
+    },
+    "semantic_assessment": [
+      "Exactly one declared BTCUSDT/ETHUSDT pair on a common certified snapshot and grid is a narrow reusable extension. Explicit feature_at instrument/ref validation plus one paired timestamp case resolves the two identified representation gaps without inventing a composite market bar.",
+      "Canonical pair ordering must not determine the ETH-minus-BTC sign. Symbol-specific certified units remain intact; within-symbol ratios are dimensionless, raw cross-symbol price subtraction remains invalid, and explicit basis_points scaling preserves the stated output.",
+      "Scope/condition cutoff at decision time and outcome cutoff min(anchor,as_of,end-1) preserve the original anchor restriction. This is an explicit new-profile rule; old required-inputs/1 global-cutoff behavior remains unchanged.",
+      "Complete-input validity, three-valued condition behavior, observed-outcome whole-scope inclusion of unknown conditions, and one timestamp per overlapping diagnostic category preserve the original question. Both members' exact dependency events must remain inspectable.",
+      "Separate AST3, hypothesis-exec/2, paired case/request formats and paired-reference-computation/1 make the changed observation unit and traversal semantics explicit. Old schemas, source pins, ETH/BTC assessments and feedback currency must remain unchanged and be tested after implementation.",
+      "D091 currently excludes cross-instrument traversal. The reusable paired scope and two-call resource exception therefore require explicit adoption of this proposal, not interpretation as already-approved infrastructure.",
+      "The two fixed 80000-token slots sum to 160000 and cost USD0.565 under the stated conservative tariff. The USD0.60 cap remains inside the dated shared USD5 allowance. No extra call, retry, successor epoch, candidate substitution or headroom recycling is authorized.",
+      "Input counts and actual model outputs remain unknown; full-packet counting and terminal gaps rather than truncation or weaker roles are appropriate. The model must produce its own candidate; the shape scaffold is never a replacement."
+    ],
+    "evidence_scope": {
+      "raw_feature_definition_source": "trading_researcher/features.py:63-88",
+      "existing_lookup_source": "trading_researcher/expressions.py:150,231,268,284",
+      "existing_case_domain_source": "trading_researcher/outcomes.py:126,148-149; trading_researcher/binding.py:120",
+      "existing_outcome_cutoff_contract": "trading_researcher/REQUIRED_INPUTS.md:13",
+      "existing_activation_scope": "docs/architecture/20_BOUNDED_MATH_REUSE.md:15-17",
+      "budget_source": "docs/reviews/implementation-2026-10-25/complete-feedback-usage-2026-10-30.json"
+    },
+    "limitations": [
+      "No paired interpreter, model formalization, composition certificate, actual source binding, execution/replay, protected-data gate, backup/restart behavior or full scientific classification was implemented or tested in this review.",
+      "The shape computation establishes capacity for the stated balanced scaffold only. It does not guarantee the future model's full mapped candidate, primitive-step/storage/time budget, or output limit will fit.",
+      "Synthetic calendar counts assume a complete Q1 grid, valid inputs and exactly 900 seconds of availability delay. They are not counts from actual market data.",
+      "The individual endpoint-domain guarantee is a required certified source invariant, not a property proved by the logarithm function itself.",
+      "The tariff and available budget were taken from the declared dated proposal/public usage record for arithmetic verification; live pricing, ledger availability and future packet counts must be rechecked before admission.",
+      "No claim of empirical support, causal identification, profitability, model quality or feasibility of a broader portfolio engine is warranted."
+    ],
+    "warranted_conclusion": "The corrected proposal is sufficiently specific and bounded to present for the required user approval. No further substantiated planning blocker was found. Approval would authorize only its stated new version, acceptance work and one bounded retained-idea continuation.",
+    "next_action": "Present the exact corrected proposal for explicit approval. Until then, preserve the original idea/gap and do not activate AST3, paired calculation or a new inference allowance.",
+    "provider_calls": 0,
+    "market_rows_read": false,
+    "production_registry_or_ledger_writes": false,
+    "runtime_changes": false,
+    "scientific_readiness": false,
+    "source_hashes": {
+      ".trf-runtime/paired-proposal-2026-10-30/proposal-section.md": "25aec49ce3e59ec8f3bcb573c7000e1d8553f18f1f94a3c3cbc9c03970560c9c",
+      ".trf-runtime/paired-proposal-2026-10-30/probe.py": "41230469eb1376102b421ce3ffb9b5b2c11b647b7bd8378a7f8543d058ef1d60",
+      ".trf-runtime/paired-proposal-2026-10-30/probe-result-v4.json": "779f8be8c352264182e11b3b5053d20c49ecc882fd06d662f68b5ef9927fb8a9",
+      "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+      "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+      "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+      "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+      "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+      "trading_researcher/REQUIRED_INPUTS.md": "2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c",
+      "docs/architecture/20_BOUNDED_MATH_REUSE.md": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+      "docs/reviews/implementation-2026-10-25/complete-feedback-usage-2026-10-30.json": "65a4f758bddf436c20363c76cb93cfa009be47007636c4634d4e1ab9cdce2332"
+    },
+    "observed_at_utc": "2026-10-30T11:24:26.314901+00:00"
+  },
+  "proposal_section_sha256": "25aec49ce3e59ec8f3bcb573c7000e1d8553f18f1f94a3c3cbc9c03970560c9c",
+  "current_git_commit": "d95449b69f4172362c02a931910f768fc0484406",
+  "current_branch": "codex/architecture",
+  "aggregate_usage_unchanged": true,
+  "aggregate_conservative_cost_nano": 2937140000,
+  "available_original_budget_nano": 2062860000,
+  "source_boundary": "Existing typed arithmetic/logarithm, source units and source-domain qualifiers are retained; cross-instrument reads, paired case unit and explicit anchor cutoff are proposed only.",
+  "canonical_files_preserved_sha256": {
+    "00_SOURCE_AUDIT.md": "0dc74b558c5241db6494b06c38f2dce9ad60c407f850155b1037ebce41a56ed6",
+    "01_PROBLEM_DEFINITION.md": "7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446",
+    "02_DECISION_REGISTER.md": "8644663cd328e8fddfca12a1228b9811afc75221fb4eda80ecf0cfecd9e0ad38",
+    "03_REJECTED_DECISIONS.md": "a92670d5239a4db774f20629ef02839d61efc765242e1bd667b25f3cc58fc0bc",
+    "04_DEFINITIONS.md": "fdbf972760b8c16ececbb4116cc1d9f077349d8dc37a859386826800f8808aa5",
+    "05_REQUIREMENTS.md": "73d927f19188bbaf2bfb3d1edf31e0e587dc6e0762d393d4a8eea88cf485e870",
+    "06_MASTER_ARCHITECTURE.md": "16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e",
+    "07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+    "08_ENGINEERING_REVIEW.md": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c",
+    "09_IMPLEMENTATION_BLUEPRINT.md": "215febd38e7e0a07e2ee4a7d347740675328b36ded702c99bfd85882a9d0e1fc",
+    "10_IMPLEMENTATION_ROADMAP.md": "eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2",
+    "11_OPEN_DECISIONS.md": "68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29",
+    "12_TRACEABILITY_MATRIX.md": "065fafee57848f283d899ca714d6aa480c1d02e68cbea9dc0b420abf425b6e99",
+    "13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2",
+    "14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "15_AGENT_INQUIRY_DISCIPLINE.md": "fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626",
+    "16_TEMPORAL_DIAGNOSTIC_INVOCATION.md": "dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e",
+    "17_MONITORING_VISIBILITY_AND_REPORTING.md": "bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d",
+    "18_BOUNDED_MATH_PRIMITIVES.md": "6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f",
+    "19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md": "80453cb2e45e1f6efd4a748644bf1d6d1863feca1ca8f0e512f12de995b311fd",
+    "20_BOUNDED_MATH_REUSE.md": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+    "21_INDEPENDENT_REVIEW_CONTINUATION.md": "a52036de9c386cd37480a13524fff81a00dea3bbd67d36fa87a6e45878b586d6",
+    "22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md": "0874945cef5d08bd8c023b8e83def3ea99ed94004d61e301beb5ca9f0afa2763",
+    "ARCHITECTURE_REGISTER.json": "519698ea8690a0ffc53d1e16fa3edeb7bd0e6bf3236520d12da41d0e61250c80",
+    "DOCUMENTATION_VERIFICATION.json": "96f20aeea70113f323d22dac9d29eaa5a7a803b3da006809181178eae52c3ce6",
+    "SOURCE_REVIEW_INDEX.md": "2b5a3cff290297f2b27f640ba3e613598676c6987988029a6e5c8eccab51b916",
+    "SOURCE_VERIFICATION.json": "49ec6489a5541fbec2a3995a3b2fc193d40118ab6f09f345c7e4dbce4f088982"
+  },
+  "legacy_runtime_hashes_preserved": {
+    "research_calls.py": "6284dca04ccbdb47fd14df418aee5d2a78bf634b5174b41fbc94f90281ccf512",
+    "coordination.py": "ee840ca99dfae25855d5aa63f375e2596bef9004c4cd8827759a8f0be67f17bb",
+    "epoch_budget.py": "514985059255014af7bf80e18204e2c32d67210a1e5534fceb52769b96f34f2a",
+    "review_continuation.py": "fb9cb56ca3aa22c787d7f1b5e28b68984b7f6b2d11beb619e2709c253edfb7ff",
+    "auxiliary.py": "975f4eff94f10bd89b1daf879cc4b62b2d4cb363e1d1d5a2c08517619ecfd13a",
+    "meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "formalization.py": "857d53bc9c5b84a89329b2857e525a011ad01e841171c5dc7adc252309cc7696"
+  },
+  "all_d093_reviewed_source_hashes_preserved": {
+    "trading_researcher/complete_feedback_budget.py": "590b0a345fe0c55792acac805a0132f5c396edfe9a768268c445fd5377139b82",
+    "trading_researcher/feedback_budget_broker.py": "f3b8f97834875c887f0f76df7516756e1b2189cb720e8b79cae1869b32fa11ef",
+    "trading_researcher/epoch_budget_dispatch.py": "962173e9f9e2142e6cc9b21f0545374509d36dd736cb235aa9f791cfc52bb7d9",
+    "trading_researcher/controller_providers.py": "4307b74a6d86a84ebfa9ca634194708845d33b2a602fd7cfac9c3ad5ed775b76",
+    "tests/test_complete_feedback_budget_adversarial.py": "79ed89b1fc0bbb8c9302056c85635e83546ca5d3a1b26a65c461b7f284ead44a",
+    ".trf-runtime/complete-feedback-2026-10-30/research.py": "8ee945bad51f2dd2b2d8d5c71da95871de754e790166253fb4c6e986962351f5"
+  },
+  "next_action": "Await direct approval for the exact paired semantics and separately bounded retained-idea continuation; continue only independent authorized work meanwhile."
+}

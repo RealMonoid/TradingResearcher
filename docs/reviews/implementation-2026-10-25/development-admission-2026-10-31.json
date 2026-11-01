@@ -1,0 +1,360 @@
+{
+  "schema": "current-development-complete-input-admission/1",
+  "at_utc": "2026-10-31T06:46:17.536162+00:00",
+  "status": "NOT_ADMITTED",
+  "context_id": "5bad0fb73087158748fbb767b7bf8bf06dd1e5e0b6e66977ebfe29318cbbc868",
+  "source_ids": [
+    "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+    "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+    "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+    "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+    "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+    "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+    "8406f5358e30347f8c827d1e92f0475816843876ce482b9e6c52d1ad1e5a05d9",
+    "98b2d5c7c81ece3e62cfcaba1f45962a9431e6689d54629439477b90a2c96cc4",
+    "a5b544c12d11c4f503b725fa9e70d7b1a5c351c6cfa7108e75f480d8d46eacc1",
+    "ac31436f73c2a1e8ab685477d1459e01737561ce8c8dda467e9dabb1b237c117",
+    "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+    "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+    "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035"
+  ],
+  "source_count": 13,
+  "source_view_profile": "discovery-source-view/3",
+  "full_selected_envelopes_reconstructed": 13,
+  "counts": [
+    {
+      "perspective": "feas-20261029-a",
+      "input_tokens": 181363,
+      "input_bound": 181491,
+      "at_utc": "2026-10-31T06:46:15.359729+00:00",
+      "response_at_utc": "2026-10-31T06:46:16.736263+00:00",
+      "wire_sha256": "dceefc498a2920bae7100aaeef43ff79d303799a84afcdbc5b122348e040ede5",
+      "transport_request_id": "req_6a636b8fc5d046eabb37a74645fa8a5e",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "qualification": "Input-count receipt only, not inference usage, provider invoice or complete-path admission."
+    },
+    {
+      "perspective": "feas-20261029-b",
+      "input_tokens": 181373,
+      "input_bound": 181501,
+      "at_utc": "2026-10-31T06:46:16.740243+00:00",
+      "response_at_utc": "2026-10-31T06:46:17.532446+00:00",
+      "wire_sha256": "9b3610b7ecbfa2072b0cbef05790f1bd9e05f9a6639372c8b60aa49f78fc96be",
+      "transport_request_id": "req_6b1141c624134175bf56c41ec8033e69",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "qualification": "Input-count receipt only, not inference usage, provider invoice or complete-path admission."
+    }
+  ],
+  "initial_input_tokens": 362736,
+  "initial_inputs_alone_exceed_epoch": true,
+  "ordinary_epoch_token_ceiling": 80000,
+  "fixed_output_slots": {
+    "discovery_a": 6000,
+    "discovery_b": 6000,
+    "formalization": 18000,
+    "independent_review": 4000
+  },
+  "initial_bounds_plus_fixed_outputs": 396992,
+  "unreserved_downstream_inputs": "UNKNOWN_NOT_ZERO",
+  "unreserved_tool_followups": "UNKNOWN_NOT_ZERO",
+  "packet_qualification": "This actual declared complete semantic-feedback packet only; not proof that all compliant presentations are impossible. Distinct omitted historical manifestation is documented, not silently omitted or claimed readable.",
+  "new_inference_calls": 0,
+  "new_epochs": 0,
+  "new_jobs": 0,
+  "new_grants": 0,
+  "scientific_readiness": false,
+  "ledger_unchanged": true,
+  "count_seconds": 2.1846811000141315,
+  "recorded_at_utc": "2026-10-31T06:54:06.168216+00:00",
+  "purpose": "One new free-development work unit informed by the complete closed ETH/BTC and paired cohorts and their qualified descriptive reports. Retain every original idea, gap, failure and inherited exposure. Original conditions had zero or one qualified observed case in their fixed scopes; these remain scientifically untested and do not establish economic usefulness. Do not tune old thresholds, dates or horizons to rescue them. Invent a new primary idea freely within the declared permitted development context; do not substitute an approved-outcome catalog for invention. Retain unsupported requirements and stage-specific gaps. This is exposed development research, not independent confirmation.",
+  "controller_reconciliation": {
+    "status": "PASS_CONTROLLER_RECONCILIATION",
+    "at_utc": "2026-10-31T06:54:06.156433+00:00",
+    "decision": "NOT_ADMITTED",
+    "selected_envelopes_reconstructed": 13,
+    "initial_inputs": [
+      181363,
+      181373
+    ],
+    "initial_input_total": 362736,
+    "initial_bounds_plus_prior_output_slots": 396992,
+    "view_bytes": 406188,
+    "latest_paired_manifest_view_bytes": 272003,
+    "pinned_runtime_sources_unchanged": 37,
+    "registry_counts": {
+      "artifacts": 1418,
+      "contexts": 57,
+      "events": 1981,
+      "research_epochs": 20,
+      "job_specs": 40,
+      "research_calls": 40
+    },
+    "native_preparation_delta": {
+      "artifacts": 0,
+      "contexts": 1,
+      "events": 1,
+      "research_epochs": 0,
+      "job_specs": 0,
+      "research_calls": 0
+    },
+    "ledger_unchanged": true,
+    "input_count_requests": 2,
+    "new_inference_calls": 0,
+    "scientific_readiness": false
+  },
+  "count_receipt_qualification": "Official input-count requests only. Reported model and immutable snapshot are unavailable in these receipts; requested model and catalog version are retained. These tokens are not inference usage or an invoice.",
+  "source_choice": {
+    "selected": [
+      "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+      "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+      "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+      "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+      "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "8406f5358e30347f8c827d1e92f0475816843876ce482b9e6c52d1ad1e5a05d9",
+      "98b2d5c7c81ece3e62cfcaba1f45962a9431e6689d54629439477b90a2c96cc4",
+      "a5b544c12d11c4f503b725fa9e70d7b1a5c351c6cfa7108e75f480d8d46eacc1",
+      "ac31436f73c2a1e8ab685477d1459e01737561ce8c8dda467e9dabb1b237c117",
+      "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+      "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+      "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035"
+    ],
+    "source_sizes": [
+      {
+        "id": "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+        "schema": "research-record/1",
+        "view_bytes": 2108
+      },
+      {
+        "id": "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+        "schema": "research-record/1",
+        "view_bytes": 2682
+      },
+      {
+        "id": "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+        "schema": "research-record/1",
+        "view_bytes": 2108
+      },
+      {
+        "id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "schema": "development-feedback-manifest/1",
+        "view_bytes": 61147
+      },
+      {
+        "id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "schema": "development-feedback-manifest/1",
+        "view_bytes": 43206
+      },
+      {
+        "id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "schema": "feature-catalog/1",
+        "view_bytes": 2053
+      },
+      {
+        "id": "8406f5358e30347f8c827d1e92f0475816843876ce482b9e6c52d1ad1e5a05d9",
+        "schema": "research-record/1",
+        "view_bytes": 2103
+      },
+      {
+        "id": "98b2d5c7c81ece3e62cfcaba1f45962a9431e6689d54629439477b90a2c96cc4",
+        "schema": "research-record/1",
+        "view_bytes": 3481
+      },
+      {
+        "id": "a5b544c12d11c4f503b725fa9e70d7b1a5c351c6cfa7108e75f480d8d46eacc1",
+        "schema": "research-record/1",
+        "view_bytes": 2612
+      },
+      {
+        "id": "ac31436f73c2a1e8ab685477d1459e01737561ce8c8dda467e9dabb1b237c117",
+        "schema": "research-record/1",
+        "view_bytes": 2384
+      },
+      {
+        "id": "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+        "schema": "research-record/1",
+        "view_bytes": 2674
+      },
+      {
+        "id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "schema": "paired-breakout-development-feedback-manifest/1",
+        "view_bytes": 272003
+      },
+      {
+        "id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "schema": "data-snapshot/1",
+        "view_bytes": 7627
+      }
+    ],
+    "selected_view_utf8_bytes": 406188,
+    "omitted_historical_manifest": "dd3a8c69029af8a077055d7fbe621ddd1078814ed56e3154d23ec5b7014b15c5",
+    "qualification": "All original idea/gap/failure records and current cohort preserved exactly; distinct old publication evidence is not in initial/read_source set. Its grant is checked by native context creation. This packet does not claim every historical envelope is initially visible.",
+    "proof": "independent-source-choice.json proves exact old original records and cohort subsets in the latest manifest; both old typed result records are separately selected. This is not global source-minimality or every historical envelope being model-readable.",
+    "independent_source_choice_sha256": "0800fa78782f769ca3f411a0126b87947c256864f5055f157139226865423c7f"
+  },
+  "native_preparation_seconds": 84.44297979999101,
+  "registry_counts_before": {
+    "artifacts": 1418,
+    "contexts": 56,
+    "events": 1980,
+    "research_epochs": 20,
+    "job_specs": 40,
+    "research_calls": 40
+  },
+  "registry_counts_after": {
+    "artifacts": 1418,
+    "contexts": 57,
+    "events": 1981,
+    "research_epochs": 20,
+    "job_specs": 40,
+    "research_calls": 40
+  },
+  "usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "inference_tokens_added": 0,
+  "prior_fixed_output_slots_qualification": "Reference settings of the earlier D093 roles, not universal minimums, a newly frozen future configuration or a complete reservation. Initial inputs alone already prove non-admission.",
+  "checked_commands": [
+    {
+      "command": "python -B .trf-runtime/development-admission-2026-10-31/preflight.py prepare",
+      "exit_code": 0,
+      "chunk_id": "b69918",
+      "scope": "One native discovery context and event; exact selected-source restoration; no paid epoch."
+    },
+    {
+      "command": "python -B .trf-runtime/development-admission-2026-10-31/preflight.py count",
+      "exit_code": 0,
+      "chunk_id": "9d026d",
+      "scope": "Two official input-count requests only; ledger unchanged."
+    },
+    {
+      "command": "python -B .trf-runtime/development-admission-2026-10-31/audit.py",
+      "exit_code": 0,
+      "chunk_id": "356387",
+      "scope": "Controller receipt, wire, source, arithmetic, registry, ledger and 37-source pin reconciliation."
+    }
+  ],
+  "independent_review": {
+    "status": "PASS_EXACT_PACKET_NOT_ADMITTED",
+    "evidence": ".trf-runtime/development-admission-2026-10-31/independent-final-review.json",
+    "sha256": "e36bfafd86e3988687f1563e0b1b60d019d7d2595c196c613ebb3565ddb39152"
+  },
+  "private_evidence_sha256": {
+    "preflight.py": "346993586adf23dc4fd3751e1e610d2862b8aaab20d4729fe76a9b041238f8af",
+    "prepared.json": "4c92dac5cc3cc35ed69f862fea392c84b2c2dcdbc59eccecc305310f50e3059d",
+    "admission-result.json": "78cb05e4c1a1867c57092e98d29b5d1272879597e19ed35975f9d5b59b0bd6dc",
+    "input-count-0.json": "d32391868c56ecbf423c492068ef4b26fa1e233b4eafc7a5f287e50fa8b8c4cb",
+    "input-count-1.json": "a050160aa5e8dd1e3ccac3c3d082c58bee40bfc181450ca679486ca69cff50dd",
+    "independent-source-choice.json": "0800fa78782f769ca3f411a0126b87947c256864f5055f157139226865423c7f",
+    "independent-preparation-check.json": "6934536b51aad7f954eead94fafd9295df346be1b5d72642b5d4865187ca919c",
+    "independent-final-review.json": "e36bfafd86e3988687f1563e0b1b60d019d7d2595c196c613ebb3565ddb39152",
+    "audit.py": "03d90de6c3e136248044da0dcd22ee07c2d71f4f4a92cecb666590119b409930"
+  },
+  "concrete_blocker": {
+    "source_view_profile": "discovery-source-view/3",
+    "code_owner": "trading_researcher/context_views.py:_feedback_lists",
+    "finding": "Owned scalar feedback manifests have exact body-reference paging; paired feedback schema/authority pairs are not recognized and their large internal reference arrays remain inline. researcher.py eagerly supplies every selected source.",
+    "latest_paired_view_utf8_bytes": 272003,
+    "all_selected_views_utf8_bytes": 406188,
+    "qualification": "Bytes are not tokens. No alternate view token count, quality equivalence or complete-path feasibility has been established."
+  },
+  "unverified": [
+    "A corrected presentation fitting the complete ordinary epoch.",
+    "Future idea-dependent formalization/review and tool-continuation input reservations.",
+    "End-to-end model behavior/quality of any new source presentation.",
+    "External count-endpoint billing or immutable model snapshot.",
+    "Scientific information/calibration/admission, economic usefulness and protected assessment."
+  ],
+  "next_action": "Qualify the smallest isolated, versioned paired-feedback reference-paging correction for the measured initial-input blocker. Preserve existing pinned runtime files and results, complete inline idea/gap/failure text and qualifications, both original perspectives/model/role settings, exact ordered reference restoration, authorized full/page reads and revocation. Bind the actual model-visible request and tools in the frozen ledger; do not hide a transport rewrite behind a different frozen request. Independently verify typed membership, reconstruction, access denial and pinned-source preservation. Only then prepare a separately bounded count and complete-path reservation under the unchanged ordinary 80,000-token/30-minute limits and remaining original shared USD budget. No inference or token exception is admitted by the current check. If the correction cannot preserve these semantics, retain the gap and prepare the specific material-change proposal; do not summarize substantive records, silently omit required content, lower model quality, reuse consumed exceptions or coerce new ideas into an outcome catalog.",
+  "scientific_contract_changed": false,
+  "changed_files": [
+    "docs/reviews/implementation-2026-10-25/development-admission-2026-10-31.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md"
+  ],
+  "private_helpers_and_evidence": ".trf-runtime/development-admission-2026-10-31/",
+  "construction_usage": {
+    "scope": "Main Codex chat from the exact current continuation boundary through the recorded snapshot; separate from framework research usage.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-10-31T06:35:59.081Z",
+    "snapshot_at_utc": "2026-10-31T06:54:00.411Z",
+    "delta": {
+      "input_tokens": 10615073,
+      "cached_input_tokens": 10488064,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 31471,
+      "reasoning_output_tokens": 16664,
+      "total_tokens": 10646544
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "child_branch_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "documentation_checks": [
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": [],
+      "additional_scope_errors": [],
+      "local_document_links": null,
+      "qualification": "Documentation/contract structure only."
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ],
+      "additional_scope_errors": [],
+      "local_document_links": 1142,
+      "qualification": "Pre-existing baseline errors remain unrepaired; this command remains FAIL."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ]
+}

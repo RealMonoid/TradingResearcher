@@ -1,0 +1,191 @@
+{
+  "schema": "paired-feedback-qualification-observation/1",
+  "at_utc": "2026-10-30T14:20:35.302439+00:00",
+  "status": "PASS",
+  "independent_review": {
+    "schema": "independent-paired-feedback-qualification/1",
+    "status": "PASS",
+    "at_utc": "2026-10-30T14:16:21.285913+00:00",
+    "purpose": "Independently qualify the narrow optional paired descriptive-feedback publication and admission boundary; preserve original research/evaluation source authority.",
+    "publisher_sha256": "9d923031883f621269adf5636e5432553ae8099fd653f0149d79cdbf4324bcd7",
+    "test_sha256": "d85b915cf9b00814ec9462a85cd9854e0c6b2c4fd3df0e86d8b54dc8dc77a5be",
+    "changed_files": [
+      "tests/test_paired_feedback.py",
+      ".trf-runtime/paired-format-correction-2026-10-30/feedback-independent-qualification.json"
+    ],
+    "checks": [
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_feedback.py -v",
+        "phase": "initial timestamp expectation",
+        "tests": 1,
+        "failures": 0,
+        "errors": 1,
+        "seconds": 0.274,
+        "exit_code": 1,
+        "finding": "formalization-record/2 UTC string incorrectly sent to integer validator; fixed by implementer using existing UTC parser"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_feedback.py -v",
+        "phase": "strict metadata RED",
+        "tests": 6,
+        "failures": 3,
+        "errors": 4,
+        "seconds": 4.722,
+        "exit_code": 1,
+        "finding": "wrong package/certificate profile or bootstrap exempted; malformed files/result raised untyped errors; implementer fixed strict recognizer"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_feedback.py -k PairedAtomicPublicationBoundary -v",
+        "phase": "direct grant revocation RED",
+        "tests": 1,
+        "failures": 0,
+        "errors": 1,
+        "seconds": 0.383,
+        "exit_code": 1,
+        "finding": "paired release schema absent from supported revocable types; implementer added scoped nested overlay"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_feedback.py -k PairedRetainedResultLifecycle -v",
+        "phase": "initial relocated clone",
+        "tests": 1,
+        "errors": 1,
+        "seconds": 155.952,
+        "exit_code": 1,
+        "genuine_publication_seconds": 68.777,
+        "finding": "paired publication and current paired evidence succeeded; inherited D092 currentness correctly failed without original ledger/registry-location binding; no backup or restore completed in this run"
+      },
+      {
+        "command": "TRF_PAIRED_FEEDBACK_SOURCE=<explicit original registry>; TRF_PAIRED_FEEDBACK_LEDGER=<explicit existing shared ledger>; python -B -m unittest discover -s tests -p test_paired_feedback.py -v",
+        "phase": "final fresh full test module",
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 255.476,
+        "exit_code": 0,
+        "genuine_publication_seconds": 64.114,
+        "process_session": 62715
+      },
+      {
+        "command": "Compare all trading_researcher/*.py SHA256 to exact retained prepared.json sources; inspect selected preflight-v3 receipt fields",
+        "exit_code": 0,
+        "top_level_files": 83,
+        "all_unchanged": true
+      },
+      {
+        "command": "git diff --check -- tests/test_paired_feedback.py",
+        "exit_code": 0
+      }
+    ],
+    "covered_boundaries": [
+      "Operator-only publisher, reserved supplied-source schemas, separate publisher source identity, unchanged default data-use delegation",
+      "Genuine isolated paired conformance certificate; exact technical metadata classification; arbitrary operations/protected/unresolved ancestry retained",
+      "Atomic rollback after staged manifest and indexed records; immutable idempotent duplicate publication; changed target denial; epoch/time fences; forged record denial; direct grant revocation",
+      "Optional descendant data-use component retains all other rights/protected gaps and arbitrary operations; inherited grant must be in formalizer context",
+      "Actual retained execution, compilation, current feature/source qualification, independent meaning review, candidate-bound composition, exact verification receipt, original formula audit and case blob",
+      "Complete closed cohort including both original ideas, attempts, failures and exact readable idea/gap records; journal and experience indexed; no generic release mutation",
+      "Explicit manifest context/worker read access; raw execution remains outside frozen context; default Broker denies new optional release",
+      "Physical isolated backup and restore preserve exact published artifacts; restored optional access works under declared D092 fence simulation; direct revocation denies existing and new contexts",
+      "Original source registry artifact/event/context/research-call counts unchanged; source opened through read-only SQLite; external ledger only read-only"
+    ],
+    "clone_fixture": {
+      "original_execution_id": "e77f9f3f8966203d51cf676de394fa9b4bccf6cd4992e1654987ed3815221fb6",
+      "physical_copy": true,
+      "hardlinks": false,
+      "production_broker_constructed_by_reviewer": false,
+      "production_registry_writes": 0,
+      "external_ledger_writes": 0,
+      "provider_calls": 0,
+      "provider_routes_installed": false,
+      "paired_evidence_inspectors_mocked": false,
+      "explicit_simulation": "After asserting relocated-context denial, only review_continuation.inspect is replaced by the exact original closed D092 grant metadata. Every binding field except physical registry identity and the complete external call-ID inventory must match. No ledger/registry binding is rewritten. All paired evidence and remaining legacy history/evidence checks execute normally.",
+      "live_budget_portability_claimed": false
+    },
+    "separate_original_location_evidence": {
+      "author": "parent implementation agent; receipt independently inspected, operation not rerun by reviewer",
+      "path": ".trf-runtime/paired-format-correction-2026-10-30/feedback-preflight-v3.json",
+      "sha256": "e22cc974c82df07c9912b79056db5894ae8dac727ac55de8c545570f49122885",
+      "status": "ADMISSIBLE_NOT_PUBLISHED",
+      "seconds": 84.13568730000407,
+      "provider_calls": 0,
+      "inherited_legacy_grant_ids": [
+        "0dc4b987496b12316f3841f20de1f9acf0c69047714f9f5c2db503c16a076a57",
+        "f2212913f63d13b19543d156823ab58ecb0f9f33c899e1f502864a5750cbc04a"
+      ],
+      "qualification": "Parent reports unmocked original-location inherited grant checks with original trusted route/shared ledger and unchanged budget; this is distinct from the relocated simulation."
+    },
+    "preserved_sources": {
+      "trading_researcher/development_feedback.py": "163f03ca7977edd9b13ea9114c9126226d896821a768dd89c446fade0e6bf68b",
+      "trading_researcher/paired_computation.py": "897ff79604921274845534978aa4ecaadc30f5a454eee1d825ec9d7e35fe5afc",
+      "top_level_source_count": 83,
+      "all_match_actual_preparation": true
+    },
+    "finding": "No substantiated remaining blocker in the bounded tested paired-feedback publication/access path. Three concrete implementation defects and one deliberate fixture relocation boundary were retained rather than hidden.",
+    "remaining_limits": [
+      "No new model call, discovery epoch, scientific/economic inference, or production publication was performed by this reviewer.",
+      "Relocated live external budget authority is intentionally not portable or certified by this test.",
+      "Future descendant data-use preservation was tested at the focused component boundary, not by a new paid discovery/formalization/computation workflow.",
+      "Currentness can change after this checkpoint; actual publication must retain the source hash and recheck exact current evidence/grants."
+    ],
+    "scientific_readiness": false,
+    "next_action": "Parent may publish the exact reviewed closed checkpoint through the owned optional publisher after checking this exact qualification hash and its original-location current preflight; retain all prior attempts and resource gaps."
+  },
+  "source_boundary": {
+    "status": "PASS",
+    "scope": "Source closure and static reuse, not publication qualification",
+    "unchanged_top_level_runtime_modules": 83,
+    "legacy_publisher_sha256": "163f03ca7977edd9b13ea9114c9126226d896821a768dd89c446fade0e6bf68b",
+    "paired_publisher_sha256": "9d923031883f621269adf5636e5432553ae8099fd653f0149d79cdbf4324bcd7",
+    "identical_function_asts": [
+      "_owned",
+      "_save",
+      "check_context",
+      "released_feedback",
+      "require"
+    ],
+    "feature_bundle_hash": "3a08198fbe744e704154811b5c1f451f60ee7bea7d4d03878b9f62bb9bd0b5fe",
+    "paired_bundle_hash": "1a10223a11c2a69b4d4315584c5499371917e1b293c45a9372e2363e2689afab",
+    "new_numeric_implementation": false,
+    "new_model_calls": 0
+  },
+  "production_preflight": {
+    "status": "ADMISSIBLE_NOT_PUBLISHED",
+    "wall_seconds": 84.13568730000407,
+    "publisher_sha256": "9d923031883f621269adf5636e5432553ae8099fd653f0149d79cdbf4324bcd7",
+    "current_inherited_legacy_grants": [
+      "0dc4b987496b12316f3841f20de1f9acf0c69047714f9f5c2db503c16a076a57",
+      "f2212913f63d13b19543d156823ab58ecb0f9f33c899e1f502864a5750cbc04a"
+    ]
+  },
+  "legacy_regression": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_development_feedback*.py' -v",
+      "tests": 22,
+      "seconds": 15.351,
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_feedback_context_views*.py' -v",
+      "tests": 19,
+      "seconds": 3.742,
+      "exit_code": 0
+    }
+  ],
+  "actual_publication": {
+    "status": "PUBLISHED_AND_CURRENT_RELEASE_CHECKED",
+    "wall_seconds": 187.92730159999337,
+    "context_id": "a6cc20ced38add599aa1eef117f4e8e5b0d1a57b075fa1477b09504c658105ab",
+    "publication": {
+      "manifest_id": "dd3a8c69029af8a077055d7fbe621ddd1078814ed56e3154d23ec5b7014b15c5",
+      "observation_id": "a5b544c12d11c4f503b725fa9e70d7b1a5c351c6cfa7108e75f480d8d46eacc1",
+      "experience_id": "8406f5358e30347f8c827d1e92f0475816843876ce482b9e6c52d1ad1e5a05d9",
+      "grant_id": "2e8a70605f61c2cd61765de01824ee3b0d01b91d22d512c44e481e639f465f76"
+    },
+    "provider_calls": 0
+  },
+  "boundaries": [
+    "This is descriptive feedback, not scientific or economic evidence.",
+    "Relocated D092 live budget authority is not portable: clone tests simulate only its historical closed-fence inspection; production legacy checks use the unchanged original binding.",
+    "Future model behavior and full scientific admission remain unverified."
+  ]
+}

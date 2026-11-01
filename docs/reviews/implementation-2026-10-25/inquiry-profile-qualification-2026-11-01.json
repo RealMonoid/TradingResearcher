@@ -1,0 +1,555 @@
+{
+  "schema": "inquiry-profile-qualification/1",
+  "status": "CONSTRUCTOR_QUALIFIED_LIVE_INTEGRATION_PENDING",
+  "at_utc": "2026-11-01T02:19:19.621781+00:00",
+  "purpose": "Qualify the optional D096 profile construction and actual original prompt compatibility; independently check storage/access/budget paths without claiming model behavior or benefit.",
+  "authority": {
+    "decision": "D096",
+    "contract": "inquiry-feedback/1.0",
+    "owner": "docs/architecture/25_METACOGNITION_DUAL_SPACE_INQUIRY.md",
+    "owner_sha256": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf"
+  },
+  "profile_version": "discovery-inquiry-feedback/2",
+  "qualification": {
+    "status": "PASS_PROFILE_CONSTRUCTION_AND_SCOPED_CONTROLS",
+    "at_utc": "2026-11-01T02:14:30.374779+00:00",
+    "tests": [
+      {
+        "command": "python -B -m unittest discover -s tests -p 'test_inquiry_profile*.py'",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "........................\n----------------------------------------------------------------------\nRan 24 tests in 15.098s\n\nOK\n"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p 'test_research*.py'",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "....................\n----------------------------------------------------------------------\nRan 20 tests in 15.319s\n\nOK\n"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p 'test_memory.py'",
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ".................\n----------------------------------------------------------------------\nRan 17 tests in 6.090s\n\nOK\n"
+      }
+    ],
+    "original_prompt_compatibility": {
+      "source": ".trf-runtime/bounded-research-resource-2026-11-01/preparation-v2.json",
+      "source_sha256": "8625666f3e0dabcc7036c73da086d4331a5aa63cc34d76510637fb48b7fe7de1",
+      "fixture_container_only": true,
+      "future_profile_or_wire_built": false,
+      "prompts": [
+        {
+          "perspective": "first",
+          "original_characters": 2940,
+          "new_characters": 8118,
+          "limit_characters": 8192,
+          "original_utf8_sha256": "489e9604f10a222851849838d71edb1ecd6a97ecbc05d7dfdb362764d96cd81a",
+          "new_utf8_sha256": "b6223e48b16f346c452a1f70f6affbc2f0902cf1a7ae1a3e76ede419fc9d8c7b"
+        },
+        {
+          "perspective": "second",
+          "original_characters": 3001,
+          "new_characters": 8179,
+          "limit_characters": 8192,
+          "original_utf8_sha256": "f65bd17c21d409a01241029d4265b784722266d2523a9544bd871f4c1f70d09d",
+          "new_utf8_sha256": "435acce1a80dc229875bd89499e2b56fddac08c5d245ea6843b6c46f64cde91a"
+        }
+      ],
+      "manifest": {
+        "schema": "inquiry-discovery-profile/1",
+        "status": "CANDIDATE_ONLY_NOT_ADMISSION",
+        "contract": "inquiry-feedback/1.0",
+        "decision": "D096",
+        "owner": "docs/architecture/25_METACOGNITION_DUAL_SPACE_INQUIRY.md",
+        "owner_sha256": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf",
+        "prompt_version": "discovery-inquiry-feedback/2",
+        "base_prompt_version": "previous-discovery/1",
+        "base_role_prompt_versions": {},
+        "base_profile_sha256": "d02aad978dbbf9afcf9445fe53541958c7d07ed68ca9d087d46ca9c82103058c",
+        "profile_sha256": "7e53e9a7bcdf26708f7214cb9730494cf72c488e0426c72eed4a55ff85b94013",
+        "instruction_utf8_sha256": "213e9027b1c8dfd7a8f03909aacd43e2b8d932f269b99fd7b8c83851201ed73e",
+        "instruction_rules": [
+          "I1",
+          "I2",
+          "I3",
+          "I4",
+          "I5",
+          "I6",
+          "I7",
+          "F1",
+          "F2",
+          "F3",
+          "F4",
+          "F5"
+        ],
+        "behavioral_cases_proven": [],
+        "runtime_admission": false,
+        "scientific_authority": false
+      }
+    },
+    "old_pins_unchanged": 37,
+    "ledger_unchanged": true,
+    "production_registry_counts_unchanged": true,
+    "registry_check_scope": "Exact table counts and no production write operation in this unit; no claim of byte-level database forensic identity.",
+    "new_api_calls": 0,
+    "new_inference_calls": 0,
+    "actual_model_behavior_qualified": false,
+    "future_runtime_admitted": false,
+    "sources": {
+      "trading_researcher/inquiry/__init__.py": "31d0d20ffa11ee037f319c973aa3bc06cf963cb3562efa1a4c94a4b86c02f8c5",
+      "trading_researcher/inquiry/profiles.py": "5bde019906f5f508c039ebf32767bef08e043bc5a18f24b8e5402b6576b8c4c6",
+      "trading_researcher/inquiry/README.md": "763d42fe5b6856e3ccefe37cc37398265c665315d7a9203f714ff4531fd22fa8",
+      "tests/test_inquiry_profile.py": "c6196da5142f40bece1012cf133f6fbb28051161de9fb175abfbb5e343aa3e7b",
+      "tests/test_inquiry_profile_review.py": "ca1bb61a04dfcc2c6085c4a535dadd6fd37b63200002629bdd5599b23f6185fa"
+    },
+    "independent_review_file": "independent-review-v2.json",
+    "independent_review_sha256": "881253071d6e48d07eadca788157a8be7cdbf874c494ffde556b4e20f4dddac4"
+  },
+  "independent_review": {
+    "schema": "inquiry-profile-independent-review/2",
+    "status": "PASS_OPTIONAL_PROFILE_STRUCTURE_AND_SCRIPTED_CONTROLS_ONLY",
+    "reviewer": "paired_view_review",
+    "at_utc": "2026-11-01T02:12:46.917135+00:00",
+    "purpose": "Qualify the current optional D096 discovery-profile constructor after an explicitly authorized diagnostic-quality clarification. Separate exact source/structure, scripted controller storage/control, substantive diagnosis assessment, actual model behavior and benefit.",
+    "profile_version": "discovery-inquiry-feedback/2",
+    "implementation_sha256": "5bde019906f5f508c039ebf32767bef08e043bc5a18f24b8e5402b6576b8c4c6",
+    "source_sha256": "5bde019906f5f508c039ebf32767bef08e043bc5a18f24b8e5402b6576b8c4c6",
+    "test_file_sha256": "ca1bb61a04dfcc2c6085c4a535dadd6fd37b63200002629bdd5599b23f6185fa",
+    "basic_test_sha256": "c6196da5142f40bece1012cf133f6fbb28051161de9fb175abfbb5e343aa3e7b",
+    "contract_sha256": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf",
+    "instruction_utf8_sha256": "213e9027b1c8dfd7a8f03909aacd43e2b8d932f269b99fd7b8c83851201ed73e",
+    "source_reconciliation": {
+      "status": "RESOLVED_BY_EXPLICIT_SOURCE_REFRESH_NOT_IGNORED",
+      "receipt_sha256": "f680310390e9e218d538216f1124b290339bcb953c9f8759c0aa71da583ab4dc",
+      "authority": "User explicitly requested this boundary in canonical documents and notification of the construction chat; read-only thread inspection confirmed the exact request. Subsequent literature research remains proposal-only.",
+      "source_thread": "01a194a6-14cb-7d20-9408-9063c10a3b92",
+      "source_turn": "01a194d4-ebc3-7e71-92ad-0c20aefe0330",
+      "old_owner_sha256": "b0aee80c2d8b2f19a26e755240fa72321d5f2466bfc3acf765770e4e525ffc8e",
+      "new_owner_sha256": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf",
+      "insertion_bytes_independently_verified": 5669,
+      "old_body_otherwise_exact": true,
+      "source_archive_sha256": "437b9bc3b33ead95fc734f8d30b33b5d7c2951b4caa0fc5ff66cd85c394224e3",
+      "all_declared_preserved_file_hashes_match": true,
+      "old_review_unchanged_sha256": "747951879b20d28fb2aba4db5356cfbd7b630efdfea3574e389565f0f9aa3fb0",
+      "prior_review_not_relabelled": "The earlier review retains its source-drift-unresolved status and original tests. This separate /2 review addresses the current owner."
+    },
+    "expectations_and_checks": {
+      "unchanged_expectations": [
+        "Full original prompt prefixes/Unicode, all other nested base values, role model/parameter/limit/tool settings and source presentation remain unchanged.",
+        "Only both prompt suffixes, top prompt_version and BOTH optional effective perspective versions change; exact accepted owner and full construction hashes bind provenance.",
+        "Wrong/reencoded/older owner bytes, invalid shapes, repeated/disguised application,8192-character overflow and profile/manifest/authority substitutions fail before valid output.",
+        "Scripted real temporary-controller checks exercise effective frozen requests, private/protected denials, original idea/correction/exposure retention, cap stops and the still-missing body-table route."
+      ],
+      "new_independent_cases": [
+        "Accepted owner refresh reconstructs the complete prior body byte-for-byte after removing the exact5669-byte approved insertion; old source and old review hashes remain preserved, and old bytes do not pass the /2 constructor.",
+        "Three deliberately unsupported scripted DQ claims with valid typed/source-linked records remain unverified_work_product, not certified diagnoses. These are negative authority-boundary fixtures, not model-produced DQ outcomes."
+      ]
+    },
+    "tests": {
+      "command": "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe -B -m unittest discover -s tests -p test_inquiry_profile*.py -v",
+      "result": "PASS",
+      "exit_code": 0,
+      "tests_run": 24,
+      "independent_review_tests": 18,
+      "basic_tests": 6,
+      "review_classes": {
+        "InquiryProfileStructureReviewTests": 10,
+        "InquiryControllerReviewTests": 8
+      },
+      "seconds": 14.856,
+      "chunk": "3fb166",
+      "private_source_refresh_case_executed": true,
+      "ast_and_direct_whitespace_check": "PASS",
+      "fixture_scope": "Temporary isolated Broker databases and ScriptedProvider subprocesses only; no genuine model/provider or production ledger/registry call."
+    },
+    "retained_failed_run": {
+      "chunk": "6e7881",
+      "exit_code": 1,
+      "tests": 24,
+      "passed": 23,
+      "failure": "The new DQ fixture expected unverified_research_assertion for intermediate research_experience records; actual owning controller uses unverified_work_product.",
+      "resolution": "Inspected coordination._worker_artifact, corrected the test expectation and added its work_product data-class check. No implementation condition was weakened or changed; all24 final tests pass."
+    },
+    "semantic_review": {
+      "conclusion": "No substantiated contradiction or material omission found in the inspected current discovery instruction slice. This is a source-grounded semantic review, not proof of model comprehension, diagnosis correctness or usefulness.",
+      "retained_I_F_meaning": [
+        "I1-I2: meaningful boundaries, actual uncertainty/source/version, unknown causes and alternatives; purposeful permitted actions without scores/quotas or fabricated hypotheses/rivals.",
+        "I3/F1: possible findings before a NEW targeted result, including uninformative outcomes; rereading known facts explicitly is not first exposure. Existing adequate bound purposes are reusable; missing interface/budget retains a gap without extra calls.",
+        "I4-I5: correction/withdrawal history, original H_idea/parents/exposure/semantic differences and descendant/freeze semantics; no easier silent substitution or iteration reset.",
+        "I6-I7: fallible substantive basis and independent ownership, no scientific/access authority from self-assessment, existing caps/checkpoints without reflection calls/cadence/gates.",
+        "F2-F4: actual result/interpretation/action/scientific verdict separation; singleton arithmetic versus information; scoped heuristics, conflicts/corrections/use timing and protected/private/release/exposure boundaries.",
+        "F5 and economic/persistence guidance: matched claim-specific assessment, full burden and failed/pending work; economic purpose without profit proof/plausibility veto/universal deadline, and both excessive persistence and premature abandonment remain reviewable."
+      ],
+      "new_DQ_meaning": [
+        "Object/source/version and factual fit are explicit, along with discrimination/support, proportional uncertainty and next-action relevance. These are substantive grounds, not completed-field scores.",
+        "Records, citations, confidence and ANY LLM agreement alone cannot certify a diagnosis. Unresolved cause stays unresolved; no forced rival or certainty follows.",
+        "Well-grounded, independently corroborated within scope and practically useful are distinct. Independent checks retain their own applicability and authority.",
+        "Correct diagnosis can lead to costly unhelpful action; luck/profit after a wrong explanation does not validate it. Diagnostic support, action benefit and complete burden cannot be collapsed."
+      ],
+      "not_implemented": "Appending these instructions does not implement an automatic semantic diagnosis judge or the complete self-improvement/review-trigger/reporting loop."
+    },
+    "observed_structure_and_control": {
+      "effective_frozen_profile": "Both effective role versions, original role models/parameters and exact original-prefix-plus-addendum system messages reached real temporary-controller reservations. Frozen key mutation denied.",
+      "deep_copy_and_source_binding": "Independent full expected manifest/profile and canonical SHA checks, byte-exact current contract, deterministic construction, Unicode and deep detachment passed.",
+      "prompt_size": {
+        "instruction_chars": 5176,
+        "original_prompt_chars": [
+          2940,
+          3001
+        ],
+        "adapted_chars": [
+          8118,
+          8179
+        ],
+        "minimum_headroom_chars": 13,
+        "limit_chars": 8192,
+        "boundary": "Exact8192 Unicode characters accepted;8193 rejected without trimming. Headroom is a measured construction limit, not a token or quality claim."
+      },
+      "denials_and_gaps": "Protected/out-of-context and peer-private reads, unsupported fields and scientific publication denied; one-call cap retains a gap. General IDEA release/context inheritance is tested, not an actual scientific-outcome descendant.",
+      "body_table_gap": "Pure profile construction does not admit the unsupported body-table source_presentation or provide new worker/tool routing. Actual future live D096/native-body-table integration remains pending."
+    },
+    "F1_first_exposure_limit_preserved": {
+      "finding": "The positive correction fixture source is already in the initial model-visible context.",
+      "actual_coverage": "A public record precedes a redundant explicit read/result artifact, and original/correction/source/exposure lineage is retained. This does NOT establish purpose before first exposure or unseen-result F1 compliance.",
+      "negative_boundary": "A deliberately retrospective-purpose script can be structurally accepted while remaining unverified. Existing controller acceptance is not F1 semantic certification."
+    },
+    "AC_and_DQ_boundary": {
+      "behavioral_ACs_proven": [],
+      "diagnostic_DQ_cases_proven": [],
+      "actual_model_behavior_checked": false,
+      "scripted_DQ_case_meaning": "Bad DQ01/02/03 narratives were deliberately authored by the test and stored as unverified work products. This verifies that valid records are not certificates; it does not show a model correctly diagnoses or corrects any case.",
+      "existing_scoped_controls": [
+        "AC06: one out-of-context assessment read/publication denial, not all partial-outcome channels.",
+        "AC07: IDEA release/context/source exposure only, not released scientific-outcome interpretation.",
+        "AC09: one frozen call-cap stop, not every D030 repair/reset history.",
+        "AC11: explicit peer private read/search denial, not independent thought or all live routes."
+      ],
+      "other_AC_model_behavior": "AC01/02/03/04/05/08/10/12 diagnoses, open decisions and benefit claims remain unexecuted; scripted text and guidance presence are not passes."
+    },
+    "future_activation_boundary": {
+      "qualified_now": "Optional pure profile constructor, structural verification and scoped existing scripted controller/storage controls only. No live production D096 worker is admitted.",
+      "before_dependent_activation": [
+        "Bind and qualify the actual future worker/broker, inline bodies/ancestry tools, effective profile and exact full visible source/wire with current native access/exposure/freeze/resource checks.",
+        "Predeclare applicable independently grounded model-produced fixtures for changed diagnosis/prospective-purpose behavior: uninformative check, open exploration and wrong-diagnosis correction, including first exposure. Where affected, include measurement/singleton/no-objection/heuristic cases and the new false/unresolved/correctness-versus-usefulness diagnostic boundaries.",
+        "Inspect substantive object/fact/support/discrimination/proportionality/action relevance against the fixed facts; record unresolved judgments rather than treating a source citation, model agreement or successful command as support.",
+        "No universal all12+3 pass requirement, fixed run-count, new benchmark, compulsory reflection call or numerical diagnosis score is adopted. Later checks remain bounded and require their own existing authority/resources."
+      ],
+      "may_remain_unknown_during_valid_work": [
+        "General effectiveness, comparative/causal improvement and economic usefulness are observation/claim-dependent, not advance proof required before every permitted task.",
+        "A complete framework or population-wide benefit estimate is not required before scoped authorized use. Stronger claims need matched pre-outcome reference/cohort/resource/uncertainty assessment."
+      ]
+    },
+    "old_pin_boundary": {
+      "prior_independent_37_pin_check_pass": true,
+      "prior_review_sha256": "747951879b20d28fb2aba4db5356cfbd7b630efdfea3574e389565f0f9aa3fb0",
+      "new_review_edit_scope": [
+        "tests/test_inquiry_profile_review.py",
+        ".trf-runtime/inquiry-profile-2026-11-01/independent-review-v2.json"
+      ],
+      "new_broad_old_module_scan_performed": false,
+      "condition": "All37 old runtime pins remain binding. Their previous independent check is retained; controller integrated qualification rechecks them. No old runtime module was edited by this review."
+    },
+    "limits": [
+      "No provider/count/API/network, AmiBroker, production grant/epoch/registry/ledger operation, source/prompt shortening or live activation occurred.",
+      "Temporary scripted fixture epochs/counters are machinery evidence, not actual model inference/tokens, genuine discovery, diagnostic quality or economic benefit.",
+      "No all-AC/DQ, full-process scientific, quality-equivalence, profitability or broad framework-completion claim follows."
+    ],
+    "next_action": "Controller checks current hashes and runs integrated qualification, preserving both earlier reviews/failures. Then continue the separately bounded actual worker/presentation/model-behavior/currentness/resource binding; do not infer admission or diagnosis usefulness from construction/record conformance.",
+    "handoff": "All owned writes/tests are complete; no write, test process or live call is in flight."
+  },
+  "independent_review_sha256": "881253071d6e48d07eadca788157a8be7cdbf874c494ffde556b4e20f4dddac4",
+  "source_reconciliation": {
+    "schema": "inquiry-profile-source-reconciliation/1",
+    "at_utc": "2026-11-01T02:04:30.644551+00:00",
+    "purpose": "Reconcile an explicitly user-requested D096 diagnostic-quality clarification before updating the optional candidate and repeating qualification.",
+    "source_thread": "01a194a6-14cb-7d20-9408-9063c10a3b92",
+    "source_turn": "01a194d4-ebc3-7e71-92ad-0c20aefe0330",
+    "authority": "User explicitly requested this boundary in canonical documents and notification of the construction chat; read-only thread inspection confirmed the exact request. Subsequent literature research remains proposal-only.",
+    "user_request": "Halte diese Grenze bitte auch ausdr\u00fccklich in den Dokumenten fest und informiere den laufenden Codex-Chat. Korrekte Aufzeichnungen d\u00fcrfen nicht als Beleg f\u00fcr gute Diagnosen gelten.",
+    "old_owner_sha256": "b0aee80c2d8b2f19a26e755240fa72321d5f2466bfc3acf765770e4e525ffc8e",
+    "new_owner_sha256": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf",
+    "insertion_bytes": 5669,
+    "old_body_otherwise_byte_identical": true,
+    "new_scope": "Controller/record integrity versus substantive diagnosis support and action usefulness; DQ-01/02/03 are unexecuted behavioral examples, no new score, lifecycle enum, spending or advance-benefit gate.",
+    "old_profile_version": "discovery-inquiry-feedback/1",
+    "new_profile_version": "discovery-inquiry-feedback/2",
+    "old_review_status": "PASS_TESTED_VERSION_ONLY_CURRENT_OWNER_DRIFT_UNRESOLVED",
+    "old_review_sha256": "747951879b20d28fb2aba4db5356cfbd7b630efdfea3574e389565f0f9aa3fb0",
+    "retained_refresh_failure": {
+      "chunk_id": "79ae23",
+      "exit_code": 1,
+      "reason": "The first guarded refresh saw a second concurrent edit: a Usefulness assessment during work heading was added inside the same approved insertion before any output write. The entire old body still reconstructs byte-exactly.",
+      "earlier_observed_owner_sha256": "ecaa4c410f18f8bf04ca2c6b3fb509da29479e994729435d36cd3629f44b4757"
+    },
+    "independent_review_file": "independent-review-v2.json",
+    "original_archive": "docs/reviews/diagnosis-quality-boundary-2026-11-01/before.zip",
+    "original_archive_sha256": "437b9bc3b33ead95fc734f8d30b33b5d7c2951b4caa0fc5ff66cd85c394224e3",
+    "preserved_files_sha256": {
+      "initial-profiles.py.txt": "4c1a0a6c2b813a08c06592b0e43e6325cd5c1f1b7678d8a1aaebbd546abf432c",
+      "initial-test_inquiry_profile.py.txt": "76c9be0c2f47af811cf491c78522f7f5dee090c553f7f0b24a779a89581fd332",
+      "initial-test_inquiry_profile_review.py.txt": "a7cbcc90fededfae6f6210d57b10fabf36cb1925979d7dd328df470d1208b72a",
+      "initial-README.md.txt": "1cf7a20b02b33dd0541b9a52fa9796c7cdd9b29df3ec7c2e201274746c47b25f",
+      "accepted-owner-before-clarification.md": "b0aee80c2d8b2f19a26e755240fa72321d5f2466bfc3acf765770e4e525ffc8e",
+      "accepted-owner-after-clarification.md": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf"
+    },
+    "new_api_calls": 0,
+    "live_activation": false
+  },
+  "additional_approved_practice_review": {
+    "schema": "diagnostic-practice-instruction-coverage/1",
+    "status": "COVERED_EXISTING_PROFILE_V2_NO_CONSEQUENTIAL_GAP_IDENTIFIED",
+    "reviewer": "paired_view_review",
+    "at_utc": "2026-11-01T02:18:33.280384+00:00",
+    "purpose": "Bounded read-only semantic delta check of the four newly approved practical applications against the actual current profile2 instructions; not a behavioral qualification or implementation change.",
+    "profile_version": "discovery-inquiry-feedback/2",
+    "module_sha256": "5bde019906f5f508c039ebf32767bef08e043bc5a18f24b8e5402b6576b8c4c6",
+    "instruction_utf8_sha256": "213e9027b1c8dfd7a8f03909aacd43e2b8d932f269b99fd7b8c83851201ed73e",
+    "accepted_owner_sha256": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf",
+    "normative_sources": {
+      "inquiry_discipline_path": "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md",
+      "inquiry_discipline_sha256": "0c55076f7629f4acc5941383c10123e714b7d53683d1dd2099192d01c6f6e868",
+      "practice_section": "approved-diagnostic-practice-without-additional-process",
+      "practice_section_exact_utf8_sha256": "e8f7c31c10d513a77b5033e1a3ae4b206fd02c6b0d9b4963bc9c58f70a32e507",
+      "sole_plan_sha256": "ee4333f8c47452d862270b9c46d8f290a8f600bd5a3ee0bff25aaa9968ea46cf",
+      "decision_register_sha256": "129d667dbcd8565a9e4c12985f3c64b357fea4c2005ecf292e435b0af8053c5e",
+      "scope": "Four numbered normative practices, their existing-entry/no-extra-process qualifications, sole-plan Approved practical application paragraph and D096 operational-clarification provenance."
+    },
+    "per_item_mapping": [
+      {
+        "item": 1,
+        "normative_practice": "1. **Discriminating checks (I3/I6):** when a diagnosis supports a consequential direction choice, use the existing inquiry entry to identify its observational basis and a feasible check that could change the interpretation. Open exploration still needs only a meaningful purpose; invent no competing hypotheses or per-call checklist.",
+        "instruction_owners": [
+          "I1",
+          "I2",
+          "I3/F1",
+          "I6",
+          "opening/final field-use restrictions"
+        ],
+        "coverage": "COVERED_BY_COMBINED_MEANING",
+        "semantic_mapping": "I1 grounds meaningful direction/boundary diagnoses in named observations. I6 requires actual object/source/version and factual fit plus discrimination of relevant alternatives. I2 requires a feasible permitted action for a clarification purpose, and I3/F1 retains the possible findings that change the next step before a new targeted result, including uninformative outcomes. Thus consequential direction choice needs more than a diagnosis label or citation.",
+        "guards_preserved": "Open exploration may state purpose alone; no fabricated rival, action quota, mandatory label set or per-call form.",
+        "specific_missing_meaning": null
+      },
+      {
+        "item": 2,
+        "normative_practice": "2. **Uncertainty and action (I1/I2):** distinguish confidence in the cause from justification for the next bounded step. An unresolved cause can warrant an affordable discriminating investigation. Confident wording alone cannot justify expensive follow-up.",
+        "instruction_owners": [
+          "I1",
+          "I2",
+          "I3/F1",
+          "I6",
+          "I7",
+          "final economic/persistence paragraph"
+        ],
+        "coverage": "COVERED_BY_COMBINED_MEANING",
+        "semantic_mapping": "I1/I6 preserve unknown causes and proportional uncertainty rather than forcing confidence. I2 separately requires a feasible permitted action for its clarification purpose; I6 assesses next-action relevance and keeps grounded/corroborated/useful distinct. A still-unresolved cause can therefore justify an affordable discriminating action without confidence itself becoming authority for expensive follow-up. Existing permissions/caps and complete burden remain binding.",
+        "guards_preserved": "No invented probability, score, return estimate, expensive-action entitlement or new confidence threshold is introduced.",
+        "specific_missing_meaning": null
+      },
+      {
+        "item": 3,
+        "normative_practice": "3. **Proportionate persistence (I4/I7):** at existing continuation/resource boundaries, explain what the next bounded step could clarify and why that could improve the decision. Mere reformulation supplies no new evidence; one unsuccessful attempt alone does not require abandonment. Preserve existing budgets and D030 limits, with no invented return estimate, universal stopping threshold, or immediate-profit requirement.",
+        "instruction_owners": [
+          "I2",
+          "I3/F1",
+          "I4",
+          "I7",
+          "final economic/persistence paragraph"
+        ],
+        "coverage": "COVERED_BY_COMBINED_MEANING",
+        "semantic_mapping": "I2/I3 connect the next feasible step to the uncertainty and findings that could change the decision. I4 requires comparison with purpose, correction and preserved history; mere renaming/retry is not progress or a repair-limit reset. I7 uses existing meaningful checkpoints/caps, without a new early-stop score. The final paragraph explicitly calls for reviewing wasteful persistence AND premature abandonment, with no immediate-profit gate or universal deadline.",
+        "precision": "The suffix does not repeat the words one unsuccessful attempt alone verbatim, but it introduces no one-failure stopping rule and preserves justified continuation through I2/I3 while warning against premature abandonment. This does not override a legitimately exhausted one-call profile cap. No missing universal patience rule is inferred or added.",
+        "specific_missing_meaning": null
+      },
+      {
+        "item": 4,
+        "normative_practice": "4. **Separate support and usefulness (F2/F5):** use existing feedback to retain what independently supported, contradicted, or left open a diagnosis, separately from the resulting action, benefit and complete cost. These are assessment questions, not new mandatory fields or lifecycle states. Neither faster stopping nor more persistence alone establishes improvement.",
+        "instruction_owners": [
+          "I4",
+          "I6",
+          "F2",
+          "F3",
+          "F5",
+          "final economic/persistence paragraph"
+        ],
+        "coverage": "COVERED_BY_COMBINED_MEANING",
+        "semantic_mapping": "I6 separates factual/discriminating support, proportional conclusions and relevance from practical usefulness; correct diagnosis can lead to costly unhelpful action and luck/profit after a wrong cause does not validate it. I4/F3 retain changed diagnoses, conflicting evidence, failed uses and corrections, including unresolved causes. F2 keeps actual check, interpretation, action and authorized verdict distinct. F5 requires episode usefulness/full burden and matched comparative evidence, so more persistence or faster stopping alone cannot establish improvement.",
+        "guards_preserved": "Existing public fields/transcripts suffice; no new mandatory field, lifecycle state, private reasoning transcript or scalar reward is introduced.",
+        "specific_missing_meaning": null
+      }
+    ],
+    "warranted_conclusion": "The four practices are substantively represented by the combined existing version2 instruction meanings; no consequential semantic gap was substantiated and no profile edit is warranted by this delta check. Coverage is not inferred merely from matching rule names or the source author's characterization.",
+    "actual_check_scope": {
+      "performed": [
+        "Read the four current normative paragraphs and their scope/example qualifications.",
+        "Read the sole-plan practical-application paragraph and D096 provenance.",
+        "Compared actual current INSTRUCTIONS meanings and guardrails, checking module/instruction/owner hashes against the completed version2 review."
+      ],
+      "not_performed": [
+        "No code or test changes",
+        "No test reruns or new fixtures",
+        "No broad source/pin scan",
+        "No actual model/provider/API/network or production database/ledger access",
+        "No new agent or live worker/profile activation"
+      ]
+    },
+    "evidence_and_behavior_limits": {
+      "instruction_semantics_only": true,
+      "new_tests_run": 0,
+      "model_behavior_ACs_proven": [],
+      "model_behavior_DQ_cases_proven": [],
+      "controller_reported_existing_tests": {
+        "reported_total": 61,
+        "reported_components": [
+          24,
+          20,
+          17
+        ],
+        "reported_chunk": "6bbb4a",
+        "qualification": "Controller-reported integrated test result; not rerun or converted into model-behavior evidence by this check."
+      },
+      "remaining_boundaries": [
+        "Existing scripted valid-record and false-diagnosis fixtures show storage/control and unverified authority, not that a model diagnoses well.",
+        "The positive purpose/correction fixture received its fixed finding in initial context; it does not prove prospective purpose before FIRST exposure. The deliberate late-purpose negative remains relevant.",
+        "AC01-12 and DQ01-03 still have no actual model-behavior pass from this review. Qualify applicable fixed/model-produced cases for the affected later runtime slice; do not invent a blanket all15 or effectiveness-before-use gate.",
+        "Actual native-body-table worker/broker routing, full-wire/resource/currentness admission and live behavior remain outside this constructor unit.",
+        "Diagnostic correctness, justified action, complete cost, comparative benefit and economic usefulness remain separate questions. No success claim follows from this semantic mapping."
+      ]
+    },
+    "preservation": {
+      "prior_review_hashes": {
+        "independent-review.json": "747951879b20d28fb2aba4db5356cfbd7b630efdfea3574e389565f0f9aa3fb0",
+        "independent-review-v2.json": "881253071d6e48d07eadca788157a8be7cdbf874c494ffde556b4e20f4dddac4"
+      },
+      "prior_reviews_unchanged": true,
+      "module_and_bound_doc25_unchanged": true
+    },
+    "next_action": "Keep the current optional version2 constructor unchanged; controller may record this semantic delta check and close the constructor qualification unit with its stated limits. Later worker/presentation/model-behavior/admission work keeps its existing prerequisites and resource authority.",
+    "handoff": "Only this new coverage JSON was written. All owned writes are complete; no write, test process or live call is in flight."
+  },
+  "additional_approved_practice_review_sha256": "ed777315e5bd52729a78dce6c76d5d70547b53754148cfa8ca2b556cf5785e12",
+  "initial_red_check": {
+    "command": "python -B -m unittest discover -s tests -p 'test_inquiry_profile.py'",
+    "exit_code": 1,
+    "chunk_id": "0b9df8",
+    "reason": "New inquiry package absent before implementation; ModuleNotFoundError."
+  },
+  "scope": "Exact profile construction plus independently checked scripted storage/access/resource controls; no generated research or actual model-behavior pass.",
+  "controller_first_exposure_boundary": "The positive correction fixture exposes its fixed source in the initial request. A purpose before a redundant explicit read proves storage order only, not purpose before first exposure. The independent review and fixture wording retain this limitation; the deliberately late-purpose script is structurally accepted and remains behaviorally unqualified.",
+  "observed_usefulness": "Structural regressions and controller wiring can be checked; effect on actual investigation choices or research quality remains unestablished.",
+  "effectiveness_review": {
+    "disposition": "Candidate retained for further qualification; live use not admitted.",
+    "trigger": "Next future configuration/worker admission, actual eligible model-produced cases and later scoped use outcomes.",
+    "pending": [
+      "Actual model-produced diagnosis/action cases applicable to changed profile.",
+      "Episode-level usefulness and complete burden in real use.",
+      "Comparative benefit only if separately claimed with matched predeclared assessment.",
+      "Separate policy economics."
+    ]
+  },
+  "usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "new_api_calls": 0,
+  "new_inference_calls": 0,
+  "new_grants": 0,
+  "new_epochs": 0,
+  "new_registry_writes": 0,
+  "operational_change_scope": "Existing production research registry and shared inference ledger; scripted tests use disposable temporary registries.",
+  "construction_usage": {
+    "scope": "Main Codex construction through snapshot, including main checking/rework; separate from research inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T01:45:48.448Z",
+    "snapshot_at_utc": "2026-11-01T02:18:54.628Z",
+    "tokens": {
+      "input_tokens": 15522655,
+      "cached_input_tokens": 15227008,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 69142,
+      "reasoning_output_tokens": 42294,
+      "total_tokens": 15591797
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "next_action": "Prepare and independently qualify the actual future worker/broker route for discovery-inquiry-feedback/2 and the already qualified inline body-table/ancestry presentation, preserving native access, attempt, perspective, lineage, budget and freeze fences. Bind its complete installed source/profile/configuration closure, rebuild/count the exact full future wires, and finish the finite protected four-stage resource/currentness disposition before dispatch. Keep affected model-behavior qualification explicit and separate from scripted controls; the constructor grants no blanket AC pass, new calls or live admission. Preserve all old wire counts, closed grants, failures and the original shared USD ledger; unknown full later inputs and benefit remain unknown.",
+  "private_evidence": ".trf-runtime/inquiry-profile-2026-11-01/",
+  "unverified": [
+    "Actual live worker/broker binding of D096 and inline body-table/ancestry presentation.",
+    "Full future wire counts, protected four-stage money/token holds and current native grants.",
+    "Actual model behavior for the twelve AC and three DQ cases beyond precisely scoped scripted controls.",
+    "Scientific/calibration/assessment/freeze completion, comparative benefit or economic usefulness."
+  ],
+  "changed_files": [
+    "trading_researcher/inquiry/__init__.py",
+    "trading_researcher/inquiry/profiles.py",
+    "trading_researcher/inquiry/README.md",
+    "tests/test_inquiry_profile.py",
+    "tests/test_inquiry_profile_review.py",
+    "docs/reviews/implementation-2026-10-25/inquiry-profile-qualification-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md"
+  ],
+  "documentation_checks": [
+    {
+      "command": "python -B docs/reviews/adoption-metacognition-2026-11-01/verify_adoption.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "command": "python -B docs/reviews/verify_system_model.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ]
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS",
+      "warnings": "warning: in the working copy of 'docs/architecture/04_DEFINITIONS.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/12_TRACEABILITY_MATRIX.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/CURRENT_STATE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md', CRLF will be replaced by LF the next time Git touches it"
+    }
+  ]
+}

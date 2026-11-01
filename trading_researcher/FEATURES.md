@@ -22,6 +22,23 @@ Definitions inherit data classification, source identities, exposure and creatio
 
 ## Independent expectations and limits
 
+### Development input release
+
+Operator RPC `release_feature_evidence(certificate_id=..., target_epoch=...)`
+explicitly admits an intact owned development raw-feature certificate as input to
+later contexts. The immutable `feature-evidence-release/1` binds that certificate,
+its exact development snapshot and definitions, release time, minimum epoch and
+inherited exposure. The same request is idempotent; changing its epoch conflicts.
+Earlier epochs/research times, revoked dependencies, generic or forged artifacts,
+protected data and worker requests remain denied. The reserved grant and its typed
+dependencies survive complete backup/restore; it creates no generic batch-release
+row and cannot release scientific results or other controller work products.
+
+This is an input-access grant under existing development permissions, not
+automatic feedback publication, new measurement meaning or scientific admission.
+The [auxiliary handoff](AUXILIARY_RESEARCH.md) uses it to expose compact, exact
+timing evidence to both formalization and independent meaning review.
+
 The validator pins the adopted contract and independent [archive](../tests/fixtures/reference_binance_cases.json), [quality](../tests/fixtures/reference_binance_quality_cases.json), [partition](../tests/fixtures/reference_binance_partition_cases.json) and [feature](../tests/fixtures/reference_feature_cases.json) fixtures. The feature fixture and [authorship note](../tests/fixtures/reference_feature_expectations.md) were fixed before implementation inspection. Its 18 definitions and ten hand-calculated projections extend 43 archive, 32 quality and 22 partition cases. Host/API admission probes have separately reported coverage; they are not implied by the child counters.
 
 Source packages are bounded to 128 files and 16 MiB. Existing row/file limits apply. The owned child has a 600-second lifetime and bounded stdout/stderr; timeout, overflow and cancellation kill and reap it. Backup creation and final checks fall outside that lifetime. Final checks hold the registry lock. The private copy needs space for all committed blobs, uses no writable hardlinks to live data and retains its credential only locally until cleanup.

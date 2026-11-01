@@ -34,6 +34,9 @@ def _rng(seed, component):
 
 
 def generate_family(report, model, components, time_rows, seed):
+    if type(model) is dict and model.get('schema') == 'lag-linked-second-order-model/1':
+        from .second_order_population import generate_family as generate_second
+        return generate_second(report, model, components, time_rows, seed)
     if type(model) is dict and model.get('schema') == 'lag-linked-binary-model/1':
         from .lag_population import generate_family as generate_linked
         return generate_linked(report, model, components, time_rows, seed)

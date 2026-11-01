@@ -15,6 +15,10 @@ from .errors import Conflict, Denied
 
 
 SCHEMA = 'research-record/1'
+# Admission-only revision: complete idea prose may exceed generic UI/RPC text.
+# Even four-byte Unicode plus a second formalization copy remains bounded by the
+# unchanged one-MiB aggregate envelope. No truncation or string normalization.
+IDEA_TEXT_MAX = 65536
 VIEWS = ('journal', 'market_model', 'research_experience', 'policy_experience')
 FIELDS = {
     'source': ({'text', 'uri'}, {'retrieved_at', 'availability_note'}),
@@ -66,6 +70,9 @@ def validate_record(record):
             if type(value) is not dict:
                 raise Invalid('Attempt details must be an object')
             canonical(value)
+        elif name == 'text' and kind == 'idea':
+            if type(value) is not str or not value.strip() or len(value) > IDEA_TEXT_MAX:
+                raise Invalid('Idea text must be a nonempty string of at most 65536 characters')
         else:
             text(value, name)
     scope_object(record['scope'])
@@ -241,7 +248,8 @@ class ResearchMemory:
                 latest = max(latest, integer(body.get('created_at'), 'certificate creation time'))
             elif type(body) is dict and body.get('schema') in ('research-data-target/1','protected-data-binding/1','data-use-assessment/1','composition-certificate/1','composition-input/1','composition-source-package/1',
                     'dependency-revocation/1', 'blob-source/1', 'reference-source-package/1', 'data-snapshot/1',
-                    'feature-source-package/1', 'feature-definitions/1', 'feature-certificate/1',
+                    'feature-source-package/1', 'feature-definitions/1', 'feature-certificate/1', 'feature-evidence-release/1',
+                    'development-feedback-manifest/1', 'development-feedback-release/1',
                     'compiled-hypothesis/1', 'reference-execution/1', 'binding-source-package/1', 'evaluation-plan/1',
                     'evaluation-plan-input/1','semantic-review-record/1','semantic-review-assessment/1','provider-invocation/1','provider-invocation-input/1',
                     'bootstrap-input/1','development-bootstrap/1',

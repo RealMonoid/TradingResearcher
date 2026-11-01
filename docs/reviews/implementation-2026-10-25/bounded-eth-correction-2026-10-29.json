@@ -1,0 +1,258 @@
+{
+  "schema": "bounded-eth-correction-observation/1",
+  "recorded_at_utc": "2026-10-29T02:33:14.289100+00:00",
+  "continuation_decision": {
+    "schema": "bounded-engineering-continuation/1",
+    "created_at_utc": "2026-10-29T02:30:10.202386+00:00",
+    "reason": "Observed null response gave no concrete diagnostic; independent finite-input composition tests refute an assumed Boolean language obstruction.",
+    "test_file": "tests/test_three_valued_validity_gate.py",
+    "test_sha256": "bfc28723e68af3a69ad3b6ee6c28813250fcea7bed839ed5fd5c4421906d064a",
+    "unchanged_original_harness_sha256": "efacf316c043a543a78925e67c6c7874bb07d6131f15d4bf19ff3cce53e6557e",
+    "correction_harness_sha256": "0059297943885e8d7ac4db3f0d2b0c71da8b7a8890e7f0514fda2689df70c716",
+    "max_paid_calls": 2,
+    "max_tokens": 80000,
+    "max_seconds": 1800,
+    "max_cost_nano_usd": 1000000000,
+    "aggregate_cap_nano_usd": 5000000000,
+    "prior_actual_cost_nano_usd": 693402500,
+    "correction_number_for_unexplained_null": 1,
+    "automatic_further_retry": false,
+    "stop": "Retain faithful output or the explicit gap after the single formalization/review pair. Never increase this attempt or erase the prior epoch.",
+    "unchanged": [
+      "original idea",
+      "scope",
+      "thresholds",
+      "missingness",
+      "horizon",
+      "data rights",
+      "protected-access prohibition",
+      "scientific gates"
+    ],
+    "limits": [
+      "Engineering composition is not a research formalization or natural-language certification.",
+      "Invalid nonfinite raw strings are rejected by data admission, not converted into per-row unknown values.",
+      "Full original invalid-price outcome semantics remain for the formalizer and independent reviewer."
+    ]
+  },
+  "prior_attempt": "bounded-math-observation-2026-10-29.json",
+  "input_scope": "Unchanged original retained ETH idea and Q1 development data. No new free-discovery call.",
+  "reopening_epoch": "8528841000a64800a10935fa403b4f32",
+  "stages": [
+    {
+      "stage": "formalization",
+      "started_at_utc": "2026-10-29T02:30:37.329961+00:00",
+      "ended_at_utc": "2026-10-29T02:32:08.278775+00:00",
+      "outcome": {
+        "accepted": true,
+        "artifact_id": "156b958cb593a5b624bf6231849fc1eecce30651b785487d66ca269e820daeff",
+        "check": "formalization/v1",
+        "message": "Formalization retention and structure checked; no semantic/scientific certificate issued",
+        "scientific_authority": false,
+        "state": "completed",
+        "transcript_ids": [
+          "23efa2c1af25963d1ec43b43b0059ded95bc995038e5b28aa89b05978b8d267c"
+        ],
+        "provider_mode": "live",
+        "actual_independent_model_review": "UNVERIFIED"
+      },
+      "artifact_id": "156b958cb593a5b624bf6231849fc1eecce30651b785487d66ca269e820daeff",
+      "body_sha256": "cdf01123e6e07146ec8ecaf2507000ca0e3e0cd17d8e9c4a263f19520400ca7a",
+      "status": null,
+      "candidate_present": false,
+      "structural_assessment": {
+        "gap": {
+          "code": "LANGUAGE_GAP",
+          "reason": "Required fields are absent or unexpected",
+          "reopen_condition": "Resolve the named meaning/capability/input gap under approved semantics"
+        },
+        "mapping_authority": "unverified_formalizer_assertion",
+        "required_before_freeze": [
+          "independent_semantic_review",
+          "feature_certification",
+          "data_and_exposure_review",
+          "calibrated_evaluation_profile",
+          "complete_evaluation_plan",
+          "atomic_allocation_and_freeze"
+        ],
+        "stage": "FORMALIZING",
+        "status": "RETAINED_GAP"
+      },
+      "semantic_report": {
+        "differences": [
+          "Unmet reporting requirement in idea e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5, exact source clause: \"Missing Y is excluded from either mean, with separate counts retained for boundary censoring, absent rows, invalid values, unavailable data, missing warmup, and condition unknown.\" The supplied executable schema specifies exclusion and condition-unknown handling but provides no fields or defined reporting behavior for retaining these separate reason-specific counts. AST missing values and Boolean unknowns do not themselves preserve those distinctions. The exclusion rule can be represented, but the required diagnostic accounting remains an unresolved expression requirement; no executable candidate or mathematical impossibility is asserted."
+        ],
+        "segments": [],
+        "status": "ambiguous"
+      }
+    },
+    {
+      "stage": "meaning_review",
+      "started_at_utc": "2026-10-29T02:32:11.972122+00:00",
+      "ended_at_utc": "2026-10-29T02:32:24.276403+00:00",
+      "outcome": {
+        "accepted": true,
+        "artifact_id": "e7225622bba0125cf828680bc04f43715f660a38c4b946d9c66b46137bb83d01",
+        "check": "semantic-review/v1",
+        "message": "Review input/response binding checked; actual independent model judgment and scientific readiness remain unverified",
+        "scientific_authority": false,
+        "state": "completed",
+        "transcript_ids": [
+          "9a60f25ea6afa31fca4bad4df35dd4f6dffcd7c0076c12a54132095e2ed9010b"
+        ],
+        "provider_mode": "live",
+        "actual_independent_model_review": "UNVERIFIED"
+      },
+      "artifact_id": "e7225622bba0125cf828680bc04f43715f660a38c4b946d9c66b46137bb83d01",
+      "body_sha256": "3ed306043bd47b70892da782d3a5d67e779777c65c9455e17855e000347427e6",
+      "status": null,
+      "review": {
+        "added_assumptions": [],
+        "conflicts": [],
+        "judgment": "uncertain",
+        "mapping_checks": [],
+        "omitted_assumptions": [],
+        "reason": "The original idea is preserved in full, but candidate is null and there are no mapping segments, so executable equivalence cannot be established. The original explicitly specifies a negative conditional-minus-whole-scope contrast, ETH-only scope, exact dates, complete-condition unknown behavior, equal decision-row weighting, and a log-basis-point outcome with distinct price keys and evaluation anchor. The supplied raw definitions agree with the referenced ETH field units, exclusive bar-end keys, and assumed 900-second availability delay; they do not implement the condition, outcome, population construction, or reporting. Retaining an unresolved gap does not itself change the hypothesis, establish executability, or constitute a negative scientific result.",
+        "unresolved_meaning": [
+          "No executable candidate is supplied to verify preservation of the ETH-only UTC decision grid in [2023-01-01, 2023-04-01), input boundaries, prohibition on warmup outside that interval, or additional recorded unavailability.",
+          "No implementation establishes use of the signal bar ending t-900, all 96 exact preceding grid observations, the ordinary even-sample median, the stated thresholds and validity checks, or complete-condition unknown evaluation rather than partial-conjunction false inference. These parameters originate explicitly in the original idea, not fitted estimates.",
+          "No implementation establishes Y=10000*ln(C_{t+3600}/O_{t+900}) evaluated at a=t+4500 with the specified availability cutoff and boundary missingness. The five-grid-step evaluation anchor must not be substituted for the one-hour price-change horizon.",
+          "No implementation establishes equal-row conditional-minus-entire-scope means, inclusion of observed-outcome condition-unknown rows in the scope benchmark, exclusion of missing outcomes from both means, retention of overlapping outcomes, or an undefined contrast for an empty conditional group.",
+          "The formalizer identifies a gap concerning separate reason-specific diagnostic counts. Those counts are explicitly required by the original, but no executable schema is supplied here to independently verify the asserted schema limitation or its resolution. Raw nulls and absent rows alone do not demonstrate retention of those distinctions."
+        ]
+      },
+      "review_assessment": {
+        "independent_semantic_review": "NOT_SATISFIED",
+        "gaps": [
+          {
+            "code": "FORMALIZATION_GAP",
+            "reason": "A faithful review of retained uncertainty does not make a candidate executable"
+          },
+          {
+            "call_id": "55232666d3ee462f96131c5cd9bdeb48",
+            "code": "MEANING_DIFFERENCE_OR_UNCERTAINTY",
+            "job_id": "3c6933de5bd6440d94161e9e36db972d",
+            "reason": "A retained review reports different or uncertain meaning"
+          }
+        ],
+        "scientific_readiness": false
+      }
+    }
+  ],
+  "new_calls": [
+    {
+      "provider": "openai",
+      "dispatch_id": "controller-c8cdd08b0e4749379cd57153dce291cf:0",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T02:30:38Z",
+      "settled_at_utc": "2026-10-29T02:32:07Z",
+      "charged_nano_usd": 103125000,
+      "state": "settled",
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_051a84f1d1d4ae70016ae2afce724c87d2bfc8b210aa462707",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 3919
+        },
+        "transport_request_id": "req_3ff86778a2354652a3d7e8fdcb6756ea",
+        "usage": {
+          "cost_units": 103125000,
+          "input_tokens": 24746,
+          "output_tokens": 4126
+        }
+      }
+    },
+    {
+      "provider": "openai",
+      "dispatch_id": "controller-55232666d3ee462f96131c5cd9bdeb48:0",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T02:32:13Z",
+      "settled_at_utc": "2026-10-29T02:32:23Z",
+      "charged_nano_usd": 47412500,
+      "state": "settled",
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_094f4a63eb9184db016ae2b02d611887d28294af088fb9c75b",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0
+        },
+        "transport_request_id": "req_3f25b2b3bd334039b598beab48058c86",
+        "usage": {
+          "cost_units": 47412500,
+          "input_tokens": 16989,
+          "output_tokens": 494
+        }
+      }
+    }
+  ],
+  "full_path_token_reservation": 77874,
+  "full_path_cost_bound_nano_usd": 329685000,
+  "finished_at_utc": "2026-10-29T02:32:24.619560+00:00",
+  "wall_seconds": 110.7155388000001,
+  "new_reported_tokens": 46355,
+  "new_conservative_cost_nano_usd": 150537500,
+  "aggregate_tokens": 295555,
+  "aggregate_conservative_cost_nano_usd": 843940000,
+  "remaining_authorization_nano_usd": 4156060000,
+  "offline_representability": {
+    "test_file": "tests/test_three_valued_validity_gate.py",
+    "tests_passed": 8,
+    "exit_code": 0,
+    "seconds": 0.356,
+    "condition_nodes": 127,
+    "condition_levels": 12,
+    "all_truth_table_rows": 9,
+    "conclusion": "Complete-input unknown handling is expressible for admitted finite/null inputs under existing logic.",
+    "limits": [
+      "Engineering witness only; no registered research formalization or natural-language fidelity proof.",
+      "Nonfinite source strings are rejected at row admission, not converted to per-row unknown.",
+      "Original invalid-price outcome semantics still need faithful formalization and independent review."
+    ]
+  },
+  "scientific_readiness": false,
+  "full_objective_complete": false,
+  "automatic_further_retry": false,
+  "source_inspection": {
+    "status": "REPORTING_GAP_CONFIRMED_IN_CONDITION_PATH",
+    "source": "trading_researcher/outcomes.py::_case; trading_researcher/expressions.py::_calculate; trading_researcher/bounded_outcomes.py::materialize_bounded",
+    "finding": "Condition evaluation receives no trace, and only conditioned.value is stored. Complete-window and Boolean missing causes can collapse; outcome traces and state/reason fields already retain some distinct causes.",
+    "warranted_conclusion": "The model identified a real bounded reporting limitation. This is not proof of mathematical inexpressibility or a negative market hypothesis.",
+    "remaining_uncertainty": "Exact minimal reporting contract, overlapping reason counts, distinction between declared invalidity and synthetic unknown literals, and faithfulness of any new diagnostic record remain to be resolved.",
+    "next_action": "Follow execution_plan: assess the smallest descriptive reason-count integration for the exact original ETH reporting requirement. Condition causes are currently discarded; some outcome/boundary causes already exist. Preserve original meaning and old case bytes. No automatic further paid retry, additional operators or calibration/model-family expansion."
+  }
+}

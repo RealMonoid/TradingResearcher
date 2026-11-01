@@ -13,7 +13,9 @@ from .codec import Invalid, MAX_BYTES, canonical, decode, text
 from .errors import Conflict, Denied
 from .server import RemoteError
 from .measurements import MEASUREMENT_TOOL
-from .context_views import SECTION_TOOL, PRESENTATION_PROFILES, TOOL_VIEW_PROFILE, source_section, source_view
+from .context_views import (SECTION_TOOL, FEEDBACK_SECTION_TOOL, PRESENTATION_PROFILES,
+                            TOOL_VIEW_PROFILE, FEEDBACK_VIEW_PROFILE, source_section,
+                            feedback_source_section, source_view)
 
 
 TOOL_DEFINITIONS = [
@@ -34,6 +36,7 @@ TOOL_DEFINITIONS = [
 ]
 DEVELOPMENT_TOOL_DEFINITIONS = [*TOOL_DEFINITIONS, MEASUREMENT_TOOL]
 CONTEXT_TOOL_DEFINITIONS = [*DEVELOPMENT_TOOL_DEFINITIONS, SECTION_TOOL]
+FEEDBACK_CONTEXT_TOOL_DEFINITIONS = [*CONTEXT_TOOL_DEFINITIONS, FEEDBACK_SECTION_TOOL]
 ERRORS = (Invalid, Conflict, Denied, RemoteError)
 
 
@@ -130,6 +133,9 @@ def _tool(client, lease, call, provider_call_id=None, tools=None):
         # Authenticate the original read before inspecting paths or slice controls.
         artifact = client.call('read_artifact', lease=lease, artifact_id=arguments['artifact_id'])
         return source_section(artifact, arguments['path'], arguments['offset'], arguments['limit'])
+    if name == 'read_feedback_references' and set(arguments) == {'artifact_id', 'path', 'offset', 'limit'}:
+        artifact = client.call('read_artifact', lease=lease, artifact_id=arguments['artifact_id'])
+        return feedback_source_section(artifact, arguments['path'], arguments['offset'], arguments['limit'])
     if name == 'search_memory' and set(arguments) == {'query'}:
         return client.call('search_memory', lease=lease, **arguments)
     if name == 'record_research' and set(arguments) == {'kind', 'content', 'scope', 'source_refs'}:
@@ -142,6 +148,8 @@ def _tool(client, lease, call, provider_call_id=None, tools=None):
                 'formalization': False, 'scientific_evaluation': False, 'capital_authority': False}
         if SECTION_TOOL in allowed:
             result.update(version='research-tools/3', source_sections=True)
+        if FEEDBACK_SECTION_TOOL in allowed:
+            result.update(version='research-tools/4', feedback_reference_sections=True)
         return result
     if name == 'measure_development':
         return client.call('measure_development',lease=lease,call_id=provider_call_id,tool_id=call['id'])
@@ -186,14 +194,16 @@ def run_research_once(client, provider, cancel=None):
         if (spec['kind'] != 'research-record/v1' or provider.mode != profile['mode']
                 or provider.model != profile['model'] or canonical(profile['tools']) not in
                 (canonical(TOOL_DEFINITIONS),canonical(DEVELOPMENT_TOOL_DEFINITIONS),
-                 canonical(CONTEXT_TOOL_DEFINITIONS))):
+                 canonical(CONTEXT_TOOL_DEFINITIONS), canonical(FEEDBACK_CONTEXT_TOOL_DEFINITIONS))
+                or (profile.get('source_presentation') == FEEDBACK_VIEW_PROFILE)
+                   != (canonical(profile['tools']) == canonical(FEEDBACK_CONTEXT_TOOL_DEFINITIONS))):
             return blocked('Installed adapter or tools do not match the frozen research profile')
         if state['calls']:
             return blocked('Existing attempt transcript requires explicit reconciliation')
         sources = [client.call('read_artifact', lease=lease, artifact_id=ref)
                    for ref in claimed['context']['artifact_ids']]
         if profile.get('source_presentation') in PRESENTATION_PROFILES:
-            sources = [source_view(source) for source in sources]
+            sources = [source_view(source, profile=profile['source_presentation']) for source in sources]
         messages = [{'role': 'system', 'content': profile['prompts'][spec['allowed_workers'][0]]},
                     {'role': 'user', 'content': canonical({'purpose': spec['purpose'], 'sources': sources})}]
         retries, ordinal = 0, 0
@@ -269,11 +279,12 @@ def run_research_once(client, provider, cancel=None):
                 stored = client.call('put_artifact', lease=lease, body=body, source_refs=[])
                 transcript.append(stored['id'])
                 visible = body
-                if (profile.get('source_presentation') == TOOL_VIEW_PROFILE
+                if (profile.get('source_presentation') in (TOOL_VIEW_PROFILE, FEEDBACK_VIEW_PROFILE)
                         and tool_result['status'] == 'ok' and call['name'] == 'measure_development'):
-                    visible = {**body, 'result': {'status': 'ok', 'value': source_view(tool_result['value'])}}
+                    visible = {**body, 'result': {'status': 'ok', 'value': source_view(
+                        tool_result['value'], profile=profile['source_presentation'])}}
                     view_record = client.call('put_artifact', lease=lease, source_refs=[stored['id']], body={
-                        'schema': 'provider-tool-view/1', 'presentation_profile': TOOL_VIEW_PROFILE,
+                        'schema': 'provider-tool-view/1', 'presentation_profile': profile['source_presentation'],
                         'source_tool_result_id': stored['id'], 'model_visible_body': visible})
                     transcript.append(view_record['id'])
                 messages.append({'role': 'tool', 'content': canonical(visible)})

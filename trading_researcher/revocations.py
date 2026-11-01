@@ -9,7 +9,8 @@ SCHEMA='dependency-revocation/1'
 AUTHORITY='technical_use_revocation_not_scientific_outcome'
 PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1','composition-source-package/1'}
 VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1',
-    'research-data-target/1','protected-data-binding/1','study-resource-continuation/1'}
+    'research-data-target/1','protected-data-binding/1','study-resource-continuation/1','feature-evidence-release/1',
+    'development-feedback-manifest/1','development-feedback-release/1'}
 REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1',
     'population-family-input/1','family-study-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
@@ -97,6 +98,15 @@ class DependencyRevocations:
             return [ref for ref in body.get('input_refs',[]) if self._artifact(ref)['body'].get('schema')=='data-snapshot/1']
         if schema=='feature-certificate/1':
             return [body[k] for k in ('data_snapshot_id','source_package_id','definitions_id') if body.get(k) is not None]
+        if schema=='feature-evidence-release/1':
+            return [body[k] for k in ('certificate_id','data_snapshot_id','definitions_id')]
+        if schema=='development-feedback-manifest/1':
+            # Meaning-review inventory freshness is checked at feedback use.
+            # It is not an executable technical version in this dependency graph.
+            return [body['request'][key] for key in ('execution_id','data_use_assessment_id')]
+        if schema=='development-feedback-release/1':return [body['manifest_id']]
+        if schema=='research-record/1' and artifact['authority']=='descriptive_development_feedback_only':
+            return [body['scope']['manifest_id']]
         if schema=='implementation-certificate/1':return [body['source_package_id']] if body.get('source_package_id') else []
         if schema=='compiled-hypothesis/1':
             args=body['dependency_arguments']

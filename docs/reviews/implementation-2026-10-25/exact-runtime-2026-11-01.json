@@ -1,0 +1,302 @@
+{
+  "schema": "exact-retained-runtime-owned-source-qualification/1",
+  "status": "PASS_SCOPED_RETAINED_RUNTIME_OWNED_CERTIFICATE_NATIVE_RESEARCH_PENDING",
+  "at_utc": "2026-11-01T13:56:47.037917+00:00",
+  "python_version": "3.14.2",
+  "purpose": "Provide versioned retained-source AST4 calculation/replay and owned implementation qualification while preserving all research/scientific/admission gates.",
+  "authority": {
+    "decision": "D097",
+    "contract": "bounded-exact-compositions/1.0",
+    "revocation_semantics": "D083 typed technical use only"
+  },
+  "previous_goal_turn_audit": {
+    "classification": "NO_PROGRESS_GATE_ONLY_RECHECK",
+    "reason": "The preceding gate-only recheck did not change the next action. No genuine external blocker prevented the selected native/runtime work; concrete implementation and measured replay continued here."
+  },
+  "executed_checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_runtime*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_approved_owner_bytes_and_declared_estimator_are_not_replaceable (test_exact_runtime.ExactRuntimeTests.test_approved_owner_bytes_and_declared_estimator_are_not_replaceable) ... ok\ntest_child_compiler_preserves_candidate_and_reports_complete_declared_spans (test_exact_runtime.ExactRuntimeTests.test_child_compiler_preserves_candidate_and_reports_complete_declared_spans) ... ok\ntest_child_conformance_is_exact_fixed_suite_and_interpreter_closure (test_exact_runtime.ExactRuntimeTests.test_child_conformance_is_exact_fixed_suite_and_interpreter_closure) ... ok\ntest_full_engineering_shape_streams_over_one_mib_and_replays_exactly (test_exact_runtime.ExactRuntimeTests.test_full_engineering_shape_streams_over_one_mib_and_replays_exactly) ... ok\ntest_source_membership_timeout_and_exclusive_directory_are_bounded (test_exact_runtime.ExactRuntimeTests.test_source_membership_timeout_and_exclusive_directory_are_bounded) ... ok\ntest_certify_runs_only_fixed_retained_core_and_case_methods (test_exact_runtime_review.ExactRuntimeReview.test_certify_runs_only_fixed_retained_core_and_case_methods) ... ok\ntest_compile_in_actual_retained_isolated_child_matches_local (test_exact_runtime_review.ExactRuntimeReview.test_compile_in_actual_retained_isolated_child_matches_local) ... ok\ntest_compile_new_window_spans_and_exact_mature_metadata (test_exact_runtime_review.ExactRuntimeReview.test_compile_new_window_spans_and_exact_mature_metadata) ... ok\ntest_execute_has_complete_diagnostic_stream_and_exact_descriptive_means (test_exact_runtime_review.ExactRuntimeReview.test_execute_has_complete_diagnostic_stream_and_exact_descriptive_means) ... ok\ntest_fixed_bundle_time_bounds_and_stream_byte_identity (test_exact_runtime_review.ExactRuntimeReview.test_fixed_bundle_time_bounds_and_stream_byte_identity) ... ok\ntest_fresh_replay_binds_exact_bytes_compilation_and_result (test_exact_runtime_review.ExactRuntimeReview.test_fresh_replay_binds_exact_bytes_compilation_and_result) ... ok\ntest_matching_hash_does_not_authorize_rows_outside_compiled_selection (test_exact_runtime_review.ExactRuntimeReview.test_matching_hash_does_not_authorize_rows_outside_compiled_selection) ... ok\ntest_protected_outside_manifest_version_unit_and_catalog_changes_reject (test_exact_runtime_review.ExactRuntimeReview.test_protected_outside_manifest_version_unit_and_catalog_changes_reject) ... ok\ntest_replay_rejects_changed_case_or_suffix_even_with_rebound_blob_hash (test_exact_runtime_review.ExactRuntimeReview.test_replay_rejects_changed_case_or_suffix_even_with_rebound_blob_hash) ... ok\ntest_replay_rejects_result_metadata_or_raw_row_change (test_exact_runtime_review.ExactRuntimeReview.test_replay_rejects_result_metadata_or_raw_row_change) ... ok\ntest_resource_stop_keeps_only_completed_numerical_prefix_and_no_effect (test_exact_runtime_review.ExactRuntimeReview.test_resource_stop_keeps_only_completed_numerical_prefix_and_no_effect) ... ok\ntest_wrong_compilation_hash_or_changed_raw_bytes_fail (test_exact_runtime_review.ExactRuntimeReview.test_wrong_compilation_hash_or_changed_raw_bytes_fail) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 19.105s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_certification*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "start_chunk_id": "103f19",
+      "completion_chunk_id": "e65644",
+      "output": "test_failed_child_retains_source_and_gap_without_selecting_certificate (test_exact_certification.ExactCertificateTests.test_failed_child_retains_source_and_gap_without_selecting_certificate) ... ok\r\ntest_owned_child_result_json_types_are_not_coerced (test_exact_certification.ExactCertificateTests.test_owned_child_result_json_types_are_not_coerced) ... ok\r\ntest_owned_source_package_certificate_and_registry_survive_restart (test_exact_certification.ExactCertificateTests.test_owned_source_package_certificate_and_registry_survive_restart) ... ok\r\ntest_known_version_revocation_preserves_history_and_changes_only_current_use (test_exact_certification.ExactLegacyRevocationTests.test_known_version_revocation_preserves_history_and_changes_only_current_use) ... ok\r\ntest_shared_dependency_across_typed_fields_is_checked_once (test_exact_certification.ExactLegacyRevocationTests.test_shared_dependency_across_typed_fields_is_checked_once) ... ok\r\ntest_source_package_identity_cannot_be_reset_by_a_new_artifact_timestamp (test_exact_certification.ExactLegacyRevocationTests.test_source_package_identity_cannot_be_reset_by_a_new_artifact_timestamp) ... ok\r\ntest_actual_owned_certificate_commits_complete_sources_before_real_child (test_exact_certification_review.ExactCertificationReview.test_actual_owned_certificate_commits_complete_sources_before_real_child) ... ok\r\ntest_bad_package_metadata_and_descriptors_fail_with_typed_rejection (test_exact_certification_review.ExactCertificationReview.test_bad_package_metadata_and_descriptors_fail_with_typed_rejection) ... ok\r\ntest_certificate_revocation_does_not_propagate_through_generic_provenance (test_exact_certification_review.ExactCertificationReview.test_certificate_revocation_does_not_propagate_through_generic_provenance) ... ok\r\ntest_certificate_status_identity_child_environment_and_result_are_checked (test_exact_certification_review.ExactCertificationReview.test_certificate_status_identity_child_environment_and_result_are_checked) ... ok\r\ntest_child_failure_retains_owned_package_gap_and_does_not_select_it (test_exact_certification_review.ExactCertificationReview.test_child_failure_retains_owned_package_gap_and_does_not_select_it) ... ok\r\ntest_corrupt_native_blob_cannot_be_read_as_a_source_capsule (test_exact_certification_review.ExactCertificationReview.test_corrupt_native_blob_cannot_be_read_as_a_source_capsule) ... ok\r\ntest_explicit_same_id_restart_revalidates_and_storage_does_not_auto_select (test_exact_certification_review.ExactCertificationReview.test_explicit_same_id_restart_revalidates_and_storage_does_not_auto_select) ... ok\r\ntest_loaded_host_and_golden_expectation_mismatches_deny_current_use (test_exact_certification_review.ExactCertificationReview.test_loaded_host_and_golden_expectation_mismatches_deny_current_use) ... ok\r\ntest_new_broker_reserves_package_and_certificate_namespaces (test_exact_certification_review.ExactCertificationReview.test_new_broker_reserves_package_and_certificate_namespaces) ... ok\r\ntest_old_typed_package_revocation_delegates_without_revoking_exact_schema (test_exact_certification_review.ExactCertificationReview.test_old_typed_package_revocation_delegates_without_revoking_exact_schema) ... ok\r\ntest_only_operator_can_certify_without_staging_an_unauthorized_attempt (test_exact_certification_review.ExactCertificationReview.test_only_operator_can_certify_without_staging_an_unauthorized_attempt) ... ok\r\ntest_package_revocation_covers_same_footprint_clones_and_typed_cert_descendants (test_exact_certification_review.ExactCertificationReview.test_package_revocation_covers_same_footprint_clones_and_typed_cert_descendants) ... ok\r\ntest_source_lookalikes_supplied_through_old_broker_never_qualify (test_exact_certification_review.ExactCertificationReview.test_source_lookalikes_supplied_through_old_broker_never_qualify) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 19 tests in 20.275s\r\n\r\nOK\r\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_revocations*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_known_version_revocation_preserves_history_and_changes_only_current_use (test_revocations.RevocationTests.test_known_version_revocation_preserves_history_and_changes_only_current_use) ... ok\ntest_shared_dependency_across_typed_fields_is_checked_once (test_revocations.RevocationTests.test_shared_dependency_across_typed_fields_is_checked_once) ... ok\ntest_source_package_identity_cannot_be_reset_by_a_new_artifact_timestamp (test_revocations.RevocationTests.test_source_package_identity_cannot_be_reset_by_a_new_artifact_timestamp) ... ok\ntest_backup_restore_keeps_revocation_and_original_evidence (test_revocations_adversarial.RevocationAdversarialTests.test_backup_restore_keeps_revocation_and_original_evidence) ... ok\ntest_different_package_bytes_are_not_semantically_revoked_by_similarity (test_revocations_adversarial.RevocationAdversarialTests.test_different_package_bytes_are_not_semantically_revoked_by_similarity) ... ok\ntest_preupgrade_operator_source_cannot_impersonate_owned_revocation (test_revocations_adversarial.RevocationAdversarialTests.test_preupgrade_operator_source_cannot_impersonate_owned_revocation) ... ok\ntest_revocation_during_real_reference_validation_retains_closed_gap (test_revocations_adversarial.RevocationAdversarialTests.test_revocation_during_real_reference_validation_retains_closed_gap) ... ok\ntest_revocation_during_unlocked_scan_prevents_returning_new_rows (test_revocations_adversarial.RevocationAdversarialTests.test_revocation_during_unlocked_scan_prevents_returning_new_rows) ... ok\ntest_revocation_is_idempotent_but_key_cannot_change_target_or_reason (test_revocations_adversarial.RevocationAdversarialTests.test_revocation_is_idempotent_but_key_cannot_change_target_or_reason) ... ok\ntest_revocation_namespace_cannot_be_forged_by_source_or_worker (test_revocations_adversarial.RevocationAdversarialTests.test_revocation_namespace_cannot_be_forged_by_source_or_worker) ... ok\ntest_revoked_data_denied_before_row_scan_but_history_is_unchanged (test_revocations_adversarial.RevocationAdversarialTests.test_revoked_data_denied_before_row_scan_but_history_is_unchanged) ... ok\ntest_same_package_bytes_under_later_artifact_id_remain_revoked (test_revocations_adversarial.RevocationAdversarialTests.test_same_package_bytes_under_later_artifact_id_remain_revoked) ... ok\ntest_supersedes_and_exposure_do_not_turn_replacement_into_hard_dependency (test_revocations_adversarial.RevocationAdversarialTests.test_supersedes_and_exposure_do_not_turn_replacement_into_hard_dependency) ... ok\ntest_unknown_consumer_is_neither_valid_nor_inferred_from_exposure (test_revocations_adversarial.RevocationAdversarialTests.test_unknown_consumer_is_neither_valid_nor_inferred_from_exposure) ... ok\ntest_unknown_evidence_or_unsupported_target_cannot_issue_revocation (test_revocations_adversarial.RevocationAdversarialTests.test_unknown_evidence_or_unsupported_target_cannot_issue_revocation) ... ok\ntest_worker_denied_before_target_or_evidence_read (test_revocations_adversarial.RevocationAdversarialTests.test_worker_denied_before_target_or_evidence_read) ... ok\ntest_cached_measurement_does_not_authorize_delivery_after_revocation (test_revocations_adversarial.RevocationMeasurementAdversarialTests.test_cached_measurement_does_not_authorize_delivery_after_revocation) ... ok\ntest_revocation_during_measurement_retains_but_cannot_deliver_new_values (test_revocations_adversarial.RevocationMeasurementAdversarialTests.test_revocation_during_measurement_retains_but_cannot_deliver_new_values) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 10.210s\n\nOK\n"
+    }
+  ],
+  "top_level_method_executions": 54,
+  "runtime_methods": 17,
+  "native_certificate_methods": 19,
+  "standard_legacy_revocation_methods": 18,
+  "legacy_methods_also_repeated_through_new_broker": 3,
+  "independently_authored_new_methods": 25,
+  "fixed_child_conformance_methods": 51,
+  "count_qualification": "Counts describe execution scopes, not scientific evidence or a quality score. The three legacy methods run under both old and new broker contexts; fixed51 child methods are repeated in several qualification scenarios, not new distinct evidence each time.",
+  "independent_review": {
+    "reviewer": "paired_view_review",
+    "runtime_tests": 12,
+    "runtime_exit_code": 0,
+    "runtime_chunk_id": "0cfe86",
+    "runtime_seconds": "12.047",
+    "certificate_tests": 13,
+    "certificate_exit_code": 0,
+    "certificate_chunk_id": "17c884",
+    "certificate_seconds": "13.001",
+    "root_type_regression_independently_rerun": {
+      "chunk_id": "48dd8a",
+      "exit_code": 0,
+      "seconds": "5.759",
+      "coercions": 4
+    },
+    "sources_sha256": {
+      "trading_researcher/exact_runtime.py": "2a45a4b9d9a182ee741406e3533fbe19d1204b882882765f5ae80d993e2fd8b7",
+      "trading_researcher/exact_certification.py": "5ee220e7678a938a28e81be3ac5f6ecfcf920a6d6dc30b6be76ee08e7ffc8a7c",
+      "trading_researcher/exact_revocations.py": "17226c1ae3b2925c303a2041561af2168c801c80e8fcab32d5d94d5d542c18a6",
+      "tests/test_exact_runtime_review.py": "39cb6596fd8a354510fb838b6702848eaa208858c4be8d51477cc593796ef596",
+      "tests/test_exact_certification_review.py": "c8527d3c0c73a44d9a3d006e2e6fcbd339e2af2e86d299e8f7b85dc46cbb36be"
+    },
+    "runtime_footprint_digest": "6a8d51913fdd9dbd88edcf4c53797d1820512c6c9a99b254db2248d657b82aa0",
+    "findings": "Native actual 26-file/51-method conformance staged before dispatch. Descriptor validation defect reproduced and corrected; independently confirmed JSON type fix, typed D083 clone/descendant/legacy delegation and no provenance taint.",
+    "conclusion": "No remaining concrete defect found in scoped retained runtime and owned implementation qualification. No external API/production registry, real data/feature input, actual hypothesis/model/scientific/funding qualification. Resource probe was not independently rerun.",
+    "no_checks_or_writes_active": true
+  },
+  "runtime_source_files": 26,
+  "runtime_footprint": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md": "6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f",
+    "docs/architecture/20_BOUNDED_MATH_REUSE.md": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+    "docs/architecture/26_BOUNDED_EXACT_COMPOSITIONS.md": "fcff34f14878773bd817155121a62212f934a07ba9cba57c3a7864777420418f",
+    "tests/fixtures/exact_composition_shape_2026-11-01.json": "d66f100e4eedc1a7e11894e6a0ad9777b5fc6298c9affea7686e583263fda88e",
+    "tests/test_exact_compositions.py": "d8fd47254458f3f070e3c06046d669f3b3be92f9d6cf4f309ad4657df812e522",
+    "tests/test_exact_compositions_review.py": "3fea890dbf601386c59f8e1142d6386c385d6ce39b2bcf320e628f66d3bc350d",
+    "tests/test_exact_outcomes.py": "051bcc7f5400c0c2531caec56bf16ce63dcf7f8bb1c1c3d6d6fc6fcf77e85637",
+    "tests/test_exact_outcomes_review.py": "da064fd250b454a9ba016b463e622a2f6a0732780d7b0b060099c5a67567f4da",
+    "trading_researcher/EXACT_COMPOSITIONS.md": "35cf923ffed5d30d842d90c03b97633dd5796ee19b8acd518910b14bfea8b038",
+    "trading_researcher/EXACT_RUNTIME.md": "bd3552337f9cce0ae92d040b187ba3a28b1d45fe08c4b06cd76eff9c9b0d7abd",
+    "trading_researcher/REQUIRED_INPUTS.md": "2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+    "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+    "trading_researcher/bounded_outcomes.py": "82c5003723b0482884f07860d7c43e4109e70e7e28588a9631187b7b1dfdce22",
+    "trading_researcher/case_diagnostics.py": "85fb071c30d2474ca512c1918317c9eebf18aaa31924a607e4090db727c1d7be",
+    "trading_researcher/certification.py": "a1b554dbb8c42fcc7751f285f4a93064e05cb078ac96e70c90599946262c0ca9",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/exact_compositions.py": "555358e6d3925cb9e414b2ba88df7d25d211de7470b53042593ba3db07600402",
+    "trading_researcher/exact_outcomes.py": "c94ceceb906d19c184c56e85f1675458cd395f433015f18df916cf65b178147b",
+    "trading_researcher/exact_runtime.py": "2a45a4b9d9a182ee741406e3533fbe19d1204b882882765f5ae80d993e2fd8b7",
+    "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+    "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+    "trading_researcher/required_inputs.py": "0b00db49cc9016df46730d5f6974d69725bb86febd25e3610d1f0931ea0ca45b"
+  },
+  "golden_expectation_pins": {
+    "tests/test_exact_compositions.py": "d8fd47254458f3f070e3c06046d669f3b3be92f9d6cf4f309ad4657df812e522",
+    "tests/test_exact_compositions_review.py": "3fea890dbf601386c59f8e1142d6386c385d6ce39b2bcf320e628f66d3bc350d",
+    "tests/test_exact_outcomes.py": "051bcc7f5400c0c2531caec56bf16ce63dcf7f8bb1c1c3d6d6fc6fcf77e85637",
+    "tests/test_exact_outcomes_review.py": "da064fd250b454a9ba016b463e622a2f6a0732780d7b0b060099c5a67567f4da",
+    "tests/fixtures/exact_composition_shape_2026-11-01.json": "d66f100e4eedc1a7e11894e6a0ad9777b5fc6298c9affea7686e583263fda88e"
+  },
+  "qualification_scope": [
+    "Source-retained-I-S-B compile/execute and fresh byte-exact replay using only supplied hashed rows.",
+    "Complete55-case engineering shape, whole-scope denominator and greater-than-one-MiB diagnostic JSONL stream.",
+    "Real temporary-registry26-file source staging before genuine51-method child, native committed blob descriptors, current environment, restart/explicit selection and owned namespaces.",
+    "Exact package/certificate D083 bindings, footprint aliases/typed descendants, legacy delegation and no propagation through generic provenance/exposure.",
+    "Source/descriptor/result JSON-type tamper rejection and retained failed qualification without selecting it."
+  ],
+  "synthetic_resource_observation": {
+    "private_evidence": ".trf-runtime/exact-runtime-2026-11-01/probe.json",
+    "evidence_sha256": "789fd469cff65c7a38274b48b1b7d08c7fdaa5c6484140b2fb7e897cd8e619ab",
+    "scope": "Fixed invented Q1 values/portable engineering shape; not market data or an accepted H_exec.",
+    "status": "RESOURCE_STOP",
+    "expected_cases": 8640,
+    "processed_cases": 5752,
+    "numeric_steps": 10000000,
+    "diagnostic_cases": 0,
+    "aggregate_effect": null,
+    "fresh_replay_verified_cases": 5752,
+    "case_blob": {
+      "sha256": "e7285fbd20f79973e6af40dea2c2fa2bf3b5ab2b27863d7b75e02b45b3d78658",
+      "size": 3773278
+    },
+    "execution_seconds": "15.597525599994697",
+    "replay_seconds": "15.325937700050417",
+    "qualification": "Actual local subprocess/byte-check timings on this host; no model or speed comparison. Encoded bytes are not measured peak RAM. This specific shape stops at the unchanged cap, not a proof that every equivalent expression must fail.",
+    "independent_resource_probe_rerun": false
+  },
+  "retained_failures": [
+    {
+      "chunk_id": "af27e2",
+      "exit_code": 1,
+      "reason": "Independent runtime missing-module RED."
+    },
+    {
+      "chunk_id": "aff40c",
+      "exit_code": 1,
+      "reason": "Independent owned-certificate missing-module RED."
+    },
+    {
+      "chunk_id": "4be4b3",
+      "exit_code": 1,
+      "reason": "New package/certificate types lacked explicit technical dependency bindings; genuine child conformance could not become usable and the missing binding masked an explicit failure. Corrected by a typed D083 overlay, never by bypassing revocation."
+    },
+    {
+      "chunk_id": "c7f5a8",
+      "exit_code": 1,
+      "reason": "Independent malformed owned package descriptors: missing size raised KeyError and an extra field was accepted. New exact shape/type/aggregate/committed-size validation precedes blob reads."
+    },
+    {
+      "start_chunk_id": "9d8d2f",
+      "completion_chunk_id": "63d5b3",
+      "exit_code": 1,
+      "reason": "Controlled malformed owned child-result copies changed false to0 or numeric0 tofalse. Python dict equality accepted four JSON-type substitutions. Both expected-result comparisons now use canonical JSON; no public namespace-forgery claim or new scientific authority follows."
+    }
+  ],
+  "preservation": {
+    "old_runtime_pins_exact": 37,
+    "historical_inquiry_member_hashes_exact": 117,
+    "check_chunk_id": "8d698b",
+    "exit_code": 0,
+    "old_grants_still_revoked": 7,
+    "qualification": "Historical closures unchanged; original registries/grants/calls and actual A mapping not modified."
+  },
+  "research_usage": {
+    "totals": {
+      "calls": 53,
+      "known_usage_calls": 53,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1058582,
+      "known_output_tokens": 177896,
+      "known_total_tokens": 1236478,
+      "exact_total_tokens": 1236478,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 53,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 49754,
+      "reasoning_detail_calls": 53,
+      "exact_reasoning_output_tokens": 49754
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 4425415000,
+      "available_nano": 574585000,
+      "halted": false
+    },
+    "authoritative_shared_ledger": ".trf-runtime/openai-integration-budget.sqlite3",
+    "prior_complete_per_call_evidence": "docs/reviews/implementation-2026-10-25/exact-formalization-2026-11-01.json",
+    "qualification": "No new inference/count rows. Prior per-call model/version/UTC/accounting remains retained; avoid copying unchanged call histories. Conservative inference charges are not invoices; count-service billing and immutable served snapshots remain unknown."
+  },
+  "new_research_model_calls": 0,
+  "new_count_calls": 0,
+  "new_production_grants": 0,
+  "production_registry_mutated": false,
+  "construction_usage_through_snapshot": {
+    "scope": "Main construction since previous native formalization snapshot, including checking/rework; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T13:03:59.270Z",
+    "snapshot_at_utc": "2026-11-01T13:56:12.078Z",
+    "tokens": {
+      "input_tokens": 18539494,
+      "cached_input_tokens": 18473216,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 75332,
+      "reasoning_output_tokens": 42881,
+      "total_tokens": 18614826
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "owned_runtime_certificate_path_qualified_in_temporary_registry": true,
+  "production_enrollment_qualified": false,
+  "full_native_inquiry_qualified": false,
+  "actual_A_still_original_null_formalization": true,
+  "scientific_readiness": false,
+  "objective_complete": false,
+  "unverified": [
+    "Original-A composition qualification and actual admitted H_exec mapping; portable synthetic shapes are not native acceptance.",
+    "Controlled native hypothesis execution with genuine certified features, development data/use/exposure and independent meaning review gates; runtime alone confers no input access.",
+    "Full finite synthetic inquiry, production source/currentness enrollment, actual formalizer profiles/full wires/count/funding and model behavior.",
+    "Complete original-A Q1 calculation within unchanged budgets; current construction retains its explicit resource gap.",
+    "Calibrated information/scientific evaluation, protected assessment/freeze, mixed-provider cycle, economic/policy qualification and reporting/delivery."
+  ],
+  "changed_files": [
+    "trading_researcher/exact_runtime.py",
+    "trading_researcher/EXACT_RUNTIME.md",
+    "trading_researcher/exact_certification.py",
+    "trading_researcher/exact_revocations.py",
+    "trading_researcher/EXACT_CERTIFICATION.md",
+    "tests/test_exact_runtime.py",
+    "tests/test_exact_runtime_review.py",
+    "tests/test_exact_certification.py",
+    "tests/test_exact_certification_review.py",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/exact-runtime-2026-11-01.json"
+  ],
+  "next_action": "Connect the qualified exact retained runtime and owned source certificate to native AST4 compilation/composition/case-execution gates, with authenticated inputs, original-scope data use, current feature certification, independent meaning review, source currentness and separate replay. Honor diagnostic completeness separately from numerical completeness; a diagnostic RESOURCE_STOP cannot become a complete original report even if numerical contrast exists. First qualify the full synthetic native route with genuinely certified definitions/availability and complete source/role contracts; no production enrollment or actual A continuation has occurred. Reuse the completed26-file/51-method source qualification and recorded5752/8640-case retained replay instead of reopening those inventories. Preserve the actual original A null formalization, all source/exposure/failure histories and exact original parameters/unknown/time commitments. The unchanged ten-million-step cap still stops the current synthetic Q1 engineering shape; investigate the smallest approved exact mapping/resource correction without raising caps, shortening the original universe, substituting a claim or treating the stop as a market result. Then version actual formalizer profiles/full wires and check fresh source/currentness/count/funding admission. Any future allocation stays separate within the original USD5 ledger with USD0.574585 remaining; all seven old grants remain revoked. No automatic retry/successor, quality reduction, scientific/assessment/capital upgrade or routine permission question follows. The full seven-package objective remains active and incomplete.",
+  "private_evidence": ".trf-runtime/exact-runtime-2026-11-01/",
+  "sources_sha256": {
+    "trading_researcher/exact_runtime.py": "2a45a4b9d9a182ee741406e3533fbe19d1204b882882765f5ae80d993e2fd8b7",
+    "trading_researcher/EXACT_RUNTIME.md": "bd3552337f9cce0ae92d040b187ba3a28b1d45fe08c4b06cd76eff9c9b0d7abd",
+    "trading_researcher/exact_certification.py": "5ee220e7678a938a28e81be3ac5f6ecfcf920a6d6dc30b6be76ee08e7ffc8a7c",
+    "trading_researcher/exact_revocations.py": "17226c1ae3b2925c303a2041561af2168c801c80e8fcab32d5d94d5d542c18a6",
+    "trading_researcher/EXACT_CERTIFICATION.md": "649ca963c90a8428074c6ff7994c04e10ad6d24d51c39f5cd1e469c4f1ad8c5f",
+    "tests/test_exact_runtime.py": "bfa910d120c9471c94c55ae17b4ce4fe1122183ea2c5b0d734958ff52c35e220",
+    "tests/test_exact_runtime_review.py": "39cb6596fd8a354510fb838b6702848eaa208858c4be8d51477cc593796ef596",
+    "tests/test_exact_certification.py": "d0a681414ac36673ce8e3f6657649ba691af5f086d0da63ee980c421e394b554",
+    "tests/test_exact_certification_review.py": "c8527d3c0c73a44d9a3d006e2e6fcbd339e2af2e86d299e8f7b85dc46cbb36be",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "da3ace2d21b597b04f35004107ca1d1ade08d1a3c84ba3961af6695bc9ecfa19",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "994b84ebdac78dbed37e79a6d111db0b396c35ff81bb1059a02041732eb79ab7",
+    "docs/architecture/CURRENT_STATE.md": "c055fc78edd7f33694d1d2c4a2f43ff1d7ae273233cf9e61cf735c7f6f6d64c1",
+    "docs/reviews/implementation-2026-10-25/progress.json": "ea2424833682dfedcd193d2f02399da5adaf9a0271cfe64c9939ff2e331d29f1",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "11f76d1e129f60ffd8074a1be86cf1d78c44431d0dd1669c497d4716287b41d7"
+  }
+}

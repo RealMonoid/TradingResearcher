@@ -1,0 +1,291 @@
+{
+  "schema": "exact-native-development-execution-qualification/1",
+  "status": "PASS_SCOPED_GENUINE_SYNTHETIC_NATIVE_ROUTE_ACTUAL_ADMISSION_PENDING",
+  "at_utc": "2026-11-01T14:58:24.960410+00:00",
+  "python_version": "3.14.2",
+  "purpose": "Connect approved AST4 primitives to authenticated native development execution without changing scientific meaning or authority.",
+  "authority": {
+    "decision": "D097",
+    "contract": "bounded-exact-compositions/1.0",
+    "composition": "D084/research-contract14.1 metadata conformance; independent meaning remains separate",
+    "revocation": "D083 supported typed technical use only"
+  },
+  "top_level_test_contexts": 79,
+  "new_methods": 22,
+  "independently_authored_new_methods": 17,
+  "regression_contexts": 57,
+  "legacy_cases_repeated_through_new_broker": 3,
+  "executed_checks": {
+    "root": {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_execution.py",
+        "-v"
+      ],
+      "started_at_utc": "2026-11-01T14:53:42.537044+00:00",
+      "completed_at_utc": "2026-11-01T14:56:22.201706+00:00",
+      "exit_code": 0,
+      "output": "test_changed_compilation_and_independent_goldens_are_rejected (test_exact_execution.ExactCompositionChecks.test_changed_compilation_and_independent_goldens_are_rejected) ... ok\ntest_retained_checker_binds_candidate_and_independent_compiler_goldens (test_exact_execution.ExactCompositionChecks.test_retained_checker_binds_candidate_and_independent_compiler_goldens) ... ok\ntest_complete_native_route_uses_certified_inputs_and_independent_replay (test_exact_execution.ExactNativeExecution.test_complete_native_route_uses_certified_inputs_and_independent_replay) ... ok\ntest_generated_case_bytes_survive_failed_independent_replay (test_exact_execution.ExactNativeExecution.test_generated_case_bytes_survive_failed_independent_replay) ... ok\ntest_meaning_gap_fences_row_loader_and_child (test_exact_execution.ExactNativeExecution.test_meaning_gap_fences_row_loader_and_child) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 158.818s\n\nOK\n",
+      "fixture_sha256": {
+        "tests/exact_execution_support.py": "383ca281cd19e7f19fcd66f6f56651ac26473e0ce9975cf38f711f8b964ec639",
+        "tests/test_exact_execution.py": "68050119bee6e0453faf482b2d8a3c0284970e8ebe4fef7d68b65dc29ed8cbd9"
+      },
+      "test_methods": 5,
+      "seconds": 158.818
+    },
+    "independent": {
+      "command": "C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe -B (unittest.defaultTestLoader.discover tests/test_exact_execution_review.py; TextTestRunner verbosity=2)",
+      "exit_code": 0,
+      "test_methods": 17,
+      "expected_test_methods": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 197.64,
+      "output_file": ".trf-runtime/exact-execution-2026-11-01/independent-test-output-3.txt",
+      "outputfile_sha256": "42817acc0cc64362b2c834c1a29dfc0bf253a9283d0871e3ff395ae001770652",
+      "test_sha256": "2798845e2376be3dccc8728f01747aaadd99cfbba8902e9e0b32702f42fe326f",
+      "fixture_sha256": "383ca281cd19e7f19fcd66f6f56651ac26473e0ce9975cf38f711f8b964ec639",
+      "scope": "Temporary genuinely certified synthetic native four-stage transport and deterministic execution only; no actual model semantics/scientific authority/production admission. Separate settled ledger unchanged in every test body.",
+      "source_sha256": {
+        "trading_researcher/exact_execution.py": "f563d2dcb78d450e7f28eece1cde91b543acd99ec3830f1b22630539fea8070d",
+        "trading_researcher/exact_composition.py": "f36fb1329bee772e6ecec32774123c1c35eb17464544f6ecca0634d6942f480d",
+        "trading_researcher/exact_meaning.py": "eaa83aedc3d0232512e4ca85ea80456a5cd0c79bc1a2c478137138f86ce933e0",
+        "trading_researcher/exact_revocations.py": "287ce9b6c4ec21780858dbb676120711b60017d5b1e232264d25ccd51b1b8123"
+      }
+    },
+    "regression": [
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_exact_certification*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "output": "test_failed_child_retains_source_and_gap_without_selecting_certificate (test_exact_certification.ExactCertificateTests.test_failed_child_retains_source_and_gap_without_selecting_certificate) ... ok\ntest_owned_child_result_json_types_are_not_coerced (test_exact_certification.ExactCertificateTests.test_owned_child_result_json_types_are_not_coerced) ... ok\ntest_owned_source_package_certificate_and_registry_survive_restart (test_exact_certification.ExactCertificateTests.test_owned_source_package_certificate_and_registry_survive_restart) ... ok\ntest_known_version_revocation_preserves_history_and_changes_only_current_use (test_exact_certification.ExactLegacyRevocationTests.test_known_version_revocation_preserves_history_and_changes_only_current_use) ... ok\ntest_shared_dependency_across_typed_fields_is_checked_once (test_exact_certification.ExactLegacyRevocationTests.test_shared_dependency_across_typed_fields_is_checked_once) ... ok\ntest_source_package_identity_cannot_be_reset_by_a_new_artifact_timestamp (test_exact_certification.ExactLegacyRevocationTests.test_source_package_identity_cannot_be_reset_by_a_new_artifact_timestamp) ... ok\ntest_actual_owned_certificate_commits_complete_sources_before_real_child (test_exact_certification_review.ExactCertificationReview.test_actual_owned_certificate_commits_complete_sources_before_real_child) ... ok\ntest_bad_package_metadata_and_descriptors_fail_with_typed_rejection (test_exact_certification_review.ExactCertificationReview.test_bad_package_metadata_and_descriptors_fail_with_typed_rejection) ... ok\ntest_certificate_revocation_does_not_propagate_through_generic_provenance (test_exact_certification_review.ExactCertificationReview.test_certificate_revocation_does_not_propagate_through_generic_provenance) ... ok\ntest_certificate_status_identity_child_environment_and_result_are_checked (test_exact_certification_review.ExactCertificationReview.test_certificate_status_identity_child_environment_and_result_are_checked) ... ok\ntest_child_failure_retains_owned_package_gap_and_does_not_select_it (test_exact_certification_review.ExactCertificationReview.test_child_failure_retains_owned_package_gap_and_does_not_select_it) ... ok\ntest_corrupt_native_blob_cannot_be_read_as_a_source_capsule (test_exact_certification_review.ExactCertificationReview.test_corrupt_native_blob_cannot_be_read_as_a_source_capsule) ... ok\ntest_explicit_same_id_restart_revalidates_and_storage_does_not_auto_select (test_exact_certification_review.ExactCertificationReview.test_explicit_same_id_restart_revalidates_and_storage_does_not_auto_select) ... ok\ntest_loaded_host_and_golden_expectation_mismatches_deny_current_use (test_exact_certification_review.ExactCertificationReview.test_loaded_host_and_golden_expectation_mismatches_deny_current_use) ... ok\ntest_new_broker_reserves_package_and_certificate_namespaces (test_exact_certification_review.ExactCertificationReview.test_new_broker_reserves_package_and_certificate_namespaces) ... ok\ntest_old_typed_package_revocation_delegates_without_revoking_exact_schema (test_exact_certification_review.ExactCertificationReview.test_old_typed_package_revocation_delegates_without_revoking_exact_schema) ... ok\ntest_only_operator_can_certify_without_staging_an_unauthorized_attempt (test_exact_certification_review.ExactCertificationReview.test_only_operator_can_certify_without_staging_an_unauthorized_attempt) ... ok\ntest_package_revocation_covers_same_footprint_clones_and_typed_cert_descendants (test_exact_certification_review.ExactCertificationReview.test_package_revocation_covers_same_footprint_clones_and_typed_cert_descendants) ... ok\ntest_source_lookalikes_supplied_through_old_broker_never_qualify (test_exact_certification_review.ExactCertificationReview.test_source_lookalikes_supplied_through_old_broker_never_qualify) ... ok\n\n----------------------------------------------------------------------\nRan 19 tests in 18.400s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_revocations*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "output": "test_known_version_revocation_preserves_history_and_changes_only_current_use (test_revocations.RevocationTests.test_known_version_revocation_preserves_history_and_changes_only_current_use) ... ok\ntest_shared_dependency_across_typed_fields_is_checked_once (test_revocations.RevocationTests.test_shared_dependency_across_typed_fields_is_checked_once) ... ok\ntest_source_package_identity_cannot_be_reset_by_a_new_artifact_timestamp (test_revocations.RevocationTests.test_source_package_identity_cannot_be_reset_by_a_new_artifact_timestamp) ... ok\ntest_backup_restore_keeps_revocation_and_original_evidence (test_revocations_adversarial.RevocationAdversarialTests.test_backup_restore_keeps_revocation_and_original_evidence) ... ok\ntest_different_package_bytes_are_not_semantically_revoked_by_similarity (test_revocations_adversarial.RevocationAdversarialTests.test_different_package_bytes_are_not_semantically_revoked_by_similarity) ... ok\ntest_preupgrade_operator_source_cannot_impersonate_owned_revocation (test_revocations_adversarial.RevocationAdversarialTests.test_preupgrade_operator_source_cannot_impersonate_owned_revocation) ... ok\ntest_revocation_during_real_reference_validation_retains_closed_gap (test_revocations_adversarial.RevocationAdversarialTests.test_revocation_during_real_reference_validation_retains_closed_gap) ... ok\ntest_revocation_during_unlocked_scan_prevents_returning_new_rows (test_revocations_adversarial.RevocationAdversarialTests.test_revocation_during_unlocked_scan_prevents_returning_new_rows) ... ok\ntest_revocation_is_idempotent_but_key_cannot_change_target_or_reason (test_revocations_adversarial.RevocationAdversarialTests.test_revocation_is_idempotent_but_key_cannot_change_target_or_reason) ... ok\ntest_revocation_namespace_cannot_be_forged_by_source_or_worker (test_revocations_adversarial.RevocationAdversarialTests.test_revocation_namespace_cannot_be_forged_by_source_or_worker) ... ok\ntest_revoked_data_denied_before_row_scan_but_history_is_unchanged (test_revocations_adversarial.RevocationAdversarialTests.test_revoked_data_denied_before_row_scan_but_history_is_unchanged) ... ok\ntest_same_package_bytes_under_later_artifact_id_remain_revoked (test_revocations_adversarial.RevocationAdversarialTests.test_same_package_bytes_under_later_artifact_id_remain_revoked) ... ok\ntest_supersedes_and_exposure_do_not_turn_replacement_into_hard_dependency (test_revocations_adversarial.RevocationAdversarialTests.test_supersedes_and_exposure_do_not_turn_replacement_into_hard_dependency) ... ok\ntest_unknown_consumer_is_neither_valid_nor_inferred_from_exposure (test_revocations_adversarial.RevocationAdversarialTests.test_unknown_consumer_is_neither_valid_nor_inferred_from_exposure) ... ok\ntest_unknown_evidence_or_unsupported_target_cannot_issue_revocation (test_revocations_adversarial.RevocationAdversarialTests.test_unknown_evidence_or_unsupported_target_cannot_issue_revocation) ... ok\ntest_worker_denied_before_target_or_evidence_read (test_revocations_adversarial.RevocationAdversarialTests.test_worker_denied_before_target_or_evidence_read) ... ok\ntest_cached_measurement_does_not_authorize_delivery_after_revocation (test_revocations_adversarial.RevocationMeasurementAdversarialTests.test_cached_measurement_does_not_authorize_delivery_after_revocation) ... ok\ntest_revocation_during_measurement_retains_but_cannot_deliver_new_values (test_revocations_adversarial.RevocationMeasurementAdversarialTests.test_revocation_during_measurement_retains_but_cannot_deliver_new_values) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 11.641s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_meaning_reviews*.py",
+          "-v"
+        ],
+        "exit_code": 0,
+        "output": "test_arbitrary_prompt_does_not_satisfy_prerequisite (test_meaning_reviews.MeaningCompletionTests.test_arbitrary_prompt_does_not_satisfy_prerequisite) ... ok\ntest_completed_qualified_review_satisfies_only_process_prerequisite (test_meaning_reviews.MeaningCompletionTests.test_completed_qualified_review_satisfies_only_process_prerequisite) ... ok\ntest_different_review_remains_gap (test_meaning_reviews.MeaningCompletionTests.test_different_review_remains_gap) ... ok\ntest_historically_timely_review_can_be_assessed_after_epoch_expiry (test_meaning_reviews.MeaningCompletionTests.test_historically_timely_review_can_be_assessed_after_epoch_expiry) ... ok\ntest_new_review_makes_prior_positive_assessment_stale (test_meaning_reviews.MeaningCompletionTests.test_new_review_makes_prior_positive_assessment_stale) ... ok\ntest_scripted_live_label_does_not_satisfy_prerequisite (test_meaning_reviews.MeaningCompletionTests.test_scripted_live_label_does_not_satisfy_prerequisite) ... ok\ntest_assessment_is_operator_owned_and_idempotent (test_meaning_reviews.MeaningReviewTests.test_assessment_is_operator_owned_and_idempotent) ... ok\ntest_missing_review_retains_gap_without_promoting_unsupported_idea (test_meaning_reviews.MeaningReviewTests.test_missing_review_retains_gap_without_promoting_unsupported_idea) ... ok\ntest_corrupt_or_forged_receipts_are_typed_gaps_not_positive_assessments (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_corrupt_or_forged_receipts_are_typed_gaps_not_positive_assessments) ... ok\ntest_critical_call_from_prior_generation_survives_unsubmitted_result (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_critical_call_from_prior_generation_survives_unsubmitted_result) ... ok\ntest_faithful_gap_review_never_promotes_candidate_and_old_record_stays_unverified (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_faithful_gap_review_never_promotes_candidate_and_old_record_stays_unverified) ... ok\ntest_false_live_label_and_bad_prompt_cannot_be_selected_around (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_false_live_label_and_bad_prompt_cannot_be_selected_around) ... ok\ntest_historical_completion_restart_and_sqlite_backup_preserve_assessment (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_historical_completion_restart_and_sqlite_backup_preserve_assessment) ... ok\ntest_later_favorable_completed_review_does_not_hide_earlier_critical_job (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_later_favorable_completed_review_does_not_hide_earlier_critical_job) ... ok\ntest_protected_schema_and_operator_only_assessment_cannot_be_forged (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_protected_schema_and_operator_only_assessment_cannot_be_forged) ... ok\ntest_review_cannot_move_target_to_fresh_epoch_budget (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_review_cannot_move_target_to_fresh_epoch_budget) ... ok\ntest_same_key_different_target_conflicts_even_when_both_have_review_gaps (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_same_key_different_target_conflicts_even_when_both_have_review_gaps) ... ok\ntest_source_policy_change_stales_even_a_positive_completed_assessment (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_source_policy_change_stales_even_a_positive_completed_assessment) ... ok\ntest_unfinished_inventory_stales_prior_assessment_and_cannot_reuse_key (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_unfinished_inventory_stales_prior_assessment_and_cannot_reuse_key) ... ok\ntest_unresolved_owned_review_dispatch_blocks_assessment_without_retry (test_meaning_reviews_adversarial.MeaningReviewsAdversarialTests.test_unresolved_owned_review_dispatch_blocks_assessment_without_retry) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 16.085s\n\nOK\n"
+      }
+    ]
+  },
+  "sources_sha256": {
+    "trading_researcher/exact_execution.py": "f563d2dcb78d450e7f28eece1cde91b543acd99ec3830f1b22630539fea8070d",
+    "trading_researcher/exact_composition.py": "f36fb1329bee772e6ecec32774123c1c35eb17464544f6ecca0634d6942f480d",
+    "trading_researcher/exact_meaning.py": "eaa83aedc3d0232512e4ca85ea80456a5cd0c79bc1a2c478137138f86ce933e0",
+    "trading_researcher/exact_revocations.py": "287ce9b6c4ec21780858dbb676120711b60017d5b1e232264d25ccd51b1b8123",
+    "trading_researcher/EXACT_EXECUTION.md": "c2dd28113c4cc1e1ed7c18ed9f3f35530eec46222b08cd74e0ab105a68a7c506",
+    "tests/exact_execution_support.py": "383ca281cd19e7f19fcd66f6f56651ac26473e0ce9975cf38f711f8b964ec639",
+    "tests/test_exact_execution.py": "68050119bee6e0453faf482b2d8a3c0284970e8ebe4fef7d68b65dc29ed8cbd9",
+    "tests/test_exact_execution_review.py": "2798845e2376be3dccc8728f01747aaadd99cfbba8902e9e0b32702f42fe326f"
+  },
+  "private_evidence_root": ".trf-runtime/exact-execution-2026-11-01",
+  "concurrent_source_boundary": {
+    "source_author_turn_completed_at_utc": "2026-11-01T14:52:46Z",
+    "new_dq_source_sha256": "e7eb7cb6e5db6bf78b6e3256b62614af1f0de2646bd780748fa7650000ce6018",
+    "qualification": "Fresh processes after source-author completion; no rebinding of denied closures. DQ software behavior is outside this qualification."
+  },
+  "preserved_previous_revocations": {
+    "path": ".trf-runtime/exact-execution-2026-11-01/prior-exact-revocations.py",
+    "sha256": "17226c1ae3b2925c303a2041561af2168c801c80e8fcab32d5d94d5d542c18a6",
+    "qualification": "Historical source revision preserved; new typed namespaces require fresh qualification, not rewriting old certificates."
+  },
+  "genuine_synthetic_route": {
+    "normalized_and_certified_input": true,
+    "assumed_delay_seconds": 900,
+    "native_source_certificates": true,
+    "four_finite_native_controller_ledger_calls": true,
+    "review_prompt_protocol_unchanged": true,
+    "independent_meaning_process_satisfied": true,
+    "qualified_development_data_use": true,
+    "owned_compilation_and_composition": true,
+    "cases": 3,
+    "case_statuses": [
+      "SCOPE_UNKNOWN",
+      "ELIGIBLE",
+      "PARTITION_BOUNDARY"
+    ],
+    "fresh_separate_retained_replay": true,
+    "diagnostic_resource_stop_fences_complete_report": true,
+    "generated_bytes_retained_after_failed_replay": true,
+    "qualification": "Fixed synthetic discovery/formalizer/reviewer/count replies; no actual LLM semantic judgment or real packet-token-fit evidence."
+  },
+  "retained_failures": [
+    {
+      "stage": "first native review",
+      "tool_chunks": [
+        "b7429e",
+        "14a6ce"
+      ],
+      "exit_code": 1,
+      "finding": "Legacy six-field receipt and direct-path validator incompatible with counted finite inquiry."
+    },
+    {
+      "stage": "post receipt bridge",
+      "tool_chunks": [
+        "7b3fff",
+        "a3e995"
+      ],
+      "exit_code": 1,
+      "finding": "Counted execution path remained different; probe.json/probe-2.json retain exact gaps, then successful strict historical accounting."
+    },
+    {
+      "stage": "fixture data use",
+      "finding": "Placeholder provider-document bytes correctly failed exact reviewed-rights gate. Replaced only fixture ingestion with retained reviewed bytes."
+    },
+    {
+      "stage": "independent run1",
+      "path": ".trf-runtime/exact-execution-2026-11-01/independent-test-output-1.txt",
+      "finding": "900-second original versus zero-delay fixture, unsupported generic technical binding expectation and concurrent source drift. Corrected actual normalization input/test expectation; source denial preserved."
+    },
+    {
+      "stage": "independent run2/root retry",
+      "path": ".trf-runtime/exact-execution-2026-11-01/independent-test-output-2.txt",
+      "finding": "Concurrent DQ source change correctly denied current use before epoch. Partial fixture constructor cleanup then corrected without registry/ledger rebind."
+    },
+    {
+      "stage": "source review",
+      "finding": "Added full composition envelope/request hash and canonical capsule/data-use binding; strengthened exact count receipt/native-ledger currentness without changing legacy bytes."
+    }
+  ],
+  "preservation": {
+    "old_runtime_pins_exact": 37,
+    "historical_inquiry_member_hashes_exact": 117,
+    "shared_model_calls": 53,
+    "old_grants_still_revoked": 7,
+    "prior_evidence": "docs/reviews/implementation-2026-10-25/exact-runtime-2026-11-01.json"
+  },
+  "research_usage": {
+    "totals": {
+      "calls": 53,
+      "known_usage_calls": 53,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1058582,
+      "known_output_tokens": 177896,
+      "known_total_tokens": 1236478,
+      "exact_total_tokens": 1236478,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 53,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 49754,
+      "reasoning_detail_calls": 53,
+      "exact_reasoning_output_tokens": 49754
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 4425415000,
+      "available_nano": 574585000,
+      "halted": false
+    },
+    "per_call_model_version_utc_history": "docs/reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json",
+    "immutable_served_snapshot": "UNKNOWN",
+    "count_service_billing": "UNVERIFIED",
+    "invoice_reconciled": false
+  },
+  "construction_usage_through_snapshot": {
+    "scope": "Main construction since retained-runtime snapshot, including failed attempts/rework; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T13:56:12.078Z",
+    "snapshot_at_utc": "2026-11-01T14:58:02.604Z",
+    "tokens": {
+      "input_tokens": 20853219,
+      "cached_input_tokens": 20649728,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 75458,
+      "reasoning_output_tokens": 39536,
+      "total_tokens": 20928677
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "new_research_model_calls": 0,
+  "new_count_calls": 0,
+  "new_production_grants": 0,
+  "production_registry_mutated": false,
+  "production_enrollment_qualified": false,
+  "actual_A_still_original_null_formalization": true,
+  "retained_q1_resource_observation": {
+    "expected_cases": 8640,
+    "processed_cases": 5752,
+    "primitive_steps": 10000000,
+    "diagnostic_cases": 0,
+    "aggregate_effect": null,
+    "status": "RESOURCE_STOP",
+    "evidence": "docs/reviews/implementation-2026-10-25/exact-runtime-2026-11-01.json",
+    "rerun_here": false
+  },
+  "unverified": [
+    "Actual retained original A formalization/meaning/execution and full-Q1 resource fit",
+    "Fresh actual model profiles/full wires/source/count/funding admission and token-fit",
+    "Actual DQ model behavior; separately owned software kit is not behavioral evidence",
+    "General scientific admission/information/calibration/protected assessment/freeze",
+    "Economic usefulness, policy returns, live deployment or capital authority",
+    "OS sandbox, peak RAM, count-service billing, immutable served model snapshot and invoices",
+    "Global implementation verifier baseline not reaudited; existing master/discipline failures remain separate"
+  ],
+  "scientific_readiness": false,
+  "objective_complete": false,
+  "changed_files": [
+    "trading_researcher/exact_execution.py",
+    "trading_researcher/exact_composition.py",
+    "trading_researcher/exact_meaning.py",
+    "trading_researcher/exact_revocations.py",
+    "trading_researcher/EXACT_EXECUTION.md",
+    "tests/exact_execution_support.py",
+    "tests/test_exact_execution.py",
+    "tests/test_exact_execution_review.py",
+    "docs/reviews/implementation-2026-10-25/exact-execution-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md"
+  ],
+  "next_action": "Resolve the retained full-Q1 engineering construction's resource gap through the smallest independently checked, meaning-preserving exact mapping under the unchanged ten-million-step/1800-second bounds. Preserve the fixed original A parameters, universe, validity/unknown/time rules, null formalization and all exposure/failure history; do not change certified step accounting, raise caps, shorten history or substitute a claim. Then version the complete actual AST4 formalizer profile/role wires and recheck current source/input/data-use/count/funding admission for a separately bounded retained-idea continuation. The full synthetic native route is software-qualified only, not production enrollment, actual LLM meaning, full-Q1 completion or scientific/economic evidence. Any later allocation stays within the original USD5 ledger with USD0.574585 remaining; all seven old grants stay revoked, with no automatic retry/successor or scientific/assessment/capital upgrade. Reuse the separately owned DQ behavior kit only through its own applicable source/resource admission; its software checks are not actual model behavior. The seven-package objective remains active and incomplete."
+}

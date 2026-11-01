@@ -1,0 +1,221 @@
+{
+  "schema": "inquiry-live-final-checks/1",
+  "at_utc": "2026-11-01 05:26:00 UTC",
+  "status": "PASS_BOUNDED_UNIT_WITH_TWO_PREEXISTING_DOCUMENT_SCOPE_FAILURES",
+  "scope": "Actual source-bound inquiry transport/native accounting/closed trial, documentation and reviewed inactive proposal. No executable A, actual meaning-review, empirical/scientific/economic or proposed-operator acceptance.",
+  "checks": [
+    {
+      "name": "closed_trial",
+      "command": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B '.trf-runtime/inquiry-admission-2026-11-01/verify_closed.py'",
+      "exit_code": 0,
+      "result": "PASS_CLOSED_TRIAL_SOURCE_NATIVE_ACCOUNTING_AND_HANDOFF",
+      "closed_trial": {
+        "status": "PASS_CLOSED_TRIAL_SOURCE_NATIVE_ACCOUNTING_AND_HANDOFF",
+        "authenticated_calls": 3,
+        "new_tokens": 172162,
+        "new_nano_usd": 468692500,
+        "old_usage_records_exact": 50,
+        "old_pins_exact": 37,
+        "original_roots_exact": 13,
+        "installed_source_count": 117,
+        "revoked_grants": 7,
+        "native_integrity": "PASS",
+        "review_calls": 0,
+        "hypothesis_computations": 0,
+        "new_operators_activated": 0,
+        "scientific_readiness": false,
+        "production_mutations_by_this_check": 0
+      }
+    },
+    {
+      "name": "system_model",
+      "command": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B 'docs/reviews/verify_system_model.py'",
+      "exit_code": 0,
+      "result": "PASS",
+      "errors": [],
+      "checks": {
+        "local_links": 761,
+        "source_files": 5,
+        "decisions": 96,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Not checked; rerun with retained --baseline inventory",
+        "git_diff_check_exit": 0
+      }
+    },
+    {
+      "name": "retail_contract",
+      "command": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B 'docs/reviews/verify_retail_contract.py'",
+      "exit_code": 0,
+      "result": "PASS",
+      "errors": [],
+      "checks": {
+        "local_links": 761,
+        "source_files": 5,
+        "decisions": 96,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+        "git_diff_check_exit": 0,
+        "later_approved_changed_paths": {
+          "REVIEWING.md": "D086 / agent-inquiry/1.0",
+          ".gitattributes": "October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes"
+        },
+        "adoption_baseline_files": 63,
+        "preexisting_files_unchanged": 44,
+        "archived_documents_exact": 20,
+        "preserved_preapproval_decisions": 70,
+        "full_historical_definition_review_generator_texts": 3,
+        "approved_policy_sections_exact_except_status_words": 15,
+        "scoped_open_dispositions_and_acceptance_mappings": 15,
+        "adoption_decision_status_counts_D001_D085": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 63,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        },
+        "decision_status_counts": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 74,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        }
+      }
+    },
+    {
+      "name": "d096_adoption",
+      "command": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B 'docs/reviews/adoption-metacognition-2026-11-01/verify_adoption.py'",
+      "exit_code": 0,
+      "result": "PASS",
+      "errors": [],
+      "checks": {
+        "archived_exact_files": 22,
+        "protected_files": 9,
+        "inquiry_rules": 7,
+        "feedback_rules": 5,
+        "worked_examples": 5,
+        "future_acceptance_cases": 12,
+        "behavioral_tests_run": 0,
+        "preserved_prior_structured_decisions": 95,
+        "preserved_contract_bodies": 2,
+        "other_progress_keys_changed_since_baseline": [
+          "authorization",
+          "next_action",
+          "external_inputs_needed",
+          "implementation_test_authorization",
+          "prior_next_action"
+        ],
+        "preserved_package_sections": 7,
+        "local_links": 711,
+        "local_anchors": 487,
+        "whitespace": "PASS",
+        "other_concurrent_changes_since_baseline": [
+          "docs/reviews/implementation-2026-10-25/verify_implementation.py",
+          "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md"
+        ],
+        "git_diff_check_exit": 0
+      }
+    },
+    {
+      "name": "implementation_scope",
+      "command": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B 'docs/reviews/implementation-2026-10-25/verify_implementation.py'",
+      "exit_code": 1,
+      "result": "FAIL",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ]
+    },
+    {
+      "name": "whitespace",
+      "command": "git diff --check",
+      "exit_code": 0,
+      "whitespace": "warning: in the working copy of 'docs/architecture/04_DEFINITIONS.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/12_TRACEABILITY_MATRIX.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/architecture/CURRENT_STATE.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md', CRLF will be replaced by LF the next time Git touches it\nwarning: in the working copy of 'docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md', CRLF will be replaced by LF the next time Git touches it\n"
+    }
+  ],
+  "integrated_tests": {
+    "command_patterns": [
+      "test_inquiry*.py",
+      "test_controller_providers*.py"
+    ],
+    "tests": [
+      71,
+      18
+    ],
+    "exit_codes": [
+      0,
+      0
+    ],
+    "unique_total": 89,
+    "logs": ".trf-runtime/inquiry-admission-2026-11-01/checks-{inquiry-integrated,controller-regression}.json",
+    "qualification": "Current117-source hashes and frozen roles retained since tests; later changes were private orchestration and descriptive/proposed documentation."
+  },
+  "native_currentness_and_preservation": {
+    "settled_authenticated_new_calls": 3,
+    "old_usage_records_exact": 50,
+    "old_source_pins_exact": 37,
+    "original_feedback_roots_exact": 13,
+    "source_closure": 117,
+    "all_grants_revoked": 7,
+    "native_integrity": "PASS",
+    "unresolved_usage": 0
+  },
+  "research_usage": {
+    "requested_model": "gpt-6.1-sol",
+    "reported_model": "gpt-6.1-sol",
+    "catalog_version": "6.1",
+    "immutable_snapshot_status": "UNKNOWN",
+    "new_calls": 3,
+    "new_tokens": 172162,
+    "new_conservative_nano_usd": 468692500,
+    "shared_calls": 53,
+    "shared_tokens": 1236478,
+    "shared_conservative_nano_usd": 4425415000,
+    "remaining_nano_usd": 574585000,
+    "per_call_model_time_token_receipts": "docs/reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json",
+    "invoice_and_count_billing": "UNKNOWN"
+  },
+  "changed_files": [
+    "trading_researcher/inquiry/resources.py",
+    "trading_researcher/inquiry/resource_host.py",
+    "trading_researcher/inquiry/RUNTIME.md",
+    "tests/test_inquiry_role_transport.py",
+    "tests/test_inquiry_roles_review.py",
+    "tests/fixtures/inquiry_actual_roles_2026-11-01.json",
+    "docs/reviews/implementation-2026-10-25/inquiry-admission-qualification-2026-11-01.json",
+    "docs/reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json",
+    "docs/reviews/implementation-2026-10-25/inquiry-live-final-checks-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md"
+  ],
+  "private_evidence": ".trf-runtime/inquiry-admission-2026-11-01/ (operator sources separately hashed in the trial record; internal capabilities are excluded)",
+  "unverified": [
+    "Fitting executable formalization, actual independent meaning review and descriptive computation for new A.",
+    "All unelicited AC/DQ behavior, comparative benefit, broad diagnosis quality or idea diversity.",
+    "Proposed AST4 implementation/acceptance/current native admission; explicit user approval is pending.",
+    "Scientific calibration/information/assessment/freeze, policy economics, other-provider live cycle and reporting/delivery."
+  ],
+  "remaining_objective": "Seven-package framework remains IN_PROGRESS. The sole plan holds the current approval boundary and unrelated authorized work."
+}

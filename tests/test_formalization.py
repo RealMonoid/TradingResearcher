@@ -93,6 +93,22 @@ class FormalizationTests(unittest.TestCase):
             self.assertEqual(journal['kind'], 'gap')
             self.assertIn(saved['id'], journal['content']['text'])
 
+    def test_malformed_programs_are_retained_without_dispatch(self):
+        for path in ('scope_ast', 'condition_ast', 'outcome'):
+            for malformed in (None, [], 'not a program'):
+                with self.subTest(path=path, malformed=malformed):
+                    candidate = copy.deepcopy(self.candidate)
+                    if path == 'outcome':
+                        candidate[path]['program'] = malformed
+                    else:
+                        candidate[path] = malformed
+                    saved = self.record(candidate=candidate)
+                    body = self.op('get_artifact', artifact_id=saved['id'])['body']
+                    self.assertEqual(body['candidate'], candidate)
+                    self.assertEqual(body['assessment']['status'], 'RETAINED_GAP')
+                    self.assertEqual(body['assessment']['gap']['code'], 'LANGUAGE_GAP')
+                    self.assertFalse(body['scientific_readiness'])
+
     def test_semantic_difference_ambiguity_and_original_text_mutation_cannot_advance(self):
         for status in ('different', 'ambiguous'):
             report = {**self.semantic, 'status': status, 'differences': ['The requested horizon is not represented']}

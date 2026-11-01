@@ -1,0 +1,96 @@
+{
+  "schema": "paired-development-qualification-observation/1",
+  "at_utc": "2026-10-30T12:46:32.413970+00:00",
+  "status": "SYNTHETIC_IMPLEMENTATION_CHECKS_PASSED",
+  "decision": "D094",
+  "scope": "Owned fixed-pair development path, independent original formula oracle, input/budget and retention gates.",
+  "checks": [
+    {
+      "command": "python -B .trf-runtime/paired-proposal-2026-10-30/check.py",
+      "tests": 95,
+      "seconds": 64.04725990000588,
+      "exit_code": 0,
+      "result": "PASS",
+      "private_evidence": ".trf-runtime/paired-proposal-2026-10-30/local-check-1793362502116249200.json"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_paired_pipeline.py -v",
+      "tests": 2,
+      "seconds": 235.823,
+      "exit_code": 0,
+      "result": "PASS",
+      "independent_reviewer": "exploratory_preflight",
+      "tested_source_sha256": "897ff79604921274845534978aa4ecaadc30f5a454eee1d825ec9d7e35fe5afc",
+      "tested_test_file_sha256": "40bb48e65f16b77f2b7775135f44bffa805e5cf1644ccf3c0e92c474bf42b609",
+      "scope": "Real temporary owned registry, exact public terms, synthetic pair, two simulated provider responses, full normal lifecycle and retained 64-case resource-prefix path."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_paired_pipeline.py -k exact_reviewed_public_source_bytes -v",
+      "tests": 1,
+      "seconds": 0.001,
+      "command_seconds": 0.9832038,
+      "exit_code": 0,
+      "result": "PASS",
+      "independent_reviewer": "exploratory_preflight",
+      "tested_test_file_sha256": "d25cc7e5f4f1bba5c898135c7c646c0a5b8fdaf43474661dd4fb5f033a142b9f",
+      "prior_full_test_file_sha256": "40bb48e65f16b77f2b7775135f44bffa805e5cf1644ccf3c0e92c474bf42b609",
+      "scope": "Path-only follow-up: both unmodified public vendor documents now use .md.source names, and the lifecycle loader adds that suffix. Their exact reviewed SHA256 values still match. The added test checks both sources; the two full lifecycle methods and production implementation are unchanged. The prior 235.823-second full run was not repeated or attributed to this new test-file hash."
+    }
+  ],
+  "oracle": {
+    "scenarios": 91,
+    "synthetic_case_checks": 1092,
+    "neutral_missingness_category_parity": true,
+    "precision": "Independent Decimal80 cross-check, with1e-65 allowance; analytical1e-12bp outward bound remains in the certified evaluator."
+  },
+  "retained_findings": [
+    "Missing dependency closure, malformed count/type and paired technical revocation edge findings corrected before activation.",
+    "Test fixture stale expiry and returned idea-index/envelope assertions corrected; these were fixture failures, not evidence of production success.",
+    "Verified incomplete streams retained as RESOURCE_STOP; failed original audit retains verified bytes as EXECUTION_GAP.",
+    "Old feature qualification was intact but stale because its source closure includes all installed modules; full same-data requalification succeeded.",
+    "Initial count-only transport returned OSError before any epoch claim. Credential-free DNS/TLS check reached401; one bounded preparation continuation counted the full input successfully."
+  ],
+  "preflight": {
+    "input_tokens": 28881,
+    "count_margin": 128,
+    "paired_reference_certificate_id": "e07f559ea0fb3235a426e1db669e9b79e72dddccf25161f2de83f9ffa6e41dd8",
+    "feature_certificate_id": "5855fe77a494398fc36f0db63b77624074d4342f00373dcf6dcdbec3dd7daacc",
+    "legacy_feedback_current": true,
+    "frozen_sources_unchanged": true,
+    "tariff": {
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "checked_utc_date": "2026-10-30",
+      "input_upper_nano_per_token": 2500,
+      "output_nano_per_token": 10000,
+      "invoice_verified": false
+    }
+  },
+  "files_sha256": {
+    "tests/fixtures/paired_provider_documents/README.md.source": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+    "tests/fixtures/paired_provider_documents/TERMS_AND_CONDITIONS.md.source": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0",
+    "tests/paired_original_oracle.py": "b18059528214cde32429d10a7f1adb50b217c79ec40dd31ae5cc49e7ee5a1e85",
+    "tests/test_paired_composition.py": "0e2eabbdcb621174d3aaf3f71b409cceadc039219c778380a03fcc208f9133db",
+    "tests/test_paired_development_adversarial.py": "00fb8dd938d6400a7fd543bff36509da86aa2ca023f99a01bc2fe29fddaa8ff4",
+    "tests/test_paired_formalization.py": "e1a0a4b7343db5b1c9473825eaa5affd0e0597e3dd4ee7f1fc0cfed447f30142",
+    "tests/test_paired_host_adversarial.py": "bfb2070dfd5af9d2ccc58d14877bb83436083143589d12c4d2416454555d71ac",
+    "tests/test_paired_pipeline.py": "d25cc7e5f4f1bba5c898135c7c646c0a5b8fdaf43474661dd4fb5f033a142b9f",
+    "tests/test_paired_runtime.py": "c95b74944b32c8e5a08224757e6452066789c02612cf8121fa4ed7c5cd1006dd",
+    "trading_researcher/PAIRED_DEVELOPMENT.md": "14c925ad3996400132c73b8362442665f6c66417ccf94d02865907490bb30c89",
+    "trading_researcher/controller_providers.py": "0a6867fa2c6b3c97fb19bc297da602d2d34544d66cbbe17113472e0878655966",
+    "trading_researcher/epoch_budget_dispatch.py": "753a7fbf63deb9cb4c9d6a58c987926a59a8f9d38b64e2d6729eea0077391812",
+    "trading_researcher/paired_broker.py": "fa26c4162f2380465370e29bc91acfcdf7a78467fab4130b47c7840a54b95e6d",
+    "trading_researcher/paired_budget.py": "48c079d7a807b0b7881c67cf820f62bd5e01561d2306ca0f12e53418f1d0193a",
+    "trading_researcher/paired_composition.py": "a3114860fb33e130287d9558b636f7be3ebc3413a67dea8ffb862d27ceed3ce8",
+    "trading_researcher/paired_computation.py": "897ff79604921274845534978aa4ecaadc30f5a454eee1d825ec9d7e35fe5afc",
+    "trading_researcher/paired_development.py": "a9a9e47c46ad0f21a125e46bfd33e5e95ac7ee43f866f822105924b91243492b",
+    "trading_researcher/paired_formalization.py": "eed89d13f977789526a80791a49df682f2978c7318fcd10995b4ccd3a93bfe1d",
+    "trading_researcher/paired_research.py": "ad1ad0037506200b262bde9228d54c71d27550e94bed1fe82515d67a9c61718d",
+    "trading_researcher/paired_revocations.py": "02e6a337d0cdf5eab9c783aaa95ab5b580720b6aeab15d2c2d6b3b0302a0ed06",
+    "trading_researcher/paired_runtime.py": "4df771cac32d652add27eba8afec4a84cd92fea0911c791f45621cbd8629c2ae"
+  },
+  "unverified": [
+    "Actual model meaning and actual market computation are recorded separately after the running continuation.",
+    "Scientific calibration, protected assessment, historical publication truth, model training exposure, economic usefulness and live capital authority."
+  ],
+  "scientific_readiness": false
+}

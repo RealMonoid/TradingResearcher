@@ -1,0 +1,807 @@
+{
+  "schema": "unregistered-proposal-shape-check/1",
+  "status": "PASS_STATIC_SHAPE_AND_EXISTING_GUARDS_ONLY",
+  "at_utc": "2026-11-01T06:02:08.337501+00:00",
+  "metrics": {
+    "scope": {
+      "nodes": 1,
+      "max_depth_zero_based": 0
+    },
+    "condition": {
+      "nodes": 130,
+      "max_depth_zero_based": 12
+    },
+    "outcome": {
+      "nodes": 25,
+      "max_depth_zero_based": 7
+    }
+  },
+  "unapproved_ast4_rejected": [
+    "condition",
+    "outcome"
+  ],
+  "existing_domain_guard_cases": [
+    {
+      "first": "100",
+      "last": "110",
+      "valid": true,
+      "missing": false
+    },
+    {
+      "first": "110",
+      "last": "100",
+      "valid": true,
+      "missing": false
+    },
+    {
+      "first": "100",
+      "last": "100",
+      "valid": true,
+      "missing": false
+    },
+    {
+      "first": "-100",
+      "last": "-110",
+      "valid": false,
+      "missing": true
+    },
+    {
+      "first": "-100",
+      "last": "110",
+      "valid": false,
+      "missing": true
+    },
+    {
+      "first": "100",
+      "last": "-110",
+      "valid": false,
+      "missing": true
+    },
+    {
+      "first": "0",
+      "last": "1",
+      "valid": false,
+      "missing": true
+    },
+    {
+      "first": "1",
+      "last": "0",
+      "valid": false,
+      "missing": true
+    },
+    {
+      "first": null,
+      "last": "1",
+      "valid": false,
+      "missing": true
+    },
+    {
+      "first": "1",
+      "last": null,
+      "valid": false,
+      "missing": true
+    }
+  ],
+  "existing_guard_truth_table": [
+    {
+      "V": true,
+      "P": true,
+      "guard": true
+    },
+    {
+      "V": true,
+      "P": false,
+      "guard": false
+    },
+    {
+      "V": true,
+      "P": null,
+      "guard": null
+    },
+    {
+      "V": false,
+      "P": true,
+      "guard": null
+    },
+    {
+      "V": false,
+      "P": false,
+      "guard": null
+    },
+    {
+      "V": false,
+      "P": null,
+      "guard": null
+    },
+    {
+      "V": null,
+      "P": true,
+      "guard": null
+    },
+    {
+      "V": null,
+      "P": false,
+      "guard": null
+    },
+    {
+      "V": null,
+      "P": null,
+      "guard": null
+    }
+  ],
+  "proposed_unregistered_trees": {
+    "scope": {
+      "schema": "research-ast/4",
+      "catalog_hash": "b22ffe28ad3f177df3c31f65134c3eebeebc8595b188f1e69e63f68d4ca80521",
+      "expression": {
+        "op": "literal",
+        "type": "boolean",
+        "unit": null,
+        "value": true
+      }
+    },
+    "condition": {
+      "schema": "research-ast/4",
+      "catalog_hash": "b22ffe28ad3f177df3c31f65134c3eebeebc8595b188f1e69e63f68d4ca80521",
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "or",
+          "left": {
+            "op": "and",
+            "left": {
+              "op": "and",
+              "left": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "ge",
+                    "left": {
+                      "op": "feature",
+                      "ref": "H@1"
+                    },
+                    "right": {
+                      "op": "feature",
+                      "ref": "L@1"
+                    }
+                  },
+                  "right": {
+                    "op": "gt",
+                    "left": {
+                      "op": "feature",
+                      "ref": "L@1"
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "price:BTCUSDT",
+                      "value": "0"
+                    }
+                  }
+                },
+                "right": {
+                  "op": "and",
+                  "left": {
+                    "op": "gt",
+                    "left": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "quote_USDT",
+                      "value": "0"
+                    }
+                  },
+                  "right": {
+                    "op": "ge",
+                    "left": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "quote_USDT",
+                      "value": "0"
+                    }
+                  }
+                }
+              },
+              "right": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "le",
+                    "left": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "right": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    }
+                  },
+                  "right": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "trailing_all",
+                      "arg": {
+                        "op": "and",
+                        "left": {
+                          "op": "and",
+                          "left": {
+                            "op": "ge",
+                            "left": {
+                              "op": "feature",
+                              "ref": "H@1"
+                            },
+                            "right": {
+                              "op": "feature",
+                              "ref": "L@1"
+                            }
+                          },
+                          "right": {
+                            "op": "gt",
+                            "left": {
+                              "op": "feature",
+                              "ref": "L@1"
+                            },
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "price:BTCUSDT",
+                              "value": "0"
+                            }
+                          }
+                        },
+                        "right": {
+                          "op": "ge",
+                          "left": {
+                            "op": "feature",
+                            "ref": "Q@1"
+                          },
+                          "right": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "quote_USDT",
+                            "value": "0"
+                          }
+                        }
+                      },
+                      "bars": 32
+                    },
+                    "bars": 1
+                  }
+                },
+                "right": {
+                  "op": "and",
+                  "left": {
+                    "op": "gt",
+                    "left": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_mean",
+                        "arg": {
+                          "op": "feature",
+                          "ref": "Q@1"
+                        },
+                        "bars": 32
+                      },
+                      "bars": 1
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "quote_USDT",
+                      "value": "0"
+                    }
+                  },
+                  "right": {
+                    "op": "gt",
+                    "left": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_product",
+                        "arg": {
+                          "op": "div",
+                          "left": {
+                            "op": "feature",
+                            "ref": "H@1"
+                          },
+                          "right": {
+                            "op": "feature",
+                            "ref": "L@1"
+                          }
+                        },
+                        "bars": 32
+                      },
+                      "bars": 1
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "ratio",
+                      "value": "1"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "op": "and",
+              "left": {
+                "op": "and",
+                "left": {
+                  "op": "ge",
+                  "left": {
+                    "op": "feature",
+                    "ref": "Q@1"
+                  },
+                  "right": {
+                    "op": "mul",
+                    "left": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "ratio",
+                      "value": "2"
+                    },
+                    "right": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_mean",
+                        "arg": {
+                          "op": "feature",
+                          "ref": "Q@1"
+                        },
+                        "bars": 32
+                      },
+                      "bars": 1
+                    }
+                  }
+                },
+                "right": {
+                  "op": "ge",
+                  "left": {
+                    "op": "div",
+                    "left": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "right": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    }
+                  },
+                  "right": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "ratio",
+                    "value": "0.45"
+                  }
+                }
+              },
+              "right": {
+                "op": "and",
+                "left": {
+                  "op": "le",
+                  "left": {
+                    "op": "div",
+                    "left": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "right": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    }
+                  },
+                  "right": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "ratio",
+                    "value": "0.55"
+                  }
+                },
+                "right": {
+                  "op": "le",
+                  "left": {
+                    "op": "integer_power",
+                    "arg": {
+                      "op": "div",
+                      "left": {
+                        "op": "feature",
+                        "ref": "H@1"
+                      },
+                      "right": {
+                        "op": "feature",
+                        "ref": "L@1"
+                      }
+                    },
+                    "exponent": 64
+                  },
+                  "right": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "trailing_product",
+                      "arg": {
+                        "op": "div",
+                        "left": {
+                          "op": "feature",
+                          "ref": "H@1"
+                        },
+                        "right": {
+                          "op": "feature",
+                          "ref": "L@1"
+                        }
+                      },
+                      "bars": 32
+                    },
+                    "bars": 1
+                  }
+                }
+              }
+            }
+          },
+          "right": {
+            "op": "and",
+            "left": {
+              "op": "not",
+              "arg": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "and",
+                    "left": {
+                      "op": "ge",
+                      "left": {
+                        "op": "feature",
+                        "ref": "H@1"
+                      },
+                      "right": {
+                        "op": "feature",
+                        "ref": "L@1"
+                      }
+                    },
+                    "right": {
+                      "op": "gt",
+                      "left": {
+                        "op": "feature",
+                        "ref": "L@1"
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "price:BTCUSDT",
+                        "value": "0"
+                      }
+                    }
+                  },
+                  "right": {
+                    "op": "and",
+                    "left": {
+                      "op": "gt",
+                      "left": {
+                        "op": "feature",
+                        "ref": "Q@1"
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "quote_USDT",
+                        "value": "0"
+                      }
+                    },
+                    "right": {
+                      "op": "ge",
+                      "left": {
+                        "op": "feature",
+                        "ref": "B@1"
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "quote_USDT",
+                        "value": "0"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "op": "and",
+                  "left": {
+                    "op": "and",
+                    "left": {
+                      "op": "le",
+                      "left": {
+                        "op": "feature",
+                        "ref": "B@1"
+                      },
+                      "right": {
+                        "op": "feature",
+                        "ref": "Q@1"
+                      }
+                    },
+                    "right": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_all",
+                        "arg": {
+                          "op": "and",
+                          "left": {
+                            "op": "and",
+                            "left": {
+                              "op": "ge",
+                              "left": {
+                                "op": "feature",
+                                "ref": "H@1"
+                              },
+                              "right": {
+                                "op": "feature",
+                                "ref": "L@1"
+                              }
+                            },
+                            "right": {
+                              "op": "gt",
+                              "left": {
+                                "op": "feature",
+                                "ref": "L@1"
+                              },
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "price:BTCUSDT",
+                                "value": "0"
+                              }
+                            }
+                          },
+                          "right": {
+                            "op": "ge",
+                            "left": {
+                              "op": "feature",
+                              "ref": "Q@1"
+                            },
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "quote_USDT",
+                              "value": "0"
+                            }
+                          }
+                        },
+                        "bars": 32
+                      },
+                      "bars": 1
+                    }
+                  },
+                  "right": {
+                    "op": "and",
+                    "left": {
+                      "op": "gt",
+                      "left": {
+                        "op": "lag",
+                        "arg": {
+                          "op": "trailing_mean",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "Q@1"
+                          },
+                          "bars": 32
+                        },
+                        "bars": 1
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "quote_USDT",
+                        "value": "0"
+                      }
+                    },
+                    "right": {
+                      "op": "gt",
+                      "left": {
+                        "op": "lag",
+                        "arg": {
+                          "op": "trailing_product",
+                          "arg": {
+                            "op": "div",
+                            "left": {
+                              "op": "feature",
+                              "ref": "H@1"
+                            },
+                            "right": {
+                              "op": "feature",
+                              "ref": "L@1"
+                            }
+                          },
+                          "bars": 32
+                        },
+                        "bars": 1
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "ratio",
+                        "value": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": null
+            }
+          }
+        },
+        "bars": 1
+      }
+    },
+    "outcome": {
+      "schema": "research-ast/4",
+      "catalog_hash": "b22ffe28ad3f177df3c31f65134c3eebeebc8595b188f1e69e63f68d4ca80521",
+      "expression": {
+        "op": "mul",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "basis_points",
+          "value": "10000"
+        },
+        "right": {
+          "op": "add",
+          "left": {
+            "op": "add",
+            "left": {
+              "op": "abs",
+              "arg": {
+                "op": "ln",
+                "arg": {
+                  "op": "div",
+                  "left": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "C@1"
+                    },
+                    "bars": 1
+                  },
+                  "right": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "C@1"
+                    },
+                    "bars": 5
+                  }
+                }
+              }
+            },
+            "right": {
+              "op": "mul",
+              "left": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": "0"
+              },
+              "right": {
+                "op": "ln",
+                "arg": {
+                  "op": "div",
+                  "left": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "C@1"
+                    },
+                    "bars": 5
+                  },
+                  "right": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "price:BTCUSDT",
+                    "value": "1"
+                  }
+                }
+              }
+            }
+          },
+          "right": {
+            "op": "mul",
+            "left": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": "0"
+            },
+            "right": {
+              "op": "ln",
+              "arg": {
+                "op": "div",
+                "left": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "C@1"
+                  },
+                  "bars": 1
+                },
+                "right": {
+                  "op": "literal",
+                  "type": "real",
+                  "unit": "price:BTCUSDT",
+                  "value": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "scope": "Engineering review fixture only. Synthetic feature aliases and proposed AST4 syntax; not an H_exec, formalization, certificate, accepted operator implementation or empirical result.",
+  "mapping_obligations": [
+    "Outer lag1 evaluates the signal at b=t-d. Baseline lag1/window32 then covers b-d through b-32d without the signal.",
+    "Power64 derives exactly from 32 divided by the one-half range threshold; product>1 preserves MW>0 under all original positive high/low guards.",
+    "Future-anchor lag1/lag5 select the original t+4d and t closes at a=t+5d. Existing zero*ln(endpoint/one-price-unit) terms preserve each positive endpoint domain and introduce no new raw input or research parameter.",
+    "Q1 bounds, cutoffs, complete availability/validity tracing, parameter origins, new operator semantics, resource behavior and independent complete mapping still require future approved implementation/certification."
+  ],
+  "new_operators_implemented": 0,
+  "new_operators_activated": 0,
+  "new_model_calls": 0,
+  "new_registry_writes": 0,
+  "full_mapping_certified": false,
+  "new_operator_conformance_tested": false,
+  "independent_review": {
+    "status": "NO_CONCRETE_STATIC_FORMULA_MISMATCH_FOUND",
+    "result_sha256": "bf7d6c497eb26e8597efd23a04a206025e4b8025ed43e50c193d54b6ee1aaa64",
+    "independent_recount_chunk": "6be9f7",
+    "scope": "Read-only original-A comparison and independent serialized-tree recount. No helper execution, new-op tests, production state or APIs.",
+    "findings": [
+      "Condition130nodes/depth12, outcome25/depth7, scope1/depth0 independently recounted.",
+      "Outerlag1/baseline lag1-window32 and futureanchor lags1/5 preserve the declared signal/baseline/endpoints.",
+      "Original H/L, Q/B, MQ and MW validity guards and exact thresholds are present; the condition reads no close.",
+      "Existing zero*ln(each endpoint/unit-one) terms enforce each positive endpoint and add exact zero on valid endpoints, with no new raw inputs."
+    ],
+    "limitations": [
+      "No new proposed operator was executed; tests cover existing G/signed-log guards and rejection of AST4 only.",
+      "Extra logarithms and duplicated validity checks consume actual steps. Node fit proves no full-Q1 resource fit.",
+      "Actual scope, instrument/date/cutoff, availability, source/parameter binding, diagnostics and complete mapping/acceptance remain future."
+    ]
+  },
+  "original_a_id": "e92a94551d9050ea5d7a0cb7d307b85389cac060d000e73d74c4edc64076acb3",
+  "check": {
+    "command": "python -B .trf-runtime/inquiry-frontier-audit-2026-11-01/shape_check.py",
+    "exit_code": 0,
+    "chunk_id": "ee7b14",
+    "existing_guard_cases": 19,
+    "expected_unapproved_ast_rejections": 2
+  },
+  "retained_recording_failure": {
+    "exit_code": 1,
+    "chunk_id": "4994e1",
+    "reason": "Importing the one-shot audit writer replayed its exclusive guard and failed before writes. The recorder now defines only the needed path/read/hash helpers locally."
+  },
+  "frontier_correction": "The initial frontier audit overstated the absence of another independent review task. This finite static shape/existing-guard check was available and is now completed. It is progress toward a concrete proposal, not authority to implement or activate its new operators.",
+  "current_boundary": "Explicit new-language approval is still pending. No fitting accepted H_exec or empirical result was created; original null candidate, grants, exposure and charges remain unchanged.",
+  "changed_files": [
+    "docs/reviews/implementation-2026-10-25/inquiry-proposal-shape-check-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md"
+  ],
+  "source_sha256": {
+    "private_shape_check": "365a2e3b4ea53e005f4a75c8f444cb8355175529e346b39c4a07b8b4ce63d6d8",
+    "existing_expressions": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+    "existing_bounded_math": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a"
+  },
+  "objective_complete": false
+}

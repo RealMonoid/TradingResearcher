@@ -1,5 +1,7 @@
 # Retained formalization records
 
+The optional [D089 bounded-math path](BOUNDED_MATH.md) adds explicit `research-ast/2` median/logarithmic-outcome formalizations with separate conformance certification and retained numerical enclosures. The legacy scalar path below remains unchanged. Independent meaning review receives the exact pinned optional contract; malformed program values remain retained language gaps.
+
 The [public data-target path](DATA_TARGETS.md) lets `test_universe.data_snapshot_ref` name an authorized, immutable predeclared target rather than a raw snapshot. The public declaration binds development feature semantics and requested calendar scope. Only a separately supplied private host binding can resolve it to exact protected data; neither the declaration nor formalization grants access. Independent review receives the original public declaration explicitly, alongside its exact public definitions. Existing direct snapshot references are unchanged.
 
 The [independent meaning-review assessment](MEANING_REVIEWS.md) separately records whether a complete controller-observed comparison process satisfies that prerequisite for an exact target. Model judgment remains fallible and does not authorize scientific execution.
@@ -13,6 +15,8 @@ The complete retained envelope, including original text, assessment and ancestry
 Context admission enforces the draft's host creation time and all known ancestor record-availability bounds, including through generic wrappers. A derived typed source inherits that bound. Unknown availability of legacy/raw sources is still unverified; this rule does not reconstruct historical market vintages.
 
 The semantic report has `status` (`equivalent`, `ambiguous`, or `different`), `segments` and `differences`. Each segment retains `text`, a candidate JSON-pointer `path`, and an `interpretation`. Concatenating segment text must reproduce the original idea text exactly; each path must exist. An equivalence assertion cannot carry declared differences. Ambiguity or difference prevents structural advancement. Matching these fields records a traceable formalizer assertion; it does not prove natural-language fidelity or independent review.
+
+The pointer root is the `hypothesis-exec/1` candidate object itself, not its response envelope. For example, `/estimand/missingness` addresses that candidate field; `/candidate/estimand/missingness` is invalid. The same root applies to `parameter_origins`. Resolve every pointer against the final submitted AST, including any added guard structure; an earlier tree's paths are not provenance for a later tree. The controller retains malformed pointers as gaps and does not remove prefixes, relocate origins or rewrite model output.
 
 ## Executable-candidate structure
 

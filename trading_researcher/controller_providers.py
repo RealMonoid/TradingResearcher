@@ -49,7 +49,12 @@ def source_hashes(provider):
     # Observed installed-source fingerprints, not a cryptographic remote attestation.
     names = {'controller_providers.py', 'researcher.py', 'research_calls.py',
              'codec.py', 'openai_provider.py', 'provider_usage.py', 'coordination.py',
-             'auxiliary.py', 'storage.py', 'memory.py', 'server.py', 'errors.py'}
+             'auxiliary.py', 'auxiliary_views.py', 'storage.py', 'memory.py', 'server.py', 'errors.py', 'epoch_budget.py',
+             'review_continuation.py', 'meaning_reviews.py', 'formalization.py',
+             'complete_feedback_budget.py', 'epoch_budget_dispatch.py', 'feedback_budget_broker.py',
+             'paired_budget.py', 'paired_broker.py', 'paired_research.py', 'paired_formalization.py',
+             'paired_development.py', 'paired_runtime.py', 'paired_computation.py', 'paired_revocations.py',
+             'paired_composition.py', 'paired_correction_budget.py'}
     if provider == 'anthropic':
         names.add('anthropic_provider.py')
     root = Path(__file__).parent
@@ -115,6 +120,7 @@ class ControllerProviders:
                 WHERE job_id=? AND generation=? AND request_key=?''', (job['id'], job['generation'], key)).fetchone()
             if prior is not None:
                 return self._invocation_result(prior['id'])
+            self._check_feedback_context(self._context(job['spec']['context_id']))
             profile = self._effective_research_profile(job)
             if profile['mode'] != 'live' or profile['currency'] != 'USD':
                 raise Denied('Direct invocation requires an explicit live USD epoch')

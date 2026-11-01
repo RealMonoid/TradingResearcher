@@ -1,0 +1,857 @@
+{
+  "schema": "amibroker-preflight-closeout/1",
+  "status": "PASS_FIXED_SYNTHETIC_PROFILE",
+  "at_utc": "2026-10-31T06:21:02.412831+00:00",
+  "purpose": "Close the already-started bounded native execution/accounting preflight after explicit user instruction to fix it.",
+  "authority": "October31 user: warte, versuche das mit amibroker zu fixen. The prior repair allowance was not reset; additional diagnosed correction/revalidation attempts under this renewed instruction are all retained below.",
+  "profile": "synthetic-long-flat/1",
+  "native_cases": 5,
+  "final_native_runs": 10,
+  "final_native_seconds_sum": 37.27069159998791,
+  "all_six_raw_exports_identical_in_each_repeat_pair": true,
+  "final_native_reports": [
+    {
+      "case": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061459Z-cf9c0052",
+      "result_sha256": "9e7b5d5631e836cd4df71a5e337d523c9bde8858b7033a2ff5e0a38f4b5a2822",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 1,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.599622300011106
+    },
+    {
+      "case": "timing",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061502Z-cc85131b",
+      "result_sha256": "32f320f33a6c363b758ed5bdbb958c28e7f274de190c20288b6c0b5b66d989f9",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 1,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.5166583999816794
+    },
+    {
+      "case": "costs",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061506Z-82e41ac6",
+      "result_sha256": "2b3b5ea22f3ca078bb8e252659ba7ef5586bc044f47273a4d8d636e344075f7c",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 1,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.929719700012356
+    },
+    {
+      "case": "costs",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061510Z-4bc4bdd6",
+      "result_sha256": "c452b3b9cf271d1c57123f216f7ba71416e59357b0f0a321c1aacb12e938e3e9",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 1,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.668288599990774
+    },
+    {
+      "case": "shared_cash",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061514Z-67566a7b",
+      "result_sha256": "b9ee739d8322a6bd2c2e95c3a14594592da90a1f67dc0dfa1d992204563ba701",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 1,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.783553600020241
+    },
+    {
+      "case": "shared_cash",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061518Z-1e15eb03",
+      "result_sha256": "4492f48493a5372217989695f6f6e6abb5db6eb9297440e9cd1051558f2a7b0f",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 1,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.8127772999869194
+    },
+    {
+      "case": "exit_then_entry",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061522Z-58cb9218",
+      "result_sha256": "d9c27a99c2fadb1fbdb4d9178bcc82f0106b058951b4deb18751da1a3bd316d8",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 2,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.837404499994591
+    },
+    {
+      "case": "exit_then_entry",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061526Z-f0e8ace2",
+      "result_sha256": "c828ffc16e0296ca5e5e0f72693440892b2b4309a63e2b49ead12b5389b70fc2",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 2,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.706069200008642
+    },
+    {
+      "case": "last_signal",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061530Z-775f4f9d",
+      "result_sha256": "7653c341a71e03b4342d741b827b5f3658e5e673a0e987ef78dbc6bf8bbc9c86",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 0,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.9048402999760583
+    },
+    {
+      "case": "last_signal",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061534Z-133aca72",
+      "result_sha256": "e942b8ef677d9c97c0893899389ee657b8cd6997cfdd8cb68f656647cff6b718",
+      "verification": {
+        "status": "PASS",
+        "rows": 8,
+        "trades": 0,
+        "price_absolute_tolerance": "0.00001",
+        "money_absolute_tolerance": "0.001"
+      },
+      "wall_seconds": 3.511757700005546
+    }
+  ],
+  "retained_attempts": [
+    {
+      "status": "FAIL",
+      "case_id": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261030T165707Z-40422696",
+      "started_at_utc": "2026-10-30T16:57:07.857531+00:00",
+      "finished_at_utc": "2026-10-30T16:58:40.252122+00:00",
+      "wall_seconds": 92.39078069999232,
+      "error": "Command '['C:\\\\WINDOWS\\\\SysWOW64\\\\cscript.exe', '//nologo', '//T:75', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\policy_worker.js', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\import.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\binance.format', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\policy.apx', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\signals.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\backtest.csv', '1']' timed out after 80 seconds",
+      "cleanup_error": "Command '['C:\\\\Program Files (x86)\\\\AmiBroker\\\\Broker.exe', '/database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\database']' timed out after 10 seconds",
+      "result_sha256": "1294b74a862d50d8d776eefe6cf0fe1dd47a29f8c0190fd1298d7db359ac1e02"
+    },
+    {
+      "status": "FAIL",
+      "case_id": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T055916Z-c001c4f2",
+      "started_at_utc": "2026-10-31T05:59:16.187508+00:00",
+      "finished_at_utc": "2026-10-31T06:00:48.687486+00:00",
+      "wall_seconds": 92.48898230001214,
+      "error": "Command '['C:\\\\WINDOWS\\\\SysWOW64\\\\cscript.exe', '//nologo', '//T:75', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\policy_worker.js', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\import.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\binance.format', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\policy.apx', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\signals.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\backtest.csv', '1']' timed out after 80 seconds",
+      "cleanup_error": "Command '['C:\\\\Program Files (x86)\\\\AmiBroker\\\\Broker.exe', '/database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\database']' timed out after 10 seconds",
+      "result_sha256": "25076750343ca1b963973b2844122f7195ee30006d3f307bd894fa547a5abbdd"
+    },
+    {
+      "status": "FAIL",
+      "case_id": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T060358Z-54751b56",
+      "started_at_utc": "2026-10-31T06:03:58.949893+00:00",
+      "finished_at_utc": "2026-10-31T06:05:37.468495+00:00",
+      "wall_seconds": 98.51453479999327,
+      "error": "Command '['C:\\\\WINDOWS\\\\SysWOW64\\\\cscript.exe', '//nologo', '//T:75', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\policy_worker.js', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\import.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\binance.format', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\policy.apx', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\signals.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\backtest.csv', '1']' timed out after 80 seconds",
+      "cleanup_error": "Command '['C:\\\\Program Files (x86)\\\\AmiBroker\\\\Broker.exe', '/database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\database']' timed out after 10 seconds",
+      "result_sha256": "1451717ec52fcfde480b0e3eeaf2e7756ee6bd60f623253d157ef38255dd2863"
+    },
+    {
+      "status": "FAIL",
+      "case_id": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T060625Z-64cebe20",
+      "started_at_utc": "2026-10-31T06:06:25.510548+00:00",
+      "finished_at_utc": "2026-10-31T06:07:57.931451+00:00",
+      "wall_seconds": 92.41718129999936,
+      "error": "Command '['C:\\\\WINDOWS\\\\SysWOW64\\\\cscript.exe', '//nologo', '//T:75', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\policy_worker.js', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\import.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\binance.format', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\policy.apx', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\signals.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\backtest.csv', '1']' timed out after 80 seconds",
+      "cleanup_error": "Command '['C:\\\\Program Files (x86)\\\\AmiBroker\\\\Broker.exe', '/database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\database']' timed out after 10 seconds",
+      "result_sha256": "494e69bcd72996033e4a933ad2834301acc534bc5e12787e52a2be6afc96fcec"
+    },
+    {
+      "status": "FAIL",
+      "case_id": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T060932Z-95052441",
+      "started_at_utc": "2026-10-31T06:09:32.651145+00:00",
+      "finished_at_utc": "2026-10-31T06:09:37.202703+00:00",
+      "wall_seconds": 4.5473930000152905,
+      "error": "Native case/trade count differs from independent expectations",
+      "cleanup_error": null,
+      "result_sha256": "7c6f9dde6bcd5e5ee51707b92e388330c3d5d943dd876c151b58d1310a113537"
+    },
+    {
+      "status": "FAIL",
+      "case_id": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061054Z-7c527d50",
+      "started_at_utc": "2026-10-31T06:10:54.383651+00:00",
+      "finished_at_utc": "2026-10-31T06:10:58.842096+00:00",
+      "wall_seconds": 4.454251899995143,
+      "error": "Incomplete native signal export",
+      "cleanup_error": null,
+      "result_sha256": "94870a0616d38c425f414b445107a569daa6d2c4d4b869ccd5d22b82032ca37a"
+    },
+    {
+      "status": "PASS",
+      "case_id": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061149Z-9b8129a7",
+      "started_at_utc": "2026-10-31T06:11:49.525525+00:00",
+      "finished_at_utc": "2026-10-31T06:11:53.211809+00:00",
+      "wall_seconds": 3.682626599998912,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "562045582422e764116d215a84857096c837c5eac95705a147bfa91e9ee8a004"
+    },
+    {
+      "status": "PASS",
+      "case_id": "timing",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061230Z-5c5cf7f2",
+      "started_at_utc": "2026-10-31T06:12:30.641495+00:00",
+      "finished_at_utc": "2026-10-31T06:12:34.909983+00:00",
+      "wall_seconds": 4.265134700021008,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "db70f35e464f8ff9aa564cf511c4a9d85dae4acd69d6eedcd1d116a6d7eb5142"
+    },
+    {
+      "status": "FAIL",
+      "case_id": "costs",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061235Z-eaf67021",
+      "started_at_utc": "2026-10-31T06:12:35.101606+00:00",
+      "finished_at_utc": "2026-10-31T06:12:38.919746+00:00",
+      "wall_seconds": 3.8144757999980357,
+      "error": "Native equity differs from independent expectation",
+      "cleanup_error": null,
+      "result_sha256": "05c4afda4cbef8ea4c996b1340d4fe69f7904055bf84d6a224c329ef665773dc"
+    },
+    {
+      "status": "PASS",
+      "case_id": "costs",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061411Z-e1fee34e",
+      "started_at_utc": "2026-10-31T06:14:11.425263+00:00",
+      "finished_at_utc": "2026-10-31T06:14:15.704318+00:00",
+      "wall_seconds": 4.275611899996875,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "4b625eeafe168fa50cf7d3faebf11d390df63d7e393d8ad206f5724fd5606c65"
+    },
+    {
+      "status": "PASS",
+      "case_id": "timing",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061459Z-cf9c0052",
+      "started_at_utc": "2026-10-31T06:14:59.022913+00:00",
+      "finished_at_utc": "2026-10-31T06:15:02.626189+00:00",
+      "wall_seconds": 3.599622300011106,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "9e7b5d5631e836cd4df71a5e337d523c9bde8858b7033a2ff5e0a38f4b5a2822"
+    },
+    {
+      "status": "PASS",
+      "case_id": "timing",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061502Z-cc85131b",
+      "started_at_utc": "2026-10-31T06:15:02.821731+00:00",
+      "finished_at_utc": "2026-10-31T06:15:06.341887+00:00",
+      "wall_seconds": 3.5166583999816794,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "32f320f33a6c363b758ed5bdbb958c28e7f274de190c20288b6c0b5b66d989f9"
+    },
+    {
+      "status": "PASS",
+      "case_id": "costs",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061506Z-82e41ac6",
+      "started_at_utc": "2026-10-31T06:15:06.550863+00:00",
+      "finished_at_utc": "2026-10-31T06:15:10.484842+00:00",
+      "wall_seconds": 3.929719700012356,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "2b3b5ea22f3ca078bb8e252659ba7ef5586bc044f47273a4d8d636e344075f7c"
+    },
+    {
+      "status": "PASS",
+      "case_id": "costs",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061510Z-4bc4bdd6",
+      "started_at_utc": "2026-10-31T06:15:10.682828+00:00",
+      "finished_at_utc": "2026-10-31T06:15:14.355020+00:00",
+      "wall_seconds": 3.668288599990774,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "c452b3b9cf271d1c57123f216f7ba71416e59357b0f0a321c1aacb12e938e3e9"
+    },
+    {
+      "status": "PASS",
+      "case_id": "shared_cash",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061514Z-67566a7b",
+      "started_at_utc": "2026-10-31T06:15:14.543520+00:00",
+      "finished_at_utc": "2026-10-31T06:15:18.331184+00:00",
+      "wall_seconds": 3.783553600020241,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "b9ee739d8322a6bd2c2e95c3a14594592da90a1f67dc0dfa1d992204563ba701"
+    },
+    {
+      "status": "PASS",
+      "case_id": "shared_cash",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061518Z-1e15eb03",
+      "started_at_utc": "2026-10-31T06:15:18.546880+00:00",
+      "finished_at_utc": "2026-10-31T06:15:22.363291+00:00",
+      "wall_seconds": 3.8127772999869194,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "4492f48493a5372217989695f6f6e6abb5db6eb9297440e9cd1051558f2a7b0f"
+    },
+    {
+      "status": "PASS",
+      "case_id": "exit_then_entry",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061522Z-58cb9218",
+      "started_at_utc": "2026-10-31T06:15:22.557835+00:00",
+      "finished_at_utc": "2026-10-31T06:15:26.399794+00:00",
+      "wall_seconds": 3.837404499994591,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "d9c27a99c2fadb1fbdb4d9178bcc82f0106b058951b4deb18751da1a3bd316d8"
+    },
+    {
+      "status": "PASS",
+      "case_id": "exit_then_entry",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061526Z-f0e8ace2",
+      "started_at_utc": "2026-10-31T06:15:26.591797+00:00",
+      "finished_at_utc": "2026-10-31T06:15:30.301634+00:00",
+      "wall_seconds": 3.706069200008642,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "c828ffc16e0296ca5e5e0f72693440892b2b4309a63e2b49ead12b5389b70fc2"
+    },
+    {
+      "status": "PASS",
+      "case_id": "last_signal",
+      "repeat": 1,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061530Z-775f4f9d",
+      "started_at_utc": "2026-10-31T06:15:30.512620+00:00",
+      "finished_at_utc": "2026-10-31T06:15:34.421097+00:00",
+      "wall_seconds": 3.9048402999760583,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "7653c341a71e03b4342d741b827b5f3658e5e673a0e987ef78dbc6bf8bbc9c86"
+    },
+    {
+      "status": "PASS",
+      "case_id": "last_signal",
+      "repeat": 2,
+      "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.local\\amibroker\\policy-20261031T061534Z-133aca72",
+      "started_at_utc": "2026-10-31T06:15:34.622214+00:00",
+      "finished_at_utc": "2026-10-31T06:15:38.137587+00:00",
+      "wall_seconds": 3.511757700005546,
+      "error": null,
+      "cleanup_error": null,
+      "result_sha256": "e942b8ef677d9c97c0893899389ee657b8cd6997cfdd8cb68f656647cff6b718"
+    }
+  ],
+  "all_attempts": 20,
+  "prior_failed_attempts": 7,
+  "earlier_source_passes": 3,
+  "independent_review": {
+    "status": "PASS_BOUNDED_ENGINEERING_REVIEW",
+    "at_utc": "2026-10-31T06:17:06.244888+00:00",
+    "reviewer": "independent bounded child review; no native launch or provider calls",
+    "scope": "Fixed five synthetic cases, two repeats, final source only; direct raw export/hash audit independently of production parse_native/verify_result.",
+    "original_fixture_hashes": {
+      "policy_cases.json": "81bd3aee784ab2fc2eed6080a16f61053b5582c8e1e81f52c7da4aa8d5068fd7",
+      "policy_expected.json": "ed8a5d46d275f6d436708775f6f9290947de2f675411476293cc78ef1ddfec83"
+    },
+    "source_sha256": {
+      "policy_preflight.py": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338",
+      "policy_worker.js": "98b3b2629b44b0757f80bd6cf807851b197133c16468767e3df85273b74159b2",
+      "test_policy_preflight.py": "50a3f1d6430277a84acbf7fd879ae1927ef2ccf93ff5b2070852311e4d36ade5",
+      "test_policy_preflight_review.py": "20a1b45f6624c2779d5212d98adff2520b7d0349d7d8aa5e1207accb0802bac3"
+    },
+    "native_runs_verified": 10,
+    "raw_export_pairs_identical": 5,
+    "recorded_artifact_hashes_rechecked": 120,
+    "max_absolute_money_error": "0.00002658",
+    "max_absolute_price_error": "0.00000824",
+    "max_absolute_reconstructed_close_mark_error": "0",
+    "reports": [
+      {
+        "case": "timing",
+        "repeat": 1,
+        "run": "policy-20261031T061459Z-cf9c0052",
+        "wall_seconds": 3.599622300011106,
+        "raw_rows": 8,
+        "trades": 1,
+        "max_raw_native_vs_close_mark_difference": "0",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "timing",
+        "repeat": 2,
+        "run": "policy-20261031T061502Z-cc85131b",
+        "wall_seconds": 3.5166583999816794,
+        "raw_rows": 8,
+        "trades": 1,
+        "max_raw_native_vs_close_mark_difference": "0",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "costs",
+        "repeat": 1,
+        "run": "policy-20261031T061506Z-82e41ac6",
+        "wall_seconds": 3.929719700012356,
+        "raw_rows": 8,
+        "trades": 1,
+        "max_raw_native_vs_close_mark_difference": "0.23596192",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "costs",
+        "repeat": 2,
+        "run": "policy-20261031T061510Z-4bc4bdd6",
+        "wall_seconds": 3.668288599990774,
+        "raw_rows": 8,
+        "trades": 1,
+        "max_raw_native_vs_close_mark_difference": "0.23596192",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "shared_cash",
+        "repeat": 1,
+        "run": "policy-20261031T061514Z-67566a7b",
+        "wall_seconds": 3.783553600020241,
+        "raw_rows": 8,
+        "trades": 1,
+        "max_raw_native_vs_close_mark_difference": "0",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "shared_cash",
+        "repeat": 2,
+        "run": "policy-20261031T061518Z-1e15eb03",
+        "wall_seconds": 3.8127772999869194,
+        "raw_rows": 8,
+        "trades": 1,
+        "max_raw_native_vs_close_mark_difference": "0",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "exit_then_entry",
+        "repeat": 1,
+        "run": "policy-20261031T061522Z-58cb9218",
+        "wall_seconds": 3.837404499994591,
+        "raw_rows": 8,
+        "trades": 2,
+        "max_raw_native_vs_close_mark_difference": "0",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "exit_then_entry",
+        "repeat": 2,
+        "run": "policy-20261031T061526Z-f0e8ace2",
+        "wall_seconds": 3.706069200008642,
+        "raw_rows": 8,
+        "trades": 2,
+        "max_raw_native_vs_close_mark_difference": "0",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "last_signal",
+        "repeat": 1,
+        "run": "policy-20261031T061530Z-775f4f9d",
+        "wall_seconds": 3.9048402999760583,
+        "raw_rows": 8,
+        "trades": 0,
+        "max_raw_native_vs_close_mark_difference": "0",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      },
+      {
+        "case": "last_signal",
+        "repeat": 2,
+        "run": "policy-20261031T061534Z-133aca72",
+        "wall_seconds": 3.511757700005546,
+        "raw_rows": 8,
+        "trades": 0,
+        "max_raw_native_vs_close_mark_difference": "0",
+        "all_artifact_hashes_match": true,
+        "all_source_hashes_current": true,
+        "raw_data_matches_report": true,
+        "raw_close_mark_independently_verified": true
+      }
+    ],
+    "all_retained_runs": [
+      {
+        "run": "policy-20261030T165707Z-40422696",
+        "case": "timing",
+        "repeat": 1,
+        "status": "FAIL",
+        "error": "Command '['C:\\\\WINDOWS\\\\SysWOW64\\\\cscript.exe', '//nologo', '//T:75', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\policy_worker.js', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\import.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\binance.format', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\policy.apx', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\signals.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261030T165707Z-40422696\\\\backtest.csv', '1']' timed out after 80 seconds",
+        "source_sha": "3ee1107c1f0e07673fe6aaeed4529ad68a627227399a02a0fe00c70a737638fe"
+      },
+      {
+        "run": "policy-20261031T055916Z-c001c4f2",
+        "case": "timing",
+        "repeat": 1,
+        "status": "FAIL",
+        "error": "Command '['C:\\\\WINDOWS\\\\SysWOW64\\\\cscript.exe', '//nologo', '//T:75', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\policy_worker.js', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\import.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\binance.format', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\policy.apx', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\signals.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T055916Z-c001c4f2\\\\backtest.csv', '1']' timed out after 80 seconds",
+        "source_sha": "a250c3f5cfcfa92b5504e2702caf3f9126c96d6cebff219167d03fe088eb7220"
+      },
+      {
+        "run": "policy-20261031T060358Z-54751b56",
+        "case": "timing",
+        "repeat": 1,
+        "status": "FAIL",
+        "error": "Command '['C:\\\\WINDOWS\\\\SysWOW64\\\\cscript.exe', '//nologo', '//T:75', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\policy_worker.js', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\import.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\binance.format', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\policy.apx', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\signals.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060358Z-54751b56\\\\backtest.csv', '1']' timed out after 80 seconds",
+        "source_sha": "a250c3f5cfcfa92b5504e2702caf3f9126c96d6cebff219167d03fe088eb7220"
+      },
+      {
+        "run": "policy-20261031T060625Z-64cebe20",
+        "case": "timing",
+        "repeat": 1,
+        "status": "FAIL",
+        "error": "Command '['C:\\\\WINDOWS\\\\SysWOW64\\\\cscript.exe', '//nologo', '//T:75', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\policy_worker.js', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\database', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\import.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\tools\\\\amibroker\\\\binance.format', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\policy.apx', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\signals.csv', 'C:\\\\Users\\\\monoi\\\\Documents\\\\ChatGPT\\\\Trading Research Framework\\\\.local\\\\amibroker\\\\policy-20261031T060625Z-64cebe20\\\\backtest.csv', '1']' timed out after 80 seconds",
+        "source_sha": "f6e65090042f6065781944b1593e987189205dbe9e7a78cf8d3d185eeb612bc5"
+      },
+      {
+        "run": "policy-20261031T060932Z-95052441",
+        "case": "timing",
+        "repeat": 1,
+        "status": "FAIL",
+        "error": "Native case/trade count differs from independent expectations",
+        "source_sha": "ce37e4e2a2b76698e9773f370528f204a06b91e72c5fadbcba2f4e458afc80d2"
+      },
+      {
+        "run": "policy-20261031T061054Z-7c527d50",
+        "case": "timing",
+        "repeat": 1,
+        "status": "FAIL",
+        "error": "Incomplete native signal export",
+        "source_sha": "6616048428fa697e328af750cef3eda36442c8881cb7572552f3641ba2382f46"
+      },
+      {
+        "run": "policy-20261031T061149Z-9b8129a7",
+        "case": "timing",
+        "repeat": 1,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "bc18fba36a5c28737fdd096a3c03d3333b68fccde9056d8ecfd87fade872e71e"
+      },
+      {
+        "run": "policy-20261031T061230Z-5c5cf7f2",
+        "case": "timing",
+        "repeat": 2,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "bc18fba36a5c28737fdd096a3c03d3333b68fccde9056d8ecfd87fade872e71e"
+      },
+      {
+        "run": "policy-20261031T061235Z-eaf67021",
+        "case": "costs",
+        "repeat": 1,
+        "status": "FAIL",
+        "error": "Native equity differs from independent expectation",
+        "source_sha": "bc18fba36a5c28737fdd096a3c03d3333b68fccde9056d8ecfd87fade872e71e"
+      },
+      {
+        "run": "policy-20261031T061411Z-e1fee34e",
+        "case": "costs",
+        "repeat": 1,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "d692894c5219f2b6667b9111f91b571509b15db372321b75d93f2e219bd869eb"
+      },
+      {
+        "run": "policy-20261031T061459Z-cf9c0052",
+        "case": "timing",
+        "repeat": 1,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061502Z-cc85131b",
+        "case": "timing",
+        "repeat": 2,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061506Z-82e41ac6",
+        "case": "costs",
+        "repeat": 1,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061510Z-4bc4bdd6",
+        "case": "costs",
+        "repeat": 2,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061514Z-67566a7b",
+        "case": "shared_cash",
+        "repeat": 1,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061518Z-1e15eb03",
+        "case": "shared_cash",
+        "repeat": 2,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061522Z-58cb9218",
+        "case": "exit_then_entry",
+        "repeat": 1,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061526Z-f0e8ace2",
+        "case": "exit_then_entry",
+        "repeat": 2,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061530Z-775f4f9d",
+        "case": "last_signal",
+        "repeat": 1,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      },
+      {
+        "run": "policy-20261031T061534Z-133aca72",
+        "case": "last_signal",
+        "repeat": 2,
+        "status": "PASS",
+        "error": null,
+        "source_sha": "00cbad65e8e7753afae8fb799ee8fc7f5a6b84c92eea96b7e3dd5421857d9338"
+      }
+    ],
+    "review_findings": [
+      {
+        "finding": "APX settings order regression verified in raw signals: malformed order produced one daily bar, source-order repair restored eight 15-minute bars and correct native trade.",
+        "status": "repaired_and_observed"
+      },
+      {
+        "finding": "Native equity valuation differed from frozen cash-plus-close-position value during cost-case holdings. Adapter now derives frozen close mark from actual native Cash, Shares and GetPrice(C), separately retaining unmodified bo.Equity. Expectations and tolerances unchanged.",
+        "status": "mapping_warranted_with_raw_facts_retained"
+      },
+      {
+        "finding": "Native Shares formatted as integer could previously hide fractional quantities. Final AFL guards integrality before position and trade formatting.",
+        "status": "repaired_source_review; fractional native fault injection not performed"
+      }
+    ],
+    "offline_checks": [
+      {
+        "command": "python -B -m unittest discover -s tools/amibroker -p 'test_policy_preflight*.py' -v",
+        "outcome": "17 passed on final frozen sources; native launch/network not used by tests"
+      },
+      {
+        "command": "Direct trailing-whitespace/final-newline check on independent review test file",
+        "outcome": "PASS"
+      },
+      {
+        "command": "Independent inline Python raw native/export/manifest/source hash audit",
+        "outcome": "PASS: 10 final-source native runs, 120 artifact hashes, 5 identical six-CSV pairs, raw close-mark error zero"
+      }
+    ],
+    "limitations": [
+      "AmiBroker 6.20.1 local synthetic long-flat profile only; no general APX schema, arbitrary policies, missing bars, short/leverage/stop conformance or market fill realism established.",
+      "No scientific validity, calibration, economic usefulness, research-registry change, live capital authority or provider calls.",
+      "Source review plus observed fixed native cases does not certify unexercised fractional native fault path.",
+      "Original failed attempts and interim source passes are retained; only the ten final-source runs establish this completion."
+    ],
+    "source_links": [
+      "https://www.amibroker.com/guide/a_custombacktest.html",
+      "https://fastapi.metacpan.org/v1/source/BPRASAD/Amibroker-OLE-Interface-0.03/lib/Amibroker/OLE/APXCreator.pm"
+    ],
+    "changed_files": [
+      "tools/amibroker/test_policy_preflight_review.py",
+      ".trf-runtime/amibroker-preflight-2026-10-30/fix-review-qualification-2026-10-31.json",
+      ".trf-runtime/amibroker-preflight-2026-10-30/fix-review-final.json"
+    ]
+  },
+  "offline_check": {
+    "command": "python -B -m unittest discover -s tools/amibroker -p 'test*.py' -v",
+    "tests": 24,
+    "seconds": 0.125,
+    "exit_code": 0,
+    "chunk_id": "90ec88"
+  },
+  "observed_defects_and_corrections": [
+    "The first two runs timed out at AnalysisDocs.Open. Timeout stdout/stderr was initially lost; worker stages and captured timeout output now remain retained.",
+    "A visible diagnostic confirmed the formula-conflict modal. An LF-only repair failed. APX has a string-escape layer beyond XML: line breaks and backslashes in formula/path now round-trip to the external CRLF formula.",
+    "Per-symbol Hold/Early SetOption calls in portfolio context produced warning504 for ~~~EQUITY; they now run in symbol context. No warning was suppressed.",
+    "The minimal settings did not produce the intended trade. Explicit trade/volume settings initially changed the native grid to daily; preserving the retained primary APX field order restored eight 900-second bars and the fixed expected trades. This is local compatibility evidence, not a generic APX schema proof.",
+    "The cost fixture showed raw bo.Equity differed from the originally specified cash-plus-close mark by about .224/.236 while native trades/cash matched. The explicit native-state-derived close mark now uses actual cash, positions and native close quotes; raw bo.Equity remains in native_equity.csv. Hypothetical exit commission is an interpretation of that discrepancy, not an independently established universal portfolio formula.",
+    "Native quantities are checked for integrality before integer CSV formatting; no change to the original fixed quantities, expected files or numeric tolerances."
+  ],
+  "applicable_sources": [
+    "https://www.amibroker.com/guide/objects.html",
+    "https://www.amibroker.com/guide/a_custombacktest.html",
+    "https://www.amibroker.com/guide/w_settings.html",
+    "https://fastapi.metacpan.org/v1/source/BPRASAD/Amibroker-OLE-Interface-0.03/lib/Amibroker/OLE/APXCreator.pm"
+  ],
+  "new_provider_calls": 0,
+  "framework_usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "framework_money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "construction_usage": "amibroker-construction-usage-2026-10-31.json",
+  "remaining_brokers": 0,
+  "scientific_readiness": false,
+  "unverified": [
+    "General/adaptive policy compilation and separately frozen policy trial",
+    "Realistic account/venue costs and net economic support",
+    "Large-market memory/performance and broad backend conformance",
+    "Native fractional fault injection; offline ownership/timeout tests are distinct from general COM recovery",
+    "Scientific information/calibration, protected assessment and atomic scientific freeze",
+    "All-branch Codex build cost/credits; the linked token snapshot covers the main chat only"
+  ],
+  "changed_files": [
+    "tools/amibroker/policy_preflight.py",
+    "tools/amibroker/policy_worker.js",
+    "tools/amibroker/test_policy_preflight.py",
+    "tools/amibroker/test_policy_preflight_review.py",
+    "tools/amibroker/fixtures/policy_cases.json",
+    "tools/amibroker/fixtures/policy_expected.json",
+    "tools/amibroker/POLICY_PREFLIGHT.md",
+    "docs/reviews/implementation-2026-10-25/amibroker-preflight-2026-10-31.json",
+    "docs/reviews/implementation-2026-10-25/amibroker-construction-usage-2026-10-31.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md"
+  ],
+  "private_helpers_and_retained_evidence": ".trf-runtime/amibroker-preflight-2026-10-30/ and .local/amibroker/policy-*/",
+  "documentation_check_note": "The implementation-scope validator retains exactly the two preexisting baseline errors recorded before this task in context-handoff-verification-2026-10-31.json; no allowlist weakening or change to those documents was made. Local-link/whitespace checks and separate retail-contract validator remain distinct.",
+  "documentation_checks": [
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": [],
+      "local_links": 731
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ],
+      "local_links": 1139
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS",
+      "qualification": "Existing CRLF-to-LF notices are informational."
+    }
+  ]
+}

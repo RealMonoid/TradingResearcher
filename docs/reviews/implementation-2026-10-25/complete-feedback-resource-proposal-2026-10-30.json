@@ -1,0 +1,120 @@
+{
+  "schema": "complete-feedback-resource-proposal/1",
+  "recorded_at_utc": "2026-10-29T23:32:38.966514+00:00",
+  "status": "PROPOSED_ONLY",
+  "previous_goal_turn_classification": "NO_PROGRESS_GATE_ONLY_RECHECK",
+  "action": "Prepare a reviewable resource decision rather than repeat the passing codec checks or consume a spent grant.",
+  "proposed_policy": "research-epoch-feedback-budget/2.0",
+  "proposed_approval": "SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET",
+  "max_epochs": 1,
+  "max_model_calls": 6,
+  "max_tokens": 420000,
+  "max_cost_nano": 1400000000,
+  "max_seconds": 1800,
+  "per_call_tokens": 80000,
+  "max_retries": 0,
+  "slots": [
+    {
+      "stage": "discovery_a_initial",
+      "input_bound": 43358,
+      "output_bound": 6000,
+      "basis": "Exact retained full wire count plus 128-token margin; recheck before activation.",
+      "wire_sha256": "2f40170cb28903af120fe5a6479295a635575898da89d8cdbd571fe2fc2a3103",
+      "total_tokens": 49358,
+      "conservative_cost_nano": 168395000
+    },
+    {
+      "stage": "discovery_b_initial",
+      "input_bound": 43368,
+      "output_bound": 6000,
+      "basis": "Exact retained full wire count plus 128-token margin; recheck before activation.",
+      "wire_sha256": "ff8b731e220845344f12d1f8b41d862e76c321d876055f53f36552b28cc4d355",
+      "total_tokens": 49368,
+      "conservative_cost_nano": 168420000
+    },
+    {
+      "stage": "discovery_a_optional_followup",
+      "input_bound": 74000,
+      "output_bound": 6000,
+      "basis": "Entire unchanged 80000-token per-call ceiling; input bound includes count margin. Unknown future packet must fit exactly.",
+      "total_tokens": 80000,
+      "conservative_cost_nano": 245000000
+    },
+    {
+      "stage": "discovery_b_optional_followup",
+      "input_bound": 74000,
+      "output_bound": 6000,
+      "basis": "Entire unchanged 80000-token per-call ceiling; input bound includes count margin. Unknown future packet must fit exactly.",
+      "total_tokens": 80000,
+      "conservative_cost_nano": 245000000
+    },
+    {
+      "stage": "formalization",
+      "input_bound": 62000,
+      "output_bound": 18000,
+      "basis": "Entire unchanged 80000-token per-call ceiling; input bound includes count margin. Unknown future packet must fit exactly.",
+      "total_tokens": 80000,
+      "conservative_cost_nano": 335000000
+    },
+    {
+      "stage": "independent_review",
+      "input_bound": 76000,
+      "output_bound": 4000,
+      "basis": "Entire unchanged 80000-token per-call ceiling; input bound includes count margin. Unknown future packet must fit exactly.",
+      "total_tokens": 80000,
+      "conservative_cost_nano": 230000000
+    }
+  ],
+  "reserved_input_tokens": 372726,
+  "reserved_output_tokens": 46000,
+  "reserved_total_tokens": 418726,
+  "reserved_cost_nano": 1391815000,
+  "model_identity": {
+    "requested_model": "gpt-6.1-sol",
+    "reported_model": null,
+    "catalog_name": "GPT-6.1 Sol",
+    "catalog_version": "6.1",
+    "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+    "immutable_snapshot_id": null,
+    "immutable_snapshot_status": "UNKNOWN"
+  },
+  "source_ids": [
+    "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+    "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+    "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+    "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+    "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+    "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+    "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+    "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035"
+  ],
+  "source_presentation": "Existing discovery-source-view/3 and auxiliary-provenance-dictionary/1 only. Private exact-json-reference probe stays inactive.",
+  "usage": {
+    "prior_total_tokens": 716565,
+    "prior_charged_nano": 2607570000,
+    "available_nano": 2392430000,
+    "aggregate_cap_nano": 5000000000,
+    "remaining_after_full_proposed_currency_cap_nano": 992430000
+  },
+  "tariff_rechecked_at_utc": "2026-10-29T23:32:38.966522+00:00",
+  "tariff_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+  "tariff_basis": "Official model page currently lists USD2 ordinary input, USD2.50 cache writes and USD10 output per million. Use conservative default30m cache-write input rate; no discount assumption. Each call is below the 272K input surcharge threshold. Standard/default processing only; reverify effective configuration and pricing before dispatch.",
+  "verification": {
+    "status": "PASS",
+    "exact_initial_wire_hashes": 2,
+    "all_six_slots_within_unchanged_per_call_cap": true,
+    "complete_reservation_within_proposed_epoch_and_currency_caps": true,
+    "no_future_slot_depends_on_unused_prior_allocation": true,
+    "aggregate_spend_unchanged": true,
+    "runtime_policy_activated": false,
+    "new_model_calls": 0,
+    "new_input_count_calls": 0,
+    "registry_writes": 0
+  },
+  "unverified": [
+    "This proposed policy has no implementation or direct human approval yet.",
+    "Future ideas, packets, tool turns and output completeness are unknown; packets beyond 80000 combined tokens still stop with retained gaps.",
+    "No scientific calibration, profitability or whole-framework completion follows."
+  ],
+  "helper_sha256": "dbfc28ca2460763f3f71f73a088304f1904946889ba6fbb1e103a5fdc17c4c33"
+}

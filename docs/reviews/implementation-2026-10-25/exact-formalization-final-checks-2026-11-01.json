@@ -1,0 +1,47 @@
+{
+  "schema": "exact-native-formalization-final-checks/1",
+  "checks": [
+    {
+      "command": "python -B .trf-runtime/exact-formalization-2026-11-01/checks.py",
+      "exit_code": 0,
+      "start_chunk_id": "9eec55",
+      "completion_chunk_id": "f28902",
+      "distinct_test_methods": 81,
+      "new_test_methods": 37,
+      "legacy_test_methods": 44
+    },
+    {
+      "command": "python -B docs/reviews/verify_system_model.py",
+      "exit_code": 0,
+      "chunk_id": "d59307",
+      "status": "PASS",
+      "local_links": 773
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "chunk_id": "a61237",
+      "status": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "chunk_id": "a346c7",
+      "status": "PASS",
+      "qualification": "Existing CRLF-to-LF notices; no whitespace errors."
+    },
+    {
+      "command": "python -B .trf-runtime/exact-compositions-2026-11-01/qualify.py",
+      "exit_code": 0,
+      "chunk_id": "8c4a76",
+      "old_runtime_pins_exact": 37,
+      "historical_inquiry_member_hashes_exact": 117
+    }
+  ],
+  "unverified": [
+    "Complete finite funded inquiry/certified-input integration and actual model behavior are not qualified by the native fixture.",
+    "AST4 composition certification, owned computation/replay, actual A continuation and unchanged-cap complete-Q1 fit remain pending.",
+    "Global verify_implementation.py baseline failures were not re-audited; its old failures remain outside these scoped checks."
+  ],
+  "evidence": "docs/reviews/implementation-2026-10-25/exact-formalization-2026-11-01.json"
+}

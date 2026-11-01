@@ -8,7 +8,7 @@ import uuid
 
 from .codec import Invalid, canonical, decode, digest, integer, strings, text
 from .errors import Conflict, Denied
-from .context_views import SECTION_TOOL, PRESENTATION_PROFILES
+from .context_views import SECTION_TOOL, FEEDBACK_SECTION_TOOL, FEEDBACK_VIEW_PROFILE, PRESENTATION_PROFILES
 
 
 PROFILE_FIELDS = {'model', 'prompt_version', 'max_calls', 'max_tokens', 'max_seconds',
@@ -53,7 +53,7 @@ class ResearchCalls:
             raise Denied('Research epoch unavailable')
         return {**dict(row), 'request': decode(row['request'])}
 
-    def _create_research_epoch(self, actor, key, context_id, workers, profile):
+    def _create_research_epoch(self, actor, key, context_id, workers, profile, budget_overlay=None, review_continuation=None):
         text(key, 'epoch request key')
         strings(workers, 'workers')
         if len(workers) != 2:
@@ -79,7 +79,17 @@ class ResearchCalls:
                 profile['source_presentation'] not in PRESENTATION_PROFILES or not any(
                     canonical(tool) == canonical(SECTION_TOOL) for tool in profile['tools'])):
             raise Invalid('Source presentation requires the versioned exact section tool')
-        for name, ceiling in [('max_calls', 12), ('max_tokens', 80000), ('max_seconds', 1800)]:
+        feedback_profile = profile.get('source_presentation') == FEEDBACK_VIEW_PROFILE
+        if feedback_profile and not any(canonical(tool) == canonical(FEEDBACK_SECTION_TOOL) for tool in profile['tools']):
+            raise Invalid('Feedback presentation requires its exact reference section tool')
+        if not feedback_profile and any(type(tool) is dict and tool.get('name') == FEEDBACK_SECTION_TOOL['name']
+                                        for tool in profile['tools']):
+            raise Invalid('Feedback reference sections require the explicit feedback presentation profile')
+        token_ceiling = 80000
+        if budget_overlay is not None:
+            from .epoch_budget import validate
+            token_ceiling = validate(self, context, profile, budget_overlay)
+        for name, ceiling in [('max_calls', 12), ('max_tokens', token_ceiling), ('max_seconds', 1800)]:
             if integer(profile[name], name, 1) > ceiling:
                 raise Invalid('Epoch profile exceeds the adopted pilot ceiling')
         integer(profile['max_cost_units'], 'max_cost_units')
@@ -103,15 +113,37 @@ class ResearchCalls:
                 if type(settings) is not dict or set(settings) != ROLE_FIELDS - {'prompt'}:
                     raise Invalid('Perspective call profile has missing or unexpected fields')
                 validate_profile({**settings, 'prompt': profile['prompts'][worker]}, profile)
+        if review_continuation is not None:
+            if budget_overlay is not None:
+                raise Invalid('Review continuation cannot reuse another budget grant')
+            from .review_continuation import validate
+            validate(self, context, profile, review_continuation)
         request = {'context_id': context_id, 'workers': workers, 'profile': profile}
+        if budget_overlay is not None:
+            request['budget_overlay'] = budget_overlay
+        if review_continuation is not None:
+            request['review_continuation'] = review_continuation
         old = self._db.execute('SELECT id,request FROM research_epochs WHERE request_key=?', (key,)).fetchone()
         if old:
             if old['request'] != canonical(request):
                 raise Conflict('Epoch key already binds a different frozen request')
+            if budget_overlay is not None:
+                from .epoch_budget import inspect
+                inspect(self, self._epoch(old['id']))
+            if review_continuation is not None:
+                from .review_continuation import inspect
+                inspect(self, self._epoch(old['id']))
             return {'id': old['id']}
         identity = uuid.uuid4().hex
+        created_at = self._now()
+        if budget_overlay is not None:
+            from .epoch_budget import claim
+            claim(self, {'id': identity, 'request_key': key, 'request': request, 'created_at': created_at})
+        if review_continuation is not None:
+            from .review_continuation import claim
+            claim(self, {'id': identity, 'request_key': key, 'request': request, 'created_at': created_at})
         self._db.execute('INSERT INTO research_epochs VALUES(?,?,?,?,?)',
-                         (identity, key, canonical(request), self._now(), 'active'))
+                         (identity, key, canonical(request), created_at, 'active'))
         self._event(actor['name'], 'research_epoch_created', epoch_id=identity, request=request)
         return {'id': identity}
 
@@ -122,6 +154,16 @@ class ResearchCalls:
             return
         epoch = self._epoch(spec['research_epoch_id'])
         request = epoch['request']
+        if 'review_continuation' in request:
+            from .review_continuation import template, inspect
+            state = inspect(self, epoch)
+            if (state['revoked'] or state['calls'] or spec['kind'] != 'semantic-review/v1'
+                    or template(spec) != request['review_continuation']['spec']):
+                raise Denied('Only the exact unused review continuation job is authorized')
+            if self._db.execute("SELECT 1 FROM job_specs WHERE json_extract(envelope,'$.research_epoch_id')=?", (epoch['id'],)).fetchone():
+                raise Denied('The one review job has already been declared')
+        if 'budget_overlay' in request and spec['max_attempts'] != 1:
+            raise Invalid('The one-use overlay permits no automatic job retry')
         if spec['kind'] in ('formalization/v1','semantic-review/v1'):
             from .auxiliary import validate_profile
             validate_profile(spec.get('research_call_profile'),request['profile'])
@@ -201,6 +243,7 @@ class ResearchCalls:
             if prior['request_hash'] != fingerprint:
                 raise Conflict('Call key already binds a different request or reservation')
             return {'call_id': prior['id'], 'dispatch': False, 'state': prior['state']}
+        self._check_feedback_context(self._context(job['spec']['context_id']))
         if 'research_call_profile' in job['spec']:
             calls=self._calls_for(epoch['id'],job['id'],job['generation'])
             if (len(calls)>profile['max_retries'] or any(c['reply'] is not None
@@ -221,6 +264,12 @@ class ResearchCalls:
         stored = self._worker_artifact(actor, job, context,
                                        {'schema': 'provider-call/1', **reservation,'dispatch_deadline':deadline}, [])
         identity = uuid.uuid4().hex
+        if 'budget_overlay' in epoch['request']:
+            from .epoch_budget import reserve
+            reserve(self, epoch, job, identity, input_token_bound, output_token_limit, cost_bound_units)
+        if 'review_continuation' in epoch['request']:
+            from .review_continuation import reserve
+            reserve(self, epoch, job, identity, input_token_bound, output_token_limit, cost_bound_units)
         self._db.execute('''INSERT INTO research_calls(id,epoch_id,job_id,generation,owner,request_key,
             request_hash,request_id,input_bound,output_bound,cost_bound,state)
             VALUES(?,?,?,?,?,?,?,?,?,?,?,?)''',
@@ -304,4 +353,25 @@ class ResearchCalls:
 
     def _inspect_research_epoch(self, actor, epoch_id):
         epoch = self._epoch(epoch_id)
-        return {**epoch, 'usage': self._call_usage(epoch_id), 'calls': self._calls_for(epoch_id)}
+        result = {**epoch, 'usage': self._call_usage(epoch_id), 'calls': self._calls_for(epoch_id)}
+        if 'budget_overlay' in epoch['request']:
+            from .epoch_budget import inspect
+            result['budget_overlay'] = inspect(self, epoch)
+        if 'review_continuation' in epoch['request']:
+            from .review_continuation import inspect
+            result['review_continuation'] = inspect(self, epoch)
+        return result
+
+    def _revoke_research_epoch_budget(self, actor, epoch_id):
+        from .epoch_budget import revoke
+        epoch = self._epoch(epoch_id)
+        if 'review_continuation' in epoch['request']:
+            from .review_continuation import revoke
+            result = revoke(self, epoch)
+            self._event(actor['name'], 'review_continuation_revoked', epoch_id=epoch_id)
+            return result
+        if 'budget_overlay' not in epoch['request']:
+            raise Denied('This epoch has no optional resource authorization')
+        result = revoke(self, epoch)
+        self._event(actor['name'], 'research_epoch_budget_revoked', epoch_id=epoch_id)
+        return result

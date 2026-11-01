@@ -1,0 +1,262 @@
+{
+  "schema": "availability-handoff-verification/1",
+  "final_gates": [
+    {"command": "python -B docs/reviews/verify_retail_contract.py", "result": "PASS", "exit_code": 0, "local_links": 828},
+    {"command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py", "result": "PASS", "exit_code": 0, "baseline_files": 103, "local_document_links": 822},
+    {"command": "python -B .trf-runtime/feasibility-checkpoint-2026-10-27/check_handoff_evidence.py", "result": "PASS", "exit_code": 0, "source_hashes": 13, "prior_receipts_unchanged": 35, "new_calls_with_model_and_utc": 2, "complete_original_descriptive_report": true}
+  ],
+  "recorded_at_utc": "2026-10-29T04:48:24.955015+00:00",
+  "purpose": "Remove the independently reproduced candidate-root and reviewer-visible timing-evidence handoff blockers without changing the original idea or evaluation semantics.",
+  "scope": "Exact owned development raw-feature evidence supplied to both roles after an explicit operator release; legacy packets unchanged when absent.",
+  "authority": "D084 and research-contract/1.0 section14.2 implement existing measurement semantics and input permissions; no new scientific rule.",
+  "source_sha256": {
+    "trading_researcher/auxiliary_availability.py": "0ab3de244567813ca4414e9c77c2c00579225dcb621418a449a06805c2252232",
+    "trading_researcher/auxiliary.py": "975f4eff94f10bd89b1daf879cc4b62b2d4cb363e1d1d5a2c08517619ecfd13a",
+    "trading_researcher/coordination.py": "4fbcf3e84024dd440c0817fe2e9c9c636bbe8766e84d53f3299a8de2623607bd",
+    "trading_researcher/memory.py": "ba6863f08477ab023a833af0a34a31091b3d6694aae8edb742f2fe48aa94859e",
+    "trading_researcher/storage.py": "39e66fe16081bcc3610d27815d554efa9ddc72f368f27cc6a08cd7fbc5d2b861",
+    "trading_researcher/revocations.py": "a1e9be625474b82d7e3f3c5b39834c94ada681b41a66170352f26ae7297b4610",
+    "trading_researcher/AUXILIARY_RESEARCH.md": "d8a91a1cc477e1bfa161a22e2656cf3c02cc3c9c9471ea69756f168fded5caee",
+    "trading_researcher/FEATURES.md": "5ebb791d41e0529e77150244ec6a8441f91a45649fe94e6065030df981c2bc9e",
+    "tests/test_auxiliary_availability.py": "b150af1884a449563609d8888a8a8fe14321c66c89d766a1d72d3149a6ee741f",
+    "tests/test_feature_evidence_release.py": "742c619d3cbd0c6cbe89c39d6f7a3520178af4cc2b74dec56e92991571ee9f99",
+    "trading_researcher/data_use.py": "74396b216d08bdee2bcd45864ffb753113d7ca8f55c3fce1874d3eba97d0bbd6",
+    "trading_researcher/DATA_USE.md": "09bfdd0a103a35c96eafc0670b29dac55cc9e6058afa7f449c28bfc5bbc9b5e6",
+    "tests/test_feature_release_knowledge.py": "68d3294c6eb008fe8bc3ab57bfc366700bb09581c269ed4280bd983842aacb6b"
+  },
+  "changed_files": [
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/availability-handoff-verification-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/eth-evidence-handoff-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/eth-evidence-handoff-usage-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "tests/test_auxiliary_availability.py",
+    "tests/test_feature_evidence_release.py",
+    "tests/test_feature_release_knowledge.py",
+    "trading_researcher/AUXILIARY_RESEARCH.md",
+    "trading_researcher/DATA_USE.md",
+    "trading_researcher/FEATURES.md",
+    "trading_researcher/auxiliary.py",
+    "trading_researcher/auxiliary_availability.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/data_use.py",
+    "trading_researcher/memory.py",
+    "trading_researcher/revocations.py",
+    "trading_researcher/storage.py"
+  ],
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_auxiliary_availability.py -v",
+      "tests": 15,
+      "result": "PASS",
+      "seconds": 77.341,
+      "exit_code": 0,
+      "scope": "Owned retained certificate and data; both exact packets, timing/null/missing cases, identity/scope/revocation and unchanged legacy packet. Auxiliary job metadata is mocked in this suite."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_feature_evidence_release.py -v",
+      "tests": 4,
+      "result": "PASS",
+      "seconds": 81.742,
+      "exit_code": 0,
+      "executor": "independent reviewer",
+      "scope": "Actual RPC and create_context admission, immutable grant, epoch/time fences, backup/restore exact context, forgery/worker/protected denial, revocation, malformed candidate universe."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_coordination.py -v",
+      "tests": 21,
+      "result": "PASS",
+      "seconds": 9.476,
+      "exit_code": 0
+    },
+    {
+      "command": "ast.parse of the new private bounded attempt harness",
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_feature_release_knowledge.py -v",
+      "tests": 7,
+      "seconds": 2.643,
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_data_use.py -v",
+      "tests": 10,
+      "seconds": 2.838,
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_feature_release_knowledge.py -v",
+      "executor": "independent reviewer",
+      "tests": 7,
+      "seconds": 2.304,
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_protected_data_use.py -v",
+      "tests": 3,
+      "seconds": 0.771,
+      "result": "PASS",
+      "exit_code": 0
+    },
+    {
+      "command": "python -B .trf-runtime/feasibility-checkpoint-2026-10-27/continue_handoff_execution.py",
+      "result": "PASS",
+      "exit_code": 0,
+      "seconds": 61.45155970000087,
+      "provider_calls": 0,
+      "scope": "Same accepted compiled hypothesis, new qualified data-use record, actual development calculation and separate case replay."
+    },
+    {
+      "command": "python -B .trf-runtime/feasibility-checkpoint-2026-10-27/check_handoff_eth_formula.py",
+      "result": "PASS",
+      "exit_code": 0,
+      "command_wall_seconds": 4.8737579,
+      "checked_decisions": 8640,
+      "checked_observed_enclosures": 8626
+    }
+  ],
+  "failure_history": [
+    {
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "stage": "initial independent availability suite",
+      "result": "RED: five methods / sixteen subcases could not import the missing module; exit1,0.012s.",
+      "resolution": "Implemented bounded owned evidence; fixed tests retained."
+    },
+    {
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "stage": "actual context integration",
+      "result": "Inspection found unreleased controller certificates cannot enter a context; generic release requires a completed job batch.",
+      "resolution": "Separate narrow operator feature-input grant; no database migration or generic release bypass. No executed pre-implementation RED is claimed."
+    },
+    {
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "stage": "independent owned lifecycle first run",
+      "result": "Three tests, one fixture error: restore_bundle missing operator key argument;75.613s,exit1.",
+      "resolution": "Test-only argument correction; final actual backup/restore test passes."
+    },
+    {
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "stage": "malformed retained candidate universe",
+      "result": "Independent RED: four malformed values raised AttributeError;one method,0.010s,exit1.",
+      "resolution": "Minimal dict guard; unchanged test passes0.005s,exit0 and in full owned suite."
+    },
+    {
+      "stage": "actual compiled candidate data-use admission",
+      "observed_at_utc": "2026-10-29T04:52:14.025501+00:00",
+      "result": "DATA_USE_GAP: exact new feature-input grant classified as OPERATIONS_KNOWLEDGE_REQUIRES_CONTROLLED_IMPORT.",
+      "resolution": "Strict metadata-only technical provenance recognition; original gap and checker version retained. No source/exposure ancestors are removed."
+    },
+    {
+      "stage": "independent technical-provenance tests",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "result": "RED7 tests/3 failures,2.548s,exit1; exact owned metadata treated as operations.",
+      "resolution": "Unchanged independent7 pass2.643s,exit0; actual operations/protected/opaque ancestry and malformed grants remain gaps."
+    },
+    {
+      "stage": "report consistency helper",
+      "observed_date": "2026-10-29",
+      "exact_time": "NOT_RECORDED",
+      "result": "Helper incorrectly expected receipt.model; actual receipt uses model_identity. KeyError,exit1.",
+      "resolution": "Use recorded model_identity fields; helper passes and all35 prior receipts remain byte-equivalent JSON values."
+    }
+  ],
+  "independent_review": {
+    "reviewer": "exploratory_preflight",
+    "finding": "No remaining actionable bounded release/access issue found.",
+    "qualification": "Source review and exercised checks do not prove absence of all defects or scientific validity.",
+    "provenance_followup": "Strict owned metadata recognition only; linked identities checked; no certificate revalidation or blob reads for classification; all ancestry remains traversed."
+  },
+  "unverified": [
+    "Historical publication truth; the exact delay remains assumed.",
+    "Generic anchor-capped timing beyond this certified fixed-delay snapshot.",
+    "Scientific calibration, N_min, protected evaluation, economic usefulness, mixed-provider run, policy and capital authority.",
+    "Actual acceptance and original-formula comparison apply only to this exact idea/snapshot; general model quality, universal semantic correctness and scientific validity are not established."
+  ],
+  "scientific_readiness": false,
+  "new_provider_calls_during_implementation": 0,
+  "actual_continuation": {
+    "evidence": "eth-evidence-handoff-2026-10-29.json",
+    "complete_original_descriptive_report": true,
+    "same_evidence_in_both_roles": true,
+    "original_data_use_gap_preserved": true,
+    "deterministic_followup_provider_calls": 0
+  },
+  "private_harness_sha256": {
+    "reopen_eth_evidence_handoff.py": "e260616b6b832124b96e50cbb6e361c4ba00f89a353c10f276a0e370d06b5c22",
+    "check_handoff_eth_formula.py": "91192aef06605cabb2e8a329a921138b69899350ee69a087586ad27804ea649d"
+  },
+  "independent_formula_audit": {
+    "schema": "independent-original-eth-formula-check/2",
+    "idea_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+    "original_text_sha256": "ef8d9c2897d27129cfd72178231f408a5283869fbcced3d54a70bd40c4a2276f",
+    "snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+    "execution_id": "62cff0ef9503481047add4193a8ab5894d2758ed0d3a2d27b648ad1f73e906dd",
+    "rows": {
+      "sha256": "ed39a972a8fc1a563d60415c9c8859e8d8b6ca9efb6d25290df62b3390b2f705",
+      "size": 7236352
+    },
+    "case_blob": {
+      "sha256": "4aab9cb47aed26f70a34541008b8be2e878f71d1cd7719471f1a274774e3f103",
+      "size": 12220451
+    },
+    "checked_rows": 8635,
+    "checked_decisions": 8640,
+    "method": "Direct Fraction arithmetic and ordinary sorted even median of all 96 preceding quote volumes; original finite/validity/availability rules; no runtime AST evaluation.",
+    "original_condition_counts": {
+      "true": 0,
+      "false": 8437,
+      "unknown": 203
+    },
+    "original_condition_unknown_causes_overlapping": {
+      "outside_universe": 97,
+      "invalid_under_original_checks": 4,
+      "null_value": 97,
+      "absent_row": 101
+    },
+    "original_outcome_counts": {
+      "observed": 8626,
+      "missing": 14,
+      "condition_true_with_observed_outcome": 0
+    },
+    "predicate_true_counts_among_fully_valid_conditions": {
+      "buy_share_ge_065": 238,
+      "quote_volume_ge_twice_median": 1553,
+      "high_excursion_ge_003": 1544,
+      "retained_return_0_to_0005": 985
+    },
+    "execution_state_counts": {
+      "ELIGIBLE": 8626,
+      "OUTCOME_MISSING": 9,
+      "PARTITION_BOUNDARY": 5
+    },
+    "data_gap_rows": [],
+    "omitted_original_observed_outcomes": [],
+    "wrongly_included_outcomes": [],
+    "condition_value_differences": [],
+    "provider_calls": 0,
+    "protected_or_outside_scope_data_read": false,
+    "numeric_log_values_computed": true,
+    "numeric_crosscheck": {
+      "method": "Independent Decimal.ln at 120 significant digits compared with every exact stored rational enclosure; supplementary numerical crosscheck, not the analytic error proof.",
+      "checked_observed_outcomes": 8626,
+      "outside_stored_enclosure": 0,
+      "maximum_enclosure_width_basis_points": {
+        "numerator": "41875",
+        "denominator": "5316911983139663491615228241121378304"
+      }
+    },
+    "scientific_readiness": false
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "schema": "eth-diagnostic-reopening-observation/1",
+  "recorded_at_utc": "2026-10-29T03:25:37.323229+00:00",
+  "continuation_decision": {
+    "schema": "bounded-continuation-decision/1",
+    "recorded_at_utc": "2026-10-29T03:19:55.589278+00:00",
+    "status": "TECHNICAL_PREREQUISITES_VERIFIED_ONE_BOUNDED_ATTEMPT",
+    "prior_attempt": "bounded-eth-correction-2026-10-29.json",
+    "new_evidence": "case-diagnostics-verification-2026-10-29.json",
+    "reason": "Concrete reporting gap removed by separately tested optional adapter; this materially changes the supplied executable/reporting capability.",
+    "scope": "Same retained ETH idea, authorized Q1 development only, unchanged original meaning. No new discovery or manual research candidate.",
+    "limits": {
+      "new_model_calls": 2,
+      "epoch_tokens": 80000,
+      "epoch_seconds": 1800,
+      "cost_nano_usd": 1000000000,
+      "aggregate_authorization_nano_usd": 5000000000,
+      "primitive_steps": 10000000
+    },
+    "stop": "Retain any formalization, review, input reservation, computation or reporting gap. No automatic reset or retry.",
+    "scientific_readiness": false
+  },
+  "prior_attempt": "bounded-eth-correction-2026-10-29.json",
+  "idea_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+  "scope": "Unchanged retained ETH idea, Q1 2023 development data, optional reason diagnostics; no new free discovery.",
+  "epoch_id": "0ea965ae8047476c90edff36220d07b7",
+  "stages": [
+    {
+      "stage": "formalization",
+      "started_at_utc": "2026-10-29T03:20:43.083409+00:00",
+      "ended_at_utc": "2026-10-29T03:23:54.682370+00:00",
+      "outcome": {
+        "state": "blocked",
+        "accepted": false,
+        "transcript_ids": [
+          "22910fc7cddaa32df3e9327f2876c772dbc583671e594faeea0891aa6d3c2662"
+        ],
+        "scientific_authority": false,
+        "actual_independent_model_review": "UNVERIFIED"
+      }
+    }
+  ],
+  "new_calls": [
+    {
+      "provider": "openai",
+      "dispatch_id": "controller-b38d8122340e49039cc5544d2a5e841a:0",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T03:20:44Z",
+      "settled_at_utc": "2026-10-29T03:23:54Z",
+      "charged_nano_usd": 204967500,
+      "state": "settled",
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0d01db8f81d7d95a016ae2bb8c309087d298d303f67126f1bb",
+        "response_status": "incomplete",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 7126
+        },
+        "transport_request_id": "req_7b801e1b849d4d4481dc263a08331490",
+        "usage": {
+          "cost_units": 204967500,
+          "input_tokens": 25987,
+          "output_tokens": 14000
+        }
+      }
+    }
+  ],
+  "full_path_token_reservation": 77115,
+  "full_path_cost_bound_nano_usd": 327787500,
+  "finished_at_utc": "2026-10-29T03:23:54.743579+00:00",
+  "wall_seconds": 194.89407260000007,
+  "new_reported_tokens": 39987,
+  "new_conservative_cost_nano_usd": 204967500,
+  "aggregate_tokens": 335542,
+  "aggregate_conservative_cost_nano_usd": 1048907500,
+  "remaining_authorization_nano_usd": 3951092500,
+  "scientific_readiness": false,
+  "protected_outcomes_accessed": false,
+  "automatic_further_retry": false,
+  "full_objective_complete": false,
+  "termination": "FORMALIZER_INCOMPLETE_AT_OUTPUT_CAP",
+  "output_analysis": {
+    "id": "22910fc7cddaa32df3e9327f2876c772dbc583671e594faeea0891aa6d3c2662",
+    "response_status": "incomplete",
+    "usage": {
+      "cost_units": 204967500,
+      "input_tokens": 25987,
+      "output_tokens": 14000
+    },
+    "details": {
+      "cached_input_tokens": 0,
+      "reasoning_output_tokens": 7126
+    },
+    "visible_characters": 27193,
+    "last_visible_characters": "-spot-15m-v1\"\n    ]\n  },\n  \"semantic_report\": {\n    \"status\": \"equivalent\",\n    \"segments\": [\n      {\n        \"text\": \"Hypothesis: unusually intense aggressive buying that produces",
+    "qualification": "Only public output text inspected; incomplete response is not a formalization."
+  }
+}

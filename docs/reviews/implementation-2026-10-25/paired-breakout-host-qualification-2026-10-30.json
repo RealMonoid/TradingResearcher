@@ -1,0 +1,208 @@
+{
+  "schema": "paired-breakout-host-observation/1",
+  "at_utc": "2026-10-30T15:33:31.268121+00:00",
+  "status": "OWNED_HOST_IMPLEMENTED_SYNTHETIC_QUALIFICATION_PASSED",
+  "purpose": "Connect the qualified second-original composition/audit to owned retained-source and revocation gates without changing numerical or scientific semantics.",
+  "idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+  "independent_review": {
+    "schema": "independent-paired-breakout-host-qualification/1",
+    "status": "PASS",
+    "qualification": "Bounded engineering qualification on synthetic temporary registries; not production source or model-meaning certification.",
+    "date": "2026-10-30",
+    "idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+    "purpose": "Independently test the optional owned breakout composition and execution host while preserving frozen numerical and legacy authority paths.",
+    "files_sha256": {
+      "trading_researcher/paired_breakout/host.py": "e1dcebdaeccbc9cb9fbd8efe6d3b905d82a7554f3c6aaab70d8f519eed807f02",
+      "trading_researcher/paired_breakout/composition.py": "bf6651b6b17005f9af964c8709dd4d041593215132b4de1404ea8d1e56b35962",
+      "trading_researcher/paired_breakout/runtime.py": "86a6dde79edd0b2a0f439c7b01e69d9624deea1bd727a2453dbb959f499359d4",
+      "tests/test_paired_breakout_host.py": "0fc2395b2694a5900db32d427398ae7e7aa3354ef65849c627e3924e443345af",
+      "tests/paired_breakout_oracle.py": "97e9288a835441ea5e039619b12782972d980eec50861b7b58dfcfe02e32d7d2",
+      "tests/test_paired_breakout_composition.py": "e44e715e9001b88f77c1fe8ebbf7575d963f7b29a2d7c315deb3c23fc2e99e3e"
+    },
+    "checks": [
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_host.py -v",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "unittest_seconds": 150.109,
+        "exit_code": 0,
+        "tool_session": 84922,
+        "terminal_tool_chunk": "d52f90"
+      },
+      {
+        "command": "python -B .trf-runtime/paired-breakout-host-2026-10-30/verify_retention_delta.py",
+        "exit_code": 0,
+        "command_wall_seconds": 0.3960832,
+        "tool_chunk": "2604c0",
+        "finding": "Reversing only the move of exact case staging before verification and the two added comments reconstructs the exact previously reviewed host SHA256 160e216c90fa4e6f98b6118c5081d244d462f73ff18aee3cb02ceccafa95c741."
+      }
+    ],
+    "retained_red_evidence": ".trf-runtime/paired-breakout-host-2026-10-30/independent-red-checks.json",
+    "resolved_finding": {
+      "problem": "After real computation, an injected verification failure retained the report but omitted the generated case blob from the failed execution record.",
+      "observed_red": "One unchanged independent regression failed in 59.511 seconds with exit 1.",
+      "fix": "Stage and validate the exact generated case bytes before invoking the separate verifier; retain them on failure without claiming verification.",
+      "green": "The same regression passed within the final unchanged ten-test suite."
+    },
+    "real_components_exercised": [
+      "Temporary BreakoutBroker registries, immutable records, content-addressed blobs and operator/worker authentication.",
+      "Genuine existing paired reference certification, retained-source compilation and current compiled-input validation.",
+      "Owned breakout source packages and complete 299-scenario / 8970-case candidate-bound composition certification for each of the two step budgets.",
+      "Full Q1 calendar execution over invented input rows, separate retained-source replay and independent original-formula audit: exactly 8640 cases in each complete check.",
+      "A nonempty incomplete resource-limited prefix with exact stored blob and matching replay count, no full original-formula audit and no successful scientific claim.",
+      "Generated case-byte retention after injected replay failure.",
+      "Installed-source drift after a real replay produces EXECUTION_GAP before successful commit while retaining the report, verification and cases.",
+      "Malformed candidate/package/owner/current-source/meaning bindings and revoked dependencies stop before the synthetic row loader.",
+      "Real typed package and composition-certificate revocation propagation to dependent input capsules and denial of later execution.",
+      "Exact delegation of other idea identities to the unchanged legacy composition/execution methods."
+    ],
+    "explicit_fixture_substitutions": {
+      "_paired_dependencies": "Supplies exact invented source, definitions, catalog and analysis-only formalization records, but selects the genuine owned paired reference certificate and bundle. This does not establish raw source certification or accepted model meaning.",
+      "_paired_data_use": "Returns an explicitly labeled synthetic QUALIFIED assessment; no provider-document rights or actual market-source qualification is claimed.",
+      "_inspect_meaning_review": "Checks the exact synthetic assessment identity, operator and formalization binding before returning a synthetic CURRENT/SATISFIED status. No model was called.",
+      "_load_reference_data": "Asserts the exact synthetic snapshot, original Q1 bounds and fixed pair, then returns only the oracle's invented 30-timestamp rows.",
+      "negative_paths": "Additional mocks inject explicit protected-source denial, changed meaning/current sources, replay failure and legacy delegation sentinels. Real owned runtime, record, blob, compilation, package and revocation machinery remains active."
+    },
+    "source_review_conclusion": "No additional substantiated objection found in the bounded host integration after the retained failure was fixed. Exact second-idea ownership, current source checks, independent review and data-use delegation, separate replay, full original audit, typed revocation and legacy routing remain required.",
+    "limits": [
+      "No production registry, real market rows, provider API, credential or spend ledger was read or modified.",
+      "The analysis-only synthetic expression fixture is not an accepted model-created H_exec.",
+      "Full-path case counts are exactly 8640. Partial and observed-outcome counts were asserted where relevant but not exported from the temporary fixtures; no additional numerical result is claimed.",
+      "The independent audit compares case scope, condition, missingness, outcomes and neutral diagnostic categories. Aggregate contrast remains computed by the frozen paired evaluator, not independently recertified here.",
+      "No new paid-call admission or production activation follows from these tests.",
+      "Actual second-idea source/model qualification, production execution and any future typed feedback publication remain separate unverified steps.",
+      "Software checks do not establish statistical validity, independent historical evidence, profitability or capital authority."
+    ],
+    "next_action": "The parent may record this bounded host engineering capability and continue only the selected plan's separately gated next step; preserve all retained failures and frozen source identities.",
+    "scientific_readiness": false
+  },
+  "independent_review_sha256": "cd5f3cc4ab781ef83d45bc6c84f8e9f20ea4c0099997c5feb1389d3571297bb1",
+  "retained_failures": {
+    "schema": "independent-engineering-checks/1",
+    "scope": "Optional second-original paired host, synthetic temporary registries only",
+    "checks": [
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_host.py -v",
+        "stage": "Initial absent-module check before implementation",
+        "exit_code": 1,
+        "tests": 1,
+        "errors": 1,
+        "unittest_seconds": 0.0,
+        "command_wall_seconds": 0.5107271,
+        "tool_chunk": "07410e",
+        "error": "ModuleNotFoundError: No module named 'trading_researcher.paired_breakout.host'"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_host.py -v",
+        "stage": "Test fixture setup error, not a runtime defect",
+        "exit_code": 1,
+        "tests": 0,
+        "errors": 1,
+        "unittest_seconds": 4.612,
+        "tool_chunk": "57df72",
+        "error": "Synthetic snapshot/definitions had origin controller; the existing technical-version contract requires origin source.",
+        "correction": "Changed only the two synthetic fixture envelope origins; no implementation expectation weakened."
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_host.py -v",
+        "stage": "First eight host tests before added retention/source-race tests",
+        "exit_code": 0,
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "unittest_seconds": 138.651,
+        "tool_session": 4166,
+        "tool_chunk": "254076"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_host.py -k replay_failure -v",
+        "stage": "Observed case retention regression before the implementation fix",
+        "exit_code": 1,
+        "tests": 1,
+        "failures": 1,
+        "errors": 0,
+        "unittest_seconds": 59.511,
+        "tool_session": 8100,
+        "tool_chunk": "3bb691",
+        "host_sha256": "160e216c90fa4e6f98b6118c5081d244d462f73ff18aee3cb02ceccafa95c741",
+        "test_sha256": "0fc2395b2694a5900db32d427398ae7e7aa3354ef65849c627e3924e443345af",
+        "error": "Actual computed case descriptor bea22170345f7422024ffed2acdde074e9ff3b8bedb466e8a6636c764fd41bc9 was absent from record.blob_refs=[] following injected verification failure.",
+        "expected_behavior": "Preserve exact generated case bytes in the failed execution record without claiming verification or scientific readiness."
+      }
+    ],
+    "limitations": [
+      "No production registry, provider, spend ledger or market data was used.",
+      "Legacy source, model-meaning and data-use boundaries use explicitly labeled synthetic substitutes; these checks do not qualify any production hypothesis.",
+      "Software test outcomes are not scientific validity or economic performance evidence."
+    ]
+  },
+  "root_focused_check": {
+    "command": "python -B -m unittest discover -s tests -p test_paired_breakout_host.py -k replay_failure -v",
+    "tests": 1,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 60.321,
+    "exit_code": 0,
+    "qualification": "The root independently reran the observed retention regression against the final unchanged source and test."
+  },
+  "source_preservation_check": {
+    "status": "PASS",
+    "scope": "Source closure and static reuse, not publication qualification",
+    "unchanged_top_level_runtime_modules": 83,
+    "legacy_publisher_sha256": "163f03ca7977edd9b13ea9114c9126226d896821a768dd89c446fade0e6bf68b",
+    "paired_publisher_sha256": "9d923031883f621269adf5636e5432553ae8099fd653f0149d79cdbf4324bcd7",
+    "identical_function_asts": [
+      "_owned",
+      "_save",
+      "check_context",
+      "released_feedback",
+      "require"
+    ],
+    "feature_bundle_hash": "3a08198fbe744e704154811b5c1f451f60ee7bea7d4d03878b9f62bb9bd0b5fe",
+    "paired_bundle_hash": "1a10223a11c2a69b4d4315584c5499371917e1b293c45a9372e2363e2689afab",
+    "new_numeric_implementation": false,
+    "new_model_calls": 0
+  },
+  "finding": "Owned source/candidate/meaning checks precede loading and precede successful commit; separate replay and original audit operate on retained bytes. Typed source/certificate invalidation prevents later execution. A real replay-failure retention defect was reproduced and fixed without changing the independent test.",
+  "warranted_conclusion": "The narrow host adapter passes independent synthetic integration tests. The actual second-original model candidate and production computation are not yet admitted or executed.",
+  "changed_files": [
+    "trading_researcher/paired_breakout/host.py",
+    "tests/test_paired_breakout_host.py",
+    "trading_researcher/paired_breakout/README.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/reviews/implementation-2026-10-25/paired-breakout-host-qualification-2026-10-30.json"
+  ],
+  "budget": {
+    "shared_currency": "USD",
+    "original_cap_nano": 5000000000,
+    "settled_dispatches": 48,
+    "conservative_charged_nano": 3544770000,
+    "remaining_nano": 1455230000,
+    "new_provider_calls": 0,
+    "new_provider_cost_nano": 0
+  },
+  "market_rows_read": 0,
+  "production_registry_mutated": false,
+  "previous_goal_turn_classification": "PROGRESS_INDEPENDENT_COMPOSITION_PREREQUISITE",
+  "intervening_hook_turn": "REQUIRED_FRESH_CHECK_ONLY_NO_MUTATION",
+  "current_goal_turn_classification": "PROGRESS_OWNED_HOST_INTEGRATION_AND_REPLAY_FAILURE_RETENTION_FIX",
+  "unverified": [
+    "No production registry, real market rows, provider API, credential or spend ledger was read or modified.",
+    "The analysis-only synthetic expression fixture is not an accepted model-created H_exec.",
+    "Full-path case counts are exactly 8640. Partial and observed-outcome counts were asserted where relevant but not exported from the temporary fixtures; no additional numerical result is claimed.",
+    "The independent audit compares case scope, condition, missingness, outcomes and neutral diagnostic categories. Aggregate contrast remains computed by the frozen paired evaluator, not independently recertified here.",
+    "No new paid-call admission or production activation follows from these tests.",
+    "Actual second-idea source/model qualification, production execution and any future typed feedback publication remain separate unverified steps.",
+    "Software checks do not establish statistical validity, independent historical evidence, profitability or capital authority."
+  ],
+  "next_action": "Prepare and record one complete bounded continuation of the exact second original idea under the existing discretionary-spending authority and remaining original shared budget. Bind current host and numerical sources, retain full formalization/review inputs, verify current pricing and complete-path token reservations, and preserve the existing independent role settings. Admit one new durable grant only after its actual inputs fit; do not reopen D093, D094 or D095. Then run faithful model formalization and separate meaning review, followed by owned descriptive execution/replay/original audit only if all gates pass. Retain any terminal gap without manual candidate repair. The synthetic witness is never H_exec; calibration and protected assessment remain outside this continuation.",
+  "scientific_readiness": false,
+  "full_objective_complete": false
+}

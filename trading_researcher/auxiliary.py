@@ -2,6 +2,7 @@
 from .codec import Invalid, canonical, decode, digest, integer, strings, text
 from .errors import Denied
 from .formalization import validate_inputs
+from .auxiliary_availability import availability_packet, release_feature_evidence, released_feature_evidence
 
 
 KINDS={'formalization/v1','semantic-review/v1'}
@@ -71,6 +72,49 @@ def mapping_count(target):
     return len(segments) if type(segments) is list else 0
 
 
+def expression_contract(candidate):
+    """Bind the exact approved optional semantics without changing legacy packets."""
+    if type(candidate) is not dict:
+        return {}
+    outcome = candidate.get('outcome')
+    programs = [candidate.get('scope_ast'), candidate.get('condition_ast'),
+                outcome.get('program') if type(outcome) is dict else None]
+    if not any(type(program) is dict and program.get('schema') == 'research-ast/2' for program in programs):
+        return {}
+    import hashlib
+    from .certification import ROOT, BOUNDED_PINS
+    path = 'docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md'
+    try:
+        raw = (ROOT / path).read_bytes()
+        if hashlib.sha256(raw).hexdigest() != BOUNDED_PINS[path]:
+            raise Invalid('Approved bounded expression contract differs from its fixed source')
+        content = raw.decode('utf-8')
+    except (OSError, UnicodeError) as exc:
+        raise Invalid('Approved bounded expression contract is unavailable') from exc
+    return {'expression_contract': {'schema': 'bounded-math/1.0', 'path': path,
+                                    'sha256': BOUNDED_PINS[path], 'text': content}}
+
+
+def reporting_contract(inputs):
+    if 'reporting_contract' not in inputs:
+        return {}
+    schema = inputs['reporting_contract']
+    require(schema in ('case-diagnostics/1','case-diagnostics/2'), 'Unknown fixed reporting contract')
+    import hashlib
+    from .certification import ROOT, DIAGNOSTIC_PINS, REQUIRED_PINS
+    path = ('trading_researcher/CASE_DIAGNOSTICS.md' if schema=='case-diagnostics/1'
+            else 'trading_researcher/REQUIRED_INPUTS.md')
+    pins = DIAGNOSTIC_PINS if schema=='case-diagnostics/1' else REQUIRED_PINS
+    try:
+        raw = (ROOT / path).read_bytes()
+        require(hashlib.sha256(raw).hexdigest() == pins[path], 'Reporting contract differs from fixed source')
+        content = raw.decode('utf-8')
+    except (OSError, UnicodeError) as exc:
+        raise Invalid('Fixed reporting contract is unavailable') from exc
+    return {'reporting_contract': {'schema': schema, 'path': path,
+                                   'sha256': pins[path], 'text': content}}
+
+
 def validate_review_record(record,sources):
     require(type(record) is dict and record.get('schema')==REVIEW_SCHEMA,'Expected an owned review record')
     require(record.get('scientific_readiness') is False and record.get('actual_independent_model_review')=='UNVERIFIED',
@@ -84,16 +128,26 @@ def validate_review_record(record,sources):
 
 
 class AuxiliaryResearch:
+    def _release_feature_evidence(self, actor, certificate_id, target_epoch):
+        return release_feature_evidence(self,actor,certificate_id,target_epoch)
+
+    def _released_feature_evidence(self, certificate, epoch, research_time):
+        return released_feature_evidence(self,certificate,epoch,research_time)
+
     def _auxiliary_packet_for_spec(self,spec):
         require(spec['kind'] in KINDS and 'research_epoch_id' in spec,'An auxiliary job needs its original epoch')
         context=self._context(spec['context_id'])
         require(context['role']=='formalizer' and len(spec['allowed_workers'])==1,'Auxiliary work needs one scoped formalizer capability')
         inputs=spec.get('research_inputs')
         expected={'idea_id','catalog_id','definition_ids'} if spec['kind']=='formalization/v1' else {'formalization_id','definition_ids'}
-        require(type(inputs) is dict and set(inputs)==expected,'Missing or unexpected typed auxiliary inputs')
+        require(type(inputs) is dict and expected <= set(inputs) <= expected|{'reporting_contract','feature_certificate_id'},
+            'Missing or unexpected typed auxiliary inputs')
+        reporting = reporting_contract(inputs)
         definitions=strings(inputs['definition_ids'],'definition_ids')
         require(len(definitions)<=16,'At most sixteen definition records may be supplied')
         identities=set(definitions)|{text(inputs[n],'auxiliary input identity') for n in expected-{'definition_ids'}}
+        if 'feature_certificate_id' in inputs:
+            identities.add(text(inputs['feature_certificate_id'],'feature certificate identity'))
         if not identities<=set(context['artifact_ids']):raise Denied('Auxiliary input is outside its frozen context')
         retained=[self._artifact(identity) for identity in definitions]
         defined={}
@@ -110,8 +164,10 @@ class AuxiliaryResearch:
             idea,catalog=(self._artifact(inputs[n]) for n in ('idea_id','catalog_id'))
             validate_inputs(idea['body'],catalog['body'])
             check_definition_origins(retained,catalog['id'])
+            availability = availability_packet(self,context,inputs,catalog['id'],retained)
             return {'schema':'formalization-input/1','context_id':context['id'],'inputs':inputs,
-                'sources':[self._artifact(n) for n in context['artifact_ids']]}
+                'sources':[self._artifact(n) for n in context['artifact_ids']
+                           if n != inputs.get('feature_certificate_id')], **reporting, **availability}
         target=self._artifact(inputs['formalization_id'])
         body=target['body']
         require(target['origin']=='worker' and type(body) is dict and body.get('schema')=='formalization-record/1',
@@ -119,6 +175,10 @@ class AuxiliaryResearch:
         job=self._job(target['job_id'])
         require(job['state']=='completed' and job['result_id']==target['id'] and job['spec']['kind']=='formalization/v1',
             'Review target must be the accepted completed formalization result')
+        require(inputs.get('reporting_contract') == job['spec'].get('research_inputs',{}).get('reporting_contract'),
+            'Review must preserve the original reporting contract')
+        require(inputs.get('feature_certificate_id') == job['spec'].get('research_inputs',{}).get('feature_certificate_id'),
+            'Review must preserve the original availability evidence identity')
         if 'research_epoch_id' in job['spec']:
             require(spec['research_epoch_id']==job['spec']['research_epoch_id'],
                 'Review must use the formalization original epoch; a new epoch cannot reset its budget')
@@ -128,6 +188,10 @@ class AuxiliaryResearch:
         candidate=body['candidate']
         universe=candidate.get('test_universe',{}) if type(candidate) is dict else {}
         snapshot_id=universe.get('data_snapshot_ref') if type(universe) is dict else None
+        availability = availability_packet(self,context,inputs,catalog['id'],retained,target)
+        if availability:
+            allowed.update((availability['availability_evidence']['certificate_id'],
+                            availability['availability_evidence']['data_snapshot_id']))
         public_target=None
         # Retained DATA_GAP drafts may contain arbitrary untrusted references.
         # Such text cannot become an existence/schema oracle outside the original
@@ -150,6 +214,9 @@ class AuxiliaryResearch:
                 'Review definitions differ from the retained catalog')
         return {'schema':'semantic-review-input/1','context_id':context['id'],'inputs':inputs,
             'formalization':target,'catalog':catalog,'definitions':retained,
+            **reporting,
+            **availability,
+            **expression_contract(candidate),
             **({'data_target':public_target} if public_target is not None else {}),
             'qualification':'Assess meaning independently; supplied mappings are formalizer assertions. No assessment outcomes are supplied.'}
 

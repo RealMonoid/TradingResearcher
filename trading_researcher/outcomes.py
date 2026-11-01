@@ -174,7 +174,8 @@ def materialize_reference(request, catalog, rows):
     }
 
 
-def _case(engine, scope, condition, outcome, when, instrument, start, end, as_of, horizon, remaining, lookback):
+def _case(engine, scope, condition, outcome, when, instrument, start, end, as_of, horizon, remaining, lookback,
+          *, serialize=_rational, require_container_rows=True):
     anchor = when + horizon * 900
     case = {'decision_time': when, 'instrument': instrument, 'outcome_anchor': anchor,
             'scope': None, 'condition': None, 'outcome': None, 'label_information_interval': None,
@@ -186,7 +187,7 @@ def _case(engine, scope, condition, outcome, when, instrument, start, end, as_of
 
     if when > as_of:
         return finish('NOT_YET_OBSERVED', 'decision_in_future')
-    if (when, instrument) not in engine.lookup:
+    if require_container_rows and (when, instrument) not in engine.lookup:
         return finish('DATA_GAP', 'missing_decision_observation')
     value = engine._calculate(scope, when, instrument, when, remaining)
     case['scope'] = value.value
@@ -200,12 +201,12 @@ def _case(engine, scope, condition, outcome, when, instrument, start, end, as_of
         return finish('PARTITION_BOUNDARY', 'anchor_at_or_after_exclusive_end')
     if anchor > as_of:
         return finish('OUTCOME_PENDING', 'horizon_not_elapsed')
-    if (anchor, instrument) not in engine.lookup:
+    if require_container_rows and (anchor, instrument) not in engine.lookup:
         return finish('DATA_GAP', 'missing_exact_outcome_observation')
     trace = _Trace(when, start, end, anchor - lookback)
     value = engine._calculate(outcome, anchor, instrument, min(as_of, end - 1), remaining, trace)
     case['trace'] = trace.public()
-    case['outcome'] = _rational(value.value)
+    case['outcome'] = serialize(value.value)
     if trace.late_warmup or trace.prior_partition or (not value.missing and trace.unknown):
         return finish('REVIEW_REQUIRED', 'outcome_dependency_membership_uncertified')
     if value.missing:

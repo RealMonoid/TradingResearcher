@@ -1,0 +1,29 @@
+{
+  "schema": "exact-resource-ceiling-approval/1",
+  "recorded_at_utc": "2026-11-01T17:39:38.394881+00:00",
+  "client_date": "2026-11-01",
+  "client_timezone": "Europe/Berlin",
+  "source": "SESSION-2026-11-01-EXACT-RESOURCES",
+  "question_id": "call_eedff1460ff440fd9220d7d636951df6",
+  "answer": "20M-Grenze freigeben (empfohlen)",
+  "question": "Darf ich die gepr\u00fcfte lokale Rechengrenze von 10 auf 20 Millionen Schritte je Berechnung beziehungsweise Wiederholung erh\u00f6hen \u2013 zusammen h\u00f6chstens 40 Millionen, weiterhin maximal 30 Minuten und mit s\u00e4mtlichen unabh\u00e4ngigen Pr\u00fcfungen?\n\n55 Tests und zwei vollst\u00e4ndige synthetische Vierteljahre samt separater Wiederholung und unabh\u00e4ngiger Ergebniskontrolle bestehen. Die Variante bleibt bisher inaktiv. Es geht um lokale Rechenarbeit, nicht um zus\u00e4tzliches API-Geld; 0,574585 USD bleiben verf\u00fcgbar. [Konkreter Vorschlag](<C:/Users/monoi/Documents/ChatGPT/Trading Research Framework/docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-1-proposal-explicit-exact-computation-resource-revision>).\n\nDiese R\u00fcckfrage ist erforderlich, weil die sp\u00e4ter von dir best\u00e4tigte [D097-Regel](<C:/Users/monoi/Documents/ChatGPT/Trading Research Framework/docs/architecture/26_BOUNDED_EXACT_COMPOSITIONS.md:30>) ausdr\u00fccklich festlegt: \u201eprimitive budgets [\u2026] remain unchanged\u201c. Die neue Grenze braucht deshalb eine konkrete Freigabe; deine freie Verwendung des API-Budgets bleibt bestehen.",
+  "proposal_sha256": "8f77c6132f7e174aae5f4c7417ffd44cdead38d4fad7b8d3572c38e441e83712",
+  "proposal_snapshot": "approved-proposal.txt",
+  "decision": "D098",
+  "contract": "exact-computation-resources/2.0",
+  "scope": {
+    "per_child_shared_primitive_steps": 20000000,
+    "execute_replay_aggregate_steps": 40000000,
+    "shared_whole_operation_seconds": 1800,
+    "plain_observed_canonical_replay_checks": "PRESERVED",
+    "legacy_10m_source_versions": "UNCHANGED",
+    "additional_api_money": 0
+  },
+  "specification_accepted": true,
+  "new_native_implementation_qualified": false,
+  "production_activation": false,
+  "new_provider_calls": 0,
+  "new_count_calls": 0,
+  "new_production_grants": 0,
+  "boundaries": "No old slot or grant reset, automatic retry/successor, token/time exception, new scientific meaning, protected-data access or capital authority."
+}

@@ -1,0 +1,369 @@
+{
+  "schema": "exact-resource-revision-offline-qualification/1",
+  "status": "READY_FOR_SPECIFIC_CEILING_DECISION_INACTIVE_ONLY",
+  "at_utc": "2026-11-01T16:10:27.447729+00:00",
+  "python_version": "3.14.2",
+  "purpose": "Remove the measured computational bottleneck while retaining every existing check; prepare a concrete resource decision before intended use.",
+  "previous_goal_turn_audit": {
+    "classification": "NO_PROGRESS_GATE_ONLY_RECHECK",
+    "reason": "The preceding gate-only validation repeated an existing checkpoint. New bounded design, implementation and offline full-quarter qualification resumed here."
+  },
+  "authority": {
+    "current": "D097 retains existing primitive budgets; accepted offline tests are not activation.",
+    "proposed_per_child_steps": 20000000,
+    "proposed_aggregate_execute_replay_steps": 40000000,
+    "shared_whole_operation_seconds": 1800,
+    "specific_ceiling_decision_received": false,
+    "proposal": "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-1-proposal-explicit-exact-computation-resource-revision"
+  },
+  "selected_design": "Keep base-first plain computation, complete observed-versus-plain case comparison, base byte binding and fresh separate canonical replay. Do not replace these checks with an unqualified observer/cache algorithm.",
+  "top_level_test_methods": 55,
+  "new_methods": 15,
+  "independently_authored_new_methods": 11,
+  "legacy_methods": 40,
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_resource_candidate*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_actual_budget_and_canonical_base_binding_cannot_be_relabelled (test_exact_resource_candidate.ExactResourceCandidateTests.test_actual_budget_and_canonical_base_binding_cannot_be_relabelled) ... ok\ntest_diagnostic_failure_keeps_plain_case_values_and_status (test_exact_resource_candidate.ExactResourceCandidateTests.test_diagnostic_failure_keeps_plain_case_values_and_status) ... ok\ntest_explicit_inactive_version_and_old_cap_preserved (test_exact_resource_candidate.ExactResourceCandidateTests.test_explicit_inactive_version_and_old_cap_preserved) ... ok\ntest_plain_projection_and_full_observed_case_check_are_preserved (test_exact_resource_candidate.ExactResourceCandidateTests.test_plain_projection_and_full_observed_case_check_are_preserved) ... ok\ntest_actual_encoded_byte_overflow_keeps_numeric_cases (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_actual_encoded_byte_overflow_keeps_numeric_cases) ... ok\ntest_actual_event_overflow_retains_complete_plain_result (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_actual_event_overflow_retains_complete_plain_result) ... ok\ntest_base_binding_restores_bytes_and_rejects_tampered_projection (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_base_binding_restores_bytes_and_rejects_tampered_projection) ... ok\ntest_budget_bounds_types_and_report_consumption_validate_before_projection (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_budget_bounds_types_and_report_consumption_validate_before_projection) ... ok\ntest_exact_guard_shapes_and_false_positives_remain_unrecognized (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_exact_guard_shapes_and_false_positives_remain_unrecognized) ... ok\ntest_explicit_20m_actual_request_and_counters_are_not_structurally_clamped (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_explicit_20m_actual_request_and_counters_are_not_structurally_clamped) ... ok\ntest_new_budget_remains_unavailable_to_old_api_and_invalid_program_scope (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_new_budget_remains_unavailable_to_old_api_and_invalid_program_scope) ... ok\ntest_only_remaining_shared_allowance_can_fund_observation (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_only_remaining_shared_allowance_can_fund_observation) ... ok\ntest_scope_false_does_not_evaluate_condition_or_outcome_for_diagnostics (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_scope_false_does_not_evaluate_condition_or_outcome_for_diagnostics) ... ok\ntest_stopped_base_is_an_exact_prefix_with_no_aggregate_effect (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_stopped_base_is_an_exact_prefix_with_no_aggregate_effect) ... ok\ntest_whole_case_comparison_preserves_json_types_and_exclusion_metadata (test_exact_resource_candidate_review.ExactResourceCandidateReview.test_whole_case_comparison_preserves_json_types_and_exclusion_metadata) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 2.586s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_outcomes*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_common_language_case_values_and_diagnostics_match_old_version (test_exact_outcomes.ExactOutcomeCompatibility.test_common_language_case_values_and_diagnostics_match_old_version) ... ok\ntest_complete_boolean_window_false_unknown_retains_all_raw_dependencies (test_exact_outcomes.ExactOutcomeCompatibility.test_complete_boolean_window_false_unknown_retains_all_raw_dependencies) ... ok\ntest_multi_instrument_order_is_deterministic_and_unsorted_rows_are_rejected (test_exact_outcomes.ExactOutcomeCompatibility.test_multi_instrument_order_is_deterministic_and_unsorted_rows_are_rejected) ... ok\ntest_original_shape_shared_budget_is_observed_not_assumed (test_exact_outcomes.ExactOutcomeCompatibility.test_original_shape_shared_budget_is_observed_not_assumed) ... ok\ntest_contrast_rejects_case_order_counts_and_contract_tampering (test_exact_outcomes_review.ExactOutcomesReview.test_contrast_rejects_case_order_counts_and_contract_tampering) ... ok\ntest_diagnostic_budget_is_the_explicit_remaining_shared_allowance (test_exact_outcomes_review.ExactOutcomesReview.test_diagnostic_budget_is_the_explicit_remaining_shared_allowance) ... ok\ntest_diagnostic_resource_stop_preserves_complete_base_and_later_replay (test_exact_outcomes_review.ExactOutcomesReview.test_diagnostic_resource_stop_preserves_complete_base_and_later_replay) ... ok\ntest_existing_asof_cutoff_is_not_silently_replaced_with_anchor_cap (test_exact_outcomes_review.ExactOutcomesReview.test_existing_asof_cutoff_is_not_silently_replaced_with_anchor_cap) ... ok\ntest_explicit_versions_contracts_and_original_engineering_shape (test_exact_outcomes_review.ExactOutcomesReview.test_explicit_versions_contracts_and_original_engineering_shape) ... ok\ntest_horizon_cutoff_and_exclusive_end_have_distinct_states (test_exact_outcomes_review.ExactOutcomesReview.test_horizon_cutoff_and_exclusive_end_have_distinct_states) ... ok\ntest_new_window_lookback_and_diagnostic_declared_earliest_match (test_exact_outcomes_review.ExactOutcomesReview.test_new_window_lookback_and_diagnostic_declared_earliest_match) ... ok\ntest_no_unused_decision_or_anchor_container_prerequisite (test_exact_outcomes_review.ExactOutcomesReview.test_no_unused_decision_or_anchor_container_prerequisite) ... ok\ntest_observed_zero_is_defined_but_empty_condition_is_not (test_exact_outcomes_review.ExactOutcomesReview.test_observed_zero_is_defined_but_empty_condition_is_not) ... ok\ntest_original_outcome_rejects_two_negative_endpoints_not_only_bad_ratio (test_exact_outcomes_review.ExactOutcomesReview.test_original_outcome_rejects_two_negative_endpoints_not_only_bad_ratio) ... ok\ntest_prior_universe_window_remains_review_required_and_reports_warmup (test_exact_outcomes_review.ExactOutcomesReview.test_prior_universe_window_remains_review_required_and_reports_warmup) ... ok\ntest_projection_and_replay_reject_changed_base_values_and_inputs (test_exact_outcomes_review.ExactOutcomesReview.test_projection_and_replay_reject_changed_base_values_and_inputs) ... ok\ntest_replay_cannot_skip_an_outcome_after_trace_and_value_removal (test_exact_outcomes_review.ExactOutcomesReview.test_replay_cannot_skip_an_outcome_after_trace_and_value_removal) ... ok\ntest_replay_rejects_reason_mutation_even_when_values_and_traces_match (test_exact_outcomes_review.ExactOutcomesReview.test_replay_rejects_reason_mutation_even_when_values_and_traces_match) ... ok\ntest_replay_rejects_reclassification_that_removes_an_observed_case (test_exact_outcomes_review.ExactOutcomesReview.test_replay_rejects_reclassification_that_removes_an_observed_case) ... ok\ntest_request_versions_types_and_required_outcome_feature_are_explicit (test_exact_outcomes_review.ExactOutcomesReview.test_request_versions_types_and_required_outcome_feature_are_explicit) ... ok\ntest_resource_stopped_base_is_exact_prefix_with_no_effect (test_exact_outcomes_review.ExactOutcomesReview.test_resource_stopped_base_is_exact_prefix_with_no_effect) ... ok\ntest_unknown_and_false_conditions_stay_in_whole_scope_denominator (test_exact_outcomes_review.ExactOutcomesReview.test_unknown_and_false_conditions_stay_in_whole_scope_denominator) ... ok\ntest_unknown_factor_plus_zero_outcome_is_missing_and_retains_diagnostics (test_exact_outcomes_review.ExactOutcomesReview.test_unknown_factor_plus_zero_outcome_is_missing_and_retains_diagnostics) ... ok\n\n----------------------------------------------------------------------\nRan 23 tests in 1.315s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_runtime*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_approved_owner_bytes_and_declared_estimator_are_not_replaceable (test_exact_runtime.ExactRuntimeTests.test_approved_owner_bytes_and_declared_estimator_are_not_replaceable) ... ok\ntest_child_compiler_preserves_candidate_and_reports_complete_declared_spans (test_exact_runtime.ExactRuntimeTests.test_child_compiler_preserves_candidate_and_reports_complete_declared_spans) ... ok\ntest_child_conformance_is_exact_fixed_suite_and_interpreter_closure (test_exact_runtime.ExactRuntimeTests.test_child_conformance_is_exact_fixed_suite_and_interpreter_closure) ... ok\ntest_full_engineering_shape_streams_over_one_mib_and_replays_exactly (test_exact_runtime.ExactRuntimeTests.test_full_engineering_shape_streams_over_one_mib_and_replays_exactly) ... ok\ntest_source_membership_timeout_and_exclusive_directory_are_bounded (test_exact_runtime.ExactRuntimeTests.test_source_membership_timeout_and_exclusive_directory_are_bounded) ... ok\ntest_certify_runs_only_fixed_retained_core_and_case_methods (test_exact_runtime_review.ExactRuntimeReview.test_certify_runs_only_fixed_retained_core_and_case_methods) ... ok\ntest_compile_in_actual_retained_isolated_child_matches_local (test_exact_runtime_review.ExactRuntimeReview.test_compile_in_actual_retained_isolated_child_matches_local) ... ok\ntest_compile_new_window_spans_and_exact_mature_metadata (test_exact_runtime_review.ExactRuntimeReview.test_compile_new_window_spans_and_exact_mature_metadata) ... ok\ntest_execute_has_complete_diagnostic_stream_and_exact_descriptive_means (test_exact_runtime_review.ExactRuntimeReview.test_execute_has_complete_diagnostic_stream_and_exact_descriptive_means) ... ok\ntest_fixed_bundle_time_bounds_and_stream_byte_identity (test_exact_runtime_review.ExactRuntimeReview.test_fixed_bundle_time_bounds_and_stream_byte_identity) ... ok\ntest_fresh_replay_binds_exact_bytes_compilation_and_result (test_exact_runtime_review.ExactRuntimeReview.test_fresh_replay_binds_exact_bytes_compilation_and_result) ... ok\ntest_matching_hash_does_not_authorize_rows_outside_compiled_selection (test_exact_runtime_review.ExactRuntimeReview.test_matching_hash_does_not_authorize_rows_outside_compiled_selection) ... ok\ntest_protected_outside_manifest_version_unit_and_catalog_changes_reject (test_exact_runtime_review.ExactRuntimeReview.test_protected_outside_manifest_version_unit_and_catalog_changes_reject) ... ok\ntest_replay_rejects_changed_case_or_suffix_even_with_rebound_blob_hash (test_exact_runtime_review.ExactRuntimeReview.test_replay_rejects_changed_case_or_suffix_even_with_rebound_blob_hash) ... ok\ntest_replay_rejects_result_metadata_or_raw_row_change (test_exact_runtime_review.ExactRuntimeReview.test_replay_rejects_result_metadata_or_raw_row_change) ... ok\ntest_resource_stop_keeps_only_completed_numerical_prefix_and_no_effect (test_exact_runtime_review.ExactRuntimeReview.test_resource_stop_keeps_only_completed_numerical_prefix_and_no_effect) ... ok\ntest_wrong_compilation_hash_or_changed_raw_bytes_fail (test_exact_runtime_review.ExactRuntimeReview.test_wrong_compilation_hash_or_changed_raw_bytes_fail) ... ok\n\n----------------------------------------------------------------------\nRan 17 tests in 19.030s\n\nOK\n"
+    }
+  ],
+  "retained_adversaries": {
+    "positive_cases": 55,
+    "rejected_cases": 8,
+    "private_evidence": ".trf-runtime/exact-resource-proposal-2026-11-01/adversaries.json",
+    "sha256": "17b715a2c0e054bd900d2ce058305448857ce8b2150e181eb63709b3414baaae"
+  },
+  "source_sha256": {
+    "trading_researcher/exact_resource_candidate.py": "3e015bc1f73ed939ec53dc04eb41f9388a126a1672482f6494a1eacae8f76765",
+    "trading_researcher/EXACT_RESOURCE_PROPOSAL.md": "8cc4ce73402035a5f27d7c2651beebaf4249baa60741f5bf00c76ddd8bbbe7c7",
+    "tests/test_exact_resource_candidate.py": "bdf9d3ff9535785447374451e370e1d513caaeeccdf4c306e0566decb73ee735",
+    "tests/test_exact_resource_candidate_review.py": "d0afcc7f0ec74badd4c002377b7c8dfcc71b5534e662e3022e448fa7f4c102e1"
+  },
+  "offline_retained_source_footprint": {
+    ".trf-runtime/exact-resource-proposal-2026-11-01/retained.py": "ac79eceb00a6e05d82c0bded2c574fd565fa5d1df624ed79711c4db2c0b9fb8e",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md": "6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f",
+    "docs/architecture/20_BOUNDED_MATH_REUSE.md": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+    "docs/architecture/26_BOUNDED_EXACT_COMPOSITIONS.md": "fcff34f14878773bd817155121a62212f934a07ba9cba57c3a7864777420418f",
+    "tests/fixtures/exact_composition_shape_2026-11-01.json": "d66f100e4eedc1a7e11894e6a0ad9777b5fc6298c9affea7686e583263fda88e",
+    "tests/test_exact_compositions.py": "d8fd47254458f3f070e3c06046d669f3b3be92f9d6cf4f309ad4657df812e522",
+    "tests/test_exact_compositions_review.py": "3fea890dbf601386c59f8e1142d6386c385d6ce39b2bcf320e628f66d3bc350d",
+    "tests/test_exact_outcomes.py": "051bcc7f5400c0c2531caec56bf16ce63dcf7f8bb1c1c3d6d6fc6fcf77e85637",
+    "tests/test_exact_outcomes_review.py": "da064fd250b454a9ba016b463e622a2f6a0732780d7b0b060099c5a67567f4da",
+    "tests/test_exact_resource_candidate.py": "bdf9d3ff9535785447374451e370e1d513caaeeccdf4c306e0566decb73ee735",
+    "tests/test_exact_resource_candidate_review.py": "d0afcc7f0ec74badd4c002377b7c8dfcc71b5534e662e3022e448fa7f4c102e1",
+    "trading_researcher/EXACT_COMPOSITIONS.md": "35cf923ffed5d30d842d90c03b97633dd5796ee19b8acd518910b14bfea8b038",
+    "trading_researcher/EXACT_RESOURCE_PROPOSAL.md": "8cc4ce73402035a5f27d7c2651beebaf4249baa60741f5bf00c76ddd8bbbe7c7",
+    "trading_researcher/EXACT_RUNTIME.md": "bd3552337f9cce0ae92d040b187ba3a28b1d45fe08c4b06cd76eff9c9b0d7abd",
+    "trading_researcher/REQUIRED_INPUTS.md": "2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c",
+    "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+    "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+    "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+    "trading_researcher/bounded_outcomes.py": "82c5003723b0482884f07860d7c43e4109e70e7e28588a9631187b7b1dfdce22",
+    "trading_researcher/case_diagnostics.py": "85fb071c30d2474ca512c1918317c9eebf18aaa31924a607e4090db727c1d7be",
+    "trading_researcher/certification.py": "a1b554dbb8c42fcc7751f285f4a93064e05cb078ac96e70c90599946262c0ca9",
+    "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+    "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+    "trading_researcher/exact_compositions.py": "555358e6d3925cb9e414b2ba88df7d25d211de7470b53042593ba3db07600402",
+    "trading_researcher/exact_outcomes.py": "c94ceceb906d19c184c56e85f1675458cd395f433015f18df916cf65b178147b",
+    "trading_researcher/exact_resource_candidate.py": "3e015bc1f73ed939ec53dc04eb41f9388a126a1672482f6494a1eacae8f76765",
+    "trading_researcher/exact_runtime.py": "2a45a4b9d9a182ee741406e3533fbe19d1204b882882765f5ae80d993e2fd8b7",
+    "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+    "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+    "trading_researcher/required_inputs.py": "0b00db49cc9016df46730d5f6974d69725bb86febd25e3610d1f0931ea0ca45b"
+  },
+  "unchanged_previous_native_source_bytes": {
+    "trading_researcher/exact_execution.py": "f563d2dcb78d450e7f28eece1cde91b543acd99ec3830f1b22630539fea8070d",
+    "trading_researcher/exact_composition.py": "f36fb1329bee772e6ecec32774123c1c35eb17464544f6ecca0634d6942f480d",
+    "trading_researcher/exact_meaning.py": "eaa83aedc3d0232512e4ca85ea80456a5cd0c79bc1a2c478137138f86ce933e0",
+    "trading_researcher/exact_revocations.py": "287ce9b6c4ec21780858dbb676120711b60017d5b1e232264d25ccd51b1b8123",
+    "trading_researcher/EXACT_EXECUTION.md": "c2dd28113c4cc1e1ed7c18ed9f3f35530eec46222b08cd74e0ab105a68a7c506",
+    "tests/exact_execution_support.py": "383ca281cd19e7f19fcd66f6f56651ac26473e0ce9975cf38f711f8b964ec639",
+    "tests/test_exact_execution.py": "68050119bee6e0453faf482b2d8a3c0284970e8ebe4fef7d68b65dc29ed8cbd9",
+    "tests/test_exact_execution_review.py": "2798845e2376be3dccc8728f01747aaadd99cfbba8902e9e0b32702f42fe326f"
+  },
+  "offline_trials": {
+    "flat": {
+      "private_evidence": ".trf-runtime/exact-resource-proposal-2026-11-01/flat-trial.json",
+      "sha256": "cc1fc9bc815788316dd62e0ef660f7f43ea4a55691cee35ad90120ccd778e613",
+      "cases": 8640,
+      "diagnostics": 8640,
+      "numeric_steps": 7574932,
+      "diagnostic_steps": 7584626,
+      "execute_steps": 15159558,
+      "replay_steps": 15159558,
+      "aggregate_steps": 30319116,
+      "execute_seconds": "42.49622149998322",
+      "replay_seconds": "43.65934280003421",
+      "case_blob": {
+        "sha256": "43699f51125ba18f14238775774d83769886e34f33d937f2dcc1926f8445ee83",
+        "size": 9075242
+      },
+      "retained_cases": ".trf-runtime/exact-resource-proposal-2026-11-01/flat-cases.jsonl",
+      "qualification": "Offline proposed engineering allowance only; invented observations, not actual original A, model semantics, native source admission, peak RAM or market evidence."
+    },
+    "varying": {
+      "private_evidence": ".trf-runtime/exact-resource-proposal-2026-11-01/varying-trial.json",
+      "sha256": "e903ff7e1cbceb0c9d2293ed73746a21a6be087863f309345288d6c03a77eb8e",
+      "cases": 8640,
+      "diagnostics": 8640,
+      "numeric_steps": 8680212,
+      "diagnostic_steps": 8689906,
+      "execute_steps": 17370118,
+      "replay_steps": 17370118,
+      "aggregate_steps": 34740236,
+      "execute_seconds": "43.57414430001518",
+      "replay_seconds": "43.95975969999563",
+      "case_blob": {
+        "sha256": "d8bf175e46d34ded438ea65617a723b503ecef688154bba6b87422973ab14c2f",
+        "size": 10345895
+      },
+      "retained_cases": ".trf-runtime/exact-resource-proposal-2026-11-01/varying-cases.jsonl",
+      "qualification": "Offline proposed engineering allowance only; invented observations, not actual original A, model semantics, native source admission, peak RAM or market evidence."
+    }
+  },
+  "independent_full_quarter_audit": {
+    "status": "PASS",
+    "qualification_status": "PASS_OFFLINE_ENGINEERING_AUDIT_ONLY",
+    "audits": [
+      {
+        "label": "flat",
+        "status": "PASS_OFFLINE_LITERAL_QUARTER_AUDIT",
+        "cases": 8640,
+        "states": {
+          "ELIGIBLE": 8635,
+          "PARTITION_BOUNDARY": 5
+        },
+        "conditions": {
+          "unknown": 33,
+          "false": 8606,
+          "true": 1
+        },
+        "guards": {
+          "unknown": 33,
+          "true": 8607
+        },
+        "source_files": 31,
+        "source_footprint_sha256": "e148260cf71f6b7978e6a68554e86104103d83d3d7edfe9562acee701afeef5c",
+        "metadata_sha256": "cc1fc9bc815788316dd62e0ef660f7f43ea4a55691cee35ad90120ccd778e613",
+        "case_blob": {
+          "sha256": "43699f51125ba18f14238775774d83769886e34f33d937f2dcc1926f8445ee83",
+          "size": 9075242
+        },
+        "checked_outcome_enclosures": 8635,
+        "checked_aggregate_enclosures": 3,
+        "oracle_precision": 120,
+        "telescoping_oracle": {
+          "scope_mean": "0",
+          "condition_mean": "0",
+          "effect": "0"
+        },
+        "reported_execute_steps": 15159558,
+        "reported_aggregate_steps": 30319116,
+        "step_scope": "Reported counters/arithmetic reconciled; not an independent instruction-count instrument.",
+        "production_activation": false,
+        "scientific_readiness": false
+      },
+      {
+        "label": "varying",
+        "status": "PASS_OFFLINE_LITERAL_QUARTER_AUDIT",
+        "cases": 8640,
+        "states": {
+          "ELIGIBLE": 8635,
+          "PARTITION_BOUNDARY": 5
+        },
+        "conditions": {
+          "unknown": 33,
+          "false": 8606,
+          "true": 1
+        },
+        "guards": {
+          "unknown": 33,
+          "true": 8607
+        },
+        "source_files": 31,
+        "source_footprint_sha256": "e148260cf71f6b7978e6a68554e86104103d83d3d7edfe9562acee701afeef5c",
+        "metadata_sha256": "e903ff7e1cbceb0c9d2293ed73746a21a6be087863f309345288d6c03a77eb8e",
+        "case_blob": {
+          "sha256": "d8bf175e46d34ded438ea65617a723b503ecef688154bba6b87422973ab14c2f",
+          "size": 10345895
+        },
+        "checked_outcome_enclosures": 8635,
+        "checked_aggregate_enclosures": 3,
+        "oracle_precision": 120,
+        "telescoping_oracle": {
+          "scope_mean": "2.88308950128498381584221582878192058382748556522656017865906901788194995905474791421321914690799468530388736700056085676",
+          "condition_mean": "3.98327031755441273568578539842580159454057559078867026474028622944572516428884382867938187446222765384759990966288048811",
+          "effect": "1.10018081626942891984356956964388101071309002556211008608121721156377520523409591446616272755423296854371254266231963135"
+        },
+        "reported_execute_steps": 17370118,
+        "reported_aggregate_steps": 34740236,
+        "step_scope": "Reported counters/arithmetic reconciled; not an independent instruction-count instrument.",
+        "production_activation": false,
+        "scientific_readiness": false
+      }
+    ],
+    "audit_script_sha256": "5b6d66bc5cb29b11fd5e4ded5c521d8073e16ad575bcad2439c406abb824e79f",
+    "limits": "Invented inputs only; no actual A acceptance, model judgment, native source/data rights admission, resource approval, peak RAM or economic proof."
+  },
+  "independent_audit_sha256": "d803fae1e00dc044023c3cfb0d530b225c6b35d41f0403e2bedcb25d31af7ade",
+  "preserved_limits": {
+    "row_cases": 100000,
+    "stream_bytes": 536870912,
+    "events_per_case": 2048,
+    "diagnostic_case_bytes": 524288,
+    "rational_bits": 8192,
+    "ast_nodes": 256,
+    "ast_depth": 32,
+    "operator_charges": "Unchanged LSB power and complete-window traversal/multiplication semantics."
+  },
+  "retained_failures": [
+    {
+      "stage": "neutral guard source review",
+      "finding": "Incomplete/malformed standalone strict guard shape could be recognized or throw; fixed defensively before independent test execution. No claimed RED reproduction."
+    },
+    {
+      "stage": "independent first test",
+      "tool_chunk": "29e87b",
+      "exit_code": 1,
+      "finding": "Counter spy used lookback argument instead of budget; first byte-stress fixture did not exceed the real limit. Corrected fixture only; actual event and byte overflows then passed without limit patching."
+    },
+    {
+      "stage": "first full retained run",
+      "tool_chunks": [
+        "816d26",
+        "5b8df4"
+      ],
+      "exit_code": 1,
+      "finding": "Private wrapper canonically serialized the full multi-MiB base through1MiB transport. Fixed metadata/per-case canonical streaming comparison; complete case values/types and base hashes remain checked."
+    }
+  ],
+  "preservation": {
+    "old_runtime_pins_exact": 37,
+    "historical_inquiry_member_hashes_exact": 117,
+    "old10m_apis_still_reject20m": true,
+    "actual_A_still_original_null_formalization": true,
+    "shared_model_calls": 53,
+    "old_grants_still_revoked": 7
+  },
+  "research_usage": {
+    "totals": {
+      "calls": 53,
+      "known_usage_calls": 53,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1058582,
+      "known_output_tokens": 177896,
+      "known_total_tokens": 1236478,
+      "exact_total_tokens": 1236478,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 53,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 49754,
+      "reasoning_detail_calls": 53,
+      "exact_reasoning_output_tokens": 49754
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 4425415000,
+      "available_nano": 574585000,
+      "halted": false
+    },
+    "per_call_model_version_utc_history": "docs/reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json",
+    "immutable_served_snapshot": "UNKNOWN",
+    "count_service_billing": "UNVERIFIED",
+    "invoice_reconciled": false
+  },
+  "construction_usage_through_snapshot": {
+    "scope": "Main construction since inactive mapping snapshot, including design/checks/rework; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T15:25:24.110Z",
+    "snapshot_at_utc": "2026-11-01T16:10:14.566Z",
+    "tokens": {
+      "input_tokens": 15410969,
+      "cached_input_tokens": 15365120,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 70550,
+      "reasoning_output_tokens": 42649,
+      "total_tokens": 15481519
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "new_research_model_calls": 0,
+  "new_count_calls": 0,
+  "new_production_grants": 0,
+  "production_registry_mutated": false,
+  "production_activation": false,
+  "scientific_readiness": false,
+  "objective_complete": false,
+  "unverified": [
+    "Specific ceiling decision and canonical adoption",
+    "New native owned source/runtime/compile/composition/execution intended-use qualification",
+    "Actual retained original A formalization/independent meaning/full original-data report",
+    "Fresh actual role profiles/full wires/source/input/data-use/count/funding admission and actual DQ behavior",
+    "Scientific information/calibration/protected assessment/freeze and economic/policy usefulness",
+    "General fit for arbitrary programs, real-data speed, peak RAM, immutable model snapshot, count billing or invoices",
+    "Global implementation verifier preexisting master/discipline baseline not reaudited"
+  ],
+  "changed_files": [
+    "trading_researcher/exact_resource_candidate.py",
+    "trading_researcher/EXACT_RESOURCE_PROPOSAL.md",
+    "tests/test_exact_resource_candidate.py",
+    "tests/test_exact_resource_candidate_review.py",
+    "docs/reviews/implementation-2026-10-25/exact-resource-proposal-2026-11-01.json",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json"
+  ],
+  "next_action": "Obtain the specific decision on the fully prepared opt-in20M-per-child/40M-aggregate primitive ceiling, with unchanged shared1800-second deadline and all plain/observed/canonical-replay checks retained. The offline implementation and independent boundary/full-quarter audits are ready; its engineering profile remains pending, unregistered and unselected. Do not infer this ceiling revision from money discretion or activate it before the specific D097 constraint is resolved. After approval, preserve the proposal/source bytes and adopt the scoped resource version with provenance; qualify the new owned runtime/source/compile/composition/execution route, then complete actual AST4 role profiles/full wires and fresh original-scope source/input/data-use/meaning/count/funding admission. The added inactive module changes future all-Python host inventory, so historical native source observations do not establish current intended-use admission. Preserve actual original A null formalization, all source/exposure/failure histories and all seven revoked grants. The original USD5 ledger retains USD0.574585; no paid call, grant reset, retry/successor or scientific/assessment/capital upgrade is authorized by this proposal. Continue independent authorized work while awaiting the specific ceiling decision. Preserve separately owned DQ kit without claiming actual model behavior. The seven-package objective remains active and incomplete."
+}

@@ -1,0 +1,196 @@
+{
+  "status": "PASS_WITH_PREEXISTING_GATE_FAILURES",
+  "scope": "Documentation presentation and Codex construction workflow only",
+  "baseline": "C:\\Users\\monoi\\AppData\\Local\\Temp\\framework-context-baseline-a5xy0snr",
+  "snapshots": {
+    "README.md": {
+      "path": "README_SNAPSHOT_2026-10-31.md",
+      "original_sha256": "2cd452145f5236d58f7f724cc1560f0905d8a1344f79bb89e769ab87d881182e",
+      "original_bytes": 25216,
+      "prefix_bytes": 284
+    },
+    "docs/architecture/CURRENT_STATE.md": {
+      "path": "docs/architecture/CURRENT_STATE_SNAPSHOT_2026-10-31.md",
+      "original_sha256": "02e728af42a7e5a5617dde7ba2300afec9528099ed450a22d63071ab5dba37ca",
+      "original_bytes": 77675,
+      "prefix_bytes": 298
+    },
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": {
+      "path": "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25_SNAPSHOT_2026-10-31.md",
+      "original_sha256": "3bb653e577d7399e1a90188aeaeb182f3ec4f14d1e18d1ccb3abca9dd4572285",
+      "original_bytes": 79884,
+      "prefix_bytes": 340
+    },
+    "AGENTS.md": {
+      "path": "AGENTS_SNAPSHOT_2026-10-31.md",
+      "original_sha256": "6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9",
+      "original_bytes": 8464,
+      "prefix_bytes": 284
+    }
+  },
+  "preexisting_implementation_errors": [
+    "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+    "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+  ],
+  "unverified": [
+    "Future cross-chat behavior",
+    "Actual token/credit savings",
+    "Model-quality equivalence",
+    "Scientific validity and market efficacy"
+  ],
+  "task_checks_status": "PASS",
+  "purpose": "Compact Codex construction entry/handoff without losing current priority, scientific decisions or prior evidence; require explicit new-chat notice and copyable prompt",
+  "changed_existing_files": [
+    "AGENTS.md",
+    "README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md"
+  ],
+  "new_files": [
+    "AGENTS_SNAPSHOT_2026-10-31.md",
+    "README_SNAPSHOT_2026-10-31.md",
+    "docs/architecture/CURRENT_STATE_SNAPSHOT_2026-10-31.md",
+    "docs/reviews/implementation-2026-10-25/context-handoff-verification-2026-10-31.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25_SNAPSHOT_2026-10-31.md"
+  ],
+  "all_other_baseline_files_unchanged": 683,
+  "checks": {
+    "exact_snapshots": 4,
+    "package_exits_exact": 7,
+    "execution_priority_exact": true,
+    "local_links": 457,
+    "local_anchors": 56,
+    "incoming_anchors": 14,
+    "existing_progress_values_preserved": true,
+    "purpose_invariants_verbatim": true,
+    "explicit_session_notice_and_prompt_rule": true,
+    "git_diff_check_exit": 0
+  },
+  "sizes": {
+    "README.md": {
+      "before_bytes": 25216,
+      "after_bytes": 4879
+    },
+    "docs/architecture/CURRENT_STATE.md": {
+      "before_bytes": 77675,
+      "after_bytes": 9573
+    },
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": {
+      "before_bytes": 79884,
+      "after_bytes": 19911
+    },
+    "AGENTS.md": {
+      "before_bytes": 8464,
+      "after_bytes": 7709
+    }
+  },
+  "active_entry_bytes_before": 191239,
+  "active_entry_bytes_after": 42072,
+  "fresh_gates": {
+    "docs/reviews/verify_system_model.py": {
+      "command": "python -B docs/reviews/verify_system_model.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "checks": {
+        "local_links": 728,
+        "source_files": 5,
+        "decisions": 95,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Not checked; rerun with retained --baseline inventory",
+        "git_diff_check_exit": 0
+      },
+      "local_document_links": null,
+      "errors": []
+    },
+    "docs/reviews/verify_retail_contract.py": {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "checks": {
+        "local_links": 728,
+        "source_files": 5,
+        "decisions": 95,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+        "git_diff_check_exit": 0,
+        "later_approved_changed_paths": {
+          "REVIEWING.md": "D086 / agent-inquiry/1.0",
+          ".gitattributes": "October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes"
+        },
+        "adoption_baseline_files": 63,
+        "preexisting_files_unchanged": 44,
+        "archived_documents_exact": 20,
+        "preserved_preapproval_decisions": 70,
+        "full_historical_definition_review_generator_texts": 3,
+        "approved_policy_sections_exact_except_status_words": 15,
+        "scoped_open_dispositions_and_acceptance_mappings": 15,
+        "adoption_decision_status_counts_D001_D085": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 63,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        },
+        "decision_status_counts": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 73,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        }
+      },
+      "local_document_links": null,
+      "errors": []
+    },
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py": {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL",
+      "checks": null,
+      "local_document_links": 1135,
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ]
+    }
+  },
+  "checked_files_sha256": {
+    "AGENTS.md": "329012fe59483ae2566efb6f90589039240bed5a71794b9ccc7cf83e072c8181",
+    "AGENTS_SNAPSHOT_2026-10-31.md": "c785df2642c7ca8adfdb9e04ae30723e7e60f1f4b80104cd16f87bdc1ade5343",
+    "README.md": "3eee7d87c87249bc41cd4b94b5a6f39f9726fa51b4080072c39de5c01d842c41",
+    "README_SNAPSHOT_2026-10-31.md": "a0ee27b084a841bc5385443ecfd7570097d887aa90d8a173183bbe00ade31c68",
+    "docs/architecture/CURRENT_STATE.md": "97838a91dc75cb04e70c90038d7853e5814a45ec4bff0ac0d43bd9584a09b18b",
+    "docs/architecture/CURRENT_STATE_SNAPSHOT_2026-10-31.md": "b3dd685237b779955b2465400a64658f0f6b030749edf993d773a0262b8dbfce",
+    "docs/reviews/implementation-2026-10-25/progress.json": "c303682414ad780f771ea241848026689ccd2dc3c2dbeb96c047fcd1b52f5cd4",
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py": "a19bd18af29f2bbf4cfb8abea850538a0c5e3b61ab5c04d82f6e7b4a1b5515fb",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "8b9bc89404f2272dfcca51fbb99a8d207d349bcd5d034c642739d7939b14287a",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25_SNAPSHOT_2026-10-31.md": "333dbd016c2fc571d8a93b971d1ee300914b8a5c8935ff31f55c217e5f4a030e"
+  },
+  "errors": [],
+  "conclusion": "Presentation and preservation checks only; current execution order and scientific authority are retained. Two older implementation-baseline errors predate this task.",
+  "next_action": "Open a fresh Codex chat in this project with the supplied prompt; inspect retained AmiBroker timeout and close only the fixed preflight before selecting the next authorized scientific blocker.",
+  "rollback": "Restore each entry document from the snapshot bytes after prefix_bytes, remove the added workflow field from progress, and remove the single new AGENTS.md allowlist entry. Retain this verification and snapshots as history; never erase research exposure, attempts or costs.",
+  "active_entry_reduction_percent": 78.0
+}

@@ -1,0 +1,712 @@
+{
+  "schema": "independent-paired-format-diagnosis/1",
+  "status": "ANALYSIS_ONLY_NOT_H_EXEC",
+  "artifact_id": "2570cc9fe22b64547ae90a009b043782aa04a268eb8c4feadf8fe3ae84bd86c5",
+  "original_candidate_sha256": "22569f7c2686a2ef23b1e9d357db2b7b4ec254cdb6106d2cb5c0cdbc24cc506e",
+  "retained_file_sha256": "fd0ad51966d31691a0a50307ef4aa9ec4d15ca66fbed750d39691a0f3aad9f28",
+  "script_sha256": "040b80b67ca22e02933e7d0370fa640df93514b24e477a4fde1c80cdf0c1ef7b",
+  "source_hashes": {
+    "trading_researcher/paired_formalization.py": "eed89d13f977789526a80791a49df682f2978c7318fcd10995b4ccd3a93bfe1d",
+    "trading_researcher/paired_development.py": "a9a9e47c46ad0f21a125e46bfd33e5e95ac7ee43f866f822105924b91243492b",
+    "trading_researcher/paired_composition.py": "a3114860fb33e130287d9558b636f7be3ebc3413a67dea8ffb862d27ceed3ce8",
+    "tests/paired_original_oracle.py": "b18059528214cde32429d10a7f1adb50b217c79ec40dd31ae5cc49e7ee5a1e85"
+  },
+  "concrete_format_defect": "horizons is a singleton list; the exact candidate schema requires an object.",
+  "dependent_paths": [
+    "/horizons/0/grid_seconds",
+    "/horizons/0/outcome_bars",
+    "semantic_report.segments[3].path=/horizons/0"
+  ],
+  "required_origin_count": 62,
+  "actual_origin_count": 67,
+  "missing_required_origins_in_actual": [
+    "/horizons/outcome_bars"
+  ],
+  "extra_origin_paths_in_actual": [
+    "/horizons/0/grid_seconds",
+    "/horizons/0/outcome_bars",
+    "/test_universe/end",
+    "/test_universe/pair/0",
+    "/test_universe/pair/1",
+    "/test_universe/start"
+  ],
+  "all_actual_origin_paths_resolve": true,
+  "origin_duplicates": false,
+  "date_and_pair_origins_permitted": true,
+  "structural_analysis_stages": [
+    {
+      "analysis_copy_delta": [],
+      "assessment": {
+        "status": "RETAINED_GAP",
+        "stage": "FORMALIZING",
+        "gap": {
+          "code": "LANGUAGE_GAP",
+          "reason": "Required fields are absent or unexpected",
+          "reopen_condition": "Resolve the named meaning/capability/input gap under approved semantics"
+        },
+        "mapping_authority": "unverified_formalizer_assertion",
+        "required_before_freeze": [
+          "independent_semantic_review",
+          "feature_certification",
+          "data_and_exposure_review",
+          "calibrated_evaluation_profile",
+          "complete_evaluation_plan",
+          "atomic_allocation_and_freeze"
+        ]
+      }
+    },
+    {
+      "analysis_copy_delta": [
+        "unwrap singleton /horizons list"
+      ],
+      "assessment": {
+        "status": "RETAINED_GAP",
+        "stage": "FORMALIZING",
+        "gap": {
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate",
+          "reopen_condition": "Resolve the named meaning/capability/input gap under approved semantics"
+        },
+        "mapping_authority": "unverified_formalizer_assertion",
+        "required_before_freeze": [
+          "independent_semantic_review",
+          "feature_certification",
+          "data_and_exposure_review",
+          "calibrated_evaluation_profile",
+          "complete_evaluation_plan",
+          "atomic_allocation_and_freeze"
+        ]
+      }
+    },
+    {
+      "analysis_copy_delta": [
+        "unwrap /horizons",
+        "segment /horizons/0 -> /horizons"
+      ],
+      "assessment": {
+        "status": "RETAINED_GAP",
+        "stage": "FORMALIZING",
+        "gap": {
+          "code": "SEMANTIC_AMBIGUITY",
+          "reason": "Mapping path is absent from the retained candidate",
+          "reopen_condition": "Resolve the named meaning/capability/input gap under approved semantics"
+        },
+        "mapping_authority": "unverified_formalizer_assertion",
+        "required_before_freeze": [
+          "independent_semantic_review",
+          "feature_certification",
+          "data_and_exposure_review",
+          "calibrated_evaluation_profile",
+          "complete_evaluation_plan",
+          "atomic_allocation_and_freeze"
+        ]
+      }
+    },
+    {
+      "analysis_copy_delta": [
+        "unwrap /horizons",
+        "segment /horizons/0 -> /horizons",
+        "two origin /horizons/0/ paths -> /horizons/"
+      ],
+      "assessment": {
+        "status": "STRUCTURE_CHECKED",
+        "stage": "FORMALIZING",
+        "gap": null,
+        "mapping_authority": "formalizer_assertion_not_independent_semantic_certification",
+        "required_before_freeze": [
+          "independent_semantic_review",
+          "feature_certification",
+          "data_and_exposure_review",
+          "calibrated_evaluation_profile",
+          "complete_evaluation_plan",
+          "atomic_allocation_and_freeze"
+        ],
+        "programs": {
+          "/scope_ast": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ]
+          },
+          "/condition_ast": {
+            "type": "boolean",
+            "unit": null,
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1",
+              "BTCUSDT.open@binance-spot-15m-v1",
+              "BTCUSDT.quote_volume@binance-spot-15m-v1",
+              "BTCUSDT.taker_quote_volume@binance-spot-15m-v1",
+              "ETHUSDT.close@binance-spot-15m-v1",
+              "ETHUSDT.open@binance-spot-15m-v1",
+              "ETHUSDT.quote_volume@binance-spot-15m-v1",
+              "ETHUSDT.taker_quote_volume@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/left/left/left/left/bars",
+              "/expression/left/left/left/left/arg/left/left/right/value",
+              "/expression/left/left/left/left/arg/left/right/right/value",
+              "/expression/left/left/left/left/arg/right/left/right/value",
+              "/expression/left/left/left/left/arg/right/right/left/right/value",
+              "/expression/left/left/left/right/bars",
+              "/expression/left/left/left/right/arg/left/left/right/value",
+              "/expression/left/left/left/right/arg/left/right/right/value",
+              "/expression/left/left/left/right/arg/right/left/right/value",
+              "/expression/left/left/left/right/arg/right/right/left/right/value",
+              "/expression/left/left/right/left/bars",
+              "/expression/left/left/right/left/arg/left/left/right/value",
+              "/expression/left/left/right/left/arg/left/right/right/value",
+              "/expression/left/left/right/left/arg/right/left/right/value",
+              "/expression/left/left/right/left/arg/right/right/left/right/value",
+              "/expression/left/left/right/right/bars",
+              "/expression/left/left/right/right/arg/left/left/right/value",
+              "/expression/left/left/right/right/arg/left/right/right/value",
+              "/expression/left/left/right/right/arg/right/left/right/value",
+              "/expression/left/left/right/right/arg/right/right/left/right/value",
+              "/expression/left/right/left/bars",
+              "/expression/left/right/left/arg/left/left/left/right/value",
+              "/expression/left/right/left/arg/left/left/right/value",
+              "/expression/left/right/left/arg/left/right/right/value",
+              "/expression/left/right/left/arg/right/left/left/right/value",
+              "/expression/left/right/left/arg/right/left/right/value",
+              "/expression/left/right/left/arg/right/right/right/value",
+              "/expression/left/right/right/bars",
+              "/expression/left/right/right/arg/left/left/left/right/value",
+              "/expression/left/right/right/arg/left/left/right/value",
+              "/expression/left/right/right/arg/left/right/right/value",
+              "/expression/left/right/right/arg/right/left/left/right/value",
+              "/expression/left/right/right/arg/right/left/right/value",
+              "/expression/left/right/right/arg/right/right/right/value",
+              "/expression/right/left/arg/left/left/bars",
+              "/expression/right/left/arg/left/left/arg/left/left/right/value",
+              "/expression/right/left/arg/left/left/arg/left/right/right/value",
+              "/expression/right/left/arg/left/left/arg/right/left/right/value",
+              "/expression/right/left/arg/left/left/arg/right/right/left/right/value",
+              "/expression/right/left/arg/left/right/bars",
+              "/expression/right/left/arg/left/right/arg/left/left/right/value",
+              "/expression/right/left/arg/left/right/arg/left/right/right/value",
+              "/expression/right/left/arg/left/right/arg/right/left/right/value",
+              "/expression/right/left/arg/left/right/arg/right/right/left/right/value",
+              "/expression/right/left/arg/right/left/bars",
+              "/expression/right/left/arg/right/left/arg/left/left/right/value",
+              "/expression/right/left/arg/right/left/arg/left/right/right/value",
+              "/expression/right/left/arg/right/left/arg/right/left/right/value",
+              "/expression/right/left/arg/right/left/arg/right/right/left/right/value",
+              "/expression/right/left/arg/right/right/bars",
+              "/expression/right/left/arg/right/right/arg/left/left/right/value",
+              "/expression/right/left/arg/right/right/arg/left/right/right/value",
+              "/expression/right/left/arg/right/right/arg/right/left/right/value",
+              "/expression/right/left/arg/right/right/arg/right/right/left/right/value",
+              "/expression/right/right/value"
+            ]
+          },
+          "/outcome/program": {
+            "type": "real",
+            "unit": "basis_points",
+            "feature_refs": [
+              "BTCUSDT.close@binance-spot-15m-v1",
+              "ETHUSDT.close@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/left/value",
+              "/expression/right/left/arg/left/bars",
+              "/expression/right/left/arg/right/bars",
+              "/expression/right/right/arg/left/bars",
+              "/expression/right/right/arg/right/bars"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "program_sha256_unchanged": {
+    "/scope_ast": "3264e2d2febb82be04ab59b4b8f30d40aef6484eb867a096e40c7f6f3e96d2c0",
+    "/condition_ast": "41c7678e24a27677486ecf271c4d0f4243c35caa83021608abfbab79fa8f6215",
+    "/outcome/program": "f39b6dce81435f5e3b2e3bb36eca6a4ec0b9770c85f2719bad5f11b0f8acef86"
+  },
+  "program_shapes": {
+    "/scope_ast": {
+      "nodes": 1,
+      "depth": 1
+    },
+    "/condition_ast": {
+      "nodes": 228,
+      "depth": 11
+    },
+    "/outcome/program": {
+      "nodes": 15,
+      "depth": 6
+    }
+  },
+  "catalog_reconstruction_sha256": "1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db",
+  "feature_closure_matches": true,
+  "synthetic_checks": [
+    {
+      "name": "inclusive_thresholds",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/0/close/99.5999",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/0/close/99.6001",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/1/close/199.1999",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/1/close/199.2001",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/0/taker_quote_volume/39.9999",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/0/taker_quote_volume/40.0001",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/1/taker_quote_volume/39.9999",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/1/taker_quote_volume/40.0001",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/2/close/100.1999",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/2/close/100.2001",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/2/taker_quote_volume/54.9999",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/2/taker_quote_volume/55.0001",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/3/close/199.9999",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/3/close/200.0001",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/3/taker_quote_volume/44.9999",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "threshold/3/taker_quote_volume/45.0001",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/open/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/open/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/open/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/close/null",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "required/0/close/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "required/0/close/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/quote_volume/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/quote_volume/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/quote_volume/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/taker_quote_volume/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/taker_quote_volume/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/0/taker_quote_volume/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/open/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/open/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/open/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/close/null",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "required/1/close/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "required/1/close/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/quote_volume/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/quote_volume/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/quote_volume/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/taker_quote_volume/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/taker_quote_volume/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/1/taker_quote_volume/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/open/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/open/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/open/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/close/null",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "required/2/close/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "required/2/close/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/quote_volume/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/quote_volume/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/quote_volume/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/taker_quote_volume/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/taker_quote_volume/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/2/taker_quote_volume/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/open/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/open/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/open/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/close/null",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "required/3/close/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "required/3/close/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/quote_volume/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/quote_volume/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/quote_volume/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/taker_quote_volume/null",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/taker_quote_volume/absent",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "required/3/taker_quote_volume/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "absent_member/0",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "absent_member/1",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "absent_member/4",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "absent_member/5",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "absent_member/12",
+      "checked_cases": 12,
+      "observed_outcomes": 5
+    },
+    {
+      "name": "absent_member/13",
+      "checked_cases": 12,
+      "observed_outcomes": 5
+    },
+    {
+      "name": "undefined_condition/0/quote_volume",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "undefined_condition/0/taker_quote_volume",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "undefined_condition/1/quote_volume",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "undefined_condition/1/taker_quote_volume",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "undefined_condition/2/quote_volume",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "undefined_condition/2/taker_quote_volume",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "undefined_condition/3/quote_volume",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "undefined_condition/3/taker_quote_volume",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "outcome_endpoint/4/null",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "outcome_endpoint/4/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "outcome_endpoint/5/null",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "outcome_endpoint/5/late",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "outcome_endpoint/12/null",
+      "checked_cases": 12,
+      "observed_outcomes": 5
+    },
+    {
+      "name": "outcome_endpoint/12/late",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "outcome_endpoint/13/null",
+      "checked_cases": 12,
+      "observed_outcomes": 5
+    },
+    {
+      "name": "outcome_endpoint/13/late",
+      "checked_cases": 12,
+      "observed_outcomes": 6
+    },
+    {
+      "name": "as_of_boundary",
+      "checked_cases": 12,
+      "observed_outcomes": 2
+    },
+    {
+      "name": "independent_values/0",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "independent_values/1",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    },
+    {
+      "name": "independent_values/2",
+      "checked_cases": 12,
+      "observed_outcomes": 7
+    }
+  ],
+  "scenario_count": 91,
+  "checked_cases": 1092,
+  "observed_outcome_checks": 608,
+  "wall_seconds": 1.7606912000046577,
+  "qualification": "Finite synthetic checks against an independently authored Fraction/Decimal80 oracle. Original expressions are unchanged; temporary structural metadata copies are not saved, registered or accepted. No independent model review, source requalification, empirical outcome or scientific readiness is established. Decimal80 checks numeric containment with the existing declared 1e-65 allowance; rigorous interval proof belongs to the evaluator.",
+  "original_preserved": true,
+  "market_rows_read": false,
+  "provider_calls": 0,
+  "registry_writes": 0,
+  "accepted_candidate_created": false,
+  "scientific_readiness": false
+}

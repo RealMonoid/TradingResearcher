@@ -1,0 +1,16 @@
+{
+  "existing_files": [
+    "trading_researcher/inquiry/README.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md"
+  ],
+  "before_sha256": {
+    "trading_researcher/inquiry/README.md": "763d42fe5b6856e3ccefe37cc37398265c665315d7a9203f714ff4531fd22fa8",
+    "docs/architecture/CURRENT_STATE.md": "c055fc78edd7f33694d1d2c4a2f43ff1d7ae273233cf9e61cf735c7f6f6d64c1",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "11f76d1e129f60ffd8074a1be86cf1d78c44431d0dd1669c497d4716287b41d7"
+  },
+  "protected_sha256": {
+    "trading_researcher/inquiry/profiles.py": "5bde019906f5f508c039ebf32767bef08e043bc5a18f24b8e5402b6576b8c4c6",
+    "docs/architecture/25_METACOGNITION_DUAL_SPACE_INQUIRY.md": "3d44c368e3e010c97ac857e4b08fdc8696e79bc9e55858bb55aa2849e9690caf"
+  }
+}

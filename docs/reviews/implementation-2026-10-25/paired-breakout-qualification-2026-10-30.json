@@ -1,0 +1,338 @@
+{
+  "schema": "paired-breakout-qualification-observation/1",
+  "at_utc": "2026-10-30T14:53:21.854498+00:00",
+  "status": "PURE_COMPOSITION_QUALIFIED_HOST_INTEGRATION_PENDING",
+  "purpose": "Resolve the sole work plan second-original representability and independent-composition prerequisite without changing the hypothesis or approved language.",
+  "original_idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+  "original_source": ".trf-runtime/complete-feedback-2026-10-30/complete-feedback-20261030-b.json",
+  "finding": {
+    "condition_nodes": 230,
+    "condition_depth": 12,
+    "outcome_nodes": 15,
+    "outcome_depth": 6,
+    "required_condition_values": 52,
+    "existing_limits": {
+      "nodes": 256,
+      "depth": 32
+    },
+    "new_max_operator_needed": false,
+    "original_thresholds_window_population_unchanged": true,
+    "independent_fixed_scenarios": 299,
+    "synthetic_case_comparisons": 8970,
+    "full_calendar_audit_cases": 8640,
+    "full_calendar_input": "Invented empty canonical source grid; no market observations"
+  },
+  "warranted_conclusion": "A faithful construction is possible inside the already-approved paired expression contract. The isolated synthetic composition/audit implementation passes independently fixed expectations and rejects the tested semantic/source mutations. This is not certification of a model candidate or production execution.",
+  "independent_review": {
+    "schema": "independent-paired-breakout-composition-qualification/1",
+    "status": "PASS_ENGINEERING_ONLY",
+    "at_utc": "2026-10-30T14:50:33.461433+00:00",
+    "purpose": "Independently fix the second retained idea formula and synthetic expectations, then test optional nested composition and retained-source audit without production activation.",
+    "idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+    "authored_files": [
+      "tests/paired_breakout_oracle.py",
+      "tests/test_paired_breakout_composition.py"
+    ],
+    "files_sha256": {
+      "tests/paired_breakout_oracle.py": "97e9288a835441ea5e039619b12782972d980eec50861b7b58dfcfe02e32d7d2",
+      "tests/test_paired_breakout_composition.py": "e44e715e9001b88f77c1fe8ebbf7575d963f7b29a2d7c315deb3c23fc2e99e3e",
+      "trading_researcher/paired_breakout/composition.py": "bf6651b6b17005f9af964c8709dd4d041593215132b4de1404ea8d1e56b35962",
+      "trading_researcher/paired_breakout/runtime.py": "86a6dde79edd0b2a0f439c7b01e69d9624deea1bd727a2453dbb959f499359d4"
+    },
+    "oracle_contract": {
+      "stdlib_only": true,
+      "imports_framework_or_prior_oracle": false,
+      "condition_required_values": 52,
+      "baseline_exact_slots": 16,
+      "condition_complete_unknown": true,
+      "prices_individually_positive": true,
+      "quote_baseline_nonnegative": true,
+      "signal_quote_and_baseline_mean_strictly_positive": true,
+      "outcome_decimal_precision": 100,
+      "outcome_anchor_bars": 5,
+      "terminal_close_offset_bars": 4,
+      "original_quarter_positions": 8640,
+      "early_warmup_positions": 17,
+      "last_boundary_positions": 5,
+      "scientific_readiness": false
+    },
+    "checks": [
+      {
+        "command": "python -B tests/paired_breakout_oracle.py -v",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.84,
+        "exit_code": 0
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_composition.py -v",
+        "phase": "initial five-method test version",
+        "tests": 5,
+        "seconds": 40.66,
+        "exit_code": 0,
+        "source_hash_not_captured_for_this_superseded_test_version": true
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_paired_breakout_composition.py -v",
+        "phase": "final expanded six-method version",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 68.287,
+        "exit_code": 0,
+        "process_session": 44111
+      },
+      {
+        "command": "Read-only SHA256 comparison of all trading_researcher/*.py to frozen D095 preparation; authored test whitespace validation",
+        "top_level_modules": 83,
+        "unchanged": true,
+        "exit_code": 0
+      }
+    ],
+    "fixed_scenarios": {
+      "count": 299,
+      "grid_positions_each": 30,
+      "case_comparisons": 8970,
+      "coverage": [
+        "four threshold equal/below/above cases",
+        "52 required values each null/missing-feature/late with a competing false predicate",
+        "34 required container omissions",
+        "unique high extremum at each of16 offsets for each member; ETH extrema distinguish max from mean",
+        "individually permitted zero baseline quote volume; invalid allzero mean, zero signal and both",
+        "BTC OR true with another missing high; ETH AND false with another missing high",
+        "each outcome endpoint missing/null/late; own positive-domain self-tests including both-negative ratios",
+        "unused decision/anchor containers",
+        "outcome log sign and scale",
+        "as-of boundaries",
+        "five fixed random complete-value seeds"
+      ]
+    },
+    "separate_processes": {
+      "composition": {
+        "scenarios": 299,
+        "checked_cases": 8970,
+        "actual_retained_child": true
+      },
+      "audit": {
+        "checked_cases": 8640,
+        "observed_outcomes": 0,
+        "input": "Empty invented canonical rows, full original Q1 calendar",
+        "actual_retained_child": true
+      },
+      "isolation": {
+        "isolated": 1,
+        "no_site": 1,
+        "ignore_environment": 1,
+        "no_bytecode_writes": 1
+      }
+    },
+    "analysis_fixture": {
+      "authority": "ANALYSIS_FIXTURE_NOT_H_EXEC",
+      "model_candidate": false,
+      "condition_nodes": 230,
+      "condition_depth_levels": 12,
+      "outcome_nodes": 15,
+      "outcome_depth_levels": 6,
+      "actual_unique_condition_read_events": 52,
+      "every_read_precedes_decision": true
+    },
+    "negative_checks": [
+      "turnover threshold altered",
+      "window15",
+      "window17",
+      "strict missingness guard removed",
+      "member/ref mismatch",
+      "outcome initial lag altered",
+      "outcome sign reversed",
+      "basis-point scale altered",
+      "ETH max replaced by mean",
+      "BTC max replaced by mean",
+      "16th ETH extremum omitted",
+      "16th BTC extremum omitted",
+      "wrong original idea",
+      "shortened original quarter",
+      "false-only comparison",
+      "unknown removed from whole scope",
+      "false scope",
+      "primitive-resource exhaustion",
+      "protected manifest",
+      "missing oracle in retained package",
+      "changed oracle bytes",
+      "unbound child audit compilation hash",
+      "case omitted",
+      "condition changed",
+      "scope changed",
+      "neutral diagnostic set changed"
+    ],
+    "findings": [
+      "No new max operator, AST budget increase or change to frozen paired execution is needed for the tested expression semantics.",
+      "Oracle and analysis fixture agree through actual new optional composition and retained audit modes; twelve semantic mutations are rejected.",
+      "The new nested modes do not themselves issue a host-owned certificate, choose data, create a candidate, authorize model calls or activate production."
+    ],
+    "limits": [
+      "Finite synthetic conformance supplements independent meaning review; it is not proof of every possible input or an accepted H_exec.",
+      "The fixture is explicitly manually authored engineering input and must never replace a real model candidate.",
+      "No actual market rows, provider calls, registry writes, ledger mutation or production qualification occurred.",
+      "The positive full-quarter audit uses empty synthetic input; it does not establish actual second-idea occurrence counts or empirical returns.",
+      "Decimal100 is a high-precision independent numerical check, not a general rigorous outward-error certificate.",
+      "Frozen compare_cases checks exact neutral categories but intentionally distinguishes oracle invalid_value from evaluator numeric_domain; no identical diagnostic nomenclature or independent aggregate-contrast certification is claimed.",
+      "Owned host source/currentness, technical revocation, actual-candidate meaning/composition binding and resource activation remain separate unmet integration gates."
+    ],
+    "next_action": "Parent may integrate the separately qualified optional host path within unchanged paired semantics, keeping all existing source pins; actual model/candidate/data use requires its own exact admission and independent checks.",
+    "scientific_readiness": false
+  },
+  "independent_review_sha256": "385c0c53eb697bf09b780900369ea191bda80101fc73392826b3b908ca634eaf",
+  "root_verification": {
+    "schema": "paired-breakout-local-verification/1",
+    "status": "PASS",
+    "command": "python -B .trf-runtime/paired-breakout-inspection-2026-10-30/verify.py",
+    "exit_code": 0,
+    "started_at_utc": "2026-10-30T14:50:04.619707+00:00",
+    "finished_at_utc": "2026-10-30T14:51:16.181814+00:00",
+    "source_hashes": {
+      "docs/architecture/23_PAIRED_DEVELOPMENT.md": "5452da26300174b729faff0a30881a7ede0522429c57baf0f5d9968d281d994e",
+      "tests/paired_breakout_oracle.py": "97e9288a835441ea5e039619b12782972d980eec50861b7b58dfcfe02e32d7d2",
+      "tests/paired_original_oracle.py": "b18059528214cde32429d10a7f1adb50b217c79ec40dd31ae5cc49e7ee5a1e85",
+      "tests/test_paired_breakout_composition.py": "e44e715e9001b88f77c1fe8ebbf7575d963f7b29a2d7c315deb3c23fc2e99e3e",
+      "tests/test_paired_development_adversarial.py": "00fb8dd938d6400a7fd543bff36509da86aa2ca023f99a01bc2fe29fddaa8ff4",
+      "trading_researcher/PAIRED_DEVELOPMENT.md": "14c925ad3996400132c73b8362442665f6c66417ccf94d02865907490bb30c89",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+      "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+      "trading_researcher/bounded_outcomes.py": "82c5003723b0482884f07860d7c43e4109e70e7e28588a9631187b7b1dfdce22",
+      "trading_researcher/certification.py": "a1b554dbb8c42fcc7751f285f4a93064e05cb078ac96e70c90599946262c0ca9",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+      "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+      "trading_researcher/paired_breakout/__init__.py": "aae53a58da7662a185823aed262656632b3aca13fe7ab760c10cd200651ce4b7",
+      "trading_researcher/paired_breakout/composition.py": "bf6651b6b17005f9af964c8709dd4d041593215132b4de1404ea8d1e56b35962",
+      "trading_researcher/paired_breakout/runtime.py": "86a6dde79edd0b2a0f439c7b01e69d9624deea1bd727a2453dbb959f499359d4",
+      "trading_researcher/paired_composition.py": "a3114860fb33e130287d9558b636f7be3ebc3413a67dea8ffb862d27ceed3ce8",
+      "trading_researcher/paired_development.py": "a9a9e47c46ad0f21a125e46bfd33e5e95ac7ee43f866f822105924b91243492b",
+      "trading_researcher/paired_runtime.py": "4df771cac32d652add27eba8afec4a84cd92fea0911c791f45621cbd8629c2ae"
+    },
+    "sources_unchanged_during_tests": true,
+    "feature_bundle_sha256": "3a08198fbe744e704154811b5c1f451f60ee7bea7d4d03878b9f62bb9bd0b5fe",
+    "paired_bundle_footprint": {
+      "docs/architecture/23_PAIRED_DEVELOPMENT.md": "5452da26300174b729faff0a30881a7ede0522429c57baf0f5d9968d281d994e",
+      "tests/paired_original_oracle.py": "b18059528214cde32429d10a7f1adb50b217c79ec40dd31ae5cc49e7ee5a1e85",
+      "tests/test_paired_development_adversarial.py": "00fb8dd938d6400a7fd543bff36509da86aa2ca023f99a01bc2fe29fddaa8ff4",
+      "trading_researcher/PAIRED_DEVELOPMENT.md": "14c925ad3996400132c73b8362442665f6c66417ccf94d02865907490bb30c89",
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+      "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+      "trading_researcher/bounded_outcomes.py": "82c5003723b0482884f07860d7c43e4109e70e7e28588a9631187b7b1dfdce22",
+      "trading_researcher/certification.py": "a1b554dbb8c42fcc7751f285f4a93064e05cb078ac96e70c90599946262c0ca9",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+      "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+      "trading_researcher/paired_composition.py": "a3114860fb33e130287d9558b636f7be3ebc3413a67dea8ffb862d27ceed3ce8",
+      "trading_researcher/paired_development.py": "a9a9e47c46ad0f21a125e46bfd33e5e95ac7ee43f866f822105924b91243492b",
+      "trading_researcher/paired_runtime.py": "4df771cac32d652add27eba8afec4a84cd92fea0911c791f45621cbd8629c2ae"
+    },
+    "budget_before": {
+      "dispatches": 48,
+      "unsettled_dispatches": 0,
+      "conservative_cost_nano": 3544770000,
+      "remaining_original_usd_budget_nano": 1455230000
+    },
+    "budget_after": {
+      "dispatches": 48,
+      "unsettled_dispatches": 0,
+      "conservative_cost_nano": 3544770000,
+      "remaining_original_usd_budget_nano": 1455230000
+    },
+    "new_provider_calls": 0,
+    "market_rows_read": 0,
+    "scientific_readiness": false,
+    "qualification": "Synthetic composition and original-formula audit implementation only; no owned production admission or actual model candidate."
+  },
+  "checks": [
+    {
+      "unittest_discovery": {
+        "start_directory": "tests",
+        "pattern": "paired_breakout_oracle.py"
+      },
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": 0,
+      "unexpected_successes": 0,
+      "seconds": 2.8356030999857467,
+      "passed": true
+    },
+    {
+      "unittest_discovery": {
+        "start_directory": "tests",
+        "pattern": "test_paired_breakout_composition.py"
+      },
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "expected_failures": 0,
+      "unexpected_successes": 0,
+      "seconds": 68.6286764999968,
+      "passed": true
+    }
+  ],
+  "root_verification_file_sha256": "e08ac11498529bcd66a344e84f9f859bd8ee48185be790f102a54af86a3463c2",
+  "legacy_regression": {
+    "command": "python -B -m unittest discover -s tests -p test_paired_composition.py -v",
+    "tests": 3,
+    "seconds": 3.787,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0
+  },
+  "source_preservation": {
+    "top_level_runtime_modules_unchanged": 83,
+    "feature_bundle_sha256": "3a08198fbe744e704154811b5c1f451f60ee7bea7d4d03878b9f62bb9bd0b5fe",
+    "paired_bundle_sha256": "1a10223a11c2a69b4d4315584c5499371917e1b293c45a9372e2363e2689afab",
+    "published_paired_feedback_source_sha256": "9d923031883f621269adf5636e5432553ae8099fd653f0149d79cdbf4324bcd7"
+  },
+  "authored_source_whitespace": "PASS",
+  "changed_implementation_and_test_files": [
+    "trading_researcher/paired_breakout/__init__.py",
+    "trading_researcher/paired_breakout/composition.py",
+    "trading_researcher/paired_breakout/runtime.py",
+    "trading_researcher/paired_breakout/README.md",
+    "tests/paired_breakout_oracle.py",
+    "tests/test_paired_breakout_composition.py"
+  ],
+  "updated_handoff_files": [
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/reviews/implementation-2026-10-25/paired-breakout-qualification-2026-10-30.json"
+  ],
+  "new_provider_calls": 0,
+  "market_rows_read": 0,
+  "budget": {
+    "dispatches": 48,
+    "unsettled_dispatches": 0,
+    "conservative_cost_nano": 3544770000,
+    "remaining_original_usd_budget_nano": 1455230000
+  },
+  "limitations": [
+    "No actual model-authored formalization or independent model meaning review for the second idea.",
+    "No owned production composition certificate, retained package/revocation integration or new paid-run grant yet.",
+    "No market outcomes or actual quarterly resource benchmark for this idea.",
+    "Only named neutral diagnostic categories are compared; oracle invalid_value and evaluator numeric_domain are not asserted to be identical.",
+    "The audit compares each case, condition, neutral missingness and bounded outcome; it does not independently certify aggregate contrast arithmetic.",
+    "Decimal100 supplements the frozen evaluator error-bound proof; finite conformance is not universal equivalence or scientific calibration.",
+    "Scientific classification, protected assessment, economic usefulness and the complete seven-package goal remain open."
+  ],
+  "next_action": "Connect the independently checked second-original composition and audit to the owned controller with exact source retention, currentness and typed revocation, preserving all frozen numerical modules and released feedback. Then record and admit one bounded full formalization and independent meaning review under the existing discretionary spending authority and remaining shared budget. A model must author its own candidate; the synthetic analysis fixture is never H_exec. Preserve every previous attempt and closed grant. No calibration expansion or protected outcome access follows from this prerequisite.",
+  "scientific_readiness": false,
+  "full_objective_complete": false
+}

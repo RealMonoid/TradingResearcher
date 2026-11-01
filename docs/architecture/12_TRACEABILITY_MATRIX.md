@@ -13,9 +13,9 @@ SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational report
 | Problem | Requirement | Decisions | Components | Interfaces | Test | Phase |
 |---|---|---|---|---|---|---|
 | PROB-01 | REQ-001 | D001, D015 | CMP-02, CMP-03, CMP-04, CMP-06 | IF-03, IF-07 | TEST-01 | P2 |
-| PROB-01 | REQ-002 | D002, D003, D055, D074 | CMP-02, CMP-03, CMP-04 | IF-03, IF-04 | TEST-02 | P1 |
-| PROB-01 | REQ-003 | D004, D084 | CMP-03, CMP-04, CMP-08 | IF-04, IF-09 | TEST-03 | P1 |
-| PROB-02 | REQ-004 | D005, D034, D061 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-06, CMP-07 | IF-01, IF-02 | TEST-04 | P3 |
+| PROB-01 | REQ-002 | D002, D003, D055, D074, D089, D091 | CMP-02, CMP-03, CMP-04 | IF-03, IF-04 | TEST-02; [bounded math cases](18_BOUNDED_MATH_PRIMITIVES.md#acceptance-and-rollback) | P1 |
+| PROB-01 | REQ-003 | D004, D084, D094, D097 | CMP-03, CMP-04, CMP-08 | IF-04, IF-09 | TEST-03; [paired acceptance](23_PAIRED_DEVELOPMENT.md#integration-exact-gates-and-stopping-rules) | P1 |
+| PROB-02 | REQ-004 | D005, D034, D061, D092 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-06, CMP-07 | IF-01, IF-02 | TEST-04; [review continuation](21_INDEPENDENT_REVIEW_CONTINUATION.md#validation-and-rollback) | P3 |
 | PROB-03 | REQ-005 | D006, D024, D027, D033, D062, D075 | CMP-03, CMP-04, CMP-06, CMP-08, CMP-09 | IF-05, IF-07 | TEST-05 | P1/P4 |
 | PROB-04 | REQ-006 | D007, D052 | CMP-01, CMP-03, CMP-04, CMP-05, CMP-06, CMP-11 | IF-06, IF-07, IF-13 | TEST-06 | P2 |
 | PROB-04 | REQ-007 | D008, D043, D067, D071, D078, D085 | CMP-04, CMP-06, CMP-08, CMP-12 | IF-04, IF-12 | TEST-07 | P1 |
@@ -25,23 +25,23 @@ SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational report
 | PROB-07 | REQ-011 | D012, D058 | CMP-01, CMP-03 | IF-01, IF-04 | TEST-11 | P2 |
 | PROB-02 | REQ-012 | D013, D042, D053 | CMP-01, CMP-05, CMP-06 | IF-06, IF-07 | TEST-12 | P2 |
 | PROB-02 | REQ-013 | D014 | CMP-01, CMP-02, CMP-07, CMP-08 | IF-01, IF-02, IF-08 | TEST-13 | P3 |
-| PROB-02 | REQ-014 | D016, D029, D039, D054, D086 | CMP-01, CMP-02, CMP-03, CMP-06, CMP-07, CMP-11, CMP-12 | IF-02, IF-03, IF-08 | TEST-14; [agent inquiry cases](15_AGENT_INQUIRY_DISCIPLINE.md#acceptance-examples-for-test-14) | P3; repository review discipline now |
+| PROB-02 | REQ-014 | D016, D029, D039, D054, D086, D095, D096 | CMP-01, CMP-02, CMP-03, CMP-06, CMP-07, CMP-11, CMP-12 | IF-02, IF-03, IF-08 | TEST-14; [agent inquiry cases](15_AGENT_INQUIRY_DISCIPLINE.md#acceptance-examples-for-test-14) | P3; repository review discipline now |
 | PROB-07 | REQ-015 | D018, D076 | CMP-01, CMP-03, CMP-05 | IF-01, IF-06 | TEST-15 | P2/P5 |
 | PROB-02 | REQ-016 | D019 | CMP-07, CMP-08, CMP-09 | IF-08 | TEST-16 | P3 |
 | PROB-05 | REQ-017 | D020, D057, D064, D080, D087, D088 | CMP-01, CMP-06, CMP-07, CMP-08, CMP-09, CMP-10, CMP-11 | IF-11 | TEST-17; [D087 invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases); [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P6 |
-| PROB-06 | REQ-018 | D022, D041, D063, D077 | CMP-01, CMP-02, CMP-05, CMP-07, CMP-12 | IF-02, IF-06, IF-12 | TEST-18 | P2/P7 |
+| PROB-06 | REQ-018 | D022, D041, D063, D077, D098 | CMP-01, CMP-02, CMP-05, CMP-07, CMP-12 | IF-02, IF-06, IF-12 | TEST-18 | P2/P7 |
 | PROB-03 | REQ-019 | D023, D082 | CMP-02, CMP-04, CMP-06 | IF-05 | TEST-19 | P4 |
 | PROB-03 | REQ-020 | D025, D038, D049 | CMP-02, CMP-05, CMP-06, CMP-09 | IF-06, IF-07 | TEST-20 | P4 |
 | PROB-04 | REQ-021 | D026, D040 | CMP-02, CMP-07, CMP-12 | IF-12 | TEST-21 | P3/P7 |
 | PROB-06 | REQ-022 | D028, D059, D060, D073, D088 | CMP-11, CMP-12 | IF-13 | TEST-22; [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P5/P6 |
-| PROB-06 | REQ-023 | D030, D065, D079 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-11, CMP-12 | IF-12, IF-13 | TEST-23 | P1/P7 |
+| PROB-06 | REQ-023 | D030, D065, D079, D090, D093 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-11, CMP-12 | IF-12, IF-13 | TEST-23; [complete-feedback exception](22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md#verification-and-rollback) | P1/P7 |
 | PROB-03 | REQ-024 | D031, D035, D047, D051 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-09 | IF-05, IF-06, IF-07 | TEST-24 | P4 |
 | PROB-05 | REQ-025 | D037, D087, D088 | CMP-01, CMP-06, CMP-07, CMP-08, CMP-09, CMP-10, CMP-11, CMP-12 | IF-11, IF-08, IF-13 | TEST-25; [D087 invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases); [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P6 |
 | PROB-05 | REQ-026 | D044, D045, D046 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07 | IF-01, IF-06 | TEST-26 | P5 |
 | PROB-08 | REQ-027 | D068, D013, D019, D025, D028, D036 | CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07, CMP-11, CMP-12 | IF-03, IF-06, IF-08, IF-13 | TEST-27 | P7; before framework success claim |
-| PROB-02 | REQ-028 | D070, D014, D019, D026 | CMP-01, CMP-03, CMP-04, CMP-06, CMP-07, CMP-12 | IF-01, IF-02, IF-08, IF-12 | TEST-28 | Scoped slice; before feedback reuse |
-| PROB-06 | REQ-029 | D069, D070, D025, D059, D068, D081 | CMP-02, CMP-06, CMP-09, CMP-11, CMP-12 | IF-05, IF-07, IF-12, IF-13 | TEST-29 | Pilot planning; before affected assessment |
-| PROB-01 | REQ-030 | D070, D005, D016, D028 | CMP-01, CMP-02, CMP-03, CMP-07, CMP-11 | IF-02, IF-03, IF-08, IF-13 | TEST-30 | Scoped slice; before diagnostic claims |
+| PROB-02 | REQ-028 | D070, D014, D019, D026, D096 | CMP-01, CMP-03, CMP-04, CMP-06, CMP-07, CMP-12 | IF-01, IF-02, IF-08, IF-12 | TEST-28 | Scoped slice; before feedback reuse |
+| PROB-06 | REQ-029 | D069, D070, D025, D059, D068, D081, D096 | CMP-02, CMP-06, CMP-09, CMP-11, CMP-12 | IF-05, IF-07, IF-12, IF-13 | TEST-29 | Pilot planning; before affected assessment |
+| PROB-01 | REQ-030 | D070, D005, D016, D028, D096 | CMP-01, CMP-02, CMP-03, CMP-07, CMP-11 | IF-02, IF-03, IF-08, IF-13 | TEST-30 | Scoped slice; before diagnostic claims |
 
 ## Reverse trace: every decision has a disposition
 
@@ -116,7 +116,7 @@ SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational report
 | D067 | OPEN | M0071, M0072, M0101, M0102, M0138, M0146, M0148, M0241, M0242, M0243 | REQ-007 | Keep open or deferred; no implied approval. |
 | D068 | ACCEPTED | SESSION-2026-10-22 | REQ-027 | Accepted acceleration objective; scoped targets now D081; named comparison and actual measurement remain prerequisites. |
 | D069 | ACCEPTED | SESSION-2026-10-22-GENERATOR | REQ-029 | Absolute profitable usefulness; no advance success or competitor-superiority prerequisite. |
-| D070 | ACCEPTED | SESSION-2026-10-22-GENERATOR | REQ-028/029/030 | Binding feedback, assessment and discovery diagnostic contract in document 13; runtime unimplemented. |
+| D070 | ACCEPTED | SESSION-2026-10-22-GENERATOR | REQ-028/029/030 | Binding contract in document 13; scoped closed development feedback is implemented and verified below. Scientific assessment release, measured improvement and full discovery diagnostics remain incomplete. |
 | D071 | ACCEPTED | SESSION-2026-10-23-CLOSURE | REQ-007 | OPEN-01: [contract section 1](14_RETAIL_RESEARCH_CONTRACT.md#1-open-01-versioned-lifecycle-and-evidence-axes); specification adopted, runtime acceptance unexecuted. |
 | D072 | ACCEPTED | SESSION-2026-10-23-CLOSURE | REQ-009 | OPEN-02: [contract section 2](14_RETAIL_RESEARCH_CONTRACT.md#2-open-02-subset-membership-is-not-evidence-transport); specification adopted, runtime acceptance unexecuted. |
 | D073 | ACCEPTED | SESSION-2026-10-23-CLOSURE | REQ-022 | OPEN-03: [contract section 3](14_RETAIL_RESEARCH_CONTRACT.md#3-open-03-descriptive-cohorts-no-invented-truth-priors); specification adopted, runtime acceptance unexecuted. |
@@ -135,6 +135,11 @@ SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational report
 | D086 | ACCEPTED | SESSION-2026-10-24-INQUIRY | REQ-014 | Apply agent-inquiry/1.0 in repository work and specified future agents; TEST-14 extensions unexecuted. |
 | D087 | ACCEPTED | SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC | REQ-017/025 | Apply [temporal-diagnostic-invocation/1.0](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md): due eligible batches and intended use invoke bound-plan checks automatically; TEST-17/25 extensions unexecuted. |
 | D088 | ACCEPTED | SESSION-2026-10-24-MONITORING-VISIBILITY | REQ-017/022/025 | Apply [monitoring-visibility/1.0](17_MONITORING_VISIBILITY_AND_REPORTING.md): authorized work starts when ready, pending work persists, weekly reports and actionable notices are delivered; TEST-17/22/25 extensions unexecuted. |
+| D089 | ACCEPTED | SESSION-2026-10-29-BOUNDED-MATH | REQ-002/003/005/011/026 | Optional [bounded-math/1.0](18_BOUNDED_MATH_PRIMITIVES.md) specifies median/log outcomes and outward bounds. Approval is not certification or completed research execution. |
+| D090 | ACCEPTED | SESSION-2026-10-29-FEEDBACK-BUDGET | REQ-004/014/022/023/030 | One-use [resource overlay](19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md); full inputs/review retained, ordinary budgets and scientific gates unchanged. |
+| D091 | ACCEPTED | SESSION-2026-10-29-BOUNDED-MATH-REUSE | REQ-002/003/004/005/011/014/022/023/026/030 | Scoped [primitive reuse](20_BOUNDED_MATH_REUSE.md) and one retained-BTC continuation; unchanged mathematical meanings and per-hypothesis gates. |
+| D092 | ACCEPTED | SESSION-2026-10-29-INDEPENDENT-BTC-REVIEW | REQ-004/014/022/023 | One exact [independent review continuation](21_INDEPENDENT_REVIEW_CONTINUATION.md), preserving original consumption, actual epoch identities and legacy policies. |
+| D093 | ACCEPTED | SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET | REQ-004/014/022/023/030 | One [complete-feedback epoch](22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md) with fixed six-slot resources, unchanged full inputs and independent review; no retry or successor. |
 
 ## Coverage and orphan rules
 
@@ -200,8 +205,93 @@ The later D088 [reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#futur
 | REQ-004/018; TEST-04/18 | [Broker tests](../../tests/test_coordination.py) deny forged identity, stale attempt writes, late context additions and unauthorized artifact/status access; [HTTP tests](../../tests/test_local_runtime.py) exercise the real capability boundary | PIT market-data validation, provider isolation, arbitrary shell access, complete adapter provenance |
 | REQ-007; D078 | Exclusive writer, idempotent job keys, retry history, SQLite integrity, real process-crash rollback, preserved commits and restored backup | Scientific FrozenManifest/TrialRecord closure, external blob manifest/quarantine, migration, power failure |
 | REQ-013/016; TEST-13/16 | Descendants retain all supplied context ancestry; incomplete operational batches cannot release; later-epoch access is explicit | Full four-memory authority, scientific allocation/dependence and all external/context exposure |
+| REQ-013/028; TEST-13/28 | [Development feedback checks](../reviews/implementation-2026-10-25/development-feedback-verification-2026-10-29.json) preserve both ideas and every closed-cohort attempt/gap, atomically publish typed observation/interpretation, deny early or revoked use/new dispatch, and restore the actual complete backup | Scientific/assessment batch release, Market Model authority, actual downstream model improvement and economic usefulness |
+| REQ-013/014/023/028; TEST-13/28 | [Feedback reference-paging checks](../reviews/implementation-2026-10-25/feedback-context-verification-2026-10-29.json) retain all idea/gap bodies and attempts, authenticate exact bounded pages, reconstruct complete original envelopes, preserve legacy views and account for unchanged budgets | Model-quality equivalence, complete-path admission, scientific evidence and approval of any larger epoch budget |
 | REQ-006/007/018; TEST-06/07/18 | Trusted structural, source-copy and decimal/rational checks reject invalid output; negative source records can complete a technical job without evidence authority | LLM factuality generally, source truth, hypothesis evaluation, statistical calibration |
 | REQ-023; TEST-23 | Attempt/deadline bounds, blocked handoff, bounded trigger occurrences, crash catch-up, duplicate events and paginated retained history | Model token/cost accounting, material-improvement iteration policy, measured research acceleration |
 | D087/D088 prerequisites | Real HTTP worker dispatch from a generic due timer; durable time/event scheduling and idempotent occurrence identity | Eligible completed-outcome producer, bound-plan readiness/freshness, quantitative diagnostics, weekly local-calendar reports and delivery |
 
 Operational records use their own versioned envelopes. A successful job is not a scientific verdict or a completed research acceptance test. The full requirements and adopted definitions are unchanged.
+
+## D090 scoped resource overlay
+
+[research-epoch-feedback-budget/1.0](19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md) affects REQ-004/014/022/023/030 and D079 only for one explicit development epoch. Verification must cover complete feedback, exact provider configuration, one-use and ordered-call persistence across restart/restore, fixed nonrefundable stage limits, unknown usage and revocation. Approval alone establishes neither implementation nor research quality; ordinary budgets and scientific gates remain unchanged.
+
+Executed [D090 verification](../reviews/implementation-2026-10-25/feedback-budget-verification-2026-10-29.json) passes 79 distinct focused tests, including 16 independently authored adversarial cases. The [actual epoch](../reviews/implementation-2026-10-25/feedback-research-2026-10-29.json) retains two settled calls, exact input counts, model/version/UTC and stage-specific stopping gaps. The consumed grant was revoked without changing its historical run snapshot. This is tested operational enforcement, not completed scientific acceptance or demonstrated research quality.
+
+## D091 scoped primitive reuse
+
+D091 / SESSION-2026-10-29-BOUNDED-MATH-REUSE adopts [bounded-math-reuse/1.0](20_BOUNDED_MATH_REUSE.md), tracing REQ-002/003/004/005/011/014/022/023/026/030 to CMP-02/03/04/05/06/07/12 and IF-02/03/04/08/09. Preserve original primitive tests and add exact activation-handoff, unchanged legacy policy, complete-input reservation and independent BTC meaning/formula checks. Approval is not completed verification or research success.
+
+## D093 complete-feedback resource exception
+
+D093 / SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET adopts [research-epoch-feedback-budget/2.0](22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md), tracing REQ-004/014/022/023/030 to CMP-02/03/04/12. Verify all six fixed slots, exact sources and role profiles, operator authority, durable one-use/restart/restore/revocation boundaries, current legacy feedback and actual per-call model/version/UTC accounting. Approval is not completed implementation or scientific success.
+
+Executed [D093 verification](../reviews/implementation-2026-10-25/complete-feedback-verification-2026-10-30.json) retains 60 focused passing tests, old-source preservation, exact real input admission and both existing feedback qualifications. The actual epoch closes with an explicit expressibility gap; no independent reviewer, market computation or scientific verdict follows.
+
+## D094 fixed-pair development trace
+
+| Decision | Status | Adopted scope | Source |
+|---|---|---|---|
+| D094 | ACCEPTED | [Fixed-pair development and one continuation](23_PAIRED_DEVELOPMENT.md) | SESSION-2026-10-30-PAIRED-DEVELOPMENT |
+
+[D094](23_PAIRED_DEVELOPMENT.md) / SESSION-2026-10-30-PAIRED-DEVELOPMENT maps REQ-002/003/004/005/011/013/014/022/023/026/028/030 to CMP-02/03/04/05/06/07/12 and IF-02/03/04/05/08/09. Required evidence is exact paired semantics, independent source/domain/case checks, owned replay, current legacy reviews and durable one-use resource accounting. Adoption does not establish implementation or empirical usefulness.
+
+## D095 delegated resource disposition
+
+[D095](24_PAIRED_FORMAT_CORRECTION.md) preserves scientific meaning while binding one original format correction to its separate grant and remaining shared budget.
+
+| Decision | Status | Source | Requirement |
+|---|---|---|---|
+| D095 | ACCEPTED | SESSION-2026-10-30-DISCRETIONARY-BUDGET | REQ-014 |
+
+The [paired closed-development handoff](../reviews/implementation-2026-10-25/paired-feedback-qualification-2026-10-30.json) implements the D070/D078/D083/D094 feedback portion for REQ-007/008/013/028/030 through CMP-07 and IF-01/08/09. Separate paired types, complete retained cohort, atomic release, current source/meaning/data checks and direct technical revocation preserve descriptive authority. It does not complete scientific evidence publication or the full package exits.
+
+The [second-original composition prerequisite](../reviews/implementation-2026-10-25/paired-breakout-qualification-2026-10-30.json) advances D084/D094 and REQ-003/005/011/026 within CMP-03/04/05 and IF-04: independently fixed direct formulas, exact required-input semantics and retained-source synthetic checks. It is not a new language operator, owned production qualification, actual model meaning review or scientific evidence.
+
+The [owned second-original host](../reviews/implementation-2026-10-25/paired-breakout-host-qualification-2026-10-30.json) extends the same D083/D084/D094 trace to REQ-007/013/022 and IF-09: typed source/certificate revocation, immutable failure/case retention and currentness before commit. Synthetic host qualification does not replace actual source or independent model-meaning gates.
+
+The [second-original resource and dispatch qualification](../reviews/implementation-2026-10-25/paired-breakout-continuation-qualification-2026-10-30.json) advances D083/D084/D094, REQ-007/013/022 and IF-09 through exact roles/packets, source-bound invocations, permanent external spending fences and rollback/revocation tests. The [actual descriptive result](../reviews/implementation-2026-10-25/paired-breakout-result-2026-10-30.json) adds real evidence for the existing semantic/execution handoff: unchanged model-authored candidate, separate review and 8,640 replay/audit agreements. A single qualifying observed case does not establish calibrated inference, economic usefulness or the complete TEST-01 through TEST-30 set.
+
+The [second-original feedback handoff](../reviews/implementation-2026-10-25/paired-breakout-feedback-publication-2026-10-30.json) advances D070/D078/D083/D084/D094 and REQ-007/013/028-030 through CMP-09/10 and IF-08: complete immutable cohort, exact evidence bindings, explicit later-context access and retained limitations. [Independent qualification](../reviews/implementation-2026-10-25/paired-breakout-feedback-qualification-2026-10-30.json) distinguishes real original-registry evidence from the explicitly simulated relocated-budget inspection. No complete scientific test inventory or economic success is asserted.
+
+The [bounded AmiBroker closeout](../reviews/implementation-2026-10-25/amibroker-preflight-2026-10-31.json) advances D022/D042/D076 and REQ-009/012/018 at the native adapter boundary: next-open fills, fixed sizing, shared cash, cost scenarios, raw result retention and exact repeats. It is engineering evidence for the declared five synthetic fixtures, not completion of TEST-09/12/18, full policy evaluation or economic support.
+
+## D096 inquiry, feedback, and observable improvement
+
+| Decision | Status | Source | Requirement | Disposition |
+|---|---|---|---|---|
+| D096 | ACCEPTED | SESSION-2026-11-01-METACOGNITION | REQ-014 | [Inquiry-feedback/1.0](25_METACOGNITION_DUAL_SPACE_INQUIRY.md) also elaborates REQ-028/029/030 through CMP-01/02/03/04/06/07/11/12 and IF-02/03/08/12/13. Specification adopted; runtime integration, behavioral qualification, and benefit remain unverified. |
+
+The [twelve acceptance cases](25_METACOGNITION_DUAL_SPACE_INQUIRY.md#acceptance-cases-and-assessment-boundary) map AC-01/02/03/04/05/08/09/11 to TEST-14 and associated validity/access/resource tests; AC-05/06/07/10 to TEST-28 and existing exposure/freeze tests; AC-12 to TEST-29; and AC-02/08/11 to TEST-30's free-discovery constraints. They remain future behavioral specifications. The [measurement and improvement loop](25_METACOGNITION_DUAL_SPACE_INQUIRY.md#what-should-improve-and-how-to-measure-it) elaborates existing TEST-21/22/27/28/29 purposes without a new score, empirical conclusion, or before-use benefit gate. [Adoption checks](../reviews/adoption-metacognition-2026-11-01/verification.json) verify documentation only.
+
+D096 [diagnostic-boundary examples DQ-01–DQ-03](25_METACOGNITION_DUAL_SPACE_INQUIRY.md#additional-diagnostic-boundary-acceptance-examples) extend REQ-014/028/029 and TEST-14/28/29: a formally valid false diagnosis, a genuinely unresolved cause, and divergence between correctness and action usefulness. They require separate substantive checking and qualified reporting, not a diagnosis score inferred from controller conformance. These are future behavioral cases, not executed tests.
+
+
+### November 1 implementation boundary: D096 profile constructor
+
+The [qualified constructor](../reviews/implementation-2026-10-25/inquiry-profile-qualification-2026-11-01.json) builds a separate `discovery-inquiry-feedback/2` profile with exact accepted-owner/provenance bindings, preserved original prompts and unchanged nonprompt role settings. Independent scripted cases check their stated storage/access/resource paths and existing regressions; they do not prove actual model diagnoses/actions, a twelve-case behavioral pass, benefit or scientific/economic validity. The old pinned runtime remains unchanged. Actual future worker/presentation binding, full-wire counts, resource/currentness admission and applicable model-behavior qualification remain pending in the sole plan. No live activation, spending grant or new evidence authority follows.
+
+
+### November 1 implementation boundary: optional inquiry native route
+
+The [scripted route qualification](../reviews/implementation-2026-10-25/inquiry-runtime-qualification-2026-11-01.json) connects the versioned D096 profile with exact source presentation, native reservations and retained trajectories. Source drift settlement retains charges/responses and halts use; a reproduced memory-read gate defect is corrected. The original brokers/source pins remain unchanged. Model AC/DQ behavior, native currentness, complete future wire counts, finite resource admission and scientific/economic effectiveness remain unverified. This is no live activation or new allowance.
+
+
+## D097 bounded exact-composition adoption
+
+D097 / [bounded-exact-compositions/1.0](26_BOUNDED_EXACT_COMPOSITIONS.md) maps REQ-002/003/004/005/011/014/022/023/026/030 and existing formalization/feature/causality/missingness/resource/replay acceptance to version-specific power/product/all/absolute conformance. The source-approved static shape is not executable coverage. Record actual independent tests and integration limits separately.
+
+[Exact case-layer qualification](../reviews/implementation-2026-10-25/exact-outcomes-2026-11-01.json) adds library coverage for declared lookback/maturity, required-input missingness, whole-scope denominators, shared resource stops and complete-case diagnostic replay (existing REQ-011/014/022/026 obligations). It reports 23 new case/diagnostic methods, including 19 independently authored methods; 28 core and 61 legacy methods also pass. Native/source authentication, actual original-A mapping and whole-interval execution remain unqualified; a synthetic 8,640-case attempt stopped at the unchanged cap. No scientific or economic conclusion follows.
+
+[Exact formalization/native-adapter qualification](../reviews/implementation-2026-10-25/exact-formalization-2026-11-01.json) adds 37 new methods (27 independently authored) and 44 legacy regressions. These cover explicit versions, original text, parameter/exponent provenance, retained gaps, native response/lease/identity binding, full contract bytes, exact original review definitions, later release and the absence of actual independent-model authority for fixture replies. This is scoped REQ-002/003/004/005/014/026/030 conformance; it does not complete their full acceptance criteria. The native fixture's prior definitions are explicitly seeded. Actual certified-input/finite admission, computation certification, protected assessment, complete original-A execution and scientific/economic validity remain open.
+
+[Retained exact runtime/source qualification](../reviews/implementation-2026-10-25/exact-runtime-2026-11-01.json) adds isolated compile/execute/replay, native immutable source/blob certificates and explicit typed D083 package/certificate dependencies. Verification covers exact stream/source identities, malformed metadata rejection, restart/currentness, operator namespaces, revocation without generic provenance taint and the unchanged-cap resource stop. It runs 17 runtime, 19 native-certificate and 18 legacy-revocation methods; the 19 include three inherited expectations also exercised through the new broker. The child independently executes the existing fixed 51 core/case methods. These scoped REQ-003/011/014/022/026 checks do not establish all requirement exits, actual H_exec composition, scientific validity or protected/native research admission.
+
+
+| Decision | Status | Source | Requirement | Disposition |
+|---|---|---|---|---|
+| D097 | ACCEPTED | SESSION-2026-11-01-EXACT-COMPOSITIONS | REQ-003 | [Bounded exact compositions](26_BOUNDED_EXACT_COMPOSITIONS.md): specification adopted; new opt-in core and complete mapping require separately recorded independent qualification. No scientific, capital or new spending authority. |
+
+
+| D098 | ACCEPTED | SESSION-2026-11-01-EXACT-RESOURCES | REQ-018; existing REQ-003/005/011/013/014/022/026/030 | [Separate exact resource version](27_EXACT_COMPUTATION_RESOURCES.md):20M perchild/40M aggregate/shared1800s; new native/source qualification remains pending. Existing checks, old10M records and independent meaning remain; no new API/grant/scientific authority. |

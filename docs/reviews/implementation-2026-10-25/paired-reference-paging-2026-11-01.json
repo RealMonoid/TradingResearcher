@@ -1,0 +1,542 @@
+{
+  "schema": "paired-reference-candidate-count/1",
+  "at_utc": "2026-11-01T00:35:56.341780+00:00",
+  "status": "NOT_ADMITTED_INITIAL_INPUTS_EXCEED_CAP",
+  "scope": "CANDIDATE_WIRE_ONLY; all13same selected sources and original role/model settings, one added exact paired-reference tool.",
+  "receipts": [
+    {
+      "scope": "CANDIDATE_WIRE_ONLY",
+      "perspective": "feas-20261029-a",
+      "input_tokens": 82885,
+      "input_bound": 83013,
+      "at_utc": "2026-11-01T00:35:54.401667+00:00",
+      "response_at_utc": "2026-11-01T00:35:55.828648+00:00",
+      "wire_sha256": "c5a2dbcd15cd007092f24239472ee4cded975573e7a07537ea2c1819cc0776cd",
+      "transport_request_id": "req_a759833b54764df3bd3013bc1c52d1cc",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "qualification": "Count endpoint only; not inference usage, runtime compatibility, a complete reservation or provider invoice."
+    },
+    {
+      "scope": "CANDIDATE_WIRE_ONLY",
+      "perspective": "feas-20261029-b",
+      "input_tokens": 82895,
+      "input_bound": 83023,
+      "at_utc": "2026-11-01T00:35:55.831154+00:00",
+      "response_at_utc": "2026-11-01T00:35:56.331675+00:00",
+      "wire_sha256": "74c41a04cee522699f6856a6ee91571c7b4adaed8693042850acfa008cfb6a6a",
+      "transport_request_id": "req_6a8cf41e801b4e7bbaa9c6437ca17bd6",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "qualification": "Count endpoint only; not inference usage, runtime compatibility, a complete reservation or provider invoice."
+    }
+  ],
+  "initial_input_tokens": 165780,
+  "ordinary_epoch_cap": 80000,
+  "per_call_input_cap": 74000,
+  "unreserved_downstream_inputs": "UNKNOWN_NOT_ZERO",
+  "unreserved_outputs_and_tool_followups": "UNKNOWN_NOT_ZERO",
+  "runtime_integration": "NOT_IMPLEMENTED",
+  "elapsed_seconds": 1.9421244999975897,
+  "registry_unchanged": true,
+  "ledger_unchanged": true,
+  "new_inference_calls": 0,
+  "new_epochs": 0,
+  "new_jobs": 0,
+  "scientific_readiness": false,
+  "recorded_at_utc": "2026-11-01T00:39:36.868499+00:00",
+  "purpose": "Remove measured paired reference inflation while preserving substantive content and old pinned code; discriminate candidate input fit before building live integration.",
+  "renderer_profile": "discovery-paired-feedback-view/1",
+  "renderer_source": "trading_researcher/feedback/reference_views.py",
+  "source_sizes": [
+    {
+      "id": "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+      "schema": "research-record/1",
+      "old_view_bytes": 2108,
+      "candidate_view_bytes": 2117
+    },
+    {
+      "id": "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+      "schema": "research-record/1",
+      "old_view_bytes": 2682,
+      "candidate_view_bytes": 2691
+    },
+    {
+      "id": "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+      "schema": "research-record/1",
+      "old_view_bytes": 2108,
+      "candidate_view_bytes": 2117
+    },
+    {
+      "id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "schema": "development-feedback-manifest/1",
+      "old_view_bytes": 61147,
+      "candidate_view_bytes": 61156
+    },
+    {
+      "id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+      "schema": "development-feedback-manifest/1",
+      "old_view_bytes": 43206,
+      "candidate_view_bytes": 43215
+    },
+    {
+      "id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "schema": "feature-catalog/1",
+      "old_view_bytes": 2053,
+      "candidate_view_bytes": 2062
+    },
+    {
+      "id": "8406f5358e30347f8c827d1e92f0475816843876ce482b9e6c52d1ad1e5a05d9",
+      "schema": "research-record/1",
+      "old_view_bytes": 2103,
+      "candidate_view_bytes": 2112
+    },
+    {
+      "id": "98b2d5c7c81ece3e62cfcaba1f45962a9431e6689d54629439477b90a2c96cc4",
+      "schema": "research-record/1",
+      "old_view_bytes": 3481,
+      "candidate_view_bytes": 3490
+    },
+    {
+      "id": "a5b544c12d11c4f503b725fa9e70d7b1a5c351c6cfa7108e75f480d8d46eacc1",
+      "schema": "research-record/1",
+      "old_view_bytes": 2612,
+      "candidate_view_bytes": 2621
+    },
+    {
+      "id": "ac31436f73c2a1e8ab685477d1459e01737561ce8c8dda467e9dabb1b237c117",
+      "schema": "research-record/1",
+      "old_view_bytes": 2384,
+      "candidate_view_bytes": 2393
+    },
+    {
+      "id": "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+      "schema": "research-record/1",
+      "old_view_bytes": 2674,
+      "candidate_view_bytes": 2683
+    },
+    {
+      "id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+      "schema": "paired-breakout-development-feedback-manifest/1",
+      "old_view_bytes": 272003,
+      "candidate_view_bytes": 98805
+    },
+    {
+      "id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+      "schema": "data-snapshot/1",
+      "old_view_bytes": 7627,
+      "candidate_view_bytes": 7636
+    }
+  ],
+  "old_view_utf8_bytes": 406188,
+  "candidate_view_utf8_bytes": 233098,
+  "previous_declared_packet_input_tokens": 362736,
+  "candidate_declared_packet_input_tokens": 165780,
+  "comparison_qualification": "Observed count receipts for the two declared packets under the same requested model alias/catalog version and unchanged role settings, with one added page tool. Immutable provider model snapshot is unknown; no general or quality-equivalent token-savings claim follows.",
+  "source_selection": "Unchanged thirteen-source snapshot. The previously documented old-manifest omission and unique historical metadata qualifications remain in development-admission-2026-10-31.json; no new selection is made here.",
+  "root_reconstruction": {
+    "envelopes": 13,
+    "page_limit": 64,
+    "pages_by_tool": {
+      "read_source_section": 75,
+      "read_feedback_references": 41,
+      "read_paired_feedback_references": 44
+    },
+    "same_original_envelopes": true
+  },
+  "independent_reconstruction": {
+    "source_count": 13,
+    "reconstructed_source_count": 13,
+    "page_limit_used": 17,
+    "page_counts": {
+      "read_source_section": 261,
+      "read_feedback_references": 159,
+      "read_paired_feedback_references": 162
+    },
+    "marker_counts": {
+      "read_source_section": 16,
+      "read_feedback_references": 17,
+      "read_paired_feedback_references": 13
+    },
+    "sources": [
+      {
+        "artifact_id": "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+        "schema": "research-record/1",
+        "original_envelope_sha256": "f2fb7a7085ee9cd9c41ba07a0a4d18e94094f30260ffa580f0998a080b51fe79",
+        "reconstructed_envelope_sha256": "f2fb7a7085ee9cd9c41ba07a0a4d18e94094f30260ffa580f0998a080b51fe79",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+        "schema": "research-record/1",
+        "original_envelope_sha256": "92995921dfad02a024ada09dbef69e2e8aac6f365c81191c9911e29f79f615f5",
+        "reconstructed_envelope_sha256": "92995921dfad02a024ada09dbef69e2e8aac6f365c81191c9911e29f79f615f5",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+        "schema": "research-record/1",
+        "original_envelope_sha256": "36d06f7bdcba8b46303c29709bc6716befdd82bc9139a0607492812efa399fcf",
+        "reconstructed_envelope_sha256": "36d06f7bdcba8b46303c29709bc6716befdd82bc9139a0607492812efa399fcf",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "schema": "development-feedback-manifest/1",
+        "original_envelope_sha256": "02a7e5d6a793a09f048226807c5324e8a4c8828eeb3de0a5323524b1606a8a2d",
+        "reconstructed_envelope_sha256": "02a7e5d6a793a09f048226807c5324e8a4c8828eeb3de0a5323524b1606a8a2d",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "schema": "development-feedback-manifest/1",
+        "original_envelope_sha256": "1aba299f9d9e078d4e58b96ac91719c6f0d351d98e2013259297d0ccb45166f5",
+        "reconstructed_envelope_sha256": "1aba299f9d9e078d4e58b96ac91719c6f0d351d98e2013259297d0ccb45166f5",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "schema": "feature-catalog/1",
+        "original_envelope_sha256": "683f64e64921d172e3d9a88102749e569cdc36513b6572bc43110d1eec3c736a",
+        "reconstructed_envelope_sha256": "683f64e64921d172e3d9a88102749e569cdc36513b6572bc43110d1eec3c736a",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "8406f5358e30347f8c827d1e92f0475816843876ce482b9e6c52d1ad1e5a05d9",
+        "schema": "research-record/1",
+        "original_envelope_sha256": "08c699a53272267052e5349432e52fad2235cbb71e37c97e4a097b02671fbcc8",
+        "reconstructed_envelope_sha256": "08c699a53272267052e5349432e52fad2235cbb71e37c97e4a097b02671fbcc8",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "98b2d5c7c81ece3e62cfcaba1f45962a9431e6689d54629439477b90a2c96cc4",
+        "schema": "research-record/1",
+        "original_envelope_sha256": "035ae8185dbf84739fa24af003aef6ce8dbd658c8066d2ddd5dac0f52d5eab29",
+        "reconstructed_envelope_sha256": "035ae8185dbf84739fa24af003aef6ce8dbd658c8066d2ddd5dac0f52d5eab29",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "a5b544c12d11c4f503b725fa9e70d7b1a5c351c6cfa7108e75f480d8d46eacc1",
+        "schema": "research-record/1",
+        "original_envelope_sha256": "4a3386cdf30b76e7c79e387cecda6821bdea9754723620211157b6f79eff11f7",
+        "reconstructed_envelope_sha256": "4a3386cdf30b76e7c79e387cecda6821bdea9754723620211157b6f79eff11f7",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "ac31436f73c2a1e8ab685477d1459e01737561ce8c8dda467e9dabb1b237c117",
+        "schema": "research-record/1",
+        "original_envelope_sha256": "314f7841258697e42be771810b56c44a66d9e551a995aaab246f4c0c8fcbdd36",
+        "reconstructed_envelope_sha256": "314f7841258697e42be771810b56c44a66d9e551a995aaab246f4c0c8fcbdd36",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+        "schema": "research-record/1",
+        "original_envelope_sha256": "ccd89eaa779aef0ed4dd02ce2c86c7aab448a1cc04193d779118d097c92c5eb2",
+        "reconstructed_envelope_sha256": "ccd89eaa779aef0ed4dd02ce2c86c7aab448a1cc04193d779118d097c92c5eb2",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+        "schema": "paired-breakout-development-feedback-manifest/1",
+        "original_envelope_sha256": "22a1eaf98a45c69614d465e9fb8b2c19fd89964bb28fe84e27965e6ab20a4071",
+        "reconstructed_envelope_sha256": "22a1eaf98a45c69614d465e9fb8b2c19fd89964bb28fe84e27965e6ab20a4071",
+        "full_reconstruction": true
+      },
+      {
+        "artifact_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "schema": "data-snapshot/1",
+        "original_envelope_sha256": "08fe829c2701815173a716c2bee3f39353eba5b5ae227e93fe6c2323731fe777",
+        "reconstructed_envelope_sha256": "08fe829c2701815173a716c2bee3f39353eba5b5ae227e93fe6c2323731fe777",
+        "full_reconstruction": true
+      }
+    ],
+    "same_perspectives_and_nonpresentation_request_fields": true,
+    "same_config": true,
+    "only_added_tool": "read_paired_feedback_references",
+    "all_37_pinned_sources_unchanged": true,
+    "pin_manifest_sha256": "11425e6439ec2445ccfdf1ed409866b4a3fa1e29f73dd88898c2a240087d9b42"
+  },
+  "independent_renderer_review": {
+    "status": "PASS_RENDERER_PRIMITIVE_ONLY",
+    "private_evidence": ".trf-runtime/paired-reference-paging-2026-10-31/independent-review.json",
+    "sha256": "4197826d9ac59d4bc57d6413f8ab8e10ef1e12db5a77dae9f0eccb5b23097811"
+  },
+  "independent_count_review": {
+    "status": "PASS_COUNT_ONLY_NOT_ADMITTED",
+    "private_evidence": ".trf-runtime/paired-reference-paging-2026-10-31/independent-count-review.json",
+    "sha256": "b89d1bd20f02602afbe28018a378e4c955c372f944e300db1c182e66f29258c3"
+  },
+  "controller_checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_paired_reference_views*.py' -v",
+      "exit_code": 0,
+      "tests": 23,
+      "chunk_id": "109063",
+      "seconds": 0.077
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_feedback_context_views.py -v",
+      "exit_code": 0,
+      "tests": 4,
+      "chunk_id": "64ee82",
+      "seconds": 3.076
+    },
+    {
+      "command": "python -B .trf-runtime/paired-reference-paging-2026-10-31/probe.py prepare",
+      "exit_code": 0,
+      "chunk_id": "2a2c4f",
+      "scope": "Local exact candidate reconstruction; no API or registry write."
+    },
+    {
+      "command": "python -B .trf-runtime/paired-reference-paging-2026-10-31/probe.py count",
+      "exit_code": 0,
+      "chunk_id": "d70976",
+      "scope": "Exactly two candidate-wire count requests; no inference/reservation."
+    }
+  ],
+  "runtime_integration_disposition": "NOT_IMPLEMENTED_NOT_ACTIVATED; the old worker/profile reject the new tool/profile. Building it cannot repair the already-oversized initial input packet.",
+  "ordinary_epoch_input_excess": 85780,
+  "per_call_input_excess": [
+    8885,
+    8895
+  ],
+  "usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "inference_tokens_added": 0,
+  "registry_before_and_after": {
+    "artifacts": 1418,
+    "contexts": 57,
+    "events": 1981,
+    "research_epochs": 20,
+    "job_specs": 40,
+    "research_calls": 40
+  },
+  "registry_writes": 0,
+  "pinned_sources_checked_unchanged": 37,
+  "current_native_source_grant_authorization": "NOT_REPEATED; this is a source-presentation diagnostic of the prior declared snapshot, not admission.",
+  "preserved_configuration_expiry": {
+    "expires_at": 1793444124,
+    "expires_at_utc": "2026-10-31T10:55:24+00:00",
+    "expired_at_first_count_request": true,
+    "qualification": "The retained configuration was already expired at the diagnostic count. This does not change counted retained-wire inputs, but cannot authorize a future reservation or inference. No expiration was silently refreshed."
+  },
+  "remaining_inline_physical_size_map": [
+    {
+      "artifact_id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "schema": "development-feedback-manifest/1",
+      "body_field_utf8_bytes": {
+        "cohort": 37580,
+        "created_at": 10,
+        "evidence_at_publication": 1036,
+        "publisher_sha256": 66,
+        "qualification": 119,
+        "request": 343,
+        "retained_research_records": 20680,
+        "schema": 33,
+        "scientific_readiness": 5
+      },
+      "cohort_field_utf8_bytes": {
+        "artifact_ids": 197,
+        "batch_ids": 561,
+        "batches": 2340,
+        "bound_attempts": 1357,
+        "calls": 8174,
+        "epoch_ids": 246,
+        "epochs": 1576,
+        "idea_ids": 135,
+        "job_ids": 596,
+        "jobs": 21858,
+        "qualification": 96,
+        "root_epoch_id": 34,
+        "root_result_ids": 135,
+        "schema": 31,
+        "scientific_readiness": 5,
+        "unresolved_exposure_refs": 2
+      }
+    },
+    {
+      "artifact_id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+      "schema": "development-feedback-manifest/1",
+      "body_field_utf8_bytes": {
+        "cohort": 12066,
+        "created_at": 10,
+        "evidence_at_publication": 1036,
+        "publisher_sha256": 66,
+        "qualification": 119,
+        "request": 343,
+        "retained_research_records": 28253,
+        "schema": 33,
+        "scientific_readiness": 5
+      },
+      "cohort_field_utf8_bytes": {
+        "artifact_ids": 197,
+        "batch_ids": 176,
+        "batches": 686,
+        "bound_attempts": 679,
+        "calls": 2442,
+        "epoch_ids": 141,
+        "epochs": 900,
+        "idea_ids": 68,
+        "job_ids": 176,
+        "jobs": 6128,
+        "qualification": 96,
+        "root_epoch_id": 34,
+        "root_result_ids": 68,
+        "schema": 31,
+        "scientific_readiness": 5,
+        "unresolved_exposure_refs": 2
+      }
+    },
+    {
+      "artifact_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+      "schema": "paired-breakout-development-feedback-manifest/1",
+      "body_field_utf8_bytes": {
+        "cohort": 19899,
+        "created_at": 10,
+        "evidence_at_publication": 26838,
+        "publisher_sha256": 66,
+        "qualification": 119,
+        "request": 335,
+        "retained_research_records": 50196,
+        "schema": 49,
+        "scientific_readiness": 5
+      },
+      "cohort_field_utf8_bytes": {
+        "artifact_ids": 204,
+        "batch_ids": 281,
+        "batches": 1143,
+        "bound_attempts": 1399,
+        "calls": 4018,
+        "epoch_ids": 141,
+        "epochs": 902,
+        "idea_ids": 135,
+        "job_ids": 281,
+        "jobs": 10839,
+        "qualification": 96,
+        "root_epoch_id": 34,
+        "root_result_ids": 135,
+        "schema": 47,
+        "scientific_readiness": 5,
+        "unresolved_exposure_refs": 2
+      }
+    }
+  ],
+  "size_map_qualification": "Physical JSON-field byte counts only, with punctuation/key overhead outside values. Field names do not establish scientific relevance or permission to omit/defer content. No further count or new presentation is selected.",
+  "unverified": [
+    "Live worker/profile integration and actual frozen-ledger wire binding.",
+    "Current native source/grant/publication admission, as distinct from this retained-snapshot presentation diagnostic.",
+    "A complete ordinary-epoch reservation and unknown future tool/formalization/review inputs/outputs; a fresh correctly bound configuration is also required.",
+    "Model behavior or research quality equivalence.",
+    "Immutable model snapshot, count-endpoint billing and external invoice.",
+    "Scientific validity/calibration, protected assessment, economic usefulness and full seven-package completion."
+  ],
+  "next_action": "Inspect the remaining inline feedback payload read-only and classify required substantive discovery inputs versus retained audit/provenance metadata against D070 and the existing retrieval contract. Use the exact13-source snapshot and physical field-size map; retain every original idea/gap/failure, qualified result, conflict and exposure. Determine whether a bounded initial presentation with exact authorized retrieval of audit detail belongs to already approved semantics, or requires a specific material-change proposal. Do not implement another presentation, omit content, dispatch inference, increase the ordinary cap, lower role/model quality or build the live worker for the known-oversized packet during this classification. The measured NOT_ADMITTED result applies to this candidate only, not all compliant retrieval policies; all runtime/currentness/frozen-wire/full-path admission requirements remain open.",
+  "scientific_contract_changed": false,
+  "construction_usage": {
+    "scope": "Main Codex construction chat from the correction continuation boundary through this snapshot, separate from framework research usage.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-10-31T06:56:31.981Z",
+    "snapshot_at_utc": "2026-11-01T00:39:32.379Z",
+    "delta": {
+      "input_tokens": 4877488,
+      "cached_input_tokens": 4686080,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 28367,
+      "reasoning_output_tokens": 12179,
+      "total_tokens": 4905855
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "child_branch_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "private_helpers_and_evidence": ".trf-runtime/paired-reference-paging-2026-10-31/",
+  "private_evidence_sha256": {
+    "probe.py": "3e04597636cf516c0522d570a6851075f222540fddd9ed091efe497fddb1582a",
+    "candidate.json": "1f46efe447e28de2873cfc3b1c9afaac88b242350ca2eedb16bf863c18bb6ef2",
+    "prepare-start.json": "57708b77a050538463f42edeff546d4aafd2077b3d864bcc014d242f559331a2",
+    "count-start.json": "8a72b9ab2e52fc7c0ebeae0f3e75b34e6b6718d641ef294f681f624738296e54",
+    "input-count-0.json": "658c214ea236f2cd61eee5c40c4726505c7549bbe2a002198aa71f11ee2533cd",
+    "input-count-1.json": "e9a49d0b0aae39528956b70a1985b81a69d34825e7c7188914b10621852f3dbd",
+    "count-result.json": "e77616706092d95e15f13120fbe31faba2db42ff4a6d0450b85b0082e9795bd0",
+    "independent-review.json": "4197826d9ac59d4bc57d6413f8ab8e10ef1e12db5a77dae9f0eccb5b23097811",
+    "independent-count-review.json": "b89d1bd20f02602afbe28018a378e4c955c372f944e300db1c182e66f29258c3",
+    "record.py": "bf7296d00d4b0f958bb9ec4f0c2a8c91330026984e9199cae8c040a226e2ed01",
+    "stage.py": "45cf7d305d4e61409fb3e85a9ed6860fda3c61a41ef5b662cb4d066911f2fa31",
+    "finalize.py": "bd951c7a442d5456ee9c604a3feb083decd117bdd29153c99ffa610a05b684cd"
+  },
+  "changed_files": [
+    "trading_researcher/feedback/reference_views.py",
+    "tests/test_paired_reference_views.py",
+    "tests/test_paired_reference_views_adversarial.py",
+    "docs/reviews/implementation-2026-10-25/paired-reference-paging-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md"
+  ],
+  "documentation_checks": [
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": [],
+      "additional_errors": [],
+      "local_document_links": null,
+      "qualification": "Documentation/contract structure only."
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ],
+      "additional_errors": [],
+      "local_document_links": 1144,
+      "qualification": "FAIL retained for the exact two pre-existing baseline errors; not a passing global validator."
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS"
+    }
+  ]
+}

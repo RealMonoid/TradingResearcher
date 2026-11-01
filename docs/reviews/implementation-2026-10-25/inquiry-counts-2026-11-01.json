@@ -1,0 +1,433 @@
+{
+  "schema": "inquiry-count-checkpoint/1",
+  "status": "NOT_ADMITTED_ORDINARY_EPOCH_CAP_EXCEEDED",
+  "at_utc": "2026-11-01T02:57:17.454984+00:00",
+  "candidate_sha256": "73012df44ebc8f7a01a62b5d22aae4d282a4fdc331078fac9beb074e636f6012",
+  "receipts": [
+    {
+      "schema": "inquiry-exact-input-observation/1",
+      "perspective": "feas-20261029-a",
+      "request_at_utc": "2026-11-01T02:57:15.826407+00:00",
+      "response_at_utc": "2026-11-01T02:57:16.924797+00:00",
+      "endpoint": "/v1/responses/input_tokens",
+      "wire_sha256": "99b12ba7399d6bacbf581f22f9f49fc766922bae2a16c02c2cc5650df9dbc0e5",
+      "response": {
+        "object": "response.input_tokens",
+        "input_tokens": 68234
+      },
+      "input_tokens": 68234,
+      "input_bound": 68362,
+      "transport_request_id": "req_467df67697a04a54a082e5ce3a57dbb1",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "inference_dispatched": false,
+      "billed_token_usage": "UNREPORTED",
+      "charge": "NOT_INVOICE_VERIFIED",
+      "qualification": "Exact rendered input observation, not inference usage, scientific evidence or a billing receipt."
+    },
+    {
+      "schema": "inquiry-exact-input-observation/1",
+      "perspective": "feas-20261029-b",
+      "request_at_utc": "2026-11-01T02:57:16.927019+00:00",
+      "response_at_utc": "2026-11-01T02:57:17.411965+00:00",
+      "endpoint": "/v1/responses/input_tokens",
+      "wire_sha256": "065fe9784f4660a90c2b0a03ab6e76573cb098f672a91b3662b34fd2640fc4ce",
+      "response": {
+        "object": "response.input_tokens",
+        "input_tokens": 68244
+      },
+      "input_tokens": 68244,
+      "input_bound": 68372,
+      "transport_request_id": "req_29f6dc211eb94161be1a71b5597f74e3",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "inference_dispatched": false,
+      "billed_token_usage": "UNREPORTED",
+      "charge": "NOT_INVOICE_VERIFIED",
+      "qualification": "Exact rendered input observation, not inference usage, scientific evidence or a billing receipt."
+    }
+  ],
+  "initial_input_tokens": 136478,
+  "initial_input_bounds": 136734,
+  "per_call_input_limit": 74000,
+  "each_initial_call_within_limit": true,
+  "ordinary_epoch_cap": 80000,
+  "reference_sized_four_stage_path": {
+    "tokens": 257163,
+    "cost_bound_nano_usd": 1002907500,
+    "qualification": "Historical actual full-input floors plus full role output room; not a forecast for new unknown inputs."
+  },
+  "all_downstream_role_maxima_path": {
+    "tokens": 308734,
+    "cost_bound_nano_usd": 1131835000
+  },
+  "available_inference_ledger_nano_usd": 1043277500,
+  "unknown_full_later_inputs": "UNKNOWN_NOT_ZERO",
+  "new_count_requests": 2,
+  "new_inference_calls": 0,
+  "new_epochs": 0,
+  "new_grants": 0,
+  "registry_counts_unchanged": true,
+  "shared_inference_ledger_unchanged": true,
+  "count_billing": "NO_SEPARATE_PUBLISHED_COUNT_TARIFF_FOUND_INVOICE_UNVERIFIED",
+  "model_behavior_qualified": false,
+  "scientific_readiness": false,
+  "purpose": "Measure exact full new runtime inputs before conditional resource implementation; no inference dispatch.",
+  "independent_review": {
+    "schema": "inquiry-count-resource-review/1",
+    "status": "PASS_COUNT_ONLY_NOT_ADMITTED",
+    "purpose": "Independently reconcile retained exact-input observations and conditional inference-resource arithmetic, without inference, new count requests, grant or production mutation.",
+    "candidate_sha256": "73012df44ebc8f7a01a62b5d22aae4d282a4fdc331078fac9beb074e636f6012",
+    "wire_binding_review_sha256": "c10745d4a2a8ef7c7ef9d5e84db8014140957412dac48db81b3f3b2d4975e1f3",
+    "source_sha256": "e0b7b65db790da7e6f0a43fcafd8eb5501416dea6008fd78cb92cea31f57723f",
+    "source_binding_sha256": "dbab1e8dc23bb4bbb3b0d175d5524c0a0157d492ff4c0d57f64417487a1bc385",
+    "source_binding_count": 111,
+    "source_binding_current_mismatches": {},
+    "old_source_pins_count": 37,
+    "old_source_pin_mismatches": {},
+    "count_artifact_hashes": {
+      "count-start.json": "2885272cade8ef0837ef4f1a82f08e534df00d0fa329e440cdac7adc48a4554a",
+      "input-count-0.json": "4d8cf21257761132e115ee307213866d53ca07e61830a402d921fc383e27c9a1",
+      "input-count-1.json": "9135b83174149b20ccd0a6c9ac7a2825ed62ac49ff0f658770a201988ce1c565",
+      "count-result.json": "6f70c8ec2dd8f1ddc72684b6fb69402f89c8f0a214c7495e67c236d0e188eb72",
+      "count.py": "a8424ca92bca0f7cac417fef4b381e5571982acf6def7d6fc0ee8a6a65e26a71"
+    },
+    "provider_source_sha256": "83fc80b6df949041d06f3d75b7cdb50c9dad3c5982b69a82996f4a82e66f7dbf",
+    "readonly_reconciliation": {
+      "checks": {
+        "candidate_and_review_pins": true,
+        "source_111_current": true,
+        "old_37_pins_current": true,
+        "exact_two_standalone_receipts": true,
+        "wire_and_configuration_feas-20261029-a": true,
+        "count_value_and_bound_feas-20261029-a": true,
+        "utc_and_identity_feas-20261029-a": true,
+        "no_inference_or_invoice_claim_feas-20261029-a": true,
+        "wire_and_configuration_feas-20261029-b": true,
+        "count_value_and_bound_feas-20261029-b": true,
+        "utc_and_identity_feas-20261029-b": true,
+        "no_inference_or_invoice_claim_feas-20261029-b": true,
+        "bounded_utc_sequence": true,
+        "count_arithmetic": true,
+        "frozen_inference_tariff": true,
+        "reference_path_arithmetic": true,
+        "role_maxima_arithmetic": true,
+        "available_balance_arithmetic": true,
+        "billing_unknown_retained": true,
+        "nonadmission_retained": true,
+        "six_old_grants_retained_closed": true
+      },
+      "failed_checks": [],
+      "tests_run": 0,
+      "network_or_api_calls": 0,
+      "production_registry_or_ledger_access": false
+    },
+    "count_receipts": [
+      {
+        "perspective": "feas-20261029-a",
+        "wire_sha256": "99b12ba7399d6bacbf581f22f9f49fc766922bae2a16c02c2cc5650df9dbc0e5",
+        "count_payload_sha256": "0ec21901c3c80ef3a53c65ea59be937369c9bcf271a78fd8c2b14c78d0d2bfbc",
+        "count_payload_fields": [
+          "model",
+          "input",
+          "tools",
+          "reasoning",
+          "text",
+          "parallel_tool_calls"
+        ],
+        "input_tokens": 68234,
+        "input_bound": 68362,
+        "request_at_utc": "2026-11-01T02:57:15.826407+00:00",
+        "response_at_utc": "2026-11-01T02:57:16.924797+00:00",
+        "duration_seconds": "1.09839",
+        "transport_request_id": "req_467df67697a04a54a082e5ce3a57dbb1",
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        }
+      },
+      {
+        "perspective": "feas-20261029-b",
+        "wire_sha256": "065fe9784f4660a90c2b0a03ab6e76573cb098f672a91b3662b34fd2640fc4ce",
+        "count_payload_sha256": "5c46f2535efc92e9b11723f68dd19a0099bcfcd944b6ead935ef681b35f87c11",
+        "count_payload_fields": [
+          "model",
+          "input",
+          "tools",
+          "reasoning",
+          "text",
+          "parallel_tool_calls"
+        ],
+        "input_tokens": 68244,
+        "input_bound": 68372,
+        "request_at_utc": "2026-11-01T02:57:16.927019+00:00",
+        "response_at_utc": "2026-11-01T02:57:17.411965+00:00",
+        "duration_seconds": "0.484946",
+        "transport_request_id": "req_29f6dc211eb94161be1a71b5597f74e3",
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        }
+      }
+    ],
+    "total_initial_input_tokens": 136478,
+    "total_initial_input_bounds": 136734,
+    "per_call_input_limit": 74000,
+    "each_input_bound_fits": true,
+    "ordinary_epoch_token_cap": 80000,
+    "observed_input_excess_over_epoch_cap": 56478,
+    "initial_input_plus_full_discovery_outputs": 148734,
+    "initial_reserved_tokens_excess_over_epoch_cap": 68734,
+    "count_observation_elapsed_seconds": "1.632701",
+    "configuration_expires_at_utc": "2026-11-02T01:23:08+00:00",
+    "inference_resource_arithmetic": {
+      "tariff_scope": "Frozen local conservative standard inference bound; not a count-endpoint price or invoice. No cookbook example tariff adopted.",
+      "input_nano_usd_per_token": 2500,
+      "output_nano_usd_per_token": 10000,
+      "remaining_inference_ledger_nano_usd": 1043277500,
+      "reference_path": {
+        "discovery_input_bounds": 136734,
+        "formalizer_historical_input_hold": 29083,
+        "reviewer_historical_input_hold": 43346,
+        "input_tokens": 209163,
+        "output_tokens": 48000,
+        "formalizer_output_room": 32000,
+        "total_tokens": 257163,
+        "cost_bound_nano_usd": 1002907500,
+        "cost_bound_usd": "1.0029075",
+        "remaining_margin_nano_usd": 40370000
+      },
+      "role_maxima_path": {
+        "discovery_input_bounds": 136734,
+        "formalizer_input_ceiling": 48000,
+        "reviewer_input_ceiling": 76000,
+        "input_tokens": 260734,
+        "output_tokens": 48000,
+        "total_tokens": 308734,
+        "cost_bound_nano_usd": 1131835000,
+        "cost_bound_usd": "1.131835",
+        "excess_over_remaining_nano_usd": 88557500,
+        "excess_over_earlier_provisional_306672_token_cap": 2062
+      }
+    },
+    "billing_status": "NO_SEPARATE_PUBLISHED_COUNT_TARIFF_FOUND_INVOICE_UNVERIFIED",
+    "count_invoice_charge": "UNKNOWN_NOT_ASSUMED_ZERO",
+    "observed_count_tokens_are_billed_inference_usage": false,
+    "preservation_evidence": {
+      "reported_registry_counts_before": {
+        "artifacts": 1418,
+        "contexts": 57,
+        "events": 1981,
+        "research_epochs": 20,
+        "jobs": 40,
+        "research_calls": 40
+      },
+      "reported_registry_counts_unchanged": true,
+      "reported_shared_inference_ledger_unchanged": true,
+      "retained_old_grant_states": [
+        {
+          "approval": "SESSION-2026-10-29-FEEDBACK-BUDGET",
+          "revoked": 1
+        },
+        {
+          "approval": "SESSION-2026-10-29-INDEPENDENT-BTC-REVIEW",
+          "revoked": 1
+        },
+        {
+          "approval": "SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET",
+          "revoked": 1
+        },
+        {
+          "approval": "SESSION-2026-10-30-DISCRETIONARY-BUDGET-PAIRED-BREAKOUT",
+          "revoked": 1
+        },
+        {
+          "approval": "SESSION-2026-10-30-DISCRETIONARY-BUDGET-PAIRED-CORRECTION",
+          "revoked": 1
+        },
+        {
+          "approval": "SESSION-2026-10-30-PAIRED-DEVELOPMENT",
+          "revoked": 1
+        }
+      ],
+      "old_grant_snapshot_sha256": "a9909c4ddce66d7964ed64cd38b28fb529366b370f62f38ab3c2a36b43245528",
+      "qualification": "Retained file and inspected executed-helper evidence only; this review did not reopen production registry/ledger or independently perform their live before/after comparison."
+    },
+    "limits": [
+      "The two receipts bind locally retained wire hashes and reconstructable count payloads. Transport request IDs are distinct; response bodies do not echo the model or full request. Requested catalog identity is gpt-6.1-sol, while reported model and immutable snapshot identity remain unknown; no served inference identity or remote attestation follows.",
+      "The local helper executes exactly two count submissions with no retry branch; _post has no internal retry. This is retained trusted-host execution evidence, not an independent network capture. No new HTTP request was made by the reviewer.",
+      "No separate published count tariff or explicit authoritative free-price statement was found according to the retained November 1 primary-source review. That source observation was not live-fetched again. Billing/invoice is unverified: neither free nor zero charge is established, and input_tokens is not billed inference usage.",
+      "All cost arithmetic uses the retained inference-ledger balance and frozen 2500/10000 nano inference rates. It is not a complete invoice-total guarantee or accounting resolution of any unknown count-endpoint charge.",
+      "Historical formalizer/reviewer input sizes are planning holds, not guaranteed lower bounds, adequate future packet sizes or permission to omit input. Full actual future role packets, models/settings/prompts and complete 32000/4000 output room require fresh binding/count/resource checks before each dispatch.",
+      "Role maxima are unaffordable under retained cash and exceed the earlier provisional 306672-token cap by 2062. A future finite module must declare its actual ceilings and conditional stop contract explicitly; no automatic larger cap, extra slot, retry, omitted input, model downgrade or fallback follows.",
+      "The ordinary 80000 epoch cap fails already on the observed two discovery inputs. Per-call fit does not establish aggregate/full-cycle admission. No new resource grant, epoch, old-grant reset, spend refund or inference is authorized by this review.",
+      "Actual production context/native publication currentness, downstream faithful formalization/independent review, model-produced AC/DQ/first-exposure behavior, scientific validity, diagnosis quality, quality equivalence and usefulness remain unqualified."
+    ],
+    "next_bounded_action": "Implement and independently qualify the separately authorized finite resource/currentness module and explicit terminal rules under standing delegated discretion. Keep future actual prompt/role/source packet admission and any live grant separate; stop before dispatch if the complete packet plus full output and protected later holds cannot be funded. No new permission or scientific policy change is inferred here.",
+    "new_api_calls": 0,
+    "new_count_calls": 0,
+    "new_inference_calls": 0,
+    "new_grants": 0,
+    "new_epochs": 0,
+    "new_tests_run": 0,
+    "authority_granted": false,
+    "scientific_or_model_behavior_pass": false,
+    "write_free_barrier": "Only this new independent-review.json was written; no process, test, network call or file write remains in flight."
+  },
+  "independent_review_sha256": "18ac02690b806e4363a08181db9ed76ac3467875462d35ce0c19d4e0069623ce",
+  "billing_review": {
+    "checked_at_utc": "2026-11-01T02:57:15.823344+00:00",
+    "sources": [
+      "https://developers.openai.com/api/docs/guides/token-counting",
+      "https://developers.openai.com/api/reference/resources/responses/subresources/input_tokens/methods/count",
+      "https://developers.openai.com/api/docs/pricing",
+      "https://developers.openai.com/cookbook/articles/per_run_spending_controller_responses_api"
+    ],
+    "supported": "Official docs distinguish a count request from response generation and show counts before model-token spending reservations. Full rendered inputs and tools must match.",
+    "limitation": "No explicit primary-source free-price statement or separate count tariff was found. Do not treat count input_tokens as billed inference usage or call this an invoice-level zero-charge verification.",
+    "status": "NO_SEPARATE_PUBLISHED_COUNT_TARIFF_FOUND_INVOICE_UNVERIFIED"
+  },
+  "reference_path_margin_nano_usd": 40370000,
+  "maxima_path_excess_nano_usd": 88557500,
+  "old_provisional_token_cap": 306672,
+  "maxima_path_excess_over_old_cap": 2062,
+  "usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "old_grant_live_check": {
+    "command": "python -B .trf-runtime/inquiry-counts-2026-11-01/validate.py",
+    "exit_code": 0,
+    "old_grants": 6,
+    "all_revoked": true,
+    "scope": "Controller read-only live ledger check, separate from the reviewer retained-snapshot check."
+  },
+  "no_production_source_changes": true,
+  "no_production_registry_writes": true,
+  "source_inputs_and_scripts": ".trf-runtime/inquiry-counts-2026-11-01/",
+  "next_action": "Implement and independently qualify the new finite four-stage resource disposition using the measured discovery bounds, protected later-stage input/full-output planning holds, monotonic single-use slots and authenticated settlement. Preserve the original shared USD 5 inference ledger and all six revoked old grants; genuinely unspent reservation may be released within this new declared contract, but spent charges/call slots never reset. Record the new token ceiling explicitly: the measured downstream-max path is 308,734 tokens, above the older provisional 306,672; arbitrary unknown future inputs remain unknown. Bind complete actual role profiles and full packets; historical configuration/size references do not authorize old hypothesis-specific prompt commitments for a new idea. Count-service billing remains unconfirmed; retain it separately from inference-rate/cash arithmetic. Relevant model-produced cases, native source/context/currentness and final funded-profile admission remain prerequisites for dependent activation.",
+  "unverified": [
+    "Count endpoint invoice billing; no authoritative free-tariff claim.",
+    "Full future downstream inputs, role profile/meaning relevance and conditional resource enforcement.",
+    "Actual model AC/DQ behavior, native context/currentness admission and funded complete-cycle execution.",
+    "Scientific/calibration/assessment/freeze, policy economics and comparative benefit."
+  ],
+  "changed_files": [
+    "docs/reviews/implementation-2026-10-25/inquiry-counts-2026-11-01.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md"
+  ],
+  "construction_usage": {
+    "scope": "Main Codex construction through snapshot, including main checking/rework; separate from research inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T02:53:41.937Z",
+    "snapshot_at_utc": "2026-11-01T03:06:49.811Z",
+    "tokens": {
+      "input_tokens": 4188856,
+      "cached_input_tokens": 4147328,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 25323,
+      "reasoning_output_tokens": 20800,
+      "total_tokens": 4214179
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "documentation_closeout": {
+    "status": "PASS_CHECKPOINT_WITH_RETAINED_SCOPE_BASELINE_FAILURES",
+    "pointer_consistency": "PASS",
+    "scope_qualification": "The implementation-scope check retains exactly two earlier baseline failures; it is not reported as passing.",
+    "new_network_calls": 0,
+    "new_inference_calls": 0,
+    "new_production_source_changes": 0,
+    "new_production_registry_writes": 0,
+    "unverified": [
+      "Count endpoint invoice billing; no authoritative free-tariff claim.",
+      "Full future downstream inputs, role profile/meaning relevance and conditional resource enforcement.",
+      "Actual model AC/DQ behavior, native context/currentness admission and funded complete-cycle execution.",
+      "Scientific/calibration/assessment/freeze, policy economics and comparative benefit."
+    ],
+    "checks": [
+      {
+        "command": "python -B docs/reviews/verify_system_model.py",
+        "exit_code": 0,
+        "status": "PASS",
+        "errors": []
+      },
+      {
+        "command": "python -B docs/reviews/verify_retail_contract.py",
+        "exit_code": 0,
+        "status": "PASS",
+        "errors": []
+      },
+      {
+        "command": "python -B docs/reviews/adoption-metacognition-2026-11-01/verify_adoption.py",
+        "exit_code": 0,
+        "status": "PASS",
+        "errors": []
+      },
+      {
+        "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+        "exit_code": 1,
+        "status": "FAIL",
+        "errors": [
+          "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+          "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+        ]
+      }
+    ],
+    "private_evidence": ".trf-runtime/inquiry-counts-2026-11-01/documentation-closeout.json",
+    "final_readonly_checks_required_after_this_write": [
+      "python -B .trf-runtime/inquiry-counts-2026-11-01/validate.py",
+      "git diff --check"
+    ]
+  }
+}

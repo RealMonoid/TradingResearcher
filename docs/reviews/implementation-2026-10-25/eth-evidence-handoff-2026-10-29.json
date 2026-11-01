@@ -1,0 +1,1840 @@
+{
+  "schema": "eth-evidence-handoff-observation/1",
+  "recorded_at_utc": "2026-10-29T04:52:46.128569+00:00",
+  "continuation_decision": {
+    "schema": "bounded-continuation-decision/1",
+    "recorded_at_utc": "2026-10-29T04:48:24.955015+00:00",
+    "status": "TECHNICAL_PREREQUISITES_VERIFIED_ONE_BOUNDED_ATTEMPT",
+    "prior_attempt": "eth-required-input-correction-2026-10-29.json",
+    "new_evidence": "availability-handoff-verification-2026-10-29.json",
+    "reason": "Exact candidate-root instructions and identical owned timing evidence address reproduced handoff defects. Fresh original-idea formalization and independent review remain required; no prior response is edited or accepted by the host.",
+    "scope": "Unchanged original ETH idea and authorized Q1 2023 development snapshot; no new discovery, cutoff, outcome rule, threshold or calibration family.",
+    "limits": {
+      "new_model_calls": 2,
+      "epoch_tokens": 80000,
+      "epoch_seconds": 1800,
+      "cost_nano_usd": 1000000000,
+      "aggregate_authorization_nano_usd": 5000000000,
+      "primitive_steps": 10000000
+    },
+    "output_allocation": {
+      "formalization_output": 18000,
+      "review_input": 30000,
+      "review_output": 4000
+    },
+    "reservation_reason": "The previous exact review input was26618; reserve30000 with new evidence headroom and count the full new packet before dispatch. Preserve high formalization reasoning and full untruncated inputs.",
+    "stop": "Any structural, review, resource or execution gap stops this attempt; no automatic further paid retry or epoch reset.",
+    "post_execution_check": "Independently apply the unchanged original formula to all8640 decisions and every observed logarithmic enclosure.",
+    "scientific_readiness": false
+  },
+  "prior_attempt": "eth-required-input-correction-2026-10-29.json",
+  "idea_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+  "scope": "Same unchanged original ETH idea, authorized Q1 2023 development only; explicit candidate-root protocol and identical owned timing evidence.",
+  "epoch_id": "08af4f8239ed4ee585778f153d702df4",
+  "stages": [
+    {
+      "stage": "formalization",
+      "started_at_utc": "2026-10-29T04:49:01.930132+00:00",
+      "ended_at_utc": "2026-10-29T04:51:25.981150+00:00",
+      "outcome": {
+        "accepted": true,
+        "artifact_id": "3d47ed4fee80c482e2828d04dbb29ca85339cac0a489d509c11ee0841e869bcb",
+        "check": "formalization/v1",
+        "message": "Formalization retention and structure checked; no semantic/scientific certificate issued",
+        "scientific_authority": false,
+        "state": "completed",
+        "transcript_ids": [
+          "3286a846a85476bebe0eaffdfd1a4307545404fce06acd7140225f1f5eb5e63f"
+        ],
+        "provider_mode": "live",
+        "actual_independent_model_review": "UNVERIFIED"
+      },
+      "artifact_id": "3d47ed4fee80c482e2828d04dbb29ca85339cac0a489d509c11ee0841e869bcb",
+      "status": null,
+      "body_sha256": "018e1c5d33e1dd14e41de00055f55272d1851280103c409765c178d28e2169fc",
+      "candidate_present": true,
+      "structural_assessment": {
+        "gap": null,
+        "mapping_authority": "formalizer_assertion_not_independent_semantic_certification",
+        "programs": {
+          "/condition_ast": {
+            "feature_refs": [
+              "ETHUSDT.close@binance-spot-15m-v1",
+              "ETHUSDT.high@binance-spot-15m-v1",
+              "ETHUSDT.open@binance-spot-15m-v1",
+              "ETHUSDT.quote_volume@binance-spot-15m-v1",
+              "ETHUSDT.taker_quote_volume@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/bars",
+              "/expression/arg/left/left/left/left/left/right/value",
+              "/expression/arg/left/left/left/left/right/right/value",
+              "/expression/arg/left/left/left/right/left/bars",
+              "/expression/arg/left/left/left/right/left/arg/bars",
+              "/expression/arg/left/left/left/right/right/value",
+              "/expression/arg/left/left/right/left/left/right/value",
+              "/expression/arg/left/right/left/left/right/value",
+              "/expression/arg/left/right/left/right/right/left/value",
+              "/expression/arg/left/right/left/right/right/right/bars",
+              "/expression/arg/left/right/left/right/right/right/arg/bars",
+              "/expression/arg/left/right/right/left/left/right/value",
+              "/expression/arg/left/right/right/left/right/value",
+              "/expression/arg/left/right/right/right/left/left/right/value",
+              "/expression/arg/left/right/right/right/left/right/value",
+              "/expression/arg/left/right/right/right/right/left/right/value",
+              "/expression/arg/left/right/right/right/right/right/value",
+              "/expression/arg/right/left/arg/left/left/left/right/value",
+              "/expression/arg/right/left/arg/left/left/right/right/value",
+              "/expression/arg/right/left/arg/left/right/left/bars",
+              "/expression/arg/right/left/arg/left/right/left/arg/bars",
+              "/expression/arg/right/left/arg/left/right/right/value",
+              "/expression/arg/right/left/arg/right/left/left/right/value",
+              "/expression/arg/right/right/value"
+            ],
+            "type": "boolean",
+            "unit": null
+          },
+          "/outcome/program": {
+            "feature_refs": [
+              "ETHUSDT.close@binance-spot-15m-v1",
+              "ETHUSDT.open@binance-spot-15m-v1"
+            ],
+            "parameter_paths": [
+              "/expression/left/value",
+              "/expression/right/arg/left/bars",
+              "/expression/right/arg/right/bars"
+            ],
+            "type": "real",
+            "unit": "basis_points"
+          },
+          "/scope_ast": {
+            "feature_refs": [],
+            "parameter_paths": [
+              "/expression/value"
+            ],
+            "type": "boolean",
+            "unit": null
+          }
+        },
+        "required_before_freeze": [
+          "independent_semantic_review",
+          "feature_certification",
+          "data_and_exposure_review",
+          "calibrated_evaluation_profile",
+          "complete_evaluation_plan",
+          "atomic_allocation_and_freeze"
+        ],
+        "stage": "FORMALIZING",
+        "status": "STRUCTURE_CHECKED"
+      },
+      "semantic_report": {
+        "differences": [],
+        "segments": [
+          {
+            "interpretation": "The executable claim is a negative descriptive conditional-minus-whole-scope difference. Replenishment and demand are proposed explanations, not separately tested causal or order-book claims; no empirical success is asserted.",
+            "path": "/estimand/direction",
+            "text": "Hypothesis: unusually intense aggressive buying that produces an intrabar rally but almost no retained gain in ETHUSDT reflects replenishing passive sell supply rather than latent bullish demand. Contrary to the standard intuition that high taker-buy participation and high turnover predict continuation, I hypothesize a lower subsequent one-hour ETH return after this failed buying impulse than across the whole eligible ETH scope. This is an original, untested development hypothesis, not evidence of profitability or a causal conclusion.\n\n"
+          },
+          {
+            "interpretation": "Use only ETHUSDT on the full declared 900-second grid, with exclusive end and the actual supplied snapshot ID. Select reference-computation/4, hence required-inputs/1, and explicitly request research_inputs.reporting_contract=\"case-diagnostics/2\" using the pinned contract SHA256 2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c. Scope is true at every declared coordinate, even without its container. Only required feature reads require rows. Required inputs outside this interval remain missing; no prior-partition warmup is admitted. This does not resolve exposure or scientific-readiness gates.",
+            "path": "/test_universe",
+            "text": "Instrument and dates: Binance spot ETHUSDT only; BTCUSDT is not used. Decision times t are every UTC 900-second grid point in [2023-01-01T00:00:00Z, 2023-04-01T00:00:00Z). All input observations must also lie within that interval; no December warmup or other historical inputs are permitted. All historical information is development exposure, and training exposure is unknown.\n\n"
+          },
+          {
+            "interpretation": "The outer exact lag places all signal expressions at s=t-900 while preserving decision-t availability checks for every historical lookup. The permitted decision grid has t<end, so its decision cutoff equals min(t,end-1 second). The supplied exhaustive availability evidence covers these ETH features and this exact snapshot and interval: present values have available_at=row_time+900 exactly. This is an assumed timing basis, not historical publication verification.",
+            "path": "/condition_ast/expression",
+            "text": "Timing: raw observations are keyed by exclusive bar end s. Their availability is assumed to be s+900 seconds, not established historical publication truth. At decision t use the signal bar ending s=t-900; never use the bar ending t. Respect any additional recorded unavailability. Conditions are evaluated with as_of=t and cutoff min(t, 2023-04-01T00:00:00Z minus one second).\n\n"
+          },
+          {
+            "interpretation": "At signal coordinate s, lag-one trailing_median over 96 quote-volume arguments reads exactly s-900 through s-86400. The approved even-window median averages the two central sorted values. Every exact argument must be observed, finite, in interval and available; no missing argument shortens or shifts the window.",
+            "path": "/condition_ast/expression/arg/left/right/left/right/right/right",
+            "text": "Exact condition: let O_s, H_s, C_s, Q_s, and B_s be ETH open, high, close, quote volume, and taker quote volume for the signal bar. Let M_s be the ordinary median of quote volumes at the preceding 96 exact grid ends s-900k, k=1,...,96; for 96 observations use the arithmetic average of the two central sorted values. Require all 96 observations, without skipping or substitution. "
+          },
+          {
+            "interpretation": "P is exactly the conjunction of the four specified inclusive threshold requirements, with the retained-gain range represented by its inclusive lower and upper comparisons. Same-price-unit divisions produce ratios; the turnover multiplier preserves USDT.",
+            "path": "/condition_ast/expression/arg/left/right",
+            "text": "The condition is true exactly when B_s/Q_s >= 0.65, Q_s >= 2*M_s, H_s/O_s-1 >= 0.003, and 0 <= C_s/O_s-1 <= 0.0005. "
+          },
+          {
+            "interpretation": "V requires O_s>0, Q_s>0, M_s>0, B_s>=0 and B_s<=Q_s, together with observed H_s and C_s through self-equality checks. These checks cover every required signal scalar and the complete median window. Finite execution inputs are required by row admission; invalid raw keyed bars project to null under the supplied definitions. V is true only when all specified completeness and validity requirements hold. False or unknown V produces an unknown condition through the enclosing guard, not a scope exclusion. No additional high/close or baseline-value threshold is introduced.",
+            "path": "/condition_ast/expression/arg/left/left",
+            "text": "Require finite values, O_s>0, Q_s>0, M_s>0, and 0<=B_s<=Q_s. No additional screening or tuning is proposed. "
+          },
+          {
+            "interpretation": "All threshold, lag, window and horizon choices come from the preserved original idea, not development-outcome fitting. The economic descriptions motivate those fixed choices without adding eligibility rules, fitting, or a regime model.",
+            "path": "/parameter_origins",
+            "text": "A 65% buy share represents materially one-sided aggressive flow; twice the preceding day's median turnover distinguishes a participation burst from ordinary noise; a 30-basis-point upward excursion with only zero to five basis points retained isolates failed upward progress. The 96-bar baseline spans one day without requiring an additional regime model. These are mechanism-motivated exploratory choices, not fitted thresholds.\n\n"
+          },
+          {
+            "interpretation": "At h=5 the future anchor is a=t+4500. Close lag one reads C_{t+3600}; open lag four reads O_{t+900}. Their ratio is dimensionless, ln is natural logarithm, and the multiplier expresses the dimensionless log change in basis points. The supplied positive_decimal price definitions and invalid-keyed-bar-to-null projection enforce finite positive observed prices; required missing, invalid or unavailable prices propagate missing, and nonfinite execution inputs fail admission. The exact-snapshot timing certificate implies close availability a and open availability a-2700. Thus, for an elapsed in-universe horizon, an inherited outcome cutoff min(as_of,end-1 second) cannot admit a dependency unavailable at the original min(a,end-1 second): both dependencies are already available by a, and the certificate rules out later recorded availability. At a=end the final close is unavailable by end-1 second; for later anchors its key is outside the interval. Hence near-end cases remain missing without adding an anchor-capped cutoff or changing the horizon. Required-inputs/1 does not demand an unused outcome-anchor container. The approved ln enclosure is propagated through means and their difference, without a midpoint decision or simple-return substitution.",
+            "path": "/outcome/program",
+            "text": "Outcome: choose positive integer h=5, so the outcome evaluation anchor is a=t+4500 seconds. Define Y_t=10000*ln(C_{t+3600}/O_{t+900}), using ETH bar-end keys. The denominator is the opening price of the bar spanning t to t+900; the numerator is the close of the bar ending t+3600. Thus Y describes the market's one-hour price change starting at decision t, expressed in log basis points. It is not a return from the stale signal close. At anchor a, the final close has its assumed 900-second publication delay satisfied. Both prices must be finite and positive, available by cutoff min(a, 2023-04-01T00:00:00Z minus one second), and have keys within the permitted interval. Near-end outcomes lacking these requirements remain missing; do not obtain April data or shorten the horizon. The future opening price is an outcome measurement, not information available to the condition or an assumed executable fill. Raw ETH prices have units USDT/ETH; only their ratios and Y are dimensionless.\n\n"
+          },
+          {
+            "interpretation": "Compute mean(Y|C=true,S=true,Y observed) minus mean(Y|S=true,Y observed), with equal decision-row weights, whole_scope comparator, negative direction and no nuisance fitting. The baseline retains both false and unknown conditions. Overlapping outcomes are not deduplicated or reweighted. A negative difference does not assert a negative conditional mean or independent observations.",
+            "path": "/estimand",
+            "text": "Comparison and weighting: the target descriptive contrast is the equal-decision-row mean Y among condition-true rows minus the equal-decision-row mean Y across the entire ETH decision grid with observed Y, including condition-false and condition-unknown rows. This intentionally uses the whole-scope benchmark, not a matched control or false-only group. The hypothesized contrast is negative. It need not imply that the conditional mean itself is negative. Overlapping hourly outcomes remain included with equal weight; they are not independent observations.\n\n"
+          },
+          {
+            "interpretation": "The exact composition is (V AND P) OR ((NOT V) AND unknown), beneath the signal lag, with identical V copies at /condition_ast/expression/arg/left/left and /condition_ast/expression/arg/right/left/arg. For V=true it equals P; for V=false or unknown it is unknown, even if P is false. Consequently a missing H_s, C_s or median argument cannot be masked by a false threshold or another invalid check. The literal unknown is not a missing market observation. The actual predicate-to-validity derivation, rather than guard recognition alone, is provided above for independent review.",
+            "path": "/condition_ast/expression/arg",
+            "text": "Missingness: if any required condition input or baseline observation is absent, null, unavailable, invalid under the stated checks, or outside the interval, label the condition unknown rather than false; use complete-condition evaluation rather than inferring false from a partial conjunction. Never forward-fill. "
+          },
+          {
+            "interpretation": "Under the explicitly selected required-inputs/1 evaluation, all scope-true grid coordinates receive condition evaluation and observed outcomes enter the baseline regardless of unknown condition or absent unrelated containers. The pinned case-diagnostics/2 adapter retains overlapping per-row reason categories: boundary censoring maps to horizon/end censoring and out-of-interval dependencies; absent rows to absent required feature-read rows only; unavailable data to actual required-read cutoff failures; missing warmup to incomplete exact historical dependencies, including pre-universe dependencies; condition unknown to the resulting guarded condition. Invalid-value reporting uses source-qualified invalid-to-null observations, missing-value/typed-null and numerical-domain events, and the recorded validity predicate at /condition_ast/expression/arg/left/left with its identical copy at /condition_ast/expression/arg/right/left/arg. A false V identifies a stated validity failure; an unknown V is not automatically classified as an invalid value. Missing values/features and pre-universe dependencies remain separately observable neutral categories. Literal null and unused coordinates are not absent market inputs. Counts overlap and count a row once per category. An empty observed conditional group yields an undefined contrast, not zero. Diagnostic or numerical resource exhaustion must be reported as incomplete with RESOURCE_STOP and processed/unprocessed counts; no completed report or measured result is claimed here.",
+            "path": "/estimand/missingness",
+            "text": "Condition-unknown rows stay in scope and enter the whole-scope outcome mean when Y is observed, but never enter the conditional mean. Missing Y is excluded from either mean, with separate counts retained for boundary censoring, absent rows, invalid values, unavailable data, missing warmup, and condition unknown. An empty conditional group leaves the contrast undefined. These rules make the descriptive estimand an observed-outcome contrast, with selection limitations rather than an implied result for missing outcomes.\n\n"
+          },
+          {
+            "interpretation": "Only the specified descriptive difference is formalized. The alternative mechanisms, unavailable mechanism evidence and possible later policy investigation are retained as context and limitations, not executable causal, profitability or trading-policy claims. No measurement is performed or requested by this formalization. Snapshot-specific structural definitions and exhaustive assumed-delay evidence justify the dependency mapping only; they do not establish historical publication truth, scientific feature acceptance, resolved provenance/exposure gates, profitability, or empirical success. This semantic mapping remains subject to independent review.",
+            "path": "/claim_kind",
+            "text": "Economic bridge and gaps: passive sellers may repeatedly replenish offers while urgent buyers consume liquidity; after the burst, depleted buying interest could expose downside. Alternatively, the same pattern could be temporary inventory transfer before a breakout, and taker classification cannot identify informed traders, actual replenishment, or order-book absorption. Those mechanisms require unavailable book, cancellation, participant, and cross-venue evidence. A lower future return could inform a later investigation of delaying purchases or reducing exposure, but no execution policy is specified or tested. Fees, spread, slippage, latency, market impact, order size, fill probability, inventory constraints, and any borrowing assumptions are missing. No profit, empirical success, or scientific acceptance is claimed. No measurement was requested. Source projections establish only supplied structure and feature descriptions; historical availability, feature certification, provenance gates, and unread inherited exposure details remain unresolved rather than assumed verified."
+          }
+        ],
+        "status": "equivalent"
+      }
+    },
+    {
+      "stage": "meaning_review",
+      "started_at_utc": "2026-10-29T04:51:36.371898+00:00",
+      "ended_at_utc": "2026-10-29T04:52:09.748284+00:00",
+      "outcome": {
+        "accepted": true,
+        "artifact_id": "8ecd3ce5d6780fe37a84d990778e04c9a499cd6f1a4100732d650bc62f287a31",
+        "check": "semantic-review/v1",
+        "message": "Review input/response binding checked; actual independent model judgment and scientific readiness remain unverified",
+        "scientific_authority": false,
+        "state": "completed",
+        "transcript_ids": [
+          "1425d4130285fed804dab65339560eb1c23516e172575b42de63eb9b216d50e7"
+        ],
+        "provider_mode": "live",
+        "actual_independent_model_review": "UNVERIFIED"
+      },
+      "artifact_id": "8ecd3ce5d6780fe37a84d990778e04c9a499cd6f1a4100732d650bc62f287a31",
+      "status": null,
+      "body_sha256": "a456022ca4ea1a909244cd429309657c31fd53aaa6919d82b130b223a012bea4",
+      "review": {
+        "added_assumptions": [],
+        "conflicts": [],
+        "judgment": "faithful",
+        "mapping_checks": [
+          {
+            "judgment": "faithful",
+            "reason": "Preserves a negative descriptive difference relative to the whole eligible scope, without converting the proposed mechanism into a causal finding or asserting a negative conditional return.",
+            "segment": 0
+          },
+          {
+            "judgment": "faithful",
+            "reason": "Retains ETH-only scope, the full half-open UTC decision grid and in-interval input restriction. Required-input evaluation correctly avoids screening out coordinates solely because an unrelated container is absent.",
+            "segment": 1
+          },
+          {
+            "judgment": "faithful",
+            "reason": "The outer one-bar lag selects s=t-900 rather than t. Decision-time availability and the assumed, rather than historically verified, 900-second delay are retained.",
+            "segment": 2
+          },
+          {
+            "judgment": "faithful",
+            "reason": "The lagged 96-observation median reads exactly s-900 through s-86400, excludes the signal bar, averages the two central values and requires every exact input.",
+            "segment": 3
+          },
+          {
+            "judgment": "faithful",
+            "reason": "All buy-share, turnover, excursion and retained-gain thresholds match the original, including inclusive endpoints and appropriate price and volume ratios.",
+            "segment": 4
+          },
+          {
+            "judgment": "faithful",
+            "reason": "The validity predicate covers the specified positive denominators, positive median, bounded taker volume and observed high and close. Under the supplied finite-input and null-projection definitions, it introduces no additional screening threshold.",
+            "segment": 5
+          },
+          {
+            "judgment": "faithful",
+            "reason": "Thresholds, window lengths, lags and horizon originate in the preserved idea. Their exploratory motivation is retained without claiming they were fitted or validated.",
+            "segment": 6
+          },
+          {
+            "judgment": "faithful",
+            "reason": "At a=t+4500, the outcome reads precisely C at t+3600 and O at t+900 and computes 10000 times their natural log ratio. Exact fixed-delay evidence establishes dependency availability by the original anchor cutoff; end-boundary cases remain missing. Bounded numerical enclosures retain the mathematical outcome rather than substitute a simple return or midpoint.",
+            "segment": 7
+          },
+          {
+            "judgment": "faithful",
+            "reason": "Retains equal row weights, overlapping outcomes, the whole-scope observed-outcome denominator including false and unknown conditions, and the negative contrast direction.",
+            "segment": 8
+          },
+          {
+            "judgment": "faithful",
+            "reason": "Under three-valued logic, the identical-V composition returns P when V is true and unknown when V is false or unknown. Missing required inputs therefore cannot be masked by a false threshold.",
+            "segment": 9
+          },
+          {
+            "judgment": "faithful",
+            "reason": "Retains unknown conditions in scope, excludes missing outcomes from both means and leaves an empty conditional contrast undefined. The supplied diagnostic contract preserves separate, potentially overlapping missingness categories without treating literal unknowns or unused coordinates as absent market observations.",
+            "segment": 10
+          },
+          {
+            "judgment": "faithful",
+            "reason": "Preserves mechanism alternatives, unavailable evidence, execution-policy gaps and unresolved provenance and exposure qualifications as limitations, not executable profitability or causal claims.",
+            "segment": 11
+          }
+        ],
+        "omitted_assumptions": [],
+        "reason": "The candidate retains the original negative, equal-decision-row conditional-minus-whole-scope contrast for ETHUSDT, with the specified dates, exact signal and baseline observations, inclusive thresholds, log-basis-point outcome and h=5 observation anchor. Its complete-validity guard preserves unknown conditions even when another threshold is false. Unknown-condition rows remain in the observed-outcome scope mean; missing outcomes enter neither mean. Required-input evaluation avoids adding decision-row or outcome-anchor container requirements. The cutoff mapping is justified specifically by the supplied exact fixed-delay dependency rule, not by coincident observed values: the required close is available at a and the open before a, while the end boundary excludes outcomes whose availability would exceed the original cutoff. This retention judgment does not certify implementation, feature validity, historical publication truth, scientific acceptance or market success.",
+        "unresolved_meaning": []
+      },
+      "review_assessment": {
+        "independent_semantic_review": "SATISFIED",
+        "gaps": [],
+        "scientific_readiness": false
+      }
+    },
+    {
+      "stage": "snapshot_cutoff_qualification",
+      "at_utc": "2026-10-29T04:52:09.750259+00:00",
+      "status": "QUALIFIED_FOR_EXACT_FIXED_DELAY_INPUTS",
+      "outcome_reads": [
+        [
+          "ETHUSDT.close@binance-spot-15m-v1",
+          1
+        ],
+        [
+          "ETHUSDT.open@binance-spot-15m-v1",
+          4
+        ]
+      ],
+      "evidence_sha256": "6645e30fd187decb3a30bc3cc14de3d43f00e3b44e9892b9226bcd2a028de737",
+      "qualification": "Current global cutoff and original anchor cutoff coincide only on these certified fixed-delay input keys. Generic extra-delay support and historical publication truth remain unverified."
+    },
+    {
+      "stage": "compile",
+      "started_at_utc": "2026-10-29T04:52:09.751105+00:00",
+      "ended_at_utc": "2026-10-29T04:52:12.729405+00:00",
+      "artifact_id": "5278827e87bb99d87e6173fc0c129973d38516b28d5ddde1c1a94c5392e4dbe3",
+      "status": "COMPILED",
+      "body_sha256": "353a345489c613b4e17b3bbba93ca9860e6bd98d0a8482e216f29348196c2aae",
+      "failure_type": null,
+      "reason": null
+    },
+    {
+      "stage": "data_use",
+      "at_utc": "2026-10-29T04:52:14.025501+00:00",
+      "artifact_id": "42e390808bb4975e32cba16f854595c12b7d2ebd04c014ef9fc0c81545af1a84",
+      "status": "DATA_USE_GAP",
+      "body_sha256": "09e2a4018cb6b7f16ecc608309a636e4eddfccbbc9570cca1c63b69723e989bf",
+      "failure_type": null,
+      "reason": null,
+      "findings": {
+        "allocation_reserved": false,
+        "availability": {
+          "basis": "assumed",
+          "delay_seconds": 900,
+          "historical_publication_time": null,
+          "historical_vintage_verified": false,
+          "provenance": {
+            "checksum_evidence_refs": [
+              "86a551062acf720c89447af149d19394c1a46b555cf49895789e14a0fef07d3f",
+              "39de9ef965f150d6ebc86b4093438b584bcd26dfaffd99e9bac29f0e3b64d7d0",
+              "4964f5657d29dba99c48d5dd3939466c12be089a7b3de8f7a5f940f8c04146d2",
+              "a81b6e71d3bb250d36b65959280c434fb89f1077863035bc5865dc877173c21f",
+              "c4bbaf2cdb4ae3bf3729027c51a09f9c8b72ebb6d0bd52a950fbb389e54e0eac",
+              "52943a1fbe531b22c090f78fa571ad24a4816b41b65253f729fe3e7d9a37eafe",
+              "ceb9d68480f762ed9f83bf65104e32f6afe1b5bb37b9833c2b552ede81c2557d",
+              "8145cef04fc6fdd9705899eaccf32d785675c81dbb8f254c4d0bffb88928cb03"
+            ],
+            "provider": "Binance public archives, verified retained local copies",
+            "raw_source_refs": [
+              "93c0e0395e56928764318b7a1d7bf87adc313c347604ec5bf0ac80fa65fc1112",
+              "e70b44716f5fe464781d38add495168cecf8414b8ff0d0ab9b453cf8d0afb5d8",
+              "2b4cca2277822723ecbdfe5e1e4cb2536cd08df9727e68b05b514f6e8e840016",
+              "34de8d80b92affc8f2733f0ed6e2ee5297976eed065b07f3e1ff1c97783db4d8",
+              "8723b98b8901df2d9d2aef4178c760da0f25b31531670a76d2e583d3421dae45",
+              "fbe462367f97c7a3042798d77bb3d8acd5b9238428e6d48b354a231a63cbc852",
+              "b932f240c44b773cff1c2f41a36b3183d652b8f83b2b7f300f07a33b614ef81d",
+              "2fa967f3b11e38cb5ecac39c68c04a83f5269d7f07f1e8bf81b36cebd73b41a7"
+            ],
+            "retrieved_at": "2026-10-27T11:11:21Z",
+            "revision": "retained-bundles/aed319a691ff31f383325dcea2795474012f075f917d9e6e87d76f51a7186b87",
+            "source_uris": [
+              "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-12.zip",
+              "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-12.zip",
+              "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-01.zip",
+              "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-01.zip",
+              "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-02.zip",
+              "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-02.zip",
+              "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-03.zip",
+              "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-03.zip"
+            ]
+          }
+        },
+        "exposure": {
+          "evidence_origin": null,
+          "independent_confirmation": false,
+          "model_training_exposure": "UNKNOWN",
+          "origin_reason": "Training exposure and historical publication vintage are unverified; known and unresolved candidate exposure is retained.",
+          "target_in_candidate_ancestry": true
+        },
+        "frozen": false,
+        "gaps": [
+          "OPERATIONS_KNOWLEDGE_REQUIRES_CONTROLLED_IMPORT"
+        ],
+        "prior_knowledge": {
+          "artifact_ids": [
+            "0141056eada0052571f8e6d58925b211acd55ec316d5c1d3e9403a49ff21c5c1",
+            "046897d82b9050dd3bdca00defdc9a6d0a5f61778a20f375e0e6a7d301c8b57a",
+            "04757652777716543cbbdb2bb3a8484e971b40da5a3362b44ba3ca282946b8d1",
+            "06e3df7a22e1028d45311d9bd9f80f3e5e5c1e4937349de958f6d829ef7cdf51",
+            "0d85e5e5403e26a1ad1da927f64db53d441d7ef7992075b7081a97d96f4e2886",
+            "0dd7cc760b4a413925fc220c206e138388722999a91ca4c430bbe5ac8c80d1bf",
+            "14e9d0808ef15a2744e853eaa1e6398794de38b3a346fcb20cdcf6dee754de01",
+            "15b220574c2680e1496f52bd4186f0f618c9dbd9413180cfc3ff4b4c99113ee7",
+            "15de808a21ae856a2acf0b4265149ec865f475832c4223e19dbf2b9310c8f67d",
+            "16470ad0c1afc9bf910edb1153cd56031a8347cf728f337bf342659f7b8aff95",
+            "181f2f2dbb3f1d27cbd40a6ba3d5e0d8bbb60dfa3cb2fab087454e1a28551e73",
+            "19aacf98b0fab096adcd732252ac1e9439b3adeba9e078984f6d713af2a88741",
+            "1f1d9883f1888858fca58e307e12f5290ca185028dd854cd6d05d57f95bc81da",
+            "229c60afee70ea087174996adab0c91ebfc4e6d78f0bd777c5240e3a67d386ac",
+            "26fedfa25e5e731966b73ba725d54d04588c1348dcdad83370633502da57522e",
+            "2769efe9241f0ff895416db89fdb0dffdee2c308326f3ddc6e3c9918cdfcd415",
+            "28a17b304141644446398f85cc7cc5709b2df18ef624a1b4ca956fd3d304fa53",
+            "2b4cca2277822723ecbdfe5e1e4cb2536cd08df9727e68b05b514f6e8e840016",
+            "2eba7b549e14ea86abfc317ada5c1642ce454629ee5b97c166dcc05c10866913",
+            "2eee437e22e678f8d3dc5ffa40e613179aa82a06e3af48d0b4c321bf795a00ea",
+            "2fa967f3b11e38cb5ecac39c68c04a83f5269d7f07f1e8bf81b36cebd73b41a7",
+            "323b00e34d355aef554e58660f05980aca3cbcf9432d4b820119ca816cf08943",
+            "3286a846a85476bebe0eaffdfd1a4307545404fce06acd7140225f1f5eb5e63f",
+            "33e7abba579b8ffa218348b26c9f56daef52d6330d024c7668a8177ee1049581",
+            "34de8d80b92affc8f2733f0ed6e2ee5297976eed065b07f3e1ff1c97783db4d8",
+            "364fb0f417061e299e4403191acbe62c36b51f94bd0198f9470ab25cf1c56c61",
+            "36cddda930b7d651c4ed35890143bbe7ad1a025d2222754f536648d293c8685d",
+            "36eaaa1fb58a305f4e9c1076e5e72f840c22ada6b2ccca1a95d05ca1e358f698",
+            "39de9ef965f150d6ebc86b4093438b584bcd26dfaffd99e9bac29f0e3b64d7d0",
+            "3cece8324895541af7ce079de3e174a51fcc7b52a6d115a28c5f2e33d8a47853",
+            "3d47ed4fee80c482e2828d04dbb29ca85339cac0a489d509c11ee0841e869bcb",
+            "4017410dd91d54db9369ec73a6ff7f441648c49ca65e9d7171e998794b169315",
+            "4380d375ade157772dac4c2eb890fb560ccbafcd9364f22c9b53a270a6285cda",
+            "48ba7e5136035c158c11a0d8bacff48e98652f3ab3937cf2ced0d88b6a97ce30",
+            "4964f5657d29dba99c48d5dd3939466c12be089a7b3de8f7a5f940f8c04146d2",
+            "4bbff057f8e7ab02adcb795bf71940fe0a5f43b34bcd2a2a2b38053fc0515378",
+            "4ee0b4fd540e565a830347caa9b63e54259995888cb399858c2e05471c15a0b2",
+            "52943a1fbe531b22c090f78fa571ad24a4816b41b65253f729fe3e7d9a37eafe",
+            "5407a3ef935fdbbd2178c51451c0cb52c6c215d83314c5820483ea1f7a3224ab",
+            "543968d1e81fa75b610a08e518c913cdcff7de9d6d57d91f90f87c8d9bfffb8b",
+            "61249ac5a480e7d5b10f03e78b0893ae1541ddb868d6abf390a87c887dd689c1",
+            "61afde97d5f65313f58a1bb50ccb4b5d177f7998764e1c4a1a2d685e5ad253c5",
+            "61f4e5c6c0088671503e4c29c89ba219965bb20addec943d840059b715432caf",
+            "6259fd4b1926c99d203cc51c2c2a5540cf9b8436de8d3a9a5ce2daa5c5f8d254",
+            "62ac2a0e1a978e71212048acee8b552d934a3c64c9057db07edec074631b55c5",
+            "65844932147503c16610a98821c73a4b571534e58e49fb8d463c616834a1294a",
+            "69e169a7c050737fcbd0912597ab1bb636e6b3d879809283a23816f2f61af36d",
+            "69f1b3f1c2ba8d3f84c5b232d9e1b67a7d59fbdcdb6ee51d8460d61ff12154ed",
+            "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+            "6f2323f0bbc6b8654475b62b70138d1c7bc6dbf6c69b3bfbcfd3cfd347973109",
+            "6ffe3e57039e4404dcdcc1f9a68196f01a8d5e4427f028edacf27513700a2142",
+            "747bf2c79bd0dcc74bc8364f6f4d8a639056150e35045ff3e123eb7fc1746af7",
+            "76b8780bab8038d1f1277301220d3429ee660cec0d44d4ed2c5e3075dce59821",
+            "78be208b08c772f33a8d1d9c1e033b527204a41a813d7dd810967afc197e04dd",
+            "79850faa9b3a47546d680e7a557e2c1e650bb341fb0d511081d268e75ac2f8c0",
+            "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+            "7d6483a241f42054706d2f8733d18653a4bb6c43219cbae0cf7c7cf0df32dfb7",
+            "8145cef04fc6fdd9705899eaccf32d785675c81dbb8f254c4d0bffb88928cb03",
+            "8376c5afdc674dd656dca21efccc7ecbac3f3304910342e9e177ffc91db18fe9",
+            "85421384b435a30db6f51c1abb63eff32be5ef1a0459ed606e5a2e82b0b9ee73",
+            "85eb8e55d4082791c77f5c858ebb5e7cbfa6d122bd8b005cce452f62d43b91a6",
+            "8644f697471700aaf7a19f4d902e6b65df25171ea77f066d2aafe30f14812d2a",
+            "86a551062acf720c89447af149d19394c1a46b555cf49895789e14a0fef07d3f",
+            "8723b98b8901df2d9d2aef4178c760da0f25b31531670a76d2e583d3421dae45",
+            "87bf088ad778a7127099a280564eae927d857239729ba1788295bedbf6fd2a6c",
+            "886c632a2828b45aaac6eb2fd5cb471c97bacdb3467a43a538ffec2801256972",
+            "88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438",
+            "8b5f1702ba31e548cdbcf8344887460dd3474ff05dab27b76bda7e931a5b577e",
+            "8bcb19db6592cc040107b958a48ebb315732b0889d830de38611728085b06e57",
+            "8c9c13e316d0b88c153ce1df4f71ac72a7e2b2184fbf57cf36928f80c2908292",
+            "8c9e8ce1c580a90447feffddde2a4ba1796d268fa333b04ebe453827e399ad57",
+            "8f9d58c6a0d6bfcca57849e4db7c77a09bfa213889d97c09ba66d2f0ef7befe9",
+            "902b260aa68119d86e730df5de9b5ba61da4a5f67440d5d9ec43a720a73f4283",
+            "93c0e0395e56928764318b7a1d7bf87adc313c347604ec5bf0ac80fa65fc1112",
+            "95368ce9ea77b7c05d8fbf5b4426e94fbb6229bc836731a5c7dfb92bc5f4450b",
+            "95af5c8d38434242f8704a3b3f2a217d0a33deb988ca11b5ce70e6abe76f9240",
+            "95f9cce617c3b3faa63b6d5e71dfd61b98b8838d911b59e68379977fabcd2ea7",
+            "979b8d26170fe28acf79b9f91fdfb8de24f966aea899ff1ef025eb31f905453c",
+            "98217a8e5e3e474d88fea00482022910d9a4a7e2321bcb6cc615c82ba1364cc0",
+            "99f75b2fa3c529fa880f04f51a7105e67871d0649b6027799a3f04a5b3a86ee6",
+            "9b1ddfe498fe87e63ac84f773890a4c3926d999036fbde636cc80addfcd2746c",
+            "9b20deac474cb62b5b8ef754ce06465e357529548550f673751fc74d3c383625",
+            "9bbae4f5c457a74e5bae4a2c0e861f07df59fa56d34b1642ce2e9786cd576aa3",
+            "a5b3108f4885d7708e810a27ca25f1f5f7a1f2831549341c5f620524659cfa73",
+            "a6265b44bf0093c5c755793fdd8ac4041e5d80db43fb1104dd3ba531c35cc6ca",
+            "a81b6e71d3bb250d36b65959280c434fb89f1077863035bc5865dc877173c21f",
+            "ac7d16e94e342eb8e1317dbf980621f7f3a7ce69f4ab71390f88a69b41a833f7",
+            "adecf1aeb3b6bbdabcea60795a7e61c67b368cc80d8fe57510e9a1efd7e1fbff",
+            "b07d4a77054ddb9153a33a3f5c731f0976086d20450a5a54ee85b13ebd033443",
+            "b396830d33520fb5a9d426d3197f2f272db622aedea4e5cf8441946174258b7b",
+            "b4b25eff71a5f059cc8e0be2c6a63ff528a308f102d505ad90e2222c816f07fa",
+            "b65098bcbe61a8d5085fdf4d61cb7e0e8d6bc981d007dd46cf134a15aae36441",
+            "b6ac37727cf8d116f9a01ca1906defb00c9a3a080ac8af1cb350ca41a95a0175",
+            "b784d2d7c9821a965f627230f50e8ca146fdf128356977141e4510e9fb25a992",
+            "b7cb0aaaa2a690ba9856e3a5994016d744a9aecee2ac625f5072b509060b7325",
+            "b81b58a95a6c8278ce3fc73674061c6e11bb87e30b3cd9189986a901fa215651",
+            "b932f240c44b773cff1c2f41a36b3183d652b8f83b2b7f300f07a33b614ef81d",
+            "bb570b8f4422f87af454df98c276948eec9e45ca694f34f01d81970e989aa943",
+            "bc9f8a75b3d55b5ee3b1911b9b787b93b5d06910ff4d22672e62ce6d65798f3a",
+            "c4bbaf2cdb4ae3bf3729027c51a09f9c8b72ebb6d0bd52a950fbb389e54e0eac",
+            "c6140cd9f957110d59168ee11f6f8d8079a98d87627ef87443ac6953a63787fd",
+            "c8d3c83112489cca4fb3965b6dd32e2b3a2da076d3013b76120c82ec03f076c0",
+            "c95a536c2c4f00f05c63aa408a01913b85b4037fb55e758017f751ef2ffe0cf3",
+            "ceb9d68480f762ed9f83bf65104e32f6afe1b5bb37b9833c2b552ede81c2557d",
+            "d34d863e7c5803e35d48a491bc417d09c0aa23dedc36c9e58294511d5afb9d22",
+            "d54b4590e496609f856aa672477f52a627794644050596f7e22008f303ac5056",
+            "d8fb373c208172ffa2228f6cac91f5c843ad6747b2b79a0879bde22c9e4634fc",
+            "d9152b0c3ce48b4aefa88e6b2ab826760e7a19c5b4cf5acc724bf662d382e232",
+            "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+            "da97db5c2eceb2c4548c65ad8d7c0fc778651a246f8f46ae4c6964ee71656538",
+            "db370e4f3c0888d44b0889f00b70287869f1e24a8170ea1716f59af75b0605f3",
+            "dc660dd02a105922bca725f0519963049b21e99a2a9ac8c770a6f747c5b0457d",
+            "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+            "e1796c9e914d6b3e1c0799669d022266ab439e4d4e1009b9c8500b6b8b053936",
+            "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+            "e5e73b32a3d54c544ec50b1d5abf8c29e560acf939b2f1309edcc953ee7c0896",
+            "e5fd2399284dc554577933073380a07aa48bd795b97e6d467ab0a31b5d1c9f25",
+            "e69c3cb8ece46c5a09eef6791a8edcceb8b7e94c6189a580c7d80b6086701b4e",
+            "e6ba2078bf8009f2609b0573e45747590fc38d8fb7c8200fd9cb384102433de5",
+            "e70b44716f5fe464781d38add495168cecf8414b8ff0d0ab9b453cf8d0afb5d8",
+            "e76d455ae347db5b1045411ed59cccc395df0f6d56ee607ffe04bde2dd60b433",
+            "e8f14763453600a67db9f46e53128f2dd29a861933bfeb440eb6b54ce04b6bd5",
+            "ed6d984235e2277d54bca27691454feded97d10b83668182c71471c992c40265",
+            "ee4ac7ab68bf68a5fd84da18867c4a4a8030033d94f06cf896f9fde1d3ce43db",
+            "efe3cfee125210d6dec702a642c216660d7e8f27dda1234acea1d5a7951be4fb",
+            "f2ea3116deb0e2fb50329a9cbde43bf54c8a4b49683912a06c01fad0738e3946",
+            "f91cf3e65fa2b39463e030c8965a06742fcc63d41332dc8e9d492ed8bbd8cb8a",
+            "fad4eab14e6ee9916f666d53a842d9945e449afd99618bd6090535bd67c175e0",
+            "fbe462367f97c7a3042798d77bb3d8acd5b9238428e6d48b354a231a63cbc852",
+            "fecc49f6d03015d7bc734a893b98d5d8dc790c44cc8afb15bff5eead740b2e5f"
+          ],
+          "basis": "Original idea and complete authorized formalization ancestry, before compiler-added dependencies.",
+          "context_ids": [
+            "760553124ed7ec916bed69e5997796711a67659916cf2da4585818164ea930dc",
+            "8dfb002c346540b1f47893ea135c223492faf52cfd462ad7448ae949a3bae027"
+          ],
+          "operations_knowledge_ids": [
+            "d54b4590e496609f856aa672477f52a627794644050596f7e22008f303ac5056"
+          ],
+          "protected_knowledge_ids": [],
+          "technical_provenance_ids": [
+            "e5fd2399284dc554577933073380a07aa48bd795b97e6d467ab0a31b5d1c9f25"
+          ],
+          "unresolved_exposure_refs": []
+        },
+        "rights": {
+          "basis": "Reviewed dataset terms v1.0 section 4.1 and research-contract/1.0 section 6; no commercial or production permission.",
+          "document_sha256": {
+            "README.md": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+            "TERMS_AND_CONDITIONS.md": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0"
+          },
+          "provider_documents_id": "88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438",
+          "purpose": "Personal non-production historical research",
+          "receipt_sha256": "35849649e44837a86c94705be99c6a5fd6352d43c4f5248287f654c7161392a1",
+          "retrieved_at": "2026-10-25T02:56:28Z",
+          "reviewed_bytes_match": true
+        },
+        "scientific_readiness": false,
+        "scope": {
+          "catalog_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+          "compiled_id": "5278827e87bb99d87e6173fc0c129973d38516b28d5ddde1c1a94c5392e4dbe3",
+          "data_snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+          "feature_certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+          "feature_definitions_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+          "formalization_id": "3d47ed4fee80c482e2828d04dbb29ca85339cac0a489d509c11ee0841e869bcb",
+          "normalization_id": "b65098bcbe61a8d5085fdf4d61cb7e0e8d6bc981d007dd46cf134a15aae36441",
+          "partition": "development",
+          "purpose": "Personal non-production historical research",
+          "row_window": {
+            "end": "2023-04-01T00:00:00Z",
+            "instruments": [
+              "ETHUSDT"
+            ],
+            "start": "2023-01-01T00:00:00Z"
+          },
+          "universe": {
+            "end": "2023-04-01T00:00:00Z",
+            "instruments": [
+              "ETHUSDT"
+            ],
+            "start": "2023-01-01T00:00:00Z"
+          },
+          "use": "qualified_historical_exploration"
+        }
+      }
+    }
+  ],
+  "new_calls": [
+    {
+      "provider": "openai",
+      "dispatch_id": "controller-c54de1d95c134472a27c71308fee7834:0",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T04:49:08Z",
+      "settled_at_utc": "2026-10-29T04:51:23Z",
+      "charged_nano": 190387500,
+      "state": "settled",
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0f746037f68db380016ae2d0447d9887d2907fed69b4a93852",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 3106
+        },
+        "transport_request_id": "req_3c385d3aa1ad4203a39674f6b77fa22d",
+        "usage": {
+          "cost_units": 190387500,
+          "input_tokens": 26887,
+          "output_tokens": 12317
+        }
+      }
+    },
+    {
+      "provider": "openai",
+      "dispatch_id": "controller-af9621b4581a4cefa44fbaf07bd6a446:0",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T04:51:43Z",
+      "settled_at_utc": "2026-10-29T04:52:03Z",
+      "charged_nano": 80152500,
+      "state": "settled",
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0a01eb484c57c1b1016ae2d0df800087d2bc1d5368c16ef75f",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 74
+        },
+        "transport_request_id": "req_af3fd88e60ab4884a5df7e03d05d0176",
+        "usage": {
+          "cost_units": 80152500,
+          "input_tokens": 27833,
+          "output_tokens": 1057
+        }
+      }
+    }
+  ],
+  "formalizer_input_count": {
+    "count": 26887,
+    "input_bound": 27015,
+    "availability_evidence": {
+      "schema": "development-availability-evidence/1",
+      "certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+      "data_snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+      "catalog_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "definitions_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+      "certificate_body_sha256": "611a9be14bef148e28f05e022723910dd2930b12a4617a2620d767f804f0ed68",
+      "source_footprint_sha256": "4fb725110f26ae3cc5e1afd555c864c601647a867588df3972042b86b53c7ced",
+      "row_blobs": [
+        {
+          "sha256": "3d88c45f2feae494b6b38c986aff1168e7799914b26733ce455d1317d876ce33",
+          "size": 14558791
+        }
+      ],
+      "universe": {
+        "end": "2023-04-01T00:00:00Z",
+        "instruments": [
+          "BTCUSDT",
+          "ETHUSDT"
+        ],
+        "start": "2023-01-01T00:00:00Z"
+      },
+      "delay_seconds": 900,
+      "rule": "For every present feature entry, including null-valued entries, available_at equals row_time + delay_seconds exactly.",
+      "summary": {
+        "status": "MATCHED_EXACT_FIXED_DELAY",
+        "checked_rows": 17270,
+        "checked_feature_samples": 155430,
+        "null_feature_samples": 18,
+        "missing_feature_samples": 0,
+        "absent_grid_rows": 10
+      },
+      "availability_basis": "assumed",
+      "historical_publication_time": null,
+      "qualification": "Exhaustive timing check of this exact certified development snapshot. Absent rows and missing/null values remain missing. No later recorded availability exists among these entries. This is not historical publication truth, a hypothesis-equivalence verdict, an outcome result or scientific admission. The reviewer must separately derive the candidate-specific cutoff implications.",
+      "scientific_readiness": false
+    },
+    "packet_sha256": "743f945a7fd41168cebc802fecb02f4c7cd41c55992656fd4d618f4120dc97ce",
+    "transport_request_id": "req_bd71d0ed27f0443a9190343ffd27a880",
+    "wire_sha256": "adfbee648449f9cc3949fd07a684da9e676da5140a8b6e3e42a626c34d601098"
+  },
+  "review_input_count": {
+    "created_at_utc": "2026-10-29T04:51:29.123280+00:00",
+    "count": {
+      "count": 27833,
+      "input_bound": 27961,
+      "availability_evidence": {
+        "schema": "development-availability-evidence/1",
+        "certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+        "data_snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "catalog_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "definitions_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+        "certificate_body_sha256": "611a9be14bef148e28f05e022723910dd2930b12a4617a2620d767f804f0ed68",
+        "source_footprint_sha256": "4fb725110f26ae3cc5e1afd555c864c601647a867588df3972042b86b53c7ced",
+        "row_blobs": [
+          {
+            "sha256": "3d88c45f2feae494b6b38c986aff1168e7799914b26733ce455d1317d876ce33",
+            "size": 14558791
+          }
+        ],
+        "universe": {
+          "end": "2023-04-01T00:00:00Z",
+          "instruments": [
+            "BTCUSDT",
+            "ETHUSDT"
+          ],
+          "start": "2023-01-01T00:00:00Z"
+        },
+        "delay_seconds": 900,
+        "rule": "For every present feature entry, including null-valued entries, available_at equals row_time + delay_seconds exactly.",
+        "summary": {
+          "status": "MATCHED_EXACT_FIXED_DELAY",
+          "checked_rows": 17270,
+          "checked_feature_samples": 155430,
+          "null_feature_samples": 18,
+          "missing_feature_samples": 0,
+          "absent_grid_rows": 10
+        },
+        "availability_basis": "assumed",
+        "historical_publication_time": null,
+        "qualification": "Exhaustive timing check of this exact certified development snapshot. Absent rows and missing/null values remain missing. No later recorded availability exists among these entries. This is not historical publication truth, a hypothesis-equivalence verdict, an outcome result or scientific admission. The reviewer must separately derive the candidate-specific cutoff implications.",
+        "scientific_readiness": false
+      },
+      "packet_sha256": "60ca3fcb032a1660e020ad1de446781c5f171a0ad8e4f5e1d4df0a15477dd93c",
+      "transport_request_id": "req_fd925b9d09b9461a9779198e3994418b",
+      "wire_sha256": "dce5b7545e6dfa267c925536829d13aee2d192ee58b8ece132d701fd0d04e3c2"
+    },
+    "reserved_input_bound": 30000
+  },
+  "full_path_token_reservation": 79015,
+  "full_path_cost_bound_nano_usd": 362537500,
+  "finished_at_utc": "2026-10-29T04:52:14.374745+00:00",
+  "wall_seconds": 197.57879499999945,
+  "new_reported_tokens": 68094,
+  "new_conservative_cost_nano_usd": 270540000,
+  "aggregate_tokens": 537423,
+  "aggregate_conservative_cost_nano_usd": 1865722500,
+  "remaining_authorization_nano_usd": 3134277500,
+  "independent_formula_audit": {
+    "schema": "independent-original-eth-formula-check/2",
+    "idea_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+    "original_text_sha256": "ef8d9c2897d27129cfd72178231f408a5283869fbcced3d54a70bd40c4a2276f",
+    "snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+    "execution_id": "62cff0ef9503481047add4193a8ab5894d2758ed0d3a2d27b648ad1f73e906dd",
+    "rows": {
+      "sha256": "ed39a972a8fc1a563d60415c9c8859e8d8b6ca9efb6d25290df62b3390b2f705",
+      "size": 7236352
+    },
+    "case_blob": {
+      "sha256": "4aab9cb47aed26f70a34541008b8be2e878f71d1cd7719471f1a274774e3f103",
+      "size": 12220451
+    },
+    "checked_rows": 8635,
+    "checked_decisions": 8640,
+    "method": "Direct Fraction arithmetic and ordinary sorted even median of all 96 preceding quote volumes; original finite/validity/availability rules; no runtime AST evaluation.",
+    "original_condition_counts": {
+      "true": 0,
+      "false": 8437,
+      "unknown": 203
+    },
+    "original_condition_unknown_causes_overlapping": {
+      "outside_universe": 97,
+      "invalid_under_original_checks": 4,
+      "null_value": 97,
+      "absent_row": 101
+    },
+    "original_outcome_counts": {
+      "observed": 8626,
+      "missing": 14,
+      "condition_true_with_observed_outcome": 0
+    },
+    "predicate_true_counts_among_fully_valid_conditions": {
+      "buy_share_ge_065": 238,
+      "quote_volume_ge_twice_median": 1553,
+      "high_excursion_ge_003": 1544,
+      "retained_return_0_to_0005": 985
+    },
+    "execution_state_counts": {
+      "ELIGIBLE": 8626,
+      "OUTCOME_MISSING": 9,
+      "PARTITION_BOUNDARY": 5
+    },
+    "data_gap_rows": [],
+    "omitted_original_observed_outcomes": [],
+    "wrongly_included_outcomes": [],
+    "condition_value_differences": [],
+    "provider_calls": 0,
+    "protected_or_outside_scope_data_read": false,
+    "numeric_log_values_computed": true,
+    "numeric_crosscheck": {
+      "method": "Independent Decimal.ln at 120 significant digits compared with every exact stored rational enclosure; supplementary numerical crosscheck, not the analytic error proof.",
+      "checked_observed_outcomes": 8626,
+      "outside_stored_enclosure": 0,
+      "maximum_enclosure_width_basis_points": {
+        "numerator": "41875",
+        "denominator": "5316911983139663491615228241121378304"
+      }
+    },
+    "scientific_readiness": false
+  },
+  "complete_original_descriptive_report": true,
+  "scientific_readiness": false,
+  "protected_outcomes_accessed": false,
+  "automatic_further_retry": false,
+  "full_objective_complete": false,
+  "deterministic_followup": {
+    "finished_at_utc": "2026-10-29T04:58:47.705939+00:00",
+    "wall_seconds": 61.45155970000087,
+    "provider_calls": 0,
+    "usage_unchanged": true,
+    "scientific_readiness": false,
+    "protected_outcomes_accessed": false,
+    "stages": [
+      {
+        "stage": "data_use_reassessment",
+        "started_at_utc": "2026-10-29T04:57:49.432140+00:00",
+        "ended_at_utc": "2026-10-29T04:57:50.732637+00:00",
+        "artifact_id": "a1a4932218f3c2f5c62b6d06c36e7395284c716b252eb53421b359d15642e972",
+        "status": "QUALIFIED_EXPLORATION",
+        "body_sha256": "5d98fb6aa0a300d93f60bd63612082d93b245cfa66dcd7d3653256ec9dff1651",
+        "findings": {
+          "scope": {
+            "compiled_id": "5278827e87bb99d87e6173fc0c129973d38516b28d5ddde1c1a94c5392e4dbe3",
+            "formalization_id": "3d47ed4fee80c482e2828d04dbb29ca85339cac0a489d509c11ee0841e869bcb",
+            "data_snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+            "catalog_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+            "feature_certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+            "feature_definitions_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+            "normalization_id": "b65098bcbe61a8d5085fdf4d61cb7e0e8d6bc981d007dd46cf134a15aae36441",
+            "partition": "development",
+            "universe": {
+              "end": "2023-04-01T00:00:00Z",
+              "instruments": [
+                "ETHUSDT"
+              ],
+              "start": "2023-01-01T00:00:00Z"
+            },
+            "row_window": {
+              "end": "2023-04-01T00:00:00Z",
+              "instruments": [
+                "ETHUSDT"
+              ],
+              "start": "2023-01-01T00:00:00Z"
+            },
+            "purpose": "Personal non-production historical research",
+            "use": "qualified_historical_exploration"
+          },
+          "rights": {
+            "provider_documents_id": "88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438",
+            "document_sha256": {
+              "README.md": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad",
+              "TERMS_AND_CONDITIONS.md": "99c4921dbe023cd68c1a447775707d621453cc78aec6ac0bfe2e6c06a5114ee0"
+            },
+            "receipt_sha256": "35849649e44837a86c94705be99c6a5fd6352d43c4f5248287f654c7161392a1",
+            "retrieved_at": "2026-10-25T02:56:28Z",
+            "reviewed_bytes_match": true,
+            "purpose": "Personal non-production historical research",
+            "basis": "Reviewed dataset terms v1.0 section 4.1 and research-contract/1.0 section 6; no commercial or production permission."
+          },
+          "prior_knowledge": {
+            "artifact_ids": [
+              "0141056eada0052571f8e6d58925b211acd55ec316d5c1d3e9403a49ff21c5c1",
+              "046897d82b9050dd3bdca00defdc9a6d0a5f61778a20f375e0e6a7d301c8b57a",
+              "04757652777716543cbbdb2bb3a8484e971b40da5a3362b44ba3ca282946b8d1",
+              "06e3df7a22e1028d45311d9bd9f80f3e5e5c1e4937349de958f6d829ef7cdf51",
+              "0d85e5e5403e26a1ad1da927f64db53d441d7ef7992075b7081a97d96f4e2886",
+              "0dd7cc760b4a413925fc220c206e138388722999a91ca4c430bbe5ac8c80d1bf",
+              "14e9d0808ef15a2744e853eaa1e6398794de38b3a346fcb20cdcf6dee754de01",
+              "15b220574c2680e1496f52bd4186f0f618c9dbd9413180cfc3ff4b4c99113ee7",
+              "15de808a21ae856a2acf0b4265149ec865f475832c4223e19dbf2b9310c8f67d",
+              "16470ad0c1afc9bf910edb1153cd56031a8347cf728f337bf342659f7b8aff95",
+              "181f2f2dbb3f1d27cbd40a6ba3d5e0d8bbb60dfa3cb2fab087454e1a28551e73",
+              "19aacf98b0fab096adcd732252ac1e9439b3adeba9e078984f6d713af2a88741",
+              "1f1d9883f1888858fca58e307e12f5290ca185028dd854cd6d05d57f95bc81da",
+              "229c60afee70ea087174996adab0c91ebfc4e6d78f0bd777c5240e3a67d386ac",
+              "26fedfa25e5e731966b73ba725d54d04588c1348dcdad83370633502da57522e",
+              "2769efe9241f0ff895416db89fdb0dffdee2c308326f3ddc6e3c9918cdfcd415",
+              "28a17b304141644446398f85cc7cc5709b2df18ef624a1b4ca956fd3d304fa53",
+              "2b4cca2277822723ecbdfe5e1e4cb2536cd08df9727e68b05b514f6e8e840016",
+              "2eba7b549e14ea86abfc317ada5c1642ce454629ee5b97c166dcc05c10866913",
+              "2eee437e22e678f8d3dc5ffa40e613179aa82a06e3af48d0b4c321bf795a00ea",
+              "2fa967f3b11e38cb5ecac39c68c04a83f5269d7f07f1e8bf81b36cebd73b41a7",
+              "323b00e34d355aef554e58660f05980aca3cbcf9432d4b820119ca816cf08943",
+              "3286a846a85476bebe0eaffdfd1a4307545404fce06acd7140225f1f5eb5e63f",
+              "33e7abba579b8ffa218348b26c9f56daef52d6330d024c7668a8177ee1049581",
+              "34de8d80b92affc8f2733f0ed6e2ee5297976eed065b07f3e1ff1c97783db4d8",
+              "364fb0f417061e299e4403191acbe62c36b51f94bd0198f9470ab25cf1c56c61",
+              "36cddda930b7d651c4ed35890143bbe7ad1a025d2222754f536648d293c8685d",
+              "36eaaa1fb58a305f4e9c1076e5e72f840c22ada6b2ccca1a95d05ca1e358f698",
+              "39de9ef965f150d6ebc86b4093438b584bcd26dfaffd99e9bac29f0e3b64d7d0",
+              "3cece8324895541af7ce079de3e174a51fcc7b52a6d115a28c5f2e33d8a47853",
+              "3d47ed4fee80c482e2828d04dbb29ca85339cac0a489d509c11ee0841e869bcb",
+              "4017410dd91d54db9369ec73a6ff7f441648c49ca65e9d7171e998794b169315",
+              "4380d375ade157772dac4c2eb890fb560ccbafcd9364f22c9b53a270a6285cda",
+              "48ba7e5136035c158c11a0d8bacff48e98652f3ab3937cf2ced0d88b6a97ce30",
+              "4964f5657d29dba99c48d5dd3939466c12be089a7b3de8f7a5f940f8c04146d2",
+              "4bbff057f8e7ab02adcb795bf71940fe0a5f43b34bcd2a2a2b38053fc0515378",
+              "4ee0b4fd540e565a830347caa9b63e54259995888cb399858c2e05471c15a0b2",
+              "52943a1fbe531b22c090f78fa571ad24a4816b41b65253f729fe3e7d9a37eafe",
+              "5407a3ef935fdbbd2178c51451c0cb52c6c215d83314c5820483ea1f7a3224ab",
+              "543968d1e81fa75b610a08e518c913cdcff7de9d6d57d91f90f87c8d9bfffb8b",
+              "61249ac5a480e7d5b10f03e78b0893ae1541ddb868d6abf390a87c887dd689c1",
+              "61afde97d5f65313f58a1bb50ccb4b5d177f7998764e1c4a1a2d685e5ad253c5",
+              "61f4e5c6c0088671503e4c29c89ba219965bb20addec943d840059b715432caf",
+              "6259fd4b1926c99d203cc51c2c2a5540cf9b8436de8d3a9a5ce2daa5c5f8d254",
+              "62ac2a0e1a978e71212048acee8b552d934a3c64c9057db07edec074631b55c5",
+              "65844932147503c16610a98821c73a4b571534e58e49fb8d463c616834a1294a",
+              "69e169a7c050737fcbd0912597ab1bb636e6b3d879809283a23816f2f61af36d",
+              "69f1b3f1c2ba8d3f84c5b232d9e1b67a7d59fbdcdb6ee51d8460d61ff12154ed",
+              "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+              "6f2323f0bbc6b8654475b62b70138d1c7bc6dbf6c69b3bfbcfd3cfd347973109",
+              "6ffe3e57039e4404dcdcc1f9a68196f01a8d5e4427f028edacf27513700a2142",
+              "747bf2c79bd0dcc74bc8364f6f4d8a639056150e35045ff3e123eb7fc1746af7",
+              "76b8780bab8038d1f1277301220d3429ee660cec0d44d4ed2c5e3075dce59821",
+              "78be208b08c772f33a8d1d9c1e033b527204a41a813d7dd810967afc197e04dd",
+              "79850faa9b3a47546d680e7a557e2c1e650bb341fb0d511081d268e75ac2f8c0",
+              "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+              "7d6483a241f42054706d2f8733d18653a4bb6c43219cbae0cf7c7cf0df32dfb7",
+              "8145cef04fc6fdd9705899eaccf32d785675c81dbb8f254c4d0bffb88928cb03",
+              "8376c5afdc674dd656dca21efccc7ecbac3f3304910342e9e177ffc91db18fe9",
+              "85421384b435a30db6f51c1abb63eff32be5ef1a0459ed606e5a2e82b0b9ee73",
+              "85eb8e55d4082791c77f5c858ebb5e7cbfa6d122bd8b005cce452f62d43b91a6",
+              "8644f697471700aaf7a19f4d902e6b65df25171ea77f066d2aafe30f14812d2a",
+              "86a551062acf720c89447af149d19394c1a46b555cf49895789e14a0fef07d3f",
+              "8723b98b8901df2d9d2aef4178c760da0f25b31531670a76d2e583d3421dae45",
+              "87bf088ad778a7127099a280564eae927d857239729ba1788295bedbf6fd2a6c",
+              "886c632a2828b45aaac6eb2fd5cb471c97bacdb3467a43a538ffec2801256972",
+              "88f1092c9f3992d8e4cc315c2f58440f39dd3d1f4546e4a13ef5f267cb051438",
+              "8b5f1702ba31e548cdbcf8344887460dd3474ff05dab27b76bda7e931a5b577e",
+              "8bcb19db6592cc040107b958a48ebb315732b0889d830de38611728085b06e57",
+              "8c9c13e316d0b88c153ce1df4f71ac72a7e2b2184fbf57cf36928f80c2908292",
+              "8c9e8ce1c580a90447feffddde2a4ba1796d268fa333b04ebe453827e399ad57",
+              "8f9d58c6a0d6bfcca57849e4db7c77a09bfa213889d97c09ba66d2f0ef7befe9",
+              "902b260aa68119d86e730df5de9b5ba61da4a5f67440d5d9ec43a720a73f4283",
+              "93c0e0395e56928764318b7a1d7bf87adc313c347604ec5bf0ac80fa65fc1112",
+              "95368ce9ea77b7c05d8fbf5b4426e94fbb6229bc836731a5c7dfb92bc5f4450b",
+              "95af5c8d38434242f8704a3b3f2a217d0a33deb988ca11b5ce70e6abe76f9240",
+              "95f9cce617c3b3faa63b6d5e71dfd61b98b8838d911b59e68379977fabcd2ea7",
+              "979b8d26170fe28acf79b9f91fdfb8de24f966aea899ff1ef025eb31f905453c",
+              "98217a8e5e3e474d88fea00482022910d9a4a7e2321bcb6cc615c82ba1364cc0",
+              "99f75b2fa3c529fa880f04f51a7105e67871d0649b6027799a3f04a5b3a86ee6",
+              "9b1ddfe498fe87e63ac84f773890a4c3926d999036fbde636cc80addfcd2746c",
+              "9b20deac474cb62b5b8ef754ce06465e357529548550f673751fc74d3c383625",
+              "9bbae4f5c457a74e5bae4a2c0e861f07df59fa56d34b1642ce2e9786cd576aa3",
+              "a5b3108f4885d7708e810a27ca25f1f5f7a1f2831549341c5f620524659cfa73",
+              "a6265b44bf0093c5c755793fdd8ac4041e5d80db43fb1104dd3ba531c35cc6ca",
+              "a81b6e71d3bb250d36b65959280c434fb89f1077863035bc5865dc877173c21f",
+              "ac7d16e94e342eb8e1317dbf980621f7f3a7ce69f4ab71390f88a69b41a833f7",
+              "adecf1aeb3b6bbdabcea60795a7e61c67b368cc80d8fe57510e9a1efd7e1fbff",
+              "b07d4a77054ddb9153a33a3f5c731f0976086d20450a5a54ee85b13ebd033443",
+              "b396830d33520fb5a9d426d3197f2f272db622aedea4e5cf8441946174258b7b",
+              "b4b25eff71a5f059cc8e0be2c6a63ff528a308f102d505ad90e2222c816f07fa",
+              "b65098bcbe61a8d5085fdf4d61cb7e0e8d6bc981d007dd46cf134a15aae36441",
+              "b6ac37727cf8d116f9a01ca1906defb00c9a3a080ac8af1cb350ca41a95a0175",
+              "b784d2d7c9821a965f627230f50e8ca146fdf128356977141e4510e9fb25a992",
+              "b7cb0aaaa2a690ba9856e3a5994016d744a9aecee2ac625f5072b509060b7325",
+              "b81b58a95a6c8278ce3fc73674061c6e11bb87e30b3cd9189986a901fa215651",
+              "b932f240c44b773cff1c2f41a36b3183d652b8f83b2b7f300f07a33b614ef81d",
+              "bb570b8f4422f87af454df98c276948eec9e45ca694f34f01d81970e989aa943",
+              "bc9f8a75b3d55b5ee3b1911b9b787b93b5d06910ff4d22672e62ce6d65798f3a",
+              "c4bbaf2cdb4ae3bf3729027c51a09f9c8b72ebb6d0bd52a950fbb389e54e0eac",
+              "c6140cd9f957110d59168ee11f6f8d8079a98d87627ef87443ac6953a63787fd",
+              "c8d3c83112489cca4fb3965b6dd32e2b3a2da076d3013b76120c82ec03f076c0",
+              "c95a536c2c4f00f05c63aa408a01913b85b4037fb55e758017f751ef2ffe0cf3",
+              "ceb9d68480f762ed9f83bf65104e32f6afe1b5bb37b9833c2b552ede81c2557d",
+              "d34d863e7c5803e35d48a491bc417d09c0aa23dedc36c9e58294511d5afb9d22",
+              "d54b4590e496609f856aa672477f52a627794644050596f7e22008f303ac5056",
+              "d8fb373c208172ffa2228f6cac91f5c843ad6747b2b79a0879bde22c9e4634fc",
+              "d9152b0c3ce48b4aefa88e6b2ab826760e7a19c5b4cf5acc724bf662d382e232",
+              "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+              "da97db5c2eceb2c4548c65ad8d7c0fc778651a246f8f46ae4c6964ee71656538",
+              "db370e4f3c0888d44b0889f00b70287869f1e24a8170ea1716f59af75b0605f3",
+              "dc660dd02a105922bca725f0519963049b21e99a2a9ac8c770a6f747c5b0457d",
+              "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+              "e1796c9e914d6b3e1c0799669d022266ab439e4d4e1009b9c8500b6b8b053936",
+              "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+              "e5e73b32a3d54c544ec50b1d5abf8c29e560acf939b2f1309edcc953ee7c0896",
+              "e5fd2399284dc554577933073380a07aa48bd795b97e6d467ab0a31b5d1c9f25",
+              "e69c3cb8ece46c5a09eef6791a8edcceb8b7e94c6189a580c7d80b6086701b4e",
+              "e6ba2078bf8009f2609b0573e45747590fc38d8fb7c8200fd9cb384102433de5",
+              "e70b44716f5fe464781d38add495168cecf8414b8ff0d0ab9b453cf8d0afb5d8",
+              "e76d455ae347db5b1045411ed59cccc395df0f6d56ee607ffe04bde2dd60b433",
+              "e8f14763453600a67db9f46e53128f2dd29a861933bfeb440eb6b54ce04b6bd5",
+              "ed6d984235e2277d54bca27691454feded97d10b83668182c71471c992c40265",
+              "ee4ac7ab68bf68a5fd84da18867c4a4a8030033d94f06cf896f9fde1d3ce43db",
+              "efe3cfee125210d6dec702a642c216660d7e8f27dda1234acea1d5a7951be4fb",
+              "f2ea3116deb0e2fb50329a9cbde43bf54c8a4b49683912a06c01fad0738e3946",
+              "f91cf3e65fa2b39463e030c8965a06742fcc63d41332dc8e9d492ed8bbd8cb8a",
+              "fad4eab14e6ee9916f666d53a842d9945e449afd99618bd6090535bd67c175e0",
+              "fbe462367f97c7a3042798d77bb3d8acd5b9238428e6d48b354a231a63cbc852",
+              "fecc49f6d03015d7bc734a893b98d5d8dc790c44cc8afb15bff5eead740b2e5f"
+            ],
+            "context_ids": [
+              "760553124ed7ec916bed69e5997796711a67659916cf2da4585818164ea930dc",
+              "8dfb002c346540b1f47893ea135c223492faf52cfd462ad7448ae949a3bae027"
+            ],
+            "unresolved_exposure_refs": [],
+            "protected_knowledge_ids": [],
+            "operations_knowledge_ids": [],
+            "technical_provenance_ids": [
+              "d54b4590e496609f856aa672477f52a627794644050596f7e22008f303ac5056",
+              "e5fd2399284dc554577933073380a07aa48bd795b97e6d467ab0a31b5d1c9f25"
+            ],
+            "basis": "Original idea and complete authorized formalization ancestry, before compiler-added dependencies."
+          },
+          "availability": {
+            "basis": "assumed",
+            "delay_seconds": 900,
+            "historical_publication_time": null,
+            "historical_vintage_verified": false,
+            "provenance": {
+              "checksum_evidence_refs": [
+                "86a551062acf720c89447af149d19394c1a46b555cf49895789e14a0fef07d3f",
+                "39de9ef965f150d6ebc86b4093438b584bcd26dfaffd99e9bac29f0e3b64d7d0",
+                "4964f5657d29dba99c48d5dd3939466c12be089a7b3de8f7a5f940f8c04146d2",
+                "a81b6e71d3bb250d36b65959280c434fb89f1077863035bc5865dc877173c21f",
+                "c4bbaf2cdb4ae3bf3729027c51a09f9c8b72ebb6d0bd52a950fbb389e54e0eac",
+                "52943a1fbe531b22c090f78fa571ad24a4816b41b65253f729fe3e7d9a37eafe",
+                "ceb9d68480f762ed9f83bf65104e32f6afe1b5bb37b9833c2b552ede81c2557d",
+                "8145cef04fc6fdd9705899eaccf32d785675c81dbb8f254c4d0bffb88928cb03"
+              ],
+              "provider": "Binance public archives, verified retained local copies",
+              "raw_source_refs": [
+                "93c0e0395e56928764318b7a1d7bf87adc313c347604ec5bf0ac80fa65fc1112",
+                "e70b44716f5fe464781d38add495168cecf8414b8ff0d0ab9b453cf8d0afb5d8",
+                "2b4cca2277822723ecbdfe5e1e4cb2536cd08df9727e68b05b514f6e8e840016",
+                "34de8d80b92affc8f2733f0ed6e2ee5297976eed065b07f3e1ff1c97783db4d8",
+                "8723b98b8901df2d9d2aef4178c760da0f25b31531670a76d2e583d3421dae45",
+                "fbe462367f97c7a3042798d77bb3d8acd5b9238428e6d48b354a231a63cbc852",
+                "b932f240c44b773cff1c2f41a36b3183d652b8f83b2b7f300f07a33b614ef81d",
+                "2fa967f3b11e38cb5ecac39c68c04a83f5269d7f07f1e8bf81b36cebd73b41a7"
+              ],
+              "retrieved_at": "2026-10-27T11:11:21Z",
+              "revision": "retained-bundles/aed319a691ff31f383325dcea2795474012f075f917d9e6e87d76f51a7186b87",
+              "source_uris": [
+                "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2022-12.zip",
+                "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2022-12.zip",
+                "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-01.zip",
+                "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-01.zip",
+                "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-02.zip",
+                "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-02.zip",
+                "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/15m/BTCUSDT-15m-2023-03.zip",
+                "https://data.binance.vision/data/spot/monthly/klines/ETHUSDT/15m/ETHUSDT-15m-2023-03.zip"
+              ]
+            }
+          },
+          "exposure": {
+            "target_in_candidate_ancestry": true,
+            "model_training_exposure": "UNKNOWN",
+            "evidence_origin": null,
+            "origin_reason": "Training exposure and historical publication vintage are unverified; known and unresolved candidate exposure is retained.",
+            "independent_confirmation": false
+          },
+          "gaps": [],
+          "scientific_readiness": false,
+          "allocation_reserved": false,
+          "frozen": false
+        }
+      },
+      {
+        "stage": "descriptive_execution",
+        "started_at_utc": "2026-10-29T04:57:52.019509+00:00",
+        "ended_at_utc": "2026-10-29T04:58:47.699806+00:00",
+        "artifact_id": "62cff0ef9503481047add4193a8ab5894d2758ed0d3a2d27b648ad1f73e906dd",
+        "status": "DESCRIPTIVE_EXECUTION",
+        "body_sha256": "943d03f11de51ce7e141651e249c17c44630f0cdc6c06569e71ecc6ee8b6a3ea",
+        "result": {
+          "case_blob": {
+            "sha256": "4aab9cb47aed26f70a34541008b8be2e878f71d1cd7719471f1a274774e3f103",
+            "size": 12220451
+          },
+          "compilation_hash": "9e1fc07648db77381534774dcdb4bf85c87cab247cc3a1fdf5b38629bad9168b",
+          "contrast": {
+            "condition_count": 0,
+            "condition_mean": null,
+            "effect": null,
+            "evaluation_contract": "required-inputs/1",
+            "kind": "conditional-minus-scope-mean/1",
+            "numerical_contract": "bounded-math/1.0",
+            "reason": "no_conditioned_cases",
+            "schema": "required-input-bounded-reference-contrast/1",
+            "scientific_readiness": false,
+            "scope_count": 8626,
+            "scope_mean": {
+              "lower": {
+                "denominator": "22931841383281368639336479403956504625152",
+                "numerator": "45868573717767046029161012366730461894375"
+              },
+              "schema": "bounded-real/1",
+              "upper": {
+                "denominator": "183454731066250949114691835231652037001216",
+                "numerator": "366948589742136368233288098933844737025625"
+              }
+            },
+            "status": "INFORMATION_GAP"
+          },
+          "report": {
+            "base_case_stream_sha256": "a3bcc94b08fc7cf5a34ce83e457bff91dd21b94f3ed5665a7353e338affc92f8",
+            "base_report_hash": "105188ef0dbbce427e2d641ebd79b891de11d801bd53d6f1f1351e7e9972dc19",
+            "diagnostics": {
+              "categories_overlap": true,
+              "expected_cases": 8640,
+              "guard_counts": {
+                "false": 4,
+                "not_evaluated": 0,
+                "true": 8437,
+                "unknown": 199,
+                "unrecognized": 0
+              },
+              "invalidity_interpretation": "REQUIRES_INDEPENDENT_MEANING_REVIEW",
+              "limits": {
+                "case_bytes": 524288,
+                "events_per_case": 2048,
+                "remaining_steps": 5504452
+              },
+              "primitive_steps": 4533258,
+              "processed_cases": 8640,
+              "processing_complete": true,
+              "reason": null,
+              "reason_counts": {
+                "absent_row": 106,
+                "boundary_censoring": 5,
+                "condition_unknown": 203,
+                "input_before_universe": 97,
+                "missing_feature": 0,
+                "missing_value": 99,
+                "missing_warmup": 97,
+                "numeric_domain": 4,
+                "unavailable_data": 0
+              },
+              "schema": "case-diagnostics/2",
+              "scientific_readiness": false,
+              "status": "COMPLETE"
+            },
+            "evaluation_contract": "required-inputs/1",
+            "expected_case_count": 8640,
+            "numerical_contract": "bounded-math/1.0",
+            "outcome_unit": "basis_points",
+            "outcomes_complete": true,
+            "primitive_steps": 4495548,
+            "processed_case_count": 8640,
+            "processing_complete": true,
+            "request": {
+              "as_of": "2023-04-01T00:00:00Z",
+              "candidate_ref": "3d47ed4fee80c482e2828d04dbb29ca85339cac0a489d509c11ee0841e869bcb",
+              "condition_program": {
+                "catalog_hash": "1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db",
+                "expression": {
+                  "arg": {
+                    "left": {
+                      "left": {
+                        "left": {
+                          "left": {
+                            "left": {
+                              "left": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.open@binance-spot-15m-v1"
+                              },
+                              "op": "gt",
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "USDT/ETH",
+                                "value": "0"
+                              }
+                            },
+                            "op": "and",
+                            "right": {
+                              "left": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                              },
+                              "op": "gt",
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "USDT",
+                                "value": "0"
+                              }
+                            }
+                          },
+                          "op": "and",
+                          "right": {
+                            "left": {
+                              "arg": {
+                                "arg": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                                },
+                                "bars": 96,
+                                "op": "trailing_median"
+                              },
+                              "bars": 1,
+                              "op": "lag"
+                            },
+                            "op": "gt",
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "USDT",
+                              "value": "0"
+                            }
+                          }
+                        },
+                        "op": "and",
+                        "right": {
+                          "left": {
+                            "left": {
+                              "left": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.taker_quote_volume@binance-spot-15m-v1"
+                              },
+                              "op": "ge",
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "USDT",
+                                "value": "0"
+                              }
+                            },
+                            "op": "and",
+                            "right": {
+                              "left": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.taker_quote_volume@binance-spot-15m-v1"
+                              },
+                              "op": "le",
+                              "right": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                              }
+                            }
+                          },
+                          "op": "and",
+                          "right": {
+                            "left": {
+                              "left": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.high@binance-spot-15m-v1"
+                              },
+                              "op": "eq",
+                              "right": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.high@binance-spot-15m-v1"
+                              }
+                            },
+                            "op": "and",
+                            "right": {
+                              "left": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.close@binance-spot-15m-v1"
+                              },
+                              "op": "eq",
+                              "right": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.close@binance-spot-15m-v1"
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "op": "and",
+                      "right": {
+                        "left": {
+                          "left": {
+                            "left": {
+                              "left": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.taker_quote_volume@binance-spot-15m-v1"
+                              },
+                              "op": "div",
+                              "right": {
+                                "op": "feature",
+                                "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                              }
+                            },
+                            "op": "ge",
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "ratio",
+                              "value": "0.65"
+                            }
+                          },
+                          "op": "and",
+                          "right": {
+                            "left": {
+                              "op": "feature",
+                              "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                            },
+                            "op": "ge",
+                            "right": {
+                              "left": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "ratio",
+                                "value": "2"
+                              },
+                              "op": "mul",
+                              "right": {
+                                "arg": {
+                                  "arg": {
+                                    "op": "feature",
+                                    "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                                  },
+                                  "bars": 96,
+                                  "op": "trailing_median"
+                                },
+                                "bars": 1,
+                                "op": "lag"
+                              }
+                            }
+                          }
+                        },
+                        "op": "and",
+                        "right": {
+                          "left": {
+                            "left": {
+                              "left": {
+                                "left": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.high@binance-spot-15m-v1"
+                                },
+                                "op": "div",
+                                "right": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.open@binance-spot-15m-v1"
+                                }
+                              },
+                              "op": "sub",
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "ratio",
+                                "value": "1"
+                              }
+                            },
+                            "op": "ge",
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "ratio",
+                              "value": "0.003"
+                            }
+                          },
+                          "op": "and",
+                          "right": {
+                            "left": {
+                              "left": {
+                                "left": {
+                                  "left": {
+                                    "op": "feature",
+                                    "ref": "ETHUSDT.close@binance-spot-15m-v1"
+                                  },
+                                  "op": "div",
+                                  "right": {
+                                    "op": "feature",
+                                    "ref": "ETHUSDT.open@binance-spot-15m-v1"
+                                  }
+                                },
+                                "op": "sub",
+                                "right": {
+                                  "op": "literal",
+                                  "type": "real",
+                                  "unit": "ratio",
+                                  "value": "1"
+                                }
+                              },
+                              "op": "ge",
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "ratio",
+                                "value": "0"
+                              }
+                            },
+                            "op": "and",
+                            "right": {
+                              "left": {
+                                "left": {
+                                  "left": {
+                                    "op": "feature",
+                                    "ref": "ETHUSDT.close@binance-spot-15m-v1"
+                                  },
+                                  "op": "div",
+                                  "right": {
+                                    "op": "feature",
+                                    "ref": "ETHUSDT.open@binance-spot-15m-v1"
+                                  }
+                                },
+                                "op": "sub",
+                                "right": {
+                                  "op": "literal",
+                                  "type": "real",
+                                  "unit": "ratio",
+                                  "value": "1"
+                                }
+                              },
+                              "op": "le",
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "ratio",
+                                "value": "0.0005"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "op": "or",
+                    "right": {
+                      "left": {
+                        "arg": {
+                          "left": {
+                            "left": {
+                              "left": {
+                                "left": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.open@binance-spot-15m-v1"
+                                },
+                                "op": "gt",
+                                "right": {
+                                  "op": "literal",
+                                  "type": "real",
+                                  "unit": "USDT/ETH",
+                                  "value": "0"
+                                }
+                              },
+                              "op": "and",
+                              "right": {
+                                "left": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                                },
+                                "op": "gt",
+                                "right": {
+                                  "op": "literal",
+                                  "type": "real",
+                                  "unit": "USDT",
+                                  "value": "0"
+                                }
+                              }
+                            },
+                            "op": "and",
+                            "right": {
+                              "left": {
+                                "arg": {
+                                  "arg": {
+                                    "op": "feature",
+                                    "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                                  },
+                                  "bars": 96,
+                                  "op": "trailing_median"
+                                },
+                                "bars": 1,
+                                "op": "lag"
+                              },
+                              "op": "gt",
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "USDT",
+                                "value": "0"
+                              }
+                            }
+                          },
+                          "op": "and",
+                          "right": {
+                            "left": {
+                              "left": {
+                                "left": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.taker_quote_volume@binance-spot-15m-v1"
+                                },
+                                "op": "ge",
+                                "right": {
+                                  "op": "literal",
+                                  "type": "real",
+                                  "unit": "USDT",
+                                  "value": "0"
+                                }
+                              },
+                              "op": "and",
+                              "right": {
+                                "left": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.taker_quote_volume@binance-spot-15m-v1"
+                                },
+                                "op": "le",
+                                "right": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.quote_volume@binance-spot-15m-v1"
+                                }
+                              }
+                            },
+                            "op": "and",
+                            "right": {
+                              "left": {
+                                "left": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.high@binance-spot-15m-v1"
+                                },
+                                "op": "eq",
+                                "right": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.high@binance-spot-15m-v1"
+                                }
+                              },
+                              "op": "and",
+                              "right": {
+                                "left": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.close@binance-spot-15m-v1"
+                                },
+                                "op": "eq",
+                                "right": {
+                                  "op": "feature",
+                                  "ref": "ETHUSDT.close@binance-spot-15m-v1"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "op": "not"
+                      },
+                      "op": "and",
+                      "right": {
+                        "op": "literal",
+                        "type": "boolean",
+                        "unit": null,
+                        "value": null
+                      }
+                    }
+                  },
+                  "bars": 1,
+                  "op": "lag"
+                },
+                "schema": "research-ast/2"
+              },
+              "data_snapshot_ref": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+              "horizon_bars": 5,
+              "max_steps": 10000000,
+              "outcome_program": {
+                "catalog_hash": "1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db",
+                "expression": {
+                  "left": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "basis_points",
+                    "value": "10000"
+                  },
+                  "op": "mul",
+                  "right": {
+                    "arg": {
+                      "left": {
+                        "arg": {
+                          "op": "feature",
+                          "ref": "ETHUSDT.close@binance-spot-15m-v1"
+                        },
+                        "bars": 1,
+                        "op": "lag"
+                      },
+                      "op": "div",
+                      "right": {
+                        "arg": {
+                          "op": "feature",
+                          "ref": "ETHUSDT.open@binance-spot-15m-v1"
+                        },
+                        "bars": 4,
+                        "op": "lag"
+                      }
+                    },
+                    "op": "ln"
+                  }
+                },
+                "schema": "research-ast/2"
+              },
+              "outcome_scale": "quantity",
+              "schema": "bounded-reference-case-request/1",
+              "scope_program": {
+                "catalog_hash": "1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db",
+                "expression": {
+                  "op": "literal",
+                  "type": "boolean",
+                  "unit": null,
+                  "value": true
+                },
+                "schema": "research-ast/2"
+              },
+              "universe": {
+                "end": "2023-04-01T00:00:00Z",
+                "instruments": [
+                  "ETHUSDT"
+                ],
+                "start": "2023-01-01T00:00:00Z"
+              }
+            },
+            "resource_reason": null,
+            "review_required": false,
+            "schema": "diagnostic-required-input-bounded-reference-cases/1",
+            "scientific_readiness": false,
+            "state_counts": {
+              "DATA_GAP": 0,
+              "ELIGIBLE": 8626,
+              "NOT_YET_OBSERVED": 0,
+              "OUTCOME_MISSING": 9,
+              "OUTCOME_PENDING": 0,
+              "PARTITION_BOUNDARY": 5,
+              "REVIEW_REQUIRED": 0,
+              "SCOPE_FALSE": 0,
+              "SCOPE_UNKNOWN": 0
+            },
+            "status": "PROCESSED"
+          },
+          "rows": {
+            "sha256": "ed39a972a8fc1a563d60415c9c8859e8d8b6ca9efb6d25290df62b3390b2f705",
+            "size": 7236352
+          },
+          "scientific_readiness": false
+        },
+        "verification": {
+          "environment": {
+            "identity": {
+              "byteorder": "little",
+              "executable_sha256": "fda7026477256845afab371e354c4d512896665f1761939cb5887d0a9dec257a",
+              "implementation": "cpython",
+              "platform": "win32",
+              "runtime_libraries": {
+                "python3.dll": "28a395fb2bda5e71084478abea00da9ab1c1dfeb7c4856c258518bee9cc146f1",
+                "python314.dll": "7ffe3ab11342db03cc18b026f27485c0f74f5bf10f239f1f6573394900596394"
+              },
+              "version": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]"
+            },
+            "isolation": {
+              "ignore_environment": 1,
+              "isolated": 1,
+              "no_bytecode_writes": 1,
+              "no_site": 1
+            },
+            "standard_library": {
+              "DLLs/_bz2.pyd": "082a761a280b08afecf6fb0509050ffbf7e87d1638ca49466b8b3eb4c85009b4",
+              "DLLs/_hashlib.pyd": "0c11671a2c572b4c016be263789f238125419df5711e281acdce8da50d9badda",
+              "DLLs/_lzma.pyd": "2376cd374ce8c2c5ecf573226e563a96975599533f86a5f5eba5bdb705e341bb",
+              "DLLs/_uuid.pyd": "d75d04aa989f8be9666505ac11339416719e38fc0701047388b061b4e576030a",
+              "DLLs/_zstd.pyd": "8f04a54778d4f21202f1bb9cfd5d080c5c5022158016dcaaf5908f7e2350270c",
+              "Lib/__future__.py": "bf11d13b6c9b2b8706be425addf399965738622bb4cc553217be16399c51d51a",
+              "Lib/_collections_abc.py": "65233950af4a4733ec37eb843e7c1c86ee740506871b4d2993047b2644a7f684",
+              "Lib/_colorize.py": "22f264713af7293dc1060967b58b469eacff398866902c2f8927bc1c4ea6b20a",
+              "Lib/_opcode_metadata.py": "f3406718afbe42308d7b343d4353f410837a4da970d5e1346815b7fef70d24f8",
+              "Lib/_py_warnings.py": "c8f80f28cec596bdca5e8385e581064040ed429905e0d39f02251c7e310a5dd5",
+              "Lib/_weakrefset.py": "1240398ecc4a08560bd03eb6ac97a70e8a10541709ad178ccc901c2c39d352c4",
+              "Lib/abc.py": "d51c54428495cd62a5da4360315fa84f692b5aa9db21be986b3e14a83f7cf288",
+              "Lib/annotationlib.py": "402abda8de3320e625f76591a81e0df8354119a6f226f44fd94606ae82c27eac",
+              "Lib/argparse.py": "89a2e3e9e8a8da34949260854e7b791c6e79fa7d96d949f2f22e2d6aa759422c",
+              "Lib/ast.py": "897e3e83094135d3eb4b30a32df40873d928db152686648481896d23140f93e6",
+              "Lib/bisect.py": "085dad54dd1a00d68aaa5361031c0c4bff5efbd281d1a02ddc8f317c519e540b",
+              "Lib/bz2.py": "733b22c0a611ca455bd4523be80ab529f2672513a229820e3ad1a2eb8c079cc3",
+              "Lib/codecs.py": "1a9c2322d454fdd4d733107c710eef94335be47c3bffd8d9eea07fbaefa5148d",
+              "Lib/codeop.py": "2a18e2ebcf8da7507b8064956eca9c305289b0f18b61f2d6b1bd22c474b67b45",
+              "Lib/collections/__init__.py": "f52c917fbab8e0a695de27a389776a6a61e7df1831a9de56e5e2a63176a1992f",
+              "Lib/compression/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "Lib/compression/_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "Lib/compression/_common/_streams.py": "4b1b6f94ce0092c359fef5d474066bf073047daaeeab3b790a65e17d50f48899",
+              "Lib/compression/zstd/__init__.py": "6e1a4483dd9e05628a7767955cee97ae947639f586f2d925dd821b2dcb863500",
+              "Lib/compression/zstd/_zstdfile.py": "ecfeb88f461916d9c2d19d058e4db5eb06173729889d47b51ec992e7fb2f88b5",
+              "Lib/contextlib.py": "ca6071e379d65e1ed13fea5206fb4cee35fdb6b3063fa4a47254acf10e42b764",
+              "Lib/copy.py": "d604d898e2eb041d0aa27123004d2e779cb36e2d05f0cfd0ba1cf677d65891d6",
+              "Lib/copyreg.py": "b4fc88bc9f9ac782175728099b309f9818e29be635b97104f80dea52f8c95316",
+              "Lib/dataclasses.py": "9e247c9f3b6f09c9f4684368487f54efbe573da8779da601a169ec8989bfc9e1",
+              "Lib/datetime.py": "8262c677654011417ae08751ae9c38edc8ca802d21c65232452529248a17aae9",
+              "Lib/difflib.py": "5f22f95ed999bd6df6417e5e2ac8e05facf00850c1539d9d955ed625bddfa55e",
+              "Lib/dis.py": "c07e4facca71011cc87faad0c8ef40c039da81ba0752ae398046b41b256d18d3",
+              "Lib/encodings/__init__.py": "d65eff616f93902031e101cb70a7f20f8f687a29e30e97fe0dec279fe8e8eaa1",
+              "Lib/encodings/_win_cp_codecs.py": "344faac7c9b1702d987233c500f5793f1d2729b7722578ceb344747078883b8e",
+              "Lib/encodings/aliases.py": "078e508591512436ec170f790ddaa8bfd36649b47eb10cdf3873991435cc4373",
+              "Lib/encodings/cp1252.py": "7acb7b80c29d9ffda0fe79540509439537216df3a259973d54e1fb23c34e7519",
+              "Lib/encodings/utf_8.py": "9c54c7db8ce0722ca4ddb5f45d4e170357e37991afb3fcdc091721bf6c09257e",
+              "Lib/enum.py": "7f8c2c07e86b1408b60f26dda875dc2d59a0c7357fba54f7c64b9eed65959e20",
+              "Lib/fnmatch.py": "52a65ca47cb1d6bf5b664f39d2067ecf43af468fff19443a9bae7bc79905ef21",
+              "Lib/fractions.py": "2fe5128f9198e3a09e223cfc10dde3b21b217e1bd893d55364dc313f1924d59b",
+              "Lib/functools.py": "169c8a9e3ff35cf6699500dcf1b46be093f6618178b71895c14ea07382abd897",
+              "Lib/genericpath.py": "ad628dc3bb5c5f684a05f6a5322850e3875a65f32db9c865ee874d8b994e55a3",
+              "Lib/gettext.py": "bd036386f6bcddb30ce2547fdab057ac04ccd8d76238aeb47c4ad78e53f998e8",
+              "Lib/glob.py": "2e2016be69c93514aded75ebcfa5a30f1adc72e96e9ca156eb8d223081b1c805",
+              "Lib/hashlib.py": "271b00a30d27c3cdd99b7f70962680f8455d3057b3c103f028e2da31141b91ee",
+              "Lib/heapq.py": "827843053934cdb09ab4f4093ecdf494d09266153e43349c846828698d7b62e3",
+              "Lib/importlib/__init__.py": "b9db2f9b696913507da9fd83ecfc1f73cf6215d4c5a5cf4b4848688a8c710dc0",
+              "Lib/importlib/_bootstrap.py": "cfea9da473529d5388cc4e989bf46f94e2404c5ba3a1f7934ae68eb01d6194e4",
+              "Lib/importlib/_bootstrap_external.py": "fac54dc5a217501ddf1fa8fc18106ed20875c5a71e20598103b994f352e272a4",
+              "Lib/importlib/machinery.py": "dbf60847b2b4e64142bbdda1d3bc06ebcedf07dcf9060367254192741ff5c3e6",
+              "Lib/inspect.py": "763f020db45c764e04e21f49e43e2df2a3f2fe3d85cee50b198a66cadc5e28cc",
+              "Lib/io.py": "f1e213175399ef7d480379344c36fc80de1732f285834eb14c8ef9ebdfcb4116",
+              "Lib/json/__init__.py": "0439e6546415d4147396afac324beadb7a8dc2c1e2391dcb541fb34c83986d8f",
+              "Lib/json/decoder.py": "604bd92a9459f42143208068f0f321d816a81bdb920c7a3d7fb509bb06833ecc",
+              "Lib/json/encoder.py": "498ba55bf9907208e58426f98dd72e2756417ab5478b141284abd373863e621c",
+              "Lib/json/scanner.py": "b2577f9db9f69a0a27f251776349238b17b8b214a01128e7477b0f7d8e24a186",
+              "Lib/keyword.py": "1f28f509383273238ad86eda04a96343fa0dc10eeaf3189439959d75cdac0a0b",
+              "Lib/linecache.py": "c56e91534c9a93a1661c36c87ab938d0a205d0b0ddcda8a984b59b1861931071",
+              "Lib/locale.py": "b51d687eb9ca52e21815352e17214f9a8d2dce7278181e99afeff9c668caee41",
+              "Lib/lzma.py": "11a62598bf2434807173253ad4af0604e7d54ad06626d2d66828da7255b9756e",
+              "Lib/ntpath.py": "5964199f4d108700723d503faf310d823747dd30c94360f3ab433d3c00cf50b3",
+              "Lib/numbers.py": "9ea88bd701713ada94855ff63d18fee1f9ecc3c2000c6292002da04c96ee59cb",
+              "Lib/opcode.py": "d128490c07322e0e5dc686faa83db3d4553faf03d68eda547d33554fd2d4ca3f",
+              "Lib/operator.py": "eb4bd627ac1a6ecd480cdaa7521322095506dc0cbad4106e0a272a5195b04e10",
+              "Lib/os.py": "8b9a446b736524e5838cd1d84803885b579c1c13c4063c322a82dcc3f3791258",
+              "Lib/pathlib/__init__.py": "208546aa566ca8df4b8e1259f30209c0f803c3f920e6d080ae1b10d53d05bd72",
+              "Lib/pathlib/_os.py": "6d0d7b691069830cc46a971b8c45ee8a8f0a5340ab981b5c15183054cc9a77c9",
+              "Lib/posixpath.py": "eb4b02ede56f0e13d06f7a9c6ae35c4adb55469e06e663df67b1f60950efe97c",
+              "Lib/pprint.py": "c29eb77af95120a7e9b107b6dc3cf093fcbe37b22aa27441cf58cacbeb56904e",
+              "Lib/random.py": "d4086a8430bb46d15a79fb4003565ca9d1ed454e7c535b8afe06cbc4fec26837",
+              "Lib/re/__init__.py": "5e285750c13fdf690a100379ec133d2038bb0f6c6e1b51206caf94e41288440b",
+              "Lib/re/_casefix.py": "b0dee234e5f8096fc9c1b035ec52d0b1b50cc1f3aea20b360b8be902e53ac752",
+              "Lib/re/_compiler.py": "2adaca25db0cfe86285f30b4575677b6fca46bada911c29e29801414c6148289",
+              "Lib/re/_constants.py": "4e6db98c59fec998d4145747536b3447c01d36e6f6e6bed18eb32682d81b3cf2",
+              "Lib/re/_parser.py": "015f98b5d25dccd79209deecd4499648b37e8d4d6bde8dadc9a9e613cb7cc5bf",
+              "Lib/reprlib.py": "98924232fa398cf72a7820722ee37606b271be663612e79356ecf2bf14484b9c",
+              "Lib/shutil.py": "4946cbf89c6f79c37aa97b70e89ad6a2b203a9380be5a54767161a6d85670f74",
+              "Lib/signal.py": "0b7e3d3d39a120142dbf4875d7d79579cad8fee662add30c2375a797f0d2386e",
+              "Lib/stat.py": "683d9b3689acd9f41dcd7095f85c0e91d426e3078db32231501d75a09acb8385",
+              "Lib/subprocess.py": "0f01b9a619bd2e8dd24c59261b6d06dfd0bf25585a09bb2094263b92fb6fb29f",
+              "Lib/tempfile.py": "6f1189b884e2cc3b06d3c8796cea60569934a43c51798204e8699b7e90b4ea0d",
+              "Lib/textwrap.py": "549a85230907b4978570e8abbb546c3ed48b7bc553ed5433b5ab941a21e5d7ea",
+              "Lib/threading.py": "f4619610f468ed5d14329ac7a4cbc4b7c9e257a4e9a7cf1bc1f4f1e28ffa4f31",
+              "Lib/token.py": "0093ebf0af835316d68f8eba5a7ae9da24c5cd3b84b2a459c806237b95570e1a",
+              "Lib/tokenize.py": "8249cdd9df4c5d4a9964787678bc626303342bed067fe7abc75d0139aa6f1d69",
+              "Lib/traceback.py": "4877bd69ef39b6e887f9a35b8ed773f56f781cfd1cfafeb8acc7622ea04065d7",
+              "Lib/types.py": "8b792e39559e0329a7104f95281eec7850b7cea8271ddad5a1cdf40f509c244a",
+              "Lib/unittest/__init__.py": "f6a8ed4b51a29dd660e4689311e785d2dcfe15793f58c0a67ed8d21427d4db81",
+              "Lib/unittest/case.py": "6c233f91c98b16899cb09801178c2313f48d58dce66a36d2d144facedb6bdbc4",
+              "Lib/unittest/loader.py": "a0c6e71654f156420369d73fbf4f8a0d38ef78278c1cacd2150a952c8d49836c",
+              "Lib/unittest/main.py": "58faa95ab82f8714e17b5686f2591a6a5d336a35a8e9f2968404782e7bc82b27",
+              "Lib/unittest/result.py": "a3e2fc7d81e336083ebc33e148e29a41d679e5275369b134132370a76578ea1d",
+              "Lib/unittest/runner.py": "c1ad778381995aa5d9a4e6935a2eb570975f1506cb69a66851e904906500c4ff",
+              "Lib/unittest/signals.py": "0ed7cf1cbe0cab769746b3b344f65a659d912c56cd63d1a4280f9b09a77b778f",
+              "Lib/unittest/suite.py": "26acd439bc5828fcba41c1dc7d2495ce05ed4f9073375e7fbfac05fafdd82e64",
+              "Lib/unittest/util.py": "d1218413dca8c641db891ed05fab47f02404320bea183e9063e511d3660f61db",
+              "Lib/uuid.py": "a52bb063cfdda51ce75ff222641d00f5af59189b24cfc42042a3603bd12794c1",
+              "Lib/warnings.py": "ac8acfa4cacdbc548c5029fc7dbde4dca4d4d76868dd4b6e86c172e333c54a4e",
+              "Lib/weakref.py": "02aeb820a71d78e65d602500368549905e25f273b896f65c61c716d74171a7e1",
+              "Lib/zipimport.py": "33afcd0f7ce1ddd4a76b6efd94f965392490f31a665d005e16fed7f7993ba840"
+            }
+          },
+          "footprint": {
+            "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+            "docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md": "6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f",
+            "tests/fixtures/reference_expression_cases.json": "df14f72459f791c3669236efa9b13d8a56e4c755ccdeb6f27f7b29375ac277b1",
+            "tests/fixtures/reference_outcome_cases.json": "e36ee6997ef7fb9f09e11156d4ed3d3c44ab6faea9caa7a7db44ea7c9f2e5817",
+            "tests/test_bounded_math.py": "18ef315b989c908fb3d48f001a19fb7ba678db597d4cce120ed0b28a1af15392",
+            "tests/test_bounded_outcomes.py": "45448d44f7c4cafe2d6ce1c053bb0fb1915bbecda0216862c80c32c24506de94",
+            "tests/test_case_diagnostics.py": "423b1ae4449a9098dc8ba4d671f42d90560ec3dd9649ad8b5f106a7d36a6347a",
+            "tests/test_expressions.py": "a927ef0a44c0f81945ffa6e0f5f9858ac526838da5d01d80f6c04f641d52ba02",
+            "tests/test_outcomes.py": "2ecaa33fa2b76792ed6df26924d6f43280138123ed93789d88108437b0237384",
+            "tests/test_required_inputs.py": "aaa9ce55cb52101811b48624ddcd42957ff5050ea53735c407a96194e32a8fc4",
+            "trading_researcher/CASE_DIAGNOSTICS.md": "54917962e900cc637cbe8e78b193f82842929078d65ca5e243f74a7dc855eed5",
+            "trading_researcher/EXPRESSIONS.md": "522a810ec667ba2e4cdbf223d0446f196349484bb5119deeaf121d27bcfb5962",
+            "trading_researcher/OUTCOMES.md": "633f06660ca6199c6e74283b783ecfc336ffce9acf058da4272c60e7699fac0a",
+            "trading_researcher/REQUIRED_INPUTS.md": "2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c",
+            "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+            "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+            "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+            "trading_researcher/bounded_outcomes.py": "82c5003723b0482884f07860d7c43e4109e70e7e28588a9631187b7b1dfdce22",
+            "trading_researcher/case_diagnostics.py": "85fb071c30d2474ca512c1918317c9eebf18aaa31924a607e4090db727c1d7be",
+            "trading_researcher/certification.py": "a1b554dbb8c42fcc7751f285f4a93064e05cb078ac96e70c90599946262c0ca9",
+            "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+            "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+            "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+            "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+            "trading_researcher/required_inputs.py": "0b00db49cc9016df46730d5f6974d69725bb86febd25e3610d1f0931ea0ca45b"
+          },
+          "mode": "verify",
+          "request_hash": "2d79ddaa054313a3f39d18deeb3d2ae202f2d8a4548e61b2185e0902f15eda15",
+          "result": {
+            "case_blob": {
+              "sha256": "4aab9cb47aed26f70a34541008b8be2e878f71d1cd7719471f1a274774e3f103",
+              "size": 12220451
+            },
+            "checked_cases": 8640,
+            "compilation_hash": "9e1fc07648db77381534774dcdb4bf85c87cab247cc3a1fdf5b38629bad9168b",
+            "result_hash": "488167e4213ec35ba200698d031d3ff85ee1abcea5217156b1e6d81414dbe584",
+            "schema": "bound-case-verification/1",
+            "scientific_readiness": false
+          }
+        }
+      }
+    ],
+    "decision": {
+      "schema": "deterministic-continuation-decision/1",
+      "recorded_at_utc": "2026-10-29T04:57:44.054591+00:00",
+      "status": "INDEPENDENT_PROVENANCE_CHECKS_PASSED",
+      "source_sha256": {
+        "trading_researcher/data_use.py": "74396b216d08bdee2bcd45864ffb753113d7ca8f55c3fce1874d3eba97d0bbd6",
+        "trading_researcher/DATA_USE.md": "09bfdd0a103a35c96eafc0670b29dac55cc9e6058afa7f449c28bfc5bbc9b5e6",
+        "tests/test_feature_release_knowledge.py": "68d3294c6eb008fe8bc3ab57bfc366700bb09581c269ed4280bd983842aacb6b"
+      },
+      "reason": "Model formalization/review and compilation succeeded. Correct only the administrative grant classification and reassess the same compiled record; do not reinterpret the idea or use another model call.",
+      "prior_data_use_id": "42e390808bb4975e32cba16f854595c12b7d2ebd04c014ef9fc0c81545af1a84",
+      "compiled_id": "5278827e87bb99d87e6173fc0c129973d38516b28d5ddde1c1a94c5392e4dbe3",
+      "limits": {
+        "new_model_calls": 0,
+        "new_provider_cost_nano": 0,
+        "wall_seconds": 600,
+        "primitive_steps": 10000000
+      },
+      "stop": "Retain any new gap without retry or source/candidate modification; independent original-formula audit required after computation.",
+      "scientific_readiness": false,
+      "protected_outcomes_allowed": false
+    }
+  },
+  "interpretation": {
+    "classification": "COMPUTED_UNCALIBRATED",
+    "condition_counts": {
+      "true": 0,
+      "false": 8437,
+      "unknown": 203
+    },
+    "observed_outcomes": 8626,
+    "missing_outcomes": 14,
+    "contrast": "UNDEFINED_NO_CONDITION_TRUE_CASES",
+    "warranted_conclusion": "No fully observed condition-true event exists for this exact original idea and authorized quarter; its conditional effect cannot be estimated. This is a faithful retained descriptive information gap, not evidence of no effect or economic usefulness.",
+    "stop": "The original idea is retained with INFORMATION_GAP/no_conditioned_cases. Do not loosen thresholds or change its dates after seeing this result. Any later descendant must retain the original and inherited exposure.",
+    "limits": "No scientific classification, N_min, calibrated inference, protected access, full-process validity, mixed-provider evidence, policy test or capital authority."
+  },
+  "updated_at_utc": "2026-10-29T05:00:52.246198+00:00"
+}

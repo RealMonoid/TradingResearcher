@@ -1,0 +1,96 @@
+{
+  "schema": "amibroker-independent-synthetic-expectations/1",
+  "profile": "synthetic-long-flat/1",
+  "scope": "Fixed invented accounting fixtures, not a market hypothesis or empirical policy result.",
+  "timestamp_basis": "UTC bar-open labels starting 2023-01-01T00:00:00Z at 900-second intervals. Signals at each bar close fill at the next index open only.",
+  "row_basis": "Cash after exits and ranked entries; equity equals that cash plus integer holdings marked at this bar close. Positions explicitly include every case symbol, including zeros.",
+  "cost_basis": "Synthetic commission on actual adverse fill notional, separately at entry and exit; buy=open*(1+(spread+slippage+impact)/10000), sell=open*(1-(spread+slippage+impact)/10000). No fees for rejected or out-of-range signals.",
+  "tolerances": {
+    "currency_absolute": "0.001",
+    "price_absolute": "0.00001",
+    "timestamps_symbols_indices_quantities_counts": "exact"
+  },
+  "cases": {
+    "timing": {
+      "rows": [
+        {"timestamp":"2023-01-01T00:00:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T00:15:00Z","cash":"780","equity":"1004","positions":{"TRF_A":2}},
+        {"timestamp":"2023-01-01T00:30:00Z","cash":"780","equity":"1016","positions":{"TRF_A":2}},
+        {"timestamp":"2023-01-01T00:45:00Z","cash":"1040","equity":"1040","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:00:00Z","cash":"1040","equity":"1040","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:15:00Z","cash":"1040","equity":"1040","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:30:00Z","cash":"1040","equity":"1040","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:45:00Z","cash":"1040","equity":"1040","positions":{"TRF_A":0}}
+      ],
+      "trades": [
+        {"symbol":"TRF_A","entry_index":1,"exit_index":3,"quantity":2,"entry_price":"110","exit_price":"130","entry_fee":"0","exit_fee":"0","pnl":"40"}
+      ]
+    },
+    "costs": {
+      "rows": [
+        {"timestamp":"2023-01-01T00:00:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T00:15:00Z","cash":"779.55978","equity":"1003.55978","positions":{"TRF_A":2}},
+        {"timestamp":"2023-01-01T00:30:00Z","cash":"779.55978","equity":"1015.55978","positions":{"TRF_A":2}},
+        {"timestamp":"2023-01-01T00:45:00Z","cash":"1039.04004","equity":"1039.04004","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:00:00Z","cash":"1039.04004","equity":"1039.04004","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:15:00Z","cash":"1039.04004","equity":"1039.04004","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:30:00Z","cash":"1039.04004","equity":"1039.04004","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:45:00Z","cash":"1039.04004","equity":"1039.04004","positions":{"TRF_A":0}}
+      ],
+      "trades": [
+        {"symbol":"TRF_A","entry_index":1,"exit_index":3,"quantity":2,"entry_price":"110.11","exit_price":"129.87","entry_fee":"0.22022","exit_fee":"0.25974","pnl":"39.04004"}
+      ]
+    },
+    "shared_cash": {
+      "rows": [
+        {"timestamp":"2023-01-01T00:00:00Z","cash":"150","equity":"150","positions":{"TRF_A":0,"TRF_B":0}},
+        {"timestamp":"2023-01-01T00:15:00Z","cash":"40","equity":"152","positions":{"TRF_A":0,"TRF_B":2}},
+        {"timestamp":"2023-01-01T00:30:00Z","cash":"40","equity":"158","positions":{"TRF_A":0,"TRF_B":2}},
+        {"timestamp":"2023-01-01T00:45:00Z","cash":"170","equity":"170","positions":{"TRF_A":0,"TRF_B":0}},
+        {"timestamp":"2023-01-01T01:00:00Z","cash":"170","equity":"170","positions":{"TRF_A":0,"TRF_B":0}},
+        {"timestamp":"2023-01-01T01:15:00Z","cash":"170","equity":"170","positions":{"TRF_A":0,"TRF_B":0}},
+        {"timestamp":"2023-01-01T01:30:00Z","cash":"170","equity":"170","positions":{"TRF_A":0,"TRF_B":0}},
+        {"timestamp":"2023-01-01T01:45:00Z","cash":"170","equity":"170","positions":{"TRF_A":0,"TRF_B":0}}
+      ],
+      "trades": [
+        {"symbol":"TRF_B","entry_index":1,"exit_index":3,"quantity":2,"entry_price":"55","exit_price":"65","entry_fee":"0","exit_fee":"0","pnl":"20"}
+      ]
+    },
+    "exit_then_entry": {
+      "rows": [
+        {"timestamp":"2023-01-01T00:00:00Z","cash":"150","equity":"150","positions":{"TRF_A":0,"TRF_B":0}},
+        {"timestamp":"2023-01-01T00:15:00Z","cash":"40","equity":"152","positions":{"TRF_A":1,"TRF_B":0}},
+        {"timestamp":"2023-01-01T00:30:00Z","cash":"40","equity":"158","positions":{"TRF_A":1,"TRF_B":0}},
+        {"timestamp":"2023-01-01T00:45:00Z","cash":"40","equity":"172","positions":{"TRF_A":0,"TRF_B":2}},
+        {"timestamp":"2023-01-01T01:00:00Z","cash":"40","equity":"178","positions":{"TRF_A":0,"TRF_B":2}},
+        {"timestamp":"2023-01-01T01:15:00Z","cash":"190","equity":"190","positions":{"TRF_A":0,"TRF_B":0}},
+        {"timestamp":"2023-01-01T01:30:00Z","cash":"190","equity":"190","positions":{"TRF_A":0,"TRF_B":0}},
+        {"timestamp":"2023-01-01T01:45:00Z","cash":"190","equity":"190","positions":{"TRF_A":0,"TRF_B":0}}
+      ],
+      "trades": [
+        {"symbol":"TRF_A","entry_index":1,"exit_index":3,"quantity":1,"entry_price":"110","exit_price":"130","entry_fee":"0","exit_fee":"0","pnl":"20"},
+        {"symbol":"TRF_B","entry_index":3,"exit_index":5,"quantity":2,"entry_price":"65","exit_price":"75","entry_fee":"0","exit_fee":"0","pnl":"20"}
+      ]
+    },
+    "last_signal": {
+      "rows": [
+        {"timestamp":"2023-01-01T00:00:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T00:15:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T00:30:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T00:45:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:00:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:15:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:30:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}},
+        {"timestamp":"2023-01-01T01:45:00Z","cash":"1000","equity":"1000","positions":{"TRF_A":0}}
+      ],
+      "trades": []
+    }
+  },
+  "limitations": [
+    "All amounts and costs are invented fixtures. Zero costs are explicitly synthetic, never a default for unknown real costs.",
+    "Native conformance, licensing, unattended behavior and installed settings remain unverified until the actual native run is separately completed.",
+    "No stop, short, leverage, partial sizing, same-symbol same-bar reentry, optimized rank, intrabar execution or market-policy semantics are admitted.",
+    "The declared tolerance accommodates native numerical storage/export only; it does not quantify execution or statistical uncertainty."
+  ],
+  "scientific_readiness": false
+}

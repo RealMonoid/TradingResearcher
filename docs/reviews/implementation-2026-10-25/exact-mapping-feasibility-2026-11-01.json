@@ -1,0 +1,249 @@
+{
+  "schema": "inactive-exact-mapping-feasibility/1",
+  "status": "PASS_SCOPED_INACTIVE_MAPPING_MEASURED_DIAGNOSTIC_GAP_PRODUCTION_UNCHANGED",
+  "at_utc": "2026-11-01T15:28:24.910723+00:00",
+  "python_version": "3.14.2",
+  "purpose": "Locate the measured fixed-quarter bottleneck without changing original meaning, caps, certified source or scientific authority.",
+  "authority": "D097 existing AST4 operators only; inactive engineering representation, never an accepted original-A repair.",
+  "previous_goal_turn_audit": {
+    "classification": "NO_PROGRESS_GATE_ONLY_RECHECK",
+    "reason": "The preceding gate-only validation repeated existing evidence without changing the next action. Concrete mapping and full-quarter measurement resumed here."
+  },
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_mapping*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_endpoint_domain_guards_keep_exact_valid_outcomes_and_required_coordinates (test_exact_mapping.ExactMappingTests.test_endpoint_domain_guards_keep_exact_valid_outcomes_and_required_coordinates) ... ok\ntest_full_condition_matches_literal_original_with_missing_invalid_and_late (test_exact_mapping.ExactMappingTests.test_full_condition_matches_literal_original_with_missing_invalid_and_late) ... ok\ntest_small_complete_case_projection_preserves_values_but_exposes_guard_gap (test_exact_mapping.ExactMappingTests.test_small_complete_case_projection_preserves_values_but_exposes_guard_gap) ... ok\ntest_strict_guard_all_nine_values_and_original_source_preservation (test_exact_mapping.ExactMappingTests.test_strict_guard_all_nine_values_and_original_source_preservation) ... ok\ntest_all_nine_strict_guard_values_and_false_unknown_counterexample (test_exact_mapping_review.ExactMappingReview.test_all_nine_strict_guard_values_and_false_unknown_counterexample) ... ok\ntest_complete_diagnostics_retains_explicit_unrecognized_guard_gap (test_exact_mapping_review.ExactMappingReview.test_complete_diagnostics_retains_explicit_unrecognized_guard_gap) ... ok\ntest_concrete_tree_cost_and_conditional_two_pass_lower_bound (test_exact_mapping_review.ExactMappingReview.test_concrete_tree_cost_and_conditional_two_pass_lower_bound) ... ok\ntest_endpoint_missingness_availability_and_required_coordinates (test_exact_mapping_review.ExactMappingReview.test_endpoint_missingness_availability_and_required_coordinates) ... ok\ntest_original_condition_domains_equalities_and_unknown_dominance (test_exact_mapping_review.ExactMappingReview.test_original_condition_domains_equalities_and_unknown_dominance) ... ok\ntest_sign_domain_guard_preserves_8192_intermediate_bounds (test_exact_mapping_review.ExactMappingReview.test_sign_domain_guard_preserves_8192_intermediate_bounds) ... ok\ntest_tracing_missing_mean_has_different_work_and_resource_prefix (test_exact_mapping_review.ExactMappingReview.test_tracing_missing_mean_has_different_work_and_resource_prefix) ... ok\ntest_valid_outcome_enclosures_and_endpoint_domains (test_exact_mapping_review.ExactMappingReview.test_valid_outcome_enclosures_and_endpoint_domains) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 1.663s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_exact_compositions*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_complete_condition_random_histories_against_original_logs (test_exact_compositions.ExactCompositionShapeTests.test_complete_condition_random_histories_against_original_logs) ... ok\ntest_exact_log_range_equality_and_guard_trace (test_exact_compositions.ExactCompositionShapeTests.test_exact_log_range_equality_and_guard_trace) ... ok\ntest_original_absolute_outcome_and_each_endpoint_domain (test_exact_compositions.ExactCompositionShapeTests.test_original_absolute_outcome_and_each_endpoint_domain) ... ok\ntest_original_complete_condition_fixed_cases_and_unknown_dominance (test_exact_compositions.ExactCompositionShapeTests.test_original_complete_condition_fixed_cases_and_unknown_dominance) ... ok\ntest_abs_enclosure_nonnegative_nonpositive_crossing_and_zero (test_exact_compositions_review.ExactCompositionReview.test_abs_enclosure_nonnegative_nonpositive_crossing_and_zero) ... ok\ntest_abs_preserves_rational_units_and_missingness_and_is_outcome_only (test_exact_compositions_review.ExactCompositionReview.test_abs_preserves_rational_units_and_missingness_and_is_outcome_only) ... ok\ntest_absolute_log_contains_independent_decimal_reference_in_basis_points (test_exact_compositions_review.ExactCompositionReview.test_absolute_log_contains_independent_decimal_reference_in_basis_points) ... ok\ntest_all_full_kleene_truth_table_and_no_implicit_unknown_override (test_exact_compositions_review.ExactCompositionReview.test_all_full_kleene_truth_table_and_no_implicit_unknown_override) ... ok\ntest_causal_exact_slots_and_no_cross_instrument_substitution (test_exact_compositions_review.ExactCompositionReview.test_causal_exact_slots_and_no_cross_instrument_substitution) ... ok\ntest_describe_exposes_all_new_parameter_origins_without_changing_inputs (test_exact_compositions_review.ExactCompositionReview.test_describe_exposes_all_new_parameter_origins_without_changing_inputs) ... ok\ntest_exact_operator_envelopes_reject_extra_or_missing_fields (test_exact_compositions_review.ExactCompositionReview.test_exact_operator_envelopes_reject_extra_or_missing_fields) ... ok\ntest_exact_power_fixed_and_independent_random_rational_oracle (test_exact_compositions_review.ExactCompositionReview.test_exact_power_fixed_and_independent_random_rational_oracle) ... ok\ntest_late_false_window_stays_false_until_explicit_outer_guard (test_exact_compositions_review.ExactCompositionReview.test_late_false_window_stays_false_until_explicit_outer_guard) ... ok\ntest_log_restrictions_survive_abs_and_nested_new_operators (test_exact_compositions_review.ExactCompositionReview.test_log_restrictions_survive_abs_and_nested_new_operators) ... ok\ntest_new_operators_need_ast4_and_legacy_engines_reject_them (test_exact_compositions_review.ExactCompositionReview.test_new_operators_need_ast4_and_legacy_engines_reject_them) ... ok\ntest_no_early_zero_unknown_or_false_hides_later_resource_failure (test_exact_compositions_review.ExactCompositionReview.test_no_early_zero_unknown_or_false_hides_later_resource_failure) ... ok\ntest_node_and_depth_ceilings_count_new_nodes_and_both_branches (test_exact_compositions_review.ExactCompositionReview.test_node_and_depth_ceilings_count_new_nodes_and_both_branches) ... ok\ntest_nonstring_operator_tags_retain_typed_language_rejection (test_exact_compositions_review.ExactCompositionReview.test_nonstring_operator_tags_retain_typed_language_rejection) ... ok\ntest_old_ast1_and_ast2_results_remain_identical (test_exact_compositions_review.ExactCompositionReview.test_old_ast1_and_ast2_results_remain_identical) ... ok\ntest_only_required_features_need_rows_not_window_or_lag_containers (test_exact_compositions_review.ExactCompositionReview.test_only_required_features_need_rows_not_window_or_lag_containers) ... ok\ntest_power_exact_step_boundaries_and_recovery (test_exact_compositions_review.ExactCompositionReview.test_power_exact_step_boundaries_and_recovery) ... ok\ntest_power_numeric_envelope_boundary_for_numerator_and_denominator (test_exact_compositions_review.ExactCompositionReview.test_power_numeric_envelope_boundary_for_numerator_and_denominator) ... ok\ntest_power_parameter_and_operand_rejections (test_exact_compositions_review.ExactCompositionReview.test_power_parameter_and_operand_rejections) ... ok\ntest_product_cannot_reorder_away_an_overlarge_intermediate (test_exact_compositions_review.ExactCompositionReview.test_product_cannot_reorder_away_an_overlarge_intermediate) ... ok\ntest_product_fixed_and_random_fraction_oracle (test_exact_compositions_review.ExactCompositionReview.test_product_fixed_and_random_fraction_oracle) ... ok\ntest_window_parameters_types_units_and_bounded_operand_rejections (test_exact_compositions_review.ExactCompositionReview.test_window_parameters_types_units_and_bounded_operand_rejections) ... ok\ntest_window_step_charges_include_offsets_and_known_multiplications (test_exact_compositions_review.ExactCompositionReview.test_window_step_charges_include_offsets_and_known_multiplications) ... ok\ntest_windows_trace_every_dependency_in_oldest_first_order (test_exact_compositions_review.ExactCompositionReview.test_windows_trace_every_dependency_in_oldest_first_order) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 0.965s\n\nOK\n"
+    }
+  ],
+  "top_level_methods": 40,
+  "new_methods": 12,
+  "independently_authored_new_methods": 8,
+  "legacy_methods": 28,
+  "source_sha256": {
+    "tests/exact_mapping_support.py": "a3e70c701f54ca7ca671c2d838fc06bb70b8a91f8b9824febe78b2932d20c252",
+    "tests/test_exact_mapping.py": "3c8a21b0d7adf9350fcde26478783a1a5f1e3d2fa984a4d9ee0f0b39693813ff",
+    "tests/test_exact_mapping_review.py": "97a5c67ef2bc67872075030a2a6ec2d26a000cd52f5941c6d787c372adad9bce"
+  },
+  "unchanged_native_qualification_source_sha256": {
+    "trading_researcher/exact_execution.py": "f563d2dcb78d450e7f28eece1cde91b543acd99ec3830f1b22630539fea8070d",
+    "trading_researcher/exact_composition.py": "f36fb1329bee772e6ecec32774123c1c35eb17464544f6ecca0634d6942f480d",
+    "trading_researcher/exact_meaning.py": "eaa83aedc3d0232512e4ca85ea80456a5cd0c79bc1a2c478137138f86ce933e0",
+    "trading_researcher/exact_revocations.py": "287ce9b6c4ec21780858dbb676120711b60017d5b1e232264d25ccd51b1b8123",
+    "trading_researcher/EXACT_EXECUTION.md": "c2dd28113c4cc1e1ed7c18ed9f3f35530eec46222b08cd74e0ab105a68a7c506",
+    "tests/exact_execution_support.py": "383ca281cd19e7f19fcd66f6f56651ac26473e0ce9975cf38f711f8b964ec639",
+    "tests/test_exact_execution.py": "68050119bee6e0453faf482b2d8a3c0284970e8ebe4fef7d68b65dc29ed8cbd9",
+    "tests/test_exact_execution_review.py": "2798845e2376be3dccc8728f01747aaadd99cfbba8902e9e0b32702f42fe326f"
+  },
+  "representation": {
+    "condition": "G(V,P) = eq(or(V, Boolean unknown), P); eager V-first order, strict Boolean equality.",
+    "proof": "V OR unknown is True exactly when V is True; strict equality returns P then, otherwise unknown. All nine truth values tested.",
+    "endpoint_guards": "Retain both zero multipliers, replacing ln(C/unit_price) with ln(C/abs(C)); positive C yields exact ln(1)=0, nonpositive/missing/unavailable C remains missing.",
+    "condition_nodes": {
+      "old": 130,
+      "new": 81
+    },
+    "outcome_nodes": {
+      "old": 25,
+      "new": 29
+    },
+    "fixed_qualifying_condition_steps": {
+      "old": 1454,
+      "new": 844
+    },
+    "outcome_steps_unequal_positive": {
+      "old": 412,
+      "new": 160
+    },
+    "outcome_steps_equal_positive": {
+      "old": 284,
+      "new": 32
+    },
+    "qualification": "No universal speedup: some invalid pairs cost four more steps. Raw keys/time domains are preserved; trace multiplicities/paths and some primitive reasons can differ."
+  },
+  "specific_two_pass_condition_lower_bound": {
+    "full_valid_cases_after_warmup": 8607,
+    "condition_steps_per_case": 844,
+    "passes": 2,
+    "steps": 14528616,
+    "cap": 10000000,
+    "qualification": "Proof for this concrete tree under complete valid windows, ignoring outcome work; not an impossibility proof for every faithful representation."
+  },
+  "retained_runtime_resource_observation": {
+    "private_evidence": ".trf-runtime/exact-mapping-2026-11-01/probe.json",
+    "evidence_sha256": "cbda586fb4650153188bbc591032d897a505991c5285bad1b9354dc631e4b040",
+    "cases": 8640,
+    "numerical_steps": 7574932,
+    "numerical_complete": true,
+    "diagnostic_cases": 2763,
+    "diagnostic_steps": 2425068,
+    "diagnostics_complete": false,
+    "unrecognized_guards": 2763,
+    "fresh_separate_replay_cases": 8640,
+    "case_blob": {
+      "sha256": "c8bb8526ea617b82b9f15fdf059f718ffca77c422ed20f769b883560b1f5b538",
+      "size": 7395067
+    },
+    "execution_seconds": "25.205407099972945",
+    "replay_seconds": "24.267221499991138",
+    "qualification": "Invented Q1 data only. Numerical completion is not a complete original report or market evidence; size is encoded bytes, not peak RAM."
+  },
+  "inactive_observation_prototype": {
+    "private_evidence": ".trf-runtime/exact-mapping-2026-11-01/observation-probe.json",
+    "evidence_sha256": "e494a67b3b30943e810e65d0b55c79e0b684d95577cd4aa102fcc9992f2bfd88",
+    "schema": "inactive-observation-collection-feasibility/1",
+    "at_utc": "2026-11-01T15:23:32.824865+00:00",
+    "cases": 8640,
+    "plain_steps": 7574932,
+    "observed_steps_including_case_overhead": 7584626,
+    "case_overhead_steps": 8640,
+    "identical_complete_plain_case_projection": true,
+    "small_reference_event_cases": 55,
+    "small_observed_steps": 46996,
+    "plain_seconds": "11.785182900028303",
+    "observed_seconds": "35.09235410002293",
+    "guard_pointer": "/expression/arg/left/left",
+    "guard_interpretation": "Explicit synthetic engineering V only, not independently accepted original meaning.",
+    "scope": "Prototype feasibility, not an admitted runtime/source/meaning/report contract.",
+    "unimplemented": [
+      "Explicit opt-in source/protocol and unchanged old profiles",
+      "Retained independent uninstrumented-vs-instrumented verification at actual intended use",
+      "Exact numerical/diagnostic stop-prefix and event/byte-failure retention semantics",
+      "Complete source/currentness/native data-use/meaning/funding qualification and actual original A"
+    ],
+    "new_model_calls": 0,
+    "new_count_calls": 0,
+    "production_enrollment": false,
+    "scientific_readiness": false,
+    "independently_rerun": false,
+    "qualification": "Local engineering feasibility only. Production protocol, independent intended-use verification, native source enrollment and stop/failure behavior remain unimplemented."
+  },
+  "grounded_next_action_risks": [
+    "Current guard recognizer explicitly supports only canonical G; strict-equality representation remains unrecognized and inactive.",
+    "Current adapter requires base-first complete-case comparison. Fresh observed replay alone cannot replace independent plain-versus-observed validation.",
+    "Tracing a missing32-slot mean costs33 rather than2 steps; at budget10 plain returns missing while observed replay exhausts. Versions/prefixes/charges must be explicit.",
+    "Event/byte overflow must stop observation retention without erasing available numerical work or disabling original outcome maturity traces; primitive exhaustion permits no refund/retry.",
+    "The prototype is not a drop-in replacement or a justification to add child allowances silently."
+  ],
+  "retained_failures": [
+    {
+      "tool_chunk": "3baa2e",
+      "exit_code": 1,
+      "stage": "new literal truth-table fixture",
+      "finding": "Existing engine constructor requires nonempty snapshot; supplied existing synthetic history, without changing market-row semantics or production."
+    },
+    {
+      "path": ".trf-runtime/exact-mapping-2026-11-01/profile.json",
+      "finding": "Initial component probe used evaluation coordinate as cutoff. It is not an original decision-time proof; fixed full-condition tests and retained resource probe supersede those component values."
+    }
+  ],
+  "preservation": {
+    "old_runtime_pins_exact": 37,
+    "historical_inquiry_member_hashes_exact": 117,
+    "old_native_runtime_and_goldens_unchanged": true,
+    "actual_A_still_original_null_formalization": true,
+    "shared_model_calls": 53,
+    "old_grants_still_revoked": 7
+  },
+  "research_usage": {
+    "totals": {
+      "calls": 53,
+      "known_usage_calls": 53,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1058582,
+      "known_output_tokens": 177896,
+      "known_total_tokens": 1236478,
+      "exact_total_tokens": 1236478,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 53,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 49754,
+      "reasoning_detail_calls": 53,
+      "exact_reasoning_output_tokens": 49754
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 4425415000,
+      "available_nano": 574585000,
+      "halted": false
+    },
+    "per_call_model_version_utc_history": "docs/reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json",
+    "immutable_served_snapshot": "UNKNOWN",
+    "count_service_billing": "UNVERIFIED",
+    "invoice_reconciled": false
+  },
+  "construction_usage_through_snapshot": {
+    "scope": "Main construction since native-execution snapshot, including checks/rework; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T14:58:02.604Z",
+    "snapshot_at_utc": "2026-11-01T15:25:24.110Z",
+    "tokens": {
+      "input_tokens": 8083368,
+      "cached_input_tokens": 8033408,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 35832,
+      "reasoning_output_tokens": 25983,
+      "total_tokens": 8119200
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "new_research_model_calls": 0,
+  "new_count_calls": 0,
+  "new_production_grants": 0,
+  "production_registry_mutated": false,
+  "production_activation": false,
+  "scientific_readiness": false,
+  "objective_complete": false,
+  "unverified": [
+    "Actual original A formalization/meaning/market evaluation and complete original report",
+    "Production/source/resource/recovery qualification of any future observation collector",
+    "Independent rerun or generalization of the private full-quarter observation prototype",
+    "Actual model/DQ behavior, fresh complete wire counts and funded admission",
+    "Scientific admission/information/calibration/protected assessment/freeze and economic/policy usefulness",
+    "Real-data speed/peak RAM, immutable served model snapshot, count billing and invoices",
+    "Global implementation verifier preexisting master/discipline baseline not reaudited"
+  ],
+  "changed_files": [
+    "tests/exact_mapping_support.py",
+    "tests/test_exact_mapping.py",
+    "tests/test_exact_mapping_review.py",
+    "docs/reviews/implementation-2026-10-25/exact-mapping-feasibility-2026-11-01.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json"
+  ],
+  "next_action": "Develop the smallest separately versioned diagnostic collection correction for the measured original-shape bottleneck: neutral recognition of the proven strict Boolean guard, jointly collected numerical/observational work, and retained independent plain-versus-observed validation plus fresh canonical replay. First specify and independently check exact source/version, primitive allocation, failure-prefix and numerical-retention behavior; tracing can change missing-window work and observation/event/byte failure must not erase a completed numerical case or disable the original outcome maturity trace. Preserve all original validity/unknown/time/parameter/universe commitments, old profiles/goldens/source packages, ten-million-step bounds and shared1800-second deadline; do not silently add allowances or remove a verification pass. The current prototype is not an admitted runtime or proof for arbitrary programs. If a required correction exceeds existing authority, retain a concrete reviewable proposal while unrelated authorized work continues. After native/source/diagnostic qualification, version complete actual role profiles/full wires and recheck original-scope source/input/data-use/count/funding admission for a separately bounded retained-idea continuation. Actual original A remains null-formalized. The original USD5 ledger retains USD0.574585 and all seven old grants remain revoked; no automatic retry/successor, extra spending or scientific/assessment/capital authority follows. Preserve the separately owned DQ kit without claiming actual model behavior. The full seven-package objective remains active and incomplete."
+}

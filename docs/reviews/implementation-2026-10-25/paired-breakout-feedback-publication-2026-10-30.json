@@ -1,0 +1,96 @@
+{
+  "at_utc": "2026-10-30T16:44:20.569568+00:00",
+  "status": "PUBLISHED_AND_CURRENT_RELEASE_CHECKED",
+  "request": {
+    "root_epoch_id": "647cb4fd972545e1a37c3f20226f5486",
+    "execution_id": "8456955e281d7e4f9c50c33ba7763597d87a06ee24c66bd6f1a09bed82003980",
+    "composition_id": "cb370ce47c7d9205e1cb2796fddfe67d1985d39b27bc505516ab6075853e6ea5",
+    "meaning_review_assessment_id": "c5d391746da7d9e6c1b61eab86c200ac40953f9d7dc28157dfb68b75edd72c6c",
+    "target_epoch": 126
+  },
+  "publication": {
+    "manifest_id": "cd568e30b600289f78cb5552c881c9083241346c306806e649cf626551a329cd",
+    "observation_id": "98b2d5c7c81ece3e62cfcaba1f45962a9431e6689d54629439477b90a2c96cc4",
+    "experience_id": "ac31436f73c2a1e8ab685477d1459e01737561ce8c8dda467e9dabb1b237c117",
+    "grant_id": "a163c3b460cfc1298a7b72f2e39dc2258b55df5db4094398b3eaeb3fbf3b2a1a"
+  },
+  "context_id": "42478fbc61f65d702df774a2a7fa572400760af91e121543cc179b1bb3e8c459",
+  "cohort_sha256": "3118633f6f2efd4cbe42da50a60c38e1c47a41ba24bb7aa2ca41d1e73697d869",
+  "publisher_sha256": "7bd421eaf7de078d2f997dbdd2d5a441dfab15a98c16b1538ae75b7fe5087153",
+  "current_inherited_grants": [
+    "0dc4b987496b12316f3841f20de1f9acf0c69047714f9f5c2db503c16a076a57",
+    "f2212913f63d13b19543d156823ab58ecb0f9f33c899e1f502864a5750cbc04a"
+  ],
+  "current_separately_preserved_paired_grants": [
+    "2e8a70605f61c2cd61765de01824ee3b0d01b91d22d512c44e481e639f465f76"
+  ],
+  "registry_integrity": {
+    "status": "PASS",
+    "events": 1980,
+    "foreign_keys": true,
+    "synchronous": "FULL",
+    "schema_version": 1,
+    "scope": "local coordination and research memory integrity only",
+    "research_memory": {
+      "status": "PASS",
+      "records": 71,
+      "version": "research-memory/1",
+      "scientific_authority": false
+    },
+    "blobs": {
+      "status": "PASS",
+      "committed": 1002,
+      "quarantined": [],
+      "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+    }
+  },
+  "wall_seconds": 250.3364746000152,
+  "usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "ledger_unchanged": true,
+  "new_provider_calls": 0,
+  "scientific_readiness": false,
+  "protected_outcomes_accessed": false,
+  "schema": "paired-breakout-feedback-publication/1",
+  "cohort_counts": {
+    "epochs": 4,
+    "jobs": 8,
+    "calls": 8,
+    "artifact_ids": 353,
+    "idea_ids": 2
+  },
+  "root_result_ids": [
+    "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+    "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3"
+  ],
+  "idea_ids": [
+    "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+    "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3"
+  ],
+  "retained_private_evidence": ".trf-runtime/paired-breakout-feedback-2026-10-30/publication.json",
+  "retained_evidence_sha256": "204df9d5769ffb9f315343b2f69fe58c6f5ff739e89eaa13d63579962857e25e",
+  "condition_count": 1,
+  "scope_count": 8625,
+  "qualification": "Exact closed development cohort; one qualifying observed case. Arithmetic enclosures are not statistical intervals. Economic usefulness remains unknown."
+}

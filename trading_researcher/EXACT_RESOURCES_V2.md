@@ -1,0 +1,9 @@
+# D098 exact resource calculation / 2
+
+`exact_resources_v2` implements the separately approved `exact-computation-resources/2.0` allowance. Its request, numerical result, diagnostics and contrast have distinct version-2 namespaces; no old 10M API, source or record changes. It validates the real typed budget before projecting only structural legacy checks. Actual requests and counters retain the full declared allowance, shared between plain calculation and diagnostics. All AST4 charges, exact arithmetic, validity/unknown rules, numerical limits, case equality and immutable-base checks remain.
+
+This is an explicit frozen version of the independently reviewed engineering algorithm. The derivation changes protocol labels and the accepted resource-contract binding, preserving its calculation and stop behavior. Keeping a separate source version prevents approval from silently altering pinned historical code. New conformance evidence is still required; earlier engineering tests do not automatically qualify this version.
+
+The new diagnostic projection also rejects missing or malformed case containers with a typed gap before iteration. Independent hostile-input checks exposed raw Python container errors at that boundary; the old engineering and 10M sources remain unchanged. This correction adds no mathematical meaning or source permission.
+
+Results carry `resource_contract: exact-computation-resources/2.0` and `authority: descriptive_calculation_only`. A pure calculation grants no native source/context/meaning/epoch/funding authority or scientific classification. The retained-source runtime must separately enforce 20M per child, 40M aggregate execute/replay, the shared 1,800-second deadline, exact fresh replay and all input/stream limits. Native certification, compilation/composition/execution binding and complete model-role contract transport remain prerequisites for actual research use.

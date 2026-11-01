@@ -8,12 +8,40 @@ This continuation connects auxiliary model work to the existing research epoch a
 
 ## Shared limits and explicit task profiles
 
+The separately approved [D092 review continuation](../docs/architecture/21_INDEPENDENT_REVIEW_CONTINUATION.md) adds one explicit, target-bound exception to the ordinary same-epoch rule below. `create_research_epoch(..., review_continuation={policy, spec})` binds only the authorized review specification, original target/epoch/usage, unchanged full wire and one external ledger claim. No source or worker can request a general budget reset. Default dispatch and legacy meaning-policy bytes remain unchanged; actual cross-epoch inventories use a separate source-bound policy. Revocation prevents new dispatch while preserving historical receipts and accounting.
+
 An epoch still has two discovery perspectives on the same frozen base context. An auxiliary `formalization/v1` or `semantic-review/v1` job uses the original `research_epoch_id`, original epoch creation time and existing call ledger. The ceiling remains 12 total calls, 80,000 input-plus-output tokens and 1,800 seconds across discovery and auxiliary roles. A role does not receive a fresh budget. The frozen currency cap remains additional and mandatory for paid work; fixture counters are not provider token or price measurements.
 
 An auxiliary job adds two immutable fields to its existing job specification:
 
 - `research_call_profile`: exact model, prompt version, prompt, generation parameters, output-token limit, call timeout and transport retry limit. Tools are fixed to an empty list. Mode, currency and global limits come from the original epoch. The profile cannot introduce separate call, token, time or spending budgets.
 - `research_inputs`: `{idea_id, catalog_id, definition_ids}` for formalization, or `{formalization_id, definition_ids}` for review. References must already belong to the job's frozen context. Adding an epoch ID grants no extra source access or peer transcript visibility.
+
+An optional `feature_certificate_id` binds both roles to the same explicitly
+released, controller-owned development raw-feature certificate. Its exact
+snapshot, catalog and definition identities must be authorized in the original
+formalization context and the dedicated review context. The operator first uses
+the narrow [feature-evidence release](FEATURES.md#development-input-release);
+ordinary feedback still follows the existing completed-batch release path.
+
+The optional `availability_evidence` packet (`development-availability-evidence/1`)
+checks every present feature entry in that exact snapshot, including null values,
+against the certified fixed-delay rule. Its bounded view is at most 100,000 grid
+positions. It retains absent rows, missing/null counts, source blob identities,
+certificate and footprint hashes, and the explicit assumed-delay qualification.
+It contains no feature values, market outcomes or automatic equivalence judgment.
+Both roles receive identical evidence; review must independently derive the
+candidate's dependency-specific cutoff implications. Invalid identities, protected
+scope, forged or revoked certificates and malformed candidate universes fail
+before source reads. An intact retained certificate may be CURRENT or STALE;
+installed-code currency is distinct from retained evidence integrity.
+
+Only this opt-in path replaces the full certificate in the formalizer's source
+list with the compact bound evidence. Its source identity and inherited exposure
+remain retained. Packets without the option preserve their prior representation.
+Candidate and mapping JSON pointers are rooted at the candidate object itself,
+as specified in [the formalization contract](FORMALIZATION.md); the response
+wrapper is not part of that pointer path.
 
 The operator uses the existing `enqueue` RPC. The worker's `auxiliary_input(lease)` operation derives the exact packet from retained records. Reservations require precisely the frozen system message and canonical user packet; no arbitrary tool request or appended conversational context is accepted. Exact canonical comparison distinguishes JSON Boolean values from integers. Job specifications are copied before validation and retained immutably.
 
@@ -22,6 +50,18 @@ All reservations are charged through the original ledger. Unknown usage keeps it
 New call records retain `dispatch_deadline`, bounded by the job deadline, original epoch end and call timeout. A late response may settle accounting and preserve public output but cannot supply an auxiliary result. Legacy calls without this field do not acquire a fabricated historical timeout; their existing lease/epoch bounds still apply. Completion also checks that the original epoch remains active and within its lifetime.
 
 ## Owned input and output handoff
+
+### Optional lossless API representation
+
+The OpenAI adapter accepts a frozen configuration option `source_presentation: "auxiliary-provenance-dictionary/1"` for complete two-message auxiliary requests without tools. [auxiliary_views.py](auxiliary_views.py) replaces only repeated strings in top-level source-envelope `source_refs` and `exposure` arrays with indices into a complete dictionary included in the same API input. Original order, duplicates, source bodies, qualifications and nested fields reconstruct exactly, checked against the original packet hash. No source retrieval, new access permission or omitted provenance is introduced.
+
+Normalized owned requests and auxiliary input/meaning-policy bytes remain unchanged. Only the API wire representation changes; the frozen provider configuration, adapter source footprint and retained wire hash identify that change. The default representation is unchanged. Formalization and independent review each receive their complete packet and must satisfy their own admission and meaning checks. Lossless reconstruction establishes structural preservation, not equivalent model comprehension or research quality. A failed or uncertain review still prevents qualified calculation.
+
+An additional explicit frozen `bounded_math_scope: "bounded-math-reuse/1.0"` option requires that lossless representation and supplies the complete, hash-pinned [D091 activation extension](../docs/architecture/20_BOUNDED_MATH_REUSE.md) as `activation_contract` beside the encoded original packet. Both roles receive the same exact approval source. Restoring the view still yields the original packet; the additional contract is validated separately and never inferred from model output. Missing/changed contract bytes, an unsupported scope or a mismatched route configuration deny the request. Legacy views do not implicitly receive this extension, and the existing substantive meaning-review policy remains unchanged. This supplement changes permitted activation scope only as approved by D091; every candidate still requires its own scope and meaning qualification.
+
+For the separately approved compact-output continuation, `output_formatting: "compact-json/1"` explicitly appends the fixed formatting-only instruction to the API system message. It requires the preceding scope and lossless-source options and is bound to the exact normalized request/host-route configuration. The stored original prompt and generic field limit remain unchanged; counting and actual dispatch see the complete augmented prompt. This changes no output parser, schema, provenance field or acceptance gate. A source document cannot activate the option. The independent reviewer keeps its original prompt unless its own frozen configuration explicitly selects this option. This transport capability grants no new spending or retry authority and does not guarantee that a model produces a complete response.
+
+The actual count-only comparison of the previously rejected complete formalization input measured 30,160 versus 21,230 tokens (29.61% reduction), with no new inference call. It does not establish admission of a future changed packet or its review. [Verification](../docs/reviews/implementation-2026-10-25/auxiliary-transport-verification-2026-10-29.json) retains the receipt, model/version/UTC, unchanged ledger and bounded tests. An earlier packet-layer design was discarded because it invalidated existing meaning-policy currency; restoring the original auxiliary module preserved the current ETH assessment and feedback context.
 
 `run_auxiliary_once(client, provider, cancel=None)` in [auxiliary.py](auxiliary.py) uses the existing isolated trusted-adapter invocation, lease heartbeats, reservations and receipts. It never passes the model an RPC credential, shell or arbitrary tool dispatcher. It retains normalized public responses before interpreting their structure. Refusal, malformed output, cancellation and unusable responses leave recorded history and a blocked attempt rather than an empirical negative.
 

@@ -1,0 +1,485 @@
+{
+  "schema": "btc-compact-final-verification/1",
+  "status": "PASS",
+  "observed_at_utc": "2026-10-29T22:28:33.911111+00:00",
+  "checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 853,\n    \"source_files\": 5,\n    \"decisions\": 91,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Checked against this adoption's preapproval inventory\",\n    \"git_diff_check_exit\": 0,\n    \"later_approved_changed_paths\": {\n      \"REVIEWING.md\": \"D086 / agent-inquiry/1.0\",\n      \".gitattributes\": \"October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes\"\n    },\n    \"adoption_baseline_files\": 63,\n    \"preexisting_files_unchanged\": 44,\n    \"archived_documents_exact\": 20,\n    \"preserved_preapproval_decisions\": 70,\n    \"full_historical_definition_review_generator_texts\": 3,\n    \"approved_policy_sections_exact_except_status_words\": 15,\n    \"scoped_open_dispositions_and_acceptance_mappings\": 15,\n    \"adoption_decision_status_counts_D001_D085\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 63,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    },\n    \"decision_status_counts\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 69,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    }\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"2cd452145f5236d58f7f724cc1560f0905d8a1344f79bb89e769ab87d881182e\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"f8a3af2d9c9d87248d0323d56966ece69c67fa680b91b37dc5e5e1825c1214b2\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"73d927f19188bbaf2bfb3d1edf31e0e587dc6e0762d393d4a8eea88cf485e870\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"215febd38e7e0a07e2ee4a7d347740675328b36ded702c99bfd85882a9d0e1fc\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"49e72562dc98b28723c73a08257ce58831cb5bb4ccde6f14c28bc8e8d60b21d1\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"439f50e29ebd513488348b2279d84c736599a581e9f614799efad6fbcd735eb7\",\n    \"docs/architecture/CURRENT_STATE.md\": \"dfaf3499b9bade1eb4de9911d8c397baf4f4391968ddf60cab15baafdd848e17\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"fdbf972760b8c16ececbb4116cc1d9f077349d8dc37a859386826800f8808aa5\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\",\n    \".gitattributes\": \"44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c\",\n    \"docs/reviews/verify_system_model.py\": \"59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef\",\n    \"docs/reviews/verify_retail_contract.py\": \"e8ad4dfc1eb0474f68e6df3b1e28e80009353ef32932c7c9d7826ab59e82d9c9\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\": \"56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\",\n    \"Complete executable AST/schema/primitive implementations and independent golden fixtures\",\n    \"Actual data quality, rights, historical availability, model exposure and account/execution costs\",\n    \"Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately\",\n    \"Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs\",\n    \"SRC-001 through SRC-008 and completeness of original conversation\"\n  ],\n  \"changed_files_since_preapproval\": [\n    \".gitattributes\",\n    \"AGENTS.md\",\n    \"README.md\",\n    \"REVIEWING.md\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_system_model.py\"\n  ],\n  \"added_files\": [\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\",\n    \"docs/reviews/adoption-2026-10-23/verification.json\"\n  ],\n  \"preserved_proposal_sha256\": \"22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29\",\n  \"preapproval_archive_sha256\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"baseline_files\": 103,\n  \"unchanged_files\": 85,\n  \"changed_files\": [\n    \"docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md\",\n    \".gitattributes\",\n    \".gitignore\",\n    \"README.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"tests/test_local_runtime.py\",\n    \"trading_researcher/README.md\",\n    \"trading_researcher/__main__.py\",\n    \"trading_researcher/checks.py\",\n    \"trading_researcher/coordination.py\"\n  ],\n  \"new_files\": [\n    \"docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md\",\n    \"docs/architecture/19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md\",\n    \"docs/architecture/20_BOUNDED_MATH_REUSE.md\",\n    \"docs/reviews/implementation-2026-10-25/auxiliary-transport-final-check-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/auxiliary-transport-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/availability-handoff-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-eth-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-eth-correction-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-observation-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-compact-continuation-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-compact-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-continuation-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-continuation-final-check-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-continuation-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-continuation-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-expression-preflight-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-output-format-observation-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/case-diagnostics-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/development-feedback-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-output-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-output-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-reopening-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-evidence-handoff-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-evidence-handoff-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-required-input-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-required-input-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-design-2026-10-27.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-exploration-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-precision-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-budget-final-check-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-budget-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-context-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-research-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-research-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/required-input-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/scientific-admission-boundary-2026-10-29.json\",\n    \"tests/test_auxiliary_availability.py\",\n    \"tests/test_auxiliary_provenance_adversarial.py\",\n    \"tests/test_auxiliary_provenance_view.py\",\n    \"tests/test_auxiliary_scope_contract.py\",\n    \"tests/test_bounded_auxiliary_contract.py\",\n    \"tests/test_bounded_binding.py\",\n    \"tests/test_bounded_math.py\",\n    \"tests/test_bounded_outcomes.py\",\n    \"tests/test_bounded_scientific_gate.py\",\n    \"tests/test_case_diagnostics.py\",\n    \"tests/test_compact_output_prompt.py\",\n    \"tests/test_counted_openai_reservations.py\",\n    \"tests/test_development_feedback.py\",\n    \"tests/test_development_feedback_release.py\",\n    \"tests/test_diagnostic_auxiliary.py\",\n    \"tests/test_diagnostic_binding.py\",\n    \"tests/test_diagnostic_scientific_gate.py\",\n    \"tests/test_epoch_budget_overlay_adversarial.py\",\n    \"tests/test_feature_evidence_release.py\",\n    \"tests/test_feature_release_knowledge.py\",\n    \"tests/test_feedback_context_views.py\",\n    \"tests/test_feedback_context_views_adversarial.py\",\n    \"tests/test_long_idea_text_adversarial.py\",\n    \"tests/test_required_binding.py\",\n    \"tests/test_required_contract.py\",\n    \"tests/test_required_inputs.py\",\n    \"tests/test_second_order_population.py\",\n    \"tests/test_three_valued_validity_gate.py\",\n    \"trading_researcher/BOUNDED_MATH.md\",\n    \"trading_researcher/CASE_DIAGNOSTICS.md\",\n    \"trading_researcher/REQUIRED_INPUTS.md\",\n    \"trading_researcher/auxiliary_availability.py\",\n    \"trading_researcher/auxiliary_views.py\",\n    \"trading_researcher/bounded_math.py\",\n    \"trading_researcher/bounded_outcomes.py\",\n    \"trading_researcher/case_diagnostics.py\",\n    \"trading_researcher/development_feedback.py\",\n    \"trading_researcher/epoch_budget.py\",\n    \"trading_researcher/required_inputs.py\",\n    \"trading_researcher/second_order_population.py\"\n  ],\n  \"local_document_links\": 876,\n  \"errors\": [],\n  \"scope\": \"Implementation preservation, local link targets and whitespace; no semantic/scientific certification\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "focused_runtime_tests": {
+    "schema": "compact-wire-correction-verification/1",
+    "status": "PASS",
+    "at_utc": "2026-10-29T22:14:08.648525+00:00",
+    "exact_approved_wire_prompt": "PASS",
+    "legacy_meaning_policy_unchanged": "PASS",
+    "reviewer_formatting_unchanged": "PASS",
+    "distinct_tests": 34,
+    "checks": [
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_compact_output_prompt.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.004s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_auxiliary_scope_contract.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.009s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_auxiliary_provenance_view.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_auxiliary_provenance_adversarial.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 1.556s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_openai_provider.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.101s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_counted_openai_reservations.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.023s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_controller_providers.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 1.943s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_bounded_auxiliary_contract.py"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": "...\n----------------------------------------------------------------------\nRan 3 tests in 0.002s\n\nOK\n"
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "docs/reviews/verify_retail_contract.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"PASS\",\n  \"checks\": {\n    \"local_links\": 854,\n    \"source_files\": 5,\n    \"decisions\": 91,\n    \"preserved_original_decisions\": 67,\n    \"preserved_approved_decisions\": 68,\n    \"preserved_rejections\": 47,\n    \"traced_requirements\": 30,\n    \"generator_acceptance_specs\": 3,\n    \"diagram_edges\": 38,\n    \"diagram_check_scope\": \"Edge structure and routing, not Mermaid rendering or executable scientific semantics\",\n    \"preexisting_file_inventory\": \"Checked against this adoption's preapproval inventory\",\n    \"git_diff_check_exit\": 0,\n    \"later_approved_changed_paths\": {\n      \"REVIEWING.md\": \"D086 / agent-inquiry/1.0\",\n      \".gitattributes\": \"October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes\"\n    },\n    \"adoption_baseline_files\": 63,\n    \"preexisting_files_unchanged\": 44,\n    \"archived_documents_exact\": 20,\n    \"preserved_preapproval_decisions\": 70,\n    \"full_historical_definition_review_generator_texts\": 3,\n    \"approved_policy_sections_exact_except_status_words\": 15,\n    \"scoped_open_dispositions_and_acceptance_mappings\": 15,\n    \"adoption_decision_status_counts_D001_D085\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 63,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    },\n    \"decision_status_counts\": {\n      \"NON_NEGOTIABLE\": 1,\n      \"ACCEPTED\": 69,\n      \"REJECTED\": 1,\n      \"CONDITIONALLY_ACCEPTED\": 5,\n      \"SUPERSEDED\": 6,\n      \"DEFERRED\": 6,\n      \"PROPOSED_ONLY\": 1,\n      \"AMBIGUOUS\": 1,\n      \"OPEN\": 1\n    }\n  },\n  \"checked_files_sha256\": {\n    \"AGENTS.md\": \"6f1131eebfadd36b0057a3d8ffe3e6473d5e54435b2853c7634e5925d09146b9\",\n    \"README.md\": \"2cd452145f5236d58f7f724cc1560f0905d8a1344f79bb89e769ab87d881182e\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\": \"7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446\",\n    \"docs/architecture/02_DECISION_REGISTER.md\": \"f8a3af2d9c9d87248d0323d56966ece69c67fa680b91b37dc5e5e1825c1214b2\",\n    \"docs/architecture/05_REQUIREMENTS.md\": \"73d927f19188bbaf2bfb3d1edf31e0e587dc6e0762d393d4a8eea88cf485e870\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\": \"16073cc5779f6eaf32e1c87f41f7649a1ec8d609b25d5392c50d0ea9d0cd724e\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\": \"215febd38e7e0a07e2ee4a7d347740675328b36ded702c99bfd85882a9d0e1fc\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\": \"eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\": \"68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\": \"49e72562dc98b28723c73a08257ce58831cb5bb4ccde6f14c28bc8e8d60b21d1\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\": \"439f50e29ebd513488348b2279d84c736599a581e9f614799efad6fbcd735eb7\",\n    \"docs/architecture/CURRENT_STATE.md\": \"0c7fc22cce45b4e4f52de90c7846e499fb78c47401647117b522fcb9fb38e888\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\": \"2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\": \"c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2\",\n    \"docs/architecture/04_DEFINITIONS.md\": \"fdbf972760b8c16ececbb4116cc1d9f077349d8dc37a859386826800f8808aa5\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\": \"334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c\",\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\": \"e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d\",\n    \"docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md\": \"fd1d37be60f27779134580d39ecf9d498fda41a7345746f78cfc79b813809626\",\n    \"docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md\": \"dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e\",\n    \"docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md\": \"bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d\",\n    \"REVIEWING.md\": \"47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b\",\n    \"trading_researcher/README.md\": \"644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256\",\n    \".gitattributes\": \"44982b51b71e9c451ab75da209f3aabc644b867bbdf3421f22f3a32fde34a23c\",\n    \"docs/reviews/verify_system_model.py\": \"59a10d916b707bbf94889c010e2c64cc007d7c730ca6bcf8dceec385eb94c3ef\",\n    \"docs/reviews/verify_retail_contract.py\": \"e8ad4dfc1eb0474f68e6df3b1e28e80009353ef32932c7c9d7826ab59e82d9c9\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\": \"56f3992cb885743982f93dd3a1401f3704543b186e451300ca3de3f60aa7e036\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n  },\n  \"errors\": [],\n  \"unverified\": [\n    \"New-session behavioral efficacy and compaction retention\",\n    \"Mermaid rendering\",\n    \"Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately\",\n    \"D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement\",\n    \"Complete executable AST/schema/primitive implementations and independent golden fixtures\",\n    \"Actual data quality, rights, historical availability, model exposure and account/execution costs\",\n    \"Pinned research-runtime/backend compatibility, licensing, full model isolation, scientific registry/blob crash recovery and restore; local coordination recovery is tested separately\",\n    \"Bootstrap marginal coverage, full-process calibration and economic opportunity/risk inputs\",\n    \"SRC-001 through SRC-008 and completeness of original conversation\"\n  ],\n  \"changed_files_since_preapproval\": [\n    \".gitattributes\",\n    \"AGENTS.md\",\n    \"README.md\",\n    \"REVIEWING.md\",\n    \"docs/architecture/01_PROBLEM_DEFINITION.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/06_MASTER_ARCHITECTURE.md\",\n    \"docs/architecture/07_SCIENTIFIC_EVALUATION.md\",\n    \"docs/architecture/08_ENGINEERING_REVIEW.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/10_IMPLEMENTATION_ROADMAP.md\",\n    \"docs/architecture/11_OPEN_DECISIONS.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/verify_system_model.py\"\n  ],\n  \"added_files\": [\n    \"docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"docs/reviews/adoption-2026-10-23/baseline.json\",\n    \"docs/reviews/adoption-2026-10-23/preapproval-documents.zip\",\n    \"docs/reviews/adoption-2026-10-23/verification.json\"\n  ],\n  \"preserved_proposal_sha256\": \"22fdd27a32680a73052adf52cee00dce3727689b2a778cc484f8cd1f486c3e29\",\n  \"preapproval_archive_sha256\": \"16dc3649c71dcfcc2dcfd0e68e173e2b4fa9d7a2a7d67a2f82e5c25040d7ae18\"\n}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+          "-B",
+          "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+        ],
+        "exit_code": 0,
+        "stdout": "{\n  \"status\": \"PASS\",\n  \"baseline_files\": 103,\n  \"unchanged_files\": 85,\n  \"changed_files\": [\n    \"docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md\",\n    \".gitattributes\",\n    \".gitignore\",\n    \"README.md\",\n    \"docs/architecture/02_DECISION_REGISTER.md\",\n    \"docs/architecture/04_DEFINITIONS.md\",\n    \"docs/architecture/05_REQUIREMENTS.md\",\n    \"docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md\",\n    \"docs/architecture/12_TRACEABILITY_MATRIX.md\",\n    \"docs/architecture/ARCHITECTURE_REGISTER.json\",\n    \"docs/architecture/CURRENT_STATE.md\",\n    \"docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md\",\n    \"docs/reviews/verify_retail_contract.py\",\n    \"tests/test_local_runtime.py\",\n    \"trading_researcher/README.md\",\n    \"trading_researcher/__main__.py\",\n    \"trading_researcher/checks.py\",\n    \"trading_researcher/coordination.py\"\n  ],\n  \"new_files\": [\n    \"docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md\",\n    \"docs/architecture/19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md\",\n    \"docs/architecture/20_BOUNDED_MATH_REUSE.md\",\n    \"docs/reviews/implementation-2026-10-25/auxiliary-transport-final-check-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/auxiliary-transport-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/availability-handoff-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-eth-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-eth-correction-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-observation-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/bounded-math-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-continuation-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-continuation-final-check-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-continuation-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-continuation-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-expression-preflight-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/btc-output-format-observation-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/case-diagnostics-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/development-feedback-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-output-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-output-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-reopening-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-diagnostic-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-evidence-handoff-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-evidence-handoff-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-required-input-correction-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/eth-required-input-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-design-2026-10-27.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-exploration-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-precision-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feasibility-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-budget-final-check-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-budget-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-context-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-research-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/feedback-research-usage-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/required-input-verification-2026-10-29.json\",\n    \"docs/reviews/implementation-2026-10-25/scientific-admission-boundary-2026-10-29.json\",\n    \"tests/test_auxiliary_availability.py\",\n    \"tests/test_auxiliary_provenance_adversarial.py\",\n    \"tests/test_auxiliary_provenance_view.py\",\n    \"tests/test_auxiliary_scope_contract.py\",\n    \"tests/test_bounded_auxiliary_contract.py\",\n    \"tests/test_bounded_binding.py\",\n    \"tests/test_bounded_math.py\",\n    \"tests/test_bounded_outcomes.py\",\n    \"tests/test_bounded_scientific_gate.py\",\n    \"tests/test_case_diagnostics.py\",\n    \"tests/test_compact_output_prompt.py\",\n    \"tests/test_counted_openai_reservations.py\",\n    \"tests/test_development_feedback.py\",\n    \"tests/test_development_feedback_release.py\",\n    \"tests/test_diagnostic_auxiliary.py\",\n    \"tests/test_diagnostic_binding.py\",\n    \"tests/test_diagnostic_scientific_gate.py\",\n    \"tests/test_epoch_budget_overlay_adversarial.py\",\n    \"tests/test_feature_evidence_release.py\",\n    \"tests/test_feature_release_knowledge.py\",\n    \"tests/test_feedback_context_views.py\",\n    \"tests/test_feedback_context_views_adversarial.py\",\n    \"tests/test_long_idea_text_adversarial.py\",\n    \"tests/test_required_binding.py\",\n    \"tests/test_required_contract.py\",\n    \"tests/test_required_inputs.py\",\n    \"tests/test_second_order_population.py\",\n    \"tests/test_three_valued_validity_gate.py\",\n    \"trading_researcher/BOUNDED_MATH.md\",\n    \"trading_researcher/CASE_DIAGNOSTICS.md\",\n    \"trading_researcher/REQUIRED_INPUTS.md\",\n    \"trading_researcher/auxiliary_availability.py\",\n    \"trading_researcher/auxiliary_views.py\",\n    \"trading_researcher/bounded_math.py\",\n    \"trading_researcher/bounded_outcomes.py\",\n    \"trading_researcher/case_diagnostics.py\",\n    \"trading_researcher/development_feedback.py\",\n    \"trading_researcher/epoch_budget.py\",\n    \"trading_researcher/required_inputs.py\",\n    \"trading_researcher/second_order_population.py\"\n  ],\n  \"local_document_links\": 874,\n  \"errors\": [],\n  \"scope\": \"Implementation preservation, local link targets and whitespace; no semantic/scientific certification\"\n}\n",
+        "stderr": ""
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "exit_code": 0,
+        "stdout": "",
+        "stderr": ""
+      }
+    ],
+    "changed_runtime": [
+      "trading_researcher/openai_provider.py"
+    ],
+    "runtime_sha256": {
+      "anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+      "auxiliary.py": "975f4eff94f10bd89b1daf879cc4b62b2d4cb363e1d1d5a2c08517619ecfd13a",
+      "auxiliary_availability.py": "0ab3de244567813ca4414e9c77c2c00579225dcb621418a449a06805c2252232",
+      "auxiliary_views.py": "07a7a53ebcfe12a1fee7f26299a3ff046b83ff8efd3a5a581dd6b1d00ed23306",
+      "binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+      "bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+      "bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+      "bounded_outcomes.py": "82c5003723b0482884f07860d7c43e4109e70e7e28588a9631187b7b1dfdce22",
+      "calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+      "calibration_runs.py": "dfae620aa8434bd0de54a98d262c5fc7c31059d07e370d1493df46a3c338db1b",
+      "calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+      "case_diagnostics.py": "85fb071c30d2474ca512c1918317c9eebf18aaa31924a607e4090db727c1d7be",
+      "certification.py": "a1b554dbb8c42fcc7751f285f4a93064e05cb078ac96e70c90599946262c0ca9",
+      "checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "composition.py": "2a234f84263c13fab214c1730eac326c578f2d8ad01149a81294133026727acd",
+      "context_views.py": "2b008e1145c1c7facd45a5366b549f9021c5b5366e7d7b6085ba933cb57018b0",
+      "controller_providers.py": "6787ea6a97e88c179fce77e109202e6b5da7d42e5b7ca7af5595e2524872ea86",
+      "coordination.py": "99d4316ddb9d114da43731f4cc0935106a79ce12c41b8feba402a02c47e0e70b",
+      "data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+      "data_targets.py": "4ea784c8eefb3eceb8183b6adefdf09adfaf15ac329fb233317eb0cb0dd91697",
+      "data_use.py": "74396b216d08bdee2bcd45864ffb753113d7ca8f55c3fce1874d3eba97d0bbd6",
+      "development_feedback.py": "163f03ca7977edd9b13ea9114c9126226d896821a768dd89c446fade0e6bf68b",
+      "epoch_budget.py": "514985059255014af7bf80e18204e2c32d67210a1e5534fceb52769b96f34f2a",
+      "errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "evaluation_plans.py": "32de8189f8603e6ac8089895eb2ff9fc675769a763f1cc99ed064bd9ca836016",
+      "evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+      "expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+      "family_models.py": "0f7cd65e62a9664d1b6645b2f36eb4a6805fcd48ec59b3f0814bb9baf5dbf92e",
+      "family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+      "family_study.py": "9153cd667aed7bdad52226d6d33e9eba3b1cf529fc25a5fefd4eaae19ccf2ba0",
+      "family_study_runs.py": "1e38a9bce9d9013a8b73e92e397bd9a667838cb400fbd6bc8e648e658763804f",
+      "features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+      "formalization.py": "857d53bc9c5b84a89329b2857e525a011ad01e841171c5dc7adc252309cc7696",
+      "information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+      "information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+      "information_study.py": "ede0c49cc21a96c9759a9a68e6fcee1522df498e5105996fbb1a456f319277be",
+      "lag_population.py": "94fbadbc9d54e880222861a07d81d5f9123b128293dcec43ec844825272d4dbe",
+      "meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+      "measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+      "memory.py": "abab9b73fd8525bb053be11866c08cf34e73843cf4dd305668f6ba87421979e7",
+      "memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "monte_carlo.py": "aaad96be04df167a4b80fbe557ec11fc1461dbcad15fa28daea7d9ef7124a4cb",
+      "openai_provider.py": "83fc80b6df949041d06f3d75b7cdb50c9dad3c5982b69a82996f4a82e66f7dbf",
+      "outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+      "population_models.py": "a0e0dc0344772b095d0ee9fef0c469a826c7007db305643ce30d31c394fa8d10",
+      "population_runs.py": "a6ded70258275d251d058053bd7a7bbb95fe824842a440b5a6af41d692024ae4",
+      "provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+      "required_inputs.py": "0b00db49cc9016df46730d5f6974d69725bb86febd25e3610d1f0931ea0ca45b",
+      "researcher.py": "6404fbf66334a13112a67871977e212ef27dac93b8cf2da94933d8a667867abc",
+      "research_calls.py": "49786557a7f733783de032ea3274a913fdd956d66a3a81b5c8e9fae73c11b4d8",
+      "research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "revocations.py": "65e9f3197f590a651d5ca76b8bd24590ea60336922a2410177fc0b8a7d933f52",
+      "second_order_population.py": "5314fea8e5fa14b70fea84e37dfd46c3c5d3d7fcfa39aa3b6ff02c2700201178",
+      "server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "source_process_scope.py": "ca6ba80ae63761bfe8e9c93117bf3b2e1c9c68bb9d0a7c2c227a65e6269b64ba",
+      "stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+      "storage.py": "b5875a64249041de241f637feb56f0db706c95d27ffb8a52ec5fa11dfef7b12b",
+      "study_pipeline.py": "9cf4cbddc2c3facc657a0d675a6e945251314c62594f6d17ab0173d6201b9bb7",
+      "study_resources.py": "436d3ac62638b6088cf07a26f6aa2be6da0932ad252982f1edb9514b83a971dd",
+      "study_runs.py": "344471ce51d7d8b849cda734fb1aadcc4957609ea5e544322790bcb47117264a",
+      "study_stream.py": "ccdacccac038a0e340603f922e8f722a7342b7f66cf00552c27a9c796d9820dd",
+      "worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe",
+      "__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20"
+    },
+    "trust_boundary": {
+      "untrusted_inputs": "Original idea/source documents and provider output cannot grant authority or bypass scope, budget, completion, meaning or execution gates.",
+      "authorized_sinks": "Exactly one host-routed formalizer and, only for a complete accepted candidate, one separate meaning-review call; shared ledger and immutable response retention.",
+      "secret_locations": "Existing local .env.local and local broker credentials; no key or credentials may be copied into public reports or prompts.",
+      "checks": "Exact prompt hash, pinned D091 activation, full input counts, both-slot reservations, unique external fence, one-attempt job limits, strict complete output and independent review.",
+      "failure_modes": "An incomplete/malformed output, budget/time failure, unknown usage or meaning gap ends this finite attempt without candidate repair or automatic retry."
+    },
+    "new_inference_calls": 0,
+    "unverified": "Actual count/admission, model completion/fidelity, BTC market execution and scientific/economic validity."
+  },
+  "independent_offline_candidate_review": {
+    "schema": "independent-btc-candidate-review/1",
+    "status": "NO_SUBSTANTIATED_MAPPING_OBJECTION_WITHIN_EXACT_SOURCE_DOMAIN",
+    "execution_admission": "BLOCKED_PENDING_ACTUAL_INDEPENDENT_MEANING_REVIEW_AND_REMAINING_QUALIFICATIONS",
+    "purpose": "Bounded offline examination of the complete actual model candidate against the unchanged original BTC idea before compilation. This is not a replacement model formalization or scientific certificate.",
+    "idea_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+    "formalization_id": "c6b85475ab4a4b4a2657d46ecbe8b0a1517ae45fcf8de389345e65904ca91415",
+    "formalization_file_sha256": "4e443dd435e1baf150df530d6d903ea1989bfd15ac507057fee779f56386cbc4",
+    "candidate_sha256": "29b1e687a5415061f50705e075be4b3a9d91810cebbedf23e5e668bd10edb603",
+    "original_text_sha256": "bd34053ef7c67e48ca2d32cf35ba858f5a850ec874dde4d3ef7cbb0a28ac9f21",
+    "frozen_independent_formula_checker_sha256": "4b05a15222a5c355ec64dc870ff17597ac38b7057926b2f69ff59e92529069e1",
+    "source_qualification": {
+      "snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+      "definitions_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+      "availability_certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+      "required_domain": "The exact retained projection supplies observed N as nonnegative integers, Q as nonnegative finite decimals and prices as positive finite decimals; invalid keyed bars become all-null, absent bars remain absent. These are necessary source-domain conditions for the compact validity identities, not properties proved for arbitrary engine inputs.",
+      "availability": "The actual role packet records an exhaustive check that every present feature entry, including nulls, has available_at = row_time + 900 in this exact snapshot. Missing/absent entries remain missing and historical publication truth remains unknown.",
+      "current_certificate_replay_and_data_use_required_before_execution": true
+    },
+    "mapping_findings": {
+      "scope": "Literal true over every BTCUSDT 900-second coordinate in [2023-01-01T00:00:00Z,2023-04-01T00:00:00Z), equal rows, exact retained snapshot, no ETH traversal or added filter.",
+      "baseline": "Outer lag 1 anchors the condition at b=t-d. lag(complete trailing_mean(16),2) reads b-2d through b-17d, equivalently t-3d through t-18d. Both episode tests use these same means; neither episode enters the baseline.",
+      "predicate": "For both b and b-d: N>=2*MN, 0.75*MQ<=Q<=1.25*MQ and B/Q>=0.60. The price predicate is C_b/O_(b-d)-1>=0.001. Original exact thresholds and direction are unchanged.",
+      "complete_validity": "V includes the complete 18-position mean of N/N equal to 1; the complete two-position mean of Q/Q equal to 1; complete MQ>0; both 0<=B<=Q checks; and C_b>0,O_(b-d)>0. Within the declared source domains these require every original input and all positive-integer counts while allowing valid individual baseline Q=0. Zero N or episode Q causes missing division, not a valid zero.",
+      "unknown_semantics": "The actual tree is lag1((V AND P) OR ((NOT V) AND Boolean-null)), with structurally identical V copies. V=false or unknown yields complete C=unknown even when a scientific predicate is false. No literal-null event is treated as an absent market observation.",
+      "outcome": "At a=t+5d the unchanged AST is 10000*ln(lag(close,1)/lag(close,5)), hence exactly 10000*ln(C_(t+4d)/C_t), quantity/basis_points. Neither C_t nor a future value enters the condition.",
+      "cutoff_proof": "For a<end, the two actual endpoint availabilities are t+d and t+5d=a, both no later than the original min(a,end-1). Therefore the inherited later min(as_of,end-1) cutoff selects the same present endpoints on this exact fixed-delay snapshot. For a>=end, the declared horizon is boundary-censored; the terminal publication cannot satisfy the original exclusive-end cap. This is a snapshot-specific proof, not permission to accept arbitrary additional delays.",
+      "denominators": "The estimand is mean(Y|C=true, observed Y) minus mean(Y|observed Y) across the full declared scope. False and unknown C remain in the whole-scope denominator; missing Y is excluded from both denominators. Overlap is retained and no independence, causal or executable-entry claim is introduced.",
+      "reporting": "The mapping explicitly selects required-inputs/1 and case-diagnostics/2, identifies the actual V paths, and maps true/false/unknown plus missing outcomes, warmup, absent rows, unavailable data and boundary censoring. Guard-false, numerical-domain and source-qualified all-null observations support invalid-input reporting; arbitrary raw invalid causes must not be invented from generic nulls. Resource exhaustion remains incomplete reporting. Actual complete diagnostics have not been computed.",
+      "parameter_origins": "All 61 literal/bars/horizon parameter paths are present exactly once and resolve against the actual final candidate. Every origin cites the original idea as preexisting_specification. Four N/N or Q/Q identity origins additionally cite the exact feature-definition artifact, correctly preserving their source-domain dependence.",
+      "original_text_mapping": "All 10 semantic-report segments concatenate to the exact pinned original text, and every segment path resolves. The formalizer's equivalent assertion is not an independent model review."
+    },
+    "exact_dependencies": {
+      "condition_lags_from_t": {
+        "trades": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "quote_volume": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "taker_quote_volume": [
+          1,
+          2
+        ],
+        "open": [
+          2
+        ],
+        "close": [
+          1
+        ]
+      },
+      "outcome_close_lags_from_future_anchor": [
+        1,
+        5
+      ],
+      "condition_guard_path": "/condition_ast/expression/arg/left/left",
+      "identical_guard_copy_path": "/condition_ast/expression/arg/right/left/arg",
+      "program_sizes": {
+        "scope": {
+          "nodes": 1,
+          "maximum_node_depth": 1
+        },
+        "condition": {
+          "nodes": 168,
+          "maximum_node_depth": 12
+        },
+        "outcome": {
+          "nodes": 8,
+          "maximum_node_depth": 5
+        }
+      }
+    },
+    "checks": [
+      {
+        "check": "Exact actual guard duplication and syntax, formula rendering, parameter resolution and original-text preservation",
+        "exit_code": 0
+      },
+      {
+        "check": "Actual unchanged accepted AST versus frozen independent direct-formula condition on invented inputs",
+        "comparisons": 220,
+        "expected_true": 3,
+        "expected_false": 22,
+        "expected_unknown": 195,
+        "coverage": "All 18 N positions tested for zero, null and late availability; every required row and Q position for absence/null; both episode thresholds and invalid turnover; condition prices; valid zero baseline volume; unrelated missing containers; each scenario also with an explicitly false scientific component.",
+        "exit_code": 0,
+        "command_wall_seconds": 0.8780822
+      },
+      {
+        "check": "Independent exact parameter inventory, source-reference membership, all dependency offsets, source-text hash and program sizes",
+        "parameter_paths": 61,
+        "semantic_segments": 10,
+        "exit_code": 0,
+        "command_wall_seconds": 0.4339745
+      }
+    ],
+    "review_fixture_corrections": [
+      "An initial synthetic command passed the catalog envelope body instead of its features map and failed FEATURE_GAP before comparisons. Only that test fixture access was corrected; no candidate/runtime changed.",
+      "An initial origin assertion incorrectly required the idea to be the sole source. Four correctly qualified validity-identity origins also cite the provided definition artifact. The corrected check requires the idea in every origin and allows only that exact additional definition source; all paths and values remained unchanged."
+    ],
+    "actual_terminal_boundary": {
+      "formalizer_response_status": "completed",
+      "formalization_assessment": "STRUCTURE_CHECKED",
+      "paid_calls": 1,
+      "input_tokens": 24443,
+      "output_tokens": 16749,
+      "total_tokens": 41192,
+      "charged_nano_usd": 228597500,
+      "charge_basis": "conservative_published_rate_upper_bound_not_provider_invoice",
+      "review_admission_status": "FULL_INPUT_EXCEEDS_RESERVED_SLOT",
+      "complete_review_input_tokens": 34934,
+      "review_input_bound_with_margin": 35062,
+      "fixed_review_input_limit": 30000,
+      "actual_independent_model_review_performed": false,
+      "market_calculation_performed": false,
+      "actual_formula_audit_performed": false,
+      "continuation": "Retain the completed unchanged formalization. Any review-only follow-up requires separately approved complete-input resources; do not rerun the formalizer, truncate the review packet or treat this offline assessment as the missing model review."
+    },
+    "limits": {
+      "no_general_semantic_equivalence_proof_for_arbitrary_sources": true,
+      "no_historical_publication_truth_claim": true,
+      "no_model_comprehension_or_scientific_validity_claim": true,
+      "provider_calls_by_reviewer": 0,
+      "market_rows_read_by_reviewer": 0,
+      "registry_writes_by_reviewer": 0,
+      "candidate_modified": false,
+      "engineering_candidate_substituted": false,
+      "original_formula_checker_modified": false,
+      "scientific_readiness": false
+    }
+  },
+  "exact_report_and_retained_source_hashes": "PASS",
+  "ledger_reconciliation": "PASS",
+  "changed_files_for_compact_continuation": [
+    "trading_researcher/openai_provider.py",
+    "tests/test_compact_output_prompt.py",
+    "trading_researcher/AUXILIARY_RESEARCH.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/btc-compact-continuation-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/btc-compact-usage-2026-10-29.json"
+  ],
+  "sha256": {
+    "trading_researcher/openai_provider.py": "83fc80b6df949041d06f3d75b7cdb50c9dad3c5982b69a82996f4a82e66f7dbf",
+    "tests/test_compact_output_prompt.py": "fc2dffd80978436bd398e744d9bd35427fc75a2e9a1b92f9afa86a300efd4738",
+    "trading_researcher/AUXILIARY_RESEARCH.md": "0a017342924a0ae3f93face9d97a43a69a3cbab464fb48b74a57c3c79cc5560f",
+    "docs/architecture/CURRENT_STATE.md": "dfaf3499b9bade1eb4de9911d8c397baf4f4391968ddf60cab15baafdd848e17",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "b4ef73f7012458d5754d5b16b1841caf0dbd5a96e6525324c7c5ce7bb6ad5f6b",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "9c96ce3d482c10bceeb44b24a44f7012f5e5129087aef25b04a3900b4f1b3169",
+    "docs/reviews/implementation-2026-10-25/progress.json": "b8536b9bbf5d882b67082b26ff0d07b7cf5d0c212114a2ecbe291fe0eedb1a7b",
+    "docs/reviews/implementation-2026-10-25/btc-compact-continuation-2026-10-29.json": "4f83783424e5a2f13d3012732931347bbc15549b28d4d03b8de309747cb58127",
+    "docs/reviews/implementation-2026-10-25/btc-compact-usage-2026-10-29.json": "b3b4347120277e8fe51a6a4ab8f77038c1fd6fe68f06c2ddfb9149015f98e987"
+  },
+  "private_evidence": ".trf-runtime/btc-compact-continuation-2026-10-29; private prepared credentials are not published.",
+  "new_inference_calls_during_finalization_and_checks": 0,
+  "pending": "One separately approved independent model review only; no new formalizer call.",
+  "unverified": [
+    "Actual independent model meaning review, data-use/execution qualification, deterministic BTC calculation, separate replay and market-case original-formula audit.",
+    "Scientific calibration, protected evaluation and economic usefulness; no capital authority.",
+    "Provider invoice, immutable model snapshot and a fresh full actual backup/restore."
+  ]
+}

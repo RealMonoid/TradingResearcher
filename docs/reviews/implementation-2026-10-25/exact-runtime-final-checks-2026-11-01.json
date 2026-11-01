@@ -1,0 +1,63 @@
+{
+  "schema": "exact-retained-runtime-final-checks/1",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_exact_runtime*.py' -v",
+      "exit_code": 0,
+      "methods": 17,
+      "evidence": ".trf-runtime/exact-runtime-2026-11-01/checks.json"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_exact_certification*.py' -v",
+      "exit_code": 0,
+      "methods": 19,
+      "start_chunk_id": "103f19",
+      "completion_chunk_id": "e65644"
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p 'test_revocations*.py' -v",
+      "exit_code": 0,
+      "methods": 18,
+      "evidence": ".trf-runtime/exact-runtime-2026-11-01/checks.json"
+    },
+    {
+      "command": "python -B .trf-runtime/exact-runtime-2026-11-01/probe.py",
+      "exit_code": 0,
+      "completion_chunk_id": "7282e6",
+      "scope": "8640 invented coordinates;5752-case RESOURCE_STOP reproduced in separate retained child, no effect."
+    },
+    {
+      "command": "python -B docs/reviews/verify_system_model.py",
+      "exit_code": 0,
+      "chunk_id": "577428",
+      "status": "PASS",
+      "local_links": 777
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "chunk_id": "3e3557",
+      "status": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "chunk_id": "456e8e",
+      "status": "PASS",
+      "qualification": "Existing CRLF-to-LF notices; no whitespace errors."
+    },
+    {
+      "command": "python -B .trf-runtime/exact-compositions-2026-11-01/qualify.py",
+      "exit_code": 0,
+      "chunk_id": "8d698b",
+      "old_runtime_pins_exact": 37,
+      "historical_inquiry_member_hashes_exact": 117
+    }
+  ],
+  "unverified": [
+    "Original A composition, admitted actual H_exec and controlled native hypothesis computation with certified data/use/meaning gates remain pending.",
+    "No full finite inquiry or production enrollment/model/count/spending admission occurred. The specific synthetic Q1 construction remains resource-stopped.",
+    "Global verify_implementation.py baseline failures were not re-audited in this scoped unit; no broad all-framework pass follows."
+  ],
+  "evidence": "docs/reviews/implementation-2026-10-25/exact-runtime-2026-11-01.json"
+}

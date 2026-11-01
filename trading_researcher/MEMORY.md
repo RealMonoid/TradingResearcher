@@ -16,6 +16,8 @@ The directory must be new or empty. The command starts its own loopback server, 
 
 Kinds are `source`, `idea`, `observation`, `gap`, `attempt`, `research_experience`, and `policy_experience`. Each has an explicit field allowlist; gaps require a reason and reopening condition. Relations may express `supersedes`, `contradicts`, and `depends_on`. Both ends remain in history. Recording a relation does not establish that either claim is true.
 
+Idea `content.text` now accepts up to 65,536 Unicode code points, preserving the exact string without trimming, normalization or truncation. Other text fields, scope values and queries retain their 8,192-character limits, and the aggregate one-MiB envelope limit still applies. This compatible admission extension retains `research-record/1` bytes and adds no migration or automatic reprocessing of old blocked jobs. A build predating this extension can reject a newly retained long idea during replay; rollback must preserve those records and use a compatible reader. Independent tests cover the actual 8,255-character boundary, complete formalization handoff, replay, restart and backup/restore on isolated registries.
+
 The Journal contains all typed records. Research Experience and Policy Experience are separate projections of their own record kinds. The Market Model query surface exists but remains empty: no memory RPC can issue scientific evidence. Its qualified publication path is a later evaluator integration requirement, not completed work. Likewise, generic trial/plan references can be retained as dependency links, but complete executable scientific schemas belong to the formalization package.
 
 Workers have role-specific write allowlists. Their records carry `unverified_work_product`; source imports carry `supplied_source_not_certified`. Actual completed, rejected, blocked, and expired attempt transitions are recorded by the host with `observed_operational_event`. A model's claimed completion cannot become an observed host transition. Operational completion of a `research-record/v1` job checks record structure only and returns `scientific_authority: false`.
@@ -42,8 +44,19 @@ Only the operator can release a completed operational batch. The release include
 | `inspect_memory` | Operator | Audit all retained records with view/query/scope/kind filters |
 | `rebuild_memory` | Operator | Recreate the disposable index from validated immutable artifacts |
 | `create_context` | Operator | Freeze permitted artifacts, epoch, role, and research time |
+| `publish_development_feedback` | Operator | Atomically retain and release a closed development checkpoint for a later epoch |
 
 Use the existing `rpc` command and request files described in the [runtime guide](README.md). Generic `add_source` and `put_artifact` reject the reserved research-record namespace, preventing an alternative write path from bypassing typed validation.
+
+## Closed development feedback
+
+`publish_development_feedback(root_epoch_id, execution_id, data_use_assessment_id, meaning_review_assessment_id, target_epoch)` implements the scoped exploratory feedback permitted by [D070](../docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md). The host derives both original perspectives and every linked job, attempt, call, computation and known exposure. Earlier retained ideas still link their later attempts even when they were not a job's final result. Active or resumable work, unsettled calls, unresolved computations, unsealed or partially selected batches, protected ancestry and uncontrolled operations knowledge prevent publication. Exhausted blocked jobs remain blocked; generic `release_batch` rules do not change.
+
+The operation requires an owned, complete development execution, its exact retained separate case-verification receipt and intact case blob, matching current data-use and independent meaning-review assessments, and a target epoch later than every source batch. One transaction writes four immutable artifacts: a `development-feedback-manifest/1`, a typed Journal observation, a separate Research Experience interpretation, and a `development-feedback-release/1`. It indexes the two records and records the publication event. All original artifacts remain unchanged. The manifest includes exact readable idea/gap records, complete cohort metadata and provenance; it does not paraphrase unsupported ideas or turn a technical gap into a negative market result. Oversized envelopes fail atomically under the existing one-MiB limit.
+
+Only the exact manifest and its two typed records may be explicitly selected into later contexts through this grant. It does not release arbitrary controller results or raw source artifacts. Availability, epoch, current assessment status and technical revocation are checked on context admission and use; descendants inherit the complete exposure. New provider reservations also check inherited grants; acknowledgements and settlement of already admitted calls remain possible. A changed review/data-use status or technical revocation is a review trigger. Existing published bytes stay historical and readable to the operator. Identical publication retries return the same snapshot; changed inputs or release epoch for that execution are rejected.
+
+The authority is `descriptive_development_feedback_only`. The Market Model remains empty. Scientific/assessment batch publication, independent confirmation, calibration, economic usefulness and live-capital authority are not supplied by this operation. Tests of this boundary use explicitly synthetic computation metadata and mock only the existing assessment inspectors; actual provider/review/data-use evidence requires a separately recorded integration check.
 
 ## Persistence and migration
 

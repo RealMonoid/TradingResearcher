@@ -1,0 +1,520 @@
+{
+  "schema": "amibroker-synthetic-preflight/1",
+  "cases": [
+    {
+      "schema": "synthetic-long-flat/1",
+      "id": "timing",
+      "synthetic": true,
+      "start_utc": "2023-01-01T00:00:00Z",
+      "bar_seconds": 900,
+      "initial_cash": "1000",
+      "assets": [
+        {
+          "symbol": "TRF_A",
+          "quantity": 2,
+          "rank": 10,
+          "buy": [
+            0
+          ],
+          "sell": [
+            2
+          ],
+          "bars": [
+            {
+              "open": "100",
+              "high": "104",
+              "low": "97",
+              "close": "101"
+            },
+            {
+              "open": "110",
+              "high": "115",
+              "low": "107",
+              "close": "112"
+            },
+            {
+              "open": "120",
+              "high": "123",
+              "low": "115",
+              "close": "118"
+            },
+            {
+              "open": "130",
+              "high": "135",
+              "low": "127",
+              "close": "132"
+            },
+            {
+              "open": "140",
+              "high": "143",
+              "low": "136",
+              "close": "139"
+            },
+            {
+              "open": "150",
+              "high": "154",
+              "low": "147",
+              "close": "151"
+            },
+            {
+              "open": "160",
+              "high": "164",
+              "low": "157",
+              "close": "161"
+            },
+            {
+              "open": "170",
+              "high": "174",
+              "low": "167",
+              "close": "171"
+            }
+          ]
+        }
+      ],
+      "costs": {
+        "commission_bps": "0",
+        "spread_bps": "0",
+        "slippage_bps": "0",
+        "impact_bps": "0",
+        "basis": "synthetic_per_fill_notional",
+        "valid_for": "fixture_only"
+      }
+    },
+    {
+      "schema": "synthetic-long-flat/1",
+      "id": "costs",
+      "synthetic": true,
+      "start_utc": "2023-01-01T00:00:00Z",
+      "bar_seconds": 900,
+      "initial_cash": "1000",
+      "assets": [
+        {
+          "symbol": "TRF_A",
+          "quantity": 2,
+          "rank": 10,
+          "buy": [
+            0
+          ],
+          "sell": [
+            2
+          ],
+          "bars": [
+            {
+              "open": "100",
+              "high": "104",
+              "low": "97",
+              "close": "101"
+            },
+            {
+              "open": "110",
+              "high": "115",
+              "low": "107",
+              "close": "112"
+            },
+            {
+              "open": "120",
+              "high": "123",
+              "low": "115",
+              "close": "118"
+            },
+            {
+              "open": "130",
+              "high": "135",
+              "low": "127",
+              "close": "132"
+            },
+            {
+              "open": "140",
+              "high": "143",
+              "low": "136",
+              "close": "139"
+            },
+            {
+              "open": "150",
+              "high": "154",
+              "low": "147",
+              "close": "151"
+            },
+            {
+              "open": "160",
+              "high": "164",
+              "low": "157",
+              "close": "161"
+            },
+            {
+              "open": "170",
+              "high": "174",
+              "low": "167",
+              "close": "171"
+            }
+          ]
+        }
+      ],
+      "costs": {
+        "commission_bps": "10",
+        "spread_bps": "5",
+        "slippage_bps": "5",
+        "impact_bps": "0",
+        "basis": "synthetic_per_fill_notional",
+        "valid_for": "fixture_only"
+      }
+    },
+    {
+      "schema": "synthetic-long-flat/1",
+      "id": "shared_cash",
+      "synthetic": true,
+      "start_utc": "2023-01-01T00:00:00Z",
+      "bar_seconds": 900,
+      "initial_cash": "150",
+      "assets": [
+        {
+          "symbol": "TRF_A",
+          "quantity": 1,
+          "rank": 10,
+          "buy": [
+            0
+          ],
+          "sell": [
+            2
+          ],
+          "bars": [
+            {
+              "open": "100",
+              "high": "104",
+              "low": "97",
+              "close": "101"
+            },
+            {
+              "open": "110",
+              "high": "115",
+              "low": "107",
+              "close": "112"
+            },
+            {
+              "open": "120",
+              "high": "123",
+              "low": "115",
+              "close": "118"
+            },
+            {
+              "open": "130",
+              "high": "135",
+              "low": "127",
+              "close": "132"
+            },
+            {
+              "open": "140",
+              "high": "143",
+              "low": "136",
+              "close": "139"
+            },
+            {
+              "open": "150",
+              "high": "154",
+              "low": "147",
+              "close": "151"
+            },
+            {
+              "open": "160",
+              "high": "164",
+              "low": "157",
+              "close": "161"
+            },
+            {
+              "open": "170",
+              "high": "174",
+              "low": "167",
+              "close": "171"
+            }
+          ]
+        },
+        {
+          "symbol": "TRF_B",
+          "quantity": 2,
+          "rank": 20,
+          "buy": [
+            0
+          ],
+          "sell": [
+            2
+          ],
+          "bars": [
+            {
+              "open": "50",
+              "high": "54",
+              "low": "47",
+              "close": "51"
+            },
+            {
+              "open": "55",
+              "high": "59",
+              "low": "52",
+              "close": "56"
+            },
+            {
+              "open": "60",
+              "high": "63",
+              "low": "56",
+              "close": "59"
+            },
+            {
+              "open": "65",
+              "high": "69",
+              "low": "62",
+              "close": "66"
+            },
+            {
+              "open": "70",
+              "high": "73",
+              "low": "66",
+              "close": "69"
+            },
+            {
+              "open": "75",
+              "high": "79",
+              "low": "72",
+              "close": "76"
+            },
+            {
+              "open": "80",
+              "high": "84",
+              "low": "77",
+              "close": "81"
+            },
+            {
+              "open": "85",
+              "high": "89",
+              "low": "82",
+              "close": "86"
+            }
+          ]
+        }
+      ],
+      "costs": {
+        "commission_bps": "0",
+        "spread_bps": "0",
+        "slippage_bps": "0",
+        "impact_bps": "0",
+        "basis": "synthetic_per_fill_notional",
+        "valid_for": "fixture_only"
+      }
+    },
+    {
+      "schema": "synthetic-long-flat/1",
+      "id": "exit_then_entry",
+      "synthetic": true,
+      "start_utc": "2023-01-01T00:00:00Z",
+      "bar_seconds": 900,
+      "initial_cash": "150",
+      "assets": [
+        {
+          "symbol": "TRF_A",
+          "quantity": 1,
+          "rank": 10,
+          "buy": [
+            0
+          ],
+          "sell": [
+            2
+          ],
+          "bars": [
+            {
+              "open": "100",
+              "high": "104",
+              "low": "97",
+              "close": "101"
+            },
+            {
+              "open": "110",
+              "high": "115",
+              "low": "107",
+              "close": "112"
+            },
+            {
+              "open": "120",
+              "high": "123",
+              "low": "115",
+              "close": "118"
+            },
+            {
+              "open": "130",
+              "high": "135",
+              "low": "127",
+              "close": "132"
+            },
+            {
+              "open": "140",
+              "high": "143",
+              "low": "136",
+              "close": "139"
+            },
+            {
+              "open": "150",
+              "high": "154",
+              "low": "147",
+              "close": "151"
+            },
+            {
+              "open": "160",
+              "high": "164",
+              "low": "157",
+              "close": "161"
+            },
+            {
+              "open": "170",
+              "high": "174",
+              "low": "167",
+              "close": "171"
+            }
+          ]
+        },
+        {
+          "symbol": "TRF_B",
+          "quantity": 2,
+          "rank": 20,
+          "buy": [
+            2
+          ],
+          "sell": [
+            4
+          ],
+          "bars": [
+            {
+              "open": "50",
+              "high": "54",
+              "low": "47",
+              "close": "51"
+            },
+            {
+              "open": "55",
+              "high": "59",
+              "low": "52",
+              "close": "56"
+            },
+            {
+              "open": "60",
+              "high": "63",
+              "low": "56",
+              "close": "59"
+            },
+            {
+              "open": "65",
+              "high": "69",
+              "low": "62",
+              "close": "66"
+            },
+            {
+              "open": "70",
+              "high": "73",
+              "low": "66",
+              "close": "69"
+            },
+            {
+              "open": "75",
+              "high": "79",
+              "low": "72",
+              "close": "76"
+            },
+            {
+              "open": "80",
+              "high": "84",
+              "low": "77",
+              "close": "81"
+            },
+            {
+              "open": "85",
+              "high": "89",
+              "low": "82",
+              "close": "86"
+            }
+          ]
+        }
+      ],
+      "costs": {
+        "commission_bps": "0",
+        "spread_bps": "0",
+        "slippage_bps": "0",
+        "impact_bps": "0",
+        "basis": "synthetic_per_fill_notional",
+        "valid_for": "fixture_only"
+      }
+    },
+    {
+      "schema": "synthetic-long-flat/1",
+      "id": "last_signal",
+      "synthetic": true,
+      "start_utc": "2023-01-01T00:00:00Z",
+      "bar_seconds": 900,
+      "initial_cash": "1000",
+      "assets": [
+        {
+          "symbol": "TRF_A",
+          "quantity": 1,
+          "rank": 10,
+          "buy": [
+            7
+          ],
+          "sell": [],
+          "bars": [
+            {
+              "open": "100",
+              "high": "104",
+              "low": "97",
+              "close": "101"
+            },
+            {
+              "open": "110",
+              "high": "115",
+              "low": "107",
+              "close": "112"
+            },
+            {
+              "open": "120",
+              "high": "123",
+              "low": "115",
+              "close": "118"
+            },
+            {
+              "open": "130",
+              "high": "135",
+              "low": "127",
+              "close": "132"
+            },
+            {
+              "open": "140",
+              "high": "143",
+              "low": "136",
+              "close": "139"
+            },
+            {
+              "open": "150",
+              "high": "154",
+              "low": "147",
+              "close": "151"
+            },
+            {
+              "open": "160",
+              "high": "164",
+              "low": "157",
+              "close": "161"
+            },
+            {
+              "open": "170",
+              "high": "174",
+              "low": "167",
+              "close": "171"
+            }
+          ]
+        }
+      ],
+      "costs": {
+        "commission_bps": "0",
+        "spread_bps": "0",
+        "slippage_bps": "0",
+        "impact_bps": "0",
+        "basis": "synthetic_per_fill_notional",
+        "valid_for": "fixture_only"
+      }
+    }
+  ]
+}

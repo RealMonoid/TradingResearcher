@@ -1,0 +1,226 @@
+{
+  "schema": "paired-breakout-result/1",
+  "recorded_at_utc": "2026-10-30T16:12:21.679097+00:00",
+  "status": "DESCRIPTIVE_ONLY",
+  "original_idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+  "idea_summary": "Original Q1 2023 ETH breakout/low quote-volume condition without a corresponding BTC breakout; subsequent relative ETH-minus-BTC logarithmic price movement.",
+  "epoch_id": "c04f6879e5194c31b67edac200add00f",
+  "formalization_id": "c63e915881cb660ed6a65c1d46dd764796041bb3302fa2a1507e3aeb77cfb3f6",
+  "meaning_review_id": "c5d391746da7d9e6c1b61eab86c200ac40953f9d7dc28157dfb68b75edd72c6c",
+  "compiled_id": "9052edbe4725b3ac7c063ba21e9ad345af2f5171b6a6a6363624020701fedd3d",
+  "composition_id": "cb370ce47c7d9205e1cb2796fddfe67d1985d39b27bc505516ab6075853e6ea5",
+  "execution_id": "8456955e281d7e4f9c50c33ba7763597d87a06ee24c66bd6f1a09bed82003980",
+  "candidate_sha256": "6030f39d815297c96eb48a78cec93123edaa5bdee11b61a5765c50d3c21abaa6",
+  "boundaries": {
+    "start": "2023-01-01T00:00:00Z",
+    "end_exclusive": "2023-04-01T00:00:00Z",
+    "pair": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "grid_seconds": 900,
+    "outcome_anchor_bars": 5,
+    "original_fixed_outcome": "10000 * (ln(ETH.close(t+4d)/ETH.close(t)) - ln(BTC.close(t+4d)/BTC.close(t))), d=900 seconds",
+    "weighting": "equal_rows",
+    "baseline": "Every scope row with an observed outcome, including false/unknown conditions"
+  },
+  "meaning_review_status": "SATISFIED",
+  "structure_status": "STRUCTURE_CHECKED",
+  "composition": {
+    "schema": "paired-breakout-composition-result/1",
+    "scenario_count": 299,
+    "checked_cases": 8970,
+    "candidate_hash": "6030f39d815297c96eb48a78cec93123edaa5bdee11b61a5765c50d3c21abaa6"
+  },
+  "execution_report": {
+    "diagnostics": {
+      "condition_outcome_counts": {
+        "false": {
+          "missing": 6,
+          "observed": 8590
+        },
+        "true": {
+          "missing": 0,
+          "observed": 1
+        },
+        "unknown": {
+          "missing": 9,
+          "observed": 34
+        }
+      },
+      "reason_counts": {
+        "absent_row": 26,
+        "boundary_censoring": 5,
+        "condition_unknown": 43,
+        "missing_value": 19,
+        "missing_warmup": 17
+      },
+      "schema": "paired-case-diagnostics/1",
+      "status": "COMPLETE"
+    },
+    "evaluation_contract": "paired-development/1.0",
+    "expected_case_count": 8640,
+    "numerical_contract": "bounded-math/1.0",
+    "outcome_unit": "basis_points",
+    "outcomes_complete": true,
+    "pair": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "primitive_steps": 4901655,
+    "processed_case_count": 8640,
+    "processing_complete": true,
+    "resource_reason": null,
+    "review_required": false,
+    "schema": "paired-reference-cases/1",
+    "scientific_readiness": false,
+    "state_counts": {
+      "DATA_GAP": 0,
+      "ELIGIBLE": 8625,
+      "NOT_YET_OBSERVED": 0,
+      "OUTCOME_MISSING": 10,
+      "OUTCOME_PENDING": 0,
+      "PARTITION_BOUNDARY": 5,
+      "REVIEW_REQUIRED": 0,
+      "SCOPE_FALSE": 0,
+      "SCOPE_UNKNOWN": 0
+    },
+    "status": "PROCESSED"
+  },
+  "contrast": {
+    "condition_count": 1,
+    "condition_mean": {
+      "lower": {
+        "denominator": "166153499473114484112975882535043072",
+        "numerator": "3255519066220516047898205530070516875"
+      },
+      "schema": "bounded-real/1",
+      "upper": {
+        "denominator": "10633823966279326983230456482242756608",
+        "numerator": "208353220238113027065485153924513243125"
+      }
+    },
+    "effect": {
+      "lower": {
+        "denominator": "340282366920938463463374607431768211456",
+        "numerator": "6844749514350627592951803057494367963975"
+      },
+      "schema": "bounded-real/1",
+      "upper": {
+        "denominator": "85070591730234615865843651857942052864",
+        "numerator": "1711187378587656898237950764373594262301"
+      }
+    },
+    "evaluation_contract": "paired-development/1.0",
+    "kind": "conditional-minus-scope-mean/1",
+    "reason": "paired_reference_calculation_complete",
+    "schema": "paired-reference-contrast/1",
+    "scientific_readiness": false,
+    "scope_count": 8625,
+    "scope_mean": {
+      "lower": {
+        "denominator": "85070591730234615865843651857942052864",
+        "numerator": "-44361616682752681714069532977488317301"
+      },
+      "schema": "bounded-real/1",
+      "upper": {
+        "denominator": "340282366920938463463374607431768211456",
+        "numerator": "-177446466731010726856278131909949403975"
+      }
+    },
+    "status": "DESCRIPTIVE_ONLY"
+  },
+  "rounded_display_basis_points": {
+    "condition_mean": "19.593443",
+    "scope_mean": "-0.521468",
+    "effect": "20.114911"
+  },
+  "case_blob": {
+    "sha256": "8132450f0ca3a49ea2cd6a60df16e1bda7093e92bd6ad6c2e10ccba69e51b592",
+    "size": 108043230
+  },
+  "replay": {
+    "case_blob": {
+      "sha256": "8132450f0ca3a49ea2cd6a60df16e1bda7093e92bd6ad6c2e10ccba69e51b592",
+      "size": 108043230
+    },
+    "checked_cases": 8640,
+    "result_hash": "dc2e1872d0b769c321f9f29402437ae8b3f55ad4db9b67523674c53a9558a67c",
+    "schema": "paired-case-verification/1",
+    "scientific_readiness": false
+  },
+  "original_formula_audit": {
+    "candidate_hash": "6030f39d815297c96eb48a78cec93123edaa5bdee11b61a5765c50d3c21abaa6",
+    "checked_cases": 8640,
+    "idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+    "observed_outcomes": 8625,
+    "oracle_sha256": "97e9288a835441ea5e039619b12782972d980eec50861b7b58dfcfe02e32d7d2",
+    "profile": "paired-breakout-composition/1",
+    "qualification": "Independent Decimal100 cross-check; rigorous bounds belong to the certified evaluator.",
+    "schema": "paired-breakout-row-audit/1",
+    "scientific_readiness": false
+  },
+  "new_model_calls": 2,
+  "new_tokens": 95325,
+  "new_conservative_cost_nano": 411952500,
+  "total_tokens": 1064316,
+  "remaining_original_budget_nano": 1043277500,
+  "model_pipeline_seconds": 403.31785580000724,
+  "execution_replay_audit_ms": 77849,
+  "resource_observation": "Formalizer actually used 22066 output tokens, including6494 reasoning tokens. This observed output exceeds the unused18000-token draft, while remaining inside the selected32000 limit; no counterfactual response is claimed.",
+  "grant_closure": {
+    "at_utc": "2026-10-30T16:06:49.330197+00:00",
+    "revocation": {
+      "epoch_id": "c04f6879e5194c31b67edac200add00f",
+      "pending_calls_still_require_settlement": true,
+      "status": "REVOKED"
+    }
+  },
+  "registry_integrity_after_model_run": {
+    "blobs": {
+      "committed": 997,
+      "orphan_policy": "uncommitted files confer no authority; no automatic deletion",
+      "quarantined": [],
+      "status": "PASS"
+    },
+    "events": 1972,
+    "foreign_keys": true,
+    "research_memory": {
+      "records": 69,
+      "scientific_authority": false,
+      "status": "PASS",
+      "version": "research-memory/1"
+    },
+    "schema_version": 1,
+    "scope": "local coordination and research memory integrity only",
+    "status": "PASS",
+    "synchronous": "FULL"
+  },
+  "qualification": "One qualifying observed case yields a descriptive contrast, not a reliable population effect, significance result or executable policy return. Numerical enclosures are rounding bounds, not statistical confidence intervals.",
+  "unverified": [
+    "Calibrated inference and protected assessment",
+    "Economic usefulness, realistic policy costs, shorting/borrow feasibility and portfolio execution",
+    "Generalization beyond the exposed development quarter",
+    "Independent provider/model diversity",
+    "Second-result publication into future model feedback"
+  ],
+  "private_evidence_hashes": {
+    "formalization.json": "d8cfa9816392735a228731a2318c9561c3ff3a0f90e08dd9aade6f18b39d09cc",
+    "review.json": "1e24b619759e9963ef74a04fb09bb3c5a026b7b714aab5c643483f0a44f39120",
+    "compiled.json": "c98bab46125eb44ea12686cc91c406e4b2e131fb9ae53dde448c2a4d6ab340c9",
+    "composition.json": "e1ab1c7839055cc09aaa5d934e34067d19befdc97f98588f19fd0eb860920708",
+    "execution.json": "7b65a0d837fd7ec4275a3404847872d62999d53c7ab7929647b921bd1ae60d28",
+    "run-result.json": "794ca1ed2e4a54e7f336afb63d9109245bba1bfc8ae435ab9adc9e049a66a872",
+    "grant-closure.json": "4b46c428a1abbf17a6a4a4a584f152a70b6533a9a3c07a9866d50febd8575bcc"
+  },
+  "scientific_readiness": false,
+  "protected_outcomes_accessed": false,
+  "manual_candidate_repair": false,
+  "independent_aggregate_audit": {
+    "evidence": "paired-breakout-independent-audit-2026-10-30.json",
+    "sha256": "a0ff233565edf7afefc31a7721b4856cd585c9c7be7a3c816588094f89f70fbc",
+    "status": "PASS",
+    "case_count": 8640,
+    "scope": "Exact retained-case hash, counts, independent Fraction/outward-rounded interval aggregates, immutable registry/capsule binding and per-call accounting; no scientific inference."
+  }
+}

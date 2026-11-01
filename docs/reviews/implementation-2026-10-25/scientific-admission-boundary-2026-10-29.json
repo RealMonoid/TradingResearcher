@@ -1,0 +1,377 @@
+{
+  "schema": "scientific-admission-continuation-evidence/1",
+  "recorded_at_utc": "2026-10-29T06:03:09.737814+00:00",
+  "purpose": "Resolve the current operational-plan priority for the exact original ETH report; assess a separate future feedback-informed discovery input before spending on inference.",
+  "status": "ORIGINAL_SCOPE_GAP_RETAINED_NEW_UNIT_NOT_ADMITTED",
+  "authority": "Engineering admission and resource decision only; no new scientific contract or empirical classification.",
+  "original_scope_audit": {
+    "schema": "scientific-admission-boundary-observation/1",
+    "observed_at_utc": "2026-10-29T05:51:11.946291+00:00",
+    "wall_seconds": "0.3904865000004065",
+    "scope": "Exact retained ETH development report only; no framework-wide verdict.",
+    "idea_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+    "idea_text_sha256": "ef8d9c2897d27129cfd72178231f408a5283869fbcced3d54a70bd40c4a2276f",
+    "compiled_id": "5278827e87bb99d87e6173fc0c129973d38516b28d5ddde1c1a94c5392e4dbe3",
+    "execution_id": "62cff0ef9503481047add4193a8ab5894d2758ed0d3a2d27b648ad1f73e906dd",
+    "case_blob": {
+      "sha256": "4aab9cb47aed26f70a34541008b8be2e878f71d1cd7719471f1a274774e3f103",
+      "size": 12220451
+    },
+    "request_sha256": "d306ee5bf849c238fc659ed29c73012436e26640e2ea895ca2ef241556a8ace9",
+    "admission_probe": {
+      "status": "DENIED_AS_REQUIRED",
+      "reason": "Bounded outcomes are descriptive only; scalar scientific planning is unavailable"
+    },
+    "effect_profile_probe": {
+      "status": "NO_APPLICABLE_APPROVED_PROFILE",
+      "first_guard": "The approved pilot requires the canonical ratio contrast"
+    },
+    "outcome": {
+      "measurement": "One-hour ETH log price change from future open to future close in basis points.",
+      "observation_span_seconds": 3600,
+      "evaluation_anchor_offset_seconds": 4500,
+      "anchor_note": "Five15-minute bars include the adopted900-second publication delay; this is not a75-minute return."
+    },
+    "cases": 8640,
+    "observed_outcomes": 8626,
+    "condition_counts": {
+      "true": 0,
+      "false": 8437,
+      "unknown": 203
+    },
+    "contrast": {
+      "condition_count": 0,
+      "condition_mean": null,
+      "effect": null,
+      "evaluation_contract": "required-inputs/1",
+      "kind": "conditional-minus-scope-mean/1",
+      "numerical_contract": "bounded-math/1.0",
+      "reason": "no_conditioned_cases",
+      "schema": "required-input-bounded-reference-contrast/1",
+      "scientific_readiness": false,
+      "scope_count": 8626,
+      "scope_mean": {
+        "lower": {
+          "denominator": "22931841383281368639336479403956504625152",
+          "numerator": "45868573717767046029161012366730461894375"
+        },
+        "schema": "bounded-real/1",
+        "upper": {
+          "denominator": "183454731066250949114691835231652037001216",
+          "numerator": "366948589742136368233288098933844737025625"
+        }
+      },
+      "status": "INFORMATION_GAP"
+    },
+    "denominator_invariant": {
+      "conditioned_eligible_rows": 0,
+      "resampling_can_add_a_conditioned_row": false,
+      "basis": "All eligible conditioned indicators equal0, so sum_i w_i*C_i=0 for every nonnegative index multiplicity vector.",
+      "qualification": "Only index resampling of these retained rows. Not zero population prevalence, falsification, power, or a claim about another period."
+    },
+    "decision": {
+      "resource_action": "RETAIN_GAP",
+      "current_original_scope_inference": "STOP",
+      "scientific_outcome": null,
+      "original_idea_status": "RETAINED_UNTESTED_SCIENTIFICALLY",
+      "reason": "A new effect profile or numerical-bootstrap implementation cannot identify an empty conditional mean on this unchanged scope.",
+      "profile_extension_now": "NOT_JUSTIFIED_BY_THIS_REPORT",
+      "reopen_condition": "A separately scoped and authorized informative research target, defensible practical effect profile, bound-preserving estimator and all scientific admission requirements; preserve original meaning/exposure."
+    },
+    "source_sha256": {
+      "trading_researcher/evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+      "trading_researcher/evaluation_plans.py": "32de8189f8603e6ac8089895eb2ff9fc675769a763f1cc99ed064bd9ca836016",
+      "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+      "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+      "docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md": "6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f"
+    },
+    "provider_calls": 0,
+    "tokens": 0,
+    "cost_usd": "0",
+    "new_market_outcome_evaluations": 0,
+    "protected_reads": 0,
+    "registry_writes": 0,
+    "unverified": [
+      "No chosen newdelta or scientific-profile proposal; an economic policy is not specified.",
+      "No calibrated information target, scientific freeze or protected assessment.",
+      "No claim of predictive failure, successful search, economic value or population prevalence."
+    ]
+  },
+  "interpretation": {
+    "information": "Zero conditioned rows leave the conditional mean undefined on this unchanged quarter. Index resampling of these rows has a zero conditioned denominator for every multiplicity vector.",
+    "meaning": "The original return measures one hour, not 75 minutes; its evaluation anchor is offset by 4,500 seconds to include the assumed 900-second availability delay.",
+    "scientific_gate": "Bounded outcomes intentionally cannot enter the scalar scientific planner. Existing binary and 24-hour simple-return practical-effect profiles cannot be silently transferred to a one-hour log-return claim.",
+    "decision": "Retain the descriptive information gap and stop inference for this unchanged original scope. A new effect threshold or estimator cannot create a conditioned observation.",
+    "proposal_disposition": "No new scientific profile is proposed solely to evaluate this empty conditional mean.",
+    "not_established": [
+      "Population condition prevalence",
+      "Falsification",
+      "Predictive value",
+      "Economic value",
+      "Scientific calibration"
+    ]
+  },
+  "new_unit_preflight": {
+    "schema": "feedback-discovery-admission-preflight/1",
+    "observed_at_utc": "2026-10-29T05:58:48.683080+00:00",
+    "purpose": "New free development discovery informed by the complete closed cohort. Preserve the original claims unchanged and scientifically untested; do not tune their thresholds or dates to rescue the observed zero-case result. This is a new development work unit, not independent confirmation.",
+    "status": "NOT_ADMITTED",
+    "scope": "Exact initial inputs for two isolated perspectives; no generated idea, downstream packet or research epoch.",
+    "source_ids": [
+      "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+      "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+      "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035"
+    ],
+    "same_sources_both_perspectives": true,
+    "source_projection": "Existing discovery-source-view/2 only; all body fields and seven complete retained idea/gap records preserved.",
+    "source_sizes": [
+      {
+        "id": "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+        "schema": "research-record/1",
+        "full_bytes": 17737,
+        "view_bytes": 2098
+      },
+      {
+        "id": "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+        "schema": "research-record/1",
+        "full_bytes": 18311,
+        "view_bytes": 2672
+      },
+      {
+        "id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "schema": "development-feedback-manifest/1",
+        "full_bytes": 165887,
+        "view_bytes": 134275
+      },
+      {
+        "id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "schema": "feature-catalog/1",
+        "full_bytes": 1572,
+        "view_bytes": 2043
+      },
+      {
+        "id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "schema": "data-snapshot/1",
+        "full_bytes": 16048,
+        "view_bytes": 7617
+      }
+    ],
+    "existing_feedback_context_freshness": "PASS",
+    "new_context_created": false,
+    "requests": [
+      {
+        "perspective": "feas-20261029-a",
+        "normalized_request_sha256": "874b4ba88f17128d69dd446cdabd30eeaacf95faddfad7f420a05dbc85ea648f",
+        "wire_sha256": "d100c3f2274302f14032640c2ababa85eaf8ed20eb10186f5da0f422f5679b43",
+        "wire_bytes": 162067,
+        "input_tokens": 69756,
+        "response": {
+          "object": "response.input_tokens",
+          "input_tokens": 69756
+        },
+        "transport_request_id": "req_7a95ba4497e74cd888a585d361d47c54",
+        "counted_at_utc": "2026-10-29T05:58:48.262198+00:00"
+      },
+      {
+        "perspective": "feas-20261029-b",
+        "normalized_request_sha256": "ebe3746ccd6b989636b42453f8089d02dae4fc481e278fdfd228db492b586980",
+        "wire_sha256": "7d86eec16bd462d48bd17df8fa302ab354e8615dd452b856c9de521f739621c4",
+        "wire_bytes": 162128,
+        "input_tokens": 69766,
+        "response": {
+          "object": "response.input_tokens",
+          "input_tokens": 69766
+        },
+        "transport_request_id": "req_80a5cdf60db54988a10ad3e4a3803c9b",
+        "counted_at_utc": "2026-10-29T05:58:48.683059+00:00"
+      }
+    ],
+    "initial_input_tokens_two_perspectives": 139522,
+    "existing_epoch_token_ceiling": 80000,
+    "output_tokens_or_downstream_allowance_included": false,
+    "initial_inputs_alone_exceed_ceiling": true,
+    "model_identity": {
+      "requested_model": "gpt-6.1-sol",
+      "reported_model": null,
+      "catalog_name": "GPT-6.1 Sol",
+      "catalog_version": "6.1",
+      "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "immutable_snapshot_id": null,
+      "immutable_snapshot_status": "UNKNOWN"
+    },
+    "input_count_requests": 2,
+    "inference_calls": 0,
+    "new_inference_tokens": 0,
+    "new_recorded_inference_charge_nano": 0,
+    "billing_qualification": "Token-count endpoints are recorded separately from inference; no provider invoice inspected.",
+    "registry_writes": 0,
+    "protected_reads": 0,
+    "wall_seconds": "3.5557487000005494",
+    "helper_sha256": "d4322eed844c4302449c750aec5e0c3f5c0aa99c16482e49e5a20c671ea0836e",
+    "limitations": [
+      "No empirical or quality claim.",
+      "No changed source-presentation rule or source omission.",
+      "No downstream admission or permission to split/reset epochs to evade their ceiling.",
+      "No new provider, spending cap, scientific profile or resumption of the original target."
+    ]
+  },
+  "usage": {
+    "totals": {
+      "calls": 37,
+      "known_usage_calls": 37,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 467801,
+      "known_output_tokens": 69622,
+      "known_total_tokens": 537423,
+      "exact_total_tokens": 537423,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 37,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 23053,
+      "reasoning_detail_calls": 37,
+      "exact_reasoning_output_tokens": 23053
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 1865722500,
+      "available_nano": 3134277500,
+      "halted": false
+    },
+    "models": [
+      {
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": null,
+          "catalog_source": null,
+          "catalog_version": null,
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "calls": 4,
+        "known_usage_calls": 4,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 2038,
+        "known_output_tokens": 134,
+        "known_total_tokens": 2172,
+        "exact_total_tokens": 2172,
+        "known_cached_input_tokens": 0,
+        "cached_detail_calls": 4,
+        "exact_cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "reasoning_detail_calls": 4,
+        "exact_reasoning_output_tokens": 0
+      },
+      {
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "calls": 33,
+        "known_usage_calls": 33,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 465763,
+        "known_output_tokens": 69488,
+        "known_total_tokens": 535251,
+        "exact_total_tokens": 535251,
+        "known_cached_input_tokens": 20971,
+        "cached_detail_calls": 33,
+        "exact_cached_input_tokens": 20971,
+        "known_reasoning_output_tokens": 23053,
+        "reasoning_detail_calls": 33,
+        "exact_reasoning_output_tokens": 23053
+      }
+    ],
+    "timestamp_basis": "UTC; admission and durable local settlement, not provider execution start/end. Missing historical fields are not backfilled."
+  },
+  "usage_qualification": "Two input-count endpoint requests are recorded separately with UTC and model identity. No inference was dispatched and the inference ledger was unchanged. No invoice was inspected.",
+  "failure_history": [
+    {
+      "stage": "local audit helper assertion",
+      "outcome": "First run failed because Counter omitted the absent true key; fixed explicit zero-category initialization, then passed. No registry write or scientific runtime change.",
+      "failed_run_time": "UNKNOWN"
+    },
+    {
+      "stage": "read-only file lookup",
+      "outcome": "A guessed decision.json filename was absent; the retained file is continuation-decision.json. No runtime or source mutation.",
+      "failed_run_time": "UNKNOWN"
+    }
+  ],
+  "checks": [
+    {
+      "name": "bounded_scientific_gate",
+      "cmd": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B -m unittest discover -s tests -p test_bounded_scientific_gate.py -v",
+      "chunk_id": "0b7eed",
+      "wall_time_seconds": 0.710276,
+      "exit_code": 0,
+      "original_token_count": 180,
+      "output": "test_bounded_diagnostic_is_denied_before_blob_access_for_scalar_target (test_bounded_scientific_gate.BoundedScientificGateTests.test_bounded_diagnostic_is_denied_before_blob_access_for_scalar_target) ... ok\r\ntest_bounded_target_is_denied_before_snapshot_or_diagnostic_access (test_bounded_scientific_gate.BoundedScientificGateTests.test_bounded_target_is_denied_before_snapshot_or_diagnostic_access) ... ok\r\ntest_legacy_scalar_target_and_diagnostic_keep_existing_admission_route (test_bounded_scientific_gate.BoundedScientificGateTests.test_legacy_scalar_target_and_diagnostic_keep_existing_admission_route) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 3 tests in 0.001s\r\n\r\nOK\r\n"
+    },
+    {
+      "name": "required_contract",
+      "cmd": "& 'C:/Users/monoi/AppData/Local/Programs/Python/Python314/python.exe' -B -m unittest discover -s tests -p test_required_contract.py -v",
+      "chunk_id": "205dbc",
+      "wall_time_seconds": 0.6199042,
+      "exit_code": 0,
+      "original_token_count": 242,
+      "output": "test_both_new_diagnostic_schemas_are_denied_before_blob_access (test_required_contract.RequiredContractTests.test_both_new_diagnostic_schemas_are_denied_before_blob_access) ... ok\r\ntest_formalizer_and_reviewer_receive_identical_pinned_meaning (test_required_contract.RequiredContractTests.test_formalizer_and_reviewer_receive_identical_pinned_meaning) ... ok\r\ntest_missing_or_changed_new_source_fails_closed (test_required_contract.RequiredContractTests.test_missing_or_changed_new_source_fails_closed) ... ok\r\ntest_new_target_is_denied_before_any_snapshot_or_diagnostic_access (test_required_contract.RequiredContractTests.test_new_target_is_denied_before_any_snapshot_or_diagnostic_access) ... ok\r\ntest_review_cannot_downgrade_omit_or_add_the_contract (test_required_contract.RequiredContractTests.test_review_cannot_downgrade_omit_or_add_the_contract) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.004s\r\n\r\nOK\r\n"
+    }
+  ],
+  "required_documentation_gates": {
+    "verify_retail_contract.py": {"status": "PASS", "exit_code": 0, "local_links": 833},
+    "verify_implementation.py": {"status": "PASS", "exit_code": 0, "baseline_files": 103, "local_document_links": 829},
+    "git diff --check": {"status": "PASS", "exit_code": 0, "qualification": "Existing CRLF normalization warnings only."},
+    "exact_log": ".trf-runtime/feasibility-checkpoint-2026-10-27/scientific-admission-documentation-checks.json"
+  },
+  "private_evidence": [
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/inspect_scientific_admission.py",
+      "sha256": "207a7a1996c8e21da6468fa912133b45e4bee806dcc997635709d0f57448ee5c"
+    },
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/scientific-admission-boundary.json",
+      "sha256": "53a2f2c0045b65fb1bb65b364d2c02eb1da7ebdaee6b1a1a254e94c153bbd1aa"
+    },
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/prepare_feedback_discovery.py",
+      "sha256": "d4322eed844c4302449c750aec5e0c3f5c0aa99c16482e49e5a20c671ea0836e"
+    },
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-discovery-local-preflight.json",
+      "sha256": "7898fe00fb2af9db3740a1b287aa6e7337e4435221a64dd7c75a6cb269294054"
+    },
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/feedback-discovery-token-preflight.json",
+      "sha256": "03eb580dd25e2462391fd02cc4f60e03fc8a44424a52d33ca5d24010fcdd164b"
+    },
+    {
+      "path": ".trf-runtime/feasibility-checkpoint-2026-10-27/scientific-admission-checks.json",
+      "sha256": "c43baca48e80bc467434fe3f6cf0f1dfc02cc6e4ae46c2a56df359a0a1cbbd34"
+    }
+  ],
+  "changed_project_files": [
+    "docs/reviews/implementation-2026-10-25/scientific-admission-boundary-2026-10-29.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json"
+  ],
+  "runtime_source_changes": [],
+  "next_action": "Follow execution_plan: assess exact bounded retrieval of repeated reference/provenance lists without removing ideas, gaps, failure descriptions or qualifications; establish full-path admission before a new discovery unit. Preserve old contexts and ceilings.",
+  "unverified": [
+    "No new source-presentation implementation or demonstrated token saving.",
+    "No admitted downstream formalization/review packet for a new idea.",
+    "No new research epoch, mixed-provider execution or completed full scientific cycle.",
+    "No protected assessment, chosen new practical-effect profile, final calibration or economic result."
+  ]
+}

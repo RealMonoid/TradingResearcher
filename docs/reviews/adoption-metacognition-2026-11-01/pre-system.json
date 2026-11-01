@@ -1,0 +1,52 @@
+{
+  "command": "python -B docs/reviews/verify_system_model.py",
+  "exit_code": 0,
+  "result": {
+    "status": "PASS",
+    "checks": {
+      "local_links": 731,
+      "source_files": 5,
+      "decisions": 95,
+      "preserved_original_decisions": 67,
+      "preserved_approved_decisions": 68,
+      "preserved_rejections": 47,
+      "traced_requirements": 30,
+      "generator_acceptance_specs": 3,
+      "diagram_edges": 38,
+      "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+      "preexisting_file_inventory": "Not checked; rerun with retained --baseline inventory",
+      "git_diff_check_exit": 0
+    },
+    "checked_files_sha256": {
+      "AGENTS.md": "3966c30bd371703f1ccb46959e43c751a0b728cc96b7ecf5e1e4384782e46670",
+      "README.md": "3eee7d87c87249bc41cd4b94b5a6f39f9726fa51b4080072c39de5c01d842c41",
+      "docs/architecture/01_PROBLEM_DEFINITION.md": "7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446",
+      "docs/architecture/02_DECISION_REGISTER.md": "86d679b64819ce5a913fde071ce8d2b5ae42868b15432d0df18bedeea32fb772",
+      "docs/architecture/05_REQUIREMENTS.md": "6b321bfa7480d447558de5aa7080d6756bd81b6f44fd22f8057abcdad77c3110",
+      "docs/architecture/06_MASTER_ARCHITECTURE.md": "fe39428e5aa641a706beda613153f54717770a2a2d179ef870b07e12e82ad1c7",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "691c4a923ee5ee73c835bb2ed9608858148d230d1a19bdd1f258ffe58f6e6552",
+      "docs/architecture/10_IMPLEMENTATION_ROADMAP.md": "eb01019197e9161eb0d5c03fa15bcee7242818ec9784af33c3bb8f7dff5bbda2",
+      "docs/architecture/11_OPEN_DECISIONS.md": "68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29",
+      "docs/architecture/12_TRACEABILITY_MATRIX.md": "6c8a9fb6277e9967d4323103df697f822fb77427765b45de6cb38d7b037ecccd",
+      "docs/architecture/ARCHITECTURE_REGISTER.json": "ece7911019cceafa50eb47f22fa68d869541230a7681bbf509022341eddb8625",
+      "docs/architecture/CURRENT_STATE.md": "06fa616726566c6b489f07ccc8f9532ce8635660703836a06221eb3cda9bb57b",
+      "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+      "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2",
+      "docs/architecture/04_DEFINITIONS.md": "4bd8b1afc42892a8dc0e84d72b6601cddcc89bf802feb03670c68a7b1ec35564",
+      "docs/architecture/08_ENGINEERING_REVIEW.md": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c",
+      "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+      "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "802647f655fc1b13ce84eafa0e32483da5a1a60c1671c98384eed6f7491efe2b",
+      "docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md": "dc2fa12c066d80f4e07d69b451154eb356148f9e1e7e40e9956f543ebef41c8e",
+      "docs/architecture/17_MONITORING_VISIBILITY_AND_REPORTING.md": "bc8996e914eb95b5becde5a7abed2572dc090678fb7dbd2923df6107b346717d",
+      "REVIEWING.md": "47296fe58beea0faa930c9083e61cd7422514f01c59783dd4a676a3aabd4452b",
+      "trading_researcher/README.md": "644baea88435827f52b49da7ba7dcfaf044064d4f79a46c9d2c8f13d14705256"
+    },
+    "errors": [],
+    "unverified": [
+      "New-session behavioral efficacy and compaction retention",
+      "Mermaid rendering",
+      "Full autonomous scientific runtime and complete TEST-01 through TEST-30; bounded coordination tests are recorded separately",
+      "D087 TEST-17/25 and D088 TEST-17/22/25 extensions, temporal diagnostic method/calibration, weekly reporting/delivery, profitability and speed improvement"
+    ]
+  }
+}

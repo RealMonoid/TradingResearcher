@@ -1,0 +1,40 @@
+{
+  "schema": "codex-construction-usage-observation/1",
+  "scope": "Main Codex chat since explicit AmiBroker fix instruction; checking and rework included to snapshot time.",
+  "prompt_at_utc": "2026-10-31T06:03:33.142Z",
+  "baseline": {
+    "at_utc": "2026-10-31T06:03:32.558Z",
+    "tokens": {
+      "input_tokens": 677032578,
+      "cached_input_tokens": 666207744,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3275459,
+      "reasoning_output_tokens": 1386315,
+      "total_tokens": 680308037
+    }
+  },
+  "latest": {
+    "at_utc": "2026-10-31T06:20:38.888Z",
+    "tokens": {
+      "input_tokens": 690683104,
+      "cached_input_tokens": 679800832,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3306188,
+      "reasoning_output_tokens": 1402535,
+      "total_tokens": 693989292
+    }
+  },
+  "delta": {
+    "input_tokens": 13650526,
+    "cached_input_tokens": 13593088,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 30729,
+    "reasoning_output_tokens": 16220,
+    "total_tokens": 13681255
+  },
+  "models_observed": [],
+  "latest_model": "gpt-6.1-sol",
+  "child_branch_token_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+  "billed_credits": "UNKNOWN",
+  "framework_provider_calls": "Separate persistent research-call ledger; no calls made by this preflight."
+}

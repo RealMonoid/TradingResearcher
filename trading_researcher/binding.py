@@ -16,12 +16,35 @@ from .certification import FILES, _runtime_identity, _runtime_path_allowed, _env
 
 ROOT = Path(__file__).resolve().parents[1]
 PROFILE = 'bound-reference/1'
+BOUNDED_PROFILE = 'reference-computation/2'
+DIAGNOSTIC_PROFILE = 'reference-computation/3'
+REQUIRED_PROFILE = 'reference-computation/4'
 DRIVER = 'trading_researcher/binding.py'
 PACKAGE_FILES = (*FILES, DRIVER)
 BOOTSTRAP = ('import sys;sys.path.insert(0,sys.argv[1]);'
     'from trading_researcher.binding import child_entry;child_entry(sys.argv[2])')
 MAX_OUTPUT_BYTES = 512*1024*1024
 AUTHORITY = 'descriptive_reference_computation_only'
+
+
+def package_profile(files):
+    if set(files) == set(PACKAGE_FILES):
+        return PROFILE
+    # Older retained /1 packages predate configuration; /2 predates the /3 name.
+    # Load only the API that the selected extended source closure needs.
+    from .certification import configuration
+    if set(files) == set(configuration(BOUNDED_PROFILE)['files']) | {DRIVER}:
+        return 'bound-reference/2'
+    if set(files) == set(configuration(DIAGNOSTIC_PROFILE)['files']) | {DRIVER}:
+        return 'bound-reference/3'
+    if set(files) == set(configuration(REQUIRED_PROFILE)['files']) | {DRIVER}:
+        return 'bound-reference/4'
+    raise Invalid('Unknown fixed bound source closure')
+
+
+def bounded_candidate(candidate):
+    return any(type(program) is dict and program.get('schema') == 'research-ast/2' for program in (
+        candidate['scope_ast'], candidate['condition_ast'], candidate['outcome']['program']))
 
 
 def hashes(bundle):
@@ -63,7 +86,8 @@ def environment(expected):
 def expected_request(payload):
     candidate = payload['candidate']
     universe = candidate['test_universe']
-    return {'schema':'reference-case-request/1','candidate_ref':payload['formalization_id'],
+    schema = 'bounded-reference-case-request/1' if bounded_candidate(candidate) else 'reference-case-request/1'
+    return {'schema':schema,'candidate_ref':payload['formalization_id'],
         'data_snapshot_ref':universe['data_snapshot_ref'],'scope_program':candidate['scope_ast'],
         'condition_program':candidate['condition_ast'],'outcome_program':candidate['outcome']['program'],
         'outcome_scale':candidate['outcome']['scale'],'horizon_bars':candidate['horizons']['outcome_bars'],
@@ -113,22 +137,35 @@ def compile_payload(payload):
     require(type(payload) is dict and set(payload) == {'formalization_id','candidate','catalog','data_manifest','as_of','max_steps'})
     candidate = payload['candidate']
     request = expected_request(payload)
-    start,end,as_of,_,count,instruments = _validate(request)
+    bounded = request['schema'] == 'bounded-reference-case-request/1'
+    if bounded:
+        from .bounded_math import BoundedReferenceEngine
+        from .bounded_outcomes import legacy_request, lookback
+        validated_request = legacy_request(request)
+        node_lookback = lookback
+    else:
+        validated_request, node_lookback = request, _lookback
+    start,end,as_of,_,count,instruments = _validate(validated_request)
     require(start%900 == 0 and end%900 == 0, 'The bound data loader needs an exact 900-second universe')
     manifest = payload['data_manifest']
     data_start,data_end = (_instant(manifest['universe'][key]) for key in ('start','end'))
     require(data_start <= start < end <= data_end and set(instruments) <= set(manifest['universe']['instruments']))
-    engine = ReferenceEngine(payload['catalog'], [{'time':start,'instrument':instruments[0],'features':{}}])
-    programs = {key:engine.describe(request[key]) for key in ('scope_program','condition_program','outcome_program')}
+    rows = [{'time':start,'instrument':instruments[0],'features':{}}]
+    engine = (BoundedReferenceEngine(payload['catalog'], rows) if bounded
+              else ReferenceEngine(payload['catalog'], rows))
+    outcome_engine = BoundedReferenceEngine(payload['catalog'], rows, allow_log=True) if bounded else engine
+    programs = {key:(outcome_engine if key == 'outcome_program' else engine).describe(request[key])
+                for key in ('scope_program','condition_program','outcome_program')}
     require(programs['scope_program']['type'] == programs['condition_program']['type'] == 'boolean')
     expected_type = 'boolean' if request['outcome_scale'] == 'binary_probability' else 'real'
     require(programs['outcome_program']['type'] == expected_type)
     outcome_unit = 'ratio' if expected_type == 'boolean' else programs['outcome_program']['unit']
+    require(not bounded or outcome_unit == 'basis_points', 'Bounded outcome profile requires basis_points')
     require(candidate['estimand']['unit'] == outcome_unit)
     refs = sorted({ref for item in programs.values() for ref in item['feature_refs']})
     require(refs == sorted(candidate['feature_refs']))
-    decision_lookback = max(_lookback(engine._program_node(request[key])) for key in ('scope_program','condition_program'))
-    outcome_lookback = _lookback(engine._program_node(request['outcome_program']))
+    decision_lookback = max(node_lookback(engine._program_node(request[key])) for key in ('scope_program','condition_program'))
+    outcome_lookback = node_lookback(outcome_engine._program_node(request['outcome_program']))
     lookback = max(decision_lookback,max(0,outcome_lookback-request['horizon_bars']*900))
     row_start = max(data_start,start-lookback)
     maximum_rows = ((end-row_start)//900)*len(instruments)
@@ -141,7 +178,7 @@ def compile_payload(payload):
         'scientific_readiness':False}
 
 
-def _compute(payload, directory):
+def _compute(payload, directory, *, diagnostics=False, required_inputs=False):
     from .outcomes import materialize_reference
     require(type(payload) is dict and set(payload) == {'compilation_input','compilation_hash','rows'})
     compiled = compile_payload(payload['compilation_input'])
@@ -154,13 +191,41 @@ def _compute(payload, directory):
             checksum.update(line)
             rows.append(decode(line))
     require(digest({'sha256':checksum.hexdigest(),'size':size}) == digest(payload['rows']))
+    if required_inputs:
+        from .required_inputs import materialize_required, add_required_diagnostics
+        report = materialize_required(compiled['request'],payload['compilation_input']['catalog'],rows)
+        return add_required_diagnostics(report,payload['compilation_input']['catalog'],rows,
+            max(0,compiled['request']['max_steps']-report['primitive_steps']))
+    if compiled['request']['schema'] == 'bounded-reference-case-request/1':
+        from .bounded_outcomes import materialize_bounded
+        report = materialize_bounded(compiled['request'],payload['compilation_input']['catalog'],rows)
+        if diagnostics:
+            from .case_diagnostics import add_diagnostics
+            return add_diagnostics(report,payload['compilation_input']['catalog'],rows,
+                max(0,compiled['request']['max_steps']-report['primitive_steps']))
+        return report
     return materialize_reference(compiled['request'],payload['compilation_input']['catalog'],rows)
 
 
-def _execute(payload, directory):
+def descriptive_contrast(report):
+    if report.get('schema') == 'diagnostic-required-input-bounded-reference-cases/1':
+        from .required_inputs import required_base_projection, required_contrast
+        return required_contrast(required_base_projection(report))
+    if report.get('schema') == 'diagnostic-bounded-reference-cases/1':
+        from .case_diagnostics import base_projection
+        from .bounded_outcomes import bounded_contrast
+        return bounded_contrast(base_projection(report))
+    if report.get('schema') == 'bounded-reference-cases/1':
+        from .bounded_outcomes import bounded_contrast
+        return bounded_contrast(report)
     from .outcomes import reference_contrast
-    report = _compute(payload,directory)
-    contrast = reference_contrast(report)
+    return reference_contrast(report)
+
+
+def _execute(payload, directory, *, diagnostics=False, required_inputs=False):
+    from .outcomes import reference_contrast
+    report = _compute(payload,directory,diagnostics=diagnostics,required_inputs=required_inputs)
+    contrast = descriptive_contrast(report)
     output,checksum,size = Path(directory)/'cases.jsonl',hashlib.sha256(),0
     with output.open('xb') as stream:
         for case in report['cases']:
@@ -176,7 +241,7 @@ def _execute(payload, directory):
         'compilation_hash':payload['compilation_hash'],'scientific_readiness':False}
 
 
-def _verify_execution(payload, directory):
+def _verify_execution(payload, directory, *, diagnostics=False, required_inputs=False):
     """Exact replay of already selected immutable rows; no extra data permission."""
     from .outcomes import reference_contrast
     require(type(payload) is dict and set(payload) == {'execution_input','result'})
@@ -184,9 +249,9 @@ def _verify_execution(payload, directory):
     require(type(result) is dict and set(result) == {'report','contrast','case_blob','rows','compilation_hash','scientific_readiness'})
     require(result['compilation_hash'] == execution['compilation_hash'] and result['scientific_readiness'] is False
         and digest(result['rows']) == digest(execution['rows']))
-    report = _compute(execution,directory)
+    report = _compute(execution,directory,diagnostics=diagnostics,required_inputs=required_inputs)
     require(digest(result['report']) == digest({key:value for key,value in report.items() if key != 'cases'}))
-    require(digest(result['contrast']) == digest(reference_contrast(report)))
+    require(digest(result['contrast']) == digest(descriptive_contrast(report)))
     checksum,size = hashlib.sha256(),0
     with (Path(directory)/'cases.jsonl').open('rb') as stream:
         for case in report['cases']:
@@ -205,16 +270,18 @@ def _verify_execution(payload, directory):
 def child_entry(request_path):
     request = decode(Path(request_path).read_bytes())
     expected = request['footprint']
-    require(set(expected) == set(PACKAGE_FILES))
+    profile = package_profile(expected)
     require(hashes({name:(ROOT/name).read_bytes() for name in expected}) == expected)
     require(not list((ROOT/'trading_researcher').glob('**/*.pyc')))
     environment(expected)
     if request['mode'] == 'compile':
         result = compile_payload(request['payload'])
     elif request['mode'] == 'execute':
-        result = _execute(request['payload'],Path(request_path).parent)
+        result = _execute(request['payload'],Path(request_path).parent,diagnostics=profile=='bound-reference/3',
+            required_inputs=profile=='bound-reference/4')
     elif request['mode'] == 'verify':
-        result = _verify_execution(request['payload'],Path(request_path).parent)
+        result = _verify_execution(request['payload'],Path(request_path).parent,diagnostics=profile=='bound-reference/3',
+            required_inputs=profile=='bound-reference/4')
     else:
         raise Invalid('Unknown bound computation operation')
     require(hashes({name:(ROOT/name).read_bytes() for name in expected}) == expected)
@@ -252,7 +319,7 @@ class BoundComputation:
         return self._bound_dependencies(actor,*(args[name] for name in ('formalization_id','feature_certificate_id','reference_certificate_id')),**optional)
 
     def _bound_dependencies(self, actor, formalization_id, feature_certificate_id, reference_certificate_id, data_target_binding_id=None):
-        from .certification import _pins_match, EXPECTED_CHECKS
+        from .certification import _pins_match, configuration
         record = self._artifact(text(formalization_id,'formalization identity'))
         require(record['origin'] == 'worker' and type(record['body']) is dict
             and record['body'].get('schema') == 'formalization-record/1', 'A retained formalization is required')
@@ -280,9 +347,20 @@ class BoundComputation:
         status = self._reference_certificate_status(actor,reference_certificate_id)
         require(status['status'] in ('CURRENT','STALE') and status['retained_source_status'] == 'VERIFIED')
         refbody = reference['body']
+        if bounded_candidate(candidate):
+            require(refbody['profile'] in (BOUNDED_PROFILE,DIAGNOSTIC_PROFILE,REQUIRED_PROFILE),
+                'New mathematical primitives need the optional bounded conformance certificate')
+        if refbody['profile'] in (DIAGNOSTIC_PROFILE,REQUIRED_PROFILE):
+            require(bounded_candidate(candidate), 'Diagnostic reporting requires the bounded candidate profile')
+        if job['spec'].get('research_inputs',{}).get('reporting_contract') == 'case-diagnostics/1':
+            require(refbody['profile'] == DIAGNOSTIC_PROFILE,
+                'The formalized reporting contract requires its exact diagnostic certificate')
+        if job['spec'].get('research_inputs',{}).get('reporting_contract') == 'case-diagnostics/2':
+            require(refbody['profile'] == REQUIRED_PROFILE,
+                'The formalized reporting contract requires its exact required-input certificate')
         reference_bundle = self._load_reference_package(refbody['source_package_id'])
-        require(hashes(reference_bundle) == refbody['footprint'] and _pins_match(refbody['footprint'])
-            and digest(refbody['checks']) == digest(EXPECTED_CHECKS) and _environment_current(refbody['environment']),
+        require(hashes(reference_bundle) == refbody['footprint'] and _pins_match(refbody['footprint'], refbody['profile'])
+            and digest(refbody['checks']) == digest(configuration(refbody['profile'])['checks']) and _environment_current(refbody['environment']),
             'The retained calculator needs its exact compatible certified runtime')
         identities = sorted({formalization_id,feature_certificate_id,reference_certificate_id,snapshot['id'],snapshot['body']['catalog_id'],*target_refs})
         exposure = set(identities)
@@ -293,7 +371,8 @@ class BoundComputation:
             'reference_bundle':reference_bundle,'refs':sorted(identities),'exposure':sorted(exposure)}
 
     def _retain_binding_package(self, bundle):
-        require(set(bundle) == set(PACKAGE_FILES) and sum(map(len,bundle.values())) <= 16*1024*1024)
+        profile = package_profile(bundle)
+        require(sum(map(len,bundle.values())) <= 16*1024*1024)
         files = {name:self._stage_blob_bytes(raw) for name,raw in sorted(bundle.items())}
         with self._transaction():
             for descriptor in files.values():self._register_blob(descriptor)
@@ -301,7 +380,7 @@ class BoundComputation:
                 'data_class':'operations','source_refs':[],'exposure':[],
                 'blob_refs':sorted({descriptor['sha256'] for descriptor in files.values()}),
                 'authority':'retained_source_not_certified','body':{'schema':'binding-source-package/1',
-                    'profile':PROFILE,'created_at':self._now(),'files':files,'footprint':hashes(bundle),
+                    'profile':profile,'created_at':self._now(),'files':files,'footprint':hashes(bundle),
                     'bootstrap_sha256':hashlib.sha256(BOOTSTRAP.encode()).hexdigest()}})
             self._event('controller','binding_source_retained',artifact_id=artifact['id'])
             return artifact['id']
@@ -310,8 +389,8 @@ class BoundComputation:
         artifact = self._artifact(identity)
         body = artifact['body']
         require(artifact['creator'] == artifact['origin'] == 'controller' and type(body) is dict
-            and body.get('schema') == 'binding-source-package/1' and body.get('profile') == PROFILE
-            and set(body['files']) == set(PACKAGE_FILES))
+            and body.get('schema') == 'binding-source-package/1'
+            and body.get('profile') == package_profile(body['files']))
         self._require_usable_dependencies(identity)
         require(body['bootstrap_sha256'] == hashlib.sha256(BOOTSTRAP.encode()).hexdigest())
         bundle = {}
@@ -404,7 +483,7 @@ class BoundComputation:
             artifact = self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
                 'data_class':dependencies['snapshot']['data_class'],'source_refs':refs,
                 'exposure':sorted(set(refs+dependencies['exposure'])),'authority':AUTHORITY,
-                'body':{'schema':'compiled-hypothesis/1','profile':PROFILE,'created_at':self._now(),
+                'body':{'schema':'compiled-hypothesis/1','profile':package_profile(bundle),'created_at':self._now(),
                     'status':'COMPILED' if error is None else 'COMPILATION_GAP','failure_type':error,
                     'attempt_id':attempt,'source_package_id':package_id,'dependency_arguments':args,
                     'data_snapshot_id':dependencies['snapshot']['id'],'compilation_input':payload,
@@ -489,12 +568,15 @@ class BoundComputation:
             artifact = self._save_artifact({'version':'local-artifact/1','creator':'controller','origin':'controller',
                 'data_class':'development','source_refs':refs,'exposure':sorted(set(refs+compiled['exposure'])),
                 'blob_refs':[descriptor['sha256']] if error is None else [],'authority':AUTHORITY,
-                'body':{'schema':'reference-execution/1','profile':PROFILE,'created_at':self._now(),
+                'body':{'schema':'reference-execution/1','profile':package_profile(bundle),'created_at':self._now(),
                     'status':'DESCRIPTIVE_EXECUTION' if error is None else 'EXECUTION_GAP','failure_type':error,
                     'attempt_id':attempt,'compiled_id':compiled['id'],'data_snapshot_id':snapshot['id'],
                     'result':report['result'] if error is None else None,'environment':report['environment'] if error is None else None,
                     'verification':verification if error is None else None,
-                    'case_format':'reference-cases-jsonl/1','scientific_readiness':False,
+                    'case_format':('diagnostic-required-input-bounded-reference-cases-jsonl/1' if package_profile(bundle)=='bound-reference/4'
+                                   else 'diagnostic-bounded-reference-cases-jsonl/1' if package_profile(bundle)=='bound-reference/3'
+                                   else 'bounded-reference-cases-jsonl/1' if bounded_candidate(body['compilation_input']['candidate'])
+                                   else 'reference-cases-jsonl/1'),'scientific_readiness':False,
                     'qualification':'Exploratory development computation; no semantic approval, calibrated inference, scientific freeze or D087 event.'}})
             self._event('controller','bound_computation_checked',attempt_id=attempt,artifact_id=artifact['id'],status=artifact['body']['status'])
             canonical(artifact)

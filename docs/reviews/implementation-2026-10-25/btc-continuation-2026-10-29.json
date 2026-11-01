@@ -1,0 +1,335 @@
+{
+  "schema": "btc-bounded-continuation-observation/1",
+  "decision": "D091",
+  "status": "FINITE_ATTEMPT_STOPPED_WITH_RETAINED_OUTPUT_GAP",
+  "observed_at_utc": "2026-10-29T20:57:07.874433+00:00",
+  "purpose": "One faithful formalization and, if accepted, independent review of the already selected BTC idea under bounded-math-reuse/1.0.",
+  "idea_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+  "approval": {
+    "schema": "bounded-math-reuse-approval/1",
+    "recorded_at_utc": "2026-10-29T20:40:14.599068+00:00",
+    "source": "SESSION-2026-10-29-BOUNDED-MATH-REUSE",
+    "user_quote": "fortsetzen",
+    "decision": "D091",
+    "proposal_sha256": "f40b46ccb7ce6338395aca747313070ca3a5a21e7f9405b6c6ea47f70407e308",
+    "contract_path": "docs/architecture/20_BOUNDED_MATH_REUSE.md",
+    "contract_sha256": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+    "status": "ACCEPTED_NOT_YET_EXECUTED",
+    "max_calls": 2,
+    "max_tokens": 80000,
+    "max_seconds": 1800,
+    "max_cost_nano": 500000000,
+    "aggregate_cap_nano": 5000000000,
+    "tariff_verified_at_utc": "2026-10-29T20:40:14.599348+00:00",
+    "tariff_sources": [
+      "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "https://developers.openai.com/api/docs/guides/prompt-caching"
+    ],
+    "tariff_finding": "Standard USD2 input, USD2.50 cache-write and USD10 output per million; default30m cache multiplier1.25. Installed conservative USD2.50/10 bound unchanged. No inference or invoice verification."
+  },
+  "terminal": {
+    "schema": "d091-terminal-gap/1",
+    "observed_at_utc": "2026-10-29T20:57:07.874433+00:00",
+    "status": "STOPPED_OUTPUT_RESOURCE_GAP",
+    "epoch_id": "f08a8c9752bd4b55a11aed8f143a6a02",
+    "job_id": "4ee75abbfe8a4f4b91a44711c9754636",
+    "job_state": "blocked",
+    "reason": "Provider ended without a final auxiliary result; its public response is retained",
+    "response_id": "c0ba664865561b229dcfba603aa30a71eb7d77c824fcdcb3a2d69e31b12b5230",
+    "raw_public_output_characters": 48592,
+    "raw_public_output_sha256": "359e3dfdc9d6a8e4f006126d403be34edac6353f7903fe4d64bfa9ef2c71dc61",
+    "json_parse_gap": {
+      "message": "Unterminated string starting at",
+      "line": 1241,
+      "column": 22,
+      "character": 48591
+    },
+    "last_public_characters": " \"source_refs\": [\"a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32\"],\n        \"rationale\": \"Episode Q_s>0.\"\n      },\n      {\n        \"path\": \"/condition_ast/expression/arg/right/left/arg/right/left/left/right/left/bars\",\n        \"basis\": \"preexisting_specification\",\n        \"source_refs\": [\"a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32\"],\n        \"rationale\": \"Earlier episode bar b-d.\"\n      },\n      {\n        \"path\": \"/condition_ast/expression/arg/right/left/arg/right/left/left/right/right/value\",\n        \"basis\": \"preexisting_specification\",\n        \"source_refs\": [\"a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32\"],\n        \"rationale\": \"",
+    "incomplete_section": "candidate.parameter_origins: a rationale string is unfinished; required subsequent content cannot be presumed.",
+    "limit_evidence": "Provider and message status incomplete; output usage equals the frozen 18,000 limit. The provider incomplete_details reason is not retained by this adapter, so no exact provider reason code is asserted.",
+    "formalization_accepted": false,
+    "review_calls": 0,
+    "market_calculations": 0,
+    "new_calls": [
+      {
+        "dispatch_id": "controller-ebcb3993b798426e828e2a9f38ecd3c1:0",
+        "request_sha256": "71f7847ddec4e3298b4f2a560f520b4399cf1759d06daafc073af3de7c9ac755",
+        "reserved_nano": 241160000,
+        "charged_nano": 240840000,
+        "state": "settled",
+        "created_at": 1793306870,
+        "admitted_at_utc": "2026-10-29T20:47:50Z",
+        "settled_at_utc": "2026-10-29T20:51:06Z",
+        "metadata": {
+          "counted_input_tokens": 24336,
+          "epoch_id": "f08a8c9752bd4b55a11aed8f143a6a02",
+          "model": "gpt-6.1-sol",
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": null,
+            "requested_model": "gpt-6.1-sol"
+          },
+          "ordinal": 0,
+          "prompt_version": "faithful-btc-bounded-reuse/1",
+          "run_id": "controller-ebcb3993b798426e828e2a9f38ecd3c1",
+          "worker": "d091-btc-formalizer"
+        },
+        "receipt": {
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": "gpt-6.1-sol",
+            "requested_model": "gpt-6.1-sol"
+          },
+          "provider_request_id": "resp_0863663f534d0ae6016ae3b0f722e087d282043bc5b3eb167e",
+          "response_status": "incomplete",
+          "token_details": {
+            "cached_input_tokens": 0,
+            "reasoning_output_tokens": 5872
+          },
+          "transport_request_id": "req_b113c63a88ad4b68920145c5e4d109e6",
+          "usage": {
+            "cost_units": 240840000,
+            "input_tokens": 24336,
+            "output_tokens": 18000
+          }
+        },
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        }
+      }
+    ],
+    "wall_seconds": 216.65127360000042,
+    "started_at_utc": "2026-10-29T20:47:37.814465+00:00",
+    "ended_at_utc": "2026-10-29T20:51:07.249693+00:00",
+    "no_retry": "The unique external run-start fence is retained. This one-use continuation is ended; its unused reviewer slot is not a retry allowance.",
+    "ordinary_epoch_state_at_run_end": "active",
+    "epoch_state_qualification": "Ordinary epoch inspection preserves its raw active state; no ordinary-epoch revoke endpoint exists. The one-use driver fence, operator boundary and original wall deadline apply. No shared-ledger or registry reset occurred.",
+    "d090_still_consumed_and_revoked": true,
+    "full_wire_reconstruction": "PASS",
+    "registry_integrity": {
+      "status": "PASS",
+      "events": 1736,
+      "foreign_keys": true,
+      "synchronous": "FULL",
+      "schema_version": 1,
+      "scope": "local coordination and research memory integrity only",
+      "research_memory": {
+        "status": "PASS",
+        "records": 48,
+        "version": "research-memory/1",
+        "scientific_authority": false
+      },
+      "blobs": {
+        "status": "PASS",
+        "committed": 957,
+        "quarantined": [],
+        "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+      }
+    },
+    "usage_unchanged_by_inspection": true,
+    "scientific_readiness": false,
+    "protected_outcomes_accessed": false
+  },
+  "input_admission": {
+    "formalization_count": {
+      "observed_at_utc": "2026-10-29T20:46:44.412011+00:00",
+      "counted_input_tokens": 24336,
+      "input_bound": 24464,
+      "transport_request_id": "req_41ce1217a6a346b89309085a9c405a93",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "wire_sha256": "71f7847ddec4e3298b4f2a560f520b4399cf1759d06daafc073af3de7c9ac755",
+      "packet_sha256": "547f385ac286117b801ad6a7edfcc52ffe6fd8ac1c64c14d33ccb47f85cd7421",
+      "activation_contract_sha256": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+      "availability_evidence": {
+        "schema": "development-availability-evidence/1",
+        "certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+        "data_snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "catalog_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "definitions_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+        "certificate_body_sha256": "611a9be14bef148e28f05e022723910dd2930b12a4617a2620d767f804f0ed68",
+        "source_footprint_sha256": "4fb725110f26ae3cc5e1afd555c864c601647a867588df3972042b86b53c7ced",
+        "row_blobs": [
+          {
+            "sha256": "3d88c45f2feae494b6b38c986aff1168e7799914b26733ce455d1317d876ce33",
+            "size": 14558791
+          }
+        ],
+        "universe": {
+          "end": "2023-04-01T00:00:00Z",
+          "instruments": [
+            "BTCUSDT",
+            "ETHUSDT"
+          ],
+          "start": "2023-01-01T00:00:00Z"
+        },
+        "delay_seconds": 900,
+        "rule": "For every present feature entry, including null-valued entries, available_at equals row_time + delay_seconds exactly.",
+        "summary": {
+          "status": "MATCHED_EXACT_FIXED_DELAY",
+          "checked_rows": 17270,
+          "checked_feature_samples": 155430,
+          "null_feature_samples": 18,
+          "missing_feature_samples": 0,
+          "absent_grid_rows": 10
+        },
+        "availability_basis": "assumed",
+        "historical_publication_time": null,
+        "qualification": "Exhaustive timing check of this exact certified development snapshot. Absent rows and missing/null values remain missing. No later recorded availability exists among these entries. This is not historical publication truth, a hypothesis-equivalence verdict, an outcome result or scientific admission. The reviewer must separately derive the candidate-specific cutoff implications.",
+        "scientific_readiness": false
+      },
+      "scope": "Complete actual input; separate count request, not inference consumption or invoice."
+    },
+    "reserved_total_tokens": 76464,
+    "reserved_cost_nano": 356160000,
+    "activation_doc_sha256": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+    "both_role_packet_roundtrip_tests": "PASS",
+    "actual_formalizer_received_activation": true,
+    "actual_reviewer_dispatched": false
+  },
+  "new_inference_calls": 1,
+  "new_tokens": 42336,
+  "new_conservative_cost_usd": "0.24084",
+  "aggregate_tokens": 639375,
+  "aggregate_conservative_cost_usd": "2.2809975",
+  "remaining_original_usd5_allowance": "2.7190025",
+  "billing_qualification": "Provider-reported tokens. Known sums exclude unknown receipts. Cached/reasoning counts are subsets. Currency is a conservative published-rate bound, not an invoice.",
+  "independent_terminal_review": {
+    "schema": "independent-btc-terminal-review/1",
+    "status": "VERIFIED_RETAINED_FORMALIZATION_GAP",
+    "scope": "Read-only verification of the single D091 attempt, its public output and settled accounting; not a candidate reconstruction or formula audit.",
+    "idea_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+    "epoch_id": "f08a8c9752bd4b55a11aed8f143a6a02",
+    "job_id": "4ee75abbfe8a4f4b91a44711c9754636",
+    "call_id": "ebcb3993b798426e828e2a9f38ecd3c1",
+    "transcript_id": "c0ba664865561b229dcfba603aa30a71eb7d77c824fcdcb3a2d69e31b12b5230",
+    "source_files": {
+      "run-result.json": "a9488dc7d5c841964fd485d0e80d29eacbcc0219c4289d2f91f737611840044b",
+      "formalization.json": "f22a7e6ab4b4de3b4543e806fa587714e0dc6d2eecc7bfe124f0df6caef89f2f"
+    },
+    "terminal_output": {
+      "provider_status": "incomplete",
+      "public_message_status": "incomplete",
+      "public_message_phase": "final_answer",
+      "public_output_text_characters": 48592,
+      "public_output_text_utf8_bytes": 48592,
+      "public_output_text_sha256": "359e3dfdc9d6a8e4f006126d403be34edac6353f7903fe4d64bfa9ef2c71dc61",
+      "strict_json_parse": "INVALID_UNTERMINATED_STRING",
+      "unfinished_json_location": "candidate.parameter_origins[63].rationale",
+      "unfinished_parameter_path": "/condition_ast/expression/arg/right/left/arg/right/left/left/right/right/value",
+      "unfinished_section": "The 64th parameter-origin entry has begun its rationale string but has no closing quote. The parameter_origins array, candidate object and complete response are unfinished.",
+      "required_sections_not_reached": [
+        "candidate.feature_refs",
+        "semantic_report"
+      ],
+      "formalization_job_state": "blocked",
+      "formalization_accepted": false,
+      "accepted_candidate_artifact": null,
+      "normalized_response_output": null,
+      "cap_observation": "Reported output tokens equal the frozen 18000-token output cap. This is consistent with exhaustion of that cap; a separate provider incomplete_details reason was not retained, so none is invented."
+    },
+    "accounting": {
+      "new_paid_calls": 1,
+      "state": "settled",
+      "usage_unknown": false,
+      "input_tokens": 24336,
+      "output_tokens": 18000,
+      "total_tokens": 42336,
+      "reasoning_output_tokens": 5872,
+      "reasoning_token_interpretation": "Subset of the 18000 output tokens; do not add it a second time.",
+      "cached_input_tokens": 0,
+      "reserved_nano_usd": 241160000,
+      "charged_nano_usd": 240840000,
+      "charged_usd": "0.24084",
+      "charge_basis": "conservative_published_rate_upper_bound",
+      "independent_charge_arithmetic": "24336 * 2500 + 18000 * 10000 = 240840000 nanoUSD",
+      "provider_invoice_verified": false,
+      "admitted_at_utc": "2026-10-29T20:47:50Z",
+      "settled_at_utc": "2026-10-29T20:51:06Z",
+      "run_wall_seconds": 216.65127360000042,
+      "requested_model": "gpt-6.1-sol",
+      "reported_model": "gpt-6.1-sol",
+      "catalog_version": "6.1",
+      "immutable_snapshot_id": null,
+      "immutable_snapshot_status": "UNKNOWN",
+      "aggregate_calls_after": 40,
+      "aggregate_tokens_before": 597039,
+      "aggregate_tokens_after": 639375,
+      "aggregate_charged_nano_before": 2040157500,
+      "aggregate_charged_nano_after": 2280997500,
+      "aggregate_cap_nano": 5000000000,
+      "aggregate_available_nano_after": 2719002500
+    },
+    "continuation_assessment": {
+      "independent_meaning_review_performed": false,
+      "actual_formula_audit_performed": false,
+      "market_outcome_computed": false,
+      "candidate_reconstructed_or_repaired": false,
+      "second_paid_call_warranted_for_this_attempt": false,
+      "reason": "There is no complete accepted formalization to provide to the reserved independent reviewer. D091 authorized at most one formalizer call and one reviewer call, not a second formalizer attempt or response-completion call. Unspent tokens or dollars do not reopen the closed attempt. Any further paid continuation needs a separately reviewed and explicitly approved plan; it cannot treat this partial JSON as an accepted candidate.",
+      "scientific_readiness": false
+    },
+    "review_boundaries": {
+      "provider_calls_by_reviewer": 0,
+      "market_rows_read_by_reviewer": 0,
+      "registry_writes_by_reviewer": 0,
+      "encrypted_reasoning_interpreted_or_printed": false,
+      "frozen_checker_sha256": "4b05a15222a5c355ec64dc870ff17597ac38b7057926b2f69ff59e92529069e1",
+      "frozen_checker_changed": false,
+      "only_new_file": "independent-terminal-review.json"
+    }
+  },
+  "independent_formula_checker": {
+    "sha256": "4b05a15222a5c355ec64dc870ff17597ac38b7057926b2f69ff59e92529069e1",
+    "status": "Prepared before actual input; 11 synthetic tests passed. No actual accepted candidate or market cases audited."
+  },
+  "failed_preparation": "The first private driver incorrectly required an idea to have data_class development. Corrected to its retained work_product/origin worker envelope after immutable comparison; no certification, count or inference occurred in that failed preparation. Both preparation records remain retained.",
+  "retained_terminal_check_failure": "The first finalization command exited 1 before writing reports: route-free Broker overlay inspection denied access because no host-selected OpenAI ledger was attached. Reused the existing read-only grant verification and direct epoch call-count inspection; no provider route, grant, registry evidence or runtime code was changed.",
+  "findings": [
+    "Complete input with the approved activation fits its fixed formalizer slot; source packets and old meaning-policy bytes remain unchanged.",
+    "The complete-output limit is now the observed blocker. The response stops inside parameter-origin metadata and is not usable as a complete formalization.",
+    "No AST was salvaged, repaired, independently approved or executed. This is a pipeline resource gap, not an empirical rejection of the BTC idea.",
+    "The output contains repeated explicit tree paths and source identifiers. A lossless output representation is a possible engineering follow-up, not a demonstrated remedy or new paid authority."
+  ],
+  "next_action": "Inspect output representation offline using retained bytes and complete synthetic fixtures. Measure exact reversible encoding and all required provenance/mapping preservation before proposing any new paid attempt. No automatic retry, higher cap, manual candidate repair, calibration/model-family expansion or protected evaluation.",
+  "source_preservation": {
+    "approval.json": "97220db016ae244d982ad74fbb0ac91e0667734c9c02d13d82b0c67e0562fd12",
+    "proposal-before-approval.md": "f40b46ccb7ce6338395aca747313070ca3a5a21e7f9405b6c6ea47f70407e308",
+    "prepared.json": "897caa2159b24d911a3a3168e5b5b6768cf30344a12755c101cc056804d2061a",
+    "research.py": "b56666324172547cf5d2eb1b5bcadf524f3773fe0ad71a910082803c8c7ee5e4",
+    "run-start.json": "4f1b5bbc904ec90161db687008d2cf4e47102e3a26570f01155e480bc24f5fd3",
+    "run-result.json": "a9488dc7d5c841964fd485d0e80d29eacbcc0219c4289d2f91f737611840044b",
+    "formalization-packet.json": "569661becea6e7939ef7a150007e9342303c3f5a28ba56d2957e442da6216834",
+    "terminal-inspection.json": "9ac47273768daa489bdcaddacd693f3c74dd764428a8561c0dc6518ac6afb69f",
+    "one-use-terminal.json": "8b309d3255fcde7f2db58e2242583790c484f9a70260055613991544b5d6d6b9",
+    "incomplete-public-output.txt": "359e3dfdc9d6a8e4f006126d403be34edac6353f7903fe4d64bfa9ef2c71dc61"
+  },
+  "unverified": [
+    "Faithful complete BTC formalization, independent model review, market execution, separate replay and actual original-formula audit.",
+    "Research quality equivalence or completion under another output representation; no such change is activated.",
+    "Scientific calibration, protected evaluation, economic usefulness, live-capital authority, provider invoice and immutable model snapshot.",
+    "A new full backup/restore after this actual attempt; registry integrity alone is not that test."
+  ]
+}

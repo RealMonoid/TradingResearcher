@@ -1,0 +1,647 @@
+{
+  "schema": "exact-composition-engineering-fixture/1",
+  "authority": "synthetic_engineering_only_not_formalization",
+  "source_shape_sha256": "4dfbbe2fccd0b618f189d1479b21b8605b55ab33bc7965e537bf4a8653fbd30e",
+  "original_idea_id": "e92a94551d9050ea5d7a0cb7d307b85389cac060d000e73d74c4edc64076acb3",
+  "programs": {
+    "scope": {
+      "schema": "research-ast/4",
+      "catalog_hash": "b22ffe28ad3f177df3c31f65134c3eebeebc8595b188f1e69e63f68d4ca80521",
+      "expression": {
+        "op": "literal",
+        "type": "boolean",
+        "unit": null,
+        "value": true
+      }
+    },
+    "condition": {
+      "schema": "research-ast/4",
+      "catalog_hash": "b22ffe28ad3f177df3c31f65134c3eebeebc8595b188f1e69e63f68d4ca80521",
+      "expression": {
+        "op": "lag",
+        "arg": {
+          "op": "or",
+          "left": {
+            "op": "and",
+            "left": {
+              "op": "and",
+              "left": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "ge",
+                    "left": {
+                      "op": "feature",
+                      "ref": "H@1"
+                    },
+                    "right": {
+                      "op": "feature",
+                      "ref": "L@1"
+                    }
+                  },
+                  "right": {
+                    "op": "gt",
+                    "left": {
+                      "op": "feature",
+                      "ref": "L@1"
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "price:BTCUSDT",
+                      "value": "0"
+                    }
+                  }
+                },
+                "right": {
+                  "op": "and",
+                  "left": {
+                    "op": "gt",
+                    "left": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "quote_USDT",
+                      "value": "0"
+                    }
+                  },
+                  "right": {
+                    "op": "ge",
+                    "left": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "quote_USDT",
+                      "value": "0"
+                    }
+                  }
+                }
+              },
+              "right": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "le",
+                    "left": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "right": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    }
+                  },
+                  "right": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "trailing_all",
+                      "arg": {
+                        "op": "and",
+                        "left": {
+                          "op": "and",
+                          "left": {
+                            "op": "ge",
+                            "left": {
+                              "op": "feature",
+                              "ref": "H@1"
+                            },
+                            "right": {
+                              "op": "feature",
+                              "ref": "L@1"
+                            }
+                          },
+                          "right": {
+                            "op": "gt",
+                            "left": {
+                              "op": "feature",
+                              "ref": "L@1"
+                            },
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "price:BTCUSDT",
+                              "value": "0"
+                            }
+                          }
+                        },
+                        "right": {
+                          "op": "ge",
+                          "left": {
+                            "op": "feature",
+                            "ref": "Q@1"
+                          },
+                          "right": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "quote_USDT",
+                            "value": "0"
+                          }
+                        }
+                      },
+                      "bars": 32
+                    },
+                    "bars": 1
+                  }
+                },
+                "right": {
+                  "op": "and",
+                  "left": {
+                    "op": "gt",
+                    "left": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_mean",
+                        "arg": {
+                          "op": "feature",
+                          "ref": "Q@1"
+                        },
+                        "bars": 32
+                      },
+                      "bars": 1
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "quote_USDT",
+                      "value": "0"
+                    }
+                  },
+                  "right": {
+                    "op": "gt",
+                    "left": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_product",
+                        "arg": {
+                          "op": "div",
+                          "left": {
+                            "op": "feature",
+                            "ref": "H@1"
+                          },
+                          "right": {
+                            "op": "feature",
+                            "ref": "L@1"
+                          }
+                        },
+                        "bars": 32
+                      },
+                      "bars": 1
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "ratio",
+                      "value": "1"
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "op": "and",
+              "left": {
+                "op": "and",
+                "left": {
+                  "op": "ge",
+                  "left": {
+                    "op": "feature",
+                    "ref": "Q@1"
+                  },
+                  "right": {
+                    "op": "mul",
+                    "left": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "ratio",
+                      "value": "2"
+                    },
+                    "right": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_mean",
+                        "arg": {
+                          "op": "feature",
+                          "ref": "Q@1"
+                        },
+                        "bars": 32
+                      },
+                      "bars": 1
+                    }
+                  }
+                },
+                "right": {
+                  "op": "ge",
+                  "left": {
+                    "op": "div",
+                    "left": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "right": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    }
+                  },
+                  "right": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "ratio",
+                    "value": "0.45"
+                  }
+                }
+              },
+              "right": {
+                "op": "and",
+                "left": {
+                  "op": "le",
+                  "left": {
+                    "op": "div",
+                    "left": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "right": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    }
+                  },
+                  "right": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "ratio",
+                    "value": "0.55"
+                  }
+                },
+                "right": {
+                  "op": "le",
+                  "left": {
+                    "op": "integer_power",
+                    "arg": {
+                      "op": "div",
+                      "left": {
+                        "op": "feature",
+                        "ref": "H@1"
+                      },
+                      "right": {
+                        "op": "feature",
+                        "ref": "L@1"
+                      }
+                    },
+                    "exponent": 64
+                  },
+                  "right": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "trailing_product",
+                      "arg": {
+                        "op": "div",
+                        "left": {
+                          "op": "feature",
+                          "ref": "H@1"
+                        },
+                        "right": {
+                          "op": "feature",
+                          "ref": "L@1"
+                        }
+                      },
+                      "bars": 32
+                    },
+                    "bars": 1
+                  }
+                }
+              }
+            }
+          },
+          "right": {
+            "op": "and",
+            "left": {
+              "op": "not",
+              "arg": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "and",
+                    "left": {
+                      "op": "ge",
+                      "left": {
+                        "op": "feature",
+                        "ref": "H@1"
+                      },
+                      "right": {
+                        "op": "feature",
+                        "ref": "L@1"
+                      }
+                    },
+                    "right": {
+                      "op": "gt",
+                      "left": {
+                        "op": "feature",
+                        "ref": "L@1"
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "price:BTCUSDT",
+                        "value": "0"
+                      }
+                    }
+                  },
+                  "right": {
+                    "op": "and",
+                    "left": {
+                      "op": "gt",
+                      "left": {
+                        "op": "feature",
+                        "ref": "Q@1"
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "quote_USDT",
+                        "value": "0"
+                      }
+                    },
+                    "right": {
+                      "op": "ge",
+                      "left": {
+                        "op": "feature",
+                        "ref": "B@1"
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "quote_USDT",
+                        "value": "0"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "op": "and",
+                  "left": {
+                    "op": "and",
+                    "left": {
+                      "op": "le",
+                      "left": {
+                        "op": "feature",
+                        "ref": "B@1"
+                      },
+                      "right": {
+                        "op": "feature",
+                        "ref": "Q@1"
+                      }
+                    },
+                    "right": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_all",
+                        "arg": {
+                          "op": "and",
+                          "left": {
+                            "op": "and",
+                            "left": {
+                              "op": "ge",
+                              "left": {
+                                "op": "feature",
+                                "ref": "H@1"
+                              },
+                              "right": {
+                                "op": "feature",
+                                "ref": "L@1"
+                              }
+                            },
+                            "right": {
+                              "op": "gt",
+                              "left": {
+                                "op": "feature",
+                                "ref": "L@1"
+                              },
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "price:BTCUSDT",
+                                "value": "0"
+                              }
+                            }
+                          },
+                          "right": {
+                            "op": "ge",
+                            "left": {
+                              "op": "feature",
+                              "ref": "Q@1"
+                            },
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "quote_USDT",
+                              "value": "0"
+                            }
+                          }
+                        },
+                        "bars": 32
+                      },
+                      "bars": 1
+                    }
+                  },
+                  "right": {
+                    "op": "and",
+                    "left": {
+                      "op": "gt",
+                      "left": {
+                        "op": "lag",
+                        "arg": {
+                          "op": "trailing_mean",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "Q@1"
+                          },
+                          "bars": 32
+                        },
+                        "bars": 1
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "quote_USDT",
+                        "value": "0"
+                      }
+                    },
+                    "right": {
+                      "op": "gt",
+                      "left": {
+                        "op": "lag",
+                        "arg": {
+                          "op": "trailing_product",
+                          "arg": {
+                            "op": "div",
+                            "left": {
+                              "op": "feature",
+                              "ref": "H@1"
+                            },
+                            "right": {
+                              "op": "feature",
+                              "ref": "L@1"
+                            }
+                          },
+                          "bars": 32
+                        },
+                        "bars": 1
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "ratio",
+                        "value": "1"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "right": {
+              "op": "literal",
+              "type": "boolean",
+              "unit": null,
+              "value": null
+            }
+          }
+        },
+        "bars": 1
+      }
+    },
+    "outcome": {
+      "schema": "research-ast/4",
+      "catalog_hash": "b22ffe28ad3f177df3c31f65134c3eebeebc8595b188f1e69e63f68d4ca80521",
+      "expression": {
+        "op": "mul",
+        "left": {
+          "op": "literal",
+          "type": "real",
+          "unit": "basis_points",
+          "value": "10000"
+        },
+        "right": {
+          "op": "add",
+          "left": {
+            "op": "add",
+            "left": {
+              "op": "abs",
+              "arg": {
+                "op": "ln",
+                "arg": {
+                  "op": "div",
+                  "left": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "C@1"
+                    },
+                    "bars": 1
+                  },
+                  "right": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "C@1"
+                    },
+                    "bars": 5
+                  }
+                }
+              }
+            },
+            "right": {
+              "op": "mul",
+              "left": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": "0"
+              },
+              "right": {
+                "op": "ln",
+                "arg": {
+                  "op": "div",
+                  "left": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "C@1"
+                    },
+                    "bars": 5
+                  },
+                  "right": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "price:BTCUSDT",
+                    "value": "1"
+                  }
+                }
+              }
+            }
+          },
+          "right": {
+            "op": "mul",
+            "left": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": "0"
+            },
+            "right": {
+              "op": "ln",
+              "arg": {
+                "op": "div",
+                "left": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "C@1"
+                  },
+                  "bars": 1
+                },
+                "right": {
+                  "op": "literal",
+                  "type": "real",
+                  "unit": "price:BTCUSDT",
+                  "value": "1"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "catalog": {
+    "H@1": {
+      "type": "real",
+      "unit": "price:BTCUSDT"
+    },
+    "L@1": {
+      "type": "real",
+      "unit": "price:BTCUSDT"
+    },
+    "C@1": {
+      "type": "real",
+      "unit": "price:BTCUSDT"
+    },
+    "Q@1": {
+      "type": "real",
+      "unit": "quote_USDT"
+    },
+    "B@1": {
+      "type": "real",
+      "unit": "quote_USDT"
+    }
+  },
+  "qualification": "Portable synthetic test only. No actual catalog/snapshot binding, H_exec, native certificate, original model repair or empirical computation."
+}

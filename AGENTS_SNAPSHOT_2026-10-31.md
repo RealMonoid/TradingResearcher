@@ -1,0 +1,54 @@
+> Historical snapshot retained October 31, 2026 before the compact build handoff. This is evidence of the earlier document, not current instructions. Resume from [AGENTS.md](AGENTS.md); its current priority governs. The original document bytes follow this notice without alteration.
+
+# Repository instructions
+
+## Purpose and boundaries
+
+Build toward autonomous, nontrivial LLM invention of market hypotheses, faithful formalization and freezing, and independent deterministic scientific evaluation. Preserve free discovery rather than replacing it with a closed rule catalog. The LLM must not judge its own empirical success. See the [Problem Definition](docs/architecture/01_PROBLEM_DEFINITION.md) and D001 in the [Decision Register](docs/architecture/02_DECISION_REGISTER.md).
+
+Preserve the [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md) invariants: point-in-time information, inherited exposure, pre-outcome scientific commitments, independent feature certification, retained failures and unsupported ideas, separate policy evaluation, and the firewall between operations and research evidence. Keep evidence, validity, applicability and deployment authority distinct under the approved versioned contracts. Historical-first research does not make exposed history unseen; v1 discovery starts at 15-minute observations (D012–D014).
+
+## Read according to the task
+
+- Start with the [README](README.md) and descriptive [Current State](docs/architecture/CURRENT_STATE.md).
+- Before a system-level assessment, follow [REVIEWING.md](REVIEWING.md): reconstruct and substantiate the system model before critique, state gaps, and withhold an overall verdict when the reconstruction is incomplete. Use that same model for design and implementation; reuse it within a session and reconstruct it after context loss or a material change.
+- For affected behavior, consult the [Decision Register](docs/architecture/02_DECISION_REGISTER.md), [Rejected Decisions](docs/architecture/03_REJECTED_DECISIONS.md), [Definitions](docs/architecture/04_DEFINITIONS.md), [Open Decisions](docs/architecture/11_OPEN_DECISIONS.md) and the adopted [Retail Research Contract](docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md). For temporal applicability monitoring, also read the approved [Temporal Diagnostic Invocation Contract](docs/architecture/16_TEMPORAL_DIAGNOSTIC_INVOCATION.md) (D087).
+- For design or implementation, read relevant sections of the [Master Architecture](docs/architecture/06_MASTER_ARCHITECTURE.md), [Requirements](docs/architecture/05_REQUIREMENTS.md), [Engineering Review](docs/architecture/08_ENGINEERING_REVIEW.md), [Implementation Blueprint](docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md) and [Traceability Matrix](docs/architecture/12_TRACEABILITY_MATRIX.md). Consult the [Scientific Evaluation](docs/architecture/07_SCIENTIFIC_EVALUATION.md) when scientific validity is affected.
+- For provenance disputes, use the [Source Audit](docs/architecture/00_SOURCE_AUDIT.md) and [Source Review Index](docs/architecture/SOURCE_REVIEW_INDEX.md) to locate the relevant archived messages. Do not read the entire conversation for every small change.
+
+For wording-only edits and other bounded tasks with no architectural consequence, use the entry documents and affected files only; skip the full orientation and system recap. Do not expand the task, repeat reads already available, or ask the user to restate documented context. A historical handoff's task authorization describes that earlier task; the current explicit user request determines today's scope, subject to the scientific change-control rules below.
+
+## Authority and change control
+
+Accepted decisions and versioned canonical definitions govern their stated scope; respect source-confidence qualifications. Architecture summaries, examples, reviews and implementation proposals do not override them.
+
+| Status | Treatment |
+|---|---|
+| NON_NEGOTIABLE / ACCEPTED | Preserve the recorded constraint or decision. |
+| CONDITIONALLY_ACCEPTED | Apply only within the recorded conditions. |
+| REJECTED | Consult the rejection's reason, exact scope, replacement and reconsideration conditions before proposing or implementing a similar approach. A role-specific rejection is not a blanket ban. |
+| SUPERSEDED | Retain historical provenance; follow the recorded replacement. |
+| PROPOSED_ONLY / DEFERRED | Neither accepted nor authorized for implementation merely by appearing in documentation; deferral is not permanent rejection. |
+| OPEN / AMBIGUOUS | Resolve before affected operations; do not silently choose a scientific interpretation. Unrelated authorized work may continue. |
+
+Never silently change project goals, scientific evidence rules, scientific contracts or canonical definitions. Material changes require explicit user approval of a reviewable proposal with rationale, affected decisions/requirements, validation, versioning and rollback (D008, D026). Label goal changes **GOAL CHANGE — USER APPROVAL REQUIRED**. D071-D085 adopt research-contract/1.0, including the scoped resolutions of OPEN-01 through OPEN-03; consult document 14 and the current disposition register. Preserve prior versions and exposure history when recording approved changes.
+
+D087 adopts automatic invocation of a bound temporal diagnostic plan when an eligible completed-outcome batch reaches its predeclared checkpoint, plus a scope/freshness check at intended use. It does not approve a quantitative monitoring method, universal cadence, live action or capital authority. Do not treat a new 15-minute bar as a completed longer-horizon outcome or silently skip a due check.
+
+Distinguish scientific logic from ordinary infrastructure. External runtimes, storage and backtest libraries may implement approved contracts; they cannot define evidence or change scientific meaning. Routine infrastructure work within an authorized task does not need repeated approval unless it materially changes those boundaries. Use D084 and document 14 section 14 for independent automatic certification within approved semantics; uncertain membership and new scientific meaning still require review.
+
+## Working discipline
+
+Apply [Agent Inquiry Discipline / agent-inquiry/1.0](docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md), adopted in D086:
+
+- Identify the actual object, source/version and scope under investigation; treat supplied questions and your own framing as assumptions to examine.
+- Before a targeted investigation, state the uncertainty and which possible findings could change the assessment or next action. Open exploration may start with a search purpose, without a finished hypothesis or competing explanations; retain changes in purpose.
+- Challenge consequential assumptions and concrete counterexamples without manufacturing objections. "No substantiated objection found" is acceptable and does not prove the claim.
+- At completed investigations, handoffs and justified continuation decisions, retain a concise summary: purpose, finding with source, warranted conclusion, remaining uncertainty, and next action with reason. Reuse existing artifacts; no form before every tool call or private reasoning transcript is required.
+- Apply existing budget, exposure, freeze and role boundaries. This discipline adds no scientific verdict, automatic score, compulsory discovery mode or new access permission.
+
+- Keep all authored project artifacts in English (en-US), per D043. Preserve original-language verbatim source quotations and the archived source bytes; do not translate or rewrite the original conversation archive. Document source gaps honestly and add later recovery as separately versioned evidence.
+- Use the smallest coherent implementation that meets affected requirements. Logical roles do not mandate separate agents, services or databases. Avoid speculative abstractions and follow D030's bounded iteration rules.
+- The [Roadmap](docs/architecture/10_IMPLEMENTATION_ROADMAP.md) proposes phases; it does not authorize starting one. Work within the user's current scope and resolve blockers for the selected work.
+- Verify changes against affected requirements, acceptance criteria and existing tests. Distinguish specified future tests from executable tests and from tests actually run. For documentation, check consistency, links, whitespace and preservation of unaffected artifacts. Report changed files, exact check outcomes and unverified boundaries; do not claim scientific validity from software checks.
+- After approved decisions or verified capability changes, update affected canonical documents and the descriptive handoff using the [Current State maintenance process](docs/architecture/CURRENT_STATE.md#maintaining-this-handoff-and-recording-decisions).

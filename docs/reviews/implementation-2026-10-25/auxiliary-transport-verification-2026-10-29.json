@@ -1,0 +1,368 @@
+{
+  "schema": "auxiliary-transport-verification/1",
+  "status": "PASS",
+  "observed_at_utc": "2026-10-29T12:58:29.335987+00:00",
+  "purpose": "Remove measured long-idea and repeated-reference input limits without changing scientific meaning, original sources or legacy review currency.",
+  "changed_runtime_files": [
+    "trading_researcher/memory.py",
+    "trading_researcher/openai_provider.py",
+    "trading_researcher/controller_providers.py",
+    "trading_researcher/auxiliary_views.py"
+  ],
+  "added_tests": [
+    "tests/test_long_idea_text_adversarial.py",
+    "tests/test_auxiliary_provenance_view.py",
+    "tests/test_auxiliary_provenance_adversarial.py"
+  ],
+  "fresh_checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_long_idea_text_adversarial.py"
+      ],
+      "exit_code": 0,
+      "tests": 8,
+      "wall_seconds": 3.459093799996481,
+      "stdout": "",
+      "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 2.879s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_provenance_view.py"
+      ],
+      "exit_code": 0,
+      "tests": 5,
+      "wall_seconds": 0.3523787000012817,
+      "stdout": "",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.003s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_provenance_adversarial.py"
+      ],
+      "exit_code": 0,
+      "tests": 4,
+      "wall_seconds": 2.23713829999906,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 1.611s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_openai_provider.py"
+      ],
+      "exit_code": 0,
+      "tests": 6,
+      "wall_seconds": 0.4461354000013671,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.108s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_counted_openai_reservations.py"
+      ],
+      "exit_code": 0,
+      "tests": 4,
+      "wall_seconds": 0.3615986000004341,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.024s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_controller_providers.py"
+      ],
+      "exit_code": 0,
+      "tests": 4,
+      "wall_seconds": 2.7102890000023763,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 2.070s\n\nOK\n"
+    }
+  ],
+  "fresh_tests_passed": 31,
+  "file_sha256": {
+    "trading_researcher/memory.py": "abab9b73fd8525bb053be11866c08cf34e73843cf4dd305668f6ba87421979e7",
+    "trading_researcher/openai_provider.py": "c732a85089b46f8c7f1e0e07ddf6a248780b55d69489634d39a97b009f64e7f0",
+    "trading_researcher/controller_providers.py": "6787ea6a97e88c179fce77e109202e6b5da7d42e5b7ca7af5595e2524872ea86",
+    "trading_researcher/auxiliary_views.py": "51e6106263a64ac99835bc8514054dfb81ad24fb223454fe66310829eca50fdd",
+    "tests/test_long_idea_text_adversarial.py": "cc407d21448cd7107e2e3978e8d220c3c558f8202bd7691a572ca6a77ff8072e",
+    "tests/test_auxiliary_provenance_view.py": "f9e1de74616ef8189468f681a814949771d3297bbbed905107af97fbe7f12d29",
+    "tests/test_auxiliary_provenance_adversarial.py": "55d41c7b5079f2e7a1898b23702bcb34603f79219b5678cdfcd4eed3bc2318f8",
+    "tests/test_openai_provider.py": "084cfcedcabe98e24551bcca580a32c28fb263acd153b5bf3c8f6a959dc6e22a",
+    "tests/test_counted_openai_reservations.py": "fcd1f94dd1075c765b4e8272fa4b960e1e762e6093d340714dcba4131a88d3c5",
+    "tests/test_controller_providers.py": "dd0ed93da5e0e28dbabf9cf8e90309daeebd63e977346dee21af89d7191a16f4"
+  },
+  "preserved_contract_sha256": {
+    "docs/architecture/18_BOUNDED_MATH_PRIMITIVES.md": "6f183599cede66f8a06b5cf01868c9db70e632b63cf683fff6c1cb1adc77100f",
+    "trading_researcher/REQUIRED_INPUTS.md": "2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c",
+    "trading_researcher/CASE_DIAGNOSTICS.md": "54917962e900cc637cbe8e78b193f82842929078d65ca5e243f74a7dc855eed5",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md": "80453cb2e45e1f6efd4a748644bf1d6d1863feca1ca8f0e512f12de995b311fd"
+  },
+  "legacy_auxiliary_sha256": "975f4eff94f10bd89b1daf879cc4b62b2d4cb363e1d1d5a2c08517619ecfd13a",
+  "earlier_regression_checks": [
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_memory.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".................\n----------------------------------------------------------------------\nRan 17 tests in 6.095s\n\nOK\n",
+      "wall_seconds": 6.644785099997534
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_formalization.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".............\n----------------------------------------------------------------------\nRan 13 tests in 4.968s\n\nOK\n",
+      "wall_seconds": 5.529014699997788
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_research.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 1.659s\n\nOK\n",
+      "wall_seconds": 2.22322179999901
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_pipeline.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "..\n----------------------------------------------------------------------\nRan 2 tests in 79.866s\n\nOK\n",
+      "wall_seconds": 80.51372919999994
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_adversarial.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 84.089s\n\nOK\n",
+      "wall_seconds": 84.73245370000222
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_auxiliary_availability.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 77.453s\n\nOK\n",
+      "wall_seconds": 78.07837019999715
+    },
+    {
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_controller_providers.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 2.024s\n\nOK\n",
+      "wall_seconds": 2.702150500001153
+    }
+  ],
+  "earlier_regression_qualification": "73 passing tests across seven suites, including four controller tests repeated in the fresh checks. Some ran during the now-discarded auxiliary-layer placement; they did not select that option. Final auxiliary source bytes match the original and fresh adapter/route adversarial checks cover the final integration.",
+  "independent_review": "Separate reviewer authored/froze eight long-text and four transport boundary tests. Final limited review found no further substantiated blocker. Temporary registries only; no scientific or security certification.",
+  "retained_failures": [
+    {
+      "stage": "long idea RED",
+      "observed": "An 8,255-character complete idea failed the former generic 8,192 limit; one failing test, exit 1, before implementation."
+    },
+    {
+      "stage": "transport RED",
+      "observed": "Initial test import failed before auxiliary_views existed; one error, exit 1."
+    },
+    {
+      "stage": "test fixture",
+      "observed": "Long-text fixture incorrectly expected a complete envelope from an ID-returning API; corrected fixture, not runtime semantics."
+    },
+    {
+      "stage": "verification harness",
+      "observed": "All 31 final tests and their unchanged-source assertion passed, then the evidence writer used a path rather than a basename for a prepared source-hash key. Corrected the key and completed only the remaining evidence checks; no runtime/test change or repeat inference."
+    },
+    {
+      "stage": "discarded integration",
+      "observed": "Changing auxiliary.py invalidated legacy meaning-policy currency and feedback context. Restored its original bytes and moved opt-in encoding solely to the provider adapter. Old tests and discarded source are retained privately; their extra same-presentation rule is not claimed for the final design."
+    }
+  ],
+  "discarded_design_actual_check": {
+    "assessment": {
+      "assessment_id": "c8c5309f3f109ce00c9c8c3fdb48d6be409eb9ab6de3746b9a17efa2830373b5",
+      "current": false,
+      "status": "STALE",
+      "independent_semantic_review": "NOT_SATISFIED",
+      "current_inventory_sha256": "4ceb1e744feb69af24310ae058286d852d48fb150d77edb843f765a45cb2c382",
+      "scientific_readiness": false
+    },
+    "feedback_context": {
+      "type": "Invalid",
+      "message": "Feedback needs current qualified data use and independent meaning review"
+    },
+    "new_provider_calls": 0,
+    "ledger_unchanged": true
+  },
+  "restored_legacy_actual_check": {
+    "assessment": {
+      "assessment_id": "c8c5309f3f109ce00c9c8c3fdb48d6be409eb9ab6de3746b9a17efa2830373b5",
+      "current": true,
+      "status": "CURRENT",
+      "independent_semantic_review": "SATISFIED",
+      "current_inventory_sha256": "4946d1cde3d3d95578f99e2e50d81f8dc1d43086a3e25574bf884ae50e8bd48f",
+      "scientific_readiness": false
+    },
+    "feedback_context": "PASS",
+    "new_provider_calls": 0,
+    "ledger_unchanged": true
+  },
+  "measurement": {
+    "schema": "lossless-auxiliary-wire-measurement/1",
+    "observed_at_utc": "2026-10-29T12:46:46.320328+00:00",
+    "old_counted_tokens": 30160,
+    "new_counted_tokens": 21230,
+    "transport_request_id": "req_e99944dab3e84dbaa0e3a6f0efd35fb9",
+    "model_identity": {
+      "requested_model": "gpt-6.1-sol",
+      "reported_model": null,
+      "catalog_name": "GPT-6.1 Sol",
+      "catalog_version": "6.1",
+      "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "immutable_snapshot_id": null,
+      "immutable_snapshot_status": "UNKNOWN"
+    },
+    "old_wire_sha256": "bef060ab09d2d1e53e55c7430e885f54b7cb301e3949a0e3e1bd8c6f2117ba55",
+    "new_wire_sha256": "d3762e817622a8ed4c2658d9738fa51bd9ec4f01f01ce900b23348dfeacc1268",
+    "old_packet_bytes": 67592,
+    "new_packet_bytes": 52330,
+    "reference_dictionary_entries": 248,
+    "full_original_packet_reconstructed_exactly": true,
+    "old_wire_other_fields_identical": true,
+    "source_bodies_unchanged": true,
+    "new_input_count_requests": 1,
+    "new_inference_calls": 0,
+    "ledger_unchanged": true,
+    "aggregate_tokens": 597039,
+    "aggregate_cost_nano": 2040157500,
+    "scope": "Exact previously rejected full formalization packet, with opt-in lossless reference transport only. Not a newly admitted epoch, meaning/operator activation, new future full-path count or an invoice.",
+    "unverified": "Model comprehension/behavioral quality equivalence; future changed formalizer or review packets and any scientific/economic result."
+  },
+  "actual_blocked_job_and_full_response_unchanged": true,
+  "aggregate_usage_matches_prior_report": true,
+  "aggregate_tokens": 597039,
+  "aggregate_cost_nano": 2040157500,
+  "new_inference_calls": 0,
+  "new_input_count_requests": 1,
+  "conclusion": "Structural blockers corrected within existing infrastructure authority. The retained old full packet fits more compactly; no new hypothesis/operator scope or inference has been admitted.",
+  "next_action": "Follow the single execution plan and the separately reviewable bounded primitive reuse / finite BTC continuation proposal. No automatic successor epoch or recycled D090 grant.",
+  "unverified": [
+    "Behavioral/model-quality equivalence of the lossless representation.",
+    "Future actual formalizer/reviewer input sizes and full-path admission.",
+    "Faithful executable BTC representation, dependency timing, numerical result and economic usefulness.",
+    "New actual production-registry backup/restore in this step; isolated lifecycle tests do cover long records.",
+    "Provider invoice and immutable model snapshot; no claimed new scientific calibration, protected-data access or capital authority."
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "schema": "independent-paired-correction-result-review/1",
+  "at_utc": "2026-10-30T13:53:35.208612+00:00",
+  "status": "PASS_READ_ONLY_RESULT_BINDING_AUDIT",
+  "artifact_ids": {
+    "formalization": "a884336d0be3546658130b2a2505d5c4fa9d7551bbbf586a880960ac48ee76ca",
+    "meaning": "88d6eb9b9061f686727c0d34664f9afa7d99b1c33aa91551acae560a2cc72f10",
+    "compiled": "9ca4d371215f14d2fd4c374caabf69931423064b17a0a881ff3b821d5d23f5fc",
+    "composition": "339b1bcc9a1ce3dee9a2fb8d33a791194b63d1e7337dbf68ce66e96d755d81c8",
+    "execution": "e77f9f3f8966203d51cf676de394fa9b4bccf6cd4992e1654987ed3815221fb6"
+  },
+  "input_hashes": {
+    "formalization.json": "6b785a8378f1ff4457aef5f004538a2af8eb6f406e5e0eedd8763b265fdaf89e",
+    "review.json": "ae7cb4ba847214d0fbdcebb5090862844911c1dfa98731228261996661c2910c",
+    "compiled.json": "2fc747f2240b5ac73c88b70c0da8cadf0aa9212d809811ea36237a1d21654018",
+    "composition.json": "e39567ae06344caea19ae50de0019a5e1cdbc5ebbc60795644217bb21a4a1747",
+    "execution.json": "0026d6bd3972d9077c8d0ef6eaac91c699ffb863d0634ca7d013264a4ffe4c79",
+    "run-result.json": "d882986afc73ca232df56e92461a2fcb052f502263799fece25d440a5de8a36e",
+    "grant-closure.json": "c9315cc60e7386be0341ab026b03cda8e19c37dc2ea38e6453834b4e2781e72b"
+  },
+  "candidate_sha256": "922b054e193e4769e0abfc08bfed14b04065e92b9c9b882723079e15d8c02eb9",
+  "original_idea_universe_and_features_preserved": true,
+  "full_role_contract_and_availability_equal": true,
+  "top_level_runtime_sources_match_frozen_prepare": true,
+  "ast_bytes_equal_previous_gap": {
+    "scope_ast": true,
+    "condition_ast": false,
+    "outcome": true
+  },
+  "composition": {
+    "scenario_count": 91,
+    "checked_cases": 1092,
+    "candidate_binding_verified": true
+  },
+  "execution": {
+    "status": "DESCRIPTIVE_EXECUTION",
+    "elapsed_ms": 46058,
+    "primitive_steps": 4296855,
+    "case_count": 8640,
+    "observed_outcomes": 8625,
+    "state_counts": {
+      "ELIGIBLE": 8625,
+      "OUTCOME_MISSING": 10,
+      "PARTITION_BOUNDARY": 5
+    },
+    "condition_outcome_counts": {
+      "true": {
+        "observed": 0,
+        "missing": 0
+      },
+      "false": {
+        "observed": 8621,
+        "missing": 6
+      },
+      "unknown": {
+        "observed": 4,
+        "missing": 9
+      }
+    },
+    "reason_counts": {
+      "condition_unknown": 13,
+      "missing_warmup": 2,
+      "missing_value": 4,
+      "absent_row": 11,
+      "numeric_domain": 5,
+      "boundary_censoring": 5
+    },
+    "case_blob": {
+      "sha256": "389244f093e4a4fb06723a42da777d8cffa6deb74768fa8a42f640a65724be0a",
+      "size": 42184184
+    },
+    "blob_and_summary_recomputed": true,
+    "all_observed_interval_widths_within_1e-12bp": true,
+    "outward_mean_contains_exact_sum_of_endpoints": true,
+    "contrast_status": "INFORMATION_GAP",
+    "contrast_reason": "no_conditioned_cases",
+    "separate_replay": {
+      "case_blob": {
+        "sha256": "389244f093e4a4fb06723a42da777d8cffa6deb74768fa8a42f640a65724be0a",
+        "size": 42184184
+      },
+      "checked_cases": 8640,
+      "result_hash": "2ba14a2e4cbd87a701a676e4ab7614579e7d67f7b367102682e10d0dfa2d4c01",
+      "schema": "paired-case-verification/1",
+      "scientific_readiness": false
+    },
+    "independent_original_audit": {
+      "candidate_hash": "922b054e193e4769e0abfc08bfed14b04065e92b9c9b882723079e15d8c02eb9",
+      "checked_cases": 8640,
+      "observed_outcomes": 8625,
+      "oracle_sha256": "b18059528214cde32429d10a7f1adb50b217c79ec40dd31ae5cc49e7ee5a1e85",
+      "qualification": "Independent Decimal80 cross-check; rigorous bounds belong to the certified evaluator.",
+      "schema": "paired-original-row-audit/1",
+      "scientific_readiness": false
+    }
+  },
+  "accounting": {
+    "calls": [
+      {
+        "dispatch_id": "controller-b855cfbd15344227881296addcce9822:0",
+        "state": "settled",
+        "charged_nano": 244002500,
+        "admitted_at_utc": "2026-10-30T13:38:45Z",
+        "settled_at_utc": "2026-10-30T13:41:38Z",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "usage": {
+          "cost_units": 244002500,
+          "input_tokens": 28997,
+          "output_tokens": 17151
+        }
+      },
+      {
+        "dispatch_id": "controller-f39aec73829d4ac095b4862e8443748b:0",
+        "state": "settled",
+        "charged_nano": 113645000,
+        "admitted_at_utc": "2026-10-30T13:42:23Z",
+        "settled_at_utc": "2026-10-30T13:42:44Z",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "usage": {
+          "cost_units": 113645000,
+          "input_tokens": 41066,
+          "output_tokens": 1098
+        }
+      }
+    ],
+    "new_tokens": 88312,
+    "new_charged_nano": 357647500,
+    "aggregate_charged_nano": 3544770000,
+    "remaining_nano": 1455230000,
+    "all_settled": true,
+    "grants": [
+      {
+        "approval": "SESSION-2026-10-29-FEEDBACK-BUDGET",
+        "calls": 2,
+        "revoked": true
+      },
+      {
+        "approval": "SESSION-2026-10-29-INDEPENDENT-BTC-REVIEW",
+        "calls": 1,
+        "revoked": true
+      },
+      {
+        "approval": "SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET",
+        "calls": 3,
+        "revoked": true
+      },
+      {
+        "approval": "SESSION-2026-10-30-DISCRETIONARY-BUDGET-PAIRED-CORRECTION",
+        "calls": 2,
+        "revoked": true
+      },
+      {
+        "approval": "SESSION-2026-10-30-PAIRED-DEVELOPMENT",
+        "calls": 1,
+        "revoked": true
+      }
+    ]
+  },
+  "feedback_boundary": {
+    "legacy_evidence_rejection": {
+      "type": "Invalid",
+      "reason": "Owned development feedback input required"
+    },
+    "ancestry_artifacts": 307,
+    "protected_knowledge_ids": [],
+    "operations_metadata_blockers": [
+      {
+        "id": "28838aba04f359317d820526bc597bafaac06893ef1a0e4023a07bbf3f650481",
+        "schema": "paired-source-package/1"
+      },
+      {
+        "id": "e07f559ea0fb3235a426e1db669e9b79e72dddccf25161f2de83f9ffa6e41dd8",
+        "schema": "paired-reference-certificate/1"
+      }
+    ]
+  },
+  "retained_audit_expectation_failure": "First read-only audit asserted exact equality of the aggregate enclosure with an unrounded rational mean and exited1 before saving a report. Enclosure arithmetic explicitly rounds outward; corrected assertion requires containment. No runtime or result changed.",
+  "limits": [
+    "Model-authored condition AST is regrouped, not byte-identical to the previous failed response; original meaning has independent model, synthetic composition and actual oracle checks, not a manually repaired candidate.",
+    "No provider call, calculation rerun, source mutation or production registry/ledger write.",
+    "Current raw certificate and meaning inspectors were not rerun by this audit; execution-time evidence and unchanged source identities were checked.",
+    "No raw market rows inspected, only the already-authorized computed cases and provenance metadata.",
+    "Scientific calibration, historical publication truth, model training exposure and economic usefulness remain unresolved; immutable model snapshot UNKNOWN; cost is usage accounting, not invoice."
+  ],
+  "scientific_readiness": false
+}

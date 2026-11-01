@@ -1,0 +1,57 @@
+{
+  "version": "diagnostic-cases/1",
+  "cases": {
+    "case-a": {
+      "original_question": "Count ALPHA observations with volume strictly greater than 100 in the supplied complete sample. Preserve this condition.",
+      "prior_record": {"claim": "Zero results demonstrate that qualifying ALPHA events are rare.", "references_resolve": true, "ordering_valid": true},
+      "query": {"requested_symbol": "ALPHA", "bound_symbol": "BETA", "predicate": "volume > 100", "returned_count": 0},
+      "rows": [{"symbol": "ALPHA", "time": "09:00", "volume": 150}, {"symbol": "ALPHA", "time": "09:15", "volume": 80}, {"symbol": "BETA", "time": "09:00", "volume": 40}, {"symbol": "BETA", "time": "09:15", "volume": 70}],
+      "coverage": "These are all rows for both symbols in this synthetic sample; no other market observations are available."
+    },
+    "case-b": {
+      "original_question": "Determine why the collector returned no observations for ALPHA, then choose a justified next action.",
+      "prior_record": {"claim": "The provider had no observations.", "references_resolve": true, "ordering_valid": true},
+      "collection_contract": "Both a provider reply with no observations and a local symbol mapping failure produce the stored payload rows=[]. The status field and mapping trace were not retained.",
+      "payload": {"rows": []},
+      "second_model_note": "I agree that the provider had no observations. I have only seen the same empty payload.",
+      "available_information": "No provider receipt or local mapping trace is accessible in this task. A later authorized retrieval could inspect them."
+    },
+    "case-c": {
+      "original_question": "Review the retained diagnosis and follow-up work before choosing the next step.",
+      "prior_record": {"claim": "The collector used BETA instead of the requested ALPHA.", "references_resolve": true, "ordering_valid": true},
+      "independent_audit": {"requested": "ALPHA", "bound": "BETA", "after_repair": "ALPHA", "reference_case_before": "rejected", "reference_case_after": "accepted"},
+      "follow_up": {"operation": "Re-read the identical immutable audit repeatedly after the correction was independently checked.", "total_minutes": 90, "additional_observations": 0, "additional_uncertainty_resolved": "none", "changed_decision": "none", "avoided_action": "none", "other_purpose": "none"},
+      "summary_by_prior_worker": "The diagnosis was correct, so all follow-up work was useful."
+    },
+    "case-d": {
+      "original_question": "Review the cause assigned to an empty query and the later outcome without changing the original ALPHA condition.",
+      "prior_record": {"claim": "ALPHA events are rare, explaining the empty result.", "references_resolve": true, "ordering_valid": true},
+      "independent_audit": {"requested": "ALPHA", "bound": "BETA", "ALPHA_qualifying_rows": 3, "BETA_qualifying_rows": 0},
+      "later_outcome": {"toy_trade_net_result_units": 12, "claim_by_prior_worker": "The favorable result confirms my rarity explanation."},
+      "scope": "The synthetic trade is a single outcome. No causal link from the rarity explanation to that outcome has been established."
+    },
+    "case-e": {
+      "original_question": "Count ALPHA observations with volume strictly greater than 100 in the supplied complete sample. Preserve this condition.",
+      "prior_record": {"claim": "No ALPHA rows in this sample satisfy the condition.", "references_resolve": true, "ordering_valid": true},
+      "query": {"requested_symbol": "ALPHA", "bound_symbol": "ALPHA", "predicate": "volume > 100", "returned_count": 0},
+      "rows": [{"symbol": "ALPHA", "time": "09:00", "volume": 50}, {"symbol": "ALPHA", "time": "09:15", "volume": 80}, {"symbol": "BETA", "time": "09:00", "volume": 40}, {"symbol": "BETA", "time": "09:15", "volume": 70}],
+      "coverage": "These are all rows for both symbols in this synthetic sample; no other market observations are available."
+    },
+    "case-f": {
+      "original_question": "Determine why the collector returned no observations for ALPHA, then choose a justified next action.",
+      "prior_record": {"claim": "The provider had no observations.", "references_resolve": true, "ordering_valid": true},
+      "collection_contract": "Both a provider reply with no observations and a local symbol mapping failure produce the stored payload rows=[].",
+      "payload": {"rows": []},
+      "provider_receipt": {"requested_symbol": "ALPHA", "returned_rows": 2},
+      "local_trace": {"lookup_key": "BETA", "available_response_key": "ALPHA", "lookup_status": "KEY_NOT_FOUND", "returned_rows": []},
+      "receipt_scope": "The receipt and trace independently match this request identifier; these fields are available for this task."
+    },
+    "case-g": {
+      "original_question": "Review the retained diagnosis and follow-up work before choosing the next step.",
+      "prior_record": {"claim": "The collector used BETA instead of the requested ALPHA.", "references_resolve": true, "ordering_valid": true},
+      "independent_audit": {"requested": "ALPHA", "bound": "BETA"},
+      "follow_up": {"operation": "Repair only the binding and run an independent known-positive reference case.", "total_minutes": 2, "bound_after": "ALPHA", "reference_case_before": "rejected", "reference_case_after": "accepted", "original_condition_changed": false, "additional_uncertainty_resolved": "Whether the binding repair restores the reference case", "changed_decision": "Use the corrected query for this sample"},
+      "market_result": "No population or profitability assessment has been performed."
+    }
+  }
+}

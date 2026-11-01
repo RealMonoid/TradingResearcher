@@ -1,0 +1,47 @@
+{
+  "schema": "exact-case-layer-final-checks/1",
+  "scope": "Scoped software/documentation/preservation checks; no native or scientific certificate.",
+  "checks": [
+    {
+      "command": "python -B docs/reviews/verify_system_model.py",
+      "chunk_id": "d36204",
+      "exit_code": 0,
+      "status": "PASS",
+      "scope": "770 local links, 97 decisions, 30 traced requirements and source preservation checks"
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "chunk_id": "e0aee4",
+      "exit_code": 0,
+      "status": "PASS"
+    },
+    {
+      "command": "git diff --check",
+      "chunk_id": "a1cc0d",
+      "exit_code": 0,
+      "status": "PASS",
+      "qualification": "Existing CRLF-to-LF notices; no whitespace errors"
+    },
+    {
+      "command": "python -B .trf-runtime/exact-outcomes-2026-11-01/checks.py",
+      "chunk_id": "474ae1",
+      "exit_code": 0,
+      "status": "PASS",
+      "distinct_test_methods": 112
+    },
+    {
+      "command": "python -B .trf-runtime/exact-compositions-2026-11-01/qualify.py",
+      "chunk_id": "4fdf93",
+      "exit_code": 0,
+      "status": "PASS",
+      "old_runtime_pins_exact": 37,
+      "historical_inquiry_member_hashes_exact": 117
+    }
+  ],
+  "unverified": [
+    "Global verify_implementation.py preexisting source-baseline failures were not re-audited in this slice.",
+    "Native AST4 formalization/certification/authenticated storage, actual A mapping/model review and paid admission are not yet qualified.",
+    "The current synthetic whole-Q1 expression construction stopped at its unchanged resource cap; no whole-Q1 empirical computation or effect was established."
+  ],
+  "qualification": "Changed file inventory and full focused test outputs are in exact-outcomes-2026-11-01.json."
+}

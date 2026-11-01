@@ -218,14 +218,20 @@ class ReferenceEngine:
     def _missing(node, reason):
         return Value(node.kind, node.unit, None, reason)
 
+    def _requires_observation(self, node):
+        return True
+
+    def _traces_observation(self, node):
+        return True
+
     def _calculate(self, node, when, instrument, cutoff, remaining, trace=None):
         remaining[0] -= 1
         if remaining[0] < 0:
             gap('RESOURCE_GAP', 'Expression exhausted its primitive-step budget')
         samples = self.lookup.get((when, instrument))
-        if trace is not None:
+        if trace is not None and self._traces_observation(node):
             trace(when, None, 'observation' if samples is not None else 'missing_observation')
-        if samples is None:
+        if samples is None and self._requires_observation(node):
             if trace is not None:
                 # Missing arithmetic cannot conceal another declared dependency's
                 # publication time. Trace the remaining tree under the same budget.

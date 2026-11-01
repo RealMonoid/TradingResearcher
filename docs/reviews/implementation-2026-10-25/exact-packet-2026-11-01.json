@@ -1,0 +1,326 @@
+{
+  "schema": "actual-exact-input-qualification/1",
+  "status": "PASS_ACTUAL_SELECTED_CONTEXT_TRANSPORT_NOT_ADMITTED",
+  "at_utc": "2026-11-01T17:18:09.169965+00:00",
+  "python_version": "3.14.2",
+  "purpose": "Prepare the actual unchanged A input and inspect complete selected-context transport before any future native/cash admission.",
+  "previous_goal_turn_audit": {
+    "classification": "NO_PROGRESS_GATE_ONLY_RECHECK",
+    "reason": "The preceding turn repeated11 controlled-feedback tests. Actual immutable source/request recovery and independently checked complete wire construction now resolve concrete input uncertainty."
+  },
+  "authority": "D094/D097 bounded preparation only; no new context, epoch, job, worker, grant, resource limit or API call.",
+  "private_evidence_sha256": {
+    ".trf-runtime/exact-packet-2026-11-01/prepare.py": "546816522bd8459b7fe1742ee5d1ae4d7729b5a201c1f8860e358aad88660638",
+    ".trf-runtime/exact-packet-2026-11-01/prepared.json": "5febe0813b4cc7b65b2f80b9ac3a1fc502af6357c77aa98a14693048d6fac491",
+    ".trf-runtime/exact-packet-2026-11-01/independent_check.py": "a3a8110de9efc07d773465f13cbd0cee6ba450b059eebd3a983ff291c64150bb",
+    ".trf-runtime/exact-packet-2026-11-01/independent-check.json": "2c673e7ba84e99d242a2c4ed6f12c5facb17d50c0399c9aba4275aa64a815f89",
+    ".trf-runtime/exact-packet-2026-11-01/independent-evidence.json": "e4e58b39d81a794b9255d0c5649c529ae9ad1909da2d842cf7cfd214a267f866",
+    ".trf-runtime/exact-packet-2026-11-01/recheck.py": "3bc689146948b30eaf8a01f363a4b50bd34989ea6206f52011c60661aad95856"
+  },
+  "unchanged_previous_source_bytes": {
+    "trading_researcher/exact_feedback.py": "4c3a01c01ab31d6008de64dcb79a53c0e2a1ce55380d2deece19c7ca2cbdb71d",
+    "trading_researcher/EXACT_FEEDBACK.md": "7b59df2034a24932ad4d55104d9148d4964cac0ffdd869d8c21973fb15edc7a3",
+    "tests/test_exact_feedback.py": "aa99a4d4165bfbe1dfb2f07e7f126a69417d9d800513d091fa787038132d9d69",
+    "tests/test_exact_feedback_review.py": "8c41da9b732d4ffd66f3da6a04fff68460b74ed34403fb0104258a6a75341d44",
+    "trading_researcher/exact_profiles.py": "2870ca08252a89a3913ceaf180f11ec5a051ced04aea7f203ac4098ebc477c88",
+    "trading_researcher/EXACT_PROFILES.md": "bf53a12482f1d33956b7f2f6fca3d0cf203355473e5510acaa78d01cfd06cf33",
+    "tests/test_exact_profiles.py": "34847bce57329f5f78d10a7422d09c3a4f5a8e1e6199fe61bbfaac6d6ef1c86c",
+    "tests/test_exact_profiles_review.py": "60b93ba42773e0db2e1da3e593fd998898caafcc8d1bafee67c1d1225afa1356",
+    "tests/fixtures/exact_formalizer_base_v3.json": "fb572a9246847b4f29f34850524d7dc3cacadd0348d16d71c4280c1e03c82362",
+    "trading_researcher/exact_resource_candidate.py": "3e015bc1f73ed939ec53dc04eb41f9388a126a1672482f6494a1eacae8f76765",
+    "trading_researcher/EXACT_RESOURCE_PROPOSAL.md": "8cc4ce73402035a5f27d7c2651beebaf4249baa60741f5bf00c76ddd8bbbe7c7",
+    "tests/test_exact_resource_candidate.py": "bdf9d3ff9535785447374451e370e1d513caaeeccdf4c306e0566decb73ee735",
+    "tests/test_exact_resource_candidate_review.py": "d0afcc7f0ec74badd4c002377b7c8dfcc71b5534e662e3022e448fa7f4c102e1",
+    "trading_researcher/exact_execution.py": "f563d2dcb78d450e7f28eece1cde91b543acd99ec3830f1b22630539fea8070d",
+    "trading_researcher/exact_composition.py": "f36fb1329bee772e6ecec32774123c1c35eb17464544f6ecca0634d6942f480d",
+    "trading_researcher/exact_meaning.py": "eaa83aedc3d0232512e4ca85ea80456a5cd0c79bc1a2c478137138f86ce933e0",
+    "trading_researcher/exact_revocations.py": "287ce9b6c4ec21780858dbb676120711b60017d5b1e232264d25ccd51b1b8123",
+    "trading_researcher/EXACT_EXECUTION.md": "c2dd28113c4cc1e1ed7c18ed9f3f35530eec46222b08cd74e0ab105a68a7c506",
+    "tests/exact_execution_support.py": "383ca281cd19e7f19fcd66f6f56651ac26473e0ce9975cf38f711f8b964ec639",
+    "tests/test_exact_execution.py": "68050119bee6e0453faf482b2d8a3c0284970e8ebe4fef7d68b65dc29ed8cbd9",
+    "tests/test_exact_execution_review.py": "2798845e2376be3dccc8728f01747aaadd99cfbba8902e9e0b32702f42fe326f"
+  },
+  "historical_job_id": "c234c13715324cb2bd9c20a6a0e11762",
+  "historical_epoch_id": "aa2c49b363a84156badfb725a4afb49f",
+  "original_A_id": "e92a94551d9050ea5d7a0cb7d307b85389cac060d000e73d74c4edc64076acb3",
+  "original_A_text_sha256": "7c730d4be9e5f5dc867dd5ef92dda111299789eb8b18531d5e3a6d5cab99d27e",
+  "null_formalization_id": "948ce2bb7f4d50c93bb4ade9f57114e3b4973bfd976c50dc090aa279190c7bcb",
+  "selected_context": {
+    "context_id": "8be9d449e92f1af6c090e0d216384f58d96bae86c4e95bccc12a742730371988",
+    "full_source_envelopes": 4,
+    "artifact_ids": [
+      "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "c8d806c66c9b613dbe1c1ffbf8500d5938d7e17203eed8375fa7e7fc91b3a3e4",
+      "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+      "e92a94551d9050ea5d7a0cb7d307b85389cac060d000e73d74c4edc64076acb3",
+      "f4e0088e92279bfd540d35cf7e0165809224ca484a826207ed6d997fbb9da218"
+    ],
+    "transported_ids_in_order": [
+      "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "c8d806c66c9b613dbe1c1ffbf8500d5938d7e17203eed8375fa7e7fc91b3a3e4",
+      "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+      "e92a94551d9050ea5d7a0cb7d307b85389cac060d000e73d74c4edc64076acb3"
+    ],
+    "source_bodies_references_exposure": "Exact unchanged full selected source envelopes and ordered metadata, independently compared with read-only registry and retained historical request.",
+    "feature_certificate": "Omitted as a raw source by the existing owner; the complete original timing-evidence block binds its body, footprint and row-blob descriptors.",
+    "transitive_scope": "Four complete selected envelopes are not all366/373 transitive bodies or discovery13 source bodies. Original source/exposure lineage remains unchanged; no new access is granted.",
+    "availability_scope": "Exact retained earlier exhaustive timing evidence, bound to its certificate; no fresh status/release/currentness pass."
+  },
+  "prepared_role": {
+    "version": "faithful-exact-formalization/4",
+    "prompt_characters": 8186,
+    "model": "gpt-6.1-sol",
+    "max_output_tokens": 32000,
+    "reasoning_effort": "high",
+    "reviewer_unchanged": true,
+    "current_primitive_cap": 10000000,
+    "configuration_freshness": "NOT_CHECKED"
+  },
+  "bytes": {
+    "historical_packet": 90503,
+    "packet": 120753,
+    "normalized_request": 133895,
+    "provider_wire": 123673,
+    "packed_user_content": 111584
+  },
+  "digests": {
+    "historical_request": "8ffbf4203ac60df10e209fd1fa84fe52e90c58e78521b63d68213947a2c802d2",
+    "historical_packet": "c6ace0439633a6a4c5a532ce423258d46e67c8bd7471af0dc185844752935ac9",
+    "new_packet": "5c5e7cc271928afd99e0e7d26706b0f8bbc2ece3d651ebb75eccc2413caef2af",
+    "normalized_request": "6f8eb9154fa1f33013a989d584ac051cc96acc4fb7b73457bdcd154aab7c3b85",
+    "provider_wire": "8a377d8606908553f636830ba5a75adbfde7d10fcd310e6ade3ccfc86f66cbc4"
+  },
+  "independent_validation": {
+    "schema": "independent-actual-exact-packet-audit/1",
+    "status": "PASS",
+    "qualification_status": "PASS_CANDIDATE_PACKET_ONLY_NOT_ADMITTED",
+    "at_utc": "2026-11-01T17:14:20.845098+00:00",
+    "prepared_sha256": "5febe0813b4cc7b65b2f80b9ac3a1fc502af6357c77aa98a14693048d6fac491",
+    "checker_sha256": "a3a8110de9efc07d773465f13cbd0cee6ba450b059eebd3a983ff291c64150bb",
+    "database_access": "SQLite mode=ro, query_only=ON, single explicit read transaction; no broker constructed",
+    "historical_job_id": "c234c13715324cb2bd9c20a6a0e11762",
+    "historical_context_id": "8be9d449e92f1af6c090e0d216384f58d96bae86c4e95bccc12a742730371988",
+    "historical_request_artifact_id": "d1ada2b4dc8f5f30686c51db101330cca3f9c9ca2422f32413e1f6a4fed080d4",
+    "selected_source_ids_in_original_order": [
+      "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "c8d806c66c9b613dbe1c1ffbf8500d5938d7e17203eed8375fa7e7fc91b3a3e4",
+      "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+      "e92a94551d9050ea5d7a0cb7d307b85389cac060d000e73d74c4edc64076acb3"
+    ],
+    "selected_full_envelopes": 4,
+    "historical_context_ids": 5,
+    "certificate_representation": "Unchanged retained availability_evidence; full certificate envelope is audit evidence, not a fifth transmitted source body.",
+    "original_A_text_sha256": "7c730d4be9e5f5dc867dd5ef92dda111299789eb8b18531d5e3a6d5cab99d27e",
+    "retained_null_formalization_id": "948ce2bb7f4d50c93bb4ade9f57114e3b4973bfd976c50dc090aa279190c7bcb",
+    "digests": {
+      "historical_request": "8ffbf4203ac60df10e209fd1fa84fe52e90c58e78521b63d68213947a2c802d2",
+      "historical_packet": "c6ace0439633a6a4c5a532ce423258d46e67c8bd7471af0dc185844752935ac9",
+      "new_packet": "5c5e7cc271928afd99e0e7d26706b0f8bbc2ece3d651ebb75eccc2413caef2af",
+      "normalized_request": "6f8eb9154fa1f33013a989d584ac051cc96acc4fb7b73457bdcd154aab7c3b85",
+      "provider_wire": "8a377d8606908553f636830ba5a75adbfde7d10fcd310e6ade3ccfc86f66cbc4"
+    },
+    "bytes": {
+      "historical_packet": 90503,
+      "packet": 120753,
+      "normalized_request": 133895,
+      "provider_wire": 123673,
+      "packed_user_content": 111584
+    },
+    "dictionary_entries": 365,
+    "negative_checks": [
+      {
+        "case": "source_body",
+        "status": "REJECTED",
+        "reason": "Actual packet has an unapproved field/body/order/context change"
+      },
+      {
+        "case": "exposure_order",
+        "status": "REJECTED",
+        "reason": "Actual packet has an unapproved field/body/order/context change"
+      },
+      {
+        "case": "source_order",
+        "status": "REJECTED",
+        "reason": "Actual packet has an unapproved field/body/order/context change"
+      },
+      {
+        "case": "context",
+        "status": "REJECTED",
+        "reason": "Actual packet has an unapproved field/body/order/context change"
+      },
+      {
+        "case": "input_selector",
+        "status": "REJECTED",
+        "reason": "Actual packet has an unapproved field/body/order/context change"
+      },
+      {
+        "case": "contract_text",
+        "status": "REJECTED",
+        "reason": "Actual packet has an unapproved field/body/order/context change"
+      },
+      {
+        "case": "wire_index_bool",
+        "status": "REJECTED",
+        "reason": "Reference index type/bounds"
+      },
+      {
+        "case": "wire_settings",
+        "status": "REJECTED",
+        "reason": "Provider wire settings/messages differ"
+      },
+      {
+        "case": "normalized_settings",
+        "status": "REJECTED",
+        "reason": "Normalized request changed outside language/contract fields"
+      },
+      {
+        "case": "byte_count",
+        "status": "REJECTED",
+        "reason": "Recorded UTF8 lengths differ"
+      },
+      {
+        "case": "wire_hash",
+        "status": "REJECTED",
+        "reason": "Recorded request/wire digest differs"
+      },
+      {
+        "case": "own_admission",
+        "status": "REJECTED",
+        "reason": "Construction claims native_admission"
+      },
+      {
+        "case": "construction_fields",
+        "status": "REJECTED",
+        "reason": "Complete construction fields differ"
+      },
+      {
+        "case": "historical_body",
+        "status": "REJECTED",
+        "reason": "historical_request_artifact differs from read-only database"
+      },
+      {
+        "case": "original_text_hash",
+        "status": "REJECTED",
+        "reason": "Original/null identity differs"
+      },
+      {
+        "case": "certificate_body",
+        "status": "REJECTED",
+        "reason": "feature_certificate_envelope differs from read-only database"
+      },
+      {
+        "case": "timing_evidence",
+        "status": "REJECTED",
+        "reason": "Actual packet has an unapproved field/body/order/context change"
+      }
+    ],
+    "negative_checks_passed": 17,
+    "limits": [
+      "Historical selection/complete bodies/refs/exposure are preserved; this does not transmit all373 transitive ancestor bodies or all13 discovery envelopes.",
+      "Timing evidence is exactly retained and certificate-bound; rows, current feature/release/data-use qualification and historical publication truth were not re-evaluated.",
+      "Pure request construction grants no new context, ownership, lease, job, epoch, source selection, grant, resource ceiling or dispatch authority. Old job remains completed with its original frozen v3 request.",
+      "Configuration/pricing freshness, actual token fit/count-service billing, future independent reviewer packet and two-call funding are unknown. No provider/count call or broker was invoked.",
+      "No current shared ledger/grant audit was repeated. The reported53calls/sevenrevoked grants/USD0.574585 remain a separate owner observation; no reset is inferred.",
+      "Old-config arithmetic only: full outputs32k+4k cost360000000nano, leaving85834 combined input tokens from574585000nano. Full48k+76k input maxima cost670000000nano, exceeding that remainder by95415000; this grants no allocation or fit."
+    ],
+    "no_writes_in_flight": true
+  },
+  "independent_evidence_history": {
+    "earlier_run_tool_chunk": "dea304",
+    "earlier_exit_code": 0,
+    "earlier_tool_seconds": "0.867",
+    "earlier_rejected_mutations": 16,
+    "earlier_preserved_evidence": ".trf-runtime/exact-packet-2026-11-01/independent-evidence.json",
+    "final_rejected_mutations": 17,
+    "final_original_tool_exit_and_time": "TRUNCATED_UNAVAILABLE; no invented exit or duration",
+    "fresh_central_command": "python -B .trf-runtime/exact-packet-2026-11-01/recheck.py",
+    "fresh_central_scope": "Re-executes independent actual-DB/packet/wire positive validation read-only and verifies retained17 rejected mutation evidence/checker hashes; no evidence rewrite."
+  },
+  "funding_observation": {
+    "basis": "Arithmetic from unchanged retained configuration, not a current-price, full-count, billing or grant check.",
+    "retained_tariff_version": "openai-gpt-6.1-sol-standard-2026-10-25/1",
+    "full_output_tokens": 36000,
+    "output_reserve_nano_usd": 360000000,
+    "available_nano_usd": 574585000,
+    "maximum_combined_reserved_inputs_by_cash": 85834,
+    "profile_maximum_combined_inputs": 124000,
+    "profile_maximum_total_nano_usd": 670000000,
+    "shortfall_at_both_input_maxima_nano_usd": 95415000,
+    "ordinary_80000_epoch_combined_input_room_with_full_outputs": 44000,
+    "qualification": "Actual input/reviewer packet token counts and eventual original-epoch authority remain unresolved. Maxima do not prove actual impossibility; cash fit would not prove token/time/slot admission. No old allocation is reopened or split into successor epochs."
+  },
+  "research_usage": {
+    "totals": {
+      "calls": 53,
+      "known_usage_calls": 53,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 1058582,
+      "known_output_tokens": 177896,
+      "known_total_tokens": 1236478,
+      "exact_total_tokens": 1236478,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 53,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 49754,
+      "reasoning_detail_calls": 53,
+      "exact_reasoning_output_tokens": 49754
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 4425415000,
+      "available_nano": 574585000,
+      "halted": false
+    },
+    "per_call_model_version_utc_history": "docs/reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json",
+    "immutable_served_snapshot": "UNKNOWN",
+    "count_service_billing": "UNVERIFIED",
+    "invoice_reconciled": false
+  },
+  "construction_usage_through_snapshot": {
+    "scope": "Main construction since controlled-feedback snapshot, including gate recheck, actual-input preparation and independent verification; separate from framework inference.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-11-01T17:01:03.955Z",
+    "snapshot_at_utc": "2026-11-01T17:18:01.606Z",
+    "tokens": {
+      "input_tokens": 7673475,
+      "cached_input_tokens": 7612288,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 27072,
+      "reasoning_output_tokens": 14139,
+      "total_tokens": 7700547
+    },
+    "input_includes_cached": true,
+    "reasoning_is_subset_of_output": true,
+    "immutable_served_snapshot": "UNKNOWN",
+    "child_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "new_provider_calls": 0,
+  "new_count_calls": 0,
+  "new_production_grants": 0,
+  "production_registry_mutated": false,
+  "resource_limit_change": false,
+  "actual_native_admission": false,
+  "token_fit": "UNKNOWN_NOT_COUNTED",
+  "scientific_readiness": false,
+  "objective_complete": false,
+  "work_plan_priority_preserved": "Obtain the specific decision on the fully prepared opt-in20M-per-child/40M-aggregate primitive ceiling, with unchanged shared1800-second deadline and all plain/observed/canonical-replay checks retained. The offline implementation and independent boundary/full-quarter audits are ready; its engineering profile remains pending, unregistered and unselected. Do not infer this ceiling revision from money discretion or activate it before the specific D097 constraint is resolved. After approval, preserve the proposal/source bytes and adopt the scoped resource version with provenance; qualify the new owned runtime/source/compile/composition/execution route, then complete actual AST4 role profiles/full wires and fresh original-scope source/input/data-use/meaning/count/funding admission. The added inactive module changes future all-Python host inventory, so historical native source observations do not establish current intended-use admission. Preserve actual original A null formalization, all source/exposure/failure histories and all seven revoked grants. The original USD5 ledger retains USD0.574585; no paid call, grant reset, retry/successor or scientific/assessment/capital upgrade is authorized by this proposal. Continue independent authorized work while awaiting the specific ceiling decision. Preserve separately owned DQ kit without claiming actual model behavior. The seven-package objective remains active and incomplete.",
+  "unverified": [
+    "Pending resource ceiling decision and separately versioned source/profile",
+    "Current complete actual source/context/release/feature/data-use intended-use admission",
+    "New authorized role/input ownership, pricing/configuration freshness, actual full input count and funding",
+    "Actual formalization/model fidelity, independent meaning and original-A descriptive report",
+    "Current funding/token/slot policy; eventual accepted resource profile will change the actual wire and must be re-counted",
+    "Scientific information/calibration/protected assessment/freeze, economic/policy usefulness and actual DQ behavior",
+    "Immutable model snapshot, count billing/invoices and child construction-usage aggregation",
+    "Global implementation-verifier preexisting master/discipline baseline not reaudited"
+  ],
+  "changed_files": [
+    "docs/reviews/implementation-2026-10-25/exact-packet-2026-11-01.json",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/implementation-2026-10-25/progress.json"
+  ]
+}

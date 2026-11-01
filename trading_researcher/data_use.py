@@ -9,7 +9,7 @@ from pathlib import Path
 from .binding import require
 from .codec import Invalid, decode, digest, integer, text
 from .errors import Conflict, Denied
-from .features import binding
+from .features import binding, PROFILE as FEATURE_PROFILE, SCOPE as FEATURE_SCOPE
 
 
 SCHEMA='data-use-assessment/1'
@@ -41,6 +41,43 @@ def use_profile(compiled):
     return PROTECTED_PROFILE if 'data_target_binding_id' in compiled['body']['dependency_arguments'] else PROFILE
 
 
+def is_feature_release_provenance(broker, artifact):
+    """Recognize administrative metadata, never exempt its ancestry or usability."""
+    if (set(artifact) != {'id','version','creator','origin','data_class','source_refs','exposure','authority','body'}
+            or artifact['version'] != 'local-artifact/1'
+            or artifact['creator'] != 'controller' or artifact['origin'] != 'controller'
+            or artifact['data_class'] != 'operations'
+            or artifact['authority'] != 'development_feature_input_release_only'):
+        return False
+    body = artifact['body']
+    if (type(body) is not dict or set(body) != {'schema','certificate_id','data_snapshot_id',
+            'definitions_id','target_epoch','created_at','scientific_readiness'}
+            or body['schema'] != 'feature-evidence-release/1' or body['scientific_readiness'] is not False
+            or any(type(body[name]) is not int or body[name] < 0 for name in ('target_epoch','created_at'))):
+        return False
+    ids = [body[name] for name in ('certificate_id','data_snapshot_id','definitions_id')]
+    if (not all(type(identity) is str and len(identity) == 64
+            and set(identity) <= set('0123456789abcdef') for identity in ids)
+            or len(set(ids)) != 3 or artifact['source_refs'] != sorted(ids)):
+        return False
+    certificate, snapshot, definition = (broker._artifact(identity) for identity in ids)
+    if any(parent['creator'] != 'controller' or parent['data_class'] != 'development'
+            or type(parent['body']) is not dict for parent in (certificate,snapshot,definition)):
+        return False
+    cb, sb, db = certificate['body'], snapshot['body'], definition['body']
+    refs = db.get('input_refs')
+    manifest = sb.get('manifest')
+    return (certificate['origin'] == 'controller' and certificate['authority'] == FEATURE_SCOPE['authority']
+        and cb.get('schema') == 'feature-certificate/1' and cb.get('profile') == FEATURE_PROFILE
+        and cb.get('status') == 'CERTIFIED' and cb.get('data_snapshot_id') == ids[1]
+        and cb.get('definitions_id') == ids[2]
+        and snapshot['origin'] == 'source' and sb.get('schema') == 'data-snapshot/1'
+        and type(manifest) is dict and manifest.get('partition') == 'development'
+        and definition['origin'] == 'source' and db.get('schema') == 'feature-definitions/1'
+        and type(refs) is list and all(type(ref) is str for ref in refs)
+        and ids[1] in refs and sb.get('catalog_id') in refs)
+
+
 def prior_knowledge(broker, formalization):
     """Start before compiler dependency expansion; never subtract target IDs.
 
@@ -67,7 +104,8 @@ def prior_knowledge(broker, formalization):
                 'binding-source-package/1','composition-source-package/1')
                 and artifact['authority']=='retained_source_not_certified')
             certificate=schema=='implementation-certificate/1' and artifact['authority']=='implementation_conformance_only'
-            (technical if owned and (implementation or certificate) else operations).add(identity)
+            release = schema == 'feature-evidence-release/1' and is_feature_release_provenance(broker,artifact)
+            (technical if owned and (implementation or certificate or release) else operations).add(identity)
         pending.extend((ref,True) for ref in artifact['source_refs'])
         pending.extend((ref,False) for ref in artifact['exposure'])
         if artifact['origin']=='worker':

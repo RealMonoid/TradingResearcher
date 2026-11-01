@@ -1,0 +1,63 @@
+{
+  "schema": "github-development-publication-preflight/1",
+  "date": "2026-11-01",
+  "status": "PASS_CHECKED_DEVELOPMENT_SNAPSHOT",
+  "scope": "Publish the complete current framework source, tests, specifications and retained evidence. This is an unfinished development checkpoint, not scientific or production readiness.",
+  "remote": "https://github.com/RealMonoid/TradingResearcher.git",
+  "branch": "codex/architecture",
+  "expected_parent": "d95449b69f4172362c02a931910f768fc0484406",
+  "user_authorization": "Current conversation: update the GitHub repository with the newest complete version, then continue normal goal work.",
+  "focused_tests": {
+    "owner_methods": 5,
+    "independent_methods": 17,
+    "skipped": 0,
+    "exit_codes": [0, 0],
+    "tool_chunks": ["f9df4a", "082e69", "57bc4a", "abcd9c"],
+    "evidence": "docs/reviews/adoption-exact-resources-2026-11-01/verification.json",
+    "qualification": "Genuine tiny raw certification and synthetic paired protocol seams; actual historical-context admission remains unverified. Earlier scoped framework checks are retained, not described as rerun."
+  },
+  "documentation_checks": [
+    {"command": "python -B docs/reviews/verify_system_model.py", "exit_code": 0, "status": "PASS", "tool_chunk": "83ac19"},
+    {"command": "python -B docs/reviews/verify_retail_contract.py", "exit_code": 0, "status": "PASS", "tool_chunk": "a014ee"},
+    {"command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py", "exit_code": 0, "status": "PASS", "tool_chunk": "172d37"},
+    {"command": "git -c core.safecrlf=false diff --check", "exit_code": 0, "tool_chunk": "e71ac0"}
+  ],
+  "publication_review": {
+    "reviewer": "Independent github_publication_review agent",
+    "outcome": "PASS scoped candidate review, with final staged-tree reconciliation required separately",
+    "candidate_files_inspected": 876,
+    "candidate_bytes_inspected": 56830220,
+    "zip_files": 43,
+    "zip_entries": 2666,
+    "supported_real_credential_patterns_detected": 0,
+    "private_paths_detected": 0,
+    "sqlite_payloads_detected": 0,
+    "archive_scan_errors": 0,
+    "synthetic_token_hits": "Seven copies of the same fixed synthetic provider-test literal; working source plus six retained archives.",
+    "tool_chunks": ["384bbd", "80b756", "676f72", "bf5c73"],
+    "qualification": "Supported-pattern/path/archive inspection is not proof of absence of every possible secret. Final status/verification additions and staged bytes are checked separately."
+  },
+  "preservation": {
+    "finding": "Git normalization would change 40 files, including pinned contracts, approvals and nested Python sources.",
+    "correction": "Extend existing exact-byte attributes recursively to runtime, tests, tools, architecture/review documents and snapshots. No frozen file was normalized to satisfy a hash.",
+    "all_candidate_git_filter_changes_after_fix": 0,
+    "tool_chunk": "abe0cd",
+    "final_staging_correction": "Six unchanged tracked index entries still held normalized LF objects after the attribute change; explicitly restage only those entries to match their existing local raw bytes. No local frozen file is edited. Prior Git objects remain in history.",
+    "retained_whitespace": "Narrow whitespace-only exceptions preserve two trailing spaces in the captured provider README and blank EOF lines in three already qualified modules; no source bytes or expectations are changed.",
+    "staged_and_remote_identity": "Verified separately after final staging/push; this committed record documents preflight rather than a self-referential commit identity."
+  },
+  "retained_gate_failure": {
+    "tool_chunk": "94d4f5",
+    "exit_code": 1,
+    "finding": "Old implementation-scope list omitted two previously approved documentation paths.",
+    "resolution": "Both files exactly match their prior accepted adoption hashes (39c722 and independent 676f72). Add only those two path-specific provenance entries; no scientific checks or expected results changed."
+  },
+  "excluded_private_state": [".env", ".env.local", ".env.*", ".trf-runtime/", "local operator keys and runtime databases", "__pycache__/"],
+  "new_inference_calls": 0,
+  "unverified": [
+    "The entire historical test suite was not rerun for this snapshot; scoped results and their versions remain in existing evidence.",
+    "Actual historical-feedback qualification and native original-A admission, including final packet count and finite auxiliary resource allocation.",
+    "Full scientific calibration, protected assessment/freeze, mixed-provider live cycle, economic validation and reporting/delivery.",
+    "GitHub CI execution, API invoices and complete construction-credit accounting."
+  ]
+}

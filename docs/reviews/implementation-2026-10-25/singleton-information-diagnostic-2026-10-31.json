@@ -1,0 +1,502 @@
+{
+  "schema": "singleton-empirical-resampling-diagnostic/1",
+  "status": "PASS_EXACT_SUPPORT_DIAGNOSTIC",
+  "at_utc": "2026-10-31T06:31:37.471266+00:00",
+  "purpose": "Separate missing empirical conditional-outcome information from a missing bootstrap/profile implementation.",
+  "execution_id": "8456955e281d7e4f9c50c33ba7763597d87a06ee24c66bd6f1a09bed82003980",
+  "compiled_id": "9052edbe4725b3ac7c063ba21e9ad345af2f5171b6a6a6363624020701fedd3d",
+  "candidate_sha256": "6030f39d815297c96eb48a78cec93123edaa5bdee11b61a5765c50d3c21abaa6",
+  "case_blob": {
+    "sha256": "8132450f0ca3a49ea2cd6a60df16e1bda7093e92bd6ad6c2e10ccba69e51b592",
+    "size": 108043230
+  },
+  "rows": 8640,
+  "observed_scope_outcomes": 8625,
+  "observed_conditioned_outcomes": 1,
+  "sole_case_decision_time": 1674435600,
+  "sole_case_outcome_enclosure": {
+    "lower": {
+      "numerator": "3255519066220516047898205530070516875",
+      "denominator": "166153499473114484112975882535043072"
+    },
+    "upper": {
+      "numerator": "208353220238113027065485153924513243125",
+      "denominator": "10633823966279326983230456482242756608"
+    }
+  },
+  "fixed_weight_checks": [
+    {
+      "label": "all_rows_once",
+      "positive_conditional_denominator": true,
+      "conditional_enclosure_unchanged": true,
+      "conditional_mean_defined": true,
+      "exact_scope_mean": {
+        "lower": {
+          "numerator": "-765237887777483759567699443861673469125",
+          "denominator": "1467467707346547123685802994549500411904"
+        },
+        "upper": {
+          "numerator": "-765237887777483759567699443861656819725",
+          "denominator": "1467467707346547123685802994549500411904"
+        }
+      }
+    },
+    {
+      "label": "omit_conditioned",
+      "positive_conditional_denominator": false,
+      "conditional_enclosure_unchanged": null,
+      "conditional_mean_defined": false,
+      "exact_scope_mean": {
+        "lower": {
+          "numerator": "-96071442412661696000093400790558209800625",
+          "denominator": "183412195770385831806758913405723065974784"
+        },
+        "upper": {
+          "numerator": "-96071442412661696000093400790556128951875",
+          "denominator": "183412195770385831806758913405723065974784"
+        }
+      }
+    },
+    {
+      "label": "conditioned_twice",
+      "positive_conditional_denominator": true,
+      "conditional_enclosure_unchanged": true,
+      "conditional_mean_defined": true,
+      "exact_scope_mean": {
+        "lower": {
+          "numerator": "-95238029531709243891831460174860157480625",
+          "denominator": "183454731066250949114691835231652037001216"
+        },
+        "upper": {
+          "numerator": "-95238029531709243891831460174858075979375",
+          "denominator": "183454731066250949114691835231652037001216"
+        }
+      }
+    },
+    {
+      "label": "only_conditioned",
+      "positive_conditional_denominator": true,
+      "conditional_enclosure_unchanged": true,
+      "conditional_mean_defined": true,
+      "exact_scope_mean": {
+        "lower": {
+          "numerator": "3255519066220516047898205530070516875",
+          "denominator": "166153499473114484112975882535043072"
+        },
+        "upper": {
+          "numerator": "208353220238113027065485153924513243125",
+          "denominator": "10633823966279326983230456482242756608"
+        }
+      }
+    },
+    {
+      "label": "rational_reweighting",
+      "positive_conditional_denominator": true,
+      "conditional_enclosure_unchanged": true,
+      "conditional_mean_defined": true,
+      "exact_scope_mean": {
+        "lower": {
+          "numerator": "-1435237746023258275243567427548486780769375",
+          "denominator": "2751480683626843298256914153867348786806784"
+        },
+        "upper": {
+          "numerator": "-1435237746023258275243567427548455563470625",
+          "denominator": "2751480683626843298256914153867348786806784"
+        }
+      }
+    }
+  ],
+  "hand_fixed_counterexamples": 4,
+  "proof": "For any nonnegative empirical row/block multiplicities, the conditional numerator is w_star*Y_star and denominator w_star. If positive, their ratio equals the same underlying retained Y_star; otherwise the mean is undefined. Other rows cannot contribute a conditioned outcome.",
+  "qualification": "Y_star is known only within its retained arithmetic enclosure. Exact rational propagation gives the same enclosure under positive weighting; implementation rounding could add numeric width but cannot add empirical sampling information. The whole-scope baseline and contrast can vary. This is not a new inference method, universal minimum count, population-variance claim or market falsification.",
+  "resource_decision": "RETAIN_ORIGINAL_SCOPE_INFORMATION_GAP",
+  "next_action": "Construct and inspect a complete source/resource admission packet for one separate free-development work unit, with no inference dispatch yet. Reuse the current qualified closed-cohort feedback, retain both perspectives, all original idea/gap text, failures and exposure, and check actual current grants/source access. Derive the complete discovery/tool/formalization/independent-review reservation against the ordinary 80,000-token and 30-minute epoch limits and remaining original shared USD budget before creating a paid epoch. Do not inherit consumed exceptional grants, silently omit source content, change frozen research role/model settings, coerce new ideas into an approved outcome catalog or retune original claims. If a complete packet cannot fit or requires a material policy change, retain NOT_ADMITTED and prepare only the specific reviewable proposal. No default calibration-family, backend or reporting expansion.",
+  "independent_review": {
+    "schema": "independent-scientific-next-review/1",
+    "recorded_at_utc": "2026-10-31T06:29:35.866452+00:00",
+    "status": "BOUNDED_ALGEBRAIC_DIAGNOSTIC_PREFERRED_WITH_LIMITS",
+    "purpose": "Independently identify the smallest discriminating next operation without assuming a calibration-infrastructure requirement or changing original claim meanings.",
+    "reviewed_object": {
+      "execution_id": "8456955e281d7e4f9c50c33ba7763597d87a06ee24c66bd6f1a09bed82003980",
+      "original_idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+      "candidate_sha256": "6030f39d815297c96eb48a78cec93123edaa5bdee11b61a5765c50d3c21abaa6",
+      "contract": "paired-development/1.0",
+      "scope": "Unchanged BTCUSDT/ETHUSDT Q1 2023 paired one-hour log-return-difference development result."
+    },
+    "independent_raw_case_check": {
+      "case_blob_sha256": "8132450f0ca3a49ea2cd6a60df16e1bda7093e92bd6ad6c2e10ccba69e51b592",
+      "bytes": 108043230,
+      "rows": 8640,
+      "state_counts": {
+        "ELIGIBLE": 8625,
+        "OUTCOME_MISSING": 10,
+        "PARTITION_BOUNDARY": 5
+      },
+      "scope_observed": 8625,
+      "conditioned_observed": 1,
+      "sole_case_decision_time": 1674435600,
+      "sole_case_outcome_enclosure": {
+        "lower": {
+          "numerator": "3255519066220516047898205530070516875",
+          "denominator": "166153499473114484112975882535043072"
+        },
+        "upper": {
+          "numerator": "208353220238113027065485153924513243125",
+          "denominator": "10633823966279326983230456482242756608"
+        }
+      },
+      "published_conditional_enclosure_exact_match": true
+    },
+    "preferred_next_operation": {
+      "name": "Retain an exact singleton empirical-resampling information diagnostic on the existing case blob.",
+      "question": "Can adding a bootstrap implementation or calibrated profile create empirical conditional-outcome variation in this unchanged sample?",
+      "answer": "No. For every nonnegative multiplicity vector, the conditional numerator is w_star*Y_star and the conditional denominator is w_star. A positive denominator returns the same Y_star and its numerical enclosure; a zero denominator is undefined. This is an algebraic support limitation, not a simulation result.",
+      "discriminating_value": "Current retained output states one qualifying case and no reliable population effect; it does not explicitly establish the weighted-resampling invariant. The diagnostic supports stopping inferential expansion for this unchanged sample before spending on a paired bootstrap/profile.",
+      "acceptance": "Verify the exact retained blob hash, one observed condition-true row, original candidate/outcome binding and unchanged enclosure; independently check positive, omitted, repeated and isolated sole-case weights; explicitly show that baseline/effect may still vary.",
+      "authority": "Read-only development-case analysis and existing contract14 sections5.3/5.4; no new evaluator, study family, outcome processing or scientific classification."
+    },
+    "fixed_weight_checks": [
+      {
+        "label": "all_rows_once",
+        "conditioned_weight": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "other_row_weight": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "conditional_mean": {
+          "lower": {
+            "numerator": "3255519066220516047898205530070516875",
+            "denominator": "166153499473114484112975882535043072"
+          },
+          "upper": {
+            "numerator": "208353220238113027065485153924513243125",
+            "denominator": "10633823966279326983230456482242756608"
+          }
+        },
+        "scope_mean": {
+          "lower": {
+            "numerator": "-765237887777483759567699443861673469125",
+            "denominator": "1467467707346547123685802994549500411904"
+          },
+          "upper": {
+            "numerator": "-765237887777483759567699443861656819725",
+            "denominator": "1467467707346547123685802994549500411904"
+          }
+        }
+      },
+      {
+        "label": "omit_conditioned",
+        "conditioned_weight": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "other_row_weight": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "conditional_mean": null,
+        "scope_mean": {
+          "lower": {
+            "numerator": "-96071442412661696000093400790558209800625",
+            "denominator": "183412195770385831806758913405723065974784"
+          },
+          "upper": {
+            "numerator": "-96071442412661696000093400790556128951875",
+            "denominator": "183412195770385831806758913405723065974784"
+          }
+        }
+      },
+      {
+        "label": "conditioned_twice",
+        "conditioned_weight": {
+          "numerator": "2",
+          "denominator": "1"
+        },
+        "other_row_weight": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "conditional_mean": {
+          "lower": {
+            "numerator": "3255519066220516047898205530070516875",
+            "denominator": "166153499473114484112975882535043072"
+          },
+          "upper": {
+            "numerator": "208353220238113027065485153924513243125",
+            "denominator": "10633823966279326983230456482242756608"
+          }
+        },
+        "scope_mean": {
+          "lower": {
+            "numerator": "-95238029531709243891831460174860157480625",
+            "denominator": "183454731066250949114691835231652037001216"
+          },
+          "upper": {
+            "numerator": "-95238029531709243891831460174858075979375",
+            "denominator": "183454731066250949114691835231652037001216"
+          }
+        }
+      },
+      {
+        "label": "only_conditioned",
+        "conditioned_weight": {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        "other_row_weight": {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        "conditional_mean": {
+          "lower": {
+            "numerator": "3255519066220516047898205530070516875",
+            "denominator": "166153499473114484112975882535043072"
+          },
+          "upper": {
+            "numerator": "208353220238113027065485153924513243125",
+            "denominator": "10633823966279326983230456482242756608"
+          }
+        },
+        "scope_mean": {
+          "lower": {
+            "numerator": "3255519066220516047898205530070516875",
+            "denominator": "166153499473114484112975882535043072"
+          },
+          "upper": {
+            "numerator": "208353220238113027065485153924513243125",
+            "denominator": "10633823966279326983230456482242756608"
+          }
+        }
+      },
+      {
+        "label": "rational_reweighting",
+        "conditioned_weight": {
+          "numerator": "7",
+          "denominator": "3"
+        },
+        "other_row_weight": {
+          "numerator": "5",
+          "denominator": "2"
+        },
+        "conditional_mean": {
+          "lower": {
+            "numerator": "3255519066220516047898205530070516875",
+            "denominator": "166153499473114484112975882535043072"
+          },
+          "upper": {
+            "numerator": "208353220238113027065485153924513243125",
+            "denominator": "10633823966279326983230456482242756608"
+          }
+        },
+        "scope_mean": {
+          "lower": {
+            "numerator": "-1435237746023258275243567427548486780769375",
+            "denominator": "2751480683626843298256914153867348786806784"
+          },
+          "upper": {
+            "numerator": "-1435237746023258275243567427548455563470625",
+            "denominator": "2751480683626843298256914153867348786806784"
+          }
+        }
+      }
+    ],
+    "scientific_consequences": [
+      "Retain the three zero-conditioned original-scope information gaps; their conditional means remain undefined.",
+      "Retain the singleton result as descriptive. Empirical resampling cannot create additional conditional observations or estimate conditional-outcome variation absent further assumptions.",
+      "A varying whole-scope baseline can yield varying resampled contrasts; do not claim every empirical contrast draw must be identical.",
+      "The outcome enclosure bounds numerical approximation, not population uncertainty.",
+      "The one-hour log or paired-log target does not inherit the binary-probability or exact24h simple-return practical-effect profile.",
+      "No universal minimum count, population variance value, market rejection, rare-event impossibility or invalidity of every possible estimator follows."
+    ],
+    "alternatives_and_why_not_next": [
+      {
+        "alternative": "New paired/bootstrap/calibration infrastructure",
+        "reason": "Does not add an observed conditioned outcome, supply an approved practical-effect profile or repair denominator/information limits; the exact diagnostic is cheaper and discriminating."
+      },
+      {
+        "alternative": "Reuse the binary synthetic feasibility study",
+        "reason": "Its synthetic binary population, overlap and two-repetition partial cells do not establish applicability or power for the original continuous paired log-return claim. Closed inventory should not be rerun."
+      },
+      {
+        "alternative": "Alter original conditions, dates, horizon or threshold",
+        "reason": "Changes original meaning after exposed results. Preserve originals; any new claim remains a separately registered exposed descendant, not a repaired original."
+      },
+      {
+        "alternative": "Open2024/2025 or freeze the singleton directly",
+        "reason": "Protected admission, assigned effect/information profile, calibration and atomic allocation/freeze remain separate prerequisites; no permission follows from this diagnostic."
+      },
+      {
+        "alternative": "Immediately spend on new discovery",
+        "reason": "Prior exceptional grants are consumed/closed. Ordinary80k combined token ceiling persists; complete source and downstream admission must be established first. A new source/profile/resource exception cannot be silently inherited."
+      }
+    ],
+    "next_after_this_diagnostic": {
+      "action": "Retain the original-scope inferential gap, then perform a separate source/resource admission preflight for the next free-development work unit without model calls or silent source omission. Keep all original meanings and exposure.",
+      "material_approval_if_needed": "If faithful two-perspective discovery plus independently reserved downstream packets cannot fit current80k epoch resources, prepare a specific bounded resource/source-policy proposal. A new practical-effect profile or inference method for a later informative log-return claim separately requires D008/D026 review; do not request one solely to rescue this singleton.",
+      "uncertainty": "No current complete successor packet was constructed in this review; feasibility under present resource limits is unverified. D093 initial fixed reservations were43,368 tokens per perspective before downstream and do not establish successor authority."
+    },
+    "sources": [
+      {
+        "path": "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+        "sections": [
+          "5.2",
+          "5.3",
+          "5.4",
+          "9",
+          "11",
+          "12",
+          "14"
+        ]
+      },
+      {
+        "path": "trading_researcher/evaluation_policy.py",
+        "objects": [
+          "effect_profile",
+          "draft_plan",
+          "bootstrap_family_completeness"
+        ]
+      },
+      {
+        "path": "trading_researcher/information_diagnostics.py",
+        "object": "diagnose"
+      },
+      {
+        "path": "trading_researcher/PAIRED_DEVELOPMENT.md"
+      },
+      {
+        "path": "docs/architecture/22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md",
+        "sections": [
+          "Scope and fixed allocation",
+          "Authority and observable completion"
+        ]
+      },
+      {
+        "path": "docs/reviews/implementation-2026-10-25/scientific-admission-boundary-2026-10-29.json"
+      },
+      {
+        "path": "docs/reviews/implementation-2026-10-25/paired-breakout-independent-audit-2026-10-30.json"
+      },
+      {
+        "path": "docs/reviews/implementation-2026-10-25/feasibility-precision-2026-10-29.json"
+      }
+    ],
+    "boundaries": {
+      "provider_calls": 0,
+      "new_simulated_worlds": 0,
+      "new_market_outcome_evaluations": 0,
+      "protected_reads": 0,
+      "registry_writes": 0,
+      "source_edits": 0,
+      "scientific_readiness": false,
+      "classification_permitted": false
+    },
+    "unverified": [
+      "No complete scientific data/exposure admission, estimator calibration, attainable precision or atomic freeze is established.",
+      "Population effect, significance, generalization and economic usefulness remain unknown.",
+      "This review is bounded and supplies no whole-framework verdict."
+    ]
+  },
+  "source_sha256": {
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "trading_researcher/evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+    "trading_researcher/evaluation_plans.py": "32de8189f8603e6ac8089895eb2ff9fc675769a763f1cc99ed064bd9ca836016"
+  },
+  "script_sha256": "384c08e7c3a4a14b1bd1e8af6b9bee629f16c1e6bf56bc31af361dc4aa41e63c",
+  "wall_seconds": 0.6538766000012401,
+  "new_provider_calls": 0,
+  "new_market_outcome_evaluations": 0,
+  "new_simulated_worlds": 0,
+  "protected_reads": 0,
+  "registry_writes": 0,
+  "scientific_readiness": false,
+  "framework_usage_totals": {
+    "calls": 50,
+    "known_usage_calls": 50,
+    "unknown_usage_calls": 0,
+    "known_input_tokens": 891525,
+    "known_output_tokens": 172791,
+    "known_total_tokens": 1064316,
+    "exact_total_tokens": 1064316,
+    "known_cached_input_tokens": 20971,
+    "cached_detail_calls": 50,
+    "exact_cached_input_tokens": 20971,
+    "known_reasoning_output_tokens": 48587,
+    "reasoning_detail_calls": 50,
+    "exact_reasoning_output_tokens": 48587
+  },
+  "framework_money": {
+    "currency": "USD",
+    "units_per_usd": 1000000000,
+    "cap_nano": 5000000000,
+    "charged_nano": 3956722500,
+    "available_nano": 1043277500,
+    "halted": false
+  },
+  "controller_check": {
+    "command": "python -B .trf-runtime/scientific-next-2026-10-31/probe.py",
+    "exit_code": 0,
+    "chunk_id": "ba4010",
+    "cases": 8640,
+    "exact_weight_checks": 5,
+    "hand_fixed_counterexamples": 4,
+    "scope": "Exact retained empirical-support algebra; no bootstrap draws, new market outcomes or scientific classification."
+  },
+  "current_scientific_boundary": {
+    "profile": "No current approved practical-effect profile for the original one-hour paired logarithmic basis-point target. Binary-probability and exact24-hour simple-return profiles cannot be substituted.",
+    "planner": "The installed owned scientific planner accepts compiled-hypothesis/1 and excludes bounded descriptive outcomes; the paired development execution is not scientific admission.",
+    "information": "The singleton support restriction remains even if a compatible profile or paired bootstrap implementation is added.",
+    "originals": "Preserve original zero/one-condition claims and exposed history as scientifically untested. No primary outcome or negative result is assigned."
+  },
+  "changed_files": [
+    "docs/reviews/implementation-2026-10-25/singleton-information-diagnostic-2026-10-31.json",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/implementation-2026-10-25/progress.json"
+  ],
+  "private_helpers_and_evidence": ".trf-runtime/scientific-next-2026-10-31/",
+  "construction_usage": {
+    "scope": "Main Codex chat from this goal continuation to snapshot, if the exact boundary is available; separate from framework research usage.",
+    "model": "gpt-6.1-sol",
+    "boundary_at_utc": "2026-10-31T06:24:35.325Z",
+    "snapshot_at_utc": "2026-10-31T06:33:58.469Z",
+    "delta": {
+      "input_tokens": 6444081,
+      "cached_input_tokens": 6405632,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 17417,
+      "reasoning_output_tokens": 10792,
+      "total_tokens": 6461498
+    },
+    "child_branch_aggregation": "UNAVAILABLE_NOT_INCLUDED",
+    "billed_credits": "UNKNOWN"
+  },
+  "documentation_checks": [
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "local_links": 731,
+      "chunk_id": "c15edf"
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "exit_code": 1,
+      "status": "FAIL_PREEXISTING_BASELINE_ONLY",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/06_MASTER_ARCHITECTURE.md",
+        "Unplanned baseline change: docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md"
+      ],
+      "local_links": 1140,
+      "chunk_id": "27fe44"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "status": "PASS",
+      "chunk_id": "bc184f"
+    }
+  ]
+}

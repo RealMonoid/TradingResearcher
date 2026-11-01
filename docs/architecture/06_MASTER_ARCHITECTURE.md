@@ -86,7 +86,7 @@ All branches retain their records. Gaps may return for formalization when the re
 
 ## Roles and rights
 
-Roles can share a process where the host preserves the same access restrictions. Different model labels alone are not independence. A deterministic validator and independent fixtures are stronger than asking the implementing model to approve its own output.
+Roles can share a process where the host preserves the same access restrictions. The framework may also [spawn optional subagents](15_AGENT_INQUIRY_DISCIPLINE.md#optional-subagent-delegation) selectively for bounded work under central coordination, with the same role restrictions, parent resource accounting and controller-checked completion; recursive spawning is not the default and this permission creates no separate evaluation project; this does not expand scientific authority or change the initial discovery profile. Different model labels alone are not independence. A deterministic validator and independent fixtures are stronger than asking the implementing model to approve its own output.
 
 | Role | Read | Write / request | Forbidden |
 |---|---|---|---|
@@ -171,6 +171,12 @@ A normal historical path may finish with supported, negative or inconclusive evi
 ## Agent inquiry discipline
 
 D086 adopts [agent-inquiry/1.0](15_AGENT_INQUIRY_DISCIPLINE.md) within existing responsibilities. CMP-02 identifies the object and clarification purpose, permits open exploration and challenges assumptions without an objection quota. CMP-03 exposes changes between the original question and H_exec through its semantic-difference/gap path. CMP-07 retains concise sourced investigation summaries separately from interpretations. CMP-06 continues to apply only the frozen scientific policy. IF-02/03/08 carry the records; existing work boundaries and budgets support review without a new controller, score, role or per-tool form. No runtime behavior or improvement has been demonstrated.
+
+## D096 inquiry and feedback elaboration
+
+D096 reaffirms D069's purpose hierarchy: economically useful trading opportunities after realistic costs, execution constraints and considered risk are the end; scientific discipline, reliable formalization and faster research are means. Existing reports must distinguish intermediate capability from economic usefulness and account for research burden. This does not require advance profit from each investigation or relax D001/evidence boundaries.
+
+[Inquiry-feedback/1.0](25_METACOGNITION_DUAL_SPACE_INQUIRY.md) adds a fallible account of uncertainty, a justified next investigation, and retained action/outcome/correction links within CMP-02/03/07. The hypothesis and investigation spaces are not H_idea/H_exec, the two discovery perspectives, or separate services. CMP-01/04 enforce permissions/freeze, CMP-06 alone determines scientific outcomes, and CMP-12 governs versioned material changes. The extension is adopted specification, not verified runtime capability or measured benefit. Useful bounded work may begin under its existing prerequisites while effectiveness is learned; no new success-before-use gate follows. The original infrastructure boundary below remains unchanged.
 
 ## Implemented infrastructure boundary
 

@@ -257,7 +257,8 @@ class MeasurementContextViewAdversarialTests(unittest.TestCase):
         fixture = fixed.ContextViewProfileAdversarialTests()
         self.addCleanup(fixture.doCleanups)
         fixture.setUp()
-        self.assertEqual(context_views.PRESENTATION_PROFILES, ('discovery-source-view/1', PROFILE))
+        self.assertEqual(context_views.PRESENTATION_PROFILES,
+                         ('discovery-source-view/1', PROFILE, 'discovery-source-view/3'))
         profile = fixture.profile(source_presentation=PROFILE, tools=deepcopy(researcher.CONTEXT_TOOL_DEFINITIONS))
         before = fixed.encoded(profile)
         identity = fixture.create(profile)

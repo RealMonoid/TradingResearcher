@@ -1,0 +1,127 @@
+{
+  "schema": "paired-format-correction-qualification/1",
+  "at_utc": "2026-10-30T13:39:15.297430+00:00",
+  "status": "PASS",
+  "decision": "D095",
+  "authority_source": "SESSION-2026-10-30-DISCRETIONARY-BUDGET",
+  "checks": [
+    {
+      "command": "python -B -m unittest discover -s tests -p test_paired_correction_budget.py -v",
+      "tests": 11,
+      "seconds": 1.315,
+      "exit_code": 0,
+      "result": "PASS",
+      "scope": "Real temporary grant/SQLite ledger plus explicit source/packet stubs and actual Broker routing/permission test."
+    },
+    {
+      "command": "python -B -m unittest discover -s tests -p test_paired_host_adversarial.py -v",
+      "tests": 12,
+      "seconds": 4.898,
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "python -B docs/reviews/verify_retail_contract.py",
+      "result": "PASS",
+      "exit_code": 0,
+      "decisions": 95
+    },
+    {
+      "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "result": "PASS",
+      "exit_code": 0,
+      "local_document_links": 935
+    },
+    {
+      "command": "git diff --check",
+      "result": "PASS",
+      "exit_code": 0
+    }
+  ],
+  "independent_review": {
+    "reviewer": "exploratory_preflight",
+    "initial_tests": 11,
+    "initial_seconds": 1.369,
+    "initial_exit_code": 0,
+    "observed_red": "One failing misplaced-prompt subcase before exact suffix-position enforcement; expectation unchanged.",
+    "conclusion": "No substantiated remaining blocker within the inspected resource/prompt/source gate scope.",
+    "normal_and_resource_path_evidence": "paired-development-qualification-2026-10-30.json"
+  },
+  "initial_check_failures": [
+    "Verbatim public document fixtures had original whitespace/upstream-relative links; moved to .md.source without byte changes, with focused hash check. No linter relaxation.",
+    "Newly authored CRLF text was accidentally written with doubled CR; original bytes retained, newline-only repair and pre-activation contract pin update recorded. Documentation checks then pass."
+  ],
+  "preflight": {
+    "input_tokens": 28997,
+    "input_bound": 29125,
+    "full_formal_input_limit": 62000,
+    "output_limit": 18000,
+    "full_review_input_limit": 76000,
+    "review_output_limit": 4000,
+    "max_calls": 2,
+    "max_tokens": 160000,
+    "max_cost_nano": 600000000,
+    "max_seconds": 1800,
+    "paired_certificate_id": "e07f559ea0fb3235a426e1db669e9b79e72dddccf25161f2de83f9ffa6e41dd8",
+    "feature_certificate_id": "f4e0088e92279bfd540d35cf7e0165809224ca484a826207ed6d997fbb9da218",
+    "legacy_feedback_current": true,
+    "tariff": {
+      "source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+      "checked_utc_date": "2026-10-30",
+      "input_upper_nano_per_token": 2500,
+      "output_nano_per_token": 10000,
+      "invoice_verified": false
+    }
+  },
+  "source_normalization": {
+    "reason": "Accidental doubled CR corrected before activation; all non-line-ending bytes unchanged and original bytes retained.",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": {
+      "old_sha256": "ce7f5982e6f4132ee16a9b3db7462ae40d0e2c1ed83406f218ee30cb1b96af08",
+      "new_sha256": "cb8bc199344e4993a37f6805647f82eb3a981a89a14341ce53a8921ee9782e14",
+      "doubled_cr_sequences_removed": 508
+    },
+    "docs/architecture/24_PAIRED_FORMAT_CORRECTION.md": {
+      "old_sha256": "e11917c4e1d7c0bb8306ad2fe1fbda2d83fa507ae38fc3f007f67648bb544f6d",
+      "new_sha256": "42028a29d3553efed746381d46499e577e70c7321114027a6d0a635592e5a9fa",
+      "doubled_cr_sequences_removed": 17
+    }
+  },
+  "usage_before": {
+    "totals": {
+      "calls": 46,
+      "known_usage_calls": 46,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 749289,
+      "known_output_tokens": 131390,
+      "known_total_tokens": 880679,
+      "exact_total_tokens": 880679,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 46,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 38476,
+      "reasoning_detail_calls": 46,
+      "exact_reasoning_output_tokens": 38476
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 3187122500,
+      "available_nano": 1812877500,
+      "halted": false
+    }
+  },
+  "files_sha256": {
+    "trading_researcher/paired_correction_budget.py": "8405d8d3b5098aea97a22a8e2264048c6861cf957707d22b8757f872f982400c",
+    "trading_researcher/paired_broker.py": "7f10f3210f99ccc2bc8e8c1caceb4ec683ff0fd3df484c794f3650a574d14081",
+    "trading_researcher/epoch_budget_dispatch.py": "c8da17c375a49ddd355e21b9b925be4cd7f079905af46c370e0b8dbfd5d510da",
+    "trading_researcher/controller_providers.py": "c0685f2a1cc82819f985488f1c31b55a220d9b33f3036a083b1d725f72fdb238",
+    "tests/test_paired_correction_budget.py": "6fe14f73de41d845cb2ee2eadceefb7d7d220505a261cff511ad24d4c88809bc",
+    "docs/architecture/24_PAIRED_FORMAT_CORRECTION.md": "42028a29d3553efed746381d46499e577e70c7321114027a6d0a635592e5a9fa"
+  },
+  "unverified": [
+    "Live model judgment and market result are recorded after this running attempt.",
+    "Scientific calibration, protected assessment, economic usefulness and capital authority."
+  ],
+  "scientific_readiness": false
+}

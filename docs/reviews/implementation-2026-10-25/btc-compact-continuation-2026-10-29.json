@@ -1,0 +1,1870 @@
+{
+  "schema": "btc-compact-output-continuation-observation/1",
+  "status": "STOPPED_REVIEW_INPUT_RESOURCE_GAP",
+  "observed_at_utc": "2026-10-29T22:28:05.451726+00:00",
+  "approval": {
+    "schema": "compact-output-continuation-approval/1",
+    "recorded_at_utc": "2026-10-29T22:10:18.492521+00:00",
+    "source": "SESSION-2026-10-29-BTC-COMPACT-OUTPUT",
+    "decision": "D091",
+    "scope": "one_additional_formatting_only_btc_attempt",
+    "question_call_id": "call_0c729ac949e3405599659636532eac5c",
+    "user_quote": "Einmalige Formatkorrektur freigeben (empfohlen)",
+    "proposal_path": "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "proposal_sha256": "356e7f59a0929fee53eb04ce84ea9d5b9aceab4cbaff7eef2523e1ece9582184",
+    "contract_path": "docs/architecture/20_BOUNDED_MATH_REUSE.md",
+    "contract_sha256": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+    "formalizer_prompt_sha256": "87e1c8ae4c820a88c517cfc7f15f6aff4355a5ff36bc888708bf5b24f00acc0b",
+    "prior_attempt_result_sha256": "a9488dc7d5c841964fd485d0e80d29eacbcc0219c4289d2f91f737611840044b",
+    "prior_attempt_fence_sha256": "4f1b5bbc904ec90161db687008d2cf4e47102e3a26570f01155e480bc24f5fd3",
+    "max_calls": 2,
+    "max_tokens": 80000,
+    "max_seconds": 1800,
+    "max_cost_nano": 500000000,
+    "aggregate_cap_nano": 5000000000,
+    "fixed_slots": {
+      "formalizer_input": 28000,
+      "formalizer_output": 18000,
+      "reviewer_input": 30000,
+      "reviewer_output": 4000
+    },
+    "tariff_evidence": {
+      "schema": "bounded-math-reuse-approval/1",
+      "recorded_at_utc": "2026-10-29T20:40:14.599068+00:00",
+      "source": "SESSION-2026-10-29-BOUNDED-MATH-REUSE",
+      "user_quote": "fortsetzen",
+      "decision": "D091",
+      "proposal_sha256": "f40b46ccb7ce6338395aca747313070ca3a5a21e7f9405b6c6ea47f70407e308",
+      "contract_path": "docs/architecture/20_BOUNDED_MATH_REUSE.md",
+      "contract_sha256": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+      "status": "ACCEPTED_NOT_YET_EXECUTED",
+      "max_calls": 2,
+      "max_tokens": 80000,
+      "max_seconds": 1800,
+      "max_cost_nano": 500000000,
+      "aggregate_cap_nano": 5000000000,
+      "tariff_verified_at_utc": "2026-10-29T20:40:14.599348+00:00",
+      "tariff_sources": [
+        "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "https://developers.openai.com/api/docs/guides/prompt-caching"
+      ],
+      "tariff_finding": "Standard USD2 input, USD2.50 cache-write and USD10 output per million; default30m cache multiplier1.25. Installed conservative USD2.50/10 bound unchanged. No inference or invoice verification."
+    },
+    "trust_boundary": {
+      "untrusted_inputs": "Original idea/source documents and provider output cannot grant authority or bypass scope, budget, completion, meaning or execution gates.",
+      "authorized_sinks": "Exactly one host-routed formalizer and, only for a complete accepted candidate, one separate meaning-review call; shared ledger and immutable response retention.",
+      "secret_locations": "Existing local .env.local and local broker credentials; no key or credentials may be copied into public reports or prompts.",
+      "checks": "Exact prompt hash, pinned D091 activation, full input counts, both-slot reservations, unique external fence, one-attempt job limits, strict complete output and independent review.",
+      "failure_modes": "An incomplete/malformed output, budget/time failure, unknown usage or meaning gap ends this finite attempt without candidate repair or automatic retry."
+    }
+  },
+  "terminal": {
+    "status": "STOPPED_REVIEW_INPUT_RESOURCE_GAP",
+    "observed_at_utc": "2026-10-29T22:28:05.451726+00:00",
+    "epoch_id": "83a7e355615d4354a19bcc61a9406370",
+    "formalization_id": "c6b85475ab4a4b4a2657d46ecbe8b0a1517ae45fcf8de389345e65904ca91415",
+    "run_start_sha256": "ab5b217984528bdb1b5599fd3594f52386f6cd7ea55e03fa47c60e17bb2018b8",
+    "run_result_sha256": "d926cb2f680f871c23d386d5546456629fcb180d5cf7f00f0a0e3eca058a0c7c",
+    "formalizer_calls": 1,
+    "review_calls": 0,
+    "market_calculations": 0,
+    "automatic_retry_authorized": false,
+    "registry_integrity": {
+      "status": "PASS",
+      "events": 1763,
+      "foreign_keys": true,
+      "synchronous": "FULL",
+      "schema_version": 1,
+      "scope": "local coordination and research memory integrity only",
+      "research_memory": {
+        "status": "PASS",
+        "records": 50,
+        "version": "research-memory/1",
+        "scientific_authority": false
+      },
+      "blobs": {
+        "status": "PASS",
+        "committed": 957,
+        "quarantined": [],
+        "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+      }
+    },
+    "raw_epoch_state": "active",
+    "qualification": "The finite attempt ended at the frozen reviewer input limit. The raw ordinary epoch state does not authorize retry or a successor. Preserve the external one-use fence, original deadline and shared ledger."
+  },
+  "purpose": "One separately approved formatting-only correction for the same original BTC idea.",
+  "formalization": {
+    "id": "c6b85475ab4a4b4a2657d46ecbe8b0a1517ae45fcf8de389345e65904ca91415",
+    "job_id": "49a66799669447bab922ab7d8fdd7a3c",
+    "status": "STRUCTURE_CHECKED_NOT_INDEPENDENTLY_ADMITTED",
+    "candidate": {
+      "claim_kind": "difference",
+      "comparator": {
+        "kind": "whole_scope"
+      },
+      "condition_ast": {
+        "catalog_hash": "1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db",
+        "expression": {
+          "arg": {
+            "left": {
+              "left": {
+                "left": {
+                  "left": {
+                    "left": {
+                      "left": {
+                        "arg": {
+                          "left": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.trades@binance-spot-15m-v1"
+                          },
+                          "op": "div",
+                          "right": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.trades@binance-spot-15m-v1"
+                          }
+                        },
+                        "bars": 18,
+                        "op": "trailing_mean"
+                      },
+                      "op": "eq",
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "ratio",
+                        "value": "1"
+                      }
+                    },
+                    "op": "and",
+                    "right": {
+                      "left": {
+                        "arg": {
+                          "left": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                          },
+                          "op": "div",
+                          "right": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                          }
+                        },
+                        "bars": 2,
+                        "op": "trailing_mean"
+                      },
+                      "op": "eq",
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "ratio",
+                        "value": "1"
+                      }
+                    }
+                  },
+                  "op": "and",
+                  "right": {
+                    "left": {
+                      "arg": {
+                        "arg": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                        },
+                        "bars": 16,
+                        "op": "trailing_mean"
+                      },
+                      "bars": 2,
+                      "op": "lag"
+                    },
+                    "op": "gt",
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "USDT",
+                      "value": "0"
+                    }
+                  }
+                },
+                "op": "and",
+                "right": {
+                  "left": {
+                    "left": {
+                      "left": {
+                        "left": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                        },
+                        "op": "ge",
+                        "right": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "USDT",
+                          "value": "0"
+                        }
+                      },
+                      "op": "and",
+                      "right": {
+                        "left": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                        },
+                        "op": "le",
+                        "right": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                        }
+                      }
+                    },
+                    "op": "and",
+                    "right": {
+                      "arg": {
+                        "left": {
+                          "left": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                          },
+                          "op": "ge",
+                          "right": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "USDT",
+                            "value": "0"
+                          }
+                        },
+                        "op": "and",
+                        "right": {
+                          "left": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                          },
+                          "op": "le",
+                          "right": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                          }
+                        }
+                      },
+                      "bars": 1,
+                      "op": "lag"
+                    }
+                  },
+                  "op": "and",
+                  "right": {
+                    "left": {
+                      "left": {
+                        "op": "feature",
+                        "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                      },
+                      "op": "gt",
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "USDT/BTC",
+                        "value": "0"
+                      }
+                    },
+                    "op": "and",
+                    "right": {
+                      "arg": {
+                        "left": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.open@binance-spot-15m-v1"
+                        },
+                        "op": "gt",
+                        "right": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "USDT/BTC",
+                          "value": "0"
+                        }
+                      },
+                      "bars": 1,
+                      "op": "lag"
+                    }
+                  }
+                }
+              },
+              "op": "and",
+              "right": {
+                "left": {
+                  "left": {
+                    "left": {
+                      "left": {
+                        "op": "feature",
+                        "ref": "BTCUSDT.trades@binance-spot-15m-v1"
+                      },
+                      "op": "ge",
+                      "right": {
+                        "left": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "ratio",
+                          "value": "2"
+                        },
+                        "op": "mul",
+                        "right": {
+                          "arg": {
+                            "arg": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.trades@binance-spot-15m-v1"
+                            },
+                            "bars": 16,
+                            "op": "trailing_mean"
+                          },
+                          "bars": 2,
+                          "op": "lag"
+                        }
+                      }
+                    },
+                    "op": "and",
+                    "right": {
+                      "left": {
+                        "arg": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.trades@binance-spot-15m-v1"
+                        },
+                        "bars": 1,
+                        "op": "lag"
+                      },
+                      "op": "ge",
+                      "right": {
+                        "left": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "ratio",
+                          "value": "2"
+                        },
+                        "op": "mul",
+                        "right": {
+                          "arg": {
+                            "arg": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.trades@binance-spot-15m-v1"
+                            },
+                            "bars": 16,
+                            "op": "trailing_mean"
+                          },
+                          "bars": 2,
+                          "op": "lag"
+                        }
+                      }
+                    }
+                  },
+                  "op": "and",
+                  "right": {
+                    "left": {
+                      "left": {
+                        "left": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                        },
+                        "op": "ge",
+                        "right": {
+                          "left": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "ratio",
+                            "value": "0.75"
+                          },
+                          "op": "mul",
+                          "right": {
+                            "arg": {
+                              "arg": {
+                                "op": "feature",
+                                "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                              },
+                              "bars": 16,
+                              "op": "trailing_mean"
+                            },
+                            "bars": 2,
+                            "op": "lag"
+                          }
+                        }
+                      },
+                      "op": "and",
+                      "right": {
+                        "left": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                        },
+                        "op": "le",
+                        "right": {
+                          "left": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "ratio",
+                            "value": "1.25"
+                          },
+                          "op": "mul",
+                          "right": {
+                            "arg": {
+                              "arg": {
+                                "op": "feature",
+                                "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                              },
+                              "bars": 16,
+                              "op": "trailing_mean"
+                            },
+                            "bars": 2,
+                            "op": "lag"
+                          }
+                        }
+                      }
+                    },
+                    "op": "and",
+                    "right": {
+                      "left": {
+                        "left": {
+                          "arg": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                          },
+                          "bars": 1,
+                          "op": "lag"
+                        },
+                        "op": "ge",
+                        "right": {
+                          "left": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "ratio",
+                            "value": "0.75"
+                          },
+                          "op": "mul",
+                          "right": {
+                            "arg": {
+                              "arg": {
+                                "op": "feature",
+                                "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                              },
+                              "bars": 16,
+                              "op": "trailing_mean"
+                            },
+                            "bars": 2,
+                            "op": "lag"
+                          }
+                        }
+                      },
+                      "op": "and",
+                      "right": {
+                        "left": {
+                          "arg": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                          },
+                          "bars": 1,
+                          "op": "lag"
+                        },
+                        "op": "le",
+                        "right": {
+                          "left": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "ratio",
+                            "value": "1.25"
+                          },
+                          "op": "mul",
+                          "right": {
+                            "arg": {
+                              "arg": {
+                                "op": "feature",
+                                "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                              },
+                              "bars": 16,
+                              "op": "trailing_mean"
+                            },
+                            "bars": 2,
+                            "op": "lag"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "op": "and",
+                "right": {
+                  "left": {
+                    "left": {
+                      "left": {
+                        "left": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                        },
+                        "op": "div",
+                        "right": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                        }
+                      },
+                      "op": "ge",
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "ratio",
+                        "value": "0.60"
+                      }
+                    },
+                    "op": "and",
+                    "right": {
+                      "arg": {
+                        "left": {
+                          "left": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                          },
+                          "op": "div",
+                          "right": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                          }
+                        },
+                        "op": "ge",
+                        "right": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "ratio",
+                          "value": "0.60"
+                        }
+                      },
+                      "bars": 1,
+                      "op": "lag"
+                    }
+                  },
+                  "op": "and",
+                  "right": {
+                    "left": {
+                      "left": {
+                        "left": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                        },
+                        "op": "div",
+                        "right": {
+                          "arg": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.open@binance-spot-15m-v1"
+                          },
+                          "bars": 1,
+                          "op": "lag"
+                        }
+                      },
+                      "op": "sub",
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "ratio",
+                        "value": "1"
+                      }
+                    },
+                    "op": "ge",
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "ratio",
+                      "value": "0.001"
+                    }
+                  }
+                }
+              }
+            },
+            "op": "or",
+            "right": {
+              "left": {
+                "arg": {
+                  "left": {
+                    "left": {
+                      "left": {
+                        "left": {
+                          "arg": {
+                            "left": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.trades@binance-spot-15m-v1"
+                            },
+                            "op": "div",
+                            "right": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.trades@binance-spot-15m-v1"
+                            }
+                          },
+                          "bars": 18,
+                          "op": "trailing_mean"
+                        },
+                        "op": "eq",
+                        "right": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "ratio",
+                          "value": "1"
+                        }
+                      },
+                      "op": "and",
+                      "right": {
+                        "left": {
+                          "arg": {
+                            "left": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                            },
+                            "op": "div",
+                            "right": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                            }
+                          },
+                          "bars": 2,
+                          "op": "trailing_mean"
+                        },
+                        "op": "eq",
+                        "right": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "ratio",
+                          "value": "1"
+                        }
+                      }
+                    },
+                    "op": "and",
+                    "right": {
+                      "left": {
+                        "arg": {
+                          "arg": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                          },
+                          "bars": 16,
+                          "op": "trailing_mean"
+                        },
+                        "bars": 2,
+                        "op": "lag"
+                      },
+                      "op": "gt",
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "USDT",
+                        "value": "0"
+                      }
+                    }
+                  },
+                  "op": "and",
+                  "right": {
+                    "left": {
+                      "left": {
+                        "left": {
+                          "left": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                          },
+                          "op": "ge",
+                          "right": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "USDT",
+                            "value": "0"
+                          }
+                        },
+                        "op": "and",
+                        "right": {
+                          "left": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                          },
+                          "op": "le",
+                          "right": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                          }
+                        }
+                      },
+                      "op": "and",
+                      "right": {
+                        "arg": {
+                          "left": {
+                            "left": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                            },
+                            "op": "ge",
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "USDT",
+                              "value": "0"
+                            }
+                          },
+                          "op": "and",
+                          "right": {
+                            "left": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.taker_quote_volume@binance-spot-15m-v1"
+                            },
+                            "op": "le",
+                            "right": {
+                              "op": "feature",
+                              "ref": "BTCUSDT.quote_volume@binance-spot-15m-v1"
+                            }
+                          }
+                        },
+                        "bars": 1,
+                        "op": "lag"
+                      }
+                    },
+                    "op": "and",
+                    "right": {
+                      "left": {
+                        "left": {
+                          "op": "feature",
+                          "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                        },
+                        "op": "gt",
+                        "right": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "USDT/BTC",
+                          "value": "0"
+                        }
+                      },
+                      "op": "and",
+                      "right": {
+                        "arg": {
+                          "left": {
+                            "op": "feature",
+                            "ref": "BTCUSDT.open@binance-spot-15m-v1"
+                          },
+                          "op": "gt",
+                          "right": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "USDT/BTC",
+                            "value": "0"
+                          }
+                        },
+                        "bars": 1,
+                        "op": "lag"
+                      }
+                    }
+                  }
+                },
+                "op": "not"
+              },
+              "op": "and",
+              "right": {
+                "op": "literal",
+                "type": "boolean",
+                "unit": null,
+                "value": null
+              }
+            }
+          },
+          "bars": 1,
+          "op": "lag"
+        },
+        "schema": "research-ast/2"
+      },
+      "estimand": {
+        "condition_unknown": "exclude-from-condition-retain-in-scope",
+        "direction": "positive",
+        "kind": "conditional-minus-scope-mean/1",
+        "missingness": "scope-true-outcome-observed/1",
+        "nuisance_fit": "none",
+        "unit": "basis_points",
+        "weighting": "equal_rows"
+      },
+      "feature_refs": [
+        "BTCUSDT.close@binance-spot-15m-v1",
+        "BTCUSDT.open@binance-spot-15m-v1",
+        "BTCUSDT.quote_volume@binance-spot-15m-v1",
+        "BTCUSDT.taker_quote_volume@binance-spot-15m-v1",
+        "BTCUSDT.trades@binance-spot-15m-v1"
+      ],
+      "horizons": {
+        "grid_seconds": 900,
+        "outcome_bars": 5
+      },
+      "idea_ref": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+      "outcome": {
+        "program": {
+          "catalog_hash": "1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db",
+          "expression": {
+            "left": {
+              "op": "literal",
+              "type": "real",
+              "unit": "basis_points",
+              "value": "10000"
+            },
+            "op": "mul",
+            "right": {
+              "arg": {
+                "left": {
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  },
+                  "bars": 1,
+                  "op": "lag"
+                },
+                "op": "div",
+                "right": {
+                  "arg": {
+                    "op": "feature",
+                    "ref": "BTCUSDT.close@binance-spot-15m-v1"
+                  },
+                  "bars": 5,
+                  "op": "lag"
+                }
+              },
+              "op": "ln"
+            }
+          },
+          "schema": "research-ast/2"
+        },
+        "scale": "quantity"
+      },
+      "parameter_origins": [
+        {
+          "basis": "preexisting_specification",
+          "path": "/scope_ast/expression/value",
+          "rationale": "All declared BTC decision coordinates are in scope; no other filters apply.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/bars",
+          "rationale": "b=t-d; assess the episode at b, not t.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/left/left/left/left/bars",
+          "rationale": "Complete validity covers all 16 baseline and both episode trade counts: 18 consecutive bars ending b.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/left/left/left/right/value",
+          "rationale": "N/N=1 tests complete nonzero counts; exact nonnegative-integer projection makes these positive integers. This is a validity identity, not an activity threshold.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+            "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/left/left/right/left/bars",
+          "rationale": "Both episode quote volumes must be present and strictly positive.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/left/left/right/right/value",
+          "rationale": "Q/Q=1 checks complete nonzero episode volumes; the source projects nonnegative decimals.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+            "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/left/right/left/bars",
+          "rationale": "The baseline ends at b-2*d, excluding both episode bars.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/left/right/left/arg/bars",
+          "rationale": "MQ uses all 16 exact baseline bars.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/left/right/right/value",
+          "rationale": "Require MQ>0.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/right/left/left/left/right/value",
+          "rationale": "Require B_b>=0.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/right/left/right/bars",
+          "rationale": "Check taker-volume validity also at b-d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/right/left/right/arg/left/right/value",
+          "rationale": "Require B_{b-d}>=0.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/right/right/left/right/value",
+          "rationale": "The terminal condition price C_b must be positive.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/right/right/right/bars",
+          "rationale": "The initial condition price is O_{b-d}.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/left/right/right/right/arg/right/value",
+          "rationale": "The initial condition price must be positive.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/left/left/left/left/bars",
+          "rationale": "Identical validity copy: all 16 baseline and both episode trade counts.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/left/left/left/right/value",
+          "rationale": "Identical N/N validity identity for projected nonnegative integer counts.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+            "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/left/left/right/left/bars",
+          "rationale": "Identical validity copy: both episode quote volumes.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/left/left/right/right/value",
+          "rationale": "Identical Q/Q completeness and positivity identity on projected nonnegative volumes.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+            "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/left/right/left/bars",
+          "rationale": "Identical validity copy: baseline ends at b-2*d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/left/right/left/arg/bars",
+          "rationale": "Identical validity copy: complete 16-bar MQ.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/left/right/right/value",
+          "rationale": "Identical validity copy: MQ>0.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/right/left/left/left/right/value",
+          "rationale": "Identical validity copy: B_b>=0.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/right/left/right/bars",
+          "rationale": "Identical validity copy: taker-volume checks at b-d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/right/left/right/arg/left/right/value",
+          "rationale": "Identical validity copy: B_{b-d}>=0.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/right/right/left/right/value",
+          "rationale": "Identical validity copy: C_b>0.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/right/right/right/bars",
+          "rationale": "Identical validity copy: initial price at b-d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/left/arg/right/right/right/arg/right/value",
+          "rationale": "Identical validity copy: O_{b-d}>0.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/right/right/value",
+          "rationale": "Any incomplete or invalid required condition input makes the complete condition unknown, even when another component is false.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/left/left/right/left/value",
+          "rationale": "N_b>=2*MN.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/left/left/right/right/bars",
+          "rationale": "MN ends at b-2*d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/left/left/right/right/arg/bars",
+          "rationale": "MN is the complete 16-bar baseline mean.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/left/right/left/bars",
+          "rationale": "Check trade count at the earlier episode bar b-d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/left/right/right/left/value",
+          "rationale": "N_{b-d}>=2*MN.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/left/right/right/right/bars",
+          "rationale": "Use the same MN ending b-2*d for both episode bars.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/left/right/right/right/arg/bars",
+          "rationale": "The same 16-bar MN baseline excludes both episode bars.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/left/left/right/left/value",
+          "rationale": "Q_b>=0.75*MQ.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/left/left/right/right/bars",
+          "rationale": "MQ ends at b-2*d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/left/left/right/right/arg/bars",
+          "rationale": "Complete 16-bar MQ.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/left/right/right/left/value",
+          "rationale": "Q_b<=1.25*MQ.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/left/right/right/right/bars",
+          "rationale": "The upper turnover bound uses MQ ending b-2*d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/left/right/right/right/arg/bars",
+          "rationale": "Complete 16-bar MQ for the upper bound.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/right/left/left/bars",
+          "rationale": "Check turnover at the earlier episode bar b-d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/right/left/right/left/value",
+          "rationale": "Q_{b-d}>=0.75*MQ.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/right/left/right/right/bars",
+          "rationale": "The earlier episode uses the same MQ ending b-2*d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/right/left/right/right/arg/bars",
+          "rationale": "The common MQ uses 16 exact bars.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/right/right/left/bars",
+          "rationale": "The earlier episode's upper turnover bound applies at b-d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/right/right/right/left/value",
+          "rationale": "Q_{b-d}<=1.25*MQ.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/right/right/right/right/bars",
+          "rationale": "Keep the same MQ ending b-2*d for this bound.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/left/right/right/right/right/right/arg/bars",
+          "rationale": "Complete 16-bar MQ; neither episode bar enters it.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/right/left/left/right/value",
+          "rationale": "B_b/Q_b>=0.60.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/right/left/right/bars",
+          "rationale": "The buyer-share test also applies at b-d.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/right/left/right/arg/right/value",
+          "rationale": "B_{b-d}/Q_{b-d}>=0.60.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/right/right/left/left/right/bars",
+          "rationale": "The two-bar rise starts at O_{b-d}, not O_b.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/right/right/left/right/value",
+          "rationale": "Preserve C_b/O_{b-d}-1.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/condition_ast/expression/arg/left/right/right/right/right/value",
+          "rationale": "Require the specified 0.001 two-bar rise.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/outcome/program/expression/left/value",
+          "rationale": "10000 converts the natural logarithmic price ratio to log basis points.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/outcome/program/expression/right/arg/left/bars",
+          "rationale": "At a=t+5*d, lag one reads terminal close C_{t+4*d}.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/outcome/program/expression/right/arg/right/bars",
+          "rationale": "At a=t+5*d, lag five reads initial close C_t.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/horizons/grid_seconds",
+          "rationale": "The original decision grid and d are 900 seconds.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        },
+        {
+          "basis": "preexisting_specification",
+          "path": "/horizons/outcome_bars",
+          "rationale": "The original explicitly chooses h=5; the fifth interval permits terminal-close publication.",
+          "source_refs": [
+            "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32"
+          ]
+        }
+      ],
+      "schema": "hypothesis-exec/1",
+      "scope_ast": {
+        "catalog_hash": "1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db",
+        "expression": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": true
+        },
+        "schema": "research-ast/2"
+      },
+      "test_universe": {
+        "data_snapshot_ref": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "end": "2023-04-01T00:00:00Z",
+        "instruments": [
+          "BTCUSDT"
+        ],
+        "start": "2023-01-01T00:00:00Z"
+      }
+    },
+    "semantic_report": {
+      "differences": [],
+      "segments": [
+        {
+          "interpretation": "A strictly positive descriptive difference in observed one-hour log returns is tested using the specified aggregate episode proxies. The parent-order account remains a conjecture, not an identified parent-order measurement or causal estimand.",
+          "path": "/estimand",
+          "text": "Hypothesis: a BTC buying episode carried by unusually many small transactions, with persistent buyer-initiated participation but ordinary total turnover, predicts higher subsequent one-hour BTC returns relative to the whole eligible BTC scope. The mechanism conjectured is persistent execution of sliced parent buy orders: elevated transaction frequency without a proportionate increase in notional turnover may reflect repeated small child orders rather than a single completed block. Two consecutive buyer-dominated bars and upward price progress suggest that liquidity suppliers are allowing prices to adjust rather than fully absorbing demand. Remaining parent-order demand could continue after the reporting delay. Trade fragmentation can also arise from exchange matching, retail activity, or market-maker behavior, so these proxies do not establish parent orders.\n\n"
+        },
+        {
+          "interpretation": "The immutable BTC idea is retained as a separate exploratory claim. This mapping neither revises ETH work nor reports computation, independent review, or empirical success.",
+          "path": "/idea_ref",
+          "text": "This is a new exploratory claim, not a revision of either retained ETH absorption hypothesis. Their dates, thresholds, outcomes and original claims remain unchanged and scientifically untested. The supplied closed checkpoint reports zero conditioned cases and an undefined contrast for its exact original scope; this neither falsifies those mechanisms nor supports this new one. I make no measurement call and claim no empirical success.\n\n"
+        },
+        {
+          "interpretation": "The candidate selects only BTCUSDT in the exact Q1 development snapshot and interval, with exclusive end, equal-row weighting and an unconditional true scope over every declared grid coordinate. required-inputs/1 preserves coordinates without decision containers. Actual required feature keys outside this universe are not supplied from another partition; their missingness and pre-universe dependencies remain reportable. Development exposure is not independent confirmation and training exposure remains unknown.",
+          "path": "/test_universe",
+          "text": "Scope: Binance spot BTCUSDT only; ETHUSDT is not used. One equally weighted decision row per UTC 900-second timestamp t in [2023-01-01T00:00:00Z, 2023-04-01T00:00:00Z). All raw input keys must lie within this same interval. No pre-January warmup, April observations, external inputs or 2024/2025 inputs are allowed. All history is development exposure; training exposure is unknown.\n\n"
+        },
+        {
+          "interpretation": "The outer lag places the episode anchor at b=t-900; its local lag one reads b-d, and baseline lag two places the complete window before both episode bars. Historical reads retain decision cutoff t. Availability evidence 7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323 covers this exact snapshot and BTC features: every present entry has available_at=s+900. The latest condition dependency b is therefore available at t. For the outcome, the latest dependency t+4*d is available exactly at a=t+5*d, while C_t is available earlier. Thus the inherited later as_of cutoff cannot admit a dependency arriving after a on this snapshot; the exclusive-end cap still applies. Absent and null entries remain missing. This derivation uses the fixed-delay evidence, not historical publication truth, and does not make either decision or outcome-anchor containers additional observations.",
+          "path": "/condition_ast/expression",
+          "text": "Timing: let d=900 seconds and b=t-d. Keys represent exclusive complete-bar ends. A raw observation ending s is usable only after s+d, and only if otherwise available. Publication at s+d is an assumption, not proven historical point-in-time truth. At any evaluation anchor a use availability cutoff min(a, 2023-04-01T00:00:00Z minus one second). Assess the condition at t using bars ending b and b-d, never raw features ending t.\n\n"
+        },
+        {
+          "interpretation": "The predicate at /condition_ast/expression/arg/left/right implements both episode tests against the same complete 16-bar means over b-17*d through b-2*d and the exact simple two-bar price-progress test. The complete-validity composition is at /condition_ast/expression/arg, with identical V copies at /condition_ast/expression/arg/left/left and /condition_ast/expression/arg/right/left/arg. The owned exact projections in dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab restrict observed trade counts to nonnegative integers and quote volumes to nonnegative decimals; invalid keyed bars are all-null and nonfinite execution values fail admission. Consequently the complete 18-position mean of N/N equals one exactly when all 16 baseline and both episode counts are present and positive integers. Zero counts create missing division results, not valid zeros. The complete two-position Q/Q identity likewise requires both episode volumes positive. Complete MQ>0 validates baseline completeness and positive mean; individual baseline nonnegativity is supplied by the exact nonnegative-decimal projection, so valid baseline zeros are allowed. Explicit checks enforce B>=0 and B<=Q at both episode bars and positivity of C_b and O_{b-d}. V cannot be true with any required input absent, null, unavailable or invalid. When V is false or unknown the guard returns unknown regardless of a false scientific component. These source-domain dependencies are qualified execution definitions, not a new integer operator or scientific feature certification.",
+          "path": "/condition_ast/expression/arg",
+          "text": "Exact condition: write N_s for BTC trade count, Q_s for quote volume, B_s for taker quote volume, and O_s,C_s for open and close. Define baseline means MN=(sum of N_{b-k*d} for k=2,...,17)/16 and MQ=(sum of Q_{b-k*d} for k=2,...,17)/16. Thus the baseline is the 16 exact bars immediately preceding the two-bar episode and excludes both episode bars. The condition is true exactly when, for EACH s in {b-d,b}, N_s >= 2*MN, 0.75*MQ <= Q_s <= 1.25*MQ, and B_s/Q_s >= 0.60, AND C_b/O_{b-d}-1 >= 0.001. Require all inputs finite, episode Q_s>0, baseline Q_s>=0, MQ>0, all trade counts positive integers, and 0<=B_s<=Q_s; both endpoint prices must be positive. No other filters apply.\n\n"
+        },
+        {
+          "interpretation": "All scientific thresholds and windows retain the original exploratory commitments. The 18-position validity window is the union of the specified 16 baseline and two episode bars, not an altered activity reference. Unit identities in the guard merely test required completeness and positivity on the owned source domains. No threshold is chosen from development outcomes; taker-volume interpretation remains qualified.",
+          "path": "/parameter_origins",
+          "text": "Rationale for every numeric choice: 16 bars provide a local four-hour activity reference; two consecutive bars require persistence over 30 minutes rather than a single matching burst. Twice baseline transaction count with turnover within 75%-125% of baseline isolates substantially smaller average prints while avoiding a turnover collapse. A 60% taker-buy share requires a meaningful directional majority without implying that every small print is a buy. A 0.1% two-bar rise requires ten basis points of realized upward progress. These are mechanism-motivated exploratory commitments, not thresholds fitted to counts or outcomes. Interpreting taker quote volume as buyer-initiated turnover remains subject to feature certification.\n\n"
+        },
+        {
+          "interpretation": "At future anchor t+5*900, numerator lag one reads C_{t+4*d} and denominator lag five reads C_t. The program computes exactly 10000 times the natural logarithm of their dimensionless ratio in basis_points, with bounded-math/1.0 outward enclosures, not a simple return or next-bar body. The owned positive-decimal close projection and finite-input admission preserve the positive finite price requirement; invalid keyed closes are null. Exact feature reads require both permitted keys and availability. The horizon must elapse and remain in the declared universe; no April or substitute close is read. C_t is never a decision-condition input or claimed attainable entry quote.",
+          "path": "/outcome/program",
+          "text": "Outcome: choose positive integer h=5; evaluate at a=t+5*d. Define Y(t)=10000*ln(C_{t+4*d}/C_t), using BTC closes keyed by exclusive bar ends. This measures the one-hour market log return from t to t+3600 seconds in log basis points. The fifth interval permits the terminal close its assumed publication delay. Both closes must be finite, positive, within the permitted interval and available by the anchor cutoff. C_t is an outcome input, unavailable to the condition at t, not an executable entry price. Raw prices have units USDT/BTC; their ratio is dimensionless.\n\n"
+        },
+        {
+          "interpretation": "The estimand is mean(Y|C=true,S=true,Y observed) minus mean(Y|S=true,Y observed), with equal rows, positive direction, no nuisance fitting, and whole_scope comparator. False and unknown conditions remain in the observed baseline. Overlapping rows are retained without independence or causal claims; the conditional mean need not itself exceed zero.",
+          "path": "/estimand",
+          "text": "Comparison: the hypothesized descriptive contrast is strictly positive: equal-row mean Y among condition-true rows minus equal-row mean Y across the whole decision scope with observed Y, including condition-false and condition-unknown rows. This intentionally uses the installed whole-scope benchmark, not a false-only, matched, causal or beta-adjusted comparison. It does not require the conditional return itself to be positive. Include overlapping outcomes without thinning; rows are not independent samples.\n\n"
+        },
+        {
+          "interpretation": "Use the explicitly selected reference-computation/4 required-inputs/1 evaluation and pinned case-diagnostics/2 adapter, sha256 2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c. Every scope-true declared coordinate has its condition evaluated from actual dependencies, even without a decision row; only actual feature reads require rows. Observed outcomes enter the scope population when the condition is unknown. Complete windows and the guard at /condition_ast/expression/arg preserve unknown-on-any-required-invalid-input without false-conjunction masking. Record V at /condition_ast/expression/arg/left/left and its identical copy /condition_ast/expression/arg/right/left/arg. Map requested true/false/unknown counts to evaluated complete-condition statuses and missing-outcome counts to their cross-tabulation with outcome observation. Map missing warmup to exact incomplete historical windows and pre-universe dependency observations; absent rows to absent required feature-row reads; late/unavailable values to cutoff failures; and boundary censoring to the original end and horizon checks. Invalid-value reasons are traced through false V checks, numerical-domain events from zero N/N or Q/Q, and source-qualified invalid-bar all-null events; other null or missing features retain their neutral missing-value qualification rather than an invented raw cause. Nonfinite execution inputs fail admission. Report overlapping neutral categories once per case per category, retaining the raw-invalid transformation qualification. An unused decision or outcome-anchor coordinate is not an absent required row. Preserve missing-outcome and censored counts without entering either denominator; empty mean populations leave the contrast undefined. Missingness selection remains unresolved. Diagnostics share the 10000000-step cap: any exhaustion requires partial processed/unprocessed counts and RESOURCE_STOP, never a complete-report claim; incomplete numerical computation yields no effect. Separate independent review, formula checks and replay are still required.",
+          "path": "/estimand/missingness",
+          "text": "Missingness: require all 16 baseline bars and both episode bars without interpolation, shortening or substitution. Any absent, null, nonfinite, invalid, out-of-range or unavailable required condition input makes the complete condition unknown, even if another component appears false. Unknown-condition rows remain in scope and contribute to its mean when Y is observed, but never to the conditioned mean. Missing or unavailable outcome prices make Y missing; exclude these rows from both mean denominators while retaining their counts. Keep explicit counts for true, false and unknown conditions, missing outcomes by condition status, missing warmup, absent rows, invalid values, late/unavailable values and boundary censoring. Never extend the horizon beyond Q1 or substitute an endpoint. Empty mean populations leave the contrast undefined. The estimand concerns observed outcomes only, with missingness selection unresolved.\n\n"
+        },
+        {
+          "interpretation": "These are retained limitations of the original descriptive hypothesis, not extra executable outcomes or eligibility filters. No parent-order evidence, policy, profitability, causality, protected assessment or capital authority is asserted. Structural and fixed-delay qualifications do not resolve scientific feature meaning, rights, historical publication or exposure provenance. This formalization is a mapping assertion requiring independent meaning review, not that review or an execution result.",
+          "path": "/idea_ref",
+          "text": "Economic bridge and gaps: continuation could motivate a later investigation of purchase timing or inventory acquisition, but this is not a policy trial. Parent-order identity, trade-side-specific size distributions, order-book replenishment, cancellations and cross-venue demand are unavailable; aggregate trade counts cannot distinguish child-order slicing from many matches against one order. Those requirements remain gaps rather than asserted evidence. An executable policy, attainable post-delay quotes, order size, fees, spread, fill probability, slippage, latency, market impact and inventory constraints are unspecified. No profit or causal inference follows. Supplied structure does not certify feature semantics, transformation, rights, checksums or historical publication. Deferred provenance and inherited exposure lists remain unread, not empty or verified; the supplied cohort is qualified development feedback, not independent confirmation."
+        }
+      ],
+      "status": "equivalent"
+    },
+    "original_idea_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+    "source_artifact_sha256": "dcf34c41e0eb013331f30390ad82c0a485e671894fc5e17f3475103ac6b3d0a9",
+    "complete_output_characters": 39589,
+    "line_breaks": 0,
+    "qualification": "The complete actual output was accepted unchanged. Formatting compliance and structural checks do not prove semantic fidelity or scientific validity."
+  },
+  "review_admission": {
+    "stage": "review_admission",
+    "status": "FULL_INPUT_EXCEEDS_RESERVED_SLOT",
+    "count": {
+      "observed_at_utc": "2026-10-29T22:20:14.451041+00:00",
+      "counted_input_tokens": 34934,
+      "input_bound": 35062,
+      "transport_request_id": "req_68c82f8d6cca4e55a8d978093ad2edc3",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "wire_sha256": "d530b6e8cba693933cb8270f8b442bb94f9b6ba7dc8faef042971a796869c9d4",
+      "packet_sha256": "e9fd549a3a7f23c25bf53b9c9e1267cb45c882cfe1cb78faf72cac286e8c55a0",
+      "activation_contract_sha256": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569",
+      "availability_evidence": {
+        "schema": "development-availability-evidence/1",
+        "certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+        "data_snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "catalog_id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "definitions_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+        "certificate_body_sha256": "611a9be14bef148e28f05e022723910dd2930b12a4617a2620d767f804f0ed68",
+        "source_footprint_sha256": "4fb725110f26ae3cc5e1afd555c864c601647a867588df3972042b86b53c7ced",
+        "row_blobs": [
+          {
+            "sha256": "3d88c45f2feae494b6b38c986aff1168e7799914b26733ce455d1317d876ce33",
+            "size": 14558791
+          }
+        ],
+        "universe": {
+          "end": "2023-04-01T00:00:00Z",
+          "instruments": [
+            "BTCUSDT",
+            "ETHUSDT"
+          ],
+          "start": "2023-01-01T00:00:00Z"
+        },
+        "delay_seconds": 900,
+        "rule": "For every present feature entry, including null-valued entries, available_at equals row_time + delay_seconds exactly.",
+        "summary": {
+          "status": "MATCHED_EXACT_FIXED_DELAY",
+          "checked_rows": 17270,
+          "checked_feature_samples": 155430,
+          "null_feature_samples": 18,
+          "missing_feature_samples": 0,
+          "absent_grid_rows": 10
+        },
+        "availability_basis": "assumed",
+        "historical_publication_time": null,
+        "qualification": "Exhaustive timing check of this exact certified development snapshot. Absent rows and missing/null values remain missing. No later recorded availability exists among these entries. This is not historical publication truth, a hypothesis-equivalence verdict, an outcome result or scientific admission. The reviewer must separately derive the candidate-specific cutoff implications.",
+        "scientific_readiness": false
+      },
+      "scope": "Complete actual input; separate count request, not inference consumption or invoice."
+    },
+    "limit": 30000
+  },
+  "independent_offline_candidate_review": {
+    "schema": "independent-btc-candidate-review/1",
+    "status": "NO_SUBSTANTIATED_MAPPING_OBJECTION_WITHIN_EXACT_SOURCE_DOMAIN",
+    "execution_admission": "BLOCKED_PENDING_ACTUAL_INDEPENDENT_MEANING_REVIEW_AND_REMAINING_QUALIFICATIONS",
+    "purpose": "Bounded offline examination of the complete actual model candidate against the unchanged original BTC idea before compilation. This is not a replacement model formalization or scientific certificate.",
+    "idea_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+    "formalization_id": "c6b85475ab4a4b4a2657d46ecbe8b0a1517ae45fcf8de389345e65904ca91415",
+    "formalization_file_sha256": "4e443dd435e1baf150df530d6d903ea1989bfd15ac507057fee779f56386cbc4",
+    "candidate_sha256": "29b1e687a5415061f50705e075be4b3a9d91810cebbedf23e5e668bd10edb603",
+    "original_text_sha256": "bd34053ef7c67e48ca2d32cf35ba858f5a850ec874dde4d3ef7cbb0a28ac9f21",
+    "frozen_independent_formula_checker_sha256": "4b05a15222a5c355ec64dc870ff17597ac38b7057926b2f69ff59e92529069e1",
+    "source_qualification": {
+      "snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+      "definitions_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+      "availability_certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+      "required_domain": "The exact retained projection supplies observed N as nonnegative integers, Q as nonnegative finite decimals and prices as positive finite decimals; invalid keyed bars become all-null, absent bars remain absent. These are necessary source-domain conditions for the compact validity identities, not properties proved for arbitrary engine inputs.",
+      "availability": "The actual role packet records an exhaustive check that every present feature entry, including nulls, has available_at = row_time + 900 in this exact snapshot. Missing/absent entries remain missing and historical publication truth remains unknown.",
+      "current_certificate_replay_and_data_use_required_before_execution": true
+    },
+    "mapping_findings": {
+      "scope": "Literal true over every BTCUSDT 900-second coordinate in [2023-01-01T00:00:00Z,2023-04-01T00:00:00Z), equal rows, exact retained snapshot, no ETH traversal or added filter.",
+      "baseline": "Outer lag 1 anchors the condition at b=t-d. lag(complete trailing_mean(16),2) reads b-2d through b-17d, equivalently t-3d through t-18d. Both episode tests use these same means; neither episode enters the baseline.",
+      "predicate": "For both b and b-d: N>=2*MN, 0.75*MQ<=Q<=1.25*MQ and B/Q>=0.60. The price predicate is C_b/O_(b-d)-1>=0.001. Original exact thresholds and direction are unchanged.",
+      "complete_validity": "V includes the complete 18-position mean of N/N equal to 1; the complete two-position mean of Q/Q equal to 1; complete MQ>0; both 0<=B<=Q checks; and C_b>0,O_(b-d)>0. Within the declared source domains these require every original input and all positive-integer counts while allowing valid individual baseline Q=0. Zero N or episode Q causes missing division, not a valid zero.",
+      "unknown_semantics": "The actual tree is lag1((V AND P) OR ((NOT V) AND Boolean-null)), with structurally identical V copies. V=false or unknown yields complete C=unknown even when a scientific predicate is false. No literal-null event is treated as an absent market observation.",
+      "outcome": "At a=t+5d the unchanged AST is 10000*ln(lag(close,1)/lag(close,5)), hence exactly 10000*ln(C_(t+4d)/C_t), quantity/basis_points. Neither C_t nor a future value enters the condition.",
+      "cutoff_proof": "For a<end, the two actual endpoint availabilities are t+d and t+5d=a, both no later than the original min(a,end-1). Therefore the inherited later min(as_of,end-1) cutoff selects the same present endpoints on this exact fixed-delay snapshot. For a>=end, the declared horizon is boundary-censored; the terminal publication cannot satisfy the original exclusive-end cap. This is a snapshot-specific proof, not permission to accept arbitrary additional delays.",
+      "denominators": "The estimand is mean(Y|C=true, observed Y) minus mean(Y|observed Y) across the full declared scope. False and unknown C remain in the whole-scope denominator; missing Y is excluded from both denominators. Overlap is retained and no independence, causal or executable-entry claim is introduced.",
+      "reporting": "The mapping explicitly selects required-inputs/1 and case-diagnostics/2, identifies the actual V paths, and maps true/false/unknown plus missing outcomes, warmup, absent rows, unavailable data and boundary censoring. Guard-false, numerical-domain and source-qualified all-null observations support invalid-input reporting; arbitrary raw invalid causes must not be invented from generic nulls. Resource exhaustion remains incomplete reporting. Actual complete diagnostics have not been computed.",
+      "parameter_origins": "All 61 literal/bars/horizon parameter paths are present exactly once and resolve against the actual final candidate. Every origin cites the original idea as preexisting_specification. Four N/N or Q/Q identity origins additionally cite the exact feature-definition artifact, correctly preserving their source-domain dependence.",
+      "original_text_mapping": "All 10 semantic-report segments concatenate to the exact pinned original text, and every segment path resolves. The formalizer's equivalent assertion is not an independent model review."
+    },
+    "exact_dependencies": {
+      "condition_lags_from_t": {
+        "trades": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "quote_volume": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ],
+        "taker_quote_volume": [
+          1,
+          2
+        ],
+        "open": [
+          2
+        ],
+        "close": [
+          1
+        ]
+      },
+      "outcome_close_lags_from_future_anchor": [
+        1,
+        5
+      ],
+      "condition_guard_path": "/condition_ast/expression/arg/left/left",
+      "identical_guard_copy_path": "/condition_ast/expression/arg/right/left/arg",
+      "program_sizes": {
+        "scope": {
+          "nodes": 1,
+          "maximum_node_depth": 1
+        },
+        "condition": {
+          "nodes": 168,
+          "maximum_node_depth": 12
+        },
+        "outcome": {
+          "nodes": 8,
+          "maximum_node_depth": 5
+        }
+      }
+    },
+    "checks": [
+      {
+        "check": "Exact actual guard duplication and syntax, formula rendering, parameter resolution and original-text preservation",
+        "exit_code": 0
+      },
+      {
+        "check": "Actual unchanged accepted AST versus frozen independent direct-formula condition on invented inputs",
+        "comparisons": 220,
+        "expected_true": 3,
+        "expected_false": 22,
+        "expected_unknown": 195,
+        "coverage": "All 18 N positions tested for zero, null and late availability; every required row and Q position for absence/null; both episode thresholds and invalid turnover; condition prices; valid zero baseline volume; unrelated missing containers; each scenario also with an explicitly false scientific component.",
+        "exit_code": 0,
+        "command_wall_seconds": 0.8780822
+      },
+      {
+        "check": "Independent exact parameter inventory, source-reference membership, all dependency offsets, source-text hash and program sizes",
+        "parameter_paths": 61,
+        "semantic_segments": 10,
+        "exit_code": 0,
+        "command_wall_seconds": 0.4339745
+      }
+    ],
+    "review_fixture_corrections": [
+      "An initial synthetic command passed the catalog envelope body instead of its features map and failed FEATURE_GAP before comparisons. Only that test fixture access was corrected; no candidate/runtime changed.",
+      "An initial origin assertion incorrectly required the idea to be the sole source. Four correctly qualified validity-identity origins also cite the provided definition artifact. The corrected check requires the idea in every origin and allows only that exact additional definition source; all paths and values remained unchanged."
+    ],
+    "actual_terminal_boundary": {
+      "formalizer_response_status": "completed",
+      "formalization_assessment": "STRUCTURE_CHECKED",
+      "paid_calls": 1,
+      "input_tokens": 24443,
+      "output_tokens": 16749,
+      "total_tokens": 41192,
+      "charged_nano_usd": 228597500,
+      "charge_basis": "conservative_published_rate_upper_bound_not_provider_invoice",
+      "review_admission_status": "FULL_INPUT_EXCEEDS_RESERVED_SLOT",
+      "complete_review_input_tokens": 34934,
+      "review_input_bound_with_margin": 35062,
+      "fixed_review_input_limit": 30000,
+      "actual_independent_model_review_performed": false,
+      "market_calculation_performed": false,
+      "actual_formula_audit_performed": false,
+      "continuation": "Retain the completed unchanged formalization. Any review-only follow-up requires separately approved complete-input resources; do not rerun the formalizer, truncate the review packet or treat this offline assessment as the missing model review."
+    },
+    "limits": {
+      "no_general_semantic_equivalence_proof_for_arbitrary_sources": true,
+      "no_historical_publication_truth_claim": true,
+      "no_model_comprehension_or_scientific_validity_claim": true,
+      "provider_calls_by_reviewer": 0,
+      "market_rows_read_by_reviewer": 0,
+      "registry_writes_by_reviewer": 0,
+      "candidate_modified": false,
+      "engineering_candidate_substituted": false,
+      "original_formula_checker_modified": false,
+      "scientific_readiness": false
+    }
+  },
+  "input_admission": {
+    "formalizer_input_tokens": 24443,
+    "reserved_tokens": 76571,
+    "reserved_cost_nano": 356427500,
+    "exact_approved_api_prompt_characters": 8606
+  },
+  "new_calls": [
+    {
+      "dispatch_id": "controller-2064ce3fe44149a6b62d83fbdfcc2e28:0",
+      "request_sha256": "0c7ce1ee9f5ba971789385fead431065ff3bcca6298c2b8ea0209caeba397a13",
+      "reserved_nano": 241427500,
+      "charged_nano": 228597500,
+      "state": "settled",
+      "created_at": 1793312241,
+      "admitted_at_utc": "2026-10-29T22:17:21Z",
+      "settled_at_utc": "2026-10-29T22:20:06Z",
+      "metadata": {
+        "counted_input_tokens": 24443,
+        "epoch_id": "83a7e355615d4354a19bcc61a9406370",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-btc-compact-output/1",
+        "run_id": "controller-2064ce3fe44149a6b62d83fbdfcc2e28",
+        "worker": "btc-compact-formalizer"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0fe6aa9d4671fe13016ae3c5f23c8087d2bc2ca547a63bd296",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 4991
+        },
+        "transport_request_id": "req_9e226266c4fe490bad5b887c3157eb28",
+        "usage": {
+          "cost_units": 228597500,
+          "input_tokens": 24443,
+          "output_tokens": 16749
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    }
+  ],
+  "new_tokens": 41192,
+  "new_conservative_cost_usd": "0.2285975",
+  "aggregate_tokens": 680567,
+  "aggregate_conservative_cost_usd": "2.509595",
+  "remaining_original_usd5_allowance": "2.490405",
+  "wall_seconds": 195.11215999998967,
+  "usage_qualification": "Provider-reported tokens. Known sums exclude unknown receipts. Cached/reasoning counts are subsets. Currency is a conservative published-rate bound, not an invoice.",
+  "verification": {
+    "focused_tests": 34,
+    "all_focused_exit_codes": 0,
+    "project_checks": "Both documentation gates and git diff --check passed.",
+    "independent_preflight": {
+      "schema": "independent-btc-compact-preflight-review/1",
+      "status": "PASS_CORRECTED_PREFLIGHT_NO_KNOWN_BLOCKER",
+      "purpose": "Verify the separately approved formatting-only BTC continuation before any inference, without reading market rows or reconstructing a candidate.",
+      "approval_question_call_id": "call_0c729ac949e3405599659636532eac5c",
+      "initial_sources": {
+        "prior_driver_sha256": "b56666324172547cf5d2eb1b5bcadf524f3773fe0ad71a910082803c8c7ee5e4",
+        "new_driver_sha256": "49cb7d972b8ff3be24f1ce11bff9002343531362587c62077899cbef5cd87fff",
+        "approved_full_prompt_sha256": "87e1c8ae4c820a88c517cfc7f15f6aff4355a5ff36bc888708bf5b24f00acc0b",
+        "prior_result_sha256": "a9488dc7d5c841964fd485d0e80d29eacbcc0219c4289d2f91f737611840044b",
+        "prior_run_fence_sha256": "4f1b5bbc904ec90161db687008d2cf4e47102e3a26570f01155e480bc24f5fd3",
+        "frozen_formula_checker_sha256": "4b05a15222a5c355ec64dc870ff17597ac38b7057926b2f69ff59e92529069e1"
+      },
+      "initial_checks": {
+        "declared_driver_replacements_reproduce_exact_new_source": true,
+        "complete_original_prompt_is_exact_prefix": true,
+        "original_prompt_characters": 8012,
+        "formatting_suffix_characters_including_separator": 594,
+        "new_prompt_characters": 8606,
+        "unchanged_generic_prompt_limit": 8192,
+        "formalizer_model": "gpt-6.1-sol",
+        "formalizer_reasoning": "high",
+        "provider_retries": 0,
+        "call_cap": 2,
+        "fixed_slots": {
+          "formalizer_input": 28000,
+          "formalizer_output": 18000,
+          "reviewer_input": 30000,
+          "reviewer_output": 4000
+        },
+        "total_token_ceiling": 80000,
+        "whole_path_worst_bound_nano_usd": 365000000,
+        "approved_attempt_cap_nano_usd": 500000000,
+        "shared_aggregate_cap_nano_usd": 5000000000,
+        "unique_new_worker_names_and_epoch_key": true,
+        "exclusive_external_run_start_fence_before_epoch": true,
+        "no_discovery_dispatch_or_automatic_retry_in_driver": true,
+        "old_result_and_old_fence_identity_checks_present": true,
+        "stops_before_compilation_and_market_execution": true
+      },
+      "initial_findings": [
+        {
+          "kind": "REPRODUCED_PROMPT_ADMISSION_BLOCKER",
+          "finding": "The complete approved API prompt has 8606 characters. Passing it through the unchanged codec.text limit fails before input counting or inference.",
+          "actual_check": "python -B -c: codec.text(Path(formalizer-prompt.txt).read_text(encoding='utf-8'), 'complete frozen formalizer prompt')",
+          "exception": "Invalid: complete frozen formalizer prompt must be a nonempty bounded string",
+          "exit_code": 1,
+          "command_wall_seconds": 0.3829017
+        },
+        {
+          "kind": "REVIEW_DISPATCH_GATE_MISMATCH",
+          "finding": "The new approval permits a reviewer only for a complete accepted candidate. The inherited if-not-target gate would also review an accepted retained formalization gap with candidate=null.",
+          "smallest_gate": "Require a non-null candidate and STRUCTURE_CHECKED assessment before any reviewer dispatch. Retain other complete or incomplete gaps without repair."
+        }
+      ],
+      "corrected_review": {
+        "initial_findings_retained_above": true,
+        "driver_sha256": "b12eb83434d7f30bae8dd8e1e3035ef1dba3ab87226510fb7eca3cf8a426b912",
+        "adapter_sha256": "83fc80b6df949041d06f3d75b7cdb50c9dad3c5982b69a82996f4a82e66f7dbf",
+        "approval_sha256": "aa44c2d2452b6bf71048dde58b1f5359408262ac002588bfc1318db20e53ddb1",
+        "count_record_sha256": "49650617eb85cf6f4389e05bcd0d1afafdfc410b177fd74ca91c5e8d21831c6a",
+        "actual_full_wire_sha256": "0c7ce1ee9f5ba971789385fead431065ff3bcca6298c2b8ea0209caeba397a13",
+        "driver_delta": "Only the replacements declared in wire-correction.json occur after normalizing CRLF/LF. The first byte-string reconstruction check failed on archive newline representation; a normalized comparison then passed. Raw file hashes above retain exact bytes.",
+        "wire_change": "Explicit frozen output_formatting=compact-json/1 requires bounded_math_scope and the lossless auxiliary profile. After deepcopy, it appends exactly the approved 594-character suffix to the original 8012-character system prompt. The resulting 8606-character actual wire prompt equals formalizer-prompt.txt exactly; the complete source packet reconstructs unchanged.",
+        "unchanged_boundaries": "No codec limit, auxiliary normalized packet, meaning-review policy, schema, model, reasoning effort, source content or scientific rule changed. The actual reviewer configuration has no formatting flag and its existing prompt stays unchanged. Source data cannot enable the flag; route/request config mismatch remains rejected.",
+        "candidate_gate": "Before release, reviewer input counting or paid review, the driver now stops unless a non-null candidate has assessment STRUCTURE_CHECKED. Other retained gaps are not repaired or promoted.",
+        "old_attempts": "The initial script and unpaid preparation-start are retained separately. The corrected preparation has its own preparation-v2-start marker; the new paid attempt still has one exclusive run-start fence. The old paid result/fence and frozen independent checker are unchanged.",
+        "complete_actual_input_tokens_reported": 24443,
+        "count_margin": 128,
+        "formalizer_reserved_input_tokens": 24571,
+        "total_reserved_tokens": 76571,
+        "total_reserved_nano_usd": 356427500,
+        "reservation_arithmetic": "24571 + 18000 + 30000 + 4000 = 76571; (24571 + 30000)*2500 + (18000 + 4000)*10000 = 356427500 nanoUSD. Both remain inside the unchanged 80000-token and USD0.50 ceilings.",
+        "independent_checks": [
+          {
+            "check": "test_compact_output_prompt.py unchanged focused suite",
+            "tests": 3,
+            "test_seconds": 0.004,
+            "exit_code": 0
+          },
+          {
+            "check": "Exact approved wire text, original-packet roundtrip, unchanged normalized request and meaning policy",
+            "exit_code": 0
+          },
+          {
+            "check": "Corrected driver delta, actual frozen configurations and recorded full-path arithmetic",
+            "exit_code": 0
+          },
+          {
+            "check": "Reconstruct actual prepared complete wire and match its counted hash; reviewer formatting unchanged",
+            "exit_code": 0
+          }
+        ],
+        "inference_calls_at_review": 0,
+        "conclusion": "No concrete remaining pre-inference blocker found. The human-authorized single attempt may proceed only while its existing source, ledger, time, input-count and reservation checks still pass. This is not a prediction of model completion or an approval of any future candidate."
+      },
+      "limits": {
+        "recorded_complete_actual_input_count_and_wire_binding_verified": true,
+        "input_count_endpoint_independently_called_by_reviewer": false,
+        "actual_new_provider_execution_verified": false,
+        "model_comprehension_or_quality_equivalence_verified": false,
+        "candidate_semantics_verified": false,
+        "scientific_readiness": false,
+        "provider_calls_by_reviewer": 0,
+        "market_rows_read_by_reviewer": 0,
+        "registry_writes_by_reviewer": 0,
+        "only_reviewer_authored_file": "independent-preflight-review.json"
+      }
+    },
+    "wire_correction": {
+      "reason": "Initial unpaid preparation stopped because the exact8606-character combined prompt exceeds the8192 stored-field limit. Preserve all approved text by appending at the explicit frozen API boundary; codec/auxiliary/reviewer policy remain unchanged.",
+      "exact_driver_replacements": {
+        "'preparation-start.json'": "'preparation-v2-start.json'",
+        "formal['prompt']=(WORK/'formalizer-prompt.txt').read_text(encoding='utf-8')": "# Keep the original bounded normalized prompt; append the exact approved suffix only on the wire.",
+        "formal['generation_parameters']={'openai_responses':config(28000,18000,high=True)}": "formal['generation_parameters']={'openai_responses':config(28000,18000,high=True)}\n    formal['generation_parameters']['openai_responses']['output_formatting']='compact-json/1'",
+        "view=decode(wire['input'][1]['content'])": "view=decode(wire['input'][1]['content'])\n    if label=='formalization':assert wire['input'][0]['content']==(WORK/'formalizer-prompt.txt').read_text(encoding='utf-8')\n    else:assert wire['input'][0]['content']==spec['research_call_profile']['prompt']",
+        "if not target:return": "if not target:return\n        if target['body']['assessment']['status']!='STRUCTURE_CHECKED' or target['body'].get('candidate') is None:\n            record('candidate-admission-gap.json',{'stage':'candidate_admission','status':'NO_COMPLETE_STRUCTURALLY_ACCEPTED_CANDIDATE','formalization_id':target['id']});return"
+      },
+      "new_inference_calls": 0,
+      "new_count_requests": 0,
+      "prior_preparation_start": "preparation-start.json retained unchanged",
+      "red": "New compact-output suite:3 tests,1 missing-capability error,exit1 before implementation.",
+      "green": "Same3 tests pass,0.005s,exit0 after implementation."
+    },
+    "exact_accepted_artifact_and_usage_reconciliation": "PASS",
+    "registry_integrity": {
+      "status": "PASS",
+      "events": 1763,
+      "foreign_keys": true,
+      "synchronous": "FULL",
+      "schema_version": 1,
+      "scope": "local coordination and research memory integrity only",
+      "research_memory": {
+        "status": "PASS",
+        "records": 50,
+        "version": "research-memory/1",
+        "scientific_authority": false
+      },
+      "blobs": {
+        "status": "PASS",
+        "committed": 957,
+        "quarantined": [],
+        "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+      }
+    }
+  },
+  "source_hashes": {
+    "research.py": "b12eb83434d7f30bae8dd8e1e3035ef1dba3ab87226510fb7eca3cf8a426b912",
+    "approval.json": "aa44c2d2452b6bf71048dde58b1f5359408262ac002588bfc1318db20e53ddb1",
+    "formalizer-prompt.txt": "87e1c8ae4c820a88c517cfc7f15f6aff4355a5ff36bc888708bf5b24f00acc0b",
+    "prepared.json": "6b28a967b6449ee8ec657cfc4eec15ec6a2bd0214b5206a042bbfa0dc22c9c1e",
+    "run-start.json": "ab5b217984528bdb1b5599fd3594f52386f6cd7ea55e03fa47c60e17bb2018b8",
+    "run-result.json": "d926cb2f680f871c23d386d5546456629fcb180d5cf7f00f0a0e3eca058a0c7c",
+    "formalization.json": "4e443dd435e1baf150df530d6d903ea1989bfd15ac507057fee779f56386cbc4",
+    "review-count.json": "4255c07eaf13a377171c8e5d4cf3b100b7272c9afabaeee6013a6d48f484e140",
+    "review-packet.json": "990cce42ff363990f4031f74c5727f1e32b74a3a79d25d342561f414d0e316f5",
+    "candidate-review.json": "d9d4f8d4c4f260906e45fe0704705de46acd55e4d923d2bd0fb250ed0f58fe58",
+    "wire-correction-verification.json": "bd74e8dee0a50d3bf37d029cfe2651c17d3ea6f47e21474244de96442a1d8607",
+    "one-use-terminal.json": "71e807dc4f1d58e22405d7ee2104cd154478ca17733eaf27f031bd1aa2f42ffe"
+  },
+  "protected_outcomes_accessed": false,
+  "scientific_readiness": false,
+  "unverified": [
+    "Actual independent model meaning review, data-use/execution qualification, deterministic BTC calculation, separate replay and market-case original-formula audit.",
+    "Scientific calibration, protected evaluation and economic usefulness; no capital authority.",
+    "Provider invoice, immutable model snapshot and a fresh full actual backup/restore."
+  ],
+  "next_action": "Use the retained exact candidate and independent offline findings to decide whether one separately authorized review-only call is warranted. Preserve both prior attempts; do not re-formalize, repair, truncate or automatically reassign the frozen reviewer slot."
+}

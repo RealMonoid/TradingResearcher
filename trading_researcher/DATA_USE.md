@@ -17,6 +17,17 @@ Candidate knowledge starts at the original formalization, idea, authorized conte
 
 Protected outcome ancestry and uncontrolled operations ancestry remain explicit scope gaps in this implementation. This is not a contractual ban on all later exploration of released historical results or on registered operational anomalies: those need the separate controlled paths and roles required by the contract and D037. Genuine host-owned implementation packages/certificates are technical provenance, while arbitrary schema strings cannot convert operational observations into technical proof. All ancestry continues to be traversed.
 
+The exact owned `feature-evidence-release/1` administrative grant is also technical
+provenance. Recognition requires its complete fixed metadata shape, release
+authority, distinct identity roles, exact source references and matching owned
+development certificate/snapshot/definition metadata. Extra payloads, forged
+owners, malformed fields or mismatches do not receive that classification. This
+does not recertify a historical certificate or hide any ancestor: all source and
+exposure edges still contribute their protected, operations or unresolved
+knowledge gaps. Existing integrity, intended-use and revocation checks remain
+separate. Earlier assessments retain their original checker hash and findings;
+reassessment creates a new record.
+
 `prepare_evaluation_plan` accepts optional `data_use_assessment_id`. It retains the exact current assessment in its input capsule before child work and rechecks it before commitment. `inspect_evaluation_plan` can satisfy `scientific_data_and_exposure_acceptance` only for that exact development exploration scope; it explicitly returns `protected_target_admission: false`. Historical raw plan gates are unchanged. Legacy requests have no implicit admission. Cancellation retains the original input; revocation or changed/missing evidence reopens the current gate without rewriting historical records.
 
 For protected targets that argument is mandatory and must currently satisfy `qualified_protected_target_data_use`. The private plan uses owned diagnostics only from the development snapshot named by the public declaration's development certificate. Diagnostic source/exposure ancestry must also pass the concrete-knowledge check. The capsule, assessment and plan are assessment-class and retain their private binding ancestry; research roles cannot obtain them through wrappers. Current plan inspection leaves scientific data/exposure acceptance open and explicitly reports selection/reservation review as `NOT_ASSESSED`. Stored candidate ancestry alone cannot account for every earlier campaign, sibling query, external observation or selection decision. A future atomic admission must resolve those conditions before protected execution.

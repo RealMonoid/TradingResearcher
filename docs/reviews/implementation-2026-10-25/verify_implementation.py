@@ -9,6 +9,14 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[3]
 AUDIT = Path(__file__).resolve().parent
 ALLOWED = {
+    'AGENTS.md',  # October 31 user-approved compact construction/session instructions.
+    # D089: explicit October29 approval of the bounded median/log specification.
+    'docs/architecture/02_DECISION_REGISTER.md', 'docs/architecture/ARCHITECTURE_REGISTER.json',
+    'docs/architecture/04_DEFINITIONS.md', 'docs/architecture/05_REQUIREMENTS.md',
+    'docs/architecture/12_TRACEABILITY_MATRIX.md',
+    'docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md',  # D096: user-approved addendum; original body checked by adoption verifier.
+    'docs/architecture/06_MASTER_ARCHITECTURE.md',  # Exact approved bytes: adoption-metacognition-2026-11-01/verification.json.
+    'docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md',  # Exact approved bytes: diagnosis-practice-adoption-2026-11-01/verification.json.
     '.gitattributes',  # Preserve runtime/evidence bytes in the authorized GitHub publication.
     'docs/reviews/verify_retail_contract.py',  # Record that explicit later publication scope.
     '.gitignore', 'README.md', 'docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md',
@@ -16,6 +24,7 @@ ALLOWED = {
     'trading_researcher/__main__.py', 'trading_researcher/checks.py', 'trading_researcher/coordination.py',
     'trading_researcher/README.md',  # Authorized storage/replay capability and backup instructions.
     'docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md',
+    'docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md',  # October 26 user-requested dated risk addendum; original text preserved.
 }
 
 

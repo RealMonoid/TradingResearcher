@@ -8,6 +8,12 @@ Rollback may select an older approved configuration for future work while retain
 
 ## Preserved generator contract version 1.0
 
+**Current binding addendum:** D096 adopts [inquiry-feedback/1.0](25_METACOGNITION_DUAL_SPACE_INQUIRY.md), November 1, 2026, alongside generator-contract/1.0 and research-contract/1.0. F1–F5 retain the intended clarification before its outcome, distinguish observed result/diagnosis/action/scientific verdict, preserve correction and heuristic-use history, enforce exposure/release timing, and assess only the particular benefit claimed. I1–I7 govern the associated inquiry choices. AC-01–AC-12 extend the existing acceptance purposes without a new score, empirical outcome, spending grant, or mandatory comparison workstream. Learn from bounded authorized work; effectiveness evidence is required for the claim made, not as an advance prerequisite to use. The complete original v1.0 body below remains unchanged.
+
+D096's later user clarification reaffirms D069: science is a means to economically useful trading opportunities, not an academic output objective. Procedural gains remain intermediate; account for full research burden and separate policy economics. This is not an advance-profit requirement for individual investigations or permission to weaken evidence.
+
+D096 clarification: [correct records do not establish diagnosis quality](25_METACOGNITION_DUAL_SPACE_INQUIRY.md#controller-integrity-and-diagnosis-quality). Reports retain control/record conformance, substantive diagnostic support with uncertainty, and observed action usefulness/cost separately. A populated diagnosis field, source citation, second-model agreement or favorable outcome is not by itself evidence of a sound explanation. Missing substantive assessment remains visible.
+
 # Generator Feedback and Evaluation Contract
 
 Version: 1.0, October 22, 2026. Normative specification under D069-D070 and REQ-028 through REQ-030; no runtime implementation or executed scientific experiment. This contract operationalizes existing memory, exposure, diagnostics and evaluation responsibilities. It does not replace the canonical lifecycle, definitions or open statistical policies.

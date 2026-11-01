@@ -1,0 +1,2014 @@
+{
+  "schema": "btc-synthetic-expression-preflight/1",
+  "status": "PASS",
+  "observed_at_utc": "2026-10-29T13:09:14.873205+00:00",
+  "scope": "Offline synthetic AST1 condition probe only. Not a submitted model formalization, certificate, independent meaning review, D089 scope activation, market calculation or research outcome.",
+  "purpose": "Assess node/depth capacity and complete-input unknown semantics before paying for the proposed BTC continuation.",
+  "primary_idea_id": "a83f61a8d9c99c4e8bfde5c7bc1f2c4b0ce6bf40c313b9a8dc456176f386fc32",
+  "retained_definition_id": "dfebc7e3d378cbc928c8a1a149177fe5dd8d730e3cc485f0a1716ea42bbbfaab",
+  "synthetic_catalog": {
+    "N@1": {
+      "type": "real",
+      "unit": "count"
+    },
+    "Q@1": {
+      "type": "real",
+      "unit": "volume"
+    },
+    "B@1": {
+      "type": "real",
+      "unit": "volume"
+    },
+    "O@1": {
+      "type": "real",
+      "unit": "price"
+    },
+    "C@1": {
+      "type": "real",
+      "unit": "price"
+    }
+  },
+  "engineering_expression": {
+    "schema": "research-ast/1",
+    "catalog_hash": "9ba7582a45805eb4b40f4597aa71c482961990ee473e715b7c0ee46953c3367a",
+    "expression": {
+      "op": "or",
+      "left": {
+        "op": "and",
+        "left": {
+          "op": "and",
+          "left": {
+            "op": "and",
+            "left": {
+              "op": "and",
+              "left": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "and",
+                    "left": {
+                      "op": "and",
+                      "left": {
+                        "op": "and",
+                        "left": {
+                          "op": "and",
+                          "left": {
+                            "op": "and",
+                            "left": {
+                              "op": "and",
+                              "left": {
+                                "op": "eq",
+                                "left": {
+                                  "op": "lag",
+                                  "arg": {
+                                    "op": "trailing_mean",
+                                    "arg": {
+                                      "op": "div",
+                                      "left": {
+                                        "op": "feature",
+                                        "ref": "N@1"
+                                      },
+                                      "right": {
+                                        "op": "feature",
+                                        "ref": "N@1"
+                                      }
+                                    },
+                                    "bars": 16
+                                  },
+                                  "bars": 3
+                                },
+                                "right": {
+                                  "op": "literal",
+                                  "type": "real",
+                                  "unit": "ratio",
+                                  "value": "1"
+                                }
+                              },
+                              "right": {
+                                "op": "gt",
+                                "left": {
+                                  "op": "lag",
+                                  "arg": {
+                                    "op": "trailing_mean",
+                                    "arg": {
+                                      "op": "feature",
+                                      "ref": "Q@1"
+                                    },
+                                    "bars": 16
+                                  },
+                                  "bars": 3
+                                },
+                                "right": {
+                                  "op": "literal",
+                                  "type": "real",
+                                  "unit": "volume",
+                                  "value": "0"
+                                }
+                              }
+                            },
+                            "right": {
+                              "op": "gt",
+                              "left": {
+                                "op": "lag",
+                                "arg": {
+                                  "op": "feature",
+                                  "ref": "N@1"
+                                },
+                                "bars": 1
+                              },
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "count",
+                                "value": "0"
+                              }
+                            }
+                          },
+                          "right": {
+                            "op": "gt",
+                            "left": {
+                              "op": "lag",
+                              "arg": {
+                                "op": "feature",
+                                "ref": "Q@1"
+                              },
+                              "bars": 1
+                            },
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "volume",
+                              "value": "0"
+                            }
+                          }
+                        },
+                        "right": {
+                          "op": "ge",
+                          "left": {
+                            "op": "lag",
+                            "arg": {
+                              "op": "feature",
+                              "ref": "B@1"
+                            },
+                            "bars": 1
+                          },
+                          "right": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "volume",
+                            "value": "0"
+                          }
+                        }
+                      },
+                      "right": {
+                        "op": "le",
+                        "left": {
+                          "op": "lag",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "B@1"
+                          },
+                          "bars": 1
+                        },
+                        "right": {
+                          "op": "lag",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "Q@1"
+                          },
+                          "bars": 1
+                        }
+                      }
+                    },
+                    "right": {
+                      "op": "gt",
+                      "left": {
+                        "op": "lag",
+                        "arg": {
+                          "op": "feature",
+                          "ref": "N@1"
+                        },
+                        "bars": 2
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "count",
+                        "value": "0"
+                      }
+                    }
+                  },
+                  "right": {
+                    "op": "gt",
+                    "left": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "feature",
+                        "ref": "Q@1"
+                      },
+                      "bars": 2
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "volume",
+                      "value": "0"
+                    }
+                  }
+                },
+                "right": {
+                  "op": "ge",
+                  "left": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "bars": 2
+                  },
+                  "right": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "volume",
+                    "value": "0"
+                  }
+                }
+              },
+              "right": {
+                "op": "le",
+                "left": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "B@1"
+                  },
+                  "bars": 2
+                },
+                "right": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "Q@1"
+                  },
+                  "bars": 2
+                }
+              }
+            },
+            "right": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "arg": {
+                  "op": "feature",
+                  "ref": "O@1"
+                },
+                "bars": 2
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "price",
+                "value": "0"
+              }
+            }
+          },
+          "right": {
+            "op": "gt",
+            "left": {
+              "op": "lag",
+              "arg": {
+                "op": "feature",
+                "ref": "C@1"
+              },
+              "bars": 1
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "price",
+              "value": "0"
+            }
+          }
+        },
+        "right": {
+          "op": "and",
+          "left": {
+            "op": "and",
+            "left": {
+              "op": "and",
+              "left": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "and",
+                    "left": {
+                      "op": "and",
+                      "left": {
+                        "op": "and",
+                        "left": {
+                          "op": "ge",
+                          "left": {
+                            "op": "lag",
+                            "arg": {
+                              "op": "feature",
+                              "ref": "N@1"
+                            },
+                            "bars": 1
+                          },
+                          "right": {
+                            "op": "mul",
+                            "left": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "ratio",
+                              "value": "2"
+                            },
+                            "right": {
+                              "op": "lag",
+                              "arg": {
+                                "op": "trailing_mean",
+                                "arg": {
+                                  "op": "feature",
+                                  "ref": "N@1"
+                                },
+                                "bars": 16
+                              },
+                              "bars": 3
+                            }
+                          }
+                        },
+                        "right": {
+                          "op": "ge",
+                          "left": {
+                            "op": "lag",
+                            "arg": {
+                              "op": "feature",
+                              "ref": "Q@1"
+                            },
+                            "bars": 1
+                          },
+                          "right": {
+                            "op": "mul",
+                            "left": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "ratio",
+                              "value": "0.75"
+                            },
+                            "right": {
+                              "op": "lag",
+                              "arg": {
+                                "op": "trailing_mean",
+                                "arg": {
+                                  "op": "feature",
+                                  "ref": "Q@1"
+                                },
+                                "bars": 16
+                              },
+                              "bars": 3
+                            }
+                          }
+                        }
+                      },
+                      "right": {
+                        "op": "le",
+                        "left": {
+                          "op": "lag",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "Q@1"
+                          },
+                          "bars": 1
+                        },
+                        "right": {
+                          "op": "mul",
+                          "left": {
+                            "op": "literal",
+                            "type": "real",
+                            "unit": "ratio",
+                            "value": "1.25"
+                          },
+                          "right": {
+                            "op": "lag",
+                            "arg": {
+                              "op": "trailing_mean",
+                              "arg": {
+                                "op": "feature",
+                                "ref": "Q@1"
+                              },
+                              "bars": 16
+                            },
+                            "bars": 3
+                          }
+                        }
+                      }
+                    },
+                    "right": {
+                      "op": "ge",
+                      "left": {
+                        "op": "div",
+                        "left": {
+                          "op": "lag",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "B@1"
+                          },
+                          "bars": 1
+                        },
+                        "right": {
+                          "op": "lag",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "Q@1"
+                          },
+                          "bars": 1
+                        }
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "ratio",
+                        "value": "0.60"
+                      }
+                    }
+                  },
+                  "right": {
+                    "op": "ge",
+                    "left": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "feature",
+                        "ref": "N@1"
+                      },
+                      "bars": 2
+                    },
+                    "right": {
+                      "op": "mul",
+                      "left": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "ratio",
+                        "value": "2"
+                      },
+                      "right": {
+                        "op": "lag",
+                        "arg": {
+                          "op": "trailing_mean",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "N@1"
+                          },
+                          "bars": 16
+                        },
+                        "bars": 3
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "op": "ge",
+                  "left": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    },
+                    "bars": 2
+                  },
+                  "right": {
+                    "op": "mul",
+                    "left": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "ratio",
+                      "value": "0.75"
+                    },
+                    "right": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "trailing_mean",
+                        "arg": {
+                          "op": "feature",
+                          "ref": "Q@1"
+                        },
+                        "bars": 16
+                      },
+                      "bars": 3
+                    }
+                  }
+                }
+              },
+              "right": {
+                "op": "le",
+                "left": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "Q@1"
+                  },
+                  "bars": 2
+                },
+                "right": {
+                  "op": "mul",
+                  "left": {
+                    "op": "literal",
+                    "type": "real",
+                    "unit": "ratio",
+                    "value": "1.25"
+                  },
+                  "right": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "trailing_mean",
+                      "arg": {
+                        "op": "feature",
+                        "ref": "Q@1"
+                      },
+                      "bars": 16
+                    },
+                    "bars": 3
+                  }
+                }
+              }
+            },
+            "right": {
+              "op": "ge",
+              "left": {
+                "op": "div",
+                "left": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "B@1"
+                  },
+                  "bars": 2
+                },
+                "right": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "Q@1"
+                  },
+                  "bars": 2
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": "0.60"
+              }
+            }
+          },
+          "right": {
+            "op": "ge",
+            "left": {
+              "op": "sub",
+              "left": {
+                "op": "div",
+                "left": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "C@1"
+                  },
+                  "bars": 1
+                },
+                "right": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "O@1"
+                  },
+                  "bars": 2
+                }
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "ratio",
+                "value": "1"
+              }
+            },
+            "right": {
+              "op": "literal",
+              "type": "real",
+              "unit": "ratio",
+              "value": "0.001"
+            }
+          }
+        }
+      },
+      "right": {
+        "op": "and",
+        "left": {
+          "op": "not",
+          "arg": {
+            "op": "and",
+            "left": {
+              "op": "and",
+              "left": {
+                "op": "and",
+                "left": {
+                  "op": "and",
+                  "left": {
+                    "op": "and",
+                    "left": {
+                      "op": "and",
+                      "left": {
+                        "op": "and",
+                        "left": {
+                          "op": "and",
+                          "left": {
+                            "op": "and",
+                            "left": {
+                              "op": "and",
+                              "left": {
+                                "op": "and",
+                                "left": {
+                                  "op": "eq",
+                                  "left": {
+                                    "op": "lag",
+                                    "arg": {
+                                      "op": "trailing_mean",
+                                      "arg": {
+                                        "op": "div",
+                                        "left": {
+                                          "op": "feature",
+                                          "ref": "N@1"
+                                        },
+                                        "right": {
+                                          "op": "feature",
+                                          "ref": "N@1"
+                                        }
+                                      },
+                                      "bars": 16
+                                    },
+                                    "bars": 3
+                                  },
+                                  "right": {
+                                    "op": "literal",
+                                    "type": "real",
+                                    "unit": "ratio",
+                                    "value": "1"
+                                  }
+                                },
+                                "right": {
+                                  "op": "gt",
+                                  "left": {
+                                    "op": "lag",
+                                    "arg": {
+                                      "op": "trailing_mean",
+                                      "arg": {
+                                        "op": "feature",
+                                        "ref": "Q@1"
+                                      },
+                                      "bars": 16
+                                    },
+                                    "bars": 3
+                                  },
+                                  "right": {
+                                    "op": "literal",
+                                    "type": "real",
+                                    "unit": "volume",
+                                    "value": "0"
+                                  }
+                                }
+                              },
+                              "right": {
+                                "op": "gt",
+                                "left": {
+                                  "op": "lag",
+                                  "arg": {
+                                    "op": "feature",
+                                    "ref": "N@1"
+                                  },
+                                  "bars": 1
+                                },
+                                "right": {
+                                  "op": "literal",
+                                  "type": "real",
+                                  "unit": "count",
+                                  "value": "0"
+                                }
+                              }
+                            },
+                            "right": {
+                              "op": "gt",
+                              "left": {
+                                "op": "lag",
+                                "arg": {
+                                  "op": "feature",
+                                  "ref": "Q@1"
+                                },
+                                "bars": 1
+                              },
+                              "right": {
+                                "op": "literal",
+                                "type": "real",
+                                "unit": "volume",
+                                "value": "0"
+                              }
+                            }
+                          },
+                          "right": {
+                            "op": "ge",
+                            "left": {
+                              "op": "lag",
+                              "arg": {
+                                "op": "feature",
+                                "ref": "B@1"
+                              },
+                              "bars": 1
+                            },
+                            "right": {
+                              "op": "literal",
+                              "type": "real",
+                              "unit": "volume",
+                              "value": "0"
+                            }
+                          }
+                        },
+                        "right": {
+                          "op": "le",
+                          "left": {
+                            "op": "lag",
+                            "arg": {
+                              "op": "feature",
+                              "ref": "B@1"
+                            },
+                            "bars": 1
+                          },
+                          "right": {
+                            "op": "lag",
+                            "arg": {
+                              "op": "feature",
+                              "ref": "Q@1"
+                            },
+                            "bars": 1
+                          }
+                        }
+                      },
+                      "right": {
+                        "op": "gt",
+                        "left": {
+                          "op": "lag",
+                          "arg": {
+                            "op": "feature",
+                            "ref": "N@1"
+                          },
+                          "bars": 2
+                        },
+                        "right": {
+                          "op": "literal",
+                          "type": "real",
+                          "unit": "count",
+                          "value": "0"
+                        }
+                      }
+                    },
+                    "right": {
+                      "op": "gt",
+                      "left": {
+                        "op": "lag",
+                        "arg": {
+                          "op": "feature",
+                          "ref": "Q@1"
+                        },
+                        "bars": 2
+                      },
+                      "right": {
+                        "op": "literal",
+                        "type": "real",
+                        "unit": "volume",
+                        "value": "0"
+                      }
+                    }
+                  },
+                  "right": {
+                    "op": "ge",
+                    "left": {
+                      "op": "lag",
+                      "arg": {
+                        "op": "feature",
+                        "ref": "B@1"
+                      },
+                      "bars": 2
+                    },
+                    "right": {
+                      "op": "literal",
+                      "type": "real",
+                      "unit": "volume",
+                      "value": "0"
+                    }
+                  }
+                },
+                "right": {
+                  "op": "le",
+                  "left": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "B@1"
+                    },
+                    "bars": 2
+                  },
+                  "right": {
+                    "op": "lag",
+                    "arg": {
+                      "op": "feature",
+                      "ref": "Q@1"
+                    },
+                    "bars": 2
+                  }
+                }
+              },
+              "right": {
+                "op": "gt",
+                "left": {
+                  "op": "lag",
+                  "arg": {
+                    "op": "feature",
+                    "ref": "O@1"
+                  },
+                  "bars": 2
+                },
+                "right": {
+                  "op": "literal",
+                  "type": "real",
+                  "unit": "price",
+                  "value": "0"
+                }
+              }
+            },
+            "right": {
+              "op": "gt",
+              "left": {
+                "op": "lag",
+                "arg": {
+                  "op": "feature",
+                  "ref": "C@1"
+                },
+                "bars": 1
+              },
+              "right": {
+                "op": "literal",
+                "type": "real",
+                "unit": "price",
+                "value": "0"
+              }
+            }
+          }
+        },
+        "right": {
+          "op": "literal",
+          "type": "boolean",
+          "unit": null,
+          "value": null
+        }
+      }
+    }
+  },
+  "nodes": 214,
+  "depth": 19,
+  "fixed_node_limit": 256,
+  "fixed_depth_limit": 32,
+  "synthetic_cases": [
+    {
+      "name": "all inclusive thresholds",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "threshold 19/N/199",
+      "expected": false,
+      "actual": false,
+      "direct_formula": false
+    },
+    {
+      "name": "threshold 18/N/199",
+      "expected": false,
+      "actual": false,
+      "direct_formula": false
+    },
+    {
+      "name": "threshold 19/Q/74.99",
+      "expected": false,
+      "actual": false,
+      "direct_formula": false
+    },
+    {
+      "name": "threshold 19/Q/125.01",
+      "expected": false,
+      "actual": false,
+      "direct_formula": false
+    },
+    {
+      "name": "threshold 19/B/59.99",
+      "expected": false,
+      "actual": false,
+      "direct_formula": false
+    },
+    {
+      "name": "threshold 19/C/100.099",
+      "expected": false,
+      "actual": false,
+      "direct_formula": false
+    },
+    {
+      "name": "threshold 19/Q/75",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "threshold 19/Q/125",
+      "expected": false,
+      "actual": false,
+      "direct_formula": false
+    },
+    {
+      "name": "threshold 19/B/60",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "upper turnover and buyer-share inclusive boundaries",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "required 2/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 2/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 2/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 2/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 2/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 2/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 3/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 3/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 3/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 3/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 3/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 3/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 4/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 4/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 4/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 4/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 4/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 4/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 5/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 5/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 5/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 5/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 5/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 5/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 6/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 6/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 6/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 6/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 6/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 6/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 7/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 7/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 7/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 7/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 7/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 7/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 8/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 8/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 8/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 8/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 8/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 8/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 9/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 9/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 9/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 9/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 9/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 9/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 10/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 10/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 10/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 10/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 10/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 10/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 11/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 11/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 11/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 11/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 11/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 11/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 12/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 12/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 12/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 12/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 12/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 12/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 13/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 13/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 13/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 13/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 13/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 13/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 14/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 14/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 14/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 14/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 14/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 14/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 15/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 15/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 15/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 15/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 15/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 15/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 16/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 16/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 16/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 16/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 16/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 16/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 17/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 17/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 17/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 17/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 17/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 17/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/B/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/B/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/B/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/N/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/N/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/N/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/Q/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/Q/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/Q/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/B/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/B/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/B/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/O/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/O/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 18/O/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/C/null despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/C/absent despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "required 19/C/late despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 2 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 3 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 4 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 5 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 6 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 7 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 8 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 9 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 10 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 11 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 12 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 13 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 14 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 15 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 16 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 17 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 18 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero count 19 despite false predicate",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 2",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 3",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 4",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 5",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 6",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 7",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 8",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 9",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 10",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 11",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 12",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 13",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 14",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 15",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 16",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 17",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 18",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "absent required bar 19",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "invalid 18/Q/0",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "invalid 19/Q/0",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "invalid 18/B/101",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "invalid 19/B/-1",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "invalid 18/O/0",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "invalid 19/C/0",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "zero baseline quote mean",
+      "expected": null,
+      "actual": null,
+      "direct_formula": null
+    },
+    {
+      "name": "one zero baseline quote allowed",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unused decision features absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unrequired row 0 fields absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unrequired row 1 fields absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unrequired row 20 fields absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unrequired row 21 fields absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unrequired row 22 fields absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unrequired row 23 fields absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unrequired row 24 fields absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    },
+    {
+      "name": "unrequired row 25 fields absent",
+      "expected": true,
+      "actual": true,
+      "direct_formula": true
+    }
+  ],
+  "case_count": 184,
+  "source_domain_condition": "Only the exact certified BTC raw projection: N integer >=0, Q/B >=0, positive O/C, invalid source rows null. This probe does not implement a general integrality test for arbitrary real-valued feature catalogs.",
+  "algebraic_argument": "For the retained N>=0 integer domain, N/N is exactly one for every positive count and missing at zero. A 16-bar mean over these ratios preserves complete baseline availability and positivity. Full validity is propagated by (V and P) or ((not V) and unknown), so a false predicate cannot conceal another invalid required input. All original numeric thresholds remain in P.",
+  "outcome_static_mapping": {
+    "future_anchor_bars": 5,
+    "numerator_close_lag_bars_at_anchor": 1,
+    "denominator_close_lag_bars_at_anchor": 5,
+    "availability_required": "Both endpoint-specific checks, complete original Q1 key boundary and anchor cutoff; no ETH-specific endpoint shortcut. Not evaluated in this probe."
+  },
+  "finding": "One explicitly source-qualified engineering condition fits existing scalar AST limits and matches a separately written direct formula on the declared synthetic cases. This removes a speculative need for a new integrality operator or larger node limit; it does not certify the eventual model candidate.",
+  "new_inference_calls": 0,
+  "new_input_count_requests": 0,
+  "usage_unchanged": true,
+  "retained_probe_failure": "Initial expected value for one zero baseline Q was incorrectly False; both the expression and direct formula returned True. Independently checking MQ=1500/16=93.75 establishes 0.75*MQ<=100<=1.25*MQ, so the fixture expectation was corrected to True. Baseline B was also set to zero to retain the source volume domain. No runtime implementation changed.",
+  "runtime_files_changed": false,
+  "registry_writes": false,
+  "market_rows_read": false,
+  "unverified": [
+    "Independent review of the engineering construction and actual LLM candidate.",
+    "Full outcome/missingness diagnostics, qualification, exact temporal dependency proof and owned execution/replay.",
+    "Exact future formalizer/reviewer input sizes, model behavior, scientific or economic value."
+  ],
+  "next_action": "Preserve the pending scope/resource decision. If approved, obtain the faithful model formalization and independent review; do not substitute this engineering tree for that workflow.",
+  "source_sha256": {
+    "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+    "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+    "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+    "docs/reviews/implementation-2026-10-25/feedback-research-2026-10-29.json": "64dd4a48aeeaa3ad50e6f957c8347a760f5af578f2570c97ec9837b52d6e13cb",
+    ".trf-runtime/feedback-budget-adoption-2026-10-29/probe_btc_condition.py": "99ab884ad0283bd54847bbdca26d6601beaa8cb2986457c243996fce4bfdcad3"
+  }
+}

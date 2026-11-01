@@ -1,0 +1,540 @@
+{
+  "schema": "complete-feedback-research-observation/1",
+  "at_utc": "2026-10-30T11:05:21.782519+00:00",
+  "decision": "D093",
+  "approval_source": "SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET",
+  "status": "RETAINED_EXPRESSIBILITY_GAP",
+  "epoch_id": "647cb4fd972545e1a37c3f20226f5486",
+  "purpose": "One complete-feedback development epoch with full fixed downstream reservations and unchanged quality settings.",
+  "actual_path": {
+    "discovery_perspectives": 2,
+    "ideas": [
+      {
+        "worker": "complete-feedback-20261030-a",
+        "result": {
+          "accepted": true,
+          "artifact_id": "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+          "check": "research-record/v1",
+          "message": "Research record structure checked; claims and interpretations remain unverified",
+          "scientific_authority": false,
+          "state": "completed",
+          "record_ids": [
+            "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3"
+          ],
+          "transcript_ids": [
+            "60c2a9c9231995c3cda72a0da4e851c43a0548ffa52d18f90827958f49d151e0"
+          ],
+          "provider_mode": "live",
+          "genuine_discovery": null
+        },
+        "records": [
+          {
+            "id": "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+            "kind": "idea",
+            "content": {
+              "text": "Hypothesis: after a synchronized BTC and ETH selloff, a rebound in BTC accompanied by a reversal of BTC aggressive flow toward buying, while ETH remains seller-dominated and fails to rebound, predicts subsequent ETH outperformance relative to BTC. The proposed mechanism is staggered liquidity restoration: BTC's deeper market may absorb a common liquidation shock first, while temporarily constrained ETH liquidity providers delay repricing ETH upward. Once risk capacity returns, ETH may catch up. This differs from a generic relative-price reversal because it requires a common initial shock followed by divergent flow recovery. Persistent ETH-specific bad news is a competing explanation and could instead produce further ETH underperformance. Neither liquidation nor liquidity-provider constraints are identified by these bars.\n\nThis is a new development work unit, not independent confirmation or a threshold revision of any retained idea. The supplied ETH absorption and BTC small-transaction continuation cohorts report no qualifying cases in their respective executed original scopes; their conditional effects remain undefined and scientifically untested. All original claims, failures, language and mapping gaps, blocked attempts, exposure and qualifications remain retained, not repaired by this hypothesis. The additional paired ETH absorption conjecture also remains as originally stated. I neither change their thresholds or dates nor infer that their mechanisms failed. No new measurement or outcome inspection is requested.\n\nScope: Binance spot ETHUSDT and BTCUSDT, paired at each UTC 900-second decision timestamp t in [2023-01-01T00:00:00Z, 2023-04-01T00:00:00Z). There is one paired row per timestamp, not one row per instrument. All raw observation keys must fall within this interval; no December warmup, April observations, external data, or 2024/2025 inputs are permitted. All historical information is development exposure; training exposure is unknown.\n\nTiming: d=900 seconds. Raw bar keys s denote exclusive bar ends and are assumed available at s+d, not at s. This is an assumed publication delay, not proven historical point-in-time truth. Respect additional recorded unavailability. At anchor a the availability cutoff is min(a, 2023-04-01T00:00:00Z minus one second). Assess scope and condition at t. Define the shock bar e=t-2d and recovery bar b=t-d; both are available under the assumed delay at t, whereas raw bar features ending t are unavailable and never enter the condition.\n\nExact condition: for symbol X in {BTCUSDT, ETHUSDT}, define r_X(s)=close_X(s)/open_X(s)-1 and f_X(s)=taker_quote_volume_X(s)/quote_volume_X(s). The condition is true exactly when all of the following hold: r_BTC(e)<=-0.004; r_ETH(e)<=-0.004; f_BTC(e)<=0.40; f_ETH(e)<=0.40; r_BTC(b)>=0.002; f_BTC(b)>=0.55; r_ETH(b)<=0; and f_ETH(b)<=0.45. No other screening applies. Every required price must be finite and positive; each required quote volume must be finite and strictly positive, with finite taker quote volume between zero and its quote volume inclusive. These checks apply to both symbols and both bars.\n\nNumeric rationale: two consecutive 15-minute bars separate the common shock from its immediate recovery without fitting a regime model. A decline of at least 0.4% in each symbol seeks a noticeable shared dislocation rather than opposite idiosyncratic moves. At most 40% taker-buy participation requires a substantial seller-initiated majority during that shock. A BTC recovery of at least 0.2% represents economically noticeable partial repair on roughly half the minimum shock scale, without asserting an exact retracement. At least 55% BTC buy participation requires flow to cross beyond balance. ETH's nonpositive recovery-bar return represents literal failure to rebound, while at most 45% buy participation requires continued seller dominance rather than merely a small price lag. These are mechanism-motivated exploratory choices, not optimized thresholds or adjustments intended to obtain cases. Interpretation of taker quote volume as buyer-initiated turnover remains subject to feature certification.\n\nOutcome: choose positive integer h=5 and evaluate at future anchor a=t+5d. Define Y(t)=10000*[ln(close_ETH(t+4d)/close_ETH(t))-ln(close_BTC(t+4d)/close_BTC(t))]. This is the one-hour ETH-minus-BTC log-return spread from t through t+3600 seconds, in log basis points. The fifth interval allows the terminal closes their assumed publication delay. All four outcome closes must be finite, positive, within the permitted key interval, and available by the anchor cutoff. Starting closes at t are future outcome inputs relative to the decision information set, not condition inputs or assumed executable entry prices. Raw prices have symbol-specific units USDT/ETH and USDT/BTC; only within-symbol ratios and their log-return difference are dimensionless. No subtraction of raw cross-symbol prices is permitted.\n\nComparison and direction: predict a strictly positive equal-row mean Y among condition-true paired timestamps minus the equal-row mean Y across the entire paired decision scope with observed Y. The whole-scope mean intentionally includes condition-false and condition-unknown timestamps; it is not a false-only or matched benchmark. This question is deliberately a whole-scope descriptive contrast, not a causal estimate, beta-neutral return or policy effect. A positive contrast does not require the conditional mean itself to be positive. No volatility scaling or notional weighting applies. Keep overlapping one-hour outcomes with equal timestamp weight; observations are not independent samples.\n\nMissingness and boundaries: all four condition bars must be present and valid; any absent, null, nonfinite, invalid, out-of-range or unavailable required input makes the complete condition unknown, even if another predicate would be false. Do not interpolate, forward-fill, substitute bars or infer false from a partial conjunction. Early-quarter missing lookback remains unknown; do not fetch earlier history. Unknown-condition timestamps remain in scope and enter its outcome mean whenever Y is observed, but never enter the conditioned mean. If any outcome input fails its requirements, Y is missing and excluded from both mean denominators while the timestamp remains in scope accounting. Retain explicit counts for true, false and unknown conditions, observed and missing outcomes within each status, missing lookback, absent rows, null or invalid values, unavailable or late values, and end-boundary censoring; causes may overlap. Do not shorten the horizon or obtain April prices. If either mean population is empty, its mean and the contrast are undefined. This is an observed-outcome estimand, with missing-outcome selection unresolved.\n\nEconomic bridge and unsupported requirements: staggered recovery could motivate a later study of whether an ETH purchaser should accelerate acquisition after BTC liquidity recovers, or whether relative exposure is useful. But the required evidence on liquidation events, order-book depth, dealer inventory, cancellations, participant identity, cross-venue flows and ETH-specific news is unavailable. Aggregate flow divergence does not prove delayed arbitrage or liquidity restoration. Those identification requirements remain gaps. Executable post-delay quotes, order size, spread, fees, slippage, fill probability, latency, market impact, inventory limits and a decision/holding policy are unspecified; a long-ETH/short-BTC implementation would additionally require shorting access and borrowing costs absent from spot bars. This is not a policy trial and makes no profit, empirical-success or causal claim.\n\nSource qualification: supplied source projections and closed reports are qualified development material, not scientific certification. Historical publication truth, feature semantics, rights, provider checksums, transformation verification and inherited exposure requirements remain unresolved as indicated by the supplied gates. Deferred provenance, cohort-reference and exposure lists were not inspected and remain unread evidence, not empty or verified evidence. No claim of complete independent provenance review is made."
+            }
+          }
+        ],
+        "started_at_utc": "2026-10-30T10:59:42.697121+00:00",
+        "ended_at_utc": "2026-10-30T11:01:04.114155+00:00"
+      },
+      {
+        "worker": "complete-feedback-20261030-b",
+        "result": {
+          "accepted": true,
+          "artifact_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+          "check": "research-record/v1",
+          "message": "Research record structure checked; claims and interpretations remain unverified",
+          "scientific_authority": false,
+          "state": "completed",
+          "record_ids": [
+            "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a"
+          ],
+          "transcript_ids": [
+            "7ef28a4e2b237346473da829f3cdc0ee77cd2af579b4ec6a2d875f676355dfde"
+          ],
+          "provider_mode": "live",
+          "genuine_discovery": null
+        },
+        "records": [
+          {
+            "id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+            "kind": "idea",
+            "content": {
+              "text": "Original hypothesis: an ETH upward breakout accompanied by unusually low turnover, when BTC does not break upward, can reflect withdrawal of sell liquidity rather than weak buyer conviction. Contrary to the intuition that a low-volume breakout should fail, I hypothesize higher subsequent one-hour ETH-minus-BTC returns relative to the whole eligible paired scope. Sellers may temporarily withdraw offers in anticipation of repricing; modest aggressive demand can then move ETH above its recent range, and restoration of sell liquidity may lag. This is a conjecture about liquidity withdrawal, not evidence that withdrawal occurred. The principal countermechanism is a thin-market price excursion that reverses as liquidity returns; ETH-specific news or changing market beta could also explain relative movement.\n\nThis is a new development work unit, not threshold tuning or rescue of the previous ETH absorption or BTC transaction-fragmentation ideas. All their original claims, failures, attempts and exposure remain retained. The supplied closed ETH and BTC reports each have zero qualifying cases in their respective executed original scopes, with undefined conditional effects; those effects remain scientifically untested, not falsified. Neither the reported scope means nor structural workflow checks support this new hypothesis. The additional retained ETH-relative absorption claim likewise remains unsupported. Deferred provenance and exposure lists have not been inspected here; they remain unread evidence, not empty lists. All supplied historical feedback is development exposure; training exposure is unknown. No new outcome measurement is requested and no empirical success is claimed.\n\nScope: Binance spot ETHUSDT and BTCUSDT, with ETH focal and BTC comparator. Use one paired, equally weighted row at every UTC 900-second decision timestamp t in [2023-01-01T00:00:00Z, 2023-04-01T00:00:00Z). The symbols are not separately weighted rows. All raw observation keys must lie within that interval. No December warmup, April data, external inputs or 2024/2025 inputs are allowed.\n\nTiming: set d=900 seconds and b=t-d. Observation keys are exclusive complete-bar ends. Every required raw value ending s must satisfy assumed availability s+d <= evaluation cutoff, as well as any separately recorded availability restriction. At any anchor a the cutoff is min(a, 2023-04-01T00:00:00Z minus one second). Publication exactly 900 seconds after bar end is assumed, not proven historical point-in-time truth. Assess scope and condition at t; do not use raw features ending t in the condition.\n\nFormal condition: for symbol X, define R_X=max(H_X(b-k*d), k=1,...,16), using the sixteen exact bars immediately preceding the signal bar. Define MQ_ETH=(sum of Q_ETH(b-k*d), k=1,...,16)/16. Here H is high, Q quote volume, O open and C close. The condition is true exactly when all four inequalities hold: C_ETH(b)/R_ETH-1 >= 0.001; C_ETH(b)/O_ETH(b)-1 >= 0.001; Q_ETH(b) <= 0.75*MQ_ETH; and C_BTC(b) <= R_BTC. No taker-flow, trade-count, volatility or calendar filters apply. Require every referenced price finite and positive, every referenced volume finite and nonnegative, signal Q_ETH(b)>0 and MQ_ETH>0. Require all sixteen baseline observations for each required feature without skipping missing grid slots. These are the only condition validity requirements.\n\nNumeric rationale: sixteen bars represent a local four-hour reference range and turnover environment. A close at least ten basis points above the prior ETH high separates the proposed breakout from a marginal tick crossing. A signal-bar rise of at least ten basis points requires upward progress within that bar rather than only an opening discontinuity. Turnover no greater than 75% of its preceding four-hour arithmetic mean explicitly selects a material participation shortfall. BTC closing no higher than its own preceding range maximum defines lack of concurrent BTC breakout without comparing raw symbol prices. These choices are mechanism-motivated exploratory commitments, not fitted to qualifying counts or returns. They deliberately define a different question from aggressive-buy absorption and transaction fragmentation; none of the old thresholds or dates is changed.\n\nOutcome: choose positive integer h=5 and evaluate at future anchor a=t+5*d. Define Y(t)=10000*[ln(C_ETH(t+4*d)/C_ETH(t))-ln(C_BTC(t+4*d)/C_BTC(t))]. This is the one-hour ETH-minus-BTC log-return spread from decision timestamp t to t+3600 seconds, in log basis points. The fifth interval allows the terminal closes their assumed publication delay. All four outcome prices must be finite, positive, keyed inside the permitted quarter and available by the anchor cutoff. Closes ending t are outcome inputs unavailable to the condition at t, not assumed executable entry prices. Raw prices have symbol-specific units USDT/ETH or USDT/BTC; each within-symbol ratio is dimensionless. No raw cross-symbol price subtraction is permitted. The factor 10000 expresses dimensionless log returns in basis points; one hour is the proposed short liquidity-repricing horizon, not an optimized holding period.\n\nComparison: the directional hypothesis is a strictly positive equal-row conditional mean Y minus the equal-row whole-scope mean Y. The conditional population contains condition-true rows with observed Y. The comparison population is every paired decision-grid row with observed Y, including condition-false and condition-unknown rows. This intentionally adopts a whole-scope descriptive benchmark, not a false-only control, matched population, causal effect or beta-neutral estimand. A positive contrast need not imply a positive conditional mean. All overlapping hourly outcomes remain equally weighted, without thinning, and are not independent samples.\n\nMissingness and boundaries: any required condition input that is absent, null, nonfinite, invalid under the specified checks, outside Q1 or unavailable by t makes the complete condition unknown, even when another available clause is false. Never forward-fill, shorten a baseline or substitute an endpoint. Unknown-condition rows remain in scope and contribute to the whole-scope mean when Y is observed, but never to the conditional mean. Any missing, invalid, out-of-quarter or unavailable outcome price makes Y missing; retain the row in accounting but exclude it from both mean denominators. End-of-quarter censorship must remain explicit even if an anchor lies beyond the quarter; no April inputs may be fetched. Missing early warmup is likewise explicit. Retain total grid rows, true/false/unknown counts, observed and missing outcomes by condition status, and reason flags for missing warmup, boundary censoring, absent rows, null/invalid inputs and late/unavailable values. Reason flags may overlap. An empty conditional or comparison population leaves the contrast undefined. This is an observed-outcome estimand with unresolved missingness selection.\n\nEconomic bridge and unsupported requirements: price progress on low volume can arise because supply retreats, not because demand is economically unimportant. Relative continuation could motivate a later investigation of ETH purchase timing or inventory allocation, but it does not establish an implementable strategy. Direct identification of withdrawn offers requires unavailable order-book depth, quote revisions, cancellations, participant behavior and cross-venue evidence. OHLCV cannot distinguish liquidity withdrawal from sparse trading, matching artifacts or information shocks. Feature-semantic certification, historical availability, source checksum, transformation, rights and inherited exposure verification remain unresolved rather than implied by structural acceptance. A trading interpretation additionally needs an independently specified policy, attainable post-delay quotes, order size, fees, spread, slippage, latency, fill probability, impact and inventory constraints. A short-BTC implementation requires borrowing or another shorting mechanism and its costs, absent here. This is not a policy trial, profit claim, causal finding or independent confirmation."
+            }
+          }
+        ],
+        "started_at_utc": "2026-10-30T11:01:04.244390+00:00",
+        "ended_at_utc": "2026-10-30T11:02:29.728135+00:00"
+      }
+    ],
+    "terminal": {
+      "stage": "formalization",
+      "status": "RETAINED_EXPRESSIBILITY_GAP",
+      "formalization_id": "20aeb22cef22f57f30e639c10736f9a28b20c7bb16d03e2c5bc8ff95dbd262ff",
+      "assessment": {
+        "gap": {
+          "code": "LANGUAGE_GAP",
+          "reason": "Required fields are absent or unexpected",
+          "reopen_condition": "Resolve the named meaning/capability/input gap under approved semantics"
+        },
+        "mapping_authority": "unverified_formalizer_assertion",
+        "required_before_freeze": [
+          "independent_semantic_review",
+          "feature_certification",
+          "data_and_exposure_review",
+          "calibrated_evaluation_profile",
+          "complete_evaluation_plan",
+          "atomic_allocation_and_freeze"
+        ],
+        "stage": "FORMALIZING",
+        "status": "RETAINED_GAP"
+      },
+      "semantic_report": {
+        "differences": [
+          "The supplied original idea 94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3 requires a paired-timestamp evaluation population. Exact source clause: \"Scope: Binance spot ETHUSDT and BTCUSDT, paired at each UTC 900-second decision timestamp t in [2023-01-01T00:00:00Z, 2023-04-01T00:00:00Z). There is one paired row per timestamp, not one row per instrument.\" The supplied execution profile evaluates coordinates within an instrument and supplies no paired-row constructor or cross-instrument traversal. Listing both instruments in test_universe would not establish the required single paired observation per timestamp. Selecting either instrument alone would omit required paired inputs. This scope requirement remains an expression gap.",
+          "The complete condition requires simultaneous reads from both instruments at both event bars. Exact source clauses: \"Exact condition: for symbol X in {BTCUSDT, ETHUSDT}, define r_X(s)=close_X(s)/open_X(s)-1 and f_X(s)=taker_quote_volume_X(s)/quote_volume_X(s). The condition is true exactly when all of the following hold: r_BTC(e)<=-0.004; r_ETH(e)<=-0.004; f_BTC(e)<=0.40; f_ETH(e)<=0.40; r_BTC(b)>=0.002; f_BTC(b)>=0.55; r_ETH(b)<=0; and f_ETH(b)<=0.45.\" and \"These checks apply to both symbols and both bars.\" No supported node traverses from one instrument's evaluation coordinate to the other instrument's required observations. A complete-validity guard can preserve unknown propagation for accessible inputs, but cannot supply those cross-instrument reads. The required joint predicate and its joint validity requirements therefore remain unmapped.",
+          "The outcome requires a cross-instrument logarithmic spread at each paired timestamp. Exact source clauses: \"Outcome: choose positive integer h=5 and evaluate at future anchor a=t+5d. Define Y(t)=10000*[ln(close_ETH(t+4d)/close_ETH(t))-ln(close_BTC(t+4d)/close_BTC(t))].\" and \"All four outcome closes must be finite, positive, within the permitted key interval, and available by the anchor cutoff.\" The supported same-instrument future-anchor evaluation cannot obtain both instruments' starting and terminal closes for one paired outcome. The fixed-delay availability evidence establishes timing for present entries, not cross-instrument expression support. The activation extension is limited to single-instrument development hypotheses and does not authorize this paired composition. Replacing the spread with either instrument's return, or replacing the supplied idea with the earlier BTC continuation, would change the original. This is a retained expression and activation-scope gap, not an executable candidate or a claim of mathematical impossibility."
+        ],
+        "segments": [],
+        "status": "ambiguous"
+      },
+      "candidate": null,
+      "reason": "No complete structure-checked candidate; independent review and calculation are not dispatched."
+    },
+    "formalizer_count": {
+      "stage": "formalization_preflight",
+      "counted_input_tokens": 26194,
+      "input_bound": 26322,
+      "wire_sha256": "cd3ef252aa092f73ad0cb1f726b74cae5e22a46ec6a9d430ebda708a3520210b",
+      "transport_request_id": "req_1d2937bbb4084c49ad323deed20e598b",
+      "observed_at_utc": "2026-10-30T11:02:36.528228+00:00",
+      "model_identity": {
+        "requested_model": "gpt-6.1-sol",
+        "reported_model": null,
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_version": "6.1",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN"
+      },
+      "qualification": "Full input count; not inference usage or invoice.",
+      "limit": 62000
+    },
+    "review_dispatched": false,
+    "market_calculation_dispatched": false
+  },
+  "resources": {
+    "wall_seconds": 239.8449940999999,
+    "calls": 3,
+    "reported_tokens": 117455,
+    "conservative_cost_nano": 329570000,
+    "aggregate_tokens": 834020,
+    "aggregate_conservative_cost_nano": 2937140000,
+    "remaining_original_budget_nano": 2062860000,
+    "unknown_usage": 0,
+    "fixed_total_reserved_tokens": 418726,
+    "fixed_total_reserved_nano": 1391815000,
+    "consumed_slots": [
+      {
+        "allocated_cost": 168395000,
+        "allocated_tokens": 49358,
+        "call_id": "f155f31a92724e8fa8f8880fd51c561a",
+        "cost_bound": 168395000,
+        "input_bound": 43358,
+        "job_id": "3f51d47bc2da4cf8bad0338d6d87601f",
+        "output_bound": 6000,
+        "stage": "discovery:0"
+      },
+      {
+        "allocated_cost": 168420000,
+        "allocated_tokens": 49368,
+        "call_id": "db405bf319434a2fa2d7c217e50c11ef",
+        "cost_bound": 168420000,
+        "input_bound": 43368,
+        "job_id": "f4a1ca18f1a1442ea0a0d014a6ee4aa0",
+        "output_bound": 6000,
+        "stage": "discovery:1"
+      },
+      {
+        "allocated_cost": 335000000,
+        "allocated_tokens": 80000,
+        "call_id": "8b68fde1650e4a70b3490faa66d830bf",
+        "cost_bound": 335000000,
+        "input_bound": 62000,
+        "job_id": "aa433e435c23488781bada30d99cc2c2",
+        "output_bound": 18000,
+        "stage": "formalization/v1"
+      }
+    ],
+    "grant_revoked": true,
+    "count_requests_not_inference": "Two initial counts and one actual future-packet count, plus adapter counts retained separately.",
+    "calls_with_identity_and_utc": [
+      {
+        "dispatch_id": "1769966d591f448da727e84778d59218:0",
+        "request_sha256": "2f40170cb28903af120fe5a6479295a635575898da89d8cdbd571fe2fc2a3103",
+        "reserved_nano": 168395000,
+        "charged_nano": 125465000,
+        "state": "settled",
+        "created_at": 1793358025,
+        "admitted_at_utc": "2026-10-30T11:00:25Z",
+        "settled_at_utc": "2026-10-30T11:01:03Z",
+        "metadata": {
+          "counted_input_tokens": 43230,
+          "epoch_id": "647cb4fd972545e1a37c3f20226f5486",
+          "model": "gpt-6.1-sol",
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": null,
+            "requested_model": "gpt-6.1-sol"
+          },
+          "ordinal": 0,
+          "prompt_version": "ordinary-complete-feedback-admission/1",
+          "run_id": "1769966d591f448da727e84778d59218",
+          "worker": "complete-feedback-20261030-a"
+        },
+        "receipt": {
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": "gpt-6.1-sol",
+            "requested_model": "gpt-6.1-sol"
+          },
+          "provider_request_id": "resp_05ea50f0c1dc2a1e016ae478c9872c87d2a978af18cd891440",
+          "response_status": "completed",
+          "token_details": {
+            "cached_input_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "transport_request_id": "req_b0ab39634c6143088431447383f883b0",
+          "usage": {
+            "cost_units": 125465000,
+            "input_tokens": 43230,
+            "output_tokens": 1739
+          }
+        },
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        }
+      },
+      {
+        "dispatch_id": "ce28699c6896482389ee053111fb002a:0",
+        "request_sha256": "ff8b731e220845344f12d1f8b41d862e76c321d876055f53f36552b28cc4d355",
+        "reserved_nano": 168420000,
+        "charged_nano": 125110000,
+        "state": "settled",
+        "created_at": 1793358111,
+        "admitted_at_utc": "2026-10-30T11:01:51Z",
+        "settled_at_utc": "2026-10-30T11:02:29Z",
+        "metadata": {
+          "counted_input_tokens": 43240,
+          "epoch_id": "647cb4fd972545e1a37c3f20226f5486",
+          "model": "gpt-6.1-sol",
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": null,
+            "requested_model": "gpt-6.1-sol"
+          },
+          "ordinal": 0,
+          "prompt_version": "ordinary-complete-feedback-admission/1",
+          "run_id": "ce28699c6896482389ee053111fb002a",
+          "worker": "complete-feedback-20261030-b"
+        },
+        "receipt": {
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": "gpt-6.1-sol",
+            "requested_model": "gpt-6.1-sol"
+          },
+          "provider_request_id": "resp_0844fd59518af0c7016ae4791f8dec87d2bb8ef4f29e492aea",
+          "response_status": "completed",
+          "token_details": {
+            "cached_input_tokens": 0,
+            "reasoning_output_tokens": 0
+          },
+          "transport_request_id": "req_dffce1fcb8ba49e7b5a56c76feefbdcd",
+          "usage": {
+            "cost_units": 125110000,
+            "input_tokens": 43240,
+            "output_tokens": 1701
+          }
+        },
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        }
+      },
+      {
+        "dispatch_id": "controller-8b68fde1650e4a70b3490faa66d830bf:0",
+        "request_sha256": "cd3ef252aa092f73ad0cb1f726b74cae5e22a46ec6a9d430ebda708a3520210b",
+        "reserved_nano": 335000000,
+        "charged_nano": 78995000,
+        "state": "settled",
+        "created_at": 1793358184,
+        "admitted_at_utc": "2026-10-30T11:03:04Z",
+        "settled_at_utc": "2026-10-30T11:03:25Z",
+        "metadata": {
+          "counted_input_tokens": 26194,
+          "epoch_id": "647cb4fd972545e1a37c3f20226f5486",
+          "model": "gpt-6.1-sol",
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": null,
+            "requested_model": "gpt-6.1-sol"
+          },
+          "ordinal": 0,
+          "prompt_version": "faithful-complete-feedback-formalization/1",
+          "run_id": "controller-8b68fde1650e4a70b3490faa66d830bf",
+          "worker": "complete-feedback-20261030-f"
+        },
+        "receipt": {
+          "model_identity": {
+            "catalog_name": "GPT-6.1 Sol",
+            "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+            "catalog_version": "6.1",
+            "immutable_snapshot_id": null,
+            "immutable_snapshot_status": "UNKNOWN",
+            "reported_model": "gpt-6.1-sol",
+            "requested_model": "gpt-6.1-sol"
+          },
+          "provider_request_id": "resp_0c3dbda8766a65f7016ae47968be5487d2ad43216fd4033cf1",
+          "response_status": "completed",
+          "token_details": {
+            "cached_input_tokens": 0,
+            "reasoning_output_tokens": 715
+          },
+          "transport_request_id": "req_fedf49260b51456882d0b913fbdd86d1",
+          "usage": {
+            "cost_units": 78995000,
+            "input_tokens": 26194,
+            "output_tokens": 1351
+          }
+        },
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        }
+      }
+    ]
+  },
+  "qualification": "Operational closure of the one authorized attempt. The formalizer intentionally returned a null candidate with specific unsupported paired-case/cross-instrument requirements; the host generic LANGUAGE_GAP message alone is not its explanation. Structural acceptance is not a meaning or empirical verdict. No scientific classification, protected evaluation, trading policy, profit or capital authority.",
+  "independent_scope_review": {
+    "schema": "independent-original-idea-capability-review/1",
+    "observed_at_utc": "2026-10-30T11:03:35.661379+00:00",
+    "purpose": "Bounded read-only representability and activation-scope review of the actual selected idea, before any accepted calculation.",
+    "idea_id": "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+    "idea_creator": "complete-feedback-20261030-a",
+    "source_file": ".trf-runtime\\complete-feedback-2026-10-30\\complete-feedback-20261030-a.json",
+    "source_file_sha256": "312e7645fb3ba0b6bd048a9a81c9a2955208bfc6d4b6b2495476bc6e8761427c",
+    "exact_idea_text_sha256": "4e9e4ff51421b1dfe3379fce1124d3feb730a41d5885e5094d62182959c0a823",
+    "source_hashes": {
+      "trading_researcher/expressions.py": "512585fb503257336b28fe5df3bb07224359112f7a861c1898f9952a1ee25984",
+      "trading_researcher/bounded_math.py": "3f93c712532e055b2563b6d4ab204b165001d4f8177a1dc3717ae10835f8d54a",
+      "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+      "trading_researcher/binding.py": "058c3144813894986607101662e73ae9f09a88a90854eae4f49cb8a658e918cb",
+      "trading_researcher/REQUIRED_INPUTS.md": "2a851e4e24804c8623f4e486e3ed6e8c502753bf7b51da035a454e0b3c2e2f9c",
+      "docs/architecture/20_BOUNDED_MATH_REUSE.md": "62cdb38908176ef91fe3368a8c41cdbd10a3f808499aa316e1ed863cf161a569"
+    },
+    "findings": [
+      {
+        "id": "cross-instrument-lookup",
+        "status": "UNSUPPORTED_CURRENT_LANGUAGE",
+        "original_clause": "for symbol X in {BTCUSDT, ETHUSDT}, define r_X(s)=close_X(s)/open_X(s)-1 and f_X(s)=taker_quote_volume_X(s)/quote_volume_X(s).",
+        "evidence": [
+          "expressions.py:150 feature permits only ref, no symbol selector",
+          "expressions.py:231 lookup key is (when,instrument)",
+          "expressions.py:268 and284 preserve the same instrument in lag and child evaluation",
+          "bounded_math.py:230-257 preserves instrument for new bounded primitives"
+        ],
+        "conclusion": "The required synchronized BTC/ETH predicates and both-symbol outcome cannot be evaluated by the existing scalar same-instrument AST. Selecting both universe instruments does not create cross-instrument access."
+      },
+      {
+        "id": "paired-decision-population",
+        "status": "UNSUPPORTED_CURRENT_CASE_DOMAIN",
+        "original_clause": "There is one paired row per timestamp, not one row per instrument.",
+        "evidence": [
+          "outcomes.py:126 counts grid positions multiplied by instrument count",
+          "outcomes.py:148-149 iterates each timestamp then each instrument",
+          "binding.py:120 validates that same multiplicative expected case count"
+        ],
+        "exact_grid_observation": {
+          "original_paired_timestamps": 8640,
+          "existing_two_instrument_scalar_cases": 17280,
+          "basis": "UTC interval duration and declared grid only; no market rows or outcomes accessed"
+        },
+        "conclusion": "The existing two-instrument universe would create 17,280 scalar cases rather than the stated 8,640 paired decisions. Collapsing, duplicating, or relabeling these would change the original population and weighting."
+      },
+      {
+        "id": "activation-scope",
+        "status": "OUTSIDE_D091_SCOPE",
+        "evidence": [
+          "docs/architecture/20_BOUNDED_MATH_REUSE.md:15 limits reuse to single-instrument development hypotheses",
+          "same document:17 explicitly excludes cross-instrument traversal"
+        ],
+        "conclusion": "D091 and the D093 operational allowance do not authorize a paired-instrument language/case-domain extension."
+      }
+    ],
+    "supported_components_only": [
+      "Exact rational scalar comparisons, division, lagged same-instrument inputs and three-valued Boolean composition exist.",
+      "Outcome-only bounded natural logarithms and arithmetic exist within their approved single-instrument scope.",
+      "Required-input missingness and neutral diagnostic reporting exist; they do not add cross-instrument lookup or a paired case domain."
+    ],
+    "timing_qualification": "The existing outcome cutoff is min(as_of,end-1), not generically min(anchor,end-1). Exact dependency-specific fixed-delay evidence could establish coincidence for the stated endpoint inputs, but this review did not inspect or newly certify market availability and does not override the two hard capability gaps.",
+    "warranted_conclusion": "Retain this unchanged actual idea as an unsupported representational/activation requirement if the actual formalizer confirms a gap. This is neither empirical rejection nor proof that the hypothesis is scientifically false.",
+    "remaining_uncertainty": [
+      "No actual formalization file was available at this observation; no candidate was accepted, repaired, or constructed by this review.",
+      "No node/depth bound for an unsupported hypothetical paired language was estimated.",
+      "Model meaning review, feature qualification, empirical performance and economic usefulness are not established by this source inspection."
+    ],
+    "next_action": "Inspect only the actual completed formalizer output. Preserve a specific unsupported gap; do not substitute the other perspective, invent paired feature aliases, mutate the candidate, compile, or execute. Any later paired-language/case-domain proposal must remain separate and receive the applicable explicit semantic approval.",
+    "provider_calls": 0,
+    "market_rows_read": false,
+    "production_registry_mutations": false,
+    "scientific_readiness": false
+  },
+  "independent_formalization_gap_review": {
+    "schema": "independent-actual-formalization-gap-review/1",
+    "observed_at_utc": "2026-10-30T11:04:29.183566+00:00",
+    "purpose": "Check the actual terminal formalizer output against the unchanged original and independently inspected supported language.",
+    "idea_id": "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+    "formalization_id": "20aeb22cef22f57f30e639c10736f9a28b20c7bb16d03e2c5bc8ff95dbd262ff",
+    "formalization_file_sha256": "6c505262223ea34ef4eb5ed80d2fff98951225652301083923985d874b79953a",
+    "prior_capability_review": {
+      "path": "independent-primary-idea-review.json",
+      "sha256": "25e02c834cbc1001e7df11862fb19f14b03c94d692d7e22f19b463de0d998722",
+      "temporal_note": "The prior review was composed from source before formalization was inspected; the file became available by the end of that write. This supplemental review now evaluates it explicitly."
+    },
+    "checks": {
+      "accepted_retained_record": true,
+      "candidate_is_null": true,
+      "original_idea_body_exactly_preserved": true,
+      "all_quoted_original_clauses_exact_substrings": true,
+      "checked_quoted_clauses": 5,
+      "specific_unmet_requirements": 3,
+      "actual_independent_model_review": "UNVERIFIED"
+    },
+    "source_supported_findings": [
+      "The paired-timestamp population is not the existing time-by-instrument case grid.",
+      "The simultaneous BTC/ETH condition and validity dependencies have no same-instrument AST mapping.",
+      "The paired logarithmic spread needs unsupported cross-instrument reads and lies outside D091 single-instrument activation."
+    ],
+    "assessment_qualification": "The generic host assessment reports LANGUAGE_GAP / Required fields are absent or unexpected for the null candidate. The retained semantic_report supplies the specific source-qualified capability explanation. This must not be mislabeled as an empirically failed hypothesis or a repaired executable formalization.",
+    "conclusion": "No substantive discrepancy found between the actual explicit gap explanation, original clauses, and current language/activation limits. Retain it as a terminal unsupported idea. There is no executable candidate to review, compile, or evaluate.",
+    "next_action": "Close the existing run with its complete records and accounting. Preserve both perspectives. Do not substitute another idea or spend a reviewer call on this null candidate. A later paired-language and paired-case proposal is separate from this bounded resource allowance.",
+    "limits": [
+      "This offline review supplements, but is not, an owned independent model meaning-review assessment.",
+      "No empirical result, market row, invoice, scientific classification, model-quality guarantee, or future implementation feasibility was established."
+    ],
+    "provider_calls": 0,
+    "market_rows_read": false,
+    "runtime_or_registry_mutations": false,
+    "scientific_readiness": false
+  },
+  "registry_integrity": {
+    "blobs": {
+      "committed": 958,
+      "orphan_policy": "uncommitted files confer no authority; no automatic deletion",
+      "quarantined": [],
+      "status": "PASS"
+    },
+    "events": 1854,
+    "foreign_keys": true,
+    "research_memory": {
+      "records": 59,
+      "scientific_authority": false,
+      "status": "PASS",
+      "version": "research-memory/1"
+    },
+    "schema_version": 1,
+    "scope": "local coordination and research memory integrity only",
+    "status": "PASS",
+    "synchronous": "FULL"
+  },
+  "legacy_source_hashes": {
+    "research_calls.py": "6284dca04ccbdb47fd14df418aee5d2a78bf634b5174b41fbc94f90281ccf512",
+    "coordination.py": "ee840ca99dfae25855d5aa63f375e2596bef9004c4cd8827759a8f0be67f17bb",
+    "epoch_budget.py": "514985059255014af7bf80e18204e2c32d67210a1e5534fceb52769b96f34f2a",
+    "review_continuation.py": "fb9cb56ca3aa22c787d7f1b5e28b68984b7f6b2d11beb619e2709c253edfb7ff",
+    "auxiliary.py": "975f4eff94f10bd89b1daf879cc4b62b2d4cb363e1d1d5a2c08517619ecfd13a",
+    "meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+    "formalization.py": "857d53bc9c5b84a89329b2857e525a011ad01e841171c5dc7adc252309cc7696"
+  },
+  "initial_input_tokens": [
+    43230,
+    43240
+  ],
+  "complete_source_count": 8,
+  "legacy_feedback_currency": "Both exact original released trios pass current evidence checks inside validate.",
+  "protected_outcomes_accessed": false,
+  "scientific_readiness": false,
+  "next_action": "Retain the original paired idea and the concrete expression/case-unit gaps. Prepare only the smallest reviewable integration proposal if warranted; do not alter the idea, recycle unused slots or dispatch a successor epoch.",
+  "private_evidence_directory": ".trf-runtime/complete-feedback-2026-10-30",
+  "artifact_hashes": {
+    "activation.json": "96962655a4efacf14a43b69ce2c4e43d5c63caca7335f26346face3052e65f03",
+    "approval.json": "cdb01c71aaeb40492f2a53e091a42ac2b316cf67198687d6a5b310e64e04ce37",
+    "complete-feedback-20261030-a.json": "312e7645fb3ba0b6bd048a9a81c9a2955208bfc6d4b6b2495476bc6e8761427c",
+    "complete-feedback-20261030-b.json": "cb30d60997d88544f05a31fec9b96870da2455403919e517f1d3e56c570c786d",
+    "driver-exit.json": "203e8070d5864904bd78cc6e5c34daf95c08f028ad581c4bc0b187f9d4b00ccd",
+    "epoch.json": "c429753749cfc2995ade3563fc6552d9381b45dbc8f7164fb6aa6a2246936bbc",
+    "formalization-gap.json": "5fa5dc2566aa6160ae6ca486315c01605e6e6034b7f8cf47ce7542bb69f05aee",
+    "formalization-preflight.json": "ac5a731d8ea81c71e8b8ec6ca0c39cfc44232789340b8a616bbfefa6be9ea44c",
+    "formalization.json": "6c505262223ea34ef4eb5ed80d2fff98951225652301083923985d874b79953a",
+    "grant-closure.json": "f841f59bf9a960ced487d860520a288a2a92ae733c6ded797b0781eb20b58651",
+    "independent-formalization-gap-review.json": "b82f50d192d2cb0328c8aedb418512f9d453b48e748357ab9824d879b95671d8",
+    "independent-primary-idea-review.json": "25e02c834cbc1001e7df11862fb19f14b03c94d692d7e22f19b463de0d998722",
+    "input-count-1d6cb922c5ff4f47b96eeb6fe5263b54.json": "133658a389e4273b90f12428eaac44231c83a7046d80ebcd3f6ee1b95631c3ae",
+    "input-count-32d2d2cd549b4f749e337107a1383a9f.json": "2bbd65c6b065f28f691fcb463310a8ecd652ce05f83281e524a041a9dd4cfcfb",
+    "input-count-d63eb0a5e8f243c7b10e78d12a0007f5.json": "66aa3277e55d16a669a15ccd17a568e99b8297ae6ee19c5cb14c8efb07a1d330",
+    "prepared-v2.json": "f570c66b0518c498b7328e50e546707544f85d2cbad3ae8f6073e9d387a818c3",
+    "run-result.json": "66ebb55159463f270934ce46b72f59fdfaba9132650a9be509ca2dbd69b3505d",
+    "run-start.json": "428b8947073f58117fb4af1164d3d9e358cde8f780953588505f5a55c8d6e334",
+    "software-check-105721.json": "319b3e2e8919e8a8e476616bfae6dc134d0e54173ec851354672d3fd72251fe7"
+  },
+  "unverified": [
+    "Faithful executable representation of this paired idea",
+    "Independent model meaning review and deterministic market calculation for this idea",
+    "Scientific calibration and classification",
+    "Mixed-provider live research",
+    "Economic usefulness and provider invoice"
+  ]
+}

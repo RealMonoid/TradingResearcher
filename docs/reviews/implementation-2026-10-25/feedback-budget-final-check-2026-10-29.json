@@ -1,0 +1,94 @@
+{
+  "schema": "feedback-budget-final-state-check/1",
+  "observed_at_utc": "2026-10-29T12:28:20.923066+00:00",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "retail",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/verify_retail_contract.py"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "local_links": 845
+    },
+    {
+      "name": "implementation",
+      "command": [
+        "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+        "-B",
+        "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "local_links": 848
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "local_links": null
+    }
+  ],
+  "changed_files": [
+    "trading_researcher/epoch_budget.py",
+    "trading_researcher/research_calls.py",
+    "trading_researcher/coordination.py",
+    "trading_researcher/controller_providers.py",
+    "trading_researcher/openai_provider.py",
+    "tests/test_epoch_budget_overlay_adversarial.py",
+    "tests/test_counted_openai_reservations.py",
+    "docs/architecture/19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md",
+    "docs/architecture/02_DECISION_REGISTER.md",
+    "docs/architecture/ARCHITECTURE_REGISTER.json",
+    "docs/architecture/04_DEFINITIONS.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/architecture/CURRENT_STATE.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "docs/reviews/implementation-2026-10-25/progress.json",
+    "docs/reviews/implementation-2026-10-25/feedback-budget-verification-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/feedback-research-2026-10-29.json",
+    "docs/reviews/implementation-2026-10-25/feedback-research-usage-2026-10-29.json"
+  ],
+  "sha256": {
+    "trading_researcher/epoch_budget.py": "514985059255014af7bf80e18204e2c32d67210a1e5534fceb52769b96f34f2a",
+    "trading_researcher/research_calls.py": "49786557a7f733783de032ea3274a913fdd956d66a3a81b5c8e9fae73c11b4d8",
+    "trading_researcher/coordination.py": "99d4316ddb9d114da43731f4cc0935106a79ce12c41b8feba402a02c47e0e70b",
+    "trading_researcher/controller_providers.py": "d38a522cbd1f3f0e343e68e0959b39bf9ec85ae5722f6c754836b79549502b53",
+    "trading_researcher/openai_provider.py": "7923b60a455ce124a2122a3d93f7462a3022b459ca7a035ab034cb98717d7324",
+    "tests/test_epoch_budget_overlay_adversarial.py": "967d0e92631a609c15a359794e9787bc9e4b8e0a8cb6a6eea3ea4d5b7f125f12",
+    "tests/test_counted_openai_reservations.py": "fcd1f94dd1075c765b4e8272fa4b960e1e762e6093d340714dcba4131a88d3c5",
+    "docs/architecture/19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md": "80453cb2e45e1f6efd4a748644bf1d6d1863feca1ca8f0e512f12de995b311fd",
+    "docs/architecture/02_DECISION_REGISTER.md": "885f7b97af4d3de3d94429588117524b300f612a71b9bb2b46eec3e004801956",
+    "docs/architecture/ARCHITECTURE_REGISTER.json": "191c66fa0f63e335158e7bedcdb7dd1b48dc7608486b6a3f2a2945814a654e05",
+    "docs/architecture/04_DEFINITIONS.md": "fb92e5192517ea3f49aa979d9499e0ec0d217cce85051b15a184a07403f5fda2",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "415c0f717ce9409dfbe0215d83e3277031d3736d8483d082fd25c7c24e196b79",
+    "docs/architecture/CURRENT_STATE.md": "dbcc757bf0c18f1abaf0767c4322a18d1b3c94dec7270145dea3dc7fc995482a",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "dd9d0efcaf5157b4ed7c9858ba88be235f62cc78245c9b23f0104d4f60b09194",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "31c1fd4b780305b5731461414be68b45ce8a400ee2dc89313056701b8401da87",
+    "docs/reviews/implementation-2026-10-25/progress.json": "cfda8c70d33073efecd13463411c901e82f923376e483c2f04063af135cbb746",
+    "docs/reviews/implementation-2026-10-25/feedback-budget-verification-2026-10-29.json": "7d81788ea26613c5d588a4fb68478f9a549d65b30492e017e69e4a51962cbbe1",
+    "docs/reviews/implementation-2026-10-25/feedback-research-2026-10-29.json": "64dd4a48aeeaa3ad50e6f957c8347a760f5af578f2570c97ec9837b52d6e13cb",
+    "docs/reviews/implementation-2026-10-25/feedback-research-usage-2026-10-29.json": "367a4b5baf93fcdbf72620f85731424d6f51b4a01da87a4b1c49eea5ad0dd3f2"
+  },
+  "runtime_and_test_sources_unchanged_since_79_passing_tests": true,
+  "exact_actual_input_and_field_size_checks": "PASS",
+  "live_usage_matches_published_report": true,
+  "one_use_claim_consumed_and_revoked": true,
+  "independent_actual_review": "Read-only assertion check passed;2settledcalls/59616tokens/174435000nanoUSD,8255-character rejected output,30288>27015 formalization reservation.",
+  "unverified": [
+    "Research/behavioral quality equivalence of source paging.",
+    "Independent meaning and executable representation of both new ideas.",
+    "Scientific calibration, protected evaluation and economic usefulness.",
+    "Provider invoice, immutable model snapshot and a new full actual backup/restore."
+  ],
+  "scope": "Bounded D090 implementation and actual finite attempt; full seven-package objective remains unfinished."
+}

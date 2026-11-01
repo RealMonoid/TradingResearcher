@@ -19,7 +19,11 @@ For a new scoped manifest, resolve the following existing definition IDs as `(de
 
 The scoped overlay does not replace a definition's unrelated fields. Section 1 owns migration/projection and section 13 owns applicability consequences; D087's separate invocation extension does not replace either. Unknown origin/replication/applicability remains unknown; retries do not create replication. No runtime records have been migrated.
 
+Additional optional resource overlay: D090 adopts [research-epoch-feedback-budget/1.0](19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md) for exactly one feedback-informed development epoch. The 240,000-token/USD 1 exception remains within the existing USD 5 aggregate and does not change any scientific definition. Ordinary epochs retain D079's 80,000-token ceiling; attempts, exposure and usage cannot be reset.
+
 ## Preserved reconstruction-1 (historical version)
+
+Additional optional primitive overlay: D089 adopts [bounded-math/1.0](18_BOUNDED_MATH_PRIMITIVES.md) for DEF-003–008/013/023/031–032. Exact complete-window medians and outcome-only natural logarithms with outward rational numerical bounds extend only explicitly versioned manifests. Existing scalar meanings, three-valued conditions, whole-scope denominators and research-contract/1.0 evidence rules remain intact. Legacy AST/source/result versions are preserved; approval does not establish implementation or scientific admission.
 
 # Canonical Definitions and Formula Preservation
 
@@ -418,3 +422,19 @@ sequential_policy_H ist das dafür verwendete, vor Freeze spezifizierte sequenzi
 
 Ohne eine solche eingefrorene Policy ist wiederholtes Nachsehen keine zulässige primäre Evaluation.
 ~~~~
+
+D091 adopts the optional [bounded-math-reuse/1.0](20_BOUNDED_MATH_REUSE.md) activation extension for DEF-003-008/013/023/031-032. The existing meanings remain unchanged; new single-instrument development hypotheses each need their own scope, conformance, faithful-review and execution qualification. The original D089 version is preserved.
+
+## D094 fixed-pair case unit
+
+Under [paired-development/1.0](23_PAIRED_DEVELOPMENT.md), a paired case is one declared 900-second UTC timestamp with both fixed member identities. It is not two scalar instrument cases or a synthetic composite bar. Explicit `feature_at` selectors retain each certified member, unit, key and availability; the full grid survives missing data. This definition applies only to the opt-in research-ast/3 and hypothesis-exec/2 profile.
+
+
+## D097 bounded exact-composition adoption
+
+D097 exact scalar composition version extends the existing executable expression/outcome definitions only under [bounded-exact-compositions/1.0](26_BOUNDED_EXACT_COMPOSITIONS.md). Complete causal windows and explicit whole-condition guards preserve original required-input meaning; an absolute bounded-real outcome retains its unit and outward bounds. AST1/2 and paired AST3 remain separately versioned. Accepted specification is not a certified mapping or empirical result.
+
+
+## D098 exact-computation resource version
+
+[Exact-computation-resources/2.0](27_EXACT_COMPUTATION_RESOURCES.md) versions the engineering allowance only:20M perchild shared plain/diagnostics,40M execute/replay aggregate,shared1800s. D097 mathematics and old10M evidence remain unchanged. Resource completion is neither semantic certification nor scientific, economic or deployment authority.

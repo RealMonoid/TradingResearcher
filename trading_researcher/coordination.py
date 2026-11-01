@@ -36,6 +36,7 @@ from .study_runs import InformationStudies
 from .measurements import DevelopmentMeasurements
 from .controller_providers import ControllerProviders, routes as provider_routes_config
 from .meaning_reviews import MeaningReviews
+from .review_continuation import ReviewContinuation
 from .revocations import DependencyRevocations
 from .composition import CompositionCertification
 from .data_use import DataUseAssessments
@@ -70,7 +71,7 @@ CREATE TABLE IF NOT EXISTS events(seq INTEGER PRIMARY KEY, previous_hash TEXT NO
 '''
 
 
-class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews, DependencyRevocations, CompositionCertification, DataUseAssessments, DataTargets):
+class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCertification, ExternalStorage, DataSnapshots, FeatureCertification, BoundComputation, EvaluationPlans, AuxiliaryResearch, BootstrapRuns, InformationDiagnostics, PopulationWorlds, InformationStudies, DevelopmentMeasurements, ControllerProviders, MeaningReviews, DependencyRevocations, CompositionCertification, DataUseAssessments, DataTargets):
     def __init__(self, directory, clock=None, *, provider_routes=None):
         self._provider_routes = provider_routes_config(provider_routes)
         self.directory = Path(directory).resolve()
@@ -270,14 +271,17 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
                          'enqueue', 'resume', 'release_batch', 'inspect', 'status', 'verify',
                          'add_schedule', 'emit', 'tick', 'backup', 'get_artifact',
                          'add_research', 'inspect_memory', 'rebuild_memory',
-                         'create_research_epoch', 'inspect_research_epoch', 'reference_certificate_status',
+                         'create_research_epoch', 'inspect_research_epoch', 'revoke_research_epoch_budget', 'reference_certificate_status',
                          'inspect_reference_checks', 'feature_certificate_status', 'inspect_feature_checks',
                          'inspect_bound_computations','assess_meaning_review','inspect_meaning_review','inspect_evaluation_plan',
                          'revoke_dependency','inspect_dependency_use','composition_certificate_status','assess_data_use','inspect_data_use',
-                         'declare_data_target','bind_data_target'}
+                         'declare_data_target','bind_data_target','release_feature_evidence','publish_development_feedback'}
             allowed = admin_ops if actor['role'] == 'operator' else worker_ops
             if op not in allowed:
                 raise Denied('Operation unavailable for this capability')
+            if op in ('read_artifact','search_memory','auxiliary_input'):
+                job = self._owned(actor, args.get('lease'))
+                self._check_feedback_context(self._context(job['spec']['context_id']))
             method = getattr(self, '_' + op)
             try:
                 inspect.signature(method).bind(actor, **args)
@@ -379,14 +383,31 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
             else:
                 released = self._db.execute('SELECT epoch FROM releases WHERE artifact_id=?', (identity,)).fetchone()
                 if released is None or epoch < released[0]:
-                    raise Denied('Work product has not been released for this epoch')
+                    feature_release = self._released_feature_evidence(artifact, epoch, research_time)
+                    if feature_release is None:
+                        from .development_feedback import released_feedback
+                        feature_release = released_feedback(self, artifact, epoch, research_time)
+                    if feature_release is None:
+                        raise Denied('Work product has not been released for this epoch')
+                    exposure.update([feature_release['id'], *feature_release['exposure']])
         envelope = {'version': 'local-context/2', 'role': role, 'epoch': epoch,
                     'artifact_ids': sorted(artifact_ids), 'exposure': sorted(exposure),
                     'research_time': research_time}
+        self._check_feedback_context(envelope)
         identity = digest(envelope)
         self._db.execute('INSERT OR IGNORE INTO contexts VALUES(?,?)', (identity, canonical(envelope)))
         self._event(actor['name'], 'context_frozen', context_id=identity)
         return {'id': identity, **envelope}
+
+    def _publish_development_feedback(self, actor, root_epoch_id, execution_id,
+            data_use_assessment_id, meaning_review_assessment_id, target_epoch):
+        from .development_feedback import publish_feedback
+        return publish_feedback(self, actor, root_epoch_id, execution_id,
+            data_use_assessment_id, meaning_review_assessment_id, target_epoch)
+
+    def _check_feedback_context(self, context):
+        from .development_feedback import check_context
+        check_context(self, context)
 
     def _deny_final_calibration_ancestry(self,artifact,*,allow_private_targets=False):
         pending=[artifact];seen=set()
@@ -426,6 +447,12 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
         return {'id': batch_id, 'sealed': True}
 
     def _spec(self, spec):
+        context = self._spec_structure(spec)
+        self._research_spec_check(spec)
+        return context
+
+    def _spec_structure(self, spec):
+        """Shared shape, identity and dependency checks; grants are checked separately."""
         required = {'kind', 'context_id', 'purpose', 'allowed_workers', 'max_attempts',
                     'lease_seconds', 'deadline', 'dependencies'}
         if type(spec) is not dict or not required <= set(spec) or set(spec) - required - {
@@ -443,7 +470,6 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
         integer(spec['lease_seconds'], 'lease_seconds', 3)
         integer(spec['deadline'], 'deadline', 1)
         context = self._context(spec['context_id'])
-        self._research_spec_check(spec)
         for name in spec['allowed_workers']:
             row = self._db.execute('SELECT role,capabilities FROM principals WHERE name=?', (name,)).fetchone()
             if row is None or row['role'] != context['role'] or spec['kind'] not in decode(row['capabilities']):
@@ -529,6 +555,7 @@ class Broker(ResearchMemory, ResearchCalls, FormalizationRecords, ReferenceCerti
             # First eligible task retains the host order; workers cannot cherry-pick IDs.
             if actor['name'] not in spec['allowed_workers']:
                 return None
+            self._check_feedback_context(self._context(spec['context_id']))
             generation = job['generation'] + 1
             until = min(self._now() + spec['lease_seconds'], spec['deadline'])
             self._db.execute("UPDATE jobs SET state='running',owner=?,generation=?,lease_until=?,detail='{}' WHERE id=?",

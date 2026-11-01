@@ -1,0 +1,159 @@
+{
+  "schema": "bounded-math-development-observation/1",
+  "recorded_at_utc": "2026-10-29T02:25:19.572699+00:00",
+  "purpose": "Remove the approved primitive gap and attempt faithful formalization/review of the unchanged retained ETH idea.",
+  "contract": "bounded-math/1.0",
+  "decision": "D089",
+  "idea_id": "e579e41eb2adf198a16c3cf4c3a23ae28da41ef35472200b85ea2205cb1074e5",
+  "original_epoch": "7b7294088ce8471dab63da9054786950",
+  "reopening_epoch": "36c86aebbd264e2bb76ecfedfc570b44",
+  "reopening_reason": "D089 implemented; one new bounded attempt on the exact original idea after a concrete capability change, not a reset/retry of the closed feasibility epoch.",
+  "limits": {
+    "max_calls": 2,
+    "max_tokens": 80000,
+    "max_seconds": 1800,
+    "max_cost_nano": 1000000000,
+    "aggregate_cap_nano": 5000000000
+  },
+  "admission": {
+    "formalization_counted_input_tokens": 24587,
+    "complete_path_token_reservation": 78715,
+    "complete_path_cost_bound_nano_usd": 316787500,
+    "review_input_counted_tokens": 16795,
+    "qualification": "Review packet cannot be counted until the candidate exists. Reserve this entire input allowance before formalization, then count the exact full packet. If it exceeds the reserved bound, retain a gap and stop, without truncation or increased epoch limits."
+  },
+  "technical_certificate_id": "9c05de17b873487975ff9647a65d88a186bf9f0f2a57afd9876a145ca4e20b6e",
+  "stage_results": [
+    {
+      "stage": "formalization",
+      "started_at_utc": "2026-10-29T02:18:47.284431+00:00",
+      "ended_at_utc": "2026-10-29T02:19:02.053575+00:00",
+      "artifact_id": "9d2c3e8a7ae03b986dbe6b20c36a15440c89eed5bf410f63226d587f869cac0f",
+      "status": "RETAINED_GAP"
+    },
+    {
+      "stage": "meaning_review",
+      "started_at_utc": "2026-10-29T02:19:06.325852+00:00",
+      "ended_at_utc": "2026-10-29T02:19:17.251507+00:00",
+      "artifact_id": "b27fde188c520c6ede0678eb0a1c656d8b0ffd0256c692c7cd76596502302932",
+      "status": "NOT_SATISFIED"
+    }
+  ],
+  "formalization_gap": {
+    "code": "LANGUAGE_GAP",
+    "reason": "Required fields are absent or unexpected",
+    "reopen_condition": "Resolve the named meaning/capability/input gap under approved semantics"
+  },
+  "candidate": null,
+  "semantic_report": null,
+  "review": {
+    "added_assumptions": [],
+    "conflicts": [],
+    "judgment": "uncertain",
+    "mapping_checks": [],
+    "omitted_assumptions": [],
+    "reason": "The original idea is preserved, but candidate and semantic_report are null and no mapping segments are supplied. Consequently, executable equivalence cannot be assessed. The original specifies a negative conditional-minus-whole-scope observed-outcome contrast for ETHUSDT only, on the stated January\u2013March 2023 decision grid, with equal row weighting. It specifies the delayed signal bar, a complete 96-exact-bar median baseline, exploratory thresholds, and complete-condition unknown behavior. Its outcome is 10000*ln(C_{t+3600}/O_{t+900}), evaluated at t+4500, not a return from the signal close or a five-bar price horizon. Unknown-condition rows with observed outcomes enter the scope mean, missing outcomes enter neither mean, and an empty conditional group leaves the contrast undefined. The supplied ETH raw field definitions, price and volume units, exclusive-end keys, and assumed 900-second delay are consistent with these stated inputs, but do not establish an implementation of the median, temporal accesses, condition, outcome, or aggregation. Retaining the idea with a language gap neither contradicts the hypothesis nor supplies an executable or scientifically negative result.",
+    "unresolved_meaning": [
+      "No executable candidate is supplied, so preservation of direction, scope, thresholds, baseline completeness, exact outcome denominator and anchor, weighting, boundary censoring, and missing/unknown behavior cannot be checked.",
+      "No semantic mapping is supplied linking the original specifications to executable operations. The generic LANGUAGE_GAP message does not identify which specifications cannot be represented."
+    ]
+  },
+  "review_assessment_id": "532c479fdee79a3e267f248c20b47ab49a399db280d29a4970a95495ac5d3ca2",
+  "review_gaps": [
+    {
+      "code": "FORMALIZATION_GAP",
+      "reason": "A faithful review of retained uncertainty does not make a candidate executable"
+    },
+    {
+      "call_id": "bc91f039bb79444db228973ba2e92440",
+      "code": "MEANING_DIFFERENCE_OR_UNCERTAINTY",
+      "job_id": "606761b00956474f9a0befb8f9824998",
+      "reason": "A retained review reports different or uncertain meaning"
+    }
+  ],
+  "paid_calls": [
+    {
+      "stage": "formalization",
+      "dispatch_id": "controller-37391aadefe3437ab028ddf7a440ee8b:0",
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T02:18:48Z",
+      "settled_at_utc": "2026-10-29T02:19:01Z",
+      "usage": {
+        "cost_units": 64777500,
+        "input_tokens": 24587,
+        "output_tokens": 331
+      },
+      "token_details": {
+        "cached_input_tokens": 0,
+        "reasoning_output_tokens": 308
+      },
+      "charged_nano_usd": 64777500
+    },
+    {
+      "stage": "meaning_review",
+      "dispatch_id": "controller-bc91f039bb79444db228973ba2e92440:0",
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      },
+      "admitted_at_utc": "2026-10-29T02:19:07Z",
+      "settled_at_utc": "2026-10-29T02:19:16Z",
+      "usage": {
+        "cost_units": 46067500,
+        "input_tokens": 16795,
+        "output_tokens": 408
+      },
+      "token_details": {
+        "cached_input_tokens": 0,
+        "reasoning_output_tokens": 26
+      },
+      "charged_nano_usd": 46067500
+    }
+  ],
+  "wall_seconds": 33.65469889999986,
+  "finished_at_utc": "2026-10-29T02:19:17.596186+00:00",
+  "tokens": 42121,
+  "conservative_cost_nano_usd": 110845000,
+  "aggregate_tokens": 249200,
+  "aggregate_conservative_cost_nano_usd": 693402500,
+  "remaining_authorization_nano_usd": 4306597500,
+  "findings": [
+    "Optional median/logarithm implementation conformance and retained-source synthetic integration are supported.",
+    "Full-path token reservation and actual independent review completed; the prior budget-admission obstruction did not recur.",
+    "The formalizer declined an executable representation without a concrete explanatory gap. The prompt explicitly allowed null candidate/semantic_report; this limits diagnosis.",
+    "The independent reviewer correctly retained uncertainty. This does not demonstrate that the mathematical idea is inexpressible or empirically false."
+  ],
+  "not_run": [
+    "genuine-idea compilation",
+    "genuine-idea data-use assessment",
+    "genuine-idea outcome computation",
+    "protected outcome access"
+  ],
+  "unverified": [
+    "substantive faithful model formalization",
+    "genuine descriptive result",
+    "scientific calibration/information sufficiency",
+    "economic usefulness",
+    "immutable provider model snapshot",
+    "actual invoice"
+  ],
+  "next_action": "One bounded offline check of complete/invalid-input unknown composition before further paid attempts; no manual repair of a research candidate or wider operator expansion.",
+  "scientific_readiness": false,
+  "successful_extension_acceptance": false,
+  "full_objective_complete": false
+}

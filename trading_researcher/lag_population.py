@@ -44,6 +44,45 @@ def validate_specification(spec):
     return deepcopy(spec)
 
 
+def _innovation_probabilities(thresholds,share):
+    edges=sorted({F(0),F(1),*thresholds});row=[F(0)]*(1<<len(thresholds))
+    for left,right in zip(edges,edges[1:]):
+        probabilities=[share*int(left<p)+(1-share)*p for p in thresholds]
+        for target in range(len(row)):
+            value=right-left
+            for i,p in enumerate(probabilities):value*=p if (target>>i)&1 else 1-p
+            row[target]=_exact(row[target]+value)
+    require(sum(row)==1 and all(value>=0 for value in row),'Invalid joint transition row')
+    return row
+
+
+def _stationary_solution(matrix):
+    size=len(matrix)
+    require(1<=size<=16 and all(len(row)==size and sum(row)==1 and all(0<=p<=1 for p in row)
+                               for row in matrix),'Bounded stochastic transition matrix required')
+    equations=[[matrix[i][j]-int(i==j) for i in range(size)]+[F(0)] for j in range(size-1)]
+    equations.append([F(1)]*size+[F(1)])
+    for column in range(size):
+        pivot=next((r for r in range(column,size) if equations[r][column]),None)
+        require(pivot is not None,'Unique joint stationary law not established')
+        equations[column],equations[pivot]=equations[pivot],equations[column]
+        scale=equations[column][column]
+        equations[column]=[_exact(x/scale) for x in equations[column]]
+        for row in range(size):
+            if row==column or not equations[row][column]:continue
+            factor=equations[row][column]
+            equations[row]=[_exact(x-factor*y) for x,y in zip(equations[row],equations[column])]
+    pi=[row[-1] for row in equations]
+    require(sum(pi)==1 and all(p>=0 for p in pi),'Invalid joint stationary mass')
+    require(all(sum(pi[i]*matrix[i][j] for i in range(size))==pi[j] for j in range(size)),
+            'Joint stationary residual is nonzero')
+    lattice=math.lcm(*(p.denominator for p in pi))
+    require(lattice.bit_length()<=4096,'Stationary sampling lattice exceeds its resource envelope')
+    return {'matrix':[[_rational(p) for p in row] for row in matrix],
+        'probabilities':[_rational(p) for p in pi],
+        'lattice_size':str(lattice),'counts':[str(int(p*lattice)) for p in pi]}
+
+
 def stationary_joint(transitions,common_share):
     """Exact joint law for fresh common/individual uniform threshold innovations.
 
@@ -65,38 +104,10 @@ def stationary_joint(transitions,common_share):
     width=len(rates);size=1<<width;matrix=[]
     for prior in range(size):
         thresholds=[rates[i][(prior>>i)&1] for i in range(width)]
-        edges=sorted({F(0),F(1),*thresholds});row=[F(0)]*size
-        for left,right in zip(edges,edges[1:]):
-            probabilities=[share*int(left<p)+(1-share)*p for p in thresholds]
-            for target in range(size):
-                value=right-left
-                for i,p in enumerate(probabilities):value*=p if (target>>i)&1 else 1-p
-                row[target]=_exact(row[target]+value)
-        require(sum(row)==1 and all(value>=0 for value in row),'Invalid joint transition row')
-        matrix.append(row)
-    equations=[[matrix[i][j]-int(i==j) for i in range(size)]+[F(0)] for j in range(size-1)]
-    equations.append([F(1)]*size+[F(1)])
-    for column in range(size):
-        pivot=next((r for r in range(column,size) if equations[r][column]),None)
-        require(pivot is not None,'Unique joint stationary law not established')
-        equations[column],equations[pivot]=equations[pivot],equations[column]
-        scale=equations[column][column]
-        equations[column]=[_exact(x/scale) for x in equations[column]]
-        for row in range(size):
-            if row==column or not equations[row][column]:continue
-            factor=equations[row][column]
-            equations[row]=[_exact(x-factor*y) for x,y in zip(equations[row],equations[column])]
-    pi=[row[-1] for row in equations]
-    require(sum(pi)==1 and all(p>=0 for p in pi),'Invalid joint stationary mass')
-    require(all(sum(pi[i]*matrix[i][j] for i in range(size))==pi[j] for j in range(size)),
-            'Joint stationary residual is nonzero')
-    lattice=math.lcm(*(p.denominator for p in pi))
-    require(lattice.bit_length()<=4096,'Stationary sampling lattice exceeds its resource envelope')
+        matrix.append(_innovation_probabilities(thresholds,share))
     result={'schema':'binary-joint-stationary/1','coordinate_count':width,
         'state_order':'ascending_integer_coordinate_i_is_bit_i',
-        'matrix':[[_rational(p) for p in row] for row in matrix],
-        'probabilities':[_rational(p) for p in pi],
-        'lattice_size':str(lattice),'counts':[str(int(p*lattice)) for p in pi]}
+        **_stationary_solution(matrix)}
     canonical(result)
     return result
 
@@ -180,39 +191,50 @@ def _sample_state(rng,law):
 
 def _generate(report,model,components,time_rows,seed):
     from .population_models import _bernoulli,_instant
-    require(type(model) is dict and model.get('schema')==MODEL,'Lag-linked model required')
-    require(digest(model)==digest(build_model(report,model.get('diagnostics'),model.get('specification'),model.get('effects'))),
+    require(type(model) is dict,'Lag-linked model required')
+    second=model.get('schema')=='lag-linked-second-order-model/1'
+    extension=None
+    if second:
+        from . import second_order_population as extension
+    require(model.get('schema')==(extension.MODEL if second else MODEL),'Lag-linked model required')
+    builder=extension.build_model if second else build_model
+    require(digest(model)==digest(builder(report,model.get('diagnostics'),model.get('specification'),model.get('effects'))),
             'Lag-linked model differs from bound source and recipe')
     require(model['status']=='MODEL_SPECIFIED','Unresolved lag-linked model cannot generate')
     integer(time_rows,'joint time rows',1);randomness(seed)
     symbols=sorted(report['request']['universe']['instruments']);horizon=report['request']['horizon_bars']
     dimensions=[(item['id'],symbol) for item in components for symbol in symbols]
     width=len(dimensions);lag=model['lag_bars']
-    require(width<=4 and lag*width<=100000,'Joint lag state exceeds exact stationary capability')
+    order=2 if second else 1
+    require(width<=(2 if second else 4) and order*lag*width<=100000,
+            'Joint lag state exceeds exact stationary capability')
     require(horizon<time_rows and time_rows*width<=100000,'Generated cases exceed their envelope')
     rates=[model['scenarios'][item['scenario']] for item in components for _ in symbols]
-    transitions=[[_read_rational(row[key]) for key in ('transition_p_zero','transition_p_one')] for row in rates]
+    transitions=([[_read_rational(p) for p in row['history_transitions']] for row in rates] if second else
+                 [[_read_rational(row[key]) for key in ('transition_p_zero','transition_p_one')] for row in rates])
     share=_read_rational(model['specification']['common_share'])
-    law=stationary_joint(transitions,share)
-    initial_rng=_rng(seed,'stationary-phase-states')
+    law=(extension.stationary_joint if second else stationary_joint)(transitions,share)
+    rng=extension._rng if second else _rng
+    initial_rng=rng(seed,'stationary-phase-states')
     states=[_sample_state(initial_rng,law) for _ in range(lag)]
     initial_states=list(states)
     lattice=math.lcm(*(p.denominator for pair in transitions for p in pair))
     require(lattice.bit_length()<=4096,'Innovation lattice exceeds numeric envelope')
     thresholds=[[int(p*lattice) for p in pair] for pair in transitions]
-    common_rng=_rng(seed,'common-innovation');mask_rng=_rng(seed,'joint-mask')
-    own=[_rng(seed,['individual-innovation',*coordinate]) for coordinate in dimensions]
-    choice=[_rng(seed,['common-choice',*coordinate]) for coordinate in dimensions]
+    common_rng=rng(seed,'common-innovation');mask_rng=rng(seed,'joint-mask')
+    own=[rng(seed,['individual-innovation',*coordinate]) for coordinate in dimensions]
+    choice=[rng(seed,['common-choice',*coordinate]) for coordinate in dimensions]
     source_width=len(symbols);source_size=len(report['cases'])//source_width
     mask=mask_rng.randrange(source_size);restart=F(1,model['specification']['mask_mean_block'])
     buffers=[[] for _ in components];forced=[0]*len(components)
     for t in range(time_rows):
         common=common_rng.randrange(lattice);previous=states[t%lag];current=0
         for i,(response,symbol) in enumerate(dimensions):
-            prior=(previous>>i)&1
+            prior=(previous>>(i+width if second else i))&1
+            history=((previous>>i)&1)+2*prior if second else prior
             individual=own[i].randrange(lattice)
             uniform=common if _bernoulli(choice[i],share) else individual
-            value=int(uniform<thresholds[i][prior]);current|=value<<i
+            value=int(uniform<thresholds[i][history]);current|=value<<i
             source=report['cases'][mask*source_width+i%source_width]
             status=source['status'];terminal=source.get('scope') is True and t+horizon>=time_rows
             if status=='PARTITION_BOUNDARY' or status=='DATA_GAP' and source.get('scope') is True:status='OUTCOME_MISSING'
@@ -231,7 +253,8 @@ def _generate(report,model,components,time_rows,seed):
                     'predecision_input_published_late':False,'outcome_lookback_before_universe':False,'reasons':[]}
                 case['label_information_interval']={'start':when,'end':anchor}
             buffers[i//source_width].append(case)
-        states[t%lag]=current  # Advance latent histories even on wholly missing timestamps.
+        # Advance all latent histories even on wholly missing timestamps.
+        states[t%lag]=(previous>>width)|(current<<width) if second else current
         mask=mask_rng.randrange(source_size) if _bernoulli(mask_rng,restart) else (mask+1)%source_size
     catalog={name+'@1':{'type':'boolean','unit':None} for name in ('synthetic_scope','synthetic_condition','synthetic_outcome')}
     def program(name):return {'schema':'research-ast/1','catalog_hash':digest(catalog),'expression':{'op':'feature','ref':name+'@1'}}
@@ -252,10 +275,15 @@ def _generate(report,model,components,time_rows,seed):
             'simulation':{'kind':'lag_linked_binary_response_and_exogenous_masks','raw_AST_executed':False,
                 'lag_bars':lag,'response_id':item['id'],'calendar':'artificial_900_second_grid',
                 'terminal_horizon_censor':True,'source_condition_values_resampled':False}}
+        if second:
+            synthetic['simulation']['kind']='lag_linked_second_order_response_and_exogenous_masks'
+            synthetic['simulation']['history_order']=2
         output.append({'id':item['id'],'scenario':item['scenario'],'truth':deepcopy(model['scenarios'][item['scenario']]),
             'terminal_censored_cases':forced[index],'report':synthetic,'descriptive':reference_contrast(synthetic)})
-    return output,{'coordinates':[{'response_id':x,'instrument':y} for x,y in dimensions],
+    initialization={'coordinates':[{'response_id':x,'instrument':y} for x,y in dimensions],
         'independent_phase_count':lag,'law':law,'initial_states':initial_states}
+    if second:initialization['history_order']=2
+    return output,initialization
 
 
 def generate_world(report,model,scenario,time_rows,seed):

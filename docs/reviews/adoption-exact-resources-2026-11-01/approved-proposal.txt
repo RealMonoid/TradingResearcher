@@ -1,0 +1,34 @@
+## November 1 proposal: explicit exact-computation resource revision
+
+Status: **PROPOSED ONLY — SPECIFIC CEILING DECISION REQUIRED BEFORE INTENDED-USE ACTIVATION**. Offline synthetic implementation and tests are authorized engineering investigations; they grant no native activation, actual model call, renewed allowance or scientific authority.
+
+### Concrete problem and selected correction
+
+The [inactive mapping evidence](../implementation-2026-10-25/exact-mapping-feasibility-2026-11-01.json) computes all8,640 invented Q1 numerical cases in7,574,932 steps, then exhausts the existing10M shared request allowance after2,763 diagnostic cases. An independently checked lower bound for that concrete tree already exceeds14.5M condition steps across plain and observed passes alone. This is not a universal impossibility theorem or a real-data result.
+
+Independent review rejected silently substituting an observed-only calculation/replay: it would remove the existing independent plain-versus-observed full-case check. A new cache/observer validator would add substantial new correctness and stop-prefix obligations. The smallest selected correction is an explicitly versioned larger **engineering allowance**, preserving the existing plain calculation, full observed-case equality, immutable base binding and fresh separate canonical replay.
+
+### Exact proposed limit and retained scope
+
+- A new opt-in resource version may use at most **20,000,000 primitive steps per child/request**, shared between its plain calculation and diagnostics.
+- Execute plus fresh separate replay may use at most **40,000,000 steps in aggregate**, with the existing **shared1,800-second whole-operation deadline**. No automatic retry, successor or replenished allocation.
+- Existing10M profiles, source bytes, records and grants remain unchanged and retain their old ceiling. The new request/profile/output namespaces are separate; old APIs reject the proposed allowance.
+- Keep all existing AST4 operator charges, oldest-to-newest complete windows, intermediate8,192-bit checks,256-node/32-level bounds,100,000 input-row/case envelope,512MiB streams,2,048 events/case and512KiB diagnostic-case limit. No new expression operator or changed estimator is requested.
+- Retain every original parameter, raw feature, validity/unknown rule, scope, Q1 boundary, cutoff, endpoint, denominator and independent meaning review. Add only neutral recognition of the proven existing-operator strict guard `eq(or(V,unknown),P)`; recognition does not establish that V means scientific validity.
+- Preserve numerical results/prefixes if diagnostics exhausts steps/events/bytes. A resource stop or incomplete diagnostics remains incomplete. Neither a prototype nor a green software check becomes scientific or economic success.
+
+The prior flat-close observation suggests about15.16M per child for this encoding. A16M limit is not justified by that observation: varying positive closes can add up to128 main-log steps per eligible outcome per pass, bringing the fixed synthetic construction above17.3M. The20M proposal includes room for that concrete case; it does not guarantee success for actual data, extreme rationals or arbitrary hypotheses. Independent numerical bounds still stop unsafe or excessive intermediates.
+
+### Reviewable implementation and validation
+
+The [inactive module and scope guide](../../../trading_researcher/EXACT_RESOURCE_PROPOSAL.md) provide a distinct offline implementation, preserving base-first calculation and full observed comparison. It has no broker registration, runtime selector, source certificate, epoch or grant. Its structural compatibility projection validates the actual20M budget first and projects only the legacy limit for existing temporal/order/contrast validation; actual work, request identity and recorded consumption are never clamped or relabelled as old10M evidence.
+
+Required offline checks: typed0/Boolean/over-limit rejection; actual20M request/counter retention; remaining-budget fences; canonical whole-case and base-byte checks; absent/null/late/invalid inputs; scope-false outcome exclusion; exact guard shapes and false positives; actual event/byte overflow with numerical retention; old API rejection; fixed-flat and varying-positive-close full quarters; fresh retained-source replay and exact case-stream bytes/suffix/metadata/row integrity. Capture model/date/time/token accounting separately from these free local tests. The implementation evidence is [recorded separately](../implementation-2026-10-25/exact-resource-proposal-2026-11-01.json); until it exists and passes, no executed-check claim follows.
+
+### Authority, activation and rollback
+
+This changes an engineering ceiling, not the research goal, original hypothesis, mathematical operator, evidence threshold or scientific interpretation. Nevertheless D097/[document26](../../architecture/26_BOUNDED_EXACT_COMPOSITIONS.md) explicitly preserves existing primitive budgets, and D095's delegated spending selection also retained10M/30min. The general5-USD/5-EUR spending discretion does not clearly override that later specific resource constraint. The necessary decision concerns this exact20M-per-child/40M-total ceiling, **not additional API money**.
+
+Only after the specific ceiling decision may the new source/runtime be independently qualified and selected for intended use. Preserve complete actual role contracts, original-scope source/feature/data-use permissions, independent meaning, exact full-wire counts and fresh native/shared-ledger funding admission. The original USD5 ledger has USD0.574585 remaining at preparation; all seven old grants remain revoked. Activation creates no paid-call authorization or spending reset and promises no accepted original-A formalization or empirical success.
+
+Rollback keeps the new candidate unselected, revokes only genuinely unused new allocations if any were separately admitted, and preserves every idea, null formalization, source/exposure/history, failure, case byte, old profile and charge. No old slot, unseen history or source certificate is restored.

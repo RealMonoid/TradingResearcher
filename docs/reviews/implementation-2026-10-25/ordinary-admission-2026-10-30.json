@@ -1,0 +1,357 @@
+{
+  "schema": "ordinary-admission-checkpoint/1",
+  "recorded_at_utc": "2026-10-29T23:28:27.205614+00:00",
+  "status": "NOT_ADMITTED_RESOURCE_GAP_RETAINED",
+  "purpose": "New free development discovery informed by both complete closed ETH/BTC cohorts and their descriptive reports. Preserve all previous claims, failures and exposure. Neither original condition had any qualifying case in its original quarter; those effects remain undefined and scientifically untested. Do not tune the old thresholds or dates to rescue them. This is a new development work unit, not independent confirmation. Retain unsupported requirements rather than substituting a convenient canned claim.",
+  "baseline": {
+    "schema": "ordinary-complete-path-admission/1",
+    "at_utc": "2026-10-29T23:16:48.034781+00:00",
+    "status": "NOT_ADMITTED",
+    "purpose": "New free development discovery informed by both complete closed ETH/BTC cohorts and their descriptive reports. Preserve all previous claims, failures and exposure. Neither original condition had any qualifying case in its original quarter; those effects remain undefined and scientifically untested. Do not tune the old thresholds or dates to rescue them. This is a new development work unit, not independent confirmation. Retain unsupported requirements rather than substituting a convenient canned claim.",
+    "source_ids": [
+      "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+      "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+      "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+      "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+      "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+      "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+      "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+      "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035"
+    ],
+    "source_sizes": [
+      {
+        "id": "12b6d0242e48f935559ece31eff19ab35a69e48bb976828bd4f05925185d521d",
+        "schema": "research-record/1",
+        "full_bytes": 17737,
+        "view_bytes": 2108
+      },
+      {
+        "id": "2b8617908630ef3a8f108407f90fc6262a49ab1cd81495a449c86c0c9e9e328b",
+        "schema": "research-record/1",
+        "full_bytes": 18311,
+        "view_bytes": 2682
+      },
+      {
+        "id": "2f177872e1fedc0e9205d4b4ad79cd946066109aa2955c2e5bde77e6127d2428",
+        "schema": "research-record/1",
+        "full_bytes": 20149,
+        "view_bytes": 2108
+      },
+      {
+        "id": "3c199714862409d80df3850a352d439c0ef397767596355cccebff78a8c75938",
+        "schema": "development-feedback-manifest/1",
+        "full_bytes": 165887,
+        "view_bytes": 61147
+      },
+      {
+        "id": "5d402dfe2f113c2734c6567539e48abe4cb228ce08e252df753f3cb47f055e2d",
+        "schema": "development-feedback-manifest/1",
+        "full_bytes": 171583,
+        "view_bytes": 43206
+      },
+      {
+        "id": "6b36faab76fb227c0b501661f18d7c0b3b35ef927721421dd6240e460e7ba35e",
+        "schema": "feature-catalog/1",
+        "full_bytes": 1572,
+        "view_bytes": 2053
+      },
+      {
+        "id": "bc465d2aeefcf5954b3ff155c059bebab6edc34c2644f00cbe028831179f3626",
+        "schema": "research-record/1",
+        "full_bytes": 20715,
+        "view_bytes": 2674
+      },
+      {
+        "id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+        "schema": "data-snapshot/1",
+        "full_bytes": 16048,
+        "view_bytes": 7627
+      }
+    ],
+    "same_sources_both_perspectives": true,
+    "full_envelopes_reconstructed": 8,
+    "source_profile": "discovery-source-view/3",
+    "counts": [
+      {
+        "perspective": "feas-20261029-a",
+        "input_tokens": 43230,
+        "input_bound": 43358,
+        "counted_at_utc": "2026-10-29T23:16:47.137256+00:00",
+        "transport_request_id": "req_9ec6bcdd54844b0db5cdfd086b7c6c5c",
+        "wire_sha256": "2f40170cb28903af120fe5a6479295a635575898da89d8cdbd571fe2fc2a3103",
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        }
+      },
+      {
+        "perspective": "feas-20261029-b",
+        "input_tokens": 43240,
+        "input_bound": 43368,
+        "counted_at_utc": "2026-10-29T23:16:47.710634+00:00",
+        "transport_request_id": "req_c1a9a7c751fd4c2f982627da84628388",
+        "wire_sha256": "ff8b731e220845344f12d1f8b41d862e76c321d876055f53f36552b28cc4d355",
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        }
+      }
+    ],
+    "initial_input_tokens": 86470,
+    "initial_inputs_alone_exceed_epoch": true,
+    "epoch_token_ceiling": 80000,
+    "fixed_output_slots": {
+      "discovery_a": 6000,
+      "discovery_b": 6000,
+      "formalization": 18000,
+      "independent_review": 4000
+    },
+    "minimum_reserved_tokens_before_downstream_inputs_or_optional_tools": 120726,
+    "fixed_profile_already_exceeds_epoch": true,
+    "historical_downstream_reference": [
+      {
+        "stage": "formalization",
+        "input_tokens": 24443,
+        "output_tokens": 16749,
+        "total_tokens": 41192,
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "admitted_at_utc": "2026-10-29T22:17:21Z",
+        "settled_at_utc": "2026-10-29T22:20:06Z"
+      },
+      {
+        "stage": "independent_review",
+        "input_tokens": 34934,
+        "output_tokens": 1064,
+        "total_tokens": 35998,
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "admitted_at_utc": "2026-10-29T22:57:04Z",
+        "settled_at_utc": "2026-10-29T22:57:23Z"
+      }
+    ],
+    "future_packet_qualification": "Actual future ideas/formalizations are unknown. Historical downstream values are workload references, not a universal lower bound.",
+    "input_count_requests": 2,
+    "inference_calls": 0,
+    "new_inference_tokens": 0,
+    "new_charge_nano": 0,
+    "registry_writes": 0,
+    "new_epochs": 0,
+    "new_jobs": 0,
+    "protected_reads": 0,
+    "wall_seconds": 0.9025334999896586,
+    "helper_sha256": "c18ee597052ecf0a2c74937b8cb45333ba5b40b263223e2aa51057c4bdb317b2",
+    "next_action": "If over budget, inspect repeated exact metadata for a bounded lossless encoding; do not omit substantive evidence, shrink quality settings or reuse spent grants.",
+    "limits": [
+      "Count endpoints are not model inference or invoice verification.",
+      "No future full path or research quality is established."
+    ]
+  },
+  "private_reference_probe": {
+    "schema": "private-reference-transport-observation/1",
+    "at_utc": "2026-10-29T23:25:58.556699+00:00",
+    "status": "MEASURED_PRIVATE_ONLY",
+    "requests": [
+      {
+        "label": "feas-20261029-a",
+        "baseline_wire_sha256": "2f40170cb28903af120fe5a6479295a635575898da89d8cdbd571fe2fc2a3103",
+        "baseline_input_tokens": 43230,
+        "baseline_wire_bytes": 138264,
+        "encoded_wire_sha256": "197c5f36a366ad2f59eb40b3d963ba4d44361d88133680befe70c8c28cdaed10",
+        "encoded_wire_bytes": 100136,
+        "dictionary_entries": 162,
+        "full_wire_restoration": true,
+        "counted_at_utc": "2026-10-29T23:25:57.108833+00:00",
+        "transport_request_id": "req_f1689b6f020f44079a6ec4e22454e9a0",
+        "input_tokens": 31242,
+        "input_bound": 31370,
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        }
+      },
+      {
+        "label": "feas-20261029-b",
+        "baseline_wire_sha256": "ff8b731e220845344f12d1f8b41d862e76c321d876055f53f36552b28cc4d355",
+        "baseline_input_tokens": 43240,
+        "baseline_wire_bytes": 138325,
+        "encoded_wire_sha256": "81ac0b4fa063e78248f463438b1bffb15af76ed5182d127bfa605240ca715f3b",
+        "encoded_wire_bytes": 100197,
+        "dictionary_entries": 162,
+        "full_wire_restoration": true,
+        "counted_at_utc": "2026-10-29T23:25:57.519074+00:00",
+        "transport_request_id": "req_0ac54d00ca404563acd19388a58dd7df",
+        "input_tokens": 31252,
+        "input_bound": 31380,
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        }
+      },
+      {
+        "label": "historical_formalization",
+        "baseline_wire_sha256": "0c7ce1ee9f5ba971789385fead431065ff3bcca6298c2b8ea0209caeba397a13",
+        "baseline_input_tokens": 24443,
+        "baseline_wire_bytes": 77288,
+        "encoded_wire_sha256": "193ff667cbc80f524aa930c62f29dc30b8909b79d4c598eae6be85aab35a4cc3",
+        "encoded_wire_bytes": 67766,
+        "dictionary_entries": 31,
+        "full_wire_restoration": true,
+        "counted_at_utc": "2026-10-29T23:25:57.820833+00:00",
+        "transport_request_id": "req_f820ba1d3d6246cba0c2195ce5dfba11",
+        "input_tokens": 21645,
+        "input_bound": 21773,
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        }
+      },
+      {
+        "label": "historical_review",
+        "baseline_wire_sha256": "d530b6e8cba693933cb8270f8b442bb94f9b6ba7dc8faef042971a796869c9d4",
+        "baseline_input_tokens": 34934,
+        "baseline_wire_bytes": 117470,
+        "encoded_wire_sha256": "9b067453d1246548692b214877e17cdf5df56810da8d22725c67c60b17dcbb1f",
+        "encoded_wire_bytes": 100737,
+        "dictionary_entries": 50,
+        "full_wire_restoration": true,
+        "counted_at_utc": "2026-10-29T23:25:58.268522+00:00",
+        "transport_request_id": "req_1e58614dae01434b8fa37c53d5e7bd13",
+        "input_tokens": 28892,
+        "input_bound": 29020,
+        "model_identity": {
+          "requested_model": "gpt-6.1-sol",
+          "reported_model": null,
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_version": "6.1",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN"
+        }
+      }
+    ],
+    "initial_input_bounds": 62750,
+    "fixed_output_reservations": 34000,
+    "initial_plus_fixed_outputs": 96750,
+    "historical_four_stage_reservation_reference": 147543,
+    "epoch_cap": 80000,
+    "input_count_requests": 4,
+    "inference_calls": 0,
+    "new_inference_tokens": 0,
+    "new_charge_nano": 0,
+    "registry_writes": 0,
+    "runtime_activation": false,
+    "wall_seconds": 1.4486202000116464,
+    "usage_unchanged": true,
+    "qualification": "Exact canonical preservation and historical workload token counts only. Future packets, optional tool costs and model comprehension/quality are unverified. No complete-path admission follows."
+  },
+  "retained_preparation_failure": {
+    "status": "RETAINED_LOCAL_PREPARATION_FAILURE",
+    "command": "python -B .trf-runtime/ordinary-admission-2026-10-30/reference_probe.py prepare",
+    "exit_code": 1,
+    "error": "KeyError: input_tokens",
+    "cause": "Historical count receipts use counted_input_tokens; the current discovery count receipts use input_tokens. The private preparation incorrectly assumed one field name.",
+    "correction": "Read each retained schema explicitly and normalize only this diagnostic's token-count field. Preserve both original receipts and all wire hashes.",
+    "count_requests_before_failure": 0,
+    "inference_calls": 0,
+    "runtime_activation": false
+  },
+  "warranted_conclusion": "This tested lossless encoding reduces initial discovery input tokens by 23976 (27.728%). It still exceeds the ordinary epoch ceiling before downstream inputs and optional tools. No production integration or additional compression search follows from this finite check.",
+  "preservation": "Both isolated perspectives receive the same eight source envelopes. Existing deferred provenance lists reconstruct all original envelopes. Every encoded request restores the exact full baseline wire. System instructions, tools, reasoning settings and output slots are unchanged.",
+  "input_count_requests": 6,
+  "inference_calls": 0,
+  "new_inference_tokens": 0,
+  "new_charge_nano": 0,
+  "registry_writes": 0,
+  "new_epochs": 0,
+  "new_jobs": 0,
+  "runtime_activation": false,
+  "aggregate_usage": {
+    "settled_calls": 42,
+    "total_tokens": 716565,
+    "input_tokens": 607744,
+    "output_tokens": 108821,
+    "conservative_charge_nano": 2607570000,
+    "remaining_nano": 2392430000,
+    "authorization_nano": 5000000000,
+    "model": "gpt-6.1-sol",
+    "catalog_version": "6.1",
+    "immutable_snapshot_status": "UNKNOWN",
+    "full_usage_evidence": "docs/reviews/implementation-2026-10-25/btc-review-usage-2026-10-30.json"
+  },
+  "verification": {
+    "private_focused_tests": 8,
+    "private_focused_exit_code": 0,
+    "private_focused_seconds": "0.105",
+    "local_preparation_recovery_exit_code": 0,
+    "count_command_exit_code": 0,
+    "commands": [
+      "python -B .trf-runtime/ordinary-admission-2026-10-30/reference_probe.py test",
+      "python -B .trf-runtime/ordinary-admission-2026-10-30/reference_probe.py prepare_recovery",
+      "python -B .trf-runtime/ordinary-admission-2026-10-30/reference_probe.py count"
+    ],
+    "later_document_checks": "docs/reviews/implementation-2026-10-25/ordinary-admission-verification-2026-10-30.json"
+  },
+  "local_provenance": {
+    "preflight.py": "c18ee597052ecf0a2c74937b8cb45333ba5b40b263223e2aa51057c4bdb317b2",
+    "reference_probe.py": "2009c3e5c9d084cbee409ae765b68385de6df9ca52ab9454c767c676d95e7480",
+    "prepared.json": "4785996d8458a9157dd6af8124a84ac348aebb79dfa2b90644d686f5226c02d7",
+    "reference-probe-prepared.json": "61738eda833c35a81d9223e72f20dd576274ca6238a857a39825730a72914c77"
+  },
+  "independent_review": {
+    "reviewer": "/root/exploratory_preflight",
+    "verification": "A separately implemented bottom-up decoder reconstructed all four complete wires to their pinned baseline hashes; local command exit 0, 0.635 seconds.",
+    "finding": "No hidden content removal found. Exact input counts, bounds and unchanged system/tool/provider fields confirmed. No model-quality claim follows.",
+    "private_decoder_limit": "A 1100-entry backward-only alias chain can raise RecursionError because reference traversal does not advance the decoder's depth counter. None of the four measured packings contains this case. This is a retained future-activation limitation, not a reason to activate or further develop this private codec.",
+    "conclusion": "Close the finite diagnostic as NOT_ADMITTED/private-only; no additional representation search."
+  },
+  "unverified": [
+    "Private codec is not production-hardened: arbitrarily long valid backward-reference chains can exceed Python recursion depth; this was independently reproduced and is outside the four measured packets.",
+    "Model comprehension and research-quality equivalence of the private reference encoding.",
+    "Actual future idea/formalization/review packet sizes and optional tool use; historical workload is not a universal lower bound.",
+    "Provider immutable snapshot, provider invoice and total finished-system runtime.",
+    "Scientific calibration, protected assessment, profitability, mixed-provider live access and full seven-package completion."
+  ],
+  "next_action": "Follow execution_plan: close this finite transport diagnostic and prepare a bounded complete-path resource proposal using the measured full-feedback inputs, unchanged output/reasoning settings and explicit allowances for downstream inputs/tools. Do not activate the private codec or start paid inference. A new exception to the ordinary 80000-token ceiling requires approval under D008/D026 and section 9; do not reuse D090/D091/D092. Unknown future packets must still pass exact stage admission. Preserve the original USD5 cap and all scientific gates; do not expand calibration or repeat the completed checkpoint."
+}

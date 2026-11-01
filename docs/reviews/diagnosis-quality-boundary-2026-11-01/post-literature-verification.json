@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "results": [
+    {
+      "check": "docs/reviews/verify_system_model.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": [],
+      "checks": {
+        "local_links": 753,
+        "source_files": 5,
+        "decisions": 96,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Not checked; rerun with retained --baseline inventory",
+        "git_diff_check_exit": 0
+      }
+    },
+    {
+      "check": "docs/reviews/verify_retail_contract.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "errors": [],
+      "checks": {
+        "local_links": 753,
+        "source_files": 5,
+        "decisions": 96,
+        "preserved_original_decisions": 67,
+        "preserved_approved_decisions": 68,
+        "preserved_rejections": 47,
+        "traced_requirements": 30,
+        "generator_acceptance_specs": 3,
+        "diagram_edges": 38,
+        "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+        "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+        "git_diff_check_exit": 0,
+        "later_approved_changed_paths": {
+          "REVIEWING.md": "D086 / agent-inquiry/1.0",
+          ".gitattributes": "October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes"
+        },
+        "adoption_baseline_files": 63,
+        "preexisting_files_unchanged": 44,
+        "archived_documents_exact": 20,
+        "preserved_preapproval_decisions": 70,
+        "full_historical_definition_review_generator_texts": 3,
+        "approved_policy_sections_exact_except_status_words": 15,
+        "scoped_open_dispositions_and_acceptance_mappings": 15,
+        "adoption_decision_status_counts_D001_D085": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 63,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        },
+        "decision_status_counts": {
+          "NON_NEGOTIABLE": 1,
+          "ACCEPTED": 74,
+          "REJECTED": 1,
+          "CONDITIONALLY_ACCEPTED": 5,
+          "SUPERSEDED": 6,
+          "DEFERRED": 6,
+          "PROPOSED_ONLY": 1,
+          "AMBIGUOUS": 1,
+          "OPEN": 1
+        }
+      }
+    },
+    {
+      "check": "review local links, anchors, status, whitespace; scoped git diff --check",
+      "exit_code": 0,
+      "local_links_checked": 2,
+      "output": ""
+    }
+  ],
+  "review_sha256": "bd8636d35b3353826adcd27c67781217eaceaa64e33d08b0fad4b421e0c49a7e",
+  "changed_files_in_this_scope": [
+    "docs/architecture/25_METACOGNITION_DUAL_SPACE_INQUIRY.md",
+    "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+    "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/05_REQUIREMENTS.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+    "docs/reviews/DIAGNOSIS_QUALITY_LITERATURE_REVIEW_2026-11-01.md"
+  ],
+  "unverified": [
+    "Literature experiments not reproduced",
+    "No empirical assessment of diagnosis quality or economic benefit",
+    "Other chat runtime changes not reviewed by this check"
+  ]
+}

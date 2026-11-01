@@ -104,7 +104,14 @@ def assess_candidate(idea_id, original_text, candidate, semantic_report, catalog
         if type(universe['data_snapshot_ref']) is not str or universe['data_snapshot_ref'] not in allowed_refs:
             gap('DATA_GAP', 'Requested data snapshot is not authorized in this attempt')
         engine = ReferenceEngine(catalog, [{'time': 0, 'instrument': 'static-validation', 'features': {}}])
-        descriptions = {path: engine.describe(program) for path, program in (
+        if any(type(program) is dict and program.get('schema') == 'research-ast/2' for program in (
+                candidate['scope_ast'], candidate['condition_ast'], candidate['outcome']['program'])):
+            from .bounded_math import BoundedReferenceEngine
+            engine = BoundedReferenceEngine(catalog, [{'time': 0, 'instrument': 'static-validation', 'features': {}}])
+            outcome_engine = BoundedReferenceEngine(catalog, [{'time': 0, 'instrument': 'static-validation', 'features': {}}], allow_log=True)
+        else:
+            outcome_engine = engine
+        descriptions = {path: (outcome_engine if path == '/outcome/program' else engine).describe(program) for path, program in (
             ('/scope_ast', candidate['scope_ast']), ('/condition_ast', candidate['condition_ast']),
             ('/outcome/program', candidate['outcome']['program']))}
         if any(descriptions[path]['type'] != 'boolean' for path in ('/scope_ast', '/condition_ast')):

@@ -1,0 +1,3871 @@
+{
+  "schema": "bounded-feasibility-precision-observation/1",
+  "observed_utc_date": "2026-10-29",
+  "status": "BOUNDED_CHECKPOINT_COMPLETE_WITH_UNRESOLVED_FEASIBILITY",
+  "study_id": "e98f28291919e19906381cbe1dd826410805e64b84923eb25cbdc01d4d5d0f6c",
+  "precomputation_refinement": {
+    "created_at_utc": "2026-10-29T01:14:41.186727+00:00",
+    "original_design": "docs/reviews/implementation-2026-10-25/feasibility-design-2026-10-27.json",
+    "prior_template_formalization_id": "43ad4bea85c2539a9cac8b2ede7972d86c18eb380e32485b14d3683e12296ad4",
+    "data_snapshot_id": "d97d080ba0657d7fb2be67629829ea85ea3346e67a41a0b55c4ccc772d2fb035",
+    "feature_certificate_id": "7a7eeb040cf86f182bfacd7952a03bfc46046b6e14f2905836490f12f6706323",
+    "reference_certificate_id": "9364777f5c694dbf49474cf0c263f148f337fa1ae4e431e8a02ac6b78dee2357",
+    "fixed_template": "Previous completed BTC bar closes above its own open; response is next completed bar closing above its own open. Canonical positive conditional-minus-whole-scope contrast. Engineering template, not either genuine idea.",
+    "universe": {
+      "start": "2023-01-01T00:00:00Z",
+      "end": "2023-04-01T00:00:00Z",
+      "instruments": [
+        "BTCUSDT"
+      ]
+    },
+    "profile_before_cost_source": {
+      "specifications": [
+        {
+          "schema": "binary-population-spec/1",
+          "mask_mean_block": 8,
+          "persistence": {
+            "numerator": "3",
+            "denominator": "4"
+          },
+          "common_share": {
+            "numerator": "1",
+            "denominator": "2"
+          },
+          "rationale": "Declared estimator-only response/mask stress. No fitted original-process law, no identity-preservation or empirical adequacy claim."
+        }
+      ],
+      "targets": [
+        512,
+        2048
+      ],
+      "worlds_per_cell": 2,
+      "seed": 2026102901,
+      "mc_noncoverage": {
+        "numerator": "1",
+        "denominator": "100"
+      },
+      "outer_noncoverage": {
+        "numerator": "1",
+        "denominator": "20"
+      },
+      "responses": [
+        "a",
+        "b"
+      ],
+      "patterns": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "budget": {
+        "max_compute_ms": 1200000,
+        "attempt_compute_ms": 300000,
+        "max_storage_bytes": 2147483648,
+        "attempt_storage_bytes": 268435456,
+        "max_attempts": 1
+      }
+    },
+    "base_length": 8,
+    "population_effects": [
+      "0",
+      "1/20",
+      "1/10"
+    ],
+    "refinement_before_any_precision_computation": {
+      "reason": "Existing controller disallows targets larger than the source grid and requires all homogeneous effects plus at least one mixed-truth family pattern. The old one-day template has only96timestamps.",
+      "change": "Reuse its fixed expressions on the already prepared Q1 development snapshot, one BTC instrument and two synthetic response claims. Add the required mixed pattern[0,2], giving16planned worlds instead of12; unchanged1200second/2GiB cap, no resource continuation. Existing manifest order is target, specification, pattern, replicate.",
+      "not_changed": "No target chosen from observed results, no model expansion, no scientific thresholds changed; delta remains0.05 and existing19999draws at4/8/16 are retained.",
+      "cross_instrument_limit": "One source instrument. Common latent dependence is across the two synthetic response components; cross-instrument calibration is not assessed.",
+      "scope_limit": "This declared probability sensitivity does not represent the genuine logarithmic return ideas. Their precision remains unsupported."
+    },
+    "seed_rule": "Existing development-family-study/1 domain-separated hash derivation from complete manifest and fixed seed2026102901; exact world inventory retained before first world.",
+    "overall_wall_cap_seconds": 1200,
+    "stop": "Do not admit another300secondworld if less than300secondsremain. Stop at complete, resource stop, any technical/model gap or missing capability; no retry or extension.",
+    "source_footprint": {
+      "trading_researcher/__init__.py": "6eca757148896b40759217e8981ed556abed651b86d63479322aca7f9c62f336",
+      "trading_researcher/__main__.py": "e653c66835737d08bbefd051b6dcd3f76ff4e914c0e513dc1da48a1adc26fb20",
+      "trading_researcher/anthropic_provider.py": "5768871ceedd293436c8c3ffb85a9362db6c866ae1a085c88ff5043150fdbb1f",
+      "trading_researcher/auxiliary.py": "539e230d8508225229073e5a8e428629b8daf81a31005bf20bfe50a1f8752e57",
+      "trading_researcher/binance_archive.py": "b563fc847ceca4755417009787c8ac09a5e57ffd874c0bf51d1df752fc7dc1ab",
+      "trading_researcher/binance_ingest.py": "79f8ab8a6245649c2ea8cf8cc0a75e8c513edcf047cdfd08bcf286a317fa0de0",
+      "trading_researcher/binance_normalize.py": "a93b092e585381c15aee12f499aa859d71ef81ec2a4a6b24a23bf98b50c0d348",
+      "trading_researcher/binance_quality.py": "15400e82b21caf4475c32b760f6b2c85eff6324a223eaaa3385d67dbb13733df",
+      "trading_researcher/binding.py": "bfb195ad9c1e27bd4ff8a8159cfd0a0b986f31565814ffa714f90e95daf36aaf",
+      "trading_researcher/bootstrap_runs.py": "b8e6f4c0272e6e604c5bcf38af2be7fdc3836871205521959fb7fffb95a225ad",
+      "trading_researcher/calibration.py": "2a402d21f01911a308083e8ddaa461f73ddddb9e9f0c2186696ac4a0a6906c0b",
+      "trading_researcher/calibration_runs.py": "dfae620aa8434bd0de54a98d262c5fc7c31059d07e370d1493df46a3c338db1b",
+      "trading_researcher/calibration_study.py": "058530e147029922de59191977a4b85f8934549a96fc5747aa527252dc00a4e3",
+      "trading_researcher/certification.py": "071ec6e6be31ad309d2ccf6046c49c56b7adea349dbabc82097572346a70ab02",
+      "trading_researcher/checks.py": "a979ba2b84649cf7308351d3cc5718ce7aa1fde3429453f3fc2cd48705dc600d",
+      "trading_researcher/codec.py": "de0e255cb8879bbe0557bab8e22069180d98d9c0595db791ea801eb23fe42602",
+      "trading_researcher/composition.py": "2a234f84263c13fab214c1730eac326c578f2d8ad01149a81294133026727acd",
+      "trading_researcher/context_views.py": "7fa7a4392f0e28501147c60f0d1eeee83a49b4cb4ed2937f88e60431a3757ec6",
+      "trading_researcher/controller_providers.py": "518a1b0729f43a4102e4708513c6bdebaccf2b055847426f536aa0ebcb71757e",
+      "trading_researcher/coordination.py": "28830475b8335804d4ba655282c7dce7a1d5d96268f391faa31e8659344a94cf",
+      "trading_researcher/data.py": "162f1162046711c77f75b8af14e9d125765627337345641c5dcbf4a70366e94d",
+      "trading_researcher/data_targets.py": "4ea784c8eefb3eceb8183b6adefdf09adfaf15ac329fb233317eb0cb0dd91697",
+      "trading_researcher/data_use.py": "b670913e14e446b7d38ba5b1c53886f9167235d6fb8b786a893379488b554794",
+      "trading_researcher/errors.py": "36ee8cc56517c2b313670e414ff2b77d16b1230dd9fdc736db54d2c24d80130c",
+      "trading_researcher/evaluation_plans.py": "f2ba6e19fd7734f5e347782b0a225b12d54536722c7a7c02e054f8e3bdef5484",
+      "trading_researcher/evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+      "trading_researcher/expressions.py": "1f354c7346a1262e33ab3b793c52bf9886afbe9dda2997642761f8c60a90f226",
+      "trading_researcher/family_models.py": "0f7cd65e62a9664d1b6645b2f36eb4a6805fcd48ec59b3f0814bb9baf5dbf92e",
+      "trading_researcher/family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+      "trading_researcher/family_study.py": "9153cd667aed7bdad52226d6d33e9eba3b1cf529fc25a5fefd4eaae19ccf2ba0",
+      "trading_researcher/family_study_runs.py": "1e38a9bce9d9013a8b73e92e397bd9a667838cb400fbd6bc8e648e658763804f",
+      "trading_researcher/features.py": "ea55402e106efef7239e82f4eb7d87759e7ab36cc3a3b6cb0afc077334c2f949",
+      "trading_researcher/formalization.py": "8a467d350fbac561c2861ea4b1bda74330e1f3267a668d6e778262c013881ef3",
+      "trading_researcher/information_diagnostics.py": "4d691f02c456826cada0b0967525cd5ed5c590903c58296ee615a6a6eb7489c4",
+      "trading_researcher/information_runs.py": "ba0e18905bf31bded7cb49128dc34fd317705aab6883db737312727bbddab379",
+      "trading_researcher/information_study.py": "ede0c49cc21a96c9759a9a68e6fcee1522df498e5105996fbb1a456f319277be",
+      "trading_researcher/lag_population.py": "94fbadbc9d54e880222861a07d81d5f9123b128293dcec43ec844825272d4dbe",
+      "trading_researcher/meaning_reviews.py": "a0669647d08578bbf07a16f8a849905c31eed689fccf6bef5ba30e142bfe61ee",
+      "trading_researcher/measurements.py": "f42c8f3f6958482292047f4284df9e9121190af22cd4b0312620133715bf331a",
+      "trading_researcher/memory.py": "201183af4e6272ca46a8abd2ba5a3145e600ae32f3b39854479035282778939a",
+      "trading_researcher/memory_demo.py": "51b9a6029cef4228880a47222b0428a1f6d1771eeb21645a4df770ae1541272c",
+      "trading_researcher/monte_carlo.py": "aaad96be04df167a4b80fbe557ec11fc1461dbcad15fa28daea7d9ef7124a4cb",
+      "trading_researcher/openai_provider.py": "9576950722832ec7f7139f3b5054410af8d5e545b870b84d6c19d94454e80980",
+      "trading_researcher/outcomes.py": "8f798b61c23628e12cada48c9e786bce2286b3307c245d0ad0ff854273a83ef6",
+      "trading_researcher/population_models.py": "a0e0dc0344772b095d0ee9fef0c469a826c7007db305643ce30d31c394fa8d10",
+      "trading_researcher/population_runs.py": "a6ded70258275d251d058053bd7a7bbb95fe824842a440b5a6af41d692024ae4",
+      "trading_researcher/provider_usage.py": "b916b40cc06057638a1896db14b4a0282f9ad3c0f19d619f2abcc08f8665a045",
+      "trading_researcher/research_calls.py": "11bc3b43e3032c8b80ac19e7432fd261529bbf45df3869073365d9b6944f5599",
+      "trading_researcher/research_demo.py": "f05db0baf3fdd9f6e3eb0fb3a478ffde7107562d0a24be88ad6aaaca1800d490",
+      "trading_researcher/researcher.py": "84f56b4f11200e01925ec9b2a5eb176fab928dc29cf1ab66e2d1c0f44ce6780e",
+      "trading_researcher/revocations.py": "be0028ff21e68f19288b9a3e05345cfb4fd8f886756270f49e39be473365d9e8",
+      "trading_researcher/second_order_population.py": "5314fea8e5fa14b70fea84e37dfd46c3c5d3d7fcfa39aa3b6ff02c2700201178",
+      "trading_researcher/server.py": "f4816ae64cf6857b79a591e2d8fb567f35bbadaec683be5b55ef2bf20ef35527",
+      "trading_researcher/source_process_scope.py": "ca6ba80ae63761bfe8e9c93117bf3b2e1c9c68bb9d0a7c2c227a65e6269b64ba",
+      "trading_researcher/stationary_bootstrap.py": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+      "trading_researcher/storage.py": "9f6dfa7c53ca67f3e13cf2596c15df1d4050b7bacbeb5b84437e147af7417f98",
+      "trading_researcher/study_pipeline.py": "9cf4cbddc2c3facc657a0d675a6e945251314c62594f6d17ab0173d6201b9bb7",
+      "trading_researcher/study_resources.py": "436d3ac62638b6088cf07a26f6aa2be6da0932ad252982f1edb9514b83a971dd",
+      "trading_researcher/study_runs.py": "344471ce51d7d8b849cda734fb1aadcc4957609ea5e544322790bcb47117264a",
+      "trading_researcher/study_stream.py": "ccdacccac038a0e340603f922e8f722a7342b7f66cf00552c27a9c796d9820dd",
+      "trading_researcher/worker.py": "925c707e73020246e64ffae7d49d8e8a038152b68254e4fc29f4775867d42cfe"
+    },
+    "scientific_readiness": false,
+    "n_min": null
+  },
+  "manifest": {
+    "schema": "family-information-study-manifest/1",
+    "assigned": {
+      "input_binding": "97fd2a0536c1c60022d642b719fc378e60d957a7839f84dea62db1ddfc35a4d8",
+      "base_length": 8,
+      "primary_count": 2,
+      "delta": {
+        "denominator": "20",
+        "numerator": "1"
+      },
+      "direction": "positive",
+      "horizon_bars": 1,
+      "available_time_rows": 8640,
+      "instruments": 1
+    },
+    "profile": {
+      "budget": {
+        "attempt_compute_ms": 300000,
+        "attempt_storage_bytes": 268435456,
+        "max_attempts": 1,
+        "max_compute_ms": 1200000,
+        "max_storage_bytes": 2147483648
+      },
+      "cost_estimate": {
+        "observed_compute_ms": 300000,
+        "observed_storage_bytes": 268435456,
+        "qualification": "Admission allowance, not an observed benchmark. Actual complete world/replay costs will be reported; no full-year speed claim.",
+        "source_ref": "8628f8f0dce6f4a561cc63bb55f8f697ff457c35caab4061cf4db24dabc6d62d",
+        "world_time_rows": 512
+      },
+      "mc_noncoverage": {
+        "denominator": "100",
+        "numerator": "1"
+      },
+      "outer_noncoverage": {
+        "denominator": "20",
+        "numerator": "1"
+      },
+      "patterns": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "responses": [
+        "a",
+        "b"
+      ],
+      "seed": 2026102901,
+      "specifications": [
+        {
+          "common_share": {
+            "denominator": "2",
+            "numerator": "1"
+          },
+          "mask_mean_block": 8,
+          "persistence": {
+            "denominator": "4",
+            "numerator": "3"
+          },
+          "rationale": "Declared estimator-only response/mask stress. No fitted original-process law, no identity-preservation or empirical adequacy claim.",
+          "schema": "binary-population-spec/1"
+        }
+      ],
+      "targets": [
+        512,
+        2048
+      ],
+      "worlds_per_cell": 2
+    },
+    "effects": [
+      {
+        "numerator": "0",
+        "denominator": "1"
+      },
+      {
+        "numerator": "1",
+        "denominator": "20"
+      },
+      {
+        "numerator": "1",
+        "denominator": "10"
+      }
+    ],
+    "required_lengths": [
+      4,
+      8,
+      16
+    ],
+    "family": {
+      "profile": "historical-batch-v1",
+      "primary_count": 2,
+      "family_noncoverage": {
+        "numerator": "1",
+        "denominator": "20"
+      },
+      "marginal_noncoverage": {
+        "numerator": "1",
+        "denominator": "40"
+      },
+      "interval_sides": 2,
+      "allocation": "union_bound",
+      "fixed_releases": 1,
+      "independence_between_claims_required": false,
+      "valid_marginal_coverage_required": true
+    },
+    "mc_policy": {
+      "schema": "mc-boundary-policy/1",
+      "noncoverage": {
+        "denominator": "100",
+        "numerator": "1"
+      },
+      "delta": {
+        "denominator": "20",
+        "numerator": "1"
+      },
+      "direction": "positive"
+    },
+    "outer_method": "clopper-pearson-dyadic-outward/1",
+    "outer_bits": 40,
+    "selection": "smallest_complete_tested_point_all_declared_alternative_components_at_least_four_fifths",
+    "seed_namespace": "development-family-study/1",
+    "scientific_readiness": false,
+    "n_min": null,
+    "recipe_hash": "91375b886d222bd563c4a75436f65a757de0d3eae5b5bd2f290fede059055f25",
+    "worlds": [
+      {
+        "id": "bd3b31ea497e1bf3a2914fb085a5f83249a76575c0879c3847dcc895e8f8ff7f",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "replicate": 0,
+        "population_seed": 6386199607256158351431190222166420904702643066936780774106196011876927281436,
+        "bootstrap_seed": 34835807693318242743512798289947357768722400247543705353289784618736843707289
+      },
+      {
+        "id": "7c620e03ef054cbee9e4439b5fdc1e3c76508ed978471aa9f422350cce27ee34",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "replicate": 1,
+        "population_seed": 105084816506365353345347749627006608054625060387733236162979231475924372442262,
+        "bootstrap_seed": 81945980863978072108535840929850616932934443765952891224463513626298809297015
+      },
+      {
+        "id": "c6e6f3d2fd69f942bdae590199c6793e15086ad355cd62b8046ddb0c2a43510a",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "replicate": 0,
+        "population_seed": 22570091980012947502210690563253820591247689787774401556489524055144380011410,
+        "bootstrap_seed": 43679749816487753599256208798263395857962710017820091625995142551207310586677
+      },
+      {
+        "id": "37c83e7358e3795f1cc7a57de1b8b7a028533b30fbac029a473767a3d0992797",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "replicate": 1,
+        "population_seed": 42623077685459624823808454261577239065098484486662426659580649481999911845259,
+        "bootstrap_seed": 89607857381815867772802533804842572564965234766763128979135618453643127385001
+      },
+      {
+        "id": "cd2914a8569252dbf5d8f07d9393ddf21fed01f3b431b376b507eaeed5ff5fb7",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 2,
+        "replicate": 0,
+        "population_seed": 53011391796248432874280179020095734950420153668929174831698333861959600699175,
+        "bootstrap_seed": 54601271712304231881341614841433438495081865602877305849192256465907841729217
+      },
+      {
+        "id": "f123ec28c5abd26e6671c86e1e3ac522166687677bf9de5aa8b67b9ffb628086",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 2,
+        "replicate": 1,
+        "population_seed": 91971405578726161080731853543226241101715783799368821853945376193738109153034,
+        "bootstrap_seed": 13930123631364754003498969399533581263324458169835368722117202109895798778259
+      },
+      {
+        "id": "86d25f6fdc89d19e057f15f898b6c193b48f72c4c2705a5e53018a4963fd0c5f",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 3,
+        "replicate": 0,
+        "population_seed": 59094819164053696793029258321105433412391647499092779043769237229411629924358,
+        "bootstrap_seed": 101861080705760645559474466627540459154868565354475723244510644954137127309203
+      },
+      {
+        "id": "287e92b50af888a5d9a7267511ac8172f2c76671c388e9c38119d256768fc3e0",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 3,
+        "replicate": 1,
+        "population_seed": 49901116184813677617671422033410676551191262589958097863349004251954765799105,
+        "bootstrap_seed": 39702502561217688841081752420046195016682585490644985655643853222713628406270
+      },
+      {
+        "id": "b185b523321aa4036406f110ba0cdd70440e70ec95170ce8de2afd4253ea04c7",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "replicate": 0,
+        "population_seed": 111010062794307936097790273175374347304104134168908214323431847126036801214505,
+        "bootstrap_seed": 2615853996825785667870246417705974311753942305698083852028515463796694832539
+      },
+      {
+        "id": "2545776cb07cb672fd793bedeb3222466dfe98f9c44944bb9c1ae1dee66b1c3b",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "replicate": 1,
+        "population_seed": 73186739819948268350101148114328246488469999312208630352467141227029408266422,
+        "bootstrap_seed": 11230979241438815511349708691359254872255993023840723730795063655287066623824
+      },
+      {
+        "id": "65363915c2bc437589c23473a85ec5049f76e295349df2ba3438fe878885dac7",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "replicate": 0,
+        "population_seed": 97331727940463685891944244132853104427686154326543105958403474177892966787002,
+        "bootstrap_seed": 24888062436127538297869818786281119277932938318089791998776521103266212299340
+      },
+      {
+        "id": "4befcf4d01ce3521af1abe2eb778fc78241a438d30660f2a7e77254c183a1ec4",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "replicate": 1,
+        "population_seed": 113024905697955658844432441212265507330536996119792274326200221955693464328739,
+        "bootstrap_seed": 101406686834718173312080431805516212829960939532435814442363390754586322484880
+      },
+      {
+        "id": "6dc077d5a0eec314106969314f8385bdb256f4ba10a1714eb45bffee82cecf65",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 2,
+        "replicate": 0,
+        "population_seed": 61249995554506714236468610003054876112907772733806835788477160854994846183034,
+        "bootstrap_seed": 94489093425346923677183413627171843843273773744176223871911856995637953239151
+      },
+      {
+        "id": "79c72fbcf40b872da8067d9e975d7c5b9336f9237130e9d586c8139fc365afa7",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 2,
+        "replicate": 1,
+        "population_seed": 88166376811557174216991797506816053407386588611948363153087902687530826217282,
+        "bootstrap_seed": 108590021275696688211259462080756218937331768934673871372296467137383604663662
+      },
+      {
+        "id": "ee08eeccda455a250180327af6d77d4b77bed60a20d59687e14555926fb46a50",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 3,
+        "replicate": 0,
+        "population_seed": 102916635833139301684059435092006126765446735015235462194661999742137074284691,
+        "bootstrap_seed": 85566411687577157274012206275229763770210067209078198531397007055397693573909
+      },
+      {
+        "id": "4fa0d1e614a275c19f247f39514a5d8c8ff6693381c0ff0a609dc3be9c8364c7",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 3,
+        "replicate": 1,
+        "population_seed": 27036686049578075377598151614008651473592886221456516538754532636112137065104,
+        "bootstrap_seed": 81446272760229009107943570124681210507628851693959875116453983243822327201821
+      }
+    ]
+  },
+  "owned_study_summary": {
+    "schema": "family-study-summary/1",
+    "complete": false,
+    "planned_worlds": 16,
+    "recorded_worlds": 12,
+    "cells": [
+      {
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "planned": 2,
+        "recorded": 2,
+        "states": {
+          "INFORMATION_GAP": 0,
+          "MODEL_GAP": 0,
+          "TECHNICAL_FAILURE": 0,
+          "VERIFIED": 2
+        },
+        "complete": true,
+        "detections": []
+      },
+      {
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "planned": 2,
+        "recorded": 2,
+        "states": {
+          "INFORMATION_GAP": 0,
+          "MODEL_GAP": 0,
+          "TECHNICAL_FAILURE": 0,
+          "VERIFIED": 2
+        },
+        "complete": true,
+        "detections": [
+          {
+            "response_index": 1,
+            "detections": 0,
+            "interval": {
+              "method": "clopper-pearson-dyadic-outward/1",
+              "noncoverage": {
+                "numerator": "1",
+                "denominator": "20"
+              },
+              "bits": 40,
+              "point": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "lower": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "upper": {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              },
+              "lower_root_bracket": [
+                {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                {
+                  "numerator": "0",
+                  "denominator": "1"
+                }
+              ],
+              "upper_root_bracket": [
+                {
+                  "numerator": "925663574895",
+                  "denominator": "1099511627776"
+                },
+                {
+                  "numerator": "57853973431",
+                  "denominator": "68719476736"
+                }
+              ],
+              "maximum_bracket_width": {
+                "numerator": "1",
+                "denominator": "1099511627776"
+              },
+              "pointwise_only": true,
+              "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+            },
+            "design_target_met": false
+          }
+        ]
+      },
+      {
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 2,
+        "planned": 2,
+        "recorded": 2,
+        "states": {
+          "INFORMATION_GAP": 0,
+          "MODEL_GAP": 0,
+          "TECHNICAL_FAILURE": 0,
+          "VERIFIED": 2
+        },
+        "complete": true,
+        "detections": []
+      },
+      {
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 3,
+        "planned": 2,
+        "recorded": 2,
+        "states": {
+          "INFORMATION_GAP": 0,
+          "MODEL_GAP": 0,
+          "TECHNICAL_FAILURE": 0,
+          "VERIFIED": 2
+        },
+        "complete": true,
+        "detections": [
+          {
+            "response_index": 0,
+            "detections": 0,
+            "interval": {
+              "method": "clopper-pearson-dyadic-outward/1",
+              "noncoverage": {
+                "numerator": "1",
+                "denominator": "20"
+              },
+              "bits": 40,
+              "point": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "lower": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "upper": {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              },
+              "lower_root_bracket": [
+                {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                {
+                  "numerator": "0",
+                  "denominator": "1"
+                }
+              ],
+              "upper_root_bracket": [
+                {
+                  "numerator": "925663574895",
+                  "denominator": "1099511627776"
+                },
+                {
+                  "numerator": "57853973431",
+                  "denominator": "68719476736"
+                }
+              ],
+              "maximum_bracket_width": {
+                "numerator": "1",
+                "denominator": "1099511627776"
+              },
+              "pointwise_only": true,
+              "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+            },
+            "design_target_met": false
+          },
+          {
+            "response_index": 1,
+            "detections": 0,
+            "interval": {
+              "method": "clopper-pearson-dyadic-outward/1",
+              "noncoverage": {
+                "numerator": "1",
+                "denominator": "20"
+              },
+              "bits": 40,
+              "point": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "lower": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "upper": {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              },
+              "lower_root_bracket": [
+                {
+                  "numerator": "0",
+                  "denominator": "1"
+                },
+                {
+                  "numerator": "0",
+                  "denominator": "1"
+                }
+              ],
+              "upper_root_bracket": [
+                {
+                  "numerator": "925663574895",
+                  "denominator": "1099511627776"
+                },
+                {
+                  "numerator": "57853973431",
+                  "denominator": "68719476736"
+                }
+              ],
+              "maximum_bracket_width": {
+                "numerator": "1",
+                "denominator": "1099511627776"
+              },
+              "pointwise_only": true,
+              "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+            },
+            "design_target_met": false
+          }
+        ]
+      },
+      {
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "planned": 2,
+        "recorded": 2,
+        "states": {
+          "INFORMATION_GAP": 0,
+          "MODEL_GAP": 0,
+          "TECHNICAL_FAILURE": 0,
+          "VERIFIED": 2
+        },
+        "complete": true,
+        "detections": []
+      },
+      {
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "planned": 2,
+        "recorded": 2,
+        "states": {
+          "INFORMATION_GAP": 0,
+          "MODEL_GAP": 0,
+          "TECHNICAL_FAILURE": 0,
+          "VERIFIED": 2
+        },
+        "complete": true,
+        "detections": [
+          {
+            "response_index": 1,
+            "detections": 2,
+            "interval": {
+              "method": "clopper-pearson-dyadic-outward/1",
+              "noncoverage": {
+                "numerator": "1",
+                "denominator": "20"
+              },
+              "bits": 40,
+              "point": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "lower": {
+                "numerator": "10865503305",
+                "denominator": "68719476736"
+              },
+              "upper": {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              "lower_root_bracket": [
+                {
+                  "numerator": "10865503305",
+                  "denominator": "68719476736"
+                },
+                {
+                  "numerator": "173848052881",
+                  "denominator": "1099511627776"
+                }
+              ],
+              "upper_root_bracket": [
+                {
+                  "numerator": "1",
+                  "denominator": "1"
+                },
+                {
+                  "numerator": "1",
+                  "denominator": "1"
+                }
+              ],
+              "maximum_bracket_width": {
+                "numerator": "1",
+                "denominator": "1099511627776"
+              },
+              "pointwise_only": true,
+              "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+            },
+            "design_target_met": true
+          }
+        ]
+      },
+      {
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 2,
+        "planned": 2,
+        "recorded": 0,
+        "states": {
+          "INFORMATION_GAP": 0,
+          "MODEL_GAP": 0,
+          "TECHNICAL_FAILURE": 0,
+          "VERIFIED": 0
+        },
+        "complete": false,
+        "detections": []
+      },
+      {
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 3,
+        "planned": 2,
+        "recorded": 0,
+        "states": {
+          "INFORMATION_GAP": 0,
+          "MODEL_GAP": 0,
+          "TECHNICAL_FAILURE": 0,
+          "VERIFIED": 0
+        },
+        "complete": false,
+        "detections": [
+          {
+            "response_index": 0,
+            "detections": 0,
+            "interval": null,
+            "design_target_met": null
+          },
+          {
+            "response_index": 1,
+            "detections": 0,
+            "interval": null,
+            "design_target_met": null
+          }
+        ]
+      }
+    ],
+    "candidate_time_rows": null,
+    "candidate_qualification": "smallest_complete_tested_point_not_n_min",
+    "n_min": null,
+    "scientific_readiness": false,
+    "classification_permitted": false
+  },
+  "worlds": [
+    {
+      "manifest_world": {
+        "id": "bd3b31ea497e1bf3a2914fb085a5f83249a76575c0879c3847dcc895e8f8ff7f",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "replicate": 0,
+        "population_seed": 6386199607256158351431190222166420904702643066936780774106196011876927281436,
+        "bootstrap_seed": 34835807693318242743512798289947357768722400247543705353289784618736843707289
+      },
+      "artifact_id": "15db31ed9584c5a7aba30cae4302b5b19098c4ffab2eba8039245b536f2c16f9",
+      "envelope_sha256": "15db31ed9584c5a7aba30cae4302b5b19098c4ffab2eba8039245b536f2c16f9",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 511,
+          "condition_count": 240,
+          "sample_effect": {
+            "denominator": "7665",
+            "numerator": "158"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "115580645376",
+              "numerator": "-4334616631"
+            },
+            "upper": {
+              "denominator": "4891471872",
+              "numerator": "399151997"
+            }
+          },
+          "interval_width": {
+            "numerator": "874417577",
+            "denominator": "7341595136"
+          },
+          "width_probability_points": 11.910457615842029,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": false,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 511,
+          "condition_count": 240,
+          "sample_effect": {
+            "denominator": "15330",
+            "numerator": "857"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "898705920000",
+              "numerator": "1285608181"
+            },
+            "upper": {
+              "denominator": "148333080",
+              "numerator": "16343711"
+            }
+          },
+          "interval_width": {
+            "numerator": "236423542226161",
+            "denominator": "2173969620480000"
+          },
+          "width_probability_points": 10.875199910749444,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {},
+        "false_support": false,
+        "joint_miscoverage": true
+      },
+      "settlement": {
+        "attempt_id": "85c1d65308524177a366f88f84192196",
+        "compute_ms": 45746,
+        "storage_bytes": 38375966,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "12c75d95ae8dac5c0a5a8b67f10784bd3c819a8dbc2cd3bb418a75d653be4aff",
+        "size": 6452806
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "10509822b262c8316bcc14a9807bf55b3b19d1e334823c2d5c36fba8ef242bb8",
+          "size": 35308257
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "7c620e03ef054cbee9e4439b5fdc1e3c76508ed978471aa9f422350cce27ee34",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "replicate": 1,
+        "population_seed": 105084816506365353345347749627006608054625060387733236162979231475924372442262,
+        "bootstrap_seed": 81945980863978072108535840929850616932934443765952891224463513626298809297015
+      },
+      "artifact_id": "51cc878c25ad4df1607dfe930f67fcae243c9f5bac91e1979beb18d29679ef85",
+      "envelope_sha256": "51cc878c25ad4df1607dfe930f67fcae243c9f5bac91e1979beb18d29679ef85",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 511,
+          "condition_count": 247,
+          "sample_effect": {
+            "denominator": "126217",
+            "numerator": "796"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "21456890000",
+              "numerator": "-959333303"
+            },
+            "upper": {
+              "denominator": "2598587330560",
+              "numerator": "155906113317"
+            }
+          },
+          "interval_width": {
+            "numerator": "16385892791953",
+            "denominator": "156493872640000"
+          },
+          "width_probability_points": 10.470628987274962,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 511,
+          "condition_count": 247,
+          "sample_effect": {
+            "denominator": "126217",
+            "numerator": "-2108"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "497960173882080",
+              "numerator": "-34499170038211"
+            },
+            "upper": {
+              "denominator": "301143664640",
+              "numerator": "10686314259"
+            }
+          },
+          "interval_width": {
+            "numerator": "59842623749465741",
+            "denominator": "571198624071505920"
+          },
+          "width_probability_points": 10.47667505270011,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {},
+        "false_support": false,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "1f4247dbe55e4f18a0c40431538a6b69",
+        "compute_ms": 44159,
+        "storage_bytes": 38448478,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "83b120a2e4f92a23b27db252091541728ae3beaffefbdf08a567b832843a61c5",
+        "size": 6470811
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "56446c91a654e790d19bb314962df2d0971342f22bfd4dff6c168bd2a35d968a",
+          "size": 35329376
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "c6e6f3d2fd69f942bdae590199c6793e15086ad355cd62b8046ddb0c2a43510a",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "replicate": 0,
+        "population_seed": 22570091980012947502210690563253820591247689787774401556489524055144380011410,
+        "bootstrap_seed": 43679749816487753599256208798263395857962710017820091625995142551207310586677
+      },
+      "artifact_id": "824c07b2d1d50f63209765bc07bf12015fa9e7dc481985a887de7b4cdc36b34c",
+      "envelope_sha256": "824c07b2d1d50f63209765bc07bf12015fa9e7dc481985a887de7b4cdc36b34c",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 504,
+          "condition_count": 246,
+          "sample_effect": {
+            "denominator": "5166",
+            "numerator": "-83"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "12064455000",
+              "numerator": "-903813641"
+            },
+            "upper": {
+              "denominator": "10103862248928",
+              "numerator": "447925424827"
+            }
+          },
+          "interval_width": {
+            "numerator": "40033447514010863",
+            "denominator": "335717252264940000"
+          },
+          "width_probability_points": 11.924751332832138,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "10",
+            "numerator": "1"
+          },
+          "scope_count": 504,
+          "condition_count": 246,
+          "sample_effect": {
+            "denominator": "3444",
+            "numerator": "379"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "3316796893200",
+              "numerator": "153392577097"
+            },
+            "upper": {
+              "denominator": "463095",
+              "numerator": "81626"
+            }
+          },
+          "interval_width": {
+            "numerator": "7919949542479",
+            "denominator": "60915806355600"
+          },
+          "width_probability_points": 13.001468775190755,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {
+          "b": false
+        },
+        "false_support": false,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "8a58779345dc44ada7474814f145c329",
+        "compute_ms": 43994,
+        "storage_bytes": 39137968,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "01a9b6c0eb45102e19491f811827575f72aa209f541b5f72bb409008eb0988b6",
+        "size": 6643262
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "01268f259081d2cb899c3df70a809e652dccec70293bb7da34de6c547ca2dfd1",
+          "size": 35360168
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "37c83e7358e3795f1cc7a57de1b8b7a028533b30fbac029a473767a3d0992797",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "replicate": 1,
+        "population_seed": 42623077685459624823808454261577239065098484486662426659580649481999911845259,
+        "bootstrap_seed": 89607857381815867772802533804842572564965234766763128979135618453643127385001
+      },
+      "artifact_id": "d00c08467f015e783ca401bf740ae3088c9547a95cfbd727870f405d5876fc2d",
+      "envelope_sha256": "d00c08467f015e783ca401bf740ae3088c9547a95cfbd727870f405d5876fc2d",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 511,
+          "condition_count": 252,
+          "sample_effect": {
+            "denominator": "657",
+            "numerator": "-20"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "757435852800",
+              "numerator": "-56559419407"
+            },
+            "upper": {
+              "denominator": "106297344",
+              "numerator": "1417795"
+            }
+          },
+          "interval_width": {
+            "numerator": "3005882639",
+            "denominator": "34153785600"
+          },
+          "width_probability_points": 8.801023330778301,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "10",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 252,
+          "sample_effect": {
+            "denominator": "14",
+            "numerator": "1"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "1241566480",
+              "numerator": "21459931"
+            },
+            "upper": {
+              "denominator": "16935651600",
+              "numerator": "2130292111"
+            }
+          },
+          "interval_width": {
+            "numerator": "1018509536986607",
+            "denominator": "9386936314070700"
+          },
+          "width_probability_points": 10.850287068208779,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {
+          "b": false
+        },
+        "false_support": false,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "bfbf9c420529472a837a29fe6a44cde8",
+        "compute_ms": 44439,
+        "storage_bytes": 38428730,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "851da0eea237251c05fde4eea2883a3f7956d95bd3628e85c2ac8ab99550b515",
+        "size": 6466052
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "bacbd08fa48d0ae3a5714a88236ed6e669385810b73f535681c8dee0fe14cb3d",
+          "size": 35368673
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "cd2914a8569252dbf5d8f07d9393ddf21fed01f3b431b376b507eaeed5ff5fb7",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 2,
+        "replicate": 0,
+        "population_seed": 53011391796248432874280179020095734950420153668929174831698333861959600699175,
+        "bootstrap_seed": 54601271712304231881341614841433438495081865602877305849192256465907841729217
+      },
+      "artifact_id": "8629259604785719e926b66d5a652fa4b532f88192a8063a2d22eecd5e2baf29",
+      "envelope_sha256": "8629259604785719e926b66d5a652fa4b532f88192a8063a2d22eecd5e2baf29",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "20",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 256,
+          "sample_effect": {
+            "denominator": "18688",
+            "numerator": "1405"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "1701589120",
+              "numerator": "44007893"
+            },
+            "upper": {
+              "denominator": "76176773120",
+              "numerator": "9414254391"
+            }
+          },
+          "interval_width": {
+            "numerator": "38731695095669",
+            "denominator": "396347750543360"
+          },
+          "width_probability_points": 9.77214959402975,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "20",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 256,
+          "sample_effect": {
+            "denominator": "130816",
+            "numerator": "5491"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "98322940800",
+              "numerator": "-792670429"
+            },
+            "upper": {
+              "denominator": "52980480000",
+              "numerator": "5007733807"
+            }
+          },
+          "interval_width": {
+            "numerator": "23685768499",
+            "denominator": "230895360000"
+          },
+          "width_probability_points": 10.258226280077695,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": false,
+        "detections": {},
+        "false_support": null,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "1a853c32832b44cdbe383469714749b2",
+        "compute_ms": 43665,
+        "storage_bytes": 38457216,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "c528ce5a98f7bf4690defb98a27e597fe5126459905489c95edd981d13cbab2c",
+        "size": 6473119
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "d02cded98416cc08dd448ec4d128965ff73098cf08721cd64dd36a70fe7082ac",
+          "size": 35327081
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "f123ec28c5abd26e6671c86e1e3ac522166687677bf9de5aa8b67b9ffb628086",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 2,
+        "replicate": 1,
+        "population_seed": 91971405578726161080731853543226241101715783799368821853945376193738109153034,
+        "bootstrap_seed": 13930123631364754003498969399533581263324458169835368722117202109895798778259
+      },
+      "artifact_id": "6709c953f07840a6628035111f139d14bccc9b19ece9ff6f03b0e3bc54ff0911",
+      "envelope_sha256": "6709c953f07840a6628035111f139d14bccc9b19ece9ff6f03b0e3bc54ff0911",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "20",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 266,
+          "sample_effect": {
+            "denominator": "19418",
+            "numerator": "1191"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "160613074300",
+              "numerator": "2420075913"
+            },
+            "upper": {
+              "denominator": "7821781667840",
+              "numerator": "824422976571"
+            }
+          },
+          "interval_width": {
+            "numerator": "30759253047780039",
+            "denominator": "340508914727833600"
+          },
+          "width_probability_points": 9.033317988859615,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "20",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 266,
+          "sample_effect": {
+            "denominator": "9709",
+            "numerator": "445"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "542933493760",
+              "numerator": "-1876942203"
+            },
+            "upper": {
+              "denominator": "28206586800",
+              "numerator": "2633235103"
+            }
+          },
+          "interval_width": {
+            "numerator": "100463871525251",
+            "denominator": "1037717359257600"
+          },
+          "width_probability_points": 9.681236478218356,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": false,
+        "detections": {},
+        "false_support": null,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "4e67c950c5a542ba864b4d13e33d1d48",
+        "compute_ms": 44020,
+        "storage_bytes": 38390826,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "4c56defc82542f2263ae1325c915b4b6742dacc9497a9c5894bff79015956ab1",
+        "size": 6456478
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "739def127026915741f26fb1f7b72bb969d060a4da85f69a2e94d7898ece5c27",
+          "size": 35324128
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "86d25f6fdc89d19e057f15f898b6c193b48f72c4c2705a5e53018a4963fd0c5f",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 3,
+        "replicate": 0,
+        "population_seed": 59094819164053696793029258321105433412391647499092779043769237229411629924358,
+        "bootstrap_seed": 101861080705760645559474466627540459154868565354475723244510644954137127309203
+      },
+      "artifact_id": "57322a5e3f646077ddf40913b20173e3ad921c03a3166905e2abd9a70f0dd6fe",
+      "envelope_sha256": "57322a5e3f646077ddf40913b20173e3ad921c03a3166905e2abd9a70f0dd6fe",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "10",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 272,
+          "sample_effect": {
+            "denominator": "69496",
+            "numerator": "7173"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "444774400",
+              "numerator": "18676503"
+            },
+            "upper": {
+              "denominator": "130627660",
+              "numerator": "20534271"
+            }
+          },
+          "interval_width": {
+            "numerator": "269679701031",
+            "denominator": "2340847667200"
+          },
+          "width_probability_points": 11.520600200079521,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "10",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 272,
+          "sample_effect": {
+            "denominator": "19856",
+            "numerator": "1543"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "2125060849800",
+              "numerator": "46950914909"
+            },
+            "upper": {
+              "denominator": "12279074500",
+              "numerator": "1640412489"
+            }
+          },
+          "interval_width": {
+            "numerator": "197012613566323",
+            "denominator": "1766925594819000"
+          },
+          "width_probability_points": 11.15002318965811,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {
+          "a": false,
+          "b": false
+        },
+        "false_support": null,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "245eab2560004ce8859e770a18924f15",
+        "compute_ms": 43522,
+        "storage_bytes": 38568710,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "6fad97bb17bd39cd2de1dd768f9061e30bd73c968221223c6010155cba1bd532",
+        "size": 6500941
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "c0e77e756e4eb2c04ffaca441b7495497c1709eb987801e9f2a8e8e0465f650a",
+          "size": 35364664
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "287e92b50af888a5d9a7267511ac8172f2c76671c388e9c38119d256768fc3e0",
+        "time_rows": 512,
+        "spec_index": 0,
+        "pattern_index": 3,
+        "replicate": 1,
+        "population_seed": 49901116184813677617671422033410676551191262589958097863349004251954765799105,
+        "bootstrap_seed": 39702502561217688841081752420046195016682585490644985655643853222713628406270
+      },
+      "artifact_id": "0d0b402adcaf8496078ffa3ffff2e69f0a4dcc0186ec27ae86b0b20fd9854830",
+      "envelope_sha256": "0d0b402adcaf8496078ffa3ffff2e69f0a4dcc0186ec27ae86b0b20fd9854830",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "10",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 281,
+          "sample_effect": {
+            "denominator": "143591",
+            "numerator": "8956"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "3934925096960",
+              "numerator": "60302544747"
+            },
+            "upper": {
+              "denominator": "19004556032000",
+              "numerator": "2085039157111"
+            }
+          },
+          "interval_width": {
+            "numerator": "5435646359459",
+            "denominator": "57588539008000"
+          },
+          "width_probability_points": 9.438764124062773,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_INCONCLUSIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "10",
+            "numerator": "1"
+          },
+          "scope_count": 511,
+          "condition_count": 281,
+          "sample_effect": {
+            "denominator": "143591",
+            "numerator": "12176"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "2477185982880",
+              "numerator": "70715295113"
+            },
+            "upper": {
+              "denominator": "46630028522000",
+              "numerator": "6379482231603"
+            }
+          },
+          "interval_width": {
+            "numerator": "3874224184151023",
+            "denominator": "35784979112652000"
+          },
+          "width_probability_points": 10.826397779791542,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {
+          "a": false,
+          "b": false
+        },
+        "false_support": null,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "a4086542a5d3468f90fcf99673c09b27",
+        "compute_ms": 42806,
+        "storage_bytes": 38470414,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "96b2f912353d1ee9993b2f21525becbf66358b0750f21b39f527cfe908b93f77",
+        "size": 6476260
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "9b640c708de84cf8964ccb5609f2e2811da5e9e4bca7fd29bf967d2c55385d12",
+          "size": 35350965
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "b185b523321aa4036406f110ba0cdd70440e70ec95170ce8de2afd4253ea04c7",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "replicate": 0,
+        "population_seed": 111010062794307936097790273175374347304104134168908214323431847126036801214505,
+        "bootstrap_seed": 2615853996825785667870246417705974311753942305698083852028515463796694832539
+      },
+      "artifact_id": "01d6ae9aa460275953e697e7b6c05d8687ef79e6b74523e1acc629b30a539e0f",
+      "envelope_sha256": "01d6ae9aa460275953e697e7b6c05d8687ef79e6b74523e1acc629b30a539e0f",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 2046,
+          "condition_count": 1022,
+          "sample_effect": {
+            "denominator": "174251",
+            "numerator": "-2556"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "11167154136600",
+              "numerator": "-437077449817"
+            },
+            "upper": {
+              "denominator": "276128547839760",
+              "numerator": "2722305649597"
+            }
+          },
+          "interval_width": {
+            "numerator": "8334124951671303",
+            "denominator": "170089771184040400"
+          },
+          "width_probability_points": 4.899839004812123,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 2046,
+          "condition_count": 1022,
+          "sample_effect": {
+            "denominator": "522753",
+            "numerator": "-3554"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "8870325749171040",
+              "numerator": "-274315175224793"
+            },
+            "upper": {
+              "denominator": "2557033962529200",
+              "numerator": "44058769929323"
+            }
+          },
+          "interval_width": {
+            "numerator": "25530507383681961551",
+            "denominator": "530168488054526658400"
+          },
+          "width_probability_points": 4.815545993193055,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {},
+        "false_support": false,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "029b56345a564cc8817e3300228e9622",
+        "compute_ms": 135373,
+        "storage_bytes": 39972136,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "1adcba04011291a83768c39e0a675c77df832e8e8127c4c0bc11688c1196e896",
+        "size": 6851602
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "25939672a391e53812f4669bc89b3369a00eb7a111ba339a49c863337096aca9",
+          "size": 37997861
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "2545776cb07cb672fd793bedeb3222466dfe98f9c44944bb9c1ae1dee66b1c3b",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 0,
+        "replicate": 1,
+        "population_seed": 73186739819948268350101148114328246488469999312208630352467141227029408266422,
+        "bootstrap_seed": 11230979241438815511349708691359254872255993023840723730795063655287066623824
+      },
+      "artifact_id": "a7655f1251d5af15fcc138a1e044ae23e98fcdc29487a77a448508f18501d10c",
+      "envelope_sha256": "a7655f1251d5af15fcc138a1e044ae23e98fcdc29487a77a448508f18501d10c",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 2047,
+          "condition_count": 1012,
+          "sample_effect": {
+            "denominator": "90068",
+            "numerator": "-305"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "2809084016640000",
+              "numerator": "-76099354628921"
+            },
+            "upper": {
+              "denominator": "1159787622400",
+              "numerator": "24299404977"
+            }
+          },
+          "interval_width": {
+            "numerator": "2951388715731581",
+            "denominator": "61433446103040000"
+          },
+          "width_probability_points": 4.804205042935941,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 2047,
+          "condition_count": 1012,
+          "sample_effect": {
+            "denominator": "90068",
+            "numerator": "-35"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "43261231185920",
+              "numerator": "-1090588978761"
+            },
+            "upper": {
+              "denominator": "76162307809280",
+              "numerator": "1851552629011"
+            }
+          },
+          "interval_width": {
+            "numerator": "752802871887211",
+            "denominator": "15201996638732288"
+          },
+          "width_probability_points": 4.951999989061885,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {},
+        "false_support": false,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "504b1b46f3f743368deb4183fe185227",
+        "compute_ms": 143788,
+        "storage_bytes": 39737638,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "959b87fb1d4f2398e5eb058c263da81e344efb9cc4c970e7a81a81e696d4d965",
+        "size": 6793015
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "56a5b21ed51c846d2108a09f834b58d2a1f01fe6e0f910cf9eec60479c85601d",
+          "size": 37940045
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "65363915c2bc437589c23473a85ec5049f76e295349df2ba3438fe878885dac7",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "replicate": 0,
+        "population_seed": 97331727940463685891944244132853104427686154326543105958403474177892966787002,
+        "bootstrap_seed": 24888062436127538297869818786281119277932938318089791998776521103266212299340
+      },
+      "artifact_id": "6054751c5fc442f81d79fdca3fed5027a68409170a374f2b48f2c9d9f83eb436",
+      "envelope_sha256": "6054751c5fc442f81d79fdca3fed5027a68409170a374f2b48f2c9d9f83eb436",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 2047,
+          "condition_count": 1050,
+          "sample_effect": {
+            "denominator": "2149350",
+            "numerator": "23923"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "110700122400",
+              "numerator": "-1325527061"
+            },
+            "upper": {
+              "denominator": "4903232852582400",
+              "numerator": "167023882176229"
+            }
+          },
+          "interval_width": {
+            "numerator": "145328425065216947",
+            "denominator": "3156701310492549120"
+          },
+          "width_probability_points": 4.603806656719794,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "SUPPORTED_INITIAL",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "10",
+            "numerator": "1"
+          },
+          "scope_count": 2047,
+          "condition_count": 1050,
+          "sample_effect": {
+            "denominator": "102350",
+            "numerator": "10157"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "51937175827046400",
+              "numerator": "3617052509413951"
+            },
+            "upper": {
+              "denominator": "109837107200",
+              "numerator": "14162082801"
+            }
+          },
+          "interval_width": {
+            "numerator": "806849582392386407",
+            "denominator": "13607540066686156800"
+          },
+          "width_probability_points": 5.929430142687638,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {
+          "b": true
+        },
+        "false_support": false,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "55a4e23beb2a4869b5cbf7b279cbab42",
+        "compute_ms": 145885,
+        "storage_bytes": 39825718,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "aae9385f8561975837a5adcc16464683d7ad12ed314a54f2dec483d207dfdc00",
+        "size": 6815001
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "15a3124d692884de9cdb9b388b797cce09565789c1e4ecceb4563f2c85ff6f83",
+          "size": 37998026
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    },
+    {
+      "manifest_world": {
+        "id": "4befcf4d01ce3521af1abe2eb778fc78241a438d30660f2a7e77254c183a1ec4",
+        "time_rows": 2048,
+        "spec_index": 0,
+        "pattern_index": 1,
+        "replicate": 1,
+        "population_seed": 113024905697955658844432441212265507330536996119792274326200221955693464328739,
+        "bootstrap_seed": 101406686834718173312080431805516212829960939532435814442363390754586322484880
+      },
+      "artifact_id": "b4e8bc1a082ebdacea79d7b9f05b427668cefe49c9554da3cac38d8c979d392e",
+      "envelope_sha256": "b4e8bc1a082ebdacea79d7b9f05b427668cefe49c9554da3cac38d8c979d392e",
+      "components": [
+        {
+          "covered": true,
+          "decision": "TESTED_NEGATIVE",
+          "id": "a",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "1",
+            "numerator": "0"
+          },
+          "scope_count": 2047,
+          "condition_count": 1040,
+          "sample_effect": {
+            "denominator": "2128880",
+            "numerator": "8939"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "27226246320",
+              "numerator": "-521351177"
+            },
+            "upper": {
+              "denominator": "2366718152053964800",
+              "numerator": "65222918888252429"
+            }
+          },
+          "interval_width": {
+            "numerator": "15535520455070533411",
+            "denominator": "332614927984814899200"
+          },
+          "width_probability_points": 4.6707225527111,
+          "boundary_stable": true,
+          "draws": 59997
+        },
+        {
+          "covered": true,
+          "decision": "SUPPORTED_INITIAL",
+          "id": "b",
+          "state": "VERIFIED",
+          "truth": {
+            "denominator": "10",
+            "numerator": "1"
+          },
+          "scope_count": 2047,
+          "condition_count": 1040,
+          "sample_effect": {
+            "denominator": "1064440",
+            "numerator": "112837"
+          },
+          "interval": {
+            "lower": {
+              "denominator": "3379067334656",
+              "numerator": "267580128879"
+            },
+            "upper": {
+              "denominator": "95009768488960",
+              "numerator": "12651978537767"
+            }
+          },
+          "interval_width": {
+            "numerator": "77667362731141",
+            "denominator": "1438885116231680"
+          },
+          "width_probability_points": 5.397745925299814,
+          "boundary_stable": true,
+          "draws": 59997
+        }
+      ],
+      "events": {
+        "boundary_decisive": null,
+        "detections": {
+          "b": true
+        },
+        "false_support": false,
+        "joint_miscoverage": false
+      },
+      "settlement": {
+        "attempt_id": "4ec605e5d6b045c89cddde0fbaf9cc33",
+        "compute_ms": 136212,
+        "storage_bytes": 39842696,
+        "usage_known": true
+      },
+      "stream_blob": {
+        "sha256": "6188e98d9b03b228a03199822fa85eadddd2f1c7e9d7b1d0368f9c08bc0ce757",
+        "size": 6819251
+      },
+      "stream_encoding": {
+        "compression": {
+          "filename": "",
+          "level": 6,
+          "mtime": 0,
+          "name": "gzip",
+          "zlib_runtime_version": "1.3.1.zlib-ng",
+          "zlib_version": "1.3.1.zlib-ng"
+        },
+        "decoded_blob": {
+          "sha256": "6cb0d27b56c8711ae578ce54caba1d19dc1a79f8ea074c2f7a4f2648e3579e96",
+          "size": 38001652
+        },
+        "schema": "study-stream-gzip/1"
+      },
+      "separate_replay_verified": true
+    }
+  ],
+  "cells": [
+    {
+      "time_rows": 512,
+      "pattern": [
+        0,
+        0
+      ],
+      "planned_worlds": 2,
+      "recorded_worlds": 2,
+      "complete": true,
+      "responses": [
+        {
+          "response": "a",
+          "truth": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_INCONCLUSIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            11.910457615842029,
+            10.470628987274962
+          ]
+        },
+        {
+          "response": "b",
+          "truth": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_INCONCLUSIVE": 1,
+            "TESTED_NEGATIVE": 1
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 1,
+          "width_probability_points": [
+            10.875199910749444,
+            10.47667505270011
+          ]
+        }
+      ],
+      "events": {
+        "joint_miscoverage": {
+          "observed": 2,
+          "count": 1,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "1",
+              "denominator": "2"
+            },
+            "lower": {
+              "numerator": "13830885511",
+              "denominator": "1099511627776"
+            },
+            "upper": {
+              "numerator": "1085680742265",
+              "denominator": "1099511627776"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "13830885511",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "1728860689",
+                "denominator": "137438953472"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "135710092783",
+                "denominator": "137438953472"
+              },
+              {
+                "numerator": "1085680742265",
+                "denominator": "1099511627776"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "false_support": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "boundary_decisive": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        }
+      }
+    },
+    {
+      "time_rows": 512,
+      "pattern": [
+        0,
+        2
+      ],
+      "planned_worlds": 2,
+      "recorded_worlds": 2,
+      "complete": true,
+      "responses": [
+        {
+          "response": "a",
+          "truth": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_NEGATIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            11.924751332832138,
+            8.801023330778301
+          ]
+        },
+        {
+          "response": "b",
+          "truth": {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_INCONCLUSIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            13.001468775190755,
+            10.850287068208779
+          ]
+        }
+      ],
+      "events": {
+        "joint_miscoverage": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "false_support": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "boundary_decisive": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        }
+      }
+    },
+    {
+      "time_rows": 512,
+      "pattern": [
+        1,
+        1
+      ],
+      "planned_worlds": 2,
+      "recorded_worlds": 2,
+      "complete": true,
+      "responses": [
+        {
+          "response": "a",
+          "truth": {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_INCONCLUSIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            9.77214959402975,
+            9.033317988859615
+          ]
+        },
+        {
+          "response": "b",
+          "truth": {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_INCONCLUSIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            10.258226280077695,
+            9.681236478218356
+          ]
+        }
+      ],
+      "events": {
+        "joint_miscoverage": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "false_support": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        },
+        "boundary_decisive": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        }
+      }
+    },
+    {
+      "time_rows": 512,
+      "pattern": [
+        2,
+        2
+      ],
+      "planned_worlds": 2,
+      "recorded_worlds": 2,
+      "complete": true,
+      "responses": [
+        {
+          "response": "a",
+          "truth": {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_INCONCLUSIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            11.520600200079521,
+            9.438764124062773
+          ]
+        },
+        {
+          "response": "b",
+          "truth": {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_INCONCLUSIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            11.15002318965811,
+            10.826397779791542
+          ]
+        }
+      ],
+      "events": {
+        "joint_miscoverage": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "false_support": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        },
+        "boundary_decisive": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        }
+      }
+    },
+    {
+      "time_rows": 2048,
+      "pattern": [
+        0,
+        0
+      ],
+      "planned_worlds": 2,
+      "recorded_worlds": 2,
+      "complete": true,
+      "responses": [
+        {
+          "response": "a",
+          "truth": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_NEGATIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            4.899839004812123,
+            4.804205042935941
+          ]
+        },
+        {
+          "response": "b",
+          "truth": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_NEGATIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            4.815545993193055,
+            4.951999989061885
+          ]
+        }
+      ],
+      "events": {
+        "joint_miscoverage": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "false_support": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "boundary_decisive": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        }
+      }
+    },
+    {
+      "time_rows": 2048,
+      "pattern": [
+        0,
+        2
+      ],
+      "planned_worlds": 2,
+      "recorded_worlds": 2,
+      "complete": true,
+      "responses": [
+        {
+          "response": "a",
+          "truth": {
+            "numerator": "0",
+            "denominator": "1"
+          },
+          "recorded": 2,
+          "decisions": {
+            "TESTED_NEGATIVE": 2
+          },
+          "supported_count": 0,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            4.603806656719794,
+            4.6707225527111
+          ]
+        },
+        {
+          "response": "b",
+          "truth": {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          "recorded": 2,
+          "decisions": {
+            "SUPPORTED_INITIAL": 2
+          },
+          "supported_count": 2,
+          "support_probability_interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "10865503305",
+              "denominator": "68719476736"
+            },
+            "upper": {
+              "numerator": "1",
+              "denominator": "1"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "10865503305",
+                "denominator": "68719476736"
+              },
+              {
+                "numerator": "173848052881",
+                "denominator": "1099511627776"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "1",
+                "denominator": "1"
+              },
+              {
+                "numerator": "1",
+                "denominator": "1"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          },
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 2,
+          "width_probability_points": [
+            5.929430142687638,
+            5.397745925299814
+          ]
+        }
+      ],
+      "events": {
+        "joint_miscoverage": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "false_support": {
+          "observed": 2,
+          "count": 0,
+          "interval": {
+            "method": "clopper-pearson-dyadic-outward/1",
+            "noncoverage": {
+              "numerator": "1",
+              "denominator": "20"
+            },
+            "bits": 40,
+            "point": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "lower": {
+              "numerator": "0",
+              "denominator": "1"
+            },
+            "upper": {
+              "numerator": "57853973431",
+              "denominator": "68719476736"
+            },
+            "lower_root_bracket": [
+              {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              {
+                "numerator": "0",
+                "denominator": "1"
+              }
+            ],
+            "upper_root_bracket": [
+              {
+                "numerator": "925663574895",
+                "denominator": "1099511627776"
+              },
+              {
+                "numerator": "57853973431",
+                "denominator": "68719476736"
+              }
+            ],
+            "maximum_bracket_width": {
+              "numerator": "1",
+              "denominator": "1099511627776"
+            },
+            "pointwise_only": true,
+            "assumption": "fixed_independent_outer_worlds_under_declared_simulation_law"
+          }
+        },
+        "boundary_decisive": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        }
+      }
+    },
+    {
+      "time_rows": 2048,
+      "pattern": [
+        1,
+        1
+      ],
+      "planned_worlds": 2,
+      "recorded_worlds": 0,
+      "complete": false,
+      "responses": [
+        {
+          "response": "a",
+          "truth": {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          "recorded": 0,
+          "decisions": {},
+          "supported_count": 0,
+          "support_probability_interval": null,
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 0,
+          "width_probability_points": []
+        },
+        {
+          "response": "b",
+          "truth": {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          "recorded": 0,
+          "decisions": {},
+          "supported_count": 0,
+          "support_probability_interval": null,
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 0,
+          "width_probability_points": []
+        }
+      ],
+      "events": {
+        "joint_miscoverage": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        },
+        "false_support": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        },
+        "boundary_decisive": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        }
+      }
+    },
+    {
+      "time_rows": 2048,
+      "pattern": [
+        2,
+        2
+      ],
+      "planned_worlds": 2,
+      "recorded_worlds": 0,
+      "complete": false,
+      "responses": [
+        {
+          "response": "a",
+          "truth": {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          "recorded": 0,
+          "decisions": {},
+          "supported_count": 0,
+          "support_probability_interval": null,
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 0,
+          "width_probability_points": []
+        },
+        {
+          "response": "b",
+          "truth": {
+            "numerator": "1",
+            "denominator": "10"
+          },
+          "recorded": 0,
+          "decisions": {},
+          "supported_count": 0,
+          "support_probability_interval": null,
+          "support_interpretation": "Detection of practical positive contrast only for truth=2*delta; not a detection target at null or delta.",
+          "covered_count": 0,
+          "width_probability_points": []
+        }
+      ],
+      "events": {
+        "joint_miscoverage": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        },
+        "false_support": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        },
+        "boundary_decisive": {
+          "observed": 0,
+          "count": 0,
+          "interval": null
+        }
+      }
+    }
+  ],
+  "unrun_worlds": [
+    {
+      "id": "6dc077d5a0eec314106969314f8385bdb256f4ba10a1714eb45bffee82cecf65",
+      "time_rows": 2048,
+      "spec_index": 0,
+      "pattern_index": 2,
+      "replicate": 0,
+      "population_seed": 61249995554506714236468610003054876112907772733806835788477160854994846183034,
+      "bootstrap_seed": 94489093425346923677183413627171843843273773744176223871911856995637953239151
+    },
+    {
+      "id": "79c72fbcf40b872da8067d9e975d7c5b9336f9237130e9d586c8139fc365afa7",
+      "time_rows": 2048,
+      "spec_index": 0,
+      "pattern_index": 2,
+      "replicate": 1,
+      "population_seed": 88166376811557174216991797506816053407386588611948363153087902687530826217282,
+      "bootstrap_seed": 108590021275696688211259462080756218937331768934673871372296467137383604663662
+    },
+    {
+      "id": "ee08eeccda455a250180327af6d77d4b77bed60a20d59687e14555926fb46a50",
+      "time_rows": 2048,
+      "spec_index": 0,
+      "pattern_index": 3,
+      "replicate": 0,
+      "population_seed": 102916635833139301684059435092006126765446735015235462194661999742137074284691,
+      "bootstrap_seed": 85566411687577157274012206275229763770210067209078198531397007055397693573909
+    },
+    {
+      "id": "4fa0d1e614a275c19f247f39514a5d8c8ff6693381c0ff0a609dc3be9c8364c7",
+      "time_rows": 2048,
+      "spec_index": 0,
+      "pattern_index": 3,
+      "replicate": 1,
+      "population_seed": 27036686049578075377598151614008651473592886221456516538754532636112137065104,
+      "bootstrap_seed": 81446272760229009107943570124681210507628851693959875116453983243822327201821
+    }
+  ],
+  "stop_reason": "OWNED_STATUS_RESOURCE_STOP",
+  "underlying_study_status": "RESOURCE_STOP",
+  "elapsed_seconds": 943.9428975000001,
+  "source_execution_seconds": 7.124656899999991,
+  "additional_registry_bytes": 88030792,
+  "budget": {
+    "charged_compute_ms": 913609,
+    "charged_storage_bytes": 475215305,
+    "outstanding_attempts": [],
+    "attempts_per_world": {
+      "bd3b31ea497e1bf3a2914fb085a5f83249a76575c0879c3847dcc895e8f8ff7f": 1,
+      "7c620e03ef054cbee9e4439b5fdc1e3c76508ed978471aa9f422350cce27ee34": 1,
+      "c6e6f3d2fd69f942bdae590199c6793e15086ad355cd62b8046ddb0c2a43510a": 1,
+      "37c83e7358e3795f1cc7a57de1b8b7a028533b30fbac029a473767a3d0992797": 1,
+      "cd2914a8569252dbf5d8f07d9393ddf21fed01f3b431b376b507eaeed5ff5fb7": 1,
+      "f123ec28c5abd26e6671c86e1e3ac522166687677bf9de5aa8b67b9ffb628086": 1,
+      "86d25f6fdc89d19e057f15f898b6c193b48f72c4c2705a5e53018a4963fd0c5f": 1,
+      "287e92b50af888a5d9a7267511ac8172f2c76671c388e9c38119d256768fc3e0": 1,
+      "b185b523321aa4036406f110ba0cdd70440e70ec95170ce8de2afd4253ea04c7": 1,
+      "2545776cb07cb672fd793bedeb3222466dfe98f9c44944bb9c1ae1dee66b1c3b": 1,
+      "65363915c2bc437589c23473a85ec5049f76e295349df2ba3438fe878885dac7": 1,
+      "4befcf4d01ce3521af1abe2eb778fc78241a438d30660f2a7e77254c183a1ec4": 1
+    },
+    "overrun": false,
+    "next_reservation_fits": false,
+    "initial_storage_bytes": 7558809,
+    "continuation_storage_bytes": 0,
+    "original_max_compute_ms": 1200000,
+    "original_max_storage_bytes": 2147483648,
+    "max_compute_ms": 1200000,
+    "max_storage_bytes": 2147483648
+  },
+  "unique_retained_output_blob_bytes": 80104295,
+  "total_draws_per_generation_pass": 1439928,
+  "replay_passes": 12,
+  "resources_by_target": [
+    {
+      "time_rows": 512,
+      "worlds": 8,
+      "seconds_min": 42.806,
+      "seconds_median": 44.007000000000005,
+      "seconds_max": 45.746,
+      "charged_bytes_median": 38452847.0,
+      "retained_stream_bytes_median": 6471965.0,
+      "projection_256_worlds_hours": 3.129386666666667,
+      "projection_1024_worlds_hours": 12.517546666666668,
+      "projection_1024_worlds_charged_gib": 36.67149257659912,
+      "projection_1024_worlds_stream_gib": 6.172146797180176
+    },
+    {
+      "time_rows": 2048,
+      "worlds": 4,
+      "seconds_min": 135.373,
+      "seconds_median": 140.0,
+      "seconds_max": 145.885,
+      "charged_bytes_median": 39834207.0,
+      "retained_stream_bytes_median": 6817126.0,
+      "projection_256_worlds_hours": 9.955555555555556,
+      "projection_1024_worlds_hours": 39.82222222222222,
+      "projection_1024_worlds_charged_gib": 37.98886013031006,
+      "projection_1024_worlds_stream_gib": 6.501317977905273
+    }
+  ],
+  "linear_year_scenario": {
+    "time_rows": 35040,
+    "base_rows": 2048,
+    "scale": 17.109375,
+    "seconds_per_world": 2395.3125,
+    "hours_per_1024_worlds": 681.3333333333334,
+    "qualification": "Illustrative constant-cost-per-row extrapolation, not measured full-year performance. Ignores fixed overhead, changes in arithmetic/case distributions, memory pressure and cache; binary integral workload does not benchmark continuous log returns. No runtime or resource authorization follows."
+  },
+  "resource_limits": "Charged compute includes retained-source generation and separate replay through output staging; final commit excluded. Logical storage includes temporary materializations and retained outputs; unique final bytes differ. Phase-specific timing and peak temporary backup/RAM are unmeasured. No OS-enforced quota claim.",
+  "population": {
+    "q": {
+      "numerator": "1462",
+      "denominator": "2877"
+    },
+    "w": {
+      "numerator": "1462",
+      "denominator": "2877"
+    },
+    "condition_and_missingness": "Stationary resampling of the full authorized Q1 BTC engineering mask grid, mean block8.",
+    "response_persistence": "3/4",
+    "common_response_share": "1/2",
+    "source_identity_preserved": false,
+    "source_instruments": 1,
+    "responses": 2,
+    "horizon_bars": 1,
+    "scope": "Estimator-only binary response/mask stress; not a fitted original price process, the freely invented ideas, or cross-instrument calibration."
+  },
+  "limitations": [
+    "Two planned worlds per cell yield very wide pointwise binomial uncertainty, not a calibrated power or coverage claim.",
+    "Unrun slots remain in original inventory; no new seed, repeat or continuation budget.",
+    "Unknown historical availability and model training exposure remain qualified.",
+    "No original-process adequacy, N_min, full-process calibration, genuine-idea outcome, economic viability or protected market evidence established."
+  ],
+  "source_files_sha256": {
+    "precision.py": "70bb24ec95eab2d55cbab26634e9ee04a48d50eef781b2574ac2cc99a7fa0db1",
+    "precision-start.json": "79a7d43133d64e201dfb4035114d6d745c9f5bd54495ba7596069ea4baca3591",
+    "precision-study-input.json": "f7e51f8f2483148de2956e53e156ba1079c577ed3adedacc6e281c133ba63af8",
+    "precision-result.json": "52dd123485224e987854ed0f69542e95bef785e3342882f688ec313b8fda90d7",
+    "publish_precision.py": "0c09e432b759f206bdb677a66e67229438d4e1c52f9989b076910422774972c2"
+  },
+  "provider_calls": 0,
+  "scientific_readiness": false,
+  "n_min": null,
+  "full_objective_complete": false
+}

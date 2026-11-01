@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-01",
+  "scope": "D096 clarification: record integrity does not establish diagnostic quality",
+  "paths": [
+    "docs/architecture/25_METACOGNITION_DUAL_SPACE_INQUIRY.md",
+    "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md",
+    "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+    "docs/architecture/05_REQUIREMENTS.md",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md"
+  ],
+  "sha256": {
+    "docs/architecture/25_METACOGNITION_DUAL_SPACE_INQUIRY.md": "b0aee80c2d8b2f19a26e755240fa72321d5f2466bfc3acf765770e4e525ffc8e",
+    "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "3ca16805c8292a49b6a8166614bd645e15d090031d4f2cbcb01706096876a862",
+    "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "af4a723f6e6ef0151f38a82ed01515ab59b0a376ccb7e32d056cd032cc56bdfc",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "504ddf6ab6a768f399cda1c25ea2b62abbb4096f3d986f57cafa78d742fcac13",
+    "docs/architecture/05_REQUIREMENTS.md": "5b7372b9988e212dd7214a56ec62a94905a457c679f29e1b6e67ad1cfb678dbf",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "92e055939bf72d9da3c640c4865d64b64215c25debe1e7629d445cb2afd1ec26",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "78d9b0e6ea92503ca3ddf3100e23213edd4aa8a5daad279bf2acfc454380754b"
+  },
+  "archive_sha256": "437b9bc3b33ead95fc734f8d30b33b5d7c2951b4caa0fc5ff66cd85c394224e3"
+}

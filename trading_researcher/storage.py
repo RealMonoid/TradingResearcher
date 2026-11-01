@@ -19,7 +19,8 @@ MAX_BLOB_BYTES = 512 * 1024 * 1024
 BLOCK = 1024 * 1024
 RESERVED = ('study-resource-continuation/','research-data-target/','protected-data-binding/','data-use-assessment/','composition-certificate/','composition-input/','composition-source-package/',
             'dependency-revocation/', 'blob-source/', 'reference-source-package/', 'data-snapshot/',
-            'feature-source-package/', 'feature-definitions/', 'feature-certificate/',
+            'feature-source-package/', 'feature-definitions/', 'feature-certificate/', 'feature-evidence-release/',
+            'development-feedback-manifest/', 'development-feedback-release/',
             'compiled-hypothesis/', 'reference-execution/', 'binding-source-package/', 'evaluation-plan/',
             'evaluation-plan-input/','semantic-review-record/','semantic-review-assessment/','provider-invocation/','provider-invocation-input/',
             'bootstrap-input/','development-bootstrap/',

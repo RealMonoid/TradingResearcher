@@ -1,0 +1,399 @@
+{
+  "schema": "paired-format-correction-observation/1",
+  "at_utc": "2026-10-30T13:47:41.521399+00:00",
+  "status": "COMPLETED_DESCRIPTIVE_INFORMATION_GAP",
+  "decision": "D095",
+  "idea_id": "94cf7b732406785e98d1c5a42daccce4c43685fbf0471f517d2a960311c8e6c3",
+  "formalization_id": "a884336d0be3546658130b2a2505d5c4fa9d7551bbbf586a880960ac48ee76ca",
+  "meaning_assessment_id": "88d6eb9b9061f686727c0d34664f9afa7d99b1c33aa91551acae560a2cc72f10",
+  "compiled_id": "9ca4d371215f14d2fd4c374caabf69931423064b17a0a881ff3b821d5d23f5fc",
+  "composition_id": "339b1bcc9a1ce3dee9a2fb8d33a791194b63d1e7337dbf68ce66e96d755d81c8",
+  "execution_id": "e77f9f3f8966203d51cf676de394fa9b4bccf6cd4992e1654987ed3815221fb6",
+  "model_run_wall_seconds": 281.6418232000142,
+  "execution_replay_audit_elapsed_ms": 46058,
+  "formalization_times": {
+    "started_at_utc": "2026-10-30T13:38:19.582120+00:00",
+    "ended_at_utc": "2026-10-30T13:41:42.218542+00:00"
+  },
+  "review_times": {
+    "started_at_utc": "2026-10-30T13:41:56.734243+00:00",
+    "ended_at_utc": "2026-10-30T13:42:52.005920+00:00"
+  },
+  "composition": {
+    "candidate_hash": "922b054e193e4769e0abfc08bfed14b04065e92b9c9b882723079e15d8c02eb9",
+    "checked_cases": 1092,
+    "oracle_sha256": "b18059528214cde32429d10a7f1adb50b217c79ec40dd31ae5cc49e7ee5a1e85",
+    "profile": "paired-original-composition/1",
+    "scenario_count": 91,
+    "schema": "paired-composition-result/1",
+    "scientific_readiness": false
+  },
+  "report": {
+    "diagnostics": {
+      "condition_outcome_counts": {
+        "false": {
+          "missing": 6,
+          "observed": 8621
+        },
+        "true": {
+          "missing": 0,
+          "observed": 0
+        },
+        "unknown": {
+          "missing": 9,
+          "observed": 4
+        }
+      },
+      "reason_counts": {
+        "absent_row": 11,
+        "boundary_censoring": 5,
+        "condition_unknown": 13,
+        "missing_value": 4,
+        "missing_warmup": 2,
+        "numeric_domain": 5
+      },
+      "schema": "paired-case-diagnostics/1",
+      "status": "COMPLETE"
+    },
+    "evaluation_contract": "paired-development/1.0",
+    "expected_case_count": 8640,
+    "numerical_contract": "bounded-math/1.0",
+    "outcome_unit": "basis_points",
+    "outcomes_complete": true,
+    "pair": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "primitive_steps": 4296855,
+    "processed_case_count": 8640,
+    "processing_complete": true,
+    "resource_reason": null,
+    "review_required": false,
+    "schema": "paired-reference-cases/1",
+    "scientific_readiness": false,
+    "state_counts": {
+      "DATA_GAP": 0,
+      "ELIGIBLE": 8625,
+      "NOT_YET_OBSERVED": 0,
+      "OUTCOME_MISSING": 10,
+      "OUTCOME_PENDING": 0,
+      "PARTITION_BOUNDARY": 5,
+      "REVIEW_REQUIRED": 0,
+      "SCOPE_FALSE": 0,
+      "SCOPE_UNKNOWN": 0
+    },
+    "status": "PROCESSED"
+  },
+  "scope": {
+    "end": "2023-04-01T00:00:00Z",
+    "pair": [
+      "BTCUSDT",
+      "ETHUSDT"
+    ],
+    "start": "2023-01-01T00:00:00Z"
+  },
+  "as_of": "2023-04-01T00:00:00Z",
+  "contrast": {
+    "condition_count": 0,
+    "condition_mean": null,
+    "effect": null,
+    "evaluation_contract": "paired-development/1.0",
+    "kind": "conditional-minus-scope-mean/1",
+    "reason": "no_conditioned_cases",
+    "schema": "paired-reference-contrast/1",
+    "scientific_readiness": false,
+    "scope_count": 8625,
+    "scope_mean": {
+      "lower": {
+        "denominator": "85070591730234615865843651857942052864",
+        "numerator": "-44361616682752681714069532977488317301"
+      },
+      "schema": "bounded-real/1",
+      "upper": {
+        "denominator": "340282366920938463463374607431768211456",
+        "numerator": "-177446466731010726856278131909949403975"
+      }
+    },
+    "status": "INFORMATION_GAP"
+  },
+  "case_blob": {
+    "sha256": "389244f093e4a4fb06723a42da777d8cffa6deb74768fa8a42f640a65724be0a",
+    "size": 42184184
+  },
+  "separate_replay": {
+    "case_blob": {
+      "sha256": "389244f093e4a4fb06723a42da777d8cffa6deb74768fa8a42f640a65724be0a",
+      "size": 42184184
+    },
+    "checked_cases": 8640,
+    "result_hash": "2ba14a2e4cbd87a701a676e4ab7614579e7d67f7b367102682e10d0dfa2d4c01",
+    "schema": "paired-case-verification/1",
+    "scientific_readiness": false
+  },
+  "original_formula_audit": {
+    "candidate_hash": "922b054e193e4769e0abfc08bfed14b04065e92b9c9b882723079e15d8c02eb9",
+    "checked_cases": 8640,
+    "observed_outcomes": 8625,
+    "oracle_sha256": "b18059528214cde32429d10a7f1adb50b217c79ec40dd31ae5cc49e7ee5a1e85",
+    "qualification": "Independent Decimal80 cross-check; rigorous bounds belong to the certified evaluator.",
+    "schema": "paired-original-row-audit/1",
+    "scientific_readiness": false
+  },
+  "calls": [
+    {
+      "dispatch_id": "controller-b855cfbd15344227881296addcce9822:0",
+      "request_sha256": "a6273afe5be04701d8801aa331d4185ef55ca16bfeea3acccaee3bf54f53bba7",
+      "reserved_nano": 335000000,
+      "charged_nano": 244002500,
+      "state": "settled",
+      "created_at": 1793367525,
+      "admitted_at_utc": "2026-10-30T13:38:45Z",
+      "settled_at_utc": "2026-10-30T13:41:38Z",
+      "metadata": {
+        "counted_input_tokens": 28997,
+        "epoch_id": "4f858523d4f240558b7058e411c50484",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "faithful-paired-format-correction/1",
+        "run_id": "controller-b855cfbd15344227881296addcce9822",
+        "worker": "paired-format-correction-20261030-f"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_0d05c80c3a61e064016ae49de601bc87d283a1c2bbe30482ec",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 3496
+        },
+        "transport_request_id": "req_fb535b4e104b419292e65cdcfca5fc35",
+        "usage": {
+          "cost_units": 244002500,
+          "input_tokens": 28997,
+          "output_tokens": 17151
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    },
+    {
+      "dispatch_id": "controller-f39aec73829d4ac095b4862e8443748b:0",
+      "request_sha256": "98419489ff20c1c7c16205a4730a9c82ba45986370b6a368cb770337273ad0f6",
+      "reserved_nano": 230000000,
+      "charged_nano": 113645000,
+      "state": "settled",
+      "created_at": 1793367743,
+      "admitted_at_utc": "2026-10-30T13:42:23Z",
+      "settled_at_utc": "2026-10-30T13:42:44Z",
+      "metadata": {
+        "counted_input_tokens": 41066,
+        "epoch_id": "4f858523d4f240558b7058e411c50484",
+        "model": "gpt-6.1-sol",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "ordinal": 0,
+        "prompt_version": "meaning-comparison/1",
+        "run_id": "controller-f39aec73829d4ac095b4862e8443748b",
+        "worker": "paired-format-correction-20261030-r"
+      },
+      "receipt": {
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "provider_request_id": "resp_01f106816e2696f9016ae49ebf4f3487d284afe3c6fd88b6bd",
+        "response_status": "completed",
+        "token_details": {
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 50
+        },
+        "transport_request_id": "req_0cf6028348d8480ebb80a382de1efa74",
+        "usage": {
+          "cost_units": 113645000,
+          "input_tokens": 41066,
+          "output_tokens": 1098
+        }
+      },
+      "provider": "openai",
+      "model_identity": {
+        "catalog_name": "GPT-6.1 Sol",
+        "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+        "catalog_version": "6.1",
+        "immutable_snapshot_id": null,
+        "immutable_snapshot_status": "UNKNOWN",
+        "reported_model": "gpt-6.1-sol",
+        "requested_model": "gpt-6.1-sol"
+      }
+    }
+  ],
+  "new_tokens": 88312,
+  "new_conservative_cost_nano": 357647500,
+  "usage_after": {
+    "totals": {
+      "calls": 48,
+      "known_usage_calls": 48,
+      "unknown_usage_calls": 0,
+      "known_input_tokens": 819352,
+      "known_output_tokens": 149639,
+      "known_total_tokens": 968991,
+      "exact_total_tokens": 968991,
+      "known_cached_input_tokens": 20971,
+      "cached_detail_calls": 48,
+      "exact_cached_input_tokens": 20971,
+      "known_reasoning_output_tokens": 42022,
+      "reasoning_detail_calls": 48,
+      "exact_reasoning_output_tokens": 42022
+    },
+    "money": {
+      "currency": "USD",
+      "units_per_usd": 1000000000,
+      "cap_nano": 5000000000,
+      "charged_nano": 3544770000,
+      "available_nano": 1455230000,
+      "halted": false
+    },
+    "models": [
+      {
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": null,
+          "catalog_source": null,
+          "catalog_version": null,
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": null,
+          "requested_model": "gpt-6.1-sol"
+        },
+        "calls": 4,
+        "known_usage_calls": 4,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 2038,
+        "known_output_tokens": 134,
+        "known_total_tokens": 2172,
+        "exact_total_tokens": 2172,
+        "known_cached_input_tokens": 0,
+        "cached_detail_calls": 4,
+        "exact_cached_input_tokens": 0,
+        "known_reasoning_output_tokens": 0,
+        "reasoning_detail_calls": 4,
+        "exact_reasoning_output_tokens": 0
+      },
+      {
+        "provider": "openai",
+        "model_identity": {
+          "catalog_name": "GPT-6.1 Sol",
+          "catalog_source": "https://developers.openai.com/api/docs/models/gpt-6.1-sol",
+          "catalog_version": "6.1",
+          "immutable_snapshot_id": null,
+          "immutable_snapshot_status": "UNKNOWN",
+          "reported_model": "gpt-6.1-sol",
+          "requested_model": "gpt-6.1-sol"
+        },
+        "calls": 44,
+        "known_usage_calls": 44,
+        "unknown_usage_calls": 0,
+        "known_input_tokens": 817314,
+        "known_output_tokens": 149505,
+        "known_total_tokens": 966819,
+        "exact_total_tokens": 966819,
+        "known_cached_input_tokens": 20971,
+        "cached_detail_calls": 44,
+        "exact_cached_input_tokens": 20971,
+        "known_reasoning_output_tokens": 42022,
+        "reasoning_detail_calls": 44,
+        "exact_reasoning_output_tokens": 42022
+      }
+    ],
+    "timestamp_basis": "UTC; admission and durable local settlement, not provider execution start/end. Missing historical fields are not backfilled.",
+    "qualification": "Provider-reported tokens. Known sums exclude unknown receipts. Cached/reasoning counts are subsets. Currency is a conservative published-rate bound, not an invoice."
+  },
+  "grant_closure": {
+    "at_utc": "2026-10-30T13:42:52.730507+00:00",
+    "revocation": {
+      "epoch_id": "4f858523d4f240558b7058e411c50484",
+      "pending_calls_still_require_settlement": true,
+      "status": "REVOKED"
+    }
+  },
+  "registry_integrity": {
+    "status": "PASS",
+    "events": 1930,
+    "foreign_keys": true,
+    "synchronous": "FULL",
+    "schema_version": 1,
+    "scope": "local coordination and research memory integrity only",
+    "research_memory": {
+      "status": "PASS",
+      "records": 64,
+      "version": "research-memory/1",
+      "scientific_authority": false
+    },
+    "blobs": {
+      "status": "PASS",
+      "committed": 997,
+      "quarantined": [],
+      "orphan_policy": "uncommitted files confer no authority; no automatic deletion"
+    }
+  },
+  "qualification": "The original condition occurs zero times in this exact development quarter. The conditional mean and effect are undefined. INFORMATION_GAP is neither falsification nor independent confirmation. Software checks establish only their stated conformance scope.",
+  "unverified": [
+    "Scientific data/exposure admission, calibration and freeze",
+    "Protected assessment and out-of-sample evidence",
+    "Economic utility, execution costs and policy returns",
+    "Live mixed-provider research quality",
+    "Paired feedback publication and current release"
+  ],
+  "scientific_readiness": false,
+  "protected_outcomes_accessed": false,
+  "next_action": "Complete a bounded paired closed-development feedback integration: retain both discovery perspectives, D093/D094/D095 attempts, full usage and exact descriptive result; independently verify current evidence, protected-data rejection, release timing and revocation before publication. No further model call is needed. Preserve the zero-conditioned-case finding; do not tune the original idea or infer scientific rejection.",
+  "private_evidence": {
+    "prepared.json": "44102768bb816aa76129df790c850df6b3427a8bf57ae90f2dc387f987db413e",
+    "run-start.json": "a6c112d994c106ddbc9e258c30859f0d7d22f4ac3d5173918b9489197f119709",
+    "formalization.json": "6b785a8378f1ff4457aef5f004538a2af8eb6f406e5e0eedd8763b265fdaf89e",
+    "review-preflight.json": "f87d6734c8423ab079ca26dd20f919c99d24b2a7aad290afb664e91db83e41b2",
+    "review.json": "ae7cb4ba847214d0fbdcebb5090862844911c1dfa98731228261996661c2910c",
+    "grant-closure.json": "c9315cc60e7386be0341ab026b03cda8e19c37dc2ea38e6453834b4e2781e72b",
+    "run-result.json": "d882986afc73ca232df56e92461a2fcb052f502263799fece25d440a5de8a36e",
+    "compute-start.json": "1669a318a05aecb4ce856ac540c2fb8e04fcd95fbf914720edc1b4a28669cd00",
+    "compiled.json": "2fc747f2240b5ac73c88b70c0da8cadf0aa9212d809811ea36237a1d21654018",
+    "composition.json": "e39567ae06344caea19ae50de0019a5e1cdbc5ebbc60795644217bb21a4a1747",
+    "execution.json": "0026d6bd3972d9077c8d0ef6eaac91c699ffb863d0634ca7d013264a4ffe4c79"
+  }
+}

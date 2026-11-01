@@ -164,6 +164,8 @@ class EvaluationPlans:
                 or type(body) is not dict or body.get('schema')!='compiled-hypothesis/1'
                 or body.get('status')!='COMPILED'):
             raise Denied('Plan preparation requires an owned compiled hypothesis')
+        if body['compilation']['request']['schema'] == 'bounded-reference-case-request/1':
+            raise Denied('Bounded outcomes are descriptive only; scalar scientific planning is unavailable')
         self._require_usable_dependencies(compiled['id'])
         snapshot=self._data_snapshot(body['data_snapshot_id'])
         protected=snapshot['data_class']!='development' or snapshot['body']['manifest']['partition']!='development'
@@ -191,6 +193,9 @@ class EvaluationPlans:
                     or value.get('schema')!='reference-execution/1' or value.get('status')!='DESCRIPTIVE_EXECUTION'
                     or value.get('data_snapshot_id')!=diagnostic_snapshot_id):
                 raise Denied('Dependence references must be owned computations on this development snapshot')
+            if value['result']['report']['schema'] in ('bounded-reference-cases/1','diagnostic-bounded-reference-cases/1',
+                    'required-input-bounded-reference-cases/1','diagnostic-required-input-bounded-reference-cases/1'):
+                raise Denied('Bounded diagnostics cannot supply the scalar scientific-plan path')
             self._require_usable_dependencies(artifact['id'])
             if protected:
                 from .data_use import prior_knowledge, protected_knowledge_gaps

@@ -1,0 +1,111 @@
+{
+  "artifact": "metacognition-dual-space-proposal-documentation-verification",
+  "version": "1.0",
+  "date": "2026-11-01",
+  "timezone": "Europe/Berlin",
+  "status": "DOCUMENTATION_ONLY",
+  "proposal": "METACOGNITION_DUAL_SPACE_PROPOSAL_2026-11-01.md",
+  "proposal_sha256": "bac65b3b9cd3ff868d04e0826e24994cbe6060ef11df1f8533d42099f483c052",
+  "authority": "User requested concrete proposal and examples. No canonical adoption or runtime activation.",
+  "actual_checks": {
+    "targeted_prechange_search": {
+      "patterns": [
+        "metacogn",
+        "dual.space",
+        "SDDS",
+        "Klahr",
+        "Dunbar"
+      ],
+      "scope": "docs/architecture and docs/reviews Markdown excluding snapshots",
+      "matches": 0,
+      "exit_code": 1,
+      "interpretation": "No matching terms; not evidence that related behavior is absent."
+    },
+    "structure": {
+      "inquiry_rules": 7,
+      "feedback_rules": 5,
+      "worked_examples": 5,
+      "future_acceptance_cases": 12,
+      "lines": 185,
+      "words": 3647
+    },
+    "whitespace": {
+      "trailing_whitespace_lines": [],
+      "utf8_bom": false
+    },
+    "git_new_file_diff_check": {
+      "command": "git diff --no-index --check -- NUL docs/reviews/METACOGNITION_DUAL_SPACE_PROPOSAL_2026-11-01.md",
+      "exit_code": 1,
+      "diagnostic_output": "",
+      "interpretation": "No whitespace diagnostic emitted; exit code alone is not recorded as a passing test. Explicit whitespace scan is the documented check."
+    },
+    "initial_link_check": {
+      "local_links": 10,
+      "external_links": 2,
+      "missing": [
+        "METACOGNITION_DUAL_SPACE_VERIFICATION_2026-11-01.json"
+      ],
+      "interpretation": "This planned verification file did not yet exist. Final link check must run after its creation."
+    },
+    "preservation": {
+      "baselineFiles": 709,
+      "unchanged": 709,
+      "changedOrRemoved": [],
+      "added": [
+        "docs/reviews/METACOGNITION_DUAL_SPACE_PROPOSAL_2026-11-01.md"
+      ]
+    },
+    "manual_consistency_review": {
+      "method": "Author review against current owning sections; not independent validation.",
+      "checked": [
+        "D086 open exploration and no compulsory switching controller",
+        "D070 observation, interpretation, use, correction, and assessment separation",
+        "D014 inherited exposure and D082 controlled batch release",
+        "D079 perspective isolation and current resource boundaries",
+        "D008/D026 proposal-only status, versioned adoption, and rollback",
+        "D030 bounded iteration and reuse of existing roles/records",
+        "No transfer of SDDS evidence judgment to the LLM",
+        "All market examples hypothetical; all 12 behavioral cases unexecuted"
+      ]
+    },
+    "sources": {
+      "inspected_on": "2026-11-01",
+      "primary_texts": [
+        "Klahr and Dunbar 1988, sections 5.1-5.2",
+        "Nelson and Narens 1990, pages 125-128"
+      ],
+      "interpretation": "Conceptual basis, not validation of LLM or market effectiveness."
+    }
+  },
+  "owning_source_sha256": {
+    "docs/architecture/02_DECISION_REGISTER.md": "86d679b64819ce5a913fde071ce8d2b5ae42868b15432d0df18bedeea32fb772",
+    "docs/architecture/03_REJECTED_DECISIONS.md": "a92670d5239a4db774f20629ef02839d61efc765242e1bd667b25f3cc58fc0bc",
+    "docs/architecture/05_REQUIREMENTS.md": "6b321bfa7480d447558de5aa7080d6756bd81b6f44fd22f8057abcdad77c3110",
+    "docs/architecture/06_MASTER_ARCHITECTURE.md": "fe39428e5aa641a706beda613153f54717770a2a2d179ef870b07e12e82ad1c7",
+    "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+    "docs/architecture/08_ENGINEERING_REVIEW.md": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "691c4a923ee5ee73c835bb2ed9608858148d230d1a19bdd1f258ffe58f6e6552",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "6c8a9fb6277e9967d4323103df697f822fb77427765b45de6cb38d7b037ecccd",
+    "docs/architecture/13_GENERATOR_FEEDBACK_AND_EVALUATION.md": "c386dd7ec851e685077eaa0a5090df1ca87c022b3afda46c062ef902d18be8f2",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/architecture/15_AGENT_INQUIRY_DISCIPLINE.md": "802647f655fc1b13ce84eafa0e32483da5a1a60c1671c98384eed6f7491efe2b",
+    "docs/architecture/CURRENT_STATE.md": "06fa616726566c6b489f07ccc8f9532ce8635660703836a06221eb3cda9bb57b"
+  },
+  "changed_files": [
+    "docs/reviews/METACOGNITION_DUAL_SPACE_PROPOSAL_2026-11-01.md",
+    "docs/reviews/METACOGNITION_DUAL_SPACE_VERIFICATION_2026-11-01.json"
+  ],
+  "unverified": [
+    "Runtime implementation and all proposed behavioral acceptance cases",
+    "Independent behavioral qualification",
+    "Scientific calibration and full research-cycle validity",
+    "Improved discovery quality, efficiency, or economic usefulness"
+  ],
+  "final_link_check": {
+    "local_links_checked": 10,
+    "missing": [],
+    "proposal_hash_matches": true,
+    "json_parse": true,
+    "whitespace_both_files": "PASS"
+  }
+}

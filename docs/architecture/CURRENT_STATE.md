@@ -12,6 +12,20 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
   Sequence](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#current-execution-priority-october-31-2026)
   is the sole operational plan; current user instructions govern scope.
 
+- **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation
+  under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without
+  the user's explicit decision; dependent work waits, and existing authorizations remain binding.
+
+- **Approved construction priority:** complete scientific freeze/allocation and applicable calibration in
+  packages 3/4 under the sole plan. The user selected "Kernpfad priorisieren (empfohlen)"; the original-A
+  continuation is on hold. Existing full acceptance criteria, scientific contracts and budgets remain binding.
+
+- **Review reconciliation:** [constructive dispositions and library evidence](../reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-1-reconciliation-of-the-supplied-claude-critiques)
+  and the user's constructive-scope approval are recorded in execution-plan/0.5. Apply acceptance-led slices,
+  library reuse, permitted selective feedback, approved primitive reuse and early development diagnostics;
+  full implementation remains open, and existing numerical/scientific contracts remain binding.
+  The builder chat is confirmed paused; its unverified AUXILIARY_RESOURCES.md draft remains preserved.
+
 - **Requested timing:** measure the first complete actual idea-to-independently-checked-report path under
   the [package 5 timing
   instruction](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#first-complete-cycle-timing-user-request-november-1-2026),
@@ -52,12 +66,9 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
 - **Resource observation:** the earlier 37,964-input wire / 38,092-input bound is planning evidence.
   Full unchanged outputs plus the historical reviewer hold projected 117,438 tokens / USD 0.563595. A new
   raw/context packet and actual reviewer require fresh counting and admission; fit is unproven. USD 0.574585
-  remains under shared USD 5, ordinary 80k stays unchanged, and a new auxiliary-only allocation is pending.
+  remains under shared USD 5, ordinary 80k stays unchanged, and the original-A auxiliary allocation is on hold under the approved core priority.
 
-- **Next action:** implement the reviewed minimal auxiliary-only original-A two-slot allocation, preserving
-  full roles/inputs and all seven revoked grants. Freeze final adapter sources, qualify native/raw/context
-  currency and recount changed complete packets before conditional funding/admission. Follow the sole plan;
-  original A/null, exposure, USD 0.574585 and the original idea timestamp remain.
+- **Next action:** Implement the missing atomic scientific freeze/allocation transaction through the existing registry and operator caller under D078/D082 and IF-05. Inspect the actual request/plan/certification/data-use/dependency interfaces and existing fixed acceptance fixtures first; cover complete immutable input closure, idempotency/conflicts, concurrent reservation, crash rollback, retained attempts and exposure. Independently check actual integration and failure paths with synthetic inputs. Keep scientific use denied until all applicable admission/calibration/information gates pass. Retain full package 3/4 exits; ask promptly with a researched proposal for any unresolved user decision. Original-A continuation is on hold; no new paid research grant, model call or protected assessment access is authorized.
 
 - **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a 24-pass
   / 1-error review exposing noncanonical-object rejection persistence are retained. Final v2 omits
@@ -71,7 +82,7 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
 - **Working tree/processes:** GitHub checkpoint e2e70ac is verified remotely. The later local financial-read
   correction and real-context proof are complete; no checks remain live at this closeout. The concurrent
   whitespace-only handoff edit is preserved. No new inference/context/job/spending grant/source release or
-  AmiBroker mutation; all seven old grants remain revoked. Scientific/native original-A admission is pending.
+  AmiBroker mutation; all seven old grants remain revoked. Original-A admission is on hold under the approved core priority.
 
 - **Research result:** original scalar and paired development paths have descriptive reports; latest paired
   breakout has one qualified observed case. Zero/one-condition limitations prevent reliable population or
@@ -82,7 +93,7 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
   result](../reviews/implementation-2026-10-25/PAIRED_DESCRIPTIVE_RESULT_2026-10-30.md), [current
   status/evidence register](../reviews/implementation-2026-10-25/progress.json).
 
-- **Usage:** shared inference ledger now 53 known calls / 1,236,478tokens /USD4.425415 ofUSD5; USD 0.574585
+- **Usage:** shared inference ledger now 53 known calls / 1,236,478 tokens / USD 4.425415 of USD 5; USD 0.574585
   remains. The latest real trial added 3 calls / 172,162 tokens / USD 0.4686925. The [real-trial
   record](../reviews/implementation-2026-10-25/inquiry-live-trial-2026-11-01.json) retains per-call
   requested/reported model, catalog 6.1, UTC, prompts, exact tokens and conservative charges. Immutable

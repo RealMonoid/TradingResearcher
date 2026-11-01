@@ -222,6 +222,19 @@ IN PROGRESS. Reuse independent calculation, bootstrap/MC candidates and retained
 
 [Detailed scope and original implementation evidence](IMPLEMENTATION_SEQUENCE_2026-10-25_SNAPSHOT_2026-10-31.md#4-independent-computation-and-narrow-scientific-calibration).
 
+**November 2 information-profile continuation:** the existing second-order lag
+law is present and now has independent exact/capacity and owned native family
+qualification at the recorded bounded scope. Complete Q1 source identity and
+fresh raw/reference/compile/execution/diagnostic bindings retain unchanged case
+bytes. The [existing progress register](../implementation-2026-10-25/progress.json)
+holds the completed 130.702-second cost probe, corrected real cost handoff and
+prepared 32-world study with zero worlds started. A one-time additional 60-minute
+local resource decision is pending; do not dispatch worlds or a continuation
+before the answer. Preserve empirical-versus-model knownness weights,
+the two-coordinate limit, all failed checks and old sources. Declared stress
+conformance is not fitted nuisance adequacy, N_min or calibration. Continue the
+scientific core; original A remains on hold and protected outcomes stay blocked.
+
 ### 5. First genuine historical research cycle
 
 IN PROGRESS for descriptive development; the complete scientific cycle still depends on the applicable exits of 1-4. Original ETH/BTC and paired ideas have faithful descriptive paths, including zero/one-condition gaps; these do not establish scientific or economic success. Preserve BTCUSDT/ETHUSDT spot 15-minute partition/exposure rules, every idea/attempt, independent review, complete budgets and allowed later feedback. No new paid run follows from compact documentation.

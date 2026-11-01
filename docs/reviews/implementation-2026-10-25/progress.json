@@ -319,7 +319,7 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "Prepare one justified claim-scoped binary mean/rate-contrast nuisance/stress and information profile from permitted development diagnostics under contract 14 sections 5.3/5.4/11, then reuse the existing development/final controllers within actual fixed resources. Exact dependence/randomness/target/adequacy inputs are still required; do not issue a count-only certificate or promote a smallest tested target into N_min. Retain scientific selection/data/exposure and corroboration gaps.",
+  "next_action": "Await the pending+60minute local resource decision. The exact32-world profile is prepared and READY with0worlds/attempts. If approved, independently check final request/source/runtime/currentness at intended use, then advance only this fixed inventory under the initial60minute cap; any single approved additional60minute continuation must bind its actual RESOURCE_STOP checkpoint. If declined, honor the selected alternative. Do not redispatch the completed cost probe, reopen original A, run final cohorts or infer scientific admission.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -5694,5 +5694,736 @@
       "docs/reviews/implementation-2026-10-25/progress.json"
     ],
     "unverified_boundary": "No full-project test suite or complete IF-05/package 3/4 acceptance claimed. The final affected implementation checks cover 66 distinct methods across current and applicable unchanged-owner regressions; independent-author rerun is not added to that count. Physical power loss, real admission, protected access, scientific/economic usefulness remain unverified."
+  },
+  "scientific_information_profile_2026_11_02": {
+    "status": "MODEL_AND_COST_HANDOFF_VERIFIED_RESOURCE_DECISION_PENDING",
+    "purpose": "Qualify the existing second-order binary law against the retained Q1 engineering template and actual owned generation/bootstrap/MC/replay before choosing a finite information-study profile. Address the documented dependent-null gap without adding a simulator family.",
+    "requirements": [
+      "REQ-005",
+      "REQ-020",
+      "REQ-024",
+      "REQ-029"
+    ],
+    "governing_sources": [
+      "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md sections 5.3/5.4/11",
+      "docs/reviews/implementation-2026-10-25/information-planning-assessment.json governance",
+      "docs/reviews/implementation-2026-10-25/DEPENDENT_NULL_SCOPE_2026-10-26.md"
+    ],
+    "source_base": "733ea58",
+    "source_ids": {
+      "plan_id": "8e3124df69b94a3fea267d8b2603adc4c4fafa60f797addcd340466b5930af84",
+      "execution_id": "f85b6d447d798c96b5947f3710ebb855ebe590ca268e58222cad79700465ca94",
+      "diagnostics_id": "fca2e8d1979237897cd3e882d9e78051ba35432b4b5b560c67863e136ce7d3d0"
+    },
+    "predeclared_diagnosis": {
+      "model": "lag-linked-second-order-spec/1",
+      "beta": [
+        "-1/2",
+        "0",
+        "1/2"
+      ],
+      "effects": [
+        "0",
+        "1/20",
+        "1/10"
+      ],
+      "purpose": "Check exact source identity and interior truth mappings; these are existing fixed stress witnesses, not inferred nuisance values or an admitted study grid."
+    },
+    "acceptance": "Independent exact marginal/joint cases at Q1 q; complete bound Q1 shifted-value check; actual owned synthetic family route including full fixed draws, MC and separate replay; unsupported and capacity/failure paths retained.",
+    "reuse": "Reuse existing lag_population exact Fraction stationary solver, second_order_population dispatch, native family/study controllers, source/runtime capture and existing independent algebraic expectations. No new numerical solver, dependency, approximation or model family.",
+    "limits": "Q1 source is a fixed engineering template, not free discovery. Existing counts and masks do not establish stationarity, beta/common-shock adequacy or historical unseen evidence. Source w and exogenous-model w differ. No large grid/final cohort starts before explicit profile and measured complete cost fit the actual budget. No scientific admission, 2024 access, API call, grant renewal or original-A continuation.",
+    "construction_effort": {
+      "wall_seconds": "UNKNOWN at inquiry start",
+      "coordination": "One independent exact-case author/reviewer; source/native ownership separated",
+      "model_tokens_and_cost": "UNKNOWN; construction separate from research ledger",
+      "known_check_seconds_excludes_failed_runs_and_metadata": "156.366+3.198+0.069+2.785+3.529+3.785+156.605; independent-author reruns recorded separately and not added to distinct coverage.",
+      "failed_check_seconds": "164.131 native fixture schema error; other initial fixture/guard failures retained above. Complete total wall/cost remains UNKNOWN."
+    },
+    "source_profile_diagnosis": {
+      "case_blob": {
+        "sha256": "9362984a4e56bed4b18b9c177fa4e56f269e034d178a8679ab92d1bbf8e87f5d",
+        "size": 4805729
+      },
+      "case_rows": 8640,
+      "source_scope": {
+        "schema": "source-process-scope/1",
+        "source_request_hash": "4709fc497b7de107d5d4dd41652009c49448680c53cf2d0181143ffb44292677",
+        "case_stream_sha256": "9362984a4e56bed4b18b9c177fa4e56f269e034d178a8679ab92d1bbf8e87f5d",
+        "processing_complete": true,
+        "status": "SHIFTED_VALUE_IDENTITY",
+        "reason": "exact_ordered_syntax_with_uniform_feature_shift",
+        "identity": {
+          "condition_equals_outcome_at_offset_bars": -2,
+          "catalog_hash": "1e23070253d79b727de6bbf3cf9a627894b5e9d780f3acbd7fb9d4cedb9924db",
+          "grid_seconds": 900
+        },
+        "observations": {
+          "target_rows": 8640,
+          "partner_absent": 2,
+          "both_unobserved": 6,
+          "condition_unobserved": 0,
+          "outcome_unobserved": 1,
+          "compared": 8631,
+          "equal": 8631,
+          "unequal": 0,
+          "both_eligible_compared": 8627
+        },
+        "original_process_adequacy": "NOT_ASSESSED",
+        "scientific_readiness": false,
+        "classification_permitted": false,
+        "qualifications": [
+          "conditional_on_valid_exactly_bound_reference_programs",
+          "program_compilation_and_feature_semantics_not_certified_here",
+          "value_identity_only_on_jointly_observable_support",
+          "no_equality_of_missingness_eligibility_or_availability_traces",
+          "no_AST_rewrite_or_requirement_on_bootstrap_draws",
+          "absence_of_a_match_does_not_establish_independence_or_adequacy",
+          "observed_pairs_are_descriptive_not_population_evidence"
+        ]
+      },
+      "models": [
+        {
+          "beta": "-1/2",
+          "status": "MODEL_SPECIFIED",
+          "population": {
+            "q": {
+              "numerator": "1462",
+              "denominator": "2877"
+            },
+            "w": {
+              "numerator": "12615598",
+              "denominator": "24831387"
+            },
+            "source_condition_fraction": {
+              "numerator": "1462",
+              "denominator": "2877"
+            },
+            "known_condition_fraction": {
+              "numerator": "8629",
+              "denominator": "8631"
+            },
+            "target": "pooled_eligible_E_Y_given_true_minus_E_Y",
+            "weighting": "eligible_instrument_rows_under_exogenous_mask_law",
+            "truth_is_not_realized_sample_contrast": true
+          },
+          "gaps": [],
+          "source_identity_preservation": "PRESERVED_ON_JOINTLY_OBSERVED_SYNTHETIC_VALUES",
+          "scenarios": [
+            {
+              "effect": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "alpha": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            },
+            {
+              "effect": {
+                "numerator": "1",
+                "denominator": "20"
+              },
+              "alpha": {
+                "numerator": "8631",
+                "denominator": "56600"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            },
+            {
+              "effect": {
+                "numerator": "1",
+                "denominator": "10"
+              },
+              "alpha": {
+                "numerator": "8631",
+                "denominator": "28300"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            }
+          ]
+        },
+        {
+          "beta": "0",
+          "status": "MODEL_SPECIFIED",
+          "population": {
+            "q": {
+              "numerator": "1462",
+              "denominator": "2877"
+            },
+            "w": {
+              "numerator": "12615598",
+              "denominator": "24831387"
+            },
+            "source_condition_fraction": {
+              "numerator": "1462",
+              "denominator": "2877"
+            },
+            "known_condition_fraction": {
+              "numerator": "8629",
+              "denominator": "8631"
+            },
+            "target": "pooled_eligible_E_Y_given_true_minus_E_Y",
+            "weighting": "eligible_instrument_rows_under_exogenous_mask_law",
+            "truth_is_not_realized_sample_contrast": true
+          },
+          "gaps": [],
+          "source_identity_preservation": "PRESERVED_ON_JOINTLY_OBSERVED_SYNTHETIC_VALUES",
+          "scenarios": [
+            {
+              "effect": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "alpha": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            },
+            {
+              "effect": {
+                "numerator": "1",
+                "denominator": "20"
+              },
+              "alpha": {
+                "numerator": "2877",
+                "denominator": "28300"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            },
+            {
+              "effect": {
+                "numerator": "1",
+                "denominator": "10"
+              },
+              "alpha": {
+                "numerator": "2877",
+                "denominator": "14150"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            }
+          ]
+        },
+        {
+          "beta": "1/2",
+          "status": "MODEL_SPECIFIED",
+          "population": {
+            "q": {
+              "numerator": "1462",
+              "denominator": "2877"
+            },
+            "w": {
+              "numerator": "12615598",
+              "denominator": "24831387"
+            },
+            "source_condition_fraction": {
+              "numerator": "1462",
+              "denominator": "2877"
+            },
+            "known_condition_fraction": {
+              "numerator": "8629",
+              "denominator": "8631"
+            },
+            "target": "pooled_eligible_E_Y_given_true_minus_E_Y",
+            "weighting": "eligible_instrument_rows_under_exogenous_mask_law",
+            "truth_is_not_realized_sample_contrast": true
+          },
+          "gaps": [],
+          "source_identity_preservation": "PRESERVED_ON_JOINTLY_OBSERVED_SYNTHETIC_VALUES",
+          "scenarios": [
+            {
+              "effect": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "alpha": {
+                "numerator": "0",
+                "denominator": "1"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            },
+            {
+              "effect": {
+                "numerator": "1",
+                "denominator": "20"
+              },
+              "alpha": {
+                "numerator": "2877",
+                "denominator": "56600"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            },
+            {
+              "effect": {
+                "numerator": "1",
+                "denominator": "10"
+              },
+              "alpha": {
+                "numerator": "2877",
+                "denominator": "28300"
+              },
+              "feasible": true,
+              "within_transition_capability": true
+            }
+          ]
+        }
+      ],
+      "qualification": "Read-only exact development-source diagnosis. Feasible mathematical scenarios are not nuisance fit, adequate stress coverage, power, final calibration or scientific admission."
+    },
+    "raw_feature_currentness": {
+      "certificate_id": "5bb3855e993dd986bda6896733848cc0195537d28e24a5bcb50e0f766573a23d",
+      "status": "CERTIFIED",
+      "seconds": "118.102",
+      "reason": "FIXED_CASES_AND_FULL_SOURCE_REPLAY_PASSED",
+      "scientific_readiness": false
+    },
+    "reference_currentness": {
+      "certificate_id": "e2ab53aecdb8c77e1205e3a87fca542c6971b59cecd0ea95839f3946d69b6a6f",
+      "profile": "reference-computation/1",
+      "status": "CERTIFIED",
+      "reason": "FIXED_CONFORMANCE_PASSED",
+      "seconds": 1.263,
+      "scientific_readiness": false
+    },
+    "failure_history": [
+      "Native test first follow-through reached actual generation/replay but failed on a guessed result[components] assertion; corrected against actual family_pipeline bootstraps schema, then both methods passed (156.366s). No production change.",
+      "The first real compilation follow-through correctly stopped before compilation because its original reference certificate was STALE (retained source VERIFIED). Fresh qualification uses the same original profile; no old certificate/result is promoted or retargeted.",
+      "Independent invented fixture initially excluded its terminal boundary and then exceeded the canonical 1MiB limit in a whole-report immutability digest; corrected fixture calendar accounting and used detached equality. Fixed mathematical expectations and production guards were preserved.",
+      "Inline handoff helper encountered mixed historical line endings after updating progress only; corrected paragraph-boundary matching, then updated Current State. No runtime/scientific mutation."
+    ],
+    "current_development_binding": {
+      "compiled_id": "8f8bc4ab3af2075ab1a5e5beadafb35cdf4672864ae17c86f1c56f638741a825",
+      "execution_id": "c9b2ac00dea36f56abbd80c17278c157a15b8783115b373655de38e3bde4f643",
+      "plan_id": "3a5e4eab4fc5f8a7eda879d55b88e88671f72a874dd938f5a6ca58b21e660e88",
+      "diagnostics_id": "d631db7b17f88dcdd5a920f7eeb7e1626c9d301a472020cec5a1f453b5ee945d",
+      "case_blob": {
+        "sha256": "9362984a4e56bed4b18b9c177fa4e56f269e034d178a8679ab92d1bbf8e87f5d",
+        "size": 4805729
+      },
+      "original_case_bytes_unchanged": true,
+      "old_artifacts_preserved": true,
+      "seconds": 27.906,
+      "scientific_readiness": false
+    },
+    "cost_probe_request": {
+      "key": "second-order-q1-cost-2048-20261102",
+      "plan_id": "3a5e4eab4fc5f8a7eda879d55b88e88671f72a874dd938f5a6ca58b21e660e88",
+      "execution_id": "c9b2ac00dea36f56abbd80c17278c157a15b8783115b373655de38e3bde4f643",
+      "diagnostics_id": "d631db7b17f88dcdd5a920f7eeb7e1626c9d301a472020cec5a1f453b5ee945d",
+      "specification": {
+        "schema": "lag-linked-second-order-spec/1",
+        "mask_mean_block": 8,
+        "beta": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "common_share": {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        "rationale": "Predeclared Q1 estimator/source-identity cost probe. Existing signed-dependence law, not fitted market dynamics or scientific admission."
+      },
+      "components": [
+        {
+          "id": "a",
+          "scenario": 0
+        },
+        {
+          "id": "b",
+          "scenario": 2
+        }
+      ],
+      "time_rows": 2048,
+      "seed": 2026110203,
+      "bootstrap_seed": 2026110204,
+      "mc_noncoverage": {
+        "numerator": "1",
+        "denominator": "100"
+      },
+      "limits": {
+        "max_seconds": 240
+      }
+    },
+    "cost_probe_purpose": "Measure one complete existing owned generation/full-bootstrap/MC/replay route at the larger previously studied cutoff before deciding whether a finite information study fits its actual resource contract. Retain errors, incomplete draws and all prefixes; no retry/reseed to rescue a favorable result and no calibration classification.",
+    "cost_probe_resource_scope": "One development-only fixed request, 240 seconds inside the existing per-call 1800-second ceiling and below the prior 300-second attempt allowance; no API spending, protected market data or old grant reuse. No full-grid or final-cohort allocation is implied.",
+    "qualification_checks": [
+      {
+        "command": "python -B -m unittest discover -s tests -p test_second_order_independent.py -v",
+        "tests": 11,
+        "seconds": "3.198",
+        "exit_code": 0,
+        "role": "Central run of independently authored exact/capacity/generation cases"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_second_order_independent.py",
+        "tests": 11,
+        "seconds": "3.262",
+        "exit_code": 0,
+        "role": "Independent author final run; not added again to distinct coverage"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_second_order_population.py -v",
+        "tests": 4,
+        "seconds": "0.069",
+        "exit_code": 0,
+        "role": "Existing unchanged second-order primitive regressions"
+      },
+      {
+        "command": "python -B -m unittest discover -s tests -p test_second_order_native.py -v",
+        "tests": 2,
+        "seconds": "156.366",
+        "exit_code": 0,
+        "role": "Actual owned synthetic raw certification, compilation, generation/full draw attempts/MC/separate replay and infeasible-gap caller"
+      }
+    ],
+    "qualification_source_sha256": {
+      "trading_researcher/second_order_population.py": "5314fea8e5fa14b70fea84e37dfd46c3c5d3d7fcfa39aa3b6ff02c2700201178",
+      "trading_researcher/lag_population.py": "94fbadbc9d54e880222861a07d81d5f9123b128293dcec43ec844825272d4dbe",
+      "trading_researcher/family_pipeline.py": "08040b3a111f14b3648b6567ed5bea4accb9ce22ef7dc3a15c2817c6e7d0b2e4",
+      "tests/test_second_order_independent.py": "9c24e25e93af1ba9970f773c5cf3e41b0b2840b960cd2819836cb7b1046bb232",
+      "tests/test_second_order_native.py": "5a6c570c38734ee2d80098e7c4cc7d95726172973b5d267c7410774211af90cb"
+    },
+    "completed_acceptance": [
+      "Existing law dispatch and bounded independent stationary/coupling/truth/capacity checks qualified, without production-code changes.",
+      "Complete Q1 source identity freshly checked, and current raw/reference/compiler/execution/diagnostic owners reproduce identical original case bytes while preserving old artifacts.",
+      "Native actual caller attempts all prescribed 19,999 draws per required length and independently replays the resulting retained bytes; infeasible history remains a retained gap."
+    ],
+    "not_completed": [
+      "Measured new-law complete cost and finite profile allocation",
+      "Justified empirical nuisance/stress adequacy and information target",
+      "Complete development grid and fresh final calibration",
+      "Scientific selection/exposure/data admission, corroboration and scientific execution/release; full package 3/4 exits"
+    ],
+    "live_process": null,
+    "cost_probe_result": {
+      "artifact_id": "4bae90e427dcc819d06739029e93f31ccaa1b2890a79aa1472b21dcc5bd97fa2",
+      "input_capsule_id": "54512f5c0330845b95d93502d16f6cfbcf329435ef7f7225cd148b5cec523b2d",
+      "status": "COMPUTED_UNCALIBRATED",
+      "model_status": "MODEL_SPECIFIED",
+      "elapsed_seconds": 130.702,
+      "world_blob": {
+        "sha256": "4fd7cd0106d0aa95f9d74cb83c3a374bae57232e105b8c65fba7683935617f3c",
+        "size": 38131142
+      },
+      "bootstrap_summaries": [
+        {
+          "id": "a",
+          "status": "COMPUTED_UNCALIBRATED",
+          "cases": [
+            {
+              "length": 4,
+              "attempted": 19999,
+              "defined": 19999,
+              "undefined": 0
+            },
+            {
+              "length": 8,
+              "attempted": 19999,
+              "defined": 19999,
+              "undefined": 0
+            },
+            {
+              "length": 16,
+              "attempted": 19999,
+              "defined": 19999,
+              "undefined": 0
+            }
+          ]
+        },
+        {
+          "id": "b",
+          "status": "COMPUTED_UNCALIBRATED",
+          "cases": [
+            {
+              "length": 4,
+              "attempted": 19999,
+              "defined": 19999,
+              "undefined": 0
+            },
+            {
+              "length": 8,
+              "attempted": 19999,
+              "defined": 19999,
+              "undefined": 0
+            },
+            {
+              "length": 16,
+              "attempted": 19999,
+              "defined": 19999,
+              "undefined": 0
+            }
+          ]
+        }
+      ],
+      "separate_replay": {
+        "verified_result_hash": "0a25c7d7abca13401a7946163e339464b79e4c6c0a7c8ec67abda79593925135"
+      },
+      "scientific_readiness": false
+    },
+    "cost_source_and_profile_preparation": {
+      "compressed_stream_bytes": 6924661,
+      "logical_study_cost_estimate_bytes": 49679580,
+      "cost_source_id": "640310019cb27cbb963b8c0b0f4f0ce885e5a49b17302f455494a5ff808d3427",
+      "cost_source_exposure_count": 134,
+      "profile_request": {
+        "key": "second-order-q1-development-20261102",
+        "plan_id": "3a5e4eab4fc5f8a7eda879d55b88e88671f72a874dd938f5a6ca58b21e660e88",
+        "execution_id": "c9b2ac00dea36f56abbd80c17278c157a15b8783115b373655de38e3bde4f643",
+        "diagnostics_id": "d631db7b17f88dcdd5a920f7eeb7e1626c9d301a472020cec5a1f453b5ee945d",
+        "profile": {
+          "specifications": [
+            {
+              "schema": "lag-linked-second-order-spec/1",
+              "mask_mean_block": 8,
+              "beta": {
+                "numerator": "-1",
+                "denominator": "2"
+              },
+              "common_share": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "rationale": "Predeclared signed-dependence estimator/source-identity stress, not fitted market dynamics."
+            },
+            {
+              "schema": "lag-linked-second-order-spec/1",
+              "mask_mean_block": 8,
+              "beta": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "common_share": {
+                "numerator": "1",
+                "denominator": "2"
+              },
+              "rationale": "Predeclared signed-dependence estimator/source-identity stress, not fitted market dynamics."
+            }
+          ],
+          "targets": [
+            2048,
+            4096
+          ],
+          "worlds_per_cell": 2,
+          "seed": 2026110205,
+          "mc_noncoverage": {
+            "numerator": "1",
+            "denominator": "100"
+          },
+          "outer_noncoverage": {
+            "numerator": "1",
+            "denominator": "20"
+          },
+          "responses": [
+            "a",
+            "b"
+          ],
+          "patterns": [
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "budget": {
+            "max_compute_ms": 3600000,
+            "attempt_compute_ms": 300000,
+            "max_storage_bytes": 2147483648,
+            "attempt_storage_bytes": 268435456,
+            "max_attempts": 1
+          },
+          "cost_estimate": {
+            "source_ref": "640310019cb27cbb963b8c0b0f4f0ce885e5a49b17302f455494a5ff808d3427",
+            "world_time_rows": 2048,
+            "observed_compute_ms": 130702,
+            "observed_storage_bytes": 49679580,
+            "qualification": "One fixed Q1 second-order native family generation/full estimator/MC/replay: 130.702s. Existing bounded gzip measured over its retained exact stream. Storage is the current study logical-copy estimate from actual source/case/encoded/result bytes, not a study settlement or a full-grid guarantee. Complete benchmark ancestry is retained."
+          }
+        }
+      },
+      "dispatch_state": "PREPARATION_ONLY_NO_WORLDS_DISPATCHED",
+      "preparation_status": "DENIED",
+      "failure_type": "Denied",
+      "reason": "Study cost ancestry must be development-only"
+    },
+    "resource_decision_proposal": {
+      "status": "PENDING_USER_DECISION",
+      "basis": "research-contract/1.0 section9:60-minute narrow-calibration cap; additional computation requires a recorded continuation decision. No cash/API budget increase is proposed.",
+      "fixed_workload": "32 development worlds:2 existing beta stress laws x2 targets(2048,4096) x4 homogeneous/mixed vectors x2 outer replications. Each world retains3 lengths x2 responses x19999draws and separate replay.",
+      "measured_basis": "One fixed actual Q1 second-order2048-row world completed in130.702seconds with38131142raw/6924661encoded bytes. Existing logical-copy estimate49679580bytes, not an authenticated study settlement or future guarantee.",
+      "time_projection_seconds": "6273.696 (104.562 minutes):16 worlds at measured2048 cost plus16 at a linear2x4096 extrapolation. Exact4096/per-vector variation remains unmeasured.",
+      "storage_projection_bytes": 1589746560,
+      "recommendation": "Authorize one additional bounded60-minute local continuation after a genuine RESOURCE_STOP, for at most120minutes aggregate for this exact fixed development profile. Keep the initial2GiB logical storage,300second/256MiB per-attempt caps and one attempt per world. No automatic renewal or final-cohort authorization.",
+      "alternatives": [
+        "Retain the existing60-minute cap and report an honestly incomplete grid; no target nomination from partial results.",
+        "First qualify an exact acceleration under unchanged scientific semantics, then re-estimate; no speed improvement is established."
+      ],
+      "acceptance": "Complete exact32-world inventory with all failures/gaps, charges, source/runtime and replay before any whole-grid candidate. A smallest tested point-power candidate remains distinct from N_min and scientific admission.",
+      "versioning_and_rollback": "Profile is immutable once prepared; any continuation binds its actual checkpoint through study-resource-continuation/1. Stop/deselect on rollback while retaining all input versions, outcomes, failures, exposure and spent resources.",
+      "uncertainty": "Existing model still has unproven empirical adequacy; final256-world-per-cell assessment is separate and substantially larger.120minutes may still be insufficient, in which case retain a resource gap.",
+      "dependent_work": "No study world dispatch or additional allowance until answer. Independent work may only repair the reproducible cost-source admission failure that currently blocks this same profile."
+    },
+    "post_cost_fix_currentness": {
+      "feature_certificate_id": "ee31c9d6d5fee634de61c032d34b5e3c6e314605619d6355a5e324d201a3c82d",
+      "reference_certificate_id": "62e35a9a662808dc28c2d055707317606afecae3ab3483dda01cf7e8f1ec51ba",
+      "seconds": 120.93,
+      "status": "CERTIFIED",
+      "scope": "Fresh current inputs after the cost-provenance owner correction; old certificates unchanged and not relabelled.",
+      "scientific_readiness": false
+    },
+    "cost_provenance_correction": {
+      "status": "VERIFIED_ACTUAL_PUBLIC_PREPARATION",
+      "reproduction": "Actual public prepare_family_study rejected the134-ref measured-cost exposure:135 ancestry artifacts included owned technical packages/certificate and the original bound formalization work product; no unresolved/assessment refs. Original error: Study cost ancestry must be development-only.",
+      "owning_source": "trading_researcher/study_runs.py _study_cost_source; reuse data_use.prior_knowledge/protected_knowledge_gaps and existing final-calibration ancestry guard.",
+      "rationale": "Separate permitted development research/technical provenance from arbitrary operational knowledge using the existing approved boundary. Preserve exact cost-root body and all ancestry. This remains an unauthenticated operator cost claim, not package certification/current use. Existing actual plan/execution/source/runtime/revocation use checks are unchanged; D083 genealogy is not actual technical use.",
+      "authority_review": "Independent source review classified this as routine gate correction within existing D014/D078/D083/contract semantics; no numerical/estimand/effect/calibration/authority change. Separate+60minute resource question remains pending.",
+      "reused_library_and_project_owner": "Existing knowledge classifier/worker-context checks and SQLite/canonical artifact owners; no new generic graph algorithm or dependency.",
+      "checks": [
+        {
+          "command": "python -B -m unittest discover -s tests -p test_study_cost_provenance.py -v",
+          "tests": 5,
+          "seconds": "2.785",
+          "exit_code": 0
+        },
+        {
+          "command": "python -B -m unittest discover -s tests -p test_data_use.py -v",
+          "tests": 10,
+          "seconds": "3.785",
+          "exit_code": 0
+        },
+        {
+          "command": "python -B -m unittest discover -s tests -p test_study_cost_provenance_independent.py",
+          "tests": 11,
+          "seconds": "4.087",
+          "exit_code": 0,
+          "role": "Independent author, before central reconciliation"
+        },
+        {
+          "command": "python -B -m unittest discover -s tests -p test_study_cost_provenance_independent.py -v",
+          "tests": 11,
+          "seconds": "3.529",
+          "exit_code": 0,
+          "role": "Central final-source run of independent cases"
+        },
+        {
+          "command": "python -B -m unittest discover -s tests -p test_study_runs.py -v",
+          "tests": 4,
+          "seconds": "156.605",
+          "exit_code": 0,
+          "role": "Existing real child/whole-grid/retry/orphan/public-guard regression"
+        }
+      ],
+      "failure_history": [
+        "Before patch:5methods,2 failing final-namespace subtests and1 expected legitimate-lineage denial error.",
+        "First patched run exposed a test-helper assumption: put_artifact returns identity only. The fixture now captures full get_artifact before comparing unchanged bytes; no production guard was weakened."
+      ],
+      "source_sha256": {
+        "trading_researcher/study_runs.py": "6ed2adf73a42738f8fe1802966111397c8455231f558571b2e4f2c1cf6bd7407",
+        "trading_researcher/data_use.py": "74396b216d08bdee2bcd45864ffb753113d7ca8f55c3fce1874d3eba97d0bbd6",
+        "tests/test_study_cost_provenance.py": "5a76cd469754e74ce5703f4116e35df6bcdd3ce270aa87ef9b459a828ad6a8af",
+        "tests/test_study_cost_provenance_independent.py": "e68955fc4702cde49a3111878e18fd226c45bc5fc35e1d8723050765b9c24961"
+      },
+      "unverified": "No scientific admission, authenticated benchmark, final calibration or study-world dispatch. The prepared profile remains behind the pending resource answer; conformance does not establish model adequacy.",
+      "actual_caller_evidence": "post_cost_fix_preparation and prepared_profile_inspection: actual public owner retained all cost/worker/technical ancestry, prepared32worlds with143source_refs/147exposure refs, originalcasebytes unchanged, READY,0recorded worlds/attempts, no continuation.",
+      "independent_final_review": {
+        "status": "PASS_BOUNDED_SOURCE_AND_ACTUAL_CALLER_METADATA",
+        "source_sha256": "6ed2adf73a42738f8fe1802966111397c8455231f558571b2e4f2c1cf6bd7407",
+        "scope": "Read-only source/SQLite metadata; exact32world settings,64distinct seed slots, all135cost ancestry IDs in source/exposure, exact original compiled programs/case descriptor and current source/runtime;0attempts/continuations, no raw/protected/provider/outcome reads.",
+        "limits": "No scientific adequacy, target, calibration or budget extension established."
+      }
+    },
+    "live_processes": [],
+    "post_cost_fix_preparation": {
+      "status": "PREPARED_NO_WORLDS_DISPATCHED",
+      "compiled_id": "ce89f4ea22926ea1b0d650f18298fb64185cfa87eeaf32eecd69670a4e4568cc",
+      "execution_id": "23801ed304e8567ebf75f5d2a7e11fcaea1786c402b8054195740c8c886d7623",
+      "plan_id": "9ab1a21e3189d1b04100363e08fed30051d59bc42d30dc50b2a1836b97c5796d",
+      "diagnostics_id": "b3f993fce612d235f56fa332597b7e0fd0602dadf87c5d062afa40f12f39c9f0",
+      "study_id": "37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab",
+      "worlds": 32,
+      "input_case_blob": {
+        "sha256": "9362984a4e56bed4b18b9c177fa4e56f269e034d178a8679ab92d1bbf8e87f5d",
+        "size": 4805729
+      },
+      "original_case_bytes_unchanged": true,
+      "source_refs": 143,
+      "exposure_refs": 147,
+      "initial_storage_bytes": 8687387,
+      "elapsed_seconds": 30.258,
+      "scientific_readiness": false,
+      "request_sha256": "c295d76ca5c9c456a3feaeaff3f27abbdfcfca6fb9208546e81c87b1537e5284",
+      "profile_sha256": "9a903c5fa19b239bc5d00b97d1926628d6ed5b733a5beee0d610c4b8edfd08ca",
+      "request_key": "second-order-q1-development-cost-provenance-20261102",
+      "request_retained_in": "Owned study body.request; full numerical profile also retained in cost_source_and_profile_preparation.profile_request",
+      "numerical_profile_matches_proposal": true
+    },
+    "prepared_profile_inspection": {
+      "study_id": "37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab",
+      "status": "READY",
+      "recorded_worlds": 0,
+      "attempts": 0,
+      "budget": {
+        "charged_compute_ms": 0,
+        "charged_storage_bytes": 8687387,
+        "outstanding_attempts": [],
+        "attempts_per_world": {},
+        "overrun": false,
+        "next_reservation_fits": true,
+        "initial_storage_bytes": 8687387,
+        "continuation_storage_bytes": 0,
+        "original_max_compute_ms": 3600000,
+        "original_max_storage_bytes": 2147483648,
+        "max_compute_ms": 3600000,
+        "max_storage_bytes": 2147483648
+      },
+      "scientific_readiness": false
+    },
+    "next_action": "Await the pending+60minute local resource decision. The exact32-world profile is prepared and READY with0worlds/attempts. If approved, independently check final request/source/runtime/currentness at intended use, then advance only this fixed inventory under the initial60minute cap; any single approved additional60minute continuation must bind its actual RESOURCE_STOP checkpoint. If declined, honor the selected alternative. Do not redispatch the completed cost probe, reopen original A, run final cohorts or infer scientific admission.",
+    "changed_files": [
+      "trading_researcher/study_runs.py",
+      "tests/test_second_order_independent.py",
+      "tests/test_second_order_native.py",
+      "tests/test_study_cost_provenance.py",
+      "tests/test_study_cost_provenance_independent.py",
+      "trading_researcher/INFORMATION_STUDIES.md",
+      "trading_researcher/LAG_LINKED_POPULATION.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+      "docs/reviews/implementation-2026-10-25/progress.json"
+    ],
+    "retained_auxiliary_draft_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
+    "prior_next_action": "Prepare one justified claim-scoped binary mean/rate-contrast nuisance/stress and information profile from permitted development diagnostics under contract 14 sections 5.3/5.4/11, then reuse the existing development/final controllers within actual fixed resources. Exact dependence/randomness/target/adequacy inputs are still required; do not issue a count-only certificate or promote a smallest tested target into N_min. Retain scientific selection/data/exposure and corroboration gaps.",
+    "documentation_checks": {
+      "status": "PASS",
+      "verify_system_model_exit": 0,
+      "verify_retail_contract_exit": 0,
+      "verify_implementation_exit": 0,
+      "git_diff_check_exit": 0,
+      "local_architecture_links": 782,
+      "implementation_links": 866,
+      "scope": "Current links, preserved source/contract/decision histories, traceability and whitespace; not scientific/model/economic validity. Only final evidence fields are added after this bundle; JSON/preservation/whitespace are refreshed below."
+    },
+    "completion_scope": "Existing model conformance and actual measured-cost-to-study preparation handoff only. Full goal and packages3/4 remain incomplete; no global full-suite or empirical/economic success claim. Pending user decision is retained once, without assuming approval from time or automatic continuation.",
+    "source_mutation_scope": "Only study_runs.py changes production behavior. Existing second_order_population/lag/family numerical implementations and all fixed fixture bytes are preserved. New tests qualify existing code and the actual cost lineage handoff."
   }
 }

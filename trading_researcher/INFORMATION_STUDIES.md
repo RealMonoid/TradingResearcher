@@ -6,7 +6,7 @@ Status: implemented and verified within the bounded engineering scope. This is a
 
 The corresponding joint-family operations are `prepare_family_study`, `advance_family_study` and `inspect_family_study`. They use the same ownership, retention and budget machinery with `family-study-input/1` and `family-study-attempt/1`. Preparation takes the same fields, adding `responses` and `patterns` inside `profile`. Responses are sorted distinct synthetic IDs matching the owned plan's family count (two through eight). Patterns are sorted distinct complete vectors of effect-scenario indices, aligned with those IDs. Every homogeneous allowed effect vector and at least one genuinely mixed vector are mandatory; at most eight vectors and 2,048 total worlds are admitted. Every response runs the actual fixed-draw estimator on one shared template law. Target candidacy requires a complete development inventory and the 80% point target separately for every declared 2*delta response/stress/vector; it remains a tested-grid candidate, not N_min. See [final family series](CALIBRATION.md#owned-joint-family-series) for the protected assessment boundary.
 
-`prepare_information_study` binds an owned development evaluation plan, its declared execution, matching nuisance diagnostics, and a finite operator-supplied profile. It retains the exact source/runtime, case bytes, inherited exposure, complete ordered world inventory and all generation/bootstrap seeds before starting a simulation. Protected or unowned diagnostic/cost ancestry fails before source-package reads.
+`prepare_information_study` binds an owned development evaluation plan, its declared execution, matching nuisance diagnostics, and a finite operator-supplied profile. It retains the exact source/runtime, case bytes, inherited exposure, complete ordered world inventory and all generation/bootstrap seeds before starting a simulation. Protected knowledge, arbitrary operational knowledge, unresolved ancestry and unowned diagnostics fail before source-package reads.
 
 `advance_information_study` reserves one full attempt envelope and advances the next fixed world. It generates synthetic binary responses/masks, executes all prescribed 19,999 bootstrap draws at each distinct required length, applies the plan-bound MC diagnostic, and repeats the complete pipeline in a separate isolated process. The exact ordered case/draw stream and failed prefixes are retained as immutable blobs. This repeats installed deterministic code; it is not an independent statistical method or proof of model adequacy.
 
@@ -19,9 +19,22 @@ The preparation arguments are `key`, `plan_id`, `execution_id`, `diagnostics_id`
 - One to four distinct population stress specifications, one to eight increasing historical-grid targets, one to 256 worlds per cell, and a fixed seed. The total inventory is bounded to 2,048 worlds and the canonical 1 MiB input limit still applies.
 - Exact rational `mc_noncoverage` and `outer_noncoverage`. The existing plan assigns delta, direction, primary-family count and block lengths; callers cannot replace them.
 - Positive integer initial aggregate/per-attempt compute milliseconds and logical storage bytes, plus at most three attempts per world. The original limits remain immutable; explicit continuation decisions can add bounded aggregate resources as described below. Per-attempt envelopes and retry caps never change.
-- A retained `cost_estimate` with `source_ref`, `world_time_rows`, `observed_compute_ms`, `observed_storage_bytes`, and `qualification`. Its source must have the exact body `{"schema":"development-study-cost-estimate/1", ...estimate_without_source_ref}` and development-only ancestry. This preserves the operator's measurement claim and qualification; the controller explicitly does **not** authenticate it as a benchmark.
+- A retained `cost_estimate` with `source_ref`, `world_time_rows`, `observed_compute_ms`, `observed_storage_bytes`, and `qualification`. Its source must have the exact body `{"schema":"development-study-cost-estimate/1", ...estimate_without_source_ref}` and permitted development research ancestry under the boundary below. This preserves the operator's measurement claim and qualification; the controller explicitly does **not** authenticate it as a benchmark.
 
 Targets count joint calendar positions within the bound historical window. They do not count independent observations. Effects include zero, delta and twice delta, with both signs for nondirectional claims. Retries keep the same world and seeds. Completed information gaps and MC abstentions are not retried to obtain more favorable outcomes.
+
+The cost root must have development classification and exactly match the retained
+measurement body. Its ancestry uses the existing data-use knowledge boundary:
+owned technical provenance and properly bound worker/context lineage may remain
+attached; they are not operational observations or protected assessment knowledge.
+Final-calibration namespaces, arbitrary operations, unresolved references and
+incomplete authorized contexts remain denied, including behind wrappers. Every
+traversed artifact stays in the study's references/exposure. This fixes the actual
+measured-cost handoff without omitting its lineage. It does not authenticate the
+operator's benchmark claim or qualify a historical certificate for new execution.
+Current plan/execution/feature/source/runtime checks still run through their
+existing owners. The November 2 scoped regression and native handoff results are
+in the existing [progress register](../docs/reviews/implementation-2026-10-25/progress.json).
 
 Preparation with the same key/arguments returns the same capsule; changed arguments conflict. A different key with identical arguments also returns the same capsule and budget. This prevents resetting a study merely by changing its request key. A corrected recipe is a separately identified study; it does not replace prior inputs, failures or exposure.
 

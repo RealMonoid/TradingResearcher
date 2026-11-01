@@ -1,6 +1,6 @@
 # Current State
 
-Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain authority. This replaces chronological loading with current pointers. The [byte-preserved previous snapshot](CURRENT_STATE_SNAPSHOT_2026-10-31.md) retains all earlier approvals, evidence and qualified historical claims.
+Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain authority. This replaces chronological loading with current pointers. The [byte-preserved previous snapshot](CURRENT_STATE_SNAPSHOT_2026-10-31.md) retains all earlier approvals, evidence and qualified historical claims.
 
 ## Resume handoff
 
@@ -77,11 +77,18 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
   applicable registry/storage/policy/revocation regressions pass; [exact versions, timings and retained
   failed runs](../reviews/implementation-2026-10-25/progress.json). No full package or scientific pass follows.
 
-- **Next action:** prepare a justified claim-scoped binary nuisance/stress and information profile from
-  permitted development diagnostics, then reuse the existing study/final-calibration controllers under
-  the actual fixed resources. Connect scientific selection/data/exposure admission under packages 3/4. No existing exploratory/private-plan qualification is a
-  scientific certificate. Research required user decisions promptly; preserve the original-A hold,
-  complete package exits, no new spending and no protected assessment access.
+- **Information-profile progress (November 2):** the existing second-order law has bounded independent
+  and native qualification; full Q1 source identity and fresh source-bound execution retain the original
+  case bytes. The measured 2,048-row cost probe completed in 130.702 seconds with full draws/replay.
+  The actual cost-provenance caller is corrected using the existing knowledge boundary; 30 affected
+  methods pass, alongside 17 model checks at their recorded source scope. This is no adequacy certificate.
+
+- **Next action / pending decision:** the exact 32-world development profile is prepared as
+  `37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab`, READY with 0/32 worlds
+  and no attempts. Await the user's answer to the concrete one-time +60-minute local continuation
+  proposal (maximum 120 minutes; no API budget increase). No study worlds or continuation are dispatched
+  while the answer is pending. [Request, evidence and limits](../reviews/implementation-2026-10-25/progress.json).
+  Preserve original A on hold, every source/failure/exposure and the blocked scientific/2024 gates.
 
 - **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a 24-pass
   / 1-error review exposing noncanonical-object rejection persistence are retained. Final v2 omits
@@ -92,10 +99,10 @@ Updated November 1, 2026. Descriptive resume handoff; decisions/contracts retain
   cannot learn conditional-outcome variation; the whole-scope baseline may vary. No new practical-effect
   profile or bootstrap alone repairs that support limitation.
 
-- **Working tree/processes:** GitHub checkpoint e2e70ac is verified remotely. The later local financial-read
-  correction and real-context proof are complete; no checks remain live at this closeout. The concurrent
-  whitespace-only handoff edit is preserved. No new inference/context/job/spending grant/source release or
-  AmiBroker mutation; all seven old grants remain revoked. Original-A admission is on hold under the approved core priority.
+- **Working tree/processes:** local atomic-freeze checkpoint is `733ea58`; the information-profile and
+  cost-provenance closeout follows it. No process remains live and no GitHub publication occurs here.
+  The unverified AUXILIARY_RESOURCES.md draft remains preserved and uncommitted; the builder/original-A
+  continuation stays on hold. No new research-model call or spending grant; all seven old grants remain revoked.
 
 - **Research result:** original scalar and paired development paths have descriptive reports; latest paired
   breakout has one qualified observed case. Zero/one-condition limitations prevent reliable population or

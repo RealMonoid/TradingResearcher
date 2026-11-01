@@ -151,17 +151,23 @@ class InformationStudies:
         require(type(estimate) is dict and set(estimate)=={'source_ref','world_time_rows','observed_compute_ms',
             'observed_storage_bytes','qualification'},'Exact retained cost estimate required')
         identity=estimate['source_ref'];text(identity,'cost source')
-        source=self._artifact(identity);pending=[source];seen=set()
-        while pending:
-            current=pending.pop()
-            if current['id'] in seen:continue
-            seen.add(current['id'])
-            if current['data_class']!='development':raise Denied('Study cost ancestry must be development-only')
-            for ref in set(current['source_refs'])|set(current['exposure']):
-                if ref not in seen:pending.append(self._artifact(ref))
+        source=self._artifact(identity)
+        if source['data_class']!='development':
+            raise Denied('Study cost root must be development-only')
+        # A measured development computation necessarily retains technical
+        # packages and its original worker context. Reuse the existing knowledge
+        # boundary; storage class alone is not a research-purpose classifier.
+        # This admits provenance for an unauthenticated cost claim, never a
+        # certificate or renewed use of a historical technical version. Actual
+        # plan/execution currency remains checked by _development_plan_execution.
+        from .data_use import prior_knowledge, protected_knowledge_gaps
+        self._deny_final_calibration_ancestry(source)
+        knowledge=prior_knowledge(self,source)
+        if protected_knowledge_gaps(knowledge):
+            raise Denied('Study cost ancestry contains protected, operational or unresolved knowledge')
         require(source['body']=={'schema':'development-study-cost-estimate/1',
             **{key:value for key,value in estimate.items() if key!='source_ref'}},'Cost estimate differs from its retained source')
-        return source,seen
+        return source,set(knowledge['artifact_ids'])
 
     def _study_inputs(self,actor,request):
         diagnostic=self._artifact(request['diagnostics_id']);body=diagnostic.get('body')

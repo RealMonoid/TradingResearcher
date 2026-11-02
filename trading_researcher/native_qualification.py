@@ -36,7 +36,8 @@ class NativeQualifications:
         if (item['creator'] != item['origin'] or item['creator'] != 'controller'
                 or item['data_class'] != 'operations' or item['authority'] != authority
                 or type(body) is not dict or body.get('schema') != schema
-                or body.get('profile') != profile.PROFILE):
+                or type(body.get('profile')) is not str
+                or body['profile'] not in profile.KNOWN_PROFILES):
             raise Denied('Owned native qualification record required')
         return item
 
@@ -44,7 +45,7 @@ class NativeQualifications:
         package = self._owned(identity, SOURCE)
         body = package['body']
         files = body['files']
-        allowed = set(profile.FIXED) | {profile.LOOP_FILE}
+        allowed = profile.source_paths(body['profile'])
         require(type(files) is dict and 1 <= len(files) <= 128 and all(
             type(name) is str and (name in allowed or
             re.fullmatch(r'trading_researcher/[A-Za-z_][A-Za-z0-9_]*\.py', name)) for name in files),
@@ -78,7 +79,8 @@ class NativeQualifications:
         runtime = self.runtimes._package(body['runtime_id'])
         package = self._owned(body['source_package_id'], SOURCE)
         refs = sorted([runtime['id'], package['id']])
-        require(body['request']['runtime_id'] == runtime['id']
+        require(body['profile'] == package['body']['profile']
+                and body['request']['runtime_id'] == runtime['id']
                 and body['runtime_manifest'] == runtime['body']['manifest']
                 and body['source_footprint'] == package['body']['footprint']
                 and item['source_refs'] == refs and item['blob_refs'] == []
@@ -92,7 +94,8 @@ class NativeQualifications:
         body = item['body']
         capsule = self._input(body['input_id'])
         original = capsule['body']
-        require(item['source_refs'] == [capsule['id']]
+        require(body['profile'] == original['profile']
+                and item['source_refs'] == [capsule['id']]
                 and set(item['exposure']) == set(capsule['exposure']) | {capsule['id']}
                 and body['request'] == original['request'] and body['attempt_id'] == original['attempt_id']
                 and body['runtime_id'] == original['runtime_id']
@@ -136,6 +139,8 @@ class NativeQualifications:
         broker = self.broker
         with broker._mutex:
             certificate = self._certificate(certificate_id)
+            require(certificate['body']['profile'] == profile.PROFILE,
+                    'Historical native profile is read-only; current qualification required')
             require(certificate['body']['status'] == 'CERTIFIED', 'A completed native qualification is required')
             broker._require_usable_dependencies(certificate['id'])
             self._verify_outputs(certificate)
@@ -180,7 +185,7 @@ class NativeQualifications:
         for row in broker._db.execute(
                 "SELECT id FROM artifacts WHERE json_extract(envelope,'$.body.schema')=?", (SOURCE,)):
             package = self._owned(row[0], SOURCE)
-            if package['body']['footprint'] == expected:
+            if package['body']['profile'] == profile.PROFILE and package['body']['footprint'] == expected:
                 require(self._source(package['id']) == source)
                 broker._require_usable_dependencies(package['id'])
                 return package
@@ -317,6 +322,8 @@ class NativeQualifications:
                 if status == 'CERTIFIED':
                     try:
                         broker._require_usable_dependencies(certificate['id'])
+                        require(certificate['body']['profile'] == profile.PROFILE,
+                                'Historical native qualification is not current')
                         self._verify_outputs(certificate)
                         source = self._source(capsule['body']['source_package_id'])
                         runtime = self.runtimes._package(capsule['body']['runtime_id'])
@@ -352,7 +359,10 @@ def technical_provenance(broker, artifact):
         capsule = qualifications._input(certificate['body']['input_id'])
         package = qualifications._source_metadata(capsule['body']['source_package_id'])
         runtime = qualifications.runtimes._package(capsule['body']['runtime_id'])
-        profile.validate_runtime(runtime)
+        if certificate['body']['profile'] == profile.LEGACY_PROFILE:
+            profile.validate_legacy_runtime(runtime, certificate['body']['profile'])
+        else:
+            profile.validate_runtime(runtime)
         archive = qualifications.runtimes._archive_source(runtime['body']['request']['archive_id'])
         return {item['id'] for item in (certificate, capsule, package, runtime, archive)}
     except (Denied, Conflict, KeyError, TypeError, AttributeError, ValueError):

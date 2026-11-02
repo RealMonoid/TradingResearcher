@@ -319,17 +319,39 @@ the same 21 methods also pass on the original kernel. Fixed complete 4,096-row
 ABBA medians are 18.583887 versus 16.059563 seconds (13.58% less in this fixture),
 with all four full result/stream hashes and prescribed draws equal. The probe
 also matches the complete 1,024-row gold. This selects the small packing change
-for technical integration; it is not installed or runtime-certified. Original
+for technical integration; that experimental checkpoint grants no runtime authority. Original
 profiling/setup failures, source bytes, compiler pins and exact observations
 remain in the [packing evidence](../../../tests/fixtures/native-path-packing-checks-2026-11-02.zip).
-**Next:** integrate that same eight-store change as a separately bound canonical
-kernel/runtime version through the existing qualifier, cache and reserved-study
-callers. Retain version-1 source/binary/input/certificates and all historical
-attempts; independently check final conformance, source/environment currentness,
-admission/denial, resources, revocation and cache-free restore at the final source.
-No native-libm replacement, skipped checker, new final series or retargeting of
-the completed development/derived final follows. The observed calculator gain
-does not establish whole-caller improvement or full-series feasibility.
+**Checked canonical adoption:** `stationary-native-runtime/2` now binds that
+exact eight-store source to a separately built canonical kernel/archive/manifest.
+Version 1 retains its exact bytes and readable history; it cannot authorize new
+execution or retarget an old study. The current qualifier's 31 methods and 16 new
+independent version cases pass. The 36-method caller/transport run retains its
+35 passes and one obsolete expected-version failure; after its independently
+checked one-byte fixture correction, only that open method was rerun and passes.
+Fifteen unchanged provenance methods, 21 canonical loop cases and ten existing
+actual-factory methods also pass. No passing numerical suite was repeated merely
+to obtain a new aggregate green run.
+
+Actual current-source qualification completes two separate 21-case/59,997-draw
+children. The subsequent 151-blob cache-free restore completes all three single
+and four family worlds in both routes: 14 attempts, 28 generation/replay proofs,
+equal complete results and encoded/decoded streams. Cold 57,323,346 bytes are
+charged once. All four inventories complete with known usage and no continuation;
+their information gaps remain gaps. The initial target-16 request was rejected
+against a three-row assigned grid before any study reservation. Its successful
+qualification and failed driver remain retained; the corrected initial target-3
+probe reuses those inputs and certificate without a numerical retry.
+[Exact sources, independent checks and retained failures](../../../tests/fixtures/native-packing-adoption-checks-2026-11-02.zip)
+close this technical adoption slice only. The tiny probe's complete native calls
+take longer than its scalar calls; calculator timings are not a caller speedup.
+**Next:** measure this canonical version on the existing fixed 4,096-row owned
+caller workload, with a predeclared scalar/native first-world pair, full separate
+replay and the existing 300-second/256-MiB attempt limits. Preserve all earlier
+attempts/charges and use fresh source-bound inputs; no old capsule is retargeted.
+No native-libm replacement, skipped checker, new final series, budget increase or
+completed-development/derived-final transfer follows. Whole-series feasibility
+and the remaining scientific package exits stay open.
 Reuse the checked Blob/cache/backup owners; do not relax
 128-file/16-MiB project-source or blob-reference limits, copy NumPy per world,
 use host site-packages, retarget frozen capsules or assume full-series savings.

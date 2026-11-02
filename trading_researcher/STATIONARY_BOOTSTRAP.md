@@ -212,14 +212,30 @@ Broker/HTTP interface. The latter accepts the retained input or result identity.
 Workers cannot invoke them or forge their reserved records. Generic retention
 and compatibility metadata grant no qualification.
 
-`stationary-native-runtime/1` accepts only the pinned canonical archive,
-manifest, kernel and prior independent fixtures. It fixes the observed host
-paths/hashes before work, preserves the original assertions and complete golden
-result/stream, and records the complete current source closure. The owned input
-and `STARTED` event commit before cache materialization or child execution.
-Two fresh isolated children each run the same 13 independent loop cases and all
-59,997 calculator draws; replay compares every retained draw byte. Both phases
-must pass pre/post environment, source, cache and fixed-result checks.
+Current execution uses `stationary-native-runtime/2`, with a separately pinned
+canonical archive, manifest and kernel. Its only kernel change replaces Python
+tuple-based path packing with eight typed byte stores; the numeric ABI,
+mathematics, RNG, checker order and fallback remain unchanged. The retained
+[packing cases](../tests/fixtures/native-path-packing-checks-2026-11-02.zip)
+keep their original source guards and assertion bodies. The adapter verifies
+those historical inputs before supplying the current kernel to the same cases.
+No prior source, binary or certificate is relabelled.
+
+The profile fixes the observed host paths/hashes before work, preserves the
+complete golden result/stream, and records the complete current source closure.
+The owned input and `STARTED` event commit before cache materialization or child
+execution. Two fresh isolated children each run the same 21 independent loop
+cases (13 existing, eight packing-boundary cases) and all 59,997 calculator draws;
+replay compares every retained draw byte. Both phases must pass pre/post
+environment, source, cache and fixed-result checks.
+
+`stationary-native-runtime/1` retains its exact old archive, manifest, kernel,
+13-case source and immutable history. It remains readable, including idempotent
+request lookup, but inspection under this owner reports it as stale rather than
+granting new execution authority. Current source, input and certificate profiles
+must agree. Legacy use is rejected before source capture, cache writes or child
+dispatch; historical technical provenance does not refresh a certificate or
+replace an old study binding.
 
 The implementation-qualification attempt is bounded to 300 seconds and 256 MiB
 of logical retention/materialization/output accounting. Unknown usage preserves
@@ -228,6 +244,14 @@ Input blobs are rechecked after execution, output bytes at intended use. Exact
 key replay returns immutable history. A changed request conflicts; an unfinished
 or interrupted attempt needs an explicit new key, retaining its prior cost.
 Typed source/runtime/input/result revocation blocks use without deleting history.
+
+The [canonical adoption evidence](../tests/fixtures/native-packing-adoption-checks-2026-11-02.zip)
+retains the current build and version checks, actual two-child qualification,
+complete reserved single/family caller/replay and cache-free restore. It also
+preserves the denied target-16 preparation and its correction to the genuine
+three-row engineering grid before any study reservation. That tiny fixture's
+information gaps and slower complete native calls establish neither a useful
+information target nor a whole-caller speedup.
 
 Inspection is read-only. `CURRENT` requires intact source, archive, cache,
 retained output and environment bindings. A missing restored cache is `STALE`;

@@ -125,10 +125,15 @@ cdef class Candidate:
             segments += 1
             sampled += count
             # Same >II bytes as struct.pack, kept in a bounded private buffer.
-            for number in (start, count):
-                for shift in (24, 16, 8, 0):
-                    path[offset] = <unsigned char>(number >> shift)
-                    offset += 1
+            path[offset] = <unsigned char>(start >> 24)
+            path[offset + 1] = <unsigned char>(start >> 16)
+            path[offset + 2] = <unsigned char>(start >> 8)
+            path[offset + 3] = <unsigned char>start
+            path[offset + 4] = <unsigned char>(count >> 24)
+            path[offset + 5] = <unsigned char>(count >> 16)
+            path[offset + 6] = <unsigned char>(count >> 8)
+            path[offset + 7] = <unsigned char>count
+            offset += 8
             end = start + count
             for field in range(4):
                 if end <= size:

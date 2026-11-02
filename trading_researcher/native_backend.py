@@ -10,7 +10,7 @@ from .binding import require
 
 ABI = 'stationary-native-int64/1'
 NUMPY = '2.3.4'
-SOURCE_SHA256 = '7032309223049cd250f9774b26f5e44829e878693f3e1114df71b7f2b5b794ba'
+SOURCE_SHA256 = 'b4fb9106bb2b2e7715a5b7e34a2d468d4f950cc5e60dc1571531397ea3a8f5b6'
 MAX_TIME_ROWS = 100000
 MAX_MEAN_LENGTH = 100000
 INFO = {'abi': ABI, 'max_time_rows': MAX_TIME_ROWS, 'max_mean_length': MAX_MEAN_LENGTH,

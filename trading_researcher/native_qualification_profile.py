@@ -24,33 +24,58 @@ from .native_runtime import verify_tree
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PROFILE = 'stationary-native-runtime/1'
+PROFILE = 'stationary-native-runtime/2'
+LEGACY_PROFILE = 'stationary-native-runtime/1'
+KNOWN_PROFILES = frozenset({LEGACY_PROFILE, PROFILE})
 BOOTSTRAP = ('import sys;sys.path.insert(0,sys.argv[1]);'
              'from trading_researcher.native_qualification_profile import child_entry;'
              'child_entry(sys.argv[2])')
-MANIFEST_SHA = '384f70b80d41878c3b7a35c7e3b7b981ea891aa6dabe5df79e9893ead707ee33'
-ARCHIVE_SHA = '8c0458b745399a3bc92f912bb129ea1c6969466a0cad3239d5c361c23746dc21'
-KERNEL_SHA = '46d1c2efc66e8cd3546e72027970f7951360e6f18dd1f868d82efbe83e78d509'
+MANIFEST_SHA = '20151908bc9fd2b09ac407caebc5d7bbc2f79016315b8b59d736d2427297c848'
+ARCHIVE_SHA = '4d379ab0dc5d689445c1f720b967b923b8106af4184de1576418837c23853976'
+KERNEL_SHA = '318b5a84c357902af965c154bd0652c837503e5783a156f506c13872e1639a36'
+LEGACY_MANIFEST_SHA = '384f70b80d41878c3b7a35c7e3b7b981ea891aa6dabe5df79e9893ead707ee33'
+LEGACY_ARCHIVE_SHA = '8c0458b745399a3bc92f912bb129ea1c6969466a0cad3239d5c361c23746dc21'
+LEGACY_KERNEL_SHA = '46d1c2efc66e8cd3546e72027970f7951360e6f18dd1f868d82efbe83e78d509'
 RESULT_SHA = '720ac237f2ad3e29a5a9d94191af68a90a549f476c6e0f2d5bae36b537901b09'
 STREAM_SHA = '76c3fb49b827455afaf488104f0ee88788254446e4bcf1fad07f73b42cb4f533'
 STREAM_SIZE = 15143319
 NUMERIC_PINS = {
     'trading_researcher/stationary_bootstrap.py': 'f6f1b27ca43acde60972caa3af2fbec082e324180b13cb60f4fb64142dfd8d57',
-    'trading_researcher/native_backend.py': '415c59d6e9be6a21bb29b0679fac806e2a35d1fd055784d44b2a3c28f34122ca',
+    'trading_researcher/native_backend.py': 'bae49af0078154886b9ac382505712793699afea8e1a23dc1a7f63c900a6d0ab',
     'trading_researcher/family_pipeline.py': 'c082918d76595f15a89c4607578c526eb5354619deccf7e991d9319d9095c0bb',
     'trading_researcher/study_pipeline.py': '2d8b00d6f4f3c5e52ae0f1569b0ad4f7bfef628943dab0e5107385ed73fbb8de',
 }
-FIXED = {
+LEGACY_FIXED = {
     'tests/fixtures/native-calculator-integration-2026-11-02.zip': '39907b38a6e91a7bdf30b2101d93e0a17cba134f9dffe949631abd02cc6b6008',
     'tests/fixtures/native-environment-checks-2026-11-02.zip': 'fda1c157fbf365f5a8826a9ba0e9f7d19fae5f36f7299bf7a770a9764524fd30',
     'tests/fixtures/study-source-0f1bf36.zip': 'ee335215005ce138a058ea3499c5424ac929003a9243e80c139ed0c18dc96e2f',
     'tests/bootstrap_oracle.py': '83b9c8422b6ba061c2cf5240541ae00d3cee3417f4589b9e0e1d4273a82b1286',
     'tests/bootstrap_support.py': 'b2639c98d7acbfddfd25a29f9202a1bbd7f66082d3e22dd19c99a98ac3e02540',
 }
-LOOP_FILE = '.trf-runtime/native-runtime-2026-11-02/canonical_draw_independent_cases.py'
-LOOP_SHA = 'a2569b97280dbf88a0b10560f0c31f19193718f12a83d7e3261a64f42653ced3'
+LEGACY_LOOP_FILE = '.trf-runtime/native-runtime-2026-11-02/canonical_draw_independent_cases.py'
+PACKING_ARCHIVE = 'tests/fixtures/native-path-packing-checks-2026-11-02.zip'
+FIXED = {**LEGACY_FIXED, PACKING_ARCHIVE: 'c0f0b7e8f4b926bc8e6e79ae5ba173d5b2566a81ccef9beeb316ea5a122fa266'}
+LOOP_FILE = '.trf-runtime/native-loop-2026-11-02/packing_independent_cases.py'
+LOOP_SHA = '013a4061cbe0ef3588f6c30ad2f675baafafaaab9c42fd0b7195ad5dfc27e1a0'
+ORACLE_FILE = '.trf-runtime/native-build-tools-2026-11-02/draw_independent_cases.py'
+OLD_KERNEL_FILE = '.trf-runtime/native-loop-2026-11-02/before-kernel.pyx'
+OLD_GENERATED_FILE = '.trf-runtime/native-runtime-2026-11-02/kernel-v1/_trf_stationary_native.c'
+CASE_FILES = {
+    LOOP_FILE: LOOP_SHA,
+    ORACLE_FILE: '342dd443823df5015109768428e15a425b5fba113d5abee8f27bf94ac9dcc0a9',
+    OLD_KERNEL_FILE: '7032309223049cd250f9774b26f5e44829e878693f3e1114df71b7f2b5b794ba',
+    OLD_GENERATED_FILE: 'db03b01939ae2b8e4add25db641c9e019b8f77ae526702976dd486ea31a4d89c',
+}
 LOADED = footprint(source_bundle())
 META = 1024 * 1024
+
+
+def source_paths(profile_id):
+    """Explicit historical metadata paths, without granting executable use."""
+    require(profile_id in KNOWN_PROFILES, 'Unknown native qualification profile')
+    if profile_id == LEGACY_PROFILE:
+        return set(LEGACY_FIXED) | {LEGACY_LOOP_FILE}
+    return set(FIXED) | set(CASE_FILES)
 
 
 def capture_source():
@@ -63,9 +88,11 @@ def capture_source():
         raw = (ROOT / name).read_bytes()
         require(hashlib.sha256(raw).hexdigest() == checksum, 'Independent native fixture changed')
         bundle[name] = raw
-    with ZipFile(io.BytesIO(bundle['tests/fixtures/native-calculator-integration-2026-11-02.zip'])) as archive:
-        bundle[LOOP_FILE] = archive.read(LOOP_FILE)
-    require(hashlib.sha256(bundle[LOOP_FILE]).hexdigest() == LOOP_SHA, 'Independent loop assertions changed')
+    with ZipFile(io.BytesIO(bundle[PACKING_ARCHIVE])) as archive:
+        for name, checksum in CASE_FILES.items():
+            raw = archive.read(name)
+            require(hashlib.sha256(raw).hexdigest() == checksum, 'Independent packing source changed')
+            bundle[name] = raw
     return bundle
 
 
@@ -84,9 +111,19 @@ def validate_runtime(runtime):
             'Runtime is not a member of the independently checked native profile')
 
 
+def validate_legacy_runtime(runtime, profile_id):
+    """Exact v1 membership for historical provenance only; no code/cache use."""
+    require(profile_id == LEGACY_PROFILE, 'Exact historical native profile required')
+    body = runtime['body']
+    require(digest(body['manifest']) == LEGACY_MANIFEST_SHA
+            and body['archive']['sha256'] == LEGACY_ARCHIVE_SHA
+            and body['manifest']['files'][KERNEL_FILE]['sha256'] == LEGACY_KERNEL_SHA,
+            'Runtime is not the retained historical native profile')
+
+
 def _expected_result():
     return {'schema': 'native-runtime-conformance-result/1', 'profile': PROFILE,
-            'tests': 13, 'failures': 0, 'errors': 0, 'skipped': 0,
+            'tests': 21, 'failures': 0, 'errors': 0, 'skipped': 0,
             'complete_result_sha256': RESULT_SHA, 'complete_stream_sha256': STREAM_SHA,
             'draws': 59997, 'native_lengths': [4, 8, 16], 'scientific_readiness': False}
 
@@ -123,21 +160,25 @@ def child_entry(request_path):
     spec = importlib.util.spec_from_file_location('native_loop_cases', ROOT / LOOP_FILE)
     loops = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = loops
-    previous_argv = sys.argv
-    try:
-        sys.argv = [str(ROOT / LOOP_FILE), str(directory / KERNEL_FILE)]
-        spec.loader.exec_module(loops)
-    finally:
-        sys.argv = previous_argv
+    spec.loader.exec_module(loops)
+    # Keep the author's v1 guards and all case bodies unchanged. This adapter
+    # verifies their retained historical inputs, then supplies the selected v2
+    # core to the same independently authored factories without invoking CLI.
+    require(CASE_FILES[ORACLE_FILE] == loops.ORIGINAL_SHA
+            and CASE_FILES[OLD_KERNEL_FILE] == loops.BASELINE_SOURCE_SHA
+            and CASE_FILES[OLD_GENERATED_FILE] == loops.BASELINE_C_SHA,
+            'Historical packing-case guards differ')
+    oracle = loops.load_fixed_cases(core)
+    cases = loops.make_cases(oracle, core, numpy)
     from bootstrap_oracle import binary_report
     from .stationary_bootstrap import calculate, randomness
     context = NativeContext(request['runtime_id'], request['runtime_manifest'], directory, request['host_images'])
     before = environment(expected, _native=context)
     log = io.StringIO()
-    suite = unittest.defaultTestLoader.loadTestsFromModule(loops)
+    suite = unittest.defaultTestLoader.loadTestsFromTestCase(cases)
     checked = unittest.TextTestRunner(stream=log).run(suite)
     write_file(request_path.parent / 'conformance.txt', log.getvalue().encode())
-    require(checked.testsRun == 13 and checked.wasSuccessful() and not checked.skipped
+    require(checked.testsRun == 21 and checked.wasSuccessful() and not checked.skipped
             and not checked.expectedFailures and not checked.unexpectedSuccesses, log.getvalue())
     factory = make_draw_factory(core, numpy)
     selections = []

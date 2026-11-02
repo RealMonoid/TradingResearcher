@@ -133,18 +133,29 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   retain all draw indices/digests, full streams, accounting and old inventory.
   Whole-series feasibility remains unproved under the selected existing limits.
   The bound-source/profile inquiry preserves all Python mathematics/checker
-  calls and identifies tuple boxing used only for path bytes. An uninstalled
+  calls and identifies tuple boxing used only for path bytes. An isolated
   eight-store candidate passes 21 independent loop/byte cases and ten existing
   factory/fallback methods; complete 1,024/4,096-row results and draw hashes match.
   Fixed 4,096-row ABBA medians are 18.583887 versus 16.059563 seconds (13.58% less
   in this fixture). [Exact evidence and retained failures](../../tests/fixtures/native-path-packing-checks-2026-11-02.zip)
   include the original profiling exit 1 from an over-narrow DLL-list assertion;
   independent read-only reconciliation finds nine exact lazy-loaded NumPy files,
-  without rerunning numerics or expanding a certificate. Next integrate the same
-  packing change through a separately bound canonical runtime version and actual
-  qualifier/cache/reserved callers, with independent denial/resource/revocation/
-  restore checks. It is not yet installed or runtime-certified. Native libm
-  replacement and skipped checker calls remain outside this slice. Preserve
+  without rerunning numerics or expanding a certificate. The exact packing delta
+  is now adopted as separately bound `stationary-native-runtime/2`; v1 bytes and
+  immutable history remain readable, with new v1 use denied. Current qualification
+  and independent version/provenance/caller/transport/factory checks pass at their
+  recorded source scopes. Actual two-child qualification and 151-blob cache-free
+  restore complete all seven fixed single/family worlds in both routes, with full
+  result/stream/replay equality and cold 57,323,346 bytes charged once. Fourteen
+  attempts settle known usage; no grant or retry occurs. The initial invalid
+  target-16 preparation is retained and consumed no study reservation; the valid
+  target-3 probe reuses its successful qualifier and genuine inputs.
+  [Canonical adoption evidence](../../tests/fixtures/native-packing-adoption-checks-2026-11-02.zip)
+  closes technical integration only. Tiny-probe native public calls are slower
+  than scalar calls. Next measure the canonical version on the existing fixed
+  4,096-row owned caller workload under unchanged limits, preserving earlier
+  attempts and fresh source binding. Native libm replacement and skipped checker
+  calls remain outside this slice. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require
@@ -161,8 +172,8 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   cannot learn conditional-outcome variation; the whole-scope baseline may vary. No new practical-effect
   profile or bootstrap alone repairs that support limitation.
 
-- **Working tree/processes:** the native-study caller closeout follows local qualification checkpoint
-  `e7db007`; exact source/check versions are retained in the progress record. No owned probe/check
+- **Working tree/processes:** canonical path-packing adoption follows local checkpoint
+  `44be0f1`; exact source/check versions are retained in the progress record. No owned probe/check
   process remains live at closeout and no GitHub publication occurs here.
   The unverified AUXILIARY_RESOURCES.md draft remains preserved and uncommitted; the builder/original-A
   continuation stays on hold. No new research-model call or spending grant; all seven old grants remain revoked.

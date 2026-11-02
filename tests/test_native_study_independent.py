@@ -267,7 +267,7 @@ class NativeStudyIndependentTests(unittest.TestCase):
                 self.assertEqual(study['body']['source_footprint'], hashes(self.project))
                 self.assertEqual(study['body']['native_bootstrap_sha256'], hashlib.sha256(BOOTSTRAP.encode()).hexdigest())
                 self.assertEqual(study['body']['native_binding'], {
-                    'schema': 'qualified-native-study-runtime/1', 'profile': 'stationary-native-runtime/1',
+                    'schema': 'qualified-native-study-runtime/1', 'profile': 'stationary-native-runtime/2',
                     'qualification_id': self.qualified['certificate']['id'], 'runtime_id': self.runtime['id'],
                     'runtime_manifest': self.runtime_manifest, 'host_images': [], 'source_footprint': hashes(self.project)})
                 records = [self.qualified[name] for name in ('certificate', 'capsule', 'source_package', 'runtime', 'archive_source')]

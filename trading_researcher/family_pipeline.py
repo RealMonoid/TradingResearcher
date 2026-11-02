@@ -12,8 +12,9 @@ from .stationary_bootstrap import calculate, randomness
 RESULT = 'development-family-computation/1'
 
 
-def calculate_family(payload, cases, retain, *, retain_draw_bytes=None):
+def calculate_family(payload, cases, retain, *, retain_draw_bytes=None, _draw_factory=None):
     started = time.monotonic()
+    engine_options = {} if _draw_factory is None else {'_draw_factory': _draw_factory}
     report = {**payload['report'], 'cases': cases}
     model = build_model(report, payload['diagnostics'], payload['specification'], payload['effects'])
     design = payload['design']
@@ -37,7 +38,8 @@ def calculate_family(payload, cases, retain, *, retain_draw_bytes=None):
                 on_draw=(lambda draw: retain({'kind': 'draw', 'response_id': identity, 'value': draw}))
                     if retain_draw_bytes is None else None,
                 on_draw_bytes=(lambda encoded: retain_draw_bytes(prefix + encoded + b'}\n'))
-                    if retain_draw_bytes is not None else None)
+                    if retain_draw_bytes is not None else None,
+                **engine_options)
             component['report'].pop('cases')
             result['bootstraps'].append({'id': identity, 'result': bootstrap})
             if bootstrap['status'] == 'COMPUTED_UNCALIBRATED':

@@ -141,5 +141,36 @@ The isolated `-I -S -B` child reran the same 13 fixed loop cases from the select
 cache; all 98 imported NumPy/adapter module files matched it. This is not proof
 of transitive OS/native DLL paths or loaded binary identity. Real Windows
 junctions were checked; the separate symlink case remains skipped on this host
-because creation is denied. Actual study selection, exact numeric fallback,
-full native environment qualification and scientific admission remain open.
+because creation is denied. The numeric adapter and exact fallback below are
+checked; actual study selection, full native environment qualification and
+scientific admission remain open.
+
+### Explicit qualified draw engine
+
+`calculate` accepts a private `_draw_factory(rng, prefix_rows, length)` from a
+separately qualified owned caller. It runs once per sensitivity length. `None`
+retains the same original scalar RNG and all its numeric guards. The world and
+family calculator functions forward an explicit factory; their default calls
+add no new keyword to legacy callees. This private hook authenticates no factory
+and no Registry operation selects one yet.
+
+The versioned `stationary-native-int64/1` kernel reuses the qualified NumPy
+MT19937 core. The adapter copies the exact Python state-v3 words and position
+without advancing that RNG and uses the actual Python `log1p` and `floor` per
+draw. Integer prefixes enter the native subset only after the conservative
+`N * max_abs_bucket_delta <= 2**63-1` proof for every sufficient statistic.
+Fractions, larger integers, unsupported row counts or mean lengths return to
+Python before consuming RNG. The native 100,000-row/length envelope does not
+restrict the original public length or 8,192-bit exact-number envelope.
+
+The engine preserves candidate-generation-before-check order, partial counts and
+path bytes, and passes current-draw segment offsets to the existing global
+resource checks. Pre/post-draw and interval checks, callbacks, exact mean/effect
+guards, full draw counts and classification prohibitions remain in place.
+Compatibility metadata and the pinned kernel source do not issue a certificate.
+
+The [numeric integration evidence](../tests/fixtures/native-calculator-integration-2026-11-02.zip)
+retains the independent frozen-oracle checks, canonical build and complete
+4,096-row result/draw-byte gold comparison. Its loader observations include
+current Python, Windows and preexisting vendor images; those observations still
+need a qualified immutable host-image binding before actual native study use.

@@ -16,8 +16,9 @@ BOOTSTRAP=('import sys;sys.path.insert(0,sys.argv[1]);'
 
 
 def calculate_world(payload, manifest, world, cases, retain, *, retain_draw_bytes=None,
-        retain_family_draw_bytes=None):
+        retain_family_draw_bytes=None, _draw_factory=None):
     """Complete deterministic pipeline with an exact ordered case/draw sink."""
+    engine_options = {} if _draw_factory is None else {'_draw_factory': _draw_factory}
     if manifest['schema'] in ('family-information-study-manifest/1','family-evaluator-calibration-manifest/1'):
         from .family_pipeline import calculate_family
         from .family_study import components, outcome_record
@@ -28,7 +29,8 @@ def calculate_world(payload, manifest, world, cases, retain, *, retain_draw_byte
             'limits':{'max_seconds':max(1,manifest['profile']['budget']['attempt_compute_ms']//1000)},
             'design':{'base_length':manifest['assigned']['base_length'],
                 'primary_count':manifest['assigned']['primary_count'],'mc_policy':manifest['mc_policy']}}
-        result=calculate_family(bound,cases,retain,retain_draw_bytes=retain_family_draw_bytes)
+        result=calculate_family(bound,cases,retain,retain_draw_bytes=retain_family_draw_bytes,
+                                **engine_options)
         return {**result,'world_id':world['id'],'outcome':outcome_record(manifest,world,result['outcomes'])}
     report={**payload['report'],'cases':cases}
     model=build_model(report,payload['diagnostics'],
@@ -48,7 +50,7 @@ def calculate_world(payload, manifest, world, cases, retain, *, retain_draw_byte
         'max_segments':100000000}
     bootstrap=calculate(generated['report'],design,limits,
         on_draw=(lambda draw:retain({'kind':'draw','value':draw})) if retain_draw_bytes is None else None,
-        on_draw_bytes=retain_draw_bytes)
+        on_draw_bytes=retain_draw_bytes,**engine_options)
     generated['report'].pop('cases')
     result.update(world=generated,bootstrap=bootstrap)
     descriptive=bootstrap['descriptive']

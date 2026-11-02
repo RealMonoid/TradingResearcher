@@ -252,8 +252,12 @@ metering, conflict/crash, version revocation and cache-free restore cases pass.
 The [real pinned-input qualification](../../../tests/fixtures/native-runtime-input-checks-2026-11-02.zip)
 also preserves all upstream wheel bytes and passes isolated fixed-loop checks,
 zero-write cache reuse and cache-free rebuild. This is no study/runtime or
-scientific certificate. **Next:** integrate opt-in reserved study execution with
-immutable runtime/source binding, exact unsupported-numeric fallback, full native
+scientific certificate. The private numeric factory and its direct world/family
+callers now pass 10 independently authored methods and 55 affected regressions;
+the actual canonical kernel/factory also matches the complete recorded draw/result
+gold. Unsupported numeric/length domains retain the exact scalar path. **Next:**
+integrate opt-in reserved study execution with immutable runtime/source binding,
+the checked unsupported-numeric fallback, full native
 environment/technical qualification, chronological aggregate accounting and full
 separate-child replay, including admission/role/revocation and failure paths.
 Reuse the checked Blob/cache/backup owners; do not relax

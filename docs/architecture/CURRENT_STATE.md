@@ -100,6 +100,8 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   have owned Registry/HTTP operations and a verified shared-cache component: 28 independent methods
   pass (one additional symlink case skipped), including real junctions, metering, revocation,
   crashes and cache-free restore. A pinned real archive also passes isolated loop/rebuild checks.
+  The private calculator/family/world engine seam now passes 10 independent methods plus 55 affected
+  regressions; the actual canonical kernel/factory matches the full recorded 59,997-draw gold.
   Next complete opt-in reserved study execution, exact fallback, full native environment/runtime
   qualification, chronological aggregate accounting and complete separate-child replay. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind

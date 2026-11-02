@@ -127,7 +127,8 @@ def _prefixes(report,check_stop=None):
     return prefixes
 
 
-def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None):
+def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None,
+              _draw_factory=None):
     """Compute every prescribed draw or retain a resource/input gap, never a verdict.
 
     on_draw receives each completed draw in order, including undefined values.
@@ -135,6 +136,9 @@ def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None):
     its immutable bytes are reused from the draw hash. Both sinks are optional.
     Its canonical JSON plus newline is the exact retained draw-stream format.
     No callback failure is swallowed or represented as completed computation.
+    The private factory belongs to a separately qualified owned caller. It may
+    decline any unsupported exact domain without consuming the seeded RNG;
+    the original scalar calculation then handles that length unchanged.
     """
     started=time.monotonic()
     report,design,limits=deepcopy(report),deepcopy(design),deepcopy(limits)
@@ -143,14 +147,15 @@ def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None):
     require(stop is None or callable(stop),'Stop predicate must be callable')
     require(on_draw is None or callable(on_draw),'Draw sink must be callable')
     require(on_draw_bytes is None or callable(on_draw_bytes),'Byte draw sink must be callable')
+    require(_draw_factory is None or callable(_draw_factory),'Draw factory must be callable')
     counts=report.get('state_counts')
     require(type(counts) is dict and all(type(value) is int and value>=0 for value in counts.values()),
             'State counts must be nonnegative integer metadata')
     used_segments=0
-    def interrupted(need_segment=False):
+    def interrupted(need_segment=False,additional_segments=0):
         if stop is not None and stop():return 'caller_cancelled'
         if time.monotonic()-started>=limits['max_seconds']:return 'computation_time_limit'
-        if need_segment and used_segments>=limits['max_segments']:return 'computation_segment_limit'
+        if need_segment and used_segments+additional_segments>=limits['max_segments']:return 'computation_segment_limit'
         return None
     descriptive=reference_contrast(report)
     source_hash=hashlib.sha256()
@@ -183,6 +188,7 @@ def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None):
         seed=int(hashlib.sha256(canonical({'sampler':SAMPLER,'seed':design['randomness']['seed'],
                                           'length':length}).encode()).hexdigest(),16)
         rng=random.Random(seed)
+        engine = None if _draw_factory is None else _draw_factory(rng, prefix_rows, length)
         current={'length':length,'derived_seed':str(seed),'attempted':0,'defined':0,'undefined':0,'interrupted':0,
                  'interval':None,'replicate_sha256':None,'interrupted_draw':None}
         result['cases'].append(current)
@@ -193,21 +199,34 @@ def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None):
             if reason:break
             current['attempted']+=1
             n,total,nc,conditional=0,0,0,0
-            path_hash=hashlib.sha256(); segments=sampled=0
-            for start,count in _segments(size,length,rng):
-                reason=interrupted(need_segment=True)
-                if reason:break
-                used_segments+=1; segments+=1; sampled+=count
-                path_hash.update(struct.pack('>II',start,count))
-                try:
-                    scope_count, scope_sum, condition_count, condition_sum = _segment_sums(
-                        prefix_rows, start, count)
-                    n += scope_count
-                    total = _bounded(total + scope_sum)
-                    nc += condition_count
-                    conditional = _bounded(conditional + condition_sum)
-                except ArithmeticError as exc:
-                    reason=str(exc); break
+            if engine is None:
+                path_hash=hashlib.sha256(); segments=sampled=0
+                for start,count in _segments(size,length,rng):
+                    reason=interrupted(need_segment=True)
+                    if reason:break
+                    used_segments+=1; segments+=1; sampled+=count
+                    path_hash.update(struct.pack('>II',start,count))
+                    try:
+                        scope_count, scope_sum, condition_count, condition_sum = _segment_sums(
+                            prefix_rows, start, count)
+                        n += scope_count
+                        total = _bounded(total + scope_sum)
+                        nc += condition_count
+                        conditional = _bounded(conditional + condition_sum)
+                    except ArithmeticError as exc:
+                        reason=str(exc); break
+                path_sha256 = path_hash.hexdigest()
+            else:
+                partial = engine.draw(length, interrupted)
+                n = partial['scope_count']
+                total = partial['scope_sum']
+                nc = partial['condition_count']
+                conditional = partial['condition_sum']
+                sampled = partial['sampled_times']
+                segments = partial['segments']
+                used_segments += segments
+                path_sha256 = partial['path_sha256']
+                reason = partial['reason']
             value=None
             if reason is None and n and nc:
                 try:value=_rational(_bounded(_bounded(Fraction(conditional,nc))-_bounded(Fraction(total,n))))
@@ -215,11 +234,11 @@ def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None):
             if reason is not None:
                 current['interrupted']=1
                 current['interrupted_draw']={'index':draw,'sampled_times':sampled,'segments':segments,
-                                             'path_sha256':path_hash.hexdigest()}
+                                             'path_sha256':path_sha256}
                 break
             assert sampled==size
             record={'schema':'joint-bootstrap-draw/1','length':length,'index':draw,'value':value,
-                    'scope_count':n,'condition_count':nc,'segments':segments,'path_sha256':path_hash.hexdigest()}
+                    'scope_count':n,'condition_count':nc,'segments':segments,'path_sha256':path_sha256}
             encoded=canonical(record).encode()
             stream_hash.update(encoded+b'\n')
             if on_draw is not None:on_draw(deepcopy(record))

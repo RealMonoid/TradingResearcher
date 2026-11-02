@@ -125,9 +125,22 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   guard now has 25 passing independent methods; the fixed 112-file host and
   full 1,126-blob baseline restore pass, preserving the original 32 development
   worlds and 104-file calculator. [Bounded evidence](../../tests/fixtures/finite-family-operator-checks-2026-11-02.zip).
-  The one-run driver, actual fixed seed/count/applicability and prepared-final
-  backup/restore proof remain required. No final input or numerical series has
-  started. This is not full-process calibration or scientific admission.
+  The one-run driver now passes 18 independent orchestration controls; actual
+  fixed input/seed/count/source/runtime and prepared-final recovery checks pass,
+  including 4,504 blob hashes and preserved baseline history across four copies.
+  Study `8ab8334f134f75145857d8c4975bdf514f854ec00d8680a7831cb9cea5241b96`
+  started at 21:38:38 UTC, PID 25168, in the fixed isolated `52c571d` host.
+  The first world passes independent full-stream/replay/accounting reconciliation:
+  119,994 ordered draws, six replicate digests, two child proofs and exact known
+  236,931 ms / 43,051,550 logical bytes. Central reconciliation matches the
+  authenticated bytes and retained history. [Start/first-world evidence](../../tests/fixtures/scalar-final-start-checks-2026-11-02.zip).
+  No complete calibration,
+  full-process qualification, N_min or scientific admission follows.
+  Live records: `.trf-runtime/scalar-final-calibration-2026-11-02/`.
+  Use read-only observation, never another Broker against the active primary.
+  Preserve the live host/driver/helper; the main checkout may advance M2.
+  Safe user-requested stopping uses `stop-after-current-world.request` in the
+  run directory and retains all charges/identities. No automatic retry/reset.
 
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original

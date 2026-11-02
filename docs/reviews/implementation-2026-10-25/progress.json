@@ -9603,7 +9603,7 @@
       }
     },
     "finite_calibration_resource_decision_2026_11_02": {
-      "status": "ONE_CONDITIONAL_RUN_AND_C_TARGET_APPROVED_PREFLIGHT_REQUIRED",
+      "status": "ONE_APPROVED_FIXED_SCALAR_SERIES_RUNNING_FIRST_WORLD_INDEPENDENTLY_RECONCILED",
       "instruction": "SESSION-2026-11-02-CORE-CLOSEOUT, explicit user-authorized message from chat01a19904-f581-72d0-ae4f-78c1a0c8c3c5: fix encountered obstacles through qualified integration; present current finite full-calibration resource decision now, preserving full scope and no extra allowance.",
       "plan_section": "finite-calibration-resource-decision-november-2-2026",
       "recommended_route": "Existing retained-scalar FamilyCalibrationStudies, immutable development37208 and calculator425124; no nativefinalselector/transfer/retarget required. Pin current assessment/controller source separately in an isolated checkout with same interpreter/runtime.",
@@ -9703,7 +9703,10 @@
         },
         "selected_target": "C:",
         "capacity_recheck_sha256": "0e2b1a181e9ded7a0ea212cb8d14905e031b02c032168e274e5db25fca520fbc",
-        "capacity_recheck_path": ".trf-runtime/calibration-resource-decision-2026-11-02/physical-storage-recheck-2026-11-02.json"
+        "capacity_recheck_path": ".trf-runtime/calibration-resource-decision-2026-11-02/physical-storage-recheck-2026-11-02.json",
+        "latest_checked_free_bytes": 138919763968,
+        "latest_checked_utc": "2026-11-02T21:48:39.233301+00:00",
+        "conditional_dynamic_free_formula": "6GiB+2*currentprimarycommittedfilebytes+3*remainingworlds*7525747B. Includes futureprimary growth+twofreshterminalcopies; earlycopies already consume observedfree. Filelength planning,notOSquota/worstcase guarantee."
       },
       "evidence": {
         "inventory-time-review.json": {
@@ -9721,14 +9724,43 @@
       },
       "central_acceptance": "PASS: sealedhashes,sourcehashes,actualreadonlyquery_only32worldmanifest/assigned4,8,16 anddraw/peak arithmetic; DBmetadata stable. No Broker/test/world/paid/protected-data operation.",
       "failure_policy": "Keep max1/fullnextreservation/unknownorphanfence;retainall failuresandcharges. A failedrequiredworld can preclude completecohortpass. Diagnose/fix concretecause; genuinely missing recovery/method/resource authority must be asked promptly,notresampled/dropped or replaced byoptimizationseries.",
-      "required_preflight": "Complete32worldinventory/continuation,currenttypeddependencies/revocation,retainedcalculatorblob/runtime,freshfixedseedandrecordedcollisioncheck,count/applicability,sourceisolation,reviewedfiniteoperator andactualphysical/backup target readiness. No finalinput/seedpreparation/grant/runyet.",
+      "required_preflight": "PASS at recorded actual start: independent driver/control evidence, original complete development/source/runtime/cases, fixed request/world/seed/count/applicability and full prepared backup/restore; intended-use guards remain active for every call.",
       "remaining_full_scope": "Population/nuisance/stress adequacy,justified information/N_min,full discovery/selectionprocesscalibration and actualscientificadmission/release remain. No fullprocessinventory/repetitioncount invented; fix/decide underownpreoutcomecontracts.",
-      "questions_pending": "None from the two resource questions. Both direct answers are retained; actual execution prerequisites remain.",
-      "current_limits": "Oneconditional180h/100GiBretainedscalar2048run approved after preflight/storage. No actualgrant/finalpreparation/worldyet. Perattempt300s/256MiB/max1,method/fullreplay/criteria,USD0.574585/53calls/7revoked/no2024/originalAhold/noretarg/capital remain.",
+      "questions_pending": "None from resource/outcome questions. Actual series may stop at unmet runtime/resource/failure gates; no reset/retry/replacement authority.",
+      "current_limits": "One fixed approved2048-world scalar run active under<=180h/100GiB/179additionalgrants; perattempt300s/256MiB/max1 and full separate replay unchanged. USD0.574585/53settledcalls/7oldrevoked/no2024/nooriginalA/noretarg/nocapital unchanged.",
       "next_chain": "Remaining-admissible-idea-to-report-chain-november-2-2026 in soleplan maps all M2 scientificgates and qualifiedidea/report; M3policies/M4monitoring/M5wholeprocess remainfullscope.",
       "construction_effort": "Read-only scopedreviews/physicalmetadata/centralprimarycheck and proposal/adoptiondocs; interruptedhelper schema/eol/concurrent-context assumptions stopped before clobber,corrected against actualcurrentM1edits. Totalconstructiontime/coordination/modeltokens/cashunknown. No repeatedcode/numericchecks.",
-      "next_action": "Review/fix the run-specific driver, bind the already qualified cf51 consuming adapter and immutable real approval/host/recipe, then pass actual fixed request/seed/count/applicability and complete prepared-capsule recovery proof before starting exactly one approved2048-world series.",
-      "live_processes": [],
+      "next_action": "Keep fixed approvedcontroller running within immutable2048-world/aggregate/perattempt limits; continue M2 D099 declared spans for currentlyeligible ownedscalarplans, then fullprofile/rawmembership/dependence/selection/data/information prerequisites. Fullstudy/modeladequacy/N_min/scientificadmission remainopen.",
+      "live_processes": [
+        {
+          "pid": 25168,
+          "launch": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/launch-20261102T213838Z.json",
+            "bytes": 1387,
+            "sha256": "49e0ccd7a4c1e111a033000d2e7436a5666e37bf0f77c1ab05110ff8eb69704c"
+          },
+          "study_id": "8ab8334f134f75145857d8c4975bdf514f854ec00d8680a7831cb9cea5241b96",
+          "run_directory": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\scalar-final-calibration-2026-11-02",
+          "latest_recorded_observation": {
+            "at_utc": "2026-11-02T21:55:01.691806+00:00",
+            "kind": "advance_family_calibration",
+            "pid": 25168,
+            "study_id": "8ab8334f134f75145857d8c4975bdf514f854ec00d8680a7831cb9cea5241b96",
+            "wall_elapsed_ms": 982422,
+            "status": "READY",
+            "recorded_worlds": 4,
+            "attempts": 4,
+            "last_attempt_id": "d8963b3479f5c19c96b740d951716be052128b6def2d2efd5737af1d92b1dd8f",
+            "charged_compute_ms": 957736,
+            "charged_storage_bytes": 182302519,
+            "max_compute_ms": 3600000,
+            "max_storage_bytes": 4294967296,
+            "continuation_ids": [],
+            "result_id": "d8963b3479f5c19c96b740d951716be052128b6def2d2efd5737af1d92b1dd8f"
+          },
+          "observation_scope": "Descriptive snapshot, not freshness guarantee. Registry remains sole allowance/usage owner; never open another Broker on active primary."
+        }
+      ],
       "approval_record": "docs/reviews/implementation-2026-10-25/calibration-resource-approval-2026-11-02.json",
       "approved_answer": "Einmalig bis 180 h / 100 GiB unter diesen Voraussetzungen freigeben (empfohlen)",
       "questions": {
@@ -9779,7 +9811,7 @@
       ],
       "failure_history": "Initialimplementationdoccheckfailed on ownredundantD099appendixto07;exactpreexisting07bytesrestored,authoritykeptin28/14,andall3affectedchecksrefreshedPASS. Initialreceiptsretained. Validatornotweakenedforthisfailure.",
       "finite_operator_preparation": {
-        "status": "FINAL_RESOURCE_POLICY_AND_CONSUMER_CHECKED_DRIVER_REVIEW_PENDING",
+        "status": "PASS_DRIVER_AND_ACTUAL_PREPARATION_AND_FIRST_WORLD_RECONCILIATION_SERIES_ACTIVE",
         "policy_source_and_tests": {
           "tests/test_finite_family_operator_independent.py": "c2a12fbb60dee637184e9b78ae6285b4028b1aa8b08b8acf4cf577d0388913b3",
           "tools/calibration/finite_family.py": "543fa4cd2cd01fbbb58584547c076ac263da7f079e81e5ef44b61231a9fb8a3d"
@@ -9792,7 +9824,7 @@
           "seconds": "2.647833499999251",
           "scope": "11 pure methods plus one actual generic Broker continuation lifecycle with explicit synthetic host usage; no numerical advance. Pre-implementation absent-module check is a loader failure and zero domain coverage."
         },
-        "review_scope": "Independent read-only source review supports bounded arithmetic and explicit guards. View authentication, source/approval/study/path/recovery binding and actual consuming caller are not yet complete.",
+        "review_scope": "Finalfixeddriver18fakeorchestrationcontrols+source review,cf51finiteadapter25independentmethods reused, actualpreparedhistory/source/runtime/seed/count/recovery qualification, and actualfirstimmutableworld119994draw fullproof/stream/resource reconciliation. Independentresultscentrallymatched; nocalibration/admission/fullframeworkclaim.",
         "reuse_review": {
           "path": ".trf-runtime/calibration-resource-decision-2026-11-02/operator-reuse-review.json",
           "sha256": "59dc175f7ae0a8a86d61ceca0980ac6fb33119ec48ca25b19bfd05e7d5042760",
@@ -9826,10 +9858,10 @@
           "receipt": ".trf-runtime/scalar-final-calibration-2026-11-02/baseline-restore-check.json",
           "scope": "Complete baseline primary restoration only; newly prepared final-capsule recovery proof remains pending."
         },
-        "final_prepared": false,
-        "numerical_run_started": false,
+        "final_prepared": true,
+        "numerical_run_started": true,
         "new_continuation_grants": 0,
-        "next_action": "Review/fix the run-specific driver, bind the already qualified cf51 consuming adapter and immutable real approval/host/recipe, then pass actual fixed request/seed/count/applicability and complete prepared-capsule recovery proof before starting exactly one approved2048-world series.",
+        "next_action": "Keep fixed approvedcontroller running within immutable2048-world/aggregate/perattempt limits; continue M2 D099 declared spans for currentlyeligible ownedscalarplans, then fullprofile/rawmembership/dependence/selection/data/information prerequisites. Fullstudy/modeladequacy/N_min/scientificadmission remainopen.",
         "historical_source_input_preflight": {
           "status": "PASS_RETAINED_SOURCE_INPUT_PRECONDITIONS",
           "receipt": ".trf-runtime/scalar-final-calibration-2026-11-02/retained-source-input-preflight.json",
@@ -9872,7 +9904,7 @@
           }
         ],
         "distinct_final_methods": 25,
-        "scope": "Finite policy/custody/actual consuming adapter software qualification. Genuine synthetic metadata/development and full backup/restore; final numerical transport responses explicitly replaced. Not a real2048final run, approval of arbitrary file text, scientific calibration, information sufficiency or admission.",
+        "scope": "Fixeddriver/preparedsourceinputrecovery qualification plus activeactualscalarseries. No completedcountcalibration,marketadequacy,information/N_min,scientificadmission orwholeframeworkcompletion.",
         "retained_review_corrections": [
           "Initial23 methods passed but omitted future primary disk growth and exact consumed recovery bytes; independent review found both. Corrected source cf51 and two discriminating cases now included.",
           "Isolatedold98source fails both new controls as expected. Parent raw matcher wrongly required two literal Invalid-not-raised messages; correct second uses documented exception tuple. Raw failure retained and read-only reconciliation passes without rerunning tests."
@@ -9897,7 +9929,7 @@
           "members": 26,
           "CRC_all_raw_readback": "PASS"
         },
-        "construction_effort": "Existing owner/runner/stdio patterns and stdlib reused; framework-owned finite authority/custody adapter added. Independent fixed12+11then13cases, source/caller checks, two substantiated review corrections and old-source controls retained. One root result-text matcher assumption corrected by independent raw-read reconciliation without rerunning tests. Complete coordination/model-token/cash/construction-time accounting remains unknown; no research-model use or new numerical final work.",
+        "construction_effort": "Existing owner/runner/stdio patterns and stdlib reused; framework-owned finite authority/custody adapter added. Independent fixed12+11then13cases, source/caller checks, two substantiated review corrections and old-source controls retained. One root result-text matcher assumption corrected by independent raw-read reconciliation without rerunning tests. Complete coordination/model-token/cash/construction-time accounting remains unknown; no research-model use or new numerical final work. Run-specificdriver source/control review found2concrete defects; correctedwith18independentfakeorchestrationcontrols andoldsourceRED2failures. Actualpreparation65.1321333s plusindependentreadonly4504blobhash/source/seed/historyreconciliation; totalcoordination/waits/modelusage/constructiontimeunknown. No paidresearch use. FirstscopedJSONwrite normalizedmixedlineendings; correctedbyrawHEADoutsideobject+currentselectedobject splice withsemantic/CASpreservation. Nootherfields changed.",
         "documentation_checks": [
           {
             "path": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-implementation-documentation-check.json",
@@ -9935,8 +9967,191 @@
             "seconds": "5.957344599999487",
             "scope": "Related finite policy/consumer/baseline documentation; later change only records these results. Final whitespace/JSON/source preservation checked afterward."
           }
+        ],
+        "prior_status": "FINAL_RESOURCE_POLICY_AND_CONSUMER_CHECKED_DRIVER_REVIEW_PENDING",
+        "actual_input": {
+          "calibration_id": "8ab8334f134f75145857d8c4975bdf514f854ec00d8680a7831cb9cea5241b96",
+          "artifact_hash": "1326e62710c575a4d90f94ddbc158d032b3788379c524aa06662f9082d1db768",
+          "request_hash": "204c1fc3b87c9ec43cbfba3b5c59462ea5c1bdfc20224533bfe716b8f5f75440",
+          "manifest_hash": "ca3be8284be1769bd6c3a45abc69c83b19e0aaadadd43f7c6ac5f1299595d02f",
+          "recipe_hash": "dda4b0b3b69f90a5184ce57bb51c9caa27ff76049dc133735122f3f3fc348af5",
+          "count_plan_hash": "c04f00594a529ec1b0d7c5cdb5240809a55d9f9fe9340a581b77263a01abfd31",
+          "independently_recomputed_series_identity": "0e8372c9cdd795d52d7744aff08876b5b31d8ddeca3d7ade0f163137f9bae032",
+          "request_key": "scalar-final-2048-20261102-approved-once-v1",
+          "initial_logical_storage_bytes": 8687387,
+          "fixed_seed": 2026110227,
+          "counts": {
+            "worlds": 2048,
+            "seeds": 4096,
+            "criterion_cohorts": 20,
+            "denominator_each": 256,
+            "initial_attempts": 0,
+            "initial_grants": 0
+          }
+        },
+        "driver": {
+          "source": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/run_once.py",
+            "bytes": 20580,
+            "sha256": "4facb64a8d1b0f61b8c5994df859b1e7f32bcf0d5036106e862d8bfaff13604e"
+          },
+          "original_source": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/run_once.before-safety-fixes.py",
+            "bytes": 17158,
+            "sha256": "8ee7004b331090d1a4e0e640f9fcc99d797b64aa6803fdec492a6a385b59fc7c"
+          },
+          "tests": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/test_run_driver_controls.py",
+            "bytes": 18691,
+            "sha256": "c4b2910cff7966f5aec685a08bc51ef1bc9b9b31807a8e90a75aebdf91375fb8"
+          },
+          "final_controls": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/driver-controls-final-check.json",
+            "bytes": 1071,
+            "sha256": "3110aaf38b31467964978d6951355b76a31ad0968797073eb66ee27dd394dee9"
+          },
+          "methods": 18,
+          "exit_code": 0,
+          "seconds": "1.1995553000015207",
+          "scope": "Independent driver orchestration controls only. FakeBroker/fakeconsumer/Windows and owned temporary files; no real Registry, finalworld, grant or Win32 operation.",
+          "original_source_red": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/driver-original-source-red.json",
+            "bytes": 2588,
+            "sha256": "410a6114e05bab9b9affd3a3237cab571d08d7f5a9f9fdb2baa3dc10ee3b2181"
+          },
+          "review": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/independent-run-driver-review.json",
+            "bytes": 12810,
+            "sha256": "e79bdd8f5f774cffd16529b7f8ce093a98f42f573e066aaec7779efda7ab280b"
+          },
+          "retained_corrections": [
+            "Operationalcopy/close/powerclearfailure is nonzero and retains originalfailure/charges.",
+            "Negative-only observationmembership fences forgottenattempt/grant afterstalerestore; no authority fromobserver and no guarantee ifbothstoreslost."
+          ]
+        },
+        "actual_preparation": {
+          "terminal": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/terminal-c3a90161d27b42949e0fb047f44da384.json",
+            "bytes": 284476,
+            "sha256": "1783b30f39ccf3631fdb4b46259d271129100ec0fd28435ee7868bee0e8be1c2"
+          },
+          "seconds": "65.1321333",
+          "status": "PREPARED_AND_FULLY_RESTORED_ZERO_ATTEMPTS",
+          "independent_review": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/independent-prepared-input-review.json",
+            "bytes": 23890,
+            "sha256": "c5337f2b1542a604e5020d03f42fdeecf4d0b22d7199e1b1768c74aafada126a"
+          },
+          "central_reconciliation": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/central-prepared-input-reconciliation.json",
+            "bytes": 1673,
+            "sha256": "b69a5796f69bdb62f4fe98c5c16dc1fbc886e0ae8af273c6983f9f627d0cd93f"
+          },
+          "recovery": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/prepared-recovery.json",
+            "bytes": 838,
+            "sha256": "49c984205640883e9c8ad67138cc979f408cf75603d58ef44da4aece9b7d9c81"
+          },
+          "central_prestart": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/central-prestart-admission.json",
+            "bytes": 1326,
+            "sha256": "eab8ac5f202978779bb3d9dd5eed330a64ef5d4caafcce6398512fe1710608f2"
+          },
+          "blob_hashes_checked": 4504,
+          "original_artifacts_preserved": 1507,
+          "original_events_preserved": 2263,
+          "recorded_prior_inputs": 8,
+          "limitations": "Recordedseed/worldseparation isnotidealindependence. Conditionaldeclaredstress/countqualification isnotmarketadequacy,N_min,fullprocesscalibration orscientificadmission."
+        },
+        "actual_first_world": {
+          "observation": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/first-settlement-observation.json",
+            "bytes": 2158,
+            "sha256": "cb97c0515a621dd8c4e78ae250ac9b535d9f1b0fb6fa98f59d61090c724a449d"
+          },
+          "result_id": "832420c585a0f95e497b5735d663c66b55a8e838b5caa86ba3801a45e512ab2d",
+          "world_id": "20324af2f109763fa493583b0afb77dca42308f4b88263d409741c0b509df5c0",
+          "outcome_state": "VERIFIED",
+          "settlement": {
+            "attempt_id": "3bcc1b28279349a3ac86e8379722db78",
+            "compute_ms": 236931,
+            "storage_bytes": 43051550,
+            "usage_known": true
+          },
+          "proofs": 2,
+          "independent_full_reconciliation": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/independent-first-world-review.json",
+            "sha256": "112f4eb6a9352f35830fe5c9332d8da2e220874e2c06813d881b700aaea69b71",
+            "bytes": 19280
+          },
+          "scope": "Actualfirstimmutableattempt only, fullstream/order/6replicatedigests/separatefullresulthash/knowncharges independentlyreconciledandcentralchecked. Sharedencodedblob/replayverifiedresulthash,notsecondpersistedfullresult ornewnumericalrerun. Laterworldsnotindependentlyreconciledhere.",
+          "central_reconciliation": {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/central-first-world-reconciliation.json",
+            "sha256": "0abe34ada838935f0b7e7e580091883f6e0843c53e327177d3686a643aa3505e",
+            "bytes": 1280
+          },
+          "ordered_generation_draws": 119994,
+          "full_generation_plus_replay_draws": 239988,
+          "replicate_digests": 6,
+          "encoded_stream_bytes": 6988367,
+          "decoded_stream_bytes": 41071008,
+          "source_runtime_proof_status": "PASS_at_firstimmutableprefix"
+        },
+        "acceptance_slice": "Package4/REQ005/019/020/024/029 actualreservedinvocation,inputcustody,fullseparatereplay/accountingthroughfirstimmutableworld: PASS. Whole2048inventory/20criterioncohorts,market/nuisanceadequacy,information/N_min,fullprocesscalibration andscientificadmission remainOPEN.",
+        "next_evidence_archive_path": "tests/fixtures/scalar-final-start-checks-2026-11-02.zip",
+        "windows_execution_state": {
+          "local_acquire_clear": "PASS recordedlocalWin32probe;actualdriverrequests ES_CONTINUOUS|ES_SYSTEM_REQUIRED onitsthread andclearsfinally, no permanentpowerplanchange",
+          "official_documentation_retrieval": "UNAVAILABLE: failed web/connectortransport/directHTTPtimeout preserved; no officialpagecontentverified",
+          "limitations": "No longdurationavailability/powerloss/restart/explicitsleepguarantee;unknownprocessloss remainownedrecovery/failures,notreset/retryauthority."
+        },
+        "start_evidence_archive": {
+          "path": "tests/fixtures/scalar-final-start-checks-2026-11-02.zip",
+          "sha256": "3bb70d74398efc0244eeb365e4ac814f68aa023e06779962944846434d3d6c6f",
+          "bytes": 253015,
+          "members": 36,
+          "CRC_all_raw_readback": "PASS",
+          "scope": "Fixed approved driver/preparation/recovery plus one actualimmutableworld technicalproof; no fullcalibration,scientificadmission or newrun. Credential/DB/runtimebinary/rawcase/outputstreamfiles excluded. Metadata and syntheticrequest retained."
+        },
+        "start_documentation_checks": [
+          {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/start-implementation-documentation-check.json",
+            "sha256": "c4cc7f8ff8e5964be2ed5be8e59dbf2022ac7701ec96524436cdea8f686ec569",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+            ],
+            "exit_code": 0,
+            "seconds": "0.35906689998228103",
+            "scope": "Related approvedscalarstart/driver/recovery/firstworld documentation; no scientific/runtimecertificate. Latereditrecordsoutcomes only; finalwhitespace/preservation ischeckedafterward."
+          },
+          {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/start-system-model-documentation-check.json",
+            "sha256": "af61f1db4d1f36d695b8f4181c35671c4ed2e153725d740c188d962e8db4bd7b",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/verify_system_model.py"
+            ],
+            "exit_code": 0,
+            "seconds": "6.139604700030759",
+            "scope": "Related approvedscalarstart/driver/recovery/firstworld documentation; no scientific/runtimecertificate. Latereditrecordsoutcomes only; finalwhitespace/preservation ischeckedafterward."
+          },
+          {
+            "path": ".trf-runtime/scalar-final-calibration-2026-11-02/start-retail-contract-documentation-check.json",
+            "sha256": "9a68b646f960f5fba668beccb66135b730ee8ef6541acb32b30da5063c729430",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/verify_retail_contract.py"
+            ],
+            "exit_code": 0,
+            "seconds": "6.112453899986576",
+            "scope": "Related approvedscalarstart/driver/recovery/firstworld documentation; no scientific/runtimecertificate. Latereditrecordsoutcomes only; finalwhitespace/preservation ischeckedafterward."
+          }
         ]
-      }
+      },
+      "prior_prestart_status": "ONE_CONDITIONAL_RUN_AND_C_TARGET_APPROVED_PREFLIGHT_REQUIRED"
     }
   },
   "manufacturing_milestones_2026_11_02": {

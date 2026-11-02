@@ -161,7 +161,8 @@ obstacles through actual callers and required independent controls; a retained
 gap alone is not a remedy. The user now explicitly approves one conditional180hour/100GiB run under the
 recorded prerequisites. The user also selects C: once at least 60 GiB is free;
 the November 2 recheck verifies 134.40 GiB free on NTFS. D099 option A
-is separately approved. No resource grant or numerical execution has occurred.
+is separately approved. The actual preparation and start checkpoint below now
+supersedes this proposal's earlier no-execution status.
 
 **Recommended supported route:** use the existing retained-scalar final owner,
 keeping completed development study `37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab`
@@ -207,8 +208,8 @@ recovery attempts or changed meaning/resources need their actual reviewed author
 Before preparation/run, verify original complete development/continuation,
 retained source/blob/runtime and revocation,exact request/fresh seed separation,
 applicability/count plan,finite operator,isolated host and physical/backup readiness.
-Recheck free capacity at intended use. No final input,seed/world preparation,
-resource grant or numerical run has occurred for this proposal. Setup evidence
+Recheck free capacity at intended use. Before the actual checkpoint below, no
+final input,seed/world preparation,resource grant or numerical run had occurred. Setup evidence
 includes earlier separate158.883second preparation and approximately106MiB tracked
 checkout; neither measures full future setup. Compression,host load,Registry/history
 growth,unmetered overhead and failure-space growth remain uncertain.
@@ -226,8 +227,8 @@ finite retained-scalar run after its prerequisites. The
 [approval record](../implementation-2026-10-25/calibration-resource-approval-2026-11-02.json)
 binds both direct answers, the source and limits. **C: is approved and the initial
 60 GiB capacity condition is met.** The fixed isolated controller, finite operator,
-source/input/seed/count checks and complete backup/recovery preparation remain
-required before the run starts. USD0.574585,53settled calls,sevenrevoked grants,
+source/input/seed/count checks and complete backup/recovery preparation passed
+at the actual start checkpoint below. USD0.574585,53settled calls,sevenrevoked grants,
 no protected2024/no retarget and original-A hold remain unchanged.
 
 **Checked finite controls:** the small [policy and consuming adapter](../../../tools/calibration/finite_family.py)
@@ -241,10 +242,55 @@ old source and pass on the correction. [Exact scope, failures and receipts](../.
 The isolated assessment host is pinned at `52c571d` (112 exact source files).
 Actual baseline backup/full restore preserves 1,126 blobs; the original completed
 32-world development, its continuation/charges, 104-file calculator and case bytes
-pass intended-use preflight. This is not a prepared-final recovery proof. Review
-the one-run driver, then bind/check the fixed request, fresh recorded seeds,
-20-cohort applicability/count plan and full prepared-capsule backup/restore before
-the first numerical world. No final input, world or new continuation exists yet.
+pass intended-use preflight. These baseline checks alone were not a prepared-final
+recovery proof; the following actual checkpoint completes that prerequisite.
+
+**Actual approved preparation and run:** the fixed one-run driver now has 18
+passing independently authored orchestration controls and an independent source
+review. Two counterexamples fail on its retained original bytes: operational
+closeout failure must be nonzero, and a restored primary must not forget an
+already observed attempt or grant. The observation check only denies; it is not
+another allowance ledger or a guarantee against loss of both stores. All 25
+unchanged finite-operator methods retain their exact-source evidence.
+
+The actual public preparation completed in 65.1321333 seconds, binding study
+`8ab8334f134f75145857d8c4975bdf514f854ec00d8680a7831cb9cea5241b96`
+to the fixed 2,048-world recipe, 4,096 recorded distinct population/bootstrap
+seeds and 20 planned denominator-256 cohorts. Independent read-only reconciliation
+checks all recorded prior seed/world inputs, source/runtime/case bytes, exact
+baseline history and full prepared backup/restore. All 4,504 blob hashes across
+the four retained copies pass; preparation has zero numerical attempts/grants.
+This establishes recorded separation, not ideal independence or model adequacy.
+
+After central reconciliation and a fresh 138,958,221,312-byte free-space check,
+the approved run started hidden at 2026-11-02T21:38:38.4927403Z, PID 25168.
+Its isolated `52c571d` host, exact retained scalar calculator, driver and adapter
+remain fixed while the main checkout advances. The first world is recorded
+VERIFIED with two separate-child proofs and known 236,931 ms / 43,051,550 logical
+bytes. Independent reconciliation of the complete 119,994 ordered generation
+draws, six replicate digests, separate full-result replay hash, source/runtime
+and exact reservation-to-settlement prefix passes; central reconciliation
+matches the actual immutable outputs and prepared history. The retained stream
+is 6,988,367 encoded / 41,071,008 decoded bytes. Shared content-addressed stream
+references and replay's verified-result hash are distinguished from another
+persisted full result or an independent numerical rerun.
+The study is in progress, not a passing calibration or scientific admission.
+[Start/first-world evidence](../../../tests/fixtures/scalar-final-start-checks-2026-11-02.zip)
+closes this existing package-4 actual invocation/replay/accounting prerequisite;
+the remaining 2,047 worlds at that prefix and scientific package exits stay open.
+
+Live state and immutable receipts are under
+`.trf-runtime/scalar-final-calibration-2026-11-02/`; `observations.jsonl` and
+`latest.json` are descriptive. The live primary's writer lock belongs to PID
+25168: use read-only SQLite or these observer files, never another Broker.
+User-requested orderly stopping uses `stop-after-current-world.request` in that
+directory; it retains the same series and counters, with no automatic retry.
+The driver fences unknown/orphan/overrun/stale-source/capacity paths and retains
+complete terminal backup/restore. Per-attempt and aggregate limits remain exact.
+The execution-state request prevents ordinary idle sleep only while its thread
+is alive; local API acquire/clear was checked, but official-page retrieval and
+long-duration availability were not verified. Continue the remaining M2
+reservation/selection/data/information work independently of this fixed run.
 
 ## Remaining admissible idea-to-report chain (November 2, 2026)
 

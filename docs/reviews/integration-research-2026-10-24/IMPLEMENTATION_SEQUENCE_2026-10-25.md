@@ -292,6 +292,69 @@ is alive; local API acquire/clear was checked, but official-page retrieval and
 long-duration availability were not verified. Continue the remaining M2
 reservation/selection/data/information work independently of this fixed run.
 
+**Terminal checkpoint and pending recovery decision (November 3).** The actual
+run stopped itself at its twentieth attempt: 19 worlds VERIFIED, one retained
+TECHNICAL_FAILURE, no pending attempt, and one actual continuation. Known charges
+are 5,029,797 ms and 877,970,493 logical bytes. Failed world
+`2441de7272469bfcbc587053f1164d8be5bd6ff0984fd5bd035195d2ced5684c`
+used 300,226 ms, exceeding its fixed 300,000 ms reservation by 226 ms; its
+43,351,298-byte storage use is known. Complete generation output is retained,
+but replay has no completion output, and no completed result or child-proof pair
+was returned. The overwritten earlier exception and replay progress are unknown.
+This is an actual resource breach, not removable final-commit latency.
+The driver terminated at 2026-11-02T23:05:43.092353Z and reports complete terminal
+backup/full restore PASS. Independent terminal reconciliation passes, including
+all 1,185 blobs in each complete backup/restore copy; central source, checkpoint,
+ordered-attempt, accounting and failed-output reconciliation also passes.
+PID 25168 is absent. The preceding live/start passages describe historical
+prefixes, not a currently running study.
+
+Construction tests overlapped the failed world according to the parent's process
+observation. Earlier worlds already took 283.065 and 267.487 seconds; no CPU
+attribution or exclusive cause is established. New CPU-heavy construction checks
+must not overlap a future calibration run. The requested fresh C: check finds
+140,027,133,952 bytes (130.41 GiB) free at 23:41:14 UTC, Healthy/OK NTFS, above the approved
+60 GiB initial condition. Capacity does not cure the exhausted attempt or overrun.
+
+**Reviewable operational recovery proposal; NOT APPROVED.** Recommended option:
+permit exactly one additional attempt for only the named failed world, plus a
+600,000 ms per-attempt ceiling for that retry and the remaining original worlds.
+The original 19 verified worlds, failed attempt and every charge remain retained;
+the original 2,048-world inventory, all seeds, 104-file calculator, exact numerical
+method, full fresh generation and separate replay, criterion denominators and
+thresholds remain fixed. All other worlds still have one attempt, with no blanket
+future retry authority. Compare the retry's complete generated result/stream with
+the retained failed-world generation bytes; any mismatch or further failure stops
+the run for diagnosis. This operational headroom is not a timing guarantee.
+
+The existing aggregate 180-hour/100-GiB authority, 256-MiB attempt storage and
+179-grant limit remain unchanged; all setup/recovery metadata must fit their
+existing accounting. The one recovery attempt reserves at most ten minutes and
+256 MiB; 178.602834 metered hours remain at this terminal prefix. Larger attempt
+ceilings do not guarantee that all remaining worlds fit the aggregate budget.
+No new paid inference, scientific use, protected-2024 release, reseeding,
+replacement series or completed-development retarget is proposed.
+
+The original immutable request cannot be edited, and generic continuation must
+continue rejecting its known overrun/exhausted max1. Before any use, implement
+and independently qualify a separately versioned, append-only recovery amendment
+bound to the exact terminal checkpoint, old study/source, named failed attempt,
+original approval and chosen exception. It must retain both old and amended
+operational observations, count all charges, enforce exclusive heavy-work
+scheduling, reject unknown/orphan/other-overrun/revoked/stale/mismatched state,
+and survive full backup/restore without duplicating the extra attempt. The new
+controller is isolated; the original host/calculator bytes stay intact.
+Revoking the amendment stops further work while preserving all history.
+
+Narrower alternative: authorize only that one extra attempt at the unchanged
+300-second cap, with exclusive heavy-work scheduling and the same safeguards;
+another timeout remains possible. Alternative without changed authority: retain
+the incomplete stopped series, with no retry. This is a D008/D026 operational
+resource/attempt decision under AGENTS.md, not another aggregate budget request
+or a goal change. The concrete three-option question has been sent once and is
+pending; dependent recovery waits. While pending, continue
+only authorized independent M2 prerequisite work.
+
 **Checked next M2 slice: declared scalar observation spans.** The existing
 owned-plan reservation caller now retains conservative `declared-observation-spans/1`
 for its currently supported AST1 scalar requests. Complete nested lag/mean

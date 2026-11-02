@@ -1,6 +1,6 @@
 # Current State
 
-Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain authority. This replaces chronological loading with current pointers. The [byte-preserved previous snapshot](CURRENT_STATE_SNAPSHOT_2026-10-31.md) retains all earlier approvals, evidence and qualified historical claims.
+Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain authority. This replaces chronological loading with current pointers. The [byte-preserved previous snapshot](CURRENT_STATE_SNAPSHOT_2026-10-31.md) retains all earlier approvals, evidence and qualified historical claims.
 
 ## Resume handoff
 
@@ -122,7 +122,7 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   AST2/AST4/paired and transitive raw membership, observed publication and
   dependence/exposure/selection/data/information admission remain open.
   The main source footprint changes; older native qualification retains its
-  exact historical scope. The active scalar study's isolated source is unchanged.
+  exact historical scope. The retained scalar study's isolated source is unchanged.
 
 - **Immediate finite calibration resources:** the [same-plan proposal](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#finite-calibration-resource-decision-november-2-2026)
   records approval for one retained-scalar 2,048-world/20-cohort conditional final,
@@ -137,18 +137,28 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   fixed input/seed/count/source/runtime and prepared-final recovery checks pass,
   including 4,504 blob hashes and preserved baseline history across four copies.
   Study `8ab8334f134f75145857d8c4975bdf514f854ec00d8680a7831cb9cea5241b96`
-  started at 21:38:38 UTC, PID 25168, in the fixed isolated `52c571d` host.
+  started at 21:38:38 UTC in the fixed isolated `52c571d` host; that start is history.
   The first world passes independent full-stream/replay/accounting reconciliation:
   119,994 ordered draws, six replicate digests, two child proofs and exact known
   236,931 ms / 43,051,550 logical bytes. Central reconciliation matches the
   authenticated bytes and retained history. [Start/first-world evidence](../../tests/fixtures/scalar-final-start-checks-2026-11-02.zip).
-  No complete calibration,
-  full-process qualification, N_min or scientific admission follows.
-  Live records: `.trf-runtime/scalar-final-calibration-2026-11-02/`.
-  Use read-only observation, never another Broker against the active primary.
-  Preserve the live host/driver/helper; the main checkout may advance M2.
-  Safe user-requested stopping uses `stop-after-current-world.request` in the
-  run directory and retains all charges/identities. No automatic retry/reset.
+  The actual first grant after 14 worlds passes independent and central
+  checkpoint/accounting reconciliation. At the terminal checkpoint the run has
+  stopped itself: 19 VERIFIED worlds and one TECHNICAL_FAILURE. The twentieth
+  attempt used known 300,226 ms, 226 ms beyond its frozen 300-second ceiling;
+  generation is retained but completed replay is unproved. Total charges are
+  5,029,797 ms / 877,970,493 logical bytes and one continuation. PID 25168 is
+  absent. Both complete terminal copies retain all 1,185 independently hashed
+  blobs; central reconciliation also passes. CPU attribution and the earlier
+  overwritten exception remain unknown. C: now has 130.41 GiB free, Healthy/OK
+  NTFS. [Terminal evidence](../../tests/fixtures/scalar-final-terminal-stop-checks-2026-11-03.zip).
+  No complete calibration, full-process qualification, N_min or scientific
+  admission follows. The [same-plan recovery question](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#finite-calibration-resource-decision-november-2-2026)
+  is pending; no automatic retry, changed attempt cap or grant can forgive this
+  historical overrun. Original inputs/source/history remain fixed.
+  Retained records: `.trf-runtime/scalar-final-calibration-2026-11-02/`.
+  Preserve the host/driver/helper and all copies; use read-only inspection.
+  Continue independent M2 prerequisite work while recovery awaits its decision.
 
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original

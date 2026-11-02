@@ -1,15 +1,19 @@
-"""D099 potential-event coordinates, without outcome or scientific authority.
+"""D099 potential events and declared spans, without scientific authority.
 
 Ranges describe immutable metadata, including positions whose observed scope or
 missingness is not known. Raw-input membership, actual publication endpoints and
 dependence/exposure/prior use remain separate, unqualified questions.
 """
 from copy import deepcopy
+import hashlib
+from pathlib import Path
 
 from . import binding
 from .certification import _environment_current
 from .codec import Invalid, canonical, digest, integer, strings, text
 from .data import MAX_UTC_SECOND, window
+from .expressions import ReferenceEngine
+from .outcomes import _lookback, _validate
 
 
 PROFILE = 'outcome-reservation/1.0'
@@ -26,6 +30,13 @@ GRID_FIELDS = {'schema', 'profile', 'market_domain', 'grid_seconds', 'ranges',
                'boundary_ranges', 'event_count', 'boundary_count'}
 COMPILED_PROFILES = ('bound-reference/1', 'bound-reference/2',
                      'bound-reference/3', 'bound-reference/4')
+DECLARED_STATIC_SOURCES = ('trading_researcher/expressions.py',
+                          'trading_researcher/outcomes.py',
+                          'trading_researcher/codec.py')
+LOADED_DECLARED_STATIC = {
+    name: hashlib.sha256((binding.ROOT / name).read_bytes()).hexdigest()
+    for name in DECLARED_STATIC_SOURCES
+}
 
 
 def require(condition, message):
@@ -183,6 +194,64 @@ def overlapping_events(left, right):
     return False
 
 
+def declared_spans(request, catalog):
+    """Conservative static envelopes for the current scalar-plan owner.
+
+    Reuse AST1's compiler and complete nested lag/mean lookback. This is neither
+    an exact read set nor a claim about observed rows or publication. Decision
+    envelopes include structural boundary positions, because the case owner
+    can inspect scope/condition before rejecting their outcome anchor. Literal
+    coordinates conservatively retain the legacy observation-presence rule.
+    Unsupported expression/request profiles require their own qualified owner.
+    """
+    _validate(request)
+    start, end, instruments = window(request['universe'])
+    horizon = _horizon(request['horizon_bars'])
+    # A single empty structural row supports static compilation only. No
+    # supplied market observations, row expansion or calculation is performed.
+    engine = ReferenceEngine(catalog, [
+        {'time': start, 'instrument': instruments[0], 'features': {}}])
+    programs = {}
+    for name in ('scope_program', 'condition_program', 'outcome_program'):
+        program = request[name]
+        node = engine._program_node(program)
+        expected = ('boolean' if name != 'outcome_program'
+                    or request['outcome_scale'] == 'binary_probability' else 'real')
+        require(node.kind == expected, 'Declared program type differs from its case role')
+        lookback = _lookback(node)
+        first = start if name != 'outcome_program' else start + horizon * GRID_SECONDS
+        positions, observations = [], []
+        if first < end:
+            for instrument in sorted(instruments):
+                positions.append({'instrument': instrument, 'start': first, 'end': end})
+                required_start = first - lookback
+                observations.append({'instrument': instrument, 'start': required_start,
+                    'end': end, 'unavailable_before_epoch_seconds': max(0, -required_start)})
+        programs[name] = {'expression_profile': 'research-ast/1',
+            'lookback_seconds': lookback, 'feature_refs': engine.describe(program)['feature_refs'],
+            'positions': positions, 'required_observations': observations}
+    result = {'schema': 'declared-observation-spans/1', 'profile': PROFILE,
+        'market_domain': DOMAIN, 'grid_seconds': GRID_SECONDS,
+        'universe': {**deepcopy(request['universe']), 'instruments': sorted(instruments)},
+        'horizon_bars': horizon, 'programs': programs, 'conservative': True,
+        'raw_input_membership': 'NOT_QUALIFIED',
+        'actual_inputs_and_publication': 'NOT_OBSERVED',
+        'dependence_exposure_prior_use': 'NOT_QUALIFIED', 'scientific_readiness': False}
+    canonical(result)
+    return result
+
+
+def _declared_source_compatibility(source):
+    """Never reinterpret a retained AST with changed current static owners."""
+    for name, expected in LOADED_DECLARED_STATIC.items():
+        retained = source.get(name)
+        require(type(retained) is bytes and hashlib.sha256(retained).hexdigest() == expected,
+                'Retained declared-span static owner differs from the loaded implementation')
+        require(hashlib.sha256((binding.ROOT / name).read_bytes()).hexdigest() == expected,
+                'Loaded declared-span static owner changed on disk')
+    return deepcopy(LOADED_DECLARED_STATIC)
+
+
 def _plan_binding(broker, actor, plan_id):
     """Resolve only existing owned compilation/certificate metadata owners.
 
@@ -224,6 +293,7 @@ def _plan_binding(broker, actor, plan_id):
             and all(source.get(name) == raw for name, raw in dependencies['reference_bundle'].items())
             and _environment_current(body['environment']),
             'Retained compiled source or runtime differs from its qualified binding')
+    static_sources = _declared_source_compatibility(source)
     feature = dependencies['feature_certificate']
     reference = dependencies['reference_certificate']
     feature_body = feature['body']
@@ -240,6 +310,9 @@ def _plan_binding(broker, actor, plan_id):
     require(compilation['expected_case_count'] == grid['event_count'] + grid['boundary_count']
             and compilation['expected_case_count'] <= 100000,
             'Potential grid differs from the owned compilation envelope')
+    spans = declared_spans(compilation['request'], payload['catalog'])
+    require(_declared_source_compatibility(source) == static_sources,
+            'Declared-span static source changed during metadata derivation')
     refs = sorted(set(plan['source_refs']) | set(dependencies['refs'])
                   | {plan_id, compiled_id, package_id, definitions_id, normalization_id})
     strings(refs, 'potential-event source bindings')
@@ -252,6 +325,9 @@ def _plan_binding(broker, actor, plan_id):
             'snapshot_manifest_hash': digest(manifest),
             'compiled_candidate_hash': compilation['candidate_hash'],
             'compilation_request_hash': digest(compilation['request']),
+            'catalog_hash': digest(payload['catalog']),
+            'declared_spans_static_source_footprint': static_sources,
+            'declared_observation_spans': spans,
             'grid': grid, 'source_refs': refs}
 
 

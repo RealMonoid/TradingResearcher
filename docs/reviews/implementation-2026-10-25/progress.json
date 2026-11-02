@@ -5935,7 +5935,7 @@
       }
     },
     "outcome_reservation_semantics_2026_11_02": {
-      "status": "APPROVED_A_POTENTIAL_COMPONENT_CHECKED_FULL_SCIENTIFIC_PREREQUISITES_OPEN",
+      "status": "APPROVED_A_POTENTIAL_AND_AST1_DECLARED_COMPONENTS_CHECKED_FULL_SCIENTIFIC_PREREQUISITES_OPEN",
       "question_id": "scientific_outcome_reservation_2026_11_02",
       "purpose": "Resolve the exact record-equivalence/overlap rule encountered in the next IF-05/REQ-019/D082 scientific reservation criterion, without confusing operational footprints with independent evidence.",
       "base_commit": "ed67d5e9e9db11940f47f98c5840738d0fc92b9e",
@@ -6016,7 +6016,8 @@
       "prior_next_actions": {
         "global": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
         "freeze": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
-        "information": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation."
+        "information": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
+        "before_declared_scalar_spans": "Finish the capped scalar operator and actual immutable host/source/input/seed/count/backup preflight under the separately approved one-run180h/100GiB authority and selected C:. Then continue M2 actual raw/dependence/selection/data and information/calibration admission through genuine callers; no private substitution counts as scientific admission."
       },
       "pending_question": {
         "id": "scientific_outcome_reservation_2026_11_02",
@@ -6034,8 +6035,15 @@
       "independent_work_limit": "The prior semantic question is resolved. Continue authorized M2 acceptance work and the separately approved finite run after actual prerequisites; no duplicate audits, retargeting or automatic extra resource/research grants.",
       "constructed_at_utc": "2026-11-02T17:46:57.685479+00:00",
       "construction_effort": "Read-only owner/decision/definition/rejection/caller trace and independent review; proposal/doc updates. Full source reconstruction start, coordination/rework/modeltokens/cash unknown. No numerical/API/paid or repeated code checks.",
-      "next_action": "Finish the capped scalar operator and actual immutable host/source/input/seed/count/backup preflight under the separately approved one-run180h/100GiB authority and selected C:. Then continue M2 actual raw/dependence/selection/data and information/calibration admission through genuine callers; no private substitution counts as scientific admission.",
-      "live_processes": [],
+      "next_action": "Continue sole M2 through full-profile/raw-source declarations and qualified campaign/selection/data/exposure owners. Distinguish pre-outcome metadata/commitment from post-freeze actual dispositions; do not read protected outcomes to manufacture admission.",
+      "live_processes": [
+        {
+          "pid": 25168,
+          "purpose": "Existing approved scalar calibration; not a new D099 run.",
+          "path": ".trf-runtime/scalar-final-calibration-2026-11-02",
+          "read_only_observation_only": true
+        }
+      ],
       "documentation_checks": [
         {
           "record": ".trf-runtime/scientific-outcome-reservation-2026-11-02/implementation-proposal-check.json",
@@ -6228,6 +6236,142 @@
             "exit_code": 0,
             "seconds": "5.999083000002429",
             "scope": "Final related D099/M1/resource adoption docs; subsequent edit records these outcomes and refreshed next actions only; final whitespace/JSON/preservation checked afterward."
+          }
+        ]
+      },
+      "declared_scalar_spans_component_2026_11_02": {
+        "schema": "declared-observation-spans-implementation/1",
+        "status": "PASS_BOUNDED_CURRENT_ELIGIBLE_SCALAR_DECLARATIONS",
+        "checked_at_utc": "2026-11-02T22:13:30.955920+00:00",
+        "base_commit": "9f9f14d",
+        "purpose": "Close the current owned scalar-plan metadata gap under M2/IF-05 and D099/REQ-005/007/013/019/024/028, preserving pre-outcome commitments and all scientific admission requirements.",
+        "source_sha256": {
+          "trading_researcher/outcome_reservations.py": "3d018b7a829995584b3318dd097be100fd8cf6d0127f002039d57d520ff7894c",
+          "trading_researcher/scientific_freeze.py": "9c9629635ae90561640c5b7f0a285b41e2e38be9dd284e0f7388193f7e4cd55b",
+          "tests/test_declared_observation_spans_independent.py": "1325aff780e1909cf0b1d42414920119bf6502e3a00db9b10777017703590e5a",
+          "tests/test_outcome_reservation_caller_independent.py": "21a4fdbe874d665f7be5ad252a3425353a4cc0f3cf155ddea32d7c0d5f5c6478",
+          "tests/test_outcome_reservations_independent.py": "5fdb79c901c93edc33e441f70f72e1260f64ef2a76f949b5dc73f5f8bc51ac00"
+        },
+        "completed_criteria": [
+          "Complete AST1 nested lag/mean envelopes, unclipped warmup and explicitly unavailable preepoch coordinates. Decision positions retain structural boundaries; outcome positions retain only interior potential anchors.",
+          "The actual owned public freeze caller binds catalog/request/static-source metadata without row loading or calculation. All three production scientific gaps remain; no allocation/trial/manifest is granted.",
+          "Current/retained static-owner drift fails closed. Stable event identities, atomic conflicts, failures and restart/restore controls retain affected checks."
+        ],
+        "reuse_and_library_check": "Reused ReferenceEngine compilation/description, outcomes._validate/_lookback, data.window and existing Registry/certification/source/recovery owners. Standard-library ast parses Python rather than this approved JSON research AST; array libraries cannot define its temporal/type/profile meanings. Only the framework-owned compact metadata adapter is new. No new dependency or duplicated numerical engine.",
+        "fresh_methods": {
+          "new": 12,
+          "affected_existing": 28,
+          "total": 40
+        },
+        "checks": [
+          {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-new-tests.json",
+            "bytes": 908,
+            "sha256": "ec86dce31a1e3f3ba255f33c15e8088cbdefb8555d1ac9a1e7ac2e97c20a280b"
+          },
+          {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-affected-regressions.json",
+            "bytes": 1259,
+            "sha256": "aa77b1801129d68e87c5dadb8e29b7288efe66c30ecfef01f8316437521b0ce4"
+          }
+        ],
+        "central_reconciliation": {
+          "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-central-reconciliation.json",
+          "bytes": 4157,
+          "sha256": "8bbe54b3173ea4eab22a812065da7e7b906abea014e29e9b6c9d69fde89e2e04"
+        },
+        "independent_design_review": {
+          "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-design-review.json",
+          "bytes": 10967,
+          "sha256": "933073092bce534fa8b786b5bd471147ccbf15074f3de848de171330f7ea417a"
+        },
+        "independent_final_source_review": {
+          "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-source-review.json",
+          "bytes": 11487,
+          "sha256": "5092fc849774f0c72bdb90e0bdef76778ed3506a29e628ba3dff9adcd0ca5bf1"
+        },
+        "old_caller_guard_change": {
+          "original_source": {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/before-declared-spans-test_outcome_reservation_caller_independent.py",
+            "bytes": 35898,
+            "sha256": "469597c5772df16ea257061a4fb5f5b5e1ce5cc5a85aa60615996f05e2cd18b9"
+          },
+          "delta": "Exactly three static-lookback spies become ReferenceEngine._calculate guards. All other bytes/assertions and row-loader/child/materializer guards are preserved."
+        },
+        "retained_failures": [
+          {
+            "receipt": {
+              "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-before-implementation.json",
+              "bytes": 1536,
+              "sha256": "2256d27470d5292e91be607ee08098ac4c587aa0f3cb0334cf0fb90d8f72e2cb"
+            },
+            "scope": "Expected absent API; zero domain assertions, not a behavioral regression proof."
+          },
+          {
+            "receipt": {
+              "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-record-update-failure.json",
+              "bytes": 577,
+              "sha256": "a814e9931511079d2b2fc53a312e2045c0d1534547c682b3786ac26a738c96e9"
+            },
+            "scope": "Progress helper assumed a list where the actual history field is a dictionary. It failed before any write; corrected after schema inspection. No source/check mutation or rerun."
+          }
+        ],
+        "historical_reuse": "Earlier 35 kernel/family/owned-plan methods stay historical at their recorded older module/caller scope. They are not a fresh 75-method whole-package pass. Unchanged compiler depth/node/window limits are source-reused/reviewed; no specific new upper-bound cases claimed.",
+        "remaining": [
+          "AST2/AST4/paired profile adapters and transitive raw-source membership.",
+          "Actual inspected inputs, availability/publication endpoints and dispositions at their authorized execution boundary.",
+          "Qualified dependence/exposure/prior use, campaign selection chronology and scientific data/information/calibration admission.",
+          "Complete package exits, full-process calibration, N_min and scientific release."
+        ],
+        "authority": "Conservative declarations only: raw membership NOT_QUALIFIED, actual inputs/publication NOT_OBSERVED, dependence/exposure/prior use NOT_QUALIFIED, scientific readiness false. No new grant, series, paid research call, protected2024 access, retarget or original-A continuation.",
+        "active_study_boundary": "Existing scalar PID25168 retains isolated host52c571d and fixed driver/helper/calculator. Main-source native certificates retain earlier exact-source scope and need currency checks at new intended use.",
+        "construction_effort": "Independent design identified namespace/alignment, role-type and retained-source compatibility controls before implementation. Tests fixed expectations first. Expected absent-API check; new suite144.0088515s and affected suite219.5927569s, both PASS without code correction. Documentation-helper failure retained. Complete wall time/coordination/model tokens/cash remain unknown.",
+        "evidence_archive_path": "tests/fixtures/declared-observation-spans-checks-2026-11-02.zip",
+        "next_action": "Continue sole M2 through full-profile/raw-source declarations and qualified campaign/selection/data/exposure owners. Distinguish pre-outcome metadata/commitment from post-freeze actual dispositions; do not read protected outcomes to manufacture admission.",
+        "evidence_archive": {
+          "path": "tests/fixtures/declared-observation-spans-checks-2026-11-02.zip",
+          "bytes": 95934,
+          "members": 30,
+          "sha256": "712e130a49e451d58a32fcef65f331582a8ad84c10fc380c0816a2ed45b66640",
+          "CRC_all_raw_readback": "PASS",
+          "scope": "40 fresh methods at pinned current AST1 metadata source; old35 historical only. Declared conservative spans, not raw membership, actual publication/dependence or scientific admission. No Registry, key, protected data, runtime binary or active study output."
+        },
+        "documentation_checks": [
+          {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-implementation-documentation-check.json",
+            "sha256": "6cf2e0e0cbd697ce389e23e2cd26d9b3bfd1a26bce636ceabe1ebbdde89c6b91",
+            "exit_code": 0,
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+            ],
+            "seconds": "0.3245819000294432",
+            "scope": "Related declared-AST1-span implementation/evidence/handoff documentation; no semantic or scientific certification. Later edit records outcomes only; final whitespace/preservation follows."
+          },
+          {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-system-model-documentation-check.json",
+            "sha256": "c88adc9a548a3b0da4be710e3498aeac96aaed5a5aa15bde2c15ee366186028e",
+            "exit_code": 0,
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/verify_system_model.py"
+            ],
+            "seconds": "5.983208500023466",
+            "scope": "Related declared-AST1-span implementation/evidence/handoff documentation; no semantic or scientific certification. Later edit records outcomes only; final whitespace/preservation follows."
+          },
+          {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/declared-spans-retail-contract-documentation-check.json",
+            "sha256": "4030f37d65aa689c343f0cd47dc59182457dd1f9c12387b1a9d09f98b0eb0dfc",
+            "exit_code": 0,
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/verify_retail_contract.py"
+            ],
+            "seconds": "6.015320000005886",
+            "scope": "Related declared-AST1-span implementation/evidence/handoff documentation; no semantic or scientific certification. Later edit records outcomes only; final whitespace/preservation follows."
           }
         ]
       }

@@ -119,9 +119,30 @@ Required independent cases under existing TEST-05/13/19/24/28 include:
   corruption, revocation, atomic conflicts/failures and restart/restore are
   independently checked through consuming callers.
 
-These are required cases, not a claim they have run. Complete scientific
+These are required cases; the bounded evidence below covers only its stated
+portion. Complete scientific
 selection/campaign chronology, applicable information/N_min, calibration,
 execution/quarantine and whole-batch release remain separate mandatory exits.
+
+### Implemented scalar metadata boundary
+
+The currently eligible owned scalar-plan caller now retains
+`declared-observation-spans/1` for `reference-case-request/1` / `research-ast/1`.
+It reuses the existing static compiler and nested lag/mean lookback, binding the
+catalog and exact retained/current static-owner sources. Decision envelopes
+include structural boundary positions; outcome envelopes include only interior
+potential anchors. Required spans retain unclipped warmup, including explicitly
+unavailable negative epoch coordinates. Literals may conservatively retain
+observation-presence coordinates. This metadata is not an exact read set.
+
+[Independent checks](../../tests/fixtures/declared-observation-spans-checks-2026-11-02.zip)
+cover 12 new fixed/owned-caller methods and 28 affected existing methods on the
+final source. They include source drift/corruption and the genuine public
+ADMISSION_GAP path, retaining all three scientific gates. The earlier transaction
+and family checks retain their recorded source scope. AST2/AST4/paired profiles,
+transitive raw-source membership, actual inputs/publication and qualified
+dependence/exposure/prior use remain open. No scientific freeze, protected data
+access, new numerical series or certificate follows from these declared spans.
 
 Older records without this definition stay UNKNOWN at the new intended-use
 boundary; retain their exact bytes and historical identities. Do not synthesize

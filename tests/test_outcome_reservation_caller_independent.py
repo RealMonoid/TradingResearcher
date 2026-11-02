@@ -304,7 +304,7 @@ class OutcomeReservationOwnedCallerIndependentTests(unittest.TestCase):
             for target in ('trading_researcher.binding.run_child',
                            'trading_researcher.evaluation_plans.run_plan_child',
                            'trading_researcher.outcomes.materialize_reference',
-                           'trading_researcher.outcomes._lookback'):
+                           'trading_researcher.expressions.ReferenceEngine._calculate'):
                 stack.enter_context(patch(target,
                     side_effect=AssertionError('Potential reservation computed outcomes')))
             yield
@@ -451,7 +451,7 @@ class OutcomeReservationOwnedCallerIndependentTests(unittest.TestCase):
         guards = ('trading_researcher.binding.run_child',
                   'trading_researcher.evaluation_plans.run_plan_child',
                   'trading_researcher.outcomes.materialize_reference',
-                  'trading_researcher.outcomes._lookback')
+                  'trading_researcher.expressions.ReferenceEngine._calculate')
         with ExitStack() as stack:
             stack.enter_context(patch.object(self.broker, '_load_reference_data',
                 side_effect=AssertionError('Potential reservation loaded outcome rows')))
@@ -543,7 +543,7 @@ class OutcomeReservationOwnedCallerIndependentTests(unittest.TestCase):
             for target in ('trading_researcher.binding.run_child',
                            'trading_researcher.evaluation_plans.run_plan_child',
                            'trading_researcher.outcomes.materialize_reference',
-                           'trading_researcher.outcomes._lookback'):
+                           'trading_researcher.expressions.ReferenceEngine._calculate'):
                 stack.enter_context(patch(target,
                     side_effect=AssertionError('Metadata identity computed outcomes')))
             result = self.broker.call(self.token, 'freeze_scientific_batch',

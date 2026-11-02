@@ -292,6 +292,26 @@ is alive; local API acquire/clear was checked, but official-page retrieval and
 long-duration availability were not verified. Continue the remaining M2
 reservation/selection/data/information work independently of this fixed run.
 
+**Checked next M2 slice: declared scalar observation spans.** The existing
+owned-plan reservation caller now retains conservative `declared-observation-spans/1`
+for its currently supported AST1 scalar requests. Complete nested lag/mean
+lookbacks, boundary decision positions, strict interior outcome anchors and
+unclipped warmup are bound to the exact catalog, request and three reused static
+source owners. Unknown/changed sources and unsupported profiles remain gaps.
+All 12 new independent methods and 28 affected potential/caller methods pass on
+the final source; the original caller's three static-lookback spies were replaced
+with numerical-calculation guards, retaining every existing assertion and
+row/child/materializer guard. The preimplementation absent-API check is zero
+domain coverage, not a behavioral regression proof.
+[Sources, independent review and receipts](../../../tests/fixtures/declared-observation-spans-checks-2026-11-02.zip)
+qualify this declaration only. Previous kernel/family/plan evidence is explicitly
+historical at its exact source scope. Full-profile/transitive raw membership,
+observed dispositions/publication and dependence/exposure/prior use remain open;
+all three production scientific gates remain closed. Main-source changes do not
+alter the active study's isolated `52c571d` host. Next, complete those remaining
+reservation/selection/data prerequisites through their actual consuming owners,
+keeping pre-outcome commitments separate from post-freeze observed dispositions.
+
 ## Remaining admissible idea-to-report chain (November 2, 2026)
 
 1. **M2 / IF-05 / REQ-005/007/013/019:** implement D099 owned outcome reservation,

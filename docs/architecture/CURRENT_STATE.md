@@ -115,6 +115,14 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   dependence/exposure/prior use and the remaining scientific prerequisites stay
   open. [Exact bounded evidence](../../tests/fixtures/outcome-reservation-checks-2026-11-02.zip).
   No scientific positive freeze or protected access follows.
+  The next declared-span component now passes 12 new independent methods plus
+  28 affected potential/caller regressions: the genuine scalar-plan caller binds
+  complete AST1 lag/mean envelopes, unclipped warmup and exact catalog/static
+  sources while retaining ADMISSION_GAP. [Bounded evidence](../../tests/fixtures/declared-observation-spans-checks-2026-11-02.zip).
+  AST2/AST4/paired and transitive raw membership, observed publication and
+  dependence/exposure/selection/data/information admission remain open.
+  The main source footprint changes; older native qualification retains its
+  exact historical scope. The active scalar study's isolated source is unchanged.
 
 - **Immediate finite calibration resources:** the [same-plan proposal](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#finite-calibration-resource-decision-november-2-2026)
   records approval for one retained-scalar 2,048-world/20-cohort conditional final,

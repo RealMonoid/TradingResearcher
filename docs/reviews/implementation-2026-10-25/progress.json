@@ -319,7 +319,7 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "Await the pending+60minute local resource decision. The exact32-world profile is prepared and READY with0worlds/attempts. If approved, independently check final request/source/runtime/currentness at intended use, then advance only this fixed inventory under the initial60minute cap; any single approved additional60minute continuation must bind its actual RESOURCE_STOP checkpoint. If declined, honor the selected alternative. Do not redispatch the completed cost probe, reopen original A, run final cohorts or infer scientific admission.",
+  "next_action": "Observe the single live fixed 32-world run; bind only the approved one-use continuation at an actual eligible RESOURCE_STOP; reconcile all terminal attempts, resources, versions and replay evidence before any completion claim. Scientific/final-calibration/2024 access remain unavailable.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -5696,7 +5696,7 @@
     "unverified_boundary": "No full-project test suite or complete IF-05/package 3/4 acceptance claimed. The final affected implementation checks cover 66 distinct methods across current and applicable unchanged-owner regressions; independent-author rerun is not added to that count. Physical power loss, real admission, protected access, scientific/economic usefulness remain unverified."
   },
   "scientific_information_profile_2026_11_02": {
-    "status": "MODEL_AND_COST_HANDOFF_VERIFIED_RESOURCE_DECISION_PENDING",
+    "status": "APPROVED_FIXED_STUDY_RUNNING",
     "purpose": "Qualify the existing second-order binary law against the retained Q1 engineering template and actual owned generation/bootstrap/MC/replay before choosing a finite information-study profile. Address the documented dependent-null gap without adding a simulator family.",
     "requirements": [
       "REQ-005",
@@ -5999,7 +5999,8 @@
       "Native test first follow-through reached actual generation/replay but failed on a guessed result[components] assertion; corrected against actual family_pipeline bootstraps schema, then both methods passed (156.366s). No production change.",
       "The first real compilation follow-through correctly stopped before compilation because its original reference certificate was STALE (retained source VERIFIED). Fresh qualification uses the same original profile; no old certificate/result is promoted or retargeted.",
       "Independent invented fixture initially excluded its terminal boundary and then exceeded the canonical 1MiB limit in a whole-report immutability digest; corrected fixture calendar accounting and used detached equality. Fixed mathematical expectations and production guards were preserved.",
-      "Inline handoff helper encountered mixed historical line endings after updating progress only; corrected paragraph-boundary matching, then updated Current State. No runtime/scientific mutation."
+      "Inline handoff helper encountered mixed historical line endings after updating progress only; corrected paragraph-boundary matching, then updated Current State. No runtime/scientific mutation.",
+      "Approval recorded before dispatch; first sole-plan pointer replacement encountered mixed historical line endings. Regex boundary matching preserved unrelated bytes and corrected the descriptive pointer. Intended-use preflight passed; no world had started."
     ],
     "current_development_binding": {
       "compiled_id": "8f8bc4ab3af2075ab1a5e5beadafb35cdf4672864ae17c86f1c56f638741a825",
@@ -6267,7 +6268,7 @@
       "reason": "Study cost ancestry must be development-only"
     },
     "resource_decision_proposal": {
-      "status": "PENDING_USER_DECISION",
+      "status": "APPROVED_SCOPED_USER_REPLY",
       "basis": "research-contract/1.0 section9:60-minute narrow-calibration cap; additional computation requires a recorded continuation decision. No cash/API budget increase is proposed.",
       "fixed_workload": "32 development worlds:2 existing beta stress laws x2 targets(2048,4096) x4 homogeneous/mixed vectors x2 outer replications. Each world retains3 lengths x2 responses x19999draws and separate replay.",
       "measured_basis": "One fixed actual Q1 second-order2048-row world completed in130.702seconds with38131142raw/6924661encoded bytes. Existing logical-copy estimate49679580bytes, not an authenticated study settlement or future guarantee.",
@@ -6398,7 +6399,7 @@
       },
       "scientific_readiness": false
     },
-    "next_action": "Await the pending+60minute local resource decision. The exact32-world profile is prepared and READY with0worlds/attempts. If approved, independently check final request/source/runtime/currentness at intended use, then advance only this fixed inventory under the initial60minute cap; any single approved additional60minute continuation must bind its actual RESOURCE_STOP checkpoint. If declined, honor the selected alternative. Do not redispatch the completed cost probe, reopen original A, run final cohorts or infer scientific admission.",
+    "next_action": "Observe the single live fixed 32-world run; bind only the approved one-use continuation at an actual eligible RESOURCE_STOP; reconcile all terminal attempts, resources, versions and replay evidence before any completion claim. Scientific/final-calibration/2024 access remain unavailable.",
     "changed_files": [
       "trading_researcher/study_runs.py",
       "tests/test_second_order_independent.py",
@@ -6423,7 +6424,108 @@
       "implementation_links": 866,
       "scope": "Current links, preserved source/contract/decision histories, traceability and whitespace; not scientific/model/economic validity. Only final evidence fields are added after this bundle; JSON/preservation/whitespace are refreshed below."
     },
-    "completion_scope": "Existing model conformance and actual measured-cost-to-study preparation handoff only. Full goal and packages3/4 remain incomplete; no global full-suite or empirical/economic success claim. Pending user decision is retained once, without assuming approval from time or automatic continuation.",
-    "source_mutation_scope": "Only study_runs.py changes production behavior. Existing second_order_population/lag/family numerical implementations and all fixed fixture bytes are preserved. New tests qualify existing code and the actual cost lineage handoff."
+    "prior_completion_scope": "Existing model conformance and actual measured-cost-to-study preparation handoff only. Full goal and packages3/4 remain incomplete; no global full-suite or empirical/economic success claim. Pending user decision is retained once, without assuming approval from time or automatic continuation.",
+    "completion_scope": "Existing model conformance, actual measured-cost-to-study preparation and approved invocation are verified at their recorded scopes. The fixed32-world development inventory is now running; terminal reconciliation is pending. Full goal, packages3/4, model adequacy, N_min, final calibration and scientific admission remain incomplete.",
+    "source_mutation_scope": "Only study_runs.py changes production behavior. Existing second_order_population/lag/family numerical implementations and all fixed fixture bytes are preserved. New tests qualify existing code and the actual cost lineage handoff.",
+    "resource_decision_approval": {
+      "source": "Direct user reply to request_user_input_async call_1602926c731f4a23b49f399b575952a3 item0",
+      "answer": "Zusätzliche 60 Minuten freigeben (empfohlen)",
+      "recorded_at_utc": "2026-11-01T23:59:43.323703+00:00",
+      "scope": "One additional3600000ms continuation for study37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab only, at an actual RESOURCE_STOP checkpoint; maximum7200000ms aggregate. Storage2147483648bytes, original attempt300000ms/268435456bytes and max_attempts1 stay unchanged. No API/USD, protected2024, scientific classification or final calibration authority.",
+      "additional_storage_bytes": 0,
+      "additional_compute_ms": 3600000,
+      "maximum_aggregate_compute_ms": 7200000,
+      "maximum_continuations": 1
+    },
+    "prior_pending_next_action": "Await the pending+60minute local resource decision. The exact32-world profile is prepared and READY with0worlds/attempts. If approved, independently check final request/source/runtime/currentness at intended use, then advance only this fixed inventory under the initial60minute cap; any single approved additional60minute continuation must bind its actual RESOURCE_STOP checkpoint. If declined, honor the selected alternative. Do not redispatch the completed cost probe, reopen original A, run final cohorts or infer scientific admission.",
+    "approved_run_intended_use_preflight": {
+      "status": "PASS",
+      "study_id": "37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab",
+      "worlds": 32,
+      "source_footprint_sha256": "4251242fe7a807ffe7d3568d7df56efdd91c35359375901e5f32c3c5b9b89558",
+      "source_files": 104,
+      "request_sha256": "c295d76ca5c9c456a3feaeaff3f27abbdfcfca6fb9208546e81c87b1537e5284",
+      "runtime_matches": true,
+      "dependencies_match": true,
+      "retained_source_verified": true,
+      "budget": {
+        "charged_compute_ms": 0,
+        "charged_storage_bytes": 8687387,
+        "outstanding_attempts": [],
+        "attempts_per_world": {},
+        "overrun": false,
+        "next_reservation_fits": true,
+        "initial_storage_bytes": 8687387,
+        "continuation_storage_bytes": 0,
+        "original_max_compute_ms": 3600000,
+        "original_max_storage_bytes": 2147483648,
+        "max_compute_ms": 3600000,
+        "max_storage_bytes": 2147483648
+      },
+      "seconds": 2.043,
+      "scientific_readiness": false
+    },
+    "approved_run_operator": {
+      "path": ".trf-runtime/scientific-profile-2026-11-02/run_prepared.py",
+      "sha256": "520fb0841b873ed0999dabcd407e99d69c0a21d43458621ac226c49b2d1d2844",
+      "status": "RUNNING_FIXED_INVENTORY",
+      "reuse": "Adapts the existing precision.py invocation/receipt pattern and reuses native inspect_family_study/advance_family_study/continue_study. No new numerical/runtime component or dependency.",
+      "one_time_grant_key": "second-order-q1-20261102-approved-single-60min",
+      "maximum_aggregate_compute_ms": 7200000,
+      "unchanged_storage_bytes": 2147483648,
+      "wall_admission_seconds": 7200,
+      "stop_scope": "Fixed inventory completion or owned technical/model/orphan/overrun/resource stop; no favorable-result stopping, retry, reseed or automatic extra grant. Observer files are not authoritative registry state.",
+      "independent_review": {
+        "agent": "/root/freeze_acceptance",
+        "verdict": "No launch-blocking defect found for the non-optimized invocation; native APIs, fixed inventory, checkpoint-only one-use continuation, immutable bindings and stop conditions checked read-only.",
+        "helper_sha256": "520fb0841b873ed0999dabcd407e99d69c0a21d43458621ac226c49b2d1d2844",
+        "limits": "7200-second wall admission guard, not a hard kill; no execution or tests performed by reviewer."
+      },
+      "live_process": {
+        "unified_exec_session_id": 97474,
+        "pid": 40564,
+        "started_receipt_at_utc": "2026-11-02T00:08:11.448509Z",
+        "observations": ".trf-runtime/scientific-profile-2026-11-02/observations.jsonl",
+        "latest": ".trf-runtime/scientific-profile-2026-11-02/latest.json",
+        "final_view": ".trf-runtime/scientific-profile-2026-11-02/final-view.json",
+        "instruction": "Poll this same live handle; do not start another observer or broker. Native registry artifacts/events are authoritative. No automatic retry, reseed or extra continuation."
+      }
+    },
+    "approved_run_documentation_checks": {
+      "source_scope": "Approval, intended-use preflight and live invocation updates; no production or numerical code mutation.",
+      "checks": [
+        {
+          "command": "git diff --check",
+          "exit_code": 0
+        },
+        {
+          "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+          "exit_code": 0,
+          "status": "PASS",
+          "baseline_files": 103,
+          "unchanged_files": 81,
+          "local_document_links": 866
+        },
+        {
+          "command": "python -B docs/reviews/verify_system_model.py",
+          "exit_code": 0,
+          "status": "PASS",
+          "local_links": 781,
+          "decisions": 98,
+          "traced_requirements": 30
+        },
+        {
+          "command": "python -B docs/reviews/verify_retail_contract.py",
+          "exit_code": 0,
+          "status": "PASS",
+          "archived_documents_exact": 20,
+          "scoped_open_dispositions_and_acceptance_mappings": 15
+        }
+      ],
+      "unverified": [
+        "The running inventory has not completed.",
+        "Documentation and invocation checks prove neither scientific calibration nor model adequacy, N_min, scientific admission, protected 2024 access or economic benefit."
+      ]
+    }
   }
 }

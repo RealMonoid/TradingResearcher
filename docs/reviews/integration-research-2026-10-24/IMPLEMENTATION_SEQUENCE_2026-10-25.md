@@ -228,9 +228,11 @@ qualification at the recorded bounded scope. Complete Q1 source identity and
 fresh raw/reference/compile/execution/diagnostic bindings retain unchanged case
 bytes. The [existing progress register](../implementation-2026-10-25/progress.json)
 holds the completed 130.702-second cost probe, corrected real cost handoff and
-prepared 32-world study with zero worlds started. A one-time additional 60-minute
-local resource decision is pending; do not dispatch worlds or a continuation
-before the answer. Preserve empirical-versus-model knownness weights,
+prepared 32-world study. The user explicitly approved one additional 60-minute
+local continuation on November 2, for at most 120 minutes aggregate and unchanged
+2 GiB storage. Intended-use checks and independent invocation review passed; the
+single runner started at 00:08:11 UTC (handle/PID in progress.json). Observe it; bind
+the sole extra allowance only at its actual eligible resource-stop checkpoint. Preserve empirical-versus-model knownness weights,
 the two-coordinate limit, all failed checks and old sources. Declared stress
 conformance is not fitted nuisance adequacy, N_min or calibration. Continue the
 scientific core; original A remains on hold and protected outcomes stay blocked.

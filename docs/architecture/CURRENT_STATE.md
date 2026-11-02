@@ -83,12 +83,14 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   The actual cost-provenance caller is corrected using the existing knowledge boundary; 30 affected
   methods pass, alongside 17 model checks at their recorded source scope. This is no adequacy certificate.
 
-- **Next action / pending decision:** the exact 32-world development profile is prepared as
-  `37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab`, READY with 0/32 worlds
-  and no attempts. Await the user's answer to the concrete one-time +60-minute local continuation
-  proposal (maximum 120 minutes; no API budget increase). No study worlds or continuation are dispatched
-  while the answer is pending. [Request, evidence and limits](../reviews/implementation-2026-10-25/progress.json).
-  Preserve original A on hold, every source/failure/exposure and the blocked scientific/2024 gates.
+- **Next action / approved resources:** observe the single running 32-world study
+  `37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab`; intended-use checks passed.
+  The live handle/PID and observer paths are retained in progress.json; do not dispatch a second runner.
+  The user approved one additional 60-minute local continuation on November 2: at most 120 minutes
+  aggregate, unchanged 2 GiB storage and original attempt/retry limits. Bind the sole extra allowance
+  only at an actual eligible RESOURCE_STOP checkpoint; no automatic renewal. [Exact scope and
+  receipts](../reviews/implementation-2026-10-25/progress.json). Original A, paid research and protected
+  2024/scientific/final-calibration authority remain unchanged.
 
 - **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a 24-pass
   / 1-error review exposing noncanonical-object rejection persistence are retained. Final v2 omits

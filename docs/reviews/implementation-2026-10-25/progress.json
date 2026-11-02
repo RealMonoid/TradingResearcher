@@ -9727,7 +9727,7 @@
       "current_limits": "Oneconditional180h/100GiBretainedscalar2048run approved after preflight/storage. No actualgrant/finalpreparation/worldyet. Perattempt300s/256MiB/max1,method/fullreplay/criteria,USD0.574585/53calls/7revoked/no2024/originalAhold/noretarg/capital remain.",
       "next_chain": "Remaining-admissible-idea-to-report-chain-november-2-2026 in soleplan maps all M2 scientificgates and qualifiedidea/report; M3policies/M4monitoring/M5wholeprocess remainfullscope.",
       "construction_effort": "Read-only scopedreviews/physicalmetadata/centralprimarycheck and proposal/adoptiondocs; interruptedhelper schema/eol/concurrent-context assumptions stopped before clobber,corrected against actualcurrentM1edits. Totalconstructiontime/coordination/modeltokens/cashunknown. No repeatedcode/numericchecks.",
-      "next_action": "Complete the current D099 potential-event/caller correction and independent checks, then qualify the finite capped operator and pin the isolated scalar host; verify actual source/input/seed/count and complete backup/restore readiness before preparation/start. C: target and one 180-hour/100-GiB run are expressly approved.",
+      "next_action": "Review/fix the run-specific driver, bind the already qualified cf51 consuming adapter and immutable real approval/host/recipe, then pass actual fixed request/seed/count/applicability and complete prepared-capsule recovery proof before starting exactly one approved2048-world series.",
       "live_processes": [],
       "approval_record": "docs/reviews/implementation-2026-10-25/calibration-resource-approval-2026-11-02.json",
       "approved_answer": "Einmalig bis 180 h / 100 GiB unter diesen Voraussetzungen freigeben (empfohlen)",
@@ -9777,7 +9777,166 @@
           "scope": "Final relatedD099/resource/milestone documentation;no runtime/science certification."
         }
       ],
-      "failure_history": "Initialimplementationdoccheckfailed on ownredundantD099appendixto07;exactpreexisting07bytesrestored,authoritykeptin28/14,andall3affectedchecksrefreshedPASS. Initialreceiptsretained. Validatornotweakenedforthisfailure."
+      "failure_history": "Initialimplementationdoccheckfailed on ownredundantD099appendixto07;exactpreexisting07bytesrestored,authoritykeptin28/14,andall3affectedchecksrefreshedPASS. Initialreceiptsretained. Validatornotweakenedforthisfailure.",
+      "finite_operator_preparation": {
+        "status": "FINAL_RESOURCE_POLICY_AND_CONSUMER_CHECKED_DRIVER_REVIEW_PENDING",
+        "policy_source_and_tests": {
+          "tests/test_finite_family_operator_independent.py": "c2a12fbb60dee637184e9b78ae6285b4028b1aa8b08b8acf4cf577d0388913b3",
+          "tools/calibration/finite_family.py": "543fa4cd2cd01fbbb58584547c076ac263da7f079e81e5ef44b61231a9fb8a3d"
+        },
+        "policy_check": {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-operator-initial-check.json",
+          "sha256": "8a45a2110b96eff088c3925cee909160529d76e04fa515135f87abc42853abc6",
+          "exit_code": 0,
+          "distinct_methods": 12,
+          "seconds": "2.647833499999251",
+          "scope": "11 pure methods plus one actual generic Broker continuation lifecycle with explicit synthetic host usage; no numerical advance. Pre-implementation absent-module check is a loader failure and zero domain coverage."
+        },
+        "review_scope": "Independent read-only source review supports bounded arithmetic and explicit guards. View authentication, source/approval/study/path/recovery binding and actual consuming caller are not yet complete.",
+        "reuse_review": {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/operator-reuse-review.json",
+          "sha256": "59dc175f7ae0a8a86d61ceca0980ac6fb33119ec48ca25b19bfd05e7d5042760",
+          "scope": "Source-grounded existing owners/design review, not execution certification."
+        },
+        "isolated_host": {
+          "path": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\scalar-final-calibration-2026-11-02\\host",
+          "commit": "52c571da436805a3e32308d15cad4a3e84d884a3",
+          "source_file_count": 112,
+          "source_bytes": 1528533,
+          "assessment_footprint_hash": "666817e89edc7b8751e7aa77ed330e1754f2886bb42b38563858d97dbd9a0127",
+          "pin_record": ".trf-runtime/scalar-final-calibration-2026-11-02/host-source-pin.json",
+          "pin_record_sha256": "1c6322c6352962bd539a933c2c5dceb7fc349f374091a281aba9bdd23c03ae01",
+          "approval_sha256": "0b0475cab83f5d0c839ee2de9afba67a3b83eb5eb933ca583e251ceead20647a",
+          "scope": "112 source files byte-compared with exact committed blobs; source/runtime inventory only, not a new runtime certificate."
+        },
+        "baseline_backup": {
+          "path": "C:\\Users\\monoi\\Documents\\ChatGPT\\Trading Research Framework\\.trf-runtime\\scalar-final-calibration-2026-11-02\\baseline-backup",
+          "exit_code": 0,
+          "seconds": "22.993570499995258",
+          "blobs": 1126,
+          "credentials_included": false,
+          "receipt": ".trf-runtime/scalar-final-calibration-2026-11-02/baseline-backup-check.json"
+        },
+        "primary_restore": {
+          "status": "PASS",
+          "blobs": 1126,
+          "projection_validation": "PASS",
+          "exit_code": 0,
+          "seconds": "26.844859200005885",
+          "receipt": ".trf-runtime/scalar-final-calibration-2026-11-02/baseline-restore-check.json",
+          "scope": "Complete baseline primary restoration only; newly prepared final-capsule recovery proof remains pending."
+        },
+        "final_prepared": false,
+        "numerical_run_started": false,
+        "new_continuation_grants": 0,
+        "next_action": "Review/fix the run-specific driver, bind the already qualified cf51 consuming adapter and immutable real approval/host/recipe, then pass actual fixed request/seed/count/applicability and complete prepared-capsule recovery proof before starting exactly one approved2048-world series.",
+        "historical_source_input_preflight": {
+          "status": "PASS_RETAINED_SOURCE_INPUT_PRECONDITIONS",
+          "receipt": ".trf-runtime/scalar-final-calibration-2026-11-02/retained-source-input-preflight.json",
+          "sha256": "6ff02a7575b71e208fa89b3fb8fb8b5dc959993884315d476ddba2fe4aaf85af",
+          "seconds": "6.3163061999948695",
+          "development_status": "COMPLETE",
+          "completed_worlds": 32,
+          "retained_calculation_footprint_hash": "4251242fe7a807ffe7d3568d7df56efdd91c35359375901e5f32c3c5b9b89558",
+          "retained_source_file_count": 104,
+          "prior_charged_compute_ms": 6109390,
+          "prior_charged_storage_bytes": 1353420073,
+          "prior_used_continuation_ids": [
+            "c173b6b613f948d4ff34887d6a42e51ab4c8b927d7c942120f7e4cba5f7ef2e8"
+          ],
+          "runtime_BOOTSTRAP_source_case_bytes_verified": true,
+          "new_worlds_or_grants": 0
+        },
+        "final_consumer_checks": [
+          {
+            "path": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-policy-final-check.json",
+            "sha256": "283eb2fc95c359fe4459e51c81c39f1f8de131d918a2511a5b1f4c40c646774b",
+            "exit_code": 0,
+            "distinct_methods": 12,
+            "seconds": "2.392590100003872",
+            "source_and_test_sha256": {
+              "tools/calibration/finite_family.py": "cf51ab733329ddcf02fdd3f4884e4ba25cf2422e8f51d164ee26f3e9aae2d5ef",
+              "tests/test_finite_family_operator_independent.py": "c2a12fbb60dee637184e9b78ae6285b4028b1aa8b08b8acf4cf577d0388913b3"
+            }
+          },
+          {
+            "path": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-consumer-final-check.json",
+            "sha256": "5465ad9269f6bf2ab3e3ecd04aee0ef9b2af74dea82d8bf4e005285f4b91720f",
+            "exit_code": 0,
+            "distinct_methods": 13,
+            "seconds": "296.73780150001403",
+            "source_and_test_sha256": {
+              "tools/calibration/finite_family.py": "cf51ab733329ddcf02fdd3f4884e4ba25cf2422e8f51d164ee26f3e9aae2d5ef",
+              "tests/test_finite_family_consumer_independent.py": "822cbdba65256eb76827231a796beed16f2c2215177344edb688c36a13ff5f35"
+            }
+          }
+        ],
+        "distinct_final_methods": 25,
+        "scope": "Finite policy/custody/actual consuming adapter software qualification. Genuine synthetic metadata/development and full backup/restore; final numerical transport responses explicitly replaced. Not a real2048final run, approval of arbitrary file text, scientific calibration, information sufficiency or admission.",
+        "retained_review_corrections": [
+          "Initial23 methods passed but omitted future primary disk growth and exact consumed recovery bytes; independent review found both. Corrected source cf51 and two discriminating cases now included.",
+          "Isolatedold98source fails both new controls as expected. Parent raw matcher wrongly required two literal Invalid-not-raised messages; correct second uses documented exception tuple. Raw failure retained and read-only reconciliation passes without rerunning tests."
+        ],
+        "old_source_controls": {
+          "raw": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-consumer-original-source-red.json",
+          "read_only_reconciliation": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-consumer-red-reconciliation.json",
+          "expected_old_source_unit_exit": 1,
+          "expected_old_source_unit_failures": 2,
+          "new_tests": 0
+        },
+        "independent_consumer_review": {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-operator-source-review.json",
+          "sha256": "b5fa39b1bcf8ec9c0c07f675ddd49ab9ad2003e5759a51345700945d9395867e",
+          "status": "FINAL_PASS_BOUNDED_POLICY_AND_CONSUMING_GUARD",
+          "scope": "Bounded policy and actual owned-consuming guard only; actual fixed driver/start conditions remain."
+        },
+        "evidence_archive": {
+          "path": "tests/fixtures/finite-family-operator-checks-2026-11-02.zip",
+          "sha256": "ba3fbca57aa8833dc1f96985fae723eeb0afbd7383b0b56851cb65d4057cb826",
+          "bytes": 69603,
+          "members": 26,
+          "CRC_all_raw_readback": "PASS"
+        },
+        "construction_effort": "Existing owner/runner/stdio patterns and stdlib reused; framework-owned finite authority/custody adapter added. Independent fixed12+11then13cases, source/caller checks, two substantiated review corrections and old-source controls retained. One root result-text matcher assumption corrected by independent raw-read reconciliation without rerunning tests. Complete coordination/model-token/cash/construction-time accounting remains unknown; no research-model use or new numerical final work.",
+        "documentation_checks": [
+          {
+            "path": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-implementation-documentation-check.json",
+            "sha256": "b437cd8c50dfc396b4fc1da23a6e11640b9c842fda43af5366b001a82c01b5e4",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+            ],
+            "exit_code": 0,
+            "seconds": "0.35167380003258586",
+            "scope": "Related finite policy/consumer/baseline documentation; later change only records these results. Final whitespace/JSON/source preservation checked afterward."
+          },
+          {
+            "path": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-system-model-documentation-check.json",
+            "sha256": "1fdaa82ff2cd8b0c0e89f7a8d809b746fd5812c9ffb69883fb6887695e183aac",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/verify_system_model.py"
+            ],
+            "exit_code": 0,
+            "seconds": "5.927140699990559",
+            "scope": "Related finite policy/consumer/baseline documentation; later change only records these results. Final whitespace/JSON/source preservation checked afterward."
+          },
+          {
+            "path": ".trf-runtime/calibration-resource-decision-2026-11-02/finite-retail-contract-documentation-check.json",
+            "sha256": "7c9b76cbd435a1be2c26137b8e0d7f16e3db273c3c8459b23028717e1c44e59a",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/verify_retail_contract.py"
+            ],
+            "exit_code": 0,
+            "seconds": "5.957344599999487",
+            "scope": "Related finite policy/consumer/baseline documentation; later change only records these results. Final whitespace/JSON/source preservation checked afterward."
+          }
+        ]
+      }
     }
   },
   "manufacturing_milestones_2026_11_02": {

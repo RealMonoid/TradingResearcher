@@ -230,6 +230,22 @@ source/input/seed/count checks and complete backup/recovery preparation remain
 required before the run starts. USD0.574585,53settled calls,sevenrevoked grants,
 no protected2024/no retarget and original-A hold remain unchanged.
 
+**Checked finite controls:** the small [policy and consuming adapter](../../../tools/calibration/finite_family.py)
+uses the existing Registry/study/backup owners. All 25 independently authored
+methods pass on its final source: 12 resource-policy and 13 actual consuming-path
+methods. Genuine synthetic metadata and complete backup/restore support its
+custody checks; final numerical transport responses are explicitly substituted.
+Independent review corrected missing future primary disk growth and a separately
+hashed/reread recovery receipt. Both new counterexamples fail on the preserved
+old source and pass on the correction. [Exact scope, failures and receipts](../../../tests/fixtures/finite-family-operator-checks-2026-11-02.zip).
+The isolated assessment host is pinned at `52c571d` (112 exact source files).
+Actual baseline backup/full restore preserves 1,126 blobs; the original completed
+32-world development, its continuation/charges, 104-file calculator and case bytes
+pass intended-use preflight. This is not a prepared-final recovery proof. Review
+the one-run driver, then bind/check the fixed request, fresh recorded seeds,
+20-cohort applicability/count plan and full prepared-capsule backup/restore before
+the first numerical world. No final input, world or new continuation exists yet.
+
 ## Remaining admissible idea-to-report chain (November 2, 2026)
 
 1. **M2 / IF-05 / REQ-005/007/013/019:** implement D099 owned outcome reservation,

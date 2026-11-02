@@ -121,9 +121,13 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   at most 180 metered compute hours / 100 GiB logical storage, with full replay and
   unchanged attempt caps. C: is explicitly selected; the requested recheck finds
   134.40 GiB free on NTFS at 19:25 UTC, meeting the initial 60 GiB recommendation
-  including a preserved full restore copy. Source/input/seed/count checks, the
-  fixed isolated controller, finite operator and actual backup/recovery readiness
-  remain required. This is not full-process calibration. No series has started.
+  including a preserved full restore copy. The finite policy/actual consuming
+  guard now has 25 passing independent methods; the fixed 112-file host and
+  full 1,126-blob baseline restore pass, preserving the original 32 development
+  worlds and 104-file calculator. [Bounded evidence](../../tests/fixtures/finite-family-operator-checks-2026-11-02.zip).
+  The one-run driver, actual fixed seed/count/applicability and prepared-final
+  backup/restore proof remain required. No final input or numerical series has
+  started. This is not full-process calibration or scientific admission.
 
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original

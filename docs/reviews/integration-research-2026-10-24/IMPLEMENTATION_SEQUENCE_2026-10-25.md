@@ -240,11 +240,21 @@ checks and actual child/owned-caller replay. A fixed unprofiled 4,096-row fixtur
 comparison observes 54.348309 to 52.331552 median seconds (3.71% less), with every
 complete result/draw byte matching. It does not establish full-series feasibility
 or D081 research acceleration. Completed/derived frozen capsules retain their
-original calculator. The complete 1,024-row fixture profile still identifies
-scalar segment/RNG/per-segment work as the next target, with interval/MC secondary
-in that profiled workload. Next verify an established native MT19937 core's exact
-state/operation compatibility and captured-runtime/resource feasibility before
-another adapter; no native bridge or toolchain is qualified. Preserve
+original calculator. A separately compiled NumPy MT19937/owned-loop candidate
+now passes 23 independent loop/calculator methods. The fixed complete 4,096-row
+ABBA comparison observes 51.029991 versus 17.903822 median seconds, every result
+and draw byte equal. The [retained probe sources](../../../tests/fixtures/native-bootstrap-probe-2026-11-02.zip)
+preserve the fixed inputs, exact diff, build pins and receipts; this isolated
+experiment is not installed in the actual operator. **Next:** complete the
+separately pinned retained runtime archive/shared hash-verified materialization
+through the Registry/operator study path, with immutable source/runtime binding,
+exact unsupported-numeric fallback, isolated environment, chronological resource
+accounting, roles/revocation, concurrent conflicts, crash recovery, cache-free
+restore and full separate replay. Reuse existing Blob/backup owners; do not relax
+128-file/16-MiB project-source or blob-reference limits, copy NumPy per world,
+use host site-packages, retarget frozen capsules or assume full-series savings.
+The selected native adapter section remains unfinished until those actual
+callers and independent failure checks pass. Preserve
 PRNG/order, exact numerics, full draws, all required independent checks and
 empirical-versus-model knownness weights,
 the two-coordinate limit, all failed checks and old sources. Declared stress

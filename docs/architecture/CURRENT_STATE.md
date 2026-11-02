@@ -93,10 +93,14 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   Grouped exact prefix queries now pass 63 affected checks and controlled actual-child replay.
   The fixed 4,096-row calculator comparison observes 54.348309 to 52.331552 median seconds (3.71% less),
   with identical complete results/draw bytes; this is no general speed or feasibility guarantee.
-  Complete 1,024-row fixture attribution still points to scalar segment/RNG/per-segment work; interval/MC
-  work is secondary in that profiled workload. Next check established native MT19937 state/operation
-  equivalence and captured-runtime feasibility before another adapter. No native bridge/toolchain is
-  qualified. The completed grid/derived final still bind their original calculator; no retargeting.
+  A separately compiled NumPy MT19937/owned-loop candidate now passes 23 independent loop/calculator
+  methods. Its fixed complete 4,096-row comparison observes 51.029991 to 17.903822 median seconds,
+  with every result/draw byte matching. [Retained probe sources](../../tests/fixtures/native-bootstrap-probe-2026-11-02.zip)
+  qualify an isolated experiment; the actual operator does not use it. Next complete a separately
+  pinned, retained shared runtime/cache and actual Registry/study caller, including exact fallback,
+  environment, accounting, revocation, conflict/crash and cache-free restore/replay checks. Preserve
+  old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
+  their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require
   2,048 fresh worlds, projecting about 141 hours/81 GiB from measured development costs; that multi-day
   budget was not granted. Original A, paid research and protected

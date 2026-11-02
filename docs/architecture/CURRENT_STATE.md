@@ -117,10 +117,15 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   equality. Cold materialization is charged once; the previous failed cold-cache
   attempt remains fully charged and fenced, and all driver failures remain.
   [Retained source and evidence](../../tests/fixtures/native-study-checks-2026-11-02.zip)
-  qualify technical development execution only. Next use the recorded 15.680-second
-  full-binding profile to remove redundant path/tree work while preserving every
-  check, then measure equivalent complete 4,096-row execution before updating
-  feasibility. Profiler timings establish no actual study acceleration. Preserve
+  qualify technical development execution only. A tree-check candidate preserves
+  the safety cases but shows no convincing timing gain (1.566928 versus 1.554073
+  seconds); it is not installed. Exact `028d946` source and intended-use currency
+  are restored, with fifteen additional active behavior regressions and an
+  explicitly skipped unselected performance counter. [Experiment and rollback](../../tests/fixtures/native-tree-checks-2026-11-02.zip)
+  remain retained. Next measure one predeclared complete 4,096-row scalar/native
+  reserved family-world call with genuine synthetic inputs and full replay,
+  retaining the remaining fixed inventory and all charges. No new final series
+  or full-series feasibility follows. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require

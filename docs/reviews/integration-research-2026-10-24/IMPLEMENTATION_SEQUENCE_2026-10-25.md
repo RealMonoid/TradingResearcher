@@ -280,11 +280,21 @@ streams. Independent reconciliation and exact receipts are in the
 The two earlier Windows publication failures, unknown-use fence and over-narrow
 driver assertions remain history; no old study or certificate is retargeted.
 This closes the selected technical caller slice, not packages 3/4 or scientific
-admission. **Next:** use the recorded full-binding profile to reduce the observed
-source/cache verification overhead without omitting checks, then measure the
-complete equivalent 4,096-row caller before revising full-series feasibility.
-The profile locates repeated tree/path checks; it is not an unprofiled benchmark
-or permission for a final series. Reuse the checked Blob/cache/backup owners; do not relax
+admission. A fresh-per-member metadata candidate preserves the independent
+safety cases but gives no convincing benefit on the fixed complete cache:
+unprofiled ABBA medians 1.566928 versus 1.554073 seconds (0.82%, within individual
+variation). It is **not selected**; the production source is restored exactly
+to `028d946`, and intended-use qualification is current again at those same
+bytes. [Retained experiment](../../../tests/fixtures/native-tree-checks-2026-11-02.zip)
+includes the candidate, failed fixture attempts and fifteen active behavior
+regressions; its implementation-specific performance counter is explicitly
+skipped while the candidate is absent. **Next:** measure one predeclared complete
+4,096-row scalar/native reserved family-world call with genuine synthetic
+normalized/certified/compiled inputs, unchanged qualified sources, all required
+draws/replay/accounting and no continuation. Keep the remaining fixed inventory
+visible; this engineering comparison is not a final series, completed power
+study or new information target. Then reassess whole-series feasibility honestly.
+Reuse the checked Blob/cache/backup owners; do not relax
 128-file/16-MiB project-source or blob-reference limits, copy NumPy per world,
 use host site-packages, retarget frozen capsules or assume full-series savings.
 No native final-calibration selector or old-source transfer is qualified. Preserve

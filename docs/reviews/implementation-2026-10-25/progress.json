@@ -6663,7 +6663,7 @@
         "result_hash": "5602d102b04b8824d61230f89b97b5493420f9e5a8621104dfadc9f283053e75",
         "findings": "500489 generator entries;2000000 segment-sum calls. Profiled cumulative seconds:calculate3.994780,segments1.146067,segment_sum0.678439,randrange0.551195,bounded0.330555. Nested cumulative times overlap and must not be added. This identifies scalar segment/sufficient-statistic work; it is not an unprofiled speed baseline or completed-bootstrap result."
       },
-      "next_action": "Use recorded full-binding profile to reduce repeated tree/path overhead losslessly through existing independent file/link/junction/byte/restore cases; preserve full intended-use checks and source versions. Then measure complete equivalent4096row actual caller and reassess unchanged-series feasibility within existing limits. No new final series, retargeting, protected2024/model call or budget increase.",
+      "next_action": "Measure one predeclared actual reserved4096row scalar/native family-world pair with genuine synthetic normalized/certified/compiled inputs, baseline exactavailability0, source028d946/current qualification4f1f6e3d, full draws/separate replay/chronological accounting and no continuation. Keep all remaining frozen worlds visible, all earlier failed/candidate sources and charges; no final series, retargeted completed32, protected2024, scientific/model authority or budget increase. Reassess whole-series feasibility from the actual scoped caller measurement.",
       "acceptance": "Affected independent archived/golden/adversarial cases plus actual operator/runtime integration must pass for the settled source. Measure equivalent work without profiler overhead before claiming speed/cost benefit; re-estimate full-series feasibility honestly. Existing budgets remain binding and no final series starts from this profile.",
       "unverified": "No scientific admission/N_min/fitted nuisance or market-model adequacy, final calibration, production actual-model quality, protected2024/capital access, complete packages3/4 or whole-series feasibility/speed claim. No native final selector or transfer of completed32/derivedfinal sources. Runtime observations are current disk/loader bindings, not RAM/security/license verdicts. Logical resource accounting is not an OS quota; prep/inspection/grant-validation compute remains outside attempt convention.",
       "documentation_checks": "After the profiling handoff edits: verify_implementation PASS exit0 (103baseline/81unchanged/866links); verify_system_model PASS exit0 (782links/98decisions/30requirements); verify_retail_contract PASS exit0 (20exact archives/15disposition mappings); git diff --check and JSON/profile/source/AUX preservation checks PASS exit0. Only these evidence fields are appended afterward, followed by JSON/whitespace validation.",
@@ -7214,6 +7214,90 @@
           "trading_researcher/storage.py",
           "trading_researcher/study_resources.py",
           "trading_researcher/study_runs.py"
+        ]
+      },
+      "native_tree_verification": {
+        "status": "NOT_SELECTED_EXACT_SOURCE_ROLLBACK_VERIFIED",
+        "criterion": "Package4 exact acceleration: reduce measured native cache verification overhead without omitting any containment/alias/type/link/hash/size/completeness/freshness or failure control; preserve actual qualified caller and historical source versions.",
+        "purpose": "Discriminate whether repeated physical path resolution can be replaced for provably ordinary absolute components by fresh lstat checks while retaining the historical owner for every unsupported path/reparse/metadata domain.",
+        "source_before": "028d946/native_runtime.py4f3a2097380a640c14dfeaa89c9e12a35aee54f7768aba251a795c21e8382e74",
+        "reuse": "Existing os.walk already uses stdlib scandir. Reuse walk, pathlib/os.lstat/stat, _contained and _hash_file; add only the narrow owned path proof/fallback, no new dependency. Avoid DirEntry.stat cached zero st_nlink on Windows; actual3.14.2 observation and maintained3.14.10 documentation checkedNovember2.",
+        "primary_source": "https://docs.python.org/3.14/library/os.html#os.DirEntry.stat",
+        "fixed_scope": "Before/after same complete canonical930file/56944242B cache, ABBA twice each, no profiler for elapsed comparison. Existing fixed source/byte/link/junction/restore cases plus independently authored late-mutation/fallback cases; fixed currentness and owned qualifier paths afterward. No new world/final series/model call or source retarget.",
+        "acceptance": [
+          "Complete inventories and byte/hash checks unchanged, actual stat_nlink/type guard remains AFTER containment.",
+          "Every file/member rechecks ancestors; no acceptance cache across members/calls; late hardlinks/junctions denied.",
+          "Unknown reparse, relative/dotdot, nonlexical paths and metadata proof errors use unchanged _contained; root admission unchanged.",
+          "Independently check static/failure equivalence, actual currentness/qualification and cache-free restore at final source; old runtime certificates become source-stale.",
+          "Record actual timing/limits and next actual4096row caller measurement; no full-series feasibility or scientific claim from component timings."
+        ],
+        "disposition": "NOT_SELECTED_ROLLED_BACK_BYTE_FOR_BYTE",
+        "reason": "Fixed complete-tree ABBA medians1.566928 vs1.5540733s,0.82% observed reduction within individual variability; no convincing benefit. Preserve safety tests but do not install complexity or recertify without practical improvement.",
+        "candidate_source": "30b09ec2ce094b60334454839c41f0536dae16744e979eb2aadfb09e41ae824e",
+        "restored_source": "4f3a2097380a640c14dfeaa89c9e12a35aee54f7768aba251a795c21e8382e74",
+        "checks": "Candidate16independent/2.604s,28cache+1symlinkskip/7.898s,19environment/2.147s pass; source never used to issue a new qualification.",
+        "next_action": "Measure an actual reserved4096row scalar/native world under unchanged qualified028d946 sources, with genuine synthetic normalized/certified/compiled inputs and predeclared first-world comparison; preserve every old source/attempt/budget. No newfinal/scientific/model access.",
+        "new_behavioral_checks": {
+          "command": "python -B -m unittest discover -s tests -p test_native_tree_verification_independent.py",
+          "methods": 16,
+          "passed": 15,
+          "skips": 1,
+          "seconds": "2.510",
+          "exit_code": 0,
+          "scope": "Only unselected implementation-specific acceleration counter is conditional; all fifteen unchanged behavior/oracle/late-link cases remain active. Original candidate/test bytes retained."
+        },
+        "library_discriminator": {
+          "source": "https://learn.microsoft.com/en-us/windows/win32/api/fileapi/nf-fileapi-getfileattributesw",
+          "ordinary_calls_each": 800,
+          "ctypes_fresh_attributes_seconds": "0.029939099971670657",
+          "Path_lstat_seconds": "0.03418660000897944",
+          "conclusion": "Not a complete tree/caller comparison. Limited observed upside does not justify new native-interoperability code here; no API adapter adopted."
+        },
+        "retained_failures": [
+          "Initial independent16case2.624s exit1: anticipated acceleration counter RED plus flawed late-hardlink injection in both oracle/candidate. Second16case2.666s exit1: historical fixture injection still failed. Corrected actual Path/islink mutation hooks; assertions unchanged; final candidate16case2.604s central PASS.",
+          "No old runtime certificate was refreshed or retargeted to candidate. Exact rollback subsequently passes owned intended-use CURRENT inspection."
+        ],
+        "criterion_status": "Safety/fallback and fresh mutation cases checked; useful cache-overhead reduction not established. Candidate is not an installed capability.",
+        "archive": {
+          "path": "tests/fixtures/native-tree-checks-2026-11-02.zip",
+          "bytes": 31398,
+          "sha256": "1ad2ce4ea813bf164ccae1a72fbf888f42e02b6a8dc8f6b65fdbe5a6f7ad3f3d",
+          "members": 10,
+          "CRC_raw_readback": "PASS"
+        },
+        "post_rollback_intended_use": {
+          "purpose": "Fresh intended-use check after byte-exact rollback; no candidate certificate or source transfer. Required prerequisite for upcoming actual4096row comparison.",
+          "status": "CURRENT",
+          "seconds": "9.843950300011784",
+          "qualification_id": "4f1f6e3dbc6c963c258feafe708f92e2c9e0780f828f37d7393c5223dc0827b8",
+          "native_runtime_sha256": "4f3a2097380a640c14dfeaa89c9e12a35aee54f7768aba251a795c21e8382e74"
+        },
+        "independent_review": "Separate test/review owner found initial leaf-stat ordering risk before implementation; finalcandidate keeps original finalstat/hash/walk. Fifteenbehavior assertions unchanged; only unselected implementation-specific counter is conditional. Archived original test bytes retained.",
+        "resources_and_preservation": "No new scientific/final world, runtime qualification, model/count/grant operation or production registry write. Before/candidate sources, failed fixture attempts and timings retained. Production native_runtime.py exact028d946/4f3a2097; source111 and existing qualification current after rollback. OriginalAUX6ca0e430 unchanged, builder/originalA remainpaused;53calls/USD0.574585/7revokedgrants preserved fromentry. Construction totalCPU/RSS/disk/modeltokens/costunknown; scoped durations retained, no measured efficiency claim.",
+        "documentation_checks": {
+          "implementation": {
+            "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+            "status": "PASS",
+            "exit_code": 0
+          },
+          "system_model": {
+            "command": "python -B docs/reviews/verify_system_model.py",
+            "status": "PASS",
+            "exit_code": 0
+          },
+          "retail_contract": {
+            "command": "python -B docs/reviews/verify_retail_contract.py",
+            "status": "PASS",
+            "exit_code": 0
+          },
+          "refresh": "Only closeout evidence metadata appended after bundled checks; explicitUTF8 JSON/whitespace/source/archive/AUX preservation refreshed afterward. No scientific or speed claim."
+        },
+        "changed_files": [
+          "docs/architecture/CURRENT_STATE.md",
+          "docs/reviews/implementation-2026-10-25/progress.json",
+          "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+          "tests/fixtures/native-tree-checks-2026-11-02.zip",
+          "tests/test_native_tree_verification_independent.py"
         ]
       }
     }

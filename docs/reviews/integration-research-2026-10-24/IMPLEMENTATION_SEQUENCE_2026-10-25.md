@@ -288,12 +288,30 @@ to `028d946`, and intended-use qualification is current again at those same
 bytes. [Retained experiment](../../../tests/fixtures/native-tree-checks-2026-11-02.zip)
 includes the candidate, failed fixture attempts and fifteen active behavior
 regressions; its implementation-specific performance counter is explicitly
-skipped while the candidate is absent. **Next:** measure one predeclared complete
-4,096-row scalar/native reserved family-world call with genuine synthetic
-normalized/certified/compiled inputs, unchanged qualified sources, all required
-draws/replay/accounting and no continuation. Keep the remaining fixed inventory
-visible; this engineering comparison is not a final series, completed power
-study or new information target. Then reassess whole-series feasibility honestly.
+skipped while the candidate is absent. One predeclared 4,096-row first-world
+comparison now passes through the actual reserved scalar/native callers, genuine
+synthetic normalization/certification/compilation and full separate-child replay.
+Complete public-call times are 249.243130 and 160.770932 seconds (35.50% less
+elapsed in this one scalar-first, cold-native pair). Full results and all
+119,994 draws per generation are equal, including the 6,960,016 encoded and
+40,894,548 decoded stream bytes. Both calls settle known usage within their
+unchanged 300-second/256-MiB per-attempt limits; the native call charges
+56,944,242 cold bytes once. Setup takes another 148.573302 seconds, separately
+retained. Each four-world inventory stops after its one declared attempt with
+three missing worlds; no retry or continuation occurs. This observation is not
+a completed power study, new information target, general speed guarantee or
+full-series feasibility proof. Independent reconciliation of every draw ordinal,
+replicate digest, exact storage charge and preserved old inventory passes;
+[retained source/inputs/streams/receipts](../../../tests/fixtures/native-owned-call-comparison-2026-11-02.zip)
+bind this result. The existing-limits decision remains binding;
+the historical 141-hour/81-GiB projection is not relabelled as a new native
+forecast. **Next:** inspect the retained kernel's per-segment Python mathematics
+callbacks and interruption contract against its bound scalar/Python/runtime
+sources. Establish one reviewable exact adapter/fallback option and a bounded
+independent qualification plan before implementation or further numerical work.
+The current kernel explicitly preserves Python log1p/division/floor; replacing
+them with native libm is not an admitted optimization. Reuse existing profiles,
+fixtures and failures; no new final series or completed-study retargeting.
 Reuse the checked Blob/cache/backup owners; do not relax
 128-file/16-MiB project-source or blob-reference limits, copy NumPy per world,
 use host site-packages, retarget frozen capsules or assume full-series savings.

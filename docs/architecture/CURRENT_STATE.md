@@ -122,10 +122,20 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   seconds); it is not installed. Exact `028d946` source and intended-use currency
   are restored, with fifteen additional active behavior regressions and an
   explicitly skipped unselected performance counter. [Experiment and rollback](../../tests/fixtures/native-tree-checks-2026-11-02.zip)
-  remain retained. Next measure one predeclared complete 4,096-row scalar/native
-  reserved family-world call with genuine synthetic inputs and full replay,
-  retaining the remaining fixed inventory and all charges. No new final series
-  or full-series feasibility follows. Preserve
+  remain retained. The actual predeclared 4,096-row scalar/native first-world
+  pair now passes with full replay and byte-equal results/streams: 249.243130
+  versus 160.770932 seconds for the complete public calls, including cold native
+  materialization (35.50% less in this one observation). Setup adds 148.573302
+  seconds separately. Both usages are known; cold 56,944,242 bytes are charged
+  once. Three worlds remain missing in each fixed inventory at RESOURCE_STOP;
+  no retries, continuation, final series or completed-study retargeting occurs.
+  [Independent reconciliation and exact evidence](../../tests/fixtures/native-owned-call-comparison-2026-11-02.zip)
+  retain all draw indices/digests, full streams, accounting and old inventory.
+  Whole-series feasibility remains unproved under the selected existing limits.
+  Next inspect the bound per-segment Python mathematics callbacks/interruption
+  contract for one supported exact adapter/fallback option before selecting any
+  new implementation or numerical qualification. Native libm replacement is
+  outside the current kernel's admitted contract. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require

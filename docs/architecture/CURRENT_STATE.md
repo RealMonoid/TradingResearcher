@@ -152,9 +152,17 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   target-3 probe reuses its successful qualifier and genuine inputs.
   [Canonical adoption evidence](../../tests/fixtures/native-packing-adoption-checks-2026-11-02.zip)
   closes technical integration only. Tiny-probe native public calls are slower
-  than scalar calls. Next measure the canonical version on the existing fixed
-  4,096-row owned caller workload under unchanged limits, preserving earlier
-  attempts and fresh source binding. Native libm replacement and skipped checker
+  than scalar calls. The canonical version also passes the existing complete
+  4,096-row owned caller comparison: 244.697922 scalar / 149.811452 native seconds,
+  including cold materialization/replay (38.78% less in this one observation).
+  Complete results, all 119,994 draws and full encoded/decoded streams match;
+  independent accounting/currentness/preservation checks pass. Its fresh baseline
+  retains all fourteen preceding charges. Three worlds per route remain missing
+  at RESOURCE_STOP; no continuation occurs. [Exact evidence](../../tests/fixtures/native-packing-owned-call-comparison-2026-11-02.zip)
+  retains setup separately. Binding-derived seeds differ from the older v1 case;
+  no controlled v1-to-v2 or whole-series inference follows. Next use one bounded
+  read-only currentness profile to locate caller overhead, without another world
+  or numerical replay. Native libm replacement and skipped checker
   calls remain outside this slice. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
@@ -172,9 +180,14 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   cannot learn conditional-outcome variation; the whole-scope baseline may vary. No new practical-effect
   profile or bootstrap alone repairs that support limitation.
 
-- **Working tree/processes:** canonical path-packing adoption follows local checkpoint
-  `44be0f1`; exact source/check versions are retained in the progress record. No owned probe/check
-  process remains live at closeout and no GitHub publication occurs here.
+- **Working tree/processes:** canonical path-packing adoption is locally committed as
+  `940dfcd`; exact source/check versions are retained in the progress record. That closeout has no
+  live process or GitHub publication. The next bounded 4,096-row caller preparation passes from
+  the completed 192-blob backup, preserving all fourteen prior charges; exact handles and
+  terminal receipts are in `native_path_packing.canonical_owned_call_comparison` in the progress
+  register. Sealed independent prepared-input and final result/resource reviews pass for
+  exactly the two fixed ordinal-zero calls. No process remains live. Case bytes match the earlier fixture,
+  while fresh binding-derived world seeds differ.
   The unverified AUXILIARY_RESOURCES.md draft remains preserved and uncommitted; the builder/original-A
   continuation stays on hold. No new research-model call or spending grant; all seven old grants remain revoked.
 

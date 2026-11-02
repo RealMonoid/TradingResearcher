@@ -345,10 +345,26 @@ probe reuses those inputs and certificate without a numerical retry.
 [Exact sources, independent checks and retained failures](../../../tests/fixtures/native-packing-adoption-checks-2026-11-02.zip)
 close this technical adoption slice only. The tiny probe's complete native calls
 take longer than its scalar calls; calculator timings are not a caller speedup.
-**Next:** measure this canonical version on the existing fixed 4,096-row owned
-caller workload, with a predeclared scalar/native first-world pair, full separate
-replay and the existing 300-second/256-MiB attempt limits. Preserve all earlier
-attempts/charges and use fresh source-bound inputs; no old capsule is retargeted.
+**Checked complete caller measurement:** the canonical version now passes the
+existing fixed 4,096-row workload through two fresh source-bound ordinal-zero
+calls. Complete scalar/native public times are 244.697922 / 149.811452 seconds,
+including cold native materialization and replay (38.78% less in this one pair).
+All 119,994 draws per generation, full results and 6,954,853 encoded / 40,817,857
+decoded stream bytes match. Independent ordinal/digest, environment, chronological
+resource and retained-charge reconciliation passes. The fresh 192-blob baseline
+preserves the preceding fourteen settled attempts; the new pair charges cold
+57,323,346 bytes within its own reservation. Setup takes 158.882816 seconds and
+baseline copy 3.202198 seconds separately. Both fixed four-world inventories stop
+after their sole predeclared attempt, retaining three missing worlds each.
+[Exact inputs, source, streams, receipts and sealed reviews](../../../tests/fixtures/native-packing-owned-call-comparison-2026-11-02.zip)
+retain the same 300-second/256-MiB limits. Fresh binding-derived seeds differ from
+the older v1 comparison despite equal original case bytes; this is no controlled
+v1-to-v2 timing comparison or attribution of the caller difference to packing.
+**Next:** profile one bounded read-only qualification/currentness inspection on
+the completed retained runtime to locate caller overhead before selecting another
+exact acceleration change. Reuse the existing operator and `cProfile`; preserve
+every source, environment, cache, revocation and failure check. Run no new world,
+numerical replay, final series or resource continuation for this inquiry.
 No native-libm replacement, skipped checker, new final series, budget increase or
 completed-development/derived-final transfer follows. Whole-series feasibility
 and the remaining scientific package exits stay open.

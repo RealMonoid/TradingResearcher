@@ -174,8 +174,9 @@ Compatibility metadata and the pinned kernel source do not issue a certificate.
 The [numeric integration evidence](../tests/fixtures/native-calculator-integration-2026-11-02.zip)
 retains the independent frozen-oracle checks, canonical build and complete
 4,096-row result/draw-byte gold comparison. Its loader observations include
-current Python, Windows and preexisting vendor images; those observations still
-need a qualified immutable host-image binding before actual native study use.
+current Python, Windows and preexisting vendor images. Those observations alone
+supply no qualified immutable host-image binding; actual study use requires the
+owned qualification below.
 
 ### Selected native environment observations
 
@@ -189,7 +190,7 @@ wrong suffixes, linked cache files and unqualified host paths fail closed.
 
 The collector uses bound `ctypes` and the documented Windows loader APIs. Each
 loaded runtime image must match the manifest; each host image must match an
-explicit trusted path, size and hash supplied by a future independent qualifier.
+explicit trusted path, size and hash supplied by the bound qualification profile.
 Legitimate OS component-store hardlinks are allowed only for these host files;
 runtime cache files still require one link. Module files are rechecked when the
 observation is emitted. The parent `native_environment.current` verifies the
@@ -252,6 +253,12 @@ preserves the denied target-16 preparation and its correction to the genuine
 three-row engineering grid before any study reservation. That tiny fixture's
 information gaps and slower complete native calls establish neither a useful
 information target nor a whole-caller speedup.
+The subsequent [fixed 4,096-row owned comparison](../tests/fixtures/native-packing-owned-call-comparison-2026-11-02.zip)
+passes with full result, stream and separate-replay equality: 244.697922 scalar /
+149.811452 native seconds, including cold materialization. That one observation
+does not establish general throughput or full-series feasibility, and its fresh
+binding-derived seeds prohibit a controlled timing claim against the older v1
+world. Every original attempt and charge remains retained.
 
 Inspection is read-only. `CURRENT` requires intact source, archive, cache,
 retained output and environment bindings. A missing restored cache is `STALE`;

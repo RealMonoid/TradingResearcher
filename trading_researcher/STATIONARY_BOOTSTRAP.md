@@ -174,3 +174,30 @@ retains the independent frozen-oracle checks, canonical build and complete
 4,096-row result/draw-byte gold comparison. Its loader observations include
 current Python, Windows and preexisting vendor images; those observations still
 need a qualified immutable host-image binding before actual native study use.
+
+### Selected native environment observations
+
+The private `binding.environment(..., _native=NativeContext(...))` collector
+checks imported NumPy/kernel files against the selected retained cache. It
+records `native-bootstrap-environment/1` alongside the original Python runtime,
+standard-library hashes and isolation flags. Default callers retain the exact
+three-key interface; the original validator still rejects extended records.
+Only the selected namespaces are handled. Unknown modules, missing file bindings,
+wrong suffixes, linked cache files and unqualified host paths fail closed.
+
+The collector uses bound `ctypes` and the documented Windows loader APIs. Each
+loaded runtime image must match the manifest; each host image must match an
+explicit trusted path, size and hash supplied by a future independent qualifier.
+Legitimate OS component-store hardlinks are allowed only for these host files;
+runtime cache files still require one link. Module files are rechecked when the
+observation is emitted. The parent `native_environment.current` verifies the
+extended record and the complete cache without importing NumPy or enumerating
+the parent's images. Capture before and after use is the owning caller's duty.
+
+The [component evidence](../tests/fixtures/native-environment-checks-2026-11-02.zip)
+retains independent mutation/alias/namespace cases and an actual separate-child
+pre/post probe. Its reference host inventory is provisional input, not a
+certificate. Loaded paths and current file bytes do not prove relocated memory
+identity or absence of hidden mappings. Actual study selection, independently
+issued runtime qualification, reserved accounting, replay and scientific
+admission remain open.

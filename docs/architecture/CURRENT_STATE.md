@@ -102,7 +102,10 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   crashes and cache-free restore. A pinned real archive also passes isolated loop/rebuild checks.
   The private calculator/family/world engine seam now passes 10 independent methods plus 55 affected
   regressions; the actual canonical kernel/factory matches the full recorded 59,997-draw gold.
-  Next complete opt-in reserved study execution, exact fallback, full native environment/runtime
+  The selected native environment collector and NumPy-free parent validator now pass 19 independent
+  methods and an actual separate-child pre/post probe. The fixed host inventory is provisional,
+  not a runtime certificate; legacy three-key binding behavior passes 19 existing regression methods.
+  Next complete opt-in reserved study execution, exact fallback, full native runtime
   qualification, chronological aggregate accounting and complete separate-child replay. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.

@@ -63,7 +63,10 @@ def write_file(path, raw):
         os.fsync(stream.fileno())
 
 
-def environment(expected):
+def environment(expected, *, _native=None):
+    if _native is not None:
+        from .native_environment import NativeContext
+        require(type(_native) is NativeContext, 'Explicit owned native environment context required')
     libraries = {}
     base = Path(sys.base_prefix).resolve()
     isolation = {'isolated':sys.flags.isolated, 'no_site':sys.flags.no_site,
@@ -71,6 +74,10 @@ def environment(expected):
     require(isolation == {'isolated':1,'no_site':1,'ignore_environment':1,'no_bytecode_writes':1})
     for name, module in tuple(sys.modules.items()):
         source = getattr(module, '__file__', None)
+        if _native is not None and _native.handles(name):
+            require(source is not None, 'Selected native module has no source-file binding')
+            require(_native.accepts(name, source), 'Selected native module is outside its context')
+            continue
         if not source:
             continue
         source = Path(source).resolve()
@@ -80,7 +87,10 @@ def environment(expected):
             libraries[source.relative_to(base).as_posix()] = hashlib.sha256(source.read_bytes()).hexdigest()
         else:
             raise Invalid('Bound computation imported a module outside its retained closure')
-    return {'identity':_runtime_identity(),'standard_library':dict(sorted(libraries.items())),'isolation':isolation}
+    result = {'identity':_runtime_identity(),'standard_library':dict(sorted(libraries.items())),'isolation':isolation}
+    if _native is not None:
+        result['native_runtime'] = _native.observation()
+    return result
 
 
 def expected_request(payload):

@@ -80,6 +80,22 @@ batch duplicate under another key links the same trials. The family cannot gain
 late members or refund error allocation. Members may share outcomes within their
 one predeclared family; another allocation cannot reserve those same qualified
 record identities. Distinct snapshot IDs are not proof of disjoint outcomes.
+
+New commitments bind `scientific-family-policy-binding/1` and the identical
+`family_policy` in the allocation signature, allocation, every trial and manifest.
+The existing policy owner calculates the budget from the complete admitted
+membership: family noncoverage is 1/20 and each marginal is 1/(20*m). Preparation
+counts and descriptive topic labels cannot split this family. Original plan
+drafts remain unchanged. This assigns the adopted policy; it does not establish
+valid marginal coverage, applicable calibration or scientific admission.
+Legacy records without the binding marker remain exact history. A same-key
+lookup returns their original bytes; a different key cannot retrofit a policy
+or replace their allocation. The existing campaign/record conflict applies.
+[Independent source, fixed cases and actual check receipts](../tests/fixtures/scientific-family-binding-checks-2026-11-02.zip)
+retain the preimplementation missing-binding failure and the successful bounded
+transaction/caller checks. Positive cases substitute private admission and use
+synthetic records; the actual owned-plan caller still retains its admission gap.
+
 The kernel uses the existing 256-reference envelope and rejects overflow without
 truncation. General large-population reservation representation remains unfinished.
 

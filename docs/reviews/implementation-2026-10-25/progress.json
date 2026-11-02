@@ -319,7 +319,7 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "Return to the soleplan scientific-core Package3/4 acceptance map. Restore the required source-grounded system model under REVIEWING before assessing remaining admission/freeze/calibration integration; identify the next authorized mandatory software criterion under existing resources/no-new-final/no-retarget limits. Do not spin another filesystem variant without new evidence. Research and promptly present any genuinely required unresolved user decision.",
+  "next_action": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -5677,7 +5677,7 @@
       "git_diff_check_exit": 0,
       "scope": "Links, preservation, traceability and whitespace; final evidence/handoff mutation requires affected documentation refresh"
     },
-    "next_action": "Prepare one justified claim-scoped binary mean/rate-contrast nuisance/stress and information profile from permitted development diagnostics under contract 14 sections 5.3/5.4/11, then reuse the existing development/final controllers within actual fixed resources. Exact dependence/randomness/target/adequacy inputs are still required; do not issue a count-only certificate or promote a smallest tested target into N_min. Retain scientific selection/data/exposure and corroboration gaps.",
+    "next_action": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
     "retained_auxiliary_draft_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
     "changed_files": [
       "trading_researcher/scientific_freeze.py",
@@ -5693,7 +5693,247 @@
       "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
       "docs/reviews/implementation-2026-10-25/progress.json"
     ],
-    "unverified_boundary": "No full-project test suite or complete IF-05/package 3/4 acceptance claimed. The final affected implementation checks cover 66 distinct methods across current and applicable unchanged-owner regressions; independent-author rerun is not added to that count. Physical power loss, real admission, protected access, scientific/economic usefulness remain unverified."
+    "unverified_boundary": "No full-project test suite or complete IF-05/package 3/4 acceptance claimed. The final affected implementation checks cover 66 distinct methods across current and applicable unchanged-owner regressions; independent-author rerun is not added to that count. Physical power loss, real admission, protected access, scientific/economic usefulness remain unverified.",
+    "actual_family_binding_2026_11_02": {
+      "purpose": "Complete the existing IF-05/D075/D082 atomic binding of the actual whole-family error policy, without opening scientific admission.",
+      "requirements": [
+        "REQ-005",
+        "REQ-019",
+        "REQ-024",
+        "IF-05",
+        "TEST-05",
+        "TEST-19"
+      ],
+      "base_commit": "d80bd2a56e8eff634ea0cb087bc22051e9c72535",
+      "binding_version": "scientific-family-policy-binding/1",
+      "checks": [
+        {
+          "record": ".trf-runtime/scientific-family-binding-2026-11-02/new-binding-check.json",
+          "sha256": "2f1766398b0e87fed24ea91ddea3d36e9e2ab19dc1330c61181d309e507211ac",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_scientific_family_binding_independent.py"
+          ],
+          "methods": 7,
+          "unit_seconds": "24.213",
+          "process_seconds": "24.977651400025934",
+          "exit_code": 0,
+          "executed_test_sha256": "5b4c010ae742e75f0129aabd1045aa294dc3a7ac0430d23a93e2622ec085119e",
+          "scope": "Synthetic transaction/independent fixed policies and denial/recovery; actual caller3 constructs owned synthetic plan. No scientific admission."
+        },
+        {
+          "record": ".trf-runtime/scientific-family-binding-2026-11-02/existing-freeze-check.json",
+          "sha256": "ccfb33ac95c2219c9ff80bd0befbe02c8b3fc5261aad8b67e16987dead75d239",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_scientific_freeze_independent.py"
+          ],
+          "methods": 25,
+          "unit_seconds": "70.030",
+          "process_seconds": "70.80601549998391",
+          "exit_code": 0,
+          "executed_test_sha256": "b04be629b6333b94ae845bc2646bf7dcdd37ca0fe0c81e78e57b6d38d8f854c1",
+          "scope": "Synthetic transaction/independent fixed policies and denial/recovery; actual caller3 constructs owned synthetic plan. No scientific admission."
+        },
+        {
+          "record": ".trf-runtime/scientific-family-binding-2026-11-02/owned-plan-caller-check.json",
+          "sha256": "45bd9a4db4574bfbc13a3f5be1bb9e350ddfa5d1917642e597bfdd7d89a37b4c",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_scientific_freeze.py"
+          ],
+          "methods": 3,
+          "unit_seconds": "143.851",
+          "process_seconds": "144.6312484999653",
+          "exit_code": 0,
+          "executed_test_sha256": "d2fe3666dbe34bd3ecef3173d9a4771f7bc27466603989ca0518285712eef683",
+          "scope": "Synthetic transaction/independent fixed policies and denial/recovery; actual caller3 constructs owned synthetic plan. No scientific admission."
+        }
+      ],
+      "test_scope": "35 distinct methods:7new+25unchanged independently authored transaction regressions+3actual synthetic ownedplan/dependency caller methods. One preimplementation RED is retained separately, not an extra distinct passing method.",
+      "completed_acceptance": [
+        "Exact complete admitted membership assigns one policy via unchanged family_budget, after gap/unique-membership validation.",
+        "Identical policy and explicit marker participate in allocation signature/allocation/alltrials/manifest. No provisional draft or legacy history is rewritten.",
+        "m1/2/8 literal fractions, topic separation, immutable drafts, duplicate/restart/backup, midcommit rollback/recovery, forgedoverride denial and unmodified production gap pass. Existing25include actual pre/postCOMMIT process exit/source identity and conflict controls; caller3 retains production gap on an owned synthetic plan."
+      ],
+      "not_completed": [
+        "Scientific selection/ranking and full campaign chronology/exposure admission.",
+        "Qualified exact market outcome reservations, applicable information/N_min and final calibration.",
+        "Corroboration, same-trial scientific execution/quarantine and whole-batch scientific release; complete Package3/4 and economic/acceleration gates."
+      ],
+      "source_transition": {
+        "changed_top_level_owner": "trading_researcher/scientific_freeze.py",
+        "before": "80067ad562ec35e72c17325eeaeb3228d6a7df727c2b97fe03b75ede1a9d25e1",
+        "after": "aed9f39b5b98865c65905f85d0c39fdc88653fffb2d9d631af01dbbb325641fd",
+        "package_files": 111,
+        "all_other_top_level_source_bytes_equal_HEAD": true,
+        "native_qualification": "54f7 and preceding qualification/caller certificates remain immutable evidence at their recorded sources. New intended use requires normal fresh source qualification; no inspection/recertification or CURRENT assertion performed for this new footprint.",
+        "completed_sources": "Completed32world development/derivedfinal and old capsules remain untouched; no retargeting."
+      },
+      "failure_history": [
+        "Independent preimplementation2claim counterexample failed once: absentfamily_policy,1failure/0errors/1.841s/exit1.",
+        "Root receipt metadata originally labelled companion new7 hash test_sha256 across3commands; reviewer caught ambiguity. Original bytes retained, keys clarified and exact executedmodule hashes added; no outputs/results/source/time/rerun changed.",
+        "One no-change CurrentState patch and one unmatched-context patch; exact owner lines then read and intended docs edited. No production impact."
+      ],
+      "construction_effort": {
+        "known_test_process_seconds": [
+          "24.977651400025934",
+          "70.80601549998391",
+          "144.6312484999653"
+        ],
+        "parallelism": "Three independent test processes overlapped; do not sum as wall time or infer speed/quality equivalence.",
+        "partial_clock_started_utc": "2026-11-02T17:17:58.046000+00:00",
+        "observed_utc": "2026-11-02T17:28:46.315914+00:00",
+        "limits": "Earlier model/source reconstruction start, total coordination/rework/CPU/RSS/disk/modeltokens/cash unknown. Check timings include this actual scheduling; not performance comparison.",
+        "closeout_recorded_utc": "2026-11-02T17:30:37.838884+00:00"
+      },
+      "next_action": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
+      "live_processes": [],
+      "status": "CHECKED_ACTUAL_FAMILY_BINDING_ONLY",
+      "source_model": {
+        "basis": "REVIEWING bounded source-grounded normal/failure/feedback/authority reconstruction; archived intent.json retains model and exact scope. No overall framework verdict.",
+        "record": ".trf-runtime/scientific-family-binding-2026-11-02/intent.json"
+      },
+      "reuse": {
+        "project": "Reuse unchanged evaluation_policy.family_budget and existing scientific_freeze/storage/transaction/recovery; inspect actual signatures before change.",
+        "library": "Exact approved family allocation is framework policy, already implemented using pinned Python fractions.Fraction. No third-party statistical calculation or new dependency is necessary; reuse existing generic math/JSON/SQLite owners.",
+        "new_library": false
+      },
+      "source_sha256_before": {
+        "trading_researcher/scientific_freeze.py": "80067ad562ec35e72c17325eeaeb3228d6a7df727c2b97fe03b75ede1a9d25e1",
+        "trading_researcher/evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+        "trading_researcher/evaluation_plans.py": "32de8189f8603e6ac8089895eb2ff9fc675769a763f1cc99ed064bd9ca836016",
+        "tests/test_scientific_freeze_independent.py": "b04be629b6333b94ae845bc2646bf7dcdd37ca0fe0c81e78e57b6d38d8f854c1",
+        "tests/test_scientific_freeze.py": "d2fe3666dbe34bd3ecef3173d9a4771f7bc27466603989ca0518285712eef683",
+        "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960"
+      },
+      "source_sha256_after": {
+        "trading_researcher/scientific_freeze.py": "aed9f39b5b98865c65905f85d0c39fdc88653fffb2d9d631af01dbbb325641fd",
+        "trading_researcher/evaluation_policy.py": "df7392a6d6499186504562f0cf97a3da3024b9fee29e079c0bc8f28d8fdca955",
+        "trading_researcher/evaluation_plans.py": "32de8189f8603e6ac8089895eb2ff9fc675769a763f1cc99ed064bd9ca836016",
+        "tests/test_scientific_freeze_independent.py": "b04be629b6333b94ae845bc2646bf7dcdd37ca0fe0c81e78e57b6d38d8f854c1",
+        "tests/test_scientific_freeze.py": "d2fe3666dbe34bd3ecef3173d9a4771f7bc27466603989ca0518285712eef683",
+        "tests/fixtures/reference_evaluation_policy_cases.json": "a65153fd2e7d2f647f4ddc2860d957f937c761dfe7f376e9a2289e72f6c92960"
+      },
+      "archive": {
+        "path": "tests/fixtures/scientific-family-binding-checks-2026-11-02.zip",
+        "bytes": 72699,
+        "sha256": "c63bb1a2d610b2fbbdd2c503dbb87958d3389f78566663a3cb98a66e0b4d80c7",
+        "members": 28,
+        "CRC_and_all_raw_readback": "PASS",
+        "sealed_review_sha256": "d6403574b7de9b61e70e4f3fb057a88e1d6263d1206250d95eae0c4919cd686f",
+        "scope": "Exact baseline/final owned sources, unchanged helper/plan, independent sealed cases, all35passing check outputs and original/clarified receipts, oneRED, source/authority/limits. No private Registry/key, runtime archive or numerical world."
+      },
+      "independent_review": {
+        "status": "PASS_BOUNDED_IMPLEMENTATION_AND_RECORDED_CHECKS",
+        "path": ".trf-runtime/scientific-family-binding-2026-11-02/independent-family-review.json",
+        "sha256": "d6403574b7de9b61e70e4f3fb057a88e1d6263d1206250d95eae0c4919cd686f",
+        "root_reconciliation": "Allreviewed path/hash/size descriptors and final35actualrun receipts centrally checked; raw35unitoutputs and finalsource matched. Reviewer authored no implementation or cases and reran no tests."
+      },
+      "changed_files": [
+        "trading_researcher/scientific_freeze.py",
+        "trading_researcher/EVALUATION_POLICY.md",
+        "tests/test_scientific_family_binding_independent.py",
+        "tests/fixtures/scientific-family-binding-checks-2026-11-02.zip",
+        "docs/architecture/CURRENT_STATE.md",
+        "docs/reviews/implementation-2026-10-25/progress.json",
+        "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+        "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+        "docs/architecture/12_TRACEABILITY_MATRIX.md"
+      ],
+      "publication": "Local resumed work after fulfilled GitHub refresh a51bbcc; no later push.",
+      "preserved_research_boundaries": {
+        "new_final_series": false,
+        "retarget_completed_sources": false,
+        "budget_increase": false,
+        "protected2024_access": false,
+        "original_A_work": false,
+        "production_registry_operations": false,
+        "paid_calls": false,
+        "research_ledger": "53 settled calls, USD0.574585 remaining, seven revoked grants"
+      },
+      "prior_next_actions": {
+        "global": "Return to the soleplan scientific-core Package3/4 acceptance map. Restore the required source-grounded system model under REVIEWING before assessing remaining admission/freeze/calibration integration; identify the next authorized mandatory software criterion under existing resources/no-new-final/no-retarget limits. Do not spin another filesystem variant without new evidence. Research and promptly present any genuinely required unresolved user decision.",
+        "freeze": "Prepare one justified claim-scoped binary mean/rate-contrast nuisance/stress and information profile from permitted development diagnostics under contract 14 sections 5.3/5.4/11, then reuse the existing development/final controllers within actual fixed resources. Exact dependence/randomness/target/adequacy inputs are still required; do not issue a count-only certificate or promote a smallest tested target into N_min. Retain scientific selection/data/exposure and corroboration gaps.",
+        "information": "Return to the soleplan scientific-core Package3/4 acceptance map. Restore the required source-grounded system model under REVIEWING before assessing remaining admission/freeze/calibration integration; identify the next authorized mandatory software criterion under existing resources/no-new-final/no-retarget limits. Do not spin another filesystem variant without new evidence. Research and promptly present any genuinely required unresolved user decision."
+      },
+      "documentation_checks": [
+        {
+          "record": ".trf-runtime/scientific-family-binding-2026-11-02/implementation-documentation-check.json",
+          "sha256": "da0c9c7e17b996d3e99d7b2c8db9797464d7163d5b1cd0fd6cb3f877b7461b6d",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+          ],
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "0.36997749999864027",
+          "scope": "Documentation consistency/link/whitespace/preservation checks; no scientific validity or full runtime certification."
+        },
+        {
+          "record": ".trf-runtime/scientific-family-binding-2026-11-02/system-model-documentation-check.json",
+          "sha256": "0c3b6b035fa9aba5cb2413df674c9848113ea46de1621bb46d10ba41f8715454",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "docs/reviews/verify_system_model.py"
+          ],
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "8.463942900008988",
+          "scope": "Documentation consistency/link/whitespace/preservation checks; no scientific validity or full runtime certification."
+        },
+        {
+          "record": ".trf-runtime/scientific-family-binding-2026-11-02/retail-contract-documentation-check.json",
+          "sha256": "4021b9d2de36a526b13d4009ccd406111dd6b4202cfcb93158087231367e2fa4",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "docs/reviews/verify_retail_contract.py"
+          ],
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "7.762653700017836",
+          "scope": "Documentation consistency/link/whitespace/preservation checks; no scientific validity or full runtime certification."
+        }
+      ],
+      "final_preservation": {
+        "status": "PASS",
+        "archive_hash_unchanged_after_full28member_CRC_raw_readback": true,
+        "sealed_independent_review_hash_unchanged": true,
+        "final_test_equals_sealed_before_implementation": true,
+        "source_and_unchanged_oldtests_fixed_fixture_hashes": "All matched retained before/after hashes; only freeze owner changes among111top-level project sources.",
+        "paused_AUX_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
+        "git_diff_check": {
+          "command": "git diff --check",
+          "exit_code": 0,
+          "scope": "After all related documentation/source/test/evidence edits; final staged whitespace check follows publication-free local commit staging."
+        },
+        "limits": "Documentation system-model checker does not claim a fresh full preexisting-file inventory. No real Registry, scientific use, native qualification or new final run is performed."
+      }
+    }
   },
   "scientific_information_profile_2026_11_02": {
     "status": "FIXED_DEVELOPMENT_GRID_COMPLETE_INDEPENDENTLY_VERIFIED",
@@ -6399,7 +6639,7 @@
       },
       "scientific_readiness": false
     },
-    "next_action": "Return to the soleplan scientific-core Package3/4 acceptance map. Restore the required source-grounded system model under REVIEWING before assessing remaining admission/freeze/calibration integration; identify the next authorized mandatory software criterion under existing resources/no-new-final/no-retarget limits. Do not spin another filesystem variant without new evidence. Research and promptly present any genuinely required unresolved user decision.",
+    "next_action": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
     "changed_files": [
       "trading_researcher/study_runs.py",
       "tests/test_second_order_independent.py",

@@ -214,6 +214,14 @@ corroboration pre-reservation and scientific execution/release remain open. Keep
 all package exits and the original-A hold. Exact current checks and failures are
 in the existing progress register; no full package or scientific completion follows.
 
+**November 2 actual-family binding:** new commitments use the unchanged policy
+owner and exact complete membership to bind one family error allocation in the
+signature, allocation, every trial and manifest, with an explicit binding version.
+Draft counts and topic labels cannot split the frozen family. Old draft/manifest
+bytes and the production admission gap remain unchanged. Independently fixed
+synthetic cases exercise the m=1/2/8 assignments and denial/recovery/history paths;
+the existing progress record distinguishes actual check results and limits.
+
 ### 4. Independent computation and narrow scientific calibration
 
 IN PROGRESS. Reuse independent calculation, bootstrap/MC candidates and retained study/series controllers. Scientific classification requires the applicable calibrated profile, defensible information target and adequate assumptions. Preserve fixed worlds, final draws, failures, replay and cumulative resource stops. Engineering timing/storage checks and partial synthetic cohorts do not establish calibration. No new simulator family by default.
@@ -385,12 +393,20 @@ extra work; this is a bounded-stop rationale, not a measured speed theorem.
 remain retained. All four full validations and all original byte/alias/failure
 checks stay in place. The user-requested complete GitHub refresh was verified at
 `a51bbcc`; this subsequent resumed probe is local work.
-**Next:** return to the remaining scientific-core Package 3/4 acceptance map.
-Follow [REVIEWING.md](../../../REVIEWING.md) to substantiate the current normal and
-failure flow, authority and open boundaries, then trace the first unfulfilled
-admission/freeze/calibration criterion to its actual callers and inputs. Continue
-the smallest authorized implementation under the selected existing limits;
-research and promptly present any genuinely required unresolved user decision.
+**Checked core slice:** the source-grounded normal/failure/feedback and authority
+model is restored under [REVIEWING.md](../../../REVIEWING.md). The existing
+IF-05/D075/D082 actual-family policy binding now uses the unchanged policy owner
+and exact admitted membership, retaining draft and legacy bytes and an explicit
+new binding version. All 35 affected methods pass: seven new independent cases,
+25 transaction regressions and three actual plan-caller/dependency checks.
+This mechanical commitment resolves no selection, data/exposure,
+information/calibration or execution/release prerequisite. The source change
+does not refresh earlier native qualifications or retarget retained capsules.
+**Next:** trace development-only selection/campaign chronology and qualified
+outcome reservation through the existing plan/data-use/admission owners; select
+the smallest missing core check under existing limits. Promptly research and
+present any genuinely required user decision. No final draw or new authority
+follows from this binding.
 Do not reopen filesystem tuning without a new supported proof and practical
 benefit rationale.
 No native-libm replacement, skipped checker, new final series, budget increase or

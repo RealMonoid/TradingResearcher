@@ -77,6 +77,17 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   applicable registry/storage/policy/revocation regressions pass; [exact versions, timings and retained
   failed runs](../reviews/implementation-2026-10-25/progress.json). No full package or scientific pass follows.
 
+- **Actual-family binding (November 2):** new atomic commitments derive the adopted
+  family policy from their complete membership and bind it, with an explicit
+  version marker, in allocation/signature, trials and manifest. Draft counts stay
+  provisional and old records remain exact history. All 35 affected methods pass
+  (7 new, 25 transaction regressions, 3 actual caller/dependency checks); exact
+  evidence is in the existing progress register. Scientific admission remains
+  closed. This changes a top-level source;
+  earlier native qualification applies to its recorded source only and requires
+  fresh qualification before new intended use. No recertification or study run
+  occurred for this slice.
+
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original
   case bytes. The measured 2,048-row cost probe completed in 130.702 seconds with full draws/replay.
@@ -172,9 +183,10 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   actual byte read. This is no observed production escape. Four new canonical/
   retained-oracle methods pass; production source and all four validations remain
   unchanged. [Probe, counterexamples and disposition](../../tests/fixtures/native-root-scope-checks-2026-11-02.zip)
-  record no performance run or adoption. Next restore the required system model
-  and remaining Package 3/4 acceptance/authority map, then select the next
-  authorized core criterion under existing limits. Native libm replacement and skipped checker
+  record no performance run or adoption. The subsequent core family-policy binding
+  is summarized above. Next trace selection/campaign chronology and qualified
+  outcome reservation through the existing admission owners under unchanged
+  limits. Native libm replacement and skipped checker
   calls remain outside this slice. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
@@ -206,8 +218,9 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   Remote SHA/tree and qualified source-byte equality are verified; the progress register retains
   the receipt. Implementation resumes at the same cache-containment inquiry, with no new scientific
   authority or spending. The publication-receipt commit changes documentation only.
-  Subsequent root-reuse work stays local: the candidate is unselected, four new
-  regression cases pass and no production source or runtime binding changes.
+  The subsequent local root-reuse probe remains unselected, with four new passing
+  cases and no production change. The later local family-policy binding changes
+  only the freeze source, not the published snapshot or historical runtime inputs.
   The unverified AUXILIARY_RESOURCES.md draft remains preserved and uncommitted; the builder/original-A
   continuation stays on hold. No new research-model call or spending grant; all seven old grants remain revoked.
 

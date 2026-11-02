@@ -226,6 +226,13 @@ allocation-policy cases are not claimed complete. Production retains admission
 gaps; no real scientific freeze, corroboration, full package exit, calibration or
 protected access is established. Exact outcomes are in the existing progress register.
 
+The November 2 bounded extension assigns the actual complete family's existing
+D075/D082 error policy at atomic commitment, retaining provisional draft counts
+and legacy bytes. Seven new independent cases plus 25 transaction and three
+owned-plan/dependency caller methods pass at the recorded source. This advances
+the IF-05/REQ-005/019 policy-binding subset; all scientific admission, information,
+calibration, execution/release and full package exits remain open.
+
 ## D090 scoped resource overlay
 
 [research-epoch-feedback-budget/1.0](19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md) affects REQ-004/014/022/023/030 and D079 only for one explicit development epoch. Verification must cover complete feedback, exact provider configuration, one-use and ordered-call persistence across restart/restore, fixed nonrefundable stage limits, unknown usage and revocation. Approval alone establishes neither implementation nor research quality; ordinary budgets and scientific gates remain unchanged.

@@ -11,6 +11,7 @@ import uuid
 from .codec import Invalid, canonical, decode, integer, strings, text
 from .errors import Conflict, Denied
 from .evaluation_plans import source_bundle, footprint
+from .evaluation_policy import family_budget
 from .certification import _runtime_identity
 
 INPUT = 'scientific-freeze-input/1'
@@ -18,6 +19,7 @@ ATTEMPT = 'scientific-freeze-attempt/1'
 MANIFEST = 'frozen-manifest/1'
 TRIAL = 'scientific-trial/1'
 ALLOCATION = 'scientific-allocation/1'
+FAMILY_BINDING = 'scientific-family-policy-binding/1'
 AUTHORITY = 'scientific_commitment_not_execution_or_release_permission'
 LOADED_SELF = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 LOADED_PACKAGE = footprint(source_bundle())
@@ -160,6 +162,10 @@ class ScientificFreeze:
         require([claim['plan_id'] for claim in claims] == request['plan_ids'] and
                 len({claim['claim_id'] for claim in claims}) == len(claims),
                 'Duplicate claims or changed family membership')
+        # Preparation counts are provisional. Bind the complete admitted family
+        # without rewriting its draft plans or trusting a caller's allocation.
+        policy_binding = {'family_policy_binding_version': FAMILY_BINDING,
+                          'family_policy': family_budget(len(claims))}
         records = strings(resolution['outcome_record_ids'], 'qualified outcome records')
         require(bool(records), 'Exact qualified outcome records required')
         closure, exposure, blobs = self._freeze_closure(roots)
@@ -168,7 +174,8 @@ class ScientificFreeze:
         exposure = sorted(set(exposure) | set(capsule['exposure']) | {capsule['id']})
         strings(exposure, 'complete freeze exposure')
         signature = {'campaign_id': request['campaign_id'], 'role': request['role'],
-            'claims': claims, 'selection_record_ref': request['selection_record_ref'],
+            'claims': claims, **policy_binding,
+            'selection_record_ref': request['selection_record_ref'],
             'reservation_spec_ref': request['reservation_spec_ref'],
             'outcome_record_ids': sorted(records), 'closure': closure,
             'admission': resolution['admission']}
@@ -190,15 +197,17 @@ class ScientificFreeze:
         allocation = self._freeze_save(ALLOCATION, {'created_at': self._now(),
             'contract': 'research-contract/1.0', 'campaign_id': request['campaign_id'],
             'role': request['role'], 'signature': signature, 'outcome_record_ids': sorted(records),
-            'primary_count': len(claims), 'refund_permitted': False},
+            'primary_count': len(claims), **policy_binding, 'refund_permitted': False},
             [capsule['id'], *closure], exposure, blobs=blobs)
         trials = [self._freeze_save(TRIAL, {'created_at': self._now(), **claim,
             'allocation_id': allocation['id'], 'contract': 'research-contract/1.0',
+            **policy_binding,
             'scientific_readiness': True, 'frozen': True, 'assessment_access_authority': False},
             [allocation['id'], *closure], exposure)['id'] for claim in claims]
         manifest = self._freeze_save(MANIFEST, {'created_at': self._now(), 'request': request,
             'contract': 'research-contract/1.0', 'input_id': capsule['id'],
             'allocation_id': allocation['id'], 'trial_ids': trials, 'primary_count': len(claims),
+            **policy_binding,
             'closure': closure, 'admission': resolution['admission'], 'scientific_readiness': True,
             'frozen': True, 'allocation_reserved': True, 'assessment_access_authority': False},
             [allocation['id'], *trials, *closure], exposure, blobs=blobs)

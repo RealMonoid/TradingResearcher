@@ -122,6 +122,12 @@ substitution qualifies transaction behavior only; applicable calibration,
 information, scientific selection/data acceptance, corroboration and scientific
 execution/release remain required. See the existing progress register for checks.
 
+New commitments additionally bind the actual complete family's adopted error
+policy and explicit binding version in allocation/signature, trials and manifest.
+Preparation counts remain provisional; legacy records are not upgraded. The
+independent synthetic cases and actual denied-plan caller qualify this binding
+only, not scientific admission or valid marginal coverage.
+
 ## Build boundaries
 
 ### Binding generator feedback and assessment extension

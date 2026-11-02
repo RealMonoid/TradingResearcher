@@ -319,7 +319,7 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "Observe the single live fixed 32-world run; bind only the approved one-use continuation at an actual eligible RESOURCE_STOP; reconcile all terminal attempts, resources, versions and replay evidence before any completion claim. Scientific/final-calibration/2024 access remain unavailable.",
+  "next_action": "The32-world development grid is complete and independently verified. The user selected existing resource limits and exact acceleration first. Measure the current bottleneck using existing independent fixtures, then qualify the smallest reusable adapter without changing PRNG, draws, numerical meaning or scientific gates. No final series, new grants, original-A continuation, protected2024 or scientific classifications.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -5696,7 +5696,7 @@
     "unverified_boundary": "No full-project test suite or complete IF-05/package 3/4 acceptance claimed. The final affected implementation checks cover 66 distinct methods across current and applicable unchanged-owner regressions; independent-author rerun is not added to that count. Physical power loss, real admission, protected access, scientific/economic usefulness remain unverified."
   },
   "scientific_information_profile_2026_11_02": {
-    "status": "APPROVED_FIXED_STUDY_RUNNING",
+    "status": "FIXED_DEVELOPMENT_GRID_COMPLETE_INDEPENDENTLY_VERIFIED",
     "purpose": "Qualify the existing second-order binary law against the retained Q1 engineering template and actual owned generation/bootstrap/MC/replay before choosing a finite information-study profile. Address the documented dependent-null gap without adding a simulator family.",
     "requirements": [
       "REQ-005",
@@ -6399,7 +6399,7 @@
       },
       "scientific_readiness": false
     },
-    "next_action": "Observe the single live fixed 32-world run; bind only the approved one-use continuation at an actual eligible RESOURCE_STOP; reconcile all terminal attempts, resources, versions and replay evidence before any completion claim. Scientific/final-calibration/2024 access remain unavailable.",
+    "next_action": "The user selected existing resource limits and exact acceleration first. Profile existing independent cases, check established reuse options, and qualify an exactly equivalent adapter. Do not prepare or start final draws, increase budgets, reopen original A or admit protected2024/scientific use.",
     "changed_files": [
       "trading_researcher/study_runs.py",
       "tests/test_second_order_independent.py",
@@ -6425,7 +6425,7 @@
       "scope": "Current links, preserved source/contract/decision histories, traceability and whitespace; not scientific/model/economic validity. Only final evidence fields are added after this bundle; JSON/preservation/whitespace are refreshed below."
     },
     "prior_completion_scope": "Existing model conformance and actual measured-cost-to-study preparation handoff only. Full goal and packages3/4 remain incomplete; no global full-suite or empirical/economic success claim. Pending user decision is retained once, without assuming approval from time or automatic continuation.",
-    "completion_scope": "Existing model conformance, actual measured-cost-to-study preparation and approved invocation are verified at their recorded scopes. The fixed32-world development inventory is now running; terminal reconciliation is pending. Full goal, packages3/4, model adequacy, N_min, final calibration and scientific admission remain incomplete.",
+    "completion_scope": "The conditional32-world development grid is complete and independently reconciled.4096 is a tested point-power candidate, not N_min or a final/scientific pass. Full goal and packages3/4 remain incomplete.",
     "source_mutation_scope": "Only study_runs.py changes production behavior. Existing second_order_population/lag/family numerical implementations and all fixed fixture bytes are preserved. New tests qualify existing code and the actual cost lineage handoff.",
     "resource_decision_approval": {
       "source": "Direct user reply to request_user_input_async call_1602926c731f4a23b49f399b575952a3 item0",
@@ -6468,7 +6468,7 @@
     "approved_run_operator": {
       "path": ".trf-runtime/scientific-profile-2026-11-02/run_prepared.py",
       "sha256": "520fb0841b873ed0999dabcd407e99d69c0a21d43458621ac226c49b2d1d2844",
-      "status": "RUNNING_FIXED_INVENTORY",
+      "status": "TERMINAL_COMPLETE_EXIT_0",
       "reuse": "Adapts the existing precision.py invocation/receipt pattern and reuses native inspect_family_study/advance_family_study/continue_study. No new numerical/runtime component or dependency.",
       "one_time_grant_key": "second-order-q1-20261102-approved-single-60min",
       "maximum_aggregate_compute_ms": 7200000,
@@ -6488,7 +6488,9 @@
         "observations": ".trf-runtime/scientific-profile-2026-11-02/observations.jsonl",
         "latest": ".trf-runtime/scientific-profile-2026-11-02/latest.json",
         "final_view": ".trf-runtime/scientific-profile-2026-11-02/final-view.json",
-        "instruction": "Poll this same live handle; do not start another observer or broker. Native registry artifacts/events are authoritative. No automatic retry, reseed or extra continuation."
+        "terminal_exit_code": 0,
+        "finished_at_utc": "2026-11-02T01:50:14.035454Z",
+        "instruction": "Process is terminal; do not poll or restart session97474. Native registry artifacts/events and retained terminal receipts are authoritative."
       }
     },
     "approved_run_documentation_checks": {
@@ -6526,6 +6528,72 @@
         "The running inventory has not completed.",
         "Documentation and invocation checks prove neither scientific calibration nor model adequacy, N_min, scientific admission, protected 2024 access or economic benefit."
       ]
+    },
+    "approved_run_terminal": {
+      "finished_at_utc": "2026-11-02T01:50:14.035454Z",
+      "operator_exit_code": 0,
+      "wall_elapsed_ms": 6127467,
+      "native_check": "PASS; inline native terminal reconciliation, exit0,10.679seconds. Reused inspect_family_study, validate_manifest, summarize, retained-source/runtime/dependency checks, blob reader and validate_stream; no new worlds or bootstrap replay.",
+      "native_check_receipt": ".trf-runtime/scientific-profile-2026-11-02/terminal-native-check.json",
+      "native_view_sha256": "a19b4116e0560fe6482daf30c24eb90a67b5453183bffc0ee1de1566c3bb86e5",
+      "source_footprint_sha256": "4251242fe7a807ffe7d3568d7df56efdd91c35359375901e5f32c3c5b9b89558",
+      "resource_checkpoint": "1883f5a730d27a018e75dc6b9342a5209c41e823c9d7458f7b1d7745ad26610b",
+      "worlds": 32,
+      "retained_attempts": 32,
+      "complete_cells": 16,
+      "proofs": 64,
+      "selected_blob_hashes_independently_checked": 202,
+      "primary_draws": 3839808,
+      "sensitivity_cases": 192,
+      "undefined_or_interrupted_draws": 0,
+      "charged_compute_ms": 6109390,
+      "charged_logical_storage_bytes": 1353420073,
+      "unknown_orphan_outstanding_overrun": false,
+      "continuation_id": "c173b6b613f948d4ff34887d6a42e51ab4c8b927d7c942120f7e4cba5f7ef2e8",
+      "continuation": "Exactly+3600000ms/0extra storage at the actual compute RESOURCE_STOP after21worlds and3364286ms;1MiB metadata remains charged. Original300000ms/256MiB/max1 attempt and effective7200000ms/2GiB caps preserved.",
+      "independent_review": "PASS by /root/freeze_acceptance using read-only SQLite mode=ro/query_only, exact inventory regeneration, existing independent expected_events oracle,64 proof/202 selected blob checks, ResourceHistory and separate manual chronological prefixes. No Broker, mutations or world reruns. Central native check agrees on all counts, resources, grant, checkpoint, source digest and candidate.",
+      "candidate_time_rows": 4096,
+      "interpretation": "Smallest complete tested point-power candidate only. At2048, spec1/pattern1/response1 and spec1/pattern3/response0 detect1/2; all six4096 alternatives detect2/2. For2/2 the pointwise95% interval is approximately[0.1581,1], neither simultaneous nor selection-adjusted; two outer replications cannot establish80% power.",
+      "scientific_readiness": false,
+      "classification_permitted": false,
+      "n_min": null,
+      "completed_criterion": "Package4 selected conditional development-profile grid through the actual native operator path, full draws, separate replay, retained attempts, current/retained source/runtime/dependencies/exposure and the one approved chronological continuation.",
+      "remaining_gaps": "Empirical nuisance/stationarity and stress applicability; fresh256-world-per-cell final calibration and information justification; scientific data/semantic/outcome-record admission; complete package3/4, full-process/free-discovery evaluation and economic evidence.",
+      "construction_effort": "Long-run wall6127467ms plus10.679seconds central reconciliation; existing independent reviewer used before dispatch and at termination. Construction monetary cost is unmeasured.",
+      "closeout_failures": "Automatic approval review rejected the long shell status-write command before launch with only 'blocked by policy'; no change occurred. A targeted apply_patch then failed validation because hunks were out of file order; reordered targeted patches preserve unrelated state. Neither failure changed runtime or scientific inputs."
+    },
+    "final_resource_decision": {
+      "status": "ADOPTED_EXISTING_LIMITS_EXACT_ACCELERATION_FIRST",
+      "source": "Direct user reply to request_user_input_async call_5dd1ae1a5b284d5c9e4f103c824c6b8d item0",
+      "answer": "Bestehende Grenzen; exakte Beschleunigung zuerst (empfohlen)",
+      "authority": "research-contract/1.0 section9 requires a recorded decision for additional compute. The consumed November2 grant applied only to the completed32-world study and grants no final-series expansion.",
+      "next_inventory_basis": "Unchanged final recipe at4096 would require2stress laws x4vectors x256fresh worlds=2048worlds, all19,999draws/three lengths/separate replay and existing count thresholds. No final preparation or draw occurred.",
+      "measured_basis": {
+        "4096_worlds": 16,
+        "sum_compute_ms": 3970340,
+        "mean_seconds": "248.14625",
+        "sum_logical_storage_bytes": 680283494,
+        "linear_final_hours": "141.16764444444445",
+        "linear_final_logical_bytes": 87084974619,
+        "linear_final_GiB": "81.10420277249068"
+      },
+      "alternatives_presented": "Keep current limits and qualify exact acceleration first (recommended and selected), or separately authorize a160hour/100GiB aggregate synthetic final-series envelope with at most159 one-hour checkpoint continuations, unchanged300second/256MiB/max1 attempts and no API/USD,2024 or scientific authority. The latter was NOT granted.",
+      "uncertainty": "Linear extrapolation is not a final-series charge/completion guarantee; grant metadata, failures, runtime variation, electricity and hardware costs remain uncertain. Model adequacy and final applicability remain unproven.",
+      "validation_versioning_rollback": "Measure the actual bottleneck before choosing the smallest reusable adapter. Preserve PRNG/order/numerics/full draws and required independent fixtures; pin and isolate adopted dependencies, retain old frozen sources/results and qualify affected source/runtime before any new profile. Do not retarget or refund this completed study. Stop/deselect on rollback while retaining failures, exposure and actual use.",
+      "library_reuse_research": [
+        "arch7.2.0 official StationaryBootstrap docs: NumPy RandomState/Generator/default_rng cannot silently replace the bound CPython MT19937 stream. https://arch.readthedocs.io/en/stable/bootstrap/generated/arch.bootstrap.StationaryBootstrap.html",
+        "NumPy2.5 official data-type docs: vectorized buffers are a reuse candidate; fixed-width overflow and the exact rational envelope require a checked owned adapter. https://numpy.org/doc/stable/user/basics.types.html",
+        "Cython3.3.1 official typed-memoryview docs: established compiled-buffer option; binary/runtime retention and Python-object operations still need qualification. https://docs.cython.org/en/stable/src/userguide/memoryviews.html"
+      ],
+      "adopted_dependencies": [],
+      "scope": "No speedup/equivalence is established yet; no numerical meaning, gates, budgets, original-A pause or protected-access rule changed. Existing resource limits remain binding."
+    },
+    "terminal_documentation_checks": {
+      "git diff --check": "PASS, exit0",
+      "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py": "PASS, exit0;103baseline/81unchanged/866local links",
+      "python -B docs/reviews/verify_system_model.py": "PASS, exit0;782links/98decisions/30traced requirements",
+      "python -B docs/reviews/verify_retail_contract.py": "PASS, exit0;20archived documents exact/15scoped disposition mappings",
+      "scope": "Terminal grid evidence, resolved resource choice and descriptive handoff. Earlier invocation-check limitations are historical. These document checks establish no scientific/model/economic validity; only evidence fields are appended after the bundle, followed by JSON/preservation/whitespace checks."
     }
   }
 }

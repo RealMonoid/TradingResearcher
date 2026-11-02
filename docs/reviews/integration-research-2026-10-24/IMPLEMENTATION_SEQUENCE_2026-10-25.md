@@ -228,11 +228,17 @@ qualification at the recorded bounded scope. Complete Q1 source identity and
 fresh raw/reference/compile/execution/diagnostic bindings retain unchanged case
 bytes. The [existing progress register](../implementation-2026-10-25/progress.json)
 holds the completed 130.702-second cost probe, corrected real cost handoff and
-prepared 32-world study. The user explicitly approved one additional 60-minute
-local continuation on November 2, for at most 120 minutes aggregate and unchanged
-2 GiB storage. Intended-use checks and independent invocation review passed; the
-single runner started at 00:08:11 UTC (handle/PID in progress.json). Observe it; bind
-the sole extra allowance only at its actual eligible resource-stop checkpoint. Preserve empirical-versus-model knownness weights,
+now-complete 32-world development grid. Native and independent reconciliation pass:
+32 retained attempts, 64 generation/replay proofs, 6,109.390 seconds and
+1,353,420,073 logical bytes; the sole approved continuation bound its actual
+resource-stop checkpoint after 21 worlds. The complete grid nominates 4,096 tested
+rows, with only two worlds per cell. The user selected existing resource limits
+and exact acceleration first after the unchanged final recipe projected about
+141 hours/81 GiB for 2,048 fresh worlds. No multi-day budget or final draw is
+authorized by this result. Next, measure the actual bottleneck with existing
+independent cases and qualify the smallest suitable reusable adapter, preserving
+PRNG/order, exact numerics, full draws and all required independent checks.
+No speedup is established. Preserve empirical-versus-model knownness weights,
 the two-coordinate limit, all failed checks and old sources. Declared stress
 conformance is not fitted nuisance adequacy, N_min or calibration. Continue the
 scientific core; original A remains on hold and protected outcomes stay blocked.

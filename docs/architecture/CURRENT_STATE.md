@@ -83,14 +83,18 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   The actual cost-provenance caller is corrected using the existing knowledge boundary; 30 affected
   methods pass, alongside 17 model checks at their recorded source scope. This is no adequacy certificate.
 
-- **Next action / approved resources:** observe the single running 32-world study
-  `37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab`; intended-use checks passed.
-  The live handle/PID and observer paths are retained in progress.json; do not dispatch a second runner.
-  The user approved one additional 60-minute local continuation on November 2: at most 120 minutes
-  aggregate, unchanged 2 GiB storage and original attempt/retry limits. Bind the sole extra allowance
-  only at an actual eligible RESOURCE_STOP checkpoint; no automatic renewal. [Exact scope and
-  receipts](../reviews/implementation-2026-10-25/progress.json). Original A, paid research and protected
-  2024/scientific/final-calibration authority remain unchanged.
+- **Development grid complete (November 2):** study
+  `37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab` terminated normally:
+  32 worlds/32 attempts, 64 generation/replay proofs, 6,109.390 seconds and 1,353,420,073 logical bytes.
+  Native and independent reconciliation passed; exactly one approved continuation bound its actual
+  checkpoint. The complete grid nominates 4,096 tested rows; two worlds per cell do not establish
+  N_min, model adequacy or final calibration. [Exact scope and receipts](../reviews/implementation-2026-10-25/progress.json).
+- **Next action / resource decision:** the user selected existing limits and exact acceleration first.
+  Profile existing independent cases, then qualify the smallest suitable reusable adapter with unchanged
+  PRNG, draws, numerics and gates. No speedup is established. The unchanged final recipe would require
+  2,048 fresh worlds, projecting about 141 hours/81 GiB from measured development costs; that multi-day
+  budget was not granted. No process remains live. Original A, paid research and protected
+  2024/scientific/final-calibration access remain blocked by their existing prerequisites.
 
 - **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a 24-pass
   / 1-error review exposing noncanonical-object rejection persistence are retained. Final v2 omits

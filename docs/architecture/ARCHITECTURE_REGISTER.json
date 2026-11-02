@@ -2178,6 +2178,29 @@
       "acceptance_basis": "Direct answer20M-Grenze freigeben (empfohlen) to questioncall_eedff1460ff440fd9220d7d636951df6; exact approval-time proposal preserved.",
       "normative": true,
       "change_control": "D008/D026; specification approval only. New owned source/runtime, role contracts, compile/composition/execution and actual source/context/data-use/meaning/count/funding qualification precede intended use. No additional API money, grant reset, retry/successor, token exception or scientific/capital authority."
+    },
+    {
+      "id": "D099",
+      "status": "ACCEPTED",
+      "title": "Stable outcome identity and separate dependence review",
+      "problem": "Snapshot/revision aliases and raw-operand overlap must not be conflated with scientific unused-outcome identity or independent evidence.",
+      "rationale_and_alternative": "Adopt outcome-reservation/1.0 optionA: stable initial-pilot potentialevent coordinates with separate dependence/exposure/prior-use review; B unconditional raw-target-operand exclusion not adopted. Preserve versions, actual dispositions and all other scientific gates.",
+      "requirement": "REQ-019",
+      "components": [
+        "CMP-01",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-07",
+        "CMP-08",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-11-02-OUTCOME-RESERVATION"
+      ],
+      "acceptance_basis": "Direct answer A: Ergebnisidentität und Abhängigkeit getrennt prüfen (empfohlen) to call_010f5ab50be1497eb0a7bba394becc32; exact proposal/answer preserved.",
+      "normative": true,
+      "change_control": "D008/D026; specification only. Required independent implementation/caller/denial/recovery and actual source/data/exposure/selection/information/calibration qualification precede scientific use. No budgets/protected2024/finalseries/retarget/originalA/paidcall/capital authority."
     }
   ],
   "rejections": [
@@ -3281,6 +3304,13 @@
       "date": "2026-11-01",
       "record": "27_EXACT_COMPUTATION_RESOURCES.md#approval-and-preserved-source",
       "scope": "Separate20M perchild/40M aggregate exact-computation resource version under unchanged shared1800s and complete independent checks; existing scientific/API/token/grant boundaries retained."
+    },
+    {
+      "id": "SESSION-2026-11-02-OUTCOME-RESERVATION",
+      "kind": "direct_user_approval",
+      "date": "2026-11-02",
+      "record": "28_OUTCOME_RESERVATION.md#approval-and-preserved-source",
+      "scope": "Stable potential-event identity plus separate dependence/exposure/prior-use review in the existing bounded pilot. OptionAadopted; no runtime/scientific/resource admission."
     }
   ],
   "decision_resolutions": [

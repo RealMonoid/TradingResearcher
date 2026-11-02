@@ -1,0 +1,29 @@
+{
+  "schema": "outcome-reservation-approval/1",
+  "decision": "D099",
+  "contract": "outcome-reservation/1.0",
+  "date": "2026-11-02",
+  "source": "SESSION-2026-11-02-OUTCOME-RESERVATION",
+  "question_tool_call": "call_010f5ab50be1497eb0a7bba394becc32",
+  "question_id": "scientific_outcome_reservation_2026_11_02",
+  "selected_answer": "A: Ergebnisidentität und Abhängigkeit getrennt prüfen (empfohlen)",
+  "accepted_option": "A",
+  "proposal_base_commit": "a0258fef7e3a52af7776906c189a5e101a14c847",
+  "proposal_archive": {
+    "path": "docs/reviews/implementation-2026-10-25/outcome-reservation-proposal-2026-11-02.zip",
+    "sha256": "bde61bc0f33820b4d33a226d2b6690c9b60effe293a660af9f03b1f17d1ac7bc",
+    "members": {
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": {
+        "bytes": 107230,
+        "sha256": "4fbfea50a51c9608247586a4b239719bd44eb462efb928c82b37eae06220a545"
+      },
+      "docs/reviews/implementation-2026-10-25/progress.json": {
+        "bytes": 689946,
+        "sha256": "03d73dbc65faf94bbcc25f7be25aff2641829bd2348dcc4731e44f618c78b2e8"
+      }
+    }
+  },
+  "meaning": "Stable potential-event identity with separate explicit dependence/exposure/prior-use review; raw overlap triggers review rather than unconditional exclusion. B not adopted.",
+  "limits": "Specification approval, not runtime/scientific admission or extra budget. Preserve53settledcalls/USD0.574585/sevenrevokedgrants, protected2024, nofinalseries/noretarget/originalAhold and all existing scientific/calibration/information conditions.",
+  "validation": "Required independent implementation/caller/denial/recovery cases are specified in document28; none is claimed executed by this approval record."
+}

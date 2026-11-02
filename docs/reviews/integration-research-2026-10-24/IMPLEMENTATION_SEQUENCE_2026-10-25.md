@@ -1,6 +1,6 @@
 # Implementation sequence
 
-Date: November 1, 2026. Version: execution-plan/0.5 (approved constructive-critique integration; scientific-core priority, D096, scientific scope, prior work and package exits retained).
+Date: November 2, 2026. Version: execution-plan/0.6 (approved manufacturing milestones; existing package exits, scientific contracts, D096, pending decisions and resources retained).
 
 **Accepted scope remains binding.** The November1 updated user objective reiterates that accepted versioned specifications define the full functional scope; this plan orders implementation and must not silently narrow it. Tests and exploratory completion remain intermediate milestones.
 
@@ -12,10 +12,27 @@ The user authorized implementation as far as independently possible, necessary s
 
 ## Current execution priority (October 31, 2026)
 
-Source: the October 31 instruction and the November 1 direct answer "Kernpfad priorisieren (empfohlen)" to the researched priority proposal. The current task is scientific freeze/allocation and applicable calibration in packages 3/4; the previously selected original-A continuation is on hold by this explicit user decision. Full existing acceptance criteria, scientific contracts, exposure, required independent checks and budgets remain binding. This selection governs over every dated checkpoint next-action passage below. Those passages retain history and do not authorize resuming the old continuation.
+**November 2 priority update:** the user explicitly requested implementation of
+the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
+M1's existing genuine development witness is now reconciled, including its
+exact source versions, original provider-authored idea, retained gaps and
+independent case check. The bounded [M1 closeout](#m1-technical-path-acceptance-november-2-2026)
+advances the sequence to M2's existing scientific-core work. This
+is a construction-order update, not a change to research-contract/1.0 or an
+authorization for another paid run. The user has separately approved option A
+as D099 / [outcome-reservation/1.0](../../architecture/28_OUTCOME_RESERVATION.md).
+M2 follows that version's actual implementation/admission checks and existing
+resource decisions; specification approval does not open scientific use.
+
+Source of the retained core priority: the October 31 instruction and November 1
+answer "Kernpfad priorisieren (empfohlen)". Scientific freeze/allocation and
+applicable calibration in packages 3/4 remain M2. Original A stays on hold.
+Full acceptance criteria, scientific contracts, exposure, independent checks
+and budgets remain binding. This current priority governs dated checkpoints
+below; those passages do not authorize resuming old continuations.
 
 1. **Completed: bounded AmiBroker preflight.** The [closeout evidence](../implementation-2026-10-25/amibroker-preflight-2026-10-31.json) records all five fixed synthetic cases twice under final sources, exact independent accounting checks and byte-identical repeat exports. Seven failed attempts and three earlier-source passes remain retained beside the ten final runs. The user subsequently requested fixing the adapter rather than closing the gap; those diagnosed correction and revalidation attempts are explicitly accounted for, not a reset of the earlier allowance. No paid framework call or scientific authority was added. This completes only this preflight, not package 6's separately frozen policy trial. **Next: priority 2 below.**
-2. **Current: complete the scientific core in packages 3/4.** Implement scientific freeze and allocation through the existing registry/callers under D078/D082 and IF-05, then integrate the applicable calibrated evaluator/information prerequisites. Use the complete existing package exits, not only two named tests. First close the missing atomic FrozenManifest/TrialRecord/allocation transaction and its admission boundary: complete required inputs, exact immutable closure, idempotency, conflicting requests/reservations, crash rollback, retained attempts and inherited exposure. Reuse the existing storage, plan, certification, data-use and dependency owners. Independently check the production caller and denial/recovery paths with fixed synthetic inputs before scientific use. Missing calibrated profiles or genuine scientific ambiguity remain explicit gaps, never an override or an assumed certificate. Research any required user decision and promptly ask with a concrete recommendation under AGENTS.md. No new simulation family or statistical meaning is adopted by this scheduling change.
+2. **Current: M2 scientific core in packages 3/4 after bounded M1 acceptance.** Reuse M1's retained exact-source evidence; run fresh checks only for an affected change, concrete unresolved question or intended use. Complete scientific admission through existing callers under D078/D082/D099 and IF-05 and the applicable calibrated evaluator/information prerequisites. Atomic transaction machinery and actual-family binding already have bounded software evidence; do not rebuild them or promote synthetic admission substitutions. Actual selection/outcome reservation, scientific data/exposure and applicable information/calibration remain open. Use the full package exits. Missing inputs remain explicit gaps; add no simulation family, statistical meaning or resource allowance through this scheduling change.
 3. **Original-A continuation is on hold.** Do not create its auxiliary allocation, count its wires or dispatch another descriptive/paid research continuation merely to complete the old frontier. Preserve original A/B/null, every result/failure, original timestamps, sources, exposure and all seven revoked grants. The shared USD 5 budget with USD 0.574585 remaining is unchanged. Synthetic implementation/acceptance and required calibration runs remain eligible within their existing authority/resources. Assessment data from 2024 stay inaccessible until actual scientific admission prerequisites pass; a walking skeleton may not bypass them.
 
    **Checked October 31: exact singleton information boundary.** The [read-only diagnostic](../implementation-2026-10-25/singleton-information-diagnostic-2026-10-31.json) binds the original 8,640-row case blob and confirms one observed conditioned outcome. Five exact weighting checks and four hand-fixed counterexamples show that empirical resampling preserves the same underlying conditional outcome whenever included, otherwise the mean is undefined; the whole-scope baseline and contrast can still vary. The numerical enclosure is not statistical uncertainty. This removes a proposed inferential-infrastructure next step for the unchanged sample, without declaring market failure, a universal minimum count or invalidity of all possible methods. No new outcomes, simulations, provider calls, registry writes or scientific profile were introduced. **Follow-up selected at that checkpoint:** the complete source/resource admission diagnostic below.
@@ -121,6 +138,255 @@ Source: the October 31 instruction and the November 1 direct answer "Kernpfad pr
 
 Keep scientific interpretation, software correctness and economic usefulness separate. After preflight closeout, do not automatically expand package 6 or start package 7 before addressing the selected scientific bottleneck; work from those packages may proceed when it directly removes that blocker. Existing budgets, access restrictions, frozen criteria and canonical contracts remain unchanged.
 
+## Finite calibration resource decision (November 2, 2026)
+
+**Checked preceding M2 slice:** D099 potential-event metadata now passes through
+the genuine owned-plan freeze caller without expanding outcome rows. Stable
+identity, compact grids/boundaries, exact plan/source/certificate bindings,
+independent event and completed-record collision guards, atomic failure and
+restart/restore controls are checked. The existing work record binds 63 distinct
+methods: 28 new, 35 existing; the unchanged pure-component 11-method result is
+explicitly reused, and the other 52 methods ran on the final source. Review
+corrections and initial failures are retained. This completes the potential-event
+component only ([exact evidence](../../../tests/fixtures/outcome-reservation-checks-2026-11-02.zip)).
+Raw nested-profile footprints, actual publication/dispositions,
+dependence/exposure/prior use, selection/data admission and applicable
+information/calibration remain open; all three production scientific gates stay
+closed. Continue with the finite operator below and the remaining M2 chain.
+
+**Immediate user instruction:** the approved completion task from
+SESSION-2026-11-02-CORE-CLOSEOUT requests this decision now, preserving the full
+specification, existing method/criteria and original-A hold. Fix concrete
+obstacles through actual callers and required independent controls; a retained
+gap alone is not a remedy. The user now explicitly approves one conditional180hour/100GiB run under the
+recorded prerequisites. The user also selects C: once at least 60 GiB is free;
+the November 2 recheck verifies 134.40 GiB free on NTFS. D099 option A
+is separately approved. No resource grant or numerical execution has occurred.
+
+**Recommended supported route:** use the existing retained-scalar final owner,
+keeping completed development study `37208f834cf223fc3a94a4aa55ddf620d40c6b5f42bbd956d0936e69d507c9ab`
+and calculation source `4251242fe7a807ffe7d3568d7df56efdd91c35359375901e5f32c3c5b9b89558`
+unchanged. This route already loads the retained calculator and binds a new
+assessment/controller source separately; it needs no native final selector or
+source transfer. Pin that controller in an isolated exact-source checkout using
+the same Python/runtime, so unrelated construction cannot stale a week-long run.
+Native timing remains useful engineering evidence, not a reason to delay this
+finite option for another optimization branch.
+
+| Item | Concrete proposed inventory or limit |
+|---|---|
+| Selected conditional calibration | 2 second-order signed-dependence stresses (beta -1/2,+1/2; mask block8, common share1/2) x4 vectors (00,02,11,22) x256 fresh joint worlds =2,048 worlds,20 criterion cohorts; each denominator256 |
+| Per world | 4,096 time positions,one instrument,two responses; lengths4/8/16;19,999draws/response/length =119,994generation draws, repeated completely in a fresh separate replay;491,495,424draw calculations over a fully completed inventory |
+| Method/criteria | Existing exact arithmetic, PRNG/order, full stream/result checks and MC policy unchanged. Exact95% error upper bound<=0.10; detection lower bound>=0.70; existing80% design target reported separately |
+| Observed time | 16 relevant retained-scalar4,096 worlds:238.246..263.655seconds,mean248.14625 including replay. Linear scaling135.54..149.99hours is descriptive,not a forecast. Plan roughly140..180compute-hours plus unmetered setup/check/commit/wait overhead; no promised wall-clock bound |
+| Compute proposal | <=180hours aggregate metered compute. Initial<=1hour; <=179additional real-checkpoint grants,each<=1hour. No grant beyond the total/count limits |
+| Logical storage proposal | <=100GiB aggregate including initial retention and continuation metadata (<=179MiB). Historical linear projection81.10GiB;100GiB is not the512GiB all-attempt-cap worst case or a completion guarantee |
+| Per attempt | Unchanged300seconds,256MiB logical reservation,max1attempt per world; reserve the full next envelope before work |
+| Physical results | Measured16world output/JSON sizes imply13.85..14.35GiB additional retained files,conditional on those sizes. This is not81GiB physical and not an NTFS allocated-extent guarantee |
+| Physical target | Recommend >=60GiB initially free on a selected local NTFS target: complete primary retention,before/after full backups,one preserved full restore copy,2GiBsetup/temp and4GiBfree floor plus margin. Normal operation without the extra restore copy has a40GiB planning alternative |
+
+The earlier C observation was 19,272,409,088 bytes (17.95 GiB) free at
+2026-11-02T18:40:11Z. The requested recheck at 2026-11-02T19:25:11Z finds
+144,312,868,864 bytes (134.40 GiB) free; the selected local NTFS volume meets the
+initial capacity recommendation. Recheck at intended use. The 60 GiB target derives from a
+57,857,471,704byte peak model including the planned full restore,leaving6.12GiB
+additional margin. It is capacity planning,not a new scientific gate. Existing
+backups on the same disk do not constitute independent hardware-loss protection.
+No deletion,move,cleanup,purchase or new storage destination is authorized here.
+
+The finite operator must enforce aggregate/storage/grant-count authority before
+every existing API call; the generic tranche API has no such global authorization
+field. Grants require actual RESOURCE_STOP,exact checkpoint,full next reservation
+plus metadata,no pending/orphan/unknown/overrun/model gap,and progress under D030.
+Storage-only grants count toward179. A required failed/unavailable world can
+prevent passing complete cohorts under unchanged max1. Stop,retain full charges
+and diagnose/fix the concrete cause; no discarded world,reseed,replacement series,
+criterion relaxation or automatic optimization campaign follows. Additional
+recovery attempts or changed meaning/resources need their actual reviewed authority.
+
+Before preparation/run, verify original complete development/continuation,
+retained source/blob/runtime and revocation,exact request/fresh seed separation,
+applicability/count plan,finite operator,isolated host and physical/backup readiness.
+Recheck free capacity at intended use. No final input,seed/world preparation,
+resource grant or numerical run has occurred for this proposal. Setup evidence
+includes earlier separate158.883second preparation and approximately106MiB tracked
+checkout; neither measures full future setup. Compression,host load,Registry/history
+growth,unmetered overhead and failure-space growth remain uncertain.
+
+The read-only time/source and physical inventories are recorded in the existing
+progress register. This2,048world recipe is the complete selected shared-template
+conditional evaluator inventory,not complete framework/full-process calibration.
+Population/nuisance adequacy,applicable N_min and full discovery/selection-process
+assessment retain their own existing requirements and pre-outcome inputs. No
+unknown full-process repetition count or extra LLM budget is fabricated.
+
+**Conditional run approved:** the direct answer "Einmalig bis 180 h / 100 GiB
+unter diesen Voraussetzungen freigeben (empfohlen)" approves exactly this one
+finite retained-scalar run after its prerequisites. The
+[approval record](../implementation-2026-10-25/calibration-resource-approval-2026-11-02.json)
+binds both direct answers, the source and limits. **C: is approved and the initial
+60 GiB capacity condition is met.** The fixed isolated controller, finite operator,
+source/input/seed/count checks and complete backup/recovery preparation remain
+required before the run starts. USD0.574585,53settled calls,sevenrevoked grants,
+no protected2024/no retarget and original-A hold remain unchanged.
+
+## Remaining admissible idea-to-report chain (November 2, 2026)
+
+1. **M2 / IF-05 / REQ-005/007/013/019:** implement D099 owned outcome reservation,
+   complete development-only campaign/selection chronology and actual scientific
+   data/exposure admission. Reuse registry/certification/revocation; independently
+   exercise genuine valid and denied evidence through the production resolver,
+   atomic conflicts and recovery. Private-admission substitution proves only its
+   existing transaction scope. Fix concrete defects rather than merely logging them.
+2. **M2 / REQ-005/019/020/024/029:** finalize the bounded supported calibration
+   request,source/seed/count/applicability and resource/physical conditions above.
+   Once explicitly authorized,run the full fixed inventory with full replay and
+   retained failures. Before market admission,qualify applicability/nuisance and
+   the justified information target separately; count calibration alone cannot
+   supply adequacy. A failed gate requires sourced diagnosis and prompt decision
+   for genuinely changed meaning/resources,not another automatic optimization series.
+3. **M2 / IF-03/04/05 / REQ-001/002/003/011/026:** use an eligible retained freely
+   generated idea outside the original-A hold,or a newly admitted discovery only
+   under existing actual packet/funding authority. Preserve original H_idea,
+   faithful formalization,independent meaning/feature/composition checks and all
+   exposure. Reuse M1's qualified technical witness at its exact source,without
+   treating it as scientific evidence or restarting its old paid run.
+4. **M2 / IF-05/06/07 / REQ-005/012/019/029:** with every actual prerequisite met,
+   atomically freeze the full selected family/allocation/input closure,execute
+   the permitted evidence,independently verify full results and apply the frozen
+   policy. Retain same-trial attempts; quarantine contradictory/invalid outputs;
+   release no partial scientific ranking. Protected2024 is not accessed early.
+5. **M2 / IF-08 / REQ-007/013/022/023/028/030:** independently check the faithful
+   report,all outcomes/gaps/failures,costs and complete elapsed-time accounting.
+   A valid negative or inconclusive outcome is acceptable; low information or
+   budget exhaustion is not empirical falsification. Later feedback inherits
+   exposure. This closes only that actual cycle,not economic usefulness,
+   full-process calibration,policy evaluation or all package6/7 acceptance.
+
+While an answer or authorized compute is pending,only already authorized
+independent work directly fulfilling these criteria may proceed. Stop when none
+remains; no duplicate audits,unchanged checks or new optimization branches.
+
+## Manufacturing milestones (approved November 2, 2026)
+
+**Authority:** SESSION-2026-11-02-MANUFACTURING-MILESTONES, the user's explicit
+"PLEASE IMPLEMENT THIS PLAN" after choosing an actually executed development
+backtest of a market hypothesis and genuine model-generated ideas. This is the
+readable construction sequence inside this sole plan, not a replacement for
+the seven packages or a change to scientific definitions. Project artifacts
+remain English under D043. The complete accepted specification remains in scope.
+
+### Stations and handoffs
+
+Start with logical modules in the existing application, its one-writer registry
+and immutable storage. Existing IF-01 through IF-13 remain the contracts; no new
+service, database, compulsory agent or public wire schema follows from this map.
+
+| Station | Existing owner/interface | Required handoff |
+|---|---|---|
+| Research foundation | CMP-01, IF-01/02 | Frozen permitted context, exact source/time versions, rights and inherited exposure |
+| Discovery | CMP-02, IF-02/03 | Original free H_idea, questions and search trajectory; two isolated sequential perspectives on the same allowed base |
+| Formalization | CMP-03, IF-03/04 | H_exec plus meaning comparison, or retained typed gap and reopening condition; no convenient replacement of the idea |
+| Check and commit | CMP-04, IF-04/05/09 | Independent meaning/feature/composition checks and immutable executable request; scientific freeze only after its separate admission |
+| Computation | CMP-05, IF-06 | Authorized cases, raw values, errors, resource usage, exact source/environment and replay |
+| Evaluation and report | CMP-06/11, IF-07/13 | Descriptive report in M1; scientific classification only under an admitted frozen plan in M2 |
+| Retention and feedback | CMP-07/08/09, IF-08/10 | Separate Journal, qualified Market Model, Research Experience and Policy Experience with permitted later use |
+
+A normal path preserves the original idea through formalization and independent
+execution to a source-linked report. Before freeze, revision retains parentage,
+semantic differences and exposure. After freeze, a changed claim is a descendant.
+An unsupported or ambiguous idea exits with a retained gap; computation failure
+exits with an error, not a market-negative verdict. Released feedback enters later
+eligible contexts with its exposure. No idea must become a policy or reach every
+station. CMP-10/11/12 surround this flow with applicability, observability and
+governed improvement; they do not select favorable scientific conclusions.
+
+### Build sequence and acceptance
+
+| Milestone | Existing packages and acceptance | Deliverable and exit |
+|---|---|---|
+| **M1: complete technical research path** | Relevant exits of 1-3 and development part of 5; REQ-001/002/003/004/006/011/012/013/018/023/028/029 | At least one genuine model-authored idea reaches a faithful reproducible development report without manual scientific repair. Reconcile exact idea/response, meaning/certification, execution/replay, report, all attempts, access denials and complete known/unknown timing. Historical evidence counts within its exact source/version scope. An uninformative result is acceptable; no scientific evidence classification follows. |
+| **M2: scientific evaluation** | Full applicable exits of 3/4 and scientific part of 5; REQ-005/019/020/024/029 | Qualified selection/campaign chronology, outcome reservation, scientific data/exposure, information profile, calibrated evaluator, atomic freeze and controlled release. Match calibration to the specific claim; narrow evaluator qualification cannot establish full-process calibration. Current production admission remains closed until actual prerequisites pass. |
+| **M3: separately evaluated trading policies** | Package 6 with policy/memory dependencies; REQ-009/012/018/026/029 | Separate PolicySpec, freeze and test with entries/exits, positions, shared cash and explicit costs/execution. Reuse owned backend adapters and existing independent accounting/path cases. Unknown costs remain scenarios; an empirical relationship cannot certify a combined policy. |
+| **M4: visible and checkable operation** | Package 7 and scientific/memory dependencies; REQ-017/022/025 | D087 completed-outcome due/scope checks and D088 durable pending work, weekly reports and actionable notices, with recovery/idempotency/correction/delivery checks. A reporting tick creates no quantitative look. Actual method and delivery prerequisites must pass before use. |
+| **M5: governed whole-process improvement** | Package 7, CMP-11/12 and IF-12/13; REQ-018/020/021/022/023/027/028/029/030 | Source-grounded problems, versioned proposals, bounded independent checks, permitted activation, observed effects/costs and retain/revise/rollback review. D040 permits selected Harness2 patterns behind protected evaluation, not uncontrolled self-modification or a mandatory installation. Comparative, economic and acceleration claims keep their own pre-outcome assessment. |
+
+Basic access checks, meaning/measurement controls, failures, provenance, resource
+accounting and D096 incremental learning start in M1. M5 expands the improvement
+function; it does not postpone mandatory safeguards or already-authorized
+ordinary learning. Correct records alone do not establish diagnostic quality.
+
+### First implementation slice
+
+1. Reconcile the existing genuine scalar/paired paths, starting with the retained
+   second-original paired breakout and its independently checked report. Verify
+   discovery provenance as well as downstream formalization; a scripted fixture
+   or a model-authored candidate alone cannot demonstrate free model discovery.
+2. Link exact idea, completed role responses, independent review, certificates,
+   immutable execution inputs, case/replay bytes, retained failed attempts and
+   permitted feedback. Reuse existing independently authored checks and receipt
+   formats before adding narrowly necessary evidence glue.
+3. Reconstruct original creation-to-report elapsed time from recorded events;
+   distinguish provider/compute timings, waits/repairs and unmeasured intervals.
+   Do not reset the clock at the last successful repair or invent active work time.
+4. Record criterion-by-criterion acceptance in the existing progress register.
+   Close only demonstrated missing connections through their actual callers and
+   failure paths. Do not rerun a paid epoch merely to produce fresh timestamps.
+5. After bounded M1 closeout, advance to M2 using D099's separately approved
+   outcome-reservation semantics and required implementation/denial/recovery
+   checks. Existing resource decisions remain separate. Do not repeat an
+   already-answered question or infer additional authority from that answer.
+
+Use existing implementations and established libraries before new components;
+project-owned adapters retain approved units, time, missingness and evidence
+semantics. Independently fixed cases and affected caller/failure regressions
+precede completion claims. Historical checks remain historical; fresh checks
+name final sources, actual outcomes and limitations. Update this plan first,
+then Current State and progress.json; no parallel audit platform or plan series.
+
+**Preserved limits:** original A/B/null and all failures remain; original A stays
+on hold. No new paid run, grant, token/money/compute allowance, protected 2024/2025
+access, active-profile rewrite, final-calibration draw or capital authority is
+adopted. Existing frozen versions remain bound. Rollback selects a prior future
+configuration without erasing records, spent resources or exposure.
+
+### M1 technical path acceptance (November 2, 2026)
+
+**Accepted at bounded technical scope:** original second paired idea
+`4abce1d5...8872a` reaches model-authored formalization, separate host-observed
+meaning review, bound certificates, execution `8456955e...03980`, independent
+replay/original-formula audit and a faithful descriptive report. A fresh read-only
+reconciliation checks the original discovery response, two-perspective context
+binding, all 353 cohort artifact hashes, four epochs/eight jobs/eight recorded
+calls/two ideas, seven retained formalization gaps and 12 research records. It
+verifies the owned later-feedback grant and actual epoch-126 context, rather than
+assuming generic batch-release storage. No substantive handoff gap was found.
+
+The unchanged independently authored retained-case/accounting checker freshly
+passes all 8,640 case bytes, counts and exact interval aggregates. Earlier
+separate numerical replay/original-formula execution remains historical at its
+retained source. Thirty-four current-source synthetic control methods pass:
+10 owned breakout host, 14 budget/dispatch and 10 researcher methods. Their
+synthetic admission/provider substitutions cannot certify scientific use or
+general model reliability. Registry/spend-ledger bytes remain unchanged.
+
+Original discovery epoch creation to independently checked report is
+19,057.674215 seconds; idea creation to that endpoint is 18,890.674215 seconds.
+Successful formalization/review takes 403.317856 seconds; execution/replay/audit
+has a separately retained 77,849-ms timer. These timers are not a complete
+disjoint attribution: waiting, repair/preparation and operator-active intervals
+remain incompletely classified. This historical witness is not a newly timed
+future cycle, an earliest-cycle claim or measured acceleration.
+
+Exact inputs, helper failures/corrections, fresh receipts and source hashes are in
+[the retained M1 evidence](../../../tests/fixtures/manufacturing-m1-acceptance-2026-11-02.zip)
+and `manufacturing_milestones_2026_11_02` in the existing progress register. The
+archive retains evidence/inspection sources, not the private registry or case
+blob. M1 supplies no universal expression coverage, scientific freeze/admission,
+calibration, economic value, production service, delivery or improvement benefit.
+M2-M5 and all unfulfilled package exits remain open. M2 implementation is already
+active in the existing construction chat; preserve its disjoint source ownership.
+
 ## Approved constructive review integration (November 1, 2026)
 
 The user's direct approval "Übernehmen wir was gut ist, freigabe" adopts the constructive scope in the [reconciliation](INTEGRATION_PROPOSAL.md#user-approval-of-constructive-scope), not every recommendation in the external critique. Apply it through this sole plan and existing contracts:
@@ -223,6 +489,14 @@ synthetic cases exercise the m=1/2/8 assignments and denial/recovery/history pat
 the existing progress record distinguishes actual check results and limits.
 
 #### Pending outcome-reservation semantics decision (November 2, 2026)
+
+**Resolved by explicit option A approval:** D099 /
+[outcome-reservation/1.0](../../architecture/28_OUTCOME_RESERVATION.md) now governs
+the selected semantics. The heading and proposal below retain the original
+question/history anchor; they are not a still-pending permission request.
+The approval record and preserved proposal remain separate from implementation
+qualification and resource decisions. Continue M2's actual caller/denial/recovery
+work under that version; no scientific admission follows from specification alone.
 
 **SEMANTIC CLARIFICATION — USER APPROVAL REQUIRED, D008/D026.** D082/document 14
 section 12 requires disjoint outcome records plus dependence/exposure review;
@@ -453,11 +727,11 @@ new binding version. All 35 affected methods pass: seven new independent cases,
 This mechanical commitment resolves no selection, data/exposure,
 information/calibration or execution/release prerequisite. The source change
 does not refresh earlier native qualifications or retarget retained capsules.
-**Next:** resolve the [researched outcome-reservation choice](#pending-outcome-reservation-semantics-decision-november-2-2026).
-The owner trace identified the missing exact scientific identity rule; retain the
-answer before dependent equivalence/admission implementation. Other gates and
-existing limits remain binding. No final draw or new authority follows from the
-completed family-policy binding or this proposal.
+**Next:** close the approved D099 reservation and scientific selection/data/exposure
+admission through actual callers. First present the finite calibration resource
+decision above; no large series starts before its prerequisites and explicit
+resource/run authority. The completed family-policy binding and D099 adoption
+supply neither calibration nor additional resources.
 Do not reopen filesystem tuning without a new supported proof and practical
 benefit rationale.
 No native-libm replacement, skipped checker, new final series, budget increase or

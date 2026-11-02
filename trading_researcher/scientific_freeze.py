@@ -8,10 +8,12 @@ from pathlib import Path
 import re
 import uuid
 
-from .codec import Invalid, canonical, decode, integer, strings, text
+from .codec import Invalid, canonical, decode, digest, integer, strings, text
 from .errors import Conflict, Denied
 from .evaluation_plans import source_bundle, footprint
 from .evaluation_policy import family_budget
+from .outcome_reservations import (PROFILE as RESERVATION_PROFILE, merge_grids,
+                                   overlapping_events, reservation_for_plans)
 from .certification import _runtime_identity
 
 INPUT = 'scientific-freeze-input/1'
@@ -89,9 +91,23 @@ class ScientificFreeze:
                 gaps.append('UNQUALIFIED_PLAN:' + plan_id)
         if request['role'] == 'corroboration':
             gaps.append('CORROBORATION_PRERESERVATION_AND_DEPENDENCE_NOT_QUALIFIED')
+        try:
+            reservation = reservation_for_plans(self, actor, request['plan_ids'])
+            roots.extend(reservation['artifact_ids'])
+            if reservation['grid']['event_count'] == 0:
+                gaps.append('NO_POTENTIAL_OUTCOME_EVENTS')
+        except (Invalid, Denied, Conflict, KeyError, TypeError, OSError, ValueError) as exc:
+            reservation = {'profile': RESERVATION_PROFILE, 'status': 'RESERVATION_GAP',
+                'identity_version': 'UNKNOWN', 'failure_type': type(exc).__name__,
+                'raw_input_membership': 'NOT_QUALIFIED',
+                'dependence_exposure_prior_use': 'NOT_QUALIFIED',
+                'scientific_readiness': False}
+            gaps.append('OUTCOME_RESERVATION_METADATA_NOT_QUALIFIED')
         closure, _, _ = self._freeze_closure(roots)
         return {'gaps': sorted(set(gaps)), 'artifact_ids': closure, 'claims': [],
-                'outcome_record_ids': [], 'admission': {'plan_observations': observations,
+                'outcome_record_ids': [], 'outcome_reservation': reservation,
+                'admission': {'plan_observations': observations,
+                    'outcome_reservation': reservation,
                     'qualification': 'Existing preparation checks grant no scientific admission.'}}
 
     def _freeze_save(self, schema, body, refs, exposure, *, blobs=None):
@@ -140,8 +156,9 @@ class ScientificFreeze:
         return None, None
 
     def _freeze_commit(self, actor, request, capsule, resolution):
-        require(type(resolution) is dict and set(resolution) ==
-            {'gaps', 'artifact_ids', 'claims', 'outcome_record_ids', 'admission'},
+        required = {'gaps', 'artifact_ids', 'claims', 'outcome_record_ids', 'admission'}
+        require(type(resolution) is dict and set(resolution) in
+            (required, required | {'outcome_reservation'}),
             'Malformed host admission resolution')
         strings(resolution['gaps'], 'admission gaps')
         if resolution['gaps']:
@@ -167,14 +184,42 @@ class ScientificFreeze:
         policy_binding = {'family_policy_binding_version': FAMILY_BINDING,
                           'family_policy': family_budget(len(claims))}
         records = strings(resolution['outcome_record_ids'], 'qualified outcome records')
-        require(bool(records), 'Exact qualified outcome records required')
+        reservation_binding = {}
+        trial_reservation_binding = {}
+        if 'outcome_reservation' in resolution:
+            reservation = resolution['outcome_reservation']
+            require(type(reservation) is dict and reservation.get('profile') == RESERVATION_PROFILE
+                and reservation.get('status') == 'POTENTIAL_GRID_BOUND'
+                and reservation.get('scientific_readiness') is False,
+                'Owned potential metadata required; it cannot issue scientific admission')
+            bindings = reservation.get('plan_bindings')
+            require(type(bindings) is list and len(bindings) == len(claims)
+                and all(type(item) is dict for item in bindings),
+                'Every admitted plan must retain its potential-event binding')
+            require([item['plan_id'] for item in bindings] == request['plan_ids']
+                and [item['compiled_id'] for item in bindings] ==
+                    [claim['compiled_id'] for claim in claims],
+                'Potential-event bindings differ from admitted membership')
+            grid = merge_grids([item['grid'] for item in bindings])
+            require(grid == reservation.get('grid') and grid['event_count'] > 0,
+                'Complete nonempty potential-event union required')
+            require(set(strings(reservation.get('artifact_ids'), 'potential-event sources')) <= set(roots),
+                'Admission omitted potential-event source bindings')
+            reservation_hash = digest(reservation)
+            trial_reservation_binding = {'outcome_reservation_version': RESERVATION_PROFILE,
+                                         'outcome_reservation_hash': reservation_hash}
+            reservation_binding = {**trial_reservation_binding, 'outcome_reservation': reservation}
+        else:
+            # Retained finite kernel judgments predate D099. The production
+            # resolver never grants them scientific admission or a new version.
+            require(bool(records), 'Exact qualified outcome records required')
         closure, exposure, blobs = self._freeze_closure(roots)
         for identity in blobs:
             self._read_blob_bytes(identity)
         exposure = sorted(set(exposure) | set(capsule['exposure']) | {capsule['id']})
         strings(exposure, 'complete freeze exposure')
         signature = {'campaign_id': request['campaign_id'], 'role': request['role'],
-            'claims': claims, **policy_binding,
+            'claims': claims, **policy_binding, **reservation_binding,
             'selection_record_ref': request['selection_record_ref'],
             'reservation_spec_ref': request['reservation_spec_ref'],
             'outcome_record_ids': sorted(records), 'closure': closure,
@@ -188,6 +233,13 @@ class ScientificFreeze:
                 return manifests[0]
             if old['campaign_id'] == request['campaign_id'] and old['role'] == request['role']:
                 raise Conflict('Campaign batch is already frozen; no late membership or budget refund')
+            old_reservation = old.get('outcome_reservation')
+            new_reservation = reservation_binding.get('outcome_reservation')
+            if (old_reservation is None) != (new_reservation is None):
+                raise Conflict('Legacy outcome identities are UNKNOWN; no disjointness may be inferred')
+            if new_reservation is not None:
+                if overlapping_events(old_reservation['grid'], new_reservation['grid']):
+                    raise Conflict('Stable outcome events are already reserved by another batch')
             if set(old['outcome_record_ids']) & set(records):
                 raise Conflict('Qualified outcome records are already reserved by another batch')
         old_claims = {item['body']['claim_id'] for item in self._freeze_objects(TRIAL)}
@@ -197,17 +249,18 @@ class ScientificFreeze:
         allocation = self._freeze_save(ALLOCATION, {'created_at': self._now(),
             'contract': 'research-contract/1.0', 'campaign_id': request['campaign_id'],
             'role': request['role'], 'signature': signature, 'outcome_record_ids': sorted(records),
-            'primary_count': len(claims), **policy_binding, 'refund_permitted': False},
+            'primary_count': len(claims), **policy_binding, **reservation_binding,
+            'refund_permitted': False},
             [capsule['id'], *closure], exposure, blobs=blobs)
         trials = [self._freeze_save(TRIAL, {'created_at': self._now(), **claim,
             'allocation_id': allocation['id'], 'contract': 'research-contract/1.0',
-            **policy_binding,
+            **policy_binding, **trial_reservation_binding,
             'scientific_readiness': True, 'frozen': True, 'assessment_access_authority': False},
             [allocation['id'], *closure], exposure)['id'] for claim in claims]
         manifest = self._freeze_save(MANIFEST, {'created_at': self._now(), 'request': request,
             'contract': 'research-contract/1.0', 'input_id': capsule['id'],
             'allocation_id': allocation['id'], 'trial_ids': trials, 'primary_count': len(claims),
-            **policy_binding,
+            **policy_binding, **reservation_binding,
             'closure': closure, 'admission': resolution['admission'], 'scientific_readiness': True,
             'frozen': True, 'allocation_reserved': True, 'assessment_access_authority': False},
             [allocation['id'], *trials, *closure], exposure, blobs=blobs)

@@ -83,3 +83,11 @@ For REQ-002/003/005/011/013/026/028, [paired-development/1.0](23_PAIRED_DEVELOPM
 ## D097 bounded exact-composition adoption
 
 D097 applies to REQ-002/003/004/005/011/014/022/023/026/030 through [the approved exact-composition contract](26_BOUNDED_EXACT_COMPOSITIONS.md). Fixed independent cases must cover exact arithmetic, deterministic work/intermediate limits, complete causal tracing, Kleene/outer-guard behavior and absolute enclosures; old-version denial and unchanged legacy behavior remain acceptance obligations. Tests are not yet claimed executed by this adoption.
+
+## D099 reservation acceptance
+
+[Outcome-reservation/1.0](28_OUTCOME_RESERVATION.md), adopted by D099, binds the
+existing REQ-005/007/013/019/024/028 and TEST-05/13/19/24/28 subset: metadata-only
+potential events, alias/revision-resistant prior use, separate dependence/exposure
+review and actual atomic caller/denial/recovery. Adoption is not executed coverage
+or scientific admission; all applicable information/calibration exits remain.

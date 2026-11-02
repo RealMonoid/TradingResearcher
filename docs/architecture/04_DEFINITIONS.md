@@ -438,3 +438,11 @@ D097 exact scalar composition version extends the existing executable expression
 ## D098 exact-computation resource version
 
 [Exact-computation-resources/2.0](27_EXACT_COMPUTATION_RESOURCES.md) versions the engineering allowance only:20M perchild shared plain/diagnostics,40M execute/replay aggregate,shared1800s. D097 mathematics and old10M evidence remain unchanged. Resource completion is neither semantic certification nor scientific, economic or deployment authority.
+
+## D099 scoped outcome-reservation definition
+
+D099 adopts [outcome-reservation/1.0](28_OUTCOME_RESERVATION.md) for the initial
+pilot. It elaborates DEF-014/025: stable potential-event identity and prior use
+remain separate from raw-input overlap, dependence, origin and exposure. Revisions
+and aliases cannot reset use; distinct IDs cannot certify independent evidence.
+Old definitions/records retain their original versions and unknown qualifications.

@@ -11,7 +11,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 76 |
+| ACCEPTED | 77 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -1413,3 +1413,29 @@ The user subsequently approved the documentation remedy in the [System Model Rev
 **Source and acceptance:** SESSION-2026-11-01-EXACT-RESOURCES; direct answer “20M-Grenze freigeben (empfohlen)” to questioncall_eedff1460ff440fd9220d7d636951df6. The [approval record](../reviews/adoption-exact-resources-2026-11-01/approval.json) preserves exact approval-time proposal bytes. This scoped version resolves the former D095/D097 ceiling wait; it creates no implementation certificate or production activation.
 
 **Dependencies and boundaries:** D008/D026/D084/D094/D095/D097; contract sections6/9/14 and REQ-003/005/011/013/014/018/022/026/030. No additional API money, paid-call authorization, token exception, old grant/slot reset, automatic retry/successor, protected-data or scientific/capital authority follows. Fresh owned runtime/source, mapping/composition, complete role contracts and actual context/data-use/meaning/count/funding gates precede use. Rollback unselects future admission and preserves all old/new records, source/exposure, failures and charges.
+
+### D099 — Stable outcome identity and separate dependence review
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Decision:** Adopt [outcome-reservation/1.0](28_OUTCOME_RESERVATION.md), option A:
+stable metadata-defined potential-event identity for the initial Binance-spot
+15-minute pilot, with exact source/revision provenance and separate explicit
+dependence, exposure and prior-use review. Snapshot/program/claim aliases cannot
+reset prior use. Distinct event IDs are necessary, not sufficient, for unused
+scientific evidence. Shared raw operands trigger review rather than B's
+unconditional prohibition. Preserve actual outcome dispositions, profile-specific
+input rules, historical qualifications and all other admission prerequisites.
+
+**Source and acceptance:** SESSION-2026-11-02-OUTCOME-RESERVATION; direct reply
+"A: Ergebnisidentität und Abhängigkeit getrennt prüfen (empfohlen)" to question
+`call_010f5ab50be1497eb0a7bba394becc32`. The
+[approval record](../reviews/implementation-2026-10-25/outcome-reservation-approval-2026-11-02.json)
+preserves the exact selected answer and approval-time proposal bytes.
+
+**Dependencies and boundaries:** D008/D014/D023/D026/D075/D076/D078/D082/D084;
+DEF-014/025, REQ-005/007/013/019/024/028, IF-05/09. Adoption is not runtime
+certification, calibrated information or scientific admission. Legacy missing
+versions remain UNKNOWN; rollback denies new admission and retains all history.
+No final series, source retarget, budget increase, protected-2024 access,
+original-A/AgentWorkflow continuation, paid call or capital authority follows.

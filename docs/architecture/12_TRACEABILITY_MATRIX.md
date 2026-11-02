@@ -30,7 +30,7 @@ SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational report
 | PROB-02 | REQ-016 | D019 | CMP-07, CMP-08, CMP-09 | IF-08 | TEST-16 | P3 |
 | PROB-05 | REQ-017 | D020, D057, D064, D080, D087, D088 | CMP-01, CMP-06, CMP-07, CMP-08, CMP-09, CMP-10, CMP-11 | IF-11 | TEST-17; [D087 invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases); [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P6 |
 | PROB-06 | REQ-018 | D022, D041, D063, D077, D098 | CMP-01, CMP-02, CMP-05, CMP-07, CMP-12 | IF-02, IF-06, IF-12 | TEST-18 | P2/P7 |
-| PROB-03 | REQ-019 | D023, D082 | CMP-02, CMP-04, CMP-06 | IF-05 | TEST-19 | P4 |
+| PROB-03 | REQ-019 | D023, D082, D099 | CMP-02, CMP-04, CMP-06 | IF-05 | TEST-19; [outcome reservation cases](28_OUTCOME_RESERVATION.md#acceptance-versioning-and-rollback) | P4 |
 | PROB-03 | REQ-020 | D025, D038, D049 | CMP-02, CMP-05, CMP-06, CMP-09 | IF-06, IF-07 | TEST-20 | P4 |
 | PROB-04 | REQ-021 | D026, D040 | CMP-02, CMP-07, CMP-12 | IF-12 | TEST-21 | P3/P7 |
 | PROB-06 | REQ-022 | D028, D059, D060, D073, D088 | CMP-11, CMP-12 | IF-13 | TEST-22; [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P5/P6 |
@@ -142,6 +142,12 @@ SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational report
 | D093 | ACCEPTED | SESSION-2026-10-30-COMPLETE-FEEDBACK-BUDGET | REQ-004/014/022/023/030 | One [complete-feedback epoch](22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md) with fixed six-slot resources, unchanged full inputs and independent review; no retry or successor. |
 
 ## Coverage and orphan rules
+
+D099 adopts [outcome-reservation/1.0](28_OUTCOME_RESERVATION.md) for the scoped
+IF-05/REQ-005/007/013/019/024/028 reservation boundary, extending existing
+TEST-05/13/19/24/28 with stable aliases/revisions, potential grids, separate
+dependence/exposure review, profile inputs, atomic denial/recovery and legacy
+UNKNOWN. These are adoption requirements, not executed implementation coverage.
 
 Every requirement must map to at least one source-backed decision, component, interface, acceptance test and phase. Every rejection must reference source messages and at least one decision. Every important proposed departure must reference an open decision. A referenced ID existing does not establish that its scientific interpretation is correct; semantic review remains necessary.
 
@@ -324,3 +330,26 @@ inherited-context PASS is bound to its source/time; the old raw certificate stay
 STALE and all seven spending grants stay revoked. These implementation/access
 checks complete no scientific acceptance criterion, new inference allocation or
 protected/native original-A admission.
+
+| D099 | ACCEPTED | SESSION-2026-11-02-OUTCOME-RESERVATION | REQ-019 | [Stable outcome identity and separate dependence review](28_OUTCOME_RESERVATION.md): option A is adopted specification; actual implementation/admission and resource qualification remain separate. |
+
+## M1 technical research path acceptance (November 2, 2026)
+
+The user's approved manufacturing sequence retains all TEST-01 through TEST-30
+and package exits. Its [bounded M1 acceptance](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#m1-technical-path-acceptance-november-2-2026)
+reconciles the original paired-breakout idea/provider response, unchanged
+model-authored formalization, separate meaning review, certificates, immutable
+request, execution and descriptive report. Fresh read-only checks cover the
+353-artifact cohort, eight recorded calls, two original ideas, seven retained
+formalization gaps, typed later feedback and all 8,640 retained case bytes.
+Thirty-four existing synthetic host/budget/researcher control methods pass at
+their recorded source versions. [Exact sources, receipts and helper corrections](../../tests/fixtures/manufacturing-m1-acceptance-2026-11-02.zip)
+are retained with criterion mapping in progress.json.
+
+This advances scoped REQ-001/002/003/004/006/012/013/018/023/028/029 evidence; it
+does not complete every corresponding TEST or generalize from one genuine
+technical witness. Earlier separate numerical replay/original-formula checks
+remain historical; the fresh checker reconciles retained bytes and aggregates.
+Original start-to-checked-report elapsed time includes incompletely attributed
+wait/repair intervals. Scientific freeze/admission, calibration, protected
+assessment, economic value, M2-M5 and future complete-cycle timing remain open.

@@ -1,0 +1,38 @@
+{
+  "schema": "conditional-calibration-resource-approval/1",
+  "source": "SESSION-2026-11-02-FINITE-CALIBRATION-RESOURCES",
+  "question_tool_call": "call_e6c9bd90ae284f49b2c280f5ee2a5942",
+  "question_item": 0,
+  "selected_answer": "Einmalig bis 180 h / 100 GiB unter diesen Voraussetzungen freigeben (empfohlen)",
+  "date": "2026-11-02",
+  "scope": "Exactly one existing retained-scalar 2,048-world conditional final with full separate replay; at most 180 metered compute hours and 100 GiB logical storage including finite checkpoints.",
+  "limits": {
+    "aggregate_compute_ms": 648000000,
+    "aggregate_logical_bytes": 107374182400,
+    "additional_grants_max": 179,
+    "attempt_compute_ms": 300000,
+    "attempt_storage_bytes": 268435456,
+    "max_attempts": 1
+  },
+  "conditions": [
+    "Actual source/input/seed/count/applicability preflight",
+    "Fixed isolated assessment/controller using the same interpreter/runtime and original retained calculator",
+    "Adequate selected physical capacity and complete backup/recovery plan"
+  ],
+  "physical_question": {
+    "question_item": 1,
+    "selected_answer": "C: verwenden, sobald mindestens 60 GiB frei bereitstehen (empfohlen)",
+    "selected_volume": "C:",
+    "minimum_initial_free_bytes": 64424509440,
+    "capacity_observation": {
+      "path": ".trf-runtime/calibration-resource-decision-2026-11-02/physical-storage-recheck-2026-11-02.json",
+      "sha256": "0e2b1a181e9ded7a0ea212cb8d14905e031b02c032168e274e5db25fca520fbc",
+      "observed_utc": "2026-11-02T19:25:11.9244169Z",
+      "free_bytes": 144312868864,
+      "threshold_met": true
+    },
+    "authority": "Use C: under the stated capacity condition; no cleanup, deletion, move or purchase implied."
+  },
+  "standing_boundaries": "No method/criteria change, partial replay, extra API budget, protected-2024 access, original-A continuation, grant reset, completed-study retarget or capital authority. This conditional study is not full-process calibration.",
+  "numerical_run_started": false
+}

@@ -16,9 +16,14 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without
   the user's explicit decision; dependent work waits, and existing authorizations remain binding.
 
-- **Approved construction priority:** complete scientific freeze/allocation and applicable calibration in
-  packages 3/4 under the sole plan. The user selected "Kernpfad priorisieren (empfohlen)"; the original-A
-  continuation is on hold. Existing full acceptance criteria, scientific contracts and budgets remain binding.
+- **Approved construction priority (November 2):** implement the [manufacturing
+  milestones](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#manufacturing-milestones-approved-november-2-2026)
+  inside the sole plan: accept the existing genuine technical path (M1), then scientific
+  evaluation (M2), separately tested policies (M3), monitoring/reporting (M4), and governed whole-process
+  improvement (M5). The seven packages retain full exits. Bounded M1 acceptance is recorded below;
+  M2 retains the approved packages 3/4 core priority and separately approved D099 semantics.
+  Original A remains on hold. Basic quality controls
+  and D096 incremental learning apply from M1. Contracts, protected data and budgets remain binding.
 
 - **Review reconciliation:** [constructive dispositions and library evidence](../reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-1-reconciliation-of-the-supplied-claude-critiques)
   and the user's constructive-scope approval are recorded in execution-plan/0.5. Apply acceptance-led slices,
@@ -26,7 +31,16 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   full implementation remains open, and existing numerical/scientific contracts remain binding.
   The builder chat is confirmed paused; its unverified AUXILIARY_RESOURCES.md draft remains preserved.
 
-- **Requested timing:** measure the first complete actual idea-to-independently-checked-report path under
+- **M1 technical acceptance:** the [same-plan closeout](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#m1-technical-path-acceptance-november-2-2026)
+  connects the genuine original paired idea/provider response through faithful formalization, separate
+  meaning review, certificates, execution/replay and descriptive report. Fresh read-only reconciliation
+  checks 353 cohort artifacts, all eight calls, seven retained gaps and all 8,640 retained cases;
+  34 synthetic host/budget/researcher control methods pass at their recorded sources. No substantive
+  connection gap was found. Historical epoch-to-checked-report time is 19,057.674215 seconds,
+  with incomplete active/wait/repair attribution. This accepts one bounded technical witness;
+  scientific admission/calibration and M2-M5 remain open. [Exact evidence](../../tests/fixtures/manufacturing-m1-acceptance-2026-11-02.zip).
+
+- **Requested timing:** measure the first future complete actual idea-to-independently-checked-report path under
   the [package 5 timing
   instruction](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#first-complete-cycle-timing-user-request-november-1-2026),
   retaining the original start, full wall-clock total, phase durations, waits/repairs and unknown intervals.
@@ -88,12 +102,28 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   fresh qualification before new intended use. No recertification or study run
   occurred for this slice.
 
-- **Pending reservation decision:** the source-grounded D082 follow-up separates
-  event identity from raw-input overlap. The [same-plan proposal](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#pending-outcome-reservation-semantics-decision-november-2-2026)
-  recommends stable event identity plus explicit dependence/exposure review;
-  unconditional raw-operand exclusion is the stricter alternative. This exact
-  scientific definition is not yet approved or implemented. Dependent admission
-  waits; no protected access, final series, retargeting or new spending follows.
+- **Reservation semantics approved:** D099 / [outcome-reservation/1.0](28_OUTCOME_RESERVATION.md)
+  adopts option A: stable event identity plus separate dependence/exposure/prior-use review.
+  The [same-plan proposal history](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#pending-outcome-reservation-semantics-decision-november-2-2026)
+  remains preserved; option B's unconditional raw-operand exclusion is not adopted.
+  Specification approval is distinct from actual implementation and scientific admission.
+  Its potential-event component now has source-bound genuine caller and atomic
+  conflict/recovery checks: 63 distinct methods (28 new, 35 existing), with the
+  unchanged pure 11-method result reused explicitly and 52 final-source methods
+  freshly run. Initial source-pin, collision-guard and inherited-test-history
+  defects are corrected and retained. Raw footprints, actual label dispositions,
+  dependence/exposure/prior use and the remaining scientific prerequisites stay
+  open. [Exact bounded evidence](../../tests/fixtures/outcome-reservation-checks-2026-11-02.zip).
+  No scientific positive freeze or protected access follows.
+
+- **Immediate finite calibration resources:** the [same-plan proposal](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#finite-calibration-resource-decision-november-2-2026)
+  records approval for one retained-scalar 2,048-world/20-cohort conditional final,
+  at most 180 metered compute hours / 100 GiB logical storage, with full replay and
+  unchanged attempt caps. C: is explicitly selected; the requested recheck finds
+  134.40 GiB free on NTFS at 19:25 UTC, meeting the initial 60 GiB recommendation
+  including a preserved full restore copy. Source/input/seed/count checks, the
+  fixed isolated controller, finite operator and actual backup/recovery readiness
+  remain required. This is not full-process calibration. No series has started.
 
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original
@@ -191,15 +221,14 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   retained-oracle methods pass; production source and all four validations remain
   unchanged. [Probe, counterexamples and disposition](../../tests/fixtures/native-root-scope-checks-2026-11-02.zip)
   record no performance run or adoption. The subsequent core family-policy binding
-  is summarized above. The owner trace now requires the pending reservation
-  definition above; dependent scientific implementation waits for that answer
-  under unchanged limits. Native libm replacement and skipped checker
+  is summarized above. The owner trace now has approved D099 semantics; actual M2 admission and
+  the finite resource decision above proceed under unchanged limits. Native libm replacement and skipped checker
   calls remain outside this slice. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require
-  2,048 fresh worlds, projecting about 141 hours/81 GiB from measured development costs; that multi-day
-  budget was not granted. Original A, paid research and protected
+  2,048 fresh worlds, projecting about 141 hours/81 GiB logical from measured development costs.
+  The later conditional one-run resource approval is recorded above. Original A, paid research and protected
   2024/scientific/final-calibration access remain blocked by their existing prerequisites.
 
 - **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a 24-pass

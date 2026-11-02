@@ -319,7 +319,7 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "Await the already presented question scientific_outcome_reservation_2026_11_02 (asked once): A stable event identity plus separate dependence/exposure/prior-use review, or B additional unconditional cross-batch raw-target-operand exclusion. No answer has been received; tool accepted means question delivery only. Do not repeat or infer approval from time. Dependent scientific identity/admission waits; continue only already authorized necessary independent acceptance work under unchanged limits.",
+  "next_action": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -5677,7 +5677,7 @@
       "git_diff_check_exit": 0,
       "scope": "Links, preservation, traceability and whitespace; final evidence/handoff mutation requires affected documentation refresh"
     },
-    "next_action": "Await the already presented question scientific_outcome_reservation_2026_11_02 (asked once): A stable event identity plus separate dependence/exposure/prior-use review, or B additional unconditional cross-batch raw-target-operand exclusion. No answer has been received; tool accepted means question delivery only. Do not repeat or infer approval from time. Dependent scientific identity/admission waits; continue only already authorized necessary independent acceptance work under unchanged limits.",
+    "next_action": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
     "retained_auxiliary_draft_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
     "changed_files": [
       "trading_researcher/scientific_freeze.py",
@@ -5935,7 +5935,7 @@
       }
     },
     "outcome_reservation_semantics_2026_11_02": {
-      "status": "AWAITING_USER_SEMANTIC_DECISION",
+      "status": "APPROVED_A_POTENTIAL_COMPONENT_CHECKED_FULL_SCIENTIFIC_PREREQUISITES_OPEN",
       "question_id": "scientific_outcome_reservation_2026_11_02",
       "purpose": "Resolve the exact record-equivalence/overlap rule encountered in the next IF-05/REQ-019/D082 scientific reservation criterion, without confusing operational footprints with independent evidence.",
       "base_commit": "ed67d5e9e9db11940f47f98c5840738d0fc92b9e",
@@ -6022,18 +6022,19 @@
         "id": "scientific_outcome_reservation_2026_11_02",
         "presented_once": true,
         "presented_at_utc": "2026-11-02T17:49:36.376120+00:00",
-        "answer": null,
-        "definition_activated": false,
+        "answer": "A: Ergebnisidentität und Abhängigkeit getrennt prüfen (empfohlen)",
+        "definition_activated": true,
         "tool_result": "accepted=true establishes question delivery, not user approval",
         "options": [
           "A recommended: stable event identity plus separate dependence/exposure/prior-use review",
           "B additional unconditional cross-batch raw-target-operand exclusion"
-        ]
+        ],
+        "implementation_or_scientific_admission_activated": false
       },
-      "independent_work_limit": "No unrelated code/test expansion. Limited technical footprint remains possible but is not a substitute for the missing scientific decision; continue only genuinely necessary already authorized independent acceptance work.",
+      "independent_work_limit": "The prior semantic question is resolved. Continue authorized M2 acceptance work and the separately approved finite run after actual prerequisites; no duplicate audits, retargeting or automatic extra resource/research grants.",
       "constructed_at_utc": "2026-11-02T17:46:57.685479+00:00",
       "construction_effort": "Read-only owner/decision/definition/rejection/caller trace and independent review; proposal/doc updates. Full source reconstruction start, coordination/rework/modeltokens/cash unknown. No numerical/API/paid or repeated code checks.",
-      "next_action": "Await the already presented question scientific_outcome_reservation_2026_11_02 (asked once): A stable event identity plus separate dependence/exposure/prior-use review, or B additional unconditional cross-batch raw-target-operand exclusion. No answer has been received; tool accepted means question delivery only. Do not repeat or infer approval from time. Dependent scientific identity/admission waits; continue only already authorized necessary independent acceptance work under unchanged limits.",
+      "next_action": "Finish the capped scalar operator and actual immutable host/source/input/seed/count/backup preflight under the separately approved one-run180h/100GiB authority and selected C:. Then continue M2 actual raw/dependence/selection/data and information/calibration admission through genuine callers; no private substitution counts as scientific admission.",
       "live_processes": [],
       "documentation_checks": [
         {
@@ -6094,6 +6095,141 @@
         "limits": "This bounded owner trace is not a full-project completion/blocker audit or proof that no possible independent software work exists. It records why a speculative selection scaffold was not opened at this frontier.",
         "next": "Retain the one pending outcome-reservation choice and resume its actual caller/denial/recovery implementation when answered; complete all remaining selection/information/calibration requirements afterward under current authority.",
         "operations": "Read-only source inspection; no Registry, model, numerical, paid or additional test operations."
+      },
+      "adopted_contract": "docs/architecture/28_OUTCOME_RESERVATION.md",
+      "approval_record": "docs/reviews/implementation-2026-10-25/outcome-reservation-approval-2026-11-02.json",
+      "resolved_blocker": "Direct option A resolves the semantic wait. The potential-event component and its actual fail-closed caller are checked; full D099 and scientific prerequisites remain open.",
+      "potential_event_component_2026_11_02": {
+        "schema": "outcome-reservation-potential-component-closeout/1",
+        "status": "PASS_BOUNDED_COMPONENT_CHECKS",
+        "checked_at_utc": "2026-11-02T19:38:55.693369+00:00",
+        "base_commit": "a0258fef7e3a52af7776906c189a5e101a14c847",
+        "source_sha256": {
+          "trading_researcher/scientific_freeze.py": "9c9629635ae90561640c5b7f0a285b41e2e38be9dd284e0f7388193f7e4cd55b",
+          "trading_researcher/outcome_reservations.py": "ee6e992cabbbbba13f13d568e451d1b5b248dc38bace19a3b5d4cf6c67468137",
+          "tests/test_outcome_reservations_independent.py": "5fdb79c901c93edc33e441f70f72e1260f64ef2a76f949b5dc73f5f8bc51ac00",
+          "tests/test_outcome_reservation_caller_independent.py": "469597c5772df16ea257061a4fb5f5b5e1ce5cc5a85aa60615996f05e2cd18b9",
+          "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+          "docs/reviews/implementation-2026-10-25/verify_implementation.py": "b1332e3714419a59bb0a33c90c82eb73f57d300ac5e9f97e5581f4030089ea7c"
+        },
+        "checks": {
+          "potential-events-check": {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/potential-events-check.json",
+            "sha256": "d3edaac9c7ee9c3bc3789ae75b09d5c4d7c3b4c5139035d2bbfd3b80b1c47b2a",
+            "exit_code": 0,
+            "distinct_methods": 11,
+            "seconds": "0.45509700005641207",
+            "evidence_use": "Recorded pure-component run reused for unchanged module/test bytes only."
+          },
+          "existing-freeze-final-check": {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/existing-freeze-final-check.json",
+            "sha256": "e91715cbf0dd22c87bb77688056c1f3ea5cfb9fa7ae3d266ff973e0fe5dbfc3e",
+            "exit_code": 0,
+            "distinct_methods": 25,
+            "seconds": "72.50303299998632",
+            "evidence_use": "Fresh final source-pinned central run."
+          },
+          "family-binding-final-check": {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/family-binding-final-check.json",
+            "sha256": "6ffe1a1623c080771c233d2e7082211867049f491673b1d566378491526dd9f9",
+            "exit_code": 0,
+            "distinct_methods": 7,
+            "seconds": "26.20062910002889",
+            "evidence_use": "Fresh final source-pinned central run."
+          },
+          "existing-owned-plan-final-check": {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/existing-owned-plan-final-check.json",
+            "sha256": "eee7ee6fab3cc60b27417346454bfd77e5c30a66aea4bdaa64279854609877ad",
+            "exit_code": 0,
+            "distinct_methods": 3,
+            "seconds": "148.67587109998567",
+            "evidence_use": "Fresh final source-pinned central run."
+          },
+          "reservation-caller-final-check": {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/reservation-caller-final-check.json",
+            "sha256": "c78bc4362a935e3d08ecb1a9a9dd4de2e320a968a965a073a5b0e3936a04df0a",
+            "exit_code": 0,
+            "distinct_methods": 17,
+            "seconds": "221.2997491999995",
+            "evidence_use": "Fresh final source-pinned central run."
+          }
+        },
+        "distinct_methods_total": 63,
+        "new_distinct_methods": 28,
+        "original_guard_counterexample": "Retained old36a source fails the one independent qualified-record reuse case as expected; production source never replaced.",
+        "completed_criteria": [
+          "D099 / TEST-05/13/19: source-neutral potential-event coordinates, strict compact membership and structural boundaries without outcome expansion.",
+          "D099 / TEST-24/28: actual supported owned-plan caller retains source/certificate bindings; revocation and copied-row corruption fail closed; runtime currentness negative verdict explicitly simulated.",
+          "TEST-19: atomic family version/hash binding, stable-event and completed-record conflicts, legacy UNKNOWN, interrupted commitment and same-record restart/restore controls."
+        ],
+        "remaining": [
+          "Full D099 raw nested-profile footprints and actual label/publication dispositions.",
+          "Independent dependence/exposure/prior-use, scientific campaign/selection/data admission.",
+          "Applicable information/N_min/calibration, genuine scientific positive freeze/execution/quarantine/whole-batch release.",
+          "All remaining M2-M5 and full seven-package exits."
+        ],
+        "retained_failures": [
+          "First new/old-owned fixture setup failed because a D099 link changed pinned document14; exact historical bytes and validator restored, PINS untouched.",
+          "Review found new event branch had dropped qualified-record collision; independent old-source counterexample retained and guard corrected.",
+          "Three added public negative tests initially assumed an empty inherited attempt history; fixed to preserve inherited prefix and assert exact two new attempts; complete17 rerun PASS."
+        ],
+        "authority": "Potential metadata and transaction/caller qualification only. All three production scientific admission gaps remain; no scientific/economic/capital claim, protected2024, paid call, original-A continuation or numerical final operation.",
+        "preservation": {
+          "AUX_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
+          "M1_historical_intake": "31-member archive CRC/hash and four direct input hashes checked; accepted bounded technical witness retained without rerunning its 34 controls or actual old model/case computations."
+        },
+        "live_processes": [],
+        "independent_review": {
+          "path": ".trf-runtime/outcome-reservations-2026-11-02/independent-source-review.json",
+          "sha256": "46cffac721290b12b5cecc1a6ab2f4de23676bd5e61496720e1b36fc9285e469",
+          "status": "APPROVED_BOUNDED_SOURCE_PINNED",
+          "scope": "Source-pinned bounded component and exact central receipts; no extra test run or scientific verdict."
+        },
+        "evidence_archive": {
+          "path": "tests/fixtures/outcome-reservation-checks-2026-11-02.zip",
+          "bytes": 376595,
+          "sha256": "ddf8acd3860c7061113fb87c8129238fecbcd8c1795845846e8a3a34415d9304",
+          "members": 41,
+          "CRC_all_raw_readback": "PASS"
+        },
+        "documentation_checks_final": [
+          {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/implementation-documentation-check.json",
+            "sha256": "7597a68a519662af73890a60ec1b5435be10f2f841ef0904df669f4728b18c18",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+            ],
+            "exit_code": 0,
+            "seconds": "0.3419964999775402",
+            "scope": "Final related D099/M1/resource adoption docs; subsequent edit records these outcomes and refreshed next actions only; final whitespace/JSON/preservation checked afterward."
+          },
+          {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/system-model-documentation-check.json",
+            "sha256": "7a5446860f0df43f6c82330c0be504c40d094879218d1b804a7e58c3a2c41a12",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/verify_system_model.py"
+            ],
+            "exit_code": 0,
+            "seconds": "5.943741500028409",
+            "scope": "Final related D099/M1/resource adoption docs; subsequent edit records these outcomes and refreshed next actions only; final whitespace/JSON/preservation checked afterward."
+          },
+          {
+            "path": ".trf-runtime/outcome-reservations-2026-11-02/retail-contract-documentation-check.json",
+            "sha256": "819eb03eb83cf334dd177158bc6f562a963e7bf9041ac9e59d8ef3d8758c1bbe",
+            "command": [
+              "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+              "-B",
+              "docs/reviews/verify_retail_contract.py"
+            ],
+            "exit_code": 0,
+            "seconds": "5.999083000002429",
+            "scope": "Final related D099/M1/resource adoption docs; subsequent edit records these outcomes and refreshed next actions only; final whitespace/JSON/preservation checked afterward."
+          }
+        ]
       }
     }
   },
@@ -6801,7 +6937,7 @@
       },
       "scientific_readiness": false
     },
-    "next_action": "Await the already presented question scientific_outcome_reservation_2026_11_02 (asked once): A stable event identity plus separate dependence/exposure/prior-use review, or B additional unconditional cross-batch raw-target-operand exclusion. No answer has been received; tool accepted means question delivery only. Do not repeat or infer approval from time. Dependent scientific identity/admission waits; continue only already authorized necessary independent acceptance work under unchanged limits.",
+    "next_action": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
     "changed_files": [
       "trading_researcher/study_runs.py",
       "tests/test_second_order_independent.py",
@@ -9465,6 +9601,493 @@
           }
         }
       }
+    },
+    "finite_calibration_resource_decision_2026_11_02": {
+      "status": "ONE_CONDITIONAL_RUN_AND_C_TARGET_APPROVED_PREFLIGHT_REQUIRED",
+      "instruction": "SESSION-2026-11-02-CORE-CLOSEOUT, explicit user-authorized message from chat01a19904-f581-72d0-ae4f-78c1a0c8c3c5: fix encountered obstacles through qualified integration; present current finite full-calibration resource decision now, preserving full scope and no extra allowance.",
+      "plan_section": "finite-calibration-resource-decision-november-2-2026",
+      "recommended_route": "Existing retained-scalar FamilyCalibrationStudies, immutable development37208 and calculator425124; no nativefinalselector/transfer/retarget required. Pin current assessment/controller source separately in an isolated checkout with same interpreter/runtime.",
+      "inventory": {
+        "joint_worlds": 2048,
+        "stress_laws": 2,
+        "beta": [
+          "-1/2",
+          "1/2"
+        ],
+        "mask_mean_block": 8,
+        "common_share": "1/2",
+        "vectors": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "worlds_each_cell": 256,
+        "time_rows": 4096,
+        "responses": 2,
+        "instruments": 1,
+        "lengths": [
+          4,
+          8,
+          16
+        ],
+        "draws_per_length_response": 19999,
+        "generation_plus_full_separate_replay_draws": 491495424,
+        "criterion_cohorts": 20,
+        "scope": "Complete selected shared-template conditional evaluator profile; not fullframework/fullprocesscalibration."
+      },
+      "proposed_resources": {
+        "aggregate_compute_ms": 648000000,
+        "aggregate_compute_hours": 180,
+        "aggregate_logical_bytes": 107374182400,
+        "aggregate_logical_GiB": 100,
+        "initial_compute_ms_max": 3600000,
+        "additional_grants_max": 179,
+        "each_grant_compute_ms_max": 3600000,
+        "each_grant_storage_bytes_max": 4294967296,
+        "attempt_compute_ms": 300000,
+        "attempt_storage_bytes": 268435456,
+        "max_attempts": 1,
+        "grant_metadata_max_bytes": 187695104,
+        "interpretation": "Finite operator must enforce total/count/cash authority at actual RESOURCE_STOP checkpoints. Storage-onlygrantscount.100GiB is measured-planning allowance,not512GiB allattemptcapworstcase;no guaranteed completion or automaticrenewal."
+      },
+      "timing_evidence": {
+        "old_scalar_4096_worlds": 16,
+        "seconds_min": "238.246",
+        "seconds_max": "263.655",
+        "seconds_mean": "248.14625",
+        "linear_hours_range": [
+          "135.5355022222222",
+          "149.9904"
+        ],
+        "planning_hours": [
+          140,
+          180
+        ],
+        "setup_evidence": "Earlier separate158.883second preparation and~106MiBtrackedcheckout;notfuturefullsetupmeasurement.",
+        "limits": "Newseed/stressvariation,hostload,Registrygrowth,commit/observer/waitoverhead unknown.149.811452nativeengineeringpoint cannot provide reliable85h forecast or transfer toscalar."
+      },
+      "physical": {
+        "C_free_bytes": 144312868864,
+        "C_observed_utc": "2026-11-02T19:25:11.9244169Z",
+        "C_free_GiB_approx": "134.40",
+        "other_volume": "C: explicitly selected by the user; NTFS and the initial 60 GiB planning threshold verified.",
+        "incremental_retained_scalar_bytes_range": [
+          14867652608,
+          15412729856
+        ],
+        "logical_old_projection_GiB": "81.1042,not physical",
+        "normal_operation_free_planning_GiB": 40,
+        "extra_full_restore_bytes": 16706937654,
+        "peak_model_with_fullrestore_setup_and4GiBfloor_bytes": 57857471704,
+        "recommended_free_bytes": 64424509440,
+        "recommended_free_GiB": 60,
+        "margin_over_peak_model_bytes": 6567037736,
+        "scope": "Measuredunique filelength-based conditional projections,notallocatedNTFSextent/hardcap.60GiB includesbeforeafterbackup+preservedfullrestorecopy+2GiBsetup/temp+4GiBfloor;40GiB excludesextra restore. No newscientificgate orhardware-lossproof. No cleanup/delete/move/purchase performed/authorized.",
+        "previous_C_observation": {
+          "C_free_bytes": 19272409088,
+          "C_observed_utc": "2026-11-02T18:40:11.463074Z",
+          "C_free_GiB_approx": "17.95"
+        },
+        "selected_target": "C:",
+        "capacity_recheck_sha256": "0e2b1a181e9ded7a0ea212cb8d14905e031b02c032168e274e5db25fca520fbc",
+        "capacity_recheck_path": ".trf-runtime/calibration-resource-decision-2026-11-02/physical-storage-recheck-2026-11-02.json"
+      },
+      "evidence": {
+        "inventory-time-review.json": {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/inventory-time-review.json",
+          "sha256": "2b8a3b6cea75ca35b4faf23bbf7f3fd6cab67b009667f68ee903ee6844d93b5c"
+        },
+        "physical-storage-inventory.json": {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/physical-storage-inventory.json",
+          "sha256": "a775744c18d2d4071908dbbdd3327096093f160f8675bedef745f3198e93cad0"
+        },
+        "central-resource-reconciliation.json": {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/central-resource-reconciliation.json",
+          "sha256": "65af270b09db0c939eb0fe94c57b3dc89e3a83e0fa1912d7d578b58f3ce14272"
+        }
+      },
+      "central_acceptance": "PASS: sealedhashes,sourcehashes,actualreadonlyquery_only32worldmanifest/assigned4,8,16 anddraw/peak arithmetic; DBmetadata stable. No Broker/test/world/paid/protected-data operation.",
+      "failure_policy": "Keep max1/fullnextreservation/unknownorphanfence;retainall failuresandcharges. A failedrequiredworld can preclude completecohortpass. Diagnose/fix concretecause; genuinely missing recovery/method/resource authority must be asked promptly,notresampled/dropped or replaced byoptimizationseries.",
+      "required_preflight": "Complete32worldinventory/continuation,currenttypeddependencies/revocation,retainedcalculatorblob/runtime,freshfixedseedandrecordedcollisioncheck,count/applicability,sourceisolation,reviewedfiniteoperator andactualphysical/backup target readiness. No finalinput/seedpreparation/grant/runyet.",
+      "remaining_full_scope": "Population/nuisance/stress adequacy,justified information/N_min,full discovery/selectionprocesscalibration and actualscientificadmission/release remain. No fullprocessinventory/repetitioncount invented; fix/decide underownpreoutcomecontracts.",
+      "questions_pending": "None from the two resource questions. Both direct answers are retained; actual execution prerequisites remain.",
+      "current_limits": "Oneconditional180h/100GiBretainedscalar2048run approved after preflight/storage. No actualgrant/finalpreparation/worldyet. Perattempt300s/256MiB/max1,method/fullreplay/criteria,USD0.574585/53calls/7revoked/no2024/originalAhold/noretarg/capital remain.",
+      "next_chain": "Remaining-admissible-idea-to-report-chain-november-2-2026 in soleplan maps all M2 scientificgates and qualifiedidea/report; M3policies/M4monitoring/M5wholeprocess remainfullscope.",
+      "construction_effort": "Read-only scopedreviews/physicalmetadata/centralprimarycheck and proposal/adoptiondocs; interruptedhelper schema/eol/concurrent-context assumptions stopped before clobber,corrected against actualcurrentM1edits. Totalconstructiontime/coordination/modeltokens/cashunknown. No repeatedcode/numericchecks.",
+      "next_action": "Complete the current D099 potential-event/caller correction and independent checks, then qualify the finite capped operator and pin the isolated scalar host; verify actual source/input/seed/count and complete backup/restore readiness before preparation/start. C: target and one 180-hour/100-GiB run are expressly approved.",
+      "live_processes": [],
+      "approval_record": "docs/reviews/implementation-2026-10-25/calibration-resource-approval-2026-11-02.json",
+      "approved_answer": "Einmalig bis 180 h / 100 GiB unter diesen Voraussetzungen freigeben (empfohlen)",
+      "questions": {
+        "compute_logical": {
+          "presented_once": true,
+          "answer": "Einmalig bis 180 h / 100 GiB unter diesen Voraussetzungen freigeben (empfohlen)",
+          "authority": "Oneconditionalrunonly;beforeactualprerequisites noexecution."
+        },
+        "physical_target": {
+          "presented_once": true,
+          "answer": "C: verwenden, sobald mindestens 60 GiB frei bereitstehen (empfohlen)",
+          "authority": "C: approved when at least 60 GiB free; current metadata meets that threshold. Backup, pinned controller and actual source/input/seed/count preflight still required."
+        }
+      },
+      "evidence_archive": {
+        "path": "tests/fixtures/calibration-resource-decision-checks-2026-11-02.zip",
+        "bytes": 79196,
+        "sha256": "19ad02b5f9ca7910866edf413e514235a568421a1adbcae7ac6c85e07d2906b4",
+        "members": 16,
+        "CRC_all_raw_readback": "PASS",
+        "scope": "Read-only evidence,source/recovery/physical/time analysis,finiteproposal and docchecks inclretainedbaselinefailedappend. NoRegistry/key/runtimebinary/protecteddata/numericalworld."
+      },
+      "documentation_checks": [
+        {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/implementation-documentation-check.json",
+          "sha256": "5210d1810da836f252b84ec513e0a0b111fe12d30eba56be99411831ae15f1db",
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "0.31871569994837046",
+          "scope": "Final relatedD099/resource/milestone documentation;no runtime/science certification."
+        },
+        {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/system-model-documentation-check.json",
+          "sha256": "af877ab622132dd1abf9127430c2c52aaecb190dae9a21265a43960a81f84240",
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "6.368788999971002",
+          "scope": "Final relatedD099/resource/milestone documentation;no runtime/science certification."
+        },
+        {
+          "path": ".trf-runtime/calibration-resource-decision-2026-11-02/retail-contract-documentation-check.json",
+          "sha256": "a13bd19c35bf7282939503e41506731033ae03b76e126475e2d97cb06118b65b",
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "6.277025600022171",
+          "scope": "Final relatedD099/resource/milestone documentation;no runtime/science certification."
+        }
+      ],
+      "failure_history": "Initialimplementationdoccheckfailed on ownredundantD099appendixto07;exactpreexisting07bytesrestored,authoritykeptin28/14,andall3affectedchecksrefreshedPASS. Initialreceiptsretained. Validatornotweakenedforthisfailure."
     }
+  },
+  "manufacturing_milestones_2026_11_02": {
+    "schema": "manufacturing-milestones-construction/1",
+    "authority": "SESSION-2026-11-02-MANUFACTURING-MILESTONES: user explicitly requested implementation of the complete proposed plan.",
+    "execution_plan_version": "execution-plan/0.6",
+    "updated_at_utc": "2026-11-02T18:35:03.685616+00:00",
+    "purpose": "Accept existing genuine technical research evidence before expanding the manufacturing path.",
+    "status": "M1_ACCEPTED_BOUNDED_TECHNICAL_WITNESS_M2_IN_PROGRESS",
+    "milestones": {
+      "M1": "ACCEPTED_BOUNDED_TECHNICAL_WITNESS",
+      "M2": "IN_PROGRESS_EXISTING_SCIENTIFIC_CORE",
+      "M3": "OPEN_SEPARATE_POLICY_EVALUATION",
+      "M4": "OPEN_D087_D088_MONITORING_REPORTING",
+      "M5": "OPEN_GOVERNED_WHOLE_PROCESS_IMPROVEMENT"
+    },
+    "stations": "CMP-01 through CMP-09 via existing IF-01 through IF-13; CMP-10/11/12 retain applicability, visibility and governed improvement authority.",
+    "completed_acceptance": {
+      "REQ-001/002": "Exact genuine discovery response and untouched original/candidate/semantic mapping; separate host-observed meaning review. This witness does not establish general invention coverage.",
+      "REQ-003/012/018": "Exact retained certificates, immutable compilation/request, cases and historical separate replay/original audit; fresh unchanged independent case reconciliation.",
+      "REQ-004/006/013/023": "Two-perspective base binding plus 34 existing current-source synthetic host/budget/researcher checks: denied access/forgery/protected ancestry, replay/source failure, revocation, finite usage, refusal/timeout/cancellation and retained public replies.",
+      "REQ-028/029": "Full four-epoch/eight-job/eight-call/two-idea cohort with seven retained gaps, typed later feedback and original known/unknown timing. No scientific or economic upgrade."
+    },
+    "root_idea_id": "4abce1d5187d7fd229b52dd9a00e0beca8ee3947e9a1470dbc5351ff78c8872a",
+    "execution_id": "8456955e281d7e4f9c50c33ba7763597d87a06ee24c66bd6f1a09bed82003980",
+    "acceptance_checks": {
+      "genuine_discovery_and_two_perspective_context_binding": true,
+      "original_and_provider_authored_candidate_without_manual_repair": true,
+      "separate_host_observed_meaning_review": true,
+      "immutable_certificates_execution_and_report_binding": true,
+      "complete_registered_cohort_gaps_and_later_feedback_retained": true,
+      "original_start_and_unknown_phase_intervals_retained": true,
+      "fresh_unchanged_independent_case_and_accounting_reconciliation": true,
+      "registry_and_spend_ledger_bytes_unchanged": true
+    },
+    "cohort": {
+      "epochs": 4,
+      "jobs": 8,
+      "calls": 8,
+      "ideas": 2,
+      "artifacts": 353,
+      "retained_gap_ids": [
+        "156b958cb593a5b624bf6231849fc1eecce30651b785487d66ca269e820daeff",
+        "20aeb22cef22f57f30e639c10736f9a28b20c7bb16d03e2c5bc8ff95dbd262ff",
+        "2570cc9fe22b64547ae90a009b043782aa04a268eb8c4feadf8fe3ae84bd86c5",
+        "3be03c7ef3639e4ffc581c6ab41e07b829fb3bf2d41c942054a206d17b344639",
+        "8f8c810dce5fcffc44d506d6b3d45596db6dfdb22be56df4cdffd32e013c1135",
+        "919c1333a4b70e923445a5e79026966f7218ddafa67ea75fa952c18d08548877",
+        "9d2c3e8a7ae03b986dbe6b20c36a15440c89eed5bf410f63226d587f869cac0f"
+      ],
+      "retained_research_records": 12
+    },
+    "timing": {
+      "start_basis": "Original discovery epoch creation; not last successful continuation",
+      "discovery_epoch_created_at_utc": "2026-10-30T10:59:42+00:00",
+      "original_idea_created_at_utc": "2026-10-30T11:02:29+00:00",
+      "descriptive_report_recorded_at_utc": "2026-10-30T16:12:21.679097+00:00",
+      "independently_checked_report_at_utc": "2026-10-30T16:17:19.674215+00:00",
+      "epoch_to_checked_report_elapsed_seconds": 19057.674215,
+      "idea_to_checked_report_elapsed_seconds": 18890.674215,
+      "successful_formalization_review_wall_seconds": 403.31785580000724,
+      "execution_replay_original_audit_ms": 77849,
+      "all_cohort_epoch_times": [
+        {
+          "id": "4f858523d4f240558b7058e411c50484",
+          "created_at_utc": "2026-10-30T13:38:15+00:00"
+        },
+        {
+          "id": "647cb4fd972545e1a37c3f20226f5486",
+          "created_at_utc": "2026-10-30T10:59:42+00:00"
+        },
+        {
+          "id": "9437567cebe54dc7a2ca22c1cf3f2c10",
+          "created_at_utc": "2026-10-30T12:44:35+00:00"
+        },
+        {
+          "id": "c04f6879e5194c31b67edac200add00f",
+          "created_at_utc": "2026-10-30T16:00:10+00:00"
+        }
+      ],
+      "qualification": "Wall-clock differences from retained timestamps. Stage timers are not a disjoint full-duration allocation; discovery, repairs, preparation, waits and operator-active time are not completely classified. Unknown intervals remain unknown. This is a historical path, not a newly executed or accelerated cycle."
+    },
+    "fresh_checks": {
+      "unchanged_independent_retained_case_reconciliation": "PASS; 8640 cases; no numerical evaluator/original-formula rerun",
+      "synthetic_control_methods": 34,
+      "receipts": [
+        {
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_paired_breakout_host.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "test_count": 10,
+          "elapsed_seconds": 167.6894671000191,
+          "output": ".trf-runtime\\manufacturing-m1-2026-11-02\\test_paired_breakout_host.py.log",
+          "output_sha256": "7d7dd777045157b2bf3a56660903bd0fa2002f35d0fec76c9cb57baa45dc78ef"
+        },
+        {
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_paired_breakout_budget.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "test_count": 14,
+          "elapsed_seconds": 6.367980199982412,
+          "output": ".trf-runtime\\manufacturing-m1-2026-11-02\\test_paired_breakout_budget.py.log",
+          "output_sha256": "f1fd654784a485fa3aa88310d137e875df305463430ebd6aa0befc9acbd71558"
+        },
+        {
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "-m",
+            "unittest",
+            "discover",
+            "-s",
+            "tests",
+            "-p",
+            "test_researcher.py",
+            "-v"
+          ],
+          "exit_code": 0,
+          "test_count": 10,
+          "elapsed_seconds": 13.195938999997452,
+          "output": ".trf-runtime\\manufacturing-m1-2026-11-02\\test_researcher.py.log",
+          "output_sha256": "6abda390ae4a636dd6239c3b5216eb589420d60110945cf670855b695191a286"
+        }
+      ]
+    },
+    "evidence_archive": {
+      "path": "tests/fixtures/manufacturing-m1-acceptance-2026-11-02.zip",
+      "sha256": "e8cd9c82493c924a189c1d5db991bc6c11e6d1b6b5b46a107ecdea38376cddcd",
+      "members": 28,
+      "scope": "Exact inspection/evidence sources and receipts; excludes private registry, market rows/case blob, credentials and any new scientific certificate.",
+      "prior_local_pre_documentation_sha256": "3e79c809f727b25280f8bd27be6af4db7a00990283f75c32e8baa2224553f938"
+    },
+    "source_base": "a0258fef7e3a52af7776906c189a5e101a14c847",
+    "historical_input_sha256": {
+      "docs\\reviews\\implementation-2026-10-25\\paired-breakout-result-2026-10-30.json": "96873fb37ab4ca4e9faea24c7f2aba93406eb84bfc714cf6760c5c0a269c7195",
+      "docs\\reviews\\implementation-2026-10-25\\paired-breakout-independent-audit-2026-10-30.json": "a0ff233565edf7afefc31a7721b4856cd585c9c7be7a3c816588094f89f70fbc",
+      "docs\\reviews\\implementation-2026-10-25\\paired-breakout-feedback-publication-2026-10-30.json": "3a2daa1aeadbadb782c74d69429ff7bf82da165bfcc554038f90d460fd54d869",
+      ".trf-runtime\\paired-breakout-continuation-2026-10-30\\independent-actual-reconciliation.py": "ee6c66fa4fd3ef1dad41a94866b60b000f9eb88935f94dda132927f5c113c98f"
+    },
+    "new_provider_calls": 0,
+    "scientific_readiness": false,
+    "failure_history": {
+      "status": "RETAINED_AND_CORRECTED_EVIDENCE_HELPER_FAILURES",
+      "failures": [
+        {
+          "attempt": 1,
+          "exit_code": 1,
+          "source": "initial-helper-failed-report-assumption.py",
+          "finding": "Published report is the exact execution report projection excluding request.",
+          "correction": "Check the exact projection plus request equality to the immutable compilation.",
+          "source_sha256": "e674bc09912cb6ed1846dd2f29bcb896b36f007a69bb4bf9cb86561db5e2da77"
+        },
+        {
+          "attempt": 2,
+          "exit_code": 1,
+          "source": "second-helper-failed-release-column.py",
+          "finding": "Exploratory helper used nonexistent releases.target_epoch; actual column is epoch.",
+          "correction": "Inspect the actual owner rather than infer its storage from a generic name.",
+          "source_sha256": "1c7407666c92c137c6944b7afaa026463e4bc3c466694ad666e05d657ae53c3d"
+        },
+        {
+          "attempt": 3,
+          "exit_code": 1,
+          "source": "third-helper-failed-release-epoch.py",
+          "finding": "Owned development feedback uses its immutable release grant, not generic batch releases.",
+          "correction": "Verify the owned grant, typed records, original epoch-126 context and publication event.",
+          "source_sha256": "32fbb64002d9da177fb91b3e7e2782df032bd933e7a4250ac9afd0f6ded3cb26"
+        }
+      ],
+      "qualification": "Inspection helper defects, not observed runtime/candidate defects; no original artifact, report, numerical result or research registry was repaired. An earlier read-only schema probe also selected a nonexistent job_specs.spec column before using envelope."
+    },
+    "reuse": "Existing independent retained-case checker, original model/meaning/execution/report artifacts and existing independently authored tests. Python sqlite3/json/hashlib/zipfile only inspect/package project-owned evidence; no new dependency, runtime or audit platform.",
+    "construction_effort": {
+      "control_seconds": 187.25338629999897,
+      "acceptance_seconds": 1.7999493000097573,
+      "coordination": "Read-only confirmation of active existing M2 construction chat 01a19b95-777d-7cb2-9d67-8d2cd82ea782; its D099/runtime/resource work is not duplicated.",
+      "total_wall_seconds": null,
+      "unmeasured": "Initial exploration, documentation, helper repairs and coordination; these costs are retained as unknown rather than omitted or attributed to research calls."
+    },
+    "unverified": [
+      "Current installed-source production admission or future eligibility",
+      "General model invention/formalization reliability and global originality",
+      "Complete active-time attribution or measured research acceleration",
+      "Scientific information/calibration, protected assessment, economic value, policy qualification, monitoring delivery and whole-process improvement benefit",
+      "Documentation preexisting-file inventory uses the existing dated adoption checks, not the historical optional system-model CHANGED inventory for this slice."
+    ],
+    "preserved_boundaries": [
+      "No production runtime source changes by this slice",
+      "Registry and spend-ledger bytes unchanged at retained-path check",
+      "Original A hold, all grants/charges, protected assessment and zero capital retained",
+      "D099 option A approval is separate from actual admission and resource decisions"
+    ],
+    "next_action": "M1 is accepted only for the exact historical technical witness. Continue M2 in its existing active construction chat: D099 outcome reservation and complete selection/data/exposure/information/calibration/admission under actual resource authority. Do not duplicate its writes or label M2-M5 complete. Future complete-cycle timing remains pending; this historical reconstruction is not an earliest-cycle or acceleration claim.",
+    "documentation_checks": {
+      "status": "PASS",
+      "at_utc": "2026-11-02T18:40:18.097414+00:00",
+      "gates": [
+        {
+          "command": "python -B docs/reviews/verify_system_model.py",
+          "status": "PASS",
+          "exit_code": 0,
+          "evidence": "system-model-verification-settled.json",
+          "sha256": "c1c80f25a30dda0e657a34ddd11421749bb464139d4dfcfa952bce1c1a617327"
+        },
+        {
+          "command": "python -B docs/reviews/verify_retail_contract.py",
+          "status": "PASS",
+          "exit_code": 0,
+          "evidence": "retail-contract-verification-settled.json",
+          "sha256": "704c609813cf534e7d10a2ca0119d54f54d6758d37a4c5e1508aa9dd0641f755"
+        },
+        {
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+          ],
+          "status": "PASS",
+          "exit_code": 0,
+          "evidence": "implementation-verification-settled.json",
+          "sha256": "a080f5be5fc05457cebfef81134b1bae59fd3cf41e57bd86942f042e1ee52dcb"
+        }
+      ],
+      "git_diff_check_exit": 0,
+      "retained_failures": [
+        {
+          "system-model-verification.json": [
+            "Decision forward trace missing",
+            "Decision reverse trace missing"
+          ]
+        },
+        {
+          "retail-contract-verification.json": [
+            "Inherited D099 trace failures",
+            "Adopted scientific policy differs from approved proposal"
+          ]
+        },
+        {
+          "implementation_initial_exit_code": 1,
+          "error": "Unplanned baseline change: docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md"
+        },
+        {
+          "retail-contract-verification-final.json": [
+            "Adopted scientific policy differs from approved proposal"
+          ]
+        },
+        {
+          "finalizer_initial_exit_code": 1,
+          "error": "IndentationError before execution; parenthesized the multiline evidence-record string; no check or source mutation ran."
+        }
+      ],
+      "correction": "Complete D099 forward/reverse mapping; explicitly allow the independently approved D099 contract extension in implementation preservation. Move its exact note to the version-resolution preamble, preserving the original 15 policy sections unchanged. No comparison was disabled or scientific expectation changed.",
+      "unverified": "Document checks do not establish scientific validity, delivery, economic usefulness, general model behavior or full M2-M5 completion.",
+      "final_status_reconciliation": {
+        "status": "PASS",
+        "checks": {
+          "system-model-verification-final-status.json": {
+            "status": "PASS",
+            "exit_code": 0,
+            "sha256": "d59dacb1afad36db8addd8feb21f40071669c3c7efa3cf984c9ec4013bfd9c21",
+            "checked_files": 22
+          },
+          "retail-contract-verification-final-status.json": {
+            "status": "PASS",
+            "exit_code": 0,
+            "sha256": "a2002915c60f92e805825819094da4e64d01fb0bff9451e086e28be22d11a429",
+            "checked_files": 27
+          },
+          "implementation-verification-final-status.json": {
+            "status": "PASS",
+            "exit_code": 0,
+            "sha256": "32adfd6f1f9b82d47939613fd252045d63ac7665fd019e1aa740c8d27fc583bf",
+            "entrypoint": "Existing verify_implementation.check()"
+          }
+        },
+        "checked_control_sources_unchanged": true,
+        "git_diff_check_exit": 0,
+        "qualification": "Final document-status reconciliation;34runtime controls and historical path keep their separate exact source scope."
+      }
+    },
+    "changed_files": [
+      "README.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/architecture/12_TRACEABILITY_MATRIX.md",
+      "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md",
+      "docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "docs/reviews/implementation-2026-10-25/progress.json",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+      "tests/fixtures/manufacturing-m1-acceptance-2026-11-02.zip"
+    ],
+    "concurrent_scope_preserved": "Active construction chat owns D099 specification/runtime and resource continuation. Shared documentation consistency fixes are included here; its decision/register/proposal files remain separate from M1 work."
   }
 }

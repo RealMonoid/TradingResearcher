@@ -370,15 +370,29 @@ overlapping cost, not evidence that a check is redundant. No operation, numerica
 calculation or test was repeated for the independent read-only reconciliation.
 [Exact profile, sources, prior rejection and sealed review](../../../tests/fixtures/native-guard-profile-checks-2026-11-02.zip)
 retain the 60-second outer bound and absence of a timeout.
-**Next:** investigate a small cache-specific containment adapter using existing
-path operations, potentially reusing a freshly resolved root only within one
-tree verification. Keep all four complete validations, per-member resolution,
-late root/ancestor alias checks, single-link regular files, full hashes and the
-existing fallback. Read the prior unselected candidate and fix independent
-counterexamples before any prototype or selection. Its 0.82% result remains
-unconvincing; no native API adapter or skipped check is selected. The user
-requested publishing the complete verified GitHub snapshot after this profile
-closeout, then resuming this same implementation priority.
+**Checked and rejected root-reuse probe:** the isolated candidate retains three
+fallback-control failures. An additional independently fixed unsupported-namespace
+model shows a changed containment verdict: the current root resolves to R2 while
+a member resolves into old R1; the candidate reaches a guarded R1 open, whereas
+the retained owner refuses it before opening bytes. This is a controlled API
+model, not an observed opaque-driver or production escape. Four new default
+canonical/oracle methods pass (1.853 seconds); the first three retain their
+original assertions. The candidate is **not selected**, receives no timing run,
+and changes no production source or certificate. A full ordinary-path metadata
+proof plus member resolution would repeat the prior unselected approach with
+extra work; this is a bounded-stop rationale, not a measured speed theorem.
+[Exact candidate, tests, RED evidence and independent disposition](../../../tests/fixtures/native-root-scope-checks-2026-11-02.zip)
+remain retained. All four full validations and all original byte/alias/failure
+checks stay in place. The user-requested complete GitHub refresh was verified at
+`a51bbcc`; this subsequent resumed probe is local work.
+**Next:** return to the remaining scientific-core Package 3/4 acceptance map.
+Follow [REVIEWING.md](../../../REVIEWING.md) to substantiate the current normal and
+failure flow, authority and open boundaries, then trace the first unfulfilled
+admission/freeze/calibration criterion to its actual callers and inputs. Continue
+the smallest authorized implementation under the selected existing limits;
+research and promptly present any genuinely required unresolved user decision.
+Do not reopen filesystem tuning without a new supported proof and practical
+benefit rationale.
 No native-libm replacement, skipped checker, new final series, budget increase or
 completed-development/derived-final transfer follows. Whole-series feasibility
 and the remaining scientific package exits stay open.

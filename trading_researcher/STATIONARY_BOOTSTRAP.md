@@ -266,6 +266,12 @@ Four full tree validations consume 8.309981 cumulative seconds within the
 these observations justify investigating existing path operations, not dropping
 any validation or claiming an unprofiled speedup. The earlier tree candidate
 remains unselected, and no new containment implementation is adopted.
+The subsequent [root-reuse probe](../tests/fixtures/native-root-scope-checks-2026-11-02.zip)
+is also unselected. Its fallback failures and independently fixed opaque-namespace
+model retain a containment-verdict difference; the model is not an actual driver
+or production escape. All four new cases pass on the canonical implementation
+and retained oracle. No performance run, code adoption, skipped validation or
+certificate refresh follows; the original verifier remains intact.
 
 Inspection is read-only. `CURRENT` requires intact source, archive, cache,
 retained output and environment bindings. A missing restored cache is `STALE`;

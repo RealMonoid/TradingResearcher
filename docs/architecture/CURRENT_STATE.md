@@ -166,9 +166,15 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   metadata entries and source bytes are unchanged; no new world or numerical
   replay occurs. [Source-grounded attribution](../../tests/fixtures/native-guard-profile-checks-2026-11-02.zip)
   identifies repeated containment/path-resolution work but proves no check
-  redundant. Next investigate cache-local root resolution with independent
-  counterexamples and all four full validations retained. No implementation is
-  selected yet. Native libm replacement and skipped checker
+  redundant. The following isolated root-reuse candidate is rejected: three
+  fallback-control failures and one controlled unsupported-namespace counterexample
+  remain retained; the latter changes containment verdicts without permitting an
+  actual byte read. This is no observed production escape. Four new canonical/
+  retained-oracle methods pass; production source and all four validations remain
+  unchanged. [Probe, counterexamples and disposition](../../tests/fixtures/native-root-scope-checks-2026-11-02.zip)
+  record no performance run or adoption. Next restore the required system model
+  and remaining Package 3/4 acceptance/authority map, then select the next
+  authorized core criterion under existing limits. Native libm replacement and skipped checker
   calls remain outside this slice. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
@@ -200,6 +206,8 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   Remote SHA/tree and qualified source-byte equality are verified; the progress register retains
   the receipt. Implementation resumes at the same cache-containment inquiry, with no new scientific
   authority or spending. The publication-receipt commit changes documentation only.
+  Subsequent root-reuse work stays local: the candidate is unselected, four new
+  regression cases pass and no production source or runtime binding changes.
   The unverified AUXILIARY_RESOURCES.md draft remains preserved and uncommitted; the builder/original-A
   continuation stays on hold. No new research-model call or spending grant; all seven old grants remain revoked.
 

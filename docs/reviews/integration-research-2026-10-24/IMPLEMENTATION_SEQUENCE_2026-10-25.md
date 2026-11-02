@@ -245,12 +245,18 @@ now passes 23 independent loop/calculator methods. The fixed complete 4,096-row
 ABBA comparison observes 51.029991 versus 17.903822 median seconds, every result
 and draw byte equal. The [retained probe sources](../../../tests/fixtures/native-bootstrap-probe-2026-11-02.zip)
 preserve the fixed inputs, exact diff, build pins and receipts; this isolated
-experiment is not installed in the actual operator. **Next:** complete the
-separately pinned retained runtime archive/shared hash-verified materialization
-through the Registry/operator study path, with immutable source/runtime binding,
-exact unsupported-numeric fallback, isolated environment, chronological resource
-accounting, roles/revocation, concurrent conflicts, crash recovery, cache-free
-restore and full separate replay. Reuse existing Blob/backup owners; do not relax
+experiment is not installed in the actual study operator. The retained-input
+Registry/HTTP and shared materialization component now passes 28 independent
+methods with one explicit real-symlink permission skip; actual Windows junction,
+metering, conflict/crash, version revocation and cache-free restore cases pass.
+The [real pinned-input qualification](../../../tests/fixtures/native-runtime-input-checks-2026-11-02.zip)
+also preserves all upstream wheel bytes and passes isolated fixed-loop checks,
+zero-write cache reuse and cache-free rebuild. This is no study/runtime or
+scientific certificate. **Next:** integrate opt-in reserved study execution with
+immutable runtime/source binding, exact unsupported-numeric fallback, full native
+environment/technical qualification, chronological aggregate accounting and full
+separate-child replay, including admission/role/revocation and failure paths.
+Reuse the checked Blob/cache/backup owners; do not relax
 128-file/16-MiB project-source or blob-reference limits, copy NumPy per world,
 use host site-packages, retarget frozen capsules or assume full-series savings.
 The selected native adapter section remains unfinished until those actual

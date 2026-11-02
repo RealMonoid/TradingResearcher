@@ -191,6 +191,10 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
         return dict(row)
 
     def call(self, token, op, **args):
+        if op in ('retain_native_runtime', 'inspect_native_runtime'):
+            from .native_runtime import NativeRuntimes
+            runtimes = NativeRuntimes(self)
+            return (runtimes.retain if op == 'retain_native_runtime' else runtimes.inspect)(token, args)
         if op=='continue_study':
             from .binding import require
             from .calibration_runs import CalibrationStudies

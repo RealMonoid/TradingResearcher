@@ -96,9 +96,12 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   A separately compiled NumPy MT19937/owned-loop candidate now passes 23 independent loop/calculator
   methods. Its fixed complete 4,096-row comparison observes 51.029991 to 17.903822 median seconds,
   with every result/draw byte matching. [Retained probe sources](../../tests/fixtures/native-bootstrap-probe-2026-11-02.zip)
-  qualify an isolated experiment; the actual operator does not use it. Next complete a separately
-  pinned, retained shared runtime/cache and actual Registry/study caller, including exact fallback,
-  environment, accounting, revocation, conflict/crash and cache-free restore/replay checks. Preserve
+  qualify an isolated experiment; the study operator does not use it. Retained runtime inputs now
+  have owned Registry/HTTP operations and a verified shared-cache component: 28 independent methods
+  pass (one additional symlink case skipped), including real junctions, metering, revocation,
+  crashes and cache-free restore. A pinned real archive also passes isolated loop/rebuild checks.
+  Next complete opt-in reserved study execution, exact fallback, full native environment/runtime
+  qualification, chronological aggregate accounting and complete separate-child replay. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require

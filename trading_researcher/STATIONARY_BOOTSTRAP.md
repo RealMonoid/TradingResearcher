@@ -100,3 +100,46 @@ interval/MC and byte-sink work are included. No project tests intentionally ran
 concurrently; background system load was uncontrolled. Two observations per
 version supply no paired uncertainty estimate, full-series resource guarantee,
 market calibration or D081 acceleration claim.
+
+### Retained native runtime inputs
+
+The operator may import an `operations` archive with the existing
+`add_blob_source` operation, then call `retain_native_runtime` with exactly
+`key`, `archive_id` and `manifest`. `inspect_native_runtime(runtime_id=...)`
+verifies the owned package and every archive member. A retained package has
+authority `retained_native_runtime_not_certified`; it starts no native code and
+does not select a calculator, qualify dependencies or grant scientific use.
+Workers cannot invoke either operation or forge the reserved package schema.
+
+The versioned `native-runtime-files/1` manifest binds the exact current Python
+runtime, dependency versions/distribution hashes/license files and a complete
+file-size/hash table. ZIP decoding uses the bound standard library. The archive
+and decoded total are each bounded to 512 MiB, with at most 4,096 files and the
+existing canonical 1 MiB envelope. Relative names, parent spellings, regular file
+types and decoded bytes must match exactly; path aliases, normalized names,
+encryption and unsupported compression fail before cache writes. These are
+separate runtime-input bounds; the old 128-file/16-MiB project-source and
+256-blob-reference contracts remain intact. One registered archive reference and
+two compact version fingerprints use the existing Blob/backup/revocation owners.
+Re-registering identical runtime inputs under another key cannot escape a
+recorded technical-version revocation.
+
+The internal materializer publishes a verified complete tree from a unique
+owned staging directory. It shares an exact cache, refuses a changed published
+tree, retains unrelated interrupted staging and never repairs a cache in place.
+Missing caches rebuild only from the retained archive, including after backup
+restoration. Every new or partially written byte is passed to the caller's
+meter; a cache hit writes no bytes. A future reserved study caller must include
+input retention, these writes, CPU, outputs and recovery in its existing budget.
+No scientific quota or OS tamper-proof filesystem guarantee follows from this
+helper. The child must verify its selected environment and the tree after use.
+
+The [retained input checks](../tests/fixtures/native-runtime-input-checks-2026-11-02.zip)
+preserve pinned upstream acquisition, own build inputs and receipts. Synthetic
+HTTP/concurrency/crash/restore cases and a real NumPy/adapter archive passed.
+The isolated `-I -S -B` child reran the same 13 fixed loop cases from the selected
+cache; all 98 imported NumPy/adapter module files matched it. This is not proof
+of transitive OS/native DLL paths or loaded binary identity. Real Windows
+junctions were checked; the separate symlink case remains skipped on this host
+because creation is denied. Actual study selection, exact numeric fallback,
+full native environment qualification and scientific admission remain open.

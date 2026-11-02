@@ -7,7 +7,8 @@ from .errors import Conflict, Denied
 
 SCHEMA='dependency-revocation/1'
 AUTHORITY='technical_use_revocation_not_scientific_outcome'
-PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1','composition-source-package/1'}
+PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1','composition-source-package/1',
+    'native-runtime-package/1'}
 VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1',
     'research-data-target/1','protected-data-binding/1','study-resource-continuation/1','feature-evidence-release/1',
     'development-feedback-manifest/1','development-feedback-release/1'}

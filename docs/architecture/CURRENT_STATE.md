@@ -88,6 +88,13 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   fresh qualification before new intended use. No recertification or study run
   occurred for this slice.
 
+- **Pending reservation decision:** the source-grounded D082 follow-up separates
+  event identity from raw-input overlap. The [same-plan proposal](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#pending-outcome-reservation-semantics-decision-november-2-2026)
+  recommends stable event identity plus explicit dependence/exposure review;
+  unconditional raw-operand exclusion is the stricter alternative. This exact
+  scientific definition is not yet approved or implemented. Dependent admission
+  waits; no protected access, final series, retargeting or new spending follows.
+
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original
   case bytes. The measured 2,048-row cost probe completed in 130.702 seconds with full draws/replay.
@@ -184,9 +191,9 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   retained-oracle methods pass; production source and all four validations remain
   unchanged. [Probe, counterexamples and disposition](../../tests/fixtures/native-root-scope-checks-2026-11-02.zip)
   record no performance run or adoption. The subsequent core family-policy binding
-  is summarized above. Next trace selection/campaign chronology and qualified
-  outcome reservation through the existing admission owners under unchanged
-  limits. Native libm replacement and skipped checker
+  is summarized above. The owner trace now requires the pending reservation
+  definition above; dependent scientific implementation waits for that answer
+  under unchanged limits. Native libm replacement and skipped checker
   calls remain outside this slice. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.

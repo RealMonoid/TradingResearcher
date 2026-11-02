@@ -319,7 +319,7 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
+  "next_action": "Await the already presented question scientific_outcome_reservation_2026_11_02 (asked once): A stable event identity plus separate dependence/exposure/prior-use review, or B additional unconditional cross-batch raw-target-operand exclusion. No answer has been received; tool accepted means question delivery only. Do not repeat or infer approval from time. Dependent scientific identity/admission waits; continue only already authorized necessary independent acceptance work under unchanged limits.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -5677,7 +5677,7 @@
       "git_diff_check_exit": 0,
       "scope": "Links, preservation, traceability and whitespace; final evidence/handoff mutation requires affected documentation refresh"
     },
-    "next_action": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
+    "next_action": "Await the already presented question scientific_outcome_reservation_2026_11_02 (asked once): A stable event identity plus separate dependence/exposure/prior-use review, or B additional unconditional cross-batch raw-target-operand exclusion. No answer has been received; tool accepted means question delivery only. Do not repeat or infer approval from time. Dependent scientific identity/admission waits; continue only already authorized necessary independent acceptance work under unchanged limits.",
     "retained_auxiliary_draft_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
     "changed_files": [
       "trading_researcher/scientific_freeze.py",
@@ -5932,6 +5932,154 @@
           "scope": "After all related documentation/source/test/evidence edits; final staged whitespace check follows publication-free local commit staging."
         },
         "limits": "Documentation system-model checker does not claim a fresh full preexisting-file inventory. No real Registry, scientific use, native qualification or new final run is performed."
+      }
+    },
+    "outcome_reservation_semantics_2026_11_02": {
+      "status": "AWAITING_USER_SEMANTIC_DECISION",
+      "question_id": "scientific_outcome_reservation_2026_11_02",
+      "purpose": "Resolve the exact record-equivalence/overlap rule encountered in the next IF-05/REQ-019/D082 scientific reservation criterion, without confusing operational footprints with independent evidence.",
+      "base_commit": "ed67d5e9e9db11940f47f98c5840738d0fc92b9e",
+      "previous_goal_turn_classification": "PROGRESS: ed67d5e completed bounded actual-family policy binding with final35checks; subsequent required docs-only gate passed git diff --check HEAD~1 HEAD. Neither means full goal completion. This turn owns new source-grounded semantic diagnosis and reviewable choice; no repeated code checks.",
+      "owners": [
+        "D008/D026 material meaning change; document14section14.3",
+        "D082/document14section12 disjoint outcome records AND dependence/exposure review",
+        "D076/document14section6 boundary exclusions and qualified historical use",
+        "DEF-014/025; REJ-014 no independent holdout reuse through aliases/descendants",
+        "IF-05/REQ-005/019; outcomes._case/_Trace and OUTCOMES.md:13",
+        "Binding compile_payload and profile-specific exact_outcomes.lookback"
+      ],
+      "finding": "Existing compiler/case metadata identifies decision/instrument/anchor and conservative dependency information; it does not own one global scientific outcome-equivalence rule. Actual label intervals depend on availability and scope/missingness. Snapshot/revision names cannot prove unused observations; raw-input sharing is not automatically identical event records.",
+      "data_free_counterexample": {
+        "A": "one-bar return at decision t0, anchor t1",
+        "B": "one-bar return at decision t1, anchor t2",
+        "shared": "price at t1 is A endpoint and B baseline; case coordinates differ. No real observations read or hypothetical effect generated.",
+        "alias": "Another snapshot/revision/program/claim label for A cannot reset prior use."
+      },
+      "proposal_authority": "SEMANTIC CLARIFICATION — USER APPROVAL REQUIRED under D008/D026; no definition activated by this record.",
+      "proposed_version": "outcome-reservation/1.0, initial historical-spot-pilot/1 scope only",
+      "common_definition": {
+        "coordinates": [
+          "market_domain=binance-spot",
+          "instrument in BTCUSDT/ETHUSDT",
+          "grid_seconds=900",
+          "decision_time UTC integer seconds aligned900",
+          "outcome_anchor UTC integer seconds aligned900 with positive horizon"
+        ],
+        "excluded_identity_labels": [
+          "snapshot_id",
+          "revision_id",
+          "program_id",
+          "claim_id",
+          "partition_name"
+        ],
+        "revisions": "Append exact source/value versions under the same potential event identity; preserve old values, prior reservations and exposure.",
+        "potential_membership": "Metadata-only before outcome access: t in aligned half-open [start,end); anchor=t+horizon*900 must be strictly less than end. No scope/missing/outcome-value filter creates identity. Retain actual boundary/scope/unknown/pending dispositions separately.",
+        "footprint_endpoints": "Declared raw observation grid spans use [first_required_timestamp,last_required_timestamp+900). Actual label-information endpoints remain exact; a separate explicitly closed diagnostic view includes decision and completion/publication endpoint. Interval overlap alone neither certifies dependence nor establishes identity.",
+        "profiles": "Reuse each retained compiler/profile owner; generic outcomes._lookback omits exact trailing_median/product/all. Unsupported/unknown profile remains GAP; do not apply one new AST walker.",
+        "source_namespace": "Use adopted verified Binance-spot scope; unknown namespace equivalence remains GAP, not a new supposedly-unused identity."
+      },
+      "options": {
+        "A_recommended": {
+          "meaning": "Require disjoint stable potential-event records, and separately source dependence/exposure/prior-use review. Distinct IDs are necessary, not sufficient, for unused scientific evidence. Shared raw operands trigger review rather than automatic prohibition; reused completed outcome records or unresolved/unqualified admission remain denied.",
+          "reason": "Preserves existing separation of record reuse, dependence, evidence origin and historical exploration. Does not invent one-dataset-per-idea or automatic independence.",
+          "cost": "More explicit provenance/review plumbing; no new dependency, provider call or scientific run. Construction time and full-series feasibility unknown."
+        },
+        "B": {
+          "meaning": "Same identity/provenance/membership, plus unconditional cross-batch exclusion for any shared target-label raw operand, even when A separate review could justify use. Within-batch sharing and ordinary feature-only warmup keep current rules.",
+          "tradeoff": "Simpler/stricter gate; excludes consecutive-return baseline sharing and can reduce usable information or require larger separated targets. It is an extra restriction, not presently selected by section12.",
+          "cost": "May reduce admission/precision and make existing resource feasibility worse; no extra budget/final study authorized."
+        }
+      },
+      "validation_planned_not_run": [
+        "Independent same-event alias/revision/transformedclaim identity retention and no reuse reset.",
+        "Consecutive-return/sharedanchor cases discriminate A review-required vs B unconditional exclusion; no automatic scientific admission.",
+        "Exact endpoints, aligned grid, partition-crossing, nested lag/window and each supported compiler profile.",
+        "Missing/pending/scopefalse/unknown dispositions retain potential identities without fabricating observed eligible outcomes.",
+        "Actual operator/HTTP authorization, generic-source forgery, current dependencies, corruption, revocation, interrupted atomic reservations, restart/backup/restore and legacy UNKNOWN."
+      ],
+      "versioning_and_rollback": "Adopt only after explicit selected answer; update affected canonical contract/definition and implementation together. Older missing-version reservations remain UNKNOWN and byte-preserved. Rollback denies new admission, retains failed probes/reservations/exposure and never restores unused history.",
+      "boundaries": "No protected2024 read, new finalseries, completed-development/final retarget, paidcall, grant, budget increase, originalA/AgentWorkflow continuation or capital authority. Existing53calls/USD0.574585/sevenrevoked unchanged. No calibration/independence/EvidenceRecord implied.",
+      "reuse": "Existing Registry/storage/canonical codec/compiler/profile interval/source helpers; exact mapping is framework semantics. No general audit platform or new library dependency.",
+      "independent_review": {
+        "reviewer": "native_study_review",
+        "mode": "Read-only existing-source and proposed-options review; no code, tests, Registry or numerical operations.",
+        "conclusion": "A reviewable with explicit coordinates/membership/endpoints/revisions and raw-overlap review distinguished from B unconditional prohibition. Conservative technical footprint alone needs no new scientific rule but cannot substitute for completing scientific equivalence/admission."
+      },
+      "proposal_location": "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#pending-outcome-reservation-semantics-decision-november-2-2026",
+      "source_sha256": {
+        "trading_researcher/scientific_freeze.py": "aed9f39b5b98865c65905f85d0c39fdc88653fffb2d9d631af01dbbb325641fd",
+        "trading_researcher/outcomes.py": "0f8255dba1309b849e2b6e502a914e4fb937bc7b467d814040796245f48fcdc7",
+        "trading_researcher/data_use.py": "7b4c5ad1d546bd1b4a57baeb267161a44e843033a58761c81e970ef576d0d05b",
+        "trading_researcher/data_targets.py": "4ea784c8eefb3eceb8183b6adefdf09adfaf15ac329fb233317eb0cb0dd91697",
+        "trading_researcher/exact_outcomes.py": "c94ceceb906d19c184c56e85f1675458cd395f433015f18df916cf65b178147b"
+      },
+      "prior_next_actions": {
+        "global": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
+        "freeze": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
+        "information": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation."
+      },
+      "pending_question": {
+        "id": "scientific_outcome_reservation_2026_11_02",
+        "presented_once": true,
+        "presented_at_utc": "2026-11-02T17:49:36.376120+00:00",
+        "answer": null,
+        "definition_activated": false,
+        "tool_result": "accepted=true establishes question delivery, not user approval",
+        "options": [
+          "A recommended: stable event identity plus separate dependence/exposure/prior-use review",
+          "B additional unconditional cross-batch raw-target-operand exclusion"
+        ]
+      },
+      "independent_work_limit": "No unrelated code/test expansion. Limited technical footprint remains possible but is not a substitute for the missing scientific decision; continue only genuinely necessary already authorized independent acceptance work.",
+      "constructed_at_utc": "2026-11-02T17:46:57.685479+00:00",
+      "construction_effort": "Read-only owner/decision/definition/rejection/caller trace and independent review; proposal/doc updates. Full source reconstruction start, coordination/rework/modeltokens/cash unknown. No numerical/API/paid or repeated code checks.",
+      "next_action": "Await the already presented question scientific_outcome_reservation_2026_11_02 (asked once): A stable event identity plus separate dependence/exposure/prior-use review, or B additional unconditional cross-batch raw-target-operand exclusion. No answer has been received; tool accepted means question delivery only. Do not repeat or infer approval from time. Dependent scientific identity/admission waits; continue only already authorized necessary independent acceptance work under unchanged limits.",
+      "live_processes": [],
+      "documentation_checks": [
+        {
+          "record": ".trf-runtime/scientific-outcome-reservation-2026-11-02/implementation-proposal-check.json",
+          "sha256": "c7c7249e30fcdc8bc7ae5e33dd46d2a951c0ab8161e7034e1e3d6d00c5b1c349",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "docs/reviews/implementation-2026-10-25/verify_implementation.py"
+          ],
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "0.33196640003006905",
+          "scope": "Proposal/document links, consistency, whitespace and preservation; no scientific approval or implementation."
+        },
+        {
+          "record": ".trf-runtime/scientific-outcome-reservation-2026-11-02/system-model-proposal-check.json",
+          "sha256": "dcfb4233c6376e54966570089d11ba3d769d70348843a842b6efe8117a51143b",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "docs/reviews/verify_system_model.py"
+          ],
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "7.677081200003158",
+          "scope": "Proposal/document links, consistency, whitespace and preservation; no scientific approval or implementation."
+        },
+        {
+          "record": ".trf-runtime/scientific-outcome-reservation-2026-11-02/retail-contract-proposal-check.json",
+          "sha256": "3a9dcc69ad8bff72a95e19a02dfe6ad020df606e60398760e878900827fc0e0a",
+          "command": [
+            "C:\\Users\\monoi\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+            "-B",
+            "docs/reviews/verify_retail_contract.py"
+          ],
+          "exit_code": 0,
+          "status": "PASS",
+          "seconds": "7.6575530000263825",
+          "scope": "Proposal/document links, consistency, whitespace and preservation; no scientific approval or implementation."
+        }
+      ],
+      "preservation": {
+        "source": "No production/test source changed; reuse ed67d5e source-qualified35passing methods without rerun.",
+        "AUX_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
+        "scope": "No scientific/economic/finality/capital claim, paidcall or protected read; normative contract unmodified."
       }
     }
   },
@@ -6639,7 +6787,7 @@
       },
       "scientific_readiness": false
     },
-    "next_action": "Trace D082 development-only selection/campaign chronology and qualified outcome-record reservation through existing plan/data-use/admission owners. Select the smallest missing mandatory check under current limits; retain every calibration/information/selection/data/exposure gate. Research and promptly present any genuinely required user decision; no finalseries/retarget/budget/protected2024/originalA operation.",
+    "next_action": "Await the already presented question scientific_outcome_reservation_2026_11_02 (asked once): A stable event identity plus separate dependence/exposure/prior-use review, or B additional unconditional cross-batch raw-target-operand exclusion. No answer has been received; tool accepted means question delivery only. Do not repeat or infer approval from time. Dependent scientific identity/admission waits; continue only already authorized necessary independent acceptance work under unchanged limits.",
     "changed_files": [
       "trading_researcher/study_runs.py",
       "tests/test_second_order_independent.py",

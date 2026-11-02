@@ -222,6 +222,57 @@ bytes and the production admission gap remain unchanged. Independently fixed
 synthetic cases exercise the m=1/2/8 assignments and denial/recovery/history paths;
 the existing progress record distinguishes actual check results and limits.
 
+#### Pending outcome-reservation semantics decision (November 2, 2026)
+
+**SEMANTIC CLARIFICATION — USER APPROVAL REQUIRED, D008/D026.** D082/document 14
+section 12 requires disjoint outcome records plus dependence/exposure review;
+it does not define a global record-equivalence rule. Consecutive one-bar returns
+are different `(decision, instrument, anchor)` cases but share a price operand.
+Another snapshot or revision of the same case cannot manufacture unused evidence.
+The reviewed proposal is retained in the existing progress register under
+`scientific_freeze_transaction_2026_11_01.outcome_reservation_semantics_2026_11_02`.
+
+**A, recommended:** adopt `outcome-reservation/1.0` for the first bounded pilot.
+Stable event coordinates are market `binance-spot`, instrument `BTCUSDT` or
+`ETHUSDT`, grid 900 seconds, UTC integer-second decision and outcome-anchor times
+on that grid with a positive horizon. Snapshot, revision, program, claim and
+partition labels do not create another event identity. Exact source/value
+versions remain attached; revisions neither overwrite history nor reset use.
+Record the complete metadata-defined potential grid before outcome access:
+decisions use `[start,end)`, and only anchors strictly before `end` belong to the
+potential evaluable grid. Actual scope/missing/pending/boundary dispositions stay
+separate. Declared raw-observation spans use half-open grid ranges including the
+last required timestamp; actual information intervals retain their endpoints
+with an explicit closed diagnostic view. Neither view proves independence.
+Distinct event IDs are necessary, not sufficient, for unused scientific evidence.
+Shared raw operands trigger the separately sourced dependence/exposure/prior-use
+review; they do not automatically forbid use. Reused completed outcome records
+and unqualified admission remain denied. Historical exploration retains its
+existing role; no blanket ban on exposed history is introduced.
+
+**B:** use the same stable event/provenance/membership rules and additionally
+forbid cross-batch sharing of any target-label raw operand, even when a separate
+review could justify it. Ordinary feature-only warmup and within-batch sharing
+retain their existing rules. This is simpler and stricter, but can exclude
+otherwise admissible consecutive-return cases and reduce available information.
+
+Both options keep separate calibration, information, campaign chronology,
+protected-data admission and replication requirements. They authorize no final
+draw, source retarget, protected-2024 access, provider call, original-A work or
+budget increase. Existing generic metadata is not a certificate. Missing legacy
+definition versions remain UNKNOWN; rollback denies new use while retaining all
+records/exposure. Reuse existing registry, canonical codec, compiler/profile and
+interval/source owners; no new dependency or platform is proposed. Independent
+alias/revision, transformed-claim, shared-anchor/consecutive-return, endpoint,
+nested-window, missingness, denial and recovery cases precede use. Construction
+time and full-series resource effects are unknown, not a new allowance.
+
+**Next:** present this one researched choice promptly and retain the answer.
+Dependent scientific equivalence/admission implementation waits. A conservative
+technical footprint alone could be implemented without this decision, but it
+would not resolve the missing scientific rule and is not a substitute for the
+answer. Continue only necessary already authorized independent acceptance work.
+
 ### 4. Independent computation and narrow scientific calibration
 
 IN PROGRESS. Reuse independent calculation, bootstrap/MC candidates and retained study/series controllers. Scientific classification requires the applicable calibrated profile, defensible information target and adequate assumptions. Preserve fixed worlds, final draws, failures, replay and cumulative resource stops. Engineering timing/storage checks and partial synthetic cohorts do not establish calibration. No new simulator family by default.
@@ -402,11 +453,11 @@ new binding version. All 35 affected methods pass: seven new independent cases,
 This mechanical commitment resolves no selection, data/exposure,
 information/calibration or execution/release prerequisite. The source change
 does not refresh earlier native qualifications or retarget retained capsules.
-**Next:** trace development-only selection/campaign chronology and qualified
-outcome reservation through the existing plan/data-use/admission owners; select
-the smallest missing core check under existing limits. Promptly research and
-present any genuinely required user decision. No final draw or new authority
-follows from this binding.
+**Next:** resolve the [researched outcome-reservation choice](#pending-outcome-reservation-semantics-decision-november-2-2026).
+The owner trace identified the missing exact scientific identity rule; retain the
+answer before dependent equivalence/admission implementation. Other gates and
+existing limits remain binding. No final draw or new authority follows from the
+completed family-policy binding or this proposal.
 Do not reopen filesystem tuning without a new supported proof and practical
 benefit rationale.
 No native-libm replacement, skipped checker, new final series, budget increase or

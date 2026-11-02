@@ -305,13 +305,31 @@ replicate digest, exact storage charge and preserved old inventory passes;
 [retained source/inputs/streams/receipts](../../../tests/fixtures/native-owned-call-comparison-2026-11-02.zip)
 bind this result. The existing-limits decision remains binding;
 the historical 141-hour/81-GiB projection is not relabelled as a new native
-forecast. **Next:** inspect the retained kernel's per-segment Python mathematics
-callbacks and interruption contract against its bound scalar/Python/runtime
-sources. Establish one reviewable exact adapter/fallback option and a bounded
-independent qualification plan before implementation or further numerical work.
-The current kernel explicitly preserves Python log1p/division/floor; replacing
-them with native libm is not an admitted optimization. Reuse existing profiles,
-fixtures and failures; no new final series or completed-study retargeting.
+forecast. The subsequent bound-source inquiry preserves Python mathematics and
+every checker boundary. One complete 1,024-row native profile matches its old
+result gold and all 59,997 draw digests. Its driver still retains exit 1: an
+over-narrow equal-DLL-list assertion rejected nine lazy-loaded, byte-pinned NumPy
+modules. Read-only independent reconciliation explains that condition without
+rerunning computation or extending a certificate. Generated C instead exposes
+per-segment Python tuple/integer conversions used only to pack the eight path
+bytes. An uninstalled candidate replaces only those loops with eight typed
+stores, leaving mathematics, RNG and all checks untouched. Its 21 independent
+loop/byte-boundary methods and ten existing actual-factory/fallback methods pass;
+the same 21 methods also pass on the original kernel. Fixed complete 4,096-row
+ABBA medians are 18.583887 versus 16.059563 seconds (13.58% less in this fixture),
+with all four full result/stream hashes and prescribed draws equal. The probe
+also matches the complete 1,024-row gold. This selects the small packing change
+for technical integration; it is not installed or runtime-certified. Original
+profiling/setup failures, source bytes, compiler pins and exact observations
+remain in the [packing evidence](../../../tests/fixtures/native-path-packing-checks-2026-11-02.zip).
+**Next:** integrate that same eight-store change as a separately bound canonical
+kernel/runtime version through the existing qualifier, cache and reserved-study
+callers. Retain version-1 source/binary/input/certificates and all historical
+attempts; independently check final conformance, source/environment currentness,
+admission/denial, resources, revocation and cache-free restore at the final source.
+No native-libm replacement, skipped checker, new final series or retargeting of
+the completed development/derived final follows. The observed calculator gain
+does not establish whole-caller improvement or full-series feasibility.
 Reuse the checked Blob/cache/backup owners; do not relax
 128-file/16-MiB project-source or blob-reference limits, copy NumPy per world,
 use host site-packages, retarget frozen capsules or assume full-series savings.

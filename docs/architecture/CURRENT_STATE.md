@@ -132,10 +132,19 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   [Independent reconciliation and exact evidence](../../tests/fixtures/native-owned-call-comparison-2026-11-02.zip)
   retain all draw indices/digests, full streams, accounting and old inventory.
   Whole-series feasibility remains unproved under the selected existing limits.
-  Next inspect the bound per-segment Python mathematics callbacks/interruption
-  contract for one supported exact adapter/fallback option before selecting any
-  new implementation or numerical qualification. Native libm replacement is
-  outside the current kernel's admitted contract. Preserve
+  The bound-source/profile inquiry preserves all Python mathematics/checker
+  calls and identifies tuple boxing used only for path bytes. An uninstalled
+  eight-store candidate passes 21 independent loop/byte cases and ten existing
+  factory/fallback methods; complete 1,024/4,096-row results and draw hashes match.
+  Fixed 4,096-row ABBA medians are 18.583887 versus 16.059563 seconds (13.58% less
+  in this fixture). [Exact evidence and retained failures](../../tests/fixtures/native-path-packing-checks-2026-11-02.zip)
+  include the original profiling exit 1 from an over-narrow DLL-list assertion;
+  independent read-only reconciliation finds nine exact lazy-loaded NumPy files,
+  without rerunning numerics or expanding a certificate. Next integrate the same
+  packing change through a separately bound canonical runtime version and actual
+  qualifier/cache/reserved callers, with independent denial/resource/revocation/
+  restore checks. It is not yet installed or runtime-certified. Native libm
+  replacement and skipped checker calls remain outside this slice. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require

@@ -259,6 +259,13 @@ passes with full result, stream and separate-replay equality: 244.697922 scalar 
 does not establish general throughput or full-series feasibility, and its fresh
 binding-derived seeds prohibit a controlled timing claim against the older v1
 world. Every original attempt and charge remains retained.
+The subsequent [read-only qualification profile](../tests/fixtures/native-guard-profile-checks-2026-11-02.zip)
+records one query-only inspection and unchanged Registry/cache/source state.
+Four full tree validations consume 8.309981 cumulative seconds within the
+12.234750-second profiled inspection. Nested containment/resolution costs overlap;
+these observations justify investigating existing path operations, not dropping
+any validation or claiming an unprofiled speedup. The earlier tree candidate
+remains unselected, and no new containment implementation is adopted.
 
 Inspection is read-only. `CURRENT` requires intact source, archive, cache,
 retained output and environment bindings. A missing restored cache is `STALE`;

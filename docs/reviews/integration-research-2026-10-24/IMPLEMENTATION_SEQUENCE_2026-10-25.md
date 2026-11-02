@@ -360,11 +360,25 @@ after their sole predeclared attempt, retaining three missing worlds each.
 retain the same 300-second/256-MiB limits. Fresh binding-derived seeds differ from
 the older v1 comparison despite equal original case bytes; this is no controlled
 v1-to-v2 timing comparison or attribution of the caller difference to packing.
-**Next:** profile one bounded read-only qualification/currentness inspection on
-the completed retained runtime to locate caller overhead before selecting another
-exact acceleration change. Reuse the existing operator and `cProfile`; preserve
-every source, environment, cache, revocation and failure check. Run no new world,
-numerical replay, final series or resource continuation for this inquiry.
+**Checked read-only attribution:** one query-only owned qualification inspection
+passes in 12.234750 profiled seconds (14.166740 observer / 14.830702 process seconds).
+All 21 table/schema digests, 933 cache-file metadata entries and project-source
+bytes remain unchanged. Its four full tree validations account for 8.309981
+cumulative seconds; 4,840 generic containment calls account for 5.822756 cumulative
+seconds, including 4,112 from the tree checks. Path resolution is a substantial
+overlapping cost, not evidence that a check is redundant. No operation, numerical
+calculation or test was repeated for the independent read-only reconciliation.
+[Exact profile, sources, prior rejection and sealed review](../../../tests/fixtures/native-guard-profile-checks-2026-11-02.zip)
+retain the 60-second outer bound and absence of a timeout.
+**Next:** investigate a small cache-specific containment adapter using existing
+path operations, potentially reusing a freshly resolved root only within one
+tree verification. Keep all four complete validations, per-member resolution,
+late root/ancestor alias checks, single-link regular files, full hashes and the
+existing fallback. Read the prior unselected candidate and fix independent
+counterexamples before any prototype or selection. Its 0.82% result remains
+unconvincing; no native API adapter or skipped check is selected. The user
+requested publishing the complete verified GitHub snapshot after this profile
+closeout, then resuming this same implementation priority.
 No native-libm replacement, skipped checker, new final series, budget increase or
 completed-development/derived-final transfer follows. Whole-series feasibility
 and the remaining scientific package exits stay open.

@@ -195,8 +195,11 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   exactly the two fixed ordinal-zero calls. No process remains live. Case bytes match the earlier fixture,
   while fresh binding-derived world seeds differ.
   The subsequent read-only guard profile and independent reconciliation pass with no live process.
-  The user authorized refreshing the complete verified GitHub version after this profile closeout;
-  its target and verified publication receipt are retained in the progress register.
+  The complete verified framework was published to the existing GitHub default branch
+  `codex/architecture` at [implementation commit 055c0ca](https://github.com/RealMonoid/TradingResearcher/commit/055c0cabc1347ba5996bc428eb3931f5182251ab).
+  Remote SHA/tree and qualified source-byte equality are verified; the progress register retains
+  the receipt. Implementation resumes at the same cache-containment inquiry, with no new scientific
+  authority or spending. The publication-receipt commit changes documentation only.
   The unverified AUXILIARY_RESOURCES.md draft remains preserved and uncommitted; the builder/original-A
   continuation stays on hold. No new research-model call or spending grant; all seven old grants remain revoked.
 

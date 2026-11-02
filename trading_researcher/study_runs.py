@@ -28,19 +28,32 @@ LOADED_SOURCE=footprint(source_bundle())
 METADATA_BYTES=1024*1024
 
 
-def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs):
-    """Generate and replay in separate processes; account aborted files as well."""
-    expected=footprint(source)
+def attempt_stream_limit(source,manifest,cases,*,runtime_bytes=0):
+    """Reject a known-impossible setup before any selected runtime writes."""
     # Includes two complete materializations, stdout/stderr bounds and retained
     # outputs. This is a logical byte budget, not an OS disk/memory quota.
     budget=manifest['profile']['budget']['attempt_storage_bytes']
     overhead=2*(sum(map(len,source.values()))+len(cases)+4*METADATA_BYTES)+METADATA_BYTES
+    overhead+=runtime_bytes
     stream_limit=min(256*1024*1024,(budget-overhead)//4)
     require(stream_limit>0,'Attempt storage cannot hold inputs and bounded metadata')
+    return stream_limit
+
+
+def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,*,_native=None):
+    """Generate and replay in separate processes; account aborted files as well."""
+    expected=footprint(source)
+    technical=None
+    if _native is not None:
+        from .native_study_pipeline import ParentContext
+        technical=ParentContext(source,_native)
+    stream_limit=attempt_stream_limit(source,manifest,cases,
+        runtime_bytes=0 if technical is None else technical.cold_bytes)
     calculated=None;raw=None;proofs=[];encoding=None
     for phase in ('generate','replay'):
         request={'payload':payload,'manifest':manifest,'world':world,'footprint':expected,
             'verify':None if calculated is None else digest(calculated),'stream_limit':stream_limit}
+        if technical is not None:request['native']=technical.request()
         with tempfile.TemporaryDirectory(prefix='trf-study-') as temporary:
             directory=Path(temporary)
             meter['accounting_complete']=False
@@ -51,9 +64,11 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs)
                 write_file(directory/'request.json',canonical(request).encode())
                 if raw is not None:
                     write_file(directory/('expected-stream.jsonl.gz' if encoding is not None else 'expected-stream.jsonl'),raw)
-                response=_run_child([sys.executable,'-I','-S','-B','-c',BOOTSTRAP,str(directory),str(directory/'request.json')],
+                bootstrap=BOOTSTRAP if technical is None else technical.bootstrap
+                response=_run_child([sys.executable,'-I','-S','-B','-c',bootstrap,str(directory),str(directory/'request.json')],
                     directory,timeout=remaining())
                 fields={'result','stream_blob','request_hash','footprint','environment'}
+                if technical is not None:fields|={'environment_before','native_binding','draw_engines'}
                 require(type(response) is dict and (set(response)==fields or set(response)==fields|{'stream_encoding'}),
                     'Malformed study child response')
                 encoded='stream_encoding' in response
@@ -61,7 +76,10 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs)
                     require(encoded==(encoding is not None) and response.get('stream_encoding')==encoding,
                         'Study replay encoding differs')
                 require(response['request_hash']==digest(request) and response['footprint']==expected
-                    and _environment_current(response['environment']),'Study response identity differs')
+                    and (_environment_current(response['environment']) if technical is None else
+                         technical.validate_response(response)),'Study response identity differs')
+                if technical is not None and phase=='replay':
+                    require(response['draw_engines']==proofs[0]['draw_engines'],'Native study engine replay differs')
                 path=directory/(('stream' if phase=='generate' else 'expected-stream')+'.jsonl'+('.gz' if encoded else ''))
                 require(path.stat().st_size<=stream_limit,'Study encoded file exceeds bound')
                 observed=path.read_bytes()
@@ -71,6 +89,8 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs)
                 require(footprint({name:(directory/name).read_bytes() for name in source})==expected,
                     'Retained study package changed')
                 proof={key:response[key] for key in ('request_hash','footprint','environment','stream_blob')}
+                if technical is not None:
+                    proof.update({key:response[key] for key in ('environment_before','native_binding','draw_engines')})
                 if encoded:proof['stream_encoding']=response['stream_encoding']
                 proofs.append(proof)
                 if phase=='generate':
@@ -87,8 +107,10 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs)
                     if stat.S_ISREG(observed_stat.st_mode):meter['materialized_bytes']+=observed_stat.st_size
                 # Originals already exist in the input capsule; preserve every
                 # output/prefix, diagnostic and replay input even after failure.
-                for name in ('stream.jsonl','expected-stream.jsonl','stream.jsonl.gz','expected-stream.jsonl.gz',
-                        'child-output.json','child-errors.txt'):
+                retained=('stream.jsonl','expected-stream.jsonl','stream.jsonl.gz','expected-stream.jsonl.gz',
+                          'child-output.json','child-errors.txt')
+                if technical is not None:retained+=('computed-result.json',)
+                for name in retained:
                     path=directory/name
                     try:observed_stat=path.stat()
                     except FileNotFoundError:continue
@@ -119,6 +141,12 @@ class InformationStudies:
     def _study_extra_input(self,request,manifest):
         return {}
 
+    def _study_initial_storage(self,source,payload,extra):
+        return 2*sum(map(len,source.values()))+payload['case_blob']['size']+METADATA_BYTES
+
+    def _execute_study_attempt(self,study,source,payload,manifest,world,cases,remaining,meter,outputs):
+        return execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs)
+
     def _study_input_ref(self,study):
         return study['body']['request']['execution_id']
 
@@ -126,6 +154,9 @@ class InformationStudies:
         return summarize(study['body']['manifest'],records)
 
     def _study_before_execute(self,study):
+        pass
+
+    def _study_after_execute(self,study):
         pass
 
     def _study_manifest(self,assigned,profile):
@@ -214,7 +245,7 @@ class InformationStudies:
             payload,manifest,refs,exposure=self._study_inputs(actor,request)
             source=self._study_capture_source(request)
             extra=self._study_extra_input(request,manifest)
-            initial=2*sum(map(len,source.values()))+payload['case_blob']['size']+METADATA_BYTES
+            initial=self._study_initial_storage(source,payload,extra)
             require(initial<=manifest['profile']['budget']['max_storage_bytes'],'Study input retention exceeds aggregate storage')
             files={name:self._stage_blob_bytes(raw) for name,raw in source.items()}
             with self._transaction():
@@ -287,6 +318,7 @@ class InformationStudies:
         pending=next((w for w in manifest['worlds'] if w['id'] not in by_world
             or by_world[w['id']]['state']=='TECHNICAL_FAILURE'),None)
         state=('ORPHAN_UNCERTAIN' if orphan else 'RUNNING' if budget['outstanding_attempts'] else
+            'USAGE_UNCERTAIN' if budget['usage_uncertain'] else
             'COMPLETE' if summary['complete'] else 'MODEL_GAP' if any(r['state']=='MODEL_GAP' for r in records) else
             'TECHNICAL_FAILURE' if pending and budget['attempts_per_world'].get(pending['id'],0)>=limits['max_attempts'] else
             'RESOURCE_STOP' if not budget['next_reservation_fits'] else 'READY')
@@ -377,7 +409,8 @@ class InformationStudies:
                 require(digest(list(inputs))==digest([body['payload'],manifest,study['source_refs'],study['exposure']]),
                     'Study dependencies changed')
                 source=self._load_study_source(study);cases=self._read_blob_bytes(body['payload']['case_blob']['sha256'])
-            result,proofs=execute_attempt(source,body['payload'],manifest,world,cases,remaining,meter,outputs)
+            result,proofs=self._execute_study_attempt(study,source,body['payload'],manifest,world,cases,remaining,meter,outputs)
+            self._study_after_execute(study)
             require(result['world_id']==world['id'] and result['scientific_readiness'] is False
                 and result['classification_permitted'] is False and result['n_min'] is None,'Study result claims forbidden authority')
             summarize(manifest,[result['outcome']])

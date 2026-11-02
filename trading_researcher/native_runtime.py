@@ -18,7 +18,7 @@ from .certification import _runtime_identity
 from .codec import Invalid, canonical, decode, digest, integer, strings, text
 from .errors import Conflict, Denied
 from .storage import (BLOCK, MAX_BLOB_BYTES, _contained, _hash_file,
-                      _owned_staging, _remove_staging, blob_identity)
+                      _owned_staging, _remove_staging, _publish_staging, blob_identity)
 
 
 SCHEMA = 'native-runtime-package/1'
@@ -214,7 +214,7 @@ def materialize(raw, manifest, cache_root, on_bytes=None):
                         on_bytes(path.stat().st_size)
         verify_tree(stage, manifest)
         try:
-            stage.rename(directory)
+            _publish_staging(stage, directory)
         except OSError:
             if not directory.exists():
                 raise

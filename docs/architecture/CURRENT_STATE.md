@@ -109,8 +109,18 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   conformance: 30 methods, actual two-child full-gold execution and cache-free restore pass.
   It preserves unsupported/failed attempts and usage; currentness checks retained input/output bytes.
   [Exact versions and limits](../reviews/implementation-2026-10-25/progress.json) remain authoritative
-  for these scoped observations. Next complete opt-in reserved study execution, exact fallback,
-  chronological aggregate accounting and complete separate-child replay. Preserve
+  for these scoped observations. The opt-in reserved development caller now passes
+  51 caller/provenance/transport methods at its final source, plus the independent
+  bounded Windows publication checks and affected cache/storage/qualifier checks.
+  Actual fresh qualification, 147-blob cache-free restore and all seven fixed
+  single/family worlds pass with full scalar/native result and separate-replay
+  equality. Cold materialization is charged once; the previous failed cold-cache
+  attempt remains fully charged and fenced, and all driver failures remain.
+  [Retained source and evidence](../../tests/fixtures/native-study-checks-2026-11-02.zip)
+  qualify technical development execution only. Next use the recorded 15.680-second
+  full-binding profile to remove redundant path/tree work while preserving every
+  check, then measure equivalent complete 4,096-row execution before updating
+  feasibility. Profiler timings establish no actual study acceleration. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require
@@ -127,8 +137,9 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   cannot learn conditional-outcome variation; the whole-scope baseline may vary. No new practical-effect
   profile or bootstrap alone repairs that support limitation.
 
-- **Working tree/processes:** local atomic-freeze checkpoint is `733ea58`; the information-profile and
-  cost-provenance closeout follows it. No process remains live and no GitHub publication occurs here.
+- **Working tree/processes:** the native-study caller closeout follows local qualification checkpoint
+  `e7db007`; exact source/check versions are retained in the progress record. No owned probe/check
+  process remains live at closeout and no GitHub publication occurs here.
   The unverified AUXILIARY_RESOURCES.md draft remains preserved and uncommitted; the builder/original-A
   continuation stays on hold. No new research-model call or spending grant; all seven old grants remain revoked.
 

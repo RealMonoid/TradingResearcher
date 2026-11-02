@@ -6596,7 +6596,7 @@
       "scope": "Terminal grid evidence, resolved resource choice and descriptive handoff. Earlier invocation-check limitations are historical. These document checks establish no scientific/model/economic validity; only evidence fields are appended after the bundle, followed by JSON/preservation/whitespace checks."
     },
     "exact_acceleration": {
-      "status": "GROUPED_QUERY_SLICE_COMPLETE_MODEST_BENEFIT_FINAL_RESOURCE_GAP_RETAINED",
+      "status": "NATIVE_RESERVED_DEVELOPMENT_SLICE_COMPLETE_FULL_SERIES_FEASIBILITY_OPEN",
       "purpose": "Advance package4 practical full-series feasibility under the user's existing-limits/exact-acceleration decision; preserve full scientific scope and all independent controls.",
       "reuse": "Existing stationary_bootstrap.py, tests/bootstrap_oracle.py:binary_report and archived fraction_reference, test_exact_bootstrap_acceleration/adversarial, bootstrap independent oracles and native stream/replay entrypoints. No new numerical implementation or dependency adopted.",
       "installed_reuse_candidates": "NumPy2.3.4 is installed on CPython3.14.2; Cython/Numba/arch/mypy are not installed and cl is absent from PATH (not proof that no compiler is installed). No dependency adopted. Before using NumPy, consult its actual2.3 version/API/license and qualify state/operation equivalence and retained isolated runtime; the earlier2.5 documentation read was conceptual only.",
@@ -6663,9 +6663,9 @@
         "result_hash": "5602d102b04b8824d61230f89b97b5493420f9e5a8621104dfadc9f283053e75",
         "findings": "500489 generator entries;2000000 segment-sum calls. Profiled cumulative seconds:calculate3.994780,segments1.146067,segment_sum0.678439,randrange0.551195,bounded0.330555. Nested cumulative times overlap and must not be added. This identifies scalar segment/sufficient-statistic work; it is not an unprofiled speed baseline or completed-bootstrap result."
       },
-      "next_action": "Integrate the now-qualified exact native runtime with the actual opt-in reserved-study caller, preserving immutable source/runtime/qualification inputs, exact fallback, chronological aggregate reservation/accounting, full separate-child world replay, admission/role/revocation and crash/restore paths. Reuse checked Registry/Blob/cache/certification owners; qualify changed sources at intended use. Do not retarget the completed32/derivedfinal, relax source/blob/resource/scientific/2024 limits, create final draws or grants, reopen original A or increase API/USD budget.",
+      "next_action": "Use recorded full-binding profile to reduce repeated tree/path overhead losslessly through existing independent file/link/junction/byte/restore cases; preserve full intended-use checks and source versions. Then measure complete equivalent4096row actual caller and reassess unchanged-series feasibility within existing limits. No new final series, retargeting, protected2024/model call or budget increase.",
       "acceptance": "Affected independent archived/golden/adversarial cases plus actual operator/runtime integration must pass for the settled source. Measure equivalent work without profiler overhead before claiming speed/cost benefit; re-estimate full-series feasibility honestly. Existing budgets remain binding and no final series starts from this profile.",
-      "unverified": "The grouped production sampler retains its63historical checks at that old source. Native retained-input/cache operations now have current-source independent HTTP/byte/recovery/revocation checks below. Actual reserved-study selection, exact fallback, complete native environment/loaded-library qualification, aggregate resource integration, full separate replay and full-series feasibility remain unfinished. No final calibration/model adequacy/scientific admission, D081 research acceleration or economic evidence is established.",
+      "unverified": "No scientific admission/N_min/fitted nuisance or market-model adequacy, final calibration, production actual-model quality, protected2024/capital access, complete packages3/4 or whole-series feasibility/speed claim. No native final selector or transfer of completed32/derivedfinal sources. Runtime observations are current disk/loader bindings, not RAM/security/license verdicts. Logical resource accounting is not an OS quota; prep/inspection/grant-validation compute remains outside attempt convention.",
       "documentation_checks": "After the profiling handoff edits: verify_implementation PASS exit0 (103baseline/81unchanged/866links); verify_system_model PASS exit0 (782links/98decisions/30requirements); verify_retail_contract PASS exit0 (20exact archives/15disposition mappings); git diff --check and JSON/profile/source/AUX preservation checks PASS exit0. Only these evidence fields are appended afterward, followed by JSON/whitespace validation.",
       "complete_calculator_profile": {
         "status": "COMPLETE_ATTRIBUTION_NOT_BENCHMARK",
@@ -6992,6 +6992,228 @@
           "docs/architecture/CURRENT_STATE.md",
           "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
           "docs/reviews/implementation-2026-10-25/progress.json"
+        ]
+      },
+      "native_reserved_study": {
+        "status": "QUALIFIED_OPT_IN_DEVELOPMENT_CALLER_AND_COLD_RESTORE_CHECKED",
+        "criterion": "Package4 selected native adapter; scoped REQ-003/006/008/013/018/023. Actual owned callers, immutable qualified input closure, exact fallback/full replay, chronological reservations, admission/role/revocation/failure/recovery; no complete package/scientific admission claim.",
+        "purpose": "Connect the checked runtime/cache/numeric/environment owners and retain every failure. Challenge input/currentness and resource assumptions before dependent use.",
+        "reuse": "Existing Registry/Broker/HTTP, Blob/backup, native qualifier/cache/environment/factory, InformationStudies/FamilyStudies, ResourceHistory, typed revocation and fixed independent oracles. New code owns only framework selection/closure/accounting. Existing Path/time implement bounded publication; no new dependency or generic computation reimplementation.",
+        "implemented": "Operator prepare/advance/inspect_native_information_study and native_family_study. Durable full input+STARTED/reservation before cache writes; source/archive/output/host currentness, strict gates, exact scalar fallback before RNG use, full independent-process byte replay. Technical aliases share original capsule/budget; changed source/host/manifest conflicts. Unknown use fences all later work/grants, and known-impossible setup is denied before writes. Computed results/proofs survive post-use revocation; source versions and old final inventories stay immutable.",
+        "source": {
+          "base_commit": "e7db007",
+          "archive_sha256": "7ccc06b3443d531b3291eb53ac24d190a8612a356b0aa1b1980d613407ccbbfe",
+          "files": 117,
+          "bytes": 2034869,
+          "project_files": 111,
+          "project_bytes": 1507459,
+          "snapshot": ".trf-runtime/native-study-2026-11-02/actual-v2/source.zip",
+          "membership": "stationary-native-runtime/1 and original fixed archive8c0458b7/manifest384f70b8/kernel46d1c2/numeric pins unchanged; source/host qualification separately refreshed. Prior qualification certificates retain original source and are now source-stale."
+        },
+        "actual_final": {
+          "commands": [
+            "python -B .trf-runtime/native-study-2026-11-02/qualify_study_v2.py actual-v2",
+            "python -B .trf-runtime/native-study-2026-11-02/complete_study_v2.py"
+          ],
+          "initial_driver_exit_code": 1,
+          "initial_driver_reason": "First fixed single world had no conditioned observations; native-use assertion was too narrow. Valid gap retained.",
+          "completion_exit_code": 0,
+          "initial_seconds": "371.8408449999988",
+          "completion_seconds": "372.8167972000083",
+          "qualification": {
+            "id": "4f1f6e3dbc6c963c258feafe708f92e2c9e0780f828f37d7393c5223dc0827b8",
+            "status": "CERTIFIED",
+            "settlement": {
+              "compute_ms": 99722,
+              "storage_bytes": 154977927,
+              "usage_known": true
+            },
+            "failure": null
+          },
+          "backup_blobs": 147,
+          "study_pairs": 7,
+          "separate_child_attempts": 14,
+          "information_worlds": 3,
+          "family_worlds": 4,
+          "native_engine_uses": {
+            "information": 4,
+            "family": 12
+          },
+          "cold_bytes_in_restored_study": 56944242,
+          "budget_totals": {
+            "information_scalar_view": {
+              "charged_compute_ms": 14794,
+              "charged_storage_bytes": 19289735,
+              "initial_storage_bytes": 4064853,
+              "max_compute_ms": 360000,
+              "max_storage_bytes": 2147483648,
+              "usage_uncertain": false,
+              "overrun": false
+            },
+            "information_native_view": {
+              "charged_compute_ms": 170332,
+              "charged_storage_bytes": 120916487,
+              "initial_storage_bytes": 47092645,
+              "max_compute_ms": 360000,
+              "max_storage_bytes": 2147483648,
+              "usage_uncertain": false,
+              "overrun": false
+            },
+            "family_scalar_view": {
+              "charged_compute_ms": 24183,
+              "charged_storage_bytes": 29181345,
+              "initial_storage_bytes": 4064853,
+              "max_compute_ms": 360000,
+              "max_storage_bytes": 2147483648,
+              "usage_uncertain": false,
+              "overrun": false
+            },
+            "family_native_view": {
+              "charged_compute_ms": 220545,
+              "charged_storage_bytes": 74523341,
+              "initial_storage_bytes": 47092645,
+              "max_compute_ms": 360000,
+              "max_storage_bytes": 2147483648,
+              "usage_uncertain": false,
+              "overrun": false
+            }
+          },
+          "result": "All fixed original scalar/native worlds COMPLETE, full results/encoded+decoded streams equal, all separate replay/env/source checks pass, both currencies CURRENT at checked host/source/time. Same147blob backup/capsules/certificate after cache-free restore; cold bytes charged once by reserved study. No parent NumPy/kernel import. All numerical outputs remain uncalibrated development only."
+        },
+        "checks_at_final_publication_source": [
+          {
+            "command": "python -B -m unittest discover -s tests -p test_atomic_publication_independent.py",
+            "methods": 16,
+            "seconds": "0.793",
+            "exit_code": 0
+          },
+          {
+            "command": "python -B -m unittest discover -s tests -p test_storage.py",
+            "methods": 12,
+            "seconds": "7.789",
+            "exit_code": 0
+          },
+          {
+            "command": "python -B -m unittest discover -s tests -p test_native_runtime_independent.py",
+            "methods": 29,
+            "seconds": "7.834",
+            "exit_code": 0,
+            "skips": 1,
+            "scope": "28passed; unchanged real symlink creation permission skip."
+          },
+          {
+            "command": "python -B -m unittest discover -s tests -p test_native_qualification_independent.py",
+            "methods": 30,
+            "seconds": "13.017",
+            "exit_code": 0
+          },
+          {
+            "command": "python -B -m unittest discover -s tests -p 'test_native_study*.py'",
+            "methods": 51,
+            "seconds": "410.783",
+            "exit_code": 0
+          }
+        ],
+        "reused_checks": "Earlier source-v1 72study methods/749.687s and118data-use/revocation/storage/family/calibration methods/725.106s passed. Their unchanged controller/revocation/numerical semantics retain that source scope; changed publication owners and native integration have fresh final-source checks above.19environment/2.440s and16input-binding/3.097s checks retain unchanged owner hashes.13distinct fixed loop cases run in two fresh actual qualifier children plus complete59997draw gold; not26distinct cases. No full repository suite claimed.",
+        "failures_and_corrections": [
+          "v1 first family world had no conditioned observations; erroneous native-use assertion failed after valid gap.",
+          "v1 fixed family completion passed but restore publication failed WinError5; next restore-only recovery restored180blobs then failed cold-cache publication; unknown usage retains full120000ms/256MiB and remains fenced.",
+          "v2 cold restore passed but first single world had no conditioned observations; erroneous first-world assertion did not account for new source-bound world identity. Completion intent subsequently covered ALL already-frozen3single+4family worlds, no new source/profile/seed/cap/study.",
+          "Inherited30method baseline338.242s exit1: four unknown-use subtest failures and one error losing structured result after midwork revocation. Fixed with uncertainty fence, shared setup bound and post-use hook after result retention.",
+          "Independent reviewer added qualification/runtime alias and insufficient-setup cases; all original expectations retained.",
+          "Real WinError5 publication failures retained. Real no-delete-share file handle reproduces same error, then rename succeeds after close; original denying process remains unknown. Shared publisher permits five Windows5/32/33 rename attempts with0.75s scheduled wait; no copy/materialization/calculation retries, no destination replacement on qualified Windows. Non-Windows portable atomic no-replace not established.",
+          "Publication16 initial0.967s exit1 had3mock binding errors; autospec correction only, unchanged assertions. One nonexistent test_study_resources launcher ran0tests/exit1; no coverage credited; corrected to inventoried entrypoints. Read-only v1 review initially expected one attempt while completion was running; final independent reconciliation waited for terminal state.",
+          "Old restored v1 study is USAGE_UNCERTAIN, observed16773ms/57992818B but charged full120000ms/256MiB; no retry, alias, grant or clone resets it. Fresh v2 is a distinct genuine synthetic source qualification; all v1 inputs/results/charges remain."
+        ],
+        "independent_review": {
+          "path": ".trf-runtime/native-study-2026-11-02/independent-final-review.json",
+          "sha256": "91292e21f5d0897e5af1760a6c90105311303095c7b1c3f8ca6987f96058020d",
+          "result": "PASS scoped:117source/111project;156original/170restored immutable artifact hashes;171/227event chains;147/189blob hashes; all7pairs and14two-child attempts, exact per-attempt storage/cold bytes, unchanged4capsules/certificate, known chronology/ceilings, current qualified inputs. Reviewer did not author implementation/proof drivers. Old v1 GAP review preserved0fbe37ca."
+        },
+        "overhead_finding": {
+          "source": "actual-v2/full-binding-profile.json",
+          "profile_seconds": "15.68042940000305",
+          "verify_tree_calls": 4,
+          "verify_tree_cumulative_seconds": "9.0774709",
+          "contained_calls": 5004,
+          "contained_cumulative_seconds": "6.7352806",
+          "qualification": "One read-only full intended-use check; nested times overlap and profiler overhead is included. This locates work, not unprofiled speed or full-series feasibility. Tiny native study times include substantial checks/setup; isolated kernel timings do not demonstrate caller acceleration."
+        },
+        "inquiry": {
+          "purpose": "Connect qualified native components through actual reserved callers, then inspect technical overhead without weakening scientific authority.",
+          "finding": "Genuine small-world gaps are valid retained outcomes; fresh source-bound identities change world seeds even with unchanged config.seed. Full fixed inventories, not a presumed first-world native draw, establish this caller coverage. Actual Windows rename denial was reproduced with a held child-file handle; actual denying process remains unknown.",
+          "conclusion": "Final source passes technical integration and exact full replay; source/cache validation overhead remains material. Traceability and software tests prove no scientific/model/economic adequacy.",
+          "next_action": "Optimize verified tree/path work losslessly using existing independent byte/link/junction cases, then measure actual complete4096row equivalence and full-series feasibility; no final series or resource increase."
+        },
+        "preservation_and_effort": "All owned probe/check processes terminal; AUX6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289 unchanged/uncommitted, original-A/builder paused. No production research/final2024 study, model/count/grant action or publication;53inferences/USD0.574585/7revoked grants preserved from entry. Required regression fixtures use isolated synthetic final namespaces, never protected2024 data. Two bounded child test/review owners, central checks/source reconciliation; retained rework and overlapping test/driver durations above. Total construction wall/CPU/peakRAM/physicaldisk/model tokens/billed costs unknown; no efficiency claim.",
+        "evidence_archive": {
+          "path": "tests/fixtures/native-study-checks-2026-11-02.zip",
+          "size": 2172664,
+          "sha256": "a28ae8461a2d13f9350b1d6265dfd570293ee2bc31a7d45812636129d04d0d69",
+          "members": 41,
+          "all_member_crc_and_sha_readback": "PASS"
+        },
+        "unverified": "No scientific admission/N_min/fitted nuisance or market-model adequacy, final calibration, production actual-model quality, protected2024/capital access, complete packages3/4 or whole-series feasibility/speed claim. No native final selector or transfer of completed32/derivedfinal sources. Runtime observations are current disk/loader bindings, not RAM/security/license verdicts. Logical resource accounting is not an OS quota; prep/inspection/grant-validation compute remains outside attempt convention.",
+        "next_action": "Use recorded full-binding profile to reduce repeated tree/path overhead losslessly through existing independent file/link/junction/byte/restore cases; preserve full intended-use checks and source versions. Then measure complete equivalent4096row actual caller and reassess unchanged-series feasibility within existing limits. No new final series, retargeting, protected2024/model call or budget increase.",
+        "documentation_checks": {
+          "implementation": {
+            "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+            "status": "PASS",
+            "exit_code": 0,
+            "baseline_files": 103,
+            "unchanged_files": 81,
+            "local_links": 876
+          },
+          "system_model": {
+            "command": "python -B docs/reviews/verify_system_model.py",
+            "status": "PASS",
+            "exit_code": 0,
+            "checked_source_hashes": 22
+          },
+          "retail_contract": {
+            "command": "python -B docs/reviews/verify_retail_contract.py",
+            "status": "PASS",
+            "exit_code": 0,
+            "checked_source_hashes": 27
+          },
+          "refresh": "Only this final evidence metadata appended after bundled checks; JSON/whitespace/source/archive/AUX preservation refreshed afterward. No new executable or scientific coverage claimed.",
+          "preservation": {
+            "status": "PASS",
+            "exit_code": 0,
+            "exact_staged_files": 25,
+            "archive_crc_and_sha_members": 41,
+            "final_source_files": 117,
+            "unrelated_progress_fields_unchanged": true,
+            "aux_hash_unchanged_and_unstaged": true,
+            "note": "Initial guard used Windows locale decoding, causing false JSON differences and a Unicode print error; explicit UTF-8 comparison passed. Neither failed guard modified project bytes. First local commit failed because Git identity was unset. Reuse the established last-three-commit project identity for this command only; no persistent Git configuration or publication."
+          }
+        },
+        "changed_files": [
+          "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+          "docs/architecture/CURRENT_STATE.md",
+          "docs/reviews/implementation-2026-10-25/progress.json",
+          "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+          "tests/fixtures/native-study-checks-2026-11-02.zip",
+          "tests/test_atomic_publication_independent.py",
+          "tests/test_native_input_binding_independent.py",
+          "tests/test_native_study_independent.py",
+          "tests/test_native_study_provenance_independent.py",
+          "tests/test_native_study_transport_independent.py",
+          "trading_researcher/INFORMATION_STUDIES.md",
+          "trading_researcher/STATIONARY_BOOTSTRAP.md",
+          "trading_researcher/calibration_runs.py",
+          "trading_researcher/coordination.py",
+          "trading_researcher/data_use.py",
+          "trading_researcher/native_environment.py",
+          "trading_researcher/native_qualification.py",
+          "trading_researcher/native_qualification_profile.py",
+          "trading_researcher/native_runtime.py",
+          "trading_researcher/native_study_pipeline.py",
+          "trading_researcher/native_study_runs.py",
+          "trading_researcher/revocations.py",
+          "trading_researcher/storage.py",
+          "trading_researcher/study_resources.py",
+          "trading_researcher/study_runs.py"
         ]
       }
     }

@@ -9,6 +9,7 @@ import re
 import shutil
 import sqlite3
 import tempfile
+import time
 
 from .codec import Invalid, canonical, decode, digest, integer, strings, text
 from .errors import Conflict, Denied
@@ -18,6 +19,8 @@ SHA = re.compile(r'[0-9a-f]{64}\Z')
 MAX_BLOB_BYTES = 512 * 1024 * 1024
 BLOCK = 1024 * 1024
 RESERVED = ('native-qualification-source/', 'native-runtime-qualification-input/', 'native-runtime-qualification/',
+            'native-information-study-input/', 'native-information-study-attempt/',
+            'native-family-study-input/', 'native-family-study-attempt/',
             'native-runtime-package/', 'scientific-freeze-input/', 'scientific-freeze-attempt/', 'frozen-manifest/',
             'scientific-trial/', 'scientific-allocation/',
             'study-resource-continuation/','research-data-target/','protected-data-binding/','data-use-assessment/','composition-certificate/','composition-input/','composition-source-package/',
@@ -94,6 +97,31 @@ def _remove_staging(path, parent, prefix):
         raise Conflict('Refusing cleanup outside owned staging directory')
     if path.exists():
         shutil.rmtree(path)
+
+
+def _publish_staging(stage, destination):
+    """Publish once, tolerating only bounded Windows rename denials.
+
+    A reader without delete sharing can briefly prevent a directory rename.
+    Never replace an existing destination or retry copying/computation. Callers
+    retain ownership of verification, cleanup and elapsed/resource accounting.
+    """
+    stage, destination = Path(stage), Path(destination)
+    parent = stage.parent.resolve()
+    if destination.parent.resolve() != parent:
+        raise Conflict('Publication must stay in its owned parent directory')
+    _contained(parent, stage)
+    _contained(parent, destination)
+    for attempt in range(5):
+        if destination.exists():
+            raise FileExistsError('Publication destination already exists')
+        try:
+            stage.rename(destination)
+            return
+        except PermissionError as exc:
+            if os.name != 'nt' or getattr(exc, 'winerror', None) not in (5, 32, 33) or attempt == 4:
+                raise
+            time.sleep(0.05 * 2**attempt)
 
 
 def _validate_registry(path):
@@ -200,7 +228,7 @@ def restore_bundle(source, destination, operator_key_file):
         (stage / 'manifest.json').rename(stage / 'restore-origin.json')
         if destination.exists():
             raise Conflict('Restore destination appeared during validation')
-        stage.rename(destination)
+        _publish_staging(stage, destination)
     finally:
         _remove_staging(stage, destination.parent, 'restore-pending-')
     return {'status': 'PASS', 'directory': str(destination), 'blobs': len(manifest['blobs']),
@@ -383,7 +411,7 @@ class ExternalStorage:
             _validate_backup(stage)
             if destination.exists():
                 raise Conflict('Backup destination appeared during validation')
-            stage.rename(destination)
+            _publish_staging(stage, destination)
         finally:
             _remove_staging(stage, destination.parent, 'backup-pending-')
         return {'status': 'PASS', 'directory': str(destination), 'blobs': len(blobs), 'credentials_included': False}

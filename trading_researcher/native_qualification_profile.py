@@ -233,7 +233,8 @@ def execute(source, capsule, runtime_directory, remaining, meter, outputs):
     return report
 
 
-def validate_report(report, source, capsule, runtime_directory):
+def bound_environments(report, source, capsule, runtime_directory):
+    """Validate the fixed proof bindings, without asserting cache currency."""
     require(type(report) is dict and set(report) == {'profile', 'input_id', 'source_footprint', 'proofs'}
             and report['profile'] == PROFILE and report['input_id'] == capsule['id']
             and report['source_footprint'] == footprint(source)
@@ -241,6 +242,7 @@ def validate_report(report, source, capsule, runtime_directory):
             'Exact complete native conformance report required')
     body = capsule['body']
     require(body['source_footprint'] == footprint(source), 'Native capsule source binding differs')
+    environments = []
     for phase, proof in zip(('generate', 'replay'), report['proofs'], strict=True):
         require(type(proof) is dict and set(proof) == {'request', 'request_hash', 'result',
                 'environment_before', 'environment_after', 'stream_blob'})
@@ -258,6 +260,13 @@ def validate_report(report, source, capsule, runtime_directory):
         integer(proof['stream_blob']['size'], 'Qualified stream size', 1)
         require(proof['stream_blob']['size'] == STREAM_SIZE <= request['stream_limit'])
         for field in ('environment_before', 'environment_after'):
-            require(current(proof[field], body['runtime_id'], body['runtime_manifest'],
-                            runtime_directory, body['host_images']), 'Native qualification environment is not current')
+            environments.append(proof[field])
     require(report['proofs'][0]['stream_blob'] == report['proofs'][1]['stream_blob'])
+    return environments
+
+
+def validate_report(report, source, capsule, runtime_directory):
+    body = capsule['body']
+    for observed in bound_environments(report, source, capsule, runtime_directory):
+        require(current(observed, body['runtime_id'], body['runtime_manifest'],
+                        runtime_directory, body['host_images']), 'Native qualification environment is not current')

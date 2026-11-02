@@ -266,16 +266,28 @@ Its 30 independent methods, actual two-child full-gold run and cache-free restor
 pass; the [qualification evidence](../../../tests/fixtures/native-qualification-checks-2026-11-02.zip)
 retains original sources, failures, usage and exact scope. This is technical
 conformance only; unsupported membership and stale/revoked inputs remain gaps.
-**Next:**
-integrate opt-in reserved study execution with immutable runtime/source binding,
-the checked unsupported-numeric fallback, the now-owned native
-technical qualification, chronological aggregate accounting and full
-separate-child replay, including admission/role/revocation and failure paths.
-Reuse the checked Blob/cache/backup owners; do not relax
+The opt-in reserved development-study caller now connects these components with
+immutable qualification/source inputs, exact fallback and complete separate-child
+replay. Its 51 caller/provenance/transport methods pass at the final source;
+16 independent publication cases, 28 cache cases (one additional permission
+skip), 12 storage cases and 30 qualifier cases also pass. Earlier 72 study and
+118 data-use/revocation/calibration regressions retain their pre-publication-fix
+source scope. The actual final-source proof restores a 147-blob backup without
+its cache, charges the 56,944,242 cold bytes once, then completes all three single
+and four family worlds in both scalar/native routes with equal full results and
+streams. Independent reconciliation and exact receipts are in the
+[retained evidence](../../../tests/fixtures/native-study-checks-2026-11-02.zip).
+The two earlier Windows publication failures, unknown-use fence and over-narrow
+driver assertions remain history; no old study or certificate is retargeted.
+This closes the selected technical caller slice, not packages 3/4 or scientific
+admission. **Next:** use the recorded full-binding profile to reduce the observed
+source/cache verification overhead without omitting checks, then measure the
+complete equivalent 4,096-row caller before revising full-series feasibility.
+The profile locates repeated tree/path checks; it is not an unprofiled benchmark
+or permission for a final series. Reuse the checked Blob/cache/backup owners; do not relax
 128-file/16-MiB project-source or blob-reference limits, copy NumPy per world,
 use host site-packages, retarget frozen capsules or assume full-series savings.
-The selected native adapter section remains unfinished until those actual
-callers and independent failure checks pass. Preserve
+No native final-calibration selector or old-source transfer is qualified. Preserve
 PRNG/order, exact numerics, full draws, all required independent checks and
 empirical-versus-model knownness weights,
 the two-coordinate limit, all failed checks and old sources. Declared stress

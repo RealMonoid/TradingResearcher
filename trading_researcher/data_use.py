@@ -85,7 +85,7 @@ def prior_knowledge(broker, formalization):
     annotations remain unresolved, even when exploration can proceed with them.
     """
     pending=[(formalization['id'],True)];seen=set();unresolved=set();protected=set();contexts=set()
-    operations=set();technical=set()
+    operations=set();technical=set();native_metadata=set()
     while pending:
         identity,required=pending.pop()
         if identity in seen:continue
@@ -100,6 +100,9 @@ def prior_knowledge(broker, formalization):
             protected.add(identity)
         if artifact['data_class']=='operations':
             owned=artifact['creator']==artifact['origin']=='controller'
+            if owned and schema=='native-runtime-qualification/1':
+                from .native_qualification import technical_provenance
+                native_metadata.update(technical_provenance(broker,artifact))
             implementation=(schema in ('reference-source-package/1','feature-source-package/1',
                 'binding-source-package/1','composition-source-package/1')
                 and artifact['authority']=='retained_source_not_certified')
@@ -116,6 +119,8 @@ def prior_knowledge(broker, formalization):
                 and set(context['exposure'])<=set(artifact['exposure']),'Worker ancestry omits its authorized context')
             pending.extend((ref,True) for ref in context['artifact_ids'])
             pending.extend((ref,False) for ref in context['exposure'])
+    operations.difference_update(native_metadata)
+    technical.update(native_metadata & seen)
     return {'artifact_ids':sorted(seen),'context_ids':sorted(contexts),
         'unresolved_exposure_refs':sorted(unresolved),'protected_knowledge_ids':sorted(protected),
         'operations_knowledge_ids':sorted(operations),'technical_provenance_ids':sorted(technical),

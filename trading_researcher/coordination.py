@@ -147,6 +147,9 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
             from .family_study_runs import FamilyStudies, FamilyCalibrationStudies
             FamilyStudies(self)._recover_information_studies()
             FamilyCalibrationStudies(self)._recover_information_studies()
+            from .native_study_runs import NativeInformationStudies, NativeFamilyStudies
+            NativeInformationStudies(self)._recover_information_studies()
+            NativeFamilyStudies(self)._recover_information_studies()
         except BaseException:
             self.close()
             raise
@@ -191,6 +194,14 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
         return dict(row)
 
     def call(self, token, op, **args):
+        if op in ('prepare_native_information_study', 'advance_native_information_study', 'inspect_native_information_study',
+                  'prepare_native_family_study', 'advance_native_family_study', 'inspect_native_family_study'):
+            from .native_study_runs import NativeInformationStudies, NativeFamilyStudies
+            runner = NativeFamilyStudies(self) if op.endswith('family_study') else NativeInformationStudies(self)
+            method = (runner._prepare_information_study_external if op.startswith('prepare_') else
+                      runner._advance_information_study_external if op.startswith('advance_') else
+                      runner._inspect_information_study_external)
+            return method(token, args)
         if op in ('qualify_native_runtime', 'inspect_native_runtime_qualification'):
             from .native_qualification import NativeQualifications
             qualifications = NativeQualifications(self)
@@ -203,6 +214,7 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
             from .binding import require
             from .calibration_runs import CalibrationStudies
             from .family_study_runs import FamilyStudies, FamilyCalibrationStudies
+            from .native_study_runs import NativeInformationStudies, NativeFamilyStudies
             with self._mutex:
                 self._binding_owner(token)
                 require(type(args.get('study_id')) is str,'Study identity required')
@@ -210,7 +222,9 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
                 require(type(body) is dict,'Owned study input required')
                 schema=body.get('schema')
                 runners={'information-study-input/1':self,'family-study-input/1':FamilyStudies(self),
-                    'evaluator-calibration-input/1':CalibrationStudies(self),'family-calibration-input/1':FamilyCalibrationStudies(self)}
+                    'evaluator-calibration-input/1':CalibrationStudies(self),'family-calibration-input/1':FamilyCalibrationStudies(self),
+                    'native-information-study-input/1':NativeInformationStudies(self),
+                    'native-family-study-input/1':NativeFamilyStudies(self)}
                 require(schema in runners,'Owned study input required')
                 return runners[schema]._continue_study_external(token,args)
         if op in ('prepare_family_study','advance_family_study','inspect_family_study',

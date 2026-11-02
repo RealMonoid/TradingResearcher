@@ -193,7 +193,8 @@ class NativeContext:
                   'runtime_images': runtime, 'host_images': host}
         return decode(canonical(result))
 
-    def validate(self, observation):
+    def validate_bindings(self, observation):
+        """Check retained metadata and host inputs without reading a cache."""
         require(type(observation) is dict and set(observation) == FIELDS,
                 'Exact native environment observation required')
         require(observation['schema'] == SCHEMA and observation['runtime_id'] == self.runtime_id
@@ -206,9 +207,15 @@ class NativeContext:
                     'Bounded native file observations required')
             for name, value in values.items():
                 _descriptor(value)
-                require(value == self._file(name, image=images), 'Native observed file differs')
+                require(value == self._member(name, image=images), 'Native observed file differs')
         for value in _images(observation['host_images']):
             self._host(value)
+
+    def validate(self, observation):
+        self.validate_bindings(observation)
+        for field, images in (('module_files', False), ('runtime_images', True)):
+            for name, value in observation[field].items():
+                require(value == self._file(name, image=images), 'Native observed file differs')
         # Include nonimported dependencies in the post-use integrity check.
         verify_tree(self.directory, self.manifest)
 
@@ -223,6 +230,21 @@ def current(environment, runtime_id, manifest, directory, host_images):
         if not _environment_current(base):
             return False
         NativeContext(runtime_id, manifest, directory, host_images).validate(environment['native_runtime'])
+        return True
+    except (Invalid, Conflict, OSError, KeyError, TypeError, AttributeError):
+        return False
+
+
+def inputs_current(environment, runtime_id, manifest, directory, host_images):
+    """Pre-materialization inputs only; this cannot qualify cache use."""
+    try:
+        require(type(environment) is dict and set(environment) ==
+                {'identity', 'standard_library', 'isolation', 'native_runtime'},
+                'Exact extended native environment required')
+        base = {key: environment[key] for key in ('identity', 'standard_library', 'isolation')}
+        if not _environment_current(base):
+            return False
+        NativeContext(runtime_id, manifest, directory, host_images).validate_bindings(environment['native_runtime'])
         return True
     except (Invalid, Conflict, OSError, KeyError, TypeError, AttributeError):
         return False

@@ -142,8 +142,9 @@ cache; all 98 imported NumPy/adapter module files matched it. This is not proof
 of transitive OS/native DLL paths or loaded binary identity. Real Windows
 junctions were checked; the separate symlink case remains skipped on this host
 because creation is denied. The numeric adapter and exact fallback below are
-checked; actual study selection, full native environment qualification and
-scientific admission remain open.
+checked. The selected development-study caller is described in
+[Information Studies](INFORMATION_STUDIES.md#selected-qualified-native-development-execution);
+scientific admission remains separate.
 
 ### Explicit qualified draw engine
 
@@ -152,7 +153,8 @@ separately qualified owned caller. It runs once per sensitivity length. `None`
 retains the same original scalar RNG and all its numeric guards. The world and
 family calculator functions forward an explicit factory; their default calls
 add no new keyword to legacy callees. This private hook authenticates no factory
-and no Registry operation selects one yet.
+and authenticates no caller by itself. The selected native development-study
+operations require the owned runtime qualification below.
 
 The versioned `stationary-native-int64/1` kernel reuses the qualified NumPy
 MT19937 core. The adapter copies the exact Python state-v3 words and position
@@ -198,9 +200,9 @@ The [component evidence](../tests/fixtures/native-environment-checks-2026-11-02.
 retains independent mutation/alias/namespace cases and an actual separate-child
 pre/post probe. Its reference host inventory is provisional input, not a
 certificate. Loaded paths and current file bytes do not prove relocated memory
-identity or absence of hidden mappings. Actual study selection, independently
-issued runtime qualification, reserved accounting, replay and scientific
-admission remain open.
+identity or absence of hidden mappings. The owned qualifier below and selected
+development-study caller retain their own independent checks and intended-use
+currency; the component inventory alone supplies neither authority.
 
 ### Owned runtime qualification
 
@@ -232,6 +234,9 @@ retained output and environment bindings. A missing restored cache is `STALE`;
 the same certificate can become current at a new cache location after exact
 reconstruction. The [qualification evidence](../tests/fixtures/native-qualification-checks-2026-11-02.zip)
 retains fixed-case, lifecycle, integrity, actual operator and real restore checks.
-This is implementation conformance only. Actual reserved study selection,
-aggregate study accounting, old-source transfer, calibration, scientific
+This is implementation conformance only. The opt-in
+[reserved development-study caller](INFORMATION_STUDIES.md#selected-qualified-native-development-execution)
+reuses this qualifier, cache, chronological accounting and complete separate-child
+replay. Historical study/final capsules retain their original source and cannot
+be transferred to this implementation. Calibration, model adequacy, scientific
 admission and protected-data authority remain separate prerequisites.

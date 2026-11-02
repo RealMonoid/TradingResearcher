@@ -48,6 +48,63 @@ Known use charges the measured amount. Incomplete file accounting or an unsettle
 
 Between settled worlds, the retained study can continue after registry restart or complete backup/restore. An abrupt writer loss during an outstanding attempt becomes terminal `ORPHAN_UNCERTAIN`: a writer lock or recovered event cannot prove the prior child has terminated. Automatic replacement work is blocked. Reliable OS containment/reclamation remains unimplemented.
 
+A settled attempt with unknown accounting is `USAGE_UNCERTAIN`, even with ample
+remaining resources and retry slots. It retains at least its complete original
+reservation, cannot nominate a target, and permits neither another attempt nor a
+continuation grant. Restart and backup preserve this fence; a different request
+key does not settle missing usage.
+
+## Selected qualified native development execution
+
+The operator-only `prepare_native_information_study`,
+`advance_native_information_study` and `inspect_native_information_study` select
+the [qualified native runtime](STATIONARY_BOOTSTRAP.md#owned-runtime-qualification).
+The corresponding family operations replace `information` with `family`.
+Preparation adds exactly `native_qualification_id` to the usual request. These
+are development operations; they expose no native final-calibration selector or
+scientific-admission override.
+
+Preparation requires a completed, independently qualified immutable runtime and
+the exact current project/source, trusted host and Python bindings. It checks the
+retained qualification outputs and archive bytes without requiring or building a
+cache. The input retains the complete qualification ancestry and charges its
+distinct retained blobs/metadata alongside the ordinary project/case input.
+Only the exact owned technical metadata is recognized as implementation
+provenance; every other operational, protected and unresolved ancestor remains
+subject to the existing knowledge gates. Recognition of historical provenance
+never establishes current execution authority.
+
+An alias certificate or runtime registration cannot reset the same plan/profile
+inventory or budget. Equivalent inputs return the original capsule, qualification
+identity, attempts and charges; changed source, manifest or host bindings
+conflict. A new current certificate cannot replace a revoked original binding.
+
+The durable attempt reservation and STARTED event precede native materialization.
+Known setup/storage requirements are checked before cache writes. A verified
+shared cache writes zero bytes on reuse; every cold/partial write belongs to the
+attempt meter. Each isolated generation/replay child loads only that selected
+cache and validates its complete source/runtime/host environment before and
+after work. The parent imports no NumPy or kernel. Both complete ordered streams
+and results must match, including engine-selection observations. Unsupported
+numeric/length inputs use the unchanged exact scalar fallback before RNG use.
+
+Post-use qualification and final dependency checks precede successful settlement.
+Failed replay, revocation, environment drift, malformed responses, resource stops
+and partial accounting retain available results, diagnostics and prefixes with
+technical-failure authority. Cache-free restore keeps the same immutable study;
+only its next reserved attempt may rebuild and charge the selected cache.
+Existing capsules execute their original source and are never retargeted.
+Logical accounting is not an OS memory/disk quota; preparation, inspection and
+grant-validation compute remain outside the existing attempt-time convention.
+On the qualified Windows host, cache/backup/restore publication tolerates at most
+five atomic rename attempts for Windows errors 5, 32 or 33, with at most 0.75
+seconds of scheduled waiting. Copying, materialization and computation are not
+repeated. Existing destinations remain caller-owned, and persistent denial stays
+a failure with the original accounting fence. This does not establish portable
+atomic no-replace behavior on other operating systems.
+The [progress register](../docs/reviews/implementation-2026-10-25/progress.json)
+records exact exercised versions, independent checks and remaining limits.
+
 ## Explicit resource continuation
 
 The operator-only `continue_study` operation applies to existing scalar/family development and final series. Inspection supplies an opaque `resource_checkpoint` and ordered `continuation_ids`. Supply the exact checkpoint with `key`, `study_id`, `additional_compute_ms`, `additional_storage_bytes`, `rationale`, `expected_progress`, and `stop_reason`. Each request can add at most 3,600,000 ms and 4 GiB logical storage; either addition may be zero, but not both. There is no automatic renewal. The text records the operator's decision, not a machine-validated prediction or scientific stopping rule.

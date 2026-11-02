@@ -130,7 +130,8 @@ class CalibrationStudies(InformationStudies):
     def _recorded_calibration_worlds(self):
         # Retained inputs include failed and not-yet-executed reservations.
         study_schemas={'information-study-input/1','evaluator-calibration-input/1',
-            'family-study-input/1','family-calibration-input/1'}
+            'family-study-input/1','family-calibration-input/1',
+            'native-information-study-input/1','native-family-study-input/1'}
         for row in self._db.execute('SELECT id,envelope FROM artifacts'):
             artifact=self._artifact(row['id']);body=artifact.get('body')
             if artifact['creator']!=artifact['origin'] or artifact['creator']!='controller' or type(body) is not dict:continue

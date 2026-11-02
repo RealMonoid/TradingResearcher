@@ -52,7 +52,8 @@ class ResourceHistory:
         require(value['charged_compute_ms']==self.compute and value['charged_storage_bytes']==self.storage,
             'Chronological resource accounting differs')
         value['overrun']=value['overrun'] or self.overrun
-        value['next_reservation_fits']=value['next_reservation_fits'] and not value['overrun'] and (
+        value['usage_uncertain']=self.unknown
+        value['next_reservation_fits']=value['next_reservation_fits'] and not self.unknown and not value['overrun'] and (
             self.storage+self.limits['attempt_storage_bytes']<=value['max_storage_bytes'])
         return value
 

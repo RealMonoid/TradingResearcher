@@ -40,7 +40,7 @@ class NativeQualifications:
             raise Denied('Owned native qualification record required')
         return item
 
-    def _source(self, identity):
+    def _source_metadata(self, identity):
         package = self._owned(identity, SOURCE)
         body = package['body']
         files = body['files']
@@ -58,8 +58,15 @@ class NativeQualifications:
             total += value['size']
         require(total <= 16 * META and package['source_refs'] == [] and package['exposure'] == []
                 and set(package['blob_refs']) == {value['sha256'] for value in files.values()}
+                and body['footprint'] == {name: value['sha256'] for name, value in files.items()}
                 and body['bootstrap_sha256'] == hashlib.sha256(profile.BOOTSTRAP.encode()).hexdigest(),
                 'Native qualification source closure differs')
+        return package
+
+    def _source(self, identity):
+        package = self._source_metadata(identity)
+        body = package['body']
+        files = body['files']
         source = {name: self.broker._read_blob_bytes(value['sha256']) for name, value in files.items()}
         require(footprint(source) == body['footprint'] and all(
             len(source[name]) == value['size'] for name, value in files.items()), 'Native qualification source bytes differ')
@@ -118,6 +125,40 @@ class NativeQualifications:
             integer(value['size'], 'Retained qualifier output size')
             raw = self.broker._read_blob_bytes(value['sha256'])
             require(len(raw) == value['size'], 'Retained qualifier output descriptor differs')
+
+    def _require_inputs(self, certificate_id, *, runtime_directory=None):
+        """Bind qualified inputs before a reserved caller rebuilds its cache.
+
+        No runtime file is loaded or materialized here. The consuming caller
+        must perform full runtime validation after its durable reservation.
+        """
+        from .native_environment import inputs_current
+        broker = self.broker
+        with broker._mutex:
+            certificate = self._certificate(certificate_id)
+            require(certificate['body']['status'] == 'CERTIFIED', 'A completed native qualification is required')
+            broker._require_usable_dependencies(certificate['id'])
+            self._verify_outputs(certificate)
+            capsule = self._input(certificate['body']['input_id'])
+            body = capsule['body']
+            package = self._owned(body['source_package_id'], SOURCE)
+            source = self._source(package['id'])
+            runtime = self.runtimes._package(body['runtime_id'])
+            profile.validate_runtime(runtime)
+            raw = self.runtimes._raw(runtime)
+            directory = broker.directory / 'native-runtime-cache' / _identity(raw, runtime['body']['manifest'])
+            require(source == profile.capture_source() and body['runtime_identity'] == _runtime_identity()
+                    and body['host_images'] == profile.host_inputs(source), 'Qualified native input versions changed')
+            for observed in profile.bound_environments(certificate['body']['report'], source, capsule, directory):
+                require(inputs_current(observed, body['runtime_id'], body['runtime_manifest'], directory,
+                                       body['host_images']), 'Qualified native host inputs changed')
+            if runtime_directory is not None:
+                require(Path(runtime_directory).absolute() == directory.absolute(),
+                        'Qualified runtime must use the selected owned cache')
+                profile.validate_report(certificate['body']['report'], source, capsule, directory)
+            archive = self.runtimes._archive_source(runtime['body']['request']['archive_id'])
+            return {'certificate': certificate, 'capsule': capsule, 'source_package': package,
+                    'runtime': runtime, 'archive_source': archive, 'source': source}
 
     def _prior(self, request):
         for capsule in self._inputs():
@@ -296,3 +337,23 @@ class NativeQualifications:
                  'usage_known': False} if status == 'INTERRUPTED' else None)
             return {'input_id': capsule['id'], 'certificate_id': certificate['id'] if certificate else None,
                     'status': status, 'attempts': attempts, 'settlement': settlement, 'scientific_readiness': False}
+
+
+def technical_provenance(broker, artifact):
+    """Recognize exact historical metadata, never current executable authority.
+
+    Only these five typed identities are recognized. Their other source and
+    exposure ancestors still participate in the ordinary knowledge traversal.
+    """
+    try:
+        qualifications = NativeQualifications(broker)
+        certificate = qualifications._certificate(artifact['id'])
+        require(certificate == artifact and certificate['body']['status'] == 'CERTIFIED')
+        capsule = qualifications._input(certificate['body']['input_id'])
+        package = qualifications._source_metadata(capsule['body']['source_package_id'])
+        runtime = qualifications.runtimes._package(capsule['body']['runtime_id'])
+        profile.validate_runtime(runtime)
+        archive = qualifications.runtimes._archive_source(runtime['body']['request']['archive_id'])
+        return {item['id'] for item in (certificate, capsule, package, runtime, archive)}
+    except (Denied, Conflict, KeyError, TypeError, AttributeError, ValueError):
+        return set()

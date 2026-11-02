@@ -40,7 +40,7 @@ Two fixed synthetic workload probes completed all 59,997 draws: 2,048 timestamps
 
 The later [information-planning checkpoint](../docs/reviews/implementation-2026-10-25/information-planning-verification.json) addresses the cost of repeatedly applying this actual estimator. Integer-valued sufficient statistics now use Python's exact unbounded integers within the unchanged 8,192-bit numeric envelope. Fractional observations keep rational arithmetic. Each draw still constructs both means as exact `Fraction` values before subtraction; integer division never introduces a floating-point decision. Overflow checks, full-grid sampling, seeds, all required draws, undefined values, stream ordinals/digests and Monte Carlo diagnostics are preserved.
 
-The [retained pre-change source](../docs/reviews/implementation-2026-10-25/information-planning-baseline.json) supplies a comparison oracle for complete calculations and stopped prefixes. Paired benchmarks use the same fixed inputs and draw counts and require equal result hashes, including the per-length draw-stream digests. Their local workload target is separate from D082's end-to-end research acceleration criterion. This arithmetic change cannot establish an attainable simulation-study budget or statistical power by itself.
+The [retained pre-change source](../docs/reviews/implementation-2026-10-25/information-planning-baseline.json) supplies a comparison oracle for complete calculations and stopped prefixes. Paired benchmarks use the same fixed inputs and draw counts and require equal result hashes, including the per-length draw-stream digests. Their local workload target is separate from D081's end-to-end research acceleration criterion. This arithmetic change cannot establish an attainable simulation-study budget or statistical power by itself.
 
 On the declared machine, two alternating pairs of the 2,048-timestamp periodic Boolean workload gave median calculation times of 4.005 seconds for the accelerated path and 8.633 seconds for the retained path (2.16x). A single 35,136-timestamp pair took 48.595 versus 134.584 seconds (2.77x). Each calculation completed 59,997 draws with an identical full result hash. No project test process intentionally ran concurrently during these comparisons; ordinary system background load was not controlled. These are synthetic calculation measurements, not a confidence interval for speed, a result for fractional return data, a calibrated study-budget guarantee or an end-to-end research-speed claim.
 
@@ -55,3 +55,48 @@ The optional keyword-only `on_draw_bytes` callback receives each completed draw 
 The owned study child uses this byte sink to frame the already serialized draw as `{"kind":"draw","value":...}`. Case records still use the generic canonical encoder. Generation and replay share the same size-limited, hash-checked line writer. The complete retained stream remains byte-identical to the original dictionary path, while avoiding a second validation/serialization and dictionary copy for every draw. Previously retained source capsules continue to execute their original code.
 
 An actual retained development-world comparison, with 16 timestamps and all 59,997 draws, ran three alternating generation/replay pairs per source version. Median time fell from 5.828025 to 4.829184 seconds (17.14% lower). Every numerical result and the entire 15,699,508-byte stream matched the prior version exactly. These unprofiled child comparisons are distinct from the earlier instrumented bottleneck profile; [Python's profiler documentation](https://docs.python.org/3.14/library/profile.html) explains why profiler timings are not benchmarks. Background system load was not controlled. This small workload does not establish large-sample speed, scientific calibration, complete budget feasibility or end-to-end research acceleration. [Verification](../docs/reviews/implementation-2026-10-25/draw-transport-verification.json) records checks and the independent review.
+
+### Grouped circular sufficient-statistic queries
+
+Following the November 2 existing-limits/exact-acceleration decision, the current
+calculator queries its four cumulative statistics together with the bound Python
+standard-library `operator.add` and `operator.sub`. It retains exact Python
+integers and fractions. Circular subtraction then addition keeps its original
+association; an oversized intermediate difference may cancel before the existing
+caller checks its accumulated total and conditional sum. No new intermediate
+bound or fixed-width conversion is introduced. Grid positions, including empty
+buckets and unknown-condition baseline observations, remain aligned.
+
+Transposing the four existing prefix lists adds one tuple of four references per
+grid position, plus the containing tuple. Numeric objects are reused. This linear
+memory and setup cost belongs in whole-calculation timing. PRNG consumption,
+geometric lengths, path hashing, full draw counts, callbacks and the existing
+segment/cancellation/deadline checks retain their original behavior; this change
+establishes no hard instantaneous memory or time quota.
+
+The [existing source archive](../tests/fixtures/study-source-0f1bf36.zip) already
+contains the exact pregrouped sampler, SHA-256
+`010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7`.
+Independent hand-fixed cases exercise wrapping, large integers/fractions and the
+8,192-bit cancellation boundary. The controlled child comparison retains full
+historical replay and all decoded bytes while holding model-record semantics
+fixed for complete raw/encoded/pre/post result equality. It preserves the later
+source-process diagnostic fields and their documented identity changes rather
+than stripping metadata from results.
+
+Old source capsules remain unchanged. In particular, the completed 32-world
+development grid and any final series derived by the existing controller retain
+that grid's original calculator; a faster installed source cannot retarget them.
+Future eligible execution needs its own valid source/runtime binding. The
+[existing work record](../docs/reviews/implementation-2026-10-25/progress.json)
+retains exact checks, paired timing and the remaining calibration/resource gaps.
+
+Four fixed unprofiled calculations on the existing 4,096-row binary fixture ran
+in BEFORE/AFTER/AFTER/BEFORE order, with all three 19,999-draw cases and the same
+predeclared Monte Carlo settings. Median time was 54.348309 seconds before and
+52.331552 seconds after (3.71% lower elapsed time). Complete result and combined
+draw-byte hashes matched in every observation. Setup, transposition, validation,
+interval/MC and byte-sink work are included. No project tests intentionally ran
+concurrently; background system load was uncontrolled. Two observations per
+version supply no paired uncertainty estimate, full-series resource guarantee,
+market calibration or D081 acceleration claim.

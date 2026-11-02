@@ -14,12 +14,37 @@ from trading_researcher.population_models import specification
 
 LEGACY = Path(__file__).parent / 'fixtures/study-source-0f1bf36.zip'
 LEGACY_SHA = 'ee335215005ce138a058ea3499c5424ac929003a9243e80c139ed0c18dc96e2f'
+PREGROUPED_SHA = '010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7'
+SAMPLER = 'trading_researcher/stationary_bootstrap.py'
+PIPELINE = 'trading_researcher/study_pipeline.py'
 
 
 def legacy_source():
     assert hashlib.sha256(LEGACY.read_bytes()).hexdigest() == LEGACY_SHA
     with zipfile.ZipFile(LEGACY) as archive:
         return {name:archive.read(name) for name in archive.namelist()}
+
+
+def transport_source_images(current):
+    """Hold model meaning fixed when comparing transport and sampler changes.
+
+    The full archive still runs with its exact historical model-record version.
+    Its earlier model predates source-process diagnostic fields, which change
+    model-derived identifiers and result headers by design. For transport/result
+    equality, keep current semantic sources and vary only the retained raw
+    pipeline, then only the exact grouped sampler. No result is normalized.
+    """
+    legacy = legacy_source()
+    sampler = legacy[SAMPLER]
+    assert hashlib.sha256(sampler).hexdigest() == PREGROUPED_SHA
+    encoded_before = {**current, SAMPLER: sampler}
+    raw_before = {**encoded_before, PIPELINE: legacy[PIPELINE]}
+    return [
+        ('untouched_full_legacy_historical_replay', legacy),
+        ('current_semantics_raw_transport_pregrouped', raw_before),
+        ('current_semantics_encoded_transport_pregrouped', encoded_before),
+        ('current_semantics_encoded_transport_grouped', dict(current)),
+    ]
 
 
 def inputs():

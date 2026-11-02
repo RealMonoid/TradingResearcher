@@ -235,11 +235,15 @@ resource-stop checkpoint after 21 worlds. The complete grid nominates 4,096 test
 rows, with only two worlds per cell. The user selected existing resource limits
 and exact acceleration first after the unchanged final recipe projected about
 141 hours/81 GiB for 2,048 fresh worlds. No multi-day budget or final draw is
-authorized by this result. A bounded profile of the existing 4,096-row independent
-fixture identifies scalar segment generation and sufficient-statistic queries.
-Next, qualify the smallest suitable reusable adapter, preserving
-PRNG/order, exact numerics, full draws and all required independent checks.
-No speedup is established. Preserve empirical-versus-model knownness weights,
+authorized by this result. The grouped exact prefix adapter passes 63 affected
+checks and actual child/owned-caller replay. A fixed unprofiled 4,096-row fixture
+comparison observes 54.348309 to 52.331552 median seconds (3.71% less), with every
+complete result/draw byte matching. It does not establish full-series feasibility
+or D081 research acceleration. Completed/derived frozen capsules retain their
+original calculator. Next profile the complete existing-fixture calculation,
+including interval/MC cost, before choosing another exact adapter. Preserve
+PRNG/order, exact numerics, full draws, all required independent checks and
+empirical-versus-model knownness weights,
 the two-coordinate limit, all failed checks and old sources. Declared stress
 conformance is not fitted nuisance adequacy, N_min or calibration. Continue the
 scientific core; original A remains on hold and protected outcomes stay blocked.

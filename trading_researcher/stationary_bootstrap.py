@@ -3,6 +3,7 @@ from copy import deepcopy
 from fractions import Fraction
 import hashlib
 import math
+from operator import add, sub
 import platform
 import random
 import struct
@@ -93,6 +94,17 @@ def _segment_sum(prefix,start,count):
     return prefix[end]-prefix[start] if end<=size else prefix[size]-prefix[start]+prefix[end-size]
 
 
+def _segment_sums(rows, start, count):
+    """Query the four exact cumulative statistics on the same circular path."""
+    size = len(rows) - 1
+    end = start + count
+    if end <= size:
+        return tuple(map(sub, rows[end], rows[start]))
+    # Preserve subtraction then addition, without bounding the temporary:
+    # a large wrapped difference can cancel before the caller's own guard.
+    return tuple(map(add, map(sub, rows[size], rows[start]), rows[end - size]))
+
+
 def _prefixes(report,check_stop=None):
     instruments=len(report['request']['universe']['instruments'])
     prefixes=[[0],[0],[0],[0]]
@@ -165,6 +177,7 @@ def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None):
         result.update(status='RESOURCE_STOP',reason=str(exc))
         return result
     size=result['time_rows']
+    prefix_rows = tuple(zip(*prefixes))
     mc_values={}
     for length in lengths:
         seed=int(hashlib.sha256(canonical({'sampler':SAMPLER,'seed':design['randomness']['seed'],
@@ -187,10 +200,12 @@ def calculate(report,design,limits,stop=None,on_draw=None,*,on_draw_bytes=None):
                 used_segments+=1; segments+=1; sampled+=count
                 path_hash.update(struct.pack('>II',start,count))
                 try:
-                    n+=_segment_sum(prefixes[0],start,count)
-                    total=_bounded(total+_segment_sum(prefixes[1],start,count))
-                    nc+=_segment_sum(prefixes[2],start,count)
-                    conditional=_bounded(conditional+_segment_sum(prefixes[3],start,count))
+                    scope_count, scope_sum, condition_count, condition_sum = _segment_sums(
+                        prefix_rows, start, count)
+                    n += scope_count
+                    total = _bounded(total + scope_sum)
+                    nc += condition_count
+                    conditional = _bounded(conditional + condition_sum)
                 except ArithmeticError as exc:
                     reason=str(exc); break
             value=None

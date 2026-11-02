@@ -90,11 +90,14 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   checkpoint. The complete grid nominates 4,096 tested rows; two worlds per cell do not establish
   N_min, model adequacy or final calibration. [Exact scope and receipts](../reviews/implementation-2026-10-25/progress.json).
 - **Next action / resource decision:** the user selected existing limits and exact acceleration first.
-  The bounded existing 4,096-row fixture profile identifies scalar segment generation and sufficient-statistic
-  queries as the bottleneck. Qualify the smallest reusable adapter with unchanged PRNG, draws, numerics
-  and gates; no speedup is established. The unchanged final recipe would require
+  Grouped exact prefix queries now pass 63 affected checks and controlled actual-child replay.
+  The fixed 4,096-row calculator comparison observes 54.348309 to 52.331552 median seconds (3.71% less),
+  with identical complete results/draw bytes; this is no general speed or feasibility guarantee.
+  Next profile the complete existing-fixture calculation, including interval/MC work, before selecting
+  another adapter. The completed grid/derived final still bind their original calculator; no retargeting.
+  The unchanged final recipe would require
   2,048 fresh worlds, projecting about 141 hours/81 GiB from measured development costs; that multi-day
-  budget was not granted. No process remains live. Original A, paid research and protected
+  budget was not granted. Original A, paid research and protected
   2024/scientific/final-calibration access remain blocked by their existing prerequisites.
 
 - **Retained failures:** native missing-module import, timeout rounding/malformed completion, and a 24-pass

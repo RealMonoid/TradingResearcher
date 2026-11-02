@@ -17,34 +17,70 @@ class StudyStreamTransportTests(unittest.TestCase):
     def test_real_old_source_and_new_source_have_identical_results_and_all_decoded_bytes(self):
         payload, manifest, world, cases = fixed.inputs()
         values = []; observations = []
-        for label, source in [('retained_raw_0f1bf36', fixed.legacy_source()), ('encoded_current', source_bundle())]:
+        images = fixed.transport_source_images(source_bundle())
+        legacy_source, raw_source, encoded_source, grouped_source = [source for _, source in images]
+        # Each comparison changes one implementation dimension. Preserve all
+        # historical archive bytes and all current model/provenance fields.
+        self.assertEqual({name for name in raw_source if raw_source[name] != encoded_source[name]},
+                         {fixed.PIPELINE})
+        self.assertEqual({name for name in encoded_source if encoded_source[name] != grouped_source[name]},
+                         {fixed.SAMPLER})
+        self.assertEqual(set(raw_source), set(encoded_source))
+        self.assertEqual(set(encoded_source), set(grouped_source))
+        self.assertEqual(raw_source[fixed.PIPELINE], legacy_source[fixed.PIPELINE])
+        self.assertEqual(hashlib.sha256(raw_source[fixed.SAMPLER]).hexdigest(), fixed.PREGROUPED_SHA)
+        self.assertEqual(encoded_source[fixed.SAMPLER], raw_source[fixed.SAMPLER])
+        for label, source in images:
             meter = {'materialized_bytes':0}; outputs = []; start = time.monotonic()
             result, proofs = study_runs.execute_attempt(source, payload, manifest, world, cases,
                 lambda:180, meter, outputs)
             seconds = time.monotonic()-start
             self.assertEqual(len(proofs), 2)
             self.assertEqual(result['outcome']['state'], 'VERIFIED')
+            footprint = {name:hashlib.sha256(raw).hexdigest() for name,raw in source.items()}
+            for proof in proofs:
+                self.assertEqual(proof['footprint'], footprint)
             values.append((result, proofs, dict(outputs)))
             observations.append({'label':label, 'seconds':seconds, 'proof_count':len(proofs),
+                'source_footprint_sha256':digest(footprint),
+                'sampler_sha256':footprint[fixed.SAMPLER],
+                'pipeline_sha256':footprint[fixed.PIPELINE],
                 'stream_bytes':proofs[0]['stream_blob']['size'],
                 'materialized_bytes':meter['materialized_bytes'],
                 'retained_bytes':sum(len(raw) for _,raw in outputs),
                 'charged_bytes':meter['materialized_bytes']+sum(len(raw) for _,raw in outputs)+study_runs.METADATA_BYTES})
-        old, new = values
-        self.assertEqual(old[0], new[0])
-        self.assertNotIn('stream_encoding', old[1][0])
-        raw = old[2]['generate/stream.jsonl']
+        legacy, raw_current, encoded_before, new = values
+        # Complete result equality applies to the three current-semantic images,
+        # rather than comparing two intentionally different model-record versions.
+        self.assertEqual(raw_current[0], encoded_before[0])
+        self.assertEqual(encoded_before[0], new[0])
+        raw = legacy[2]['generate/stream.jsonl']
+        self.assertEqual(raw_current[2]['generate/stream.jsonl'], raw)
+        for historical_raw in (legacy, raw_current):
+            self.assertNotIn('stream_encoding', historical_raw[1][0])
+            self.assertNotIn('stream_encoding', historical_raw[1][1])
+            self.assertEqual(historical_raw[2]['replay/expected-stream.jsonl'], raw)
+        for encoded_current in (encoded_before, new):
+            encoded = encoded_current[2]['generate/stream.jsonl.gz']
+            self.assertEqual(decode_stream(encoded, encoded_current[1][0]['stream_encoding']), raw)
+            self.assertEqual(encoded_current[2]['replay/expected-stream.jsonl.gz'], encoded)
+            self.assertEqual(encoded_current[1][0]['stream_encoding'], encoded_current[1][1]['stream_encoding'])
+            self.assertLess(len(encoded), len(raw))
         encoded = new[2]['generate/stream.jsonl.gz']
-        self.assertEqual(decode_stream(encoded, new[1][0]['stream_encoding']), raw)
-        self.assertEqual(new[2]['replay/expected-stream.jsonl.gz'], encoded)
-        self.assertEqual(new[1][0]['stream_encoding'], new[1][1]['stream_encoding'])
+        self.assertEqual(encoded_before[2]['generate/stream.jsonl.gz'], encoded)
+        self.assertEqual(encoded_before[1][0]['stream_encoding'], new[1][0]['stream_encoding'])
         self.assertEqual(sum(1 for line in raw.splitlines() if b'"kind":"draw"' in line), 79996)
-        self.assertLess(len(encoded), len(raw))
         print(json.dumps({'benchmark':'same_fixed_mixed_family_actual_generate_and_replay',
             'observations':observations, 'result_sha256':digest(new[0]),
+            'historical_result_sha256':digest(legacy[0]),
+            'legacy_archive_sha256':fixed.LEGACY_SHA,
+            'pregrouped_sampler_sha256':fixed.PREGROUPED_SHA,
             'decoded_sha256':hashlib.sha256(raw).hexdigest(), 'decoded_bytes':len(raw),
             'draws':79996, 'complete_result_and_stream_equal':True,
-            'qualification':'One paired synthetic observation; not full-series feasibility or market calibration.'}))
+            'qualification':'Four controlled source images: untouched historical replay; complete current-semantic '
+                'results equal across raw/encoded transport and pre/grouped sampler; decoded bytes equal across '
+                'all four. Historical model-record identities are retained, not normalized. This synthetic '
+                'observation establishes no full-series feasibility or market calibration.'}))
 
     def test_parent_rejects_format_switch_and_retains_both_prefix_types(self):
         payload, manifest, world, cases = fixed.inputs()

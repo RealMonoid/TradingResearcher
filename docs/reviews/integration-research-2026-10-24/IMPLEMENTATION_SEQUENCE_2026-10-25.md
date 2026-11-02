@@ -240,8 +240,11 @@ checks and actual child/owned-caller replay. A fixed unprofiled 4,096-row fixtur
 comparison observes 54.348309 to 52.331552 median seconds (3.71% less), with every
 complete result/draw byte matching. It does not establish full-series feasibility
 or D081 research acceleration. Completed/derived frozen capsules retain their
-original calculator. Next profile the complete existing-fixture calculation,
-including interval/MC cost, before choosing another exact adapter. Preserve
+original calculator. The complete 1,024-row fixture profile still identifies
+scalar segment/RNG/per-segment work as the next target, with interval/MC secondary
+in that profiled workload. Next verify an established native MT19937 core's exact
+state/operation compatibility and captured-runtime/resource feasibility before
+another adapter; no native bridge or toolchain is qualified. Preserve
 PRNG/order, exact numerics, full draws, all required independent checks and
 empirical-versus-model knownness weights,
 the two-coordinate limit, all failed checks and old sources. Declared stress

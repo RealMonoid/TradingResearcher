@@ -93,8 +93,10 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   Grouped exact prefix queries now pass 63 affected checks and controlled actual-child replay.
   The fixed 4,096-row calculator comparison observes 54.348309 to 52.331552 median seconds (3.71% less),
   with identical complete results/draw bytes; this is no general speed or feasibility guarantee.
-  Next profile the complete existing-fixture calculation, including interval/MC work, before selecting
-  another adapter. The completed grid/derived final still bind their original calculator; no retargeting.
+  Complete 1,024-row fixture attribution still points to scalar segment/RNG/per-segment work; interval/MC
+  work is secondary in that profiled workload. Next check established native MT19937 state/operation
+  equivalence and captured-runtime feasibility before another adapter. No native bridge/toolchain is
+  qualified. The completed grid/derived final still bind their original calculator; no retargeting.
   The unchanged final recipe would require
   2,048 fresh worlds, projecting about 141 hours/81 GiB from measured development costs; that multi-day
   budget was not granted. Original A, paid research and protected

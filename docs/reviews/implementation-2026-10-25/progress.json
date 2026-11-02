@@ -319,7 +319,7 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "Grouped exact prefix queries are qualified through63affected checks and actual callers; fixed full-fixture timing observes3.71% lower median elapsed with identical results/bytes, not full-series feasibility. Profile the complete existing-fixture calculator including interval/MC work before another adapter. Keep budgets, original frozen calculator bindings, scientific/2024 gates and original-A pause; no final series or new grants.",
+  "next_action": "Grouped exact prefix queries are qualified through63affected checks/actual callers with a modest fixed-fixture3.71% timing observation. The completed1024-row calculator profile still points to scalar segment/RNG/per-segment work, not interval/MC, as the next target. Verify established native MT19937 state/operation equivalence and current runtime-capture/resource support before building another exact adapter. Keep budgets, original frozen calculator bindings, scientific/2024 gates and original-A pause; no final series or new grants.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -6399,7 +6399,7 @@
       },
       "scientific_readiness": false
     },
-    "next_action": "The grouped-query slice is qualified with a modest fixed-fixture timing observation. Next profile the complete existing-fixture calculation including interval/MC cost before selecting another exact adapter; the earlier segment-limited profile does not measure those completed stages. Do not prepare/start final draws, retarget the completed grid, raise budgets, reopen original A or admit protected2024/scientific use.",
+    "next_action": "The grouped-query slice and complete1024-row attribution profile are finished. Verify an established native MT19937 implementation's exact compatibility with the bound CPython seed/state/randrange/uniform operations and the retained-runtime/resource envelope before another adapter. Do not prepare/start final draws, retarget the completed grid, raise budgets, reopen original A or admit protected2024/scientific use.",
     "changed_files": [
       "trading_researcher/study_runs.py",
       "tests/test_second_order_independent.py",
@@ -6663,10 +6663,28 @@
         "result_hash": "5602d102b04b8824d61230f89b97b5493420f9e5a8621104dfadc9f283053e75",
         "findings": "500489 generator entries;2000000 segment-sum calls. Profiled cumulative seconds:calculate3.994780,segments1.146067,segment_sum0.678439,randrange0.551195,bounded0.330555. Nested cumulative times overlap and must not be added. This identifies scalar segment/sufficient-statistic work; it is not an unprofiled speed baseline or completed-bootstrap result."
       },
-      "next_action": "Profile the complete existing-fixture calculator including interval/MC cost before another adapter; retain the qualified grouped-query implementation and original source snapshots. Preserve CPython MT19937 state/draw order, geometric math, signed/fractional8192-bit bounds, full draw/path bytes, undefined and cancellation/segment-budget prefixes, callback isolation and native separate replay. Pin/capture any future dependency and runtime; do not retarget historical/final capsules.",
+      "next_action": "Complete-fixture attribution still identifies scalar segment/RNG/per-segment work. Verify established native MT19937 state/operation compatibility and captured-runtime feasibility before another adapter; do not assume NumPy seeding or log1p substitutes are equal. Retain grouped queries, exact bounds, full bytes/stops/callbacks, historical source snapshots and independent controls. Pin/capture any future dependency/runtime; do not retarget frozen capsules.",
       "acceptance": "Affected independent archived/golden/adversarial cases plus actual operator/runtime integration must pass for the settled source. Measure equivalent work without profiler overhead before claiming speed/cost benefit; re-estimate full-series feasibility honestly. Existing budgets remain binding and no final series starts from this profile.",
       "unverified": "Grouped adapter/conformance and four fixed whole-calculation timing observations are complete. No full-series budget feasibility, final calibration/model adequacy/scientific admission, D081 research acceleration or economic evidence is established. No live benchmark/test process remains.",
-      "documentation_checks": "After the profiling handoff edits: verify_implementation PASS exit0 (103baseline/81unchanged/866links); verify_system_model PASS exit0 (782links/98decisions/30requirements); verify_retail_contract PASS exit0 (20exact archives/15disposition mappings); git diff --check and JSON/profile/source/AUX preservation checks PASS exit0. Only these evidence fields are appended afterward, followed by JSON/whitespace validation."
+      "documentation_checks": "After the profiling handoff edits: verify_implementation PASS exit0 (103baseline/81unchanged/866links); verify_system_model PASS exit0 (782links/98decisions/30requirements); verify_retail_contract PASS exit0 (20exact archives/15disposition mappings); git diff --check and JSON/profile/source/AUX preservation checks PASS exit0. Only these evidence fields are appended afterward, followed by JSON/whitespace validation.",
+      "complete_calculator_profile": {
+        "status": "COMPLETE_ATTRIBUTION_NOT_BENCHMARK",
+        "command_exit_code": 0,
+        "session_id": 11834,
+        "process_state": "TERMINAL",
+        "receipt": ".trf-runtime/scientific-profile-2026-11-02/grouped-full-calculator-profile.json",
+        "stats": ".trf-runtime/scientific-profile-2026-11-02/grouped-full-calculator-profile.pstats",
+        "source_sha256": "0f4978d9015d4e895ab6e5e1f386f055732ca5dc95f6b90333400d6386c60f00",
+        "fixture": "Existing binary_report(1024), same base8/m2/seed713/MC settings;180seconds/100million segments. Coding fixture size is not a new scientific target or cohort.",
+        "profiled_seconds": "62.967491",
+        "attempted": [19999,19999,19999],
+        "result_status": "COMPUTED_UNCALIBRATED",
+        "result_sha256": "40b901057a9912ad3bb1f50b9a2d57bf791eeb4375b842b07cd8e7e09b6fdea2",
+        "finding": "Full calculation completed. Profiled cumulative seconds:segments22.786800 including randrange10.791269; grouped sums7.034330; bounds7.013102; stop checks4.298836. basic_interval1.931849 and MCdiagnose1.928136 share ordered-replicate work3.817266. Nested times overlap and profiler overhead especially affects call-heavy code; this is attribution, not an unprofiled cost model.",
+        "warranted_next_action": "Check whether an established native MT19937 core can preserve exact CPython state/operations, then qualify a bounded native loop if reuse and isolated source/runtime capture fit existing budgets. Preserve actual Python log1p semantics, full streams, numeric/stop/callback behavior and frozen versions. Another quantile/MC-only optimization is not the first target supported by this fixture profile.",
+        "unverified": "No native state/seed/operation bridge, compiled toolchain or library runtime has been qualified/adopted. No native speedup, full-series budget feasibility, final-calibration permission or scientific/model/economic claim. No live process remains.",
+        "documentation_checks": "After the completed-profile handoff: verify_implementation PASS exit0 (103baseline/81unchanged/866links), verify_system_model PASS exit0 (782links/98decisions/30requirements), verify_retail_contract PASS exit0 (20exact archives/15mappings), git diff --check PASS exit0. Only this evidence field is appended afterward, followed by JSON/profile/source/AUX and whitespace checks. Production/source tests remain the63methods qualified in e580434; no automatic-continuation test rerun."
+      }
     }
   }
 }

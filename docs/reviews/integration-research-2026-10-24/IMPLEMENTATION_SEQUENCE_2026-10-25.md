@@ -235,8 +235,9 @@ resource-stop checkpoint after 21 worlds. The complete grid nominates 4,096 test
 rows, with only two worlds per cell. The user selected existing resource limits
 and exact acceleration first after the unchanged final recipe projected about
 141 hours/81 GiB for 2,048 fresh worlds. No multi-day budget or final draw is
-authorized by this result. Next, measure the actual bottleneck with existing
-independent cases and qualify the smallest suitable reusable adapter, preserving
+authorized by this result. A bounded profile of the existing 4,096-row independent
+fixture identifies scalar segment generation and sufficient-statistic queries.
+Next, qualify the smallest suitable reusable adapter, preserving
 PRNG/order, exact numerics, full draws and all required independent checks.
 No speedup is established. Preserve empirical-versus-model knownness weights,
 the two-coordinate limit, all failed checks and old sources. Declared stress

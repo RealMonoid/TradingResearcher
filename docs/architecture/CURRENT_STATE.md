@@ -90,8 +90,9 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   checkpoint. The complete grid nominates 4,096 tested rows; two worlds per cell do not establish
   N_min, model adequacy or final calibration. [Exact scope and receipts](../reviews/implementation-2026-10-25/progress.json).
 - **Next action / resource decision:** the user selected existing limits and exact acceleration first.
-  Profile existing independent cases, then qualify the smallest suitable reusable adapter with unchanged
-  PRNG, draws, numerics and gates. No speedup is established. The unchanged final recipe would require
+  The bounded existing 4,096-row fixture profile identifies scalar segment generation and sufficient-statistic
+  queries as the bottleneck. Qualify the smallest reusable adapter with unchanged PRNG, draws, numerics
+  and gates; no speedup is established. The unchanged final recipe would require
   2,048 fresh worlds, projecting about 141 hours/81 GiB from measured development costs; that multi-day
   budget was not granted. No process remains live. Original A, paid research and protected
   2024/scientific/final-calibration access remain blocked by their existing prerequisites.

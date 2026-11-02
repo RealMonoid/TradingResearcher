@@ -6594,6 +6594,28 @@
       "python -B docs/reviews/verify_system_model.py": "PASS, exit0;782links/98decisions/30traced requirements",
       "python -B docs/reviews/verify_retail_contract.py": "PASS, exit0;20archived documents exact/15scoped disposition mappings",
       "scope": "Terminal grid evidence, resolved resource choice and descriptive handoff. Earlier invocation-check limitations are historical. These document checks establish no scientific/model/economic validity; only evidence fields are appended after the bundle, followed by JSON/preservation/whitespace checks."
+    },
+    "exact_acceleration": {
+      "status": "CURRENT_BOTTLENECK_MEASURED_ADAPTER_QUALIFICATION_NEXT",
+      "purpose": "Advance package4 practical full-series feasibility under the user's existing-limits/exact-acceleration decision; preserve full scientific scope and all independent controls.",
+      "reuse": "Existing stationary_bootstrap.py, tests/bootstrap_oracle.py:binary_report and archived fraction_reference, test_exact_bootstrap_acceleration/adversarial, bootstrap independent oracles and native stream/replay entrypoints. No new numerical implementation or dependency adopted.",
+      "installed_reuse_candidates": "NumPy2.3.4 is installed on CPython3.14.2; Cython/Numba/arch/mypy are not installed and cl is absent from PATH (not proof that no compiler is installed). No dependency adopted. Before using NumPy, consult its actual2.3 version/API/license and qualify state/operation equivalence and retained isolated runtime; the earlier2.5 documentation read was conceptual only.",
+      "profile": {
+        "method": "Standard-library cProfile around current calculate(binary_report(4096),base8,m2,seed713), max_seconds60/max_segments500000; no market data or new study/final world.",
+        "source_sha256": "010810c61cbe9fc880aafb19a2c1b16ccedd4912ce8e7dd57e3a9e449dbae6d7",
+        "receipt": ".trf-runtime/scientific-profile-2026-11-02/exact-performance-baseline.json",
+        "stats": ".trf-runtime/scientific-profile-2026-11-02/exact-performance-baseline.pstats",
+        "command_exit_code": 0,
+        "wall_seconds": "4.000423",
+        "result_status": "RESOURCE_STOP",
+        "result_reason": "computation_segment_limit",
+        "result_hash": "5602d102b04b8824d61230f89b97b5493420f9e5a8621104dfadc9f283053e75",
+        "findings": "500489 generator entries;2000000 segment-sum calls. Profiled cumulative seconds:calculate3.994780,segments1.146067,segment_sum0.678439,randrange0.551195,bounded0.330555. Nested cumulative times overlap and must not be added. This identifies scalar segment/sufficient-statistic work; it is not an unprofiled speed baseline or completed-bootstrap result."
+      },
+      "next_action": "Select and qualify the smallest exact segment/sufficient-statistic adapter after checking established libraries and current runtime-capture support. Preserve CPython MT19937 state/draw order, geometric math, signed/fractional8192-bit bounds, all full draw/path bytes, undefined and cancellation/segment-budget prefixes, callback isolation and native separate replay. If a native dependency is selected, pin/capture its source/binaries/runtime rather than importing an unbound host library. Retain all historical source versions and independent fixtures; do not refactor them away.",
+      "acceptance": "Affected independent archived/golden/adversarial cases plus actual operator/runtime integration must pass for the settled source. Measure equivalent work without profiler overhead before claiming speed/cost benefit; re-estimate full-series feasibility honestly. Existing budgets remain binding and no final series starts from this profile.",
+      "unverified": "No adapter built, no speedup or general fixture/market equivalence established, no final calibration/model adequacy/scientific admission or economic evidence. No live process remains.",
+      "documentation_checks": "After the profiling handoff edits: verify_implementation PASS exit0 (103baseline/81unchanged/866links); verify_system_model PASS exit0 (782links/98decisions/30requirements); verify_retail_contract PASS exit0 (20exact archives/15disposition mappings); git diff --check and JSON/profile/source/AUX preservation checks PASS exit0. Only these evidence fields are appended afterward, followed by JSON/whitespace validation."
     }
   }
 }

@@ -191,6 +191,10 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
         return dict(row)
 
     def call(self, token, op, **args):
+        if op in ('qualify_native_runtime', 'inspect_native_runtime_qualification'):
+            from .native_qualification import NativeQualifications
+            qualifications = NativeQualifications(self)
+            return (qualifications.qualify if op == 'qualify_native_runtime' else qualifications.inspect)(token, args)
         if op in ('retain_native_runtime', 'inspect_native_runtime'):
             from .native_runtime import NativeRuntimes
             runtimes = NativeRuntimes(self)

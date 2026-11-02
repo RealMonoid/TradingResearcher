@@ -105,8 +105,12 @@ Updated November 2, 2026. Descriptive resume handoff; decisions/contracts retain
   The selected native environment collector and NumPy-free parent validator now pass 19 independent
   methods and an actual separate-child pre/post probe. The fixed host inventory is provisional,
   not a runtime certificate; legacy three-key binding behavior passes 19 existing regression methods.
-  Next complete opt-in reserved study execution, exact fallback, full native runtime
-  qualification, chronological aggregate accounting and complete separate-child replay. Preserve
+  The owned runtime qualifier now binds that fixed inventory and exact inputs to independent
+  conformance: 30 methods, actual two-child full-gold execution and cache-free restore pass.
+  It preserves unsupported/failed attempts and usage; currentness checks retained input/output bytes.
+  [Exact versions and limits](../reviews/implementation-2026-10-25/progress.json) remain authoritative
+  for these scoped observations. Next complete opt-in reserved study execution, exact fallback,
+  chronological aggregate accounting and complete separate-child replay. Preserve
   old source/blob limits and exclude host site-packages. The completed grid/derived final still bind
   their original calculator; no retargeting or full-series feasibility follows from these timings.
   The unchanged final recipe would require

@@ -201,3 +201,37 @@ certificate. Loaded paths and current file bytes do not prove relocated memory
 identity or absence of hidden mappings. Actual study selection, independently
 issued runtime qualification, reserved accounting, replay and scientific
 admission remain open.
+
+### Owned runtime qualification
+
+The operator can call `qualify_native_runtime(key=..., runtime_id=...)` and
+`inspect_native_runtime_qualification(qualification_id=...)` through the existing
+Broker/HTTP interface. The latter accepts the retained input or result identity.
+Workers cannot invoke them or forge their reserved records. Generic retention
+and compatibility metadata grant no qualification.
+
+`stationary-native-runtime/1` accepts only the pinned canonical archive,
+manifest, kernel and prior independent fixtures. It fixes the observed host
+paths/hashes before work, preserves the original assertions and complete golden
+result/stream, and records the complete current source closure. The owned input
+and `STARTED` event commit before cache materialization or child execution.
+Two fresh isolated children each run the same 13 independent loop cases and all
+59,997 calculator draws; replay compares every retained draw byte. Both phases
+must pass pre/post environment, source, cache and fixed-result checks.
+
+The implementation-qualification attempt is bounded to 300 seconds and 256 MiB
+of logical retention/materialization/output accounting. Unknown usage preserves
+at least that full reservation; known overruns and failures cannot certify.
+Input blobs are rechecked after execution, output bytes at intended use. Exact
+key replay returns immutable history. A changed request conflicts; an unfinished
+or interrupted attempt needs an explicit new key, retaining its prior cost.
+Typed source/runtime/input/result revocation blocks use without deleting history.
+
+Inspection is read-only. `CURRENT` requires intact source, archive, cache,
+retained output and environment bindings. A missing restored cache is `STALE`;
+the same certificate can become current at a new cache location after exact
+reconstruction. The [qualification evidence](../tests/fixtures/native-qualification-checks-2026-11-02.zip)
+retains fixed-case, lifecycle, integrity, actual operator and real restore checks.
+This is implementation conformance only. Actual reserved study selection,
+aggregate study accounting, old-source transfer, calibration, scientific
+admission and protected-data authority remain separate prerequisites.

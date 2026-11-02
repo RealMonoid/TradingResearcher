@@ -260,9 +260,15 @@ selected native environment collector and NumPy-free parent checker now pass
 19 independent methods, 19 existing binding regressions and actual separate-child
 pre/post checks. The [environment evidence](../../../tests/fixtures/native-environment-checks-2026-11-02.zip)
 retains the original failures and exact sources; its host reference inventory
-is provisional and issues no runtime certificate. **Next:**
+is provisional and alone issues no runtime certificate. The owned Registry
+qualifier now binds the fixed inputs/host inventory to independent conformance.
+Its 30 independent methods, actual two-child full-gold run and cache-free restore
+pass; the [qualification evidence](../../../tests/fixtures/native-qualification-checks-2026-11-02.zip)
+retains original sources, failures, usage and exact scope. This is technical
+conformance only; unsupported membership and stale/revoked inputs remain gaps.
+**Next:**
 integrate opt-in reserved study execution with immutable runtime/source binding,
-the checked unsupported-numeric fallback, independently issued native
+the checked unsupported-numeric fallback, the now-owned native
 technical qualification, chronological aggregate accounting and full
 separate-child replay, including admission/role/revocation and failure paths.
 Reuse the checked Blob/cache/backup owners; do not relax

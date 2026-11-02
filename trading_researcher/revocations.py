@@ -8,10 +8,11 @@ from .errors import Conflict, Denied
 SCHEMA='dependency-revocation/1'
 AUTHORITY='technical_use_revocation_not_scientific_outcome'
 PACKAGES={'reference-source-package/1','feature-source-package/1','binding-source-package/1','composition-source-package/1',
-    'native-runtime-package/1'}
+    'native-runtime-package/1','native-qualification-source/1'}
 VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificate/1','implementation-certificate/1','composition-certificate/1',
     'research-data-target/1','protected-data-binding/1','study-resource-continuation/1','feature-evidence-release/1',
-    'development-feedback-manifest/1','development-feedback-release/1'}
+    'development-feedback-manifest/1','development-feedback-release/1',
+    'native-runtime-qualification-input/1','native-runtime-qualification/1'}
 REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1',
     'population-family-input/1','family-study-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
@@ -93,6 +94,9 @@ class DependencyRevocations:
         if schema in VERSIONS:version_selector(artifact)
         elif artifact['creator']!=artifact['origin'] or artifact['creator']!='controller':return None
         if schema in PACKAGES or schema=='data-snapshot/1':return []
+        if schema=='native-runtime-qualification-input/1':
+            return [body['runtime_id'],body['source_package_id']]
+        if schema=='native-runtime-qualification/1':return [body['input_id']]
         if schema=='research-data-target/1':return [body['request']['development_feature_certificate_id']]
         if schema=='protected-data-binding/1':return [body['request'][key] for key in ('target_id','data_snapshot_id','feature_certificate_id')]
         if schema=='feature-definitions/1':

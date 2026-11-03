@@ -178,8 +178,18 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   inputs/source/history remain fixed. No recovery execution has started.
   Retained records: `.trf-runtime/scalar-final-calibration-2026-11-02/`.
   Preserve the host/driver/helper and all copies; use read-only inspection.
-  M2 data-prerequisite checks are complete; now qualify the approved recovery;
-  the numerical study must run without parallel heavy construction checks.
+  M2 data-prerequisite checks are complete. The append-only recovery kernel now
+  has independently checked custody, reservation, failure, revocation and restore
+  controls: 30 kernel methods plus 17 pure controls, with 20 fresh final-source
+  methods and 27 explicitly historical unchanged-path passes. All 75 affected
+  existing storage/revocation/continuation methods also freshly pass.
+  [Exact component evidence](../../tests/fixtures/calibration-recovery-kernel-checks-2026-11-03.zip)
+  includes an actual tiny generation/replay pair and a real fixture grant;
+  it does not qualify the approved study's consuming adapter or driver.
+  Next finish those callers and the actual before-run restore/input checks;
+  no actual recovery setup or retry has started. The numerical study must run
+  without parallel heavy construction checks. The latest requested capacity
+  recheck finds 130.10 GiB free on Healthy/OK NTFS C:; recheck at intended use.
 
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original

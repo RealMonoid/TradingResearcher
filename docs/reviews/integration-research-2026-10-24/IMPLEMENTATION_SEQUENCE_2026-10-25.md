@@ -363,6 +363,39 @@ the old host. Start the same approved series only after these prerequisites,
 with no parallel heavy construction checks. Other M2 prerequisites retain their
 full exits and scientific gates.
 
+**Recovery kernel checked; consuming preparation still required (November 3).**
+The host-local `scalar-calibration-recovery/1` owner now appends a separately
+versioned input, source custody and amendment to the same study. It retains the
+old overrun, attempts, grants and charges. Setup reserves its complete fixed
+retention tariff before staging; failed or interrupted setup cannot restart
+under another key. Reservations consume only the named extra attempt or an
+unused original world. Full generation, separate replay, original-generation
+equality, current typed dependencies and the original count plan remain required.
+The existing paired one-hour/four-GiB continuation policy and aggregate limits
+are preserved, including old grants and metadata charges. Unknown usage,
+orphaned work, new failures and revocation fence execution. Relocated restores
+retain descriptive counts and accounting but cannot execute.
+
+Independent checks cover 30 kernel methods and 17 pure resource controls;
+20 methods were freshly run at the final source and 27 unchanged-path kernel
+passes are explicitly reused from their historical source. All 75 affected
+existing storage/revocation/continuation methods also freshly pass: 122 distinct
+methods, 95 fresh and 27 historical. Genuine tiny owned inputs include a new
+complete generation/separate-replay pair and a real owned continuation. These
+are temporary synthetic fixtures, not the approved 2,048-world execution.
+Independent review and central reconciliation pass for this component only.
+[Exact sources, checks and corrected failures](../../../tests/fixtures/calibration-recovery-kernel-checks-2026-11-03.zip)
+retain the restored-view defect, corrected setup-test expectation, incorrect
+conditional-tranche implementation and its independently exposed failures.
+No fresh complete 30-method run at the final source is claimed.
+
+The thin trusted consuming adapter and isolated driver, exact live approval/input
+binding, before-run full backup/restore proof and actual named retry remain
+unqualified. No recovery setup or numerical attempt has run on the actual study.
+Next complete those callers and independent controls, then resume only the same
+approved inventory without parallel heavy construction checks. Generic old
+continuation remains fenced; scientific admission and protected data remain closed.
+
 **Checked next M2 slice: declared scalar observation spans.** The existing
 owned-plan reservation caller now retains conservative `declared-observation-spans/1`
 for its currently supported AST1 scalar requests. Complete nested lag/mean

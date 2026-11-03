@@ -18,7 +18,8 @@ from .errors import Conflict, Denied
 SHA = re.compile(r'[0-9a-f]{64}\Z')
 MAX_BLOB_BYTES = 512 * 1024 * 1024
 BLOCK = 1024 * 1024
-RESERVED = ('native-qualification-source/', 'native-runtime-qualification-input/', 'native-runtime-qualification/',
+RESERVED = ('calibration-recovery-',
+            'native-qualification-source/', 'native-runtime-qualification-input/', 'native-runtime-qualification/',
             'native-information-study-input/', 'native-information-study-attempt/',
             'native-family-study-input/', 'native-family-study-attempt/',
             'native-runtime-package/', 'scientific-freeze-input/', 'scientific-freeze-attempt/', 'frozen-manifest/',

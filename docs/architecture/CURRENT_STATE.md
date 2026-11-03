@@ -125,6 +125,13 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   before all 64 current-source references; the eight passes remain historical.
   Allow 45–90 minutes for software/checks, then uncertain 1–3 hours for acceptance.
   Original operational time, A4, aggregate resources and all science gates remain.
+  The prospective schema/3 correction is now software-checked: four new independent
+  caller/financial cases and ten affected regressions pass. Exact actual V2 inputs
+  and the sole policy difference pass a read-only check; all earlier fees/halts and
+  numeric/input/replay owners remain preserved. The updated consumer capsule
+  retains both versions, the failed caller reproduction and independent cases.
+  Next: publish/pin, fresh actual qualification and the complete 64-reference
+  acceptance. No V3 process, final seed reservation or runtime admission is claimed.
 
 - **Direct LightGBM role adopted — D102 (November 3):** direct LightGBM is designated
   as an interchangeable forecast component for actual hypothesis tasks, with the

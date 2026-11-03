@@ -43,7 +43,7 @@ def policy():
     return {'schema': 'native-calibration-controller-policy/1', 'max_workers': 6,
         'metadata_bytes_prepaid': CONTROL_BYTES, 'order': 'replicate_then_target_spec_pattern_id',
         'acceptance_order': 'parallel_then_serial_fixed_old_corpus',
-        'acceptance_deadline_ms': 300000,
+        'acceptance_deadline_ms': 600000,
         'retry_order': 'due_retry_before_unstarted', 'deadline_multiplier': 2,
         'cleanup_reservation_ms': 30000, 'forecast_checkpoint_worlds': 64,
         'forecast_wall_limit_ms': WALL_LIMIT_MS, 'retry_planning_floor': {'num': 1, 'den': 32},
@@ -759,7 +759,8 @@ class NativeCalibrationController:
                 and len(p['specifications']) == 2 and len(p['patterns']) == 4
                 and len(manifest['worlds']) == 32, 'D100 requires the entire fixed original reference corpus')
         tasks = runner.tasks(reference)
-        self.bind_inventory(token, pool_id, 'acceptance', reference['id'], list(tasks), 300000)
+        self.bind_inventory(token, pool_id, 'acceptance', reference['id'], list(tasks),
+                            policy()['acceptance_deadline_ms'])
         rank = {identity: i for i, identity in enumerate(round_robin(manifest['worlds']))}
         for mode, workers in (('parallel', 6), ('serial', 1)):
             selected = sorted([task for task in tasks if tasks[task]['mode'] == mode],

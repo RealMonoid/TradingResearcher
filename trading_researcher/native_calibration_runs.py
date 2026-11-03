@@ -65,12 +65,41 @@ SOURCE_DEPENDENCY_CORRECTION = MappingProxyType({
     'ancestor_pool_id': '74eee8955850c048b355a439963eaf90fd50af057ab03604835f940b040affb9',
     'failure_pairs': (('Invalid', 'Native study dependencies changed'),),
     'scope': 'The pinned pre-final base-consumer dependency correction; no second final series.'})
+SOURCE_REFERENCE_CLOCK_CORRECTION = MappingProxyType({
+    'schema': 'native-calibration-source-correction/3',
+    'predecessor_pool_id': 'ed91215b33d3c4ab89b56f2b8c36291ae3ae04e1d16d98d0ec6359cfef41c5b2',
+    'expected_checkpoint': 'b908814d78808fe9e7e5cf3721432cc04887fd81418c458a90f3d88afbe88d43',
+    'reference_id': '93e219325d0139f7a9ecf1b8b63e4b5d7988347e043d9a080c0764b3b7772f78',
+    'source_result_id': '49449b73c6623f9b8c24bfcd9787c08d22e2e401b193427112f54d7a5cecc40a',
+    'old_coordination_sha256': '25c67fa1d48371108aa1e91f630d953cc5e7e33e5615f503feadb851e3782dfc',
+    'fixed_coordination_sha256': '25c67fa1d48371108aa1e91f630d953cc5e7e33e5615f503feadb851e3782dfc',
+    'predecessor_correction_schema': 'native-calibration-source-correction/2',
+    'ancestor_pool_id': 'bd57b37e9fbdf78a2eb14684ff3d742f1453add2eeea4fe0dd48bf2abdf4809a',
+    'old_acceptance_deadline_ms': 300000, 'new_acceptance_deadline_ms': 600000,
+    'completed_attempts': 8, 'failed_attempts': 2,
+    'acceptance_artifact_ids': (
+        'e86968d45cf79afc9158413658cbf106c7aa7483708e81e34f933a6a5af525eb',
+        '5fcb578be45937c1515e29903a67ffdb64630e08cf295b0c281635e9a4f0ae25',
+        '569d0568431d355fea902c320decc348aa1bb4c88aa7254aa00e516b39a12067',
+        'abfceb9ab7abd5c11292416493689897eecac184deb5deec39c6aff9296256e4',
+        '4f6797dd56a261961dbbeb895fb071f928513cea8b149bae5bfcfac76f9dec9f',
+        '1fdc04a9f7f247c6ca0d805a0599bba0a385b1bf9614dab9ab1dd53bdd55b6a8',
+        'c6933e6098aec2371fc375f449e14c77eedc77c0844589cfc036147ee3426a62',
+        '89f852e6af4d5e45166a1c29ddded5ceaceab4db8c364cd9e8a87396902090dc',
+        '7855c9a332ee24105183d095a295f1e8f3abf9177c134551e60034b1d83aaab7',
+        '7bb175d0199a6e02de09c6aaa6a8be01ab598131ae14c747b32fa3426e7d0f7d'),
+    'failure_pairs': (
+        ('AttemptDeadlineExceeded', 'Owned native whole-attempt deadline elapsed'),
+        ('StudyProcessCancelled', 'Native study parent requested cancellation')),
+    'scope': 'The pinned pre-final outer reference measurement correction; no inner profile or final-series reset.'})
 SOURCE_CORRECTION_FILES = frozenset({
     'trading_researcher/coordination.py', 'trading_researcher/native_calibration_runs.py',
     'trading_researcher/native_calibration_controller.py', 'trading_researcher/revocations.py'})
 
 
 def _source_correction_pin(predecessor_pool_id):
+    if predecessor_pool_id == SOURCE_REFERENCE_CLOCK_CORRECTION['predecessor_pool_id']:
+        return SOURCE_REFERENCE_CLOCK_CORRECTION
     if predecessor_pool_id == SOURCE_DEPENDENCY_CORRECTION['predecessor_pool_id']:
         return SOURCE_DEPENDENCY_CORRECTION
     return SOURCE_CORRECTION
@@ -336,6 +365,49 @@ class NativeCalibrationResources:
                     'inventories': {phase: item['id'] for phase, item in history.inventories.items()},
                     'scientific_readiness': False}
 
+    @staticmethod
+    def _reference_clock_checkpoint(previous, reference, attempts, pin):
+        """Carry only the observed immutable V2 terminal set, never a clock retry."""
+        request = previous.inventories['acceptance']['body']['request']
+        require(request['execution_deadline_ms'] == pin['old_acceptance_deadline_ms']
+                and request['attempt_compute_ms'] == pin['old_acceptance_deadline_ms'] + 30000,
+                'Stopped reference inventory differs from the pinned old measurement envelope')
+        require(len(attempts) == len(pin['acceptance_artifact_ids'])
+                and {item['id'] for item in attempts} == set(pin['acceptance_artifact_ids']),
+                'Reference correction requires the exact ten retained acceptance artifacts')
+        complete, failed = [], []
+        for item in attempts:
+            body = item['body']
+            require(body.get('reference_id') == reference['id']
+                    and body.get('reference_mode') == 'parallel'
+                    and body['settlement']['usage_known'] is True,
+                    'Reference correction requires known parallel work from its exact input')
+            if body['resource_state'] == 'COMPLETE':
+                require(body.get('failure') is None and body.get('failures') == [],
+                        'Historical reference completion has a retained error')
+                complete.append(body)
+            else:
+                failure = body.get('failure') or {}
+                pair = (failure.get('type'), failure.get('message'))
+                require(body['resource_state'] == 'FAILED' and pair in pin['failure_pairs']
+                        and body.get('failures') == [failure],
+                        'Only the pinned reference deadline and cancellation may be carried')
+                failed.append(body)
+                if pair[0] == 'StudyProcessCancelled':
+                    require(body.get('proofs') == [] and body.get('output_blobs') == {}
+                            and body.get('result') is None and body.get('replay_result') is None
+                            and body.get('custody', {}).get('phases') == [],
+                            'Pinned cancellation must retain its exact pre-generation shape')
+                    continue
+            require(len(body.get('proofs', [])) == 2 and body.get('result') is not None
+                    and body.get('replay_result') is not None
+                    and body.get('reference_comparison') == 'FULL_REFERENCE_MATCH',
+                    'Pinned reference computation must retain both full matched phases')
+        require(len(complete) == pin['completed_attempts'] and len(failed) == pin['failed_attempts']
+                and {(b['failure']['type'], b['failure']['message']) for b in failed}
+                    == set(pin['failure_pairs']),
+                'Pinned reference terminal outcome counts or causes differ')
+
     def correct_source(self, token, args):
         """One pinned pre-final defect correction, never a generic unhalt/reset."""
         b = self.broker
@@ -412,17 +484,20 @@ class NativeCalibrationResources:
                     'Pinned stopped acceptance input differs')
             failed = [b._artifact(row['artifact_id']) for (phase, _), row in previous.records.items()
                       if phase == 'acceptance']
-            require(len(failed) == pin['failed_attempts'] and all(
-                item['body'].get('reference_id') == reference['id']
-                and item['body'].get('reference_mode') == 'parallel'
-                and item['body']['resource_state'] == 'FAILED'
-                and item['body']['settlement']['usage_known'] is True
-                and item['body'].get('proofs') == [] and item['body'].get('output_blobs') == {}
-                and item['body'].get('result') is None and item['body'].get('replay_result') is None
-                and item['body'].get('custody', {}).get('phases') == []
-                and (item['body'].get('failure', {}).get('type'),
-                     item['body'].get('failure', {}).get('message')) in pin['failure_pairs']
-                for item in failed), 'Only the pinned known pre-generation metadata failures may be corrected')
+            if pin['schema'] == 'native-calibration-source-correction/3':
+                self._reference_clock_checkpoint(previous, reference, failed, pin)
+            else:
+                require(len(failed) == pin['failed_attempts'] and all(
+                    item['body'].get('reference_id') == reference['id']
+                    and item['body'].get('reference_mode') == 'parallel'
+                    and item['body']['resource_state'] == 'FAILED'
+                    and item['body']['settlement']['usage_known'] is True
+                    and item['body'].get('proofs') == [] and item['body'].get('output_blobs') == {}
+                    and item['body'].get('result') is None and item['body'].get('replay_result') is None
+                    and item['body'].get('custody', {}).get('phases') == []
+                    and (item['body'].get('failure', {}).get('type'),
+                         item['body'].get('failure', {}).get('message')) in pin['failure_pairs']
+                    for item in failed), 'Only the pinned known pre-generation metadata failures may be corrected')
             source = b._artifact(pin['source_result_id'])
             source_task = predecessor['body']['setup_tasks']['controller_source']
             require(previous.records[('setup', source_task)]['artifact_id'] == source['id']
@@ -431,7 +506,14 @@ class NativeCalibrationResources:
                     'Predecessor operational start lacks its charged source binding')
             original_binding = source['body']['controller_binding']
             from .native_calibration_controller import policy
-            require(original_binding['policy'] == policy(), 'Correction changed the frozen operational policy')
+            expected_policy = policy()
+            if pin['schema'] == 'native-calibration-source-correction/3':
+                require(expected_policy['acceptance_deadline_ms'] == pin['new_acceptance_deadline_ms'],
+                        'Reference measurement policy must use its pinned new outer deadline')
+                expected_policy = {**expected_policy,
+                    'acceptance_deadline_ms': pin['old_acceptance_deadline_ms']}
+            require(original_binding['policy'] == expected_policy,
+                    'Correction changed the frozen operational policy')
             receipt = copies._historical_terminal(token, predecessor, request['terminal_receipt_path'])
             authority = self._read_authority()
             require(predecessor['body']['approval_hashes'] == authority['hashes'],
@@ -452,6 +534,11 @@ class NativeCalibrationResources:
                 'terminal_receipt_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                 'terminal_event_prefix': receipt['event_prefix'],
                 'scope': pin['scope']}
+            if pin['schema'] == 'native-calibration-source-correction/3':
+                correction['reference_measurement_policy_change'] = {
+                    'old_outer_deadline_ms': pin['old_acceptance_deadline_ms'],
+                    'new_outer_deadline_ms': pin['new_acceptance_deadline_ms'],
+                    'scope': 'Prospective outer reference measurement only; frozen inner calculator and all acceptance criteria unchanged.'}
             identity = digest({'schema': 'native-calibration-source-correction-identity/1',
                 'predecessor_pool_id': predecessor['id'], 'checkpoint': previous.checkpoint,
                 'source_footprint': LOADED_SOURCE})

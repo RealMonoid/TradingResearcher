@@ -519,6 +519,28 @@ partial reference sample. Enforce actual A2/A3 and report limits when encountere
 The existing consumer evidence capsule retains the actual stop, timings and
 connection observations; the existing progress item owns exact pins and effort.
 
+**Software closeout of the outer-clock correction.** The policy now binds a
+600,000 ms outer acceptance deadline and 630,000 ms full reservation. Schema/3
+accepts only the exact stopped V2 checkpoint, its eight complete and two failed
+immutable attempts, V2 ancestry and the old 300/330-second envelope. Only that
+outer policy field may differ; no arbitrary recovery chain or old-pool unhalt is
+introduced. Four independently authored cases pass (two caller/policy units and
+two genuine disposable financial/controller/inventory/copy cases), along with ten
+affected regressions. The failed 300-versus-600 caller assertion and initial
+fixture schema error remain retained. Numerical/source qualification are disclosed
+fixture seams; software checks do not establish actual numerical acceptance.
+
+Central reconciliation preserves 137 other project files, the entire reference,
+correction-reference, numerical-caller and copy class ASTs, all other resource
+methods and the original pin/calculator constants. The actual stopped ten-artifact
+checkpoint and sole policy difference pass read-only checking with primary bytes
+unchanged. The existing consumer capsule retains all prior members plus these
+sources/checks. Next: publish/pin, fresh actual source qualification, all 64 real
+reference calls, measured deadline and final source/seed/capacity/copy admission.
+No actual V3 runtime, final input or world is claimed at this software checkpoint.
+All elapsed investigation, publication, coordination, checking and rework remains
+inside the gross effort record; the original operational start and A4 are unchanged.
+
 The local Codex connection log also corrects construction-time attribution:
 65 HTTP sends failed and 13 outer stream retries were logged from 15:43:29 to
 16:38:05 UTC, followed by HTTP200 at 16:39:08 UTC. The observed first-failure to

@@ -11776,5 +11776,97 @@
     ],
     "concurrent_scope_preserved": "Active construction chat owns D099 specification/runtime and resource continuation. Shared documentation consistency fixes are included here; its decision/register/proposal files remain separate from M1 work."
   },
-  "prior_root_next_action_before_D100": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits."
+  "prior_root_next_action_before_D100": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
+  "contextual_trading_methodology_2026_11_03": {
+    "status": "DISCUSSION_RETAINED_INTEGRATION_PROPOSED",
+    "review_base": "153a043a88d4f3483c2595356a78425a56e23b99",
+    "branch": "codex/architecture",
+    "source": "Direct user discussion in this chat on November 3, 2026; selected original-language statements and the final three inquiry levels are retained verbatim in the existing proposal.",
+    "purpose": "Preserve the full distinction between fallible market-mechanics hypotheses, testable trading implications and separately evaluated strategic implementation, without prescribing a dynamic state/regime model or arbitrary setup optimization.",
+    "proposal": "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology",
+    "plan_checkpoint": "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#contextual-trading-methodology-integration-proposal-november-3-2026",
+    "changed_files": [
+      "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/implementation-2026-10-25/progress.json"
+    ],
+    "scope": "Documentation-only synthesis and future caller/acceptance mapping; no canonical scientific adoption, model/dependency/profile change, research execution or change to D100/A1-A5 priority and root next_action.",
+    "retained_details": [
+      "Economic purpose with free nontrivial invention; neither complete market explanation nor arbitrary rule optimization",
+      "Mechanics/implication/implementation inquiry levels distinguished from measurement/forecast/action software functions",
+      "Market Model knowledge base distinguished from state estimation and statistical EvaluationPlan from trading policy",
+      "Task, suitable simple comparator and reproducible evaluation before complex representation research; no compulsory ladder",
+      "Temporal development, interactions and path outcomes; standalone feature or entry edge is not a universal prerequisite",
+      "Theory/data/anomaly/recombination discovery and UNKNOWN mechanisms preserved under REJ-006 and D011/D032",
+      "Prediction/policy comparators distinguished from the D015 rejected baseline hypothesis generator",
+      "Output meanings, horizon, source/time/fitting/selection lineage, uncertainty and inherited exposure",
+      "Separate forecast skill, probability calibration when claimed, net policy usefulness and evaluator/full-process calibration",
+      "Entries/holding/exits/sizing/no trade, holdings/cash, costs/risk and counterfactual resimulation",
+      "Complexity costs and legitimate simple/negative regime results; no universal new numeric gate",
+      "Nasdaq/CVD/VWAP/Developing Value Area/twelve-bar examples retained as illustrations without scope/data authority",
+      "LEAN software and Qlib conceptual references; no mandatory infrastructure adoption or rejection of suitable reuse",
+      "Five existing-owner handoffs, seven proposed future boundary cases, versioning and rollback"
+    ],
+    "prior_checks_reused_not_rerun_for_this_documentation_slice": {
+      "source": "Earlier tool execution in this chat at review base 153a043",
+      "status": "PASS",
+      "test_methods": 7,
+      "reported_test_seconds": 2.094,
+      "scope": "Three memory authority/time/view methods, three formalization separation/gap methods and one independent policy-arithmetic/admission method; no forecast, strategy, regime or usefulness test."
+    },
+    "fresh_documentation_verification": {
+      "status": "PASS",
+      "checked_at_utc": "2026-11-03T07:39:58Z",
+      "system_model": {
+        "entrypoint": "docs/reviews/verify_system_model.py:verify()",
+        "status": "PASS",
+        "exit_code": 0,
+        "checked_files": 22,
+        "local_links": 836,
+        "traced_requirements": 30,
+        "scope": "Existing documentation/traceability/diagram checks; the historical optional pre-edit inventory mode was not used. This slice's four-path inventory was checked separately."
+      },
+      "retail_contract": {
+        "entrypoint": "docs/reviews/verify_retail_contract.py:validate() with docs/reviews on sys.path",
+        "status": "PASS",
+        "exit_code": 0,
+        "checked_files": 27,
+        "preserved_policy_sections": 15,
+        "archived_documents_exact": 20
+      },
+      "implementation": {
+        "entrypoint": "docs/reviews/implementation-2026-10-25/verify_implementation.py:check()",
+        "status": "PASS",
+        "exit_code": 0,
+        "baseline_files": 103,
+        "local_document_links": 970
+      },
+      "focused_preservation": {
+        "status": "PASS",
+        "local_links_and_anchors": 259,
+        "existing_markdown_text_preserved": true,
+        "existing_progress_values_preserved": true,
+        "protected_canonical_and_source_hashes_verified": 7,
+        "only_four_expected_tracked_files_changed": true,
+        "git_diff_check_exit": 0
+      },
+      "checked_document_sha256": {
+        "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "2c52b2ae3476e3a4f8fe223c415aa48e38f86d38d0ba43770b55fe2857566df8",
+        "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "23eb205907539c2932f12d9da10ee13476969e974bc415acaa5c77747a1f95f2",
+        "docs/architecture/CURRENT_STATE.md": "ee737e21b64537a26425176d136a666bd15703f9cd39f016a128fa812d6f1460"
+      },
+      "retained_initial_invocation_failure": {
+        "entrypoint": "importlib file loading of verify_retail_contract.py without its script directory on sys.path",
+        "exit_code": 1,
+        "error": "ModuleNotFoundError: No module named 'verify_system_model' before validation",
+        "correction": "Use the existing module with docs/reviews on sys.path. No checker, assertion, contract or production source was changed."
+      },
+      "unverified": "Documentation integrity and preservation only; no runtime integration, forecast/regime calibration, trading benefit, complexity benefit or new scientific admission is established."
+    },
+    "construction_tradeoff": "One author and four existing documents; no new service, schema, document series, helper script, dependency installation, paid call or heavy/native test. Total billed effort was not measured; no efficiency or quality-equivalence claim.",
+    "remaining_uncertainty": "The next actual task, numerical forecast/policy contract and empirical benefit remain unselected/unverified. Promptly research and resolve an actual semantic/run decision when it arises; this proposal creates no general approval wait for D100 or independent authorized work.",
+    "next_action": "Use the sole-plan checkpoint at the next affected design boundary to reconcile one actual caller and select the smallest existing-package integration slice; retain the D100 priority, fixed sources and all scientific/data/resource gates.",
+    "rollback": "Revise or revert only these documentation additions, retaining the user quotations, prior reasoning and all source/exposure/failure/resource history."
+  }
 }

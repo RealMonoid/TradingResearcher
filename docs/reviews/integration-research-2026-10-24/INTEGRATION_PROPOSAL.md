@@ -876,3 +876,252 @@ Primary documentation checked on November 1, 2026:
 ### Closeout and rollback
 
 The first implementation target remains the existing scientific freeze/allocation path, followed by applicable calibration. The builder remains paused until the user resumes construction in the chosen chat. Existing contracts, research profiles, source versions, grants, exposure and archives remain unchanged. The new instruction and plan bullet may be reverted without altering scientific records. Fresh documentation/preservation outcomes are retained in the existing progress register; no separate audit platform, benchmark or new acceptance gate is created. Full pipeline execution, dependency adoption, numerical migration benefits and economic usefulness remain unverified.
+
+## November 3 proposal: hypothesis-led contextual trading methodology
+
+**Status and provenance:** discussion capture and integration proposal, prepared at
+`153a043a88d4f3483c2595356a78425a56e23b99` on `codex/architecture`. The direct user
+discussion on November 3, 2026 supplies the intent and final three-level framing
+below. The user requested that the discussion's details survive integration;
+the mapping and future interfaces here are the assistant's proposed synthesis.
+This is not a new adopted scientific contract, runtime capability or research run.
+The [sole-plan checkpoint](IMPLEMENTATION_SEQUENCE_2026-10-25.md#contextual-trading-methodology-integration-proposal-november-3-2026)
+keeps this proposal discoverable without replacing D100 or creating another plan.
+
+### Purpose, source statements and corrected framing
+
+The intended product is a systematic trading methodology that investigates the
+dynamic interaction of observable market processes and independently tests their
+economic consequences. Understanding all financial markets is not a prerequisite;
+unrestricted optimization of arbitrary condition combinations is not the method.
+An interpretable market story alone is not evidence, and simplicity alone does
+not make a strategy unsound. A simple result can be the best supported result.
+Free, nontrivial LLM invention, faithful formalization and independent evaluation
+remain the framework's construction goal; profitability remains to be discovered.
+
+Selected direct user statements, retained in their original language:
+
+> Ich willst eine systematische Handelsmethodik entwickeln, die das dynamische Zusammenspiel der Marktkräfte berücksichtigt und daraus profitable Entscheidungen ableitet. Nicht den Markt vollständig erklären. Aber auch keine beliebigen Wenn-dann-Regeln optimieren.
+
+> Welche aus den verfügbaren Marktdaten ableitbare Repräsentation verbessert nachweislich Prognosen und Handelsentscheidungen gegenüber einfachen Alternativen, und rechtfertigt dieser Nutzen ihre zusätzliche Komplexität?
+
+> Wir sollten gerade nicht mit der Entwicklung eines dynamischen Marktmodells beginnen.
+
+> Das Entscheidende: Wir untersuchen die Wechselwirkungen, ohne vorauszusetzen, dass daraus zwingend feste Regime, ein Zustandsvektor oder ein bestimmtes Modell entstehen müssen.
+
+> Und wir testen nicht beliebige Setups, sondern die wirtschaftlichen Konsequenzen begründeter Hypothesen über das Marktverhalten.
+
+The user's final inquiry levels, verbatim:
+
+> 1. Marktmechanik: Welche Kräfte scheinen gerade zu wirken? Beispielsweise aggressives Verkaufen bei zunehmend geringerem Abwärtsfortschritt. Das ist eine Hypothese über den Auktionsprozess, keine bestätigte Tatsache.
+> 2. Handelsimplikation: Welche konkreten Kursentwicklungen wären bei dieser Konstellation plausibel? Was würde unsere Interpretation widerlegen?
+> 3. Strategische Umsetzung: Können wir diese Information rechtzeitig und mit positivem Erwartungswert nutzen, einschließlich Positionsführung, Risiko und Handelskosten?
+
+The representation question is a task-specific research question, not a replacement
+for the entire framework objective or a mandatory model-building program. Financial
+research and strategy research have different immediate outputs and can inform one
+another. D069/D096 retain economic usefulness as the eventual purpose; a valid
+negative, information gap or complexity rejection can still be useful progress.
+
+### Three inquiry levels and their relationship to software functions
+
+The user's final three levels describe inquiry, not three mandatory programs,
+trained models, agents or sequential admission gates:
+
+| Inquiry level | Question and retained qualification | Existing owner and proposed handoff |
+|---|---|---|
+| Market mechanics | Which forces might be operating, for example aggressive selling with diminishing downward progress? Keep observations separate from the fallible auction-process interpretation, its assumptions and alternatives. | CMP-01 supplies permitted measurements; CMP-02 retains the original interpretation in H_idea and inquiry records. FeatureDefinition describes measurement, not proof of the interpretation. |
+| Trading implication | Which specific subsequent paths, conditional outcomes or boundaries would follow if that interpretation were useful? What observation would contradict it? | CMP-03 formalizes condition, comparator, outcome, horizon, scope and parameter origin in H_exec, or retains an explicit gap. A path-dependent implication need not reduce to predicting a terminal direction. |
+| Strategic implementation | Can the information be used in time with positive expected net value, taking account of position management, risk, costs and alternatives? | CMP-09 proposes PolicySpec; IF-10 creates its separate trial; CMP-05 simulates and CMP-06 evaluates under its own frozen plan. CMP-10 separately handles applicability and any later authorized use. |
+
+The earlier state/forecast/decision distinction describes functional outputs:
+measurements or a state description, a conditional forecast, and an action policy.
+It is compatible with these inquiry levels but does not make a hypothesized force
+an observed fact. An implementation can share code and storage across functions
+while preserving their meanings, provenance and independent evaluation authority.
+
+Terminology must remain explicit. Existing CMP-08 **Market Model** is the qualified
+market knowledge base, not the current-state estimator. Existing **EvaluationPlan**
+and `evaluation_policy.py` govern scientific assessment, not position decisions.
+Use these qualified terms in subsequent designs; do not rename historical schemas
+or migrate records merely to align conversational labels.
+
+### Research sequence without a compulsory model ladder
+
+For an actual representation/forecast investigation, first define the prediction
+task, horizon, available-at information and suitable simple comparator. Bind a
+reproducible evaluation design before its assessment outcomes. Then investigate
+whether observed mechanisms, temporal development and interactions add useful
+information. Only an actual need justifies testing a more elaborate joint state
+representation or regime classification. This ordering prevents model-building
+from becoming the objective; it is not a new universal gate for all hypotheses.
+
+Preserve all of the following details:
+
+- A continuous representation, a few directly observed variables, lagged paths,
+  discrete regimes, a simple statistical model or transparent decision rule are
+  possible results. None is mandated. A regime model with no robust incremental
+  benefit is a legitimate negative result, not an unfinished implementation.
+- Context includes temporal evolution and interactions. The same current value
+  after acceleration and after deceleration may have different implications;
+  whether it does is an empirical question. Individual inputs need not each pass
+  a positive-effect gate before their combination can be investigated.
+- Hypotheses may originate in theory, data, anomalies or recombination. Reasoned
+  investigation means explicit observations, uncertainty, implications and checks;
+  it does not require a known causal mechanism or Auction Market Theory membership.
+  UNKNOWN mechanisms remain legitimate. REJ-006 and D011/D032 still apply; no
+  plausibility veto or closed retail setup catalog is introduced.
+- Simple prediction/policy comparators and process controls are distinct from the
+  competing hypothesis-generator baseline rejected in D015. Choose the comparator
+  for the actual question; do not install another generator or require market-wide
+  superiority. Existing canonical estimands, comparators and effect thresholds are
+  not changed by the word baseline; a different scientific meaning needs review.
+- Forecast improvement and trading improvement are separate claims. A ranking
+  score, expected return, event probability and path distribution have different
+  meanings; not every useful forecast needs to output a calibrated probability.
+  Validate the meaning actually claimed. Policy-specific value also depends on
+  current holdings, available cash, constraints and execution assumptions.
+- Quantify relevant complexity costs before assessing the proposed improvement:
+  data requirements, estimation uncertainty, parameter/selection burden, runtime,
+  latency, construction and maintenance effort. Use task-appropriate forecast,
+  economic and risk criteria; no universal complexity score or new numeric hurdle
+  is adopted here. D030 and the approved proportionate-effort rule still apply.
+- Entry, holding, exit, sizing, adaptive management and no action are research
+  objects. A high probability of a small favorable move may still have negative
+  expected net value. A policy may have value without a positive isolated entry
+  effect, and its evidence does not prove each mechanistic premise (D010/D017/D048).
+- The Nasdaq example involving trend structure, Developing Value Area, CVD, VWAP,
+  volatility and a twelve-bar horizon is illustrative. These are candidate
+  measurements and interpretations, not accepted predictors, authenticated
+  historical states, a frozen horizon or an authorized new instrument/data profile.
+  Aggression classification and price response depend on exact input definitions;
+  later completed value areas cannot be substituted for their developing values.
+- Version sources, feature definitions, fitted transformations, training samples,
+  parameters, selection alternatives and output units. Preserve missingness,
+  availability, exposure and unknown historical vintages. A fitted representation
+  selected on assessment outcomes cannot become independent through a later refit.
+  Revisions after outcomes create descendants with inherited exposure.
+
+### Software architecture and scientific model architecture
+
+LEAN is a conceptual software reference for separating data/universe handling,
+alpha/forecast, portfolio construction, risk and execution. Qlib supplies relevant
+conceptual examples of feature processing, forecasting, portfolio use and separate
+signal/portfolio evaluation. Neither prescribes a standalone dynamic market-regime
+model. The scientific architecture investigates which representation is useful;
+the software architecture organizes computation and authority around that question.
+
+The [original Qlib discussion](../../../sources/full_conversation.md#m0254--assistant)
+described its Data Layer and Expression Engine as candidates/conceptual references
+and explicitly said to examine the concept rather than automatically integrate it.
+The later user clarification in this chat favors conceptual reuse without requiring
+Qlib's machine-learning infrastructure. No Qlib or LEAN import/adapter was found in
+the scoped runtime review. Do not interpret this as a rejection of useful reuse:
+before implementing a concrete component, check the actual project and established
+libraries, choose the smallest suitable adapter, pin an adopted version and verify
+its units, alignment, availability, numerics, resources and interface/license scope.
+
+Primary design references inspected earlier in this chat on November 3, 2026:
+[LEAN framework overview](https://www.quantconnect.com/docs/v2/writing-algorithms/algorithm-framework/overview),
+[Qlib data processing](https://qlib.readthedocs.io/en/latest/component/data.html),
+[Qlib forecast-to-portfolio contract](https://qlib.readthedocs.io/en/latest/component/strategy.html)
+and [separate evaluation views](https://qlib.readthedocs.io/en/latest/component/report.html).
+These are architecture evidence, not dependency adoption or conformance evidence.
+Retain the owned controller, scientific core and registries; D042's recorded
+vectorbt candidate and the bounded AmiBroker work are not replaced by this proposal.
+
+### Actual gaps and smallest proposed integration
+
+The scoped review found existing measurement/AST/certification and retained
+descriptive hypothesis paths. [Formalization](../../../trading_researcher/formalization.py)
+binds an explicit outcome/horizon and the installed conditional-minus-scope
+estimand; [outcome calculation](../../../trading_researcher/outcomes.py) calculates that
+contrast with `scientific_readiness: false`. This is not a production forecast
+service. [Memory](../../../trading_researcher/memory.py) provides an empty Market
+Model projection and keeps heuristic and policy experience separate.
+[Scientific admission](../../../trading_researcher/scientific_freeze.py) still denies production
+scientific admission. M3's complete PolicySpec-to-evaluated-policy path remains
+open; the [AmiBroker preflight](../../../tools/amibroker/POLICY_PREFLIGHT.md)
+supplies bounded synthetic accounting/execution
+evidence only. Evaluator-world calibration is distinct from probability-forecast
+calibration, policy usefulness and whole-process validation.
+
+Owning specifications are the [problem and economic purpose](../../architecture/01_PROBLEM_DEFINITION.md#success-and-non-goals),
+[component and authority map](../../architecture/06_MASTER_ARCHITECTURE.md#components-and-owned-artifacts),
+[existing interfaces](../../architecture/09_IMPLEMENTATION_BLUEPRINT.md#interface-contracts),
+[requirements](../../architecture/05_REQUIREMENTS.md),
+[scientific evaluation](../../architecture/07_SCIENTIFIC_EVALUATION.md),
+[traceability](../../architecture/12_TRACEABILITY_MATRIX.md) and
+[research-contract/1.0](../../architecture/14_RETAIL_RESEARCH_CONTRACT.md).
+[REJ-006](../../architecture/03_REJECTED_DECISIONS.md#rej-006--discovery-must-start-with-theory-or-a-known-mechanism)
+retains the reason against a universal known-mechanism prerequisite. These owners
+remain unchanged by the proposal.
+
+Recommended integration uses existing owners and artifacts:
+
+| Boundary | Smallest design clarification before affected implementation | Existing contracts and acceptance owners |
+|---|---|---|
+| Observation to interpretation | Retain exact measurement definitions and time/source references separately from proposed forces, alternatives and falsifying observations. Reuse H_idea and inquiry records. | CMP-01/02/03; IF-01/02/03/04/08; REQ-001/002/003/010/014/015; D011/D036/D086/D096 |
+| Interpretation to testable implication | Bind the specific conditional/path claim, relevant scope/horizon and task comparator, keeping unsupported semantics as gaps. Reuse H_exec and EvaluationPlan. | CMP-03/04/06; IF-03/04/05/07; REQ-002/005/019/020/024; D074/D075/D082 |
+| Qualified claim to usable forecast | When an actual caller needs it, define a versioned handoff identifying input feature/source state, model/rule and any fitting/selection history, prediction time, target/horizon, output meaning/units, scope, uncertainty and permitted-use evidence. Use the existing envelope/dependency closure; do not create an unneeded standalone service or fit a model in this documentation step. | CMP-01/03/04/06/08; existing FeatureDefinition/H_exec/ExecutionResult lineage; REQ-003/004/005/013/018/024 |
+| Forecast/implication to action | Bind exactly what information and version the policy consumed, when it became available, rule basis/assumptions, current holdings/cash, entry/hold/exit/sizing, costs and risk constraints. Freeze/test the combined policy independently; filtering saved trades cannot substitute for required resimulation. | CMP-05/06/09/10; IF-06/07/10/11; REQ-009/012/017/025/026/029; D010/D021/D072/D076 |
+| Evaluation to future learning | Keep technical, inferential, predictive and economic results distinct. Release permitted observations and fallible interpretations only into later eligible contexts with complete exposure, including failures and unhelpful complexity. | CMP-06/07/08/11/12; IF-07/08/12/13; REQ-006/013/016/020/021/022/027; D070/D096 |
+
+Validation is an independent responsibility across these boundaries, not a fourth
+model that must execute after them. Correct feature calculation does not establish
+forecast value; forecast skill does not establish net policy value; a profitable
+policy does not validate its explanation or the entire research process. Existing
+scientific admission, protected partitions and D087 intended-use scope/freshness
+checks remain required for their respective uses. A new bar is not a completed
+longer-horizon outcome. No model output or backtest grants capital authority.
+
+### Proposed acceptance cases and next safe integration boundary
+
+These are future boundary specifications, not newly executed behavioral coverage:
+
+1. An identical measurement can support competing retained interpretations; a
+   plausible mechanics narrative cannot set an EvidenceRecord or bypass a gap.
+2. A time-valid forecast can result in no trade because expected losses, costs,
+   risk or existing positions make the proposed action unsuitable. The forecast
+   record and the separately evaluated policy outcome remain distinct.
+3. Replacing developing observations with completed-period values, or fitting a
+   transform on prohibited outcomes, fails the affected availability/exposure use.
+4. A joint interaction can remain investigable when its individual inputs have
+   no demonstrated standalone edge. No theory/causality/positive-entry prerequisite
+   is imposed on all valid bounded research.
+5. A simple representation matches or improves the evaluated result and the
+   regime extension has no robust incremental value. Retain that finding and its
+   uncertainty; do not add regimes merely to complete an architecture diagram.
+6. Prediction performance can improve while net policy performance does not;
+   record both, including selection history, denominator, failures and full costs.
+7. A positive policy result retains unproven mechanistic premises as qualified
+   assumptions. Adaptive rules and changed cash/position interactions get their
+   own frozen request and resimulation where required.
+
+The immediate deliverable is this coherent proposal and its plan/handoff/evidence
+pointers. D100/A1-A5, the pinned native series, existing grants and the authorized
+development-only v0 boundaries keep priority. At the next affected safe design
+boundary, reconcile this proposal with the actual caller before adding a field or
+dependency. Select one bounded integration slice within the existing packages;
+do not first build a dynamic state/regime model or an entire ML platform. Once an
+actual study is selected, research and promptly present any unresolved target,
+horizon, comparator, cost/risk criterion or semantic decision under D008/D026;
+do not silently invent those choices or substitute repeated checks for a decision.
+
+This proposal preserves D001/D003/D008/D010/D011/D015/D017/D021/D022/D026/D030/D032/
+D048/D069/D070 and the adopted research contract. No mandatory three-stage ladder,
+known-mechanism admission gate, new estimator, numeric acceptance threshold,
+research-profile mutation, paid call, Nasdaq/short-selling scope, protected-data
+access or capital authority is adopted. Canonical adoption and future runtime
+qualification remain distinct from retaining the user's requested discussion.
+
+**Tradeoff and rollback:** one documentation slice in the existing proposal, sole
+plan, handoff and progress record avoids duplicate schemas/plans and premature
+model engineering. No measured speed/quality advantage is claimed. Revert these
+documentation additions if the synthesis is revised; preserve user-source quotes,
+superseded reasoning and every scientific/source/exposure/resource record. The
+seven focused memory/formalization/policy-arithmetic tests run earlier in this
+chat passed at the reviewed source; they are historical to this documentation
+slice and do not test a forecast handoff or this proposed research program.
+Fresh documentation/preservation outcomes are retained in the existing progress
+record. No empirical forecast, regime, economic or complexity benefit is established.

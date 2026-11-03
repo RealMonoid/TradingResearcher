@@ -668,6 +668,28 @@ While an answer or authorized compute is pending,only already authorized
 independent work directly fulfilling these criteria may proceed. Stop when none
 remains; no duplicate audits,unchanged checks or new optimization branches.
 
+## Contextual trading methodology integration proposal (November 3, 2026)
+
+The user's discussion is retained in the [existing integration proposal](INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology),
+including the final three inquiry levels: fallible market-mechanics hypothesis,
+testable trading implication and separately evaluated strategic implementation.
+It distinguishes state/forecast/action functions, the existing Market Model
+knowledge base, LEAN's software reference and Qlib's conceptual feature/forecast
+examples. Neither a dynamic regime model nor Qlib/LEAN infrastructure is required.
+Start an actual representation study from a defined task, suitable simple
+comparator and reproducible evaluation; retain interactions, temporal development,
+complexity costs and legitimate simple/negative results. This is no compulsory
+ladder or known-mechanism prerequisite for every freely invented hypothesis.
+
+**Proposal checkpoint, not execution-priority change:** preserve D100/A1-A5,
+pinned sources, protected-data restrictions, all package exits and budgets. At the
+next affected design boundary, reconcile the proposed handoffs with existing
+H_idea/H_exec, FeatureDefinition, EvaluationPlan and PolicySpec callers. Research
+and promptly resolve any actual missing semantic/run decision before dependent
+work; no new target, model, threshold, paid run or dependency is selected here.
+The existing proposal contains source quotes, scope, current gaps, proposed cases,
+versioning/rollback and the distinction between documented and executed checks.
+
 ## Manufacturing milestones (approved November 2, 2026)
 
 **Authority:** SESSION-2026-11-02-MANUFACTURING-MILESTONES, the user's explicit

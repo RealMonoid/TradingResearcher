@@ -16,7 +16,15 @@ Before system-level assessment/design, follow [REVIEWING.md](REVIEWING.md): subs
 
 ## Codex construction workflow
 
-**Quality takes precedence over token and runtime savings.** Preserve required framework behavior, architectural understanding, independent checks, acceptance criteria and evidence. Compact wording, shorter sessions or smaller child inputs may remove irrelevant repetition only. Supply or reread all needed decisions, dependencies, source context and failure history; restore missing context before dependent work. Do not weaken tests, coverage, review independence or scientific inputs to meet a context/cost target. A handoff, fresh context or cheaper model does not establish equivalent quality. If uncertainty or a regression appears, use sufficient context and capability within existing budgets and recheck affected work; escalate only genuinely missing authority. No new benchmark project or scientific gate is introduced.
+**Balance required quality, completion, time and total cost.** Deliver a useful, verifiable result with proportionate effort. Accepted behavior, scientific requirements, required independent controls and acceptance criteria remain binding. Choose the simplest adequate solution, with sufficient context and capability for the task.
+
+Before substantial additional engineering, verification or optimization, identify the concrete risk or acceptance criterion addressed. Weigh the expected improvement against total effort, including construction, execution, tokens, storage, coordination, rework and maintenance. Use existing evidence and reasonable estimates; uncertain benefit may justify a bounded investigation. Routine choices remain autonomous.
+
+Additional assurance, precision or optimization is not automatically worth its cost. Omit optional work whose expected contribution is small relative to its effort. Reuse applicable versioned evidence and advance once the selected acceptance criteria are met. Apply D030 to iterations without meaningful improvement.
+
+Existing requirements may also warrant reconsideration when their cost is disproportionate. Promptly present a researched alternative with costs, consequences, validation and rollback. Obtain explicit approval before changing accepted scientific meaning, guarantees, acceptance criteria, frozen profiles or resource limits.
+
+Record material tradeoffs briefly in the existing work item.
 
 Follow the work plan's [build-session rules](docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#codex-build-sessions-and-context). Use one bounded item and focused checks, small relevant tool output, selective centrally checked delegation and task-sufficient child contexts. Load only needed skills/tools. Choose model capability for task complexity, risk and required checks; there is no blanket preference for a cheaper model. The user selects the main-chat model in Codex; recommend a justified change explicitly and never claim an automatic switch. A delegated model may be selected only through available tools and within authorized delegation. This governs the coding assistant, not frozen research-agent models/prompts/inputs or budgets.
 

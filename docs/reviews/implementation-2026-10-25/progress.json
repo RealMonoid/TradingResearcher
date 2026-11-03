@@ -4457,7 +4457,7 @@
       "Actual token/credit savings",
       "Model-quality equivalence and attribution of context to files/tools/history"
     ],
-    "quality_priority": "Required framework quality, understanding, independent checks and evidence outrank token/runtime savings. No blanket cheaper-model preference; context must be task-sufficient and reconstructed when incomplete. Equivalent quality remains unverified.",
+    "quality_priority": "Meet binding requirements with proportionate total effort; weigh substantial additional work against expected contribution and total construction/runtime/maintenance cost. Reuse applicable evidence and close verified work. Promptly propose changes to disproportionate requirements; accepted meanings, guarantees, criteria, frozen profiles and resource limits require explicit approval before change.",
     "quality_clarification_evidence": "docs/reviews/implementation-2026-10-25/context-quality-verification-2026-10-31.json",
     "researched_decisions_2026_11_01": {
       "source": "Direct user instruction in this chat, November 1, 2026: research an open decision, ask with a recommendation, and do not defer it to later",
@@ -4480,6 +4480,57 @@
         "git_diff_check_exit": 0,
         "limits": "Documentation consistency, preservation, links and whitespace only; future instruction compliance and scientific/runtime behavior remain unverified"
       }
+    },
+    "proportionate_effort_2026_11_03": {
+      "status": "DOCUMENTED_BEHAVIOR_AND_BENEFIT_UNVERIFIED",
+      "approval_source": "Direct user approval in Review des Framework-Stands, November 3, 2026: \"ja, integriere das. freigabe\"",
+      "source_base": "198ed7104e273ed450c1b333ed34c786365610fa",
+      "scope": "Codex construction workflow only; full specification and manufacturing priorities remain binding. No framework runtime, scientific/numerical meaning, frozen profile, spending or resource change.",
+      "owner": "AGENTS.md#codex-construction-workflow",
+      "execution_plan_version": "execution-plan/0.7",
+      "prior_execution_plan_version": "execution-plan/0.6",
+      "superseded_quality_priority_2026_10_31": "Required framework quality, understanding, independent checks and evidence outrank token/runtime savings. No blanket cheaper-model preference; context must be task-sufficient and reconstructed when incomplete. Equivalent quality remains unverified.",
+      "approved_rule_sha256": "7587dc822086770f0deec620cb59e036db5a591635fa8025dccb759be30cad54",
+      "purpose": "Make additional assurance/precision/optimization justify its expected contribution and total effort; required work that is disproportionate prompts a researched decision instead of unlimited pursuit or silent relaxation.",
+      "reuse": "Existing D030 iteration bound, versioned evidence, affected checks, researched-decision handling and work records; no score, per-call form, benchmark or new audit workstream.",
+      "changed_files": [
+        "AGENTS.md",
+        "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+        "docs/architecture/CURRENT_STATE.md",
+        "docs/reviews/implementation-2026-10-25/progress.json"
+      ],
+      "verification": {
+        "status": "PASS_DOCUMENTATION_ONLY",
+        "approved_rule_exact_match": true,
+        "edits_limited_to_approved_rule_version_handoff_and_workflow_record": true,
+        "historical_workflow_fields_preserved": true,
+        "verify_system_model": {
+          "command": "python -B docs/reviews/verify_system_model.py",
+          "exit_code": 0,
+          "status": "PASS",
+          "errors": []
+        },
+        "verify_retail_contract": {
+          "command": "python -B docs/reviews/verify_retail_contract.py",
+          "exit_code": 0,
+          "status": "PASS",
+          "errors": []
+        },
+        "verify_implementation": {
+          "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+          "exit_code": 0,
+          "status": "PASS",
+          "errors": []
+        },
+        "git_diff_check_exit": 0,
+        "source_scope": "New instruction text, execution-plan/0.7 and handoff checked; only this verification result is completed afterward, followed by JSON/whitespace refresh.",
+        "limits": "No runtime tests or research execution required for this documentation change. Future instruction compliance, economic benefit and measured savings are unverified."
+      },
+      "unverified": [
+        "Future instruction compliance",
+        "Actual time/cost savings and construction-quality effects"
+      ],
+      "rollback": "A later approved construction-instruction revision can restore the superseded wording from the source base; retain approval/check history. No scientific or runtime artifact is changed."
     }
   },
   "amibroker_preflight": {

@@ -16,6 +16,11 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without
   the user's explicit decision; dependent work waits, and existing authorizations remain binding.
 
+- **Construction tradeoffs (November 3):** apply the [approved quality/effort rule](../../AGENTS.md#codex-construction-workflow)
+  and execution-plan/0.7: meet binding requirements with proportionate total effort, justify substantial
+  optional work, and promptly propose changes to disproportionate requirements. Existing scientific
+  meaning, guarantees, acceptance criteria, frozen profiles and resource limits require approval to change.
+
 - **Approved construction priority (November 2):** implement the [manufacturing
   milestones](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#manufacturing-milestones-approved-november-2-2026)
   inside the sole plan: accept the existing genuine technical path (M1), then scientific

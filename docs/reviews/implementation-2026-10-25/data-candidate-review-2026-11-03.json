@@ -1,0 +1,268 @@
+{
+  "schema_version": "data-candidate-review/1",
+  "review_date": "2026-11-03",
+  "repository_base": "ea4d0ad595f1937afd52c7467ff6e367864b94b0",
+  "purpose": "Resolve the approved Quantiacs and sp500-scraper review questions on no-cost access, rights, coverage, provenance and historical availability; no scientific admission or integration.",
+  "authorization": "Current user request: Prüfe jetzt Quantiacs und sp500-scraper genauer auf kostenlose Verfügbarkeit, Nutzungsrechte und die dokumentierten offenen Punkte. Freigabe.",
+  "quantiacs": {
+    "source_ref": "quantiacs/toolbox@9e5274c5ce102a66debc799fd2a2300969fb90f6",
+    "sources": {
+      "faq": "https://quantiacs.com/faq",
+      "user_agreement": "https://quantiacs.com/termsofuse",
+      "local_development": "https://quantiacs.com/documentation/en/user_guide/local_development.html",
+      "stocks": "https://quantiacs.com/documentation/en/data/stocks.html",
+      "futures": "https://quantiacs.com/documentation/en/data/futures.html",
+      "original_futures_description": "https://github.com/quantiacs/documentation/blob/master/en/source/user_guide/data.md"
+    },
+    "availability": {
+      "publisher_claim": "FAQ states strategy development and data access are free and supports local development.",
+      "metadata_gets": [
+        {
+          "url": "https://data-api.quantiacs.io/futures/list",
+          "authorization": "none",
+          "http_status": 200,
+          "bytes": 7168,
+          "sha256": "17bc04ad7fe656929374f52c13e671cdc7624af06cf0186f337a4a8c1d93c865",
+          "items": 71
+        },
+        {
+          "url": "https://data-api.quantiacs.io/assets?min_date=2026-10-30&max_date=2026-10-30&type=SPX500",
+          "authorization": "none",
+          "http_status": 200,
+          "bytes": 133347,
+          "items": 863,
+          "qualification": "Asset inventory includes historical securities; not proof of 863 current members. AAPL server ID independently matched to symbol AAPL."
+        }
+      ],
+      "series_probe": {
+        "url": "https://data-api.quantiacs.io/data",
+        "method": "POST, read-only series query",
+        "request": {
+          "assets": [
+            "tts-831814"
+          ],
+          "min_date": "2026-10-29",
+          "max_date": "2026-10-30",
+          "type": "SPX500"
+        },
+        "authorization": "none",
+        "http_status": 200,
+        "bytes": 732,
+        "sha256": "e69ea9ab3b48ef5d155319ed6353b2ed632a44334cb79fa5602cc750fc3803a2",
+        "content_type": "application/x-netcdf",
+        "dimensions": [
+          "field",
+          "time",
+          "asset"
+        ],
+        "shape": [
+          8,
+          2,
+          1
+        ],
+        "fields": [
+          "open",
+          "low",
+          "high",
+          "close",
+          "vol",
+          "divs",
+          "split_cumprod",
+          "is_liquid"
+        ],
+        "time_units": "days since 2026-10-30",
+        "time_offsets": [
+          0,
+          -1
+        ],
+        "checks_passed": [
+          "two distinct requested dates",
+          "finite fields",
+          "positive low",
+          "nonnegative volume",
+          "open and close enclosed by low/high",
+          "is_liquid equals one"
+        ],
+        "decoder": "Existing scipy.io.netcdf_file, no package installation.",
+        "qualification": "Initial probe was not decoded because xarray was unavailable. Follow-up used existing SciPy and obtained the exact same response hash. One security and two dates establish neither all-history quality nor PIT/total-return/execution correctness. Raw price values and binary payload are not retained."
+      },
+      "access_limit": "Documented toolbox requires a profile API key and exits on an empty key; direct anonymous requests succeeded at review time. This is not a promise that anonymous access is supported permanently."
+    },
+    "rights": {
+      "view": "User Agreement rendered in browser; text-only web extraction returned only the SPA shell.",
+      "sections_checked": [
+        6,
+        10,
+        11,
+        12
+      ],
+      "finding": "Section 11 permits personal use and business use in furtherance of collaboration with Quantiacs, but prohibits making market data or any synopsis/analysis thereof available to third parties and prohibits public distribution/commercial use of Quantiacs content. Section 10 reserves IP. The toolbox MIT license covers software, not an unrestricted dataset grant.",
+      "consequence": "No third-party LLM/API transfer, public dataset/evidence redistribution or independent commercial/live-use right established. Obtain scope-specific written clarification before such integration; no contact was sent.",
+      "legal_limit": "Source-based suitability finding, not a court determination or a claim that private local research is categorically prohibited."
+    },
+    "open_checks": [
+      "Full asset/date and delisting coverage",
+      "meaning and historical correctness of is_liquid",
+      "split/volume/dividend conventions and corporate-action goldens",
+      "futures roll/back-adjustment and spot/futures splice semantics",
+      "original contract identifiers/executability",
+      "release latency, available_at, historical revisions/vintages",
+      "reproducible full snapshots and independent vendor checks",
+      "actual account-backed client path, never tested"
+    ]
+  },
+  "sp500_scraper": {
+    "source_ref": "riazarbi/sp500-scraper@3ddcd13aa1727f2eda7a3468e76f341d88f7fd9f",
+    "inventory": {
+      "truncated": false,
+      "license_files": [],
+      "github_license": null,
+      "csv": {
+        "ishares": {
+          "count": 1211,
+          "first": "2006-10-31",
+          "last": "2026-10-23",
+          "early_cadence": "Mostly 12 monthly snapshots per year; 2017 has six."
+        },
+        "wikipedia": {
+          "count": 1039,
+          "first": "2022-11-08",
+          "last": "2026-11-03"
+        },
+        "tidyquant": {
+          "count": 1038,
+          "first": "2022-11-08",
+          "last": "2026-11-02"
+        }
+      },
+      "correction": "Current Wikipedia CSV and Parquet inventory begins November 8, 2022, despite README describing March 2007 and pre-November-2022 revision reconstruction. Old history was not located in the reviewed tree; Git history was not exhaustively searched.",
+      "provenance": "Wikipedia and Tidyquant scripts date files at collection; Tidyquant CSV has no embedded as-of date. Current iShares code uses source as-of date. Dates do not prove exact historical availability."
+    },
+    "samples": [
+      {
+        "path": "ishares/sp500/csv/20261023.csv",
+        "http_status": 200,
+        "bytes": 92839,
+        "sha256": "4aacfc4b379071bdfce4ace6b946cde28d206e884d8e3dcf4f906db811d9f698",
+        "rows": 508,
+        "equity_labeled_rows": 504,
+        "blank_or_duplicate_symbols": 0
+      },
+      {
+        "path": "wikipedia/sp500/csv/20261023.csv",
+        "http_status": 200,
+        "bytes": 65133,
+        "sha256": "8c75faab5fc80aa64375d1239422d256ae2c28a025faf7cea458bbf7e1fbe6da",
+        "rows": 503,
+        "blank_or_duplicate_symbols": 0
+      },
+      {
+        "path": "tidyquant/sp500/csv/20261023.csv",
+        "http_status": 200,
+        "bytes": 44973,
+        "sha256": "3cce9f332ca0d8b064a2c28d3f70545aeeb52b3709afaec89cd74b9485369795",
+        "rows": 505,
+        "blank_or_duplicate_symbols": 0
+      },
+      {
+        "path": "wikipedia/sp500/csv/20261030.csv",
+        "http_status": 200,
+        "bytes": 65121,
+        "sha256": "f44696863e79139ca7f75990c2eaa463913b528a00b289f6c3aad49204304f6f",
+        "rows": 503,
+        "blank_or_duplicate_symbols": 0
+      },
+      {
+        "path": "tidyquant/sp500/csv/20261030.csv",
+        "http_status": 200,
+        "bytes": 44989,
+        "sha256": "61d275179ac243b19942a139a7883443aba12788eff8904529c27db7e93676a6",
+        "rows": 505,
+        "blank_or_duplicate_symbols": 0
+      },
+      {
+        "path": "wikipedia/sp500/csv/20261103.csv",
+        "http_status": 200,
+        "bytes": 65121,
+        "sha256": "72971c8bc896247d3c70dfb7a6e02ed9f8c1afff15da5310653761e73586c2d3",
+        "rows": 503,
+        "blank_or_duplicate_symbols": 0
+      }
+    ],
+    "same_date_comparison": {
+      "date": "2026-10-23",
+      "status": "PASS after explicit classifications",
+      "matching_symbols": 503,
+      "initial_symbol_normalization": "Whitespace trimming and dots to hyphens only; this left iShares BF B/BRK B class aliases and HOLX, and Tidyquant '-' and 2602335D.",
+      "explicit_followup": "BF B -> BF-B and BRK B -> BRK-B; exclude iShares non-equity classes (XTSLA, SGAFT, ESZ6, USD); exclude CUSIP 436CVR021 from both fund datasets as Hologic contingent value right; exclude Tidyquant US DOLLAR identifier 999USDZ92.",
+      "excluded_cvr_rows": {
+        "ishares": "HOLX, CUSIP 436CVR021, NO MARKET (E.G. UNLISTED), price 0.01, weight_pct 0",
+        "tidyquant": "2602335D, CUSIP 436CVR021, company label TPG INC"
+      },
+      "source_support": [
+        "https://www.hologic.com/about/press-release/blackstone-and-tpg-complete-acquisition-hologic",
+        "https://www.sec.gov/Archives/edgar/data/1424212/000094040026025153/primary_doc.xml",
+        "https://press.spglobal.com/2026-04-06-Caseys-General-Stores-Set-to-Join-S-P-500-DigitalOcean-Holdings-to-Join-S-P-MidCap-400-Broadstone-Net-Lease-to-Join-S-P-SmallCap-600"
+      ],
+      "qualification": "Narrow comparison of three snapshots, not an independent official full-universe certification. No production filters or source data were modified; no generic zero-weight exclusion adopted. The older Johnbrick/shardul 501-versus-503 discrepancy remains unresolved."
+    },
+    "rights_and_independence": {
+      "sources": {
+        "wikimedia_terms": "https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use",
+        "blackrock_corporate_terms": "https://www.blackrock.com/corporate/compliance/terms-and-conditions",
+        "tidyquant_code": "https://github.com/business-science/tidyquant/blob/a5cb868d79edfcef2f7de8aee71a1453d3aa40c5/R/tq_stock_list.R"
+      },
+      "finding": "No repository license or blanket upstream grant was located. Wikimedia permits licensed reuse subject to applicable attribution/share-alike terms; it is not a blanket license for the mixed repository. BlackRock corporate terms allow personal/noncommercial use and restrict redistribution, commercial reuse and automated copying; exact holdings/API-specific rights remain unconfirmed. An attempted SSGA terms URL was inaccessible, so no SSGA-specific permission is claimed.",
+      "source_chain": "Inspected current tidyquant source maps SP500 to SPY and downloads SSGA holdings. Repository workflow/container does not pin the R dependency revision; that exact historic package version is unproven. Thus the Tidyquant leg is not assumed independent of the shardul SPY check, nor the Wikipedia leg of other Wikipedia-derived sources."
+    },
+    "open_checks": [
+      "Repository and each upstream's intended-use rights",
+      "Exact historical R/container versions and source dates",
+      "Prior Wikipedia history recovery, if needed",
+      "Full snapshot completeness and gaps",
+      "Stable security IDs and historical corporate-action transitions",
+      "Effective versus retrieval and available-at times",
+      "Independent official event-based validation"
+    ]
+  },
+  "cost_and_limits": {
+    "purchases": 0,
+    "new_accounts": 0,
+    "credentials_used": 0,
+    "packages_installed": 0,
+    "messages_sent": 0,
+    "production_imports": 0,
+    "gross_elapsed": "Not instrumented for this review; no precise duration or time credit claimed.",
+    "scope": "Bounded public-source review and small read-only samples. No final scientific study, source/profile change, paid run, protected BTC/ETH assessment access, BARS re-review or integration."
+  },
+  "disposition": {
+    "quantiacs": "Retain as review candidate. Free small-sample access verified; external-provider/public/commercial integration remains unadmitted pending rights and remaining conformance checks.",
+    "sp500_scraper": "Retain as comparison candidate. Anonymous CSV availability and one corrected same-date agreement verified; mixed-source rights and full historical/PIT qualification remain open.",
+    "next_action": "For future integration, resolve scope-specific rights first, then perform only the selected profile's outstanding data/PIT checks. No automatic expansion or outbound inquiry."
+  },
+  "private_use_instruction": {
+    "source": "SESSION-2026-11-03-PRIVATE-DATA-USE",
+    "date": "2026-11-03",
+    "user_instruction": "Nutzungsrechte interessieren mich als Privatperson nicht. Beachte die nicht.",
+    "explicit_followup_approval": "freigabe",
+    "approved_interpretation": "For the user's private use, rights are not an assistant-imposed source-selection or integration hurdle. Focus on no-cost availability, data quality, historical correctness and technical suitability.",
+    "scope": "Private data-source work, including its external-provider processing; no claim that a provider changed its terms or that technical/scientific admission passed.",
+    "supersedes": "Rights-clearance prerequisites in the original disposition, rights findings and open-check lists. The original observations and review disposition remain historical.",
+    "preserved": [
+      "no-cost-access criterion",
+      "PIT/history and exposure",
+      "identity and source independence",
+      "quality/corporate-action/roll checks",
+      "paid-access approval",
+      "frozen profiles and scientific admission",
+      "D100/A1-A5 priorities and limits",
+      "HF Data Library rejection"
+    ],
+    "fresh_source_or_data_checks": false
+  },
+  "current_disposition": {
+    "quantiacs": "Retain as review candidate. Free sample access verified at the recorded source/time. Continue technical/scientific qualification when selected; do not impose rights clearance for the user's private integration.",
+    "sp500_scraper": "Retain as comparison candidate. Reuse the recorded sample and same-date checks; complete historical/PIT/identity/source-independence qualification when selected. No rights-clearance prerequisite for private use.",
+    "next_action": "Follow the sole plan. At the selected private integration step, resolve only the remaining technical/scientific requirements and actual access/cost questions; no further rights-clearance work or repeated approval request."
+  }
+}

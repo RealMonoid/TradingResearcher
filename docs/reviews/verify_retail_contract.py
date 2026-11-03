@@ -53,6 +53,40 @@ def decision_blocks(text):
     return dict(re.findall(r"^### (D\d{3}) (.*?)(?=^### D\d{3} |\Z)", text, re.M | re.S))
 
 
+PRIVATE_USE_CLARIFICATION = (
+    "**Private-use construction clarification (user approval, November 3, 2026):** for this user'"
+    's private data-source selection and integration work, rights clearance is not an assistant-i'
+    'mposed prerequisite. Apply the [explicit instruction and approval](../reviews/integration-re'
+    'search-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#private-use-data-source-instruction-'
+    'november-3-2026); retain already-recorded rights/use observations as descriptive history rat'
+    'her than reopening clearance work or requests. This operational clarification does not relab'
+    'el provider terms, change frozen research-contract/1.0 profiles or waive data quality, histo'
+    'rical availability, exposure, scientific admission, costs or execution requirements.'
+)
+
+
+def original_contract_bytes(data):
+    """Remove only the explicitly approved construction addendum, byte-exactly.
+
+    This preserves the complete original contract for its existing baseline and
+    scientific-policy checks; no other paragraph or policy edit is exempted.
+    """
+    marker = PRIVATE_USE_CLARIFICATION.encode('utf-8')
+    if marker not in data:
+        return data
+    record = json.loads((ROOT / 'docs/reviews/implementation-2026-10-25/data-candidate-review-2026-11-03.json').read_text(encoding='utf-8'))
+    approval = record['private_use_instruction']
+    if (approval['source'] != 'SESSION-2026-11-03-PRIVATE-DATA-USE'
+            or approval['explicit_followup_approval'] != 'freigabe'
+            or data.count(marker) != 1):
+        raise ValueError('Exact private-use construction approval required')
+    ending = b'\r\n' if marker + b'\r\n\r\n' in data else b'\n'
+    block = marker + ending * 2
+    if data.count(block) != 1:
+        raise ValueError('Exact private-use construction paragraph boundary required')
+    return data.replace(block, b'', 1)
+
+
 def validate():
     result = verify()
     errors = result["errors"]
@@ -115,7 +149,13 @@ def validate():
     ]
     for old, new in substitutions:
         body = body.replace(old, new)
-    actual = "## 1. OPEN-01:" + contract.split("## 1. OPEN-01:", 1)[1].split(
+    try:
+        original_contract = original_contract_bytes(contract.encode('utf-8')).decode('utf-8')
+    except (KeyError, ValueError, OSError) as exc:
+        require(False, 'Unqualified construction clarification: ' + str(exc))
+        original_contract = contract
+    checks['private_use_construction_clarification_exact'] = original_contract != contract
+    actual = "## 1. OPEN-01:" + original_contract.split("## 1. OPEN-01:", 1)[1].split(
         "## Versioning, migration and rollback", 1)[0]
     require(actual.strip() == body.strip(), "Adopted scientific policy differs from approved proposal")
     require("> Freigabe" in contract and "SESSION-2026-10-23-CLOSURE" in contract,

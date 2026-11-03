@@ -4,6 +4,8 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
 
 ## Resume handoff
 
+- **Latest instruction — D100 deferred (November 3):** do not start, restart or further build D100 or its reference acceptance. A1-A5 are dormant. Preserve all sources, attempts, results, charges, backups and checks. An operator stop request is placed; terminal reconciliation is pending. Continue only already authorized independent technical v0 on 2020-2023, and prepare the retail scientific/budget proposal and first-study specification under D008/D026. No replacement scientific profile or resource grant is active. The [latest sole-plan instruction](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#d100-deferred-by-the-user-retail-proposal-requested-november-3-2026) supersedes D100-first scheduling and next actions below, which remain historical evidence.
+
 - **Objective:** implement the full accepted specification within valid permissions/resources; the
   seven-package plan orders work and cannot narrow mandatory scope. Free invention, faithful formalization,
   independent evaluation and zero capital authority remain binding.
@@ -12,7 +14,7 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   Sequence](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#current-execution-priority-october-31-2026)
   is the sole operational plan; current user instructions govern scope.
 
-- **Approved later data candidates (November 3):** [Johnbrick123/sp500-data](https://github.com/Johnbrick123/sp500-data) is selected for a later daily S&P 500/equity/ETF research extension, with [shardul0701/SP500-Survivorship-bias-data-2004-2026](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026) as the approved supplementary membership source. The [sole-plan entry](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-sp-500-data-candidate-for-later-equity-research-november-3-2026) retains both approvals, reviewed sources, shared historical provenance, the unresolved 501-versus-503 member counts and historical ticker-transition conflicts, plus required rights/PIT/versioning/data checks. [Additional approved review candidates](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-additional-data-review-candidates-november-3-2026) are Quantiacs and `riazarbi/sp500-scraper`, with `kfccolonel1/BARS` reserved for a later Futures extension; access/rights, PIT, coverage, source/identity and roll checks remain open. HF Data Library remains rejected. Candidate selection is not scientific admission; D100/A1-A5 and the current BTC/ETH profile retain priority. No import or new research run occurred.
+- **Approved later data candidates (November 3):** [Johnbrick123/sp500-data](https://github.com/Johnbrick123/sp500-data) and supplementary [shardul0701/SP500-Survivorship-bias-data-2004-2026](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026) remain in the [sole-plan entry](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-sp-500-data-candidate-for-later-equity-research-november-3-2026), including the unresolved 501-versus-503 discrepancy. [Quantiacs and sp500-scraper review](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#detailed-quantiacs-and-sp500-scraper-review-november-3-2026) now verifies a free Quantiacs two-day sample and six anonymous scraper CSVs, with a corrected 503-title same-date comparison. The [private-use instruction](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#private-use-data-source-instruction-november-3-2026) now removes rights-clearance prerequisites from private source selection/integration; earlier findings remain historical. Wikipedia inventory starts in 2022 despite the README's earlier claim. Full PIT/history, identity, corporate-action and roll checks remain open. Both stay review candidates, with BARS reserved for a later Futures extension and HF Data Library rejected. No production import, scientific admission or new study occurred; D100/A1-A5 and the BTC/ETH priority remain.
 
 - **Next delivery approved November 3:** follow the [bounded delivery and expansion stop](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-next-delivery-and-expansion-stop-november-3-2026): close D100 within unchanged A1-A5, then one complete scientific cycle under the applicable approved profile. Build only directly required capabilities and controls; complete D101/D102 option rollout is not a prerequisite. Report the warranted result/information boundary, total time/cost/rework and usable feedback before the next expansion decision. A blocked or mainly technical outcome stops expansion and triggers a prompt researched cheaper alternative for user decision. Full accepted scope, scientific criteria, existing budgets/access and live pinned work remain binding. This approval is scheduling, not a completed cycle or changed scientific authority.
 
@@ -153,8 +155,15 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   separately. Schema/4 carries only the exact five-setup stopped V3 checkpoint,
   preserving all charges, markers, copies and original clock. Only this version
   additionally permits the exact old/new qualifier source; generic guards remain.
-  Next: publish/pin, fresh actual full qualification, then all64 references and
-  final admission. No V4 process, current certificate or final seed is claimed.
+  Published/pinned `ea4d0ad` V4 has now passed actual financial carry and full
+  native qualification `5fb900f7…` (76,040 ms / 134,672,407 bytes) with48 selected
+  host inputs. Exec `88767`, PID `36432`, pool `d8dd1ec4…` remains live in its
+  fixed checkout. The retained atomic live snapshot records3 complete reference
+  generations/full replays/old matches and2 pending full reservations; no final
+  input exists at that snapshot. This is actual bounded runtime qualification,
+  not complete64-reference or scientific admission. Continue the existing
+  process; no duplicate or observation-driven restart. After all64, apply the
+  fixed measured-deadline/source/seed/capacity/copy and A2/A3 admission path.
 
 - **Direct LightGBM role adopted — D102 (November 3):** direct LightGBM is designated
   as an interchangeable forecast component for actual hypothesis tasks, with the

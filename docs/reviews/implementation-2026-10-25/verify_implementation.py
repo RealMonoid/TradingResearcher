@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import sys
 from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -43,7 +44,18 @@ def check():
         if not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected:
             changed.append(name)
             if name not in ALLOWED:
-                errors.append('Unplanned baseline change: ' + name)
+                permitted = False
+                if name == 'docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md' and path.is_file():
+                    # November 3 private-use construction approval changes only
+                    # its exact addendum; every original byte remains required.
+                    sys.path.insert(0, str(ROOT / 'docs/reviews'))
+                    from verify_retail_contract import original_contract_bytes
+                    try:
+                        permitted = hashlib.sha256(original_contract_bytes(path.read_bytes())).hexdigest() == expected
+                    except (KeyError, ValueError, OSError):
+                        pass
+                if not permitted:
+                    errors.append('Unplanned baseline change: ' + name)
     untracked = subprocess.check_output(['git', 'ls-files', '--others', '--exclude-standard'],
                                         cwd=ROOT, text=True).splitlines()
     documents = sorted({name for name in changed + untracked if name.endswith('.md')})

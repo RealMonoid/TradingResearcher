@@ -1,6 +1,6 @@
 # Implementation sequence
 
-Date: November 3, 2026. Version: execution-plan/0.10 (D102 designates direct LightGBM as an interchangeable forecast component; D101 methodology and D100/A1-A5 execution priority, full exits and resources retained).
+Date: November 3, 2026. Version: execution-plan/0.11 (approved bounded scientific delivery and expansion decision; D100/A1-A5, D101/D102 scope, full exits and resources retained).
 
 **Accepted scope remains binding.** The November1 updated user objective reiterates that accepted versioned specifications define the full functional scope; this plan orders implementation and must not silently narrow it. Tests and exploratory completion remain intermediate milestones.
 
@@ -11,6 +11,34 @@ The user authorized implementation as far as independently possible, necessary s
 **Next safe work boundary:** apply the approved [D096 integration checkpoint](#metacognition-and-dual-space-integration-november-1-2026), preserving the current bounded task, live calls, frozen runs, spending and prior work. This is the operational handoff for the new rules, not another work plan or an advance-benefit gate.
 
 ## Current execution priority (October 31, 2026)
+
+### Approved next delivery and expansion stop (November 3, 2026)
+
+Source: SESSION-2026-11-03-NEXT-DELIVERY, the current repository conversation. The user replied "ok. freigabe" to the immediately preceding four-part recommendation: close D100 within its deadline and stop rules, deliver one complete scientific research cycle, limit interim construction to functions directly needed for that delivery, and decide on further expansion from the actual result and full effort. This is execution prioritization within the full accepted objective, not deletion of later milestones or a scientific-criteria change.
+
+1. **Close D100 under its existing limits.** Runnable integration and fixed acceptance remain due by **November 4, 2026 at 23:59:59 CET**. If ready and admitted, run the authorized native series with unchanged A1-A5, full inventory/replay and the actual A2/A3 observations. If readiness misses A4, stop automatic construction and present the exact blocker, remaining effort and a researched cheaper alternative. No automatic extension, replacement series or new resource allowance follows.
+2. **Deliver one bounded complete scientific cycle next.** Carry a freely invented LLM hypothesis in an applicable already approved profile through faithful formalization, independent checks, scientific data/exposure and selection/reservation prerequisites, atomic freeze, admitted evaluation and a reproducible report. Use the existing M2 acceptance; calibration must actually apply to the selected claim. Preserve all attempts, unsupported ideas, costs, unknowns and failed stages. Do not substitute a canned claim or manually repair scientific meaning. A positive effect is not required. A qualified negative or inconclusive scientific result is admissible; a blocked stage or missing information is retained honestly and cannot be relabelled a completed scientific evaluation.
+3. **Restrict interim construction to this delivery.** Complete only capabilities and required controls that directly remove a named blocker for the cycle, with the time/effort check below. Add no independent model platform, simulator family or agent feature as preparation for later milestones. D101/D102 remain accepted and their applicable constraints still govern, but complete implementation of every methodological/forecast option is not a prerequisite for this delivery. Already-authorized independent v0 work during the pinned study must directly advance the same delivery and preserve source ownership, exposure and budgets. Present a material scientific choice promptly when encountered; do not postpone it behind other construction.
+4. **Make the result a decision point.** In the existing report answer: what scientifically warranted conclusion or information boundary was reached; what total time, money and rework it required, including waits/coordination/checking and explicit unknowns; and what usable feedback it gives the next idea. Distinguish numerical/technical completion, scientific information and economic usefulness. If the outcome is again mainly technical proofs and new prerequisites, or an applicable limit prevents completion, stop expansion and promptly present the specific disproportionate requirement and a researched lower-cost alternative with consequences, validation, versioning and rollback. The user decides any changed accepted scope/criteria before implementation. Present the continuation/simplification decision before further expansion; do not silently narrow the full goal or treat a missing positive market result as failure of the whole approach.
+
+Reuse the existing remaining-work table, Current State and progress register. No parallel plan, benchmark/evaluation project, new paid authorization or change to protected access, frozen study sources, accepted scientific rules or capital authority is introduced.
+
+### Remaining work and construction time (user clarification, November 3, 2026)
+
+The cost rule includes elapsed construction time, execution, coordination, checking, rework and maintenance. Apply it before each substantial next step, not only at A4's deadline. In the existing work item, state the acceptance criterion, what is still missing, the expected remaining effort as a range with its basis/uncertainty, and why the next change is worth that effort. Mark required work versus optional assurance or optimization. Reuse sufficient evidence and omit optional work with disproportionate benefit. If an accepted requirement appears disproportionate, promptly present the researched alternative for approval under D008/D026 rather than silently weakening it or continuing indefinitely.
+
+The following is the initial remaining-work view for D100, not a new plan or an estimate for the entire framework. Ranges are provisional reviewer planning judgments based on the recorded integration gaps and recent slice durations; they are not measured forecasts or new resource grants. The construction owner updates the selected row from the actual source/status before substantial work and records actual elapsed time and rework at closeout. Reuse newly completed components instead of rebuilding or rechecking unchanged work. Overlapping items must not double-count time or weaken required independent checks.
+
+| Remaining item | Initial additional time estimate | Observable acceptance |
+|---|---|---|
+| Finish the outer controller that prepares copies and starts/restarts the study | Software connected and checked November 3; construction began 11:31:42 UTC, about 70 minutes through source reconciliation, including coordination and corrections. Allow 15-30 minutes for bundled closeout/pinning; actual qualification/acceptance below remain. Initial 2-5 hour range was a planning judgment. | Existing public callers use pinned sources, preserve complete copies and old charges, enforce finite shared authority and safe restart; changed failure paths have scoped software checks. Actual runtime admission remains required. |
+| Connect scheduling, timeout handling and resource stops | Software completed within the same controller interval, not additional time; actual A2/A3 measurements remain below. | At most six workers with bounded threads/priority; A1 preserves timeout/retry history. Fixed A2/A3 formulas and current-charge/pending checks are connected; real observations and actual stop/admission decisions are still pending. |
+| Qualify the exact final native version | 1-3 hours including affected independent checks; depends on source stability | Required native conformance and current source/runtime bindings pass for the version that will actually run; historical qualification is not relabelled current. |
+| Execute the fixed reference inventory serially and in parallel | 0.5-1 hour setup/inspection; numerical run time remains unknown until actual acceptance measurements | All original 32 cases run in both modes with full generation/replay and matching numerical results/stream identities; record full-call time and resource use, then freeze applicable deadlines. No replacement cases or weakened acceptance. |
+| Admit and start the authorized final series | 0.5-1.5 hours setup/checking after the prerequisites pass | Fresh seeds, source/currentness and capacity admission succeed; A3 pre-start forecasts are recorded and actual series progress is retained. No start based on software fixtures alone. |
+| Check the actual series forecast and finish or stop under the approved rules | Actual duration is unknown before measured throughput; do not present A2's 24-hour forecast threshold as a measured completion promise | After approximately 60 actual parallel worlds, report the full-inventory forecast including retries/overhead and enforce A2; enforce A3 throughout. Final completion preserves all 2,048 worlds and full replay, or reports the precise stop/failure and missing inventory. |
+
+Do not add these overlapping ranges as a precise delivery forecast. Compare the remaining dependency path with **November 4, 2026 at 23:59:59 CET** before every substantial step. If required work no longer plausibly fits, report the forecast and concrete causes promptly and present any necessary decision; do not wait until the deadline to reveal the conflict. A4 still requires runnable integration and fixed acceptance by that time, with no automatic construction extension. All A1-A5 limits and the fixed scientific inventory remain binding.
 
 ### Native parallel calibration approval (November 3, 2026)
 
@@ -255,6 +283,50 @@ no generic audit/storage platform or dependency is added. Next: bind that outer
 caller, finite grants/six-worker scheduling and frozen A2/A3 rules; then current
 native qualification and the complete fixed real reference acceptance. Scientific
 admission, protected2024, old fees and the A4 deadline remain unchanged.
+
+**The host caller now connects the approved study (November 3).** The
+[controller](../../../trading_researcher/native_calibration_controller.py) and
+[command](../../../tools/calibration/native_parallel.py) reuse the existing
+qualification, immutable input, numerical, Registry and full-copy owners. Standard
+ThreadPoolExecutor supplies at most six world slots; no new scheduler, dependency
+or audit platform is added. A separate eighth setup task pays reference-input
+retention instead of combining it with qualification under one 256 MiB envelope.
+The source setup explicitly prepays 16 MiB of bounded observation/report metadata
+within the existing aggregate. Durable intents and actual committed-prefix proofs
+fence stale restoration; reconciliation cannot repeat work or create an allowance.
+
+The fixed old corpus runs parallel-first and then serially, all 32 cases in both
+modes. Actual whole-call parallel measurements at 4,096 rows fix twice the maximum,
+rounded up to seconds, as the final deadline; its full reservation adds 30 seconds.
+The old reference manifests remain unchanged. A2 uses 64 terminal unique worlds,
+the actual whole operational wall and measured final-phase throughput, required
+retries and copy overhead. A3 retains actual charged/full pending use and forecasts
+remaining logical bytes and physical growth, scratch, complete copies and the
+20 GiB C: floor. The 1/32 retry floor and 1.25 physical planning factor are explicit
+engineering contingencies, not confidence bounds or runtime guarantees. Missing
+timings cannot inflate measured parallelism. These rules are frozen in the source
+before any final draws; exact formulas and units are retained in the existing
+progress record and source, not a new planning document.
+
+The [software evidence](../../../tests/fixtures/native-controller-checks-2026-11-03.zip)
+accepts 23 distinct controller methods: 19 applicable earlier-source passes and
+four final-source error/stop passes. The last four comprise three passes from a
+four-case run and one fresh corrected assertion; its notes-only authored failure
+remains retained. The 22 owner regressions pass in 22.819 seconds with the eighth
+setup expectation and unchanged method bodies. Seven hand-derived forecast tests,
+one real monitor-closure unit and 15 genuine disposable-Registry scheduler cases
+use disclosed numerical/authority seams. One real A3 unit counterexample is fixed;
+source review also corrected pending retry counting, full-pending cost checks,
+timing provenance and first-error retention. No actual numerical acceptance is
+claimed from software fixtures.
+
+This completes the bounded AC-N1/2/5/6/8/9/11 outer software connections. The next
+required step is the isolated pinned source's actual qualification and complete
+64-call reference acceptance, followed by measured forecasts, fresh final-input
+admission, actual complete copies and the 2,048-world series. No production pool,
+new native qualification, reference computation or final seed reservation has
+started at this checkpoint. A4 remains November 4 at 23:59:59 CET; all scientific,
+protected-data and accepted next-delivery boundaries remain binding.
 
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
@@ -971,6 +1043,8 @@ This approval authorizes compatible implementation of these improvements; it doe
 ## Codex build sessions and context
 
 This workflow governs Codex building the repository. Research-agent prompts, models, scientific inputs, frozen epochs and their budgets keep their separately approved contracts.
+
+**Understandable result of each step (user clarification, November 3).** At each completed bounded work item, give the user two plain German sentences: first explain what now works or what failed, with the material limitation; second state the exact next task, remaining blocker or decision needed. Include observed versus estimated time when relevant. These are user-facing closeouts, not messages after every tool call or new report files. Keep authored project records in English under D043. Begin new status entries and commit subjects with the concrete behavior or outcome; put identifiers and provenance links after that explanation. A record that a check ran is not a substitute for explaining what it established.
 
 **Proportionate construction effort (user clarification, November 3).** Apply the [approved quality/effort rule](../../../AGENTS.md#codex-construction-workflow): meet binding requirements with proportionate total effort and choose the simplest adequate solution. Weigh substantial additional engineering, checking or optimization against its expected contribution to risk reduction or acceptance. Reuse applicable evidence, close verified work, apply D030, and retain material tradeoffs in the existing item. Disproportionate requirements prompt a researched change proposal; changes to accepted scientific meaning, guarantees, acceptance criteria, frozen profiles or resource limits still require explicit approval. This governs construction and grants no scientific-profile change or additional resources.
 

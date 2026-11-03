@@ -37,7 +37,8 @@ AUTHORITY_FILES = {
     'proposal': ('native-calibration-proposal-revision-5-2026-11-03.source',
                  '0995cf21a7278a8f72cfc05fa12b16160327b2ee27c5b3206aa9bd6ef7ad2b05')}
 SETUP_NAMES = ('controller_source', 'runtime_retain', 'runtime_qualification',
-               'acceptance_summary', 'prepare_final_input', 'prepared_copies', 'terminal_copies')
+               'prepare_reference_input', 'acceptance_summary', 'prepare_final_input',
+               'prepared_copies', 'terminal_copies')
 REFERENCE = 'native-calibration-reference-input/1'
 
 # These reviewed versions give caller_cancelled its narrow meaning here: the

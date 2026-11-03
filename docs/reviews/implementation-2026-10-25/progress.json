@@ -319,7 +319,8 @@
     "new_budget_authorized": false,
     "runtime_checks_performed_for_this_update": false
   },
-  "next_action": "D100 / soleplan0.8: retire Scalar optionA with all old records/charges retained. Reuse exact native owners, implement the new full2048-world <=6-worker series and fixed independent acceptance under A1-A5, then run after source/fresh-seed/resource admission with24h/100GiB/20GiB stops. Construction deadline November4 23:59:59CET; report causes if not ready. Continue permitted independent v0 on2020-2023 while the pinned series runs; scientific/2024 and full-project gates remain.",
+  "next_delivery_2026_11_03": {"source": "SESSION-2026-11-03-NEXT-DELIVERY: current conversation; approval of immediately preceding four-part recommendation", "approval_quote": "ok. freigabe", "status": "APPROVED_EXECUTION_PRIORITY_NOT_IMPLEMENTED_BY_THIS_UPDATE", "plan": "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-next-delivery-and-expansion-stop-november-3-2026", "prior_next_action": "D100 / soleplan0.8: retire Scalar optionA with all old records/charges retained. Reuse exact native owners, implement the new full2048-world <=6-worker series and fixed independent acceptance under A1-A5, then run after source/fresh-seed/resource admission with24h/100GiB/20GiB stops. Construction deadline November4 23:59:59CET; report causes if not ready. Continue permitted independent v0 on2020-2023 while the pinned series runs; scientific/2024 and full-project gates remain.", "scope": "D100 closeout, one complete scientific cycle, directly necessary work only, then result/effort/usefulness decision; stop expansion and research a cheaper alternative if blocked or mainly technical", "full_accepted_objective_retained": true, "scientific_contract_changed": false, "new_resources_or_access_authorized": false, "production_runs_performed_for_this_update": false},
+  "next_action": "Close D100 under unchanged A1-A5 and the November4 23:59:59CET runnable-integration/acceptance deadline; no automatic construction extension. After qualified calibration, deliver one bounded complete scientific research cycle for a freely invented hypothesis under an applicable approved profile, with faithful formalization, independent controls, actual admission/freeze/evaluation and a reproducible report retaining all attempts and gaps. Before further expansion, report the scientific conclusion or information boundary, total time/cost/rework and usable feedback, then present the continuation/simplification decision. Until that delivery, build only functions directly required for it; no automatic platform/model/simulator/agent expansion. D101/D102 remain accepted within scope without making their complete implementation a prerequisite. A predominantly technical or blocked outcome triggers an expansion stop and a prompt researched alternative, not another open-ended prerequisite chain. Full project scope and scientific criteria, existing budgets/access and pinned studies remain binding.",
   "feasibility_priority_checkpoint": {
     "date": "2026-10-26",
     "execution_refinement_date": "2026-10-27",
@@ -6587,7 +6588,7 @@
     "prior_next_action_before_data_prerequisite": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits."
   },
   "scientific_information_profile_2026_11_02": {
-    "status": "NATIVE_FULL_COPY_COMPONENT_VERIFIED_OUTER_CONTROLLER_AND_ACTUAL_ACCEPTANCE_OPEN",
+    "status": "NATIVE_CONTROLLER_SOFTWARE_VERIFIED_ACTUAL_QUALIFICATION_AND_ACCEPTANCE_OPEN",
     "purpose": "Qualify the existing second-order binary law against the retained Q1 engineering template and actual owned generation/bootstrap/MC/replay before choosing a finite information-study profile. Address the documented dependent-null gap without adding a simulator family.",
     "requirements": [
       "REQ-005",
@@ -10985,7 +10986,7 @@
     "prior_status_before_D100": "FIXED_DEVELOPMENT_GRID_COMPLETE_INDEPENDENTLY_VERIFIED",
     "prior_active_next_action_before_D100": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
     "native_parallel_calibration_2026_11_03": {
-      "status": "FULL_COPY_COMPONENT_VERIFIED_OUTER_CONTROLLER_AND_ACTUAL_ACCEPTANCE_OPEN",
+      "status": "CONTROLLER_SOFTWARE_VERIFIED_ACTUAL_QUALIFICATION_AND_ACCEPTANCE_OPEN",
       "decision": "D100",
       "approval_record": {
         "path": "docs/reviews/implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json",
@@ -11052,7 +11053,7 @@
         "persistent_driver_stop_marker_sha256": "3dbd639f1340770c4ef0e5606b858bcca84c25ddc1e0eae4f32074252eef8431",
         "preservation": "The stop marker changes no old Registry/source/result/proof. UserA5 replaces future execution authority; checked Scalar preparation remains historical."
       },
-      "code_status": "Reserved final/reference callers and full-copy component verified in software; pinned outer setup/acceptance/series controller, actual current-source qualification,64real reference calculations,A2/A3 and series admission remain open.",
+      "code_status": "The host command connects fixed setup, full reference acceptance, shared funding, up to six workers, A1 retries, fixed A2/A3 forecasts and complete copies. Software evidence is accepted; actual pinned runtime qualification,64reference calculations and final-series admission remain open.",
       "reuse_review_ownership": {
         "native_transport_tests": "Read-only native/factory/runtime/cache/measurement reuse assessment.",
         "outcome_reservation_review": "Read-only A1/A2/A3 accounting, fixed acceptance, fresh-seed and restart design.",
@@ -11064,7 +11065,7 @@
       "native_new_world_attempts": 0,
       "new_research_API_calls": 0,
       "new_scientific_authority": false,
-      "next_action": "Complete pinned outer setup/acceptance/series controller using verified resource/numerical/copy owners: fixed dispatch-prefix observations, finite grants and <=6 actual workers, frozen A2/A3 formulas, then current-source native qualification and all32original cases serial+parallel. Require actual prepared full-copy proof and honest forecasts before fresh disjoint final seed admission/2048world series. V2archive/manifest paths and hashes are retained in full_copy_slice.next_runtime_inputs. A4cutoff2026-11-04T22:59:59Z unchanged.",
+      "next_action": "Commit and pin this exact source in a separate checkout. Run tools/calibration/native_parallel.py against the original C: Registry and fixed v2 archive/manifest. It must complete current-source qualification and all original32cases in parallel and serial modes, freeze actual deadline/forecasts, prepare fresh final seeds and prove complete copies before the2048-world call. No general approval wait; stop/report real A1-A5 or admission failure. During the admitted pinned run advance only the approved next scientific delivery.",
       "during_series": "Continue permitted technical main pathv0 on development2020–2023 without mutating pinned study source/results; account for desktop/v0 resources and avoid unnecessary concurrent heavy tests.",
       "unchanged_boundaries": "Full project specification, actual scientific admission/protected2024 restrictions, exact scientific criteria, exposure, freeze, separate policy/capital authority and existing inference budget remain binding. OriginalA/AgentWorkflow/AUX draft is not implicitly resumed.",
       "construction_effort": "Native task03:32:10UTC; reuse/design/adoption and process-control slice recorded in existing capsule. Two real input-integrity/cleanup defects fixed under independent RED cases. A4 cutoff remains2026-11-04T22:59:59Z; full final integration/acceptance pending. No measured speed/quality equivalence or construction token-cost data.",
@@ -12124,6 +12125,173 @@
             }
           },
           "scope": "Three actual gates with stable document/verifier hashes; subsequent edits only record these results, evidence capsule digest and closeout timing. Final git diff --check covers final metadata."
+        }
+      },
+      "controller_slice": {
+        "status": "VERIFIED_OUTER_SOFTWARE_ACTUAL_NATIVE_ACCEPTANCE_PENDING",
+        "purpose": "Connect the existing owners into the executable D100 workflow rather than add another isolated infrastructure component.",
+        "acceptance": "Bounded AC-N1/2/5/6/8/9/11 outer software connections; actual qualification/reference64, fresh final admission, physical forecasts/full copies and the2048-world inventory remain required.",
+        "owners": [
+          "trading_researcher/native_calibration_controller.py",
+          "tools/calibration/native_parallel.py",
+          "tests/test_native_calibration_controller_independent.py"
+        ],
+        "source_sha256": {
+          "trading_researcher/native_calibration_controller.py": "bb66281f1b39e1e72d1ad6246c77112926e770db2b7de1cfc0f2ddbae5613fa8",
+          "tools/calibration/native_parallel.py": "cb355646e8d0885f0acd7101866d1895953eda3a1e6540c4dce48e015fd7e854",
+          "trading_researcher/native_calibration_runs.py": "b75db63d7b44336f49fa2c38d45a6f7405708c41d69374c1ed658391cfa7fe52",
+          "tests/test_native_calibration_controller_independent.py": "68768151b2dcbaa63e9926e3295ad59dda9e0887478f628122f9370efe4b0ac8",
+          "tests/test_native_calibration_resource_owner_independent.py": "8bf4087aee5a21af1b05228a9a93b95a8da297ea46cee9144c844efdd8a8436f"
+        },
+        "reuse": "Existing numerical, native qualification/input, Registry/resource and full-copy owners; standard ThreadPoolExecutor, SQLite, hashing and file flushing. No dependency, audit platform, numerical redesign, new case family or optional model feature.",
+        "prospective_resources": {
+          "setup_tasks": 8,
+          "new_task": "prepare_reference_input",
+          "reason": "Qualification and reference-input retention have separate256MiB reservations; combining them can exceed one envelope.",
+          "control_metadata_bytes_prepaid": 16777216,
+          "metadata_scope": "Bounded controller binding, intent/ACK observations, forecasts and final report; charged in source setup within the existing100GiB. Full-copy metadata retains its two separate tariffs and no progress credit.",
+          "unchanged": "180h aggregate,100GiB logical,179total grants including old1,256MiB per attempt,up to6world slots; no research API allowance.",
+          "physical_scope": "Approved C: Registry and C: full-copy destinations; actual space/currentness must pass at intended use."
+        },
+        "frozen_engineering_rules": {
+          "policy": "native-calibration-controller-policy/1",
+          "order": "Round robin by replicate, then target/specification/pattern/ID; due retry before fresh task. Parallel reference mode first, then serial; all original32worlds in both.",
+          "deadline": "D=ceil_seconds(2*maximum actual whole-call parallel reference time at4096rows); reservation R=D+30000ms. Old reference manifests/inner limits stay fixed.",
+          "A2": "At64terminal unique worlds and required later checks, E includes actual setup/reference/copies/pauses. P=min(6,sum actual measured final whole-call times/final-phase elapsed), excluding substituted missing timings; explicit unmeasured sequential fallback when none known. Work=sum cell(mean all settled whole-attempt estimates*remaining first incl in-flight +fullR*(known due/in-flight retries+ceil(p*remaining first))). p=max(1/32,first-timeout fraction by world). Add copy overhead. Strict total>24h stops; estimates are not confidence bounds.",
+          "A3_logical": "Retain actual charged/full pending fees, then measured cell maximum*unstarted worlds plus full256MiB for unreserved known retries and planned retry contingency. Recompute on actual resource checkpoints and after reservation before child launch. No refund through CAS dedup.",
+          "A3_physical": "Use fresh retained descriptors within an attempt, not reference corpus CAS delta; factor1.25 and per-attempt DB/control reserve. Required free=20GiB+forecast growth+six-slot scratch/control+preparedCopies*current primary+terminalCopies*(primary+growth). Prepared copies precede future growth; retained prior copies already reduce current free.",
+          "timing_missing": "Missing ACK cannot invent reference timing; fixed actual acceptance refuses it. Final remaining-work planning may use fullR, but that value cannot inflate measured P.",
+          "stop_and_recovery": "Cancel before joining; retain active outputs/fees. Known unlaunched slots settle FAILED with control-only known use. Unknown missing settlements retain full reservations. Actual prefix proofs can reconcile existing results, never repeat a call or reset grants. Original failure and durable-stop diagnostics reach the final report."
+        },
+        "software_evidence": {
+          "unique_controller_methods": 23,
+          "mapping": "19 applicable initial-source passes plus3current error4 passes and1fresh corrected assertion pass; no whole23final-source rerun claimed.",
+          "current_affected_methods": 4,
+          "initial23": {
+            "receipt": "native-controller-first23-check.json",
+            "sha256": "4055af9166da2aa016032518d5b271f63eaaf727e636acc1819abe3cb85f9b21",
+            "executed": 23,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "exit_code": 0,
+            "seconds": "33.447"
+          },
+          "error4": {
+            "receipt": "native-controller-error4-before-notes-repair-check.json",
+            "sha256": "c2173955f67bdda4bc02fbbb6ec5e186afdf5be81891029069314e77319ba14e",
+            "executed": 4,
+            "passes": 3,
+            "authored_notes_shape_failure": 1,
+            "exit_code": 1,
+            "seconds": "13.1957411"
+          },
+          "current_primary1": {
+            "receipt": "native-controller-current-primary1-check.json",
+            "sha256": "855ab10f44884663c732920942e8cb026706ec38cc89b8b3150d13d42919f9a0",
+            "executed": 1,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "exit_code": 0,
+            "seconds": "5.4723632"
+          },
+          "owner_regressions": {
+            "receipt": "native-controller-owner22-check.json",
+            "sha256": "e99a8639e84f15e3d24bb6fc0036fe6be17582d0eaa3501631847dcb81115bd0",
+            "methods": 22,
+            "exit_code": 0,
+            "seconds": "22.819",
+            "scope": "All120before/after pins stable at initial controller source; current119same, only controller reporting delta differs. Existing owner definitions and SETUP8 helper unchanged."
+          },
+          "CLI_entry": {
+            "command": "python -B tools/calibration/native_parallel.py --help",
+            "exit_code": 0,
+            "scope": "Argument/import entry only; no Broker or numerical execution."
+          },
+          "historical_kernel": "Unchanged f646 resource kernel29PASS reused from full-copy evidence, not newly executed.",
+          "disclosure": "Seven hand-derived forecast/order cases, one actual monitor-closure unit and fifteen real temporary Registry/ledger/scheduler cases; native numerical responses and financial authority remain explicit seams.",
+          "closeout_sha256": "812f6705544a0fd1bbb230693e3becd16af8603adfa42b292b387103f5347dee"
+        },
+        "corrected_findings": [
+          "A real unit RED showed that larger COMPLETE costs before64worlds failed to invalidate A3; current resource checkpoints now invalidate and pre-dispatch pending charges are checked.",
+          "Source review corrected live-retry terminal counting and cancellation before Executor join.",
+          "Missing timings no longer inflate measured P; first errors and failed stop commitment remain visible through actual outer reporting.",
+          "The final authored equality rejected newly retained notes; narrowed to exact original type/message and explicit bounded notes. No production defect claimed from that assertion failure."
+        ],
+        "evidence_capsule": {
+          "path": "tests/fixtures/native-controller-checks-2026-11-03.zip",
+          "sha256": "d3fe43fbbecca1d94e0c1211f951bcad93d62906050e4d024ae4d6e4c0316ac1",
+          "size": 2620370,
+          "members": 192,
+          "all_crc_sha_size_verified": true
+        },
+        "source_review": {
+          "path": "native-controller-source-review.json",
+          "sha256": "a7a47f4f19049063dce4732a939eb278884561a50be3f4ec73c273cf8a23f8a6",
+          "status": "READY_FOR_BOUNDED_CONTROLLER_SOFTWARE_CLOSEOUT_ACTUAL_ACCEPTANCE_PENDING"
+        },
+        "central_reconciliation": {
+          "path": "native-controller-central-reconciliation.json",
+          "sha256": "f1cb332d1848d6fac6ca1913b810ba2be44e39cf588c03e4e3ce7285979e764e"
+        },
+        "preservation": {
+          "receipt": "native-controller-preservation.json",
+          "sha256": "bce0a27c72b8dca439048ad12097593e96d8fe92aa39a833e98a6629913ae4ee",
+          "unchanged_project_files": 115,
+          "existing_native_runs_all_method_AST_unchanged": true,
+          "existing_change": "Prospective eighth SETUP_NAMES entry only.",
+          "retired_registry_sha256": "8911e337a8952ab156bff9a0c0850489bd47c18a7173328b8fa2483ab70a5a9b",
+          "auxiliary_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289"
+        },
+        "effort": {
+          "started_at_utc": "2026-11-03T11:31:42Z",
+          "through_utc": "2026-11-03T12:52:50.415372+00:00",
+          "observed_elapsed_seconds": "4868.415372",
+          "initial_estimate": "2-5hours for required controller implementation/checking, overlapping1-3hours scheduler work; not additive.",
+          "included": "Implementation, selective delegation, coordination, required affected checks, defect corrections and closeout. Root closeout validation helper had two schema/plural handling errors corrected without any test or production-source change; rework is included.",
+          "remaining": "15-30minutes bundled documentation/publication/pinning. Then actual native qualification and reference64 runtime are not measured yet; initial qualification1-3h/acceptance setup0.5-1h/admission0.5-1.5h ranges remain provisional, overlapping where applicable. About34h toA4 still leaves a plausible path, not a delivery guarantee.",
+          "required_vs_optional": "Only actual-call, resource, restart/failure and forecast controls needed for D100 and next approved scientific delivery. No optional platform/model expansion.",
+          "construction_token_or_money_cost": "Not measured; no speed/quality equivalence claimed."
+        },
+        "not_verified": [
+          "Actual current-source native qualification and all64fixed reference calculations",
+          "Actual final seed/source/capacity admission, prepared/terminal full copies and2048world series",
+          "Actual A2throughput and A3logical/physical predictions",
+          "Hard OS quota/orphan termination and hostile-host tamper resistance",
+          "Scientific/full-process applicability, protected2024 access and capital authority"
+        ],
+        "new_research_API_calls": 0,
+        "native_new_world_attempts": 0,
+        "documentation_checks": {
+          "status": "PASS",
+          "checks": {
+            "implementation": {
+              "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+              "exit_code": 0,
+              "seconds": "0.6680886",
+              "receipt": "native-controller-doc-implementation.json",
+              "sha256": "f4642bc49bc45908481e278fe361104f3f454952f0d17bd5b655f16346fe3359",
+              "pins_stable": true
+            },
+            "system-model": {
+              "command": "python -B docs/reviews/verify_system_model.py",
+              "exit_code": 0,
+              "seconds": "6.4407633",
+              "receipt": "native-controller-doc-system-model.json",
+              "sha256": "899248d7856781fb2c093606af39bec5342630e079a3c13f001d4e44a9d5109e",
+              "pins_stable": true
+            },
+            "retail": {
+              "command": "python -B docs/reviews/verify_retail_contract.py",
+              "exit_code": 0,
+              "seconds": "6.3909657",
+              "receipt": "native-controller-doc-retail.json",
+              "sha256": "3fdb9cae102d0f534cd8b79f9bc5b29094576cd795659bc3c8d62c90bad5e24c",
+              "pins_stable": true
+            }
+          },
+          "scope": "Three actual bundled gates with stable document/verifier hashes. Subsequent edits record results, capsule digest and closeout timing only; final git diff --check covers final metadata."
         }
       }
     }

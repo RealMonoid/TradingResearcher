@@ -459,3 +459,23 @@ records 16 independent real disposable-Registry copy cases and 29 reducer/22 own
 regressions, with disclosed synthetic retired financial/authority inputs. The
 source-reviewed copied-prefix gap was corrected before the passing adversary;
 no pre-correction failing test is claimed.
+
+The [host command](../../tools/calibration/native_parallel.py) now connects the
+approved native workflow through one [controller](../../trading_researcher/native_calibration_controller.py).
+It reserves eight fixed setup tasks, separately charging reference-input retention,
+and prepays 16 MiB of bounded operational observations/reports within the existing
+authority. Existing numerical and copy owners supply the actual work. At most six
+ThreadPoolExecutor slots share one Registry; durable intents/acknowledgements bind
+actual reservation, settlement and grant prefixes. A stale restore cannot restart
+an observed task. Missing acknowledgements may reconcile existing results but
+cannot authorize another calculation or invent a timing measurement.
+
+The fixed original 32-case corpus runs in both modes before a measured deadline,
+new final inputs and complete prepared copies can admit the 2,048-world call.
+Fixed A2/A3 formulas retain charged/pending envelopes and required retries/copies;
+the controller checks new resource/cost evidence before dispatch. A rejected
+unlaunched slot records known control-only work. Active failures cancel before
+join, retain original errors and attempt terminal full copies. The [evidence](../../tests/fixtures/native-controller-checks-2026-11-03.zip)
+contains 23 unique controller cases with scoped version reuse and 22 owner
+regressions. Actual source/runtime qualification, all 64 reference calculations,
+final admission and scientific applicability remain separate required evidence.

@@ -12,6 +12,8 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   Sequence](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#current-execution-priority-october-31-2026)
   is the sole operational plan; current user instructions govern scope.
 
+- **Next delivery approved November 3:** follow the [bounded delivery and expansion stop](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-next-delivery-and-expansion-stop-november-3-2026): close D100 within unchanged A1-A5, then one complete scientific cycle under the applicable approved profile. Build only directly required capabilities and controls; complete D101/D102 option rollout is not a prerequisite. Report the warranted result/information boundary, total time/cost/rework and usable feedback before the next expansion decision. A blocked or mainly technical outcome stops expansion and triggers a prompt researched cheaper alternative for user decision. Full accepted scope, scientific criteria, existing budgets/access and live pinned work remain binding. This approval is scheduling, not a completed cycle or changed scientific authority.
+
 - **Current execution scope — D100 (November 3):** the [native parallel approval](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026)
   replaces Scalar option A. No Scalar retry was launched; its persistent driver
   stop sentinel is installed, and all old sources/results/errors/copies/fees remain.
@@ -57,9 +59,15 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   The [copy evidence](../../tests/fixtures/native-full-copy-checks-2026-11-03.zip)
   records 16 independent disposable-Registry cases plus 29 reducer/22 owner
   regressions, all passing; financial/authority fixtures remain synthetic.
-  Next: the pinned outer controller/setup, dispatch intents, current native
-  qualification, all 32 real serial/parallel references, actual prepared/terminal
-  copies and A2/A3. Disposable copy checks do not satisfy these actual run gates.
+  The [outer controller](../../tools/calibration/native_parallel.py) now connects
+  the fixed setup, parallel/serial reference acceptance, shared ledger, retries,
+  full copies and A2/A3 stops. Its [software evidence](../../tests/fixtures/native-controller-checks-2026-11-03.zip)
+  accepts 23 distinct controller cases with versioned reuse and four final-source
+  error checks, plus 22 resource-owner regressions. Numerical responses remain
+  explicit test seams; this is no actual runtime or final-series admission.
+  Next: pin this source in a separate checkout, run current native qualification
+  and all 32 real references in both modes, then admit the fresh final inputs,
+  forecasts and complete copies before the authorized 2,048-world series.
   No numerical acceptance or native series has started; no general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation

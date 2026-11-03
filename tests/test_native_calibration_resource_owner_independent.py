@@ -30,7 +30,7 @@ POOL = 'native-calibration-resource-pool/1'
 ERRORS = (Invalid, Conflict, Denied)
 PROJECT = Path(__file__).resolve().parents[1]
 SETUP_TASKS = {'controller_source', 'runtime_retain', 'runtime_qualification',
-               'acceptance_summary', 'prepare_final_input', 'prepared_copies', 'terminal_copies'}
+               'acceptance_summary', 'prepare_reference_input', 'prepare_final_input', 'prepared_copies', 'terminal_copies'}
 
 
 class RetiredFinancialFixture:

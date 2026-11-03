@@ -108,21 +108,23 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   final admission. The 45-90 minute build/check record retains cost/rework and
   scoped authority. Science/2024, original clock, resources and A4 are unchanged.
   No existing pool is unhalted and no general approval wait is introduced.
-
-- **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation
-  under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without
-  the user's explicit decision; dependent work waits, and existing authorizations remain binding.
-
-- **Adopted contextual trading methodology — D101 (November 3):** the [complete adopted discussion and integration mapping](../reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology)
-  preserve fallible mechanics hypotheses, testable trading implications and separate
-  strategic evaluation, with temporal interactions, simple comparators and complexity
-  costs. Regime/state models and Qlib/LEAN adoption are optional candidates, not
-  prerequisites. The [same-plan checkpoint](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#contextual-trading-methodology-integration-proposal-november-3-2026)
-  binds subsequent affected slices without changing D100 priority. The full user
-  approval adopts `contextual-trading-methodology/1.0`; the [canonical architecture](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
-  and [seven acceptance specifications](05_REQUIREMENTS.md#d101-contextual-trading-acceptance)
-  are updated. Implementation, behavioral checks and empirical usefulness remain
-  open; no new research/data-use grant follows. Exact approval-time bytes are retained.
+  Actual `51f5d85` V2 subsequently passed fresh native qualification
+  `3fe4537c…` (79,607 ms / 134,603,827 bytes) and eight parallel 2,048-row
+  references with complete generation/replay. It then stopped: one 4,096-row
+  attempt retained both proofs and a full reference match but exceeded the
+  300-second outer deadline (327,127 ms); another attempt was cancelled.
+  Exec `86150` exited 1; PID `34896` is terminal. Pool `ed91215b…` is halted at
+  checkpoint `b908814d…`, with 8,671,998 ms / 2,085,856,342 bytes charged, two
+  grants used, none pending, no unknown use and no overrun. Complete terminal
+  backup/restore retains 1,286 blobs (1,459,379,272 bytes). Read-only financial,
+  event-prefix and SQL reconciliation passed with the primary unchanged.
+  No final input, seed or world exists. The next bounded correction prospectively
+  allows 600 seconds for outer reference measurement plus 30 seconds reserved
+  cleanup, preserving the old inner calculator limits and all 64 cases. It must
+  pass independent checks, carry this exact stopped history and freshly qualify
+  before all 64 current-source references; the eight passes remain historical.
+  Allow 45–90 minutes for software/checks, then uncertain 1–3 hours for acceptance.
+  Original operational time, A4, aggregate resources and all science gates remain.
 
 - **Direct LightGBM role adopted — D102 (November 3):** direct LightGBM is designated
   as an interchangeable forecast component for actual hypothesis tasks, with the
@@ -144,6 +146,12 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   and execution-plan/0.7: meet binding requirements with proportionate total effort, justify substantial
   optional work, and promptly propose changes to disproportionate requirements. Existing scientific
   meaning, guarantees, acceptance criteria, frozen profiles and resource limits require approval to change.
+  Connection failures explain part of elapsed time but are fully counted in the
+  evaluation, as clarified by the user. Local Codex logs show 65 failed HTTP
+  sends and 13 stream retries from 15:43:29 to 16:38:05 UTC; the next HTTP200 was
+  at 16:39:08 UTC. This corrects the earlier broad analysis/coordination
+  attribution. The 55m39s observed failure-to-success window is not a deduction,
+  an exact total-outage estimate or a reason to extend A2/A4.
 
 - **Approved construction priority (November 2):** implement the [manufacturing
   milestones](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#manufacturing-milestones-approved-november-2-2026)

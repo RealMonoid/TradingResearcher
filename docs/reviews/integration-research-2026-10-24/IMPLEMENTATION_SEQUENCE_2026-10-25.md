@@ -27,6 +27,8 @@ Reuse the existing remaining-work table, Current State and progress register. No
 
 The cost rule includes elapsed construction time, execution, coordination, checking, rework and maintenance. Apply it before each substantial next step, not only at A4's deadline. In the existing work item, state the acceptance criterion, what is still missing, the expected remaining effort as a range with its basis/uncertainty, and why the next change is worth that effort. Mark required work versus optional assurance or optimization. Reuse sufficient evidence and omit optional work with disproportionate benefit. If an accepted requirement appears disproportionate, promptly present the researched alternative for approval under D008/D026 rather than silently weakening it or continuing indefinitely.
 
+The user's subsequent clarification, "Das wird dir nicht von der Zeit abgezogen bei der Auswertung", keeps connection failures and retry waits fully inside evaluated gross elapsed time. Track evidenced interruptions separately as explanatory causes, without subtraction, a time credit, a clock reset or a deadline extension. A lost observation connection is not evidence that a local study stopped; inspect its existing process/handle before any recovery action.
+
 The following is the initial remaining-work view for D100, not a new plan or an estimate for the entire framework. Ranges are provisional reviewer planning judgments based on the recorded integration gaps and recent slice durations; they are not measured forecasts or new resource grants. The construction owner updates the selected row from the actual source/status before substantial work and records actual elapsed time and rework at closeout. Reuse newly completed components instead of rebuilding or rechecking unchanged work. Overlapping items must not double-count time or weaken required independent checks.
 
 | Remaining item | Initial additional time estimate | Observable acceptance |
@@ -478,6 +480,55 @@ this software checkpoint; the two real stopped versions and their fees/copies
 are retained. The existing work record measures the 45-90 minute bounded repair,
 including diagnosis/coordination/rework, and keeps the unknown numerical cost
 explicit. All original budgets, protected-access and A4 boundaries remain.
+
+Actual `51f5d85` V2 subsequently passed current qualification (79,607 ms /
+134,603,827 bytes) and eight complete parallel 2,048-row references. Exec `86150`
+then exited 1: a 4,096-row reference retained two authenticated phases and the
+full old match but exceeded the 300-second outer deadline at 327,127 ms; another
+attempt was cancelled. No serial reference or final input/seed/world completed.
+Pool `ed91215b…` is halted at `b908814d…`: 8,671,998 ms / 2,085,856,342 bytes
+charged, two grants used, none pending, no unknown use or overrun. The complete
+terminal copy retains 1,286 blobs / 1,459,379,272 bytes; read-only financial,
+event-prefix and SQL reconciliation passes with the primary unchanged.
+
+**Selected finite reference-clock correction.** The approved revision-5 section
+0.3/A1 and D100 require full acceptance and a final world deadline measured under
+parallel load; they do not fix this implementation's premeasurement 300-second
+outer reference guard. A scoped independent authority review confirms that a
+prospectively versioned 600-second outer reference envelope, with its full
+630-second reservation, is ordinary infrastructure within the existing mandate.
+It cannot change the old inner calculator profile, scientific criteria, full
+64-case equality/replay, aggregate resources, A2/A3/A4 or any retained failure.
+
+Reuse the existing exact source-correction/copy/currentness owners to carry only
+this pinned stopped V2 checkpoint and all ten acceptance artifacts into one new
+current-source controller; never unhalt, retry or reclassify the old acceptance.
+Fresh qualification and all 64 current-source reference calls remain required.
+Independent checks must cover the exact financial carry, old clock and halted
+history, new outer reservation, allowed policy difference, negative admission,
+withdrawal and recovery. Preserve all earlier source versions and evidence.
+
+The one bounded read-only metadata probe measured 8.151 seconds before execution,
+7.549 seconds rebuilding canonical inputs and 21.566 seconds after execution under
+cProfile. This establishes material checking cost, not actual phase durations or
+final-series throughput. Do not start a general profiling/optimization project.
+Allow 45–90 minutes for the required software/checks/closeout, followed by an
+uncertain 1–3-hour engineering acceptance range. A4 remains plausibly reachable,
+without a guarantee; no complete 2,048-world forecast is supportable from this
+partial reference sample. Enforce actual A2/A3 and report limits when encountered.
+The existing consumer evidence capsule retains the actual stop, timings and
+connection observations; the existing progress item owns exact pins and effort.
+
+The local Codex connection log also corrects construction-time attribution:
+65 HTTP sends failed and 13 outer stream retries were logged from 15:43:29 to
+16:38:05 UTC, followed by HTTP200 at 16:39:08 UTC. The observed first-failure to
+recovery window is 3,339 seconds. It materially explains the pause but does not
+identify local-network versus service cause or exact complete disconnected
+duration. Per the user's clarification, retain every second in gross elapsed
+evaluation; do not subtract that interval or the 615 seconds of explicit outer
+backoff, reset the original operational clock or extend A4. Log metadata is
+sanitized in the existing work record; no raw headers, credentials or request
+payloads are published.
 
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).

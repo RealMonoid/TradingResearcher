@@ -65,10 +65,23 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   accepts 23 distinct controller cases with versioned reuse and four final-source
   error checks, plus 22 resource-owner regressions. Numerical responses remain
   explicit test seams; this is no actual runtime or final-series admission.
-  Next: pin this source in a separate checkout, run current native qualification
-  and all 32 real references in both modes, then admit the fresh final inputs,
-  forecasts and complete copies before the authorized 2,048-world series.
-  No numerical acceptance or native series has started; no general approval wait.
+  The isolated `145934b` checkout then passed actual native qualification, but
+  its first six parallel reference attempts all failed before authenticated
+  generation. The shared SQLite statement cache reproduced the same metadata
+  read failures independently. The pool is halted with no outstanding work;
+  all six failures and charges remain. Actual terminal backup and restore retain
+  1,244 blobs (1,455,798,125 bytes). No final input, final seeds or final world exists.
+  The [targeted correction evidence](../../tests/fixtures/native-broker-cache-checks-2026-11-03.zip)
+  records the unchanged independent test failing before the fix and passing all
+  7,200 exact reads afterward, plus 66 fresh Broker/controller/resource regressions.
+  `coordination.py` disables the shared connection's statement cache; numerical
+  sources are unchanged. This completes the read-defect correction only.
+  Next: implement and independently check one source-bound pre-final handoff
+  carrying the exact stopped financial state and original operational start,
+  without unhalting the old pool or resetting grants/fees. Then freshly qualify
+  the corrected source and rerun all 32 references in both modes before final
+  admission. That handoff and actual acceptance are unimplemented/unverified;
+  science/2024 remain blocked and A4 remains unchanged. No general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation
   under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without

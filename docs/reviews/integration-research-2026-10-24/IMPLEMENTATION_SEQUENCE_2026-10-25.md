@@ -33,8 +33,8 @@ The following is the initial remaining-work view for D100, not a new plan or an 
 |---|---|---|
 | Finish the outer controller that prepares copies and starts/restarts the study | Software connected and checked November 3; construction began 11:31:42 UTC, about 70 minutes through source reconciliation, including coordination and corrections. Allow 15-30 minutes for bundled closeout/pinning; actual qualification/acceptance below remain. Initial 2-5 hour range was a planning judgment. | Existing public callers use pinned sources, preserve complete copies and old charges, enforce finite shared authority and safe restart; changed failure paths have scoped software checks. Actual runtime admission remains required. |
 | Connect scheduling, timeout handling and resource stops | Software completed within the same controller interval, not additional time; actual A2/A3 measurements remain below. | At most six workers with bounded threads/priority; A1 preserves timeout/retry history. Fixed A2/A3 formulas and current-charge/pending checks are connected; real observations and actual stop/admission decisions are still pending. |
-| Qualify the exact final native version | 1-3 hours including affected independent checks; depends on source stability | Required native conformance and current source/runtime bindings pass for the version that will actually run; historical qualification is not relabelled current. |
-| Execute the fixed reference inventory serially and in parallel | 0.5-1 hour setup/inspection; numerical run time remains unknown until actual acceptance measurements | All original 32 cases run in both modes with full generation/replay and matching numerical results/stream identities; record full-call time and resource use, then freeze applicable deadlines. No replacement cases or weakened acceptance. |
+| Qualify the exact final native version | Actual pinned `145934b` qualification passed, charging 77,250 ms and 191,822,081 bytes. The subsequent Broker correction needs fresh qualification; reuse this observation only as a planning basis, not current admission. | Required native conformance and current source/runtime bindings pass for the version that will actually run; historical qualification is not relabelled current. |
+| Execute the fixed reference inventory serially and in parallel | The first six actual parallel attempts failed on metadata reads before authenticated generation; no reference passed. One-time exact-carry source handoff remains: provisional 1-2 hours implementation/checking from the scoped review, then fresh qualification and all 64 calls; actual numerical duration is still unknown. | Preserve all six failures/charges and the halted pool. All original 32 cases must run in both modes with full generation/replay and matching numerical results/stream identities; record full-call time and resource use, then freeze applicable deadlines. No replacement cases or weakened acceptance. |
 | Admit and start the authorized final series | 0.5-1.5 hours setup/checking after the prerequisites pass | Fresh seeds, source/currentness and capacity admission succeed; A3 pre-start forecasts are recorded and actual series progress is retained. No start based on software fixtures alone. |
 | Check the actual series forecast and finish or stop under the approved rules | Actual duration is unknown before measured throughput; do not present A2's 24-hour forecast threshold as a measured completion promise | After approximately 60 actual parallel worlds, report the full-inventory forecast including retries/overhead and enforce A2; enforce A3 throughout. Final completion preserves all 2,048 worlds and full replay, or reports the precise stop/failure and missing inventory. |
 
@@ -324,9 +324,44 @@ This completes the bounded AC-N1/2/5/6/8/9/11 outer software connections. The ne
 required step is the isolated pinned source's actual qualification and complete
 64-call reference acceptance, followed by measured forecasts, fresh final-input
 admission, actual complete copies and the 2,048-world series. No production pool,
-new native qualification, reference computation or final seed reservation has
-started at this checkpoint. A4 remains November 4 at 23:59:59 CET; all scientific,
+new native qualification, reference computation or final seed reservation had
+started at that software checkpoint. A4 remains November 4 at 23:59:59 CET; all scientific,
 protected-data and accepted next-delivery boundaries remain binding.
+
+**Actual pre-final stop and targeted Broker correction (November 3).** The
+isolated `145934b` source passed actual native qualification. Its first six
+parallel reference attempts then failed with retained SQLite/API/metadata-read
+errors, zero authenticated phase proofs and no numerical output. The controller
+stopped, settled every reservation and completed the terminal full backup and
+restore. Read-only primary reconciliation confirms the exact retained event tip,
+SQL fingerprint and resource checkpoint: 6,156,365 ms / 1,198,395,867 bytes charged,
+including all old fees; one grant used, none pending, no uncertain use or overrun.
+No native final input, final seed reservation or final world exists. This is a
+failed acceptance prerequisite, not an incomplete numerical calibration pass.
+
+The [correction evidence](../../../tests/fixtures/native-broker-cache-checks-2026-11-03.zip)
+retains an independently authored genuine-Broker counterexample: six threads,
+7,200 immutable artifact reads, 1,548 exceptions before the fix. The unchanged
+test passes 7,200 exact reads with no exceptions afterward; 21 Broker, 23 controller
+and 22 resource-owner regressions also pass freshly. The only production change
+sets `sqlite3.connect(cached_statements=0)` for the shared connection. This reuses
+the existing standard-library option instead of adding a database adapter or
+changing numerical/scientific meaning. The bounded defect criterion is closed;
+the source-qualified study admission is still open.
+
+Next is one independently checked, source-bound **pre-final** correction handoff.
+Keep the predecessor permanently halted and preserve its failures/copies. Carry
+its exact charges, allocations, grant/progress state and original operational
+start; enforce one successor atomically, with no alias/version refund. Reuse the
+same runtime bytes and complete old reference corpus, but obtain a fresh
+current-source qualification and all 64 reference calls. No generic unhalt/retry
+platform or second final series follows. The scoped authority review identifies
+this as the already-authorized checked correction above; implementation and its
+actual handoff remain pending. The provisional 1-2 hour range covers that required
+connection/checking, not numerical acceptance. It remains plausibly within A4,
+with no completion guarantee or deadline extension. Reassess from actual progress
+before that substantial step. The SQLite fix has not been run against a real
+study; scientific use and protected2024 remain blocked.
 
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).

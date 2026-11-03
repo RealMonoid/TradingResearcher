@@ -99,7 +99,7 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
             raise Conflict('Another broker owns this registry') from exc
         try:
             self._db = sqlite3.connect(self.directory / 'registry.sqlite3', isolation_level=None,
-                                       check_same_thread=False)
+                                       check_same_thread=False, cached_statements=0)
             self._db.row_factory = sqlite3.Row
             self._db.execute('PRAGMA foreign_keys=ON')
             self._db.execute('PRAGMA synchronous=FULL')

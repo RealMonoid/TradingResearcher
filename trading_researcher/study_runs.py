@@ -40,17 +40,29 @@ def attempt_stream_limit(source,manifest,cases,*,runtime_bytes=0):
     return stream_limit
 
 
-def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,*,_native=None,_control=None):
+def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,*,
+                    _native=None,_control=None,_custody=None,_cancel=None):
     """Generate and replay in separate processes; account aborted files as well."""
     if _control is not None:
         from .study_process_control import ProcessControl, ChildCleanupFailed
         require(type(_control) is ProcessControl and _native is not None,
                 'Owned process controls require selected native study inputs')
+    if _custody is not None or _cancel is not None:
+        from .study_process_control import NativeAttemptCustody, validate_cancellation
+        require(_control is not None and _native is not None,
+                'Custody and cancellation require controlled native study inputs')
+        require(_custody is None or type(_custody) is NativeAttemptCustody,
+                'Owned native attempt custody required')
+        validate_cancellation(_cancel)
     expected=footprint(source)
     technical=None
     if _native is not None:
         from .native_study_pipeline import ParentContext
         technical=ParentContext(source,_native,_control=_control)
+    if _custody is not None:
+        _custody._begin({'source_footprint':expected,'payload_hash':digest(payload),
+            'manifest_hash':digest(manifest),'world_id':world['id'],
+            'native_binding':digest(_native['binding']),'process_control':_control.request()})
     stream_limit=attempt_stream_limit(source,manifest,cases,
         runtime_bytes=0 if technical is None else technical.cold_bytes)
     calculated=None;raw=None;proofs=[];encoding=None
@@ -63,6 +75,7 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,
             directory=Path(temporary)
             meter['accounting_complete']=False
             child_usage_known=True
+            authenticated_phase=None
             try:
                 for name,value in source.items():
                     path=directory/name;path.parent.mkdir(parents=True,exist_ok=True);write_file(path,value)
@@ -73,6 +86,7 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,
                 bootstrap=BOOTSTRAP if technical is None else technical.bootstrap
                 launch_options={'timeout':remaining()}
                 if _control is not None:launch_options['_control']=_control
+                if _cancel is not None:launch_options['_cancel']=_cancel
                 try:
                     response=_run_child([sys.executable,'-I','-S','-B','-c',bootstrap,str(directory),str(directory/'request.json')],
                         directory,**launch_options)
@@ -109,12 +123,15 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,
                 proofs.append(proof)
                 if phase=='generate':
                     calculated=response['result'];raw=observed;encoding=response.get('stream_encoding')
+                    technical_failure=calculated['outcome']['state']=='TECHNICAL_FAILURE'
+                    authenticated_phase=(response['result'],proof)
                     # Time/segment/numeric stops are not deterministic successful
                     # computations and must never acquire a completed-world status.
-                    if calculated['outcome']['state']=='TECHNICAL_FAILURE':return calculated,proofs
+                    if technical_failure:return calculated,proofs
                 else:
                     require(response['result']=={'verified_result_hash':digest(calculated)} and observed==raw,
                         'Independent study replay differs')
+                    authenticated_phase=(response['result'],proof)
             finally:
                 for path in directory.rglob('*'):
                     observed_stat=path.stat()
@@ -146,6 +163,8 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,
                                 and path.read_bytes()==value,'Controlled study input changed during execution')
                     except OSError as exc:
                         raise Conflict('Controlled study input is unavailable after execution') from exc
+                if _custody is not None and authenticated_phase is not None:
+                    _custody._record(phase,*authenticated_phase)
     return calculated,proofs
 
 

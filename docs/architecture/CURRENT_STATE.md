@@ -36,7 +36,11 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   now passes29 reducer/22 actual disposable-Registry tests: old charges/grants,
   atomic six-slot reservations, late failure custody, withdrawal and uncertain
   restart/full restore. A read-only actual carry probe leaves the original DB
-  unchanged. Private result labels confer no numerical authority. Public native
+  unchanged. The [attempt-custody checks](../../tests/fixtures/native-attempt-custody-checks-2026-11-03.zip)
+  now pass23 new cases plus23 process/17 transport regressions: authenticated
+  generation survives a replay failure, parent cancellation kills/reaps, and
+  malformed or unacknowledged results acquire no phase. Numerical transport uses
+  explicit test seams; this is no numerical/current-runtime admission. Public native
   advance remains denied. Next: typed numerical result/proof/retry integration,
   actual reserved caller, fixed32-reference serial/parallel acceptance and A2/A3.
   No numerical acceptance or native series has started; no general approval wait.

@@ -144,6 +144,22 @@ Private metadata tests/clock labels are not numerical or final-run authority.
 No actual pool/final preparation or numerical acceptance/series has started;
 the public final advance remains guarded and A4's deadline is unchanged.
 
+**Attempt custody/cancellation closeout (November 3):**23 new independent cases
+plus23 process-control and17 native transport regressions pass (63 distinct
+methods, Exit0, no failures/errors/skips). The [attempt evidence](../../../tests/fixtures/native-attempt-custody-checks-2026-11-03.zip)
+retains exact source pins, independent review, API RED and the corrected
+malformed-generation RED. Existing transport, source/case/full-stream validation
+and finally retention now feed one-use parent-owned custody: successful
+generation survives replay failure, while no unacknowledged or malformed result
+qualifies. Parent-only standard-library Event cancellation kills/reaps the tiny
+Windows child; failed cleanup remains unknown and cancellation never becomes a
+clock. Native final input callers forward the same custody/Event; default scalar
+and uncontrolled native shapes remain covered. This closes AC-N3/N5/N12
+transport obligations and an A1 prerequisite only. Actual reserved numerical
+classification, retry equality and post-error qualification still precede the
+fixed32 serial/parallel acceptance, source/runtime/capacity admission and A2/A3.
+No actual pool, final seeds, numerical acceptance or new series has started.
+
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
 M1's existing genuine development witness is now reconciled, including its

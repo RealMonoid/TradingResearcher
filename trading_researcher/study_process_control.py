@@ -45,6 +45,49 @@ class ChildCleanupFailed(Invalid):
     """The child could still consume resources; a file scan cannot settle use."""
 
 
+class StudyProcessCancelled(Invalid):
+    """Parent-requested cancellation; never an owned clock or retry allowance."""
+
+
+class NativeAttemptCustody:
+    """One-use parent custody of authenticated transport phases, not admission.
+
+    Numerical completion, currency and resource settlement remain the caller's
+    responsibility. Copies prevent later response/result mutations from changing
+    the retained acknowledgement, including when a later replay raises.
+    """
+    __slots__ = ('_binding', '_phases')
+
+    def __init__(self):
+        self._binding = None
+        self._phases = []
+
+    def _begin(self, binding):
+        require(self._binding is None and type(binding) is dict,
+                'Fresh owned native attempt custody required')
+        self._binding = decode(canonical(binding).encode())
+
+    def _record(self, phase, result, proof):
+        expected = 'generate' if not self._phases else 'replay'
+        require(self._binding is not None and len(self._phases) < 2 and phase == expected
+                and type(result) is dict and type(proof) is dict,
+                'Ordered authenticated native phase required')
+        self._phases.append(decode(canonical(
+            {'phase': phase, 'result': result, 'proof': proof}).encode()))
+
+    def snapshot(self):
+        return decode(canonical({'schema': 'native-attempt-custody/1',
+            'binding': self._binding or {}, 'phases': self._phases}).encode())
+
+
+def validate_cancellation(cancel):
+    # Parent-only import: observing controls in the numerical child must not
+    # import additional libraries merely to accept an Event it never receives.
+    if cancel is not None:
+        from threading import Event
+        require(type(cancel) is Event, 'Owned parent cancellation Event required')
+
+
 class _DeadlineObserved(Exception):
     """Private control flow; not an externally admissible failure cause."""
 
@@ -76,7 +119,7 @@ def observe_control(policy):
     return observed
 
 
-def run_controlled_child(command, directory, timeout, control):
+def run_controlled_child(command, directory, timeout, control, *, _cancel=None):
     """Reuse Popen with explicit controls; retain every output/error prefix.
 
     Creation, kill and filesystem work are not hard OS quotas. Their actual
@@ -84,6 +127,7 @@ def run_controlled_child(command, directory, timeout, control):
     the known deadline cause; the ledger must stop on uncertain resource use.
     """
     require(type(control) is ProcessControl, 'Owned native study process control required')
+    validate_cancellation(_cancel)
     require(type(timeout) in (int, float), 'Finite positive child timeout required')
     try:
         valid_timeout = math.isfinite(timeout) and timeout > 0
@@ -91,6 +135,8 @@ def run_controlled_child(command, directory, timeout, control):
         valid_timeout = False
     require(valid_timeout, 'Finite positive child timeout required')
     require(sys.platform == 'win32', 'Native study process controls require Windows')
+    if _cancel is not None and _cancel.is_set():
+        raise StudyProcessCancelled('Native study cancelled before child launch')
     directory = Path(directory)
     output, errors = directory / 'child-output.json', directory / 'child-errors.txt'
     environment = os.environ.copy()
@@ -108,6 +154,8 @@ def run_controlled_child(command, directory, timeout, control):
             while process.poll() is None:
                 # A simultaneous output-cap failure has priority over the clock.
                 bounded_outputs()
+                if _cancel is not None and _cancel.is_set():
+                    raise StudyProcessCancelled('Native study parent requested cancellation')
                 seconds = deadline - time.monotonic()
                 if seconds <= 0:
                     raise _DeadlineObserved()

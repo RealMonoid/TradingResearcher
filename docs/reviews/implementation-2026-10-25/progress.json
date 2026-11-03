@@ -6587,7 +6587,7 @@
     "prior_next_action_before_data_prerequisite": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits."
   },
   "scientific_information_profile_2026_11_02": {
-    "status": "NATIVE_PARALLEL_RESOURCE_CALLER_VERIFIED_NUMERICAL_ADMISSION_OPEN",
+    "status": "NATIVE_ATTEMPT_CUSTODY_VERIFIED_NUMERICAL_ADMISSION_OPEN",
     "purpose": "Qualify the existing second-order binary law against the retained Q1 engineering template and actual owned generation/bootstrap/MC/replay before choosing a finite information-study profile. Address the documented dependent-null gap without adding a simulator family.",
     "requirements": [
       "REQ-005",
@@ -10985,7 +10985,7 @@
     "prior_status_before_D100": "FIXED_DEVELOPMENT_GRID_COMPLETE_INDEPENDENTLY_VERIFIED",
     "prior_active_next_action_before_D100": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
     "native_parallel_calibration_2026_11_03": {
-      "status": "SHARED_RESOURCE_KERNEL_AND_REGISTRY_OWNER_VERIFIED_NUMERICAL_CALLER_OPEN",
+      "status": "AUTHENTICATED_PHASE_CUSTODY_VERIFIED_RESERVED_NUMERICAL_CALLER_OPEN",
       "decision": "D100",
       "approval_record": {
         "path": "docs/reviews/implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json",
@@ -11064,7 +11064,7 @@
       "native_new_world_attempts": 0,
       "new_research_API_calls": 0,
       "new_scientific_authority": false,
-      "next_action": "Connect qualified native runtime/cache/exact factory and reserved final input to the actual resource owner with typed numerical timeout classification, retained authenticated generation/replay custody, retry equality and post-error currentness. Complete fixedfull32 development/reference serial+parallel acceptance and changed integration failure/recovery paths, freshcurrent-source runtime qualification, measured deadline/logical+physical forecasts and disjointfinalseed admission; startD1002048series withA2/A3 andcontinuepermittedv0. A4cutoff2026-11-04T22:59:59Z unchanged.",
+      "next_action": "Connect actual reserved numerical work to NativeCalibrationResources using host-owned typed deadline classification, full-result/stream retry equality and current qualification after error. Complete fixedfull32 reference serial+parallel acceptance, freshcurrent-source qualification, measured deadline/logical+physical forecasts and actual final disjointseeds; then D100 series A2/A3 and permittedv0. A4 cutoff2026-11-04T22:59:59Z unchanged.",
       "during_series": "Continue permitted technical main pathv0 on development2020–2023 without mutating pinned study source/results; account for desktop/v0 resources and avoid unnecessary concurrent heavy tests.",
       "unchanged_boundaries": "Full project specification, actual scientific admission/protected2024 restrictions, exact scientific criteria, exposure, freeze, separate policy/capital authority and existing inference budget remain binding. OriginalA/AgentWorkflow/AUX draft is not implicitly resumed.",
       "construction_effort": "Native task03:32:10UTC; reuse/design/adoption and process-control slice recorded in existing capsule. Two real input-integrity/cleanup defects fixed under independent RED cases. A4 cutoff remains2026-11-04T22:59:59Z; full final integration/acceptance pending. No measured speed/quality equivalence or construction token-cost data.",
@@ -11463,6 +11463,103 @@
           }
         ],
         "documentation_scope": "Fresh gates after currentplan/blueprint/CurrentState/progress changes. Subsequent metadata only records outcomes and packs their exact receipts; final diffcheck covers metadata. Software/document checks confer no numerical/scientific qualification."
+      },
+      "attempt_custody_slice": {
+        "status": "VERIFIED_TRANSPORT_CUSTODY_AND_PARENT_CANCEL_NUMERICAL_CALLER_OPEN",
+        "criteria": [
+          "AC-N3/N5/N12 authenticated transport and cancellation boundary",
+          "D100/A1 prerequisite: preserve acknowledged generation across replay failure without granting retry"
+        ],
+        "purpose": "Connect existing exact native transport and final input caller to one-use parent-owned phase custody. A replay failure must not discard a fully authenticated generation; unacknowledged files, malformed results and partial replay must not become successful phases.",
+        "reuse": "Reuse existing execute_attempt/ParentContext/source/case/full encoded+decoded stream validation, finally output retention and native input/cache caller. Standard-library threading.Event and subprocess implement generic cancellation; the small custody adapter owns framework acknowledgement/order/identity semantics. No new dependency or numerical method.",
+        "fixed_interface": {
+          "custody": "Exact NativeAttemptCustody class, one begin, detached native-attempt-custody/1 snapshots; fixed source/payload/manifest/world/native/control binding; generate full result and replay wire acknowledgement stored only after validation and finally retention/input checks.",
+          "cancellation": "Exact parent-only threading.Event with fixed ProcessControl; never included in numerical request/callback. Prelaunch cancels without files; running child kill/reap is bounded. Cancellation is StudyProcessCancelled, never known clock. Failed kill/reap is ChildCleanupFailed and usage remains unknown.",
+          "caller": "NativeFamilyCalibrationStudies forwards custody/Event/control through actual inherited execution method; development defaults retain legacy options and reject explicit custody/cancel before cache writes."
+        },
+        "owners": {
+          "tests/test_native_attempt_custody_independent.py": "aa2e5f742ae8423591f3c50e07c9c71e4730692fd5ff2c9e2ffa44456a10b61f",
+          "trading_researcher/study_process_control.py": "cfe2b73ddacdd35272895f60181c5b2b4e5b7d98255ca15fdf0aa5f0bb8dfee3",
+          "trading_researcher/study_runs.py": "9eb0f1b52e4363120f925c185af52fb360eb37abfd59edd577fc8ff72a8bc62f",
+          "trading_researcher/binance_normalize.py": "ea40eb25d2676c1dadf0e980d3b4ac00273bd316234d676c4369b96c98db478e",
+          "trading_researcher/native_study_runs.py": "e97115a6e50f31ad5aeece12eabc80378591df4c823da6ecc64215ac5624fae1"
+        },
+        "check": {
+          "path": ".trf-runtime/native-final-calibration-2026-11-03/native-attempt-final63-check.json",
+          "sha256": "5e8a411aec729272861d0648edd44b046c3d033c0b53a0149a5d1e3cadbca8ee",
+          "distinct_methods": 63,
+          "new_custody": 23,
+          "existing_process_control": 23,
+          "existing_native_transport": 17,
+          "tests_run": 63,
+          "exit_code": 0,
+          "failures": 0,
+          "errors": 0,
+          "skips": 0,
+          "elapsed_seconds": 6.111336899979506,
+          "all11_before_after_current_pins_match": true,
+          "scope": "23newphasecustody/cancel +23existingprocesscontrol +17existingtransport distinctmethods. Actual source/case/encodeddecodedstream/proof/retention, invented native/binary membership/environment/numerical transport seams; realtinyisolatedcontrol/cancellation/deadlinechildren only. No heavy native/normalization/calibration/numericalqualification, Registry, actualseries/retry/admission. BothmalformedgenerationREDs/rawoutputs/sourcebytes retained; only testharnesssubTestscope correction prior to productionorderingfix, assertionsunchanged."
+        },
+        "completed_criteria": [
+          "Generation survives later replay deadline/cancel/unknown cleanup/mismatch; no fabricated replay proof.",
+          "Both child responses and full stream/source/input/inventory checks precede custody recording; unacknowledged computed-result.json is raw evidence only.",
+          "Valid technical-failure generation retains one transport phase without numerical-world completion.",
+          "Actual tiny Windows child cancellation kills/reaps and keeps output/error prefixes; failed cleanup stays unknown.",
+          "Default scalar and uncontrolled native request/kwargs/proof/return shapes preserved; final caller forwards parent-only state."
+        ],
+        "production_red": {
+          "path": "native-attempt-malformed-generation-red.json",
+          "sha256": "e77ae59602f2290683d55b4bcebbf31473eff23e03d5fbd8c7b82b1634c8230f",
+          "tests_run": 1,
+          "subtest_failures": 2,
+          "exit_code": 1,
+          "finding": "Generation result {} or outcome{} raised KeyError after premature phase assignment, then entered custody in finally. Corrected evaluation order before phase assignment; both counterexamples now pass with raw output retained.",
+          "pre_fix_study_runs_sha256": "e8aeb2cb8a68a86d3e6f79e870572a7302c2bcf8fe819eab923bc413c4f8e3a2"
+        },
+        "history": "Initial API RED (one unsupported-keyword error, no successful custody coverage), first22 PASS and first-subcase-only malformed RED retained. Original22 method ASTs unchanged; one counterexample added. A test subTest-scope correction preserves assertions and executes both malformed subcases. Root receipt projection/name-prefix errors were corrected after reading actual schema; no production/test expectation changed.",
+        "source_review": {
+          "sha256": "19ddb2818ff29faf0c9fec16c0a90286080cda04873949c7bbadece11a621614",
+          "status": "READY_FOR_BOUNDED_ATTEMPT_TRANSPORT_CLOSEOUT"
+        },
+        "central_reconciliation_sha256": "8663c16e418e8557d1e93eecec2c9fba8eae47e1e37251b0924d96d074e43391",
+        "evidence_capsule": {
+          "path": "tests/fixtures/native-attempt-custody-checks-2026-11-03.zip",
+          "members": 46,
+          "bytes": 196603,
+          "sha256": "8aa95cdd80673cbd4b61997aa58f7214caed9ce9f10492786949cc275010d0f6",
+          "all_member_hashes_sizes_and_crc_verified": true
+        },
+        "not_verified": [
+          "Actual resource-reserved numerical caller/classifier, retry full-result/stream equality and post-error runtime currency",
+          "Current-source native binary qualification and all32 full development reference cases in serial and parallel",
+          "Actual final preparation/seeds, six-worker series, A2/A3 forecasts and full required process calibration",
+          "Scientific admission and protected2024 access remain blocked"
+        ],
+        "construction_effort": "Preparation after06:38UTC and resumed source work07:44UTC; first22 2.1765s, malformedRED 0.0908s, final63 6.1113s, plus source review/coordination/docs. No actual numerical study or research API calls; billed construction model/token costs unknown.",
+        "documentation_checks": {
+          "implementation": {
+            "path": "native-attempt-doc-implementation.json",
+            "sha256": "18982f58928876f23099049ee8c6c9722a980dfc04ecc916dc63eb0cdfa25b44",
+            "exit_code": 0,
+            "elapsed_seconds": 0.3342711000004783,
+            "scope": "Three existing documentation gates; exact per-check retained documentation pins, not scientific validity."
+          },
+          "system-model": {
+            "path": "native-attempt-doc-system-model.json",
+            "sha256": "7c3a29e04b8329e20fc083b1c50d02d40be54862590e636a92e0bf4135c720f9",
+            "exit_code": 0,
+            "elapsed_seconds": 6.086365499999374,
+            "scope": "Three existing documentation gates; exact per-check retained documentation pins, not scientific validity."
+          },
+          "retail-contract": {
+            "path": "native-attempt-doc-retail-contract.json",
+            "sha256": "6c7dfee2f3df119df05479bcc3a1b5fa579035cbbeb8b171a82621c29ad939a2",
+            "exit_code": 0,
+            "elapsed_seconds": 6.159364200022537,
+            "scope": "Three existing documentation gates; exact per-check retained documentation pins, not scientific validity."
+          }
+        },
+        "documentation_scope": "Existing gates passed after the related closeout paragraphs; later result/hash metadata is checked by final git diff --check. Parallel approved D101 documents are owned separately."
       }
     }
   },

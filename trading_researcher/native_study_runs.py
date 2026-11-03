@@ -112,7 +112,21 @@ class NativeStudyInputs:
                 'Native study retained entrypoint differs')
         return super()._load_study_source(study)
 
-    def _execute_study_attempt(self, study, source, payload, manifest, world, cases, remaining, meter, outputs):
+    def _execute_study_attempt(self, study, source, payload, manifest, world, cases, remaining, meter, outputs, *,
+                               _custody=None, _cancel=None):
+        options = {}
+        control = self._study_process_control()
+        if _custody is not None or _cancel is not None:
+            from .study_process_control import NativeAttemptCustody, ProcessControl, validate_cancellation
+            require(type(control) is ProcessControl and
+                    (_custody is None or type(_custody) is NativeAttemptCustody),
+                    'Custody and cancellation require owned final native process controls')
+            validate_cancellation(_cancel)
+            if _custody is not None:
+                require(_custody.snapshot()['binding'] == {}, 'Fresh native attempt custody required')
+                options['_custody'] = _custody
+            if _cancel is not None:
+                options['_cancel'] = _cancel
         request = study['body']['request']
         qualified = self._qualified(request)
         remaining()
@@ -122,8 +136,6 @@ class NativeStudyInputs:
         remaining()
         self._qualified(request, runtime_directory=directory)
         selected = {'binding': study['body']['native_binding'], 'directory': str(directory)}
-        options = {}
-        control = self._study_process_control()
         if control is not None:
             options['_control'] = control
         return study_runs.execute_attempt(source, payload, manifest, world, cases, remaining,

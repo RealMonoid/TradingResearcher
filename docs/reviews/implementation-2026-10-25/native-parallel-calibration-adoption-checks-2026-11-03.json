@@ -1,0 +1,50 @@
+{
+  "schema": "native-parallel-calibration-adoption-verification/1",
+  "status": "PASS_DOCUMENTED_APPROVAL_AND_SCALAR_HOLD_ONLY",
+  "checked_at_utc": "2026-11-03T04:13:03.615899+00:00",
+  "decision": "D100",
+  "plan": "execution-plan/0.8",
+  "approval_sha256": "9c28969e7078bba1dbd22b30d6746b3c1c7badb71d5ad36fa88a5076760123c3",
+  "AGENTS_sha256": "9df15dc7ca2e615fcd085fca60535a0caf14bb3dd6be4733f6a01f4024023b43",
+  "AGENTS_preserved_original_sha256": "a7d1848064f13ce17e1381a7b1290c8689f096b1e2fa8a2796aba7a618b9f504",
+  "AGENTS_only_new_scoped_paragraph": true,
+  "documentation_checks": {
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py": {
+      "receipt_path": ".trf-runtime/native-final-calibration-2026-11-03/adoption-documentation-verify_implementation.json",
+      "receipt_sha256": "00429d18ddddfcbc37b69593879e5de887f92399981da99775573d39e463c9fa",
+      "exit_code": 0,
+      "seconds": 0.3087511000339873,
+      "scope": "Fresh checks for D100/plan0.8/AGENTS. Implementation PASS reused across the sole ACCEPTED77\u219278 status-summary correction, which changes no links/preservation/whitespace rule; final diff check remains required."
+    },
+    "docs/reviews/verify_retail_contract.py": {
+      "receipt_path": ".trf-runtime/native-final-calibration-2026-11-03/adoption-documentation-verify_retail_contract.json",
+      "receipt_sha256": "fb24ef6f2ae20f3ed7ddd0dc3e6c82594c3cc92296aeea390bf2d3e5639bf696",
+      "exit_code": 0,
+      "seconds": 6.687431199999992,
+      "scope": "Refreshed after the existing Markdown status-summary count correction."
+    },
+    "docs/reviews/verify_system_model.py": {
+      "receipt_path": ".trf-runtime/native-final-calibration-2026-11-03/adoption-documentation-verify_system_model.json",
+      "receipt_sha256": "12bee241c4f56dd90ce5759a60c7a59a15f7476d2c4177abec72201931862381",
+      "exit_code": 0,
+      "seconds": 6.494722600036766,
+      "scope": "Refreshed after the existing Markdown status-summary count correction."
+    }
+  },
+  "retained_failures": [
+    "Initial System/Retail checks each exit1 solely Status counts mismatch after D100; original raw receipts kept. Existing Markdown ACCEPTED count77\u219278 corrected, no validator/rule changes.",
+    "Scoped progress helper rejected nonunique actual_preparation before write; corrected owning-parent selector. Root resume pointer separately corrected while preserving its historical value."
+  ],
+  "protected_unchanged_source_pins": {
+    "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+    "docs/architecture/14_RETAIL_RESEARCH_CONTRACT.md": "e8513ced048dd3c60f30490736e666cadf4d3da0929002b4923a8d70ac31a76d",
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py": "b1332e3714419a59bb0a33c90c82eb73f57d300ac5e9f97e5581f4030089ea7c",
+    "trading_researcher/inquiry/AUXILIARY_RESOURCES.md": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289"
+  },
+  "scalar_new_world_attempts": 0,
+  "scalar_stop_marker_sha256": "3dbd639f1340770c4ef0e5606b858bcca84c25ddc1e0eae4f32074252eef8431",
+  "native_series_started": false,
+  "native_acceptance_run": false,
+  "scientific_readiness": false,
+  "scope": "Approval/authority/active-priority/instruction/preservation documentation only. No new native implementation, seed reservation, numerical evaluation or scientific admission follows."
+}

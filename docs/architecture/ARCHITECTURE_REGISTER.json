@@ -1,6 +1,6 @@
 {
-  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1+temporal-diagnostic-invocation-1+monitoring-visibility-1+inquiry-feedback-1 + bounded-exact-compositions-1 + exact-computation-resources-2",
-  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline. D087 uses SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC for a later approved invocation extension. D088 uses SESSION-2026-10-24-MONITORING-VISIBILITY for operational reporting; prior scientific contracts remain versioned. D096 uses SESSION-2026-11-01-METACOGNITION for the approved inquiry/feedback addendum and incremental observable-improvement clarifications; original source bytes and earlier decisions remain preserved. D097 uses SESSION-2026-11-01-EXACT-COMPOSITIONS; direct answer and exact approval-time proposal are preserved in document26/adoption evidence. D098 uses SESSION-2026-11-01-EXACT-RESOURCES for the direct20M/40M local resource decision; exact proposal bytes and answer remain in document27/adoption evidence. D097 and all old10M profiles remain unchanged.",
+  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1+temporal-diagnostic-invocation-1+monitoring-visibility-1+inquiry-feedback-1 + bounded-exact-compositions-1 + exact-computation-resources-2 + native-parallel-calibration-1",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline. D087 uses SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC for a later approved invocation extension. D088 uses SESSION-2026-10-24-MONITORING-VISIBILITY for operational reporting; prior scientific contracts remain versioned. D096 uses SESSION-2026-11-01-METACOGNITION for the approved inquiry/feedback addendum and incremental observable-improvement clarifications; original source bytes and earlier decisions remain preserved. D097 uses SESSION-2026-11-01-EXACT-COMPOSITIONS; direct answer and exact approval-time proposal are preserved in document26/adoption evidence. D098 uses SESSION-2026-11-01-EXACT-RESOURCES for the direct20M/40M local resource decision; exact proposal bytes and answer remain in document27/adoption evidence. D097 and all old10M profiles remain unchanged. D100 uses SESSION-2026-11-03-NATIVE-PARALLEL: exact direct approval/section0.3 A1-A5 for new native parallel final execution, old Scalar retirement and unchanged scientific/inference boundaries.",
   "decisions": [
     {
       "id": "D001",
@@ -2201,6 +2201,29 @@
       "acceptance_basis": "Direct answer A: Ergebnisidentität und Abhängigkeit getrennt prüfen (empfohlen) to call_010f5ab50be1497eb0a7bba394becc32; exact proposal/answer preserved.",
       "normative": true,
       "change_control": "D008/D026; specification only. Required independent implementation/caller/denial/recovery and actual source/data/exposure/selection/information/calibration qualification precede scientific use. No budgets/protected2024/finalseries/retarget/originalA/paidcall/capital authority."
+    },
+    {
+      "id": "D100",
+      "status": "ACCEPTED",
+      "title": "Native parallel calibration with bounded acceptance",
+      "problem": "The retained Scalar final path has disproportionate wall time; its frozen source cannot silently become native or acquire blanket retry/resource authority.",
+      "rationale_and_alternative": "Adopt the user-approved smallest new exact native2048-world version with <=6 low-priority bounded-thread workers/full streams/full replay/fixed acceptance and A1-A5. Preserve old Scalar history/fees and retire its execution. G1/G2 deferred and G9 withdrawn; no general profiling/optimization chain.",
+      "requirement": "REQ-018",
+      "components": [
+        "CMP-01",
+        "CMP-04",
+        "CMP-06",
+        "CMP-07",
+        "CMP-08",
+        "CMP-11",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-11-03-NATIVE-PARALLEL"
+      ],
+      "acceptance_basis": "Direct human approval message01a19f72-b713-7113-af55-64a935c745c8 in Review des Framework-Stands; exact proposal/section0.3 and approval retained in native-parallel-calibration-approval-2026-11-03.json. Fixed independent serial/parallel result/interval/digest and changed retry/resource/accounting acceptance remain required before run.",
+      "normative": true,
+      "change_control": "D008/D026; new version/fresh final seeds/current native source and capacity admission. A1 one known-timeout retry with unresolved cases visible; A2 actual~60-world >24h forecast stop; A3 existing100GiB/all old fees/20GiB C reserve; A4 two-workday construction stop/report; A5 no further Scalar recovery. Scientific/2024/inference/capital/full-project boundaries remain. Rollback retains all records/charges."
     }
   ],
   "rejections": [
@@ -3311,6 +3334,13 @@
       "date": "2026-11-02",
       "record": "28_OUTCOME_RESERVATION.md#approval-and-preserved-source",
       "scope": "Stable potential-event identity plus separate dependence/exposure/prior-use review in the existing bounded pilot. OptionAadopted; no runtime/scientific/resource admission."
+    },
+    {
+      "id": "SESSION-2026-11-03-NATIVE-PARALLEL",
+      "kind": "direct_user_approval",
+      "date": "2026-11-03",
+      "record": "../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026",
+      "scope": "Only revision5 section0.3 smallest native parallel2048-world execution/A1-A5 approved; full streams/replay/exactnumerics. Scalar optionA retired, G1/G2 deferred,G9 withdrawn; exact human/proposal evidence linked in soleplan."
     }
   ],
   "decision_resolutions": [

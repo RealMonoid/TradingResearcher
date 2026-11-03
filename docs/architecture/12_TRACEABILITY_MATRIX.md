@@ -29,7 +29,7 @@ SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational report
 | PROB-07 | REQ-015 | D018, D076 | CMP-01, CMP-03, CMP-05 | IF-01, IF-06 | TEST-15 | P2/P5 |
 | PROB-02 | REQ-016 | D019 | CMP-07, CMP-08, CMP-09 | IF-08 | TEST-16 | P3 |
 | PROB-05 | REQ-017 | D020, D057, D064, D080, D087, D088 | CMP-01, CMP-06, CMP-07, CMP-08, CMP-09, CMP-10, CMP-11 | IF-11 | TEST-17; [D087 invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases); [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P6 |
-| PROB-06 | REQ-018 | D022, D041, D063, D077, D098 | CMP-01, CMP-02, CMP-05, CMP-07, CMP-12 | IF-02, IF-06, IF-12 | TEST-18 | P2/P7 |
+| PROB-06 | REQ-018 | D022, D041, D063, D077, D098, D100 | CMP-01, CMP-02, CMP-05, CMP-07, CMP-12 | IF-02, IF-06, IF-12 | TEST-18; [native parallel acceptance](05_REQUIREMENTS.md#d100-native-parallel-calibration-acceptance) | P2/P4/P7 |
 | PROB-03 | REQ-019 | D023, D082, D099 | CMP-02, CMP-04, CMP-06 | IF-05 | TEST-19; [outcome reservation cases](28_OUTCOME_RESERVATION.md#acceptance-versioning-and-rollback) | P4 |
 | PROB-03 | REQ-020 | D025, D038, D049 | CMP-02, CMP-05, CMP-06, CMP-09 | IF-06, IF-07 | TEST-20 | P4 |
 | PROB-04 | REQ-021 | D026, D040 | CMP-02, CMP-07, CMP-12 | IF-12 | TEST-21 | P3/P7 |
@@ -332,6 +332,8 @@ checks complete no scientific acceptance criterion, new inference allocation or
 protected/native original-A admission.
 
 | D099 | ACCEPTED | SESSION-2026-11-02-OUTCOME-RESERVATION | REQ-019 | [Stable outcome identity and separate dependence review](28_OUTCOME_RESERVATION.md): option A is adopted specification; actual implementation/admission and resource qualification remain separate. |
+
+| D100 | ACCEPTED | SESSION-2026-11-03-NATIVE-PARALLEL | REQ-018; existing REQ-006/007/013/022/023/026/030 | [Native parallel calibration/A1–A5](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026): new complete2048-world version, exact numerics/full streams/replay, bounded6-worker acceptance and actual throughput/storage stops. Scalar recovery retired; implementation/run/scientific acceptance remain separate. |
 
 ## M1 technical research path acceptance (November 2, 2026)
 

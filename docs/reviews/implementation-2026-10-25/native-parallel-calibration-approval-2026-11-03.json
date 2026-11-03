@@ -1,0 +1,78 @@
+{
+  "schema": "native-parallel-calibration-approval/1",
+  "status": "APPROVED_SCOPE_NOT_IMPLEMENTATION_OR_RUN_ACCEPTANCE",
+  "decision": "D100",
+  "source": "Direct human user approval in Review des Framework-Stands; independently read through Codex read_thread after cross-chat transfer.",
+  "source_thread_id": "01a19904-f581-72d0-ae4f-78c1a0c8c3c5",
+  "source_user_message_id": "01a19f72-b713-7113-af55-64a935c745c8",
+  "selected_user_instruction": "Freigabe für deinen kleinsten Auftrag: neue Serienversion mit dem nativen Rechner, bis zu 6 Welten parallel mit begrenzten Bibliotheks-Threads und niedriger Priorität, volle Ströme und volles Replay, feste Abnahme, danach der Lauf. Es gelten die Auflagen A1–A5 aus Abschnitt 0.3 von Claudes „PROPOSAL_Kalibrierung_schlank.md“ (Revision 5). G1-Aufbewahrungsumbau und G2 sind zurückgestellt, G9 ist zurückgezogen. Die Wiederaufnahme der alten Scalar-Serie wird nicht weitergebaut. Während die Serie läuft, arbeite am Hauptpfad v0 weiter.",
+  "received_and_work_started_at_utc": "2026-11-03T03:32:10Z",
+  "approved_source": {
+    "path": "docs/reviews/implementation-2026-10-25/native-calibration-proposal-revision-5-2026-11-03.source",
+    "sha256": "0995cf21a7278a8f72cfc05fa12b16160327b2ee27c5b3206aa9bd6ef7ad2b05",
+    "bytes": 30617,
+    "governing_section": "0.3, revision5; supersedes contradictory later sections",
+    "section_sha256": "a3aff1124392a4f0d0bafd1e8fd539c8fad8cab1f60f41e6b53aeabcc1bd7b21",
+    "other_sections": "Retained proposal history, not blanket adoption."
+  },
+  "scope": {
+    "new_versioned_final_series": true,
+    "native_calculator": "Reuse qualified exact native implementation; no float64 change",
+    "dependence_profiles": 2,
+    "effect_combinations": 4,
+    "worlds_per_group": 256,
+    "worlds_total": 2048,
+    "fresh_final_seeds_reserved_before_outcomes": true,
+    "max_parallel_world_workers": 6,
+    "library_threads": "Explicit bounded limits, pinned and checked before use",
+    "process_priority": "Explicit low priority; preserve private-computer/v0 usability",
+    "full_draw_streams": true,
+    "full_separate_replay_every_world": true,
+    "existing_statistical_thresholds_and_numerics_unchanged": true,
+    "fixed_acceptance": "Existing independent development/reference cases; identical serial/parallel results, intervals and digests, plus affected retry/error/resource/accounting/recovery paths. Measure full-call time/logical/physical storage during this acceptance, not a separate profiling project."
+  },
+  "conditions": {
+    "A1": "A known per-world timeout does not abort the whole series. Retry that same world once under the frozen approved rule, then continue independent worlds. Determine/freeze per-world deadline under actual parallel acceptance. Retain every attempt/error/charge. Unresolved/failed after retry stays visible and cannot yield a complete calibration pass. Integrity, unknown-resource and real resource failures still stop.",
+    "A2": "After approximately60 actually completed parallel worlds, project full inventory wall time using actual throughput, outstanding work/retries and overheads. Forecast above24h means controlled stop and report.",
+    "A3": "Before start report logical and physical storage projections. Keep existing100GiB logical aggregate and at least20GiB freeCreserve; retain all prior charges, no budget reset. Stop/report foreseeable logical excess or reserve breach.",
+    "A4": "Integration and fixed acceptance runnable within at most2 working days; otherwise present status and concrete causes, do not automatically continue building.",
+    "A5": "Do not further develop or execute old Scalar optionA recovery. Preserve old series/sources/results/errors/evidence/fees; no deletion, retarget or reinterpretation."
+  },
+  "construction_deadline": {
+    "start_utc": "2026-11-03T03:32:10Z",
+    "start_local": "2026-11-03 04:32:10 Europe/Berlin",
+    "deadline_utc": "2026-11-04T22:59:59Z",
+    "deadline_local": "2026-11-04 23:59:59 Europe/Berlin",
+    "counting": "Conservative end of the second counted workday: November3 and4; no later48h interpretation. This is an elapsed construction stop/report boundary, not a scientific threshold or runtime guarantee.",
+    "on_miss": "Stop automatic further integration/optimization and present concrete status/causes under the same work item."
+  },
+  "resources": {
+    "existing_compute_aggregate_ms": 648000000,
+    "existing_logical_aggregate_bytes": 107374182400,
+    "physical_free_C_reserve_bytes": 21474836480,
+    "new_API_or_inference_allowance": false,
+    "charge_carryover": "Preserve authoritative old development/Scalar/setup accounting and explicitly bind carried prior charges before native admission; no new-version reset."
+  },
+  "retired_scalar_state": {
+    "study_id": "8ab8334f134f75145857d8c4975bdf514f854ec00d8680a7831cb9cea5241b96",
+    "prepared_amendment_id": "f98819bf3aa214d9a2a36a8922916cbe393acc086db4526de7a5d76661c17202",
+    "new_world_attempts": 0,
+    "old_attempts": 20,
+    "verified_worlds": 19,
+    "retained_technical_failures": 1,
+    "old_grants": 1,
+    "known_compute_ms": 5029797,
+    "known_logical_bytes_after_setup": 887402753,
+    "setup_fee_bytes_retained": 9432260,
+    "execution_stop": "Persistent existing driver stop sentinel; no Scalar run was launched. Existing records/proofs/source bytes remain intact."
+  },
+  "deferred_or_withdrawn": {
+    "G1_retention_redesign": "Deferred; not part of this implementation. If limits fail, report rather than automatically implement.",
+    "G2_float64": "Deferred and not adopted.",
+    "G9_reduced_inventory": "Withdrawn; all2048 retained.",
+    "other_proposal_claims": "Not adopted wholesale, including any different scientific-admission or full-process-calibration claim."
+  },
+  "during_series": "Continue permitted technical main pathv0 on development2020–2023 without mutating pinned study source/results; account for desktop/v0 resources and avoid unnecessary concurrent heavy tests.",
+  "unchanged_boundaries": "Full project specification, actual scientific admission/protected2024 restrictions, exact scientific criteria, exposure, freeze, separate policy/capital authority and existing inference budget remain binding. OriginalA/AgentWorkflow/AUX draft is not implicitly resumed.",
+  "rollback": "Stop new dispatch at safe boundaries, retain every source/result/failure/fee and report unresolved state. Do not revive retired Scalar execution without a later explicit decision."
+}

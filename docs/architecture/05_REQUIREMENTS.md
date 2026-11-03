@@ -91,3 +91,16 @@ existing REQ-005/007/013/019/024/028 and TEST-05/13/19/24/28 subset: metadata-on
 potential events, alias/revision-resistant prior use, separate dependence/exposure
 review and actual atomic caller/denial/recovery. Adoption is not executed coverage
 or scientific admission; all applicable information/calibration exits remain.
+
+## D100 native parallel calibration acceptance
+
+D100 applies the approved execution revision to REQ-006/007/013/018/022/023/026/030
+through existing roles and the sole plan. Fixed independent development/reference
+acceptance requires serial/parallel equality of complete results, intervals and
+digests, full generation/separate replay, bounded library threads/low priority,
+isolated writes and atomic accounting for up to six in-flight worlds. Cover one
+known-timeout retry, retained unresolved cases, unknown/integrity/resource stops,
+fresh final seeds, restart/revocation and carried charges. Actual approximately60-world
+throughput and logical/physical forecasts must enforce A2/A3; A4 limits construction
+and A5 retires Scalar recovery. These are acceptance obligations, not executed
+native-final coverage or permission to relax scientific/2024 admission.

@@ -1,0 +1,238 @@
+Vorschlag: Kalibrierung schlank machen (Befund N1)
+Von: Nutzer, mit Claude als Reviewer An: Codex Grundlage: Repo-Stand a51bbcc (2. November 2026), in Revision 2 ff0fc34 (3. November 2026), docs/architecture/CURRENT_STATE.md, progress.json, Contract (Dokument 14) §5.3 und §11, eigene Messungen des Reviewers Art: Änderungsvorschlag zur Bauweise der Kalibrierung. Die wissenschaftlichen Schwellen bleiben unverändert. Teil 3.3 berührt die numerische Ausführung und braucht deshalb eine Freigabe nach D008/D026. Revision 2 (3. November 2026): Nach Codex' Antwort überarbeitet, Grundlage jetzt origin/codex/architecture bei ff0fc34. Was sich geändert hat, steht in Abschnitt 0. Revision 3 (3. November 2026): Neu sind die Wirtschaftlichkeit für ein Retail-Projekt (2.7), das parallele Rechnen der Welten (G8), die Option mit weniger Weltsorten für v1 (G9) und die Bedingungen für die bestehende Ressourcen-Freigabe (G10). Revision 5 (3. November 2026): Ergebnis der Abstimmung mit Codex, siehe Abschnitt 0.3. Das ist der maßgebliche Stand. Wo spätere Abschnitte abweichen, gilt 0.3. Revision 4 (3. November 2026): Codex' Stellungnahme zu Revision 1 ist eingearbeitet, siehe Abschnitt 0.2. Der Anteil des Apparats ist korrigiert, die Wirkungstabelle neu gerechnet. Ergänzt sind die Pinning-Anforderung (G1), die Fehlerschranke (G2), die Anwendbarkeitsprüfung (G6) und portable Fixtures (Abschnitt 6).
+
+0. Korrekturen nach Codex' Antworten
+0.1 Erste Antwort (Revision 2)
+Codex' Einwand	Prüfung durch den Reviewer	Folge
+Ein einziger abweichender Fall kann das finale Urteil kippen.	Zutreffend. Bei 256 Welten sind höchstens 17 falsche „Ja" erlaubt (exakte einseitige 95-%-Obergrenze 0,0979 ≤ 0,10). Bei einer wahren Rate von 0,05 landet die Zählung mit etwa 9 % Wahrscheinlichkeit genau auf 17 oder 18. Dort entscheidet eine Welt über Bestehen oder Nichtbestehen. Eine Stichprobe kann das nicht absichern.	Das Stichproben-Replay aus Revision 1 ist zurückgezogen. Jede Welt wird weiterhin vollständig nachgerechnet. Der Vorschlag setzt jetzt bei den Kosten jedes Durchgangs an (G1 neu).
+Bei den tatsächlichen 2.048 Welten ergeben 20–30 s je Welt bereits 11–17 h.	Zutreffend. Revision 1 ging von weniger Welten aus, und die Angabe „eine Nacht" war falsch.	Abschnitt 4 ist mit 2.048 Welten neu gerechnet.
+Die finale Serie wurde begonnen und nach 19 verifizierten Welten und einem technischen Fehler gestoppt.	Bestätigt in CURRENT_STATE bei ff0fc34. Gemessen: 5.029.797 ms und 877.970.493 Bytes für 20 Versuche, also ~251 s und ~44 MB je Welt. Der Abbruch kam, weil der 20. Versuch mit 300.226 ms die Grenze von 300 s um 226 ms überschritt.	Abschnitte 2.2 und 2.3 sind aktualisiert.
+Neu aufgefallen und für die Entscheidung wichtig:
+
+Laut CURRENT_STATE läuft die finale Serie als „retained-scalar", also mit dem skalaren Rechner, weil sie an den ursprünglichen Rechner gebunden ist. Der native Beschleuniger macht 74 % des Codes aus, der seit e2e70ac5 hinzugekommen ist. In der finalen Kalibrierung wird er nicht benutzt.
+Codex' eigene Hochrechnung: ~141 Stunden und ~81 GiB für 2.048 Welten. Freigegeben sind höchstens 180 Rechenstunden und 100 GiB.
+Die neue Regel in AGENTS.md (2a70f62, „Balance required quality, completion, time and total cost") verlangt ausdrücklich, unverhältnismäßig teure Anforderungen mit einer recherchierten Alternative vorzulegen. Dieser Vorschlag ist eine solche Vorlage.
+0.2 Stellungnahme zu Revision 1 (Revision 4)
+Codex' Punkt	Prüfung durch den Reviewer	Folge
+„90 % Prüfapparat" ist nicht sauber hergeleitet. Der Benchmark umfasst 3 Bootstrap-Berechnungen, eine Welt 6 plus ein separates Replay.	Zutreffend. Steht die native Zeit von 17,9 s für 3 Berechnungen, braucht eine Welt rechnerisch etwa 2 × 2 × 17,9 ≈ 72 s reine Rechnung. Das wären ~29 % der 251 s. Der Apparat macht dann etwa 70 % aus, nicht 90 %.	Abschnitt 2.1 und die Tabelle in Abschnitt 4 sind korrigiert. Die Mehrheit der Zeit bleibt Apparat. Die genaue Aufteilung liefert G1 Schritt 1.
+Logische und physische Speichergrößen werden vermischt.	Zutreffend. Die 44 MB je Welt und die ~88 GB sind logische Bytes.	Überall als logisch gekennzeichnet.
+Seed und Version allein garantieren die Wiederherstellung nicht (NumPy-Kompatibilitätsregeln).	Zutreffend. Dieselben Zufallsströme gibt es nur mit derselben Generator- und Rechnerquelle, derselben Bibliotheksversion und derselben Laufzeitumgebung.	G1 Schritt 2 verlangt jetzt gepinnte Quellen und Umgebung.
+1e-6 bp ist keine nachgewiesene Fehlerschranke; Präfixsummen können Rundungsfehler aufbauen.	Zutreffend.	G2 verlangt jetzt eine hergeleitete Fehlerschranke und Grenzfall-Tests. Als Alternative ist Festkomma-Rechnung genannt.
+G3: Fehler, die korrekte Ergebnisse oder sicheren Wiederanlauf verhindern, müssen weiter behoben werden.	Einverstanden.	G3 ist entsprechend eingegrenzt.
+G5: auch Intervalle und Ergebnisse vergleichen; am vollständigen Aufruf messen	Einverstanden.	G5 ist ergänzt.
+G6: Ein neuer Markt braucht eine Prüfung, ob die Kalibrierung anwendbar ist.	Einverstanden.	G6 ist ergänzt.
+Stichproben-Replay bleibt möglich, mit ehrlich benannter Restunsicherheit.	Wird nicht weiterverfolgt. Mit G8 (parallel) wird die vollständige Nachrechnung jeder Welt bezahlbar, und eine Restunsicherheit an der Zählgrenze ist dann unnötig.	Revision 2 bleibt: jede Welt wird nachgerechnet.
+Pflichtprüfungen mit fehlenden lokalen Dateien brauchen portable Fixtures; pauschales Überspringen verdeckt die Lücke.	Einverstanden, besser als der eigene Vorschlag.	Abschnitt 6 ist geändert.
+Ein historischer technischer Hauptpfad ist als M1 akzeptiert.	Zur Kenntnis genommen. Den Beleg hat der Reviewer nicht geprüft.	–
+0.3 Ergebnis der Abstimmung (Revision 5)
+Codex' Stellungnahme zu Revision 4 und die Prüfung durch den Reviewer:
+
+Codex' Punkt	Prüfung durch den Reviewer
+Auch die „70 % Apparat" sind nicht belegt, weil native Rechenzeit von der skalaren Gesamtzeit abgezogen wurde.	Zutreffend. Die Prozentangabe wird zurückgezogen. Für die Entscheidung ist sie nicht mehr nötig.
+G9 beschreibt das Inventar falsch: 2.048 = 2 Abhängigkeitsprofile × 4 Effektkombinationen × 256.	Zutreffend. G9 ist zurückgezogen.
+Die harte Zählgrenze erzwingt keine bestimmte Replay-Quote. Vollständiges Replay ist eine Absicherungsentscheidung.	Einverstanden. Es bleibt, weil es ins Zeitbudget passt.
+Kleinster Auftrag: nativer Rechner in neuer Serienversion, bis zu 6 Welten parallel mit begrenzten Bibliotheks-Threads und niedriger Priorität, volle Ströme und volles Replay, feste Abnahme, dann Lauf. Schätzung ~17–18 h.	Einverstanden. Das ist die kleinste Änderung, die die 24-h-Leitlinie plausibel erreicht. Ergänzt um die Auflagen A1–A5 unten.
+Vereinbarter Auftrag: Codex' kleinster Auftrag mit den Auflagen A1–A5.
+
+G1-Aufbewahrungsumbau und G2 werden zurückgestellt. Sie kommen nur, wenn die Messung zeigt, dass die 24 h oder der Speicher nicht reichen.
+G9 ist zurückgezogen.
+Auflage	Inhalt
+A1 Zeitüberschreitung	Eine Überschreitung der Zeitgrenze einer Welt stoppt nicht die ganze Serie. Die Welt wird gemäß der bereits freigegebenen Wiederaufnahme-Regel einmal wiederholt, die Serie läuft weiter. Die Zeitgrenze pro Welt wird in der Abnahme unter Parallellast gemessen und festgelegt.
+A2 Durchsatz-Kontrolle	Nach den ersten ~60 Welten wird die Gesamtdauer aus dem gemessenen Durchsatz hochgerechnet. Liegt die Prognose über 24 h Wanduhr, wird angehalten und berichtet.
+A3 Speicher	Die Prognose für logischen und physischen Speicher wird vor dem Start genannt. Ist absehbar, dass die freigegebenen 100 GiB oder eine Reserve von 20 GiB freiem Platz auf C: unterschritten wird, wird angehalten und berichtet.
+A4 Bauzeit	Integration und Abnahme sind in höchstens 2 Arbeitstagen lauffähig. Sonst werden Stand und Ursachen vorgelegt (G4).
+A5 Alte Serie	Die Wiederaufnahme der skalaren Serie (Option A) wird nicht weitergebaut (G10). Die alte Serie und alle Belege bleiben unverändert erhalten.
+1. Worum es geht
+Die Kalibrierung prüft die Prüfmaschine, nicht eine einzelne Hypothese. Dafür werden künstliche Märkte („Welten") erzeugt, bei denen die Wahrheit bekannt ist:
+
+Weltsorte	Inhalt	Was der Test zeigen muss (Contract §11)
+Null-Welt	kein Effekt	falsches „Ja" selten: einseitige exakte 95-%-Obergrenze ≤ 0,10 bei nominal 0,05
+eingepflanzter Effekt	Effekt 2δ = 20 bp	Effekt wird erkannt: einseitige 95-%-Untergrenze ≥ 0,70, Ziel 0,80
+Grenz-Welt	Effekt genau δ = 10 bp	kein falsches entscheidendes Urteil; dieselbe Toleranz 0,10
+Wir sind uns einig, dass das gebraucht wird. Ohne diesen Nachweis ist ein späteres „bestanden" auf den 2024-Daten nichts wert. Gründe dafür sind die abhängigen, überlappenden 15-Minuten-Ergebnisse und die vielen Ideen, die das LLM erzeugt.
+
+Die Kalibrierung ist nicht pro Hypothese nötig. Sie muss einmal pro Markttyp und Testversion laufen und erneut, wenn sich am Test etwas ändert. Für einen neuen Markt wie NQ ist eine eigene Kalibrierung nötig. NQ hat Handelspausen, Wochenend- und Rolllücken und Termine zu festen Uhrzeiten. Die Kosten der Kalibrierung fallen also bei jedem neuen Markt erneut an.
+
+2. Das Problem: Die Kalibrierung dauert zu lange und trägt im Verhältnis wenig zur Qualität bei
+2.1 Gemessene Dauer
+Aus CURRENT_STATE und progress.json:
+
+Das Entwicklungsraster brauchte für 32 Welten 6.109 s (1,7 h) und 1,35 GB logische Bytes.
+Eine Welt mit 4.096 Zeilen braucht 161 s nativ und 249 s skalar, dazu 149 s Setup.
+Die reine Bootstrap-Rechnung derselben Welt braucht nativ 17,9 s. Im NumPy-Benchmark des Reviewers waren es 4,9 s (_claude_review/bench_bootstrap.py, 3 × 19.999 Ziehungen, Präfixsummen-Variante).
+Korrigiert in Revision 4: Eine finale Welt umfasst 6 Bootstrap-Berechnungen und ein separates Replay, der Benchmark nur 3. Daraus ergeben sich nativ rechnerisch ~72 s reine Rechnung von ~251 s. Etwa 70 % der Zeit pro Welt gehen also nicht in die Statistik. Sie verteilen sich auf die Erzeugung, das Schreiben, Lesen und Hashen der Ziehungsströme, die Herkunftsnachweise und die Materialisierung. Dabei ist noch nicht berücksichtigt, dass die finale Serie skalar statt nativ rechnet. Die genaue Aufteilung liefert G1 Schritt 1.
+
+2.2 Hochrechnung
+Grundlage ist die gemessene finale Serie, ~251 s und ~44 MB je Welt.
+
+Umfang	so, wie gebaut
+2.048 Welten (finale Serie)	~143 h reine Rechenzeit, also ~6 Tage Dauerbetrieb (Codex: ~141 h)
+Speicher (logisch)	~88 GB (Codex: ~81 GiB)
+jeder weitere Markt (z. B. NQ)	dasselbe noch einmal
+2.3 Stand
+Das Entwicklungsraster ist fertig. Codex hält fest: „two worlds per cell do not establish N_min, model adequacy or final calibration".
+Die finale Serie hat am 2. November begonnen. Nach 19 verifizierten Welten und 1 technischem Fehler hat sie sich selbst gestoppt, weil eine Welt ihre Zeitgrenze um 226 ms überschritt.
+Damit sind 19 von 2.048 Welten erledigt, also knapp 1 %.
+Für den Neustart wurde eine Wiederaufnahme mit 600-s-Grenzen freigegeben. Sie braucht vor dem Einsatz einen eigenen, unabhängig qualifizierten Umbau, und an dem arbeitet Codex jetzt. Die Wiederaufnahme selbst hat noch nicht begonnen.
+Keine der drei Fragen aus Abschnitt 1 ist bisher beantwortet.
+Im Code fließt der Aufwand vor allem in den Apparat. Von den Code-Zeilen, die seit e2e70ac5 hinzugekommen sind, entfallen 74 % auf den nativen exakten Beschleuniger, bei den Tests sind es 65 %.
+
+2.4 Warum der Qualitätsbeitrag klein ist
+Baustein	Schützt wovor	Beitrag zur Kalibrierungsaussage
+Unabhängiges Nachrechnen jeder Welt	dass ein Rechenfehler das Urteil verfälscht	Nötig (siehe Abschnitt 0). Weil das Urteil an einer harten Zählgrenze hängt, kann eine einzige Welt es kippen. Teuer ist nicht das Nachrechnen an sich, sondern was je Durchgang zusätzlich anfällt (siehe G1).
+Vollständige Aufbewahrung aller Ziehungsströme	Nachprüfbarkeit im Nachhinein	Klein. Die Ströme lassen sich aus PRNG, Version und Seed neu erzeugen. Contract §5.3 verlangt PRNG, Version, Seed und Toleranz, nicht die Ströme selbst.
+Exakte Bruchrechnung (Fraction)	Rundungsfehler	Sehr klein. Die Zufallsschwankung des Bootstraps ist um viele Größenordnungen größer als jeder float64-Rundungsfehler. Der Geschwindigkeitsgewinn durch float64 ist aber nur etwa 3,7-fach. Das ist der kleinere Hebel.
+Nativer exakter Beschleuniger	Langsamkeit der exakten Rechnung	Er beschleunigt eine selbst gewählte Langsamkeit. Zur Qualität trägt er nichts bei.
+Buchhaltung je Versuch (Rechenzeit, Speicher, „Zähler unbekannt")	Ressourcen-Überschreitung	Nützlich für den Betrieb, aber ohne Beitrag zur Frage, ob der Test korrekt ist
+Angriffs-Tests auf die Prozess-Übertragung	manipulierte Zwischendateien	Für ein lokales Ein-Personen-System kaum relevant
+2.5 Das größere Risiko ist noch offen
+Das LLM erzeugt viele Ideen, und die beste wird ausgewählt. Dagegen schützt die Prozess-Kalibrierung mit Placebos (D038, Dokument 07). Sie ist noch nicht begonnen. Der meiste Aufwand steckt derzeit also im kleineren der beiden Risiken.
+
+2.6 Folge für das Projektziel
+Der Nutzer will ein System, das selbstständig Hypothesen aufstellt und backtestet. Die Kalibrierung des Tests ist dafür eine harte Voraussetzung: Kein Ergebnis auf den Bewertungsdaten 2024 darf als „bestanden" gelten, solange die Kalibrierung für diesen Markt nicht bestanden ist. Sie läuft also nicht beliebig nebenher.
+
+Sie ist aber keine Voraussetzung dafür, den Hauptpfad zu bauen und zu erproben. Hypothese, Formalisierung und Backtest auf den Entwicklungsdaten 2020–2023 brauchen sie nicht. Zurzeit wird die Kalibrierung vor dem Hauptpfad gebaut. Der Hauptpfad wartet deshalb, obwohl er nicht von ihr abhängt. Ihre lange Dauer wiegt schwer, gerade weil sie eine Voraussetzung ist: Sechs Tage pro Markt verzögern bei jedem neuen Markt das erste gültige Urteil.
+
+Davon zu unterscheiden ist die Prozess-Kalibrierung mit Placebos (D038, Abschnitt 2.5). Sie prüft, ob das LLM mit Auswahl mehr findet als ein Zufallsprozess. Sie braucht den laufenden Prozess und kann laufen, während das Framework schon Hypothesen produziert. Auf sie bezog sich der Wunsch des Nutzers, die Kalibrierung „nebenbei" laufen zu lassen.
+
+2.7 Wirtschaftlichkeit für ein Retail-Projekt (Revision 3)
+Das Projekt läuft auf einem einzigen privaten Rechner: AMD Ryzen 7 8745HS mit 8 Kernen und 16 Threads, 24 GB RAM, Laufwerk C:. Gemessen daran:
+
+Kostenart	Größenordnung	Bewertung
+Strom für ~143 h	grob 7–14 kWh bei 50–100 W, also wenige Euro (Schätzung)	unkritisch
+Kalenderzeit	~6 Tage Dauerbetrieb pro Serie. Der Rechner ist so lange belegt, und eine einzelne Störung stoppt die Serie: Die bisherige Serie hielt bei einer Überschreitung um 226 ms an	nicht tragbar
+Wiederholung	Fällig bei jeder Änderung am Test und bei jedem neuen Markt (Abschnitt 1)	nicht tragbar, weil die 6 Tage sich vervielfachen
+Bauzeit von Codex	Mehrere Tage für Sicherung, Wiederaufnahme und Qualifizierung um die Serie herum, ohne dass bisher eine Kalibrierungsfrage beantwortet ist	größter Kostenposten
+Zum Vergleich: Für ein Retail-Forschungsprojekt üblich ist eine Monte-Carlo-Prüfung von Fehlerrate und Trennschärfe mit einigen hundert simulierten Datensätzen. Sie dauert Minuten bis Stunden. Der heutige Aufbau, also exakte Bruchrechnung, byte-genaue Ströme und vollständige Aufbewahrung, entspricht eher einem institutionellen Prüfstandard.
+
+Leitlinie (vom Nutzer mit der Weitergabe dieses Vorschlags gesetzt): Die finale Test-Kalibrierung eines Markts muss in höchstens 24 Stunden auf diesem Rechner laufen, ohne den Rechner für andere Arbeit zu blockieren (G4, G8). Eine Lösung, die das nicht erreicht, wird vorgelegt und nicht gebaut.
+
+3. Gegenvorschläge
+3.1 Was ausdrücklich gleich bleibt
+Alle Schwellen aus Contract §11: 256 frische Welten je deklarierter Null-Welt, 0,10, 0,70/0,80, Grenzfälle, Heavy-Tail, Overlap und Common-Shock, soweit anwendbar
+Die Bootstrap-Methode aus Contract §5.3: gemeinsames Resampling, halbe/Basis-/doppelte Blocklänge, 19.999 Ziehungen, Basic-Intervalle, δ = 10 bp, Union-Bound 0,05/m
+Getrennte Entwicklungs- und Final-Ziehungen; Seed-Liste und Ground Truth der finalen Welten werden vorab reserviert
+Kein Ergebnis wird nachträglich umgedeutet. Bereits gebauter Code wird eingefroren, nicht gelöscht.
+3.2 G1 – Jede Welt nachrechnen, aber jeden Durchgang billig machen (Revision 2)
+Ersetzt das Stichproben-Replay aus Revision 1 (siehe Abschnitt 0).
+
+Zuerst die Zeit aufschlüsseln. Codex liefert für eine Welt aus der finalen Serie die Aufteilung der ~251 s auf:
+
+Erzeugung der Welt
+Rechnung im ersten Durchgang
+Rechnung im Replay
+Schreiben, Lesen und Hashen der Ziehungsströme
+Materialisierung, Prozessstart und Buchhaltung
+Ohne diese Zahlen sind alle weiteren Schätzungen unsicher, auch die des Reviewers.
+
+Jede Welt wird unabhängig nachgerechnet. Verglichen werden Entscheidung, Ergebnis und die bereits vorhandenen Replikat-Digests. Die vollständigen Ziehungsströme werden nicht für jede Welt aufbewahrt und erneut eingelesen, denn sie lassen sich neu erzeugen (Contract §5.3). Dafür werden gepinnt aufbewahrt:
+
+Seed, PRNG-Typ und -Version
+Hashes der Generator- und Rechnerquellen
+die exakte Laufzeitumgebung: Python, Bibliotheken, Build und Plattform
+die Eingaben
+Ergebnisse, Intervalle und alle Fehler
+Vollständige Ströme werden nur bei Abweichung, technischem Fehler oder Abbruch aufbewahrt. Vor dem Lauf wird einmal belegt, dass die gepinnte Umgebung die Ströme bitgleich neu erzeugt. Das geschieht an den 19 vorhandenen finalen Welten, deren Ströme vorliegen.
+
+Der schon gebaute native Rechner kommt zum Einsatz. Die finale Serie läuft heute skalar, weil sie an den ursprünglichen Rechner gebunden ist. Der native Rechner ist qualifiziert, wird dort aber nicht benutzt. Eine neue Version der Serie (siehe Abschnitt 5) nutzt ihn.
+
+Eine Zeitüberschreitung ist ein Ressourcen-Ereignis, kein Abbruchgrund für die Serie. Die Grenze wird aus der gemessenen Verteilung abgeleitet, z. B. als dreifacher Median. Überschreitet eine Welt sie, wird diese eine Welt einmal neu gerechnet. Die Serie läuft weiter. Abbrüche werden wie bisher protokolliert und gezählt.
+
+Erwarteter Effekt: Die Schutzwirkung bleibt voll erhalten, weil jede Welt nachgerechnet wird. Die Zeit sinkt nur so weit, wie die Aufschlüsselung in Schritt 1 Apparatkosten zeigt. Die Zahlen in Abschnitt 4 sind Spannen und werden nach G5 gemessen.
+
+3.3 G2 – Numerik (optional, braucht D008/D026-Freigabe)
+Die Kalibrierung rechnet mit NumPy float64, wie im Vorschlag numerical-stack/1.0 (PROPOSAL_numerical-stack-1.0.md). Liegt ein Ergebnis innerhalb von 1e-6 bp um ±δ, gilt es als INCONCLUSIVE.
+Das Nachrechnen übernimmt eine zweite, unabhängige Implementierung. Der erste Durchgang läuft in NumPy float64, die Nachrechnung jeder Welt mit dem exakten nativen Rechner, oder umgekehrt. Weicht eine Entscheidung ab oder liegt sie im Unschärfeband um ±δ, entscheidet der exakte Rechner. Das ist eine stärkere Kontrolle als heute, wo dieselbe Implementierung sich selbst nachrechnet.
+Voraussetzung (Revision 4): Der Abstand von 1e-6 bp ist bisher nur ein vorgeschlagener Wert, keine nachgewiesene Schranke. Vor dem Einsatz braucht es:
+eine hergeleitete Fehlerschranke für den ersten Durchgang, einschließlich des Rundungsaufbaus in Präfixsummen. Paarweise oder kompensierte Summation sowie eine Ableitung des Bandes aus der Schranke statt einer festen Zahl sind dabei zu prüfen.
+das Bestehen der vorhandenen unabhängigen Referenzfälle und gezielter Grenzfälle, zusätzlich zu den 32 Entwicklungswelten
+Alternative: Präfixsummen in Festkomma-Ganzzahlen (int64 mit fester Skala). Dann ist die Summation selbst exakt, und der einzige Fehler entsteht beim einmaligen Runden der Eingaben, mit einfach angebbarer Schranke.
+Erwarteter Effekt: Die Rechnung im ersten Durchgang wird etwa 3,7-fach schneller. G2 bleibt eine wählbare Option neben G1.
+3.4 G3 – Weiterentwicklung einfrieren
+Für den nativen Beschleuniger, die Übertragungshärtung und die Recovery-/Zähler-Sonderfälle gibt es keine weitere Entwicklung über den aktuellen Stand hinaus. Ausnahme ist nur, was G1 zum Einbinden braucht. Bestehender Code bleibt lauffähig. Bekannte Fehler, die korrekte Ergebnisse oder einen sicheren Wiederanlauf verhindern, werden weiter behoben. Eingefroren wird nur zusätzliche Optimierung und Härtung.
+Ein Umbau, der nur nötig wird, weil die alte Serie gebunden ist, entfällt, wenn die Serie nach Abschnitt 5 neu versioniert wird. Das betrifft zum Beispiel die laufende Qualifizierung der Wiederaufnahme mit 600-s-Grenzen.
+Die 8 Tests, die nach den letzten Änderungen veraltet sind (siehe unten), werden einmal nachgezogen, damit die Suite wieder stimmt.
+3.5 G4 – Zeitprognose und Zeitgrenze
+Vor dem Start der finalen Kalibrierung nennt Codex die erwartete Gesamtdauer und den Speicherbedarf für alle Weltsorten.
+Ziel: Die komplette finale Kalibrierung eines Markts mit 2.048 Welten läuft in höchstens 24 Stunden. Ist das nach der Aufschlüsselung aus G1 nicht erreichbar, legt Codex die Gründe vor.
+Bauzeit-Grenze: Ist der schlanke Pfad nach 3 Arbeitstagen nicht lauffähig, legt Codex dem Nutzer den Stand und die Ursachen vor, statt weiterzubauen.
+3.6 G5 – Validierung des schlanken Pfads
+Der schlanke Pfad wird auf den 32 vorhandenen Entwicklungswelten ausgeführt. Er muss dieselben Entscheidungen wie die bisherigen nativen Ergebnisse liefern. Bei G2 dürfen die Zahlen höchstens um die Toleranz abweichen.
+Laufzeit und Speicher pro Welt werden am vollständigen Aufruf gemessen, logisch und physisch getrennt, und neben die Werte der finalen Serie gestellt (~251 s, ~44 MB logisch).
+Ohne G2, also bei unveränderter Numerik, werden zusätzlich Intervalle und Ergebnisse verglichen und müssen gleich sein, nicht nur die Entscheidungen.
+3.7 G6 – Wiederverwendbar für weitere Märkte
+Der Welt-Generator wird pro Markt als austauschbares Modul gebaut, passend zur Station „Marktdaten" im modularen Entwurf (MODULARER_AUFBAU.md). Eine Kalibrierung für NQ braucht dann nur einen NQ-Datenanschluss, einen NQ-Welt-Generator und einen Lauf innerhalb der Zeitgrenze aus G4. Vorhandene Schnittstellen werden dafür wiederverwendet.
+Eine Kalibrierung gilt für ein bestimmtes Test- und Annahmenprofil. Für jeden neuen Markt wird deshalb zuerst geprüft, ob das Profil anwendbar ist: Handelszeiten, Lücken, Roll, Abhängigkeitsstruktur und feste Termine. Erst danach wird der Generator angepasst und die Kalibrierung gestartet.
+3.8 G7 – Reihenfolge
+Zwei Spuren im Bau: Spur A ist der Hauptpfad (Hypothese → Formalisierung → Backtest auf 2020–2023, also v0). Spur B ist die schlanke Kalibrierung nach G1–G5. Spur A wartet nicht auf Spur B.
+Harte Schranke: Erst wenn die Test-Kalibrierung eines Markts bestanden ist, wird auf diesem Markt ein Ergebnis auf Bewertungsdaten (2024) als Urteil ausgegeben. Das gilt auch für jeden neuen Markt wie NQ.
+Prozess-Kalibrierung mit Placebos (D038): Sie wird schlank nach den Regeln G1, G4 und G5 geplant und läuft, während das Framework Hypothesen produziert. Sie ist Voraussetzung für die Aussage „der LLM-Prozess findet mehr als Zufall", nicht für das Urteil über eine einzelne Hypothese.
+3.9 G8 – Welten parallel rechnen (Revision 3)
+Die Welten sind voneinander unabhängig. Jede hat ihren eigenen reservierten Seed, ihre eigene Erzeugung und ihr eigenes Ergebnis. Soweit CURRENT_STATE erkennen lässt, laufen sie nacheinander in einem einzigen Rechenprozess. Codex bestätigt oder korrigiert das.
+Vorschlag: bis zu 6 parallele Welt-Prozesse. Damit bleiben 2 von 8 Kernen für den Nutzer und für Codex frei.
+Was gleich bleibt:
+Seeds und Ergebnisse jeder Welt, weil die Reihenfolge der Abarbeitung das Ergebnis einer Welt nicht beeinflusst
+die vollständige Nachrechnung jeder Welt
+die Zählung, also welche Welten bestanden und welche fehlgeschlagen sind
+Was angepasst werden muss:
+die Ressourcen-Buchhaltung für gleichzeitige Versuche: Rechenzeit pro Welt statt Wanduhr der Serie
+die Zeitgrenze pro Welt, gemessen unter Parallellast
+Schreibzugriffe ohne gegenseitige Überschneidung
+Erwarteter Effekt: Die Wanduhr-Dauer sinkt grob durch die Zahl paralleler Prozesse, abzüglich Verlust durch geteilten Speicher und Datenträger. Schon ohne G1/G2 würden aus ~143 h etwa 24–30 h, mit G1/G2 wenige Stunden. Das ist eine Schätzung und wird nach G5 gemessen.
+Validierung: G5 einmal seriell und einmal parallel auf denselben Welten. Entscheidungen und Ergebnis-Digests müssen identisch sein.
+3.10 G9 – Option: weniger Weltsorten für v1 (Entscheidung des Nutzers, D008/D026)
+Codex legt offen, wie sich die 2.048 Welten auf Weltsorten verteilen (Null-Welt, eingepflanzter Effekt, Grenzfall, Heavy-Tail, Overlap, Common-Shock und weitere).
+Option: Für v1 werden nur die Sorten kalibriert, die das erste Urteil auf 2024 tragen: Null-Welt, eingepflanzter Effekt und Grenzfall, je 256 Welten. Die übrigen Sorten folgen als eigene Version vor jeder Aussage, die sie betrifft.
+Folge: Die Zahl der Welten sinkt erheblich. Bei 8 Sorten zu je 256 wären es 768 statt 2.048, also ~60 % weniger.
+Preis: Für Heavy-Tail, Overlap und Common-Shock gibt es bis dahin keinen Kalibrierungsnachweis. Ein Urteil auf 2024 wird entsprechend eingeschränkt beschriftet.
+Das ändert den wissenschaftlichen Umfang. Es ist deshalb nur eine Option und braucht die ausdrückliche Freigabe des Nutzers. G1–G8 funktionieren auch ohne G9.
+3.11 G10 – Bedingungen für die bestehende Ressourcen-Freigabe (Revision 3)
+Laut CURRENT_STATE ist eine Serie mit 2.048 Welten mit höchstens 180 Rechenstunden und 100 GiB freigegeben.
+Diese Freigabe gilt ab sofort nur noch unter folgenden Bedingungen:
+Die Wiederaufnahme der alten Serie (Option A, 600-s-Grenzen) wird nicht weitergebaut und nicht ausgeführt, bis über diesen Vorschlag entschieden ist.
+Eine neue Serie startet nur mit einer vorab genannten Prognose ≤ 24 h Wanduhr (Abschnitt 2.7).
+Die alte Serie und alle ihre Belege bleiben unverändert erhalten.
+4. Erwartete Wirkung im Überblick
+Grundlage sind 2.048 Welten. Jede Welt wird in allen Spalten vollständig nachgerechnet.
+
+Neu gerechnet in Revision 4: je Welt 6 Bootstrap-Berechnungen und 1 Replay. Nativ sind das 2 × 35,8 s ≈ 72 s, bei G2 9,8 s (NumPy) + 35,8 s (natives Replay) ≈ 46 s. Für Erzeugung und übrige Kosten sind 10–40 s angenommen, weil diese Zahl noch nicht gemessen ist.
+
+heute (gemessen, skalar)	nach G1 (Schätzung)	nach G1 + G2 (Schätzung)
+Zeit pro Welt	~251 s	~80–110 s	~55–85 s
+2.048 Welten, seriell	~143 h (~6 Tage)	~45–63 h	~31–48 h
+2.048 Welten, 6 parallel (G8)	~24–30 h	~9–13 h	~6–10 h
+zusätzlich mit G9 (768 Welten, 6 parallel)	~9–11 h	~3,5–5 h	~2,5–4 h
+Speicher gesamt (logisch)	~88 GB	wenige GB	wenige GB
+Schutz vor Rechenfehlern	jede Welt, gleiche Implementierung	jede Welt, gleiche Implementierung	jede Welt, zweite unabhängige Implementierung
+wissenschaftliche Schwellen	§11	unverändert	unverändert
+Die parallelen Werte nehmen 6 Prozesse an und rechnen einen Verlust von bis zu ~20 % durch geteilte Ressourcen ein. G1 und G8 allein erreichen die 24-h-Leitlinie aus Abschnitt 2.7 schon deutlich. G9 ist dafür nicht nötig.
+
+Die Spannen sind breit, weil die Aufschlüsselung aus G1 Schritt 1 noch fehlt, vor allem die Kosten der Welt-Erzeugung. Grundlage sind die native Zeit von 17,9 s und die NumPy-Zeit von 4,9 s für je 3 Bootstrap-Berechnungen, hochgerechnet auf 6. Verbindlich sind erst die Messungen aus G5.
+
+5. Einordnung für D008/D026
+Punkt	Inhalt
+Betroffene Teile	Kalibrierungsablauf (Paket 4, REQ-020); Aufbewahrung der Kalibrierungsbelege; Ressourcen-Buchhaltung bei paralleler Ausführung (G8); bei G2 die numerische Ausführung des Bootstraps; bei G9 der Umfang der kalibrierten Weltsorten für v1
+Nicht betroffen	Contract §5.3 Methode, Contract §11 Schwellen, Ziele, Freeze-Regeln, Datenpartitionen. Die Budgets bleiben, mit den Bedingungen aus G10. Ohne G9 bleibt auch der Weltumfang unverändert.
+Begründung	Abschnitt 2: Laufzeit und Speicher werden vom Apparat um die Rechnung bestimmt. Die Schutzwirkung, also die vollständige Nachrechnung jeder Welt, bleibt erhalten und wird mit G2 sogar stärker.
+Validierung	G5: gleiche Entscheidungen auf den 32 Entwicklungswelten, Messung von Zeit und Speicher
+Versionierung	neue Version des Kalibrierungsablaufs, z. B. calibration-procedure/2, mit frisch reservierten finalen Seeds. Die begonnene Serie (8ab8334f…, 19 verifizierte Welten und 1 technischer Fehler) bleibt als Geschichte erhalten und wird nicht fortgesetzt oder umgedeutet. Verloren gehen dabei ~1,4 h Rechenzeit, gemessen an ~143 h für die alte Serie. Der Wechsel ist durch Kosten begründet, nicht durch Ergebnisse.
+Rückweg	Der exakte native Pfad mit vollständigem Replay bleibt lauffähig und kann jederzeit wieder für alle Welten benutzt werden
+6. Nebenbefund: Die Testsuite stimmt nicht mehr
+Ein Lauf der vollen Suite auf a51bbcc im Review-Klon hat 172 Minuten gedauert. Ergebnis: 2.030 Tests, 4 FAIL, 8 ERROR.
+
+6 ERROR in test_draw_transport_adversarial: study_pipeline.py:88 übergibt retain_family_draw_bytes, die Test-Ersatzfunktion kennt das Argument nicht.
+2 FAIL: Die erwartete Anzahl 117 ist hart codiert, tatsächlich sind es 147 (test_inquiry_role_transport, test_inquiry_roles_review).
+4 Tests brauchen unversionierte Dateien unter .trf-runtime/. Zwei davon sind bestätigt, zwei wahrscheinlich.
+Vorschlag:
+
+eine schnelle Kern-Suite unter 5 Minuten pro Änderung, die volle Suite nachts
+Pflichtprüfungen, die heute lokale Laufzeitdaten brauchen, bekommen portable Fixtures im Repo (Revision 4, Codex' Vorschlag). Pauschales Überspringen würde die Lücke nur verdecken.
+7. Was wir von Codex erwarten
+Zuerst, ohne Umbau:
+die Zeitaufschlüsselung einer finalen Welt (G1 Schritt 1)
+die Bestätigung, ob die Welten seriell laufen (G8)
+die Verteilung der 2.048 Welten auf Weltsorten (G9)
+Zu jedem Punkt G1–G10: Zustimmung oder begründeter Widerspruch mit Quelle.
+Eine eigene Schätzung von Bauzeit, Wanduhr-Laufzeit und Speicher für G1, G1 + G8 und G1 + G2 + G8, gemessen an der 24-h-Leitlinie.
+Die Aufnahme der zugestimmten Punkte in den Arbeitsplan, erst nach Freigabe durch den Nutzer.
+Keine neue Prüfplattform und keine neue Dokumentenreihe für diesen Umbau.

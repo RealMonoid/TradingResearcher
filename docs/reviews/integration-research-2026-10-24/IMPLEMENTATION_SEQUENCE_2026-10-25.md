@@ -1,6 +1,6 @@
 # Implementation sequence
 
-Date: November 3, 2026. Version: execution-plan/0.7 (user-approved proportionate construction effort; manufacturing milestones, full package exits, scientific contracts, D096, pending decisions and resources retained).
+Date: November 3, 2026. Version: execution-plan/0.8 (approved native parallel calibration/A1–A5 replaces Scalar recovery; proportionate construction, full package exits, scientific contracts, D096 and existing resources retained).
 
 **Accepted scope remains binding.** The November1 updated user objective reiterates that accepted versioned specifications define the full functional scope; this plan orders implementation and must not silently narrow it. Tests and exploratory completion remain intermediate milestones.
 
@@ -11,6 +11,68 @@ The user authorized implementation as far as independently possible, necessary s
 **Next safe work boundary:** apply the approved [D096 integration checkpoint](#metacognition-and-dual-space-integration-november-1-2026), preserving the current bounded task, live calls, frozen runs, spending and prior work. This is the operational handoff for the new rules, not another work plan or an advance-benefit gate.
 
 ## Current execution priority (October 31, 2026)
+
+### Native parallel calibration approval (November 3, 2026)
+
+**Current binding priority — D100.** The direct user approval in
+“Review des Framework-Stands” replaces the Scalar option-A continuation. The
+[exact approval](../implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json)
+retains the human message and [revision-5 proposal bytes](../implementation-2026-10-25/native-calibration-proposal-revision-5-2026-11-03.source).
+Section 0.3 governs; conflicting later proposal sections and broader recommendations
+are not adopted. Older Scalar next actions below are historical and inactive.
+
+Implement the smallest new versioned native final-series path using the existing
+qualified exact calculator: **2 dependence profiles × 4 effect combinations ×
+256 = 2,048 worlds**, freshly reserved final seeds, unchanged statistical
+thresholds and exact numerics, full draw streams and full separate replay.
+Use at most six independent world workers with explicitly bounded library
+threads, low process priority, separate write areas and atomic shared resource
+accounting. Reuse existing native/factory/cache, Registry/storage/coordination and
+standard-library implementations. Add no general profiling project or optimization
+chain. G1 retention redesign and G2/float64 are deferred; G9 is withdrawn.
+
+- **A1 — timeout/retry:** one known per-world timeout permits one retry of that
+  same world, then independent worlds continue. Freeze its deadline from the fixed
+  acceptance under parallel load. Preserve every attempt/error/charge. An unresolved
+  or failed retry stays visible and cannot produce a complete calibration pass;
+  integrity, unknown-use and real resource failures remain stop conditions.
+- **A2 — actual throughput:** after approximately 60 completed worlds in the
+  actual parallel series, project the entire inventory's wall time, including
+  outstanding work, required retries and overheads. Above 24 hours: controlled
+  stop and report. Planning estimates are not measured throughput.
+- **A3 — storage/resources:** report logical and physical forecasts before start.
+  Preserve the existing 100 GiB logical aggregate, existing compute authority and
+  all old charges, with no version/key reset; keep at least 20 GiB free on C:.
+  A foreseeable logical excess or physical-reserve breach requires stop/report.
+  Bind carried prior fees explicitly before new reservations.
+- **A4 — construction deadline:** start **2026-11-03 03:32:10 UTC / 04:32:10 CET**.
+  Conservative deadline: **2026-11-04 22:59:59 UTC / 23:59:59 CET**, counting
+  November 3 and 4 as the two workdays. If integration and fixed acceptance are
+  not runnable by then, present the actual state and concrete causes; do not
+  automatically keep building. Record effort and uncertainty here/in progress.json.
+- **A5 — Scalar retired:** no further Scalar recovery development or execution.
+  No Scalar retry was launched. The existing driver stop sentinel is installed;
+  the original20 attempts/19 verified/one failure/one grant, all sources/copies
+  and the already charged 9,432,260-byte setup remain intact. No deletion,
+  retargeting, reinterpretation or refund follows.
+
+**Fixed acceptance, then run:** select the existing independent development and
+reference cases and required changed failure/retry/resource/restart paths before
+implementation. Require identical serial/parallel results, intervals and digests,
+complete generation/replay and honest full-call time/logical/physical measurements.
+Reuse current versioned evidence; fix concrete failures through checked correction.
+After acceptance and actual source/seed/capacity admission, start the authorized
+new series with A2/A3 monitoring. If limits fail, report; do not silently add G1/G2,
+reduce the inventory or increase budgets. No renewed general approval is needed.
+
+**v0 during the fixed series:** continue already permitted independent technical
+main-path work on development data 2020–2023 without changing the pinned study
+source or results. Preserve desktop/v0 usability; avoid unnecessary concurrent
+heavy checks. Scientific judgments and protected2024 access still require actual
+admission/calibration, and all seven package exits remain binding. Original A,
+AgentWorkflow and the unreviewed AUX draft are not implicitly resumed. The builder
+owns this plan/status/source integration; the review chat owns only its coordinated
+AGENTS.md instruction update.
 
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
@@ -411,15 +473,39 @@ and central reconciliation are [retained here](../../../tests/fixtures/calibrati
 Source/Registry and observation-store loss together, unavailable evidence sinks,
 external host load and long-duration availability remain unverified boundaries.
 
-No recovery setup or numerical attempt has run on the actual study. Next pin a
-new detached recovery host at the checked caller commit; preserve the original
-host. Use the existing owner's exact old20/1/input/source/seed/failed-generation
-preflight, current C: capacity and full 2,029-execution forecast. The authorized
-metadata-only preparation is the actual success-path qualification: one amendment,
-zero new world attempts/grants, full backup/restore and sealed proof. Independently
-reconcile it before the named retry. Resume only the same approved inventory
-without parallel heavy construction checks. Generic old continuation remains
-fenced; scientific admission and protected data remain closed.
+**Actual metadata preparation (November 3).** The new detached host is pinned at
+`ff0fc34`; the original `52c571d` host remains intact. The existing unpatched
+owner's current input/source/seed/failed-generation preflight passes in 11.438257
+seconds. Independent read-only reconciliation passes: the exact original20/1
+prefix and three-table state match the preserved terminal copy; 107 required
+calculator/case/generation blobs are freshly hashed, not all 1,185 old blobs.
+The 2,029-execution physical forecast is 55,133,069,345 bytes, below both actual
+free capacity and the approved 60 GiB initial condition. An initial helper URI
+parameter error before database opening is retained; no production code or study
+attempt changed for its correction.
+
+The authorized metadata-only driver phase completes in 89.161196 seconds with
+one recovery input/source/amendment, no new world attempt and no new grant. It
+reports complete backup/restore and seals the prepared proof and run binding.
+Amendment `f98819bf3aa214d9a2a36a8922916cbe393acc086db4526de7a5d76661c17202`
+retains the old20 attempts, one grant and 5,029,797 ms. The fixed 9,432,260-byte
+setup fee brings known storage to 887,402,753 bytes; allocated capacity remains
+two hours/eight GiB within the unchanged aggregate authority. Independent prepared
+acceptance and central reconciliation now pass: all 1,212 blobs/1,404,263,478 bytes
+are freshly hashed in each primary/backup/restore, all SQL tables agree, every old
+row/link remains, and the closed restored-database/proof/source hashes match.
+The storage mechanism checks content and database integrity; its manifest has no
+HMAC or signature. [Exact actual evidence](../../../tests/fixtures/scalar-recovery-prepared-checks-2026-11-03.zip)
+records the successful real owner roundtrip and its limits without exporting any
+Registry/database/blob/key contents.
+
+**Superseded before numerical launch by D100/A5.** The above describes the
+completed metadata-only checkpoint, not current execution authority. No Scalar
+retry was started; its once-proposed safe-boundary run is cancelled. Preserve
+this preparation, all old results/failures, the full copies and every charge.
+The persistent Scalar stop sentinel remains installed. Current work is the new
+native parallel version at the top of this sole plan; generic old continuation
+stays fenced and scientific admission/protected data remain closed.
 
 **Checked next M2 slice: declared scalar observation spans.** The existing
 owned-plan reservation caller now retains conservative `declared-observation-spans/1`

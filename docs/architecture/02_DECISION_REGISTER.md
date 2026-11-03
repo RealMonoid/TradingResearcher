@@ -11,7 +11,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 77 |
+| ACCEPTED | 78 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -1439,3 +1439,47 @@ certification, calibrated information or scientific admission. Legacy missing
 versions remain UNKNOWN; rollback denies new admission and retains all history.
 No final series, source retarget, budget increase, protected-2024 access,
 original-A/AgentWorkflow continuation, paid call or capital authority follows.
+
+### D100 — Native parallel calibration with bounded acceptance
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Decision:** Adopt the user's smallest new versioned native final-calibration
+execution path and revision-5 section0.3 conditions A1–A5, as preserved in the
+[exact approval](../reviews/implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json).
+Keep the complete 2 dependence profiles × 4 effect combinations × 256 worlds,
+fresh pre-reserved final seeds, existing exact numerics/statistical thresholds,
+full draw streams and full separate replay. Use at most six independent world
+workers, explicitly bounded library threads, low priority, isolated write areas
+and atomic shared resource accounting through existing components.
+
+**Bounds and acceptance:** one known world-timeout retry, with its deadline
+frozen from parallel acceptance; retain unresolved failures and prohibit a false
+complete pass. Other integrity/unknown-use/resource failures still stop. After
+approximately60 actual parallel worlds, an honest full-wall-time forecast above
+24h stops/reports. Report logical/physical forecasts before start, preserve the
+existing100GiB logical/compute authority and all old fees, and maintain20GiB free
+on C:. Integration/fixed acceptance has at most two workdays, with the explicit
+start/deadline in the [sole plan](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026);
+otherwise report causes rather than automatically keep building. Fixed existing
+independent development/reference cases must match serial/parallel results,
+intervals and digests and cover the changed retry/accounting/resource paths.
+
+**Replacement and retained boundaries:** A5 withdraws future Scalar option-A
+development/execution; no retry was launched. Preserve every old source, series,
+result, failure, copy and charge. G1 retention redesign/G2 float64 are deferred;
+G9 is withdrawn. No blanket adoption of the proposal's other scientific claims
+or assurance changes follows. During the pinned series, continue permitted v0
+development on2020–2023 without mutating study source/results. Full specification,
+scientific admission/protected2024, inference spending, exposure and capital
+boundaries remain. Stop/rollback preserves history and grants no automatic new
+series, retry or budget reset.
+
+**Source:** SESSION-2026-11-03-NATIVE-PARALLEL; direct human user message
+`01a19f72-b713-7113-af55-64a935c745c8` in the review chat, read independently after
+cross-chat transfer. Approved section0.3 takes precedence over conflicting later
+proposal sections. Specification approval is not implementation, source/runtime
+qualification, a complete calibration pass or scientific authority.
+
+**Dependencies:** D008/D014/D022/D026/D030/D038/D042/D075/D077/D079/D082/D084/D098;
+REQ-006/007/013/018/022/023/026/030; existing CMP-01/04/06/07/08/11/12 and IF-05/07/12/13.

@@ -12,6 +12,24 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   Sequence](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#current-execution-priority-october-31-2026)
   is the sole operational plan; current user instructions govern scope.
 
+- **Latest binding scope — D100 (November 3):** the [native parallel approval](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026)
+  replaces Scalar option A. No Scalar retry was launched; its persistent driver
+  stop sentinel is installed, and all old sources/results/errors/copies/fees remain.
+  Implement one new exact native version with the full 2×4×256 inventory, fresh
+  final seeds, at most six low-priority world workers and bounded library threads,
+  full streams/replay and fixed independent serial/parallel acceptance, then run.
+  A1 permits one same-world timeout retry without hiding unresolved failures;
+  A2 stops/reports a >24h forecast after approximately60 actual parallel worlds;
+  A3 preserves the 100 GiB logical aggregate/old charges and 20 GiB free C: reserve.
+  A4 starts November3 at04:32:10 CET and requires runnable integration/acceptance
+  by November4 at23:59:59 CET, otherwise stop further automatic construction and
+  report actual causes. G1/G2 are deferred and G9 withdrawn. During the fixed
+  series continue permitted technical v0 on2020–2023 without mutating its source;
+  science/2024 and full project exits remain gated. Exact [approval/source](../reviews/implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json).
+  Next: reuse current native owners, freeze the bounded acceptance/interface and
+  implement actual final-series/concurrent-accounting/retry/monitoring callers.
+  No native series or acceptance run has started; no further general approval wait.
+
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation
   under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without
   the user's explicit decision; dependent work waits, and existing authorizations remain binding.
@@ -196,11 +214,20 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   spies. [Exact caller evidence](../../tests/fixtures/calibration-recovery-caller-checks-2026-11-03.zip)
   retains unknown-charge, terminal-output and stale-restore defects/corrections.
   Pre-dispatch observations now deny ambiguous same-checkpoint reuse without
-  granting authority. Next pin the new detached host, then qualify the actual
-  metadata-only preparation and full before-run restore/input checks before any
-  retry. No actual recovery setup or retry has started. The numerical study must
-  run without parallel heavy construction checks. The latest C: recheck finds
-  122.54 GiB free, Healthy/OK NTFS; recheck at intended use.
+  granting authority. The checked `ff0fc34` host and actual original inputs now
+  pass the owner's preflight and independent read-only reconciliation. Actual
+  metadata-only preparation completes in 89.161196 seconds, creating one bound
+  amendment and full prepared backup/restore proof, with zero new world attempts
+  or grants. The old20 attempts/one grant and 5,029,797 ms remain; the fixed
+  9,432,260-byte setup fee brings storage to 887,402,753 bytes. Independent and
+  central prepared acceptance pass: all 1,212 blobs and complete SQL tables agree
+  across primary/backup/restore; old history and pinned proof/source bytes remain.
+  [Actual prepared evidence](../../tests/fixtures/scalar-recovery-prepared-checks-2026-11-03.zip).
+  **D100/A5 supersedes that continuation before any retry:** keep this completed
+  preparation as history and do not execute or further develop it. The Scalar stop
+  sentinel is installed; no new world or grant was consumed. Current work is the
+  new native version above. Its A2/A3 forecasts and resource admission must be
+  checked at intended use; the old prepared proof is not a native-run certificate.
 
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original

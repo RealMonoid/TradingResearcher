@@ -311,3 +311,19 @@ restored. The revised source has 13 focused independent checks; earlier syntheti
 and raw/protocol tests retain their exact historical scope. Final original-A
 native/source/role/count/funding admission and the full scientific cycle remain
 separate and incomplete.
+
+## D100 native final-series integration
+
+The existing qualified native selector is a development capability, not an
+implemented native final-series API. [D100](02_DECISION_REGISTER.md#d100--native-parallel-calibration-with-bounded-acceptance)
+authorizes the smallest separately versioned final adapter and bounded concurrent
+caller through existing Registry, runtime/cache, exact factory, full-stream/replay
+and storage owners. Preserve final request/identity, source/case/development/count
+bindings and fresh-seed inventory; do not retarget old source or hide method
+resolution differences behind a development mixin. Up to six reserved workers
+need atomic shared accounting, separate write areas, explicit thread caps and low
+priority. Keep a known-timeout retry distinct from unknown-use/integrity/resource
+stops; every attempt/fee and unavailable final case remains recorded. Fixed
+serial/parallel acceptance and A2/A3 monitoring precede actual use. No new generic
+profiling/assurance service, reduced retention, float64 or scientific-admission
+bypass is part of this integration; Scalar recovery remains historical.

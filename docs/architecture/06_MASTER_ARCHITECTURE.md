@@ -181,3 +181,18 @@ D096 reaffirms D069's purpose hierarchy: economically useful trading opportuniti
 ## Implemented infrastructure boundary
 
 The approved [local coordination slice](09_IMPLEMENTATION_BLUEPRINT.md#implemented-local-coordination-slice) now supplies a runnable task queue, immutable scoped artifacts, authenticated worker identities, fenced attempts and trusted operational completion checks. Its generic time/event triggers do not implement scientific checkpoints or report delivery. This is partial infrastructure for existing components, not a new scientific authority or a completed component graph. A task's technical completion cannot write an EvidenceRecord, activate a method or authorize capital. The [runtime guide](../../trading_researcher/README.md) and [verification](../reviews/LOCAL_COORDINATION_VERIFICATION_2026-10-24.json) state the exact implemented and tested boundary.
+
+## D100 bounded native calibration execution
+
+[D100/A1–A5](02_DECISION_REGISTER.md#d100--native-parallel-calibration-with-bounded-acceptance)
+reuses CMP-01/04/06/07/08/11/12 for a new native2048-world series with fresh final
+seeds, exact current criteria, full streams/replay and up to six low-priority
+world workers with bounded library threads. Parallel workers are execution units,
+not scientific authorities. CMP-01/07 preserve atomic reservations, source/failure
+history and all fees; CMP-06 may assess complete authenticated cohorts only.
+Known timeouts have one frozen retry; unresolved cases cannot become a complete
+pass. Throughput/storage and construction stop/report conditions remain explicit
+in the sole plan. Scalar recovery is retired before any retry. Permitted v0
+development may continue against2020–2023 while the study source stays pinned;
+no protected2024/scientific/capital authority or full-process calibration claim
+follows from operational completion.

@@ -1,0 +1,23 @@
+{
+  "schema": "native-host-input-amendment/1",
+  "id": "windows-host-inputs/2026-11-03.1",
+  "authority": "technical_host_inputs_only_not_runtime_or_scientific_admission",
+  "base_archive_sha256": "fda1c157fbf365f5a8826a9ba0e9f7d19fae5f36f7299bf7a770a9764524fd30",
+  "base_host_images_sha256": "6158af593a614efa70c3b3f1ff43ff7c441be34ba0289e5f938fcbf476e85d1c",
+  "additions": [
+    {
+      "path": "C:\\Windows\\System32\\apphelp.dll",
+      "sha256": "b838911cb7279ba34a5092d35037223188c452cf282d03a2e70b7242c9516bb2",
+      "size": 678520
+    }
+  ],
+  "provenance": {
+    "independent_observation_receipt": "native-host-import-observation-independent.json",
+    "independent_observation_sha256": "4446e1e9d4f62e281215fb846ff31f22258488b886703447be68180db054fdfd",
+    "independent_proposal_receipt": "native-host-amendment-independent-proposal.json",
+    "independent_proposal_sha256": "1b14cd3e9e3d2c439678595b810946fd81a8b889577a318d3292722d8ba01e29",
+    "origin_observation_receipt": "native-reference-clock-host-signature.json",
+    "origin_observation_sha256": "d2e1773221047671da65a91abff00268b1819bcd9e0ec00b48a2182c3b440809",
+    "scope": "A separate isolated import-only child observed exactly this additional current host component and the unchanged old47-image basis. This is a provisional technical input, not the exact failed-child inventory or a runtime certificate. Fresh complete native conformance and intended-use currentness remain required; no automatic further additions."
+  }
+}

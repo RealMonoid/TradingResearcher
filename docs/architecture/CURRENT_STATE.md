@@ -12,6 +12,8 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   Sequence](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#current-execution-priority-october-31-2026)
   is the sole operational plan; current user instructions govern scope.
 
+- **Approved later data candidates (November 3):** [Johnbrick123/sp500-data](https://github.com/Johnbrick123/sp500-data) is selected for a later daily S&P 500/equity/ETF research extension, with [shardul0701/SP500-Survivorship-bias-data-2004-2026](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026) as the approved supplementary membership source. The [sole-plan entry](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-sp-500-data-candidate-for-later-equity-research-november-3-2026) retains both approvals, reviewed sources, shared historical provenance, the unresolved 501-versus-503 member counts and historical ticker-transition conflicts, plus required rights/PIT/versioning/data checks. [Additional approved review candidates](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-additional-data-review-candidates-november-3-2026) are Quantiacs and `riazarbi/sp500-scraper`, with `kfccolonel1/BARS` reserved for a later Futures extension; access/rights, PIT, coverage, source/identity and roll checks remain open. HF Data Library remains rejected. Candidate selection is not scientific admission; D100/A1-A5 and the current BTC/ETH profile retain priority. No import or new research run occurred.
+
 - **Next delivery approved November 3:** follow the [bounded delivery and expansion stop](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#approved-next-delivery-and-expansion-stop-november-3-2026): close D100 within unchanged A1-A5, then one complete scientific cycle under the applicable approved profile. Build only directly required capabilities and controls; complete D101/D102 option rollout is not a prerequisite. Report the warranted result/information boundary, total time/cost/rework and usable feedback before the next expansion decision. A blocked or mainly technical outcome stops expansion and triggers a prompt researched cheaper alternative for user decision. Full accepted scope, scientific criteria, existing budgets/access and live pinned work remain binding. This approval is scheduling, not a completed cycle or changed scientific authority.
 
 - **Current execution scope — D100 (November 3):** the [native parallel approval](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026)
@@ -141,11 +143,18 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   passes with primary bytes unchanged. No final input, seed or world exists.
   Current metadata finds signed Windows `apphelp.dll` outside the old fixed
   47-image host set. The exact failed child's missing image is not identified.
-  Next: focused independent metadata reproduction, then only a substantiated,
-  source-bound host-input revision and its independent checks before fresh
-  qualification/all 64 references. Preserve the old fixture and strict unknown-
-  image/byte/alias denials; no automatic whitelist expansion. Allow 30–90 minutes
-  for bounded construction/checks, with unknown actual admission duration.
+  A separate isolated import-only child now reproduces the old47 denial with
+  exactly `apphelp.dll` unknown; known host bytes remain unchanged. The source-bound
+  single-member amendment preserves the old fixture and historical47 reader;
+  current source capture binds128 files and48 selected hosts within existing caps.
+  Eight new metadata cases, four genuine financial/controller/copy cases and23
+  affected regressions pass. Typed failed qualification in financial fixtures is
+  an explicit seam; actual metadata/source preservation and inputs are checked
+  separately. Schema/4 carries only the exact five-setup stopped V3 checkpoint,
+  preserving all charges, markers, copies and original clock. Only this version
+  additionally permits the exact old/new qualifier source; generic guards remain.
+  Next: publish/pin, fresh actual full qualification, then all64 references and
+  final admission. No V4 process, current certificate or final seed is claimed.
 
 - **Direct LightGBM role adopted — D102 (November 3):** direct LightGBM is designated
   as an interchangeable forecast component for actual hypothesis tasks, with the

@@ -54,7 +54,10 @@ LEGACY_FIXED = {
 }
 LEGACY_LOOP_FILE = '.trf-runtime/native-runtime-2026-11-02/canonical_draw_independent_cases.py'
 PACKING_ARCHIVE = 'tests/fixtures/native-path-packing-checks-2026-11-02.zip'
-FIXED = {**LEGACY_FIXED, PACKING_ARCHIVE: 'c0f0b7e8f4b926bc8e6e79ae5ba173d5b2566a81ccef9beeb316ea5a122fa266'}
+HOST_AMENDMENT_FILE = 'tests/fixtures/native-host-amendment-2026-11-03.json'
+HOST_AMENDMENT_SHA = 'c9ff91a14403bf05676857e9d25e9991402a6be004fcac646fd0abc587660988'
+FIXED = {**LEGACY_FIXED, PACKING_ARCHIVE: 'c0f0b7e8f4b926bc8e6e79ae5ba173d5b2566a81ccef9beeb316ea5a122fa266',
+         HOST_AMENDMENT_FILE: HOST_AMENDMENT_SHA}
 LOOP_FILE = '.trf-runtime/native-loop-2026-11-02/packing_independent_cases.py'
 LOOP_SHA = '013a4061cbe0ef3588f6c30ad2f675baafafaaab9c42fd0b7195ad5dfc27e1a0'
 ORACLE_FILE = '.trf-runtime/native-build-tools-2026-11-02/draw_independent_cases.py'
@@ -98,10 +101,47 @@ def capture_source():
 
 def host_inputs(source):
     name = 'tests/fixtures/native-environment-checks-2026-11-02.zip'
-    require(hashlib.sha256(source[name]).hexdigest() == FIXED[name], 'Host reference source changed')
+    require(hashlib.sha256(source[name]).hexdigest() == LEGACY_FIXED[name],
+            'Host reference source changed')
     with ZipFile(io.BytesIO(source[name])) as archive:
         observed = decode(archive.read('.trf-runtime/native-runtime-2026-11-02/environment-reference-observation.json'))
-    return observed['host_images']
+    base = observed['host_images']
+    # Historical source packages retain their original 47 inputs. This reader
+    # grants no currentness: current preparation/intended use separately require
+    # the complete byte-identical capture_source(), including the amendment.
+    if HOST_AMENDMENT_FILE not in source:
+        return base
+    raw = source[HOST_AMENDMENT_FILE]
+    require(hashlib.sha256(raw).hexdigest() == FIXED[HOST_AMENDMENT_FILE],
+            'Host amendment source changed')
+    amendment = decode(raw)
+    require(type(amendment) is dict and set(amendment) == {
+                'schema', 'id', 'authority', 'base_archive_sha256',
+                'base_host_images_sha256', 'additions', 'provenance'}
+            and amendment['schema'] == 'native-host-input-amendment/1'
+            and amendment['id'] == 'windows-host-inputs/2026-11-03.1'
+            and amendment['authority'] == 'technical_host_inputs_only_not_runtime_or_scientific_admission'
+            and amendment['base_archive_sha256'] == LEGACY_FIXED[name]
+            and amendment['base_host_images_sha256'] == digest(base),
+            'Host amendment identity or historical basis differs')
+    additions = amendment['additions']
+    require(type(additions) is list and len(additions) == 1,
+            'Only the independently reviewed single host addition is selected')
+    from .native_environment import _images
+    additions = _images(additions)
+    require(additions[0]['path'] == r'C:\Windows\System32\apphelp.dll',
+            'Host amendment selects an unreviewed path or alias')
+    integer(additions[0]['size'], 'Amended host image size', 1)
+    provenance = amendment['provenance']
+    require(type(provenance) is dict and set(provenance) == {
+                'independent_observation_receipt', 'independent_observation_sha256',
+                'independent_proposal_receipt', 'independent_proposal_sha256',
+                'origin_observation_receipt', 'origin_observation_sha256', 'scope'},
+            'Explicit independent host amendment provenance required')
+    combined = base + additions
+    keys = [str(Path(value['path']).absolute()).casefold() for value in combined]
+    require(len(keys) == len(set(keys)), 'Host amendment aliases a retained image')
+    return combined
 
 
 def validate_runtime(runtime):

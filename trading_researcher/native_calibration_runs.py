@@ -92,12 +92,30 @@ SOURCE_REFERENCE_CLOCK_CORRECTION = MappingProxyType({
         ('AttemptDeadlineExceeded', 'Owned native whole-attempt deadline elapsed'),
         ('StudyProcessCancelled', 'Native study parent requested cancellation')),
     'scope': 'The pinned pre-final outer reference measurement correction; no inner profile or final-series reset.'})
+SOURCE_HOST_INPUT_CORRECTION = MappingProxyType({
+    'schema': 'native-calibration-source-correction/4',
+    'predecessor_pool_id': 'e55f747cbb34e51a52ae6234707da0798c6643753eb15c5d8511480b27edc754',
+    'expected_checkpoint': '1d56b38873437cef82ee0cf4556bd88ef2fb693be4d081c361494c26aad2a5ef',
+    'reference_id': '93e219325d0139f7a9ecf1b8b63e4b5d7988347e043d9a080c0764b3b7772f78',
+    'source_result_id': '44b5081ab49beb63fb0bd3498e686ca3385d0cb034e34e76fb69849b47a511a2',
+    'predecessor_correction_schema': 'native-calibration-source-correction/3',
+    'ancestor_pool_id': 'ed91215b33d3c4ab89b56f2b8c36291ae3ae04e1d16d98d0ec6359cfef41c5b2',
+    'qualification_id': '3af1410ff3bafd2d2a564f7ff400be102f2cfe939a9beb294c6a04dc1ab6406b',
+    'failed_setup_artifact_id': 'e6668e5674209bb041995e63f00b303902c428160bbbb7a44df200f97a67412a',
+    'old_coordination_sha256': '25c67fa1d48371108aa1e91f630d953cc5e7e33e5615f503feadb851e3782dfc',
+    'fixed_coordination_sha256': '25c67fa1d48371108aa1e91f630d953cc5e7e33e5615f503feadb851e3782dfc',
+    'old_profile_sha256': '58d5478e0cc12be426540d6c6acf9b1ef02305ccb79af9906c5e4acd6f470d88',
+    'new_profile_sha256': 'b31c300924834b61e627d8ea0d5d2ebb5372e55081338980061be0de15059dda',
+    'host_amendment_sha256': 'c9ff91a14403bf05676857e9d25e9991402a6be004fcac646fd0abc587660988',
+    'scope': 'The pinned pre-final independently observed host-input revision; no numerical or final-series reset.'})
 SOURCE_CORRECTION_FILES = frozenset({
     'trading_researcher/coordination.py', 'trading_researcher/native_calibration_runs.py',
     'trading_researcher/native_calibration_controller.py', 'trading_researcher/revocations.py'})
 
 
 def _source_correction_pin(predecessor_pool_id):
+    if predecessor_pool_id == SOURCE_HOST_INPUT_CORRECTION['predecessor_pool_id']:
+        return SOURCE_HOST_INPUT_CORRECTION
     if predecessor_pool_id == SOURCE_REFERENCE_CLOCK_CORRECTION['predecessor_pool_id']:
         return SOURCE_REFERENCE_CLOCK_CORRECTION
     if predecessor_pool_id == SOURCE_DEPENDENCY_CORRECTION['predecessor_pool_id']:
@@ -408,6 +426,44 @@ class NativeCalibrationResources:
                     == set(pin['failure_pairs']),
                 'Pinned reference terminal outcome counts or causes differ')
 
+    def _host_qualification_checkpoint(self, previous, predecessor, reference, attempts, pin):
+        """Retain a fixed failed host qualification without treating it as evidence."""
+        b = self.broker
+        require('acceptance' not in previous.inventories and not attempts
+                and predecessor['body']['source_correction']['predecessor_reference_id'] == reference['id'],
+                'Host correction requires its pinned pre-reference stop and inherited corpus')
+        names = ('controller_source', 'runtime_retain', 'runtime_qualification',
+                 'prepared_copies', 'terminal_copies')
+        tasks = predecessor['body']['setup_tasks']
+        require(set(previous.records) == {('setup', tasks[name]) for name in names},
+                'Host correction requires the exact five retained setup tasks')
+        records = {name: b._artifact(previous.records[('setup', tasks[name])]['artifact_id'])
+                   for name in names}
+        failed = records['runtime_qualification']
+        qualification = b._artifact(pin['qualification_id'])
+        from .native_qualification import RESULT, AUTHORITY as QUALIFICATION_AUTHORITY
+        body = qualification['body']
+        failure = body.get('failure') or {}
+        require(qualification['creator'] == qualification['origin'] == 'controller'
+                and qualification['data_class'] == 'operations'
+                and qualification['authority'] == QUALIFICATION_AUTHORITY
+                and body.get('schema') == RESULT and body.get('status') == 'CERTIFICATION_GAP'
+                and body.get('settlement', {}).get('usage_known') is True
+                and failure.get('type') == 'Invalid'
+                and 'Native host image was not independently qualified' in failure.get('message', ''),
+                'Only the pinned known host-qualification gap may be carried')
+        require(failed['id'] == pin['failed_setup_artifact_id']
+                and failed['body'].get('result') == {'failure': failure, 'ok': False,
+                    'qualification_id': qualification['id']}
+                and qualification['id'] in failed['body'].get('technical_refs', [])
+                and failed['body'].get('failure') == {
+                    'type': 'Invalid', 'message': 'Native setup did not satisfy its owned completion criterion'},
+                'Failed setup does not bind the exact retained host qualification')
+        require(all(item['body']['resource_state'] == ('FAILED' if name == 'runtime_qualification' else 'COMPLETE')
+                    and item['body']['settlement']['usage_known'] is True
+                    for name, item in records.items()),
+                'Host correction requires known retained setup outcomes')
+
     def correct_source(self, token, args):
         """One pinned pre-final defect correction, never a generic unhalt/reset."""
         b = self.broker
@@ -470,8 +526,19 @@ class NativeCalibrationResources:
                              and event['details']['key'] == request['key']),
                         'Source correction key already belongs to another pool')
             old_source = predecessor['body']['source_footprint']
+            allowed_changes = SOURCE_CORRECTION_FILES
+            if pin['schema'] == 'native-calibration-source-correction/4':
+                profile_path = 'trading_researcher/native_qualification_profile.py'
+                allowed_changes = allowed_changes | {profile_path}
+                from . import native_qualification_profile as native_profile
+                require(old_source.get(profile_path) == pin['old_profile_sha256']
+                        and LOADED_SOURCE.get(profile_path) == pin['new_profile_sha256']
+                        and native_profile.FIXED[native_profile.HOST_AMENDMENT_FILE] == pin['host_amendment_sha256']
+                        and hashlib.sha256((native_profile.ROOT / native_profile.HOST_AMENDMENT_FILE).read_bytes()).hexdigest()
+                            == pin['host_amendment_sha256'],
+                        'Host correction must bind its exact old/new qualifier and independent host amendment')
             require(set(old_source) == set(LOADED_SOURCE)
-                    and {p for p in old_source if old_source[p] != LOADED_SOURCE[p]} <= SOURCE_CORRECTION_FILES
+                    and {p for p in old_source if old_source[p] != LOADED_SOURCE[p]} <= allowed_changes
                     and old_source['trading_researcher/coordination.py'] == pin['old_coordination_sha256']
                     and LOADED_SOURCE['trading_researcher/coordination.py'] == pin['fixed_coordination_sha256'],
                     'Correction must preserve all sources except the pinned operational repair')
@@ -480,24 +547,29 @@ class NativeCalibrationResources:
                     and all('final' not in self._history(p).inventories for p in self._objects(POOL)),
                     'Final inputs or final work forbid a replacement source series')
             reference = NativeCalibrationReferences(b)._study(pin['reference_id'])
-            require(previous.inventories.get('acceptance', {}).get('body', {}).get('input_id') == reference['id'],
-                    'Pinned stopped acceptance input differs')
-            failed = [b._artifact(row['artifact_id']) for (phase, _), row in previous.records.items()
-                      if phase == 'acceptance']
-            if pin['schema'] == 'native-calibration-source-correction/3':
-                self._reference_clock_checkpoint(previous, reference, failed, pin)
+            if pin['schema'] == 'native-calibration-source-correction/4':
+                attempts = [b._artifact(row['artifact_id']) for (phase, _), row in previous.records.items()
+                            if phase == 'acceptance']
+                self._host_qualification_checkpoint(previous, predecessor, reference, attempts, pin)
             else:
-                require(len(failed) == pin['failed_attempts'] and all(
-                    item['body'].get('reference_id') == reference['id']
-                    and item['body'].get('reference_mode') == 'parallel'
-                    and item['body']['resource_state'] == 'FAILED'
-                    and item['body']['settlement']['usage_known'] is True
-                    and item['body'].get('proofs') == [] and item['body'].get('output_blobs') == {}
-                    and item['body'].get('result') is None and item['body'].get('replay_result') is None
-                    and item['body'].get('custody', {}).get('phases') == []
-                    and (item['body'].get('failure', {}).get('type'),
-                         item['body'].get('failure', {}).get('message')) in pin['failure_pairs']
-                    for item in failed), 'Only the pinned known pre-generation metadata failures may be corrected')
+                require(previous.inventories.get('acceptance', {}).get('body', {}).get('input_id') == reference['id'],
+                        'Pinned stopped acceptance input differs')
+                failed = [b._artifact(row['artifact_id']) for (phase, _), row in previous.records.items()
+                          if phase == 'acceptance']
+                if pin['schema'] == 'native-calibration-source-correction/3':
+                    self._reference_clock_checkpoint(previous, reference, failed, pin)
+                else:
+                    require(len(failed) == pin['failed_attempts'] and all(
+                        item['body'].get('reference_id') == reference['id']
+                        and item['body'].get('reference_mode') == 'parallel'
+                        and item['body']['resource_state'] == 'FAILED'
+                        and item['body']['settlement']['usage_known'] is True
+                        and item['body'].get('proofs') == [] and item['body'].get('output_blobs') == {}
+                        and item['body'].get('result') is None and item['body'].get('replay_result') is None
+                        and item['body'].get('custody', {}).get('phases') == []
+                        and (item['body'].get('failure', {}).get('type'),
+                             item['body'].get('failure', {}).get('message')) in pin['failure_pairs']
+                        for item in failed), 'Only the pinned known pre-generation metadata failures may be corrected')
             source = b._artifact(pin['source_result_id'])
             source_task = predecessor['body']['setup_tasks']['controller_source']
             require(previous.records[('setup', source_task)]['artifact_id'] == source['id']
@@ -539,6 +611,13 @@ class NativeCalibrationResources:
                     'old_outer_deadline_ms': pin['old_acceptance_deadline_ms'],
                     'new_outer_deadline_ms': pin['new_acceptance_deadline_ms'],
                     'scope': 'Prospective outer reference measurement only; frozen inner calculator and all acceptance criteria unchanged.'}
+            if pin['schema'] == 'native-calibration-source-correction/4':
+                correction['host_input_revision'] = {
+                    'file': native_profile.HOST_AMENDMENT_FILE,
+                    'sha256': pin['host_amendment_sha256'],
+                    'old_profile_sha256': pin['old_profile_sha256'],
+                    'new_profile_sha256': pin['new_profile_sha256'],
+                    'retained_qualification_gap_id': pin['qualification_id']}
             identity = digest({'schema': 'native-calibration-source-correction-identity/1',
                 'predecessor_pool_id': predecessor['id'], 'checkpoint': previous.checkpoint,
                 'source_footprint': LOADED_SOURCE})

@@ -23,6 +23,32 @@ Source: SESSION-2026-11-03-NEXT-DELIVERY, the current repository conversation. T
 
 Reuse the existing remaining-work table, Current State and progress register. No parallel plan, benchmark/evaluation project, new paid authorization or change to protected access, frozen study sources, accepted scientific rules or capital authority is introduced.
 
+### Approved S&P 500 data candidate for later equity research (November 3, 2026)
+
+Source: SESSION-2026-11-03-SP500-DATA, this repository conversation. Following the bounded suitability review, the user approved: "Ja, das nehmen wir. Trage das ein so das wir es finden. Freigabe". Retain [Johnbrick123/sp500-data](https://github.com/Johnbrick123/sp500-data) as the selected data candidate for a later daily equity/ETF research extension. D100/A1-A5 and the current BTCUSDT/ETHUSDT profile retain priority and authority.
+
+**Purpose and reuse finding:** reuse historical S&P 500 membership, including former members, daily prices, corporate-action handling and published quality reports rather than rebuilding that collection. The reviewed source was [commit 981c7d2](https://github.com/Johnbrick123/sp500-data/tree/981c7d25370844697603342b58d8603386217e54). The publisher's [November 3 verification report](https://github.com/Johnbrick123/sp500-data/releases/download/data/verification_report.txt) reported 64 PASS / 0 FAIL / 0 UNVERIFIED, with prices through October 30, 2026; these were read, not independently rerun. Checks include sampling and tolerated anomalies. Before 1996, the documented data lacks open/high/low/volume; daily data cannot supply intraday observations.
+
+**Approved supplementary membership source:** SESSION-2026-11-03-SP500-SUPPLEMENT, this conversation: "Ja, das nehmen wir als ergänzende Quelle auch auf. Trage es beim ersten Kandidaten ein, einschließlich der offenen Abweichungen. Freigabe." Add [shardul0701/SP500-Survivorship-bias-data-2004-2026](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026), reviewed at [commit d33c854](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026/tree/d33c85464c0e281992a9d1f1e90943ef39fe7ae2), for historical membership reconstruction and discrepancy investigation alongside the first candidate. It provides annual YAML membership/change records, not prices. Both projects derive older membership history from `fja05680/sp500`; agreement is not independent corroboration of that shared history. Newer S&P announcement links and announcement dates are useful additional evidence, subject to validation.
+
+**Open discrepancies retained:** the first candidate's November 3 report lists 501 members on October 30, 2026; the supplementary source's [November 2 live-check record](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026/blob/d33c85464c0e281992a9d1f1e90943ef39fe7ae2/metadata/live_check_state.json) lists 503 and reports a match to SPY holdings as of October 30. Neither count is accepted here as authoritative. The supplementary source's [June 6 reconciliation report](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026/blob/d33c85464c0e281992a9d1f1e90943ef39fe7ae2/audit/sp500_2019_2026_reconciliation.md) retains three same-date conflicts, 38 YAML dates without a parsed official match and 15 official rows requiring review; its [source notes](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026/blob/d33c85464c0e281992a9d1f1e90943ef39fe7ae2/source_notes.json) identify BMS/AMCR, CBS/VIAC and GDI/TT transition ambiguities. These are published historical findings, not a freshly reproduced audit or proof that unmatched dates are errors. README/source-note coverage through June is stale relative to the [November 2 freshness record](https://github.com/shardul0701/SP500-Survivorship-bias-data-2004-2026/blob/d33c85464c0e281992a9d1f1e90943ef39fe7ae2/metadata/data_freshness.json), which lists the latest effective change as October 6. The direct member-list comparison was not executed because local `pyarrow` was unavailable; nothing was installed. At intended use, compare both pinned lists for the same effective date, resolve differing securities and ticker identities against original announcements, and check the historical ambiguities before relying on affected records.
+
+**Admission gaps and next action:** when this extension is selected for execution, first clarify repository and upstream data-use rights (no explicit repository license was found for the first candidate), then perform a bounded independent data check under D018 and [document 14 section 6](../../architecture/14_RETAIL_RESEARCH_CONTRACT.md#6-open-06-data-and-execution-authority). Pin source and complete dataset bytes with SHA-256, retrieval time and available provider checksums. Retain membership, corporate actions, source/identity mappings, `no_trade_days.csv`, `exit_gaps.csv` and reports together: the rolling `data` release is overwritten. Check effective versus available-at times, revisions, adjusted-price use, missing/non-trading days and delisting execution. Historical membership and monthly snapshots do not establish complete PIT validity or unseen assessment history. Existing independent scientific, exposure, profile and policy gates remain binding.
+
+**Closeout criterion and tradeoff:** the candidate, approval, source, intended use, qualifications and next action are searchable here and linked from Current State. This documentation-only selection claims no import, installation, new run or scientific certification. Reuse the reviewed evidence at its stated scope; runtime checks would add no evidence for this recording task.
+
+### Approved additional data review candidates (November 3, 2026)
+
+Source: SESSION-2026-11-03-ADDITIONAL-DATA, this conversation. The user approved: "Ja, nehmen wir so auf. Trage Quantiacs und sp500-scraper als Prüfkandidaten ein, BARS für eine spätere Futures-Erweiterung. Halte die offenen Prüfungen und Einschränkungen fest. Freigabe." Record the following alongside the existing S&P 500 candidates; this selects candidates for later review, not an immediate acquisition or new research branch.
+
+| Candidate and intended role | Reviewed evidence and limitations | Required check before use |
+|---|---|---|
+| [Quantiacs](https://github.com/quantiacs/documentation/blob/master/en/source/user_guide/data.md): review candidate for later multi-asset research, particularly daily stocks/futures | The [current data overview](https://quantiacs.com/documentation/en/data/intro.html) describes stocks, futures and crypto; the free platform's [local access instructions](https://quantiacs.com/documentation/en/user_guide/local_development.html) require an account API key. These are documentation findings, not a tested account/download or an unrestricted data license. The supplied futures documentation describes stitched continuous contracts and Bitcoin-futures history extended with spot prices. | Confirm no-cost availability of the required dataset and permitted local/off-platform use, storage, redistribution and intended research/trading scope. Check actual asset/date coverage, historical membership/delistings, corporate actions, roll/adjustment rules and spot/futures splices, timestamps, revisions and available-at evidence; pin retrieved files and source versions. Do not treat a continuous series or spot prefix as an executable historical contract. |
+| [riazarbi/sp500-scraper](https://github.com/riazarbi/sp500-scraper/tree/3ddcd13aa1727f2eda7a3468e76f341d88f7fd9f): review candidate for supplementary membership/identity comparisons | Reviewed README, inventory and iShares collection code at this commit: snapshots from iShares (documented from October 2006), Wikipedia (March 2007) and Tidyquant (November 2022), with identifiers varying by source/date. Pre-November-2022 Wikipedia snapshots were reconstructed from revision history with filtering. iShares records IVV ETF holdings, not an authoritative index-membership feed. The inspected inventory's latest iShares CSV was October 23, 2026, although Wikipedia/Tidyquant snapshots were newer. | Clarify repository/upstream rights; compare actual snapshot coverage and source independence against the existing candidates. Resolve ETF cash/other holdings, index-versus-fund differences, ticker reuse/renames, identifier mappings, effective/as-of versus retrieval/availability dates and missing snapshots. A requested October 30 iShares CSV was absent; no same-date membership comparison was completed. It does not supply a replacement OHLCV price history. |
+| [kfccolonel1/BARS](https://github.com/kfccolonel1/BARS/tree/b8f2d8ab36e44c289036ce093bf7c9f04073a7d9): candidate only for a later Futures extension | Reviewed README and [catalog](https://github.com/kfccolonel1/BARS/blob/b8f2d8ab36e44c289036ce093bf7c9f04073a7d9/catalog.json): NQ 1-minute history June 21, 2024-October 8, 2026; ES 1-minute June 20, 2025-October 9, 2026, plus other intervals. Source-priority stitching combines AlfordLabs, TradingView, IBKR and Yahoo; series are unadjusted front-month with roll jumps. Some NQ history lacks volume; source/roll disagreements and a raw source-label ambiguity are disclosed. No explicit repository license was found. ES/NQ are not MES/MNQ trade records. | Clarify upstream/download/use rights, independently check gaps, duplicates, OHLCV, session/DST and timestamp labeling, source transitions, actual contract identity and consistent roll boundaries. Preserve source tags/raw inputs; prevent roll jumps from becoming claimed market returns. Validate each intended timeframe, cost/execution profile and any proposed use as a micro-futures proxy separately. |
+
+**Scope, effort and closeout:** reuse the bounded November 3 source review; publisher claims remain unverified unless explicitly checked above. This records three searchable candidates and their open acceptance checks in the existing plan, with a Current State pointer, rather than constructing a new data platform. D100/A1-A5, the current BTC/ETH profile, protected data, budgets and all scientific/policy gates remain unchanged. No account/key creation, bulk acquisition, installation or research execution is authorized by this recording task. HF Data Library remains rejected. Other repositories from the reviewed list are not newly selected by this approval.
+
 ### Remaining work and construction time (user clarification, November 3, 2026)
 
 The cost rule includes elapsed construction time, execution, coordination, checking, rework and maintenance. Apply it before each substantial next step, not only at A4's deadline. In the existing work item, state the acceptance criterion, what is still missing, the expected remaining effort as a range with its basis/uncertainty, and why the next change is worth that effort. Mark required work versus optional assurance or optimization. Reuse sufficient evidence and omit optional work with disproportionate benefit. If an accepted requirement appears disproportionate, promptly present the researched alternative for approval under D008/D026 rather than silently weakening it or continuing indefinitely.
@@ -572,6 +598,41 @@ Allow 30–90 minutes of bounded construction/checking plus unknown actual fresh
 qualification/full64 time. Stop and present any unresolved membership or material
 choice; no automatic append, setup retry, unhalt, budget or A4 extension follows.
 The existing progress item owns exact pins, uncertainty, costs and rollback.
+
+**Host-input software closeout.** The independent controlled import-only child
+reproduced the old47 denial with exactly `apphelp.dll` unknown in stable before/
+after loader snapshots; known host bytes were unchanged and no draws or test
+methods ran. This is contemporary evidence, not the exact failed child's image
+inventory. The fixed amendment `windows-host-inputs/2026-11-03.1` records only its
+reviewed path/hash/size and independent origin/probe references. The old fixture
+and historical47 reader remain intact; current full source captures the amendment
+and48 selected hosts. Neither metadata lookup nor constructor certifies it.
+
+Eight independent metadata cases and four genuine financial/controller/copy
+cases pass, together with23 affected historical-profile/correction/recovery
+regressions. The actual stopped V3 input and source transition pass a read-only
+check with primary bytes unchanged. Numerical/failed-Q answers in financial
+fixtures are disclosed seams. The original numerical profile2, binaries,21 golden
+cases, full result/stream digests and child/replay implementations remain unchanged.
+Current capture is128files/11,144,999bytes within unchanged128/16MiB limits.
+
+Schema/4 accepts only this exact five-setup V3 stop, its failed qualification and
+inherited complete reference corpus. Existing known-use/carry/one-child/copy/
+marker/revocation/no-final checks remain; only this version explicitly permits
+the exact old/new qualifier file and fixed amendment. The generic four-file
+repair allowance and all earlier stages remain unchanged. The existing consumer
+capsule preserves all prior members and these sources/checks. Gross effort since
+17:36:39UTC is retained including diagnosis/coordination/rework/checking; the
+30-90minute estimate includes construction, with actual qualification/full64
+still additional and uncertain. No clock credit, resource or A4 extension follows.
+
+Next: publish/pin, fresh complete current-source qualification against unchanged
+numerical goldens, all64 actual references at the checked600/630-second outer
+policy, measured final deadline and final source/seed/capacity/copy admission.
+Any further unknown host remains denied and requires concrete sourced review;
+no automatic append or setup retry follows. V4 actual admission is unverified
+at this software checkpoint. User-approved parallel later-data notes remain
+preserved in this same plan and handoff; they do not start another workstream.
 
 The local Codex connection log also corrects construction-time attribution:
 65 HTTP sends failed and 13 outer stream retries were logged from 15:43:29 to

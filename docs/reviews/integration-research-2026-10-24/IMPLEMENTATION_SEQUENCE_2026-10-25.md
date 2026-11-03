@@ -160,6 +160,35 @@ classification, retry equality and post-error qualification still precede the
 fixed32 serial/parallel acceptance, source/runtime/capacity admission and A2/A3.
 No actual pool, final seeds, numerical acceptance or new series has started.
 
+**Reserved numerical caller closeout (November 3):** the host-only
+`NativeCalibrationAttempts.execute` now consumes an existing final reservation
+and derives its immutable input/world, runtime/cache selection, two-phase proof,
+usage and failure classification through the existing owners. No Broker RPC or
+readiness/result override is added. The [caller evidence](../../../tests/fixtures/native-reserved-attempt-checks-2026-11-03.zip)
+contains 19 final-source independent passes, the unchanged-source 22 resource-owner
+regressions at their recorded intermediate version, and independent source review.
+The new cases use genuine temporary Registry/input/cache/transport/stream/custody
+and accounting paths with explicit qualification, numerical-child, financial and
+clock seams. They do not certify an actual native numerical run.
+
+Three production counterexamples are retained and corrected: manager-only clock
+labels cannot authorize a retry; a halted pending task cannot start; combined
+custody serialization failure cannot skip stop, postchecks or output retention.
+Exact owned clocks remain distinct from cancellation, generic/derived timeout,
+segment/numeric, integrity, unknown-use and resource failures. Available full
+generations must agree on retry, including actual full stream bytes. A second
+known timeout remains unavailable without blocking an independent healthy task.
+A staging failure preserves the full pending charge and fences redispatch.
+
+This closes the bounded AC-N3/4/5 consuming obligations and the dispatch/restart
+subset of AC-N6. Next are the pinned outer controller/reference caller, fresh
+source/runtime qualification, all 32 full reference cases serially and in actual
+parallel execution, measured limits and A2/A3, full prepared/terminal copy proofs
+and stale-restore intents, then actual disjoint seeds and series admission. Copy
+metadata booking must be explicitly charged without claiming copy verification
+or metadata progress; reuse the existing full-copy convention. No actual new
+pool, final seeds, acceptance or series has started. A4 remains unchanged.
+
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
 M1's existing genuine development witness is now reconciled, including its
@@ -730,6 +759,14 @@ research workstream or fixed first extension after v0. Apply it when it helps an
 actual hypothesis task through the smallest owned adapter; retain D100/A1-A5 and
 existing authorized priorities. This adoption installs/trains nothing, chooses no
 library release, target, numerical profile or study, and grants no data/resources.
+
+**D102 estimator-choice clarification, approved November 3:** choose a suitable
+estimator for the actual required statement/output and assumptions, including
+inspectability and proportionate reuse cost. There is no fixed regression -> EBM
+-> quantile/survival -> LightGBM ladder, no mandatory model contest and no model
+zoo implementation. Readability is not scientific evidence; preserve coefficient/
+contrast meaning, uncertainty and interval/event-data requirements. D102's LightGBM
+role, D100/A1-A5, current authorized priorities and all project gates remain.
 
 ## Manufacturing milestones (approved November 2, 2026)
 

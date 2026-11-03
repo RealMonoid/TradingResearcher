@@ -1585,3 +1585,25 @@ artifact, training/source/parameter lineage and applicable independent checks.
 Scientific/numerical changes still require D008/D026 review. No current frozen
 prompt or pinned study changes; D100/A1-A5 remains execution priority. Rollback
 unselects future use while retaining every source, model, failure, exposure and fee.
+
+**Later task-specific estimator clarification (November 3, 2026):** the direct
+user reply "einverstanden" to the qualified review of the subsequent model list
+approves task-specific estimator choice, not that list's fixed ranking or blanket
+exclusions. Source: SESSION-2026-11-03-ESTIMATOR-SELECTION; the content/scope and
+checks are retained in the existing progress record. D102 remains an interchangeable
+LightGBM role, not a requirement to exhaust regression/EBM/quantile/survival models
+first or to make every task use LightGBM. Interpretability helps inspect behavior;
+it is not evidence of correct specification, causal truth or economic usefulness.
+
+Regression coefficients address their specified scale/model; a logistic
+interaction coefficient is not automatically the canonical probability contrast,
+and zero is not universal absence of useful information. EBM curves describe the
+fitted function, not established market mechanics. Quantile prediction is a target
+that can use different learners, including LightGBM; claimed interval coverage
+needs assessment. First-target/first-stop timing requires appropriate competing-
+event semantics and sufficiently resolved data. Bayesian uncertainty, regularization,
+neural models and RL have task-specific assumptions/costs; neither automatic
+validity nor categorical rejection follows from their label. Use the smallest
+suitable established implementation for the required output, with unchanged
+source/fitting/exposure/scientific controls. No additional model, numeric profile,
+mandatory model ladder, benchmark, runtime capability or priority change is adopted.

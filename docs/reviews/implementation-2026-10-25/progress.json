@@ -12231,5 +12231,143 @@
     "next_action": "Use the designated tool through the smallest qualified adapter when an actual hypothesis task calls for it, preserving D100/A1-A5 and active frozen studies. Resolve genuinely new target/numerical/evaluation meanings when encountered; routine implementation choices remain autonomous.",
     "unverified": "No LightGBM fit/predict adapter, model training/replay, scientific admission, comparison, profitability or other model-family benefit was executed. Concurrent native changes are outside these checks.",
     "rollback": "Unselect future use via D008/D026 while preserving this approval, original claims, learned artifacts, prior versions, exposure, failures and charges."
+  },
+  "estimator_selection_clarification_2026_11_03": {
+    "status": "ADOPTED_D102_CLARIFICATION",
+    "decision": "D102",
+    "source": "SESSION-2026-11-03-ESTIMATOR-SELECTION",
+    "approval_message": "einverstanden",
+    "antecedent": "The immediately preceding qualified assistant review of the subsequent Claude model list in this chat, not the unqualified model ranking itself.",
+    "recorded_at_utc": "2026-11-03T09:22:03.895065+00:00",
+    "review_base": "9fab75d",
+    "changed_files": [
+      "docs/architecture/02_DECISION_REGISTER.md",
+      "docs/architecture/ARCHITECTURE_REGISTER.json",
+      "docs/architecture/06_MASTER_ARCHITECTURE.md",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+      "docs/reviews/implementation-2026-10-25/progress.json"
+    ],
+    "approved_scope": [
+      "Choose estimator by required statement/output, assumptions, inspectability, usefulness, cost and reusable implementation; no fixed model ladder or model zoo.",
+      "Regression coefficients have model-specific scales; logistic interactions are not automatically conditional-minus-scope, and zero is not universal absence of useful information.",
+      "EBM shapes describe the fitted predictor; interpretability is inspection support, not causal/scientific/economic certification.",
+      "Quantile regression is an output target supported by different learners including LightGBM; claimed interval coverage needs assessment.",
+      "First-target/first-stop timing requires competing-event semantics and sufficiently resolved data; coarse bars cannot supply unobserved ordering.",
+      "Regularization and Bayesian/neural/RL labels imply neither automatic validity nor categorical rejection; their assumptions and costs depend on task.",
+      "LightGBM remains the D102 interchangeable tool. The new model ranking, first-post-v0 schedule, additional implementation, benchmark, profile, installation and training are not adopted."
+    ],
+    "documentation_checks": {
+      "system_model": {
+        "status": "PASS",
+        "exit_code": 0,
+        "checked_files": 22,
+        "checks": {
+          "local_links": 883,
+          "source_files": 5,
+          "decisions": 102,
+          "preserved_original_decisions": 67,
+          "preserved_approved_decisions": 68,
+          "preserved_rejections": 47,
+          "traced_requirements": 30,
+          "generator_acceptance_specs": 3,
+          "diagram_edges": 38,
+          "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+          "preexisting_file_inventory": "Not checked; rerun with retained --baseline inventory",
+          "git_diff_check_exit": 0
+        },
+        "baseline_files": null,
+        "local_document_links": null,
+        "errors": []
+      },
+      "retail_contract": {
+        "status": "PASS",
+        "exit_code": 0,
+        "checked_files": 27,
+        "checks": {
+          "local_links": 883,
+          "source_files": 5,
+          "decisions": 102,
+          "preserved_original_decisions": 67,
+          "preserved_approved_decisions": 68,
+          "preserved_rejections": 47,
+          "traced_requirements": 30,
+          "generator_acceptance_specs": 3,
+          "diagram_edges": 38,
+          "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+          "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+          "git_diff_check_exit": 0,
+          "later_approved_changed_paths": {
+            "REVIEWING.md": "D086 / agent-inquiry/1.0",
+            ".gitattributes": "October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes"
+          },
+          "adoption_baseline_files": 63,
+          "preexisting_files_unchanged": 44,
+          "archived_documents_exact": 20,
+          "preserved_preapproval_decisions": 70,
+          "full_historical_definition_review_generator_texts": 3,
+          "approved_policy_sections_exact_except_status_words": 15,
+          "scoped_open_dispositions_and_acceptance_mappings": 15,
+          "adoption_decision_status_counts_D001_D085": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 63,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          },
+          "decision_status_counts": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 80,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          }
+        },
+        "baseline_files": null,
+        "local_document_links": null,
+        "errors": []
+      },
+      "implementation": {
+        "status": "PASS",
+        "exit_code": 0,
+        "checked_files": 0,
+        "checks": {},
+        "baseline_files": 103,
+        "local_document_links": 1051,
+        "errors": []
+      }
+    },
+    "focused_preservation": {
+      "status": "PASS",
+      "decision_count_unchanged": 102,
+      "all_prior_decision_fields_preserved": true,
+      "original_D102_text_preserved": true,
+      "D100_governing_priority_unchanged": true,
+      "scientific_contract_unchanged": true,
+      "current_prior_and_concurrent_progress_preserved": true,
+      "concurrent_progress_roots": [
+        "scientific_information_profile_2026_11_02"
+      ]
+    },
+    "checked_working_file_sha256": {
+      "docs/architecture/02_DECISION_REGISTER.md": "ef8d340c179043ecafbb0a9663ec29ee9608925eebd057ddfc1a7bb606403766",
+      "docs/architecture/ARCHITECTURE_REGISTER.json": "5a019851825c48ff4cd010b326d517dc4923c48aa73ebfa7250a6bc03c8e0673",
+      "docs/architecture/06_MASTER_ARCHITECTURE.md": "c639d4107383a76f0add7c4c50412a5282c3372badf9b9f80f9fd900a921cc55",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "b4428d8d54227b958284cfb7d66f1e3b0d1346e77757ad789e1e85e63414348a",
+      "docs/architecture/CURRENT_STATE.md": "6e420a6d8fd0db211d5e4a3d150c5c85d97f724f45ccc7ef49f8339f20f4ac92",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "eb9f7b6bb8427808b12fed1144bc4f403c977aa266125091a9ec66117df1dcf2"
+    },
+    "construction_tradeoff": "Seven existing records only; no new decision ID, contract/profile, document series, helper, model, dependency or experiment. Preserve active native code/test/AUX work and stage only this clarification in the shared progress file. Billed effort was not measured.",
+    "next_action": "Apply task-specific choice within the existing D102 actual-caller contract; keep D100/A1-A5 and authorized priorities. Do not turn model selection into an additional research program.",
+    "unverified": "Documentation adoption only. No additional model, forecast, inference, interval/event-data capability or economic benefit was implemented or empirically tested; concurrent native code is outside scope."
   }
 }

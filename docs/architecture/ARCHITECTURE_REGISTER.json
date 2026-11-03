@@ -2321,7 +2321,15 @@
       ],
       "acceptance_basis": "Direct user reply \"akzeptiert. machen wir so\" to the preceding qualified assistant review; scope and approved-reply content transcription retained in lightgbm-component-approval-2026-11-03.json. Earlier unqualified Claude comparison/refutation claims are not adopted.",
       "normative": true,
-      "change_control": "D008/D026/D101. A general architectural tool choice selects no installed/pinned release, fitted model, fit/predict/scientific admission, target/profile/numeric rule, spending or resource/capital authority. Qualify the smallest owned adapter and actual caller when required. D100/A1-A5 and frozen studies/prompts remain. Rollback preserves source/model/exposure/failure/charge history."
+      "change_control": "D008/D026/D101. A general architectural tool choice selects no installed/pinned release, fitted model, fit/predict/scientific admission, target/profile/numeric rule, spending or resource/capital authority. Qualify the smallest owned adapter and actual caller when required. D100/A1-A5 and frozen studies/prompts remain. Rollback preserves source/model/exposure/failure/charge history.",
+      "clarifications": [
+        {
+          "id": "D102-estimator-selection/1",
+          "source": "SESSION-2026-11-03-ESTIMATOR-SELECTION",
+          "status": "ACCEPTED",
+          "scope": "Choose the required statement/output and suitable estimator by assumptions, inspectability, usefulness and cost. No fixed model ladder/zoo, no model-family label as validity or rejection, and no replacement of hypothesis/estimand by a coefficient or fitted curve. Quantiles are an output target; event ordering needs competing-event/data semantics. LightGBM remains interchangeable; no new installed model/profile/study or priority change."
+        }
+      ]
     }
   ],
   "rejections": [
@@ -3453,6 +3461,13 @@
       "date": "2026-11-03",
       "record": "02_DECISION_REGISTER.md#d102--direct-lightgbm-as-an-interchangeable-forecast-component",
       "scope": "Direct LightGBM forecast-component design choice with four adopted qualifications; variant A suitable, no mandatory comparison branch or first-post-v0 schedule. Approval content transcription, user answer and limits retained in linked implementation approval record."
+    },
+    {
+      "id": "SESSION-2026-11-03-ESTIMATOR-SELECTION",
+      "kind": "direct_user_approval",
+      "date": "2026-11-03",
+      "record": "02_DECISION_REGISTER.md#d102--direct-lightgbm-as-an-interchangeable-forecast-component",
+      "scope": "User reply \"einverstanden\" approves the qualified review of the later model list: task-specific interchangeable tools, interpretability distinct from evidence, no mandatory ordering or new implementations. Existing progress record retains scope and checks."
     }
   ],
   "decision_resolutions": [

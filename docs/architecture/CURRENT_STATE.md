@@ -41,8 +41,11 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   generation survives a replay failure, parent cancellation kills/reaps, and
   malformed or unacknowledged results acquire no phase. Numerical transport uses
   explicit test seams; this is no numerical/current-runtime admission. Public native
-  advance remains denied. Next: typed numerical result/proof/retry integration,
-  actual reserved caller, fixed32-reference serial/parallel acceptance and A2/A3.
+  advance remains denied. The [reserved numerical caller](../../tests/fixtures/native-reserved-attempt-checks-2026-11-03.zip)
+  now passes 19 independent methods: owned clock classification, full-byte retry
+  comparison, post-error currentness, stop and uncertain restart. Native numerical
+  answers and qualification remain disclosed test seams; actual admission is open.
+  Next: the admitted controller, fixed 32-case serial/parallel acceptance and A2/A3.
   No numerical acceptance or native series has started; no general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation
@@ -68,6 +71,13 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   remains separate. This selects no installed/qualified model or study and opens
   no comparison branch. D100/A1-A5 and existing priorities remain; the [same plan](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#direct-lightgbm-component-approval-november-3-2026)
   binds use through the next actual affected caller.
+
+- **Estimator choice clarified under D102 (November 3):** the user's "einverstanden"
+  approves task-specific, interchangeable estimators and interpretability as a
+  selection/inspection criterion, not a scientific verdict or fixed model ladder.
+  The [architecture clarification](06_MASTER_ARCHITECTURE.md#task-specific-estimator-selection-under-d102)
+  retains output/estimand/uncertainty/event-data distinctions. No additional model
+  implementation or research branch is selected; D100 priority remains.
 
 - **Construction tradeoffs (November 3):** apply the [approved quality/effort rule](../../AGENTS.md#codex-construction-workflow)
   and execution-plan/0.7: meet binding requirements with proportionate total effort, justify substantial

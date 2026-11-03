@@ -75,6 +75,18 @@ are not automatically delegated to a forecasting model. Existing scientific/data
 resource gates and numerical profiles remain. No fit/predict route or D102 runtime
 qualification is supplied by this specification adoption.
 
+### Approved estimator-choice clarification
+
+D102's interface is task-specific and interchangeable, not a fixed sequence from
+regression through EBM and quantile/survival methods to LightGBM. Select the output
+and estimand first; distinguish model family, learning procedure and prediction
+target. Interpretability supports diagnosis but does not establish evidence.
+Retain original hypothesis meaning, fitted-function/parameter scale and applicable
+uncertainty/coverage assumptions. A first-event target requires explicit competing-
+event and data-resolution semantics. Additional model families remain possible
+reuse candidates, not installed or qualified capabilities. Existing review of new
+scientific meanings and independent caller qualification remain unchanged.
+
 ## Interface contracts
 
 Names below identify owned contracts; they are not promises about third-party APIs.
@@ -401,3 +413,14 @@ parent-only Event cancellation reuses subprocess kill/bounded reap without
 altering the numerical request or time callback. These transport controls do
 not classify numerical deadlines, admit retries or establish overall series
 cancellation/current-runtime/scientific readiness.
+
+The [reserved caller evidence](../../tests/fixtures/native-reserved-attempt-checks-2026-11-03.zip)
+checks the next host-only consumer through 19 independent methods. An existing
+final reservation selects the owned input/world and exact native transport.
+Dispatch provenance, post-error qualification and full-generation/stream retry
+comparison prevent bookkeeping labels or partial files from becoming numerical
+authority. Fatal/unknown/resource failures stop dispatch; a bounded custody
+serialization error still retains raw outputs and receives failed settlement.
+The public final advance remains denied. Real native qualification, fixed full
+32-case serial/parallel acceptance, the admitted controller, full-copy/recovery
+proofs and A2/A3 remain required before the actual series.

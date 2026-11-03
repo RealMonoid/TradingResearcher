@@ -252,6 +252,23 @@ meaning must be concrete before qualifying the adapter. This is a general design
 choice, not an installed/qualified model, study launch or new workstream. Existing
 v0/native priorities, active frozen profiles, D100/A1-A5 and resources remain.
 
+### Task-specific estimator selection under D102
+
+The user-approved November 3 clarification chooses estimators by the actual
+required statement/output, assumptions, inspectability, cost and reusable
+implementation. Regression with defined interactions, GAM/EBM, boosted trees,
+quantile targets or time-to-event/competing-event methods address different needs;
+these are possible tools, not a required sequence or an adopted model zoo.
+LightGBM remains interchangeable. Quantile regression can itself use LightGBM.
+
+Readable coefficients/curves support inspection but do not by themselves certify
+the original hypothesis, causal meaning, calibrated uncertainty or net policy
+value. Keep the estimand's scale and original meaning: coefficient testing does
+not silently replace conditional-minus-scope. Interval coverage, event ordering
+and data resolution require their own applicable checks. No blanket model-family
+ban or automatic Bayesian/regularization validity is introduced. This clarification
+creates no dependency installation, study, new statistical profile or workstream.
+
 ## D100 bounded native calibration execution
 
 [D100/A1–A5](02_DECISION_REGISTER.md#d100--native-parallel-calibration-with-bounded-acceptance)

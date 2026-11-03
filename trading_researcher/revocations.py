@@ -19,7 +19,7 @@ REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','populatio
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
     'development-information-study-attempt/1','evaluator-calibration-attempt/1','development-measurement/1',
     'development-population-family/1','family-study-attempt/1','family-calibration-attempt/1'}
-RESULT_INPUTS|={'native-information-study-attempt/1','native-family-study-attempt/1'}
+RESULT_INPUTS|={'native-information-study-attempt/1','native-family-study-attempt/1','native-family-calibration-attempt/1'}
 
 
 def version_selector(artifact):
@@ -142,8 +142,9 @@ class DependencyRevocations:
         if schema in REQUEST_INPUTS:
             request=body['request']
             return [request[k] for k in ('plan_id','execution_id','diagnostics_id','native_qualification_id') if k in request]
-        if schema in ('evaluator-calibration-input/1','family-calibration-input/1'):
-            return [body['request']['development_study_id'],*body.get('development_continuation_ids',[])]
+        if schema in ('evaluator-calibration-input/1','family-calibration-input/1','native-family-calibration-input/1'):
+            return [body['request']['development_study_id'],*body.get('development_continuation_ids',[]),
+                *([body['request']['native_qualification_id']] if schema=='native-family-calibration-input/1' else [])]
         if schema=='development-measurement-input/1':return [body['request']['snapshot_id']]
         if schema=='study-resource-continuation/1':
             return [body['request']['study_id']]+([body['previous_continuation_id']] if body['previous_continuation_id'] else [])

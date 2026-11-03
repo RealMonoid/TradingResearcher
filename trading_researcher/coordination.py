@@ -150,6 +150,8 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
             from .native_study_runs import NativeInformationStudies, NativeFamilyStudies
             NativeInformationStudies(self)._recover_information_studies()
             NativeFamilyStudies(self)._recover_information_studies()
+            from .native_study_runs import NativeFamilyCalibrationStudies
+            NativeFamilyCalibrationStudies(self)._recover_information_studies()
         except BaseException:
             self.close()
             raise
@@ -194,6 +196,17 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
         return dict(row)
 
     def call(self, token, op, **args):
+        if op in ('prepare_native_family_calibration', 'advance_native_family_calibration',
+                  'inspect_native_family_calibration'):
+            from .native_study_runs import NativeFamilyCalibrationStudies
+            runner = NativeFamilyCalibrationStudies(self)
+            if op.startswith('prepare_'):
+                return runner._prepare_information_study_external(token, args)
+            if set(args) != {'calibration_id'}:
+                raise Invalid('Exact native family calibration identity required')
+            method = (runner._advance_information_study_external if op.startswith('advance_') else
+                      runner._inspect_information_study_external)
+            return method(token, {'study_id': args['calibration_id']})
         if op in ('prepare_native_information_study', 'advance_native_information_study', 'inspect_native_information_study',
                   'prepare_native_family_study', 'advance_native_family_study', 'inspect_native_family_study'):
             from .native_study_runs import NativeInformationStudies, NativeFamilyStudies
@@ -214,7 +227,7 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
             from .binding import require
             from .calibration_runs import CalibrationStudies
             from .family_study_runs import FamilyStudies, FamilyCalibrationStudies
-            from .native_study_runs import NativeInformationStudies, NativeFamilyStudies
+            from .native_study_runs import NativeInformationStudies, NativeFamilyStudies, NativeFamilyCalibrationStudies
             with self._mutex:
                 self._binding_owner(token)
                 require(type(args.get('study_id')) is str,'Study identity required')
@@ -224,7 +237,8 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
                 runners={'information-study-input/1':self,'family-study-input/1':FamilyStudies(self),
                     'evaluator-calibration-input/1':CalibrationStudies(self),'family-calibration-input/1':FamilyCalibrationStudies(self),
                     'native-information-study-input/1':NativeInformationStudies(self),
-                    'native-family-study-input/1':NativeFamilyStudies(self)}
+                    'native-family-study-input/1':NativeFamilyStudies(self),
+                    'native-family-calibration-input/1':NativeFamilyCalibrationStudies(self)}
                 require(schema in runners,'Owned study input required')
                 return runners[schema]._continue_study_external(token,args)
         if op in ('prepare_family_study','advance_family_study','inspect_family_study',
@@ -443,7 +457,8 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
             seen.add(current['id']);body=current.get('body')
             if type(body) is dict and str(body.get('schema','')).startswith(
                     ('evaluator-calibration-input/','evaluator-calibration-attempt/',
-                     'family-calibration-input/','family-calibration-attempt/')):
+                     'family-calibration-input/','family-calibration-attempt/',
+                     'native-family-calibration-input/','native-family-calibration-attempt/')):
                 raise Denied('Reserved final calibration and its descendants are unavailable to research roles')
             if not allow_private_targets and type(body) is dict and body.get('schema')=='protected-data-binding/1':
                 raise Denied('Private target bindings and their descendants are unavailable to research roles')

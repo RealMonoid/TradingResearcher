@@ -26,13 +26,14 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   report actual causes. G1/G2 are deferred and G9 withdrawn. During the fixed
   series continue permitted technical v0 on2020–2023 without mutating its source;
   science/2024 and full project exits remain gated. Exact [approval/source](../reviews/implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json).
-  Process-control subset checked:23 independent tiny-process/transport cases,
-  17 final-source transport regressions and12 legacy normalization cases pass.
-  Controlled launches bind one-thread environment/below-normal priority; copied
-  input corruption overrides timeout, and failed kill/reap keeps usage unknown.
-  [Exact bounded evidence](../../tests/fixtures/native-process-control-checks-2026-11-03.zip)
-  grants no retry or current native qualification. Next: explicit final input
-  adapter, shared bounded ledger and consuming retry/monitoring controller.
+  Bounded components checked:23 process-control and18 final-input independent
+  cases pass, with17 transport/12 normalization/19 native-binding/3 family-series
+  regressions at their recorded versions/scopes. [Process evidence](../../tests/fixtures/native-process-control-checks-2026-11-03.zip)
+  retains the corrected integrity/unknown-use failures. [Input evidence](../../tests/fixtures/native-final-input-checks-2026-11-03.zip)
+  binds final identity/cases/counts/seeds and typed dependencies through genuine
+  disposable Registry callers; native membership/numerical development are test
+  seams. Public advance/legacy continuation stay denied. Next: shared bounded
+  ledger, old-charge carry and consuming retry/currentness/monitoring controller.
   No numerical acceptance or native series has started; no general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation

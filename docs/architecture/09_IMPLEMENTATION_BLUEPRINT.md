@@ -314,8 +314,12 @@ separate and incomplete.
 
 ## D100 native final-series integration
 
-The existing qualified native selector is a development capability, not an
-implemented native final-series API. [D100](02_DECISION_REGISTER.md#d100--native-parallel-calibration-with-bounded-acceptance)
+The native selector has development capabilities and bounded final-input
+preparation/inspection; final execution remains guarded pending the concurrent
+ledger and admitted controller. The [18-case input evidence](../../tests/fixtures/native-final-input-checks-2026-11-03.zip)
+checks explicit final identity/case/count/seed bindings and D083/research isolation
+with trusted native-membership/development seams, not actual binary or final
+scientific qualification. [D100](02_DECISION_REGISTER.md#d100--native-parallel-calibration-with-bounded-acceptance)
 authorizes the smallest separately versioned final adapter and bounded concurrent
 caller through existing Registry, runtime/cache, exact factory, full-stream/replay
 and storage owners. Preserve final request/identity, source/case/development/count

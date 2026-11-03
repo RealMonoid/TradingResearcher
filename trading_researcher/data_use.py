@@ -96,7 +96,8 @@ def prior_knowledge(broker, formalization):
             unresolved.add(identity);continue
         artifact=broker._artifact(identity);seen.add(identity)
         body=artifact['body'];schema=body.get('schema') if type(body) is dict else None
-        if artifact['data_class']=='assessment' or schema in ('evaluator-calibration-input/1','evaluator-calibration-attempt/1'):
+        if artifact['data_class']=='assessment' or schema in ('evaluator-calibration-input/1','evaluator-calibration-attempt/1',
+                'native-family-calibration-input/1','native-family-calibration-attempt/1'):
             protected.add(identity)
         if artifact['data_class']=='operations':
             owned=artifact['creator']==artifact['origin']=='controller'

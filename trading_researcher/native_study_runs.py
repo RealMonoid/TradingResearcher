@@ -6,7 +6,7 @@ from .codec import canonical, digest, text
 from .data_use import prior_knowledge, protected_knowledge_gaps
 from .errors import Conflict, Denied
 from .evaluation_plans import source_bundle, footprint
-from .family_study_runs import FamilyStudies
+from .family_study_runs import FamilyStudies, FamilyCalibrationStudies
 from .native_qualification import NativeQualifications
 from .native_qualification_profile import PROFILE
 from .native_runtime import NativeRuntimes, _identity
@@ -70,11 +70,17 @@ class NativeStudyInputs:
     def _study_capture_source(self, request):
         return _project_source(self._qualified(request))
 
+    def _native_case_blob(self, request):
+        return self._artifact(request['execution_id'])['body']['result']['case_blob']
+
+    def _study_process_control(self):
+        return None
+
     def _study_extra_input(self, request, manifest):
         qualified = self._qualified(request)
         source = _project_source(qualified)
         common = set(footprint(source).values())
-        common.add(self._artifact(request['execution_id'])['body']['result']['case_blob']['sha256'])
+        common.add(self._native_case_blob(request)['sha256'])
         descriptors = [qualified['runtime']['body']['archive'],
                        *qualified['source_package']['body']['files'].values(),
                        *qualified['certificate']['body']['output_blobs'].values()]
@@ -116,8 +122,12 @@ class NativeStudyInputs:
         remaining()
         self._qualified(request, runtime_directory=directory)
         selected = {'binding': study['body']['native_binding'], 'directory': str(directory)}
+        options = {}
+        control = self._study_process_control()
+        if control is not None:
+            options['_control'] = control
         return study_runs.execute_attempt(source, payload, manifest, world, cases, remaining,
-                                          meter, outputs, _native=selected)
+                                          meter, outputs, _native=selected, **options)
 
     def _study_after_execute(self, study):
         # The common caller retains the returned result/proofs before checking
@@ -139,3 +149,57 @@ class NativeFamilyStudies(NativeStudyInputs, FamilyStudies):
     _study_input_schema = 'native-family-study-input/1'
     _study_result_schema = 'native-family-study-attempt/1'
     _study_authority = 'native_development_joint_family_study_not_scientific_admission'
+
+
+class NativeFamilyCalibrationStudies(NativeStudyInputs, FamilyCalibrationStudies):
+    """Explicit final inputs; execution waits for the bounded admitted caller.
+
+    NativeStudyInputs owns runtime retention/transport, while the final owner
+    owns semantic identity, completed development and reserved count/seed rules.
+    Neither development request fields nor its execution_id hook apply here.
+    """
+    _study_input_schema = 'native-family-calibration-input/1'
+    _study_result_schema = 'native-family-calibration-attempt/1'
+    _study_authority = 'conditional_native_joint_family_calibration_not_scientific_admission'
+    _study_request_fields = FamilyCalibrationStudies._study_request_fields | {'native_qualification_id'}
+    _calibration_identity_schema = 'native-joint-family-final-identity/1'
+
+    def _study_identity(self, request):
+        return FamilyCalibrationStudies._study_identity(self, request)
+
+    def _study_existing_request(self, existing, request):
+        def fixed(value):
+            return {key: item for key, item in value.items()
+                    if key not in ('key', 'development_study_id', 'native_qualification_id')}
+        if digest(fixed(existing['body']['request'])) != digest(fixed(request)):
+            raise Conflict('Native final series already binds seed, budget, cost and applicability; no reset')
+        NativeStudyInputs._study_existing_request(self, existing, request)
+
+    def _native_case_blob(self, request):
+        development, _ = self._development(request)
+        return development['body']['payload']['case_blob']
+
+    def _study_process_control(self):
+        from .study_process_control import ProcessControl
+        return ProcessControl()
+
+    def _study_extra_input(self, request, manifest):
+        extra = super()._study_extra_input(request, manifest)
+        return {**extra, 'process_control': self._study_process_control().request()}
+
+    def _study_before_execute(self, study):
+        super()._study_before_execute(study)
+        require(canonical(study['body']['process_control']) == canonical(self._study_process_control().request()),
+                'Native final process-control policy differs')
+
+    def _advance_information_study_external(self, token, args):
+        with self._mutex:
+            self._binding_owner(token)
+            require(set(args) == {'study_id'}, 'Exact native final identity required')
+            self._study(args['study_id'])
+            raise Denied('Native final execution requires the admitted bounded controller and resource ledger')
+
+    def _continue_study_external(self, token, args):
+        with self._mutex:
+            self._binding_owner(token)
+            raise Denied('Native final allocation requires its bounded resource ledger; no legacy continuation')

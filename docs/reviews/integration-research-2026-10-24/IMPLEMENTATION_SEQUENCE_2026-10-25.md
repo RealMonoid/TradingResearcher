@@ -95,6 +95,24 @@ qualification, real parallel numerical acceptance and all final admission remain
 pending. Environment-variable/priority observations do not measure vendor thread
 counts or establish a hard OS resource quota.
 
+**Final-input slice closeout (November 3):** explicit native final request and
+semantic identity now reuse the existing FamilyCalibration owner; retained case
+bytes come from completed development, while current qualified native source and
+fixed process controls remain separately bound. Both seed roles and world IDs
+include reserved, unexecuted native final inputs in the shared collector. Typed
+dependencies, namespace/research isolation, idempotency/alias limits, atomic
+failure and complete backup/restore pass18 independent cases;19 native-binding
+and3 existing family-series regressions pass. The [input capsule](../../../tests/fixtures/native-final-input-checks-2026-11-03.zip)
+states qualification/numerical seams and retained early API/fixture failures.
+Only disposable fixtures prepared inputs; the actual old Registry remains20
+Scalar attempts and zero native final artifacts. Public native advance and
+legacy continuation explicitly refuse until the bounded ledger/admitted caller
+exists. Next: carry all applicable prior fees, atomic six-slot reservations,
+known-timeout retry/currentness/withdrawal/restart and consuming A2/A3 controls,
+then the fixed numerical/source/seed/capacity acceptance. No new approval wait,
+actual final seed reservation, numerical native acceptance or series follows from
+this input-only result. A4's construction deadline remains unchanged.
+
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
 M1's existing genuine development witness is now reconciled, including its

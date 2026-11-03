@@ -148,3 +148,32 @@ Primary texts were inspected in the preceding research and refreshed on October 
 | [Howard et al., Annals of Statistics 2021; arXiv v9](https://arxiv.org/abs/1810.08240v9) | Abstract and journal metadata: time-uniform confidence sequences under stated conditions | No full proof audit or market-specific sequential policy adopted. |
 
 Ambroise and McLachlan's 2002 feature-selection paper was inspected during the preceding literature discussion, but its author-hosted PDF timed out during this refresh. The nested-selection explanation above uses the accessible Varma-Simon source; this refresh makes no new claim of access to the unavailable PDF.
+
+## D101 evaluation across contextual trading research
+
+D101 / [contextual-trading-methodology/1.0](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
+adopts the complete contextual methodology without replacing the historical
+scientific text or research-contract/1.0 numerical profiles. Evaluate separately:
+measurement correctness and availability; the empirical implication; actual
+forecast output meaning and performance; net policy value under execution/risk;
+and any claimed whole-process reliability. Probability calibration is required
+when that is the claimed output, not imposed on every ranking score.
+
+For an actual representation study, specify the task, comparator, information
+access, assessment/selection design and relevant usefulness/complexity criteria
+before assessment. Retain temporal interactions, path outcomes and all fitting,
+threshold, horizon and representation choices. Assessment-derived transformations
+or later feedback carry exposure into descendants; a refit does not erase it.
+Simple forecast/policy comparators are not the D015 rejected baseline generator.
+Interactions do not require each input to have independent standalone edge.
+
+Correct measurements, plausible auction-process explanations and criticism
+survival are distinct from predictive evidence. Forecast skill is distinct from
+net policy value; policy evidence does not establish its mechanistic premises.
+Keep negative/inconclusive/simple-representation results and complexity costs.
+A missing scientific profile remains an evaluation gap; this adoption supplies no
+new estimator, numeric hurdle, independence guarantee or causal identification.
+Evaluator-world calibration, forecast-probability calibration and economic/process
+qualification retain their separate scope. The [seven adopted cases](05_REQUIREMENTS.md#d101-contextual-trading-acceptance)
+remain specifications, not new executed evidence. Existing freeze, calibrated
+admission, cost basis, outcome maturation and intended-use controls still apply.

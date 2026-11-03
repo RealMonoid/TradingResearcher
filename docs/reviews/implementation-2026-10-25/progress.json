@@ -11868,5 +11868,196 @@
     "remaining_uncertainty": "The next actual task, numerical forecast/policy contract and empirical benefit remain unselected/unverified. Promptly research and resolve an actual semantic/run decision when it arises; this proposal creates no general approval wait for D100 or independent authorized work.",
     "next_action": "Use the sole-plan checkpoint at the next affected design boundary to reconcile one actual caller and select the smallest existing-package integration slice; retain the D100 priority, fixed sources and all scientific/data/resource gates.",
     "rollback": "Revise or revert only these documentation additions, retaining the user quotations, prior reasoning and all source/exposure/failure/resource history."
+  },
+  "contextual_trading_adoption_2026_11_03": {
+    "status": "ADOPTED_SPECIFICATION_RUNTIME_INTEGRATION_PENDING",
+    "decision": "D101",
+    "version": "contextual-trading-methodology/1.0",
+    "approval": "docs/reviews/implementation-2026-10-25/contextual-trading-approval-2026-11-03.json",
+    "approved_source": {
+      "path": "docs/reviews/implementation-2026-10-25/contextual-trading-proposal-2026-11-03.source",
+      "sha256": "446bc5ad8a5718ed1debc3e5e641100129d1b10f1cf2e3e148fe6d7f5a873452",
+      "bytes": 20150,
+      "encoding": "Original section bytes, unchanged",
+      "original_document": "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+      "original_document_sha256": "2c52b2ae3476e3a4f8fe223c415aa48e38f86d38d0ba43770b55fe2857566df8",
+      "review_commit": "d3a278b"
+    },
+    "source_message": "wir übernehmen den vorschlag komplett",
+    "recorded_at_utc": "2026-11-03T08:06:03.817017+00:00",
+    "review_base": "d3a278b",
+    "changed_files": [
+      "README.md",
+      "docs/architecture/01_PROBLEM_DEFINITION.md",
+      "docs/architecture/02_DECISION_REGISTER.md",
+      "docs/architecture/ARCHITECTURE_REGISTER.json",
+      "docs/architecture/04_DEFINITIONS.md",
+      "docs/architecture/05_REQUIREMENTS.md",
+      "docs/architecture/06_MASTER_ARCHITECTURE.md",
+      "docs/architecture/07_SCIENTIFIC_EVALUATION.md",
+      "docs/architecture/08_ENGINEERING_REVIEW.md",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+      "docs/architecture/11_OPEN_DECISIONS.md",
+      "docs/architecture/12_TRACEABILITY_MATRIX.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+      "docs/reviews/implementation-2026-10-25/progress.json",
+      "docs/reviews/implementation-2026-10-25/verify_implementation.py",
+      "docs/reviews/implementation-2026-10-25/contextual-trading-approval-2026-11-03.json",
+      "docs/reviews/implementation-2026-10-25/contextual-trading-proposal-2026-11-03.source"
+    ],
+    "scope": "Full canonical adoption of all proposal details, five existing-owner handoffs and seven acceptance cases. Specification adoption selects no new model/dependency/profile/numeric threshold/run or scientific/data/resource/capital authority; D100/A1-A5 priority remains.",
+    "canonical_updates": "Decision/source register, purpose, definitions, requirements, master architecture, scientific/engineering owners, blueprint, open dispositions, forward/reverse trace, README, sole plan0.9, handoff and discussion status.",
+    "documentation_checks": {
+      "system_model": {
+        "status": "PASS",
+        "exit_code": 0,
+        "checks": {
+          "local_links": 870,
+          "source_files": 5,
+          "decisions": 101,
+          "preserved_original_decisions": 67,
+          "preserved_approved_decisions": 68,
+          "preserved_rejections": 47,
+          "traced_requirements": 30,
+          "generator_acceptance_specs": 3,
+          "diagram_edges": 38,
+          "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+          "preexisting_file_inventory": "Not checked; rerun with retained --baseline inventory",
+          "git_diff_check_exit": 0
+        },
+        "checked_files": 22,
+        "baseline_files": null,
+        "local_document_links": null,
+        "errors": []
+      },
+      "retail_contract": {
+        "status": "PASS",
+        "exit_code": 0,
+        "checks": {
+          "local_links": 870,
+          "source_files": 5,
+          "decisions": 101,
+          "preserved_original_decisions": 67,
+          "preserved_approved_decisions": 68,
+          "preserved_rejections": 47,
+          "traced_requirements": 30,
+          "generator_acceptance_specs": 3,
+          "diagram_edges": 38,
+          "diagram_check_scope": "Edge structure and routing, not Mermaid rendering or executable scientific semantics",
+          "preexisting_file_inventory": "Checked against this adoption's preapproval inventory",
+          "git_diff_check_exit": 0,
+          "later_approved_changed_paths": {
+            "REVIEWING.md": "D086 / agent-inquiry/1.0",
+            ".gitattributes": "October 26 explicit GitHub publication: preserve exact runtime, fixture and evidence bytes"
+          },
+          "adoption_baseline_files": 63,
+          "preexisting_files_unchanged": 44,
+          "archived_documents_exact": 20,
+          "preserved_preapproval_decisions": 70,
+          "full_historical_definition_review_generator_texts": 3,
+          "approved_policy_sections_exact_except_status_words": 15,
+          "scoped_open_dispositions_and_acceptance_mappings": 15,
+          "adoption_decision_status_counts_D001_D085": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 63,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          },
+          "decision_status_counts": {
+            "NON_NEGOTIABLE": 1,
+            "ACCEPTED": 79,
+            "REJECTED": 1,
+            "CONDITIONALLY_ACCEPTED": 5,
+            "SUPERSEDED": 6,
+            "DEFERRED": 6,
+            "PROPOSED_ONLY": 1,
+            "AMBIGUOUS": 1,
+            "OPEN": 1
+          }
+        },
+        "checked_files": 27,
+        "baseline_files": null,
+        "local_document_links": null,
+        "errors": []
+      },
+      "implementation": {
+        "status": "PASS",
+        "exit_code": 0,
+        "checks": {},
+        "checked_files": 0,
+        "baseline_files": 103,
+        "local_document_links": 1036,
+        "errors": []
+      }
+    },
+    "focused_adoption_preservation": {
+      "status": "PASS",
+      "approved_source_bytes": 20150,
+      "approved_source_sha256": "446bc5ad8a5718ed1debc3e5e641100129d1b10f1cf2e3e148fe6d7f5a873452",
+      "complete_proposal_text_preserved_except_explicit_adoption_banner": true,
+      "all_100_prior_structured_decisions_preserved": true,
+      "forward_reverse_affected_requirement_rows": 25,
+      "adopted_acceptance_specs_not_executed": 7,
+      "append_only_owner_documents": 5,
+      "D100_governing_priority_and_A1_A5_preserved": true,
+      "retail_contract_unchanged": true,
+      "concurrent_progress_roots_preserved": [
+        "scientific_information_profile_2026_11_02"
+      ],
+      "concurrent_runtime_changes_excluded": [
+        "trading_researcher/binance_normalize.py",
+        "trading_researcher/native_study_runs.py",
+        "trading_researcher/study_process_control.py",
+        "trading_researcher/study_runs.py"
+      ],
+      "checked_document_hashes_stable_through_all_gates": true
+    },
+    "checked_working_file_sha256": {
+      "README.md": "e53959feb8dee41240a28c64cadbb18e763b535abc3cf24f9e29a4aab2be042c",
+      "docs/architecture/01_PROBLEM_DEFINITION.md": "07238a8272a206e6eb7b42a08d7a8f10cafadc69ffaaa0d594ebec963e686c32",
+      "docs/architecture/02_DECISION_REGISTER.md": "5f43d6ba48b6f0ee1381445cf60739b6e130dfdfbe1894a22b1a0334eac267b9",
+      "docs/architecture/ARCHITECTURE_REGISTER.json": "a88337592233a4cdb74fc6974bd0c544f4442570b44bc0ee838aac4c11a4ed00",
+      "docs/architecture/04_DEFINITIONS.md": "723258d6c9513f7006bf252bf66c7970f505a168962c194628ea3133c06be948",
+      "docs/architecture/05_REQUIREMENTS.md": "d337b90d5b98e9632fccfd80f8f174eed9c2805c25050ccae56e3a1bfec97a00",
+      "docs/architecture/06_MASTER_ARCHITECTURE.md": "dc56dba997cf4dbdf4bcd08ff32ca286a3217e15f6da67c1c370bc6e16ff31c7",
+      "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "5d00c549838e8108a90830589775aa6d94a6b8fc6ecfd836a6ec8b98d4511559",
+      "docs/architecture/08_ENGINEERING_REVIEW.md": "801309293b3f6f97c02c0d7cfb636baeafab6c32fb2e7f3205e77a999331d3ec",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "f1923f5c198c267990e3157e9ab901ab58c107adf8f514525a3c589d81f4dff0",
+      "docs/architecture/11_OPEN_DECISIONS.md": "28133cf014c7931c394a09a364e120c1ed2f237fa4c128d79e70b1e410d73d89",
+      "docs/architecture/12_TRACEABILITY_MATRIX.md": "490f420624c700a7266765884ecd41d9dd8f72e41463f69cef30fb16b23e01a1",
+      "docs/architecture/CURRENT_STATE.md": "039c2eb10e9f3ef91830217aff1e02b730b5310d7df818125b4965a03def42a3",
+      "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "64008831ee05f1d2ba0e426cdb2c0a07bb96c5925c0653b00ffa4e96108002df",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "d9de3a0b78a74951b5d01d3b932fc6ccdc828ccbe89500ed4a2f777e9c7cc8d3",
+      "docs/reviews/implementation-2026-10-25/verify_implementation.py": "00920729d524659630f1f689ada67b24c950c457ed3f9747e927d9413e53ca1d",
+      "docs/reviews/implementation-2026-10-25/contextual-trading-approval-2026-11-03.json": "f8923ba9f43d18df3ff378582f43dc84ce9f94b26624c91dc6c9c17b0814341d",
+      "docs/reviews/implementation-2026-10-25/contextual-trading-proposal-2026-11-03.source": "446bc5ad8a5718ed1debc3e5e641100129d1b10f1cf2e3e148fe6d7f5a873452"
+    },
+    "retained_initial_check_failure": {
+      "status": "FAIL",
+      "errors": [
+        "Unplanned baseline change: docs/architecture/01_PROBLEM_DEFINITION.md",
+        "Unplanned baseline change: docs/architecture/07_SCIENTIFIC_EVALUATION.md",
+        "Unplanned baseline change: docs/architecture/08_ENGINEERING_REVIEW.md",
+        "Unplanned baseline change: docs/architecture/11_OPEN_DECISIONS.md"
+      ],
+      "correction": "Add exactly these four explicitly D101-approved append-only owners to the existing implementation allowlist. All scientific policy/source/history/trace checks remain active. The initial combined inspection shell exit is not counted as a passing Python validation."
+    },
+    "retained_construction_corrections": [
+      "Two apply_patch context mismatches were rejected before mutation; exact anchors were corrected.",
+      "Structured register rebuilt with unchanged original mixed line endings and identical new entries.",
+      "An initially overbroad whole-native-section preservation assertion detected a legitimate concurrent attempt-custody closeout. No native progress was reverted; final checks bind unchanged governing D100/A1-A5 and preserve concurrent implementation evidence."
+    ],
+    "construction_tradeoff": "One author, seventeen existing files plus two approval/source artifacts, existing verifier entrypoints and inline validation only. No model/platform/helper-script build, paid call, native run or duplicate document series. Total billed construction effort was not measured.",
+    "concurrent_scope": "Native code, attempt-custody fixture/test, AUX draft and native additions to the shared plan/state/progress belong to the active builder; preserve them and exclude them from the adoption commit. Checked working hashes describe the actual reconciled workspace, including concurrent descriptive progress where present.",
+    "next_action": "Apply adopted handoffs and acceptance at the next affected safe caller/design slice through the sole plan while retaining D100 priority, pinned studies and all project gates. Research and promptly resolve actual missing scientific/run inputs when encountered.",
+    "unverified": "No D101 runtime acceptance case, forecast/regime/policy/process qualification, economic or complexity benefit was executed. Earlier seven-method checks remain historical. This adoption does not certify concurrent native changes.",
+    "rollback": "Version later changes under D008/D026; retain the full approval/source, historical schemas/definitions, source/exposure/failures and charges."
   }
 }

@@ -1,0 +1,41 @@
+{
+  "schema": "contextual-trading-approval/1",
+  "decision": "D101",
+  "adopted_version": "contextual-trading-methodology/1.0",
+  "status": "APPROVED",
+  "date": "2026-11-03",
+  "recorded_at_utc": "2026-11-03T07:48:10.949937+00:00",
+  "source": "Direct user message in this chat after the completed proposal and evidence-gate closeout; no message ID is available in the supplied conversation.",
+  "user_message": "wir übernehmen den vorschlag komplett",
+  "scope": "The complete November 3 contextual trading methodology proposal, including all details, five interface mappings, seven acceptance cases, preserved governance and its explicit limits. Approval-time proposed/future wording records the status before this adoption; capabilities remain unimplemented until separately checked.",
+  "proposal_source": {
+    "path": "docs/reviews/implementation-2026-10-25/contextual-trading-proposal-2026-11-03.source",
+    "sha256": "446bc5ad8a5718ed1debc3e5e641100129d1b10f1cf2e3e148fe6d7f5a873452",
+    "bytes": 20150,
+    "encoding": "Original section bytes, unchanged",
+    "original_document": "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md",
+    "original_document_sha256": "2c52b2ae3476e3a4f8fe223c415aa48e38f86d38d0ba43770b55fe2857566df8",
+    "review_commit": "d3a278b"
+  },
+  "canonical_pre_adoption_sha256": {
+    "README.md": "55aa375da256f7445ad7f787a91c0780d843d745765edf46fde68eb189b46099",
+    "docs/architecture/01_PROBLEM_DEFINITION.md": "7a84ce614728c3e00c3c7ad9525a4cccade451df40c8ea7e1f752eecf7963446",
+    "docs/architecture/02_DECISION_REGISTER.md": "9b771073776886cfca65f44dc84185c3189e84431440a9fcb086749b6f551040",
+    "docs/architecture/ARCHITECTURE_REGISTER.json": "dd7bc397cca44c66d973c3fe33aad284b68a07dafa969530920a1e00f33d512f",
+    "docs/architecture/04_DEFINITIONS.md": "128c6c809dafdb7f7d9c12760716a59881da84822c2b3d91475ceb23477cada1",
+    "docs/architecture/05_REQUIREMENTS.md": "2bb268d28cae40f579a4f34b58a4e0bc000ae5ddb0e066e6cea7063580a02581",
+    "docs/architecture/06_MASTER_ARCHITECTURE.md": "f86e3896907e7b3411955d1f638f8d682ff888aed6e4362d972ff06d3b3ef2ad",
+    "docs/architecture/07_SCIENTIFIC_EVALUATION.md": "2101ed27e1fbb7392d4a780d98244242e7d5dbee1292539e46bc9c09d5a5c8f9",
+    "docs/architecture/08_ENGINEERING_REVIEW.md": "334a0843ca4c9c302d28598f15569fda430573139907ca5b2a8590f5f4729f9c",
+    "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "c87f2473a5f3c625a6a22c0c7345c4d015ab601da6271809eec2bd69851bae69",
+    "docs/architecture/11_OPEN_DECISIONS.md": "68821a3875714847bf9b3e2738bbc07861438f72bc0eb0f1115f3d9ff506ed29",
+    "docs/architecture/12_TRACEABILITY_MATRIX.md": "ceb3aa0337ab30685d382724761ce25da9b680dde17985c8e9e2588387967a65",
+    "docs/architecture/CURRENT_STATE.md": "ee737e21b64537a26425176d136a666bd15703f9cd39f016a128fa812d6f1460",
+    "docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md": "2c52b2ae3476e3a4f8fe223c415aa48e38f86d38d0ba43770b55fe2857566df8",
+    "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "23eb205907539c2932f12d9da10ee13476969e974bc415acaa5c77747a1f95f2",
+    "docs/reviews/implementation-2026-10-25/progress.json": "2800ba9d5949752d65821b85e21f8d3ba817a31741801cff4d42618bb542b5a8",
+    "docs/reviews/implementation-2026-10-25/verify_implementation.py": "b1332e3714419a59bb0a33c90c82eb73f57d300ac5e9f97e5581f4030089ea7c"
+  },
+  "limits": "No dynamic state/regime requirement, compulsory three-stage ladder, known-mechanism gate, baseline hypothesis generator, selected dependency/model, changed numeric/scientific profile, resource increase, paid call, protected-data access or capital authority. D100/A1-A5 remains the current execution priority.",
+  "validation_scope": "Approval provenance only. Documentation/traceability checks and future runtime qualifications are separate and recorded in progress.json."
+}

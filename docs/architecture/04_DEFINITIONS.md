@@ -21,6 +21,21 @@ The scoped overlay does not replace a definition's unrelated fields. Section 1 o
 
 Additional optional resource overlay: D090 adopts [research-epoch-feedback-budget/1.0](19_RESEARCH_EPOCH_FEEDBACK_BUDGET.md) for exactly one feedback-informed development epoch. The 240,000-token/USD 1 exception remains within the existing USD 5 aggregate and does not change any scientific definition. Ordinary epochs retain D079's 80,000-token ceiling; attempts, exposure and usage cannot be reset.
 
+## D101 contextual trading terminology
+
+D101 adopts the [contextual-trading-methodology/1.0 clarification](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
+for subsequent affected designs. For DEF-005, distinguish a measured state from
+the fallible interpretation of forces producing it; neither implies a validated
+forecast. DEF-023 retains claim versus action-policy separation, including holding,
+exits, sizing and no action. DEF-028 retains explicit rule basis and parameter
+origin. Under DEF-030, Market Model denotes the qualified knowledge base, not a
+mandatory state estimator. DEF-013/025/031/032 keep availability, exposure,
+temporal development and completed-path versus decision-time inputs distinct.
+Scientific EvaluationPlan/evaluation policy is distinct from trading PolicySpec.
+Forecast outputs may be ranks, expectations, probabilities or paths; each must
+declare its actual meaning, horizon and units. This versioned clarification
+changes no historical definition bytes, frozen manifest, numeric profile or schema.
+
 ## Preserved reconstruction-1 (historical version)
 
 Additional optional primitive overlay: D089 adopts [bounded-math/1.0](18_BOUNDED_MATH_PRIMITIVES.md) for DEF-003–008/013/023/031–032. Exact complete-window medians and outcome-only natural logarithms with outward rational numerical bounds extend only explicitly versioned manifests. Existing scalar meanings, three-valued conditions, whole-scope denominators and research-contract/1.0 evidence rules remain intact. Legacy AST/source/result versions are preserved; approval does not establish implementation or scientific admission.

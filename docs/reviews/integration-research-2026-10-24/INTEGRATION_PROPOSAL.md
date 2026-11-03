@@ -879,6 +879,20 @@ The first implementation target remains the existing scientific freeze/allocatio
 
 ## November 3 proposal: hypothesis-led contextual trading methodology
 
+**ADOPTED IN FULL — D101 / contextual-trading-methodology/1.0.** After the proposal
+and its documentation closeout, the user explicitly replied "wir übernehmen den
+vorschlag komplett". The [approval record](../implementation-2026-10-25/contextual-trading-approval-2026-11-03.json)
+binds the exact [approval-time source bytes](../implementation-2026-10-25/contextual-trading-proposal-2026-11-03.source).
+The original proposal text below is preserved as the approved source discussion:
+its proposal-status labels describe approval time, not the current adoption state.
+All details, five handoff mappings, seven cases and limits are adopted. The
+[canonical architecture](../../architecture/06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology),
+[blueprint](../../architecture/09_IMPLEMENTATION_BLUEPRINT.md#d101-adopted-contextual-trading-handoffs)
+and [acceptance specifications](../../architecture/05_REQUIREMENTS.md#d101-contextual-trading-acceptance)
+implement that specification adoption. Historical implementation/check observations
+keep their recorded source/time scope; approval does not make them fresh runtime
+qualification. D100/A1-A5 and the existing scientific/data/resource boundaries remain.
+
 **Status and provenance:** discussion capture and integration proposal, prepared at
 `153a043a88d4f3483c2595356a78425a56e23b99` on `codex/architecture`. The direct user
 discussion on November 3, 2026 supplies the intent and final three-level framing

@@ -49,3 +49,21 @@ The [Blueprint](09_IMPLEMENTATION_BLUEPRINT.md) assigns these fields to existing
 OPEN-01 through OPEN-03 and OPEN-14 are now adopted for research-contract/1.0. Future material scientific changes remain subject to D008/D026, including new estimator meanings, automatic transport, truth-prior models, certification-envelope changes or live deployment authority. Any removal of the accepted goals must carry **GOAL CHANGE — USER APPROVAL REQUIRED**. No goal change was adopted here.
 
 Source recovery remains a separate factual task. Preserve old and new evidence and audit affected decisions if recovered material contradicts reconstruction; never synthesize missing acceptance or replace the archived bytes.
+
+## D101 contextual methodology disposition
+
+D101 adopts the complete [contextual-trading-methodology/1.0](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
+after the direct user approval "wir übernehmen den vorschlag komplett".
+The mechanics/implication/strategic-implementation framing, five handoffs and
+seven boundary acceptance specifications are resolved design commitments.
+The [exact approval record](../reviews/implementation-2026-10-25/contextual-trading-approval-2026-11-03.json)
+retains the proposal source and does not replace any OPEN-01 through OPEN-15
+resolution or approve new numerical meaning.
+
+Actual task/target/horizon, suitable comparator, forecast or rule version,
+fitting/selection data, economic/risk/complexity criteria and any dependency still
+need the relevant task-specific inputs and checks. No regime, state vector,
+particular model, Qlib/LEAN infrastructure or new instrument is required. These
+remaining inputs block dependent use only. D100/A1-A5 and authorized independent
+work continue; research and promptly resolve an actual missing decision when it
+arises, without a blanket approval wait or silent deferral.

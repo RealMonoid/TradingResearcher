@@ -2,6 +2,8 @@
 
 An autonomous market-research framework under construction: an LLM freely invents nontrivial hypotheses, preserves the original idea, formalizes executable claims, and submits them to independent deterministic evaluation. The goal is faster useful research and economically usable hypotheses after realistic costs. The LLM cannot judge its own empirical success.
 
+D101 adopts [hypothesis-led contextual trading methodology](docs/architecture/06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology): fallible mechanics hypotheses, testable trading implications and separately evaluated strategic implementation. Temporal interactions, simple task comparators and complexity costs matter; a dynamic regime/state model is not prescribed. The [complete approved discussion](docs/reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology) retains all details. Adoption is specification, not implemented forecast/policy capability; D100 remains the current execution priority.
+
 ## Start here
 
 1. Read the short [Current State](docs/architecture/CURRENT_STATE.md#resume-handoff).

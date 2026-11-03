@@ -27,6 +27,30 @@ Use a modular application with explicit ownership of context, discovery, formali
 
 Use one orchestrator that routes artifacts and enforces permissions, not one that selects scientific conclusions. Roles can be sequential in an engineering smoke test. Target independent discovery perspectives must later be demonstrated with separate state and identical allowed context; a one-agent smoke test is not proof of that requirement.
 
+## D101 adopted contextual trading handoffs
+
+D101 / [contextual-trading-methodology/1.0](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
+adopts the complete five-boundary mapping below. Extend existing envelopes and
+callers only for an actual bounded use; these are semantic requirements, not new
+public schemas, standalone services or implemented forecast/policy APIs.
+
+| Existing boundary | Required distinction and retained information |
+|---|---|
+| IF-01/02/03/04/08: observation to interpretation | Exact measurement definitions, sources and availability versus proposed forces, assumptions, alternatives and falsifying observations; retain H_idea/inquiry history. |
+| IF-03/04/05/07: interpretation to testable implication | H_exec condition/path claim, scope, horizon, task comparator, parameter/selection origin and EvaluationPlan; unsupported meaning remains a gap. |
+| CMP-01/03/04/06/08: qualified claim to usable forecast | Actual feature/source state, model/rule version, fitting sample/transforms/parameters and selection history when applicable, prediction time, target/horizon, output kind/units, scope, uncertainty and permitted-use evidence. Preserve the existing envelope/dependency closure. A historical conditional contrast is not automatically such a forecast. |
+| IF-06/07/10/11: implication or forecast to action | Exact information/version consumed and its availability, rule basis/assumptions, holdings/cash, entry/hold/exit/sizing/no-action behavior, costs and risk constraints. Use PolicySpec's separate freeze/trial/evaluation; resimulate changed position/cash/path interactions where required. |
+| IF-07/08/12/13: evaluation to future learning | Separate technical/inferential/predictive/economic outcomes; later eligible contexts inherit released observations, fallible interpretations, failures, complexity results and complete exposure. |
+
+For an actual representation investigation, bind the task, simple comparator and
+reproducible assessment before elaborating state/regime machinery. Interactions
+remain investigable without a positive isolated-feature prerequisite. Existing
+PIT/missingness/units, independent certification, frozen scientific criteria,
+selection and D087 intended-use checks remain. LEAN/Qlib concepts confer no
+dependency, numerical, data, execution or evidence authority. Version future
+handoffs; do not rewrite pinned studies or active researcher prompts. See the
+[seven adopted boundary cases](05_REQUIREMENTS.md#d101-contextual-trading-acceptance).
+
 ## Interface contracts
 
 Names below identify owned contracts; they are not promises about third-party APIs.
@@ -342,3 +366,14 @@ and fences replacements. Original and later failures remain separate. This
 qualifies bookkeeping under explicit test seams, not private caller-provided
 clock/currentness labels, actual numerical retry, a qualified runtime or final
 admission. The consuming native study controller and A2/A3 monitoring remain open.
+
+The [attempt custody evidence](../../tests/fixtures/native-attempt-custody-checks-2026-11-03.zip)
+adds23 independent phase/cancellation cases plus23 process/17 transport
+regressions. A one-use parent container binds immutable inputs and records each
+phase only after response/full-stream/source checks and finally input/output
+inventory. Its detached generation survives a later replay exception; raw
+computed-result files and malformed acknowledgements do not qualify. Exact
+parent-only Event cancellation reuses subprocess kill/bounded reap without
+altering the numerical request or time callback. These transport controls do
+not classify numerical deadlines, admit retries or establish overall series
+cancellation/current-runtime/scientific readiness.

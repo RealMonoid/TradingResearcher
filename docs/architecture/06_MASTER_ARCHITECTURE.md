@@ -1,5 +1,9 @@
 # Master Architecture
 
+D101 adopts [contextual-trading-methodology/1.0](#d101-contextual-trading-methodology)
+on November 3, 2026. Its complete approved discussion is retained with exact
+approval-time source bytes; specification and runtime evidence remain distinct.
+
 This reconstructs the source-backed target architecture. Component boundaries are logical responsibilities, not a commitment to twelve services or twelve agents. D071-D085 select a scoped persistence, adapter and semantic contract; runtime implementation and empirical validation remain absent. Read decisions, definitions and open issues together.
 
 The [Problem Definition](01_PROBLEM_DEFINITION.md) sets the linked goals of autonomous invention with independent evaluation and substantially accelerated discovery and testing (D001, D068). The workflow below retains progress from unsuccessful research as well as supported claims. Its information paths explain responsibilities; the versioned replacement for scoped new records is research-contract/1.0, while the legacy state machine remains preserved.
@@ -181,6 +185,51 @@ D096 reaffirms D069's purpose hierarchy: economically useful trading opportuniti
 ## Implemented infrastructure boundary
 
 The approved [local coordination slice](09_IMPLEMENTATION_BLUEPRINT.md#implemented-local-coordination-slice) now supplies a runnable task queue, immutable scoped artifacts, authenticated worker identities, fenced attempts and trusted operational completion checks. Its generic time/event triggers do not implement scientific checkpoints or report delivery. This is partial infrastructure for existing components, not a new scientific authority or a completed component graph. A task's technical completion cannot write an EvidenceRecord, activate a method or authorize capital. The [runtime guide](../../trading_researcher/README.md) and [verification](../reviews/LOCAL_COORDINATION_VERIFICATION_2026-10-24.json) state the exact implemented and tested boundary.
+
+## D101 contextual trading methodology
+
+**Authority:** D101 adopts the [complete contextual trading synthesis](../reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology)
+as `contextual-trading-methodology/1.0`. The user's full approval and exact source
+bytes are retained in the Decision Register. This elaborates the existing economic
+objective, free discovery and separate claim/policy evaluation; it selects no run.
+
+| Inquiry level | Meaning and handoff | Authority boundary |
+|---|---|---|
+| Market mechanics | CMP-01 supplies time-valid measurements; CMP-02 proposes which forces may be operating, retaining assumptions, alternatives and uncertainty in H_idea/inquiry history. | Aggressive selling with reduced downward progress is an observation/interpretation to test, not certified auction-process truth. Feature correctness does not prove the interpretation. |
+| Trading implication | CMP-03 specifies the conditional or path-dependent claim, horizon, comparator, scope, parameter origin and discriminating observations in H_exec, or preserves a gap. | Plausibility is not predictive evidence; an unavailable estimator does not justify replacing the original idea. |
+| Strategic implementation | CMP-09 specifies entry/hold/exit/sizing/no-action rules, consumed information, costs and risk; IF-10 freezes/tests the policy separately through CMP-04/05/06. | Predictive information does not establish net policy value, applicability or deployment authority. CMP-10 retains its separate responsibility. |
+
+These inquiry levels coexist with state/forecast/action software functions; they
+are not three required programs, trained models or sequential success gates.
+The existing CMP-08 Market Model remains the qualified knowledge base.
+EvaluationPlan remains scientific assessment, distinct from trading PolicySpec.
+
+For an actual representation study, define the task, suitable simple comparator
+and reproducible assessment first. Examine temporal development and interactions
+without prescribing a joint state or discrete regime. A few observed variables,
+continuous representation, explicit regimes or no useful regime classification
+are possible results. Standalone input effects and positive entry edge are not
+universal prerequisites. Theory-first, data-first and UNKNOWN-mechanism discovery
+remain valid; causal claims retain D011/D032's stronger commitments.
+
+Measurement conformance, inferential validity, predictive performance, probability
+calibration when claimed, net policy usefulness and whole-process qualification
+remain distinct. Assess the claimed outputs and additional data/estimation/
+selection/runtime/latency/maintenance burden using task-specific pre-outcome
+criteria. No universal score or new numerical threshold is adopted. Validation
+crosses these boundaries independently; it is not a mandatory fourth model.
+
+LEAN supplies a software-organization reference; Qlib supplies conceptual examples
+of feature preparation, forecasting and separate signal/portfolio evaluation.
+Neither is a required dependency or prescribes our scientific state representation.
+Reuse suitable components through owned contracts before custom building.
+The [blueprint handoffs](09_IMPLEMENTATION_BLUEPRINT.md#d101-adopted-contextual-trading-handoffs),
+[acceptance cases](05_REQUIREMENTS.md#d101-contextual-trading-acceptance) and
+[sole-plan checkpoint](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#contextual-trading-methodology-integration-proposal-november-3-2026)
+govern subsequent affected slices. Active frozen profiles, D100 execution priority,
+all seven package exits, source/exposure/resource history and scientific/protected-
+data/capital restrictions remain binding. Nasdaq and twelve-bar examples are
+illustrations, not adopted instrument, feature or horizon profiles.
 
 ## D100 bounded native calibration execution
 

@@ -1,6 +1,6 @@
 # Implementation sequence
 
-Date: November 3, 2026. Version: execution-plan/0.8 (approved native parallel calibration/A1–A5 replaces Scalar recovery; proportionate construction, full package exits, scientific contracts, D096 and existing resources retained).
+Date: November 3, 2026. Version: execution-plan/0.9 (D101 adopts the complete contextual trading methodology; D100 native parallel calibration/A1–A5 retains execution priority; full package exits, scientific contracts, D096 and existing resources retained).
 
 **Accepted scope remains binding.** The November1 updated user objective reiterates that accepted versioned specifications define the full functional scope; this plan orders implementation and must not silently narrow it. Tests and exploratory completion remain intermediate milestones.
 
@@ -670,7 +670,9 @@ remains; no duplicate audits,unchanged checks or new optimization branches.
 
 ## Contextual trading methodology integration proposal (November 3, 2026)
 
-The user's discussion is retained in the [existing integration proposal](INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology),
+**ADOPTED — D101 / contextual-trading-methodology/1.0.** The heading retains the
+proposal's original anchor. The user's full approval "wir übernehmen den vorschlag
+komplett" adopts the complete [existing integration proposal](INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology),
 including the final three inquiry levels: fallible market-mechanics hypothesis,
 testable trading implication and separately evaluated strategic implementation.
 It distinguishes state/forecast/action functions, the existing Market Model
@@ -681,14 +683,20 @@ comparator and reproducible evaluation; retain interactions, temporal developmen
 complexity costs and legitimate simple/negative results. This is no compulsory
 ladder or known-mechanism prerequisite for every freely invented hypothesis.
 
-**Proposal checkpoint, not execution-priority change:** preserve D100/A1-A5,
+**Approved integration checkpoint, not execution-priority change:** preserve D100/A1-A5,
 pinned sources, protected-data restrictions, all package exits and budgets. At the
-next affected design boundary, reconcile the proposed handoffs with existing
+next affected design boundary, apply the adopted handoffs through existing
 H_idea/H_exec, FeatureDefinition, EvaluationPlan and PolicySpec callers. Research
 and promptly resolve any actual missing semantic/run decision before dependent
 work; no new target, model, threshold, paid run or dependency is selected here.
-The existing proposal contains source quotes, scope, current gaps, proposed cases,
-versioning/rollback and the distinction between documented and executed checks.
+The [canonical handoffs](../../architecture/09_IMPLEMENTATION_BLUEPRINT.md#d101-adopted-contextual-trading-handoffs)
+and [seven adopted acceptance specifications](../../architecture/05_REQUIREMENTS.md#d101-contextual-trading-acceptance)
+are binding for subsequent affected slices; implementation and actual coverage
+remain separate. The exact approval-time source and user answer are retained in
+the [approval record](../implementation-2026-10-25/contextual-trading-approval-2026-11-03.json).
+Use one actual caller inside packages 1-6, not a preliminary dynamic-model or ML
+platform project. The five boundaries, complexity costs, versioning/rollback and
+all original source qualifications remain binding; approval grants no new run.
 
 ## Manufacturing milestones (approved November 2, 2026)
 

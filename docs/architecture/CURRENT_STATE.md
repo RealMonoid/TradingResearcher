@@ -12,7 +12,7 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   Sequence](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#current-execution-priority-october-31-2026)
   is the sole operational plan; current user instructions govern scope.
 
-- **Latest binding scope — D100 (November 3):** the [native parallel approval](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026)
+- **Current execution scope — D100 (November 3):** the [native parallel approval](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026)
   replaces Scalar option A. No Scalar retry was launched; its persistent driver
   stop sentinel is installed, and all old sources/results/errors/copies/fees remain.
   Implement one new exact native version with the full 2×4×256 inventory, fresh
@@ -45,13 +45,16 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without
   the user's explicit decision; dependent work waits, and existing authorizations remain binding.
 
-- **Contextual trading methodology proposal (November 3):** the [retained discussion and integration mapping](../reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology)
+- **Adopted contextual trading methodology — D101 (November 3):** the [complete adopted discussion and integration mapping](../reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology)
   preserve fallible mechanics hypotheses, testable trading implications and separate
   strategic evaluation, with temporal interactions, simple comparators and complexity
   costs. Regime/state models and Qlib/LEAN adoption are optional candidates, not
   prerequisites. The [same-plan checkpoint](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#contextual-trading-methodology-integration-proposal-november-3-2026)
-  records future reconciliation without changing D100 priority. This is a proposal,
-  not canonical adoption, a runtime capability or a new research/data-use grant.
+  binds subsequent affected slices without changing D100 priority. The full user
+  approval adopts `contextual-trading-methodology/1.0`; the [canonical architecture](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
+  and [seven acceptance specifications](05_REQUIREMENTS.md#d101-contextual-trading-acceptance)
+  are updated. Implementation, behavioral checks and empirical usefulness remain
+  open; no new research/data-use grant follows. Exact approval-time bytes are retained.
 
 - **Construction tradeoffs (November 3):** apply the [approved quality/effort rule](../../AGENTS.md#codex-construction-workflow)
   and execution-plan/0.7: meet binding requirements with proportionate total effort, justify substantial

@@ -94,3 +94,23 @@ The user approved a minimal Python/SQLite controller in `SESSION-2026-10-24-LOCA
 Executable counterexamples cover stale and foreign identities, unsupported completion, altered source types, wrong arithmetic, partial release and oversized responses. Real-process interruption checks committed versus uncommitted writes; a restored database preserves job/attempt state and requires the matching operator key. A synthetic CLI smoke run and the separate [verification record](../reviews/LOCAL_COORDINATION_VERIFICATION_2026-10-24.json) retain exact results. An independent code review identified Boolean/integer equality, unbounded status responses and very short leases; corrected cases have regression coverage.
 
 No paid model calls, package installations, data acquisition or scientific experiment were needed. The loopback capability surface assumes a trusted OS/operator and trusted installed Python handlers. It does not sandbox unrestricted worker shell access, certify supplied-source truth, preempt an arbitrary stuck handler, guarantee exactly-once external side effects, or prove power-loss durability. Full provider isolation, scientific records/evaluation, external blobs, temporal method calibration, weekly reporting and delivery remain unverified or unimplemented.
+
+## D101 software and model architecture separation
+
+The approved [contextual trading methodology](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
+uses LEAN as a conceptual software-organization reference and Qlib as conceptual
+feature/forecast/evaluation examples. A scientific investigation decides whether
+observed variables, interactions, temporal paths or a joint state representation
+are useful. Neither reference requires a separate dynamic regime model or adopts
+a dependency here. The complete source/primary-reference discussion is retained
+in the approved integration section, with its original source qualifications.
+
+Before substantial component implementation, inspect reusable project and library
+capabilities and use the smallest suitable adapter. Preserve units, alignment,
+availability, fitting/selection provenance, missingness, numerics, resources and
+license/interface scope; pin adopted versions. Do not build three services or an
+ML platform merely to express three responsibilities. Keep the scientific core,
+controller and registries authoritative. The recorded vectorbt candidate and
+bounded AmiBroker work remain. Apply the five [existing-owner handoffs](09_IMPLEMENTATION_BLUEPRINT.md#d101-adopted-contextual-trading-handoffs)
+and qualify only the actual bounded caller. Prior engineering evidence does not
+establish forecast, regime, economic or complexity benefit.

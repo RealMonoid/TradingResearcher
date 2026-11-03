@@ -6,12 +6,17 @@ D096 adds [inquiry-feedback/1.0](25_METACOGNITION_DUAL_SPACE_INQUIRY.md), Novemb
 
 ## Reading authority and counts
 
+D101 adds [contextual-trading-methodology/1.0](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology),
+November 3, 2026, by explicit full approval of the retained contextual trading
+proposal. Its three inquiry levels, five handoffs and seven cases are adopted;
+runtime implementation, empirical benefit and D100 execution priority are separate.
+
 Statuses describe recovered decisions, not implementation completion. A quoted proposal is not acceptance; an explicit acceptance refers to the immediately preceding qualified reply. Contextual consolidation is labeled and has weaker attribution than a direct user instruction. The final master prompt is not used as retrospective acceptance. Counts use the atomic decision units below and are not counts of approval messages.
 
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 78 |
+| ACCEPTED | 79 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -1483,3 +1488,55 @@ qualification, a complete calibration pass or scientific authority.
 
 **Dependencies:** D008/D014/D022/D026/D030/D038/D042/D075/D077/D079/D082/D084/D098;
 REQ-006/007/013/018/022/023/026/030; existing CMP-01/04/06/07/08/11/12 and IF-05/07/12/13.
+
+### D101 — Hypothesis-led contextual trading methodology
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Decision:** Adopt the complete November 3 integration proposal as
+`contextual-trading-methodology/1.0`, including all retained details, five existing
+interface mappings, seven acceptance cases and explicit limits. The
+[architecture owner](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
+distinguishes fallible market-mechanics hypotheses, testable trading implications
+and separately evaluated strategic implementation. Observations, interpretations,
+forecasts and actions have distinct meanings and evidence. Investigate temporal
+development and interactions without prescribing regimes, state vectors or a
+model family. Begin an actual representation investigation with a defined task,
+suitable simple comparator and reproducible assessment; retain complexity costs
+and legitimate simple/negative outcomes. This is not a universal positive-feature,
+positive-entry, theory or three-stage prerequisite for all research.
+
+**Reason and alternatives:** Preserve economically directed, context-dependent
+research without requiring complete financial-market explanation or substituting
+arbitrary rule optimization. Theory-first, data-first, anomalies and recombination
+remain valid discovery routes. LEAN is a conceptual software reference and Qlib a
+conceptual feature/forecast/evaluation reference; neither dependency nor a dynamic
+market-regime component is selected. Existing Market Model means the knowledge
+base; EvaluationPlan means scientific assessment, not a trading policy.
+
+**Source and acceptance:** SESSION-2026-11-03-CONTEXTUAL-TRADING; direct user reply
+"wir übernehmen den vorschlag komplett" after proposal commit `d3a278b` and its
+documentation closeout. The [approval record](../reviews/implementation-2026-10-25/contextual-trading-approval-2026-11-03.json)
+binds the exact [approval-time section bytes](../reviews/implementation-2026-10-25/contextual-trading-proposal-2026-11-03.source),
+SHA-256 `446bc5ad8a5718ed1debc3e5e641100129d1b10f1cf2e3e148fe6d7f5a873452`.
+The [complete adopted discussion](../reviews/integration-research-2026-10-24/INTEGRATION_PROPOSAL.md#november-3-proposal-hypothesis-led-contextual-trading-methodology)
+retains original-language quotations; approval-time proposed/future labels do not
+imply present runtime qualification. [D101-AC-01 through D101-AC-07](05_REQUIREMENTS.md#d101-contextual-trading-acceptance)
+are adopted specifications, not executed tests.
+
+**Dependencies and boundaries:** D001/D003/D008/D010/D011/D015/D017/D021/D022/
+D026/D027/D030/D032/D048/D069/D070/D072/D075/D076/D082/D084/D086/D096/D100;
+primary REQ-009 and related REQ-001/002/003/004/005/006/010/012/013/014/015/016/
+017/018/019/020/021/022/023/024/025/026/027/029; existing CMP-01 through CMP-12
+and IF-01 through IF-13 within their stated scopes. Full policy research, independent
+authority, inherited exposure, frozen profiles and all scientific contracts remain.
+No new estimator, numeric hurdle, baseline hypothesis generator, paid call, Nasdaq
+or short-selling profile, protected-data access, resource increase or capital
+authority follows. D100/A1-A5 retains execution priority.
+
+**Change control and rollback:** D008/D026. Apply to subsequent affected designs
+at a safe boundary through the sole plan; do not rewrite active prompts or pinned
+study sources. Reconcile one actual caller and independently qualify its slice.
+Research and promptly resolve new scientific/run meanings when encountered.
+Version future handoffs under existing envelopes; preserve old schemas, records,
+failed probes, source/exposure history and all charges on rollback.

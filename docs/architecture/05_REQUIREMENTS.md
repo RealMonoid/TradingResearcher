@@ -104,3 +104,25 @@ fresh final seeds, restart/revocation and carried charges. Actual approximately6
 throughput and logical/physical forecasts must enforce A2/A3; A4 limits construction
 and A5 retires Scalar recovery. These are acceptance obligations, not executed
 native-final coverage or permission to relax scientific/2024 admission.
+
+## D101 contextual trading acceptance
+
+D101 adopts contextual-trading-methodology/1.0 and all seven cases from the
+[complete approved source](../reviews/implementation-2026-10-25/contextual-trading-proposal-2026-11-03.source).
+They elaborate existing requirements/tests; they are specified future boundary
+checks, not executed coverage, a new estimator or a universal gate before research.
+
+| Case | Adopted observable behavior | Existing requirement/test scope |
+|---|---|---|
+| D101-AC-01 | Retain competing interpretations of identical measurements; a plausible mechanics narrative cannot assign evidence or bypass an unsupported-meaning gap. | REQ-001/002/003/010/014/016; TEST-01/02/03/10/14/16 |
+| D101-AC-02 | A time-valid forecast may lead to no trade because losses, costs, risk or existing positions make action unsuitable; retain forecast meaning and separate policy result. | REQ-005/009/012/017; TEST-05/09/12/17 |
+| D101-AC-03 | Completed-period values cannot replace developing inputs; fitting on prohibited outcomes fails the affected availability/exposure use. | REQ-003/004/013/015/024/026; TEST-03/04/13/15/24/26 |
+| D101-AC-04 | Joint interactions remain investigable without demonstrated standalone input edge; no universal known-mechanism, causal-proof or positive-entry prerequisite. | REQ-001/002/009/010/014; TEST-01/02/09/10/14 |
+| D101-AC-05 | Retain the result and uncertainty when a simple representation matches/improves performance and a regime extension adds no robust value. Regimes are not an architecture-completion requirement. | REQ-020/022/023/024/027; TEST-20/22/23/24/27 |
+| D101-AC-06 | Forecast performance can improve while net policy performance does not; retain both with selection history, denominators, failures and full costs. | REQ-005/006/009/012/020/022/024/029; TEST-05/06/09/12/20/22/24/29 |
+| D101-AC-07 | Positive policy evidence leaves unproven mechanisms qualified; adaptive rules and changed position/cash interactions receive their own frozen request and required resimulation. | REQ-005/009/012/013/017/025/026; TEST-05/09/12/13/17/25/26 |
+
+Use task-specific pre-outcome criteria for predictive/economic usefulness and
+complexity burden. Existing canonical estimands/thresholds, calibration, exposure,
+resource and intended-use controls remain. The [blueprint](09_IMPLEMENTATION_BLUEPRINT.md#d101-adopted-contextual-trading-handoffs)
+binds the callers; full behavior remains unimplemented/unverified until recorded.

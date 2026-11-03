@@ -9,6 +9,13 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[3]
 AUDIT = Path(__file__).resolve().parent
 ALLOWED = {
+    # D101: explicit full adoption of the contextual methodology on November 3.
+    # These four additional owners receive append-only canonical clarifications;
+    # existing policy/source preservation is checked by the current doc gates.
+    'docs/architecture/01_PROBLEM_DEFINITION.md',
+    'docs/architecture/07_SCIENTIFIC_EVALUATION.md',
+    'docs/architecture/08_ENGINEERING_REVIEW.md',
+    'docs/architecture/11_OPEN_DECISIONS.md',
     'AGENTS.md',  # October 31 user-approved compact construction/session instructions.
     # D089: explicit October29 approval of the bounded median/log specification.
     'docs/architecture/02_DECISION_REGISTER.md', 'docs/architecture/ARCHITECTURE_REGISTER.json',

@@ -70,3 +70,18 @@ This deliverable is documentation, not implementation. It does not recover the m
 D071-D085 adopt [research-contract/1.0](14_RETAIL_RESEARCH_CONTRACT.md) without changing the goals. Its finite historical work unit returns a scientific outcome and a separate resource decision; an information gap or inconclusive result can stop work without mandatory days of forward observation. Clean forward confirmation remains a distinct optional track, with inherited exposure preserved.
 
 The two-instrument 15-minute profile is an initial bounded study, not a permanent restriction on free invention or broad data domains. No profitable-policy, calibration or acceleration result has been demonstrated. The [current dispositions](11_OPEN_DECISIONS.md) distinguish completed design choices from missing inputs and future capabilities.
+
+## Adopted contextual trading methodology
+
+D101 / [contextual-trading-methodology/1.0](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology)
+adopts the complete November 3 proposal. The intended methodology investigates
+the economic consequences of reasoned, fallible hypotheses about dynamic market
+interactions. Complete market explanation is not a prerequisite; arbitrary setup
+optimization is not a substitute for explicit hypotheses and independent tests.
+Distinguish mechanics interpretation, testable trading implication and strategic
+implementation. These are research responsibilities, not a compulsory model ladder.
+The representation question is scoped to actual tasks: compare useful information
+and net policy value against suitable simple alternatives, including complexity
+costs. No regime/state representation or particular model is predetermined.
+Simple or negative results remain legitimate. Free theory-first, data-first and
+recombination discovery, UNKNOWN mechanisms and D069's economic purpose remain.

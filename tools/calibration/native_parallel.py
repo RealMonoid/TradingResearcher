@@ -46,7 +46,8 @@ def main():
     if any(value is not None for value in predecessor) and not all(value is not None for value in predecessor):
         parser.error('All three predecessor fields are required for the single pre-final source correction')
     correction = None if args.predecessor_pool is None else {
-        'key': 'd100-native-source-correction', 'predecessor_pool_id': args.predecessor_pool,
+        'key': 'd100-native-source-correction-' + args.predecessor_pool,
+        'predecessor_pool_id': args.predecessor_pool,
         'expected_checkpoint': args.predecessor_checkpoint,
         'terminal_receipt_path': str(args.predecessor_terminal_receipt.resolve())}
     low_priority()

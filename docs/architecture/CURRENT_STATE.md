@@ -87,10 +87,27 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   controller regressions are refreshed with the five units at final source.
   Three genuine restore/clock counterexamples and one authored test-scope error
   remain retained. Numerical qualification/results are disclosed fixture seams.
-  Next: pin the checked source, use the actual one-time handoff and unchanged
-  runtime package, freshly qualify and run all 32 references in both modes.
-  Actual handoff, final admission and the 2,048-world series remain unverified;
-  science/2024 and A4 remain unchanged. No general approval wait.
+  Actual `cddecce` then completed the financial handoff and passed fresh native
+  qualification (71,100 ms / 134,592,559 bytes). Two reserved reference attempts
+  failed before generation: preparation included correction dependencies that
+  the actual base consumer omitted. The 17 fixture cases had not exercised this
+  complete reserved-consumer path; the earlier coverage conclusion is corrected.
+  The successor is halted at checkpoint `a78ce9cd…`, with 6,354,611 ms and
+  1,448,013,849 bytes charged, one grant used, none pending and no unknown use.
+  Its terminal backup/restore retains 1,253 blobs. No final input/seed/world exists.
+  The canonical base dependency builder is now shared by preparation and actual
+  consumption. Four new independent cases pass: both reserved reference modes
+  with full replay, post-reservation withdrawal, exact V2 financial carry and
+  stage/ancestor/failure/final/key denials. Six current caller/clock follow-ups
+  pass. The [consumer evidence](../../tests/fixtures/native-reference-consumer-checks-2026-11-03.zip)
+  retains the genuine failed composition case and source preservation; old
+  fixture outcomes are reused at their recorded scope, with no fresh 21-case
+  suite claim. Numerical answers/qualification remain disclosed test seams.
+  Next: publish and pin the checked builder/V2 repair, carry this exact stopped
+  checkpoint, freshly qualify and complete all 64 actual reference calls before
+  final admission. The 45-90 minute build/check record retains cost/rework and
+  scoped authority. Science/2024, original clock, resources and A4 are unchanged.
+  No existing pool is unhalted and no general approval wait is introduced.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation
   under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without

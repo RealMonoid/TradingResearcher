@@ -41,15 +41,39 @@ SETUP_NAMES = ('controller_source', 'runtime_retain', 'runtime_qualification',
                'prepared_copies', 'terminal_copies')
 REFERENCE = 'native-calibration-reference-input/1'
 SOURCE_CORRECTION = MappingProxyType({
+    'schema': 'native-calibration-source-correction/1',
     'predecessor_pool_id': '74eee8955850c048b355a439963eaf90fd50af057ab03604835f940b040affb9',
     'expected_checkpoint': '3a56992fbbf74dfa3d23b01f34efc8d625711aa8db89d2d8f8d95f9584969fd6',
     'reference_id': '9c347777b0e8d4b4aee9e7cf8ecf15ecaa0b6246f31dbd8a8123d62bc6edc265',
     'source_result_id': '6a6aaf86838825dbcd4637925cd1f799986c3ee9f849dfa5773083fb1de5f020',
     'old_coordination_sha256': 'd335e3ec64c2c82a6bcf8ad56ff3a8059c1590bd272b727d253a5d662769982b',
-    'fixed_coordination_sha256': '25c67fa1d48371108aa1e91f630d953cc5e7e33e5615f503feadb851e3782dfc'})
+    'fixed_coordination_sha256': '25c67fa1d48371108aa1e91f630d953cc5e7e33e5615f503feadb851e3782dfc',
+    'failed_attempts': 6, 'predecessor_correction_schema': None,
+    'failure_pairs': (('InterfaceError', 'bad parameter or other API misuse'),
+                      ('Denied', 'Artifact unavailable'),
+                      ('Invalid', 'Expecting value: line 1 column 1 (char 0)')),
+    'scope': 'One pre-final Broker statement-cache defect correction; no second final series.'})
+SOURCE_DEPENDENCY_CORRECTION = MappingProxyType({
+    'schema': 'native-calibration-source-correction/2',
+    'predecessor_pool_id': 'bd57b37e9fbdf78a2eb14684ff3d742f1453add2eeea4fe0dd48bf2abdf4809a',
+    'expected_checkpoint': 'a78ce9cdad23eb125b1e0a102d609206310825c063404688585e62f2e9368862',
+    'reference_id': '01b1eb4d7aa98bf1d81e453323b5e506ec528d0168f6adcac869697972940f13',
+    'source_result_id': '10762800dc3550bf11752aa45c3459740a82d37ef2ef8f7a057dcdaf74f09ea5',
+    'old_coordination_sha256': '25c67fa1d48371108aa1e91f630d953cc5e7e33e5615f503feadb851e3782dfc',
+    'fixed_coordination_sha256': '25c67fa1d48371108aa1e91f630d953cc5e7e33e5615f503feadb851e3782dfc',
+    'failed_attempts': 2, 'predecessor_correction_schema': 'native-calibration-source-correction/1',
+    'ancestor_pool_id': '74eee8955850c048b355a439963eaf90fd50af057ab03604835f940b040affb9',
+    'failure_pairs': (('Invalid', 'Native study dependencies changed'),),
+    'scope': 'The pinned pre-final base-consumer dependency correction; no second final series.'})
 SOURCE_CORRECTION_FILES = frozenset({
     'trading_researcher/coordination.py', 'trading_researcher/native_calibration_runs.py',
     'trading_researcher/native_calibration_controller.py', 'trading_researcher/revocations.py'})
+
+
+def _source_correction_pin(predecessor_pool_id):
+    if predecessor_pool_id == SOURCE_DEPENDENCY_CORRECTION['predecessor_pool_id']:
+        return SOURCE_DEPENDENCY_CORRECTION
+    return SOURCE_CORRECTION
 
 # These reviewed versions give caller_cancelled its narrow meaning here: the
 # family caller supplies a time-only callback. Other callers/reasons acquire no
@@ -323,12 +347,23 @@ class NativeCalibrationResources:
             request = decode(canonical(args))
             text(request['key'], 'Source correction key')
             text(request['terminal_receipt_path'], 'Predecessor terminal receipt path')
-            require(all(request[k] == SOURCE_CORRECTION[k] for k in
+            pin = _source_correction_pin(request['predecessor_pool_id'])
+            require(all(request[k] == pin[k] for k in
                         ('predecessor_pool_id', 'expected_checkpoint')),
                     'Only the pinned pre-final defect checkpoint may be corrected')
             require(LOADED_SOURCE == footprint(source_bundle()), 'Source changed since correction import')
             predecessor = self._pool(request['predecessor_pool_id'])
-            require('source_correction' not in predecessor['body'], 'A correction cannot have another successor')
+            prior_correction = predecessor['body'].get('source_correction')
+            if pin['predecessor_correction_schema'] is None:
+                require(prior_correction is None, 'This correction requires its original stopped root')
+            else:
+                require(type(prior_correction) is dict
+                        and prior_correction.get('schema') == pin['predecessor_correction_schema']
+                        and prior_correction.get('predecessor_pool_id') == pin['ancestor_pool_id'],
+                        'Only the pinned previous correction stage may be carried')
+                # Historical financial custody is checked using its retained
+                # footprint, without admitting the predecessor's old source.
+                self._correction_observation(predecessor)
             b._require_usable_dependencies(predecessor['id'])
             previous = self._history(predecessor)
             require(previous.checkpoint == request['expected_checkpoint'] and previous.halted
@@ -357,22 +392,27 @@ class NativeCalibrationResources:
                 return child
             require(not intent_path.exists() and not ack_path.exists(),
                     'Observed source correction is absent from Registry; stale restore or uncertain creation forbids replay')
+            for row in b._db.execute('SELECT envelope FROM events ORDER BY seq'):
+                event = decode(row[0])
+                require(not (event['actor'] == 'controller' and event['action'] == 'native_calibration_pool_key'
+                             and event['details']['key'] == request['key']),
+                        'Source correction key already belongs to another pool')
             old_source = predecessor['body']['source_footprint']
             require(set(old_source) == set(LOADED_SOURCE)
                     and {p for p in old_source if old_source[p] != LOADED_SOURCE[p]} <= SOURCE_CORRECTION_FILES
-                    and old_source['trading_researcher/coordination.py'] == SOURCE_CORRECTION['old_coordination_sha256']
-                    and LOADED_SOURCE['trading_researcher/coordination.py'] == SOURCE_CORRECTION['fixed_coordination_sha256'],
+                    and old_source['trading_researcher/coordination.py'] == pin['old_coordination_sha256']
+                    and LOADED_SOURCE['trading_researcher/coordination.py'] == pin['fixed_coordination_sha256'],
                     'Correction must preserve all sources except the pinned operational repair')
             require(not any(self._objects(schema) for schema in
                             ('native-family-calibration-input/1', RESULT_SCHEMAS['final']))
                     and all('final' not in self._history(p).inventories for p in self._objects(POOL)),
                     'Final inputs or final work forbid a replacement source series')
-            reference = NativeCalibrationReferences(b)._study(SOURCE_CORRECTION['reference_id'])
+            reference = NativeCalibrationReferences(b)._study(pin['reference_id'])
             require(previous.inventories.get('acceptance', {}).get('body', {}).get('input_id') == reference['id'],
                     'Pinned stopped acceptance input differs')
             failed = [b._artifact(row['artifact_id']) for (phase, _), row in previous.records.items()
                       if phase == 'acceptance']
-            require(len(failed) == 6 and all(
+            require(len(failed) == pin['failed_attempts'] and all(
                 item['body'].get('reference_id') == reference['id']
                 and item['body'].get('reference_mode') == 'parallel'
                 and item['body']['resource_state'] == 'FAILED'
@@ -381,11 +421,9 @@ class NativeCalibrationResources:
                 and item['body'].get('result') is None and item['body'].get('replay_result') is None
                 and item['body'].get('custody', {}).get('phases') == []
                 and (item['body'].get('failure', {}).get('type'),
-                     item['body'].get('failure', {}).get('message')) in {
-                    ('InterfaceError', 'bad parameter or other API misuse'), ('Denied', 'Artifact unavailable'),
-                    ('Invalid', 'Expecting value: line 1 column 1 (char 0)')}
-                for item in failed), 'Only the six known pre-generation metadata failures may be corrected')
-            source = b._artifact(SOURCE_CORRECTION['source_result_id'])
+                     item['body'].get('failure', {}).get('message')) in pin['failure_pairs']
+                for item in failed), 'Only the pinned known pre-generation metadata failures may be corrected')
+            source = b._artifact(pin['source_result_id'])
             source_task = predecessor['body']['setup_tasks']['controller_source']
             require(previous.records[('setup', source_task)]['artifact_id'] == source['id']
                     and source['body']['resource_state'] == 'COMPLETE'
@@ -404,7 +442,7 @@ class NativeCalibrationResources:
                 'allocated_storage_bytes': previous.allocated_storage,
                 'grants_used': previous.budget()['grants_used'], 'progress_units': previous.progress,
                 'last_grant_progress': previous.last_grant_progress, 'no_progress_grants': previous.no_progress}
-            correction = {'schema': 'native-calibration-source-correction/1', 'request': request,
+            correction = {'schema': pin['schema'], 'request': request,
                 'predecessor_pool_id': predecessor['id'], 'predecessor_checkpoint': previous.checkpoint,
                 'predecessor_reference_id': reference['id'], 'predecessor_source_result_id': source['id'],
                 'operational_start_utc': original_binding['operational_start_utc'],
@@ -413,7 +451,7 @@ class NativeCalibrationResources:
                 'runtime_id': reference['body']['native_binding']['runtime_id'],
                 'terminal_receipt_sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                 'terminal_event_prefix': receipt['event_prefix'],
-                'scope': 'One pre-final Broker statement-cache defect correction; no second final series.'}
+                'scope': pin['scope']}
             identity = digest({'schema': 'native-calibration-source-correction-identity/1',
                 'predecessor_pool_id': predecessor['id'], 'checkpoint': previous.checkpoint,
                 'source_footprint': LOADED_SOURCE})
@@ -1119,6 +1157,17 @@ class NativeCalibrationReferences(NativeStudyInputs, InformationStudies):
         exposure = set(refs) | set(development['exposure'])
         for identity in refs:
             exposure.update(self._artifact(identity)['exposure'])
+        # The reserved consumer deliberately loads the base reference owner.
+        # Derive correction dependencies here as well as during preparation so
+        # both paths authenticate the same exact immutable input closure.
+        if 'source_correction_pool_id' in request:
+            previous = NativeCalibrationCorrectionReferences(self.broker)._correction_reference(request)
+            require(development['body']['payload'] == previous['body']['payload']
+                    and development['body']['manifest'] == previous['body']['manifest'],
+                    'Correction reference payload or manifest differs')
+            refs = sorted(set(refs) | {previous['id'], request['source_correction_pool_id']})
+            exposure.update(previous['exposure'])
+            exposure.update(refs)
         return development['body']['payload'], development['body']['manifest'], refs, sorted(exposure)
 
     def _native_case_blob(self, request):
@@ -1214,10 +1263,12 @@ class NativeCalibrationCorrectionReferences(NativeCalibrationReferences):
         pool = resources._pool(request['source_correction_pool_id'])
         resources._current(pool)
         correction = pool['body'].get('source_correction')
-        require(type(correction) is dict and correction.get('schema') == 'native-calibration-source-correction/1'
-                and correction['predecessor_pool_id'] == SOURCE_CORRECTION['predecessor_pool_id']
-                and correction['predecessor_checkpoint'] == SOURCE_CORRECTION['expected_checkpoint']
-                and correction['predecessor_reference_id'] == SOURCE_CORRECTION['reference_id'],
+        require(type(correction) is dict, 'Owned source correction required')
+        pin = _source_correction_pin(correction['predecessor_pool_id'])
+        require(correction.get('schema') == pin['schema']
+                and correction['predecessor_pool_id'] == pin['predecessor_pool_id']
+                and correction['predecessor_checkpoint'] == pin['expected_checkpoint']
+                and correction['predecessor_reference_id'] == pin['reference_id'],
                 'Owned pinned source correction is required for this reference')
         reference = self._study(correction['predecessor_reference_id'])
         require(request['development_study_id'] == reference['body']['request']['development_study_id'],
@@ -1229,15 +1280,6 @@ class NativeCalibrationCorrectionReferences(NativeCalibrationReferences):
         return digest({'schema': 'native-calibration-correction-reference-identity/1',
                        'source_correction_pool_id': request['source_correction_pool_id'],
                        'predecessor_reference_id': reference['id']})
-
-    def _study_inputs(self, actor, request):
-        previous = self._correction_reference(request)
-        payload, manifest, refs, exposure = super()._study_inputs(actor, request)
-        require(payload == previous['body']['payload'] and manifest == previous['body']['manifest'],
-                'Correction reference payload or manifest differs')
-        refs = sorted(set(refs) | {previous['id'], request['source_correction_pool_id']})
-        exposure = sorted(set(exposure) | set(previous['exposure']) | set(refs))
-        return payload, manifest, refs, exposure
 
     def _study_extra_input(self, request, manifest):
         previous = self._correction_reference(request)

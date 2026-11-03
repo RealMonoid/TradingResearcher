@@ -9,6 +9,8 @@ from copy import deepcopy
 import hashlib
 from pathlib import Path
 import tempfile
+import threading
+import types
 import unittest
 from unittest.mock import patch
 
@@ -595,6 +597,124 @@ class NativeSourceCorrectionReferenceIndependentTests(unittest.TestCase):
         self.assertIn(self.child['id'], use['checked_versions'])
         for identity, raw in self.old_bytes.items():
             self.assertEqual(canonical(self.s.broker._artifact(identity)), raw)
+
+    @contextmanager
+    def controlled_reference_transport(self):
+        """Real reserved caller/transport, invented wire/math/Q and clock only.
+
+        Do not replace the actual caller's base reference_runner or its input
+        builder. That precise composition is the regression under test.
+        """
+        self.s.clock = [0.0]
+        clock = types.SimpleNamespace(monotonic=lambda: self.s.clock[0])
+        wire = reference_support.ReferenceWireFixture(self.s)
+        cancel = threading.Event(); wire.cancel = cancel
+        with patch.object(study_runs, 'time', clock), patch.object(owner, 'time', clock), \
+                patch.object(pipeline, 'MANIFEST_SHA', digest(self.s.runtime_manifest)), \
+                patch.object(pipeline, 'KERNEL_SHA', self.s.runtime_manifest['files'][pipeline.KERNEL_FILE]['sha256']), \
+                patch.object(pipeline, 'current', side_effect=lambda value, *args: value == {'invented_environment': 'current'}), \
+                patch.object(study_runs, '_run_child', side_effect=wire.child):
+            yield owner.NativeCalibrationAttempts(self.s.broker), wire, cancel
+
+    def bind_corrected_acceptance(self, corrected):
+        return self.f.manager.bind_inventory(self.s.token, {'key': 'corrected-reserved-caller-corpus',
+            'pool_id': self.child['id'], 'phase': 'acceptance',
+            'task_ids': sorted(self.ref_owner.tasks(corrected)), 'execution_deadline_ms': 10000,
+            'attempt_compute_ms': 15000, 'attempt_storage_bytes': 256 * MIB,
+            'max_attempts': 1,
+            'expected_checkpoint': self.f.manager.inspect(self.s.token, self.child['id'])['resource_checkpoint']},
+            input_id=corrected['id'])
+
+    def reserve_corrected(self, task, index):
+        return self.f.manager.reserve(self.s.token, {'pool_id': self.child['id'], 'phase': 'acceptance',
+            'task_id': task, 'attempt_id': format(index + 200, '032x'),
+            'expected_checkpoint': self.f.manager.inspect(self.s.token, self.child['id'])['resource_checkpoint']})
+
+    def test_actual_reserved_base_caller_completes_both_correction_reference_modes_with_full_replay(self):
+        with patch.object(owner, 'SOURCE_CORRECTION', self.f.pins):
+            corrected = self.ref_owner.prepare(self.s.token, self.request)
+            before_bind = self.f.manager.inspect(self.s.token, self.child['id'])['budget']
+            inventory = self.bind_corrected_acceptance(corrected)
+            before = self.f.manager.inspect(self.s.token, self.child['id'])['budget']
+            self.assertEqual(before['charged_storage_bytes'], before_bind['charged_storage_bytes'] + MIB)
+            tasks = self.ref_owner.tasks(corrected)
+            world = corrected['body']['manifest']['worlds'][0]['id']
+            results = []
+            with self.controlled_reference_transport() as (caller, wire, cancel):
+                self.assertIs(type(caller.reference_runner), owner.NativeCalibrationReferences)
+                for index, mode in enumerate(('serial', 'parallel')):
+                    task = next(identity for identity, value in tasks.items()
+                                if value == {'world_id': world, 'mode': mode})
+                    reserved = self.reserve_corrected(task, index)
+                    saved = caller.execute(self.s.token, self.child['id'], reserved['attempt_id'], _cancel=cancel)
+                    body = saved['body']; results.append(saved)
+                    self.assertEqual(body['resource_state'], 'COMPLETE')
+                    self.assertEqual(body['schema'], 'native-calibration-acceptance-attempt/1')
+                    self.assertEqual(body['reference_id'], corrected['id'])
+                    self.assertEqual(body['reference_mode'], mode)
+                    self.assertEqual(body['task_id'], task); self.assertEqual(body['world_id'], world)
+                    self.assertEqual(body['resource_inventory_id'], inventory['id'])
+                    self.assertEqual(body['reference_comparison'], 'FULL_REFERENCE_MATCH')
+                    self.assertIs(body['currency_checked'], True)
+                    self.assertIsNone(body['failure']); self.assertEqual(body['failures'], [])
+                    self.assertEqual(len(body['proofs']), 2)
+                    self.assertEqual(body['replay_result'], {'verified_result_hash': digest(body['result'])})
+                    self.assertEqual(body['result'], next(a['body']['result'] for a in self.attempts
+                        if a['body']['world_id'] == world))
+                    vector = self.expected_vectors[world]
+                    for proof in body['proofs']:
+                        self.assertEqual(proof['stream_blob'], vector['stream_blob'])
+                        self.assertEqual(proof['stream_encoding'], vector['stream_encoding'])
+                    stream = body['output_blobs']['generate/stream.jsonl.gz']
+                    self.assertEqual(self.s.broker._read_blob_bytes(stream['sha256']),
+                                     self.s.broker._read_blob_bytes(vector['stream_blob']['sha256']))
+                    self.assertIs(body['settlement']['usage_known'], True)
+                    self.assertEqual(body['settlement']['compute_ms'], 2)
+                    self.assertGreater(body['settlement']['storage_bytes'], MIB)
+                    self.assertLessEqual(body['settlement']['storage_bytes'], reserved['storage_bytes'])
+                self.assertEqual([phase for phase, _, _ in wire.calls], ['generate', 'replay', 'generate', 'replay'])
+                self.assertFalse(cancel.is_set())
+            after = self.f.manager.inspect(self.s.token, self.child['id'])['budget']
+            self.assertEqual(after['charged_compute_ms'], before['charged_compute_ms'] + 4)
+            self.assertEqual(after['charged_storage_bytes'], before['charged_storage_bytes'] + sum(
+                item['body']['settlement']['storage_bytes'] for item in results))
+            self.assertEqual(after['progress_units'], before['progress_units'] + 2)
+            for field in ('grants_used', 'allocated_compute_ms', 'allocated_storage_bytes'):
+                self.assertEqual(after[field], before[field])
+            self.assertFalse(after['outstanding_attempts'])
+            self.assertFalse(after['usage_uncertain']); self.assertFalse(after['overrun']); self.assertFalse(after['halted'])
+        for identity, raw in self.old_bytes.items():
+            self.assertEqual(canonical(self.s.broker._artifact(identity)), raw)
+
+    def test_actual_reserved_correction_reference_withdrawal_retains_failed_slot_and_stops_without_child(self):
+        with patch.object(owner, 'SOURCE_CORRECTION', self.f.pins):
+            corrected = self.ref_owner.prepare(self.s.token, self.request)
+            self.bind_corrected_acceptance(corrected)
+            task = sorted(self.ref_owner.tasks(corrected))[0]
+            reserved = self.reserve_corrected(task, 0)
+            evidence = self.s.op('add_source', data_class='development', body={'reserved_correction_withdrawal': True})
+            self.s.op('revoke_dependency', key='reserved-correction-qualification-withdrawal',
+                dependency_id=self.s.qualified['certificate']['id'],
+                reason='Synthetic current qualification withdrawal after reservation.', evidence_refs=[evidence['id']])
+            with self.controlled_reference_transport() as (caller, wire, cancel):
+                saved = caller.execute(self.s.token, self.child['id'], reserved['attempt_id'], _cancel=cancel)
+                self.assertEqual(wire.calls, [])
+                self.assertTrue(cancel.is_set())
+            body = saved['body']
+            self.assertEqual(body['resource_state'], 'FAILED')
+            self.assertEqual(body['failure']['type'], 'Denied')
+            self.assertIs(body['currency_checked'], False)
+            self.assertEqual(body['proofs'], []); self.assertEqual(body['output_blobs'], {})
+            self.assertIsNone(body['result']); self.assertIsNone(body['replay_result'])
+            self.assertEqual(body['settlement'], {'attempt_id': reserved['attempt_id'],
+                'compute_ms': 0, 'storage_bytes': MIB, 'usage_known': True})
+            view = self.f.manager.inspect(self.s.token, self.child['id'])
+            self.assertFalse(view['budget']['outstanding_attempts'])
+            self.assertTrue(view['budget']['halted'])
+            self.assertFalse(view['budget']['usage_uncertain'])
+            self.assertIn(saved['id'], [item['artifact_id'] for item in self.f.manager._history(self.child).records.values()])
+            with self.assertRaises(ERRORS):
+                caller.execute(self.s.token, self.child['id'], reserved['attempt_id'])
 
 
 if __name__ == '__main__':

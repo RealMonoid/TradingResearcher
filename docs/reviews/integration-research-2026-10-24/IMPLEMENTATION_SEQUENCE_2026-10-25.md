@@ -33,8 +33,8 @@ The following is the initial remaining-work view for D100, not a new plan or an 
 |---|---|---|
 | Finish the outer controller that prepares copies and starts/restarts the study | Software connected and checked November 3; construction began 11:31:42 UTC, about 70 minutes through source reconciliation, including coordination and corrections. Allow 15-30 minutes for bundled closeout/pinning; actual qualification/acceptance below remain. Initial 2-5 hour range was a planning judgment. | Existing public callers use pinned sources, preserve complete copies and old charges, enforce finite shared authority and safe restart; changed failure paths have scoped software checks. Actual runtime admission remains required. |
 | Connect scheduling, timeout handling and resource stops | Software completed within the same controller interval, not additional time; actual A2/A3 measurements remain below. | At most six workers with bounded threads/priority; A1 preserves timeout/retry history. Fixed A2/A3 formulas and current-charge/pending checks are connected; real observations and actual stop/admission decisions are still pending. |
-| Qualify the exact final native version | Actual pinned `145934b` qualification passed, charging 77,250 ms and 191,822,081 bytes. The subsequent Broker correction needs fresh qualification; reuse this observation only as a planning basis, not current admission. | Required native conformance and current source/runtime bindings pass for the version that will actually run; historical qualification is not relabelled current. |
-| Execute the fixed reference inventory serially and in parallel | The first six actual parallel attempts failed before authenticated generation; no reference passed. One-time exact-carry handoff software is now checked, about one hour including independent tests/review/corrections. Allow 15-30 minutes for final publication/pinning and actual handoff, then fresh qualification and all 64 calls; numerical duration remains unknown. | Preserve all six failures/charges and the halted pool. All original 32 cases must run in both modes with full generation/replay and matching numerical results/stream identities; record full-call time and resource use, then freeze applicable deadlines. No replacement cases or weakened acceptance. |
+| Qualify the exact final native version | Pinned `145934b` qualification passed at 77,250 ms / 191,822,081 bytes; corrected `cddecce` also passed at 71,100 ms / 134,592,559 bytes. The next consumer fix requires fresh source qualification again. These are scoped observations, not admission for a later source. | Required native conformance and current source/runtime bindings pass for the version that will actually run; historical qualification is not relabelled current. |
+| Execute the fixed reference inventory serially and in parallel | Financial handoff and qualification passed; two references then failed on the producer/base-consumer dependency mismatch. The shared builder and exact V2 carry are now checked by four new independent cases and six current follow-ups. Remaining: publish/pin, actual V2 and fresh qualification, then all 64 calls; numerical duration is unknown. The 45-90 minute construction estimate includes the retained failure/diagnosis/checking. | Preserve both halted versions, all eight reference failures and every charge. All original 32 cases must run in both modes with full generation/replay and matching numerical results/stream identities; record whole-call time/resources, then freeze applicable deadlines. No replacement cases or weakened acceptance. |
 | Admit and start the authorized final series | 0.5-1.5 hours setup/checking after the prerequisites pass | Fresh seeds, source/currentness and capacity admission succeed; A3 pre-start forecasts are recorded and actual series progress is retained. No start based on software fixtures alone. |
 | Check the actual series forecast and finish or stop under the approved rules | Actual duration is unknown before measured throughput; do not present A2's 24-hour forecast threshold as a measured completion promise | After approximately 60 actual parallel worlds, report the full-inventory forecast including retries/overhead and enforce A2; enforce A3 throughout. Final completion preserves all 2,048 worlds and full replay, or reports the precise stop/failure and missing inventory. |
 
@@ -382,9 +382,10 @@ after-execution check without executing/materializing anything; only that call
 was removed and its positive case rerun. Native numerics and qualification remain
 explicit seams in these software fixtures.
 
-This completes the bounded AC-N1/2/5/6/8/9/11 source/financial handoff connection.
-Actual admission remains: pin this source, perform the one handoff, freshly
-qualify it and complete all 64 unchanged reference calls, then admit final seeds,
+This records the bounded AC-N1/2/5/6/8/9/11 software handoff checkpoint; the actual
+result below reopens its numerical-consumer connection. Admission then required
+a pinned source, the actual handoff, fresh qualification and all 64 unchanged
+reference calls, then final seeds,
 measured A2/A3 forecasts and complete prepared copies before the authorized
 2,048-world series. The inherited operational start includes the failed setup
 and repair interval; it is never reset for this correction. The 1-2 hour build
@@ -394,6 +395,89 @@ previously charged 77.250 seconds, while actual reference numerical duration is
 still unknown. This is a plausible prerequisite path, not a completion guarantee
 or deadline extension. Science/2024 remain blocked and no research API call,
 budget increase, Scalar restart or new final series follows.
+
+**Actual handoff result and next bounded correction (November 3).** The isolated
+`cddecce` caller actually carried the full prior financial state into pool
+`bd57b37e…`, retaining the original operational clock and old stopped pool. Fresh
+native qualification passed, charging 71,100 ms / 134,592,559 bytes. The two
+references affordable under the then-current full reservations both failed with
+`Native study dependencies changed`, before authenticated generation. No final
+input, final seed or final world was created. All work is settled and halted at
+checkpoint `a78ce9cdad23eb125b1e0a102d609206310825c063404688585e62f2e9368862`:
+6,354,611 ms / 1,448,013,849 bytes charged, allocations 7,200,000 ms / 8,589,934,592
+bytes, one grant used, progress 27 / last-grant progress 14, no uncertain use,
+overrun or pending attempt. Actual terminal full backup/restore passed with
+1,253 blobs / 1,456,459,894 bytes. Both prior sources, failures and full copies
+remain retained.
+
+The exact failure is the reserved caller's dependency-tuple equality: the
+preparation subclass added predecessor-reference/pool references and inherited
+exposure, while the actual base reference owner omitted them. The earlier
+genuine fixture exercised preparation/subclass checks but missed this actual
+reserved-consumer equality. Correct that coverage conclusion without relabelling
+the 17 recorded fixture outcomes or the scoped native qualification as a full
+acceptance pass. The independent regression must reach actual reserved serial
+and parallel generation/full separate replay with this correction input.
+
+The smallest remedy is one canonical correction-aware input builder used by
+preparation and the actual base consumer, preserving exact dependency equality,
+the complete old corpus and inherited exposure. Bind a prospective second
+pre-final repair to this exact new checkpoint and its two known empty-phase
+failures, carrying every fee/allocation/grant/progress counter/clock. Keep both
+predecessors halted, their external observations intact and the existing
+copy/one-child/stale-restore/withdrawal controls. This is an explicit known-stage
+repair, not arbitrary recursive recovery or a second final series. Use a
+predecessor-bound key; an old key cannot select another pool or reset authority.
+
+Before substantial work, the diagnosis/authority review in the existing work
+record confirms this directly required unchanged-scope fix falls under the
+checked-correction clause and approved next-delivery item 3. An internal one-shot
+implementation is not a new user-owned permission boundary. The cost rule still
+requires honest failure/total-rework reporting and a decision before actual
+scope expansion, disproportionate work or an A4-infeasible path. The provisional
+45-90 minute build/check range is based on the identified single builder mismatch
+and reuse of the financial/copy controller; actual qualification previously took
+about 71 seconds, but all-64 numerical duration is unknown. With over 31 hours
+to A4, no infeasibility or need to relax criteria is established. Do not broaden
+the implementation, weaken equality or invoke another actual correction before
+the new reserved-caller and financial checks pass. Fresh source qualification,
+all 64 references, A2/A3 and final admission remain required; budgets, protected
+access, paused Scalar/Original A and the deadline remain unchanged.
+
+**Canonical consumer/V2 software closeout (November 3).** The base reference
+input builder now performs the exact correction references/exposure union for
+both preparation and the actual reserved consumer. The subclass retains its
+identity/corpus validation; its parallel dependency derivation is removed.
+The actual caller's exact tuple comparison, numerical source and complete replay
+remain unchanged. The explicit `source-correction/2` pin accepts only the known
+`bd57b37e…` / `a78ce9cd…` predecessor, its V1 ancestor and two observed empty-phase
+dependency failures. It reuses exact financial/copy/observation controls, checks
+historical ancestor observations without old-source admission and carries the
+entire 6,354,611 ms / 1,448,013,849 byte state and original clock. CLI keys bind
+the predecessor; foreign key reuse is rejected before any new intent. This
+admits no arbitrary correction chain or final-series reset.
+
+The [consumer evidence](../../../tests/fixtures/native-reference-consumer-checks-2026-11-03.zip)
+retains one genuine actual-reserved-consumer RED followed by four new passing
+independent methods: actual base serial and parallel calls with two phase proofs,
+full old-result/stream equality and separate replay; withdrawal after reservation;
+and exact V2 carry/ancestry/one-child and negative-stage cases. Native results and
+qualification are disclosed invented seams, while Registry, immutable source/case,
+cache/stream/custody, resource and full-copy owners are genuine disposable paths.
+Six current follow-ups cover five existing caller units and the independent
+outer/inner reference clock boundary. Prior 17 fixture methods remain unchanged
+and scoped historical evidence; no whole 21/19/103 final-source rerun is claimed.
+The legacy no-correction builder and the actual tuple guard are AST-preserved.
+
+This closes the identified software composition gap. Next: publish/pin, use only
+the exact V2 financial handoff, freshly qualify that source and complete all 64
+unchanged actual references. Then freeze measured deadlines, admit final seeds,
+A2/A3 and prepared complete copies before the original 2,048-world series.
+Actual V2/source qualification/reference/final admission remain unverified at
+this software checkpoint; the two real stopped versions and their fees/copies
+are retained. The existing work record measures the 45-90 minute bounded repair,
+including diagnosis/coordination/rework, and keeps the unknown numerical cost
+explicit. All original budgets, protected-access and A4 boundaries remain.
 
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).

@@ -37,3 +37,26 @@ No market rows are expanded or new outcomes computed by this check, but retained
 The [implementation checkpoint](../docs/reviews/implementation-2026-10-25/DATA_USE_INTEGRATION_2026-10-26.md) distinguishes synthetic integration tests, exact real provider-document verification and the existing development probe. None establishes scientific validity or the first genuine multi-model research cycle.
 
 The later [private-plan checkpoint](../docs/reviews/implementation-2026-10-25/PROTECTED_PLAN_INTEGRATION_2026-10-26.md) records the additional protected-target qualification and its consuming plan path. Protected market data in that checkpoint's tests are synthetic.
+
+The scientific-freeze caller now computes a separate
+`scientific-data-prerequisite/1` inside its admission transaction. It binds each
+ordered owned plan to its exact current private data assessment, compilation,
+private/public targets, snapshot, feature/reference certificates, definitions,
+normalization and catalogs. Primary role requires the adopted assessment
+partition; corroboration requires its separate partition. Declared target and
+compiled universe must match exactly, and the snapshot must cover that scope.
+Current checker and certificates are required at this new intended-use boundary;
+intact older stale preparation remains history. Normalization and catalog records
+remain provenance rather than invented executable dependency versions.
+
+This component can satisfy only its exact pre-outcome data prerequisite. It
+retains assumed availability, prior-knowledge findings and null evidence origin;
+it grants no protected-target, assessment-access or scientific authority. The
+separate exposure/prior-use and selection/reservation gates remain closed, along
+with calibration/information admission; the legacy combined data/exposure denial
+also remains. One failed member prevents a smaller-family pass. Existing owning
+integrity/revocation checks still apply; the new helper performs no row expansion,
+new calculation or certificate replay. The [freeze retention boundary](EVALUATION_POLICY.md#atomic-batch-commitment-and-admission-boundary)
+describes complete bounded prerequisite ancestry and the still-unfinished large
+successful commitment representation. The existing progress register records
+exact source-bound checks and their synthetic/actual scope.

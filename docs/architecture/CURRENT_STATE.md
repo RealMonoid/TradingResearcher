@@ -124,6 +124,22 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   The main source footprint changes; older native qualification retains its
   exact historical scope. The retained scalar study's isolated source is unchanged.
 
+- **Checked data prerequisite (November 3):** the actual freeze caller now binds
+  exact owned plan/data/target/snapshot/certificate inputs and requires current
+  role/scope/checker evidence, without promoting normalization/catalog provenance
+  into executable dependency types. All 81 affected methods pass at the final
+  source: 11 data cases, 15 bounded retention/failure cases and 55 regressions.
+  Full one-plan ancestry has 275 entries; versioned read-only retention now keeps
+  it complete within existing canonical/direct-reference limits. Initial failures,
+  an interrupted unaccepted run and the reproduced inspector correction remain
+  retained. [Exact evidence and limitations](../../tests/fixtures/scientific-data-prerequisite-checks-2026-11-03.zip).
+  No eight-member ancestry-measurement pass is claimed. Large positive commitment
+  representation remains limited to 256 references and is an open IF-05 exit.
+  Selection/exposure/information/scientific admission and protected access remain
+  closed. The main source changes; older qualifications retain only their recorded
+  scope. The old isolated scalar host remains unchanged. Next: qualify the already
+  approved option-A recovery below, then run without heavy construction checks.
+
 - **Immediate finite calibration resources:** the [same-plan proposal](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#finite-calibration-resource-decision-november-2-2026)
   records approval for one retained-scalar 2,048-world/20-cohort conditional final,
   at most 180 metered compute hours / 100 GiB logical storage, with full replay and
@@ -153,12 +169,17 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   overwritten exception remain unknown. C: now has 130.41 GiB free, Healthy/OK
   NTFS. [Terminal evidence](../../tests/fixtures/scalar-final-terminal-stop-checks-2026-11-03.zip).
   No complete calibration, full-process qualification, N_min or scientific
-  admission follows. The [same-plan recovery question](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#finite-calibration-resource-decision-november-2-2026)
-  is pending; no automatic retry, changed attempt cap or grant can forgive this
-  historical overrun. Original inputs/source/history remain fixed.
+  admission follows. The [same-plan recovery option A](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#finite-calibration-resource-decision-november-2-2026)
+  is explicitly approved: one extra named-world attempt and 600-second ceilings
+  for that retry/remaining original worlds, within unchanged aggregate authority.
+  The [exact approval](../reviews/implementation-2026-10-25/calibration-recovery-approval-2026-11-03.json)
+  requires a separately versioned, independently qualified amendment before use;
+  the original API remains fenced and historical overrun is retained. Original
+  inputs/source/history remain fixed. No recovery execution has started.
   Retained records: `.trf-runtime/scalar-final-calibration-2026-11-02/`.
   Preserve the host/driver/helper and all copies; use read-only inspection.
-  Continue independent M2 prerequisite work while recovery awaits its decision.
+  M2 data-prerequisite checks are complete; now qualify the approved recovery;
+  the numerical study must run without parallel heavy construction checks.
 
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original

@@ -4,6 +4,7 @@ Operator inputs are references, never scientific verdicts. Synthetic transaction
 tests replace the private admission resolver, not any public scientific policy.
 """
 import hashlib
+from copy import deepcopy
 from pathlib import Path
 import re
 import uuid
@@ -15,6 +16,8 @@ from .evaluation_policy import family_budget
 from .outcome_reservations import (PROFILE as RESERVATION_PROFILE, merge_grids,
                                    overlapping_events, reservation_for_plans)
 from .certification import _runtime_identity
+from .data import PARTITIONS, window
+from .outcomes import _instant
 
 INPUT = 'scientific-freeze-input/1'
 ATTEMPT = 'scientific-freeze-attempt/1'
@@ -23,6 +26,9 @@ TRIAL = 'scientific-trial/1'
 ALLOCATION = 'scientific-allocation/1'
 FAMILY_BINDING = 'scientific-family-policy-binding/1'
 AUTHORITY = 'scientific_commitment_not_execution_or_release_permission'
+PREREQUISITE_CLOSURE = 'scientific-prerequisite-closure/1'
+PREREQUISITE_LIMITS = {'transitive_items': 4094, 'retained_exposure_items': 4096,
+                       'successful_commit_items': 256}
 LOADED_SELF = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
 LOADED_PACKAGE = footprint(source_bundle())
 
@@ -32,6 +38,17 @@ def require(condition, message):
         raise Invalid(message)
 
 
+def closure_strings(value, name, maximum):
+    """Bound complete private provenance without changing public reference lists."""
+    require(type(value) is list and len(value) <= maximum,
+            f'{name} exceeds its complete provenance envelope')
+    for identity in value:
+        text(identity, name)
+    require(len(set(value)) == len(value), f'{name} contains duplicates')
+    canonical(value)  # The existing 1 MiB bound also applies to each complete set.
+    return value
+
+
 class ScientificFreeze:
     def _freeze_objects(self, schema):
         return [self._artifact(row[0]) for row in self._db.execute(
@@ -39,27 +56,38 @@ class ScientificFreeze:
             AND json_extract(envelope,'$.creator')='controller'
             AND json_extract(envelope,'$.origin')='controller' ORDER BY rowid""", (schema,))]
 
-    def _freeze_closure(self, roots):
-        pending, artifacts, exposure, blobs = list(roots), {}, set(roots), set()
+    def _freeze_closure(self, roots, *, prerequisite=False):
+        # Read-only prerequisites need the genuine input ancestry, which DATA.md
+        # already permits to exceed one direct reference list. Reserve two nodes
+        # for the input/attempt. Successful commitments retain their old limit.
+        maximum = PREREQUISITE_LIMITS['transitive_items'] if prerequisite else 256
+        pending, artifacts, exposure, blobs = set(roots), set(), set(roots), set()
+        known_nonartifacts = set()
         while pending:
             identity = pending.pop()
             if identity in artifacts:
                 continue
-            require(len(artifacts) < 256, 'Freeze closure exceeds the existing reference envelope')
+            require(len(artifacts) < maximum, 'Freeze closure exceeds its complete reference envelope')
             artifact = self._artifact(identity)
-            artifacts[identity] = artifact
+            artifacts.add(identity)
             exposure.update(artifact['exposure'])
             blobs.update(artifact.get('blob_refs', []))
-            pending.extend(artifact['source_refs'])
+            require(len(exposure | artifacts) <= maximum and len(blobs) <= maximum,
+                    'Freeze provenance collection exceeds its complete reference envelope')
+            pending.update(ref for ref in artifact['source_refs'] if ref not in artifacts)
             dependencies = self._technical_dependencies(artifact)
             if dependencies is not None:
-                pending.extend(dependencies)
+                pending.update(ref for ref in dependencies if ref not in artifacts)
             for ref in artifact['exposure']:
+                if ref in artifacts or ref in pending or ref in known_nonartifacts:
+                    continue
                 if self._db.execute('SELECT 1 FROM artifacts WHERE id=?', (ref,)).fetchone():
-                    pending.append(ref)
+                    pending.add(ref)
+                else:
+                    known_nonartifacts.add(ref)
         exposure.update(artifacts)
-        strings(sorted(exposure), 'inherited freeze exposure')
-        strings(sorted(blobs), 'freeze blob references')
+        closure_strings(sorted(exposure), 'inherited freeze exposure', maximum)
+        closure_strings(sorted(blobs), 'freeze blob references', maximum)
         return sorted(artifacts), sorted(exposure), sorted(blobs)
 
     def _scientific_freeze_admission(self, actor, request):
@@ -70,7 +98,7 @@ class ScientificFreeze:
         flag, source schema or private-plan qualification substitutes for them.
         """
         gaps = ['SCIENTIFIC_SELECTION_AND_RESERVATION_NOT_QUALIFIED',
-                'SCIENTIFIC_DATA_AND_EXPOSURE_NOT_ADMITTED',
+                'SCIENTIFIC_EXPOSURE_AND_PRIOR_USE_NOT_QUALIFIED',
                 'CALIBRATED_ESTIMATOR_AND_INFORMATION_PLAN_NOT_ADMITTED']
         observations = []
         roots = [request[name] for name in
@@ -103,18 +131,139 @@ class ScientificFreeze:
                 'dependence_exposure_prior_use': 'NOT_QUALIFIED',
                 'scientific_readiness': False}
             gaps.append('OUTCOME_RESERVATION_METADATA_NOT_QUALIFIED')
-        closure, _, _ = self._freeze_closure(roots)
+        data = self._freeze_data_prerequisite(actor, request)
+        roots.extend(data['artifact_ids'])
+        if data['gaps']:
+            gaps.append('SCIENTIFIC_DATA_PREREQUISITE_NOT_QUALIFIED')
+        # Data custody and the declared historical scenario can qualify before
+        # selection, prior use and dependence. Their combined admission remains
+        # closed until its separate exposure owner is actually implemented.
+        if data['gaps'] or 'SCIENTIFIC_EXPOSURE_AND_PRIOR_USE_NOT_QUALIFIED' in gaps:
+            gaps.append('SCIENTIFIC_DATA_AND_EXPOSURE_NOT_ADMITTED')
+        closure, _, _ = self._freeze_closure(roots, prerequisite=True)
         return {'gaps': sorted(set(gaps)), 'artifact_ids': closure, 'claims': [],
                 'outcome_record_ids': [], 'outcome_reservation': reservation,
                 'admission': {'plan_observations': observations,
                     'outcome_reservation': reservation,
+                    'data_prerequisite': data,
                     'qualification': 'Existing preparation checks grant no scientific admission.'}}
+
+    def _freeze_data_prerequisite(self, actor, request):
+        """Resolve the exact pre-outcome data prerequisite through its owners.
+
+        This new intended-use check requires current certificates. It neither
+        rewrites intact historical qualifications nor treats private preparation
+        as scientific admission. Recorded availability remains an assumption;
+        actual publication, eligibility and outcome values are not inspected.
+        """
+        from . import data_use
+
+        plan_ids = strings(request['plan_ids'], 'scientific data plan identities')
+        require(1 <= len(plan_ids) <= 8, 'A complete bounded data family is required')
+        bindings, gaps, refs = [], [], set(plan_ids)
+        expected_partition = {'primary': 'assessment', 'corroboration': 'corroboration'}.get(request['role'])
+        for plan_id in plan_ids:
+            try:
+                require(expected_partition is not None, 'Unsupported scientific data role')
+                plan = self._artifact(plan_id)
+                require(self._inspect_evaluation_plan(actor, plan_id)['status'] == 'POLICY_DRAFT',
+                        'An owned current plan draft is required')
+                self._require_usable_dependencies(plan_id)
+                plan_request = plan['body']['request']
+                assessment_id = plan_request['data_use_assessment_id']
+                current = self._plan_data_use_evidence(actor, plan_request)
+                require(current is not None and current['status'] == 'QUALIFIED_PRIVATE_PLAN_DATA'
+                        and current.get('qualified_protected_target_data_use') == 'SATISFIED',
+                        'Exact current protected data prerequisite required')
+                self._require_usable_dependencies(assessment_id)
+                assessment = self._artifact(assessment_id)
+                require(data_use.checker_current(assessment['body']['checker_sha256']),
+                        'Data-use checker changed during intended-use inspection')
+                compiled, _ = self._composition_inputs(actor, plan_request['compiled_id'])
+                body = compiled['body']
+                arguments = body['dependency_arguments']
+                private = self._checked_target_binding(actor, arguments['data_target_binding_id'])
+                resolved = private['body']['resolved']
+                public = self._public_data_target(resolved['target_id'])
+                snapshot = self._data_snapshot(resolved['data_snapshot_id'])
+                manifest = snapshot['body']['manifest']
+                universe = public['body']['request']['universe']
+                declared_start, declared_end, instruments = window(universe)
+                lower, upper = (_instant(value) for value in PARTITIONS[expected_partition])
+                require(public['body']['request']['partition'] == resolved['partition']
+                        == manifest['partition'] == expected_partition
+                        and snapshot['data_class'] == compiled['data_class'] == plan['data_class'] == 'assessment'
+                        and lower <= declared_start < declared_end <= upper,
+                        'Scientific role and adopted data partition differ')
+                require(body['compilation']['request']['universe'] == universe
+                        and resolved['declared_universe'] == universe
+                        and body['data_snapshot_id'] == snapshot['id'],
+                        'Compiled scope differs from the exact predeclared target')
+                left, right, available = window(manifest['universe'])
+                require(left <= declared_start < declared_end <= right
+                        and set(instruments) <= set(available),
+                        'Protected snapshot does not cover the declared scope')
+                feature_id = arguments['feature_certificate_id']
+                reference_id = arguments['reference_certificate_id']
+                feature = self._feature_certificate_status(actor, feature_id, data_snapshot_id=snapshot['id'])
+                reference = self._reference_certificate_status(actor, reference_id)
+                require(feature['status'] == reference['status'] == 'CURRENT'
+                        and reference['retained_source_status'] == 'VERIFIED'
+                        and feature_id == resolved['feature_certificate_id'],
+                        'Scientific data intended use requires current exact certificates')
+                findings = assessment['body']['findings']
+                scope = findings['scope']
+                require(scope['compiled_id'] == compiled['id']
+                        and scope['data_snapshot_id'] == snapshot['id']
+                        and scope['feature_certificate_id'] == feature_id
+                        and scope['feature_definitions_id'] == resolved['private_definitions_id']
+                        and scope['catalog_id'] == resolved['private_catalog_id'] == snapshot['body']['catalog_id']
+                        and findings['rights']['reviewed_bytes_match'] is True
+                        and not data_use.protected_knowledge_gaps(findings['prior_knowledge']),
+                        'Qualified data findings differ from their exact owned inputs')
+                member = {'plan_id': plan_id, 'compiled_id': compiled['id'],
+                    'data_use_assessment_id': assessment_id, 'data_target_binding_id': private['id'],
+                    'public_target_id': public['id'], 'data_snapshot_id': snapshot['id'],
+                    'feature_certificate_id': feature_id, 'reference_certificate_id': reference_id,
+                    'normalization_id': scope['normalization_id'],
+                    'feature_definitions_id': resolved['private_definitions_id'],
+                    'public_definitions_id': resolved['public_definitions_id'],
+                    'catalog_id': resolved['private_catalog_id'], 'public_catalog_id': resolved['public_catalog_id']}
+                # Normalization/catalog records are exact provenance, not D083
+                # executable versions. Their owning bindings above remain exact.
+                for identity in member.values():
+                    self._artifact(identity)
+                for name in ('plan_id', 'compiled_id', 'data_use_assessment_id',
+                             'data_target_binding_id', 'public_target_id', 'data_snapshot_id',
+                             'feature_certificate_id', 'reference_certificate_id',
+                             'feature_definitions_id', 'public_definitions_id'):
+                    self._require_usable_dependencies(member[name])
+                refs.update(member.values())
+                member.update(status='QUALIFIED_DATA_PREREQUISITE', role=request['role'],
+                    partition=expected_partition, declared_universe=deepcopy(universe),
+                    data_use_status=current['status'], feature_status=feature['status'], reference_status=reference['status'],
+                    data_use_checker_sha256=assessment['body']['checker_sha256'],
+                    snapshot_manifest_hash=digest(manifest), compilation_request_hash=digest(body['compilation']['request']),
+                    rights=deepcopy(findings['rights']), availability=deepcopy(findings['availability']),
+                    evidence_origin=findings['exposure']['evidence_origin'],
+                    origin_reason=findings['exposure']['origin_reason'], prior_knowledge_hash=digest(findings['prior_knowledge']))
+                bindings.append(member)
+            except (Invalid, Denied, Conflict, KeyError, TypeError, OSError, ValueError) as exc:
+                gaps.append('DATA_PREREQUISITE_GAP:' + plan_id)
+                bindings.append({'plan_id': plan_id, 'status': 'DATA_PREREQUISITE_GAP',
+                                 'failure_type': type(exc).__name__})
+        return {'schema': 'scientific-data-prerequisite/1',
+            'status': 'DATA_PREREQUISITE_GAP' if gaps else 'QUALIFIED_DATA_PREREQUISITE',
+            'gaps': sorted(set(gaps)), 'plan_bindings': bindings, 'artifact_ids': sorted(refs),
+            'campaign_selection_and_prior_use': 'NOT_ASSESSED',
+            'unused_reservation_and_dependence': 'NOT_QUALIFIED', 'evidence_origin': None,
+            'protected_target_admission': False, 'scientific_readiness': False, 'assessment_access_authority': False}
 
     def _freeze_save(self, schema, body, refs, exposure, *, blobs=None):
         refs = sorted(set(refs))
         exposure = sorted(set(exposure) | set(refs))
         strings(refs, 'freeze references')
-        strings(exposure, 'freeze exposure')
+        closure_strings(exposure, 'freeze exposure', PREREQUISITE_LIMITS['retained_exposure_items'])
         return self._save_artifact({'version': 'local-artifact/1', 'creator': 'controller',
             'origin': 'controller', 'data_class': 'assessment', 'source_refs': refs,
             'exposure': exposure, 'blob_refs': blobs or [], 'authority': AUTHORITY,
@@ -130,9 +279,11 @@ class ScientificFreeze:
             exposure.update(requested)
             known = [ref for ref in requested if self._db.execute(
                 'SELECT 1 FROM artifacts WHERE id=?', (ref,)).fetchone()]
-            _, inherited, _ = self._freeze_closure(known)
+            _, inherited, _ = self._freeze_closure(known, prerequisite=True)
             exposure.update(inherited)
         saved = self._freeze_save(ATTEMPT, {'attempt_id': attempt, 'created_at': self._now(),
+            'prerequisite_closure_profile': PREREQUISITE_CLOSURE,
+            'prerequisite_closure_limits': dict(PREREQUISITE_LIMITS),
             'input_id': capsule['id'], 'status': status, 'manifest_id': manifest,
             'admission': admission, 'failure_type': failure, 'rejected_request': rejected_request,
             'scientific_readiness': False,
@@ -285,11 +436,23 @@ class ScientificFreeze:
                 original = next(item for item in self._freeze_objects(INPUT)
                                 if item['body']['request']['key'] == request['key'])
                 attempt = uuid.uuid4().hex
-                with self._transaction():
-                    self._event('controller', 'bound_computation_started', attempt_id=attempt,
-                        kind='scientific_freeze', input_ref=original['id'], retained_input_id=original['id'])
-                    self._freeze_attempt(attempt, original, 'FAILED', failure='Conflict',
-                                         rejected_request=request)
+                try:
+                    with self._transaction():
+                        self._event('controller', 'bound_computation_started', attempt_id=attempt,
+                            kind='scientific_freeze', input_ref=original['id'], retained_input_id=original['id'])
+                        self._freeze_attempt(attempt, original, 'FAILED', failure='Conflict',
+                                             rejected_request=request)
+                except (Invalid, Denied, Conflict) as retention_failure:
+                    # Two individually bounded ancestries need not fit their
+                    # union. Retain the exact rejected roots operationally; never
+                    # truncate an artifact's inherited exposure to make it fit.
+                    with self._transaction():
+                        self._event('controller', 'bound_computation_started', attempt_id=attempt,
+                            kind='scientific_freeze', input_ref=original['id'], retained_input_id=original['id'])
+                        self._event('controller', 'bound_computation_checked', attempt_id=attempt,
+                            status='FAILED_RETENTION', failure_type=type(retention_failure).__name__,
+                            reason=str(retention_failure)[:2000], rejected_request=request,
+                            rejected_request_hash=digest(request), artifact_retained=False)
                 raise
             if existing is not None:
                 return existing  # Immutable history, never renewed execution/access authority.
@@ -300,7 +463,7 @@ class ScientificFreeze:
             roots = [request[name] for name in
                      ('campaign_id', 'selection_record_ref', 'reservation_spec_ref')]
             roots.extend(request['plan_ids'])
-            _, exposure, _ = self._freeze_closure(roots)
+            _, exposure, _ = self._freeze_closure(roots, prerequisite=True)
             attempt = uuid.uuid4().hex
             with self._transaction():
                 if capsule is None:
@@ -310,6 +473,8 @@ class ScientificFreeze:
                     for descriptor in sources.values():
                         self._register_blob(descriptor)
                     capsule = self._freeze_save(INPUT, {'request': request,
+                        'prerequisite_closure_profile': PREREQUISITE_CLOSURE,
+                        'prerequisite_closure_limits': dict(PREREQUISITE_LIMITS),
                         'created_at': self._now(), 'checker_sha256': LOADED_SELF,
                         'source_files': sources, 'source_footprint': LOADED_PACKAGE,
                         'runtime_identity': _runtime_identity(),
@@ -323,6 +488,8 @@ class ScientificFreeze:
                     require(hashlib.sha256(Path(__file__).read_bytes()).hexdigest() == LOADED_SELF,
                             'Scientific freeze checker changed before commitment')
                     require(capsule['body']['checker_sha256'] == LOADED_SELF and
+                            capsule['body'].get('prerequisite_closure_profile') == PREREQUISITE_CLOSURE and
+                            capsule['body'].get('prerequisite_closure_limits') == PREREQUISITE_LIMITS and
                             capsule['body']['source_footprint'] == LOADED_PACKAGE and
                             footprint(source_bundle()) == LOADED_PACKAGE and
                             capsule['body']['runtime_identity'] == _runtime_identity(),
@@ -358,7 +525,8 @@ class ScientificFreeze:
         attempts = self._freeze_objects(ATTEMPT)
         terminal = {item['body']['attempt_id'] for item in attempts}
         incomplete = [item for item in self._bound_attempts()
-                      if item['kind'] == 'scientific_freeze' and item['attempt_id'] not in terminal]
+                      if item['kind'] == 'scientific_freeze' and item['attempt_id'] not in terminal
+                      and item['state'] != 'COMPLETED']
         return {'attempts': list(reversed(attempts[-limit:])), 'total': len(attempts),
                 'incomplete_attempts': list(reversed(incomplete[-limit:])),
                 'scientific_authority': False}

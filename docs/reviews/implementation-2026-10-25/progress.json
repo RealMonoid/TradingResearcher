@@ -5677,7 +5677,7 @@
       "git_diff_check_exit": 0,
       "scope": "Links, preservation, traceability and whitespace; final evidence/handoff mutation requires affected documentation refresh"
     },
-    "next_action": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
+    "next_action": "Implementandindependentlyqualify exactapprovedoptionA append-onlyrecovery through existingowners; thenresumeoriginalseries withoutparallelheavyconstructionchecks. Do notaskalreadyresolvedapprovalagain.",
     "retained_auxiliary_draft_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289",
     "changed_files": [
       "trading_researcher/scientific_freeze.py",
@@ -6375,7 +6375,165 @@
           }
         ]
       }
-    }
+    },
+    "scientific_data_prerequisite_2026_11_03": {
+      "status": "PASS_BOUNDED_OWNED_DATA_PREREQUISITE_AND_PRE_ADMISSION_RETENTION",
+      "purpose": "Close actualIF05pre-admission data/prerequisite consumer and its completeboundedprovenance; preserve independent selection/exposure/information/calibration admission and fullframeworkgoal.",
+      "requirements_scope": [
+        "D076/D083 andREQ008/015 data/custody/currentness subset",
+        "D078/D082 IF05 preadmission retention/failure/recovery subset; nofullpackage orscientificfreeze pass"
+      ],
+      "base_commit": "2008f6d",
+      "production_source_sha256": "c369b5b6720ea20683140163c52b5e9baef4f73f7fa936276a4ab732213d473b",
+      "independent_test_pins": {
+        "tests/test_scientific_data_prerequisite_independent.py": "04580ca58669ba7d7fac8e4e4adccf064b03cd7fff0b2dfc60104650117e2d2c",
+        "tests/test_scientific_prerequisite_closure_independent.py": "b5a7a051a2a2cd25ddaca4c28aed0630e7356ae1335fb0abed09daa53f49f04b"
+      },
+      "completed_acceptance": [
+        "Real public ownedprotected syntheticplan reaches computedQUALIFIED_DATA_PREREQUISITE with exactrole/scope/checker/certificates/compiled/snapshot/targetchain; independent science/accessflagsstayfalse",
+        "Normalization/catalog13memberintegrity versus10typedusable IDs; no newtechnicalversiontypes",
+        "Complete275ancestor oneplan admittedto read-onlyprerequisite retention, no ancestry/blobownership truncation, strictcount+canonicalbound andunchangeddirect/source/commitlimits",
+        "Stale/corrupt/revoked/wrongscope/wrongrole/finalcalibrationwrapper/missing/wrongcompile/unreviewedpolicy/publicforgery/familyfailure/restore controls",
+        "Conflictingrequest fullancestrieswhenfit; oversizedcount/byte union exacteventonlyFAILED_RETENTION, no partialartifact/orphan/falselyincompleteview; genuineSTARTED/INTERRUPTEDhistorypreserved"
+      ],
+      "fresh_distinct_methods": 81,
+      "fresh_checks": {
+        "data": {
+          "methods": 11,
+          "exit_code": 0,
+          "seconds": "1057.1311903999886"
+        },
+        "closure": {
+          "methods": 15,
+          "exit_code": 0,
+          "seconds": "108.70565269998042"
+        },
+        "affected_regressions": {
+          "methods": 55,
+          "exit_code": 0,
+          "seconds": "631.2556194000063"
+        }
+      },
+      "reused_historical_evidence": "Unchangedpure potential-event and declaredstatic component receipts remainhistoricalatrecordedversions; notcountedagain in81. Reviewedactualretainedproviderdocumentbytes separatelyread-onlychecked,notfreshupstream/legalacceptance.",
+      "receipts": {
+        "scientific-data-final-tests.json": {
+          "sha256": "57cef94271bd8d4411abe813bd3a8b025f2bf95f5b420196221e614194649d8a",
+          "bytes": 1260,
+          "status": null,
+          "exit_code": 0,
+          "executed_methods": 11,
+          "seconds": "1057.1311903999886"
+        },
+        "prerequisite-closure-independent-final.json": {
+          "sha256": "97e6d127bada5c52b124ccd514c38c4b29d18de5910de8b13567e8eccce934aa",
+          "bytes": 31420,
+          "status": null,
+          "exit_code": 0,
+          "executed_methods": 15,
+          "seconds": 108.70565269998042
+        },
+        "scientific-data-affected-regressions-final.json": {
+          "sha256": "6229b8f46005740b6b169225b832e951e26831540ee089971f85d05c37f1adf7",
+          "bytes": 14230,
+          "status": null,
+          "exit_code": 0,
+          "executed_methods": 55,
+          "seconds": "631.2556194000063"
+        },
+        "scientific-data-closure-measurement.json": {
+          "sha256": "c4e02a746aa2af444bc49f6d8dbdaf198569e1e528405c5562637843e0a2f49a",
+          "bytes": 63421,
+          "status": "COMPLETE_ONE_PLAN_MEASUREMENT_EIGHT_PLAN_NOT_COMPLETED",
+          "exit_code": null,
+          "executed_methods": null,
+          "seconds": 383.1913701000158
+        },
+        "scientific-data-source-review.json": {
+          "sha256": "957e1dfa326d589b2337d1a9b45357d0983ffab4a3d7da2af7a16d41037d38d8",
+          "bytes": 41383,
+          "status": "APPROVED_BOUNDED_DATA_PREREQUISITE_AND_PRE_ADMISSION_CLOSURE_SOURCE_PINNED",
+          "exit_code": null,
+          "executed_methods": null,
+          "seconds": null
+        },
+        "scientific-data-central-reconciliation.json": {
+          "sha256": "147c3629f0939d5d2605d7144ad0074901450568e35404434dc014b7f5edab8d",
+          "bytes": 4472,
+          "status": "PASS_81_SOURCE_BOUND_SOFTWARE_METHODS_AND_RETAINED_FAILURES",
+          "exit_code": null,
+          "executed_methods": null,
+          "seconds": "0.022600699972826988"
+        }
+      },
+      "evidence_archive": {
+        "path": "tests/fixtures/scientific-data-prerequisite-checks-2026-11-03.zip",
+        "sha256": "af7052f68b386bf13cdea4c78cfe1f395f7d1c1cfc4182673411934f5bbc25d2",
+        "bytes": 154080,
+        "members": 27,
+        "crc_and_raw_readback": "PASS"
+      },
+      "read_only_profile": {
+        "version": "scientific-prerequisite-closure/1",
+        "transitive_items": 4094,
+        "retained_exposure_items": 4096,
+        "canonical_bytes": 1048576,
+        "successful_commit_items": 256,
+        "direct_reference_and_owned_blob_limits": "Unchanged256",
+        "source_capture_limits": "Unchanged16MiB/128files; measured112files1541345bytes"
+      },
+      "actual_ancestry_measurement": {
+        "one_plan": "COMPLETE275artifacts/275exposure/139transitiveblobs",
+        "eight_member": "NOT_MEASURED; twoactualdistinctmembers prepared,thirdformalizationblocked; no retry orweakenedfixture, conditional8size modelisnotmeasurement",
+        "total_seconds": "383.1913701000158"
+      },
+      "retained_failure_history": [
+        "Original969f andisolatedtyped8ed full11each8earlierclosureerrors; typedloopdefectsource-established/masked,nofalseREDclaim",
+        "d375data11deliberatelyinterrupted167.264083s/exit4294967295beforecompletion; completedcoverageUNKNOWN, ownedchildren46128/31724stopped",
+        "Closureinitial15 had14pass/1authorfixturecardinalityfailure; exact4094fixturecorrectedwithoutweakeningbound",
+        "Correctedfocusedoriginald375 inspectorRED1executed/1failure/0errors; finalc369singlepredicatefixverified",
+        "Full8measurementstoppedatblockedthirdformalization; underlyingreasonunexported, no budgetcauseinferred",
+        "Documentationpatchcontextfailurechangednofile; exactowningline rereadandcorrected"
+      ],
+      "library_reuse": "Reuse existingRegistry/SQLite transactions, codec canonical/text, Pythonsets/dicts, ownedplan/data/target/certificate/dependency/source/backup helpers. Newcode isframework-ownedpre-admissionorchestration andboundedprovenanceadapter; no newcomputation/library/dependency/versionchange.",
+      "construction_effort": {
+        "executed_receipts_include_initial_failure_and_rework": true,
+        "coordination": "Separateindependentdata/closuretestauthor andsourcereviewer, centrallyreconciledall112top-levelsources/testpins/failures/receiptcounts; sourcefencesduringgenuinefixture setup andfinalchecks. Constructionchecks overlap eachother while actualstudyisstopped, not performanceclaims.",
+        "interruption_seconds": "167.2640830000164",
+        "initial_data_seconds": [
+          "823.723397099995",
+          "730.1243590000086"
+        ],
+        "measurement_seconds": "383.1913701000158",
+        "initial_closure_seconds": "100.02369449997786",
+        "focused_red_seconds": "4.376844200014602",
+        "scope": "Reportedexecutionphase measurements include retainedrework but exclude unmeasuredreading/editing/coordination; sumisnotelapsedwallclock orcompleteconstructioncost."
+      },
+      "remaining_required_exits": [
+        "Large successfulscientificcommit representation still256andunsupportedbeyondit, IF05fullrequirement remains",
+        "Fullcampaignselection/prioruse/exposure/unusedreservation/dependence/rawfullprofiles/information/applicablecalibration/admission remainclosed",
+        "Actualeightmembermeasurementunmeasured; noactualPIT/marketlegality/scientificvalidity claim",
+        "ApprovedoptionA recovery notimplemented/qualified orstarted; retainoldscalarhost/study/seeds/worlds/charges",
+        "OriginalAhold/53researchcalls/USD0.574585remaining/sevenrevokedgrants/protected2024sciencebarrier unchanged"
+      ],
+      "next_action": "Implementandindependentlyqualify exactapprovedoptionA append-onlyrecovery through existingowners; thenresumeoriginalseries withoutparallelheavyconstructionchecks. Do notaskalreadyresolvedapprovalagain.",
+      "documentation_checks": {
+        "status": "PASS",
+        "implementation": {
+          "exit_code": 0,
+          "seconds": "0.6176917"
+        },
+        "system_model": {
+          "exit_code": 0,
+          "seconds": "6.8521101"
+        },
+        "retail_contract": {
+          "exit_code": 0,
+          "seconds": "6.8342173"
+        },
+        "scope": "Freshlink/whitespace/preservation/contract checks afterallrelatedpolicy/handoff/approval/progress edits. Subsequentreceipt-onlyrecord receivesfinalgitdiffcheck; softwarechecksnoscientificvalidity."
+      }
+    },
+    "prior_next_action_before_data_prerequisite": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits."
   },
   "scientific_information_profile_2026_11_02": {
     "status": "FIXED_DEVELOPMENT_GRID_COMPLETE_INDEPENDENTLY_VERIFIED",
@@ -9747,7 +9905,7 @@
       }
     },
     "finite_calibration_resource_decision_2026_11_02": {
-      "status": "APPROVED_ONCE_RUN_STARTED_THEN_STOPPED_INCOMPLETE_KNOWN_OVERRUN_RECOVERY_DECISION_PENDING",
+      "status": "APPROVED_OPTION_A_RECOVERY_PENDING_VERSIONED_INDEPENDENT_QUALIFICATION",
       "instruction": "SESSION-2026-11-02-CORE-CLOSEOUT, explicit user-authorized message from chat01a19904-f581-72d0-ae4f-78c1a0c8c3c5: fix encountered obstacles through qualified integration; present current finite full-calibration resource decision now, preserving full scope and no extra allowance.",
       "plan_section": "finite-calibration-resource-decision-november-2-2026",
       "recommended_route": "Existing retained-scalar FamilyCalibrationStudies, immutable development37208 and calculator425124; no nativefinalselector/transfer/retarget required. Pin current assessment/controller source separately in an isolated checkout with same interpreter/runtime.",
@@ -9870,11 +10028,11 @@
       "failure_policy": "Keep max1/fullnextreservation/unknownorphanfence;retainall failuresandcharges. A failedrequiredworld can preclude completecohortpass. Diagnose/fix concretecause; genuinely missing recovery/method/resource authority must be asked promptly,notresampled/dropped or replaced byoptimizationseries.",
       "required_preflight": "PASS at recorded actual start: independent driver/control evidence, original complete development/source/runtime/cases, fixed request/world/seed/count/applicability and full prepared backup/restore; intended-use guards remain active for every call.",
       "remaining_full_scope": "Population/nuisance/stress adequacy,justified information/N_min,full discovery/selectionprocesscalibration and actualscientificadmission/release remain. No fullprocessinventory/repetitioncount invented; fix/decide underownpreoutcomecontracts.",
-      "questions_pending": "None from resource/outcome questions. Actual series may stop at unmet runtime/resource/failure gates; no reset/retry/replacement authority.",
+      "questions_pending": [],
       "current_limits": "One fixed approved2048-world scalar run active under<=180h/100GiB/179additionalgrants; perattempt300s/256MiB/max1 and full separate replay unchanged. USD0.574585/53settledcalls/7oldrevoked/no2024/nooriginalA/noretarg/nocapital unchanged.",
       "next_chain": "Remaining-admissible-idea-to-report-chain-november-2-2026 in soleplan maps all M2 scientificgates and qualifiedidea/report; M3policies/M4monitoring/M5wholeprocess remainfullscope.",
       "construction_effort": "Read-only scopedreviews/physicalmetadata/centralprimarycheck and proposal/adoptiondocs; interruptedhelper schema/eol/concurrent-context assumptions stopped before clobber,corrected against actualcurrentM1edits. Totalconstructiontime/coordination/modeltokens/cashunknown. No repeatedcode/numericchecks.",
-      "next_action": "Await one pending operational recovery answer; no retry/grant/limit change. Continue independent M2 data-prerequisite owner and concrete full-provenance preadmission caller correction, preserving all scientific gates.",
+      "next_action": "Currentdata-prerequisite componentverified81methods. Nextimplementandindependentlyqualify approvedoptionA appendonlyrecovery; onlythenresumeoriginalsame2048worldstudy/noheavyconstructionchecks. Do notaskresolvedapprovalagain.",
       "live_processes": [],
       "approval_record": "docs/reviews/implementation-2026-10-25/calibration-resource-approval-2026-11-02.json",
       "approved_answer": "Einmalig bis 180 h / 100 GiB unter diesen Voraussetzungen freigeben (empfohlen)",
@@ -9976,7 +10134,7 @@
         "final_prepared": true,
         "numerical_run_started": true,
         "new_continuation_grants": 1,
-        "next_action": "Await one pending operational recovery answer; no retry/grant/limit change. Continue independent M2 data-prerequisite owner and concrete full-provenance preadmission caller correction, preserving all scientific gates.",
+        "next_action": "Currentdata-prerequisite componentverified81methods. Nextimplementandindependentlyqualify approvedoptionA appendonlyrecovery; onlythenresumeoriginalsame2048worldstudy/noheavyconstructionchecks. Do notaskresolvedapprovalagain.",
         "historical_source_input_preflight": {
           "status": "PASS_RETAINED_SOURCE_INPUT_PRECONDITIONS",
           "receipt": ".trf-runtime/scalar-final-calibration-2026-11-02/retained-source-input-preflight.json",
@@ -10340,7 +10498,7 @@
           "central_scope": "Recorded immutable firstgrant prefix only; no claim of whole study success."
         },
         "pending_recovery_decision_2026_11_03": {
-          "status": "PENDING_ASKED_ONCE",
+          "status": "RESOLVED_OPTION_A_EXPLICITLY_APPROVED",
           "proposal_plan_anchor": "finite-calibration-resource-decision-november-2-2026",
           "recommended": "One extra attempt only for failed world2441de72,600000ms ceiling for that retry and remaining original worlds; all other worlds max1; original256MiB/global180h100GiB179grant limits unchanged.",
           "alternatives": [
@@ -10354,7 +10512,13 @@
             "No simultaneous CPU-heavy construction checks",
             "Retry complete generation matches retained generation, then full separate replay; any newfailure stops"
           ],
-          "current_authority": "No recovery attempt or operational-limit change approved; generic continuation remains fenced."
+          "current_authority": "Only named-world one extra attempt and600000ms retry/remaining ceiling under unchangedaggregate180h100GiB179grants; beforeuse versionedappendonlyrecovery mustpassindependentqualification. No executionstarted.",
+          "prior_status": "PENDING_ASKED_ONCE",
+          "selected_answer": "A: Einmalige Wiederherstellung mit 600 s zulassen (empfohlen)",
+          "approval_record": {
+            "path": "docs/reviews/implementation-2026-10-25/calibration-recovery-approval-2026-11-03.json",
+            "sha256": "7aee698e473f0d6106f635bc49627011d672887526940e5396d342fb210a3728"
+          }
         },
         "terminal_documentation_checks": {
           "status": "PASS",
@@ -10371,6 +10535,26 @@
             "seconds": "7.357295"
           },
           "scope": "Fresh documentation checks after terminal/proposal edits; software links/preservation only. Later record-only edit receives finalgitdiffcheck; no numerical/source behavioral pass claimed."
+        },
+        "recovery_option_A_approval_2026_11_03": {
+          "path": "docs/reviews/implementation-2026-10-25/calibration-recovery-approval-2026-11-03.json",
+          "sha256": "7aee698e473f0d6106f635bc49627011d672887526940e5396d342fb210a3728"
+        },
+        "recovery_approval_documentation_checks": {
+          "status": "PASS",
+          "implementation": {
+            "exit_code": 0,
+            "seconds": "0.6176917"
+          },
+          "system_model": {
+            "exit_code": 0,
+            "seconds": "6.8521101"
+          },
+          "retail_contract": {
+            "exit_code": 0,
+            "seconds": "6.8342173"
+          },
+          "scope": "Freshlink/whitespace/preservation/contract checks afterallrelatedpolicy/handoff/approval/progress edits. Subsequentreceipt-onlyrecord receivesfinalgitdiffcheck; softwarechecksnoscientificvalidity."
         }
       },
       "prior_prestart_status": "ONE_CONDITIONAL_RUN_AND_C_TARGET_APPROVED_PREFLIGHT_REQUIRED"

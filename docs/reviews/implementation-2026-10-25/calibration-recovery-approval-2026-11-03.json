@@ -1,0 +1,50 @@
+{
+  "schema": "conditional-scalar-calibration-recovery-approval/1",
+  "source": "Direct user reply in active Codex chat",
+  "recorded_at_utc": "2026-11-02T23:53:49.369636+00:00",
+  "question_tool_call": "call_ab42c42e1a33405c9588cb297f83d569",
+  "question_item": 0,
+  "selected_answer": "A: Einmalige Wiederherstellung mit 600 s zulassen (empfohlen)",
+  "original_approval": {
+    "path": "docs/reviews/implementation-2026-10-25/calibration-resource-approval-2026-11-02.json",
+    "sha256": "0b0475cab83f5d0c839ee2de9afba67a3b83eb5eb933ca583e251ceead20647a"
+  },
+  "study_id": "8ab8334f134f75145857d8c4975bdf514f854ec00d8680a7831cb9cea5241b96",
+  "terminal_checkpoint": "2e4c3cdea3e3778b54eab106c4fe4596dc933af40f001137e4e43054bd10efa7",
+  "failed_attempt_artifact_id": "77add97b7e0a561fd2704b2cffe2a916980d4cf075167dc8236820a397894d8e",
+  "failed_attempt_id": "36544840f0ff405297b3724a20588f50",
+  "failed_world_id": "2441de7272469bfcbc587053f1164d8be5bd6ff0984fd5bd035195d2ced5684c",
+  "approved_exception": {
+    "additional_attempts_for_named_failed_world": 1,
+    "attempt_compute_ms_for_retry_and_remaining_original_worlds": 600000,
+    "other_worlds_max_attempts": 1,
+    "attempt_storage_bytes": 268435456,
+    "aggregate_compute_ms": 648000000,
+    "aggregate_logical_bytes": 107374182400,
+    "additional_grants_max": 179
+  },
+  "fixed_identity": {
+    "planned_worlds": 2048,
+    "verified_worlds_retained": 19,
+    "failed_attempt_retained": true,
+    "known_compute_ms_retained": 5029797,
+    "known_logical_bytes_retained": 877970493,
+    "actual_grants_retained": 1,
+    "calculation_source_footprint": "4251242fe7a807ffe7d3568d7df56efdd91c35359375901e5f32c3c5b9b89558",
+    "request_hash": "204c1fc3b87c9ec43cbfba3b5c59462ea5c1bdfc20224533bfe716b8f5f75440",
+    "manifest_hash": "ca3be8284be1769bd6c3a45abc69c83b19e0aaadadd43f7c6ac5f1299595d02f",
+    "recipe_hash": "dda4b0b3b69f90a5184ce57bb51c9caa27ff76049dc133735122f3f3fc348af5",
+    "all_original_world_and_seed_ids_unchanged": true
+  },
+  "conditions": [
+    "Separately versioned append-only recovery amendment bound to this approval, original source/study and exact terminal checkpoint; do not mutate original request or host",
+    "Independently qualify source/currentness, exactly-once attempt accounting, all charges and finite aggregate authority, rejection of unknown/orphan/other-overrun/revoked/stale/mismatched state and full backup/restore before use",
+    "Full fresh deterministic generation using original calculator/inputs/seeds followed by complete separate replay; compare retained failed-world generation result/stream to retry and stop/quarantine any mismatch",
+    "No concurrent CPU-heavy construction checks during the numerical study; uncontrolled host workload remains a risk",
+    "Any additional failure stops again; no blanket later retry or time/budget increase"
+  ],
+  "rollback": "Revocation of the amendment stops future recovery work and preserves all old/new records, failed attempts, charges and completed outputs. The original generic continuation remains fenced; historical300226ms breach is never erased.",
+  "standing_boundaries": "No extra inference/API money, protected2024/scientific admission, reseed, replacement series, completed-development retarget, original-A continuation or capital authority. Conditional scalar study is not full-process calibration.",
+  "implementation_status": "PENDING_SEPARATELY_VERSIONED_INDEPENDENT_QUALIFICATION",
+  "recovery_execution_started": false
+}

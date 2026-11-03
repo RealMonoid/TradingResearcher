@@ -292,7 +292,7 @@ is alive; local API acquire/clear was checked, but official-page retrieval and
 long-duration availability were not verified. Continue the remaining M2
 reservation/selection/data/information work independently of this fixed run.
 
-**Terminal checkpoint and pending recovery decision (November 3).** The actual
+**Terminal checkpoint and approved recovery decision (November 3).** The actual
 run stopped itself at its twentieth attempt: 19 worlds VERIFIED, one retained
 TECHNICAL_FAILURE, no pending attempt, and one actual continuation. Known charges
 are 5,029,797 ms and 877,970,493 logical bytes. Failed world
@@ -316,7 +316,11 @@ must not overlap a future calibration run. The requested fresh C: check finds
 140,027,133,952 bytes (130.41 GiB) free at 23:41:14 UTC, Healthy/OK NTFS, above the approved
 60 GiB initial condition. Capacity does not cure the exhausted attempt or overrun.
 
-**Reviewable operational recovery proposal; NOT APPROVED.** Recommended option:
+**Operational recovery option A approved.** The user explicitly selected
+"A: Einmalige Wiederherstellung mit 600 s zulassen (empfohlen)" in response to the
+concrete three-option proposal. The [immutable recovery approval](../implementation-2026-10-25/calibration-recovery-approval-2026-11-03.json)
+binds the original approval, exact terminal checkpoint and named failed attempt.
+The reviewed scope is:
 permit exactly one additional attempt for only the named failed world, plus a
 600,000 ms per-attempt ceiling for that retry and the remaining original worlds.
 The original 19 verified worlds, failed attempt and every charge remain retained;
@@ -351,9 +355,13 @@ Narrower alternative: authorize only that one extra attempt at the unchanged
 another timeout remains possible. Alternative without changed authority: retain
 the incomplete stopped series, with no retry. This is a D008/D026 operational
 resource/attempt decision under AGENTS.md, not another aggregate budget request
-or a goal change. The concrete three-option question has been sent once and is
-pending; dependent recovery waits. While pending, continue
-only authorized independent M2 prerequisite work.
+or a goal change. The decision is resolved; do not ask it again. Finish the
+currently running data-prerequisite correction/checks, then implement and
+independently qualify this exact recovery amendment through the existing
+Registry/study/finite-operator owners. Do not resume through the old API or edit
+the old host. Start the same approved series only after these prerequisites,
+with no parallel heavy construction checks. Other M2 prerequisites retain their
+full exits and scientific gates.
 
 **Checked next M2 slice: declared scalar observation spans.** The existing
 owned-plan reservation caller now retains conservative `declared-observation-spans/1`
@@ -374,6 +382,40 @@ all three production scientific gates remain closed. Main-source changes do not
 alter the active study's isolated `52c571d` host. Next, complete those remaining
 reservation/selection/data prerequisites through their actual consuming owners,
 keeping pre-outcome commitments separate from post-freeze observed dispositions.
+
+**Checked M2 data-prerequisite slice (November 3).** The actual public freeze
+caller now computes `scientific-data-prerequisite/1` through owned plan,
+assessment, compilation, protected binding, target, snapshot and certificate
+owners. It binds exact scope/role/currentness and preserves qualifications;
+normalization/catalog provenance is not promoted to executable dependency types.
+The separate exposure/prior-use, selection/reservation and estimator/information
+gates remain closed, with no protected access or positive scientific freeze.
+
+The genuine one-plan fixture requires 275 ancestors. Its complete prerequisite
+ancestry now fits separately versioned read-only retention: 4,094 entries per
+transitive collection, 4,096 retained exposure entries and the unchanged 1 MiB
+canonical bound. Direct/owned-blob/source-capture limits stay unchanged. Oversized
+conflict unions retain exact event-only failure history without partial artifacts
+or false incomplete status. The successful scientific commitment kernel remains
+at 256 references; large positive commitment representation is a required open
+IF-05 exit, not completed by this collector.
+
+All 81 distinct affected methods pass at the final source: 11 independent data
+cases, 15 independent retention/failure cases and 55 existing affected regressions.
+Initial eight-error runs, masked typed/provenance defect, interrupted unaccepted
+run, fixture cardinality error and the actual failing inspector counterexample
+remain retained. The source reviewer and central reconciliation bind the exact
+versions and receipts in the [same-work-item fixture](../../../tests/fixtures/scientific-data-prerequisite-checks-2026-11-03.zip).
+Only the one-plan ancestry measurement is complete; the attempted genuine
+eight-member measurement stopped at a blocked third formalization and is not
+reported as an eight-member pass. Bounded software qualification does not prove
+market data rights, point-in-time history, model adequacy or scientific validity.
+
+Proceed to the already approved option-A recovery implementation and independent
+qualification above; do not repeat its approval question. Keep the old isolated
+host, 2,048-world identity, seeds, 19 valid worlds, failed twentieth attempt and all
+charges. No numerical restart precedes those recovery controls. Remaining M2-M5
+and all seven full package exits remain binding.
 
 ## Remaining admissible idea-to-report chain (November 2, 2026)
 

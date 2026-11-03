@@ -96,8 +96,34 @@ retain the preimplementation missing-binding failure and the successful bounded
 transaction/caller checks. Positive cases substitute private admission and use
 synthetic records; the actual owned-plan caller still retains its admission gap.
 
-The kernel uses the existing 256-reference envelope and rejects overflow without
-truncation. General large-population reservation representation remains unfinished.
+The successful commitment kernel retains its existing 256-reference envelope and
+rejects overflow without truncation. Large successful scientific commitments
+remain an unfinished IF-05 requirement; the prerequisite collector below cannot
+be used to bypass that limit or reduce a predeclared family.
+
+New input capsules and attempt records bind `scientific-prerequisite-closure/1`:
+read-only pre-admission traversal may retain up to 4,094 artifacts, exposure
+tokens and transitive blob identities in each complete collection. Two nodes
+remain available for the input/attempt under the existing 4,096-node inspection
+envelope. Retained inherited exposure is bounded at 4,096 entries. Each complete
+collection and final artifact must still fit canonical 1 MiB JSON. Direct
+reference lists, owned blob-reference lists and source-capture limits remain
+unchanged. Original leaf artifacts retain blob ownership; collecting their IDs
+does not claim that all blob bytes were rehashed by a gapped admission check.
+The successful commit still checks every transitive blob before saving.
+
+The actual protected-plan fixture has 275 ancestors, so a 256-total shortcut
+cannot represent even that one genuine plan. This larger read-only envelope
+retains the complete gapped caller result and provenance; it grants no positive
+freeze or scientific access. Oversized collections fail instead of truncating.
+Rejected conflicting requests retain both complete ancestries when they fit.
+If their union cannot fit the bounded attempt artifact, the existing event log
+retains the exact rejected request, its hash, original input reference and
+`FAILED_RETENTION` reason. No partial artifact, allocation or pending computation
+is created. The ordinary bound-computation view retains this terminal history;
+the freeze view does not mislabel it as an incomplete attempt. Genuine started
+and interrupted attempts remain visible for recovery. Large positive commitment
+representation is separate required work.
 
 **Current production behavior is ADMISSION_GAP.** The private host resolver reads
 the current plan/dependency owners inside the final transaction. Exploration or

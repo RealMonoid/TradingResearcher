@@ -99,7 +99,8 @@ class DependencyRevocations:
         if schema in PACKAGES or schema=='data-snapshot/1':return []
         if schema=='native-calibration-resource-pool/1':
             # Retired sources remain financial provenance, not active Scalar use.
-            return []
+            correction=body.get('source_correction')
+            return [correction['predecessor_pool_id']] if correction else []
         if schema=='native-calibration-resource-inventory/1':
             return [body['request']['pool_id']]+([body['input_id']] if body.get('input_id') else [])
         if schema=='native-calibration-resource-grant/1':
@@ -109,7 +110,9 @@ class DependencyRevocations:
             return [body['resource_pool_id'],body['resource_inventory_id'],*body.get('technical_refs',[])]
         if schema=='native-calibration-reference-input/1':
             return [body['request']['development_study_id'],body['request']['native_qualification_id'],
-                    *[v['attempt_id'] for v in body['references'].values()]]
+                    *[v['attempt_id'] for v in body['references'].values()],
+                    *([body['request']['source_correction_pool_id']]
+                      if 'source_correction_pool_id' in body['request'] else [])]
         if schema=='calibration-recovery-input/1':
             return [body['study_id'],body['failed_attempt_artifact_id'],*body['original_continuation_ids']]
         if schema=='calibration-recovery-amendment/1':

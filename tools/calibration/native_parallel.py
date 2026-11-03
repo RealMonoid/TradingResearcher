@@ -38,14 +38,24 @@ def main():
     parser.add_argument('--run-directory', type=Path, required=True)
     parser.add_argument('--runtime-archive', type=Path, required=True)
     parser.add_argument('--runtime-manifest', type=Path, required=True)
+    parser.add_argument('--predecessor-pool')
+    parser.add_argument('--predecessor-checkpoint')
+    parser.add_argument('--predecessor-terminal-receipt', type=Path)
     args = parser.parse_args()
+    predecessor = (args.predecessor_pool, args.predecessor_checkpoint, args.predecessor_terminal_receipt)
+    if any(value is not None for value in predecessor) and not all(value is not None for value in predecessor):
+        parser.error('All three predecessor fields are required for the single pre-final source correction')
+    correction = None if args.predecessor_pool is None else {
+        'key': 'd100-native-source-correction', 'predecessor_pool_id': args.predecessor_pool,
+        'expected_checkpoint': args.predecessor_checkpoint,
+        'terminal_receipt_path': str(args.predecessor_terminal_receipt.resolve())}
     low_priority()
     with_broker = Broker(args.registry)
     primary_error = None
     try:
         controller = NativeCalibrationController(with_broker, args.run_directory, driver_file=Path(__file__))
         result = controller.run_all(with_broker.admin_token, archive_path=args.runtime_archive,
-                                    manifest_path=args.runtime_manifest)
+                                    manifest_path=args.runtime_manifest, correction_args=correction)
         print(json.dumps(result, ensure_ascii=False), flush=True)
         return 0 if result['status'] == 'COMPLETE_NUMERICAL_INVENTORY' else 2
     except BaseException as exc:

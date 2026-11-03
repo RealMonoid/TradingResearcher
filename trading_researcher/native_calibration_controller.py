@@ -27,7 +27,7 @@ from .native_calibration_resources import (
     COMPUTE_TRANCHE_MS, STORAGE_TRANCHE_BYTES, POOL)
 from .native_calibration_runs import (
     NativeCalibrationResources, NativeCalibrationAttempts, NativeCalibrationCopies,
-    NativeCalibrationReferences)
+    NativeCalibrationReferences, NativeCalibrationCorrectionReferences)
 from .native_study_runs import NativeFamilyCalibrationStudies
 from .storage import _durable_file
 
@@ -206,9 +206,14 @@ class NativeCalibrationController:
                 and self.binding['policy'] == policy()
                 and self.binding['driver_sha256'] == hashlib.sha256(self.driver_file.read_bytes()).hexdigest(),
                 'Native controller binding, source, policy or location differs')
+        if 'source_correction' in pool['body']:
+            correction = pool['body']['source_correction']
+            require(correction['controller_directory'] == str(self.directory)
+                    and correction['operational_start_utc'] == self.binding['operational_start_utc'],
+                    'Correction controller directory and original clock are permanently bound')
         return pool, self.resources._history(pool)
 
-    def prepare(self, token, key):
+    def prepare(self, token, key, *, correction_args=None):
         b, r = self.broker, self.resources
         with b._mutex:
             b._binding_owner(token)
@@ -216,16 +221,34 @@ class NativeCalibrationController:
             if path.exists():
                 self.binding = decode(path.read_bytes())
                 self.validate(token, self.binding['pool_id'])
-                return r._pool(self.binding['pool_id'])
+                pool = r._pool(self.binding['pool_id'])
+                if correction_args is not None:
+                    require(pool['body'].get('source_correction', {}).get('request') == correction_args,
+                            'Existing controller binds another source correction')
+                return pool
             require(not self.directory.exists(), 'Missing native binding forbids automatic preparation/reset')
             operational_start = datetime.now(timezone.utc).isoformat()
             require(datetime.now(timezone.utc) <= datetime.fromisoformat(READINESS_CUTOFF),
                     'D100 integration readiness deadline passed; stop and report')
-            pool = r.prepare(token, {'key': key})
+            if correction_args is None:
+                pool = r.prepare(token, {'key': key})
+            else:
+                require(correction_args.get('key') == key, 'Controller source correction key differs')
+                pool = r.correct_source(token, correction_args)
+            r._current(pool)
+            correction = pool['body'].get('source_correction')
+            if correction is not None:
+                operational_start = correction['operational_start_utc']
+                require(correction['controller_directory'] == str(self.directory),
+                        'Correction controller directory is permanently bound')
             history = r._history(pool)
             task = pool['body']['setup_tasks']['controller_source']
             require(('setup', task) not in history.records and not history.pending,
                     'Existing native source work cannot be automatically rebound')
+            if correction is not None:
+                # Claim the one fixed external location before spending. A
+                # crash before binding leaves a closed, visible boundary.
+                self.directory.mkdir(parents=True, exist_ok=False)
             started = time.monotonic()
             reservation = r.reserve(token, {'pool_id': pool['id'], 'phase': 'setup', 'task_id': task,
                 'attempt_id': uuid.uuid4().hex, 'expected_checkpoint': history.checkpoint})
@@ -246,7 +269,8 @@ class NativeCalibrationController:
                     'storage_bytes': 2 * len(raw) + META + CONTROL_BYTES, 'usage_known': True}}
             result = r.settle(token, pool['id'], body, blob_refs=[driver])
             require(result['body']['resource_state'] == 'COMPLETE', 'Native controller source setup failed')
-            self.directory.mkdir(parents=True, exist_ok=False)
+            if correction is None:
+                self.directory.mkdir(parents=True, exist_ok=False)
             self.binding = {**binding, 'source_result_id': result['id']}
             self._write('binding.json', self.binding)
             _durable_file(self._path('observations.jsonl'), b'')
@@ -683,18 +707,28 @@ class NativeCalibrationController:
         require(hashlib.sha256(archive_path.read_bytes()).hexdigest() == ARCHIVE_SHA
                 and hashlib.sha256(manifest_path.read_bytes()).hexdigest() == MANIFEST_SHA,
                 'Actual native runtime inputs differ from the pinned approved version')
+        correction = self.resources._pool(pool_id)['body'].get('source_correction')
         def retain():
-            source = self.broker.call(token, 'add_blob_source', path=str(archive_path), data_class='operations',
-                description='Pinned exact D100 native runtime; no scientific authority.')
-            item = NativeRuntimes(self.broker).retain(token, {'key': 'd100-exact-native-runtime',
-                'archive_id': source['id'], 'manifest': decode(manifest_path.read_bytes())})
+            runtimes = NativeRuntimes(self.broker)
+            if correction is None:
+                source = self.broker.call(token, 'add_blob_source', path=str(archive_path), data_class='operations',
+                    description='Pinned exact D100 native runtime; no scientific authority.')
+                item = runtimes.retain(token, {'key': 'd100-exact-native-runtime',
+                    'archive_id': source['id'], 'manifest': decode(manifest_path.read_bytes())})
+            else:
+                item = runtimes.inspect(token, {'runtime_id': correction['runtime_id']})
+                require(item['body']['archive']['sha256'] == ARCHIVE_SHA
+                        and item['body']['manifest'] == decode(manifest_path.read_bytes())
+                        and item['body']['request']['key'] == 'd100-exact-native-runtime',
+                        'Correction must reuse the exact already-retained runtime package')
             return {'result': {'runtime_id': item['id']}, 'refs': [item['id']],
                     'storage_bytes': item['body']['archive']['size'], 'usage_known': True}
         runtime = self._setup(token, pool_id, 'runtime_retain', retain)['body']['result']['runtime_id']
         NativeRuntimes(self.broker).inspect(token, {'runtime_id': runtime})
         def qualify():
             item = NativeQualifications(self.broker).qualify(token,
-                {'key': 'd100-fixed-source-qualification', 'runtime_id': runtime})
+                {'key': 'd100-fixed-source-qualification' if correction is None
+                        else 'd100-source-correction-qualification-' + pool_id, 'runtime_id': runtime})
             return {'result': {'qualification_id': item['id'], 'ok': item['body']['status'] == 'CERTIFIED',
                                'failure': item['body']['failure']}, 'refs': [item['id']],
                     'storage_bytes': item['body']['settlement']['storage_bytes'],
@@ -702,8 +736,14 @@ class NativeCalibrationController:
         qualification = self._setup(token, pool_id, 'runtime_qualification', qualify)['body']['result']['qualification_id']
         NativeQualifications(self.broker)._require_inputs(qualification)
         def reference():
-            item = NativeCalibrationReferences(self.broker).prepare(token, {'key': 'd100-complete-old-reference',
-                'development_study_id': DEVELOPMENT_ID, 'native_qualification_id': qualification})
+            request = {'key': 'd100-complete-old-reference' if correction is None
+                       else 'd100-source-correction-reference-' + pool_id,
+                'development_study_id': DEVELOPMENT_ID, 'native_qualification_id': qualification}
+            owner = NativeCalibrationReferences(self.broker)
+            if correction is not None:
+                request['source_correction_pool_id'] = pool_id
+                owner = NativeCalibrationCorrectionReferences(self.broker)
+            item = owner.prepare(token, request)
             return {'result': {'reference_id': item['id']}, 'refs': [item['id']],
                     'storage_bytes': item['body']['initial_storage_bytes'], 'usage_known': True}
         reference = self._setup(token, pool_id, 'prepare_reference_input', reference)['body']['result']['reference_id']
@@ -940,8 +980,9 @@ class NativeCalibrationController:
             backup_directory=self.directory.parent / 'native-terminal-backup',
             restore_directory=self.directory.parent / 'native-terminal-restore', receipt_path=receipt)
 
-    def run_all(self, token, *, archive_path, manifest_path):
-        pool = self.prepare(token, 'd100-native-bounded-controller')
+    def run_all(self, token, *, archive_path, manifest_path, correction_args=None):
+        key = 'd100-native-bounded-controller' if correction_args is None else correction_args['key']
+        pool = self.prepare(token, key, correction_args=correction_args)
         try:
             for label in ('prepared', 'terminal'):
                 history = self.resources._history(pool)

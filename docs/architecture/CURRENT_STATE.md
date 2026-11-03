@@ -76,12 +76,21 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   7,200 exact reads afterward, plus 66 fresh Broker/controller/resource regressions.
   `coordination.py` disables the shared connection's statement cache; numerical
   sources are unchanged. This completes the read-defect correction only.
-  Next: implement and independently check one source-bound pre-final handoff
-  carrying the exact stopped financial state and original operational start,
-  without unhalting the old pool or resetting grants/fees. Then freshly qualify
-  the corrected source and rerun all 32 references in both modes before final
-  admission. That handoff and actual acceptance are unimplemented/unverified;
-  science/2024 remain blocked and A4 remains unchanged. No general approval wait.
+  The one-time pre-final handoff is now connected through the existing owners.
+  It preserves all charges, allocations, grant/progress state and the original
+  clock, keeps the predecessor halted, and fixes one successor/controller path.
+  External immutable intent/ACK files and the bound directory reject stale
+  restoration; the same rules apply when optional correction arguments are absent.
+  The [handoff evidence](../../tests/fixtures/native-source-correction-checks-2026-11-03.zip)
+  accepts 17 distinct independent cases with explicit versioned reuse, five
+  additional caller units and 103 applicable existing regressions; three of those
+  controller regressions are refreshed with the five units at final source.
+  Three genuine restore/clock counterexamples and one authored test-scope error
+  remain retained. Numerical qualification/results are disclosed fixture seams.
+  Next: pin the checked source, use the actual one-time handoff and unchanged
+  runtime package, freshly qualify and run all 32 references in both modes.
+  Actual handoff, final admission and the 2,048-world series remain unverified;
+  science/2024 and A4 remain unchanged. No general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation
   under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without

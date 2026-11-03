@@ -10667,6 +10667,23 @@
             "removed_bytes": 2,
             "ast_equal": true,
             "scope": "Only redundant trailing blank lines removed; exact checked test source preserved. Existing independent checks are reused at their named historical bytes with identical test logic; no rerun claimed."
+          },
+          "github_publication": {
+            "status": "PUSHED_AND_REMOTE_HEAD_VERIFIED",
+            "user_authorization": "Direct user request: after next completed work step upload the full new framework version to GitHub, replace the current version, then continue.",
+            "repository": "https://github.com/RealMonoid/TradingResearcher",
+            "branch": "codex/architecture",
+            "default_branch_confirmed_by_git_ls_remote_symref": true,
+            "previous_remote_head": "a51bbcc776f3725abba9520155361d6b0a46a572",
+            "published_implementation_commit": "2bd3aa6b6290b5dfad133cf073e88720446ef7e2",
+            "remote_verified_head": "2bd3aa6b6290b5dfad133cf073e88720446ef7e2",
+            "fetch_exit": 0,
+            "fast_forward_ancestry_check_exit": 0,
+            "push_exit": 0,
+            "remote_verification_exit": 0,
+            "method": "Native Git push of complete committed source/tests/docs/evidence tree and accumulated history. The connector has no native local Git-object push operation. Current complete GitHub view replaced by fast-forward.",
+            "excluded_local_state": "Paused unverified AUXILIARY_RESOURCES.md, unqualified consuming/driver drafts and ignored local runtime/Registry files remain local.",
+            "after_publication": "Continue independently qualifying the trusted consuming adapter and isolated driver; no actual recovery setup or numerical dispatch before prerequisites."
           }
         }
       },

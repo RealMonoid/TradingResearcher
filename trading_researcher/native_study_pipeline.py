@@ -26,7 +26,11 @@ EXTRA_FIELDS = {'environment_before', 'native_binding', 'draw_engines'}
 
 class ParentContext:
     """Private selected input data, never a request-supplied Python factory."""
-    def __init__(self, source, selected):
+    def __init__(self, source, selected, *, _control=None):
+        if _control is not None:
+            from .study_process_control import ProcessControl
+            require(type(_control) is ProcessControl, 'Owned native study process control required')
+        self.control = _control
         require(type(selected) is dict and set(selected) == {'binding', 'directory'},
                 'Exact selected native study input required')
         selected = decode(canonical(selected))
@@ -52,6 +56,13 @@ class ParentContext:
         return {'binding': self.binding, 'directory': str(self.directory)}
 
     def validate_response(self, response):
+        if self.control is not None:
+            from .study_process_control import validate_observation
+            controls = response.get('process_control')
+            require(type(controls) is dict and set(controls) == {'before', 'after'},
+                    'Both native study process-control observations required')
+            for value in controls.values():
+                validate_observation(value)
         require(response['native_binding'] == digest(self.binding), 'Native study input identity differs')
         engines = response['draw_engines']
         require(type(engines) is list and len(engines) <= 128, 'Bounded native engine observations required')
@@ -69,11 +80,17 @@ def child_entry(request_path):
     request_path = Path(request_path)
     directory = request_path.parent
     request = decode(request_path.read_bytes())
-    require(set(request) == {'payload', 'manifest', 'world', 'footprint', 'verify', 'stream_limit', 'native'},
+    fields = {'payload', 'manifest', 'world', 'footprint', 'verify', 'stream_limit', 'native'}
+    controlled = 'process_control' in request
+    if controlled:fields.add('process_control')
+    require(set(request) == fields,
             'Exact native study child request required')
     expected = request['footprint']
     source = source_bundle()
     require(footprint(source) == expected, 'Retained native study source differs')
+    if controlled:
+        from .study_process_control import observe_control
+        control_before = observe_control(request['process_control'])
     selected = ParentContext(source, request['native'])
     sys.path.insert(1, str(selected.directory))
     numpy = importlib.import_module('numpy')
@@ -111,6 +128,8 @@ def child_entry(request_path):
         encoding = encoded.finish()
         if verify is not None:
             require(digest(result) == verify, 'Native study result replay differs')
+    if controlled:
+        control_after = observe_control(request['process_control'])
     after = environment(expected, _native=selected.context)
     require(footprint(source_bundle()) == expected, 'Native study source changed during computation')
     raw = path.read_bytes()
@@ -118,4 +137,6 @@ def child_entry(request_path):
                      'stream_blob': {'sha256': hashlib.sha256(raw).hexdigest(), 'size': len(raw)},
                      'stream_encoding': encoding, 'request_hash': digest(request), 'footprint': expected,
                      'environment_before': before, 'environment': after,
+                     **({'process_control': {'before': control_before, 'after': control_after}}
+                        if controlled else {}),
                      'native_binding': digest(selected.binding), 'draw_engines': engines}), flush=True)

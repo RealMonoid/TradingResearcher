@@ -10985,7 +10985,7 @@
     "prior_status_before_D100": "FIXED_DEVELOPMENT_GRID_COMPLETE_INDEPENDENTLY_VERIFIED",
     "prior_active_next_action_before_D100": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
     "native_parallel_calibration_2026_11_03": {
-      "status": "APPROVED_PREIMPLEMENTATION_REUSE_AND_FIXED_ACCEPTANCE_DESIGN",
+      "status": "PROCESS_CONTROL_VERIFIED_NATIVE_FINAL_NOT_IMPLEMENTED",
       "decision": "D100",
       "approval_record": {
         "path": "docs/reviews/implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json",
@@ -11052,7 +11052,7 @@
         "persistent_driver_stop_marker_sha256": "3dbd639f1340770c4ef0e5606b858bcca84c25ddc1e0eae4f32074252eef8431",
         "preservation": "The stop marker changes no old Registry/source/result/proof. UserA5 replaces future execution authority; checked Scalar preparation remains historical."
       },
-      "code_status": "No new native-final implementation or native acceptance/series run yet. Existing owners are being inspected before the smallest adapter/interface is fixed.",
+      "code_status": "Fixed process-control option implemented through supervisor, two-phase native transport and child observations.23 independent cases,17 final transport regressions and12 unchanged legacy normalization cases pass. No numerical acceptance/native-final caller/seed/series yet.",
       "reuse_review_ownership": {
         "native_transport_tests": "Read-only native/factory/runtime/cache/measurement reuse assessment.",
         "outcome_reservation_review": "Read-only A1/A2/A3 accounting, fixed acceptance, fresh-seed and restart design.",
@@ -11064,10 +11064,10 @@
       "native_new_world_attempts": 0,
       "new_research_API_calls": 0,
       "new_scientific_authority": false,
-      "next_action": "Centrally reconcile reusable native/source/cache/ledger evidence and freeze the smallest new final/concurrent/timeout-retry/monitoring interface and fixed independent acceptance. Implement through real callers; start after actual source/fresh-seed/logical+physical admission. No separate profiling project or further Scalar work.",
+      "next_action": "Implement explicit native final-series input/identity/count/source/case/seed bindings through existing Registry/FamilyCalibration owners, then versioned bounded<=6 reservation/retry/known-use ledger and consuming A1-A3 controller. Preserve retired Scalar and all charges; fresh runtime/current-source/final-seed/capacity qualification before numerical use.",
       "during_series": "Continue permitted technical main pathv0 on development2020–2023 without mutating pinned study source/results; account for desktop/v0 resources and avoid unnecessary concurrent heavy tests.",
       "unchanged_boundaries": "Full project specification, actual scientific admission/protected2024 restrictions, exact scientific criteria, exposure, freeze, separate policy/capital authority and existing inference budget remain binding. OriginalA/AgentWorkflow/AUX draft is not implicitly resumed.",
-      "construction_effort": "New task starts03:32:10UTC. Read-only reuse/design review is active. Prior Scalar costs remain retained history. A first scoped JSON helper rejected the nonunique actual_preparation key before writing; corrected to search only its actual recovery_callers owner. No old evidence or source changed for that helper correction.",
+      "construction_effort": "Native task03:32:10UTC; reuse/design/adoption and process-control slice recorded in existing capsule. Two real input-integrity/cleanup defects fixed under independent RED cases. A4 cutoff remains2026-11-04T22:59:59Z; full final integration/acceptance pending. No measured speed/quality equivalence or construction token-cost data.",
       "adoption_checks": {
         "record_path": "docs/reviews/implementation-2026-10-25/native-parallel-calibration-adoption-checks-2026-11-03.json",
         "record_sha256": "a3954ffd45fa21fcfdee5614a6e637e488080c659494a583e6b6c6e2c8827465",
@@ -11101,6 +11101,124 @@
           "Scoped progress helper rejected nonunique actual_preparation before write; corrected owning-parent selector. Root resume pointer separately corrected while preserving its historical value."
         ],
         "final_whitespace_check": "git diff --check and cached check required after final metadata-only recording."
+      },
+      "design_evidence": [
+        {
+          "path": ".trf-runtime/native-final-calibration-2026-11-03/native-reuse-assessment.json",
+          "sha256": "a73e8abebb930d117c1df6a08d4a45de4c1e9a753062fded9ff18a26978e55f7"
+        },
+        {
+          "path": ".trf-runtime/native-final-calibration-2026-11-03/native-acceptance-design-review.json",
+          "sha256": "6950c37df105f07e0bd3762d5fbf424917ac5c0f60d222c25194e074814916d1"
+        }
+      ],
+      "process_control_slice": {
+        "fixed_before_implementation_utc": "2026-11-03T04:25:33Z",
+        "criteria": "D100/A1, REQ-018 and AC-N3/N5/N12 process-control subset; full obligations remain open.",
+        "purpose": "Separate owned/reaped clock expiry from confusable failures, and carry bounded thread/low-priority controls through both actual native child phases.",
+        "library_reuse": "Reuse subprocess.Popen/env/creationflags, existing isolated-child launcher, study transport and retention. No joblib/psutil/threadpoolctl or new dependency: generic process primitives already exist; NumPy factory performs no BLAS calculation. Environment controls and Windows priority are observed before NumPy import and after computation; this alone is not a measured vendor-library thread count.",
+        "primary_library_sources": [
+          "https://docs.python.org/3.14/library/subprocess.html",
+          "https://numpy.org/doc/2.3/reference/global_state.html"
+        ],
+        "interface": {
+          "module": "trading_researcher.study_process_control",
+          "marker": "ProcessControl(), immutable exact type; model-supplied JSON is not launch authority",
+          "policy": {
+            "schema": "native-study-process-control/1",
+            "library_threads": 1,
+            "priority": "BELOW_NORMAL"
+          },
+          "thread_environment": {
+            "OMP_NUM_THREADS": "1",
+            "OMP_THREAD_LIMIT": "1",
+            "OPENBLAS_NUM_THREADS": "1",
+            "MKL_NUM_THREADS": "1",
+            "NUMEXPR_NUM_THREADS": "1",
+            "VECLIB_MAXIMUM_THREADS": "1",
+            "BLIS_NUM_THREADS": "1"
+          },
+          "priority_class": 16384,
+          "platform": "Windows, fail closed elsewhere",
+          "transport": "Optional _control on existing _run_child, execute_attempt and ParentContext; default request/kwargs/fields unchanged. Native request process_control; response/proof before and after observations.",
+          "known_cause": "ChildDeadlineExceeded(Invalid) only for parent deadline with successful kill/reap and output within caps after reap; output overflow takes precedence. Other exceptions never authorize retry."
+        },
+        "failure_paths": [
+          "Reject malformed marker/nonfinite or nonpositive timeout/unsupported host before child/output creation.",
+          "Retain stdout/stderr prefixes on known timeout; meter/retain in existing study finally.",
+          "Output cap, nonzero child, fake child TimeoutError, malformed JSON, cancellation and failed kill/reap stay failures distinct from the known deadline.",
+          "Fail missing/changed native control observations; reject control on scalar transport."
+        ],
+        "fixed_checks": "Independent real tiny isolated child for launch environment/priority/deadline; confusable and cleanup failures; actual two-phase native transport seam checks and unchanged transport regressions. No heavy numerical study for this slice.",
+        "owners": {
+          "root": "Production and existing plan/status writes",
+          "native_transport_tests": "Independent tests and ignored test receipts only"
+        },
+        "not_yet_verified": "No parent native-final caller, bounded concurrent ledger, retry authority, aggregate/cleanup envelope, full numerical equivalence or actual final admission follows. These remain next dependent slices.",
+        "cleanup_bound_seconds": 5,
+        "known_use": "ChildCleanupFailed preserves unknown use even after successful prefix inventory; known deadline alone grants no retry.",
+        "status": "VERIFIED_COMPONENT_ONLY",
+        "evidence_capsule": {
+          "path": "tests/fixtures/native-process-control-checks-2026-11-03.zip",
+          "sha256": "5bd1f066dd68a517660887670c33e874cae7b41e301cdab37ec27c2c75f05962",
+          "bytes": 225559,
+          "members": 44
+        },
+        "final_independent_check": {
+          "tests": 23,
+          "exit_code": 0,
+          "seconds": 3.1652007999946363,
+          "failures": 0,
+          "errors": 0,
+          "skips": 0,
+          "receipt_sha256": "55521b437b7eae89ceeb05cc9ed35cf313f449177511f62ccd7196ecac459340",
+          "all9_source_test_helper_pins_centrally_matched": true
+        },
+        "regressions": [
+          {
+            "suite": "test_native_study_transport_independent",
+            "tests": 17,
+            "exit_code": 0,
+            "reported_seconds": 1.219,
+            "scope": "Final production source."
+          },
+          {
+            "suite": "test_binance_normalize",
+            "tests": 12,
+            "exit_code": 0,
+            "reported_seconds": 168.736,
+            "scope": "Unchanged default launcher, full before/after source pin set not captured; no claim of rerun after later controlled-only corrections."
+          }
+        ],
+        "review_sha256": "e65398aa9db1b0db771fb4ba32460f07a9f58f8bab5283e6e9ab489e045732f2",
+        "central_reconciliation_sha256": "7440f59565ba7d9179351a0cf88477f5021fb84884249b901193394a0332ba6a",
+        "retained_reds": [
+          "Missing _control entrypoint:1 executed method/1error.",
+          "Copied-input integrity:1method/4subcasefailures; exact expectations pass after fix.",
+          "Failed cleanup/use:1method/1failure in first kill variant; kill+reap variants both execute/pass after fix."
+        ],
+        "construction_effort": "Fixed interface04:25:33UTC; source/tests/review/central pin reconciliation complete by04:36:40UTC, documentation/publication closeout afterward. Coordination and two diagnosed corrections retained; total construction tokens/cache/model-specific charges unavailable. No paid research/provider/API call, Registry study or seed reservation.",
+        "documentation_checks": [
+          {
+            "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+            "status": "PASS",
+            "exit_code": 0,
+            "tool_seconds": 0.6638942
+          },
+          {
+            "command": "python -B docs/reviews/verify_system_model.py",
+            "status": "PASS",
+            "exit_code": 0,
+            "tool_seconds": 7.3707422
+          },
+          {
+            "command": "python -B docs/reviews/verify_retail_contract.py",
+            "status": "PASS",
+            "exit_code": 0,
+            "tool_seconds": 7.247017
+          }
+        ],
+        "documentation_check_scope": "Fresh following plan/CurrentState/evidence updates; subsequent mutation only records these outcomes. Final git diff --check covers final metadata. Preservation hashes07/14/validator/AUX/Scalar sentinel match prior record; no scientific certification."
       }
     }
   },

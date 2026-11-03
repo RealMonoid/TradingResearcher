@@ -40,13 +40,17 @@ def attempt_stream_limit(source,manifest,cases,*,runtime_bytes=0):
     return stream_limit
 
 
-def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,*,_native=None):
+def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,*,_native=None,_control=None):
     """Generate and replay in separate processes; account aborted files as well."""
+    if _control is not None:
+        from .study_process_control import ProcessControl, ChildCleanupFailed
+        require(type(_control) is ProcessControl and _native is not None,
+                'Owned process controls require selected native study inputs')
     expected=footprint(source)
     technical=None
     if _native is not None:
         from .native_study_pipeline import ParentContext
-        technical=ParentContext(source,_native)
+        technical=ParentContext(source,_native,_control=_control)
     stream_limit=attempt_stream_limit(source,manifest,cases,
         runtime_bytes=0 if technical is None else technical.cold_bytes)
     calculated=None;raw=None;proofs=[];encoding=None
@@ -54,9 +58,11 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,
         request={'payload':payload,'manifest':manifest,'world':world,'footprint':expected,
             'verify':None if calculated is None else digest(calculated),'stream_limit':stream_limit}
         if technical is not None:request['native']=technical.request()
+        if _control is not None:request['process_control']=_control.request()
         with tempfile.TemporaryDirectory(prefix='trf-study-') as temporary:
             directory=Path(temporary)
             meter['accounting_complete']=False
+            child_usage_known=True
             try:
                 for name,value in source.items():
                     path=directory/name;path.parent.mkdir(parents=True,exist_ok=True);write_file(path,value)
@@ -65,10 +71,17 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,
                 if raw is not None:
                     write_file(directory/('expected-stream.jsonl.gz' if encoding is not None else 'expected-stream.jsonl'),raw)
                 bootstrap=BOOTSTRAP if technical is None else technical.bootstrap
-                response=_run_child([sys.executable,'-I','-S','-B','-c',bootstrap,str(directory),str(directory/'request.json')],
-                    directory,timeout=remaining())
+                launch_options={'timeout':remaining()}
+                if _control is not None:launch_options['_control']=_control
+                try:
+                    response=_run_child([sys.executable,'-I','-S','-B','-c',bootstrap,str(directory),str(directory/'request.json')],
+                        directory,**launch_options)
+                except BaseException as exc:
+                    if _control is not None and isinstance(exc,ChildCleanupFailed):child_usage_known=False
+                    raise
                 fields={'result','stream_blob','request_hash','footprint','environment'}
                 if technical is not None:fields|={'environment_before','native_binding','draw_engines'}
+                if _control is not None:fields|={'process_control'}
                 require(type(response) is dict and (set(response)==fields or set(response)==fields|{'stream_encoding'}),
                     'Malformed study child response')
                 encoded='stream_encoding' in response
@@ -91,6 +104,7 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,
                 proof={key:response[key] for key in ('request_hash','footprint','environment','stream_blob')}
                 if technical is not None:
                     proof.update({key:response[key] for key in ('environment_before','native_binding','draw_engines')})
+                if _control is not None:proof['process_control']=response['process_control']
                 if encoded:proof['stream_encoding']=response['stream_encoding']
                 proofs.append(proof)
                 if phase=='generate':
@@ -116,7 +130,22 @@ def execute_attempt(source,payload,manifest,world,cases,remaining,meter,outputs,
                     except FileNotFoundError:continue
                     require(stat.S_ISREG(observed_stat.st_mode),'Unexpected study output file type')
                     outputs.append((phase+'/'+name,path.read_bytes()))
-                meter['accounting_complete']=True
+                meter['accounting_complete']=child_usage_known
+                if _control is not None:
+                    # A clock cause must not hide a simultaneous input-integrity
+                    # failure. Check even when no authenticated response exists,
+                    # after preserving outputs and recording observed file use.
+                    retained_inputs={**source,'cases.jsonl':cases,
+                        'request.json':canonical(request).encode()}
+                    if phase=='replay':
+                        retained_inputs['expected-stream.jsonl'+('.gz' if encoding is not None else '')]=raw
+                    try:
+                        for name,value in retained_inputs.items():
+                            path=directory/name;observed_stat=path.lstat()
+                            require(stat.S_ISREG(observed_stat.st_mode) and observed_stat.st_nlink==1
+                                and path.read_bytes()==value,'Controlled study input changed during execution')
+                    except OSError as exc:
+                        raise Conflict('Controlled study input is unavailable after execution') from exc
     return calculated,proofs
 
 

@@ -46,7 +46,10 @@ def _environment(expected):
     return {'identity': _runtime_identity(), 'isolation': isolation, 'standard_library': dict(sorted(libraries.items()))}
 
 
-def _run_child(command, directory, timeout=NORMALIZATION_TIMEOUT):
+def _run_child(command, directory, timeout=NORMALIZATION_TIMEOUT, *, _control=None):
+    if _control is not None:
+        from .study_process_control import run_controlled_child
+        return run_controlled_child(command, directory, timeout, _control)
     output, errors = directory/'child-output.json', directory/'child-errors.txt'
     with output.open('xb') as stdout, errors.open('xb') as stderr:
         process = subprocess.Popen(command, stdout=stdout, stderr=stderr,

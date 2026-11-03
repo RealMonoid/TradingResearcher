@@ -74,6 +74,27 @@ AgentWorkflow and the unreviewed AUX draft are not implicitly resumed. The build
 owns this plan/status/source integration; the review chat owns only its coordinated
 AGENTS.md instruction update.
 
+**Selected construction slice — process control (November 3):** AC-N3/N5/N12's
+process boundary first: reuse `subprocess` and the existing two-phase native
+transport, with a fixed one-thread environment and Windows below-normal priority.
+Observe controls before numerical imports and after computation. Only the owned
+deadline after successful child kill/reap and bounded outputs gets a distinct
+cause; output/integrity/cancellation/unknown failures do not. Preserve default
+legacy transport and every partial output. Independent tiny-process and native
+transport cases precede implementation; the fixed interface, reuse evidence,
+effort and actual outcomes belong in the existing `progress.json` native work item.
+This slice alone grants no retry, final-series or scientific admission. Next are
+the explicit final adapter, bounded shared ledger and consuming A1–A3 controller.
+**Bounded closeout:**23 independent cases and17 final-source native transport
+regressions pass;12 legacy normalization regressions also pass for the unchanged
+default launcher. Retained REDs exposed input corruption hidden by a clock cause
+and falsely known use after failed kill/reap; both are corrected. The
+[44-member evidence capsule](../../../tests/fixtures/native-process-control-checks-2026-11-03.zip)
+keeps raw outcomes, source pins and independent review. Current native binary
+qualification, real parallel numerical acceptance and all final admission remain
+pending. Environment-variable/priority observations do not measure vendor thread
+counts or establish a hard OS resource quota.
+
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
 M1's existing genuine development witness is now reconciled, including its

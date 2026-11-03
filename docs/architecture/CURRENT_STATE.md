@@ -26,9 +26,14 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   report actual causes. G1/G2 are deferred and G9 withdrawn. During the fixed
   series continue permitted technical v0 on2020–2023 without mutating its source;
   science/2024 and full project exits remain gated. Exact [approval/source](../reviews/implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json).
-  Next: reuse current native owners, freeze the bounded acceptance/interface and
-  implement actual final-series/concurrent-accounting/retry/monitoring callers.
-  No native series or acceptance run has started; no further general approval wait.
+  Process-control subset checked:23 independent tiny-process/transport cases,
+  17 final-source transport regressions and12 legacy normalization cases pass.
+  Controlled launches bind one-thread environment/below-normal priority; copied
+  input corruption overrides timeout, and failed kill/reap keeps usage unknown.
+  [Exact bounded evidence](../../tests/fixtures/native-process-control-checks-2026-11-03.zip)
+  grants no retry or current native qualification. Next: explicit final input
+  adapter, shared bounded ledger and consuming retry/monitoring controller.
+  No numerical acceptance or native series has started; no general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation
   under [AGENTS.md](../../AGENTS.md#codex-construction-workflow). Do not defer them to a later phase without

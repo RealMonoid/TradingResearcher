@@ -10135,7 +10135,7 @@
       ],
       "failure_history": "Initialimplementationdoccheckfailed on ownredundantD099appendixto07;exactpreexisting07bytesrestored,authoritykeptin28/14,andall3affectedchecksrefreshedPASS. Initialreceiptsretained. Validatornotweakenedforthisfailure.",
       "finite_operator_preparation": {
-        "status": "STOPPED_ACTUAL_STUDY_RECOVERY_KERNEL_CHECKED_CONSUMING_PREPARATION_PENDING",
+        "status": "STOPPED_ACTUAL_STUDY_RECOVERY_COMPONENTS_CHECKED_ACTUAL_PREPARATION_PENDING",
         "policy_source_and_tests": {
           "tests/test_finite_family_operator_independent.py": "c2a12fbb60dee637184e9b78ae6285b4028b1aa8b08b8acf4cf577d0388913b3",
           "tools/calibration/finite_family.py": "543fa4cd2cd01fbbb58584547c076ac263da7f079e81e5ef44b61231a9fb8a3d"
@@ -10185,7 +10185,7 @@
         "final_prepared": true,
         "numerical_run_started": true,
         "new_continuation_grants": 1,
-        "next_action": "Finish and independently qualify the trusted recovery consuming adapter and isolated driver. Then bind the exact live original inputs and prepared full backup/restore proof before the already approved single named retry. No parallel heavy construction checks during numerical study; no new user decision.",
+        "next_action": "New detached checked recovery host; existing-owner exact source/input/seed/old20/1/known-fee preflight, fresh capacity, actual metadata-only prepare and independent complete backup/restore reconciliation before the already approved named retry. No additional user decision or numerical probe.",
         "historical_source_input_preflight": {
           "status": "PASS_RETAINED_SOURCE_INPUT_PRECONDITIONS",
           "receipt": ".trf-runtime/scalar-final-calibration-2026-11-02/retained-source-input-preflight.json",
@@ -10735,6 +10735,109 @@
             "method": "Native Git push of complete committed source/tests/docs/evidence tree and accumulated history. The connector has no native local Git-object push operation. Current complete GitHub view replaced by fast-forward.",
             "excluded_local_state": "Paused unverified AUXILIARY_RESOURCES.md, unqualified consuming/driver drafts and ignored local runtime/Registry files remain local.",
             "after_publication": "Continue independently qualifying the trusted consuming adapter and isolated driver; no actual recovery setup or numerical dispatch before prerequisites."
+          }
+        },
+        "recovery_callers_2026_11_03": {
+          "status": "PASS_SOFTWARE_COMPONENTS_ONLY",
+          "acceptance_criterion": "Approved option A through actual owned consuming calls, immutable custody proof, finite paired accounting, failure/revocation/location/space denial, scoped restart intent and original-error retention; actual intended-use preparation remains required.",
+          "current_source_pins": {
+            "tools/calibration/finite_family_recovery.py": "b2294e34de142e2b5f326eb35063d8324b4e787b926f805aa053af7f65ca0c2f",
+            "tools/calibration/finite_family.py": "cf51ab733329ddcf02fdd3f4884e4ba25cf2422e8f51d164ee26f3e9aae2d5ef",
+            "trading_researcher/calibration_recovery.py": "ddae388c3c5f5ddde9ccc89b54e93baaa5a48bae4801140bbb6641da557b23b4",
+            "tests/test_finite_family_recovery_independent.py": "3361509e6409fa3c766b6a17a4efdc8caec4747bfd234e52e89f1e98830f3949",
+            "tests/test_calibration_recovery_independent.py": "453cdf0af671a6bb87de27b2db03af7f185963b196ea1cd93008c45c5fb22140",
+            "tools/calibration/scalar_recovery_run.py": "ef68441571c17abbc66151ef379c92c5d19039885730d2c729406241e14cea21",
+            "tests/test_scalar_recovery_driver_independent.py": "e81f47ac1ecaa94377359bcebd6abb9aca135a28a4517499c9588c86ca8f2ebf"
+          },
+          "independent_checks": {
+            "adapter": {
+              "receipt": "finite-recovery-adapter-full14-first-check.json",
+              "sha256": "e10b0f12e350919adff416794174eac747611ad0ec4089618648d56ff7b3e292",
+              "methods": 14,
+              "seconds": 699.969945400022,
+              "exit_code": 0,
+              "scope": "Genuine tiny owned inputs/backup/restore/kernel calls; one actual new generate/replay pair; other transports/meters explicitly substituted."
+            },
+            "driver": {
+              "receipt": "recovery-driver-controls-final22-check.json",
+              "sha256": "ab461feada1b94271bad64c101f4f790904152adba31f460700bc37374b1eca3",
+              "methods": 22,
+              "seconds": 1.1243815999478102,
+              "exit_code": 0,
+              "scope": "Fake orchestration and real temporary file controls only; no actual Broker, power API, full-owner preparation or numerical study."
+            }
+          },
+          "source_reviews": {
+            "finite-recovery-source-review.json": {
+              "sha256": "09576612a888f28a78960a5ad002cb4acc01e417e21a72fb9c7f9197b3e1b7c4",
+              "status": "APPROVED_BOUNDED_ADAPTER_SOURCE_AND_GENUINE_SOFTWARE_CALLER_CASES",
+              "pins_match_current": true
+            },
+            "recovery-driver-source-review.json": {
+              "sha256": "4638f27e699b6a8d688355282225687d80645e0f626c3fe9888e2b7a14675e68",
+              "status": "APPROVED_BOUNDED_DRIVER_SOURCE_AND_FAKE_CONTROL_CASES;_ACTUAL_PREPARATION_NOT_YET_QUALIFIED",
+              "pins_match_current": true
+            }
+          },
+          "central_reconciliation_sha256": "76b84c8aa1b0d619cef831b262463f47d82eb5cb5ce22ef7054e53c1702ffe53",
+          "evidence_archive": {
+            "path": "tests/fixtures/calibration-recovery-caller-checks-2026-11-03.zip",
+            "sha256": "12524187a0da57ad51d6e9f9a7933e531c7d4bfe73da9172fc02067c6ac5724c",
+            "bytes": 850166,
+            "members": 28,
+            "crc_and_full_readback": "PASS"
+          },
+          "retained_actual_reds": [
+            "Unknown raw settlement versus conservative ledger charge:1method/1failure, then fixed full14; raw pins=false from documented two-byte AST-equivalent helper EOF cleanup remains false.",
+            "Final receipt/output failure masked original work error:1method/2failing subcases, then fixed21 and22.",
+            "Crash before post-result observation plus stale same-path primary allowed a second consume:1method/1failure with2dispatches versus required1, then fixed22."
+          ],
+          "reuse": "Existing finite tranches/file hashing, current kernel/Registry/SQLite/source/revocation, execute_attempt and storage backup/restore owners. Framework-specific one-study authority/proof/dispatch guards require these small adapters; no new library, scheduler, approval service or general audit platform. Old run_once.py cannot be imported safely because its import selects the old host; the unchanged Windows API body and adapted same-owner backup/observation patterns are retained separately.",
+          "construction_effort": "Full14 699.9699454s; driverfinal22 1.1243816s, prior failures/full21 and all source/test revisions retained. Complete coordination, builder model usage, wall/wait/repair totals remain unknown. No research-model/API call or numerical actual-study work.",
+          "historical_kernel_and_regression_reuse": "Unchanged controller113 ef8781db and coreddae/revocation/storage. Existing kernel47 scoped methods plus75 regressions remain at their exact recorded versions/evidence; no rerun or actual-run qualification claimed. Newtools do not alter original104 calculator/112 host.",
+          "actual_study_primary_opened_for_this_slice": false,
+          "actual_recovery_setup_started": false,
+          "actual_recovery_numerical_attempts": 0,
+          "latest_physical_observation": {
+            "volume": "C:",
+            "filesystem": "NTFS",
+            "health": "Healthy/OK",
+            "free_bytes": 131576373248,
+            "free_gib_rounded": 122.54,
+            "scope": "Point-in-time Get-Volume observation, not a runtime certificate; repeat intended-use capacity gate."
+          },
+          "known_heavy_test_or_study_processes_at_last_inventory": [],
+          "scientific_readiness": false,
+          "n_min": null,
+          "unverified": [
+            "Actual isolated host/source/approval/input/seed and exact old20/1 prefix preflight",
+            "Actual successful metadata-only driver prepare/full before-run backup/restore and sealed capsule",
+            "Actual named failed-world retry/full original-generation equality/separate replay and remaining fixed worlds",
+            "Both observation-store and Registry loss, hardware failure, uncontrolled host load and long-duration availability"
+          ],
+          "next_action": "New detached checked recovery host; existing-owner exact source/input/seed/old20/1/known-fee preflight, fresh capacity, actual metadata-only prepare and independent complete backup/restore reconciliation before the already approved named retry. No additional user decision or numerical probe.",
+          "documentation_checks": {
+            "docs/reviews/implementation-2026-10-25/verify_implementation.py": {
+              "exit_code": 0,
+              "seconds": 0.33271819999208674,
+              "receipt": "recovery-caller-documentation-verify_implementation.json",
+              "sha256": "4314bda8a25912e5cc3b3640843f668a2565bed0e9f6923a4225842c33ccf8fd",
+              "scope": "Implementation preservation, local link targets and whitespace; no semantic/scientific certification"
+            },
+            "docs/reviews/verify_retail_contract.py": {
+              "exit_code": 0,
+              "seconds": 7.333962600037921,
+              "receipt": "recovery-caller-documentation-verify_retail_contract.json",
+              "sha256": "96af50a533d2417176f9e052b90983ba26e3283d9b787b2fd790941ffcd2ca1d",
+              "scope": "Existing project documentation contract/link/preservation checks only."
+            },
+            "docs/reviews/verify_system_model.py": {
+              "exit_code": 0,
+              "seconds": 7.333796699997038,
+              "receipt": "recovery-caller-documentation-verify_system_model.json",
+              "sha256": "c32b0a0991f5a9a14fd55713c095735cd2562206ea04eaa95cf3fbd2cc0eb5d9",
+              "scope": "Existing project documentation contract/link/preservation checks only."
+            }
           }
         }
       },

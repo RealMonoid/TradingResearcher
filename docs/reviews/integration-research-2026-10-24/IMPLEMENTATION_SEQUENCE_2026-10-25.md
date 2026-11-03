@@ -389,12 +389,37 @@ retain the restored-view defect, corrected setup-test expectation, incorrect
 conditional-tranche implementation and its independently exposed failures.
 No fresh complete 30-method run at the final source is claimed.
 
-The thin trusted consuming adapter and isolated driver, exact live approval/input
-binding, before-run full backup/restore proof and actual named retry remain
-unqualified. No recovery setup or numerical attempt has run on the actual study.
-Next complete those callers and independent controls, then resume only the same
-approved inventory without parallel heavy construction checks. Generic old
-continuation remains fenced; scientific admission and protected data remain closed.
+**Recovery callers checked; actual preparation next (November 3).** The thin
+trusted consuming adapter now fetches owned state and derives one action without
+caller-supplied readiness, resource amounts or outcomes. It authenticates the
+immutable original/amendment/source bindings and the stable prepared recovery
+proof, checks separate backup/restore file custody and physical capacity including
+the failed-world retry, and reconciles committed attempts/grants and all charges.
+All 14 independent methods pass, including a genuine tiny generation/replay pair,
+a real paired grant and conservative unknown-usage accounting. The earlier raw
+versus charged-use defect and its exact failing check remain retained.
+
+The separately pinned `prepare|run` driver passes all 22 independent file/control
+methods. These are orchestration spies, not an actual Registry, power or successful
+full-owner preparation test. Run mode cannot create another amendment. Durable
+pre-dispatch intent in the existing observation log denies an ambiguous unchanged
+checkpoint after crash/stale restore; it grants no slot or refund. Completed
+inventories emit no intent. Both original and new ordered observations remain
+denial evidence. Terminal receipt/output failures preserve the first work exception.
+The two independently reproduced driver defects, their corrections, source reviews
+and central reconciliation are [retained here](../../../tests/fixtures/calibration-recovery-caller-checks-2026-11-03.zip).
+Source/Registry and observation-store loss together, unavailable evidence sinks,
+external host load and long-duration availability remain unverified boundaries.
+
+No recovery setup or numerical attempt has run on the actual study. Next pin a
+new detached recovery host at the checked caller commit; preserve the original
+host. Use the existing owner's exact old20/1/input/source/seed/failed-generation
+preflight, current C: capacity and full 2,029-execution forecast. The authorized
+metadata-only preparation is the actual success-path qualification: one amendment,
+zero new world attempts/grants, full backup/restore and sealed proof. Independently
+reconcile it before the named retry. Resume only the same approved inventory
+without parallel heavy construction checks. Generic old continuation remains
+fenced; scientific admission and protected data remain closed.
 
 **Checked next M2 slice: declared scalar observation spans.** The existing
 owned-plan reservation caller now retains conservative `declared-observation-spans/1`

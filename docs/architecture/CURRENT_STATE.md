@@ -190,11 +190,17 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   existing storage/revocation/continuation methods also freshly pass.
   [Exact component evidence](../../tests/fixtures/calibration-recovery-kernel-checks-2026-11-03.zip)
   includes an actual tiny generation/replay pair and a real fixture grant;
-  it does not qualify the approved study's consuming adapter or driver.
-  Next finish those callers and the actual before-run restore/input checks;
-  no actual recovery setup or retry has started. The numerical study must run
-  without parallel heavy construction checks. The latest requested capacity
-  recheck finds 130.10 GiB free on Healthy/OK NTFS C:; recheck at intended use.
+  it does not qualify actual intended use. The consuming adapter now passes
+  14 genuine owned-input methods, including a new tiny generate/replay pair and
+  paired grant; the isolated driver passes 22 file/orchestration controls using
+  spies. [Exact caller evidence](../../tests/fixtures/calibration-recovery-caller-checks-2026-11-03.zip)
+  retains unknown-charge, terminal-output and stale-restore defects/corrections.
+  Pre-dispatch observations now deny ambiguous same-checkpoint reuse without
+  granting authority. Next pin the new detached host, then qualify the actual
+  metadata-only preparation and full before-run restore/input checks before any
+  retry. No actual recovery setup or retry has started. The numerical study must
+  run without parallel heavy construction checks. The latest C: recheck finds
+  122.54 GiB free, Healthy/OK NTFS; recheck at intended use.
 
 - **Information-profile progress (November 2):** the existing second-order law has bounded independent
   and native qualification; full Q1 source identity and fresh source-bound execution retain the original

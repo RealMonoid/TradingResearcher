@@ -131,7 +131,21 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   numeric/input/replay owners remain preserved. The updated consumer capsule
   retains both versions, the failed caller reproduction and independent cases.
   Next: publish/pin, fresh actual qualification and the complete 64-reference
-  acceptance. No V3 process, final seed reservation or runtime admission is claimed.
+  acceptance. That software checkpoint claimed no actual V3 admission.
+  Actual `e2db9c6` V3 then passed the exact financial handoff and stopped before
+  any reference calculation: qualification `3af1410f…` reports an independently
+  unqualified host image. Exec `91034` exited 1; no study process remains. Pool
+  `e55f747c…` is halted at `1d56b388…`, known 8,681,716 ms / 2,197,096,053 bytes
+  charged, two grants used, none pending and no overrun. Complete backup/restore
+  retains 1,289 blobs / 1,459,555,388 bytes; read-only SQL/event/resource checking
+  passes with primary bytes unchanged. No final input, seed or world exists.
+  Current metadata finds signed Windows `apphelp.dll` outside the old fixed
+  47-image host set. The exact failed child's missing image is not identified.
+  Next: focused independent metadata reproduction, then only a substantiated,
+  source-bound host-input revision and its independent checks before fresh
+  qualification/all 64 references. Preserve the old fixture and strict unknown-
+  image/byte/alias denials; no automatic whitelist expansion. Allow 30–90 minutes
+  for bounded construction/checks, with unknown actual admission duration.
 
 - **Direct LightGBM role adopted — D102 (November 3):** direct LightGBM is designated
   as an interchangeable forecast component for actual hypothesis tasks, with the

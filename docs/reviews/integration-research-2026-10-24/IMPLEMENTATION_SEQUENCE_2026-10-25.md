@@ -541,6 +541,38 @@ No actual V3 runtime, final input or world is claimed at this software checkpoin
 All elapsed investigation, publication, coordination, checking and rework remains
 inside the gross effort record; the original operational start and A4 are unchanged.
 
+**Actual V3 handoff passed; host admission stopped.** The published/pinned
+`e2db9c6` source carried the exact V2 history, then current qualification denied
+an independently unqualified host image before the first reference calculation.
+Exec `91034` exited 1. Pool `e55f747c…` is halted at `1d56b388…`: 8,681,716 ms /
+2,197,096,053 bytes charged, two grants used, none pending, no unknown use or
+overrun. Terminal complete backup/restore retains 1,289 blobs / 1,459,555,388 bytes;
+read-only resource/event/SQL reconciliation passes without changing the primary.
+No new reference, final input, final seed or final world was admitted.
+
+**Selected host-input revision.** A current metadata-only loader snapshot finds
+Microsoft-signed `apphelp.dll` outside the old byte-pinned 47-image set. Its exact
+path/hash/size is retained; the generic failed-child error does not prove that
+this was its missing image. First reproduce the discrepancy independently in
+an isolated metadata-only child, using the retained cache and fixed imports
+without numerical draws or tests. If substantiated, retain only the reviewed
+exact component as a source-bound host-input revision. Preserve the old fixture,
+strict unknown-image/byte/alias checks and all numerical goldens, full streams,
+runtime bytes, scientific criteria, original charges/clock and A1-A5.
+
+D084/document 14 section14 permits independent technical certification under
+unchanged meaning; it grants no child the ability to qualify its own whitelist.
+A signature is supporting origin evidence, not numerical conformance. No new
+approval wait follows from this concrete compatible correction. Reuse existing
+loader, qualification, source/copy/carry/currentness owners and independently
+check the exact changed caller/negative/recovery paths; add no general audit
+platform. A changed qualifier needs an explicitly bound additional owner path
+in the exact stopped-V3 handoff, rather than weakening the existing generic guard.
+Allow 30–90 minutes of bounded construction/checking plus unknown actual fresh
+qualification/full64 time. Stop and present any unresolved membership or material
+choice; no automatic append, setup retry, unhalt, budget or A4 extension follows.
+The existing progress item owns exact pins, uncertainty, costs and rollback.
+
 The local Codex connection log also corrects construction-time attribution:
 65 HTTP sends failed and 13 outer stream retries were logged from 15:43:29 to
 16:38:05 UTC, followed by HTTP200 at 16:39:08 UTC. The observed first-failure to

@@ -19,6 +19,7 @@ SHA = re.compile(r'[0-9a-f]{64}\Z')
 MAX_BLOB_BYTES = 512 * 1024 * 1024
 BLOCK = 1024 * 1024
 RESERVED = ('calibration-recovery-',
+            'native-calibration-',
             'native-qualification-source/', 'native-runtime-qualification-input/', 'native-runtime-qualification/',
             'native-information-study-input/', 'native-information-study-attempt/',
             'native-family-study-input/', 'native-family-study-attempt/',

@@ -261,6 +261,9 @@ class ResearchMemory:
                     'evaluator-calibration-input/1','evaluator-calibration-attempt/1',
                     'family-study-input/1','family-study-attempt/1','family-calibration-input/1','family-calibration-attempt/1',
                     'native-family-calibration-input/1','native-family-calibration-attempt/1',
+                    'native-calibration-resource-pool/1','native-calibration-resource-inventory/1',
+                    'native-calibration-resource-grant/1','native-calibration-setup-attempt/1',
+                    'native-calibration-acceptance-attempt/1',
                     'development-measurement-input/1','development-measurement/1'):
                 latest = max(latest, integer(body.get('created_at'), 'retained source creation time'))
             for identity in current['exposure']:

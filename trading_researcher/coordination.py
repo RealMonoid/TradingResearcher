@@ -152,6 +152,8 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
             NativeFamilyStudies(self)._recover_information_studies()
             from .native_study_runs import NativeFamilyCalibrationStudies
             NativeFamilyCalibrationStudies(self)._recover_information_studies()
+            from .native_calibration_runs import NativeCalibrationResources
+            NativeCalibrationResources(self).recover()
         except BaseException:
             self.close()
             raise

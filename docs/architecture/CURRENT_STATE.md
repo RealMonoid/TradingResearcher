@@ -32,8 +32,13 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   retains the corrected integrity/unknown-use failures. [Input evidence](../../tests/fixtures/native-final-input-checks-2026-11-03.zip)
   binds final identity/cases/counts/seeds and typed dependencies through genuine
   disposable Registry callers; native membership/numerical development are test
-  seams. Public advance/legacy continuation stay denied. Next: shared bounded
-  ledger, old-charge carry and consuming retry/currentness/monitoring controller.
+  seams. The [resource owner](../../tests/fixtures/native-calibration-resource-checks-2026-11-03.zip)
+  now passes29 reducer/22 actual disposable-Registry tests: old charges/grants,
+  atomic six-slot reservations, late failure custody, withdrawal and uncertain
+  restart/full restore. A read-only actual carry probe leaves the original DB
+  unchanged. Private result labels confer no numerical authority. Public native
+  advance remains denied. Next: typed numerical result/proof/retry integration,
+  actual reserved caller, fixed32-reference serial/parallel acceptance and A2/A3.
   No numerical acceptance or native series has started; no general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation

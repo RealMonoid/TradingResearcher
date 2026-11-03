@@ -113,6 +113,37 @@ then the fixed numerical/source/seed/capacity acceptance. No new approval wait,
 actual final seed reservation, numerical native acceptance or series follows from
 this input-only result. A4's construction deadline remains unchanged.
 
+**Shared resource caller closeout (November 3):**29 independent finite-reducer
+cases and22 actual disposable-Registry cases pass. The [resource capsule](../../../tests/fixtures/native-calibration-resource-checks-2026-11-03.zip)
+retains fixed expectations, failed runs, source versions and independent review.
+The unchanged retired recovery reader authenticates financial history only;
+it schedules no Scalar work. A read-only probe of the actual old Registry confirms
+5,029,797 ms/887,402,753 bytes,2h/8GiB already allocated, one of179 grants used
+and19/14/0 carried progress state, with the database hash unchanged. Development
+costs retain their separate scope. Every new setup/reference/final task needs an
+owned reservation and charge; source/qualification aliases create no allowance.
+Transactions cover six full pending envelopes, staged-output registration,
+settlement/grant keys and conservative startup recovery. Three real source REDs
+were corrected: original error masking, omitted late explicit technical-reference
+currency and missing fresh-pool source currentness. Authored impossible-carry and
+optional-view expectations are retained separately from those production defects.
+
+Use one operational progress unit per fixed task's first authenticated completion
+or known timeout; retries, grants and heartbeats add none. This preserves finite
+D100/A1 progression without counting technical progress as valid calibration.
+Required setup/reference timeouts still fail admission. Reuse serial cache
+materialization, full prepared backup/restore and full terminal copies at safe
+boundaries; there is no per-world backup or G1 retention redesign. The source
+footprint is116 project files before the existing10 qualification entries, within
+the unchanged128-file envelope. **Next:** connect controlled numerical work,
+authenticated generation/replay custody and actual retry classification to this
+Registry owner and reserved final input, then the fixed full32 development cases
+in serial/parallel, fresh source/runtime qualification, measured deadline and
+logical/physical forecasts, actual final seed admission and the approved series.
+Private metadata tests/clock labels are not numerical or final-run authority.
+No actual pool/final preparation or numerical acceptance/series has started;
+the public final advance remains guarded and A4's deadline is unchanged.
+
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
 M1's existing genuine development witness is now reconciled, including its

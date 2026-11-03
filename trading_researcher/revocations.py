@@ -13,7 +13,7 @@ VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificat
     'research-data-target/1','protected-data-binding/1','study-resource-continuation/1','feature-evidence-release/1',
     'development-feedback-manifest/1','development-feedback-release/1',
     'native-runtime-qualification-input/1','native-runtime-qualification/1',
-    'calibration-recovery-amendment/1','calibration-recovery-continuation/1'}
+    'calibration-recovery-amendment/1','calibration-recovery-continuation/1','native-calibration-resource-pool/1'}
 REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1',
     'population-family-input/1','family-study-input/1','native-information-study-input/1','native-family-study-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
@@ -96,6 +96,16 @@ class DependencyRevocations:
         if schema in VERSIONS:version_selector(artifact)
         elif artifact['creator']!=artifact['origin'] or artifact['creator']!='controller':return None
         if schema in PACKAGES or schema=='data-snapshot/1':return []
+        if schema=='native-calibration-resource-pool/1':
+            # Retired sources remain financial provenance, not active Scalar use.
+            return []
+        if schema=='native-calibration-resource-inventory/1':
+            return [body['request']['pool_id']]+([body['input_id']] if body.get('input_id') else [])
+        if schema=='native-calibration-resource-grant/1':
+            return [body['request']['pool_id']]+([body['terms']['previous_continuation_id']]
+                if body['terms']['previous_continuation_id'] else [])
+        if schema in ('native-calibration-setup-attempt/1','native-calibration-acceptance-attempt/1'):
+            return [body['resource_pool_id'],body['resource_inventory_id'],*body.get('technical_refs',[])]
         if schema=='calibration-recovery-input/1':
             return [body['study_id'],body['failed_attempt_artifact_id'],*body['original_continuation_ids']]
         if schema=='calibration-recovery-amendment/1':
@@ -150,7 +160,9 @@ class DependencyRevocations:
             return [body['request']['study_id']]+([body['previous_continuation_id']] if body['previous_continuation_id'] else [])
         if schema in RESULT_INPUTS:
             return [body['input_capsule_id']] if 'input_capsule_id' in body else [body['study_id']]+(
-                [body['continuation_id']] if body.get('continuation_id') else [])
+                [body['continuation_id']] if body.get('continuation_id') else [])+(
+                [body['resource_pool_id'],body['resource_inventory_id'],*body.get('technical_refs',[])]
+                if schema=='native-family-calibration-attempt/1' and body.get('resource_pool_id') else [])
         return None
 
     def _dependency_use(self,artifact_id):

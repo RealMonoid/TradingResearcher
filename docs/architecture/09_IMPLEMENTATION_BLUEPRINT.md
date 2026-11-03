@@ -331,3 +331,14 @@ stops; every attempt/fee and unavailable final case remains recorded. Fixed
 serial/parallel acceptance and A2/A3 monitoring precede actual use. No new generic
 profiling/assurance service, reduced retention, float64 or scientific-admission
 bypass is part of this integration; Scalar recovery remains historical.
+
+The [native resource evidence](../../tests/fixtures/native-calibration-resource-checks-2026-11-03.zip)
+checks a29-case finite reducer and22-case actual Registry owner. The owner uses
+the unchanged retired recovery reader solely for accounting custody, carries
+5,029,797 ms/887,402,753 bytes and the old2h/8GiB allocation/one grant, and leaves
+178 grants under the existing ceiling. New metadata/reservations/settlements use
+the existing transaction/blob/backup owners; inherited pending use stays charged
+and fences replacements. Original and later failures remain separate. This
+qualifies bookkeeping under explicit test seams, not private caller-provided
+clock/currentness labels, actual numerical retry, a qualified runtime or final
+admission. The consuming native study controller and A2/A3 monitoring remain open.

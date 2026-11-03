@@ -92,6 +92,30 @@ class NativeResourceHistory:
             require(tranche <= carry[allocated] <= min(maximum, tranche * (1 + carry['grants_used']))
                     and carry[charged] <= carry[allocated], 'Retained allocation or charge exceeds authority')
         self.pool_id = pool['id']
+        # Historical pools retain their original progress meaning. New pools
+        # bind exactly two metadata obligations, never caller-selected tasks.
+        self.metadata_tasks = set()
+        if 'copy_policy' in body:
+            policy = body['copy_policy']
+            _exact(policy, {'schema', 'metadata_task_ids', 'metadata_tariff_bytes', 'copy_compute'},
+                   'Exact native copy policy required')
+            require(policy['schema'] == 'native-calibration-full-copy-policy/1'
+                    and type(policy['metadata_tariff_bytes']) is int
+                    and policy['metadata_tariff_bytes'] == META
+                    and policy['copy_compute'] == 'outside_attempts_in_wall_forecast',
+                    'Native copy accounting policy differs')
+            require(type(body.get('setup_tasks')) is dict
+                    and {'prepared_copies', 'terminal_copies'} <= set(body['setup_tasks']),
+                    'Native copy policy requires its two fixed setup tasks')
+            _exact(policy['metadata_task_ids'], {'prepared', 'terminal'},
+                   'Exact native copy metadata obligations required')
+            expected = {label: body['setup_tasks'][label + '_copies']
+                        for label in ('prepared', 'terminal')}
+            require(canonical(policy['metadata_task_ids']) == canonical(expected)
+                    and len(set(expected.values())) == 2, 'Native copy metadata tasks differ')
+            for identity in expected.values():
+                _identity(identity)
+                self.metadata_tasks.add(('setup', identity))
         self._carry = carry
         self.compute = carry['charged_compute_ms']
         self.storage = carry['charged_storage_bytes']
@@ -311,7 +335,7 @@ class NativeResourceHistory:
                 self.halted = True
                 self.halt_reasons.append(state if not overrun else 'RESOURCE_OVERRUN')
             if (state in ('COMPLETE', 'KNOWN_TIMEOUT') and not overrun
-                    and task not in self.progress_tasks):
+                    and task not in self.metadata_tasks and task not in self.progress_tasks):
                 self.progress_tasks.add(task)
                 self.progress += 1
         elif action == 'native_calibration_continued':

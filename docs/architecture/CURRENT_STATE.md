@@ -50,8 +50,16 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   follow-ups), and 19 fresh final-caller regressions. Entire old multi-target
   inputs/results/streams remain fixed; alias integrity, immediate acceptance stop
   and input-bound orphan recovery are checked under disclosed numerical seams.
-  Next: the pinned controller/setup, actual current native qualification, all
-  32 real serial/parallel reference cases, full-copy/intent proofs and A2/A3.
+  The full-copy controller component now separates two charged metadata bookings
+  from actual complete backup/restore proofs. Neither booking earns progress;
+  copied SQL/blob state and the actual event prefix bind each external receipt.
+  Prepared receipts allow later history; terminal receipts require the exact tip.
+  The [copy evidence](../../tests/fixtures/native-full-copy-checks-2026-11-03.zip)
+  records 16 independent disposable-Registry cases plus 29 reducer/22 owner
+  regressions, all passing; financial/authority fixtures remain synthetic.
+  Next: the pinned outer controller/setup, dispatch intents, current native
+  qualification, all 32 real serial/parallel references, actual prepared/terminal
+  copies and A2/A3. Disposable copy checks do not satisfy these actual run gates.
   No numerical acceptance or native series has started; no general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation

@@ -437,4 +437,25 @@ input-bound orphan recovery compose with existing storage/Registry owners.
 Nineteen unique software cases (14 preserved plus five targeted passes) and 19
 fresh final-mode regressions support this component. Disclosed native/numerical
 seams do not replace fresh qualification or the actual 32-case serial/parallel
-acceptance. Outer controller/copies/intents and A2/A3 remain open.
+acceptance. The outer controller, actual copies/dispatch intents and A2/A3 remain open.
+
+The full-copy controller component reuses existing setup reservations and storage
+backup/normal restore. Two fixed, pool-bound booking tasks each pay a 1 MiB tariff
+for bounded booking/intent/proof/failure metadata and earn no operational progress.
+Their completed resource work explicitly means METADATA_BOOKED, with external
+copy verification still false. At a quiescent checkpoint, the host creates a full
+backup and independent full restoration outside pending attempts. It compares all
+SQL state, all registered blob bytes and the complete resource view, then closes
+the restored Broker before hashing its database. The external receipt binds the
+actual copied event prefix; an older pair cannot prove a newer checkpoint.
+Prepared admission permits descendant history; terminal custody requires the
+exact current tip. A fixed external intent prevents automatic replacement/retry,
+and actual failures preserve partial copies/booked fees and stop the pool. Copy
+wall time enters the outer forecast; full replica capacity remains physical.
+This component still requires its actual prepared/terminal proofs in the admitted
+controller; it grants no scientific, numerical or protected-data authority.
+The [copy evidence](../../tests/fixtures/native-full-copy-checks-2026-11-03.zip)
+records 16 independent real disposable-Registry copy cases and 29 reducer/22 owner
+regressions, with disclosed synthetic retired financial/authority inputs. The
+source-reviewed copied-prefix gap was corrected before the passing adversary;
+no pre-correction failing test is claimed.

@@ -225,6 +225,37 @@ measured limits/forecasts, fresh final seeds and the approved 2,048-world series
 No actual pool, reference computation, final seeds or series has started. The A4
 readiness deadline and all scientific/2024 boundaries remain unchanged.
 
+**Full-copy controller component (November 3):** the two existing setup-copy tasks
+now book their bounded metadata prospectively, each charging 1 MiB without copy
+verification or operational progress. Both bookings precede the prepared snapshot.
+The host-only caller reuses existing full backup and normal full restore, holding
+the parent mutex without a SQL transaction. All SQL values, registered blob bytes,
+resource fees/history and the actual copied event prefix must agree. A separately
+sealed external receipt proves the copies; it is not inside its own snapshot.
+Prepared proofs accept later primary history; terminal proofs require the exact
+tip. Fixed external receipt/intent locations forbid automatic overwrite or copy
+retry. Actual copy errors retain intent, partial copies and fees and stop the pool.
+Copy control-plane wall remains outside attempt metering but enters the A2 wall
+forecast; full replicas consume physical capacity. This is the existing full-copy
+convention with an explicit bounded metadata tariff, not deferred G1 retention.
+
+The [full-copy evidence](../../../tests/fixtures/native-full-copy-checks-2026-11-03.zip)
+records 16 independently authored methods passing in 42.071 seconds and the
+existing 29 reducer/22 owner regressions passing in 0.069/26.343 seconds, all Exit 0
+with stable source pins. Complete SQL rows/blob bytes, actual restore, locking,
+fees, withdrawal, malformed/stale proof and failure retention are exercised with
+disclosed synthetic retired financial/authority inputs. An independently reviewed
+cross-binding gap is corrected: an intact earlier pair cannot prove a later
+claimed prefix. Its final adversary passes; no pre-fix failing run is claimed.
+
+This closes the bounded AC-N5/6 full-copy caller portion. Actual production copies,
+the outer setup/acceptance/series controller and dispatch-prefix observations are
+still required. Reuse standard SQLite, hashing and the existing storage owners;
+no generic audit/storage platform or dependency is added. Next: bind that outer
+caller, finite grants/six-worker scheduling and frozen A2/A3 rules; then current
+native qualification and the complete fixed real reference acceptance. Scientific
+admission, protected2024, old fees and the A4 deadline remain unchanged.
+
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
 M1's existing genuine development witness is now reconciled, including its

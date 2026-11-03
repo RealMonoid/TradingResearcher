@@ -6587,7 +6587,7 @@
     "prior_next_action_before_data_prerequisite": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits."
   },
   "scientific_information_profile_2026_11_02": {
-    "status": "NATIVE_REFERENCE_CALLER_VERIFIED_CONTROLLER_AND_ACTUAL_ACCEPTANCE_OPEN",
+    "status": "NATIVE_FULL_COPY_COMPONENT_VERIFIED_OUTER_CONTROLLER_AND_ACTUAL_ACCEPTANCE_OPEN",
     "purpose": "Qualify the existing second-order binary law against the retained Q1 engineering template and actual owned generation/bootstrap/MC/replay before choosing a finite information-study profile. Address the documented dependent-null gap without adding a simulator family.",
     "requirements": [
       "REQ-005",
@@ -10985,7 +10985,7 @@
     "prior_status_before_D100": "FIXED_DEVELOPMENT_GRID_COMPLETE_INDEPENDENTLY_VERIFIED",
     "prior_active_next_action_before_D100": "M2: qualify the finite retained-scalar operator and pinned isolated host, then perform actual source/input/seed/count and complete prepared-capsule backup/restore preflight for the one approved2048-world run<=180meteredhours/100GiBlogical on selected C: (initial134.40GiB observed free). Continue remaining raw/dependence/selection/data and applicable information/calibration admission through actual callers. Preserve M1 bounded evidence, original-A hold,53calls/USD0.574585/sevenrevoked/no2024/no retarget and all full package exits.",
     "native_parallel_calibration_2026_11_03": {
-      "status": "REFERENCE_INPUT_AND_RESERVED_CALLER_VERIFIED_CONTROLLER_AND_ACTUAL_ACCEPTANCE_OPEN",
+      "status": "FULL_COPY_COMPONENT_VERIFIED_OUTER_CONTROLLER_AND_ACTUAL_ACCEPTANCE_OPEN",
       "decision": "D100",
       "approval_record": {
         "path": "docs/reviews/implementation-2026-10-25/native-parallel-calibration-approval-2026-11-03.json",
@@ -11052,7 +11052,7 @@
         "persistent_driver_stop_marker_sha256": "3dbd639f1340770c4ef0e5606b858bcca84c25ddc1e0eae4f32074252eef8431",
         "preservation": "The stop marker changes no old Registry/source/result/proof. UserA5 replaces future execution authority; checked Scalar preparation remains historical."
       },
-      "code_status": "Final and full-original-corpus reference inputs and their controlled shared-resource numerical consumers are independently checked at recorded source/scopes. Public final advance and inherited reference legacy advance/continuation remain denied; actual controller/qualification/reference acceptance/preflight are still required.",
+      "code_status": "Reserved final/reference callers and full-copy component verified in software; pinned outer setup/acceptance/series controller, actual current-source qualification,64real reference calculations,A2/A3 and series admission remain open.",
       "reuse_review_ownership": {
         "native_transport_tests": "Read-only native/factory/runtime/cache/measurement reuse assessment.",
         "outcome_reservation_review": "Read-only A1/A2/A3 accounting, fixed acceptance, fresh-seed and restart design.",
@@ -11064,7 +11064,7 @@
       "native_new_world_attempts": 0,
       "new_research_API_calls": 0,
       "new_scientific_authority": false,
-      "next_action": "Implement the pinned outer setup/acceptance/series controller with existing owners: prospective copy-metadata booking without false progress, complete full copies and stale-restore intents, finite shared grants and actual <=6-worker scheduling. Freeze A2/A3 observations/formulas before actual work, then fresh current-source native qualification and all32original references in serial+parallel (64calculations), measured deadline/logical/physical forecast and actual final seed admission. Start D1002048 series only after all actual gates; A4 cutoff2026-11-04T22:59:59Z unchanged.",
+      "next_action": "Complete pinned outer setup/acceptance/series controller using verified resource/numerical/copy owners: fixed dispatch-prefix observations, finite grants and <=6 actual workers, frozen A2/A3 formulas, then current-source native qualification and all32original cases serial+parallel. Require actual prepared full-copy proof and honest forecasts before fresh disjoint final seed admission/2048world series. V2archive/manifest paths and hashes are retained in full_copy_slice.next_runtime_inputs. A4cutoff2026-11-04T22:59:59Z unchanged.",
       "during_series": "Continue permitted technical main pathv0 on development2020–2023 without mutating pinned study source/results; account for desktop/v0 resources and avoid unnecessary concurrent heavy tests.",
       "unchanged_boundaries": "Full project specification, actual scientific admission/protected2024 restrictions, exact scientific criteria, exposure, freeze, separate policy/capital authority and existing inference budget remain binding. OriginalA/AgentWorkflow/AUX draft is not implicitly resumed.",
       "construction_effort": "Native task03:32:10UTC; reuse/design/adoption and process-control slice recorded in existing capsule. Two real input-integrity/cleanup defects fixed under independent RED cases. A4 cutoff remains2026-11-04T22:59:59Z; full final integration/acceptance pending. No measured speed/quality equivalence or construction token-cost data.",
@@ -11987,6 +11987,144 @@
           }
         },
         "documentation_scope": "Existing gates at retained document/verifier versions; later metadata checked by final whitespace/preservation checks. Actual numerical/parallel acceptance and scientific use remain open."
+      },
+      "full_copy_slice": {
+        "status": "VERIFIED_BOUNDED_FULL_COPY_CALLER_SOFTWARE_ACTUAL_RUN_GATES_OPEN",
+        "purpose": "Close the AC-N5/6 actual full-copy caller, booking/no-progress and retained failure subset before the outer D100 controller.",
+        "criteria": "Two real metadata bookings precede quiescent full backup+normal restore; complete SQL/blob/resource custody and actual copied prefix; prepared descendant/terminal exact tip; no overwrite/retry or financial refund on failure.",
+        "owners": [
+          "trading_researcher/native_calibration_runs.py:NativeCalibrationCopies",
+          "trading_researcher/native_calibration_resources.py:NativeResourceHistory",
+          "tests/test_native_calibration_copies_independent.py"
+        ],
+        "source_candidate_sha256": {
+          "trading_researcher\\native_calibration_runs.py": "f2cfadf7e8d67dedab6bf2da777b0028a4dc0c84845942d3927ac8e6fbdde730",
+          "trading_researcher\\native_calibration_resources.py": "f6464eec6529a612c50d6c7913964b7c1eb10a6038d1203572a128977eb3ea3b",
+          "tests\\test_native_calibration_copies_independent.py": "665e6d9504e70692a86682225ffcc7ea59656955a31dfdec6ae1866ff94c47e4"
+        },
+        "reuse_and_tradeoff": "Existing storage backup_bundle/restore_bundle/Broker.verify plus standard SQLite/hashing/locks. No new dependency/storage/audit platform. Full-copy I/O stays outside pending attempts to preserve ordinary orphan recovery; two fixed prepaid 1MiB metadata obligations earn no operational progress. Copy wall is recorded for A2, replicas remain physical. This is ordinary infrastructure within D100, not G1 or a scientific meaning change.",
+        "current_checks": {
+          "native-copies-independent16-check.json": {
+            "sha256": "34c440b8b4bbfd45aba2cd6e347a18432fc1fa33631f3be9c23dfc5ff8199a2c",
+            "methods": 16,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "exit_code": 0,
+            "seconds": "42.07120090001263",
+            "source_pins_stable_and_current": true
+          },
+          "native-full-copy-owner22-check.json": {
+            "sha256": "971f705d7a661562743165dd433a47139ba14dfb27c1c5b81f25edf246c1a19c",
+            "methods": 22,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "exit_code": 0,
+            "seconds": "26.343",
+            "source_pins_stable_and_current": true
+          },
+          "native-full-copy-kernel29-check.json": {
+            "sha256": "e197ddbaac69dfe2c7e4e13a22fa4cef8323bf20b74f153289d09ac136f9184c",
+            "methods": 29,
+            "failures": 0,
+            "errors": 0,
+            "skipped": 0,
+            "exit_code": 0,
+            "seconds": "0.069",
+            "source_pins_stable_and_current": true
+          }
+        },
+        "total_unique_methods": 67,
+        "source_review": {
+          "path": "native-full-copy-source-review.json",
+          "sha256": "a2c1b2df9a309a485ba6051b799db1881395bc88df407fec8434df50937d43a7",
+          "status": "READY_FOR_BOUNDED_FULL_COPY_COMPONENT_CLOSEOUT"
+        },
+        "central_reconciliation": {
+          "path": "native-full-copy-central-reconciliation.json",
+          "sha256": "3dd8d9825c9162355501bfbab4c951dca5aa9e92986c8662187cea369019c793"
+        },
+        "evidence_capsule": {
+          "path": "tests/fixtures/native-full-copy-checks-2026-11-03.zip",
+          "sha256": "4596441fda9990f3c2b9ef717a033b15e6e4128d140f5542b9fe4c3850bb8119",
+          "size": 1211246,
+          "members": 147,
+          "all_crc_sha_size_verified": true
+        },
+        "source_finding": "Independent/central source review found copied-prefix cross-binding gap; corrected before final passing adversary. No pre-fix failing execution is claimed.",
+        "preservation": {
+          "receipt": "native-full-copy-preservation.json",
+          "sha256": "c59b7533bd2808614b26d359dbb23b14ccec20e5298376d7146c5c492353eef2",
+          "project_files_byte_identical_to_1604b87": 114,
+          "unchanged_reference_and_reserved_caller_AST": true,
+          "resource_owner_AST_changed_only_prepare": true,
+          "retired_registry_sha256": "8911e337a8952ab156bff9a0c0850489bd47c18a7173328b8fa2483ab70a5a9b",
+          "auxiliary_sha256": "6ca0e43035e57cd8ad0db7a07a2010ba6b30627bf0785617e4787f35e537b289"
+        },
+        "physical_observation": {
+          "date": "2026-11-03",
+          "command": "Get-Volume -DriveLetter C",
+          "filesystem": "NTFS",
+          "health": "Healthy",
+          "free_bytes": 112198283264,
+          "runtime_certificate": false,
+          "full_series_copy_forecast_admitted": false
+        },
+        "next_runtime_inputs": {
+          "archive": {
+            "path": ".trf-runtime/native-packing-adoption-2026-11-02/canonical-native-runtime-v2.zip",
+            "sha256": "4d379ab0dc5d689445c1f720b967b923b8106af4184de1576418837c23853976"
+          },
+          "manifest": {
+            "path": ".trf-runtime/native-packing-adoption-2026-11-02/canonical-native-runtime-v2-manifest.json",
+            "sha256": "20151908bc9fd2b09ac407caebc5d7bbc2f79016315b8b59d736d2427297c848"
+          },
+          "both_file_hashes_checked": true,
+          "new_qualification": false
+        },
+        "not_verified": [
+          "Actual original D100 prepared/terminal copies; outer setup/scheduler/dispatch-prefix observation and admission",
+          "Fresh exact-current native qualification,all32old reference cases serial+parallel,measured deadlines,A2/A3,fresh final seeds and2048new worlds",
+          "Hard OS quota/crash-orphan termination/hostile-host tamper resistance",
+          "Scientific/full-process calibration and protected2024 admission"
+        ],
+        "construction_effort": {
+          "start_utc": "2026-11-03T11:04:13Z",
+          "through_utc": "2026-11-03T11:29:08.211355+00:00",
+          "scope": "Root implementation+central checks,independent16author/run and source review,existing-record closeout/publication; no actual study work. Wall includes coordination; no measured token/cost or quality-equivalence claim.",
+          "new_research_API_calls": 0
+        },
+        "documentation_checks": {
+          "status": "PASS",
+          "checks": {
+            "implementation": {
+              "command": "python -B docs/reviews/implementation-2026-10-25/verify_implementation.py",
+              "exit_code": 0,
+              "seconds": "0.8442268",
+              "receipt": "native-full-copy-doc-implementation.json",
+              "sha256": "9bbc53b7ac4dbe605a97cd1d11dbae145cbad243e2557242b78f70b6b980533d",
+              "pins_stable": true
+            },
+            "system-model": {
+              "command": "python -B docs/reviews/verify_system_model.py",
+              "exit_code": 0,
+              "seconds": "6.4249431",
+              "receipt": "native-full-copy-doc-system-model.json",
+              "sha256": "a5a93ac53f7f1a1bc1e562dfb698a46fc69f204208498e51201ce11adb1fbe5d",
+              "pins_stable": true
+            },
+            "retail": {
+              "command": "python -B docs/reviews/verify_retail_contract.py",
+              "exit_code": 0,
+              "seconds": "6.4513769",
+              "receipt": "native-full-copy-doc-retail.json",
+              "sha256": "1def2432a2ec43f55dbfbc9c69e331b426daf4c780807f0615b19ba6269c4580",
+              "pins_stable": true
+            }
+          },
+          "scope": "Three actual gates with stable document/verifier hashes; subsequent edits only record these results, evidence capsule digest and closeout timing. Final git diff --check covers final metadata."
+        }
       }
     }
   },

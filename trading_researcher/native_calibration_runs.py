@@ -6,7 +6,13 @@ Retired Scalar records are read solely as financial history, never scheduled.
 """
 import hashlib
 import math
+import os
+from pathlib import Path
+import shutil
+import sqlite3
 import time
+import uuid
+from contextlib import closing
 from types import MappingProxyType
 
 from .binding import require
@@ -19,6 +25,7 @@ from .native_calibration_resources import (
     RESULT_AUTHORITIES, MAX_COMPUTE_MS, MAX_STORAGE_BYTES, META)
 from .native_study_runs import NativeStudyInputs
 from .study_runs import InformationStudies
+from .storage import restore_bundle
 
 
 LOADED_SOURCE = footprint(source_bundle())
@@ -237,9 +244,17 @@ class NativeCalibrationResources:
                 body = {'identity': identity, 'carry': retired['carry'], 'max_parallel': 6,
                         'source_footprint': LOADED_SOURCE, 'approval_texts': authority['texts'],
                         'approval_hashes': authority['hashes'], 'setup_tasks': tasks,
+                        'copy_policy': {'schema': 'native-calibration-full-copy-policy/1',
+                            'metadata_task_ids': {label: tasks[label + '_copies']
+                                                  for label in ('prepared', 'terminal')},
+                            'metadata_tariff_bytes': META,
+                            'copy_compute': 'outside_attempts_in_wall_forecast'},
                         'retired_checkpoints': {k: retired[k] for k in ('original_checkpoint', 'prepared_checkpoint')},
                         'accounting': 'Retired carry plus owned new inventory/grant metadata and attempt charges. '
                                       'Initial 1MiB setup-inventory tariff covers bounded pool/authority/setup metadata; '
+                                      'each copy booking separately charges 1MiB for its booking and external proof, '
+                                      'without operational progress or a claim of verified copying. Full replicas '
+                                      'use physical capacity; copy/verification wall belongs in the wall forecast; '
                                       'preparation inspection/final commit are outside attempt elapsed metering.'}
                 require(len(canonical(body).encode()) < META, 'Native pool metadata exceeds its setup tariff')
                 pool = self._save(POOL, body, retired['source_refs'])
@@ -462,6 +477,322 @@ class NativeCalibrationResources:
                                     result=None, proofs=[],
                                     outcome=outcome_record(reference['body']['manifest'], world, failed=True))
                     self._settle_locked(pool, body, (), (), orphan=True)
+
+
+class NativeCalibrationCopies:
+    """Two prepaid metadata obligations and actual, quiescent full copies.
+
+    Copy I/O reuses storage's complete backup/normal restore; it is outside a
+    pending attempt, so restoration never suppresses orphan recovery. The
+    external proof is required separately from the booking. It is not a runtime
+    certificate, study admission or protection against a malicious host.
+    """
+    LABELS = ('prepared', 'terminal')
+
+    def __init__(self, broker):
+        self.broker = broker
+        self.resources = NativeCalibrationResources(broker)
+
+    def receipt_path(self, pool_id, label):
+        from .native_calibration_resources import _identity
+        _identity(pool_id)
+        require(label in self.LABELS, 'Unknown native copy obligation')
+        return (self.broker.directory.parent / ('native-calibration-copies-' + pool_id)
+                / (label + '.json'))
+
+    def _policy(self, pool):
+        require(pool['body'].get('copy_policy', {}).get('schema') ==
+                'native-calibration-full-copy-policy/1', 'Historical pool has no prepaid native copy policy')
+        # The reducer validates the complete policy, including its exact tasks.
+        NativeResourceHistory(pool)
+        return pool['body']['copy_policy']
+
+    def _booking_body(self, pool, label):
+        return {'schema': 'native-calibration-copy-booking/1', 'label': label,
+                'status': 'METADATA_BOOKED', 'external_copy_verified': False,
+                'metadata_tariff_bytes': META, 'registry_path': str(self.broker.directory),
+                'receipt_path': str(self.receipt_path(pool['id'], label))}
+
+    def _booking(self, pool, history, label):
+        task = self._policy(pool)['metadata_task_ids'][label]
+        row = history.records.get(('setup', task))
+        require(row is not None and row['state'] == 'COMPLETE', 'Native copy metadata is not booked')
+        item = self.broker._artifact(row['artifact_id'])
+        body = item['body']
+        require(body.get('copy_metadata_booking') == self._booking_body(pool, label)
+                and body['settlement']['usage_known'] is True
+                and body['settlement']['storage_bytes'] == META and body['currency_checked'] is True,
+                'Native copy booking meaning, location or tariff differs')
+        self.broker._require_usable_dependencies(item['id'])
+        return item
+
+    def book(self, token, pool_id, label):
+        b, r = self.broker, self.resources
+        with b._mutex:
+            b._binding_owner(token)
+            self.receipt_path(pool_id, label)
+            pool = r._pool(pool_id)
+            r._current(pool)
+            history = r._history(pool)
+            history._live()
+            task = self._policy(pool)['metadata_task_ids'][label]
+            if ('setup', task) in history.records:
+                return self._booking(pool, history, label)
+            started = time.monotonic()
+            reservation = r.reserve(token, {'pool_id': pool_id, 'phase': 'setup', 'task_id': task,
+                'attempt_id': uuid.uuid4().hex, 'expected_checkpoint': history.checkpoint})
+            body = {'resource_pool_id': pool_id, 'phase': 'setup', 'task_id': task,
+                    'attempt_id': reservation['attempt_id'], 'resource_state': 'COMPLETE',
+                    'currency_checked': True, 'failure': None, 'failures': [], 'output_blobs': {},
+                    'copy_metadata_booking': self._booking_body(pool, label)}
+            try:
+                require(len(canonical(body).encode()) < META // 4, 'Copy booking metadata exceeds its tariff')
+                r._current(pool)
+            except BaseException as exc:
+                r._failed(body, exc)
+            body['settlement'] = {'attempt_id': reservation['attempt_id'],
+                'compute_ms': max(1, math.ceil((time.monotonic() - started) * 1000)),
+                'storage_bytes': META, 'usage_known': True}
+            result = r.settle(token, pool_id, body)
+            require(result['body']['resource_state'] == 'COMPLETE', 'Native copy booking failed; pool stopped')
+            return result
+
+    @staticmethod
+    def _tip(db):
+        row = db.execute('SELECT seq,hash FROM events ORDER BY seq DESC LIMIT 1').fetchone()
+        return {'seq': row[0], 'hash': row[1]} if row else {'seq': 0, 'hash': '0' * 64}
+
+    @staticmethod
+    def _sql_fingerprint(db):
+        """Stream every SQL value, including credentials, into hashes only."""
+        schema = [list(row) for row in db.execute(
+            'SELECT type,name,tbl_name,sql FROM sqlite_master ORDER BY type,name')]
+        result = {'schema_sha256': digest(schema), 'tables': {}}
+        for name, in db.execute("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"):
+            quoted = '"' + name.replace('"', '""') + '"'
+            columns = list(db.execute('PRAGMA table_info(' + quoted + ')'))
+            order = ','.join(str(i + 1) for i in range(len(columns)))
+            checksum, count = hashlib.sha256(), 0
+            for row in db.execute('SELECT * FROM ' + quoted + ' ORDER BY ' + order):
+                count += 1
+                checksum.update(b'row\0')
+                for value in row:
+                    if value is None:
+                        kind, raw = b'null', b''
+                    elif isinstance(value, bytes):
+                        kind, raw = b'bytes', value
+                    else:
+                        kind, raw = type(value).__name__.encode(), str(value).encode('utf-8')
+                    checksum.update(kind + b':' + str(len(raw)).encode() + b':' + raw + b'\0')
+            result['tables'][name] = {'rows': count, 'sha256': checksum.hexdigest()}
+        return result
+
+    def _quiescent(self):
+        require(not self.broker._db.in_transaction, 'Full copies cannot run inside a SQL transaction')
+        for pool in self.resources._objects(POOL):
+            require(not self.resources._history(pool).pending, 'Full copies require every native attempt settled')
+        require(not self.broker._native_calibration_active, 'Native caller still owns an active attempt')
+
+    def _paths(self, pool_id, label, backup_directory, restore_directory, receipt_path, *, new):
+        paths = [Path(p).absolute() for p in (backup_directory, restore_directory, receipt_path)]
+        for path in paths:
+            for part in (path, *path.parents):
+                require(not part.is_symlink()
+                        and not (hasattr(part, 'is_junction') and part.is_junction()),
+                        'Linked native copy paths are not accepted')
+        paths = [p.resolve() for p in paths]
+        backup, restored, receipt = paths
+        require(receipt == self.receipt_path(pool_id, label), 'Native copy receipt location is fixed')
+        roots = [self.broker.directory, backup, restored]
+        require(all(not left.is_relative_to(right) and not right.is_relative_to(left)
+                    for i, left in enumerate(roots) for right in roots[i + 1:])
+                and all(not receipt.is_relative_to(root) and not root.is_relative_to(receipt)
+                        for root in roots), 'Native full copies and external proof must be disjoint')
+        if new:
+            require(all(not path.exists() for path in paths)
+                    and not Path(str(receipt) + '.intent.json').exists()
+                    and not Path(str(receipt) + '.failure.json').exists(),
+                    'Preserved native copies or intent forbid automatic replacement/retry')
+        return backup, restored, receipt
+
+    @staticmethod
+    def _write(path, body):
+        from .storage import _durable_file
+        path.parent.mkdir(parents=True, exist_ok=True)
+        _durable_file(path, canonical(body).encode())
+
+    @staticmethod
+    def _read(path):
+        import stat
+        info = path.lstat()
+        require(stat.S_ISREG(info.st_mode) and info.st_nlink == 1 and info.st_size <= META // 2,
+                'Bounded regular native copy proof required')
+        return decode(path.read_bytes())
+
+    @staticmethod
+    def _copy_custody(backup, restored):
+        import stat
+        from .storage import _validate_backup, _validate_registry, _hash_file, _content_path, _contained
+        for directory, names in ((backup, ('manifest.json', 'registry.sqlite3')),
+                                  (restored, ('restore-origin.json', 'registry.sqlite3'))):
+            for name in names:
+                info = _contained(directory, directory / name).lstat()
+                require(stat.S_ISREG(info.st_mode) and info.st_nlink == 1,
+                        'Native copy custody requires regular independent files')
+        manifest = _validate_backup(backup)
+        require(_hash_file(backup / 'manifest.json', limit=None)[:2] ==
+                _hash_file(restored / 'restore-origin.json', limit=None)[:2],
+                'Restored full-copy origin manifest differs')
+        restored_blobs = _validate_registry(restored / 'registry.sqlite3')
+        require(restored_blobs == manifest['blobs'], 'Restored complete blob inventory differs')
+        for identity, size in restored_blobs.items():
+            require(_hash_file(_content_path(restored, identity))[:2] == (identity, size),
+                    'Restored complete blob bytes differ')
+        with closing(sqlite3.connect((backup / 'registry.sqlite3').as_uri() + '?mode=ro', uri=True)) as db:
+            backup_sql = NativeCalibrationCopies._sql_fingerprint(db)
+            prefix = NativeCalibrationCopies._tip(db)
+        with closing(sqlite3.connect((restored / 'registry.sqlite3').as_uri() + '?mode=ro', uri=True)) as db:
+            require(NativeCalibrationCopies._sql_fingerprint(db) == backup_sql,
+                    'Restored SQL state differs from the complete backup')
+        return {'event_prefix': prefix,
+                'backup_manifest_sha256': _hash_file(backup / 'manifest.json', limit=None)[0],
+                'restored_database_sha256': _hash_file(restored / 'registry.sqlite3', limit=None)[0],
+                'sql_fingerprint': backup_sql,
+                'blobs': {'count': len(restored_blobs), 'bytes': sum(restored_blobs.values()),
+                          'inventory_sha256': digest(restored_blobs)}}
+
+    def create(self, token, pool_id, label, *, backup_directory, restore_directory, receipt_path):
+        from .coordination import Broker
+        b, r = self.broker, self.resources
+        with b._mutex:  # Keep the primary fixed, without holding a SQL transaction.
+            b._binding_owner(token)
+            pool = r._pool(pool_id)
+            r._current(pool)
+            history = r._history(pool)
+            if label == 'prepared':
+                history._live()
+            self._quiescent()
+            bookings = {name: self._booking(pool, history, name) for name in self.LABELS}
+            backup, restored, receipt = self._paths(pool_id, label, backup_directory,
+                                                   restore_directory, receipt_path, new=True)
+            committed = b._db.execute('SELECT COALESCE(SUM(size),0) FROM blobs').fetchone()[0]
+            committed += (b.directory / 'registry.sqlite3').stat().st_size
+            # The outer admission additionally forecasts every future full copy,
+            # scratch/cache and series growth. This checks this pair only.
+            for path in (backup, restored, receipt, Path('C:/') if os.name == 'nt' else b.directory):
+                ancestor = path.parent
+                while not ancestor.exists():
+                    ancestor = ancestor.parent
+                require(shutil.disk_usage(ancestor).free >= 20 * 1024**3 + 2 * committed + 2 * META,
+                        'Native full-copy capacity cannot retain the pair and 20GiB reserve')
+            before = {'resource_checkpoint': history.checkpoint, 'budget': history.budget()}
+            prefix, sql = self._tip(b._db), self._sql_fingerprint(b._db)
+            intent = {'schema': 'native-calibration-full-copy-intent/1', 'pool_id': pool_id,
+                'label': label, 'registry_path': str(b.directory), 'event_prefix': prefix,
+                'booking_ids': {k: v['id'] for k, v in bookings.items()},
+                'backup_directory': str(backup), 'restore_directory': str(restored),
+                'receipt_path': str(receipt), **before, 'scientific_readiness': False}
+            intent_path = Path(str(receipt) + '.intent.json')
+            started, touched = time.monotonic(), False
+            try:
+                touched = True
+                self._write(intent_path, intent)
+                require(b.call(token, 'backup_bundle', destination=str(backup))['status'] == 'PASS',
+                        'Complete native backup failed')
+                require(restore_bundle(backup, restored, b.directory / 'operator.key')['status'] == 'PASS',
+                        'Complete native restore failed')
+                recovered = Broker(restored)
+                try:
+                    require(recovered.call(recovered.admin_token, 'verify')['status'] == 'PASS',
+                            'Restored native Registry failed integrity verification')
+                    copied = NativeCalibrationResources(recovered).inspect(recovered.admin_token, pool_id)
+                    require({key: copied[key] for key in before} == before,
+                            'Restored native resource history differs')
+                finally:
+                    recovered.close()
+                custody = self._copy_custody(backup, restored)
+                require(custody['event_prefix'] == prefix and custody['sql_fingerprint'] == sql
+                        and self._sql_fingerprint(b._db) == sql
+                        and self._tip(b._db) == prefix, 'Primary or complete-copy SQL prefix changed')
+                r._current(pool)
+                result = {'schema': 'native-calibration-full-copy-receipt/1', 'status': 'COPY_VERIFIED',
+                    'pool_id': pool_id, 'label': label, 'registry_path': str(b.directory),
+                    'source_footprint': pool['body']['source_footprint'], **before,
+                    'booking_ids': intent['booking_ids'], 'event_prefix': prefix,
+                    'backup_directory': str(backup), 'restore_directory': str(restored),
+                    **custody, 'wall_elapsed_ms': max(1, math.ceil((time.monotonic() - started) * 1000)),
+                    'scientific_readiness': False}
+                self._metadata_bound(bookings[label], intent, result)
+                self._write(receipt, result)
+                require(self._read(receipt) == result, 'Native copy receipt did not retain exact bytes')
+                return result
+            except BaseException as exc:
+                if touched:
+                    failure = {'schema': 'native-calibration-full-copy-failure/1', 'pool_id': pool_id,
+                        'label': label, 'event_prefix': prefix, 'type': type(exc).__name__,
+                        'message': str(exc)[:2000], 'scientific_readiness': False}
+                    try:
+                        self._write(Path(str(receipt) + '.failure.json'), failure)
+                    except BaseException as retention_error:
+                        exc.add_note('Copy failure receipt could not be retained: ' + type(retention_error).__name__)
+                    try:
+                        r.stop(token, pool_id, 'NATIVE_FULL_COPY_FAILED_' + label.upper())
+                    except BaseException as stop_error:
+                        exc.add_note('Copy failure stop could not be committed: ' + type(stop_error).__name__)
+                raise
+
+    @staticmethod
+    def _metadata_bound(booking, intent, receipt):
+        # Also reserve a bounded failure diagnostic and the two event envelopes.
+        size = sum(len(canonical(item).encode()) for item in (booking, intent, receipt)) + 16384
+        require(size <= META, 'Combined native copy metadata exceeds its booked tariff')
+
+    def require(self, token, pool_id, label, receipt_path):
+        """Validate actual copies at use; stale primary prefixes never admit work."""
+        b, r = self.broker, self.resources
+        with b._mutex:
+            b._binding_owner(token)
+            pool = r._pool(pool_id)
+            r._current(pool)
+            history = r._history(pool)
+            if label == 'prepared':
+                history._live()
+            bookings = {name: self._booking(pool, history, name) for name in self.LABELS}
+            path = Path(receipt_path).absolute()
+            require(path.resolve() == self.receipt_path(pool_id, label), 'Native copy receipt location differs')
+            result = self._read(path)
+            backup, restored, path = self._paths(pool_id, label, result['backup_directory'],
+                                                 result['restore_directory'], path, new=False)
+            intent = self._read(Path(str(path) + '.intent.json'))
+            require(not Path(str(path) + '.failure.json').exists(), 'Native copy has a retained failure')
+            require(result['schema'] == 'native-calibration-full-copy-receipt/1'
+                    and result['status'] == 'COPY_VERIFIED' and result['pool_id'] == pool_id
+                    and result['label'] == label and result['registry_path'] == str(b.directory)
+                    and result['scientific_readiness'] is False
+                    and result['source_footprint'] == pool['body']['source_footprint']
+                    and result['booking_ids'] == {k: v['id'] for k, v in bookings.items()},
+                    'Native full-copy receipt identity or authority differs')
+            expected_intent = {'schema': 'native-calibration-full-copy-intent/1',
+                'receipt_path': str(path), 'scientific_readiness': False,
+                **{key: result[key] for key in ('pool_id', 'label', 'registry_path', 'event_prefix',
+                    'booking_ids', 'backup_directory', 'restore_directory', 'resource_checkpoint', 'budget')}}
+            require(intent == expected_intent, 'Native copy intent and receipt differ')
+            self._metadata_bound(bookings[label], intent, result)
+            prefix = result['event_prefix']
+            row = b._db.execute('SELECT hash FROM events WHERE seq=?', (prefix['seq'],)).fetchone()
+            require(row is not None and row[0] == prefix['hash'], 'Primary lost the observed native copy prefix')
+            if label == 'terminal':
+                self._quiescent()
+                require(self._tip(b._db) == prefix, 'Terminal native copy is no longer the terminal prefix')
+            at_copy = NativeResourceHistory(pool)
+            for row in b._db.execute('SELECT envelope FROM events WHERE seq<=? ORDER BY seq', (prefix['seq'],)):
+                at_copy.apply(decode(row[0]), b._artifact)
+            require(at_copy.checkpoint == result['resource_checkpoint'] and at_copy.budget() == result['budget'],
+                    'Native copy resource prefix or charged budget differs')
+            custody = self._copy_custody(backup, restored)
+            require(all(result[key] == value for key, value in custody.items()),
+                    'Native full-copy retained custody differs')
+            return result
 
 
 class NativeCalibrationReferences(NativeStudyInputs, InformationStudies):

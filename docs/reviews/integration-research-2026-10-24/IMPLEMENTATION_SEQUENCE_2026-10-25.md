@@ -189,6 +189,42 @@ metadata booking must be explicitly charged without claiming copy verification
 or metadata progress; reuse the existing full-copy convention. No actual new
 pool, final seeds, acceptance or series has started. A4 remains unchanged.
 
+**Full reference input/caller closeout (November 3):** the host-only reference
+owner preserves the complete existing development payload/manifest and every
+latest completed result/stream vector. The actual old corpus has 32 worlds at
+2,048 and 4,096 rows, two worlds per cell for two specifications and four patterns.
+Reading the largest studied target satisfies the existing completion helper only;
+it does not filter the corpus or retarget development. The content-addressed input
+computes both mode task IDs after its own identity, with no new seeds. Exact
+resource inventory, current native source, controlled cache/two-process transport
+and full old result/encoded/decoded byte comparison use the existing owners.
+
+The [reference evidence](../../../tests/fixtures/native-reference-caller-checks-2026-11-03.zip)
+accepts 19 distinct independent software methods: 14 unchanged passing bodies and
+shared helpers from one current-source run, plus five corrected/previously
+unexecuted methods from a fresh targeted run. The earlier run's authored direct-
+grant graph assertion failure remains retained; no successful whole-19 rerun is
+claimed. The actual typed continuation path reaches the old grant, and exact
+functional invalidation now confirms that requirement. All 19 existing final-mode
+methods freshly pass after the shared caller/schema changes. These cases retain
+explicit native qualification, numerical-response, clock and financial seams.
+
+Two real counterexamples are corrected: fresh reference aliases must recheck
+case/stream/source bytes and original dependency currency; acceptance clocks must
+stop pool/Event before postcurrency because they have no A1 retry. Input-bound
+reference orphan accounting, complete software backup/restore, scientific-role
+barriers and recorded-seed collection are covered. This completes the bounded
+AC-N9/11 input/caller and AC-N5/6 failure/recovery software portions, not actual
+native numerical acceptance or series admission.
+
+Next: the pinned outer controller/setup, charged copy-metadata booking without
+false progress, full copies and stale-prefix intents, finite grants, at most six
+workers and frozen A2/A3 rules. Then requalify exact current native source and run
+all original 32 reference cases serially and in actual parallel execution before
+measured limits/forecasts, fresh final seeds and the approved 2,048-world series.
+No actual pool, reference computation, final seeds or series has started. The A4
+readiness deadline and all scientific/2024 boundaries remain unchanged.
+
 **November 2 priority update:** the user explicitly requested implementation of
 the [manufacturing milestone plan](#manufacturing-milestones-approved-november-2-2026).
 M1's existing genuine development witness is now reconciled, including its

@@ -45,7 +45,13 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   now passes 19 independent methods: owned clock classification, full-byte retry
   comparison, post-error currentness, stop and uncertain restart. Native numerical
   answers and qualification remain disclosed test seams; actual admission is open.
-  Next: the admitted controller, fixed 32-case serial/parallel acceptance and A2/A3.
+  The [reference caller](../../tests/fixtures/native-reference-caller-checks-2026-11-03.zip)
+  now has 19 unique accepted software cases (14 unchanged passes plus five targeted
+  follow-ups), and 19 fresh final-caller regressions. Entire old multi-target
+  inputs/results/streams remain fixed; alias integrity, immediate acceptance stop
+  and input-bound orphan recovery are checked under disclosed numerical seams.
+  Next: the pinned controller/setup, actual current native qualification, all
+  32 real serial/parallel reference cases, full-copy/intent proofs and A2/A3.
   No numerical acceptance or native series has started; no general approval wait.
 
 - **Decision handling:** research unresolved user decisions and promptly ask with a concrete recommendation

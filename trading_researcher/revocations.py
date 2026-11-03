@@ -13,7 +13,8 @@ VERSIONS=PACKAGES|{'data-snapshot/1','feature-definitions/1','feature-certificat
     'research-data-target/1','protected-data-binding/1','study-resource-continuation/1','feature-evidence-release/1',
     'development-feedback-manifest/1','development-feedback-release/1',
     'native-runtime-qualification-input/1','native-runtime-qualification/1',
-    'calibration-recovery-amendment/1','calibration-recovery-continuation/1','native-calibration-resource-pool/1'}
+    'calibration-recovery-amendment/1','calibration-recovery-continuation/1','native-calibration-resource-pool/1',
+    'native-calibration-reference-input/1'}
 REQUEST_INPUTS={'bootstrap-input/1','information-diagnostics-input/1','population-world-input/1','information-study-input/1',
     'population-family-input/1','family-study-input/1','native-information-study-input/1','native-family-study-input/1'}
 RESULT_INPUTS={'development-bootstrap/1','development-information-diagnostics/1','development-population-world/1',
@@ -106,6 +107,9 @@ class DependencyRevocations:
                 if body['terms']['previous_continuation_id'] else [])
         if schema in ('native-calibration-setup-attempt/1','native-calibration-acceptance-attempt/1'):
             return [body['resource_pool_id'],body['resource_inventory_id'],*body.get('technical_refs',[])]
+        if schema=='native-calibration-reference-input/1':
+            return [body['request']['development_study_id'],body['request']['native_qualification_id'],
+                    *[v['attempt_id'] for v in body['references'].values()]]
         if schema=='calibration-recovery-input/1':
             return [body['study_id'],body['failed_attempt_artifact_id'],*body['original_continuation_ids']]
         if schema=='calibration-recovery-amendment/1':

@@ -17,6 +17,8 @@ from .evaluation_plans import source_bundle, footprint
 from .native_calibration_resources import (
     NativeResourceHistory, POOL, INVENTORY, GRANT, AUTHORITY, RESULT_SCHEMAS,
     RESULT_AUTHORITIES, MAX_COMPUTE_MS, MAX_STORAGE_BYTES, META)
+from .native_study_runs import NativeStudyInputs
+from .study_runs import InformationStudies
 
 
 LOADED_SOURCE = footprint(source_bundle())
@@ -29,6 +31,7 @@ AUTHORITY_FILES = {
                  '0995cf21a7278a8f72cfc05fa12b16160327b2ee27c5b3206aa9bd6ef7ad2b05')}
 SETUP_NAMES = ('controller_source', 'runtime_retain', 'runtime_qualification',
                'acceptance_summary', 'prepare_final_input', 'prepared_copies', 'terminal_copies')
+REFERENCE = 'native-calibration-reference-input/1'
 
 # These reviewed versions give caller_cancelled its narrow meaning here: the
 # family caller supplies a time-only callback. Other callers/reasons acquire no
@@ -270,8 +273,15 @@ class NativeCalibrationResources:
                     'Native final task inventory differs from its reserved worlds')
             refs.append(input_id)
             extra['input_id'] = input_id
+        elif request['phase'] == 'acceptance' and input_id is not None:
+            reference = NativeCalibrationReferences(self.broker)._study(input_id)
+            self.broker._require_usable_dependencies(input_id)
+            require(request['task_ids'] == sorted(NativeCalibrationReferences.tasks(reference)),
+                    'Native acceptance inventory must contain every serial and parallel reference task')
+            refs.append(input_id)
+            extra['input_id'] = input_id
         else:
-            require(input_id is None, 'Only a final task inventory binds a native final input')
+            require(input_id is None, 'Only final or reference acceptance inventories bind numerical inputs')
         item = self._save(INVENTORY, {'request': request, **extra}, refs)
         self._event('native_calibration_inventory_bound', pool['id'], artifact_id=item['id'])
         self._history(pool).budget()
@@ -344,6 +354,15 @@ class NativeCalibrationResources:
         if phase == 'final':
             require(body.get('study_id') == inventory['body']['input_id'], 'Native result final input differs')
             refs.append(body['study_id'])
+        elif phase == 'acceptance' and inventory['body'].get('input_id'):
+            reference_id = inventory['body']['input_id']
+            require(body.get('study_id') == body.get('reference_id') == reference_id,
+                    'Native acceptance result references another immutable corpus')
+            reference = b._artifact(reference_id)
+            task = NativeCalibrationReferences.tasks(reference)[body['task_id']]
+            require(body.get('world_id') == task['world_id'] and body.get('reference_mode') == task['mode'],
+                    'Native acceptance result world or mode differs')
+            refs.append(reference_id)
         if not orphan:
             try:
                 self._current(pool)
@@ -431,11 +450,198 @@ class NativeCalibrationResources:
                         world = next(w for w in study['body']['manifest']['worlds'] if w['id'] == task)
                         body.update(study_id=study_id, world_id=task, result=None, proofs=[],
                                     outcome=outcome_record(study['body']['manifest'], world, failed=True))
+                    elif phase == 'acceptance' and history.inventories[phase]['body'].get('input_id'):
+                        from .family_study import outcome_record
+                        reference_id = history.inventories[phase]['body']['input_id']
+                        reference = b._artifact(reference_id)
+                        selected = NativeCalibrationReferences.tasks(reference)[task]
+                        world = next(w for w in reference['body']['manifest']['worlds']
+                                     if w['id'] == selected['world_id'])
+                        body.update(study_id=reference_id, reference_id=reference_id,
+                                    input_id=reference_id, world_id=world['id'], reference_mode=selected['mode'],
+                                    result=None, proofs=[],
+                                    outcome=outcome_record(reference['body']['manifest'], world, failed=True))
                     self._settle_locked(pool, body, (), (), orphan=True)
 
 
+class NativeCalibrationReferences(NativeStudyInputs, InformationStudies):
+    """Current native replay of a complete, already exposed reference corpus.
+
+    Retain the entire old payload/manifest/results. Only the implementation
+    binding is new; this never retargets development or reserves new draws.
+    """
+    _study_input_schema = REFERENCE
+    _study_result_schema = RESULT_SCHEMAS['acceptance']
+    _study_data_class = 'operations'
+    _study_authority = AUTHORITY
+    _study_request_fields = {'key', 'development_study_id', 'native_qualification_id'}
+
+    def prepare(self, token, args):
+        return self._prepare_information_study_external(token, args)
+
+    def _advance_information_study_external(self, token, args):
+        with self.broker._mutex:
+            self.broker._binding_owner(token)
+            raise Denied('Native references require the shared reserved numerical caller')
+
+    def _continue_study_external(self, token, args):
+        with self.broker._mutex:
+            self.broker._binding_owner(token)
+            raise Denied('Native references allocate only through the shared resource pool')
+
+    def _development(self, request):
+        from .family_study_runs import FamilyStudies, FamilyCalibrationStudies
+        old = FamilyStudies(self.broker)._study(request['development_study_id'])
+        # The existing final-input reader authenticates completion, every latest
+        # attempt and its grants. Its studied-target check must not filter the
+        # original multi-target reference manifest.
+        return FamilyCalibrationStudies(self.broker)._development({
+            'development_study_id': old['id'],
+            'time_rows': max(old['body']['manifest']['profile']['targets'])})
+
+    def _vectors(self, development, view):
+        expected = {world['id']: world for world in development['body']['manifest']['worlds']}
+        require(1 <= len(expected) <= 32, 'One through 32 complete reference worlds required')
+        vectors = {}
+        for identity in reversed(view['attempt_artifact_ids']):
+            attempt = self._artifact(identity)
+            body = attempt['body']
+            world_id = body['world_id']
+            if world_id in vectors:
+                continue
+            self._require_usable_dependencies(identity)
+            require(body.get('failure') is None and len(body['proofs']) == 2
+                    and body['settlement']['usage_known'] is True,
+                    'Reference attempt needs known complete generation and separate replay')
+            result = body['result']
+            _validate_native_calculation(result, development['body']['manifest'], expected[world_id])
+            require(result['outcome'] == body['outcome']
+                    and result['outcome']['state'] in ('VERIFIED', 'INFORMATION_GAP'),
+                    'Reference result differs from its completed outcome')
+            first, replay = body['proofs']
+            require(first['stream_blob'] == replay['stream_blob']
+                    and first.get('stream_encoding') == replay.get('stream_encoding'),
+                    'Reference generation/replay streams differ')
+            vector = {'attempt_id': identity, 'result_hash': digest(result),
+                      'stream_blob': first['stream_blob']}
+            if 'stream_encoding' in first:
+                vector['stream_encoding'] = first['stream_encoding']
+            name = 'generate/stream.jsonl' + ('.gz' if 'stream_encoding' in first else '')
+            require(body['output_blobs'][name] == first['stream_blob'],
+                    'Reference generation stream lacks retained bytes')
+            vectors[world_id] = vector
+        require(set(vectors) == set(expected), 'Full completed reference corpus required')
+        return dict(sorted(vectors.items()))
+
+    def _study_identity(self, request):
+        return digest({'schema': 'native-calibration-reference-identity/1',
+                       'development_study_id': request['development_study_id']})
+
+    def _study_existing_request(self, existing, request):
+        super()._study_existing_request(existing, request)
+        self._require_usable_dependencies(existing['id'])
+        self._check_corpus(existing)
+        source = self._load_study_source(existing)
+        require(footprint(source) == existing['body']['native_binding']['source_footprint'],
+                'Existing reference source no longer matches its native binding')
+
+    def _case_integrity(self, payload):
+        descriptor = payload['case_blob']
+        raw = self._read_blob_bytes(descriptor['sha256'])
+        require({'sha256': hashlib.sha256(raw).hexdigest(), 'size': len(raw)} == descriptor,
+                'Immutable reference case bytes differ')
+
+    def _study_inputs(self, actor, request):
+        development, view = self._development(request)
+        vectors = self._vectors(development, view)
+        self._case_integrity(development['body']['payload'])
+        qualified = self._qualified(request)
+        refs = sorted({development['id'], qualified['certificate']['id'],
+                       *[v['attempt_id'] for v in vectors.values()], *view['used_continuation_ids']})
+        exposure = set(refs) | set(development['exposure'])
+        for identity in refs:
+            exposure.update(self._artifact(identity)['exposure'])
+        return development['body']['payload'], development['body']['manifest'], refs, sorted(exposure)
+
+    def _native_case_blob(self, request):
+        development, _ = self._development(request)
+        return development['body']['payload']['case_blob']
+
+    def _study_process_control(self):
+        from .study_process_control import ProcessControl
+        return ProcessControl()
+
+    def _study_extra_input(self, request, manifest):
+        extra = super()._study_extra_input(request, manifest)
+        development, view = self._development(request)
+        vectors = self._vectors(development, view)
+        for vector in vectors.values():
+            self._reference_bytes(vector)
+        return {**extra, 'references': vectors,
+                'process_control': self._study_process_control().request(),
+                'reference_scope': 'Complete exposed old corpus; no new seeds or scientific admission'}
+
+    def _reference_bytes(self, vector, *, validate_encoding=True):
+        descriptor = vector['stream_blob']
+        raw = self._read_blob_bytes(descriptor['sha256'])
+        require({'sha256': hashlib.sha256(raw).hexdigest(), 'size': len(raw)} == descriptor,
+                'Retained full reference stream differs')
+        if validate_encoding and 'stream_encoding' in vector:
+            from .study_stream import validate_stream
+            validate_stream(raw, vector['stream_encoding'], encoded_limit=268435456)
+        return raw
+
+    def _check_corpus(self, study):
+        development, view = self._development(study['body']['request'])
+        require(development['body']['payload'] == study['body']['payload']
+                and development['body']['manifest'] == study['body']['manifest']
+                and self._vectors(development, view) == study['body']['references'],
+                'Immutable reference payload, manifest or complete vectors changed')
+        self._case_integrity(study['body']['payload'])
+        # Initial preparation validates every encoding. At intended use, exact
+        # byte identity preserves that result; the selected case is decoded
+        # again during its full comparison. Do not decode the entire corpus
+        # before and after every individual reference calculation.
+        for vector in study['body']['references'].values():
+            self._reference_bytes(vector, validate_encoding=False)
+        require(study['body']['process_control'] == self._study_process_control().request(),
+                'Reference process-control policy differs')
+
+    def _study_before_execute(self, study):
+        super()._study_before_execute(study)
+        self._check_corpus(study)
+
+    def _study_after_execute(self, study):
+        super()._study_after_execute(study)
+        self._check_corpus(study)
+
+    def _study_failed_outcome(self, manifest, world, prior=None):
+        from .family_study import outcome_record
+        return outcome_record(manifest, world, failed=True)
+
+    @staticmethod
+    def tasks(reference):
+        require(reference['body']['schema'] == REFERENCE, 'Owned native reference input required')
+        return {digest({'reference_id': reference['id'], 'world_id': world['id'], 'mode': mode}):
+                {'world_id': world['id'], 'mode': mode}
+                for mode in ('serial', 'parallel') for world in reference['body']['manifest']['worlds']}
+
+    def compare(self, study, world, result, proofs, outputs):
+        vector = study['body']['references'][world['id']]
+        raw = self._reference_bytes(vector)
+        if result is None or result['outcome']['state'] == 'TECHNICAL_FAILURE':
+            return 'NO_FULL_CURRENT_GENERATION'
+        require(digest(result) == vector['result_hash'] and proofs
+                and proofs[0]['stream_blob'] == vector['stream_blob']
+                and proofs[0].get('stream_encoding') == vector.get('stream_encoding'),
+                'Native full result or reference stream descriptors differ')
+        name = 'generate/stream.jsonl' + ('.gz' if 'stream_encoding' in vector else '')
+        require(dict(outputs).get(name) == raw, 'Native full reference generation bytes differ')
+        return 'FULL_REFERENCE_MATCH'
+
+
 class NativeCalibrationAttempts:
-    """Host-only numerical consumer of already reserved final tasks.
+    """Host-only numerical consumer of reserved final and reference tasks.
 
     This is not a Broker RPC or a series-admission API. The consuming controller
     still owes fixed reference acceptance, pinned-host/source/copy/capacity
@@ -447,6 +653,7 @@ class NativeCalibrationAttempts:
         self.broker = broker
         self.resources = NativeCalibrationResources(broker)
         self.runner = NativeFamilyCalibrationStudies(broker)
+        self.reference_runner = NativeCalibrationReferences(broker)
         with broker._mutex:
             if not hasattr(broker, '_native_calibration_dispatched'):
                 broker._native_calibration_dispatched = set()
@@ -555,21 +762,27 @@ class NativeCalibrationAttempts:
             history._live()
             require(attempt_id in history.pending, 'A pending native reservation is required')
             reservation = history.pending[attempt_id]
-            require(reservation['phase'] == 'final', 'Numerical final caller requires a final reservation')
+            phase = reservation['phase']
+            require(phase in ('final', 'acceptance'), 'Native numerical caller requires final or reference work')
             require(attempt_id in b._native_calibration_active
                     and attempt_id not in b._native_calibration_dispatched,
                     'Native attempt was inherited or already dispatched')
-            inventory = history.inventories['final']
-            study = self.runner._study(inventory['body']['input_id'])
+            inventory = history.inventories[phase]
+            require(inventory['body'].get('input_id') is not None,
+                    'Metadata-only inventories cannot execute numerical references')
+            runner = self.runner if phase == 'final' else self.reference_runner
+            study = runner._study(inventory['body']['input_id'])
             manifest, payload = study['body']['manifest'], study['body']['payload']
-            world = next(w for w in manifest['worlds'] if w['id'] == reservation['task_id'])
-            previous = history.records.get(('final', world['id']))
+            selected = (None if phase == 'final' else runner.tasks(study)[reservation['task_id']])
+            world_id = reservation['task_id'] if selected is None else selected['world_id']
+            world = next(w for w in manifest['worlds'] if w['id'] == world_id)
+            previous = history.records.get(('final', world['id'])) if phase == 'final' else None
             prior = b._artifact(previous['artifact_id']) if previous is not None else None
             limits = inventory['body']['request']
             binding = {'source_footprint': study['body']['source_footprint'],
                        'payload_hash': digest(payload), 'manifest_hash': digest(manifest),
                        'world_id': world['id'], 'native_binding': digest(study['body']['native_binding']),
-                       'process_control': self.runner._study_process_control().request()}
+                       'process_control': runner._study_process_control().request()}
             with b._transaction():
                 require(not any(decode(row[0])['details'].get('attempt_id') == attempt_id
                     for row in b._db.execute("SELECT envelope FROM events WHERE "
@@ -578,7 +791,9 @@ class NativeCalibrationAttempts:
                 b._event('controller', 'native_calibration_numerical_dispatched',
                     pool_id=pool_id, inventory_id=inventory['id'], study_id=study['id'],
                     attempt_id=attempt_id, world_id=world['id'], binding_hash=digest(binding),
-                    numerical_caller='native-reserved-calculation/1')
+                    numerical_caller='native-reserved-calculation/1',
+                    **({} if selected is None else {'reference_id': study['id'],
+                        'reference_mode': selected['mode'], 'task_id': reservation['task_id']}))
                 row = b._db.execute('SELECT seq,hash FROM events ORDER BY seq DESC LIMIT 1').fetchone()
                 dispatch_event = {'seq': row['seq'], 'hash': row['hash']}
             # A failed call cannot re-enter this reservation in the same Broker;
@@ -595,6 +810,7 @@ class NativeCalibrationAttempts:
         currency_checked = True
         cancelled = None
         retry_comparison = 'NOT_CHECKED'
+        reference_comparison = None
 
         def add_failure(exc):
             failures.append(self._failure(exc))
@@ -631,19 +847,21 @@ class NativeCalibrationAttempts:
                             and prior['body']['resource_pool_id'] == pool_id,
                             'Retry predecessor belongs to another input or pool')
                     self._retry_equal(prior, None, [], [], binding)
-                self.runner._study_before_execute(study)
-                inputs = self.runner._study_inputs(actor, study['body']['request'])
+                runner._study_before_execute(study)
+                inputs = runner._study_inputs(actor, study['body']['request'])
                 require(digest(list(inputs)) == digest(
                     [payload, manifest, study['source_refs'], study['exposure']]),
                     'Native study dependencies changed')
-                source = self.runner._load_study_source(study)
+                source = runner._load_study_source(study)
                 require(footprint(source) == study['body']['source_footprint'],
                         'Native retained calculation source differs')
                 cases = b._read_blob_bytes(payload['case_blob']['sha256'])
                 require({'sha256': hashlib.sha256(cases).hexdigest(), 'size': len(cases)}
                         == payload['case_blob'], 'Native retained case bytes differ')
+                if phase == 'acceptance':
+                    runner.compare(study, world, None, [], [])
             remaining()
-            returned = self.runner._execute_study_attempt(study, source, payload, manifest, world,
+            returned = runner._execute_study_attempt(study, source, payload, manifest, world,
                 cases, remaining, meter, outputs, _custody=custody, _cancel=_cancel)
         except BaseException as exc:
             add_failure(exc)
@@ -653,7 +871,7 @@ class NativeCalibrationAttempts:
                 meter['accounting_complete'] = False
             if not isinstance(exc, Exception):
                 cancelled = exc
-            if not clock_candidate:
+            if not clock_candidate or phase != 'final':
                 stop_dispatch()
 
         # Preserve authenticated generation even when replay or final response
@@ -688,11 +906,18 @@ class NativeCalibrationAttempts:
                             'Native technical failure is not an authenticated calculator deadline')
                     add_failure(AuthenticatedCalculatorDeadline('Pinned native calculator time stop'))
                     clock_candidate = True
+                    if phase != 'final':
+                        stop_dispatch()
                 else:
                     require(result['outcome']['state'] in ('VERIFIED', 'INFORMATION_GAP')
                             and len(phases) == 2, 'Native completed world requires full separate replay')
-            retry_comparison = self._retry_equal(prior, result, proofs, outputs,
-                                                 binding)
+            if phase == 'final':
+                retry_comparison = self._retry_equal(prior, result, proofs, outputs, binding)
+            else:
+                reference_comparison = runner.compare(study, world, result, proofs, outputs)
+                if not failures:
+                    require(reference_comparison == 'FULL_REFERENCE_MATCH',
+                            'Native acceptance requires a full old reference match')
         except BaseException as exc:
             add_failure(exc)
             clock_candidate = False
@@ -703,7 +928,7 @@ class NativeCalibrationAttempts:
         # Error paths owe the same intended-use currency check. A clock cannot
         # bypass late source/cache/dependency withdrawal or mask its evidence.
         with b._mutex:
-            checks = (lambda: self.runner._study_after_execute(study),
+            checks = (lambda: runner._study_after_execute(study),
                       lambda: owner._current(pool),
                       lambda: b._require_usable_dependencies(inventory['id']),
                       lambda: b._require_usable_dependencies(study['id']))
@@ -735,7 +960,7 @@ class NativeCalibrationAttempts:
             add_failure(Invalid('Native attempt resource usage is unknown'))
 
         state = ('COMPLETE' if not failures else 'KNOWN_TIMEOUT'
-                 if clock_candidate and len(failures) == 1 and currency_checked
+                 if phase == 'final' and clock_candidate and len(failures) == 1 and currency_checked
                  and meter['accounting_complete'] else 'FAILED')
         if state == 'FAILED':
             stop_dispatch()
@@ -752,11 +977,11 @@ class NativeCalibrationAttempts:
                     state = 'FAILED'
                     stop_dispatch()
                 outcome = (result['outcome'] if state == 'COMPLETE'
-                           else self.runner._study_failed_outcome(manifest, world))
+                           else runner._study_failed_outcome(manifest, world))
                 compact = {'schema': snapshot['schema'], 'binding': snapshot['binding'],
                            'phases': [{'phase': p['phase'], 'result_hash': digest(p['result']),
                                        'proof_hash': digest(p['proof'])} for p in phases]}
-                body = {'phase': 'final', 'task_id': world['id'], 'attempt_id': attempt_id,
+                body = {'phase': phase, 'task_id': reservation['task_id'], 'attempt_id': attempt_id,
                         'study_id': study['id'], 'world_id': world['id'],
                         'numerical_caller': 'native-reserved-calculation/1',
                         'dispatch_event': dispatch_event,
@@ -768,6 +993,9 @@ class NativeCalibrationAttempts:
                         'technical_refs': [study['id']] + ([prior['id']] if prior is not None else []),
                         'settlement': {'attempt_id': attempt_id, 'compute_ms': compute,
                                        'storage_bytes': storage, 'usage_known': meter['accounting_complete']}}
+                if selected is not None:
+                    body.update(reference_id=study['id'], input_id=study['id'],
+                                reference_mode=selected['mode'], reference_comparison=reference_comparison)
                 saved = owner.settle(token, pool_id, body,
                     source_refs=([prior['id']] if prior is not None else ()),
                     blob_refs=tuple(descriptors.values()))

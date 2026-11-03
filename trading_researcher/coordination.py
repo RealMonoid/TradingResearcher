@@ -457,6 +457,8 @@ class Broker(ReviewContinuation, ResearchMemory, ResearchCalls, FormalizationRec
             current=pending.pop()
             if current['id'] in seen:continue
             seen.add(current['id']);body=current.get('body')
+            if type(body) is dict and str(body.get('schema','')).startswith('native-calibration-reference-'):
+                raise Denied('Native reference qualification and its descendants are unavailable to research roles')
             if type(body) is dict and str(body.get('schema','')).startswith(
                     ('evaluator-calibration-input/','evaluator-calibration-attempt/',
                      'family-calibration-input/','family-calibration-attempt/',

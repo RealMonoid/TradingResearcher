@@ -424,3 +424,17 @@ serialization error still retains raw outputs and receives failed settlement.
 The public final advance remains denied. Real native qualification, fixed full
 32-case serial/parallel acceptance, the admitted controller, full-copy/recovery
 proofs and A2/A3 remain required before the actual series.
+
+The [reference caller evidence](../../tests/fixtures/native-reference-caller-checks-2026-11-03.zip)
+adds a private operational input for the entire completed old corpus, retaining
+all targets/seeds/limits/results and full stream vectors while independently
+binding current native source. Two computed task IDs per old world distinguish
+mode scheduling without entering the numerical request or changing its outcome.
+The shared reserved caller selects a local runner and compares full result plus
+encoded/decoded descriptors and actual bytes. Reference errors stop immediately;
+A1 retry remains final-only. Typed withdrawal, role/namespace/seed boundaries and
+input-bound orphan recovery compose with existing storage/Registry owners.
+Nineteen unique software cases (14 preserved plus five targeted passes) and 19
+fresh final-mode regressions support this component. Disclosed native/numerical
+seams do not replace fresh qualification or the actual 32-case serial/parallel
+acceptance. Outer controller/copies/intents and A2/A3 remain open.

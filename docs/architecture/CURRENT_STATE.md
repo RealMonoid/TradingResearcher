@@ -60,6 +60,15 @@ Updated November 3, 2026. Descriptive resume handoff; decisions/contracts retain
   are updated. Implementation, behavioral checks and empirical usefulness remain
   open; no new research/data-use grant follows. Exact approval-time bytes are retained.
 
+- **Direct LightGBM role adopted — D102 (November 3):** direct LightGBM is designated
+  as an interchangeable forecast component for actual hypothesis tasks, with the
+  [approved qualifications](09_IMPLEMENTATION_BLUEPRINT.md#d102-direct-lightgbm-forecast-handoff).
+  Preserve original versus representation claims, full fitting/selection history,
+  negative/inconclusive distinctions and inherited exposure; policy sizing/risk
+  remains separate. This selects no installed/qualified model or study and opens
+  no comparison branch. D100/A1-A5 and existing priorities remain; the [same plan](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#direct-lightgbm-component-approval-november-3-2026)
+  binds use through the next actual affected caller.
+
 - **Construction tradeoffs (November 3):** apply the [approved quality/effort rule](../../AGENTS.md#codex-construction-workflow)
   and execution-plan/0.7: meet binding requirements with proportionate total effort, justify substantial
   optional work, and promptly propose changes to disproportionate requirements. Existing scientific

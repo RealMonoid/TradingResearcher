@@ -1,6 +1,6 @@
 {
-  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1+temporal-diagnostic-invocation-1+monitoring-visibility-1+inquiry-feedback-1 + bounded-exact-compositions-1 + exact-computation-resources-2 + native-parallel-calibration-1 + contextual-trading-methodology-1",
-  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline. D087 uses SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC for a later approved invocation extension. D088 uses SESSION-2026-10-24-MONITORING-VISIBILITY for operational reporting; prior scientific contracts remain versioned. D096 uses SESSION-2026-11-01-METACOGNITION for the approved inquiry/feedback addendum and incremental observable-improvement clarifications; original source bytes and earlier decisions remain preserved. D097 uses SESSION-2026-11-01-EXACT-COMPOSITIONS; direct answer and exact approval-time proposal are preserved in document26/adoption evidence. D098 uses SESSION-2026-11-01-EXACT-RESOURCES for the direct20M/40M local resource decision; exact proposal bytes and answer remain in document27/adoption evidence. D097 and all old10M profiles remain unchanged. D100 uses SESSION-2026-11-03-NATIVE-PARALLEL: exact direct approval/section0.3 A1-A5 for new native parallel final execution, old Scalar retirement and unchanged scientific/inference boundaries. D101 uses SESSION-2026-11-03-CONTEXTUAL-TRADING: explicit full adoption of the archived contextual methodology proposal, with exact approval-time bytes and unchanged scientific/resource/capital limits.",
+  "version": "reconstruction-1+generator-contract-1+research-contract-1+agent-inquiry-1+temporal-diagnostic-invocation-1+monitoring-visibility-1+inquiry-feedback-1 + bounded-exact-compositions-1 + exact-computation-resources-2 + native-parallel-calibration-1 + contextual-trading-methodology-1 + direct-lightgbm-component-1",
+  "source_scope": "Available shared-page snapshot; SRC-001 through SRC-008 remain open. D068 and D069-D070 use separately recorded current-session instructions SESSION-2026-10-22 and SESSION-2026-10-22-GENERATOR; the archived source is unchanged. D071-D085 use SESSION-2026-10-23-CLOSURE. Historical decision statuses are retained; scoped current resolutions are explicit in decision_resolutions. D086 uses SESSION-2026-10-24-INQUIRY for agent working discipline. D087 uses SESSION-2026-10-24-TEMPORAL-DIAGNOSTIC for a later approved invocation extension. D088 uses SESSION-2026-10-24-MONITORING-VISIBILITY for operational reporting; prior scientific contracts remain versioned. D096 uses SESSION-2026-11-01-METACOGNITION for the approved inquiry/feedback addendum and incremental observable-improvement clarifications; original source bytes and earlier decisions remain preserved. D097 uses SESSION-2026-11-01-EXACT-COMPOSITIONS; direct answer and exact approval-time proposal are preserved in document26/adoption evidence. D098 uses SESSION-2026-11-01-EXACT-RESOURCES for the direct20M/40M local resource decision; exact proposal bytes and answer remain in document27/adoption evidence. D097 and all old10M profiles remain unchanged. D100 uses SESSION-2026-11-03-NATIVE-PARALLEL: exact direct approval/section0.3 A1-A5 for new native parallel final execution, old Scalar retirement and unchanged scientific/inference boundaries. D101 uses SESSION-2026-11-03-CONTEXTUAL-TRADING: explicit full adoption of the archived contextual methodology proposal, with exact approval-time bytes and unchanged scientific/resource/capital limits. D102 uses SESSION-2026-11-03-LIGHTGBM-COMPONENT for the direct forecast-component choice and qualified hypothesis/representation/learning/exposure boundaries; no installation, model competition, study or priority change follows.",
   "decisions": [
     {
       "id": "D001",
@@ -2279,6 +2279,49 @@
       "acceptance_basis": "Direct user reply \"wir übernehmen den vorschlag komplett\" after proposal commit d3a278b; exact 20150-byte approval-time section SHA-256 446bc5ad8a5718ed1debc3e5e641100129d1b10f1cf2e3e148fe6d7f5a873452 and direct answer retained in contextual-trading-approval-2026-11-03.json. D101-AC-01 through D101-AC-07 are adopted specifications, not executed coverage.",
       "normative": true,
       "change_control": "D008/D026; version subsequent affected handoffs within existing envelopes, preserving historical sources/schemas/definitions and exposure. No mandatory ladder, known-mechanism/positive-input gate, baseline hypothesis generator, dependency/model/numeric/profile/resource change, paid call, protected data or capital authority. D100/A1-A5 remains priority; preserve pinned studies and active prompts. Rollback retains all failures, history and charges."
+    },
+    {
+      "id": "D102",
+      "status": "ACCEPTED",
+      "title": "Direct LightGBM as an interchangeable forecast component",
+      "problem": "Treating statistical learning as an LLM competition can create irrelevant research branches; replacing a mechanics hypothesis with a feature-usefulness claim loses meaning and trained-model selection/exposure.",
+      "rationale_and_alternative": "Designate direct LightGBM as an interchangeable estimator for actual hypothesis tasks; variant A is suitable, not compulsory. Preserve distinct original/representation claims, scoped negative/inconclusive judgments, the complete learned procedure and inherited exposure; keep policy sizing/risk independent. Do not adopt Qlib as an encompassing platform, a model contest or a mandatory first-post-v0 schedule.",
+      "requirement": "REQ-018",
+      "affected_requirements": [
+        "REQ-002",
+        "REQ-003",
+        "REQ-004",
+        "REQ-005",
+        "REQ-009",
+        "REQ-010",
+        "REQ-012",
+        "REQ-013",
+        "REQ-014",
+        "REQ-016",
+        "REQ-018",
+        "REQ-020",
+        "REQ-024",
+        "REQ-026",
+        "REQ-029"
+      ],
+      "components": [
+        "CMP-01",
+        "CMP-02",
+        "CMP-03",
+        "CMP-04",
+        "CMP-05",
+        "CMP-06",
+        "CMP-07",
+        "CMP-08",
+        "CMP-09",
+        "CMP-12"
+      ],
+      "sources": [
+        "SESSION-2026-11-03-LIGHTGBM-COMPONENT"
+      ],
+      "acceptance_basis": "Direct user reply \"akzeptiert. machen wir so\" to the preceding qualified assistant review; scope and approved-reply content transcription retained in lightgbm-component-approval-2026-11-03.json. Earlier unqualified Claude comparison/refutation claims are not adopted.",
+      "normative": true,
+      "change_control": "D008/D026/D101. A general architectural tool choice selects no installed/pinned release, fitted model, fit/predict/scientific admission, target/profile/numeric rule, spending or resource/capital authority. Qualify the smallest owned adapter and actual caller when required. D100/A1-A5 and frozen studies/prompts remain. Rollback preserves source/model/exposure/failure/charge history."
     }
   ],
   "rejections": [
@@ -3403,6 +3446,13 @@
       "date": "2026-11-03",
       "record": "02_DECISION_REGISTER.md#d101--hypothesis-led-contextual-trading-methodology",
       "scope": "Full adoption of the complete retained contextual trading proposal as contextual-trading-methodology/1.0, including all details, five handoffs, seven acceptance cases and explicit limits. Exact user answer and source bytes are retained in the linked approval record; adoption is not implementation or empirical benefit."
+    },
+    {
+      "id": "SESSION-2026-11-03-LIGHTGBM-COMPONENT",
+      "kind": "direct_user_approval",
+      "date": "2026-11-03",
+      "record": "02_DECISION_REGISTER.md#d102--direct-lightgbm-as-an-interchangeable-forecast-component",
+      "scope": "Direct LightGBM forecast-component design choice with four adopted qualifications; variant A suitable, no mandatory comparison branch or first-post-v0 schedule. Approval content transcription, user answer and limits retained in linked implementation approval record."
     }
   ],
   "decision_resolutions": [

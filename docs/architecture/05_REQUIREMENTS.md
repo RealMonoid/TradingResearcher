@@ -126,3 +126,23 @@ Use task-specific pre-outcome criteria for predictive/economic usefulness and
 complexity burden. Existing canonical estimands/thresholds, calibration, exposure,
 resource and intended-use controls remain. The [blueprint](09_IMPLEMENTATION_BLUEPRINT.md#d101-adopted-contextual-trading-handoffs)
 binds the callers; full behavior remains unimplemented/unverified until recorded.
+
+## D102 learned forecast qualification scope
+
+D102 designates direct LightGBM as a forecast component; it adds no new numeric
+profile, model-superiority gate or compulsory benchmark. Its [caller contract](09_IMPLEMENTATION_BLUEPRINT.md#d102-direct-lightgbm-forecast-handoff)
+elaborates existing TEST-02/03/04/05/09/10/12/13/14/16/18/20/24/26/29 and the
+D101 acceptance cases. Future qualification must demonstrate:
+
+- Original mechanism/conditional claims and linked representation-usefulness
+  claims remain distinct; fit/prediction cannot silently replace their meaning.
+- A no-gain result follows the bound negative/inconclusive criteria for the actual
+  estimator, target and data scope; model success cannot certify causal premises.
+- The full feature/fitting/selection/window/update recipe and fitted artifacts are
+  retained, time-valid and reproducible under the adopted numerical environment.
+- Exposed discovery data remain usable for development without becoming independent
+  confirmation; output use, sizing/risk and net policy evidence remain separate.
+
+These are specifications, not executed model tests. Pin the actual library/build
+and validate its owned mapping before use. Existing simple comparators remain;
+LightGBM is not an obligatory baseline generator or an additional research branch.

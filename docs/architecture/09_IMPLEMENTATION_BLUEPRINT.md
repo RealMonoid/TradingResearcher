@@ -51,6 +51,30 @@ dependency, numerical, data, execution or evidence authority. Version future
 handoffs; do not rewrite pinned studies or active researcher prompts. See the
 [seven adopted boundary cases](05_REQUIREMENTS.md#d101-contextual-trading-acceptance).
 
+## D102 direct LightGBM forecast handoff
+
+D102 adopts direct LightGBM as a generally useful interchangeable estimator under
+the existing D101 forecast boundary. Implement the smallest owned adapter only
+through an actual task/caller; do not install Qlib, open a model-comparison branch
+or first build a training platform merely to record this component choice.
+
+Reuse H_idea/H_exec, FeatureDefinition, the artifact/dependency envelope and assigned
+EvaluationPlan. Bind original-claim and distinct representation-claim references,
+exact target/horizon/units, allowed feature/data sources and availability, feature
+construction/selection, fit/development/assessment boundaries, training recipe,
+capacity/regularization/parameters/seeds, library/build/source versions and retained
+fitted artifact. If retraining is part of the method, freeze that procedure and
+retain each fitted version. Routine technical choices inside an approved contract
+remain autonomous; genuinely new scientific/run meaning needs researched review.
+
+Independent evaluation judges only the scoped claim supported by this design.
+Forecast gain does not certify mechanics, negative versus inconclusive follows
+predeclared criteria, and discovery/fitting ancestry remains exposure. A policy
+may consume the versioned output through its own freeze/evaluation; sizing and risk
+are not automatically delegated to a forecasting model. Existing scientific/data/
+resource gates and numerical profiles remain. No fit/predict route or D102 runtime
+qualification is supplied by this specification adoption.
+
 ## Interface contracts
 
 Names below identify owned contracts; they are not promises about third-party APIs.

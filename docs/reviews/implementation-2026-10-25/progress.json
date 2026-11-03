@@ -12156,5 +12156,80 @@
     "next_action": "Apply adopted handoffs and acceptance at the next affected safe caller/design slice through the sole plan while retaining D100 priority, pinned studies and all project gates. Research and promptly resolve actual missing scientific/run inputs when encountered.",
     "unverified": "No D101 runtime acceptance case, forecast/regime/policy/process qualification, economic or complexity benefit was executed. Earlier seven-method checks remain historical. This adoption does not certify concurrent native changes.",
     "rollback": "Version later changes under D008/D026; retain the full approval/source, historical schemas/definitions, source/exposure/failures and charges."
+  },
+  "direct_lightgbm_component_2026_11_03": {
+    "status": "ADOPTED_DESIGN_COMPONENT_RUNTIME_QUALIFICATION_PENDING",
+    "decision": "D102",
+    "source": "docs/reviews/implementation-2026-10-25/lightgbm-component-approval-2026-11-03.json",
+    "approval_message": "akzeptiert. machen wir so",
+    "recorded_at_utc": "2026-11-03T09:11:32.130417+00:00",
+    "review_base": "36cc6de",
+    "changed_files": [
+      "docs/architecture/02_DECISION_REGISTER.md",
+      "docs/architecture/ARCHITECTURE_REGISTER.json",
+      "docs/architecture/06_MASTER_ARCHITECTURE.md",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md",
+      "docs/architecture/05_REQUIREMENTS.md",
+      "docs/architecture/12_TRACEABILITY_MATRIX.md",
+      "docs/architecture/CURRENT_STATE.md",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md",
+      "docs/reviews/implementation-2026-10-25/progress.json",
+      "docs/reviews/implementation-2026-10-25/lightgbm-component-approval-2026-11-03.json"
+    ],
+    "scope": "Direct LightGBM as interchangeable forecast tool for concrete hypothesis tasks, with variant A and all four adopted qualifications. No model contest, compulsory ladder/first-post-v0 order, Qlib platform, installation/training, pinned library choice, study or new scientific/data/resource authority.",
+    "source_fidelity": "Approved visible-reply content transcription is qualified and hashed in the approval record; raw provider transport is not claimed. Earlier unqualified Claude model/refutation claims are not adopted.",
+    "documentation_checks": {
+      "system_model": {
+        "status": "PASS",
+        "exit_code": 0,
+        "decisions": 102,
+        "checked_files": 22,
+        "local_links": 880
+      },
+      "retail_contract": {
+        "status": "PASS",
+        "exit_code": 0,
+        "checked_files": 27,
+        "preserved_policy_sections": 15
+      },
+      "implementation": {
+        "status": "PASS",
+        "exit_code": 0,
+        "baseline_files": 103,
+        "local_document_links": 1047
+      }
+    },
+    "focused_preservation": {
+      "status": "PASS",
+      "approval_transcription_hash": "MATCH",
+      "all_101_prior_structured_decisions_and_sources_preserved": true,
+      "D101_prose_preserved": true,
+      "forward_reverse_requirement_mapping": 15,
+      "scientific_contract_and_D100_priority_preserved": true,
+      "prior_requirement_text_preserved": true,
+      "concurrent_progress_roots_preserved": [
+        "scientific_information_profile_2026_11_02"
+      ],
+      "concurrent_runtime_changes_excluded": [
+        "trading_researcher/native_calibration_runs.py"
+      ]
+    },
+    "checked_working_file_sha256": {
+      "docs/architecture/02_DECISION_REGISTER.md": "7ee4bb42e9a7f42231a264e39b2daf5fdf2718f8af5d19bfacf8980765ff3546",
+      "docs/architecture/ARCHITECTURE_REGISTER.json": "93a707bf4f6ff63c3caa779d8235078a4c1f01d68466dac26253520278e07b31",
+      "docs/architecture/06_MASTER_ARCHITECTURE.md": "e93110c510b24a9a484de15c934d5fffafb7fcb6f644341c6e2686f5d0aaff38",
+      "docs/architecture/09_IMPLEMENTATION_BLUEPRINT.md": "01b06bf03f9a1424c715eef47517778cfe9877703924d1f86bd2f581764af245",
+      "docs/architecture/05_REQUIREMENTS.md": "17c7f4fcba5f170693042fcc10ce7680283aa5e06982c721886da947a905ad5a",
+      "docs/architecture/12_TRACEABILITY_MATRIX.md": "5284e27902079b5867efbb0945d6dd8448481527d583c23bc8bb13826f5ea9be",
+      "docs/architecture/CURRENT_STATE.md": "c7961b908997a07af012872c79154fb7f39f21c44d4bc1eb38c944c2a3ff627f",
+      "docs/reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md": "476b23b65f641b4918557d474ee81b352dc0353fcea9c3d1dd6fc4364fe18cbf",
+      "docs/reviews/implementation-2026-10-25/lightgbm-component-approval-2026-11-03.json": "2b67a24348c5847a419a7ad2257c499eca03b4e81207ff9ea8ccc86110a021c5"
+    },
+    "concurrent_scope": "The active native builder owns existing native_calibration_runs.py changes, the pending reserved-attempt test/AUX draft and native progress. Preserve those values; commit only D102 changes, including an adoption-only progress-index blob.",
+    "later_supplied_review": "A subsequent Claude model-family ranking arrived during closeout. It is review material, not approval to replace D102 or create a model zoo/mandatory ordering. Interpretability may inform concrete tool choice under D101; additional methods, empirical superiority claims and scientific profiles are not adopted by this closeout.",
+    "construction_tradeoff": "One bounded design adoption in nine existing files plus one approval record, using existing verifiers. No new platform, runtime helper, study, benchmark or library installation. Billed construction effort was not measured.",
+    "next_action": "Use the designated tool through the smallest qualified adapter when an actual hypothesis task calls for it, preserving D100/A1-A5 and active frozen studies. Resolve genuinely new target/numerical/evaluation meanings when encountered; routine implementation choices remain autonomous.",
+    "unverified": "No LightGBM fit/predict adapter, model training/replay, scientific admission, comparison, profitability or other model-family benefit was executed. Concurrent native changes are outside these checks.",
+    "rollback": "Unselect future use via D008/D026 while preserving this approval, original claims, learned artifacts, prior versions, exposure, failures and charges."
   }
 }

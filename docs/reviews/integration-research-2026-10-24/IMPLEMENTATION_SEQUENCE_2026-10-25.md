@@ -1,6 +1,6 @@
 # Implementation sequence
 
-Date: November 3, 2026. Version: execution-plan/0.9 (D101 adopts the complete contextual trading methodology; D100 native parallel calibration/A1–A5 retains execution priority; full package exits, scientific contracts, D096 and existing resources retained).
+Date: November 3, 2026. Version: execution-plan/0.10 (D102 designates direct LightGBM as an interchangeable forecast component; D101 methodology and D100/A1-A5 execution priority, full exits and resources retained).
 
 **Accepted scope remains binding.** The November1 updated user objective reiterates that accepted versioned specifications define the full functional scope; this plan orders implementation and must not silently narrow it. Tests and exploratory completion remain intermediate milestones.
 
@@ -713,6 +713,23 @@ the [approval record](../implementation-2026-10-25/contextual-trading-approval-2
 Use one actual caller inside packages 1-6, not a preliminary dynamic-model or ML
 platform project. The five boundaries, complexity costs, versioning/rollback and
 all original source qualifications remain binding; approval grants no new run.
+
+## Direct LightGBM component approval (November 3, 2026)
+
+**D102:** the user approves direct LightGBM as a generally useful interchangeable
+forecast component. Variant A can estimate the defined target relationship from
+hypothesis-derived measurements; keep original mechanics/conditional claims and
+representation-usefulness claims distinct. Retain the full fitting/selection/
+window/update recipe, qualified negative/inconclusive outcomes and inherited
+exposure. Policy sizing/risk remains separately evaluated. Exact [approval](../implementation-2026-10-25/lightgbm-component-approval-2026-11-03.json)
+and the [caller contract](../../architecture/09_IMPLEMENTATION_BLUEPRINT.md#d102-direct-lightgbm-forecast-handoff)
+are authoritative for subsequent affected use.
+
+This is a general tool-role choice, not a mandatory LLM/model comparison, separate
+research workstream or fixed first extension after v0. Apply it when it helps an
+actual hypothesis task through the smallest owned adapter; retain D100/A1-A5 and
+existing authorized priorities. This adoption installs/trains nothing, chooses no
+library release, target, numerical profile or study, and grants no data/resources.
 
 ## Manufacturing milestones (approved November 2, 2026)
 

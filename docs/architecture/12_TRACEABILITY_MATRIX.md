@@ -13,34 +13,34 @@ SESSION-2026-10-24-MONITORING-VISIBILITY records D088's later operational report
 | Problem | Requirement | Decisions | Components | Interfaces | Test | Phase |
 |---|---|---|---|---|---|---|
 | PROB-01 | REQ-001 | D001, D015, D101 | CMP-02, CMP-03, CMP-04, CMP-06 | IF-03, IF-07 | TEST-01 | P2 |
-| PROB-01 | REQ-002 | D002, D003, D055, D074, D089, D091, D101 | CMP-02, CMP-03, CMP-04 | IF-03, IF-04 | TEST-02; [bounded math cases](18_BOUNDED_MATH_PRIMITIVES.md#acceptance-and-rollback) | P1 |
-| PROB-01 | REQ-003 | D004, D084, D094, D097, D101 | CMP-03, CMP-04, CMP-08 | IF-04, IF-09 | TEST-03; [paired acceptance](23_PAIRED_DEVELOPMENT.md#integration-exact-gates-and-stopping-rules) | P1 |
-| PROB-02 | REQ-004 | D005, D034, D061, D092, D101 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-06, CMP-07 | IF-01, IF-02 | TEST-04; [review continuation](21_INDEPENDENT_REVIEW_CONTINUATION.md#validation-and-rollback) | P3 |
-| PROB-03 | REQ-005 | D006, D024, D027, D033, D062, D075, D101 | CMP-03, CMP-04, CMP-06, CMP-08, CMP-09 | IF-05, IF-07 | TEST-05 | P1/P4 |
+| PROB-01 | REQ-002 | D002, D003, D055, D074, D089, D091, D101, D102 | CMP-02, CMP-03, CMP-04 | IF-03, IF-04 | TEST-02; [bounded math cases](18_BOUNDED_MATH_PRIMITIVES.md#acceptance-and-rollback) | P1 |
+| PROB-01 | REQ-003 | D004, D084, D094, D097, D101, D102 | CMP-03, CMP-04, CMP-08 | IF-04, IF-09 | TEST-03; [paired acceptance](23_PAIRED_DEVELOPMENT.md#integration-exact-gates-and-stopping-rules) | P1 |
+| PROB-02 | REQ-004 | D005, D034, D061, D092, D101, D102 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-06, CMP-07 | IF-01, IF-02 | TEST-04; [review continuation](21_INDEPENDENT_REVIEW_CONTINUATION.md#validation-and-rollback) | P3 |
+| PROB-03 | REQ-005 | D006, D024, D027, D033, D062, D075, D101, D102 | CMP-03, CMP-04, CMP-06, CMP-08, CMP-09 | IF-05, IF-07 | TEST-05 | P1/P4 |
 | PROB-04 | REQ-006 | D007, D052, D101 | CMP-01, CMP-03, CMP-04, CMP-05, CMP-06, CMP-11 | IF-06, IF-07, IF-13 | TEST-06 | P2 |
 | PROB-04 | REQ-007 | D008, D043, D067, D071, D078, D085 | CMP-04, CMP-06, CMP-08, CMP-12 | IF-04, IF-12 | TEST-07 | P1 |
 | PROB-04 | REQ-008 | D009, D056, D083, D087 | CMP-03, CMP-07, CMP-08 | IF-08, IF-09, IF-11 | TEST-08 | P1/P3/P6 |
-| PROB-05 | REQ-009 | D010, D017, D021, D048, D050, D066, D072, D101 | CMP-03, CMP-05, CMP-06, CMP-08, CMP-09 | IF-10, IF-07 | TEST-09 | P6 |
-| PROB-05 | REQ-010 | D011, D032, D036, D101 | CMP-02, CMP-03, CMP-06 | IF-03, IF-07 | TEST-10 | P2/P6 |
+| PROB-05 | REQ-009 | D010, D017, D021, D048, D050, D066, D072, D101, D102 | CMP-03, CMP-05, CMP-06, CMP-08, CMP-09 | IF-10, IF-07 | TEST-09 | P6 |
+| PROB-05 | REQ-010 | D011, D032, D036, D101, D102 | CMP-02, CMP-03, CMP-06 | IF-03, IF-07 | TEST-10 | P2/P6 |
 | PROB-07 | REQ-011 | D012, D058 | CMP-01, CMP-03 | IF-01, IF-04 | TEST-11 | P2 |
-| PROB-02 | REQ-012 | D013, D042, D053, D101 | CMP-01, CMP-05, CMP-06 | IF-06, IF-07 | TEST-12 | P2 |
-| PROB-02 | REQ-013 | D014, D101 | CMP-01, CMP-02, CMP-07, CMP-08 | IF-01, IF-02, IF-08 | TEST-13 | P3 |
-| PROB-02 | REQ-014 | D016, D029, D039, D054, D086, D095, D096, D101 | CMP-01, CMP-02, CMP-03, CMP-06, CMP-07, CMP-11, CMP-12 | IF-02, IF-03, IF-08 | TEST-14; [agent inquiry cases](15_AGENT_INQUIRY_DISCIPLINE.md#acceptance-examples-for-test-14) | P3; repository review discipline now |
+| PROB-02 | REQ-012 | D013, D042, D053, D101, D102 | CMP-01, CMP-05, CMP-06 | IF-06, IF-07 | TEST-12 | P2 |
+| PROB-02 | REQ-013 | D014, D101, D102 | CMP-01, CMP-02, CMP-07, CMP-08 | IF-01, IF-02, IF-08 | TEST-13 | P3 |
+| PROB-02 | REQ-014 | D016, D029, D039, D054, D086, D095, D096, D101, D102 | CMP-01, CMP-02, CMP-03, CMP-06, CMP-07, CMP-11, CMP-12 | IF-02, IF-03, IF-08 | TEST-14; [agent inquiry cases](15_AGENT_INQUIRY_DISCIPLINE.md#acceptance-examples-for-test-14) | P3; repository review discipline now |
 | PROB-07 | REQ-015 | D018, D076, D101 | CMP-01, CMP-03, CMP-05 | IF-01, IF-06 | TEST-15 | P2/P5 |
-| PROB-02 | REQ-016 | D019, D101 | CMP-07, CMP-08, CMP-09 | IF-08 | TEST-16 | P3 |
+| PROB-02 | REQ-016 | D019, D101, D102 | CMP-07, CMP-08, CMP-09 | IF-08 | TEST-16 | P3 |
 | PROB-05 | REQ-017 | D020, D057, D064, D080, D087, D088, D101 | CMP-01, CMP-06, CMP-07, CMP-08, CMP-09, CMP-10, CMP-11 | IF-11 | TEST-17; [D087 invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases); [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P6 |
-| PROB-06 | REQ-018 | D022, D041, D063, D077, D098, D100, D101 | CMP-01, CMP-02, CMP-05, CMP-07, CMP-12 | IF-02, IF-06, IF-12 | TEST-18; [native parallel acceptance](05_REQUIREMENTS.md#d100-native-parallel-calibration-acceptance) | P2/P4/P7 |
+| PROB-06 | REQ-018 | D022, D041, D063, D077, D098, D100, D101, D102 | CMP-01, CMP-02, CMP-05, CMP-07, CMP-12 | IF-02, IF-06, IF-12 | TEST-18; [native parallel acceptance](05_REQUIREMENTS.md#d100-native-parallel-calibration-acceptance) | P2/P4/P7 |
 | PROB-03 | REQ-019 | D023, D082, D099, D101 | CMP-02, CMP-04, CMP-06 | IF-05 | TEST-19; [outcome reservation cases](28_OUTCOME_RESERVATION.md#acceptance-versioning-and-rollback) | P4 |
-| PROB-03 | REQ-020 | D025, D038, D049, D101 | CMP-02, CMP-05, CMP-06, CMP-09 | IF-06, IF-07 | TEST-20 | P4 |
+| PROB-03 | REQ-020 | D025, D038, D049, D101, D102 | CMP-02, CMP-05, CMP-06, CMP-09 | IF-06, IF-07 | TEST-20 | P4 |
 | PROB-04 | REQ-021 | D026, D040, D101 | CMP-02, CMP-07, CMP-12 | IF-12 | TEST-21 | P3/P7 |
 | PROB-06 | REQ-022 | D028, D059, D060, D073, D088, D101 | CMP-11, CMP-12 | IF-13 | TEST-22; [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P5/P6 |
 | PROB-06 | REQ-023 | D030, D065, D079, D090, D093, D101 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-11, CMP-12 | IF-12, IF-13 | TEST-23; [complete-feedback exception](22_COMPLETE_FEEDBACK_RESEARCH_EPOCH.md#verification-and-rollback) | P1/P7 |
-| PROB-03 | REQ-024 | D031, D035, D047, D051, D101 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-09 | IF-05, IF-06, IF-07 | TEST-24 | P4 |
+| PROB-03 | REQ-024 | D031, D035, D047, D051, D101, D102 | CMP-02, CMP-04, CMP-05, CMP-06, CMP-09 | IF-05, IF-06, IF-07 | TEST-24 | P4 |
 | PROB-05 | REQ-025 | D037, D087, D088, D101 | CMP-01, CMP-06, CMP-07, CMP-08, CMP-09, CMP-10, CMP-11, CMP-12 | IF-11, IF-08, IF-13 | TEST-25; [D087 invocation cases](16_TEMPORAL_DIAGNOSTIC_INVOCATION.md#future-acceptance-cases); [D088 reporting cases](17_MONITORING_VISIBILITY_AND_REPORTING.md#future-acceptance-cases) | P6 |
-| PROB-05 | REQ-026 | D044, D045, D046, D101 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07 | IF-01, IF-06 | TEST-26 | P5 |
+| PROB-05 | REQ-026 | D044, D045, D046, D101, D102 | CMP-01, CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07 | IF-01, IF-06 | TEST-26 | P5 |
 | PROB-08 | REQ-027 | D068, D013, D019, D025, D028, D036, D101 | CMP-02, CMP-03, CMP-04, CMP-05, CMP-06, CMP-07, CMP-11, CMP-12 | IF-03, IF-06, IF-08, IF-13 | TEST-27 | P7; before framework success claim |
 | PROB-02 | REQ-028 | D070, D014, D019, D026, D096 | CMP-01, CMP-03, CMP-04, CMP-06, CMP-07, CMP-12 | IF-01, IF-02, IF-08, IF-12 | TEST-28 | Scoped slice; before feedback reuse |
-| PROB-06 | REQ-029 | D069, D070, D025, D059, D068, D081, D096, D101 | CMP-02, CMP-06, CMP-09, CMP-11, CMP-12 | IF-05, IF-07, IF-12, IF-13 | TEST-29 | Pilot planning; before affected assessment |
+| PROB-06 | REQ-029 | D069, D070, D025, D059, D068, D081, D096, D101, D102 | CMP-02, CMP-06, CMP-09, CMP-11, CMP-12 | IF-05, IF-07, IF-12, IF-13 | TEST-29 | Pilot planning; before affected assessment |
 | PROB-01 | REQ-030 | D070, D005, D016, D028, D096 | CMP-01, CMP-02, CMP-03, CMP-07, CMP-11 | IF-02, IF-03, IF-08, IF-13 | TEST-30 | Scoped slice; before diagnostic claims |
 
 ## Reverse trace: every decision has a disposition
@@ -335,6 +335,7 @@ protected/native original-A admission.
 
 | D100 | ACCEPTED | SESSION-2026-11-03-NATIVE-PARALLEL | REQ-018; existing REQ-006/007/013/022/023/026/030 | [Native parallel calibration/A1–A5](../reviews/integration-research-2026-10-24/IMPLEMENTATION_SEQUENCE_2026-10-25.md#native-parallel-calibration-approval-november-3-2026): new complete2048-world version, exact numerics/full streams/replay, bounded6-worker acceptance and actual throughput/storage stops. Scalar recovery retired; implementation/run/scientific acceptance remain separate. |
 | D101 | ACCEPTED | REQ-009 and the affected requirements in the forward table; existing CMP-01 through CMP-12 / IF-01 through IF-13 | [Complete contextual trading methodology](06_MASTER_ARCHITECTURE.md#d101-contextual-trading-methodology); five handoffs and [D101-AC-01 through D101-AC-07](05_REQUIREMENTS.md#d101-contextual-trading-acceptance) adopted. Specification is separate from implementation and empirical usefulness; D100 priority retained. |
+| D102 | ACCEPTED | REQ-018 and the related forward rows; CMP-01/02/03/04/05/06/07/08/09/12 | [Direct LightGBM forecast role](06_MASTER_ARCHITECTURE.md#d102-direct-learned-forecast-component), [caller and qualification](09_IMPLEMENTATION_BLUEPRINT.md#d102-direct-lightgbm-forecast-handoff). General component choice, not a model competition, runtime admission or new study. |
 
 ## M1 technical research path acceptance (November 2, 2026)
 

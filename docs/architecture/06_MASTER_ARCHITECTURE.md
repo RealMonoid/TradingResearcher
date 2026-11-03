@@ -231,6 +231,27 @@ all seven package exits, source/exposure/resource history and scientific/protect
 data/capital restrictions remain binding. Nasdaq and twelve-bar examples are
 illustrations, not adopted instrument, feature or horizon profiles.
 
+## D102 direct learned forecast component
+
+D102 designates direct LightGBM as an interchangeable forecast component for the
+[contextual methodology](#d101-contextual-trading-methodology). It can operationalize
+an actual hypothesis/representation task; it is not a competing hypothesis agent
+or a mandatory benchmark against the LLM. Qlib's full platform is not adopted.
+
+Keep the original mechanism/conditional hypothesis and any representation-usefulness
+claim distinct and linked. Predictive gain evaluates the specified estimator/task,
+not causal truth. Absence of measured gain follows the frozen negative/inconclusive
+criteria, not automatic refutation. Learned parameters and feature/selection/window/
+update choices belong to the assessed procedure. Exposed discovery data remain
+usable for development, with exposure inherited by descendants. Sizing, risk and
+net policy evaluation retain their separate authority.
+
+The [actual caller contract](09_IMPLEMENTATION_BLUEPRINT.md#d102-direct-lightgbm-forecast-handoff)
+binds future use. Model version, data permissions, target/horizon and numerical
+meaning must be concrete before qualifying the adapter. This is a general design
+choice, not an installed/qualified model, study launch or new workstream. Existing
+v0/native priorities, active frozen profiles, D100/A1-A5 and resources remain.
+
 ## D100 bounded native calibration execution
 
 [D100/A1–A5](02_DECISION_REGISTER.md#d100--native-parallel-calibration-with-bounded-acceptance)

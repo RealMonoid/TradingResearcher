@@ -16,7 +16,7 @@ Statuses describe recovered decisions, not implementation completion. A quoted p
 | Status | Count |
 |---|---:|
 | NON_NEGOTIABLE | 1 |
-| ACCEPTED | 79 |
+| ACCEPTED | 80 |
 | REJECTED | 1 |
 | CONDITIONALLY_ACCEPTED | 5 |
 | SUPERSEDED | 6 |
@@ -1540,3 +1540,48 @@ study sources. Reconcile one actual caller and independently qualify its slice.
 Research and promptly resolve new scientific/run meanings when encountered.
 Version future handoffs under existing envelopes; preserve old schemas, records,
 failed probes, source/exposure history and all charges on rollback.
+
+### D102 — Direct LightGBM as an interchangeable forecast component
+
+**Status:** ACCEPTED. **Normative:** true.
+
+**Decision:** Designate direct LightGBM as a generally useful, interchangeable
+learned forecast component under D101. Variant A is a suitable use: an LLM proposes
+a hypothesis and measurement representation; the estimator learns the defined
+target relationship; independent code evaluates the claimed usefulness. This is
+an implementation tool for actual research tasks, not a required LLM-versus-model
+contest or a separate benchmark workstream. Qlib's whole platform is not selected.
+
+**Adopted qualifications:** Preserve the original mechanics/conditional claim and
+any linked representation-usefulness claim as distinct objects; do not silently
+weaken or replace the former. Better predictive contribution does not prove the
+auction-process explanation. No measured improvement is not automatic refutation:
+apply the frozen scope/effect/precision criteria and retain inconclusive results.
+LightGBM is a fitted estimator, not a neutral measurement device. Bind feature
+construction/selection, fitting, model capacity/regularization, parameters, windows
+and any update rule as part of the assessed procedure. Discovery data remain
+usable for development with inherited exposure, not independent confirmation of
+the resulting idea/descendants. Sizing and risk stay in the separately assessed
+policy. No mandatory first-extension-after-v0 schedule follows.
+
+**Source and acceptance:** SESSION-2026-11-03-LIGHTGBM-COMPONENT; direct user reply
+"akzeptiert. machen wir so" to the preceding qualified assistant review. The
+[approval record](../reviews/implementation-2026-10-25/lightgbm-component-approval-2026-11-03.json)
+retains its content transcription and four qualifications; it does not adopt the
+unqualified Claude comparison claims or the earlier rejected model competition.
+
+**Affected components / dependencies:** primary REQ-018; related REQ-002/003/004/
+005/009/010/012/013/014/016/020/024/026/029; CMP-01/02/03/04/05/06/07/08/09/12;
+IF-01/02/03/04/05/06/07/08/10/12. D001/D008/D010/D011/D015/D017/D021/D022/D026/
+D027/D030/D032/D048/D069/D070/D072/D075/D076/D082/D084/D096/D100/D101 retain scope.
+See the [forecast handoff](09_IMPLEMENTATION_BLUEPRINT.md#d102-direct-lightgbm-forecast-handoff)
+and [existing acceptance mapping](05_REQUIREMENTS.md#d102-learned-forecast-qualification-scope).
+
+**Activation, versioning and rollback:** the general architectural choice does
+not install a library, select a release/build, grant fit/predict/scientific access,
+freeze a study, choose a target/profile or add resources. Pin and qualify the
+smallest owned adapter and actual caller when required by a task; retain the model
+artifact, training/source/parameter lineage and applicable independent checks.
+Scientific/numerical changes still require D008/D026 review. No current frozen
+prompt or pinned study changes; D100/A1-A5 remains execution priority. Rollback
+unselects future use while retaining every source, model, failure, exposure and fee.
